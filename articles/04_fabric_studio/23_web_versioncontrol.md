@@ -1,7 +1,9 @@
 <web>
-# Using Source Control in Web Studio
+  
+## Using Source Control in Web Studio
 
-Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
+
+The Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
 
 The Source Control icon in the Activity Bar on the left will always indicate an **overview of how many changes** you currently have in your repository. Selecting the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
 
@@ -13,7 +15,7 @@ You can also find indicators of the **status of your repository** in the bottom-
 
 ## Commit
 
-**Staging** (git add) and **unstaging** (git reset) can be done via contextual actions in the files or by drag-and-drop.
+**Staging** (Git add) and **unstaging** (Git reset) can be done via contextual actions in the files or by drag-and-drop.
 
 You can type a commit message above the changes and press `Ctrl+Enter` (macOS: `⌘+Enter`) to commit them. If there are any staged changes, only changes will be committed. Otherwise, you'll get a prompt asking you to select what changes you'd like to commit and get the option to change your commit settings.
 
@@ -35,7 +37,7 @@ If there is no upstream branch configured and the Git repository has remotes set
 
 ## Gutter indicators
 
-If you open a folder that is a Git repository and begin making changes, Web Studio will add useful annotations to the gutter and to the overview ruler, appears near the line numbers.
+If you open a folder that is a Git repository and begin making changes, Web Studio will add useful annotations to the gutter and to the overview ruler. These annotations appear near the line numbers.
 
 * A red triangle indicates where lines have been deleted
 * A green bar indicates new added lines
@@ -53,6 +55,6 @@ The Git tool supports viewing of diffs within Web Studio, showing original and c
 
 
 
->**Tip:** You can diff any two files by first right clicking on a file in the Explorer or **OPEN EDITORS** list and selecting **Select for Compare** and then right-click on the second file to compare with and select **Compare with 'file_name_you_chose'**.   Alternatively from the keyboard hit `Ctrl+Shift+P` and select **File: Compare Active File With** and you will be presented with a list of recent files.
+>**Tip:** You can diff any two files by first right-clicking on a file in the Explorer or **OPEN EDITORS** list and selecting **Select for Compare** and then right-click on the second file to compare with and select **Compare with 'file_name_you_chose'**.   Alternatively from the keyboard hit `Ctrl+Shift+P` and select **File: Compare Active File With** and you will be presented with a list of recent files.
 
 </web>
