@@ -2,17 +2,17 @@
 
 # Search 
 
-Fabric Web Studio allows you to quickly search terms and content over all files in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to get into The Search View where you can enter your search term. Search results are grouped into files containing the search term, with an indication of the hits, i.e. occurrences, in each file and its location. Expand a file to see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
+The Fabric Web Studio allows you to quickly search terms and content over all files in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to get into The Search View where you can enter your search term. Search results are grouped into files containing the search term, with an indication of the hits, i.e. occurrences, in each file and its location. Expand a file to see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
 
 ![search base](images/web/22_1_search.png)
 
->**Tip:** You can also use regular expression in the search box.
+>**Tip:** You can also use regular expressions in the search box.
 
 
 
 ### Advanced search options
 
-You can use the advanced search options which appear nearby the search box on the right, and also others which reveled by clicking the ellipsis (**Toggle Search Details**) .
+You can use the advanced search options which appear nearby the search box on the right, in addition to others which can be revealed by clicking the ellipsis (**Toggle Search Details**) .
 
 The Search Widget also has four advanced search options:
 
@@ -21,7 +21,7 @@ The Search Widget also has four advanced search options:
 - Regular Expression
 - Include Ignored Files
 
-Clicking on the ellipsis (**Toggle Search Details**) will show additional fields below the search box, to configure the search.
+Clicking on the ellipsis (**Toggle Search Details**) will show additional fields below the search box, which are used to configure the search.
 
 In these two input boxes you can enter patterns to include or exclude from the search. Use `,` to separate multiple patterns. Paths must use forward slashes. You can also use [glob wildcard syntax](https://en.wikipedia.org/wiki/Glob_(programming)):
 
