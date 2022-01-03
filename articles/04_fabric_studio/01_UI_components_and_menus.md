@@ -1,19 +1,19 @@
 # Fabric Studio User Interface
 
 ## What Is the Fabric Studio?
-Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the Fabric Server.
+Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
 
-Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space. 
+Fabric Studio offers a user friendly look-and-feel development environment known as the *Implementation Layer*. Each project is initiated and maintained through this platform and working space. 
 
-As an integrated tool, Fabric Studio allows you to:
+As an integrated tool, the Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
-* Use robust ETL options to define the mapping logic on each LU table using various transformation objects like [Functions](/articles/07_table_population/08_project_functions.md) and [Globals](/articles/08_globals/01_globals_overview.md) <studio>as well as [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio>.
+* Use robust ETL (Extract, Transform, Load) options to define the mapping logic for the various tables in the LUs. Transformation objects used can be [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md) <studio>as well as [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio>.
 * Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project to the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
-Fabric Studio also enables you to integrate your projects into Source Version Control systems based on Git <studio>or the Apache Sub-version (SVN) Standard</studio>.
+The Fabric Studio also enables you to integrate your projects into source version control systems based on Git <studio>or the Apache Sub-version (SVN) Standard</studio>.
 
-[Click for more information about Best Practices for Working with SVN and Git.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+[Click for more information about Best Practices for Working with GIT <studio>and SVN</studio>.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ## Get Started
 
@@ -21,14 +21,14 @@ Fabric Studio also enables you to integrate your projects into Source Version Co
 
 ### Start Page
 
-When opening the Studio you will see the Start Page
+Upon opening the desktop Studio, the Start Page will appear. 
 
 ![image](images/04_01_01_start_a_page.png)
 
-The Start Page has links to different K2View Fabric projects, including: 
+The Start Page has links, including: 
 * Start a new project, with or without configuration control. 
 * Open an existing project.
-* Checkout a project from a source versioing control.
+* Checkout a project from a source versioning control.
 * Quick links to recently opened projects. 
 * Help and support. 
 
@@ -40,7 +40,7 @@ The Start Page can be reopened, even after it is closed, by using the *Tools* ac
 
 
 
-Once a project is opened, you will see, at the left upper side of the window, the debug panel and at the left side the activity toolbar.
+Once a project is opened, the debug panel appears on the upper left of the window, and the activity toolbar appears along the left side of the window.
 
 
 
@@ -48,7 +48,7 @@ Once a project is opened, you will see, at the left upper side of the window, th
 
 ![debug toolbar](images/fabric_studio_debug_panel.png)
 
-The debug panel enables an easy access to the Fabric debug server, Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
+The debug panel enables access to the Fabric debug server, Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
 
 <table>
 <tbody>
@@ -62,6 +62,7 @@ The debug panel enables an easy access to the Fabric debug server, Cassandra deb
     <img src="images/deploy_LUs_to_debug_server.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>Deploy all updated LUs to Fabric debug server</p>
+<p>(appears white before the deploy, green after a successful deploy)</p>
 </td>
 </tr>
 <tr>
@@ -119,7 +120,7 @@ The debug panel enables an easy access to the Fabric debug server, Cassandra deb
 </tbody>
 </table>
 
-### Activity Toolbar 
+### Activity Toolbar ###
 
 <table>
 <tbody>
@@ -168,13 +169,15 @@ The debug panel enables an easy access to the Fabric debug server, Cassandra deb
 </tr>
 </tbody>
 </table>
-#### File Tab
+
+**File Tab**
+
 
 The File tab has the following options:
 
 * New Project. 
 * Open Project. 
-* Checkout Project (from SVN or Git repository). 
+* Checkout Project (from <stuido>SVN or</studio> Git repository). 
 * Close Project. 
 * Recent Projects.
 
