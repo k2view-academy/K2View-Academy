@@ -2,11 +2,11 @@
 
 # Exploring, Navigating and Managing Files
 
-This article explains how to explore files and their contents in the Fabric Studio, at project tree explorer and other utilities.
+This article explains how to explore files and their contents in the Fabric Studio, including files accesible from the project tree explorer and via other utilities.
 
  
 
-Fabric Studio is file and folder based and to explore your project it is recommended to open the Explorer View (opened by default) - the top most at the activity bar. The explorer, appears at the side bar, contains two sub-views - the Project and the Open Editors.
+Fabric Studio is file and folder based. To explore your project it is recommended to open the Explorer View (opened by default) - the top most icon in the activity bar. The explorer that appears at the side bar contains two sub-views - the Project and the Open Editors.
 
 ## Project Explorer
 
@@ -28,13 +28,13 @@ After expanding a folder, the contents of the folder are shown in the Explorer. 
 
 You can select multiple files in the **File Explorer** and its **OPEN EDITORS** sub-view to run actions (such as Delete or Open) on multiple items. Use the `Ctrl/Cmd` key with `click` to select individual files and `Shift` + `click` to select a range. 
 
-> **Tip:** If you select two items, you can now use the context menu **Compare with Each other** command to quickly diff two files.
+> **Tip:** If you select two items, you can now use the context menu **Compare with Each other** command to quickly check the difference between two files.
 
 
 
 ### Filtering the document tree
 
-You can type to filter the currently visible files in the **File Explorer**. With the focus on the **File Explorer** start to type part of the file name you want to match. You will see a filter box in the top-right of the **File Explorer** showing what you have typed so far and matching file names will be highlighted. When you press the cursor keys to move up and down the file list, it will jump between matching files or folders.
+You can type to filter the currently visible files in the **File Explorer**. With the focus on the **File Explorer**, start to type part of the file name you want to match. You will see a filter box in the top-right of the **File Explorer** showing what you have typed so far and matching file names will be highlighted. When you press the cursor keys to move up and down the file list, it will jump between matching files or folders.
 
 Hovering over the filter box and selecting **Enable Filter on Type** will show only matching files/folders. Use the 'X' **Clear** button to clear the filter.
 
@@ -52,17 +52,17 @@ At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This is a lis
 
 * You can also type `Ctrl+P` to search and open files by their name. 
 
-- To search for files contents use the Search View, accessible from the Activity Bar . You can open to the Search View also by using the  `Ctrl+Shift+F` shortcut. To learn more about using the Search tool within the Web Studio see [here](22_web_search.md).
+- To search for files contents use the Search View, accessible from the Activity Bar. You can open the Search View also by using the  `Ctrl+Shift+F` shortcut. To learn more about using the Search tool within the Web Studio see [here](22_web_search.md).
 
 
 
 ## Outline
 
-Once a file is opened you can navigate inside according to its outline. For example, in Java code the outlines represents as functions that you can move from one to another.
+Once a file is opened you can navigate inside the file according to its outline. For example, in Java code the outlines represents as functions that you can move from one to another.
 
 Outline can be opened as a right side panel, by clicking on the ![](images/web/outline.png) icon. Outline can be opened and closed also by using the shortcut: `CTRL+SHIFT+I`.
 
-File's outline can be revealed by clicking on the 3 dots ellipsis appears at the right of the file name
+A file's outline can be revealed by clicking on the 3 dots ellipsis that appears at the right of the file name.
 
 ![](images/web/21_outline_anim.gif)
 
@@ -72,7 +72,7 @@ File's outline can be revealed by clicking on the 3 dots ellipsis appears at the
 
 The Editor panel has a navigation bar above its contents called [Breadcrumbs](https://en.wikipedia.org/wiki/Breadcrumb_(navigation)). It shows the current location and allows you to quickly navigate between folders, files, and symbols.
 
-Breadcrumbs always show the file path and if the current file type has language support for symbols, the symbol path up to the cursor position. For example, Java files will be signed with Java icon near by their name.
+Breadcrumbs always show the file path. If the current file type has language support for symbols, the symbol path is also shown up to the cursor position. For example, Java files will be signed with Java icon near by their name.
 
 
 
