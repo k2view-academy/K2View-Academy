@@ -50,7 +50,7 @@ Top open the full list of shortcuts you can either:
         </tr>
         <tr >
             <td>⌘M / CTRL+M</td>
-            <td>Toggle Maximize Editor's Window (along with F11 you can get a full screen editor)</td>    
+            <td>Toggle Maximize Editor's Window (used together with F11, to get a full screen editor)</td>    
         </tr>
         <tr >
             <td>⌘⌥D / CTRL+alt+D</td>
