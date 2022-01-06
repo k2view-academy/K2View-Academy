@@ -10,6 +10,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 - Disable SELinux.
 - Apache Web server with installed modules:  mono-fastcgi-server4 libapache2-mod-fcgid.
 - The following modules enabled (a2enmod): fcgid, proxy, proxy_fcgi.
+- PHP 7.1 engine with the following modules : php-common php-opcache php-mcrypt php-cli php-gd php-curl php-xml
 - Hardware - TDB.
 
 [Click for more details about ExagoBI Technical Specifications](https://exagobi.com/support/administrators/installation-and-configuration/technical-specifications/).
