@@ -92,7 +92,7 @@ Once a debug session starts, the **Debug toolbar** becomes active.
 
 You can also evaluate expressions in the **Debug Console**. Below you can see various ways to inspect the same variable:
 
-![Debug Variables](images/web/24_8_eval.png)
+![Debug Variables](images/web/24_8_eval.jpg)
 
 
 

@@ -1,11 +1,17 @@
 <web>
-  
+
 ## Using Source Control in Web Studio
 
 
 The Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
 
-The Source Control icon in the Activity Bar on the left will always indicate an **overview of how many changes** you currently have in your repository. Selecting the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
+The Source Control icon in the Activity Bar on the left indicates an **overview of how many changes** you currently have in your repository. 
+
+
+
+Selecting the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
+
+> Tip: To bring up the Source Control View you can also use the keyboard shortcut `CTRL+SHIFT+G`.
 
 Clicking each item will show you in detail **the textual changes within each file**. Note that for unstaged changes, the editor on the right still lets you edit the file.
 
