@@ -11,7 +11,7 @@ In particular, FIPS 140-2 (Federal Information Processing Standard 140-2) is a s
 K2View has integrated the [Bouncy Castle](https://www.bouncycastle.org/index.html) Java stack to ensure FIPS-compliance for all [Fabric cryptographic algorithms](/articles/26_fabric_security/03_fabric_LUI_encryption.md) used across Fabric's projects.
 
 By default, Fabric boots up with the FIPS mode set to **off**. 
-Even when FIPS mode is off, Fabric only uses FIPS-compliant protocols and standards implementions with Fabric cryptographic embedded algorithms.
+Even when FIPS mode is off, Fabric only uses FIPS-compliant protocols and standards implementations with Fabric cryptographic embedded algorithms.
 
 
 ### FIPS Version Command
