@@ -17,7 +17,7 @@ The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30
 
 ### TDM DB
 
-TDM settings and tasks are kept in the TDM PostgreSQL DB. Both the TDM GUI and Fabric connect to the TDM DB to get or update TDM settings or tasks.
+TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB to get or update TDM settings or tasks.
 
 ### Fabric
 

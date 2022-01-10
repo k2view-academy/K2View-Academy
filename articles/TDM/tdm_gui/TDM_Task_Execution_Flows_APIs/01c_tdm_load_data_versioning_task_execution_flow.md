@@ -1,4 +1,4 @@
-# TDM - Overriding Task Execution Parameters Flow
+# TDM - Load with Data Versioning (Data Flux) Task Flow
 
 Click the blue text to open the articles about the related TDM APIs of each step. 
 
@@ -12,11 +12,17 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_flow_get_globals.png" alt="drawing" width="200pxl" style="zoom:80%;" />](09_get_evailable_globals_for_task_execution.md) Send the selected task's LUs.
 
-[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_retention_period_for_entity_reservation.md) Get the retention period options for entity reservation
+[<img src="task_set_entity_list_and_reservation_ind" alt="drawing" width="200pxl" style="zoom:80%;" />]
+
+[<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_get_available_data_versions.md) Send the selected task's attributes, and the selected environments and entity list.
+
+[<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_get_available_data_versions.md)
+
+[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_get_retention_period_for_data_versioning.md) Get retention period for entity reservation.
 
 [<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) 
 
-[<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overriden parameters of the selected task.
+[<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overridden parameters of the selected task.
 
 [<img src="images/task_basic_flow_5.png" alt="drawing" width="200pxl" style="zoom:80%;" />](05_task_execution_monitoring_API.md) Send the task_id of the selected task.
 

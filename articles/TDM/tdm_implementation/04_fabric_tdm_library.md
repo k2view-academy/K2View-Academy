@@ -6,7 +6,7 @@ The TDM Library has all the utilities required to implement a TDM project and to
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
 
-The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.2_LIBRARY.k2export) .
+The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.4_LIBRARY.k2export) .
 
 ## TDM Library - Shared Objects
 
@@ -161,7 +161,7 @@ The **deploy.flow** has been added to TDM LU in TDM 7.3. This process runs the f
 - Verify that the Environment and the Web Services are deployed to Fabric. If these are not deployed to Fabric, give an error message to the user.
 - Create the k2masking keyspace in Cassandra if it does not already exist.
 - Check if Redis is up. If Redis is not up, give an error message to the user.
-   
+  
 
 Edit the **deploy.flow** of the TDM LU before the TDM deployment:
 
