@@ -2,7 +2,7 @@
 
 ## **Overview**  
 
-The batch monitoring window has been added to Fabric version 6.5.4. 
+The batch monitoring window has been added to Fabric version 6.5.3. 
 
 It has been designed to enable the user to monitor the execution and get a detailed information of a given batch process. In addition it enable the user to edit the maximum number of workers and stop a running batch process or resume a paused batch execution. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
 
@@ -45,7 +45,7 @@ Note that a cancelled batch process cannot be resumed.
 
 #### GENERATE_IID_LIST Status
 
-Batch processes that run on a large amount of entities may take some time till the full entity list is generated. The batch status is GENERATE_IID_LIST when the batch is still generating the list of entities for execution, and the control panel displays a running spinner when the status is GENERATE_IID_LIST. When the list generation starts, the total number of entities is still unknown, but as it progresses, the total number of entities is shown on the spinner, since this number is not final at this stage:
+Batch processes that run on a large number of entities may take some time till the full entity list is generated. When the list generation starts and the batch status is GENERATE_IID_LIST, the total number of entities is still unknown. During the entity list processing, the control panel displays a running spinner, and the total number of entities flashes to indicate that the number of entities is still in process and not final at this stage:
 
 <<< Add a Screenshot>>>
 
