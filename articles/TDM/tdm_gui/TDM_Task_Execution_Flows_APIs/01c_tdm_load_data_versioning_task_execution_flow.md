@@ -12,11 +12,13 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_flow_get_globals.png" alt="drawing" width="200pxl" style="zoom:80%;" />](09_get_evailable_globals_for_task_execution.md) Send the selected task's LUs.
 
-[<img src="task_set_entity_list_and_reservation_ind" alt="drawing" width="200pxl" style="zoom:80%;" />]
+[<img src="images/task_set_entity_list_and_reservation_ind" alt="drawing" width="200pxl" style="zoom:80%;" />]
+
+[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) If the task has an entity list, send the provisioning on (target) environment and the entity list 
 
 [<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_get_available_data_versions.md) Send the selected task's attributes, and the selected environments and entity list.
 
-[<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_get_available_data_versions.md)
+[<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](13_data_version_validation.md) Send the task_execution_id of the selected version for validation.
 
 [<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_get_retention_period_for_data_versioning.md) Get retention period for entity reservation.
 
