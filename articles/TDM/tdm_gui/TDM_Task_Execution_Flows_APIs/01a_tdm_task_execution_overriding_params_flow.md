@@ -14,7 +14,7 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_set_entity_list_and_reservation_ind.png" alt="drawing" width="200pxl" style="zoom:80%;" />]
 
-[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) If the task has an entity list, send the provisioning on (target) environment and the entity list 
+[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Call the API if the task has an entity list. Send the provisioning on (target) environment and the entity list. 
 
 [<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_retention_period_for_entity_reservation.md) Get the retention period options for entity reservation
 
