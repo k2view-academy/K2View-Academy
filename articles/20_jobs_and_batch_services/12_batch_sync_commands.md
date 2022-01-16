@@ -451,13 +451,13 @@ Note that the filter supports regex.
 <td valign="top" width="400pxl">
 
 <p>
-Displays the status of instances of a given Batch process ID:
+Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set by the command. The limitation of 10,000 set set by Fabric to bring a result on reasonable time.
 
 - STATUS, which can be either WAITING, COMPLETED, FAILED.
 - ENTITIES, lists of entities separated by a comma.
 - AFFINITY, DCs or nodes.
 - SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
-- LIMIT, default limit defined in the config.ini if no limit is provided as an argument. </p>
+- LIMIT, limit the number of entities to a lower number than 10,000. The default limit is set to 10,000 entities if no limit is provided as an argument. </p>
 </td>
 <td valign="top" width="300pxl">
 <p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
