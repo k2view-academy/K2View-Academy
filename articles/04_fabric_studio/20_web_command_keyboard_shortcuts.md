@@ -26,7 +26,7 @@ Top open the full list of shortcuts you can either:
 
 * Use top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
 * Use left bottom Preferences gear icon > Open Keyboard Shortcuts
-* Use`CTRL+ALT+,`
+* Use `CTRL+ALT+,`
 
 ### General & Navigation
 
@@ -37,7 +37,7 @@ Top open the full list of shortcuts you can either:
             <th>Description</th>
         </tr>
         <tr >
-            <td>⇧⌘P / CTRL+shift+P</td>
+            <td>⇧⌘P / CTRL+shift+P / F1</td>
             <td>Show Command Palette</td>    
         </tr>
         <tr >
@@ -74,6 +74,56 @@ Top open the full list of shortcuts you can either:
         </tr>
         </tbody>
     </table>
+
+
+
+### Debug
+
+<table>
+    <tbody style="vertical-align: text-top; ">
+        <tr>
+            <th>Shortcut</th>
+            <th>Description</th>
+        </tr>
+        <tr >
+            <td>⇧⌘P / CTRL+shift+P / F1</td>
+            <td>Show Command Palette</td>    
+        </tr>
+        <tr >
+            <td>⌘P / CTRL+P</td>
+            <td>Quickly open files</td>    
+        </tr>
+        <tr >
+            <td>⌘J / CTRL+J</td>
+            <td>Toggle (show/hide) Bottom Panel</td>    
+        </tr>
+        <tr >
+            <td>⌘M / CTRL+M</td>
+            <td>Toggle Maximize Editor's Window (used together with F11, to get a full screen editor)</td>    
+        </tr>
+        <tr >
+            <td>⌘⌥D / CTRL+alt+D</td>
+            <td>Switch to the next editor Tab</td>    
+        </tr>
+        <tr>
+            <td>⌘⌥A / CTRL+alt+A</td>
+            <td>Switch to the previous editor tab</td>
+        </tr>
+        <tr>
+            <td>⇧⌘M / CTRL+Shift+M</td>
+            <td>Open Problems Panel</td>
+        </tr>
+        <tr>
+            <td>⇧⌘F / CTRL+Shift+F</td>
+            <td>Open Search View to search for terms inside files</td>
+        </tr>
+        <tr>
+            <td>⇧⌘D / CTRL+Shift+D</td>
+            <td>Open Debug View</td>
+        </tr>
+        </tbody>
+    </table>
+
 
 
 </web>
