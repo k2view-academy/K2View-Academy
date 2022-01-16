@@ -86,7 +86,7 @@ Nodes that can be added:
 * SQL node
 * SQL node with fields expanded
 
-![add bw actor](images/web/25_5_add_graphit.png)
+![add bw actor](images/web/25_5_add_graphit.jpg)
 
 
 
