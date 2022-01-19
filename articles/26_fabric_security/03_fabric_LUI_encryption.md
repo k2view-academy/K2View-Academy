@@ -24,7 +24,7 @@ See the screenshot below:
 
 There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE that controls the two LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each are described below:
 
-> **ON_SAVE** (default value): Encrypt the LUI when saving it to Cassandra. 
+> **ON_SAVE** (default value from 6.5.4): Encrypt the LUI when saving it to Cassandra. 
 The encryption is done after the compression. The advantage of using this encryption mode is twofold compared to the non-encrypted mode: 
 The data is stored encrypted in Cassandra, and at the same time the data has minimal performance and storage impact. 
 It is important to mention that data in the cache is not encrypted, therefore it is the user’s responsibility to ensure that the data 
