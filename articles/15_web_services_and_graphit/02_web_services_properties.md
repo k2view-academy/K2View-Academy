@@ -121,9 +121,9 @@ When set to False, this means (for example) if according to the user's role perm
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
-<td width="700pxl" valign="top"><p>Indicates if a Web-Service requires authentication or not. 
+<td width="700pxl" valign="top"><p>Indicates if a Web Service requires authentication or not. 
 Default is set to True.</p>
-When set to False, it will allow calling the Web-Service by skipping the Authentication. This mode should be used carefully, use it only if a Web-Service should be accessible for everyone without enforcing API key, user/password, etc.
+When set to False, it will allow calling the Web Service by skipping the Authentication step. This mode should be used carefully - use it only if a Web Service should be accessible for everyone without enforcing an API key, a user/password, etc. 
 <br>Added for Fabric release 6.5.4</td>
 </tr>
 <tr>
