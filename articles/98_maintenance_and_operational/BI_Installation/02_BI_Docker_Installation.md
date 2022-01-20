@@ -16,7 +16,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 3. Start the Docker image as follows:
    ~~~bash
-   docker run -dt -e container=docker --name=exago -p 80:80 --cap-add SYS_ADMIN k2view/deb_exagobi-fixed:v2021.1.15 bash -c 'mount -oremount,rw /sys/fs/cgroup; mkdir /sys/fs/cgroup/systemd; mount -oremount,ro /sys/fs/cgroup; exec /usr/sbin/init'
+   docker run -d --name=exago -p 80:80 k2view/deb_exagobi-fixed:v2021.1.15
    ~~~
 
    where **exago** is the docker name (you can define a different name if needed).
