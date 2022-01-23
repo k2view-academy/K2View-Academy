@@ -17,7 +17,7 @@ Note that if the batch status is **GENERATE_IID_LIST**, i.e. the batch process i
 
 
 
-<<< Add a Screenshot>>>
+![batch_list_generate_iid_status](images/batch_list_with_generate_iid_list.png)
 
 
 
@@ -47,7 +47,9 @@ Note that a cancelled batch process cannot be resumed.
 
 Batch processes that run on a large number of entities may take some time till the full entity list is generated. When the list generation starts and the batch status is GENERATE_IID_LIST, the total number of entities is still unknown. During the entity list processing, the control panel displays a running spinner, and the total number of entities flashes to indicate that the number of entities is still in process and not final at this stage:
 
-<<< Add a Screenshot>>>
+![image](images/batch_monitor_generate_iid_list.png)
+
+
 
 ### General Data
 
