@@ -1,7 +1,7 @@
 # Creating a New Database Interface
 
 ### How Do I Create a Database Interface?
-{< toggler "NAME" "STUDIO" >}}
+
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 
