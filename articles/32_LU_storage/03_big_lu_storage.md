@@ -35,15 +35,17 @@ The config.ini parameters to configure the above are:
 
 ### Improve LUI partitioning - Experimental Feature
 
-Another major performance improvement was introduced on release 6.5.4, when dealing with a lot of entity chunks.
+Another major performance improvement was introduced for release 6.5.4, when dealing with many entity chunks.
 
-The config.ini parameters to configure the above are:
+The parameters needed to configure Fabric to deal with a large amount of entity chunks are the following: 
 
 * ENABLE_PARTITIONED_MDB=true
 * ASYNC_LOAD_MAX_THREADS bigger than zero
 
-There is no upgrade path for existing projects, need to clean all data in Fabric and bring it back.
-It is recommended to turn this feature on only in case of dealing with really big LUIs that split into many chunks.
+They are to be added to the config.ini file. 
+
+However, there is no upgrade path for existing projects. You must clean all data in Fabric and bring it back.
+It is recommended to turn this feature on only when dealing with very large LUIs that are split into multiple chunks.
 
 
 [![Previous](/articles/images/Previous.png)](02_storage_management.md)
