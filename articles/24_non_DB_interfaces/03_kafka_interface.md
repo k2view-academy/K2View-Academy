@@ -74,6 +74,7 @@ To create a new Kafka interface, do the following:
 <td><strong>SASL properties</strong></td>
 <td>Mandatory properties if Kafka is defined with SASL authentication (available starting from V6.5.4).
 <p>Support SASL flavors: SASL_PLAIN, SASL_SCRAM, SASL_LDAP, SASL_GSSAPI.</p>
+<p> When SASL_SRAM is used, it is mandatory to fill in Session Hash Policy in addition to the Session User Name & Password. </p>
 </td>
 </tr>    
 </tbody>
