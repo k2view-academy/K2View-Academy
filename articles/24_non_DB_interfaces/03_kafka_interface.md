@@ -8,7 +8,7 @@ To create a new Kafka interface, do the following:
 
    ![image](images/04_kafka_1.PNG)
 
-2. Populate the connection's settings and click **Save**.
+2. Populate the relevant properties and click **Save**.
 
 ### Connection Settings
 
@@ -57,39 +57,27 @@ To create a new Kafka interface, do the following:
 </td>
 </tr>
 <tr>
-<td><strong>SSL / SASL properties</strong></td>
-<td>Mandatory properties if Kafka is defined with SSL or SASL (available starting from V6.5.1).</td>
+<td><strong>Message Processing Timeout (ms)</strong></td>
+<td>(Optional) The timeout to wait for a new message, default is 10000ms.
+<p>Can be overriden by the Broadway Actor's setting.</p>
+</td>
+</tr>
+<tr>
+<td><strong>SSL properties</strong></td>
+<td>Mandatory properties if Kafka is defined with SSL (available starting from V6.5.1).</td>
 </tr>
 <tr>
 <td><strong>SSL optional properties</strong></td>
 <td>Optional properties if Kafka is defined with SSL.</td>
 </tr>
+<tr>
+<td><strong>SASL properties</strong></td>
+<td>Mandatory properties if Kafka is defined with SASL authentication (available starting from V6.5.4).
+<p>Support SASL flavors: SASL PLAIN, SASL_SCRAM, SASL_LDAP, SASL_GSSAPI.</p>
+</td>
+</tr>    
 </tbody>
 </table>
-
-
-
-
-
-### Example of SSL Properties Definition
-
-#### SSL Security Protocol
-
-When SSL authentication is required on Kafka, set **Enable SSL/SASL** property to **True** and populate the SSL properties on the Kafka Interface. Below is the example of Interface definition when the **Security Protocol** = **SSL**. 
-
-![image](images/04_kafka_3.png)
-
-
-
-#### SASL_SSL / SASL_PLAINTEXT Security Protocols
-
-When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_SSL** or **SASL_PLAINTEXT** and populate the Session user name and password attributes.
-
-In addition, in case of **SASL_SSL** - populate the Truststore and Keystore properties as below. 
-
-![image](images/04_kafka_4.png)
-
-
 
 ### Example of Publish to Kafka Broadway Flow
 
