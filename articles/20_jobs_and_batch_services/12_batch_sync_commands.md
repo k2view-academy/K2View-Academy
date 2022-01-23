@@ -451,9 +451,9 @@ Note that the filter supports regex.
 <td valign="top" width="400pxl">
 
 <p>
-Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set by the command. The limitation of 10,000 set set by Fabric to bring a result on reasonable time.
+Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set by the command. The limitation of 10,000 is the default value and is set by Fabric so that a result is given in a reasonable almount of time. 
 
-- STATUS, which can be either WAITING, COMPLETED, FAILED.
+- STATUS, which can be WAITING, COMPLETED, or FAILED.
 - ENTITIES, lists of entities separated by a comma.
 - AFFINITY, DCs or nodes.
 - SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
