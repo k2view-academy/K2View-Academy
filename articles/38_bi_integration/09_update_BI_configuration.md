@@ -12,22 +12,23 @@ Do the following:
 
 * Copy the **WebReports.xml** from your source BI server (e.g. QA) here:  /opt/apps/exago/Config.
 
-* Change the file ownership to apache by running the following command:
+* Run the following commands:
 
   ~~~
-  chown apache:apache WebReports.xml
+  > sudo chown apache:apache WebReports.xml
+  > sudo chmod 777 WebReports.xml
   ~~~
 
 To start the configuration update process, run the command as follows:
 
 ~~~
-MOVE_TO_PROD_BI ENV = [ENV NAME]
+> MOVE_TO_PROD_BI ENV = [ENV NAME]
 ~~~
 
 This command carries out the following actions:
 
-* Matches the BI's data sources to the Fabric interfaces on the given [Environment](/articles/25_environments/01_environments_overview.md) by its name.
-  * Note that if BI is using a Fabric as a data source, it must be defined as an interface.
+* Matches the BI's data sources to the Fabric interfaces on the given [Environment](/articles/25_environments/01_environments_overview.md) by its name. 
+  * Note that each **data source** defined in the **Admin** module must have a corresponding **interface** in Fabric with the same name, including a Fabric.
   * Example: if BI includes two data sources named Fabric-Local and Postgres-Local, you must have Fabric interfaces with the same names.
 * Data sources and interfaces that are not matched are skipped. 
 * For each match, take the connection details from the Fabric interface per the input Environment and populate them into the BI's configuration file **WebReports.xml**.
@@ -35,7 +36,16 @@ This command carries out the following actions:
 * Once the connection details of all matched data sources are updated, create the updated encrypted **WebReports.xml.enc** file.
 * Delete the unencrypted **WebReports.xml** file.
 
-After the command execution is completed, restart the BI server.
+After the command execution is completed:
+
+* Run the following commands:
+
+  ~~~
+  > sudo chown apache:apache WebReports.xml.enc
+  > sudo chmod 777 WebReports.xml.enc
+  ~~~
+
+* Restart the BI server.
 
 
 

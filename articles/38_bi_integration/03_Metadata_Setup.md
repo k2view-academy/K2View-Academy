@@ -7,8 +7,6 @@ To start creating business intelligence reports, you must set up the metadata by
 * Creation of [Data sources](03_Metadata_Setup.md#data-sources), which establish the connection between the BI and a source database, to serve as a source for producing the reports and the dashboards. More than one data source can be created per each BI application.
 * Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins), which will serve as a reporting DB schema. BI can join data from different data sources into a single report. This can be done by creating the joins between the objects of different data sources.
 
-Note that each **data source** defined in the **Admin** module must have a corresponding **interface** in Fabric with the same name.
-
 ### Defining Data Sources
 
 The following type of data sources are supported:
