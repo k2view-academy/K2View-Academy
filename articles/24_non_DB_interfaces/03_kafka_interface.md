@@ -4,7 +4,7 @@ A Kafka interface type defines the connections to Apache Kafka and can be used b
 
 To create a new Kafka interface, do the following:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Kafka** from the **Interface Type** dropdown menu to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**. Then select **Kafka** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/04_kafka_1.PNG)
 
@@ -58,7 +58,7 @@ To create a new Kafka interface, do the following:
 </tr>
 <tr>
 <td><strong>Message Processing Timeout (ms)</strong></td>
-<td>(Optional) The timeout to wait for a new message, default is 10000ms.
+<td>(Optional) The timeout to wait for a new message, default is 10,000 ms.
 <p>Can be overriden by the Broadway Actor's setting.</p>
 </td>
 </tr>
@@ -73,8 +73,8 @@ To create a new Kafka interface, do the following:
 <tr>
 <td><strong>SASL properties</strong></td>
 <td>Mandatory properties if Kafka is defined with SASL authentication (available starting from V6.5.4).
-<p>Support SASL flavors: SASL_PLAIN, SASL_SCRAM, SASL_LDAP, SASL_GSSAPI.</p>
-<p> When SASL_SRAM is used, it is mandatory to fill in Session Hash Policy in addition to the Session User Name & Password. </p>
+<p>The following SASL flavors are supported: SASL_PLAIN, SASL_SCRAM, SASL_LDAP, SASL_GSSAPI.</p>
+<p> When SASL_SRAM is used, you must fill in the Session Hash Policy in addition to the Session User Name & Password. </p>
 </td>
 </tr>    
 </tbody>
