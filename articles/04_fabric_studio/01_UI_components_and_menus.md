@@ -177,7 +177,7 @@ The File tab has the following options:
 
 * New Project. 
 * Open Project. 
-* Checkout Project (from <stuido>SVN or</studio> Git repository). 
+* Checkout Project (from <studio>SVN or</studio> Git repository). 
 * Close Project. 
 * Recent Projects.
 
