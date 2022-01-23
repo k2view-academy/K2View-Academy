@@ -33,6 +33,17 @@ The config.ini parameters to configure the above are:
 * ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
 * ASYNC_LOAD_MAX_MEMORY_IN_MB, maximum memory to be allocated for the parallel load process. Set by default to 2000 MB.
 
+### Improve LUI partitioning - Experimental Feature
+
+Another major performance improvement was introduced on release 6.5.4, when dealing with a lot of entity chunks.
+
+The config.ini parameters to configure the above are:
+
+* ENABLE_PARTITIONED_MDB=true
+* ASYNC_LOAD_MAX_THREADS bigger than zero
+
+There is no upgrade path for existing projects, need to clean all data in Fabric and bring it back.
+It is recommended to turn this feature on only in case of dealing with really big LUIs that split into many chunks.
 
 
 [![Previous](/articles/images/Previous.png)](02_storage_management.md)
