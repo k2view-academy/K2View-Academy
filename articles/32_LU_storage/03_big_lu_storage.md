@@ -42,7 +42,7 @@ The parameters needed to configure Fabric to deal with a large amount of entity 
 * ENABLE_PARTITIONED_MDB=true
 * ASYNC_LOAD_MAX_THREADS bigger than zero
 
-They are to be added to the config.ini file. 
+They are to be enhanced on the config.ini file. 
 
 However, there is no upgrade path for existing projects. You must clean all data in Fabric and bring it back.
 It is recommended to turn this feature on only when dealing with very large LUIs that are split into multiple chunks.
