@@ -13,8 +13,17 @@
 <li><a href="/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md">Fabric Studio Java Code Validation</a></li>
 <li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Fabric Project</a></li>
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
+<studio>
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li> 
- 
-</ul>
+</studio>
+<web>
+<li><a href="20_web_command_keyboard_shortcuts.md">Command Palette and Keyboard Shortcuts</a></li>
+<li><a href="21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li>
+<li><a href="22_web_search.md">Search for terms and content</a></li>    
+<li><a href="23_web_versioncontrol.md">Using Source Control</a></li>
+<li><a href="24_web_debug.md">Code Debugging</a></li>    
+</web>        
 
+
+</ul>
 
