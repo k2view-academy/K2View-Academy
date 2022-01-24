@@ -4,10 +4,8 @@
 
 To start creating business intelligence reports, you must set up the metadata by defining the data sources, then its objects and joins in the **Admin** module of the BI application. This article explains how to do these tasks: 
 
-* Creation of [Data sources](03_Metadata_Setup.md#data-sources).
-* Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
-
-Note that each **data source** defined in the **Admin** module must have a corresponding **interface** in Fabric with the same name.
+* Creation of [Data sources](03_Metadata_Setup.md#data-sources), which establish the connection between the BI and a source database, to serve as a source for producing the reports and the dashboards. More than one data source can be created per each BI application.
+* Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins), which will serve as a reporting DB schema. BI can join data from different data sources into a single report. This can be done by creating the joins between the objects of different data sources.
 
 ### Defining Data Sources
 
@@ -17,7 +15,9 @@ The following type of data sources are supported:
 * PostgreSQL
 * Oracle
 
-See below the detailed explanation how to define each one of the above data source types.
+See below the detailed explanation how to define each one of the above data source types using the **BI Admin** module.
+
+![image](images/bi_admin.PNG)
 
 **How Do I Define Fabric as a Data Source?**
 
@@ -25,7 +25,7 @@ Fabric itself can be defined as a data source to allow creation of the reports b
 
 To set up Fabric as a data source, use the Fabric-Connection template in the **Admin** module as follows:
 
-1. Double click on **Sources** in the Report Tree and set the following:
+1. Right click on **Sources** in the Report Tree, click **Add** and set the following in the **New Data Source** window:
 
    ![image](images/bi_setup_fabric.PNG)
 
@@ -33,11 +33,12 @@ To set up Fabric as a data source, use the Fabric-Connection template in the **A
    * Type - select **Fabric**.
    * Connection String - define as follows:
 
-  ~~~bash
-  urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
-  ~~~
+      ~~~bash
+      urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
+      ~~~
 
-2. Click **Apply** to save the changes.
+2. Click ![image](images/bi_setup_7.PNG)to test the connection.
+3. Click **Apply** to save the changes.
 
 If BI is running on a docker, it can be connected to a local Fabric. In this case, set the **IPv4 Address** of your internet connection (by checking your machine's IP address) as a host in the Connection String.
 
@@ -52,11 +53,29 @@ To set up a PostgreSQL database as a data source, use the Postgres-Connection te
 
 ![image](images/bi_setup_postgres.PNG)
 
+Connection String:
+
+   ~~~
+   Server=<host>;Port=<port>;Database=<db_name>;User Id=<user>;Password=<password>;
+   ~~~
+
+Note that in order to retrieve the special characters (such as German special letters) correctly, you need to add the following to the Connection String:
+
+   ~~~
+   Unicode=true
+   ~~~
+
 **How Do I Define Oracle DB as a Data Source?**
 
 To set up an Oracle database as a data source, use the Oracle-Connection template in the **Admin** module and update the connection string:
 
 ![image](images/bi_setup_oracle.PNG)
+
+Connection String:
+
+   ~~~
+   Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=<host>)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=<database name)));User Id=<user>;Password=<password>
+   ~~~
 
 ### Objects and Joins
 
@@ -106,7 +125,7 @@ Once the data source is created, you must define its objects and joins. Objects 
 
 * If a table doesn’t have a primary key defined in Fabric, the object is created as **Incomplete** by the auto discovery process. In this case, you must set up the primary key manually. The LU's Root Table must have a primary key defined in a Fabric LU schema. 
 * The joins between incomplete tables are not created by the auto discovery process and must be created manually.
-* It is not required to define all data source's objects and joins in BI, but only those which are required for reports creation. However the LU's **Root table** and its respective joins must always be included in the data source metadata definition, even if it is not required for the report creation. [Click to get more details about the report creation based on Fabric LU tables](04_report_creation_guidelines.md).
+* It is not required to define all data source's objects and joins in BI, but only those which are required for reports creation. However the LU's **Root table** and its respective joins must always be included in the data source metadata definition, even if it is not required for the report creation. [Click to get more details about the report creation based on Fabric LU tables](05_report_creation_guidelines.md).
 * To include data across several data sources in the same report (for example, the data from Fabric and from PostgreSQL DB), you must manually create a join between the respective objects of these data sources. The same should be done when you need to include the LU and common tables data of the same Fabric in the report (since Fabric doesn't have a foreign key relation between the LU and common tables). 
 
 

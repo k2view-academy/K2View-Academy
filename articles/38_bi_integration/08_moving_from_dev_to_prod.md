@@ -1,23 +1,23 @@
 # BI Configuration Deployment to Production
 
-### Overview
+When moving the BI configuration from a non-production to a production environment, you must keep the sensitive information safe. The BI configuration parameters are stored in the **WebReports.XML** file, and include the following:
 
-**WebReports.XML** is the main BI configuration file which stores all the BI configurations, including  some sensitive data, such as the connection strings of the data sources. When updates in the **Admin** module are carried out by the user, the **WebReports.XML** file is updated and the encrypted **WebReports.XML.enc** file is created in the same location on the BI server.
+* Data sources definition (including sensitive data, such as the connection strings).
+* Metadata definition (object and joins).
+* Session parameters.
 
-To prevent access to sensitive information in a Production environment, the user access to the **Admin** module should be restricted and the **WebReports.XML** file should be removed, keeping the encrypted file only.
+The E2E process of deployment to a Production environment includes moving both the configuration parameters and the contents of the data (reports, dashboards). 
 
-### How Do I Restrict the Access to the Admin Module?
+The steps to do so are as follows: 
 
-Restrict the access to the **Admin** by doing one of the following:
+1. Move the reports to the production Storage Management DB. 
+   * This is performed by running a BI utility as explained [in the previous article](07_moving_reports_between_env.md).
+2. Update the BI Configuration in the Production environment with the relevant connection details. The purpose of this step is to update the connection details of the data sources defined in the WebReports.XML file with the Production environment connection details.
+   * This is performed by running a Fabric command **MOVE_TO_PROD_BI** described [in the next article](09_update_BI_configuration.md).
+3. Restrict the user access to the BI's Admin module as described [here](10_restrict_access_to_BI_Admin.md).
 
-* Run the [REVOKE command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#additional-commands)
 
-  Or
 
-* Via the Web Framework by opening **Admin** > **Security** > **Permissions**, and selecting a Role:
 
-<img src="images/permissions_setup_2.PNG" alt="image" />
 
-Then click the <img src="images/dots_icon.PNG" alt="image" /> icon and click **Revoke Resources**.
-
-[![Previous](/articles/images/Previous.png)](07_moving_reports_between_env.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_bi_admin_config.md)
+[![Previous](/articles/images/Previous.png)](07_moving_reports_between_env.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_update_BI_configuration.md)

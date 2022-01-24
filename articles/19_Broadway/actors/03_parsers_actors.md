@@ -44,7 +44,7 @@ if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
 
 The **XmlParser** Actor analyzes an input stream and outputs the objects found in the stream. 
 
-Starting with Fabric 6.5.3, there are two XMLParser Actors:
+Starting from Fabric 6.5.3, there are two XMLParser Actors:
 
 * The existing **XmlParser** Actor has been renamed to **XMLParserLegacy**. It supports parsing an XML with a list of objects only, without attributes.
 * The new **XMLParser** supports parsing an XML with a list of objects that can include attributes. And example of an XML that can be parsed by **XmlParser** Actor is shown below:
@@ -73,6 +73,8 @@ The enhanced functionality of the **XMLParser** Actor is that it enables setting
   * Both of the arguments are empty.
 * As a result of how these input arguments are set, there can be four different structures of the output object.
 * When an XML includes an element with attributes and a primitive value (not a nested XML element), setting **valueField** to **null** (empty value) is not supported.
+
+In addition, the enhanced **XMLParser** Actor enables determining if namespace information is added to the object by setting the input argument **namespaces** to true. 
 
 **Example of a parsed object when valueField = '_value' and attributesField = '__attributes'**
 
@@ -203,7 +205,7 @@ The enhanced functionality of the **XMLParser** Actor is that it enables setting
 }
 ~~~
 
-
+Starting from Fabric 6.5.4, the **XMLParser** Actor provides an ability to iterate on the XML elements. This feature enables handling large XML files without loading full XML to memory. To do so, set the **skipRoot** input argument to true and connect the input stream using an **Iterate** link type. Then the root is skipped and the Actor returns a stream of elements.
 
 ### Other Supported Parsers
 

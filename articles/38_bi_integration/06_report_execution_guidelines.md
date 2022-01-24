@@ -1,22 +1,24 @@
 # Report Execution Guidelines
 
-BI reports are created and executed using the BI's **Designer** module. 
+BI reports are created and executed using one of three methods: 
 
-Generation of a report without opening the BI application can be done by the  **GetExecute** REST API. The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
+  - [The BI's **Designer** module](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-generation-using-the-designer-module)
 
-In addition, the report generation can be done typing a direct link to a report in the browsers.
+  - [Using Fabric's **Jobs Mechanism**](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-generation-using-the-fabric-jobs-mechanism)
 
-The sections below explain about these options.
+  - [Using **Deep Link**](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-and-dashboards-generation-using-deep-link)
+
+The sections below describe these options.
 
 ### Reports Generation Using the Designer Module
 
 Generate the report in the **Designer** module using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
 
-You can setup various report generation options using the Report Options (applicable for Advance Reports) by clicking **Advanced** > **General Options**:
+You can set up various report generation options using the Report Options (applicable for Advance Reports) by clicking **Advanced** > **General Options**:
 
 ![img](images/report_adv.PNG)
 
-For example, you can define the report behavior when there is no qualified data for a report. It is done by setting the **No Data Qualify Display Mode** argument to one of the following options:
+For example, you can define the report behavior when there is no qualified data for a report. This is done by setting the **No Data Qualify Display Mode** argument to one of the following options:
 
 * **Show Message**: 
   * When running a report via the BI's Designer, **No Data Qualified** message is displayed.
@@ -53,9 +55,9 @@ Set the job parameters as follows:
 
 * The following are optional **ARGS**:
 
-  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). The filter parameters are sent as a JSON object. Only the **FilterText** and the **Values** parameters are required. The **FilterText** should include a data object and a column to filter on. **Operator** is set to 0 (EqualTo) by default.
+  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). The filter parameters are sent as a JSON object. Only the **FilterText** and the **Values** parameters are required. The **FilterText** should include a data object and a column on which to apply the filter. **Operator** is set to 0 (EqualTo) by default.
   * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation. The sort parameters are sent as a JSON object. The fields **EntityName** and **ColumnName** (data object and column to sort on) are required. The **AscendingFlag** is optional and set to false by default.
-  * **DATA_SOURCES_LIST** - this is a placeholder, the parameter will be available in future versions.
+  * **DATA_SOURCES_LIST** (optional) - starting from V6.5.4 it is possible to send different connection details for the report’s data sources than those which are defined in BI Admin. To do so, define a Fabric interface with the same name as a data source in BI Admin but with different connection details.
 
 
 [Click to get more information about the GetExecute REST API and the valid values of the data types of Filter and Sort structures.](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/)
@@ -81,19 +83,83 @@ startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe
 startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_20211101", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
 ~~~
 
-### Reports Generation Using Deep Link
+### Reports and Dashboards Generation Using Deep Link
 
-Generate the report using a direct link to it in a separate browser, as follows:
+Generate the report or a dashboard using a direct link to it in a separate browser, as follows:
 
 ~~~
 <host>:<port>/app/BI/<report path in BI>
 ~~~
 
-Where **report path in BI** is the full name of the report from the Root folder till the report name.
+Where **report path in BI** contains the full path of the report including the Root folder and all folders up to the report name.
 
 For example, the deep link to the report **mig_rep** under the folder **test_designer** running on a **localhost** is: 
 
 http://localhost:3213/app/BI/test_designer/mig_rep
+
+When a report or a dashboard name is unique, it is sufficient to provide the name only and skip the full path. For example, the deep link to the **Dashbrd-v0** dashboard under the folder **DemoProj** can be:
+
+http://localhost:3213/app/BI/Dashbrd-v0
+
+Starting from V6.5.4, report generation via a direct link is parameterized. This means you can send session parameters and a run-time filter. The syntax is: 
+
+~~~
+<host>:<port>/app/BI/<report path in BI>?pkey1=pval1&pkey2=pval2&k2filters=[encoded filter]
+~~~
+
+Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the report and, **pval1**, **pval2**, etc. respectively are the values of these parameters.
+
+**k2filters** is a run-time filter applied on the report results. It is not applicable for dashboards. Follow these steps to create a **k2filters** part of the URL:
+
+1. Prepare the filter object using the following syntax:
+
+   ~~~
+   k2filters=[{ "FilterText":table_name.column_name,"Values":[values]}]
+   ~~~
+
+   For example:
+
+   ~~~
+   [{ "FilterText": "ADDRESS.CITY", "Values": ["Berlin"] }]
+   ~~~
+
+   Note that the default operator is **EqualTo**. To use a different operator, add it to the filter as follows:
+
+   ~~~
+   [{ "FilterText": "table_name.column_name", "Operator": "NotEqualTo", "Values": [values] }]
+   ~~~
+
+2. Encode the whole filter message including the brackets using any URL Decoder tool, such as: https://meyerweb.com/eric/tools/dencoder/. 
+
+   The encoded string looks like this:
+
+   ~~~
+   %5B%7B%20%22FilterText%22%3A%20%22ADDRESS.CITY%22%2C%20%22Values%22%3A%20%5B%22Berlin%22%5D%20%7D%5D
+   ~~~
+
+3. Copy the encoded string to use it in the URL.
+
+**Example of a Link with Session Parameter**
+
+~~~
+http://localhost:3213/app/BI/subsc_list_per_cust?customer_id=345
+~~~
+
+**Example of a Link with a Run-Time Filter**
+
+First, prepare the filter, for example when the report results should be filtered by one of its columns, the syntax is as follows:
+
+~~~
+[{ "FilterText": "SUBSCRIBER_REF.SUBSCRIBER_DESC", "Values": ["SOHO"] }]
+~~~
+
+Then encode the filter and include it in the full URL as follows:
+
+~~~
+http://localhost:3213/app/BI/subsc_list_per_cust?k2filters=%5B%7B%20%22FilterText%22%3A%20%22SUBSCRIBER_REF.SUBSCRIBER_DESC%22%2C%20%22Values%22%3A%20%5B%22SOHO%22%5D%20%7D%5D
+~~~
+
+ [Click to get more information about the JavaScript API Filter data type valid values.](https://exagobi.com/support/administrators/javascript-api/javascript-api-filters-and-parameters/)
 
 
 

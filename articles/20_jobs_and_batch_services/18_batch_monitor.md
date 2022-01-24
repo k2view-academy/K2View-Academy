@@ -13,6 +13,14 @@ This window displays the list of batch processes in Fabric based on the filter c
 
 Go to the batch list winfow: navigate to **Admin > Processes > Batch** to open the batch process.
 
+Note that if the batch status is **GENERATE_IID_LIST**, i.e. the batch process is still generating the entity list,  the Completion column displays a spinner, since the total number of entities is unknown at this stage and the completion percentage cannot be calculated till the the entity list is generated:
+
+
+
+![batch_list_generate_iid_status](images/batch_list_with_generate_iid_list.png)
+
+
+
 Each batch process has its own record. Select the ```...``` button in the left side of each record and select **monitor** option to open the Batch Monitor window on the selected batch process:
 
 ![image](images/25_jobs_and_batch_services_batchMonitor1.PNG)
@@ -34,6 +42,13 @@ The batch Monitor Control banner allows you to cancel, pause, resume a paused ba
 Note that a cancelled batch process cannot be resumed. 
 
 ![image](images/31_jobs_and_batch_services_batchMonitor7.PNG)
+
+#### GENERATE_IID_LIST Status
+
+Batch processes that run on a large number of entities may take some time till the full entity list is generated. When the list generation starts and the batch status is GENERATE_IID_LIST, the total number of entities is still unknown. During the entity list processing, the control panel displays a running spinner, and the total number of entities flashes to indicate that the number of entities is still in process and not final at this stage:
+
+![image](images/batch_monitor_generate_iid_list.png)
+
 
 
 ### General Data
@@ -74,6 +89,7 @@ This panel provides a pie-chart view of the status of the entities being process
 
 ![image](images/33_jobs_and_batch_services_batchMonitor9.PNG)
 
+Note that when the batch status is **GENERATE_IID_LIST** the number of the unprocessed entities is still not final and can grow when the entity list is finalized.
 
 ### **Entities Detailed Status**
 
@@ -131,6 +147,8 @@ The summary of the execution of the batch process is shown on a per-node basis o
 - All Nodes: click this option to open the **Nodes Execution Summary** window with the summary record on the all nodes that run the batch process.
 
 
+
+Note that when the batch status is **GENERATE_IID_LIST** the number of the unprocessed entities is still not final and can grow when the entity list is finalized.
 
 [![Previous](/articles/images/Previous.png)](17_batch_process_flow.md)
 
