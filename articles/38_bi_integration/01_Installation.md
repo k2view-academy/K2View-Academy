@@ -39,7 +39,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 * **BI_PORT**, the listener port for the Storage Management DB. The default is 5432.
 * **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
 * **STORAGE_MGMT_DB_TYPE**, the type of Storage Management DB. The default is SQLite. The recommended Storage Management DB type is PostgreSQL.
-* **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Npgsql.
+* **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Devart.Data.PostgreSql.
 * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving the config.ini.
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several implementers. For example, set TABLE_PREFIX=dev1_. Once the table prefix is set, the default tables are created in the Storage Management DB and are used each time you connect to Fabric BI. 
 * **BI_REST_KEY**, a key to be used to authenticate REST requests from the Fabric server to Fabric BI.  The REST key is automatically encrypted upon saving the config.ini. You can use the default value during the development, however it is important to update it prior to moving the project to Production. [Click to get the explanation about how to update the REST key](99_bi_admin_config.md#REST-Key). 
@@ -58,7 +58,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 #STORAGE_MGMT_DB_NAME=StorageMgmt
 ## BI Storage Management type, the values are SQLite, PostgreSQL
 #STORAGE_MGMT_DB_TYPE=SQLite
-## BI Storage Management provider, the values are SQLite (for SQLite), Npgsql (for PostgreSQL)
+## BI Storage Management provider, the values are SQLite (for SQLite), Devart.Data.PostgreSql (for PostgreSQL)
 #STORAGE_MGMT_DB_PROVIDER=SQLite
 ## BI Storage Management user, empty for SQLite
 #STORAGE_MGMT_DB_USER=
