@@ -1,7 +1,7 @@
 # Example of Creating a Broadway Flow 
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
-Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records.
+Let's create a new Broadway flow that selects data from a DB table and creates a CSV file based on the selected DB records.
 
 #### Step 1 - Create a New Broadway Flow
 
@@ -34,20 +34,20 @@ Group By CASES.STATUS
 #### Step 3 - Read the Customer's List and Create a File
 1. The SQL query executed by the **DbCommand** returns several records. The next Stages run a loop on the selected records list. For each selected record, do the following:
 
-   - Build a JSON object.
-   - Write the JSON object to an output file.
+   - Build a CSV string from map.
+   - Write it to an output file.
 
- **Building a JSON Object for Each Selected Record**
+ **Building a CSV String for Each Selected Record**
 
-2. Click ![plus](images/plus_icon.png) in the right of the Flow window to create Stage 2 that builds a JSON object for each selected customer record.
+2. Click ![plus](images/plus_icon.png) in the right of the Flow window to create Stage 2 that builds a CSV string for each selected customer record.
 
-3. Add a **JsonStringify** Actor to Stage 2.
+3. Add a **CsvBuilder** Actor to Stage 2.
 
-4. Link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop.
+4. Link the **result** output parameter of the **DbCommand** Actor to the **maps** input parameter of the **CsvBuilder** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop.
 
    Read [Linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
-**Writing the JSON Object to an Output File of Each Selected Record**
+**Writing the String to an Output File of Each Selected Record**
 
 5. Add Stage 3 to the flow. Both Stages 2 and 3 have a grey background since they are included in the loop that has been opened by linking Stages 1 and 2 using the **Iterate** link type. 
 
@@ -58,7 +58,7 @@ Group By CASES.STATUS
 7. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
    - Set the **Interface** to **LocalFileSystem**.
-   - Set the **path's Population Type** to **Const** and set its value to **customer_list.json**. This parameter is populated by the file name created by the **FileWrite** Actor.
+   - Set the **path's Population Type** to **Const** and set its value to **customer_list.csv**. This parameter is populated by the file name created by the **FileWrite** Actor.
    - Set the **append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
     <img src="images/MyFirstFlow_Example_Stage3_FileWrite.png" alt="image" style="zoom:80%;" /> 
@@ -67,10 +67,10 @@ Group By CASES.STATUS
 
 8. The **FileWrite** Actor executes the following activities:
 
-   - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
-   - Writes each JSON object sent for each selected customer to the file. Note that since the **append** input argument is set to **false**, the data is not appended to the file but overrides the file on each flow run.
+   - Creates a new file named **customer_list.csv** under the working directory defined in the **LocalFileSystem** interface object.
+   - Writes each CSV string sent for each selected customer to the file. Note that since the **append** input argument is set to **false**, the data is not appended to the file but overrides the file on each flow run.
 
-9. Link the **JsonStringify** Actor's **string** output parameter to the **stream** input parameter of the **FileWrite** Actor.
+9. Link the **CsvBuilder** Actor's **csv** output parameter to the **stream** input parameter of the **FileWrite** Actor.
 
 10. Close the loop after executing Stage 3 by clicking ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage. 
 
@@ -103,7 +103,7 @@ The **DbCommand** Actor returns  a complex schema.  The Broadway Debug process *
 For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
    #### Step 5 - Check the Flow's Execution Results
 
-Check the local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from the CASE table.
+Check the local directory (C:\k2view\Broadway_Training) and open the new CSV file that contains the list of cases selected from the CASE table.
 
   
 
