@@ -3,6 +3,7 @@
 ## What Is a Logical Unit (LU) or Logical Unit Type (LUT)?
 A Logical Unit (LU or LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [(LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
 An LU is defined and configured in the Fabric Studio. These definitions are comprised of three main objects:
+
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of tables that hold the data of a Digital Entity including its columns, PKs, indexes and triggers.
 
 2. [**LU Table Population (ETL)**](/articles/07_table_population/01_table_population_overview.md): 
@@ -17,7 +18,7 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 * LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate  etc. data from the four data sources into the LU tables.
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
-![image](/articles/03_logical_units/images/1.1_LU_Overview.png)
+![image](images/1.1_LU_Overview.png)
 
 ## What Is a Logical Unit Instance (LUI)?
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database holding the data of one single Digital Entity in the LUT structure definition.
@@ -25,7 +26,7 @@ Using our example from above (Customer 360):
 * Assume that Company ABC has 35 million customers:
    * LU/LUT = Customer.
    * LUI = one single customer database.
-Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
+   Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
 
 ## Things to Consider Before Designing an LU 
 Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
