@@ -2,7 +2,7 @@
 
 Click the blue text to open the articles about the related TDM APIs of each step. 
 
-[<img src="images/task_basic_flow_1.png" alt="drawing" width="200pxl" style="zoom: 80%;" />](/02_get_task_list_API.md#get-tasks-by-filtering-parameters) Populate the "task_type" with "EXTRACT" and the "version_ind" with true.
+[<img src="images/task_basic_flow_1.png" alt="drawing" width="200pxl" style="zoom: 80%;" />](02_get_task_list_API.md#get-tasks-by-filtering-parameters) Populate the "task_type" with "EXTRACT" and the "version_ind" with true.
 
 [<img src="images/task_basic_flow_2.png" alt="drawing" width="200pxl" style="zoom:80%;" />](02_get_task_list_API.md)
 
