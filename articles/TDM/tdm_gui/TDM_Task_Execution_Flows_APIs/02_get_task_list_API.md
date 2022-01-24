@@ -141,7 +141,7 @@ custom_TDM_Tasks
 
 ### API Description
 
-The API invokes either  **/regularTasksByUser** API to bring regular tasks or **/VersionTasksByUser** API to bring data versioning (Data Flux) tasks. The selection of the API that is used to get the tasks for the user is based on the value of the **version_ind** input value: 
+The API invokes either  [regularTasksByUser](#get-regular-tasks) API to bring regular tasks or [VersionTasksByUser](#get-data-versioning-data-flux-tasks) API to bring data versioning (Data Flux) tasks. The selection of the API that is used to get the tasks for the user is based on the value of the **version_ind** input value: 
 
 - If the version_ind is **true** (get data versioning tasks): call the **/VersionTasksByUser** API.
 - If the version_ind is **false** or **empty**: call the  **/regularTasksByUser** API.
