@@ -409,7 +409,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   
 - **SET USER_ROLES** command, returns the list of roles of the connected user (valid since Fabric 6.4.2).
 
-- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance PK Column of the LU Root Table, otherwise the error message is displayed. 
+- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
 
   The following logic is performed on each SQL statement run:
 

@@ -240,7 +240,7 @@
 <p><strong><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a></strong></p>
 </td>
 <td width="516">
-<p>The main table in the Logical Unit. Each LU schema must have one Root Table. The Root Table holds the Instance ID (Instance PK Column) and is the root of the LU hierarchy.</p>
+<p>The main table in the Logical Unit. Each LU schema must have one Root Table. The Root Table holds the Instance ID ( Column) and is the root of the LU hierarchy.</p>
 </td>
 </tr>
 <tr>
@@ -355,6 +355,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 

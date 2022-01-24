@@ -24,10 +24,10 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><strong>Instance PK Column</strong></p>
+<p><strong>Instance ID Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the <a href="/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
+<p>A unique field that is used as the LU table Instance ID.</a></p>
 </td>
 </tr>
 <tr>
@@ -100,5 +100,6 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 </tbody>
 </table>
+
 
 [![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/03_table_indexes.md)

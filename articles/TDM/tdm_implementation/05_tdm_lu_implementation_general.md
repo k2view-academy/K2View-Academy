@@ -27,7 +27,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 ### Step 2 - Add the TDM Root Table and the Generic TDM Tables to the LU Schema
 
 1. Add the **FABRIC_TDM_ROOT** LU table to the LU Schema and set it as a [Root table](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md). 
-2. Set the **Instance PK** column to **k2_tdm_eid**.   
+2. Set the **Instance ID** column to **k2_tdm_eid**.   
 3. Add the **LU_PARAMS** and **INSTANCE_TABLE_COUNT** to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 4. In Parent LUs, add the **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** relationship tables to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 
@@ -39,7 +39,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 4. Add the LU_PARAMS LU table to each LU Schema (even if it is not required for defining LU parameters), so that the LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
- 
+
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
