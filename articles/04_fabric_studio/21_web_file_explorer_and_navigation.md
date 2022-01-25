@@ -2,11 +2,11 @@
 
 # Exploring, Navigating and Managing Files
 
-This article explains how to explore files and their contents in the Fabric Studio, including files accesible from the project tree explorer and via other utilities.
+This article explains how to explore files and their contents in the Fabric Web Studio, including files accessible from the Project Tree explorer and via other utilities.
 
  
 
-Fabric Studio is file and folder based. To explore your project it is recommended to open the Explorer View (opened by default) - the top most icon in the activity bar. The explorer that appears at the side bar contains two sub-views - the Project and the Open Editors.
+Fabric Web Studio is file and folder based. To explore your project it is recommended to open the Explorer View (opened by default) - the top most icon <img src="images/web/explorer.png" style="zoom:67%;" /> in the activity bar. The explorer that appears at the side bar contains two sub-views - the Project and the Open Editors.
 
 ## Project Explorer
 
@@ -28,13 +28,15 @@ After expanding a folder, the contents of the folder are shown in the Explorer. 
 
 You can select multiple files in the **File Explorer** and its **OPEN EDITORS** sub-view to run actions (such as Delete or Open) on multiple items. Use the `Ctrl/Cmd` key with `click` to select individual files and `Shift` + `click` to select a range. 
 
-> **Tip:** If you select two items, you can now use the context menu **Compare with Each other** command to quickly check the difference between two files.
+> **Tip:** If you select two items, you can now use the context menu **Compare with Each Other** command to quickly check the difference between two files.
 
 
 
-### Filtering the document tree
+### Filtering the Document Tree
 
 You can type to filter the currently visible files in the **File Explorer**. With the focus on the **File Explorer**, start to type part of the file name you want to match. You will see a filter box in the top-right of the **File Explorer** showing what you have typed so far and matching file names will be highlighted. When you press the cursor keys to move up and down the file list, it will jump between matching files or folders.
+
+<img src="images/web/21_1_filter_doc_tree.PNG" style="zoom:67%;" />
 
 Hovering over the filter box and selecting **Enable Filter on Type** will show only matching files/folders. Use the 'X' **Clear** button to clear the filter.
 
@@ -46,7 +48,7 @@ Hovering over the filter box and selecting **Enable Filter on Type** will show o
 
 At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This is a list of active files. These are files you previously opened and you are working on. 
 
-
+<img src="images/web/21_2_open_editors.PNG" style="zoom:67%;" />
 
 ## Search
 

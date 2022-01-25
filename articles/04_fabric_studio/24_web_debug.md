@@ -4,7 +4,7 @@
 
 One of the key features of the Fabric Web Studio is its debugging support. The built-in debugger helps accelerate your edit, compile and debug loop.
 
-> Note: This article covers code debugging. you can find [here](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) information about Broadway debugging.
+> Note: This article covers code debugging. You can find [here](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) information about Broadway debugging.
 
 
 
@@ -54,7 +54,7 @@ When debug is running, a Debug Console is opened at bottom panels area, where th
 
 
 
-## Start debugging
+## Start Debugging
 
 To start debugging your project implementation, click the Attach button.
 
@@ -62,7 +62,7 @@ To start debugging your project implementation, click the Attach button.
 
 The Status Bar then changes color (orange-brown for default color themes).
 
-### Debug actions
+### Debug Actions
 
 Once a debug session starts, the **Debug toolbar** becomes active.
 
@@ -73,7 +73,7 @@ Once a debug session starts, the **Debug toolbar** becomes active.
 - Restart `Ctrl+Shift+F5`
 - Stop `Shift+F5`
 
-### Data inspection
+### Data Inspection
 
 - Variables can be inspected in the **VARIABLES** section of the Debug View or by hovering over their source in the editor. Variable values and expression evaluation are relative to the selected stack frame in the **CALL STACK** section.
 
@@ -128,7 +128,7 @@ You will find **Run|Debug** on the [CodeLens](/blogs/2017/02/12/code-lens-roundu
 
 > Tip: While CodeLens is disabled, you can still access the **Run|Debug** actions by hovering over your `main()` function.
 
-#### Context menu
+#### Context Menu
 
 Another way to start debugging is to right-click a Java file in the File Explorer or editor and select **Run** or **Debug** in the context menu.
 

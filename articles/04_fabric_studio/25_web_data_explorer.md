@@ -4,13 +4,13 @@
 
 DB Interface Explorer View lets you exploring the project's data source - the DB interfaces, as well as fabric, and make actions along the Studio editors. 
 
-To bring up the Debug View, select the DB Interface Explorer icon in the **Activity Bar** on the side of Web Studio.
+To bring up the Debug View, select the DB Interface Explorer <img src="images/web/datasource_explorer.png" style="zoom:67%;" /> icon in the **Activity Bar** on the side of Web Studio.
 
  ![DB Explorer icon](images/web/25_1_db_exp_view.png)
 
 
 
-The view shows the project's DB interfaces list in a tree form. You can then expand each entry in the list to explorer schemas, tables, views, and columns, according to each database type structure and its hierarchy.
+The view shows the project's DB interfaces list in a tree form. You can then expand each entry in the list to explore schemas, tables, views, and columns, according to each database type structure and its hierarchy.
 
 According to the opened editor's context you can apply actions, like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB actors to Broadway and adding an SQL section to Graphit.
 
@@ -40,11 +40,11 @@ To open the Query Builder you can also click the DB icon appears near their name
 
 
 
- ![open QB](images/web/25_2_open_QB.jpg)
+ <img src="images/web/25_2_open_QB.jpg" alt="open QB" style="zoom:80%;" />
 
 
 
-## Add SQL statements to Fabric functions
+## Add SQL Statements to Fabric Functions
 
 When a Java file editor is opened and is in focus, you can right click to open the context menu and add code snippet of the SQL statement, for the selected table, using Fabric *fetch* helpers.
 
@@ -63,7 +63,7 @@ In the following illustrated example, specific columns from CASES table are sele
 
 
 
-## Add DB actors to Broadway
+## Add DB Actors to Broadway
 
 When a Broadway's file is opened and is in focus, you can right click to open the context menu and add actors for the selected table.
 
@@ -77,9 +77,9 @@ The actors that can be added:
 
 ![add bw actor](images/web/25_4_add_bw_actors.gif)
 
-## Add SQL section to Graphit
+## Add SQL Section to Graphit
 
- When a Graphit's file is opened and is in focus, you can right click to open the context menu and add SQL nodes for the selected table.
+ When a Graphit file is opened and is in focus, you can right click to open the context menu and add SQL nodes for the selected table.
 
 Nodes that can be added:
 

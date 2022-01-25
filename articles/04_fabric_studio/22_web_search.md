@@ -10,9 +10,9 @@ The Fabric Web Studio allows you to quickly search terms and content over all fi
 
 
 
-### Advanced search options
+### Advanced Search Options
 
-You can use the advanced search options which appear nearby the search box on the right, in addition to others which can be revealed by clicking the ellipsis (**Toggle Search Details**) .
+You can use the advanced search options which appear nearby the search box on the right, in addition to others which can be revealed by clicking the ellipsis ![](images/web/ellipsis.PNG) icon (**Toggle Search Details**) .
 
 The Search Widget also has four advanced search options:
 
@@ -31,7 +31,7 @@ In these two input boxes you can enter patterns to include or exclude from the s
 * `{}` to group conditions (for example `{**/*.html,**/*.txt}` matches all HTML and text files)
 * `[]` to **declare** a range of characters to match (`example.[0-9]` to match on `example.0`, `example.1`, …)
 
-### Search and replace
+### Search and Replace
 
 You can also Search and Replace across files. Expand the Search widget to display the Replace text box.
 

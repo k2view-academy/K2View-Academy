@@ -5,11 +5,11 @@
 
 The Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
 
-The Source Control icon in the Activity Bar on the left indicates an **overview of how many changes** you currently have in your repository. 
+The Source Control <img src="images/web/scm.png" style="zoom:67%;" /> icon in the Activity Bar on the left indicates an **overview of how many changes** you currently have in your repository. 
 
 
 
-Selecting the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
+Clicking the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
 
 > Tip: To bring up the Source Control View you can also use the keyboard shortcut `CTRL+SHIFT+G`.
 
@@ -33,7 +33,7 @@ More specific **Commit** actions can be found in the **Views and More Actions** 
 
 
 
-## Git Status Bar actions
+## Git Status Bar Actions
 
 There is a **Synchronize Changes** action in the Status Bar, next to the branch indicator, when the current checked out branch has an upstream branch configured. **Synchronize Changes** will pull remote changes down to your local repository and then push local commits to the upstream branch.
 
@@ -41,7 +41,7 @@ If there is no upstream branch configured and the Git repository has remotes set
 
 
 
-## Gutter indicators
+## Gutter Indicators
 
 If you open a folder that is a Git repository and begin making changes, Web Studio will add useful annotations to the gutter and to the overview ruler. These annotations appear near the line numbers.
 
@@ -51,11 +51,11 @@ If you open a folder that is a Git repository and begin making changes, Web Stud
 
 
 
-## Merge conflicts
+## Merge Conflicts
 
 Merge conflicts are recognized by Web Studio. Differences are highlighted and there are inline actions to accept either one or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
 
-## Viewing diffs
+## Viewing Diffs
 
 The Git tool supports viewing of diffs within Web Studio, showing original and changed file side by side.
 
