@@ -2,9 +2,9 @@
 
 # DB Interface Explorer
 
-DB Interface Explorer View lets you exploring the project's data source - the DB interfaces, as well as fabric, and make actions along the Studio editors. 
+DB Interface Explorer View lets you exploring the project's data source - the DB interfaces, as well as Fabric, and make actions along the Studio editors. 
 
-To bring up the Debug View, select the DB Interface Explorer <img src="images/web/datasource_explorer.png" style="zoom:67%;" /> icon in the **Activity Bar** on the side of Web Studio.
+To bring up this view, select the DB Interface Explorer <img src="images/web/datasource_explorer.png" style="zoom:67%;" /> icon in the **Activity Bar** on the side of Web Studio.
 
  ![DB Explorer icon](images/web/25_1_db_exp_view.png)
 
@@ -12,7 +12,7 @@ To bring up the Debug View, select the DB Interface Explorer <img src="images/we
 
 The view shows the project's DB interfaces list in a tree form. You can then expand each entry in the list to explore schemas, tables, views, and columns, according to each database type structure and its hierarchy.
 
-According to the opened editor's context you can apply actions, like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB actors to Broadway and adding an SQL section to Graphit.
+According to the opened editor's context you can apply actions, like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB Actors to Broadway and adding an SQL section to Graphit.
 
 Choose the required SQL statement by using context menu (right click) on relevant tree entry. The available statements are:
 
@@ -25,7 +25,7 @@ Choose the required SQL statement by using context menu (right click) on relevan
 
 
 
-Following are the actions you can make with the DB Explorer View:
+Following are the actions you can make with the DB Explorer View.
 
 ## Open the Query Builder
 
@@ -48,7 +48,7 @@ To open the Query Builder you can also click the DB icon appears near their name
 
 When a Java file editor is opened and is in focus, you can right click to open the context menu and add code snippet of the SQL statement, for the selected table, using Fabric *fetch* helpers.
 
-In the following illustrated example, specific columns from CASES table are selected at the DB Explorer. Then, using the right click context menu - the appropriate Java select statement code is added
+In the following illustrated example, specific columns from CASES table are selected at the DB Explorer. Then, using the right click context menu, the appropriate Java select statement code is added:
 
 ```java
     String sql = "select ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS"
@@ -79,7 +79,7 @@ The actors that can be added:
 
 ## Add SQL Section to Graphit
 
- When a Graphit file is opened and is in focus, you can right click to open the context menu and add SQL nodes for the selected table.
+When a Graphit file is opened and is in focus, you can right click to open the context menu and add SQL nodes for the selected table.
 
 Nodes that can be added:
 
