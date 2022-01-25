@@ -2,7 +2,7 @@
 
 ### How Do I Create a Database Interface?
 
-
+<!--studio
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 
 
@@ -32,10 +32,9 @@ The following screenshot displays a list of available Interface Types.
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
-{{< /toggler >}}
+-->
 
 
-<web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 
 
