@@ -6,36 +6,35 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 ## Docker Installation on Linux / Windows / MAC
 
-1. Download the Docker image (D_exago_debian_2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/uc9bLOYAyQbmCWc).
+1. Download the Docker image (D_k2vBI_ubuntu_2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/hDtKbxgv1gMylYs).
 
 2. Import the image using the following command:
 
    ~~~bash
-   docker load -i D_exago_debian_2021.1.15.tar.gz
+   docker load -i D_k2vBI_ubuntu_2021.1.15.tar.gz
    ~~~
 
 3. Start the Docker image as follows:
    ~~~bash
-   docker run -d --name=exago -p 80:80 k2v/exago_deb:2021.1.15
+   docker run -d --name=exago -p 80:80 exago_ubuntu:2021.15.1
    ~~~
 
    where **exago** is the docker name (you can define a different name if needed).
    
-4. Start the Apache and fastCGI services within the docker:
+4. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
+
+**Notes**
+ *. if it is needed to connect to an existing network, use the "--network='network name' " option. 
+
+*. To Manage the Apache and fastCGI services within the docker:
 
   ~~~bash
-  docker exec exago service apache2 start
+  docker exec exago service apache2 start|restart|stop|status
   ~~~
   
   ~~~bash
-  docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start
+  docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
   ~~~
-
-5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
-
-**Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
-
-
 
 **Directory Locations**
 
