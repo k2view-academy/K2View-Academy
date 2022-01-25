@@ -76,7 +76,7 @@ The DB Interface window enables you to define DB interfaces for your project. By
 #### Generic Interface Definition
 <!--studio
 ![image](images/05_04_03%20Generic%20Interface%20Definition.png)
--->
+
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the generic interface.
 
@@ -106,7 +106,7 @@ In this setting, value = a list of DB types to be created in an old format, sepa
 Note that it is **recommended** that you convert the existing interface into a generic format to avoid the need for ADO.NET/ODBC drivers. To do so, click the **Convert to Generic DB Interface** link.
 
 New generic interfaces cannot be converted to older interface formats based on ADO.NET/ODBC drivers. 
-
+-->
 #### Post Connection Commands
 The **Post Connection Commands** tab of the DB Interface window enables definition of multiple init commands to be executed post JDBC connection and before running SQL statements on the DB Interface. See the example below:
 <!--studio
