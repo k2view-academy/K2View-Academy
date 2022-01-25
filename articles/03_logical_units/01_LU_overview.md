@@ -18,7 +18,17 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 * LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate  etc. data from the four data sources into the LU tables.
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
+<studio>
+
 ![image](images/1.1_LU_Overview.png)
+
+</studio>
+
+<web>
+
+![image](images/web/1_web_lu_overview.PNG)
+
+</web>
 
 ## What Is a Logical Unit Instance (LUI)?
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database holding the data of one single Digital Entity in the LUT structure definition.
