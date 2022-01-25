@@ -6,7 +6,7 @@ A Broadway flow is built in Stages which are executed from left to right. Each S
 
 Occasionally there may be a need to iterate the output of an Actor and to handle each iteration. 
 
-For example, the  [Simple Broadway Flow](/05_create_broadway_flow.md#example---building-a-simple-broadway-flow) that you built in the previous lesson selects a list of customers from the database and then builds a JSON object for each customer and writes it into an output file.
+For example, the  [Simple Broadway Flow](/05_create_broadway_flow.md#example---building-a-simple-broadway-flow) that you built in the previous lesson selects a list of customers from the database and then builds a CSV string for each customer and writes it into an output file.
 
 You can add iterations to the flow either by:
 
