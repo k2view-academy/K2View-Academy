@@ -45,6 +45,10 @@ To create a new SFTP interface, do the following:
 <td>Regular expression.</td>
 </tr>
 <tr>
+<td><strong>Affinity</strong></td>
+<td>Affinity (Optional) populate this parameter with the IP address of a Fabric node, DC name, or logical identifier for Fabric nodes.</td>
+</tr>
+<tr>
 <td><strong>Actions</strong></td>
 <td>
 <p>Test Connection. Click to test the connection.</p>
@@ -53,6 +57,7 @@ To create a new SFTP interface, do the following:
 </tr>
 </tbody>
 </table>
+
 
 
 
