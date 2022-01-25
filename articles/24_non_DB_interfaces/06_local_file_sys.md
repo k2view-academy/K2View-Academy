@@ -30,8 +30,13 @@ To create a new interface, do the following:
 <td>&nbsp;<strong>Files filter</strong></td>
 <td>Filters files.</td>
 </tr>
+<tr>
+<td>&nbsp;<strong>Affinity</strong></td>
+<td>Affinity (Optional) populate this parameter with the IP address of a Fabric node, DC name, or logical identifier for Fabric nodes.</td>
+</tr>
 </tbody>
 </table>
+
 
 
 
