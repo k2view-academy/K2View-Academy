@@ -256,60 +256,59 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 The LU Schema toolbar includes the following elements:
 
 ![image](images/web/3_lu_schema_panel.PNG)
-
 <table>
 <tbody>
 <tr>
-<td width="60"><img src="images/web/group.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/group.PNG" alt="" /></td>
+<td width="550">
 <p>Group SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60"><img src="images/web/ungroup.PNG" /></td>
-<td width="557">
+<td width="150"><img src="images/web/ungroup.PNG" /></td>
+<td width="550">
 <p>Ungroup SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60"><img src="images/web/new_table.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/new_table.PNG" alt="" /></td>
+<td width="550">
 <p>New Table. Add new table to the schema.</p>
 </td>
 </tr>
  <tr>
-<td width="60"><img src="images/web/auto_layout.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/auto_layout.PNG" alt="" /></td>
+<td width="550">
 <p>Schema auto-layout.</p>
 </td>
 </tr> 
 <tr>
-<td width="60"><img src="images/web/data_viewer.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/data_viewer.PNG" alt="" /></td>
+<td width="550">
 <p>Open the Data Viewer to run queries on IID of the current LU.</p>
 </td>
 </tr>
   <tr>
-<td width="60"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
+<td width="550">
 <p>Open the Data Viewer in a context of a selected table of the current LU. You can switch between the schema tables. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
-<td width="60"><img src="images/web/navigation.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/navigation.PNG" alt="" /></td>
+<td width="550">
 <p>Open the navigation pane of the schema.</p>
 </td>
 </tr> 
  <tr>
-<td width="60"><img src="images/web/zoom.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/zoom.PNG" alt="" /></td>
+<td width="550">
 <p>Zoom in / zoom out.</p>
 </td>
 </tr> 
 <tr>
-<td width="60"><img src="images/web/search_t.PNG" alt="" /></td>
-<td width="557">
+<td width="150"><img src="images/web/search_t.PNG" alt="" /></td>
+<td width="5507">
 <p>Search a table in the LU schema.</p>
 </td>
 </tr> 
