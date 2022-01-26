@@ -5,8 +5,8 @@ Throughout a project’s lifecycle there are a number of reasons for modifying, 
 ### How Do I Change an Interface's Connection Settings?
 
 1.	Go to **Project Tree** > **Shared Objects** > **Interfaces** to open the **Interfaces list**. 
-2.	<!--studio Double click the **interface** to open it. -->
-3.	click the **interface** to open it.
+<!--studio2.	Double click the **interface** to open it. -->
+2.	click on the **interface** to open it.
 4.	Edit the [Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 5.	Click **Test Connection** to verify that the connection settings are correct:
        * If the connection is OK, the **Connection is OK notification** is displayed on the bottom of the window.
