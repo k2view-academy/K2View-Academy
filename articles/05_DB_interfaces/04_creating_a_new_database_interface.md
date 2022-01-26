@@ -44,7 +44,7 @@ The following screenshots display a list of available Interface Types.
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image](images/05_04_02_DB_Interface.PNG)
+![image](images/05_04_01_WEB3_interface_types.PNG)
 
 3. Populate the **DB Connection Name** and set **Active** to **True**.
 
