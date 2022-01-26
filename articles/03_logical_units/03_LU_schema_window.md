@@ -260,61 +260,62 @@ The LU Schema toolbar includes the following elements:
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td width="170pxl"><img src="images/web/group.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/group.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Group SubGraph.</p>
+<p>Group multiple tables.</p>
 </td>
 </tr>
 <tr>
-<td width="170pxl"><img src="images/web/ungroup.PNG" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.PNG" /></td>
 <td width="630pxl">
-<p>Ungroup SubGraph.</p>
+<p>Ungroup the tables.</p>
 </td>
 </tr>
 <tr>
-<td width="170pxl"><img src="images/web/new_table.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/new_table.PNG" alt="" /></td>
 <td width="630pxl">
-<p>New Table. Add new table to the schema.</p>
+<p>Add new table to the schema by either creating it or selecting from the list.</p>
 </td>
 </tr>
- <tr>
-<td width="170pxl"><img src="images/web/auto_layout.PNG" alt="" /></td>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/auto_layout.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Schema auto-layout.</p>
 </td>
-</tr> 
+</tr>
 <tr>
-<td width="170pxl"><img src="images/web/data_viewer.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the Data Viewer to run queries on IID of the current LU.</p>
 </td>
 </tr>
-  <tr>
-<td width="170pxl"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the Data Viewer in a context of a selected table of the current LU. You can switch between the schema tables. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
-<td width="170pxl"><img src="images/web/navigation.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/navigation.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Open the navigation pane of the schema.</p>
+<p>Open the navigation pane of the LU schema.</p>
 </td>
-</tr> 
- <tr>
-<td width="170pxl"><img src="images/web/zoom.PNG" alt="" /></td>
+</tr>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/zoom.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Zoom in / zoom out.</p>
 </td>
-</tr> 
+</tr>
 <tr>
-<td width="170pxl"><img src="images/web/search_t.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/search_t.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Search a table in the LU schema.</p>
 </td>
-</tr> 
+</tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
