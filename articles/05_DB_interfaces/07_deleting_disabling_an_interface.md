@@ -19,8 +19,7 @@ A database interface can be disabled temporarily whereby it is ignored by Fabric
 
 ### How Do I Disable an Interface?
 1.	Go to **Project Tree** > **Shared Objects** > **Interfaces** to open the **Interfaces list**. 
-2.	
-<studio>Double click the **interface** and then change **Active** to **False**. An interface can be enabled or disabled when needed.</studio>
+2.	<studio>Double click the **interface** and then change **Active** to **False**. An interface can be enabled or disabled when needed.</studio>
 <web>Click on the **interface** and then change the Active toggle button from  **ON** to **OFF**.</web>
 3.	**Save** the interface.
 
