@@ -40,7 +40,7 @@ The following screenshot displays a list of available Interface Types.
 
 The following screenshots display a list of available Interface Types.
 ![image](images/05_04_01_WEB1_interface_types.PNG)
-![image](images/05_04_01_WEB2_interface_types.PNG)
+
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
