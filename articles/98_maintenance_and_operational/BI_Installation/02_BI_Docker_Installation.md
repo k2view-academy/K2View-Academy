@@ -17,7 +17,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 4. Start the Docker image as follows:
    ~~~bash
-   docker run -d --name=exago -p 80:80 exago_ubuntu:2021.15.1
+   docker run -dt --name=exago -p 80:80 k2v/exago_ubuntu:2021.1.15
    ~~~
 
    where **exago** is the docker name (you can define a different name if needed).

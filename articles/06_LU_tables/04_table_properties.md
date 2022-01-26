@@ -102,4 +102,4 @@ The Properties tab displays a list of properties that must be defined for each L
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/03_table_indexes.md)
+[![Previous](/articles/images/Previous.png)](03_table_indexes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_business_tables.md)
