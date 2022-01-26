@@ -56,13 +56,16 @@ The following screenshots display a list of available Interface Types.
     * To check if the connection settings are correct, click the **Test Connection String**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
+
+![image](images/05_04_01_WEB3_interface_types.PNG)
+
     
 5. Optional: Edit the **Pool Properties**.
 
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
-![image](images/05_04_01_WEB3_interface_types.PNG)
+
 
 Note that if required, a new database type can be defined or an existing database type can be overwritten as a part of a product package.
 
