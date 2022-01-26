@@ -1,3 +1,5 @@
+<studio>
+   
 # Database Types
 
 ### Overview
@@ -91,7 +93,9 @@ Note that the JDBC drivers are not part of the [Fabric Deployment](/articles/01_
 ~~~
 /home/k2view/ExternalJars/
 ~~~
-
+   
+</studio>
 
 
 [![Previous](/articles/images/Previous.png)](09_fabric_API_for_DB_interfaces.md)
+
