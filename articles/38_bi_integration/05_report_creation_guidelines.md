@@ -26,7 +26,7 @@ One of the basic reports is a report based on data from a Fabric LU Instance. Fo
 
 8. Once the filter is set, click **Okay**. 
 
-### Creating Reports Based on Fabric Custom SQL
+### Creating Reports Based on Custom SQL
 
 Sometimes the report data requires writing a complex SQL query rather then just selecting columns from several joined tables. This is supported by a Customer SQL Object screen.
 
