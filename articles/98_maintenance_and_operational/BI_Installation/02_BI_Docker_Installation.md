@@ -21,19 +21,20 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    ~~~
 
    where **exago** is the docker name (you can define a different name if needed).
-5. Run the configuration script
+
+5. Run the configuration script:
 
 ~~~bash
 ./docker_config.sh {Container Name} {IP Address}|{Host Name}| {leave blank}
 ~~~
  
-   **docker name**: name of the running exago container
+   **docker name**: name of the running exago container.
    
-   **IP Adress**:container assigend IP or host local IP
+   **IP Adress**:container assigend IP or host local IP.
    
-   **Host Name**: container assigend Host Name
+   **Host Name**: container assigend Host Name.
    
-   To set IP automaticly, leave the second variable **blank**
+   To set IP automaticly, leave the second variable **blank**.
    
    
 6. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
