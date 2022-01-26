@@ -44,7 +44,7 @@ The following screenshots display a list of available Interface Types.
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image](images/05_04_01_WEB3_interface_types.PNG)
+![image](images/05_04_01_WEB5_interface_types.PNG)
 
 3. Populate the **DB Connection Name** and set **Active** to **True**.
 
@@ -62,7 +62,7 @@ The following screenshots display a list of available Interface Types.
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
-
+![image](images/05_04_01_WEB3_interface_types.PNG)
 
 Note that if required, a new database type can be defined or an existing database type can be overwritten as a part of a product package.
 
