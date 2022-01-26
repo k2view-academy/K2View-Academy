@@ -1,3 +1,5 @@
+<studio>
+
 # LU Properties
 
 The Properties tab in the LU schema window contains the following properties:
@@ -68,8 +70,7 @@ The Properties tab in the LU schema window contains the following properties:
 
 
 
-
-
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
 
+</studio>
 
