@@ -1,6 +1,10 @@
 {
 	"Branches": [
 		{
+			"display name": "Fabric 7.0",
+			"branch name": "Academy_7.0"
+		},
+		{
 			"display name": "Fabric 6.5",
 			"branch name": "Academy_6.5"
 		},
