@@ -37,6 +37,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    ~~~
    
    Replace {127.0.0.1} with the actual IP or DNS name.
+   
    C. Copy the file back to the container.
 
    ~~~bash
@@ -44,7 +45,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    ~~~
    
    In Linux environment, you can use the following script to automate the process.
-   Download the Docker Configuration Script (for Linux ) from [here](https://download.k2view.com/index.php/s/yBnXEWhq9SrTDX6) .
+   Download the Docker Configuration Script (for Linux) from [here](https://download.k2view.com/index.php/s/yBnXEWhq9SrTDX6).
 
 ~~~bash
 ./docker_config.sh {Container Name} {IP Address}|{Host Name}| {leave blank}
