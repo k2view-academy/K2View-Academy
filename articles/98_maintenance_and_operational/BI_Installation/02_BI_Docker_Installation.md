@@ -63,7 +63,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 **Notes**
 
 1. If it is needed to connect to an existing network, use the "--network='network name' " option.
-2. To Manage the Apache and fastCGI services within the docker:
+2. To manage the Apache and fastCGI services within the docker:
 
 ~~~bash
 docker exec exago service apache2 start|restart|stop|status
