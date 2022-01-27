@@ -38,24 +38,24 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    
 5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
-6. In Cloud enviroments (such as AWS and Azure) or when Local IP is not accessible (behind NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** need to be updated with the correct DNS/IP record.
-update the line
+6. In Cloud environments (such as AWS and Azure) or when Local IP is not accessible (behind NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** need to be updated with the correct DNS/IP record.
+Update the line:
 ~~~
 webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl> 
 ~~~
-and replace the local IP with the Current Information.
+​		and replace the local IP with the current Information.
 
 
-7. In order to start the enviroment or after system restart make sure the Apache service and FastCGI service are running.
-   **FastCGI** managment script is located in the installation folder of exago (usualy **'/opt/apps/exago'**)
+7. In order to start the environment or after system restart make sure the Apache service and FastCGI service are running.
+   **FastCGI** management script is located in the installation folder of Exago (usualy **'/opt/apps/exago'**).
    
-   To Manage the FastCGI service:
+   To manage the FastCGI service:
    
    ~~~bash
    ./fastcgi.sh start|stop|restart|status
    ~~~
    
-   To Managethe  apache service:
+   To manage the  apache service:
    
    ~~~bash
    service apache2 start|stop|restart|status
@@ -71,25 +71,16 @@ and replace the local IP with the Current Information.
 <td style="width: 50%; height: 18px;">/opt/apps/exago/bin</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">API for Exago Web Service</td>
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/WebServiceApi</td>
+<td style="width: 50%; height: 18px;">API for Exago Web Service</td><td style="width: 50%; height: 18px;">/opt/apps/exago/WebServiceApi</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">3rd Party’s Utilities</td>
-
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/Utilities</td>
+<td style="width: 50%; height: 18px;">3rd Party’s Utilities</td><td style="width: 50%; height: 18px;">/opt/apps/exago/Utilities</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">3rd Party’s Drivers</td>
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/Drivers</td>
+<td style="width: 50%; height: 18px;">3rd Party’s Drivers</td><td style="width: 50%; height: 18px;">/opt/apps/exago/Drivers</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">Personalization Configuration</td>
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/Config</td>
+<td style="width: 50%; height: 18px;">Personalization Configuration</td><td style="width: 50%; height: 18px;">/opt/apps/exago/Config</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">Exago Report Scheduler</td>
@@ -97,4 +88,3 @@ and replace the local IP with the Current Information.
 </tr>
 </tbody>
 </table>
-
