@@ -34,7 +34,7 @@ The BI solution uses the Fabric **config.ini** to retrieve information about the
 
 Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
-* **BI_HOST**, the IP address of the Fabric BI server.
+* **BI_HOST**, the IP address of the Fabric BI server. When BI runs on a docker, use the host IP. Do not use localhost or 127.0.0.1 as BI host.
 * **STORAGE_MGMT_HOST**, the IP address of the Storage Management DB. Empty for SQLite DB.
 * **BI_PORT**, the listener port for the Storage Management DB. The default is 5432.
 * **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
