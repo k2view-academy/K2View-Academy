@@ -4,54 +4,75 @@
 
 The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric BI starts from ExagoBI application installation. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
 
-## Docker Installation on Linux / Windows / MAC
+## Docker Installation on Linux / Windows / OSX
 
-1. Download the Docker image (D_k2vBI_ubuntu_2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/hDtKbxgv1gMylYs).
-2. Download the Docker Configuration Script (for Linux ) from [here](https://download.k2view.com/index.php/s/yBnXEWhq9SrTDX6) .
+1. Download the Docker image (D_k2view_BI_v2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/vZ2heS6xpqtMX0w).
 
-3. Import the image using the following command:
+2. Import the image using the following command:
 
    ~~~bash
-   docker load -i D_k2vBI_ubuntu_2021.1.15.tar.gz
+   docker load -i D_k2view_BI_v2021.1.15.tar.gz
    ~~~
+   
+3. Start the Docker image as follows:
 
-4. Start the Docker image as follows:
    ~~~bash
-   docker run -dt --name=exago -p 80:80 k2v/exago_ubuntu:2021.1.15
+   docker run -dt --name=exago -p 80:80 k2view/exagobi:2021.1.15
    ~~~
 
    where **exago** is the docker name (you can define a different name if needed).
+   
+4. Update file WebServiceApi.xml with the Container host IP:
 
-5. Run the configuration script:
+   A. Copy the file WebReportsApi.xml from the container:
+
+   ~~~bash
+   docker cp exago:/opt/apps/exago/WebServiceApi/Config/WebReportsApi.xml .
+   ~~~
+
+   B. Edit the file with a text editor, update the URL with the host IP or DNS name:
+   
+   ~~~
+   <webreportsbaseurl>http://127.0.0.1/Exago</webreportsbaseurl>
+   ~~~
+   
+   Replace {127.0.0.1} with the actual IP or DNS name.
+   
+   C. Copy the file back to the container.
+
+   ~~~bash
+   docker cp WebReportsApi.xml exago:/opt/apps/exago/WebServiceApi/Config/WebReportsApi.xml
+   ~~~
+   
+   In Linux environment, you can use the following script to automate the process.
+   Download the Docker Configuration Script (for Linux) from [here](https://download.k2view.com/index.php/s/yBnXEWhq9SrTDX6).
 
 ~~~bash
 ./docker_config.sh {Container Name} {IP Address}|{Host Name}| {leave blank}
 ~~~
- 
-   **docker name**: name of the running exago container.
-   
-   **IP Adress**:container assigend IP or host local IP.
-   
-   **Host Name**: container assigend Host Name.
-   
-   To set IP automaticly, leave the second variable **blank**.
-   
-   
-6. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
+  - docker name: name of the running Exago container.
+
+  - IP Address: container assigned IP or host local IP.
+
+  - Host Name: container assigned Host Name.
+
+  - To set IP automatically, leave the second variable **blank**.
+
+5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
 **Notes**
- 1. if it is needed to connect to an existing network, use the "--network='network name' " option. 
 
-2. To Manage the Apache and fastCGI services within the docker:
+1. If it is needed to connect to an existing network, use the "--network='network name' " option.
+2. To manage the Apache and fastCGI services within the docker:
 
-  ~~~bash
-  docker exec exago service apache2 start|restart|stop|status
-  ~~~
-  
-  ~~~bash
-  docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
-  ~~~
+~~~bash
+docker exec exago service apache2 start|restart|stop|status
+~~~
+
+~~~bash
+docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
+~~~
 
 **Directory Locations**
 
@@ -63,23 +84,18 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">API for Exago Web Service</td>
-
 <td style="width: 50%; height: 18px;">/opt/apps/exago/WebServiceApi</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">3rd Party’s Utilities</td>
-
 <td style="width: 50%; height: 18px;">/opt/apps/exago/Utilities</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">3rd Party’s Drivers</td>
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/Drivers</td>
+    <td style="width: 50%; height: 18px;">/opt/apps/exago/Drivers</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">Personalization Configuration</td>
-
-<td style="width: 50%; height: 18px;">/opt/apps/exago/Config</td>
+<td style="width: 50%; height: 18px;">Personalization Configuration</td><td style="width: 50%; height: 18px;">/opt/apps/exago/Config</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">Exago Report Scheduler</td>

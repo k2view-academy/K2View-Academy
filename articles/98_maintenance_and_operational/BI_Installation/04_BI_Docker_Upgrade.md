@@ -17,17 +17,17 @@ docker cp exago:/opt/apps/exago/Config/WebReports.xml /file/location/
 
 2. Stop & delete the existing container.
 
-3. Download the updated Docker image (D_K2V_BI_v2021.1.14.tar.gz) from [here](https://download.k2view.com/index.php/s/9eUCeEMeiGFvoYA).
+3. Download the updated Docker image (D_k2view_BI_v2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/vZ2heS6xpqtMX0w).
 
 4. Import the image using the following command:
 
    ~~~bash
-   docker load -i D_K2V_BI_v2021.1.14.tar.gz
+   docker load -i D_k2view_BI_v2021.1.15.tar.gz
    ~~~
 
 5. Start the Docker image as follows:
    ~~~bash
-   docker run -dt -e container=docker --name=exago -p 80:80 --cap-add SYS_ADMIN k2view/exagobi:v2021.1.14 bash -c 'mount -oremount,rw /sys/fs/cgroup; mkdir /sys/fs/cgroup/systemd; mount -oremount,ro /sys/fs/cgroup; exec /usr/sbin/init'
+   ddocker run -dt --name=exago -p 80:80 k2view/exagobi:2021.1.15
    ~~~
 
 6. Restore the backed up configuration XML file.
