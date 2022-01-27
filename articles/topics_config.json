@@ -21,14 +21,14 @@
 		{
 			"view name": "studio",
 			"tooltip": "Studio",
-			"default": true,
+			"default": false,
 			"icon on": "images/icon_studio_on.png",
 			"icon off": "images/icon_studio_off.png"
 		},
 		{
 			"view name": "web",
 			"tooltip": "Web",
-			"default": false,
+			"default": true,
 			"icon on": "images/icon_web_on.png",
 			"icon off": "images/icon_web_off.png"
 		}
