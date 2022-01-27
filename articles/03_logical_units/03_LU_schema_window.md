@@ -262,13 +262,13 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/group.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Group multiple tables.</p>
+<p>Group the selected tables.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.PNG" /></td>
 <td width="630pxl">
-<p>Ungroup the tables.</p>
+<p>Remove the selected tables from the group.</p>
 </td>
 </tr>
 <tr>
@@ -315,6 +315,7 @@ The LU Schema toolbar includes the following elements:
 </tr>
 </tbody>
 </table>
+
 
 
 

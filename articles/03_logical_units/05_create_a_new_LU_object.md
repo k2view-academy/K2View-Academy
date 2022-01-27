@@ -43,7 +43,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md), also kn
 
      ![](images/web/5_create_lu_schema.PNG)
 
-   * Click on the table that should be an LU Root Table and set it as root using the table context menu.
+   * Click on the table that should be an LU Root Table and set it as root using the table context menu. Note that only a table which has no input connections can be set as root.
 
      ![](images/web/5_create_lu_schema_set_root.PNG)
 

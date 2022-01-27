@@ -1,14 +1,10 @@
 # Delete a Table from an LU Schema
 
-<studio>
-
 To remove a table from the LU schema, open the [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md), click the required table and press the **Delete** key. Then save the changes in the LU Schema.
-
-</studio>
 
 <web>
 
-To remove a table from the LU schema, open the [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md), click the required table and delete it using the table context menu.
+Alternatively, you can delete a table using the table context menu.
 
 ![](images/web/10_delete_table.PNG)
 
