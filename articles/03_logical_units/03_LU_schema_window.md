@@ -165,7 +165,8 @@ The LU Tabs display the schema properties and they can be collapsed or expanded 
 <p><strong>Sync</strong></p>
 </td>
 <td width="630pxl">
-<p>Contains the sync settings on an LU level.</p>
+<p>Sets the sync properties and <a href="/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
+<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered upon a Sync's success or failure or after a successful Delete instance.</p>
 </td>
 </tr>
 <tr>
@@ -194,6 +195,7 @@ The LU Tabs display the schema properties and they can be collapsed or expanded 
 </tr>
 </tbody>
 </table>
+
 
 </web>
 

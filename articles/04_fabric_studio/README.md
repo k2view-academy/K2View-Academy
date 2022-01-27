@@ -21,7 +21,8 @@
 <li><a href="21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li>
 <li><a href="22_web_search.md">Search for Terms and Content</a></li>    
 <li><a href="23_web_versioncontrol.md">Using Source Control</a></li>
-<li><a href="24_web_debug.md">Code Debugging</a></li>    
+<li><a href="24_web_debug.md">Code Debugging</a></li>   
+<li><a href="25_web_data_explorer.md">DB Interface Explorer</a></li>    
 </web>        
 
 
