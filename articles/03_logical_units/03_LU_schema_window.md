@@ -11,11 +11,13 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 * [Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
 <studio>
+    
 * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
 * Parsers.
 * Instance Groups: lists of instances to be migrated into Fabric for the LU. 
 * Jobs.
 * IIDFinder. 
+    
 </studio>
 
 ### Opening the Logical Unit (LU) Window
