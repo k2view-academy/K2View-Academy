@@ -7,7 +7,7 @@ Working installation of ExagoBI previous version.
 
 ## Upgrading Linux
 
-1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/IUh31pFMPA1yJY8) into a temporary directory.
+1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/uqSlM6wJjLUeKlC) into a temporary directory.
 
 2. Download the the K2View additional files and upgrade script from [here](https://download.k2view.com/index.php/s/vESr1KlaEAewNuu) into a temporary directory.
 
@@ -18,10 +18,10 @@ Working installation of ExagoBI previous version.
    ~~~
 
 4. Run the installation script with 2 variables: the installation folder **/opt/apps/exago** and the ExagoBI installation file name. 
-   In the example, the installation filename is: **ExagoInstaller_v2021.1.14.226.tgz**.
+   In the example, the installation filename is: **ExagoInstaller_v2021.1.15.239**.
 
    ~~~bash
-   ./k2view_exago_upgrade.sh /opt/apps/exago ExagoInstaller_v2021.1.14.226.tgz
+   ./k2view_exago_upgrade.sh /opt/apps/exago ExagoInstaller_v2021.1.15.239
    ~~~
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
