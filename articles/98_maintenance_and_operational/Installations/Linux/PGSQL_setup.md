@@ -81,8 +81,8 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
    
   ~~~bash
   cd ~/
-  psql -d TDMDB -f -a ~/k2vtdm2.sql
-  psql -d TDMDB -f -a ~/k2vtdm3.sql
+  psql -d TDMDB -a -f ~/k2vtdm2.sql
+  psql -d TDMDB -a -f ~/k2vtdm3.sql
   ~~~
 
 ## How to Connect From pgadmib4 in TLS Mode
