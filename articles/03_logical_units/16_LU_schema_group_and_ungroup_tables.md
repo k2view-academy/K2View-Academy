@@ -2,21 +2,38 @@
 
 An LU schema may include a large number of [tables](/articles/06_LU_tables/01_LU_tables_overview.md). To make the structure of the table schema clearer, group or ungroup list of tables. 
 
-For example, group all Billing Tables in the Customer LU, see below:
+For example, see below a group of tables marked with a title and a different color:
 
-![image](/articles/03_logical_units/images/1.7_pic_2_grouped_paragpraph.png)
+<studio>
 
-## How Can I Group LU Tables?
-1. Select the **objects** in the **table** to be grouped.
+![image](images/1.7_pic_2_grouped_paragpraph.png)
+
+### How Can I Group LU Tables?
+1. Select the tables to be grouped.
 1. Click the **Group SubGraph** icon in the **Logical Unit** toolbar.
 1. Click the **Grouped SubGraph** and edit the name of the **Group**.
 
-## How Can I Ungroup LU Tables? 
-Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon:
+### How Can I Ungroup LU Tables? 
+Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon.
 
-\
-[Click for more information about the Diagram Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
-\
-[Click for more information about Logical Unit Schema Window Toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar)
+</studio>
+
+<web>
+
+![image](images/web/1_web_lu_overview.PNG)
+
+### How Can I Group LU Tables?
+
+1. Select the tables to be grouped. 
+2. Click the <img src="images/web/group.PNG" style="zoom:67%;" /> icon in the **Logical Unit** toolbar.
+3. Click the group's title and edit the name.
+
+### How Can I Ungroup LU Tables? 
+
+1. Select one or more tables to be removed from the group.
+2. Click the <img src="images/web/ungroup.PNG" style="zoom:67%;" /> icon in the **Logical Unit** toolbar.
+3. When all the tables are removed from the group, the group is deleted.
+
+ </web>
 
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/17_LU_schema_change_root_table.md)

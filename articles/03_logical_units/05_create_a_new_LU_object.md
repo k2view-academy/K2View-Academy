@@ -43,11 +43,11 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md), also kn
 
      ![](images/web/5_create_lu_schema.PNG)
 
-   * Click on the table that should be an LU Root Table and set it as root using the table context menu. Note that only a table which has no input connections can be set as root.
+   * Click on the table that should be an LU Root Table and set it as root using the table context menu. Only a table with no input connections can be set as root.
 
      ![](images/web/5_create_lu_schema_set_root.PNG)
 
-   * After the table is set as root, the table properties tab is opened to set the required Instance ID Column. In addition, the color of the root table's header is changed to dark blue.
+   * After the table is set as root, the table properties tab is opened to set the required Instance ID column. In addition, the color of the root table's header is changed to dark blue.
 
    * Save your changes once all the required tables are added to the LU Schema.
 

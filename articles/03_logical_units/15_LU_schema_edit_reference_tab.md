@@ -1,17 +1,17 @@
 # LU Schema - Editing References Tab
 
-## What Are Reference Tables?
+### What Are Reference Tables?
 Fabric enables creating [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) which can be used by all Logical Units.
 A Reference table typically contains metadata that is referenced by different LU instances of a specific LU, by instances from a different LU or by Web Services. For example, a postal-code table that identifies the postal code of customer addresses. 
- 
 
-## LU Schema - Reference Tab
+
+### LU Schema - Reference Tab
 The Reference tab displays a list of the common Reference tables defined in the project. 
 To ensure that a [Reference table](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method) in an LU schema is always populated when synching an instance for the first time, check the Reference table in the list in the Reference tab.
 
 Click [here](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md) for more information about Reference Tables.
 
-## How Do I Edit a Reference Tab? 
+### How Do I Edit a Reference Tab? 
 1. Open the **LU Schema Window** and click the **References tab** to display the **Reference Tables** list. 
 1. Check the **Reference Table** to create a **Lookup Object** in the **Reference Table** in the **LU Population**.
 

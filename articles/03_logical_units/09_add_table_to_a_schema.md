@@ -44,7 +44,7 @@ The following are some of the methods you can use to add a table to an [LU schem
 
 
 
-[Click for more information about LU Table Creation.](/articles/06_LU_tables/02_create_an_LU_table.md) - additional methods of creating and adding an LU table are shown there. 
+[Click for more information about LU Table Creation.](/articles/06_LU_tables/02_create_an_LU_table.md)  
 
 [Click for more information about LU Tables and Table Population.](/articles/07_table_population/01_table_population_overview.md)
 
