@@ -19,19 +19,19 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/uqSlM6wJjLUeKlC) into a temporary directory.
 
-2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/g4ixtpPnIIcDb0T) into a temporary directory.
+2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/Atl1eRGCd82UrzL) into a temporary directory.
 
 3. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command as a user with root permissions:
 
    ~~~bash
-   tar -zxvf exago_installer_debian.tar.gz
+   tar -zxvf K2V_BI_installer.tar.gz
    ~~~
 
 4. Run the installation script with 2 variables: the installation folder **/opt/apps/exago** and the ExagoBI installation file name. 
    In the example, the installation filename is: **ExagoInstaller_v2021.1.15.239**.
 
    ~~~bash
-   ./k2view_exago_install.sh /opt/apps/exago ExagoInstaller_v2021.1.15.239
+   ./k2view_BI_install.sh /opt/apps/exago ExagoInstaller_v2021.1.15.239
    ~~~
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
