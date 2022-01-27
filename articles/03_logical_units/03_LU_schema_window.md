@@ -5,28 +5,18 @@ A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a t
 
 The following objects are located under each [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
 * [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema).
-
 * Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md).
-
 * Resources, files that can be saved as part of a project. For example, an Excel file.
-
 * [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
-
 * [Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
-  <studio>
-
+<studio>
 * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
-
 * Parsers.
-
 * Instance Groups: lists of instances to be migrated into Fabric for the LU. 
-
 * Jobs.
-
 * IIDFinder. 
-
-  </studio>
+</studio>
 
 ### Opening the Logical Unit (LU) Window
 Go to the **Project Tree**, click the **LU Name** and then click the **Schema** to open the **Logical Unit** window.
