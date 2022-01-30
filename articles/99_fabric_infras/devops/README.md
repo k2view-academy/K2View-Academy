@@ -10,7 +10,7 @@
     <li><a href="/articles/99_fabric_infras/devops/06_kafka_hardening.md">Kafka Hardening</a></li>
     <li><a href="/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md">Connect Fabric to Kafka in SSL mode</a></li>
     <li><a href="/articles/99_fabric_infras/devops/08_oracleGG_hardening.md">Oracle GG (Golden Gate) Big Data Setup with Kafka SSL</a></li>
-    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Fabric - Replace the Fabric Defulte Admin Password</a></li>
+    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Fabric - Replace the Fabric Default Admin Password</a></li>
     <li><a href="/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md">Fabric - Defined Working with Master Key</a></li>
 </ul>
 
