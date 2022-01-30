@@ -1,3 +1,5 @@
+<studio>
+
 # Refresh LU Options
 
 The **Logical Unit toolbar** has two Refresh icons:
@@ -10,4 +12,7 @@ The **Logical Unit toolbar** has two Refresh icons:
 Note that Update Tables from Database does not delete or add tables to the LU schema and does not delete columns from LU tables. These updates must be implemented  manually. 
 
 
+
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/17_LU_schema_change_root_table.md)
+
+</studio>
