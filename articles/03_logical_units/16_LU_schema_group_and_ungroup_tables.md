@@ -1,4 +1,4 @@
-# LU Schema - Group and Ungroup Tables
+# Group and Ungroup LU Tables
 
 An LU schema may include a large number of [tables](/articles/06_LU_tables/01_LU_tables_overview.md). To make the structure of the table schema clearer, group or ungroup list of tables. 
 

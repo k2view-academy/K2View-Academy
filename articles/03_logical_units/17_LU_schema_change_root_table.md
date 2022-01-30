@@ -1,4 +1,4 @@
-# LU Schema - Change Root Table
+# Change LU Root Table
 
 Each LU schema must have a [Root Table](/articles/01_fabric_overview/02_fabric_glossary.md#root-table) and [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) column.  
 

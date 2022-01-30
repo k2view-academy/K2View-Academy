@@ -51,7 +51,9 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md), also kn
 
    * Save your changes once all the required tables are added to the LU Schema.
 
-</web>
 
-[![Previous](/articles/images/Previous.png)](04_LU_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_add_table_to_a_schema.md)
+
+[![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_add_table_to_a_schema.md)
+
+</web>
 

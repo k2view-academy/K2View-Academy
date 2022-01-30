@@ -20,10 +20,10 @@
 	<li><a href="/articles/03_logical_units/13_disable_enable_populations_in_schema.md">Disable and Enable Populations in LU Schema</a></li>
 	<li><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md">Edit Enrichment Order</a></li>
 	<li><a href="/articles/03_logical_units/15_LU_schema_edit_reference_tab.md">Editing References Tab</a></li>
-	<li><a href="/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md">LU Schema - Group and Ungroup Tables</a></li>
-	<li><a href="/articles/03_logical_units/17_LU_schema_change_root_table.md">LU Schema - Change Root Table</a></li>
+	<li><a href="/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md">Group and Ungroup LU Tables</a></li>
+	<li><a href="/articles/03_logical_units/17_LU_schema_change_root_table.md">Change LU Root Table</a></li>
 	<studio>
-	<li><a href="/articles/03_logical_units/18_LU_schema_refresh_LU_options.md">LU Schema - Refresh LU Options</a></li>
+	<li><a href="/articles/03_logical_units/18_LU_schema_refresh_LU_options.md">Refresh LU Options</a></li>
 	</studio>
 </ul>
 
