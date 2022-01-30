@@ -16,11 +16,13 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Call the API if the task has an entity list. Send the provisioning on (target) environment and the entity list. 
 
-[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_retention_period_for_entity_reservation.md) Get the retention period options for entity reservation
+[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_APIs.md) Get the retention period options for entity reservation
 
-[<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) 
+[<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters)
 
-[<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overriden parameters of the selected task.
+[<img src="images/task_validate_reservation_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_APIs.md) Validate the reservation period if the reservation indicator is true and the user is added as a tester to the target environment.
+
+[<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overridden parameters of the selected task.
 
 [<img src="images/task_basic_flow_5.png" alt="drawing" width="200pxl" style="zoom:80%;" />](05_task_execution_monitoring_API.md) Send the task_id of the selected task.
 
