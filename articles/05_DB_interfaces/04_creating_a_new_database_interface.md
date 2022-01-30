@@ -3,6 +3,7 @@
 ### How Do I Create a Database Interface?
 
 <studio>
+    
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 
 
@@ -32,9 +33,13 @@ The following screenshot displays a list of available Interface Types.
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
+    
+    
 </studio>
 
 <web>
+    
+    
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 
 
@@ -109,15 +114,25 @@ In this setting, value = a list of DB types to be created in an old format, sepa
 Note that it is **recommended** that you convert the existing interface into a generic format to avoid the need for ADO.NET/ODBC drivers. To do so, click the **Convert to Generic DB Interface** link.
 
 New generic interfaces cannot be converted to older interface formats based on ADO.NET/ODBC drivers. 
+    
+    
 </studio>
+
+
 #### Post Connection Commands
 The **Post Connection Commands** tab of the DB Interface window enables definition of multiple init commands to be executed post JDBC connection and before running SQL statements on the DB Interface. See the example below:
+
 <studio>
 ![post connection](images/db_interface_post_connection_commands.png)
+    
+    
 </studio>
 
 <web>
+    
 ![post connection](images/05_04_01_WEB3_interface_types.PNG)
+    
+    
 </web>
 
 [![Previous](/articles/images/Previous.png)](03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_adding_a_fabric_remote_interface_type.md)
