@@ -20,7 +20,11 @@ The following parameters can be set:
 - **sourceEnvironmentName**: source environment name
 - **targetEnvironmentName**: target environment name 
 - **taskGlobals**: list of Global variables and their values. 
-- **numberOfEntities**: populated by a number to change the number of entities processed by the task. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
+- **numberOfEntities**: populated with a number to change the number of entities processed by the task. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
+- **dataVersionExecId**: populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.
+- **dataVersionRetentionPeriod**: populated with the the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks..) and the value.
+-  **reservationInd**: true/false. Set to true if the task execution needs to reserve the entities on the target environment. The parameter is relavant for load or reserve TDM tasks.
+-  **reservationPeriod**: populated with the the reservation period of the task's entities. This parameter is contains the unit (Hours, Days, Weeks..) and the value.
 
 The task execution is validated whether the execution parameters are overridden or taken from the task itself.
 
@@ -31,6 +35,7 @@ The task execution is validated whether the execution parameters are overridden 
 - Do not enable an execution if another execution with the same execution parameters is already running on the task.
 - Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
+- Validate the number of reserved entities: if the task reserves the entities wheather the reservationInd is set to true in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
 
 If at least one of the validations fail, the API does not start the task and returns the validation errors.
 
@@ -43,6 +48,7 @@ Below is the list of the validation codes, returned by the API:
 - ReplaceSequence
 - DeleteBeforeLoad
 - syncMode
+- totalNumberOfReservedEntities
 
 #### Start the Task Execution
 
@@ -62,16 +68,26 @@ If the validations pass successfully, start the task execution by populating the
 
   ```json
   {
-    "entitieslist": "string",
-    "sourceEnvironmentName": "string",
-    "targetEnvironmentName": "string",
-    "taskGlobals": {
-      "additionalProp1": "string",
-      "additionalProp2": "string",
-      "additionalProp3": "string"
-    },
-    "numberOfEntities": 0
+  "entitieslist": "string",
+  "sourceEnvironmentName": "string",
+  "targetEnvironmentName": "string",
+  "taskGlobals": {
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  },
+  "numberOfEntities": 0,
+  "dataVersionExecId": 0,
+  "dataVersionRetentionPeriod": {
+    "additionalProp1": "string",
+    "additionalProp2": "string"
+  },
+  "reservationInd": true,
+  "reservationPeriod": {
+    "additionalProp1": "string",
+    "additionalProp2": "string"
   }
+}
   ```
 
   
@@ -94,11 +110,15 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"sourceEnvironmentName": "SRC1",
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
-	"MASKING_FLAG": "0",
-	"Customer.Global2": "value2"
-	"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
+		"MASKING_FLAG": "0",
+		"Customer.Global2": "value2"
+		"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
 	},
-	"numberOfEntities": 14 
+	"reservationInd": true,
+  	"reservationPeriod": {
+    		"unit": "Days",
+		"value": "10"
+  }
 	
 }
 ```
@@ -112,13 +132,41 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"sourceEnvironmentName": "SRC1",
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
-	"MASKING_FLAG": "0",
+		"MASKING_FLAG": "0",
 	"Customer.Global2": "value2"
 	},
  "numberOfEntities": 10
 }
 ```
 
+##### Example 3 - Data Versioning Load Task
+Override the selected version
+
+```json
+{
+	"sourceEnvironmentName": "TAR1",
+	"targetEnvironmentName": "TAR1",
+	"taskGlobals": {
+		"MASKING_FLAG": "0"
+	},
+ "dataVersionExecId": 10
+}
+```
+
+##### Example 4 - Data Versioning Extract Task
+```json
+{
+	"entitieslist": "1,2,4,9,8,11,33",
+	"sourceEnvironmentName": "TAR1",
+	"taskGlobals": {
+		"MASKING_FLAG": "0"
+	},
+ 	"dataVersionRetentionPeriod": {
+		"unit": "Days",
+		"value": "10"
+	}
+}
+```
 
 
 ### API Output Examples
