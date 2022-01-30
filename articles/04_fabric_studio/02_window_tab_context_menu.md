@@ -141,6 +141,10 @@ Right click the **Window Tab Header** to display a context menu with the followi
 
 ![image](images/web/2_window_tab_header.PNG)
 
+
+
+
+
 <table width="700pxl">
 <tbody>
 <tr>
