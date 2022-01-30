@@ -13,7 +13,19 @@ As an integrated tool, the Fabric Studio allows you to:
 
 The Fabric Studio also enables you to integrate your projects into source version control systems based on Git <studio>or the Apache Sub-version (SVN) Standard</studio>.
 
-[Click for more information about Best Practices for Working with GIT <studio>and SVN</studio>.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+<studio>
+
+[Click for more information about Best Practices for Working with GIT and SVN](07_best_practices_for_working_with_GIT_and_SVN.md).
+
+</studio>
+
+<web>
+
+[Click for more information about Best Practices for Working with GIT](07_best_practices_for_working_with_GIT.md).
+
+</web>
+
+
 
 ## Get Started
 
@@ -317,16 +329,28 @@ The Project Tree displays the components of the current project as a hierarchy o
 
 * Project, the top-level of the hierarchy. Each project has the following branches (sub-objects): 
   * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include a sub-hierarchy, as follows:
-    * Environments. 
-    * Templates
-    * Database types. 
-    * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md). 
+    * Database types, [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md). 
+    
     * Java, [Java files](/articles/04_fabric_studio/09_logic_files_and_categories.md), [Functions](/articles/07_table_population/08_project_functions.md) and [Globals](/articles/08_globals/01_globals_overview.md). 
+    
     * Resource files. 
-    * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md). 
+    
     * [Broadway flows](/articles/19_Broadway/01_broadway_overview.md). 
+    
+      <studio>
+    
+    * Environments. 
+    
+    * Templates.
+    
+    * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md). 
+    
+    </studio>
+  
 * References, reference information that may be used throughout the instance. References includes also [common project's tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
+
 * [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), a collection of all functions that are defined as Web Services for this project.
+
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 **Note:** All operations performed in the project tree’s options are accessible from the context menus of the different components in the project tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the project tree.

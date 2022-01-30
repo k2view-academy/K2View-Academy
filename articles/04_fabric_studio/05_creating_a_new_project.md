@@ -1,7 +1,7 @@
 # Creating a New Project
 
 ### What Is a Fabric Project?
-A Fabric project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb) structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the project must be defined in the Fabric Studio and can then be added to either GIT or SVN version control. 
+A Fabric project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb) structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the project must be defined in the Fabric Studio and can then be added to GIT <studio>or SVN</studio> version control. 
 
 [Click for more information about Fabric Studio UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
@@ -11,9 +11,11 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 
 
+<studio>
+
 ### How Do I Create a New Project?
 
-1. Go to the **Start Page** or click the **File** icon <img src="/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
+1. Go to the **Start Page** or click the **File** icon <img src="images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
 3. Verify that the **default directory** displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new project to SVN or Git. It is recommended to save and commit the new project as a baseline.
@@ -25,7 +27,7 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 **Notes**
 * Only one project can be deployed to a specific Fabric server / cluster. Therefore, when defining the project’s physical saved name(.K2proj), make sure that it is meaningful, for example, the project’s business purpose.  The project’s logical name can be edited in the Fabric Studio. 
 * To find the deployed project’s name, execute the **Fabric set;** command from the Fabric console.
- 
+
 [Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
 
 [Click for more information about Adding Fabric Projects to Version Controls.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
@@ -34,28 +36,30 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 
 ### How Do I Access a Fabric Project?
 
-1. Either:\
-   a. Go to the **K2view Fabric Studio Start Page** and click **Open Project**.\
-   b. Click **File** in the top left corner and then click **Open Project** to open the default Fabric Project Directory.     
+1. Either:
+   * Go to the **K2view Fabric Studio Start Page** and click **Open Project**.
+   * Click **File** in the top left corner and then click **Open Project** to open the default Fabric Project Directory.     
 2. Go to the **Project Folder** (it has the name of the project) and double click the **.k2proj file**.
-3. Do the following to check out a project:\
-   a. Go to the **Start Page** or click **File** and then click **Checkout Project** to display the Checkout Project dialog box.\
-   b. The **Repository Type** is based on the central version control defined for the project and is one of the following:
+3. Do the following to check out a project:
+   * Go to the **Start Page** or click **File** and then click **Checkout Project** to display the Checkout Project dialog box.
+   * The **Repository Type** is based on the central version control defined for the project and is one of the following:
 
 **GIT**
 
-![image](/articles/04_fabric_studio/images/04_05_02%20GIT.jpg)
-
+![image](images/04_05_02%20GIT.jpg)
 
 **SVN** 
 
-![image](/articles/04_fabric_studio/images/04_05_03%20SVN.jpg)
+![image](images/04_05_03%20SVN.jpg)
 
 4. Once checked out, the project is created locally.
 
 [Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
- 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04_user_preferences.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+</studio>
 
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04_user_preferences.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
