@@ -16,14 +16,12 @@
 <studio>
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li> 
 </studio>
-<web>
-<li><a href="20_web_command_keyboard_shortcuts.md">Command Palette and Keyboard Shortcuts</a></li>
-<li><a href="21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li>
-<li><a href="22_web_search.md">Search for Terms and Content</a></li>    
-<li><a href="23_web_versioncontrol.md">Using Source Control</a></li>
-<li><a href="24_web_debug.md">Code Debugging</a></li>   
-<li><a href="25_web_data_explorer.md">DB Interface Explorer</a></li>    
-</web>        
+<web><li><a href="20_web_command_keyboard_shortcuts.md">Command Palette and Keyboard Shortcuts</a></li></web> 
+<web><li><a href="21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li></web> 
+<web><li><a href="22_web_search.md">Search for Terms and Content</a></li></web>     
+<web><li><a href="23_web_versioncontrol.md">Using Source Control</a></li></web> 
+<web><li><a href="24_web_debug.md">Code Debugging</a></li></web> 
+<web><li><a href="25_web_data_explorer.md">DB Interface Explorer</a></li></web>        
 
 
 </ul>
