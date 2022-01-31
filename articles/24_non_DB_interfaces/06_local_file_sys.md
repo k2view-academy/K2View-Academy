@@ -73,12 +73,15 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
    * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
+<studio>
+   
 4. In the Jobs window, select the **Broadway flow** and **Execution mode** and then save the job.
 
    ![images](images/02_sftp_2.PNG)
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
 
+</studio>
 
 
 [![Previous](/articles/images/Previous.png)](05_HTTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_custom_interface.md) 
