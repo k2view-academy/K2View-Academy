@@ -68,7 +68,7 @@ To create a search index on a column, do either:
 - Right click the selected column > **Create Search Index From Selected Columns** > select the index type.
 - Open the **Search** tab and populate the **Column Name** and **Type**. 
 
-Note that Fabric Studio does not enable defining more than 63 columns in the same LU table as CDC fields, assuming that all columns are positioned according to 1 to 63 in the LU table.
+Note that Fabric Studio does not enable defining more than 63 columns in the same LU table as CDC fields, assuming that all columns are positioned according to 1 to 63 in the LU table. This limitation is not valid from release 6.5.4 and on.
 
 ### Search Field Types
 
