@@ -1,3 +1,5 @@
+<studio>
+
 # Creating a New Table Population
 
 A **Table Population** can be created by either:
@@ -45,3 +47,5 @@ When an LU table has two populations, a second Table Population can extract data
     * Connect the fields **manually**.
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/02_source_object_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/04_table_population_properties_tab.md)
+
+</studio>

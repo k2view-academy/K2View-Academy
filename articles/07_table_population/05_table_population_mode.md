@@ -20,7 +20,7 @@ To define a key:
 **Example:**
 Update the NEW_NOTE column of the target table ACTIVITY for each ACTIVITY_ID of the source object.
 
-![image](/articles/07_table_population/images/07_05_01_screen.png)
+![image](images/07_05_01_screen.png)
 
 *	The ACTIVITY_ID column on the target LU table is defined as a **key column** for the **UPDATE** statement.
 *	The **k2_concat5** function maps the updated value to the NEW_NOTE column on ACTIVITY table. 
