@@ -87,7 +87,7 @@ If the validations pass successfully, start the task execution by populating the
     "additionalProp1": "string",
     "additionalProp2": "string"
   }
-}
+  }
   ```
 
   
@@ -111,7 +111,7 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
 		"MASKING_FLAG": "0",
-		"Customer.Global2": "value2"
+		"Customer.Global2": "value2",
 		"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
 	},
 	"reservationInd": true,
@@ -133,7 +133,7 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
 		"MASKING_FLAG": "0",
-	"Customer.Global2": "value2"
+		"Customer.Global2": "value2"
 	},
  "numberOfEntities": 10
 }
