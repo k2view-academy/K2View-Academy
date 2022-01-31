@@ -30,7 +30,7 @@ To create a new interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Custom** from the **Others** section to open the **New Interface** window.
 
-2. Enter a suitable name for your new JMS Interface, then click **Create**:
+2. Enter a suitable name for your new Custom Interface, then click **Create**:
    ![image](images/custom_1WEB.PNG)
 
 2. Populate the connection's settings and click **Save**.
