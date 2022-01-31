@@ -10,7 +10,8 @@ A **Table Population** can be created by:
 
 * Using the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU table and a DB query population for each LU table.
 
-  </studio>
+</studio>
+
 
 * By right clicking the [**Table Name**] under the **Project Tree** and then clicking **New Population**. 
 
