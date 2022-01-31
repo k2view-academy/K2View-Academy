@@ -327,9 +327,9 @@ TDM supports the override of the following parameters:
 - **reservationInd**: true/false. Set to true if the task execution needs to reserve the entities on the target environment. The parameter is relavant for load or reserve TDM tasks.
 - **reservationPeriod**: populated with the the reservation period of the task's entities. This parameter is contains the unit (Hours, Days, Weeks..) and the value.
 
-Notes:
+Note:
 - The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
-- The execution parameters override is not supported for Data Flux tasks.
+
 
 ### Validate the Task Execution Parameters
 
