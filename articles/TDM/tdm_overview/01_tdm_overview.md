@@ -1,6 +1,6 @@
 # What is the Test Data Management (TDM) Platform? 
 
-<a href="https://www.k2view.com/products/test-data-management/" target="_blank">Test Data Management (TDM)</a> offers an automated solution for provisioning subsets of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from source systems into selected testing environments to provide real, high-quality data to testing teams.
+<a href="https://www.k2view.com/products/test-data-management/" target="_blank">Test Data Management (TDM)</a> offers an automated solution for provisioning subsets of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from source systems into selected testing environments to provide real, high-quality data to testing teams. 
 
 While enterprise IT continues to adopt DevOps to accelerate delivery of solutions to both internal and external customers, one thing still holds them back - provisioning realistic data to test these solutions in a timely manner. With increasing complexity and system interdependencies, testing budgets now consume a large portion of all IT resources, and yet the time required for testing brings the agility of DevOps to a halt.
 
