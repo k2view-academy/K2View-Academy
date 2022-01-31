@@ -1,3 +1,13 @@
+<web>
+   
+# Database Types
+
+This feature is not yet available on Fabric 7. Stay tuned.
+   
+</web>
+   
+
+
 <studio>
    
 # Database Types
