@@ -6,11 +6,29 @@ When creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/
 
 To create a new SFTP interface, do the following:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
+<studio>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **File System** section to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
-
+   
+   
 2. Populate the connection's settings and click **Save**.
+</studio>
+
+<web>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
+
+2. Enter a suitable name for your new SFTP Interface, then click **Create**
+  
+   ![image](images/02_sftp_1WEB.PNG)
+
+   
+3. Populate the connection's settings and click **Save**.
+
+   ![image](images/02_sftp_1WEB2.PNG)
+
+</web>
+   
 
 ### Connection Settings
 
@@ -52,7 +70,9 @@ To create a new SFTP interface, do the following:
 <td><strong>Actions</strong></td>
 <td>
 <p>Test Connection. Click to test the connection.</p>
+<studio>
 <p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
+</studio>
 </td>
 </tr>
 </tbody>
@@ -60,7 +80,7 @@ To create a new SFTP interface, do the following:
 
 
 
-
+<studio>
 
 ### Example of Using an SFTP Interface
 
@@ -82,6 +102,7 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
 
+</studio>
 
 ### Using the InterfaceListener Actor 
 
