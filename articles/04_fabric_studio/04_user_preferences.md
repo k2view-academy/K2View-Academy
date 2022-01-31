@@ -1,8 +1,11 @@
 # User Preferences
 
 ### What Are User Preferences Used For?
-User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.\
-To open the User Preferences options, click the [Tools](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
+User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.
+
+<studio>
+
+To open the User Preferences options, click the <img src="images/04_01_02_icon5.png" style="zoom:67%;" /> icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
 
 ![image](images/04_04_01_user_pref.PNG)
 
@@ -206,6 +209,17 @@ The following SVN preferences can be configured:
 </tr>
 </tbody>
 </table>
+
+
+</studio>
+
+<web>
+
+
+
+</web>
+
+### 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/03_diagram_and_toolbars.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
