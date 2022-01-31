@@ -47,6 +47,6 @@ The population mode of the target LU table is defined by the Actor used at the *
 
 
 
-[![Previous](/articles/images/Previous.png)](14_table_population_based_Broadway.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_table_population_transformation_rules.md)
+[![Previous](/articles/images/Previous.png)](14_table_population_based_Broadway.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_fabric_built_in_functions.md)
 
 </web>

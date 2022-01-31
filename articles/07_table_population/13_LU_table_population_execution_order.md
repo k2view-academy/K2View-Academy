@@ -21,7 +21,7 @@ An LU table may have more than one Table Population. By default, all populations
 The following diagram displays an LU schema with four tables: Customer, Subscriber, Activity and Address.
 
 
-![image](/articles/07_table_population/images/07_13_01_screen.png)
+![image](images/07_13_01_screen.png)
 
 *	**Customer** is a Root Table. It has one population. Its execution order = 1, indicating that the Customer table will always be populated first in the LU.
 *	**Subscriber** and **Activity** tables are on the second level in the LU schema’s hierarchy: 
@@ -46,7 +46,7 @@ Go to the [**LU Schema window**](/articles/03_logical_units/03_LU_schema_window.
 
 Go to the [**LU Schema window**](/articles/03_logical_units/03_LU_schema_window.md), click the right corner of **Table Population** and unselect **Disable Population**. The red **No Entry** icon next to the execution order is not displayed.
 
-![image](/articles/07_table_population/images/07_13_02_screen2.png)
+![image](images/07_13_02_screen2.png)
 
 **Note**: At least one population must be enabled in the root table.
 

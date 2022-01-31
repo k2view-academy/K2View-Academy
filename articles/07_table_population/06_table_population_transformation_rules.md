@@ -1,3 +1,5 @@
+<studio>
+
 # Table Population Transformation Rules
 
 Data transformation rules can be applied during the [LU Table Population](/articles/07_table_population/01_table_population_overview.md) process in a number of ways using the following tools: 
@@ -49,3 +51,5 @@ For improved performance, it is recommended to create lookups based on an LU tab
 A lookup returns only one record for each input record. For example, if the population needs to get a customer’s bills and to add a billing address to each record, define the Address table as a lookup table connected to the Bill table.
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/05_table_population_mode.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/07_fabric_built_in_functions.md)
+
+</studio>
