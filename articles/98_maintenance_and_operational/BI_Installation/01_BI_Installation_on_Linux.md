@@ -38,7 +38,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    
 5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
-6. In Cloud environments (such as AWS and Azure) or when Local IP is not accessible (behind NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** need to be updated with the correct DNS/IP record.
+6. In Cloud environments (such as AWS and Azure) or when Local IP is not accessible (behind NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** needs to be updated with the correct DNS/IP record.
 Update the line:
 ~~~
 webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl> 
@@ -55,7 +55,7 @@ webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl>
    ./fastcgi.sh start|stop|restart|status
    ~~~
    
-   To manage the  apache service:
+   To manage the Apache service:
    
    ~~~bash
    service apache2 start|stop|restart|status
@@ -88,3 +88,5 @@ webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl>
 </tr>
 </tbody>
 </table>
+
+
