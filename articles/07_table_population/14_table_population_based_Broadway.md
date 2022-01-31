@@ -74,22 +74,7 @@ The following example displays a Broadway flow template created to populate the 
 
 * **Post Load** Stage, a placeholder added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This feature is  similar to using an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
 
-### How Do I Create a Population Based on a Broadway Flow?
 
-The starting points for creating a population based on a Broadway flow are:
-
-* [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
-* [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
-  * Right click and select **New table from SQL based Broadway flow**.
-  * Drag a DB table and select **Create table based Broadway flow**.
-* Project Tree, right click a table object and select **Create Table Population based Broadway Flow**.
-* Reference, right click and select **Create References from DB tables**.
-
-The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface, and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
-
-Note that for the population to be effective on the server side, LU deployment is required. When running in debug mode, the deployment to debug is performed automatically.
-
-[Click for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
 ### Example of Creating a Population Based Broadway Flow
 
@@ -106,6 +91,18 @@ Note that for the population to be effective on the server side, LU deployment i
 
 [Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[Click to display an example of a population flow in the Demo project.](/articles/demo_project/README.md)
 
-[![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)
+
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_table_population_properties_tab.md)
+
+
+
+
+
+<web>
+
+
+
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_table_population_mode.md)
+
+</web>

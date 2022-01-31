@@ -10,11 +10,11 @@ Data transformation rules can be applied during the [LU Table Population](/artic
 Data transformation is performed from the source object’s data to the target LU table’s data. Since the source object includes one or more records, the transformation is applied on each source record. 
 When defining data transformation rules, the object’s Input and Output fields must be connected to a source table, target table and/or other objects in the population, as displayed in the following example: 
 
-![image](/articles/07_table_population/images/07_06_01_screen.png)
+![image](images/07_06_01_screen.png)
 
 Data transformation rules are set in the [Table Population](/articles/07_table_population/01_table_population_overview.md) map or [Parser Map] in the Objects tab in the Table Population or Parser Map windows. 
 
-![image](/articles/07_table_population/images/07_06_02_objects_menu.png)
+![image](images/07_06_02_objects_menu.png)
 
 ### Functions
 Functions can be added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) map to apply various data transformations. There are two types of functions: 
@@ -24,11 +24,11 @@ Both Built-in and Project functions can be either connected in a map (Table Popu
 Note that [Root functions](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) which are also displayed in the Objects tab can only be used as a source object and not for data transformation. 
 
 ### Translations and Globals
- 
+
 [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) and [Globals](/articles/08_globals/01_globals_overview.md) can be added to a Table Population map to transform the data from one set of values to another. Translations and Globals are defined either under an [LU](/articles/03_logical_units/01_LU_overview.md) or under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md). Those defined under Shared Objects are available for all LUs in a project.
 
 ### Constants
- 
+
 Constants are hard-coded values that can be used in a [Table Population](/articles/07_table_population/01_table_population_overview.md) map to set a constant value. The scope of a constant is in the current Fabric object where the constant is defined. Constants are not managed as variables in Fabric and cannot be used by various Fabric objects.
 
 To add a **Constant** to the Table Population:
