@@ -155,9 +155,11 @@ Currently it supports the following filtering parameters:
 - **delete_before_load** : true/false 
 - **selection_method** : below is the list of the valid values:
   - 'L' (Entity list)
-  - 'P' or 'PR' (Parameters), 
-  - 'S' (Synthetic), 
+  - 'P' or 'PR' (Parameters) 
+  - 'S' (Entity Clone), 
   - 'R' (Random) 
+  - 'C' (Custom Logic)
+  - 'ALL' (Extract tasks: select a predefined entity list. Load Data Versioning tasks: select all entities of the selected version) 
   -  'REF' (Reference Only)
 - **sync_mode** : OFF/FORCE
 
