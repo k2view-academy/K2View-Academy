@@ -6,13 +6,13 @@ In both cases the retention period is a combination of **unit** (Hours, Days, We
 
 An admin user of the environment's owner can set unlimited retention period by populating the value with zero.
 
-However, a tester user is limited and can set a retention period that does not exceed the [maximum retention period](10_retention_period_options.md) defined on Data Versioning extract task and entity's reservation period.
+However, a tester user is limited and can set a retention period that does not exceed the [maximum retention period](10_retention_period_options.md) defined on extract task and entity's reservation period.
 
 Therefore the retention period, either set on the task itself of the overridden execution parameters, **needs to be validated for a tester user** to verify that it does not exceed the maximum period.
 
 ## Which Task Requires a Retention Period Validation?
 
-### Data Versioning Extract Task
+### Extract Task
 
 Validate the retention period for the user whether it is set in the overridden parameters or taken from the [task itself](03_get_task_details_APIs.md).
 
@@ -26,7 +26,7 @@ Validate the retention period for the user whether it is set in the overridden p
 
 ## How Do I Identify a User as a Tester?
 
-### Data Versioning Extract Task
+### Extract Task
 
 #### 1. The Task's Source Environment is Overridden by the User
 
@@ -63,7 +63,7 @@ Get the maximum number of days from the [retentionperiodinfo](10_retention_perio
       }
   ```
 
-- **maxRetentionPeriodForExtract** attribute returns the maximum number of days to be set in the retention period for **Data Versioning extract tasks**. 
+- **maxRetentionPeriodForExtract** attribute returns the maximum number of days to be set in the retention period for **extract tasks**. 
 
   Example: 
 
