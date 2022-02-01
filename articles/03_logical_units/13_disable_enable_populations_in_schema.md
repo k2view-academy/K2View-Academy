@@ -19,6 +19,8 @@ Go to the [Schema window](/articles/03_logical_units/03_LU_schema_window.md), ri
 ### How Can I Enable a Population?
 Go to the **Schema window**, right click the **Table Population header** > check **Enable Population**. The **No Entry** icon is removed. 
 
+![image](../07_table_population/images/07_13_02_screen2.png)
+
 </studio>
 
 

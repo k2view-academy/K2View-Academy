@@ -62,6 +62,6 @@ For example, the following diagram outline displays a  list of objects  included
 
 When an object or a field of an object is selected in the Diagram Outline, it is also highlighted in the map. For example, in the above diagram the Translation object trnCountryCd is selected in the Diagram and it is highlighted in the map. 
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_lookup_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/13_LU_table_population_execution_order.md) 
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_lookup_tables.md)
 
 </studio>

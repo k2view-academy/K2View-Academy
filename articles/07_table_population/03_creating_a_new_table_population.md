@@ -86,6 +86,10 @@ Note that for the population to be effective on the server side, LU deployment i
 
 ### How Do I Create a Population Flow?
 
+When the LU Schema is created, each LU table is created with a population flow.
+
+Do the following steps If additional population flow is needed for an LU table:
+
 1.	Go to **Project Tree > Logical Units** > [**LU Name**].
 2.	Click **Tables**, right click [**Table Name**] > **New Population** to open the [population template](14_table_population_based_Broadway.md#flow-population-template) with predefined Stages and designated Actors.
 3.	Complete the missing information such as input arguments, DB interface, and save the flow.

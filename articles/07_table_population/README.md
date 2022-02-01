@@ -5,8 +5,9 @@
 <studio><li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</a></li></studio>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</a></li>
 <li><a href="/articles/07_table_population/14_table_population_based_Broadway.md">Table Population Based on a Broadway Flow</a></li>
-<studio><li><a href="/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li></studio>
+<li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
 <li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li>
+<studio><li><a href="/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li></studio>
 <studio><li><a href="/articles/07_table_population/06_table_population_transformation_rules.md">Table Population Transformation Rules</a></li></studio>
 <li><a href="/articles/07_table_population/07_fabric_built_in_functions.md">Fabric Built-in Functions</a></li>
 <li><a href="/articles/07_table_population/08_project_functions.md">Project Functions</a></li>
@@ -18,7 +19,6 @@
 <li><a href="/articles/07_table_population/11_5_creating_an_event_function.md">Creating an Event Function</a></li>
 <studio><li><a href="/articles/07_table_population/11_lookup_tables.md">Lookup Tables</a></li></studio>
 <studio><li><a href="/articles/07_table_population/12_table_population_diagram_outline.md">Table Population Diagram Outline</a></li></studio>
-<li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
 
 </ul>
 
