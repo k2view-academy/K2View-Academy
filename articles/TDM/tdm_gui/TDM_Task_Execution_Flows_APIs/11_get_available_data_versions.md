@@ -4,10 +4,6 @@
 
 /tasks/versionsForLoad
 
-```
-http://localhost:3213/api/tasks/versionsForLoad
-```
-
 ### HTTP Method
 
 POST
@@ -25,10 +21,10 @@ Get the list of the available data versions the match the input parameters. The 
 The request body contains the following filtering parameters:
 
 - **entitiesList**: populated by list of entities separated by a comma. This is an optional input. When populated, the API only brings data versions that contain the entities in the list.
-- **be_id**: populated by the unique identifier (be_id_) of the task's Business Entity (BE). 
+- **be_id**: populated by the unique identifier (be_id) of the task's Business Entity (BE). 
 - **source_env_name**: populated by the source environment from which the data version has been extracted.
 - **fromDate** and **toDate**: return a list of data versions within a given time interval. The date format of these parameters is "MM.DD.YYYY"
-- **lu_list**: list of LU names. Foe example, when populated with **Customer** and **Billing** , the API only returns data versions that contain both LUs.
+- **lu_list**: list of LU names. For example, when populated with **Customer** and **Billing** , the API only returns data versions that contain both LUs.
 
 ### API Input Examples
 
