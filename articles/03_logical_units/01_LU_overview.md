@@ -6,7 +6,7 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of tables that hold the data of a Digital Entity including its columns, PKs, indexes and triggers.
 
-2. [**LU Table Population (ETL)**](/articles/07_table_population/01_table_population_overview.md): 
+2. [**LU Table Population**](/articles/07_table_population/01_table_population_overview.md): 
     * Get data into LU tables from a variety of data sources and keep it up to date.
     * Different types of data manipulations like enrichment, cleansing, masking, transforming, etc. 
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table that holds the Digital Entity’s unique key.
@@ -15,16 +15,18 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 * Digital Entity: Customer.
 * Data sources (applications): CRM, Ordering, Billing and Collection.
 * LU tables: The tables that will hold the data you want to keep about a customer from the four data sources.
-* LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate  etc. data from the four data sources into the LU tables.
+* LU Table Populations: The set of definitions that will be used to extract, transform, clean, aggregate, validate  etc. data from the four data sources into the LU tables.
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
 <studio>
+   When working with the Fabric Studio on a local machine or docker:  
 
 ![image](images/1.1_LU_Overview.png)
 
 </studio>
 
 <web>
+   When working with the Fabric Studio on the web:
 
 ![image](images/web/1_web_lu_overview.PNG)
 
