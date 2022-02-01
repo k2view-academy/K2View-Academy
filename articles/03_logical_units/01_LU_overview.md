@@ -19,14 +19,16 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
 <studio>
-   When working with the Fabric Studio on a local machine or docker:  
+   When working with the Fabric Studio on a local machine or docker, the LU schema looks like this:
+   
 
 ![image](images/1.1_LU_Overview.png)
 
 </studio>
 
 <web>
-   When working with the Fabric Studio on the web:
+   When working with the Fabric Studio on the web, the LU schema looks like this:
+   
 
 ![image](images/web/1_web_lu_overview.PNG)
 
