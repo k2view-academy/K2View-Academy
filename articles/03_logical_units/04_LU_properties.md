@@ -19,7 +19,7 @@ The Properties tab in the LU schema window contains the following properties:
 <p><strong>Events</strong></p>
 </td>
 <td>
-<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered upon a Sync's success or failure or after a successful Delete instance.</p>
+<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered upon a Sync's success or failure or after a successful Delete instance. </p>
 <p>To select an Event function, click the three dots next to the Events property and select the function name. Only Event functions are displayed.</p>
 </td>
 </tr>
