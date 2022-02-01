@@ -1,4 +1,4 @@
-# TDM - Load with Data Versioning (Data Flux) Task Flow
+6# TDM - Load with Data Versioning (Data Flux) Task Flow
 
 Click the blue text to open the articles about the related TDM APIs of each step. 
 
@@ -14,15 +14,17 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_set_entity_list_and_reservation_ind.png" alt="drawing" width="200pxl" style="zoom: 80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters)  
 
-[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](13_task_entities_validation.md) Call the API if the task has an entity list. Send the target environment and the entity list.
+[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Call the API if the task has an entity list. Send the target environment and the entity list.
 
 [<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_available_data_versions.md) Send the selected task's attributes, and the selected environments and entity list.
 
-[<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_data_version_validation.md) Send the task_execution_id of the selected version for validation.
+[<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](13_data_version_entity_validation.md) Send the task_execution_id of the selected version for validation.
 
-[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_APIs.md) Get retention period for entity reservation if the task reserves the provisioned entities.
+[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_options.md) Get retention period for entity reservation if the task reserves the provisioned entities.
 
 [<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) 
+
+[<img src="images/task_validate_reservation_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_retention_period_validation.md) Validate the reservation period.
 
 [<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overridden parameters of the selected task.
 

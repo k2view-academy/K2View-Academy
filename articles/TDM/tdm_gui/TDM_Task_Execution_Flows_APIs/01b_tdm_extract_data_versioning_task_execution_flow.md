@@ -16,6 +16,8 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) 
 
+[<img src="images/task_validate_retention_period_on_extract.png" alt="drawing" width="200pxl" style="zoom:80%;" />](12_retention_period_validation.md) Validate the retention period of the extracted data version.
+
 [<img src="images/task_basic_flow_4.png" alt="drawing" width="200pxl" style="zoom:80%;" />](04_execute_task_API.md) Send the task_id and the overridden parameters of the selected task.
 
 [<img src="images/task_basic_flow_5.png" alt="drawing" width="200pxl" style="zoom:80%;" />](05_task_execution_monitoring_API.md) Send the task_id of the selected task.
