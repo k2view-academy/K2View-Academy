@@ -116,6 +116,32 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 ### Step 5  
 Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
+</studio>
+
+<web>
+
+### Step 1  
+Go to the **Project Tree** > **Logical Units** > **LU** > **Java** > **src** > **com** > **k2view** > **src** > **cdbms**> **usercode**> **lu** and right click **New Java File** to display the **Java Editor** window. Name the new file and click Save
+
+### Step 2  
+Write the **User Job function**
+   
+```java
+//writing into a file;
+
+while (test<5 && !isAborted()){
+	test=test+1;
+	sleep(10000);
+	inSecTime=test*10; // value returned by user job function
+	FileWriter myWriter = new FileWriter("job_test4.txt",true);
+	myWriter.write("Test Number: "+ test +"::->" + 10*test + " seconds have passed since ...");
+	myWriter.close();
+	}
+```
+   	
+	
+</web>
+
 
 ## How Do I Create a Broadway Job using the BroadwayJob actor ?
 
