@@ -1,3 +1,5 @@
+<studio>
+
 # Creating a New Translation in Fabric
 
 
@@ -12,7 +14,7 @@ A Translation is a Fabric Studio object that transforms data from one set of val
 2.	Define the **Translation Schema**: 
        * Complete the **Name**, **Direction** (Input / Output), **type**, etc. of each field.
        * Select what happens if a Translation match is not found. By default, the action is **Use Default**.
- 
+
 3.	Go to the **Translation Data** tab.
 
 4.	Optional: If the population data exists in a file or is retrieved from the DB, follow the instructions in How can I Import Translation Data.
@@ -34,7 +36,7 @@ A Translation is a Fabric Studio object that transforms data from one set of val
 
 The following Translation includes a list of Input and Output combinations where Input has unique values and Output values are repeated.  For example, the Billing and Collection values of a LEGACY_ORD_TYPE Input field return the same Output value of BLG.
 
-![image](/articles/09_translations/images/09_02_01%20Simple%20Translation%20table.png)
+![image](images/09_02_01%20Simple%20Translation%20table.png)
 
 ### Example of a Translation where Data Type = SQL
 
@@ -44,5 +46,6 @@ In the following Translation the **Field Type = SQL** whereby the query must be 
 
 To validate the query, click the **SQL** icon in the corner of the field and then click **Execute Query** in the **Query Builder** screen.
 
-
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/01_translations_overview_and_use_cases.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/09_translations/03_data_population_in_a_translation.md)
+
+</studio>

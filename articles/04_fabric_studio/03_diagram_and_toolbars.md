@@ -1,3 +1,5 @@
+<studio>
+
 # Diagram and Toolbars
 
 The Diagram window is the main working area in the Fabric Studio. When multiple functional windows are open in the same working area, you can switch between different windows using the tabs on the top of the main working area.
@@ -403,3 +405,5 @@ Click ![image](images/04_03_edit_icon1.png) to display the following options:
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04_user_preferences.md)
+
+</studio>

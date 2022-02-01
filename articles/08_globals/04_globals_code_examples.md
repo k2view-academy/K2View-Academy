@@ -2,9 +2,13 @@
 
 ### Example of Creating a New Global and Using it in a Function
 
+<studio>
+
 ![image](images/08_04_01_NEW_GLOBAL.png)
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
+</studio>
+
+Open the **Globals** window under a **Logical Unit** and define a new Global.
 
 After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
 
@@ -28,9 +32,13 @@ if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equa
 
 ### Example of Using a Global in an SQL Statement in a Function
 
+<studio>
+
 ![image](images/08_04_06_global_in_sql.PNG)
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
+</studio>
+
+Open the **Globals** window under a **Logical Unit** and define a new Global.
 
 The global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional.
 
@@ -40,6 +48,8 @@ ludb().fetch(sql, input1, input2).each(row->{
     yield(row.cells());
 });
 ~~~
+
+<studio>
 
 ### Example of Using a Global in a Table Population
 
@@ -53,11 +63,17 @@ This example shows how a Global can be used in a [Table Population](/articles/07
 
 [Click to display an example of Globals under a Logical Unit in the Demo project.](/articles/demo_project/README.md)
 
+</studio>
+
 ### Example of Using a Global in a Fabric Web Service
+
+<studio>
 
 ![image](images/08_04_04_GLOBAL_IN_WS.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) and use the Globals.
+</studio>
+
+Open the **Globals** window under **Shared Objects** and define new Globals and use the Globals.
 
 This example shows how Globals can be used within a Fabric Web Service.
 
@@ -78,9 +94,13 @@ if (contrID == "" && adrID == "") {
 
 ### Example of Overriding a Global in a Function or a Web Service
 
+<studio>
+
 ![image](images/08_04_05_FUNC_OR_WS.png)
 
-Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
+</studio>
+
+Open the **Globals** window under a **Logical Unit** and define a new Global and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
 
 The following examples show how a Global can be overridden in a cluster and per session.
 
@@ -127,7 +147,6 @@ result.put("p_error", receivedErr);
 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/03_set_globals.md)  [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/05_globals_overrides_priorities.md)
-
 
 
 

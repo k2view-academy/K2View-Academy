@@ -41,8 +41,8 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>Opening a space can be done by:</p>
 <ul>
-<li>Click on the space&rsquo;s name at the space list (when it is in status &ldquo;Running)</li>
-<li>Use the ellipsis menu resides for each space entry.</li>
+<li>Click on the space&rsquo;s name at the space list (when it is in status Running)</li>
+<li>Use the ellipsis menu which resides for each space entry.</li>
 <li>Direct access to the space by typing its URL address.</li>
 </ul>
 <p>Note that more than one user can access to a space on the same time.</p>
@@ -56,7 +56,7 @@ The table below lists the features of the Cloud Platform that are currently avai
 <p>To create a space:</p>
 <ul>
 <li>Click on the Create button and top right side of the screen.</li>
-<li>At the opened form, Give the space a name, following the allowed pattern (a-z, 0-9; up to 16 characters) and rules (cannot be an existing name).</li>
+<li>At the opened form, give the space a name, following the allowed pattern (a-z, 0-9; up to 16 characters) and rules (cannot be an existing name).</li>
 <li>The space will be added to the list of spaces where you can see their creation progress and status. The lines of the new space are highlighted with bold text.</li>
 </ul>
 <p>Notes:</p>
@@ -73,13 +73,13 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>To delete a space:</p>
 <ul>
-<li>Use the ellipsis menu resides for each space entry. Click there on Delete and assert the action at the popup dialog.</li>
-<li>The deletion process will be then shown at the space list. Once process is done the space will not be shown at the space list.</li>
+<li>Use the ellipsis menu which resides for each space entry. Click there on Delete and assert the action at the popup dialog.</li>
+<li>The deletion process will be then shown at the spaces list. Once process is done the space will not be shown at the spaces list.</li>
 </ul>
 <p>Notes:</p>
 <ul>
-<li>There is no restriction who can delete a space or which space he can delete.</li>
-<li>Deleting a space also affects storage. Delete must be done carefully and if changes that must be preserved, download the space first.</li>
+<li>There is no restriction who can delete a space or which space can be deleted.</li>
+<li>Deleting a space affects the storage. Delete must be done carefully and if there are changes that must be preserved, download the space first.</li>
 </ul>
 </td>
 </tr>

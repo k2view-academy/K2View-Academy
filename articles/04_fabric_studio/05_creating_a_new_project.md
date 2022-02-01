@@ -7,11 +7,9 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 [Click for more information about the Fabric Project Structure.](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
-[Click for more information about Adding Fabric Projects to Version Controls.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
-
-
-
 <studio>
+
+[Click for more information about Adding Fabric Projects to Version Controls.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 ### How Do I Create a New Project?
 
@@ -57,6 +55,26 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 [Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 </studio>
+
+<web>
+
+Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. Web Studio does not yet support Import or Export of a project. If you wish to use an existing project on which you already have worked, do the following:
+
+* Go to your existing project directory at your PC/Mac.
+
+* Drag and Drop the **Implementation** (and optionally the **lib**) folders from your PC into the Web Studio explorer. Do it into the project’s root empty area:
+
+  ![](images/web/5_upload_proj.PNG)
+
+* You can also upload only specific elements. In this case – go to the specific folder and upload it there.
+
+* The upload progress will be displayed in the right lower corner of the screen:
+
+  <img src="images/web/5_upload_progress.PNG" style="zoom:67%;" />
+
+Note that because this is a standard file upload action, there is no validation on what you are uploading and where.
+
+</web>
 
 
 
