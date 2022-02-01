@@ -1,4 +1,4 @@
-6# TDM - Load with Data Versioning (Data Flux) Task Flow
+# TDM - Load with Data Versioning (Data Flux) Task Flow
 
 Click the blue text to open the articles about the related TDM APIs of each step. 
 
