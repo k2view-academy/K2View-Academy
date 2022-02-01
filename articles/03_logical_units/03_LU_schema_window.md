@@ -112,7 +112,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display.</p>
+<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Enrichment functions that are directly related to specific LU tables are included in the display.</p>
 </td>
 </tr>
 <tr>
@@ -182,7 +182,7 @@ The LU Tabs display the schema properties and they can be collapsed or expanded 
 <p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order List</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display.</p>
+<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Enrichment functions that are directly related to specific LU tables are included in the display.</p>
 </td>
 </tr>
 </tbody>
