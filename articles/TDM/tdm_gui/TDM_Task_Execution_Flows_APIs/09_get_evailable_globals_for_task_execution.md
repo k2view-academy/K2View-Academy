@@ -36,86 +36,28 @@ http://localhost:3213/api/environment/getAllGlobals
 
 ### API Output Examples
 
-#### Get the Globals for Customer and Billing LUs
+#### Get the Globals Billing LU: return all the shared and the Billing LU's Globals.
 
 ```json
 {
     "result": [
         {
-            "globalName": "CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
             "globalName": "MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
+            "globalValue": "0",
+            "description": "Indicates if the sensitive data must be masked by the task execution. 1 is set as true and 0 is set as false.",
+            "lu_name": "All"
+        },              
         {
             "globalName": "PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
+            "globalValue": "PROD",
+            "description": "Indicates the applicative version of the product (system) in the environment",
+            "lu_name": "All"
+        },      
         {
-            "globalName": "TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
-        {
-            "globalName": "Customer.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Customer.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Customer.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Customer.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Customer.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Customer.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
-        {
-            "globalName": "Billing.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Billing.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Billing.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Billing.TEST_GLOBAL",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Billing.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Billing.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Billing.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
+            "globalName": "PAYMENT_METHOD",
+            "globalValue": "CC",
+            "description": "Payment method name",
+            "lu_name": "Billing"
         }
     ],
     "errorCode": "SUCCESS",
@@ -130,129 +72,29 @@ http://localhost:3213/api/environment/getAllGlobals
 ```json
 {
     "result": [
-        {
-            "globalName": "CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
+         {
             "globalName": "MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
+            "globalValue": "0",
+            "description": "Indicates if the sensitive data must be masked by the task execution. 1 is set as true and 0 is set as false.",
+            "lu_name": "All"
+        },              
         {
             "globalName": "PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
+            "globalValue": "PROD",
+            "description": "Indicates the applicative version of the product (system) in the environment",
+            "lu_name": "All"
         },
         {
-            "globalName": "TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
+            "globalName": "PAYMENT_METHOD",
+            "globalValue": "CC",
+            "description": "Payment method name",
+            "lu_name": "Billing"
+        }
         {
-            "globalName": "Orders.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Orders.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Orders.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Orders.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Orders.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Orders.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
-        {
-            "globalName": "Customer.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Customer.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Customer.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Customer.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Customer.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Customer.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
-        {
-            "globalName": "Billing.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Billing.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Billing.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Billing.TEST_GLOBAL",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Billing.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Billing.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Billing.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
-        },
-        {
-            "globalName": "Collection.CLONE_CLEANUP_RETENTION_PERIOD_VALUE",
-            "globalValue": "1"
-        },
-        {
-            "globalName": "Collection.MASK_FLAG",
-            "globalValue": "0"
-        },
-        {
-            "globalName": "Collection.CLONE_CLEANUP_RETENTION_PERIOD_TYPE",
-            "globalValue": "Days"
-        },
-        {
-            "globalName": "Collection.DEVELOPMENT_PRODUCT_VERSION",
-            "globalValue": "DEV"
-        },
-        {
-            "globalName": "Collection.PRODUCTION_PRODUCT_VERSION",
-            "globalValue": "PROD"
-        },
-        {
-            "globalName": "Collection.TDM_DEL_TABLE_PREFIX",
-            "globalValue": "TAR"
+            "globalName": "CUSTOMER_TYPE",
+            "globalValue": "Business",
+            "description": "Customer type. Valid values are Private, Business, and Government",
+            "lu_name": "Customer"
         }
     ],
     "errorCode": "SUCCESS",
