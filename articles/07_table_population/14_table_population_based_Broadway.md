@@ -90,9 +90,11 @@ The following example displays a Broadway flow template created to populate the 
 
 
 
+<studio>
+
 ### Example of Creating a Population Based Broadway Flow
 
-1. <studio>In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**.</studio> <web>In the Project Tree, right click  on the LU table  > **New Population** and provide the population name.</web> The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
+1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
 
    ![image](images/07_14_01.PNG)
 
@@ -105,9 +107,7 @@ The following example displays a Broadway flow template created to populate the 
 
 [Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-<studio>
-
-[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_table_population_properties_tab.md)
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
 </studio>
 
@@ -115,6 +115,21 @@ The following example displays a Broadway flow template created to populate the 
 
 <web>
 
-[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_table_population_mode.md)
+### Example of Creating a Population Based Broadway Flow
+
+1. In the Project Tree, right click  on the LU table  > **New Population** and provide the population name. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
+
+   ![image](images/07_14_01.PNG)
+
+
+
+2. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
+
+
+3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
+
+[Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
+
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
 </web>
