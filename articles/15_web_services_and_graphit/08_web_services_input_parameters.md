@@ -9,6 +9,8 @@ Input parameters can be transferred to Fabric Web Services either as:
 - [Not part of the URL path.](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md#transferring-input-parameters-not-part-of-the-url-path)  
 
 <studio>
+ 
+ 
 ### Transferring Input Parameters As Part of the URL Path
 
 To set Web Service input parameters to be part of the Web Service URL, add them to the URL path covered by {$}.
