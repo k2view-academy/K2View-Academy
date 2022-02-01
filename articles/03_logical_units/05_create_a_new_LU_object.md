@@ -15,7 +15,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
     * Do not check **Open LU Auto Discovery** and manually build the **Logical Unit**. 
 4. Click **OK**.
 
-[Click for more information about the LU Creation Steps.](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
+[Click here for more information about the LU Creation Steps.](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
 
 ### How Do I Duplicate a Logical Unit (LU)?
 
