@@ -31,13 +31,11 @@ Now you can start Fabric, and use the following user and password example:
 # create second admin user
 cqlsh -uadmin -padmin --ssl
 
-fabric on;
 create user 'admin2' with password 'Q7xp8GPNmjZp' SUPERUSER;
 assign role admin to user admin2;
 
 # Alter the admin with new password
 cqlsh -uadmin2 -pQ7xp8GPNmjZp --ssl 
-fabric on;
 ALTER USER admin WITH PASSWORD 'Q7xp8GPNmjZp' SUPERUSER;
 
 ```
@@ -47,7 +45,6 @@ Check the connection:
 ```bash
 # connect with the following
 cqlsh -uadmin2 -pQ7xp8GPNmjZp --ssl
-fabric on;
 ```
 
 Access points examples:
