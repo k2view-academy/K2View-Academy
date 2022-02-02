@@ -59,32 +59,23 @@ More detailed requirements for each are described below.
    <tbody>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.9/D_k2view_cassandra_3.11.9.tar.gz
-
-  ** md5:** 32752982f437c905f24a0cac69acd387
-   
-   </td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.9/D_k2view_cassandra_3.11.9.tar.gz 
+   <br>md5: 32752982f437c905f24a0cac69acd387<br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz
-   
-   **md5:** ad2c6b145e6b117ac3993b8bdbc50984
-   </td>
+   <br>md5: ad2c6b145e6b117ac3993b8bdbc50984</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.4/Server/D_k2view_fabric_6.5.4_90.tar.gz
-   
-   **md5:** a135ed5e3f79c3ded874dbf989b7f3ed   
-   </td>
+   <br>md5: a135ed5e3f79c3ded874dbf989b7f3ed</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.4/Server/compose_fabric_6.5.4_90.tar.gz
-   
-  **md5:** 5317f88627786d5df8c83328d86d645f   
-   </td>
+   <br>md5: 5317f88627786d5df8c83328d86d645f</br></td>
    </tr>
    </tbody>
    </table>
