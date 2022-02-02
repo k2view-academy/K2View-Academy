@@ -29,7 +29,7 @@ More detailed requirements for each are described below.
 
 4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ).
 
-5. Assign appropriate privileges to the k2view user, and allot to this user at least 50GB of space as follows: 
+5. Assign appropriate privileges to the k2view user, and allocate to this user at least 50GB of space as follows: 
 
       ~~~bash
       ## update the k2view user home directory and password!! 
