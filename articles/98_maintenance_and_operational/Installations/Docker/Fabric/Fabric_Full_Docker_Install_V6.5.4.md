@@ -61,28 +61,29 @@ More detailed requirements for each are described below.
    <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.9/D_k2view_cassandra_3.11.9.tar.gz
 
-   !!! - md5: 32752982f437c905f24a0cac69acd387
+  ** md5:** 32752982f437c905f24a0cac69acd387
+   
    </td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz
    
-    !!! - md5: ad2c6b145e6b117ac3993b8bdbc50984
+   **md5:** ad2c6b145e6b117ac3993b8bdbc50984
    </td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.4/Server/D_k2view_fabric_6.5.4_90.tar.gz
    
-   !!! - md5: a135ed5e3f79c3ded874dbf989b7f3ed   
+   **md5:** a135ed5e3f79c3ded874dbf989b7f3ed   
    </td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.4/Server/compose_fabric_6.5.4_90.tar.gz
    
-  !!! - md5: 5317f88627786d5df8c83328d86d645f   
+  **md5:** 5317f88627786d5df8c83328d86d645f   
    </td>
    </tr>
    </tbody>
@@ -118,7 +119,7 @@ More detailed requirements for each are described below.
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
 
-   !!! - this compose file dosent include Kafka. if you need you can open the docker-compose.yml and unremark it.
+   **Note:** this compose file dosent include Kafka. if you need you can open the docker-compose.yml and unremark it.
 
 1. Run docker-compose as follows:
 
