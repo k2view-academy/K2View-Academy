@@ -6,7 +6,7 @@ These pre-requisites are for a development, training, demo, or a small Proof-of-
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9** or higher 
    or 
-- **Docker-Desktop** for Windows or Mac 
+- **Docker-Desktop** for Windows or Mac.
 
 More detailed requirements for each are described below.
 
@@ -17,17 +17,17 @@ More detailed requirements for each are described below.
    - Modern Xeon Processor. 
    - 8 Physical Cores. 
    - 16 GB RAM. 
-   - HDD, 200GB must be available 
+   - HDD, 200GB must be available. 
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.  
 
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ ) 
 
-   **Note**: The /var/lib/docker should have at list 200GB of free memory
+   **Note**: The /var/lib/docker should have at list 200GB of free memory.
 
 3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).  
 
-4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ) 
+4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ).
 
 5. Assign appropriate privileges to the k2view user, and allot to this user at least 50GB of space as follows: 
 
@@ -44,9 +44,9 @@ More detailed requirements for each are described below.
 
 ####  For Docker-Desktop 
 
-1. Windows or Mac machine with an 8 core CPU 
-2. Windows or Mac machine with a minimum of 16G RAM 
-3. Windows or Mac machine with minimum 120G of hard disk space  
+1. Windows or Mac machine with an 8 core CPU. 
+2. Windows or Mac machine with a minimum of 16G RAM. 
+3. Windows or Mac machine with minimum 120G of hard disk space.  
 
 
 
@@ -115,7 +115,7 @@ More detailed requirements for each are described below.
    ```bash
    tar -zxvf compose_fabric_6.5.4_90.tar.gz 
    ```
-   !!! Note: open the “.env” file and update the names of the images as needed 
+   !!! Note: open the “.env” file and update the names of the images as needed.
 
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
