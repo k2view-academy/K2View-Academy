@@ -11,60 +11,65 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 1. Connect as **cassandra** user
 2. Download and run the `secure_cassandra.sh` file that generate the keys. it can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
 3. Stop Cassandra services before running the script.
+    ```bash
+    ## run: 
+    stop-server
+    ```
+
+    ```bash
+    echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
+    echo "export INSTALL_DIR=$INSLATT_DIR" >> .bash_profile
+    source ~/.bash_profile
+    cd ~/
+    rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
+
+    chmod +x secure_cassandra.sh
+    ````
+
+    **Note:** run on single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
 
 
-```bash
-echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
-echo "export INSTALL_DIR=$INSLATT_DIR" >> .bash_profile
-source ~/.bash_profile
-cd ~/
-rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
+    e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}` 
 
-chmod +x secure_cassandra.sh
-````
-!! run on single Cassandra node only !!
-* To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
-e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}`
-
-```bash
-./secure_cassandra.sh Q1w2e3r4t5 k2tls
-```
-output example:
-
-```bash
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
-Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
-Certificate was added to keystore
-[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
-Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLIENT_k2tls_PUBLIC.cer>
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
-Certificate was added to keystore
-[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
-Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
-Entry for alias k2tls_client successfully imported.
-Entry for alias k2tls_cluster successfully imported.
-Import command completed:  2 entries successfully imported, 0 entries failed or cancelled
-MAC verified OK
-MAC verified OK 
-```
-
-The following 7 files will appear under the `$INSTALL_DIR/.cassandra_ssl` directory:
-- k2tls_CLIENT.key.pem
-- k2tls_CLIENT.cer.pem
-- cassandra.keystore
-- cassandra.pks12.keystore
-- cassandra.truststore
-- CLIENT_k2tls_PUBLIC.cer
-- CLUSTER_k2tls_PUBLIC.cer
+    ```bash
+    ./secure_cassandra.sh Q1w2e3r4t5 k2tls
+    ```
+    output example:
+    
+    ```bash
+    Warning:
+    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12 which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
+    Certificate stored in file </opt/apps/k2view/.cassandra_ssl/    CLUSTER_k2tls_PUBLIC.cer>
+    
+    Warning:
+    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12 which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
+    Certificate was added to keystore
+    [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
+    
+    Warning:
+    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12 which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
+    Certificate stored in file </opt/apps/k2view/.cassandra_ssl/    CLIENT_k2tls_PUBLIC.cer>
+    
+    Warning:
+    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12 which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
+    Certificate was added to keystore
+    [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
+    Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to    /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
+    Entry for alias k2tls_client successfully imported.
+    Entry for alias k2tls_cluster successfully imported.
+    Import command completed:  2 entries successfully imported, 0 entries   failed or cancelled
+    MAC verified OK
+    MAC verified OK 
+    ```
+    
+    The following 7 files will appear under the `$INSTALL_DIR/. cassandra_ssl` directory:
+    - k2tls_CLIENT.key.pem
+    - k2tls_CLIENT.cer.pem
+    - cassandra.keystore
+    - cassandra.pks12.keystore
+    - cassandra.truststore
+    - CLIENT_k2tls_PUBLIC.cer
+    - CLUSTER_k2tls_PUBLIC.cer
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
@@ -74,13 +79,18 @@ See the example below:
 
 ``` bash
 tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
+
+# copy to other nodes in case more than one node is used
+# 10.10.10.10 represents IP address of another node
 scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
-mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
+
+# login to every node searately and run the following command
+mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
 ```
 
 ## Step 3 - Cassandra YAML
 
-1. Edit the cassandra.yaml file with the appropriate passwords and certification files.
+1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all the Cassandra nodes. 
 
 ```bash
@@ -110,22 +120,22 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 
 
 ## Step 4 - Cassandra CQLSHRC
-1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
+1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
-```bash
-mkdir ~/.cassandra
-cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
+    ```bash
+    mkdir ~/.cassandra
+    cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
-sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@; certfile = .*@certfile = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@;validate = true@validate = true@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "105iversion = SSLv23" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@;userkey = .*@userkey = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@;usercert = .*@usercert = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@port = .*@port = 9142@" $INSLATT_DIR/.cassandra/cqlshrc
-sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_DIR/.cassandra/cqlshrc
-```
+    sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@; certfile = .*@certfile = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@;validate = true@validate = true@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "105iversion = SSLv23" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@;userkey = .*@userkey = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@;usercert = .*@usercert = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@port = .*@port = 9142@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_DIR/.cassandra/cqlshrc
+    ```
 
 
 ## Step 5 - Disable the default cassandra superuser
@@ -135,17 +145,16 @@ Cassandra default **superuser** is `cassandra` and it must be disabled before go
 1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
    ~~~bash
-   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
-   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
+   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
+   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
 2. drop the `cassandra` user
 
    ~~~bash
-   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
+   echo "drop role cassandra;" | cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
    ~~~
 
    
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)
-

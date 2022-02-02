@@ -16,7 +16,7 @@ Even when FIPS mode is off, Fabric only uses FIPS-compliant protocols and standa
 
 ### FIPS Version Command
 
-The Fabric command ```version fips``` returns the FIPS version currently used and the status of all the cryptographics components included in the system. All crypto algorithms included in the jar files are checked, and either validated or rejected.
+The Fabric command ```version fips``` returns the FIPS version currently used and the status of all the cryptographic components included in the system. All crypto algorithms included in the jar files are checked, and either validated or rejected.
 
 
 #### FIPS with mode set to **ON**
