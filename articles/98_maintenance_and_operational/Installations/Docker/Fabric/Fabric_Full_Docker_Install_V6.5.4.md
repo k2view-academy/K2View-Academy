@@ -38,11 +38,9 @@ More detailed requirements for each are described below.
 
 6. Give the k2view user privileges to run docker & docker-compose via **SUDO**. 
 
-   <img src="../images/sudo_config.jpg" style="zoom:%;" />
 
 
-
-####  For Docker-Desktop 
+####  Minimum hardware requirements for Docker-Desktop 
 
 1. Windows or Mac machine with an 8 core CPU. 
 2. Windows or Mac machine with a minimum of 16G RAM. 
@@ -133,7 +131,7 @@ More detailed requirements for each are described below.
    sudo /usr/local/bin/docker-compose up -d  
    ~~~
 
-   Cassandra and Fabric will start automaticlly 
+   Cassandra and Fabric will start automaticlly. 
 
 
 ## Stopping Services
