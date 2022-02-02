@@ -12,12 +12,12 @@ The Auto Discovery Wizard can run in two modes:
 ## How Do I Use the Auto Discovery Wizard?
 
 ### STEP 1: Define the DB Interface
-The first screen displays a list of all [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
+The first screen displays a list of all [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project (go to Shared Objects -> Interfaces). Select the DB interface for the Auto Discovery process.
 
 ![image](/articles/03_logical_units/images/03_06_wizard_01.png)
 
-1. Click the **DB interface** to display its connection string.
-2. To validate the connection settings, click **Test Connection**. 
+1. Double click the **DB interface** to display its connection string.
+2. To validate the connection settings, click **Test Connection String**. 
 3. Click **Next**.
 
 ### STEP 2: Define the Root Table and Field
