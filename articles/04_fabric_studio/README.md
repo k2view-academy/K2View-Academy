@@ -18,7 +18,7 @@
 <li><a href="/articles/04_fabric_studio/08_fabric_project_tree.md">Fabric Project Tree</a></li>
 <li><a href="/articles/04_fabric_studio/09_logic_files_and_categories.md">Logic Files and Categories</a></li>
 <li><a href="/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md">Fabric Studio Java Code Validation</a></li>
-<li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Fabric Project</a></li>
+<li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Exporting and Importing a Fabric Project</a></li>
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
 <studio><li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li></studio>
 
