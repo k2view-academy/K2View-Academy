@@ -9,6 +9,14 @@ Check that the following services are switched off:
 - ZooKeeper
 - Fabric
 
+```shell
+# stop kafka
+~/kafka/bin/kafka-server-stop -daemon ~/kafka/server.properties
+# stop zookeeper
+~/kafka/bin/zookeeper-server-stop -daemon ~/kafka/zookeeper.properties
+```
+
+
 ## Step 2. Keys Generation
 
 1. [Download](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
@@ -17,6 +25,8 @@ Check that the following services are switched off:
 ```bash
 cd $K2_HOME
 chmod +x secure_kafka.sh
+# if openssl is not installed - login with root
+yum install openssl
 ```
 3. Edit the secure_Kafka.sh script or execute it using password parameters: 
 
@@ -90,20 +100,27 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
 Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
-creat tar file
+create tarball file
 ``` bash
-tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
+tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl .
 ```
 
-copy to fabric example
+copy to other kafka nodes and fabric
 ``` bash
 scp Kafka_keyz.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
 ```
 
-on the fabric use the following to extract 
+In case Docker installation use following commands to copy between running containers
+```bash
+docker cp kafka:/opt/apps/kafka/Kafka_keyz.tar.gz ./
+docker cp Kafka_keyz.tar.gz fabric:/usr/local/k2view/
+```
+
+on the Fabric and other Kafka nodes use the following to extract 
 ```bash
 mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
 ```
+
 
 # Zookeeper Configuration
 
@@ -118,19 +135,11 @@ echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider
 ```
 
 
-## Step 2 - zookeeper_jaas.conf
-
-Edit the newly created file zookeeper_jaas.conf
+## Step 2 - create zookeeper_jaas.conf
 
 ```bash
-vi $CONFLUENT_HOME/zookeeper_jaas.conf
-```
-
-
-## Step 3 - Copy the Following Data into zookeeper_jaas.conf
-
-```yaml
-Server {
+echo \
+'Server {
 org.apache.zookeeper.server.auth.DigestLoginModule required
 user_super="kafka"
 user_kafka="kafka";
@@ -140,10 +149,10 @@ Client {
 	org.apache.zookeeper.server.auth.DigestLoginModule required
 	username="kafka"
 	password="kafka";
-};
+};' > $CONFLUENT_HOME/zookeeper_jaas.conf
 ```
 
-## Step 4 - Start the ZooKeeper Service
+## Step 3 - Start the ZooKeeper Service
 
 When starting ZooKeeper make sure the following command is invoked: 
 
@@ -163,31 +172,26 @@ Define the 2-way SSL authentication between the Kafka server and clients:
 ```bash
 sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
 sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
-sed -i "32isecurity.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
-sed -i "33issl.client.auth=required" $CONFLUENT_HOME/server.properties
+sed -i "32i security.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
+sed -i "33i ssl.client.auth=required" $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.listeners/#&/' $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.host.name/#&/' $CONFLUENT_HOME/server.properties
-sed -i "60issl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
-sed -i "61issl.truststore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "60i ssl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
+sed -i "61i ssl.truststore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
 sed -i "62i ssl.keystore.location=$K2_HOME/.kafka_ssl/kafka.server.keystore.jks" $CONFLUENT_HOME/server.properties
-sed -i "63issl.keystore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
-sed -i "64issl.key.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
-sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties
+sed -i "63i ssl.keystore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "64i ssl.key.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties
 ```
 
 
 ## Step 2 - kafka_server_jaas.conf
 
-1. Edit the new kafka_server_jaas.conf file:
+1. Create kafka_server_jaas.conf file:
 
 ```bash
-vi $CONFLUENT_HOME/kafka_server_jaas.conf
-```
-
-2. Copy the following data into the kafka_server_jaas.conf:
-
-```json
-KafkaServer {
+echo \
+'KafkaServer {
 	org.apache.kafka.common.security.plain.PlainLoginModule required
 	username="kafka"
 	password="kafka"
@@ -199,8 +203,7 @@ Client {
 	org.apache.zookeeper.server.auth.DigestLoginModule required
 	username="kafka"
 	password="kafka";
-};
-
+};' > $CONFLUENT_HOME/kafka_server_jaas.conf
 ```
 ## Step 3 - Start the Kafka Server
 
@@ -215,4 +218,3 @@ The Kafka daemon starts.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
-
