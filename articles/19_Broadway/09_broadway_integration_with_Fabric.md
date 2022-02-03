@@ -14,13 +14,13 @@ To create the population based on the Broadway flow, right click the table name 
 
 ### Interface Listener For Broadway Flows
 
-From version 6.5.3, a new actor [*InterfaceListener*](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
+From version 6.5.3, a new actor [**InterfaceListener**](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
 The flow described below, is still supported and can be defined via Fabric Studio.
 
 The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either an SFTP or a local file system. Each file is only picked up once by the Listener and the file name must not be repeated otherwise it will be disregarded.  
 
-![images](/articles/24_non_DB_interfaces/images/broadway_file_read.PNG)
+![images](../24_non_DB_interfaces/images/broadway_file_read.PNG)
 
 The Listener invokes the attached Broadway flow that needs the **FileRead** Actor to read the files. The **interface** and the **path** input arguments of the **FileRead** Actor must be defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
