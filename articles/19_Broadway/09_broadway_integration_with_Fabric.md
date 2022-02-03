@@ -100,16 +100,26 @@ Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an i
 
 ### Broadway Flows: Automatic Execution upon LU Deploy
 
-A Broadway flow can run automatically as a result of a deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the deploy.flow.
+A Broadway flow can run automatically as a result of a deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the **deploy.flow**.
 
-* If the deploy.flow is defined on the shared level only, it will be inherited to all the LUs.
-* If a soft deploy is defined to the deployed environment, a deploy will not trigger the deploy.flow execution.
-* When a new Logical Unit is created, a deploy.flow will be generated automatically with the following constants:
-  * lu_name - contains the name of deployed LU.
-  * nosync – 
-    * NOSYNC TRUE: Only schema changes trigger sync after deploy.
-    * NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time instance is accessed.
-  * Is_first_deploy - A Boolean representing if this is the first deploy.
-  * is_studio - Will be true if this is the studio debug environment fabric instance.
+* If the **deploy.flow** is defined on the shared level only, it will be inherited to all the LUs.
+
+* If a soft deploy is defined to the deployed environment, a deploy will not trigger the **deploy.flow** execution.
+
+  
+
+  When a new Logical Unit is created, a **deploy.flow** will be generated automatically with the following constants:
+
+* lu_name - contains the name of deployed LU.
+
+* nosync
+  * NOSYNC TRUE: Only schema changes trigger sync after deploy.
+  * NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time instance is accessed.
+
+* Is_first_deploy - A Boolean representing if this is the first deploy.
+
+* is_studio - Will be true if this is the studio debug environment fabric instance.
+
+  
 
 [![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
