@@ -1,3 +1,5 @@
+<studio>
+
 # Offline Environment Deployment
 
 Offline environment deployment is used to deploy an environment to a server from an XML file. 
@@ -176,7 +178,7 @@ Note that deploying an XML file overrides all existing environments except for *
 
 
 
-
+</studio>
 
 
 

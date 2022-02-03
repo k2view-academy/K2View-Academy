@@ -1,3 +1,5 @@
+<studio>
+
 # Deploying an Environment from the Fabric Studio
 
 To deploy an environment to the server from the Fabric Studio, do the following:
@@ -25,3 +27,5 @@ Notes:
 [Click for more information about SET and LIST commands for environments](/articles/25_environments/05_set_and_list_commands.md).
 
 [![Previous](/articles/images/Previous.png)](02_create_new_environment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_offline_deployment.md)
+
+</studio>

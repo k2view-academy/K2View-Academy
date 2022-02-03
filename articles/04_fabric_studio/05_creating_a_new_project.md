@@ -9,6 +9,14 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 ### How Do I Create a New Project?
 
+<web>
+
+Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. You can use an existing project on which you already have worked.
+
+[Click to get more information how to load an existing project to Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+
+</web>
+
 <studio>
 
 1. Go to the **Start Page** or click the **File** icon <img src="images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
@@ -53,14 +61,6 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 [Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 </studio>
-
-<web>
-
-Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. You can use an existing project on which you already have worked.
-
-[Click to get more information how to load an existing project to Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
-
-</web>
 
 
 

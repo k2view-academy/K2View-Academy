@@ -2,7 +2,9 @@
 
 <web>
 
-Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. Web Studio does not yet support Import or Export of a project or creation of a new project. If you wish to use an existing project on which you already have worked, do the following:
+Currently the Web Studio does not yet support Import or Export of a project. 
+
+If you wish to use an existing project on which you already have worked, do the following:
 
 * Go to your existing project directory at your PC/Mac.
 
