@@ -9,7 +9,11 @@ An LUDB function is a Project function invoked from an SQL query to perform more
 ### How Do I Create or Edit an LUDB Function? 
 To create an LUDB function, refer to the steps in [How to Create Project Functions](/articles/07_table_population/10_creating_a_project_function.md).
 
+<studio>
+
 ![image](images/07_09_01_screen1.png)
+
+</studio>
 
 When creating an LUBD function, make sure that:
 *	**Function Type = LUDB Function.** 

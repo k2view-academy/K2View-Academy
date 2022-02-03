@@ -2,7 +2,17 @@
 
 ### What Is a Trigger Function?
 
+<web>
+
+A Trigger function is a Project function invoked from the **Triggers List** in the [LU table property](/articles/06_LU_tables/04_table_properties.md) when the LU table's data has been modified.
+
+</web>
+
+<studio>
+
 A Trigger function is a Project function invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md#on-change) when the LU table's data has been modified.
+
+</studio>
 
 * Any Trigger function on a Shared or LU level can be attached to an LU table.
 * The same Trigger function can be attached to several LU tables in the same LU.
@@ -12,7 +22,11 @@ A Trigger function is a Project function invoked from the **On Change** [LU tabl
 
 To create a Trigger function, refer to the steps in [How to Create Project Functions](10_creating_a_project_function.md).
 
+<studio>
+
 ![image](images/07_091_01.png)
+
+</studio>
 
 When creating a Trigger function, make sure that:
 
@@ -27,6 +41,22 @@ The **TableDataChange** data type exposes a set of methods which allow getting a
 * What are the old values and the new values?
 
 The Trigger function analyzes the change using the above information and executes business logic, for example, write the old and the new values into a log table.
+
+<web>
+
+### How Do I Attach or Remove a Trigger Function?
+
+A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
+
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
+2. In the Table Properties tab, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon to add an existing Trigger function from the list. 
+3. If needed, add additional Trigger functions and use the arrows to set the correct execution order.
+4. To remove a Trigger function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Trigger function definition in the Table Properties.
+5. **Save** the LU Table.
+
+</web>
+
+<studio>
 
 ### How Do I Attach a Trigger Function to an LU Table?
 
@@ -60,6 +90,7 @@ To remove a Trigger function from the LU table, do the following:
 
 4. Click **OK** to close the Editor and then **Save** the table.
 
+</studio>
 
 ### Example of a Trigger Function
 
@@ -83,7 +114,7 @@ To remove a Trigger function from the LU table, do the following:
    }
    ~~~
 
-3. Open LU table's properties window and attach the Trigger function to the table's **On Change** property.
+3. Open LU table's properties window and attach the Trigger function using the table's properties tab.
 
 
 [![Previous](/articles/images/Previous.png)](11_3_creating_an_LUDB_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_lookup_tables.md)

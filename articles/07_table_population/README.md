@@ -12,8 +12,8 @@
 <li><a href="/articles/07_table_population/07_fabric_built_in_functions.md">Fabric Built-in Functions</a></li>
 <li><a href="/articles/07_table_population/08_project_functions.md">Project Functions</a></li>
 <li><a href="/articles/07_table_population/10_creating_a_project_function.md">Creating a Project Function</a></li>
-<li><a href="/articles/07_table_population/11_1_creating_or_editing_a_root_function.md">Creating or Editing a Root Function</a></li>
-<li><a href="/articles/07_table_population/11_2_root_functions_code_examples.md">Root Functions - Code Examples</a></li>
+<studio><li><a href="/articles/07_table_population/11_1_creating_or_editing_a_root_function.md">Creating or Editing a Root Function</a></li></studio>
+<studio><li><a href="/articles/07_table_population/11_2_root_functions_code_examples.md">Root Functions - Code Examples</a></li></studio>
 <li><a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">Creating an LUDB Function</a></li>
 <li><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Creating a Trigger Function</a></li>
 <li><a href="/articles/07_table_population/11_5_creating_an_event_function.md">Creating an Event Function</a></li>
