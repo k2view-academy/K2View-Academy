@@ -58,7 +58,7 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 
 Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. You can use an existing project on which you already have worked.
 
-[Click to get more information how to load an existing project to Web Studio.](11_fabric_studio_exporting_and_importing a_fabric_project.md)
+[Click to get more information how to load an existing project to Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 
 </web>
 
