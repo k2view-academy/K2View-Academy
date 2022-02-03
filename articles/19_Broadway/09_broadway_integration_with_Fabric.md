@@ -1,3 +1,5 @@
+<studio>
+
 # Broadway Integration with Fabric Studio
 
 The Fabric Studio includes several integration points that are used by Broadway Actors to simplify the creation of Broadway flows.
@@ -16,8 +18,6 @@ To create the population based on the Broadway flow, right click the table name 
 
 From version 6.5.3, a new actor [**InterfaceListener**](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
-<studio>
-
 The flow described below, is still supported and can be defined via Fabric Studio.
 
 The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either an SFTP or a local file system. Each file is only picked up once by the Listener and the file name must not be repeated otherwise it will be disregarded.  
@@ -29,14 +29,6 @@ The Listener invokes the attached Broadway flow that needs the **FileRead** Acto
 ![image](images/99_07_JOBS.PNG)
 
 [Click for more information about creating an SFTP interface for an Interface Listener](/articles/24_non_DB_interfaces/02_SFTP_interface.md#example-of-using-an-sftp-interface).
-
-</studio>
-
-<web>
-
-[Click for more information about using the InterfaceListener Actor.](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor)
-
-</web>
 
 ### Fabric Commands Actors
 
@@ -108,9 +100,11 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
 
-### Broadway Flows: Automatic Execution upon LU Deploy
+</studio>
 
-A Broadway flow can run automatically as a result of a deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the **deploy.flow**.
+## Automatic Flows Execution upon LU Deploy
+
+A Broadway flow can run automatically as a result of a Deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the **deploy.flow**.
 
 * If the **deploy.flow** is defined on the shared level only, it will be inherited to all the LUs.
 
