@@ -21,7 +21,7 @@ The Fabric Studio also enables you to integrate your projects into source versio
 
 <web>
 
-[Click for more information about Best Practices for Working with GIT](07_best_practices_for_working_with_GIT.md).
+[Click for more information about Best Practices for Working with GIT](23_web_versioncontrol.md).
 
 </web>
 

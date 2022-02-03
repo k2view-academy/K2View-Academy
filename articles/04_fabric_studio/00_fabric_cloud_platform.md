@@ -87,6 +87,10 @@ The table below lists the features of the Cloud Platform that are currently avai
 </table>
 
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](01_UI_components_and_menus.md)
+
+
+
 
 </web>
 
