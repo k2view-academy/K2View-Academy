@@ -16,7 +16,7 @@ The following components can be shared in a Fabric project:
   
 * [Broadway](/articles/19_Broadway/01_broadway_overview.md), set of flows which can be used for the data movement, its transformation and orchestration. A Broadway flow defined at a Shared Objects level may be used in any LU included in the project. 
 
-  <studio>
+<studio>
 
 * Environments, where you can define the number of environments according to your needs and also switch between environments in the same Fabric project.
 
@@ -24,7 +24,7 @@ The following components can be shared in a Fabric project:
 
 * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), sets of translations which can be used for the transformation of data. A Translation defined at a Shared Objects level may be used in any LU included in the project. 
 
-  </studio>
+</studio>
 
 **Notes** 
 * If a function, a translation or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
