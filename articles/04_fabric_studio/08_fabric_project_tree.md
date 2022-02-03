@@ -56,7 +56,7 @@ Each project has the following main components:
   
   * [Tables](/articles/07_table_population/01_table_population_overview.md)
   
-    </studio>
+    <studio>
   
   * Translation
   
@@ -139,8 +139,17 @@ The following lists the recommended project component prefixes conventions:
 </table>
 
 
-
 Note that when using the above prefix conventions, it is also recommended to use meaningful names for the project’s components.
 
+<studio>
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/09_logic_files_and_categories.md)
+[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_adding_fabric_projects_to_version_control.md)
+
+</studio>
+
+<web>
+
+[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_fabric_studio_exporting_and_importing%20a_fabric_project.md.md)
+
+</web>
+

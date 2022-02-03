@@ -1,7 +1,22 @@
 # User Preferences
 
-### What Are User Preferences Used For?
 User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.
+
+<web>
+
+To open the User Preference, click the <img src="images/web/settings.png" style="zoom:67%;" /> icon >in the left lower corner of the Web Studio. Then click **Open Settings (UI)**. The **Preferences** window opens and it includes various types of settings.
+
+<img src="images/web/4_preferences.PNG" style="zoom:80%;" />
+
+You can use the **Search Settings** bar to search and set the required setting.
+
+For example, to check and update the **Soft Deploy** setting:
+
+<img src="images/web/4_soft_deploy.PNG" style="zoom:80%;" />
+
+
+
+</web>
 
 <studio>
 
@@ -212,12 +227,6 @@ The following SVN preferences can be configured:
 
 
 </studio>
-
-<web>
-
-
-
-</web>
 
 ### 
 

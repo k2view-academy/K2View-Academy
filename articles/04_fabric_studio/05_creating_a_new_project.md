@@ -64,6 +64,5 @@ Currently a space is created with a new Fabric project structure, ready for work
 
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04_user_preferences.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[![Previous](/articles/images/Previous.png)](04_user_preferences.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_fabric_project_tree.md)
 

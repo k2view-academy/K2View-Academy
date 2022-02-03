@@ -403,7 +403,7 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 
 [Click for more information about Best Practices for Working with SVN and GIT.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+[![Previous](/articles/images/Previous.png)](08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 
 

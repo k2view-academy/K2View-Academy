@@ -21,18 +21,27 @@ The deployment of a Fabric project is performed on the following levels:
   - Each Graphit object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. 
 - **Deployment of Environments**. 
 
+<studio>
+
 Deployment can be performed either:
+
 - [From the Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio) using **Deploy to Server**.
 - [Offline Deploy](03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
 A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
 
+</studio>
+
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric server. For example, when an interface is updated, all LU using this interface should be re-deployed to make this change effective.
 
 ### Soft Deploy
 
-**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use the Soft Deploy option to deploy their changes without triggering automatic processes such as:
+**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions.
+
+<studio>
+
+They can use the Soft Deploy option to deploy their changes without triggering automatic processes such as:
 
 * User jobs
 * Parsers
@@ -41,6 +50,14 @@ Note that Shared Objects are not independent objects in a project and therefore 
 To activate Soft Deploy when doing a deployment from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
 
 To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+
+</studio>
+
+<web>
+
+To activate Soft Deploy, search for it via the Preferences windows as explained [here](/articles/04_fabric_studio/04_user_preferences.md). 
+
+</web>
 
 ### How Do I Check Which Project Is Deployed to Fabric? 
 
@@ -103,7 +120,10 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
+<studio>
+
 ### How Do I Get the Deployed Implementation?
+
 After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementer can download the code deployed in the environment and check it.
 
 ###### Syntax:
@@ -115,5 +135,6 @@ After the project is deployed to the server, there might be a need to clarify wh
 
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
 
-
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
+
+</studio>
