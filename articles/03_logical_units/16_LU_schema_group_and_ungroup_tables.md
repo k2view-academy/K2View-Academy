@@ -20,14 +20,15 @@ Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon.
 
 <web>
 
-![image](images/web/1_web_lu_overview.PNG)
-
 ### How Can I Group LU Tables?
 
 1. Select the tables to be grouped. 
 2. Click the <img src="images/web/group.PNG" style="zoom:67%;" /> icon in the **Logical Unit** toolbar.
 3. Click the group's title and edit the name.
 
+![image](images/web/1_web_lu_overview.PNG)
+
+ 
 ### How Can I Ungroup LU Tables? 
 
 1. Select one or more tables to be removed from the group.
