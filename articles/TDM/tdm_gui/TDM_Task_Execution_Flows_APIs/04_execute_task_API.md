@@ -180,34 +180,6 @@ The following parameters can be set:
 
 
 
-- **entitieslist**: populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task with a Synthetic selection method.
-
-- **sourceEnvironmentName**: source environment name
-
-- **targetEnvironmentName**: target environment name 
-
-- **taskGlobals**: list of Global variables and their values. 
-
-- **numberOfEntities**: populated with a number to change the number of entities processed by the task. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
-
-- **dataVersionExecId**: populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.
-
-- **dataVersionRetentionPeriod**: populated with the the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks..) and the value. 
-
-- **reservationInd**: true/false. Set to true if the task execution needs to reserve the entities on the target environment. The parameter is relavant for load or reserve TDM tasks.
-
-- **reserveRetention**: populated with the the reservation period of the task's entities. This parameter is contains the unit (Hours, Days, Weeks..) and the value.
-
-- ```json
-   "reserveRetention": {
-      "additionalProp1": {}
-    },
-    "executionNote": "string"
-  }
-  ```
-
-The task execution is validated whether the execution parameters are overridden or taken from the task itself.
-
 #### Validate the Task Execution Parameters
 
 - Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, stop the task execution and return an error message.
@@ -231,16 +203,26 @@ If at least one of the validations fail, the API does not start the task and ret
 Below is the list of the validation codes, returned by the API:
 
 - BEandLUs
+
 - Reference
+
 - selectionMethod
+
 - Versioning
+
 - ReplaceSequence
+
 - DeleteBeforeLoad
+
 - syncMode
+
 - totalNumberOfReservedEntities
+
 - versioningRetentionPeriod
+
 - reverseRetentionPeriod
-- 
+
+  
 
 #### Start the Task Execution
 
