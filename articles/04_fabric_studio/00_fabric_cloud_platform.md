@@ -2,9 +2,9 @@
 
 # Fabric Cloud Platform
 
-In Fabric 7.0 we are introducing the Cloud Platform **cloud.k2view.com**, where you can create your spaces and see a list of the created spaces. A **space** is a fully working Fabric cluster environment providing all the tools and dependencies needed to run Fabric solutions. 
+In Fabric 7.0 we have introduced the Cloud Platform **cloud.k2view.com**, where you can create your spaces and see a list of the created spaces. A **space** is a fully working Fabric cluster environment providing all the tools and dependencies needed to run Fabric solutions. 
 
-The Cloud Platform is multi-tenant, i.e. it handles multi organizations – K2view’s customers - each in its own separated area. Once a space is created it is accessible directly - there is no need to access first to the Cloud Platform.
+The Cloud Platform is multi-tenant, i.e. it handles multi organizations – K2view’s customers - each in its own separated area. Once a space is created it is accessible directly - there is no need to first access the Cloud Platform.
 
 The table below lists the features of the Cloud Platform that are currently available:
 
@@ -41,9 +41,9 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>Opening a space can be done by:</p>
 <ul>
-<li>Click on the space&rsquo;s name at the space list (when it is in status Running)</li>
-<li>Use the ellipsis menu which resides for each space entry.</li>
-<li>Direct access to the space by typing its URL address.</li>
+<li>Clicking on the space&rsquo;s name at the space list (when it is in the Ruinng status)</li>
+<li>Using the ellipsis menu (found in each space entry).</li>
+<li>Directly accessing the space by entering its URL address.</li>
 </ul>
 <p>Note that more than one user can access to a space on the same time.</p>
 </td>
@@ -55,8 +55,8 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>To create a space:</p>
 <ul>
-<li>Click on the Create button and top right side of the screen.</li>
-<li>At the opened form, give the space a name, following the allowed pattern (a-z, 0-9; up to 16 characters) and rules (cannot be an existing name).</li>
+<li>Click on the Create button found at the top right side of the screen.</li>
+<li>In the form that opens, give the space a name, noting the permitted rules (a-z, 0-9; up to 16 characters, and cannot be an existing name).</li>
 <li>The space will be added to the list of spaces where you can see their creation progress and status. The lines of the new space are highlighted with bold text.</li>
 </ul>
 <p>Notes:</p>
@@ -73,8 +73,8 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>To delete a space:</p>
 <ul>
-<li>Use the ellipsis menu which resides for each space entry. Click there on Delete and assert the action at the popup dialog.</li>
-<li>The deletion process will be then shown at the spaces list. Once process is done the space will not be shown at the spaces list.</li>
+<li>Using the ellipsis menu found in each space entry, click Delete, then enter the action in the popup dialog.</li>
+<li>The deletion process will then be shown at the spaces list. Once the process is complete, the space will no longer be shown at the spaces list.</li>
 </ul>
 <p>Notes:</p>
 <ul>
