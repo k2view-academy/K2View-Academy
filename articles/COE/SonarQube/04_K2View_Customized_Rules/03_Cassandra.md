@@ -23,4 +23,9 @@
    -*Set a thread global in the WS and check this global in the root population to 
 control when this occurs*
 
+**5. The Truncate operation on Cassandra tables**  
+   -*This rule checks if ‘truncate’ is surrounded by a try block and 'delete' statements are being used inside the catch block.*
+   
+   -*Make sure to use ‘delete’ statements in the catch (in case one or more nodes are down).*
+
 [![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/02_Java_Coding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/04_IIDFinder.md)
