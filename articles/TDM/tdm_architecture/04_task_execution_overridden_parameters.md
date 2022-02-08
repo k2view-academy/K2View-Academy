@@ -312,20 +312,166 @@ This way, various users can **use a task as a template** and change (override) t
 
 TDM supports the override of the following parameters:
 
-- [TDM Environments](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md): 
-  - Source Environment on a [Extract task](/articles/TDM/tdm_gui/16_extract_task.md).
-  - Source and/or Target Environments on a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md).
-- Globals: 
-  - Adding Globals.
-  - Updating the values of the [task's Globals](/articles/TDM/tdm_gui/23_task_globals_tab.md).
 
-- [Entity List](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#entities-list) : provide a list of entities separated by a comma instead of the task's entity list. Note that the Entity List can only contain one entity ID when executing a task with a Synthetic selection method. 
-- [Selection  Method](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#requested-entities-columns) : set the overridden selection method to 'L' (Entity List), when overriding the task's Entity List, except for a task with a Synthetic selection method. It is possible to provide a single entity in the Entity List to clone the entity by the task with the Synthetic selection method.
-- [Number of Entities](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities) : change the number of entities to be processed by the task execution. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
-- **dataVersionExecId**: populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.
-- **dataVersionRetentionPeriod**: populated with the the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks..) and the value.
-- **reservationInd**: true/false. Set to true if the task execution needs to reserve the entities on the target environment. The parameter is relavant for load or reserve TDM tasks.
-- **reservationPeriod**: populated with the the reservation period of the task's entities. This parameter is contains the unit (Hours, Days, Weeks..) and the value.
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="225pxl">
+<p><strong>Parameter Name</strong></p>
+</td>
+<td width="225pxl">
+<p><strong>Parameter Description</strong></p>
+</td>
+<td width="200pxl">
+<p><strong>Task Types</strong></p>
+</td>
+<td width="150pxl">
+<p><strong>Data Versioning </strong></p>
+</td>
+</tr>
+<tr>
+<td width="225pxl">
+<p><a href="/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#entities-list">entitieslist</a></p>
+</td>
+<td width="225pxl">
+<p>Populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task that clones an entity</p>
+</td>
+<td width="200pxl">
+<p>Load task</p>
+</td>
+<td width="150pxl">
+<p>True/False</p>
+</td>
+</tr>
+<tr>
+<td width="225pxl">
+<p><strong>sourceEnvironmentName</strong></p>
+</td>
+<td width="225pxl">
+<p>Source environment name</p>
+</td>
+<td width="200pxl">
+<p>Load or Extract tasks</p>
+</td>
+<td width="150pxl">
+<p>True/False</p>
+</td>
+</tr>
+<tr>
+<td width="225pxl">
+<p><strong>targetEnvironmentName</strong></p>
+</td>
+<td width="225pxl">
+<p>Target environment name</p>
+</td>
+<td width="200pxl">
+<p>Load, Delete, or Reserve tasks</p>
+</td>
+<td width="123">
+<p>True/False</p>
+</td>
+</tr>
+<tr>
+<td width="223">
+<p><strong>taskGlobals</strong></p>
+</td>
+<td width="185">
+<p>A list of Global variables (task variables) and their values</p>
+</td>
+<td width="99">
+<p>All tasks</p>
+</td>
+<td width="123">
+<p>True/False</p>
+</td>
+</tr>
+<tr>
+<td width="223">
+<p><a href="/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities">numberOfEntities</a></p>
+</td>
+<td width="185">
+<p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list is not set in the overridden parameters.</p>
+</td>
+<td width="99">
+<p>All tasks</p>
+</td>
+<td width="123">
+<p>False</p>
+</td>
+</tr>
+<tr>
+<td width="223">
+<p><strong>dataVersionExecId</strong></p>
+</td>
+<td width="185">
+<p>Populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.</p>
+</td>
+<td width="99">
+<p>Load task</p>
+</td>
+<td width="123">
+<p>True</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>dataVersionRetentionPeriod</strong></p>
+</td>
+<td width="250pxl">
+<p>Populated with the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks&hellip;) and the value.</p>
+</td>
+<td>Extract task</td>
+<td>True</td>
+</tr>
+<tr>
+<td width="223">
+<p><strong>reserveInd</strong></p>
+</td>
+<td width="185">
+<p>Populated with true or false. Set to true if the task execution needs to reserve the entities on the target environment.</p>
+</td>
+<td width="99">
+<p>Load or Reserve tasks</p>
+</td>
+<td width="123">
+<p>Load task: True/False</p>
+<p>&nbsp;</p>
+<p>Reserve task: N/A</p>
+</td>
+</tr>
+<tr>
+<td width="223">
+<p><strong>reserveRetention</strong></p>
+</td>
+<td width="185">
+<p>Populated with the reservation period of the task's entities. This parameter contains the unit (Hours, Days, Weeks.) and the value.</p>
+</td>
+<td width="99">
+<p>Load or Reserve tasks</p>
+</td>
+<td width="123">
+<p>Load task: True/False</p>
+<p>&nbsp;</p>
+<p>Reserve task: N/A</p>
+</td>
+</tr>
+<tr>
+<td width="223">
+<p><strong>executionNote</strong></p>
+</td>
+<td width="185">
+<p>Free text. Add a note to the execution.</p>
+</td>
+<td width="99">
+<p>All tasks</p>
+</td>
+<td width="123">
+<p>True/False</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 Note:
 - The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
@@ -335,10 +481,22 @@ Note:
 
 This API validates the overridden parameters with the user's permissions on the task's environments:
 
-- Overrides the source and/or target environments: check the user's permissions on the new environments and verify that the user has permissions to run the task on the environments.
-- The task's environments are not overridden: check the user's permissions on the task's environments  and verify that the user has permissions to run the task on the environments.
-- Overrides the Entity List or the Number of Entities: verify that the updated number of entities does not exceed the user's permissions on the environments on which the task needs to run. 
+#### Validate the Task Execution Parameters
+
+- Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, stop the task execution and return an error message.
+- Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
+- Do not enable an execution if another execution with the same execution parameters is already running on the task.
+- Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
+- Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
+
+##### Data Versioning Validations
+
+- Data versioning extract tasks: validate the retention period to verify that it does not exceed the maximum days allowed for the tester.
+
+##### Entity Reservation Validations
+
 - Validate the number of reserved entities: if the task reserves the entities wheather the reservationInd is set to true in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
+- Validate the retention period to verify that the number of days does not exceed the the maximum number of days allowed for the tester
 
 If at least one of the validation fails, the API does not start the task and returns the validation errors. 
 
