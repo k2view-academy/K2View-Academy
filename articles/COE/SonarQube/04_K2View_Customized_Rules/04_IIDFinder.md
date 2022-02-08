@@ -46,6 +46,18 @@ as a first level*
 
 **7. Table Population on top of the LUDB**  
    -*Table Population on top of the LUDB - Do not set it to automatically run every second. This population should be executed only when the source tables are being updated and therefore in most cases should be based on decision function*
+   
+**8. Not to extract from source in case of a new instance**  
+   -*Use EXTRACT_FROM_SOURCE_IND = false and add the iidFinder generic LU
+decision function: fnIIDFCheckExtractFromSourceInd*  
+   -*Make sure that there are no scenarios that cannot be supported. For example,
+records which were orphans on the source before the new instance was created.*
+
+**9. Execute Enrichment functionality only when required**  
+   -*This rule checks if enrichment functions inside IIDF category use getThreadGlobals with a valid global as parameter (global is definded in trnExecUserActivity).*  
+   
+		• Make sure the enrichment is being executed only once a message was received for the relevant table.
+		• Use trnExecUserActivity functionality to set the relevant thread global.
 
 [![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/03_Cassandra.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/05_LU_and_Tables.md)
 
