@@ -33,7 +33,7 @@
 
 
 **4. [Download](/articles/COE/SonarQube/02_Installation) and copy the plugin Snapshots**   
-	*java-custom-rules-\<version>-SNAPSHOT* & *sonar-xml-plugin-\<version>-SNAPSHOT*  
+	*java-custom-rules-\<version>* & *sonar-xml-plugin-\<version>*  
 	**to** 
 	*C:\sonarQube\sonarqube-\<version>\extensions\plugins.*
 
