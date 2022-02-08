@@ -59,10 +59,12 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 *	A specific Fabric Project function used by Parsers to split records to populate more than one record type in the Parser map.
 *	A Switch function enables users to define different types of records for the same parser. 
 
-</studio>
-
 #### **User Job**
 
 * A specific Fabric function used by the Job’s mechanism. [Fabric Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) can only invoke functions of this type.
+
+</studio>
+
+
 
 [![Previous](/articles/images/Previous.png)](07_fabric_built_in_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_creating_a_project_function.md)
