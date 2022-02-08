@@ -190,7 +190,6 @@ The following parameters can be set:
 
 ##### Data Versioning Validations
 
-- Data versioning load tasks: validate the selected version id (the task execution id of the extract task that created the selected version). Verify that the task's entities are successfully processed in the selected version.
 - Data versioning extract tasks: validate the retention period to verify that it does not exceed the maximum days allowed for the tester.
 
 ##### Entity Reservation Validations
