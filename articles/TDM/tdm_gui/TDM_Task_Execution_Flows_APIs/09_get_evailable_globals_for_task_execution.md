@@ -32,6 +32,15 @@ http://localhost:3213/api/environment/getAllGlobals?lus=Customer, Billing
 http://localhost:3213/api/environment/getAllGlobals
 ```
 
+### API Output
+The API output returns a list of available Global variables. The following attributes are populated on each Global variable:
+- **globalName** - Global variable name
+- **globalValue** - the current value of the Global variable
+- **luList** - the luList value depends on the Global variable definition:
+    - When the Global variable is only defined in the **Shared Objects**, the luList is populated with **ALL**.
+    - When the Global variable is only defined in the **LUs**, the luList is populated with the **LU names**.
+    - When the Global variable is defined in **both**, the **Shared Objects** and the **LUs**,  the luList is populated with **ALL** and the **LU names**.
+
 ### API Output Examples
 
 #### Get the Globals Billing LU: return all the shared and the Billing LU's Globals.
@@ -52,7 +61,7 @@ http://localhost:3213/api/environment/getAllGlobals
         {
             "globalName": "PAYMENT_METHOD",
             "globalValue": "CC",
-            "luList": ["Billing", "Customer"]
+            "luList": ["Billing"]
         }
     ],
     "errorCode": "SUCCESS",
@@ -80,12 +89,12 @@ http://localhost:3213/api/environment/getAllGlobals
         {
             "globalName": "PAYMENT_METHOD",
             "globalValue": "CC",
-            "luList": ["Billing", "Customer"]
+            "luList": ["Billing"]
         },
         {
             "globalName": "CUSTOMER_TYPE",
             "globalValue": "Business",
-            "luList": ["Customer"]
+            "luList": ["Customer", "Order"]
         }
     ],
     "errorCode": "SUCCESS",
