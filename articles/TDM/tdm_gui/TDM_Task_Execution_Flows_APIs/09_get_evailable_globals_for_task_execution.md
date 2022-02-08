@@ -1,4 +1,4 @@
-# Get the Available Globals for Task
+# Get the Available Globals (Variables) for Task
 
 ### API URL
 
@@ -42,17 +42,17 @@ http://localhost:3213/api/environment/getAllGlobals
         {
             "globalName": "MASK_FLAG",
             "globalValue": "0",
-            "lu_name": "All"
+            "luList": ["ALL"]
         },              
         {
             "globalName": "PRODUCTION_PRODUCT_VERSION",
             "globalValue": "PROD",
-            "lu_name": "All"
+            "luList": ["ALL"]
         },      
         {
             "globalName": "PAYMENT_METHOD",
             "globalValue": "CC",
-            "lu_name": "Billing"
+            "luList": ["Billing", "Customer"]
         }
     ],
     "errorCode": "SUCCESS",
@@ -70,24 +70,22 @@ http://localhost:3213/api/environment/getAllGlobals
          {
             "globalName": "MASK_FLAG",
             "globalValue": "0",
-            "lu_name": "All"
+            "luList": ["ALL"]
         },              
         {
             "globalName": "PRODUCTION_PRODUCT_VERSION",
             "globalValue": "PROD",
-            "description": "Indicates the applicative version of the product (system) in the environment",
-            "lu_name": "All"
+            "luList": ["ALL"]
         },
         {
             "globalName": "PAYMENT_METHOD",
             "globalValue": "CC",
-            "description": "Payment method name",
-            "lu_name": "Billing"
+            "luList": ["Billing", "Customer"]
         },
         {
             "globalName": "CUSTOMER_TYPE",
             "globalValue": "Business",
-            "lu_name": "Customer"
+            "luList": ["Customer"]
         }
     ],
     "errorCode": "SUCCESS",
