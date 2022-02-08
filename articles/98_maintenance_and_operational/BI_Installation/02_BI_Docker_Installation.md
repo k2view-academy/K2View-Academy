@@ -22,15 +22,17 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
    where **exago** is the docker name (you can define a different name if needed).
    
-4. Update file WebServiceApi.xml with the Container host IP:
+   If you need to use a different port (for example, when the port 80 is already in use) - see the notes below.
+   
+4. Update the **WebReportsApi.xml** file with the Container host IP:
 
-   A. Copy the file WebReportsApi.xml from the container:
+   * Copy the WebReportsApi.xml from the container:
 
    ~~~bash
    docker cp exago:/opt/apps/exago/WebServiceApi/Config/WebReportsApi.xml .
    ~~~
 
-   B. Edit the file with a text editor, update the URL with the host IP or DNS name:
+   * Edit the file with a text editor, update the URL with the host IP or DNS name:
    
    ~~~
    <webreportsbaseurl>http://127.0.0.1/Exago</webreportsbaseurl>
@@ -38,7 +40,7 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    
    Replace {127.0.0.1} with the actual IP or DNS name.
    
-   C. Copy the file back to the container.
+   * Copy the file back to the container.
 
    ~~~bash
    docker cp WebReportsApi.xml exago:/opt/apps/exago/WebServiceApi/Config/WebReportsApi.xml
@@ -64,7 +66,24 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 **Notes**
 
 1. If it is needed to connect to an existing network, use the "--network='network name' " option.
-2. To manage the Apache and fastCGI services within the docker:
+
+2. To use a different port rather than 80, do the following:
+
+   * Start the docker as follows:
+
+     ~~~bash
+     docker run -dt --name=exago -p <your port>:80 k2view/exagobi:2021.1.15
+     ~~~
+
+   * Update the **WebReportsApi.xml** file with the same port number.
+
+   * In Linux environment, add the port number to the command:
+
+     ~~~
+     ./docker_config.sh {Container Name} {IP Address : Port}|{Host Name}| {leave blank}
+     ~~~
+
+3. To manage the Apache and fastCGI services within the docker:
 
 ~~~bash
 docker exec exago service apache2 start|restart|stop|status
@@ -103,4 +122,3 @@ docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
 </tr>
 </tbody>
 </table>
-
