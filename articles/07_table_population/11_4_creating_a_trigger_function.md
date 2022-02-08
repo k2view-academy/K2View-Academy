@@ -49,7 +49,7 @@ The Trigger function analyzes the change using the above information and execute
 A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
-2. In the Table Properties tab, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon to add an existing Trigger function from the list. 
+2. In the Table Properties, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon in the **Triggers** tab to add an existing Trigger function from the list. 
 3. If needed, add additional Trigger functions and use the arrows to set the correct execution order.
 4. To remove a Trigger function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Trigger function definition in the Table Properties.
 5. **Save** the LU Table.

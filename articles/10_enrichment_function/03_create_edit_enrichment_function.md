@@ -5,14 +5,42 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 ### How Can I Create or Edit an Enrichment Function?
 
 The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. 
+
+<studio>
+
 The steps which are unique for Enrichment functions are as follows:
+
 1. In the **Function Properties** tab, set the **Function Type** to **Regular Function**. 
 2. Do not define Input / Output parameters.
 3. It is recommended to set the **Category** to **Enrichment**.
 
 ![10_03_create_enrichment_1](images/10_03_create_enrichment_1.PNG)
 
+</studio>
+
 [Click for more information about How to Create a Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
+
+<web>
+
+### How Do I Attach or Remove an Enrichment Function?
+
+An Enrichment function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
+
+Do the following:
+
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
+2. In the Table Properties, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon in the **Enrichments** tab to add an existing Enrichment function from the list. 
+3. If needed, add additional Enrichment functions and use the arrows to set the correct execution order.
+4. To remove an Enrichment function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Enrichment function definition in the Table Properties.
+5. **Save** the LU Table.
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/01_enrichment_function_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
+
+</web>
+
+<studio>
 
 ### How Do I Attach an Enrichment Function to an LU Table?
 
@@ -60,3 +88,5 @@ To remove an Enrichment function from the LU table, do the following:
 5. **Save** the table.
 
 [![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
+
+</studio>
