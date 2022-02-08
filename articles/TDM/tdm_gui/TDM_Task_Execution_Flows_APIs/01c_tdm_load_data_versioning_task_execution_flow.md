@@ -14,7 +14,9 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_set_entity_list_and_reservation_ind.png" alt="drawing" width="200pxl" style="zoom: 80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters)  
 
-[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Call the API if the task has an entity list. Send the target environment and the entity list.
+[<img src="images/task_validate_entity_list.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Send the target environment and entity list if the task reseves entities and has an entity list.
+
+[<img src="images/task_validate_the_no_of_reserved_entities.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_validation.md) Send the target environment and entity list if the task reserves entities and has an entity list. 
 
 [<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_available_data_versions.md) Send the selected task's attributes, and the selected environments and entity list.
 

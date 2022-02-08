@@ -241,28 +241,29 @@ If the validations pass successfully, start the task execution by populating the
 
   ```json
   {
-  "entitieslist": "string",
-  "sourceEnvironmentName": "string",
-  "targetEnvironmentName": "string",
-  "taskGlobals": {
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  },
-  "numberOfEntities": 0,
-  "dataVersionExecId": 0,
-  "dataVersionRetentionPeriod": {
-    "additionalProp1": "string",
-    "additionalProp2": "string"
-  },
-  "reservationInd": true,
-  "reservationPeriod": {
-    "additionalProp1": "string",
-    "additionalProp2": "string"
-  }
+    "entitieslist": "string",
+    "sourceEnvironmentName": "string",
+    "targetEnvironmentName": "string",
+    "taskGlobals": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "numberOfEntities": 0,
+    "dataVersionExecId": 0,
+    "dataVersionRetentionPeriod": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "reserveInd": true,
+    "reserveRetention": {
+      "additionalProp1": {}
+    },
+    "executionNote": "string"
   }
   ```
-
+  
   
 
 ### API Input Examples
@@ -287,8 +288,8 @@ http://localhost:3213/api/task/55/forced/true/startTask
 		"Customer.Global2": "value2",
 		"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
 	},
-	"reservationInd": true,
-  	"reservationPeriod": {
+	"reserveInd": true,
+  	"reserveRetention": {
     	"unit": "Days",
 		"value": "10"
   }
@@ -312,7 +313,10 @@ http://localhost:3213/api/task/55/forced/true/startTask
 }
 ```
 
+
+
 ##### Example 3 - Data Versioning Load Task
+
 Override the selected version
 
 ```json
@@ -337,7 +341,8 @@ Override the selected version
  	"dataVersionRetentionPeriod": {
 		"unit": "Days",
 		"value": "10"
-	}
+	},
+    "executionNote": "Snapshot 1"
 }
 ```
 
