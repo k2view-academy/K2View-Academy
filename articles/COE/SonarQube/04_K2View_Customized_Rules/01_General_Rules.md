@@ -24,6 +24,9 @@
 
 **7. Complex queries**  
   -*simplify the queries whenever it's possible to avoid performance issues*
+  
+**8. LUDB Functions**  
+  -*This rule checks if LUDB functions parameters are being used inside each function logic.*
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/02_Java_Coding.md)
 

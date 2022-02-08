@@ -43,6 +43,10 @@
 
 **8. Use fabric() instead of db(<fabricInterface>) in the WS**  
    -*db() function should be used to extract data from fabric via the WS*
+	
+**9. Combine two lists**  
+   -*In order to combine two lists use Java function: ‘myListObject.addAll’. Do not add one by one by using loops.*
+	
 
 [![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/01_General_Rules.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/03_Cassandra.md)
 
