@@ -49,19 +49,19 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    In Linux environment, you can use the following script to automate the process.
    Download the Docker Configuration Script (for Linux) from [here](https://download.k2view.com/index.php/s/yBnXEWhq9SrTDX6).
 
-~~~bash
-./docker_config.sh {Container Name} {IP Address}|{Host Name}| {leave blank}
-~~~
+   ~~~bash
+   ./docker_config.sh {Container Name} {IP Address}|{Host Name}| {leave blank}
+   ~~~
 
-  - docker name: name of the running Exago container.
+     * docker name: name of the running Exago container.
 
-  - IP Address: container assigned IP or host local IP.
+     * IP Address: container assigned IP or host local IP.
 
-  - Host Name: container assigned Host Name.
+     * Host Name: container assigned Host Name.
 
-  - To set IP automatically, leave the second variable **blank**.
+     * To set IP automatically, leave the second variable **blank**.
 
-5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
+Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
 **Notes**
 
@@ -85,13 +85,13 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 3. To manage the Apache and fastCGI services within the docker:
 
-~~~bash
-docker exec exago service apache2 start|restart|stop|status
-~~~
+   ~~~bash
+   docker exec exago service apache2 start|restart|stop|status
+   ~~~
 
-~~~bash
-docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
-~~~
+   ~~~bash
+   docker exec exago bash -c "/opt/apps/exago/fastcgi.sh start|restart|stop|status
+   ~~~
 
 **Directory Locations**
 
