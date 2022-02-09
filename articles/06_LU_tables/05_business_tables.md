@@ -12,7 +12,7 @@ In the example below, we can see different examples for such tables:
 
 - **Business Child** table: 2 populations with 1 connected to its parent *Business* table, and the other population connected to the LU invoice table.
 
-- **Business2** and **Business3** tables: Unconnected to any other table in the schema and with (respectively) no population or 3 items.
+- **Business2** table: Unconnected to any other table in the schema and with (respectively) no population or 3 items.
 
 ![image](images/business_tables.PNG)
 
