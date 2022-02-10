@@ -16,9 +16,10 @@ The first screen displays a list of all [DB interfaces](/articles/05_DB_interfac
 
 ![image](/articles/03_logical_units/images/03_06_wizard_01.png)
 
-1. Double click the **DB interface** to display its connection string.
-2. To validate the connection settings, click **Test Connection String**. 
-3. Click **Next**.
+1. Click the specific **DB interface** upon which you want to base the structure of the LU. The right side of the window will fill up with various parameters, but what we need now is its *Connection String*, located under *Connection Details*.  
+2. Validate the connection string by clicking **Test Connection String**. The response will appear in the field at the bottom of the window. 
+3. If the connection string has been succefully validated, click **Next**.
+4. If the connection string has not been validated, then you must first get a valid route for the connection string before continuing. 
 
 ### STEP 2: Define the Root Table and Field
 In this step you will select a DB Table and column as the Root Table and [Instance ID](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
