@@ -1,4 +1,4 @@
-# Entity List Validation on Entity Reservation
+# Entity List Validations on Entity Reservation
 
 The following validation need to be implemented on the task's entity list when the task reserves the entities:
 
@@ -53,6 +53,10 @@ The request body contains the following attributes:
 
 
 
+### API Output
+
+The API returns the list of entities that are reserved on the environment by another user and therefore cannot be reserved by the user.
+
 ### API Output Example
 
 ```json
@@ -75,6 +79,69 @@ The request body contains the following attributes:
   },
   "errorCode": "SUCCESS",
   "message": null
+}
+```
+
+
+
+## Validate that the Total Number of Entities Reserved by the User
+
+### API URL
+
+/validatenoofreserved
+
+### HTTP Method
+
+GET
+
+### API Category
+
+TDM_ReserveEntities
+
+### API Description
+
+A tester user can reserve a limited number of entities per Business Entity and environment. The maximum number of reserved entities is set in the Environment permission set  attached to the user. Admin and environment owners can reserve unlimited number of entities on the environment.  The API performs the following validation if the user is not an admin user and is not the owner of the environment:
+
+- Get the Write permission set attached to the user. If the user does not have a Write permission set on the environment, an exception is thrown by the API.
+
+- Sum the input number of entities with the number of entities that are already reserved by the user on the environment (if exist). Validate the the total number of reserved entities does not exceed the user's permissions. 
+
+  **Example:** 
+
+  - The user can reserve up to 70 customers on ST1.
+
+  - The user already has 40 customers reserved on ST1. 
+  - The user asks to reserve 35 entities in the task:
+    -  40+35 = 75. 
+  - The API returns an error since the user cannot exceed the number of 30 customers in the task.
+
+### API Input
+
+- **noOfEntities** - populated by the number of entities, processed by the task.
+- **envName** - populated by the target environment's name.
+- **beName** - populated by the task's Business Entity name.
+
+
+
+### API Output Examples
+
+```json
+{
+  "result": {
+   },
+  "errorCode": "SUCCESS",
+  "message": null
+}
+```
+
+
+
+```json
+{
+  "result": {
+   },
+  "errorCode": "FAILED",
+  "message": "The number of entities to be reserved exceeds the number of entities allowed for the user"
 }
 ```
 
