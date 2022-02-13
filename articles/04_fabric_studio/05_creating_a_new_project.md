@@ -13,18 +13,18 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. You can use an existing project on which you already have worked.
 
-[Click to get more information how to load an existing project to Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+[Click for more information on how to load an existing project to the Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 
 </web>
 
 <studio>
 
-1. Go to the **Start Page** or click the **File** icon <img src="images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
+1. Go to the **Start Page** or click the **File** icon <img src="images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
 3. Verify that the **default directory** displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new project to SVN or Git. It is recommended to save and commit the new project as a baseline.
 Note that to avoid errors, the SVN/Git repositories must be created in advance.  
-5. Verify the **default URL** in the **Repository URL** field is correct, if not, **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control. 
+5. Verify that the **default URL** in the **Repository URL** field is correct, if not, **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control. 
 6. Click **OK**. The project’s **Main Window** opens and the **Project Tree** is displayed in the left pane. 
 
 
@@ -41,7 +41,7 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 ### How Do I Access a Fabric Project?
 
 1. Either:
-   * Go to the **K2view Fabric Studio Start Page** and click **Open Project**.
+   * Go to the **K2view Fabric Studio Start Page** and click **Open Project**, or 
    * Click **File** in the top left corner and then click **Open Project** to open the default Fabric Project Directory.     
 2. Go to the **Project Folder** (it has the name of the project) and double click the **.k2proj file**.
 3. Do the following to check out a project:
