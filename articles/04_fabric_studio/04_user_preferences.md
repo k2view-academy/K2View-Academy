@@ -4,13 +4,13 @@ User Preferences are used to define key operational functionalities for developm
 
 <web>
 
-To open the User Preference, click the <img src="images/web/settings.png" style="zoom:67%;" /> icon >in the left lower corner of the Web Studio. Then click **Open Settings (UI)**. The **Preferences** window opens and it includes various types of settings.
+To open the User Preference, click the <img src="images/web/settings.png" style="zoom:67%;" /> icon >in the left lower corner of the Web Studio, then click **Open Settings (UI)**. The **Preferences** window opens and it includes various types of settings.
 
 <img src="images/web/4_preferences.PNG" style="zoom:80%;" />
 
 You can use the **Search Settings** bar to search and set the required setting.
 
-For example, to check and update the **Soft Deploy** setting:
+For example, to check and update the **Soft Deploy** setting, type "soft deploy" in the field as indicated:
 
 <img src="images/web/4_soft_deploy.PNG" style="zoom:80%;" />
 
@@ -77,7 +77,7 @@ The following is a list of server configuration items:
 <p><strong>Soft Deploy</strong></p>
 </td>
 <td>
-<p><strong>Checked:</strong> performs the deployment without automatic processes: user jobs, parsers and interface listener</p>
+<p><strong>Checked:</strong> performs the deployment without automatic processes: user jobs, parsers and interface listener.</p>
 </td>
 </tr>
 <tr>
@@ -141,8 +141,7 @@ The following is a list of server configuration items:
 <p><strong>Add WS Parameters to URL Query</strong></p>
 </td>
 <td width="467">
-<p>When checked, enables adding parameters to the Web Service (WS) URL body.</p>
-<p>For example: ws?format=html&amp;methodName=&lt;WS_NAME&gt;&amp;token=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>When checked, this option enables adding parameters to the Web Service (WS) URL body.</p>
 </td>
 </tr>
 </tbody>
