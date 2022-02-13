@@ -217,12 +217,9 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 * **Side Bar** (C) - Contains different views like the Explorer to assist you while working on your Fabric project.
 * **Status Bar** (D) - Information about the opened project and the files you are editing.
 * **Panels** (E) - Enables you to see different panels below the editor region for debug information, compilations errors and warnings, or the integrated Fabric console. Panels can also be moved to the right to allow more vertical space.
-* **Minimap** & **Outline** (F) = Code outline, Gives you a high-level overview of your source code, which is useful for quick navigation and code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
-
-
-
-In addition, the layout contains a **top menu** (H) where you either carry out IDE operations or activate certain Fabric commands. The Web Studio works as part of the Fabric Web Platform, where you can navigate to its other apps via the **Fabric Apps Panel** (G).  
-
+* **Minimap** & **Outline** (F) - Code outline, Gives you a high-level overview of your source code, which is useful for quick navigation and code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
+* **Fabric Apps Panel** (G) - Since the Web Studio works as part of the Fabric Web Platform, you can navigate to its other apps via this panel. 
+* **Top Menu** (H) - From the top menu you can either carry out IDE operations, or activate certain Fabric commands. 
 
 
 ![basic layout](images/web/1_main_ui.jpg)
@@ -251,12 +248,12 @@ The views which appear by default at the Web Studio are as follows:
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
 <td style="padding-left: 30px;"><strong>Search</strong></td>
-<td style="width:60%">Provides ש global search and replace across your project files. This tool, which is opened from the Side Bar, lets you make smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a></td>
+<td style="width:60%">Provides a global search and replace across your project files. This tool, which is opened from the Side Bar, lets you make smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
     <td style="padding-left: 30px;"><strong>Source Control</strong></td>
-    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing those changes to the origin, as well as making various source control actions. <br>A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a></td>
+    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing those changes to the origin, as well as making various source control actions. <br>A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/debug.png" alt="debug" /></td>
@@ -266,7 +263,7 @@ The views which appear by default at the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/datasource_explorer.png" alt="data source explorer" /></td>
     <td style="padding-left: 30px;"><strong>DB Interface Explorer</strong></td>
-    <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views, and columns. According to the opened editor's context it lets you to apply actions, like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB actors to Broadway and adding an SQL section to Graphit. To learn more about using the Git tool within the Web Studio see <a href="25_web_data_explorer.md">here</a></td>
+    <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views, and columns. According to the opened editor's context it lets you apply actions like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB actors to Broadway and adding an SQL section to Graphit. To learn more about using the Git tool within the Web Studio see <a href="25_web_data_explorer.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/log.png" alt="log viewer" /></td>
