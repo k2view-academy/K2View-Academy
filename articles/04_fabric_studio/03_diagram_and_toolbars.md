@@ -2,7 +2,7 @@
 
 # Diagram and Toolbars
 
-The Diagram window is the main working area in the Fabric Studio. When multiple functional windows are open in the same working area, you can switch between different windows using the tabs on the top of the main working area.
+The Diagram window is the main working area in the Fabric Studio. When multiple functional windows are open in the same working area, you can switch between different windows using the tabs on the top of the main working area.  
 
 Below are some examples of Fabric components which have a Diagram window working area:
 
