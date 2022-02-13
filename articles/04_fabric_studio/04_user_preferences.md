@@ -223,7 +223,7 @@ The following SVN preferences can be configured:
 </tr>
 </tbody>
 </table>
-
+   
 
 </studio>
 
