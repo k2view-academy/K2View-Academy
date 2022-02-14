@@ -43,10 +43,17 @@ Each project has the following main components:
   * Templates
   
   * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) 
-  
-    </studio>
-  
+
+ 
 * **Logical Units**, a collection of all [Logical Units](/articles/03_logical_units/01_LU_overview.md) defined in the project.
+
+    </studio>
+    
+    <web>
+ 
+* **Logical Units/Data Products**, a collection of all Logical Units / [Data Products](/articles/03_logical_units/01_LU_overview.md) defined in the project.
+ 
+    </web>
   
 * **References**, reference information that can be used throughout the LU instances and may include the following sub-branches:
   
