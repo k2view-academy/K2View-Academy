@@ -30,7 +30,7 @@ Do the following steps to build the artifacts:
 
    * In the **Project Structure** screen, click **Libraries > the + sign > Java** and select the above two Jars.
 
-     <img src="images/02_filter_select_lib.PNG" style="zoom:80%;" />
+     <img src="images/02_filter_select_lib.png" style="zoom:80%;" />
 
    * Click **OK**.
 
@@ -38,7 +38,7 @@ Do the following steps to build the artifacts:
 
    * Choose the **Main class**, can be either All, filter strategies or persistency strategies. 
 
-     <img src="images/02_choose_artifacts.PNG" style="zoom:80%;" />
+     <img src="images/02_choose_artifacts.png" style="zoom:80%;" />
 
    * Click **OK**.
 
