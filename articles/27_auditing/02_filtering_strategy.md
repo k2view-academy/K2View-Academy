@@ -89,7 +89,9 @@ The following example displays the **com.k2view.external.fabric.audit.filters.Sa
    }
 ~~~
 
+The **k2_auditing** table is populated as follows:
 
+<img src="images/02_audit.png" style="zoom:80%;" />
 
 
 
