@@ -26,7 +26,7 @@ In demo or development environments, you can change this setting to **True** if 
 
 ### REST Key
 
-The REST Key is used to authenticate REST requests from the Fabric server to BI. The REST Key is defined in the **Admin** module and it is set to the default value during the BI installation.
+The REST Key is used to authenticate REST requests from the Fabric server to BI. The REST Key is defined in the **Admin** module and is saved in the BI configuration file **WebReports.xml**. The default value is set to 1234 during the BI installation. The same value must be set in **BI_REST_KEY** parameter in Fabric's **config.ini** file.
 
 To update the REST Key do the following:
 
