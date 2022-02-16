@@ -16,17 +16,21 @@ Then, do the following:
 
 1. Update the **config.ini** file with the full path of the class in the  **AUDIT_PERSISTENCY_STRATEGY** parameter. 
 
-~~~
-AUDIT_PERSISTENCY_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
-~~~
+   ~~~
+   AUDIT_PERSISTENCY_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
+   ~~~
 
-2. Verify that AUDIT is set to ON.
+2. Verify that AUDIT is set to ON in the **config.ini** file.
+
+   ~~~
+   AUDIT=ON
+   ~~~
 
 3. Restart the Fabric node.
 
 ### Example of Setting Persistence Strategy
 
-The following is an example of the **com.k2view.external.fabric.audit.persistencies.SamplePersist** persistency class which writes the Audit operations into a file.
+The following example displays the persistency class **com.k2view.external.fabric.audit.persistencies.SamplePersist** which writes the Audit operations into a file.
 
 ~~~java
 package com.k2view.external.fabric.audit.persistencies;
