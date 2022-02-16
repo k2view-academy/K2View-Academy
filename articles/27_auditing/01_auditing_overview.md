@@ -94,5 +94,11 @@ Logouts are not audited.
 
 By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** in the **config.ini** file and then restart Fabric.
 
+~~~
+AUDIT=ON
+~~~
+
+
+
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_filtering_strategy.md) 
 
