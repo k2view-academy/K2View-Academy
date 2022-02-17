@@ -30,7 +30,7 @@ One of the basic reports is a report based on data from a Fabric LU Instance. Fo
 
 Sometimes the report data requires writing a complex SQL query rather then just selecting columns from several joined tables. This is supported by a Customer SQL Object screen.
 
-Creating a report based on a query executed on a Fabric LUI is similar to creating it based on Fabric LUI tables.  Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen:
+Creating a report based on a custom query is similar to creating it based on Fabric LUI tables.  Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen:
 
 ![image](images/custom_sql_obj.PNG)
 
