@@ -101,26 +101,26 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
 Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
-create tarball file
+Create a tarball file:
 
 ``` bash
 tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl .
 ```
 
-copy to other kafka nodes and fabric
+Copy to other Kafka nodes and Fabric:
 
 ``` bash
 scp Kafka_keyz.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
 ```
 
-In case Docker installation use following commands to copy between running containers
+If you are working with a Docker installation, use the following commands to copy between running containers:
 
 ```bash
 docker cp kafka:/opt/apps/kafka/Kafka_keyz.tar.gz ./
 docker cp Kafka_keyz.tar.gz fabric:/usr/local/k2view/
 ```
 
-on the Fabric and other Kafka nodes use the following to extract
+On the Fabric and other Kafka nodes, use the following to extract:
 
 ```bash
 mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
@@ -130,7 +130,7 @@ mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_s
 
 Notes:
 
-- These configuration must be applied to every node in the cluster
+- This configuration must be applied to every node in the cluster.
 - Since ZooKeeper does not support SSL authentication, MD5 authentication (username and password) is used.
 
 ### Step 1 - SASL Authentication
@@ -139,7 +139,7 @@ Notes:
 echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider" >> $CONFLUENT_HOME/zookeeper.properties
 ```
 
-### Step 2 - create zookeeper_jaas.conf
+### Step 2 - Create zookeeper_jaas.conf
 
 ```bash
 echo \
@@ -158,7 +158,7 @@ Client {
 
 ### Step 3 - Start the ZooKeeper Service
 
-When starting ZooKeeper make sure the following command is invoked:
+When starting ZooKeeper, make sure the following command is invoked:
 
 ```bash
 export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties
@@ -168,7 +168,7 @@ The ZooKeeper daemon starts.
 
 # Kafka Server Configuration
 
-:clipboard: Note that the following steps must be applied for each node in cluster.
+:clipboard: Note that the following steps must be applied for each node in the cluster.
 
 ### Step 1 - SSL Authentication
 
@@ -194,7 +194,7 @@ sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.prope
 
 ### Step 2 - kafka_server_jaas.conf
 
-1. Create kafka_server_jaas.conf file:
+1. Create the kafka_server_jaas.conf file:
 
    ```bash
    echo \
@@ -214,7 +214,7 @@ sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.prope
 
 ### Step 3 - producer.properties
 
-1. Create producer.properties file:
+1. Create the producer.properties file:
 
 ```bash
 echo \
@@ -229,7 +229,7 @@ ssl.truststore.password=Q1w2e3r4t5' > $CONFLUENT_HOME/client_security.properties
 
 ### Step 4 - Start the Kafka Server
 
-When starting Kafka make sure the following command is invoked:
+When starting Kafka, make sure the following command is invoked:
 
 ```bash
 export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties
@@ -239,7 +239,7 @@ The Kafka daemon starts.
 
 ### Step 5 - Create Topic
 
-1. For creating topic use the following command: (in the following example, rf=1)
+1. For creating topics, use the following command: (in the following example, rf=1)
 
  ```bash
  $CONFLUENT_HOME/bin/kafka-topics --create  --zookeeper localhost:2181   --replication-factor 1  --partitions 1  --topic <topic-name>
@@ -247,7 +247,7 @@ The Kafka daemon starts.
 
 ### Step 6 - Create Kafka Producer Client
 
-1. For creating Kafka producer client use the following command:
+1. For creating the Kafka producer client, use the following command:
 
 ```bash
 $CONFLUENT_HOME/bin/kafka-console-producer --broker-list <broker-ip>:9093 --topic <topic-name> --producer.config ~/kafka/producer.properties
@@ -255,7 +255,7 @@ $CONFLUENT_HOME/bin/kafka-console-producer --broker-list <broker-ip>:9093 --topi
 
 ### Step 7 - Create Kafka Consumer Clienr
 
-1. For creating Kafka consumer client use the following command:
+1. For creating the Kafka consumer client, use the following command:
 
 ```bash
 $CONFLUENT_HOME/bin/kafka-console-consumer --bootstrap-server <bootstrap-ip>:9093 --topic <topic-name> --consumer.config ~/producer.properties
