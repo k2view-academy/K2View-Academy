@@ -12,5 +12,6 @@
     <li><a href="/articles/99_fabric_infras/devops/08_oracleGG_hardening.md">Oracle GG (Golden Gate) Big Data Setup with Kafka SSL</a></li>
     <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Replace the Fabric Default Admin Password</a></li>
     <li><a href="/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md">Define Working with Master Key</a></li>
+    <li><a href="/articles/99_fabric_infras/devops/11_kafka_plain_sasl_hardening.md">Kafka Plain SASL Hardening</a></li>
 </ul>
 
