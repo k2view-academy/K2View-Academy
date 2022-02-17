@@ -2,9 +2,14 @@
 
 <img src="images/img13.jpg" style="zoom: 80%;" />
 
-### Next DevCom Webinar is coming on January 19th!
+### Next DevCom Webinar is coming on February 23rd!
 
-Stay tuned for the next Developer Community Webinar for more interesting topics! 
+The agenda for the next Webinar is:
+
+* K2View **2022 Roadmap** (20 min)
+* Fabric **BI** Tool (15 min)
+* Fabric **Web apps** – City Mobility App Example (15 min)
+* Q&A 
 
 
 <!--block-->
@@ -28,5 +33,4 @@ The second K2View Development Community Webinar took place on July 12th where we
 [Read more >](webinar_20210712/20210712_Webinar_Agenda_And_Speakers.md)
 
 <!--block-->
-
 
