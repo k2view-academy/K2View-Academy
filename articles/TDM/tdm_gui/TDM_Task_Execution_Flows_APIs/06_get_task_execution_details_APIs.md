@@ -20,9 +20,52 @@ Returns the list of all executions of the input task. Returns one summary record
 
 ### API Input
 
-- **taskId**: a mandatory parameter.
-- **numberOfExecutions**: an optional parameter to limit the output to the latest X executions. For example, when this parameter is set to 3, the API return the last 3 task executions.
-- **userId**: an optional parameter. When populated, the API only returns the task executions made by the input user.
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>taskId</strong></p>
+</td>
+<td valign="top" width="200">
+<p>Yes</p>
+</td>
+<td valign="top" width="251">
+<p>The task&rsquo;s unique identifier.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>numberOfExecutions</strong></p>
+</td>
+<td valign="top" width="200">
+<p>No</p>
+</td>
+<td width="251">
+<p>The parameter can be set to limit the output to the latest X executions. For example, when this parameter is set to 3, the API returns the last 3 task executions.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong> userId</strong></p>
+</td>
+<td>
+<p>No</p>
+</td>
+<td valign="top">
+<p>When populated, the API only returns the task executions made by the input user.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### API Input Example
 
