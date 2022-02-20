@@ -1,3 +1,5 @@
+<studio>
+
 # Debugging with IntelliJ
 
 There are a range of key-features offered by IntelliJ IDEA that lets you accelerate your implementation. In this article, we will focus on Fabric Java project debugging capabilities.
@@ -30,3 +32,5 @@ Refer to the following links to set up a simple Java debugging scheme on your pr
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/03_intelliJ_from_fabric_studio.md)
+ 
+</studio>
