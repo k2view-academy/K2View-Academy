@@ -97,7 +97,7 @@ Call the **validatereserveretentionperiod** API to validate the reservation peri
 
 #### API URL
 
-/validateReservedEntitiesList
+/validatereserveretentionperiod
 
 #### HTTP Method
 
@@ -122,7 +122,83 @@ The validated retention period can be populated either by the combination of **r
 - **newEndDateTime** - populated with the new expiration date of the reservation period. Format: 'YYYYMMDDHHMMSS'. 
 - **listOfEntities** - contains the **environment_name**, **be_name**, and **target_entity_id** of each task's entity.  Note that if the **entitieslist** attribute is set in the overridden execution parameters, populate the listOfEntities with the entities of the **entitieslist**. Else, get the **selection_param_value** task's attribute if the task's **selection_method** is 'L' (entity list).  
 
+==========
 
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="300pxl">
+<p><strong>Valid Values</strong></p>
+</td>
+<td width="300pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>retentionUnit</strong></p>
+</td>
+<td valign="top">No</td>
+<td valign="top">
+<ul>
+<li>"Minutes"</li>
+<li>"Hours"</li>
+<li>"Days"</li>
+<li>"Weeks"</li>
+<li>"Years"</li>
+</ul>
+</td>
+<td valign="top">Populated with the unit type of the reservation period.</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>retentionValue</strong></p>
+</td>
+<td valign="top" width="200">
+<p>No</p>
+</td>
+<td width="251">
+<p>Number</p>
+</td>
+<td valign="top">The reservation period value. For example, if the <strong>retentionUnit </strong>parameter&nbsp;is "Days" and the <strong>retentionValue</strong> parameter is 5, the reservation period is 5 days.</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>newEndDateTime</strong></p>
+</td>
+<td valign="top">
+<p>No</p>
+</td>
+<td valign="top">
+<p>'YYYYMMDDhh24MISS' format</p>
+</td>
+<td valign="top">New end date of the reservation period. This parameter <strong>can be set instead of the retention period unit and value</strong> parameters. If the retention unit and values parameters are populated, validate the reservation period based on these parameters. Else, validate the reservation period based on the input <strong>newEndDateTime</strong> parameter.</td>
+</tr>
+<tr>
+<td><strong>listOfEntities</strong><strong>&nbsp;</strong></td>
+<td valign="top">
+<p>Yes</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>This parameter contains the following attributes of each task's entity:</p>
+<ul>
+<li>environment_name</li>
+<li>be_name</li>
+<li>target_entity_id.</li>
+<li>&nbsp;</li>
+<li>Note that if the <strong>entitieslist</strong> attribute is set in the overridden execution parameters, populate the <strong>listOfEntities</strong> with the entities of the <strong>entitieslist</strong>. Else, get the selection_param_value task's attribute if the task's <strong>selection_method</strong> is 'L' (entity list). </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 #### API Input Examples
 
