@@ -1,6 +1,8 @@
-# Fabric API/WS Hardening 
+# Fabric Hardening
 
-## Step 1 - Keys Generation
+## Fabric API/WS Hardening 
+
+### Step 1 - Keys Generation
 
 1. Run the following script on one of the Fabric nodes to generate the following key: ```k2vws.key```
 
@@ -19,7 +21,7 @@ keytool -genkey -noprompt \
         -keypass Q1w2e3r4t5
 ~~~
 
-## Step 2 - Copy the *k2vws.key* key to all Fabric nodes
+### Step 2 - Copy the *k2vws.key* key to all Fabric nodes
 
 1. Copy the `$K2_HOME/.ssl/k2vws.key` on each Fabric node into the same location ```$K2_HOME/.ssl```
 
@@ -29,7 +31,7 @@ scp k2vmws.tar.gz fabric@10.10.10.10:/opt/apps/fabric/
 mkdir -p $K2_HOME/.ssl && tar -zxvf k2vmws.tar.gz -C $K2_HOME/.ssl
 ```
 
-## Step 3 - Configure Fabric to use TLS for API or WebUI
+### Step 3 - Configure Fabric to use TLS for API or WebUI
 
 1. Run the snippet below on each fabric node, and restart Fabric.
 
@@ -49,11 +51,21 @@ chown root.root $K2_HOME/.ssl/k2vws.key
 ```
 
 
-## Step 4 - Check access to Fabric Web UI via HTTPS
+### Step 4 - Check access to Fabric Web UI via HTTPS
 
 - Restart each one of the Fabric nodes.
 - Use the following Access points to check that the **https** access has been properly granted: 
   - Admin Panel: ``` https://10.10.10.10:9443/ ```
   - Fabric web service will be available at: ``` https://10.10.10.10:9443/deploy ```
+
+## Fabric JDBC Driver Hardening
+
+In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the \[jdbc-server\] section of the **config.ini** file as shown below:
+
+```
+## Turn on TLS for the Fabric driver protocol
+SECURE=true
+```
+
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
