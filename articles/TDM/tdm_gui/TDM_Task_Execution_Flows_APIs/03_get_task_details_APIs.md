@@ -45,75 +45,55 @@ http://localhost:3213/api/tasks
 
 ### API Output Example
 
+#### Return One Task 
+
 ```json
 {
   "result": [
     {
-      "task_last_updated_date": "2021-09-09 10:08:45.529",
+      "task_last_updated_date": "2022-02-20 09:33:50.907",
       "be_id": 1,
       "selected_version_task_name": null,
-      "environment_id": 6,
+      "reserve_retention_period_type": "Days",
+      "environment_id": 1,
       "selection_method": "L",
       "selected_ref_version_task_name": null,
       "refresh_reference_data": false,
-      "tester": "michal",
-      "be_last_updated_date": "2021-09-30 06:33:58.083",
+      "tester": "tester1",
+      "be_last_updated_date": "2022-01-11 13:21:54.425",
       "owners": [
         {
           "owner": "OwnerEnv1",
           "owner_type": "GROUP"
-        },
-        {
-          "owner": "TestRole1",
-          "owner_type": "ID"
-        },
-        {
-          "owner": "OwnerMega",
-          "owner_type": "ID"
         }
       ],
       "refcount": 0,
       "tester_type": "ID",
       "load_entity": false,
-      "reservation_ind": false,  
       "selected_version_task_exe_id": 0,
       "task_created_by": "admin",
       "be_last_updated_by": "admin",
       "scheduling_end_date": null,
-      "retention_period_type": "Days",
+      "retention_period_type": null,
       "environment_point_of_contact_phone1": null,
       "processnames": null,
       "testers": [
         {
           "tester_type": "ID",
           "role_id": [
-            "9"
+            "2"
           ],
-          "tester": "michal"
+          "tester": "tester1"
         },
         {
           "tester_type": "ID",
           "role_id": [
-            "9"
-          ],
-          "tester": "owner2"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "9"
-          ],
-          "tester": "wsRole"
-        },
-        {
-          "tester_type": "ID",
-          "role_id": [
-            "10"
+            "3"
           ],
           "tester": "testershai"
         }
       ],
-      "selection_param_value": "1,2,3",
+      "selection_param_value": "666,2",
       "environment_status": "Active",
       "be_status": "Active",
       "selected_version_datetime": null,
@@ -126,6 +106,7 @@ http://localhost:3213/api/tasks
       "environment_point_of_contact_last_name": null,
       "environment_point_of_contact_email": null,
       "be_description": "",
+      "reserve_retention_period_value": "3",
       "parameters": null,
       "environment_expiration_date": null,
       "environment_point_of_contact_phone2": null,
@@ -133,119 +114,104 @@ http://localhost:3213/api/tasks
       "roles": [
         [
           {
-            "role_id": 8,
+            "role_id": 2,
             "allowed_test_conn_failure": true
           },
           {
-            "role_id": 9,
-            "allowed_test_conn_failure": true
-          },
-          {
-            "role_id": 11,
-            "allowed_test_conn_failure": false
-          },
-          {
-            "role_id": 10,
+            "role_id": 3,
             "allowed_test_conn_failure": false
           }
         ]
       ],
       "environment_last_updated_by": "admin",
-      "be_creation_date": "2021-08-08 13:31:04.17",
-      "task_id": 131,
+      "be_creation_date": "2021-11-21 13:35:56.86",
+      "task_id": 211,
       "be_created_by": "admin",
-      "source_environment_id": 6,
-      "role_id_orig": 9,
-      "scheduler": "immediate",
-      "environment_description": "ENV1",
+      "source_environment_id": 1,
+      "role_id_orig": 2,
+      "scheduler": null,
+      "environment_description": null,
       "selected_ref_version_datetime": null,
-      "source_env_name": null,
-      "task_title": "r6",
+      "source_env_name": "ENV1",
+      "reserve_ind": true,
+      "task_title": "reserveOnlyTest",
       "fabric_environment_name": null,
       "environment_name": "ENV1",
       "delete_before_load": false,
       "allow_write": true,
       "owner": "OwnerEnv1",
       "task_status": "Active",
-      "retention_period_value": "5",
+      "retention_period_value": null,
       "executioncount": 0,
-      "environment_last_updated_date": "2021-10-13 09:09:48.743",
+      "environment_last_updated_date": "2022-02-17 11:10:16.162",
       "be_name": "BE1",
-      "version_ind": true,
-      "number_of_entities_to_copy": 3,
-      "task_creation_date": "2021-09-09 10:08:45.529",
+      "version_ind": false,
+      "number_of_entities_to_copy": 2,
+      "task_creation_date": "2022-02-15 13:59:41.62",
       "task_globals": false,
-      "environment_point_of_contact_first_name": "",
-      "task_type": "EXTRACT",
-      "environment_creation_date": "2021-09-09 08:12:28.523",
-      "owner_type": "GROUP"
-    },
+      "environment_point_of_contact_first_name": null,
+      "task_type": "RESERVE",
+      "environment_creation_date": "2021-11-21 13:37:14.057",
+      "owner_type": "GROUP",
+      "creatorRoles": [
+        "admin"
+      ]
+    }
+  ],
+  "errorCode": "SUCCESS",
+  "message": null
+}
+```
+
+#### Return Two Tasks
+
+```json
+{
+  "result": [
     {
-      "task_last_updated_date": "2021-09-09 12:45:49.442",
+      "task_last_updated_date": "2022-02-20 09:33:50.907",
       "be_id": 1,
       "selected_version_task_name": null,
-      "environment_id": 6,
-      "selection_method": "R",
+      "reserve_retention_period_type": "Days",
+      "environment_id": 1,
+      "selection_method": "L",
       "selected_ref_version_task_name": null,
       "refresh_reference_data": false,
-      "tester": "michal",
-      "be_last_updated_date": "2021-09-30 06:33:58.083",
+      "tester": "tester1",
+      "be_last_updated_date": "2022-01-11 13:21:54.425",
       "owners": [
         {
           "owner": "OwnerEnv1",
           "owner_type": "GROUP"
-        },
-        {
-          "owner": "TestRole1",
-          "owner_type": "ID"
-        },
-        {
-          "owner": "OwnerMega",
-          "owner_type": "ID"
         }
       ],
       "refcount": 0,
       "tester_type": "ID",
-      "load_entity": true,
-      "reservation_ind": true,  
+      "load_entity": false,
       "selected_version_task_exe_id": 0,
       "task_created_by": "admin",
       "be_last_updated_by": "admin",
       "scheduling_end_date": null,
-      "retention_period_type": "Days",
+      "retention_period_type": null,
       "environment_point_of_contact_phone1": null,
       "processnames": null,
       "testers": [
         {
           "tester_type": "ID",
           "role_id": [
-            "9"
+            "2"
           ],
-          "tester": "michal"
+          "tester": "tester1"
         },
         {
           "tester_type": "ID",
           "role_id": [
-            "9"
-          ],
-          "tester": "owner2"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "9"
-          ],
-          "tester": "wsRole"
-        },
-        {
-          "tester_type": "ID",
-          "role_id": [
-            "10"
+            "3"
           ],
           "tester": "testershai"
         }
       ],
-      "selection_param_value": null,
+      "selection_param_value": "666,2",
       "environment_status": "Active",
       "be_status": "Active",
       "selected_version_datetime": null,
@@ -258,74 +224,105 @@ http://localhost:3213/api/tasks
       "environment_point_of_contact_last_name": null,
       "environment_point_of_contact_email": null,
       "be_description": "",
+      "reserve_retention_period_value": "3",
       "parameters": null,
       "environment_expiration_date": null,
       "environment_point_of_contact_phone2": null,
       "environment_created_by": "admin",
-      "roles": [],
+      "roles": [
+        [
+          {
+            "role_id": 2,
+            "allowed_test_conn_failure": true
+          },
+          {
+            "role_id": 3,
+            "allowed_test_conn_failure": false
+          }
+        ]
+      ],
       "environment_last_updated_by": "admin",
-      "be_creation_date": "2021-08-08 13:31:04.17",
-      "task_id": 135,
+      "be_creation_date": "2021-11-21 13:35:56.86",
+      "task_id": 211,
       "be_created_by": "admin",
-      "source_environment_id": 9,
-      "role_id_orig": 9,
-      "scheduler": "immediate",
-      "environment_description": "ENV1",
+      "source_environment_id": 1,
+      "role_id_orig": 2,
+      "scheduler": null,
+      "environment_description": null,
       "selected_ref_version_datetime": null,
-      "source_env_name": null,
-      "task_title": "load2",
+      "source_env_name": "ENV1",
+      "reserve_ind": true,
+      "task_title": "reserveOnlyTest",
       "fabric_environment_name": null,
       "environment_name": "ENV1",
       "delete_before_load": false,
       "allow_write": true,
       "owner": "OwnerEnv1",
       "task_status": "Active",
-      "retention_period_value": "5",
+      "retention_period_value": null,
       "executioncount": 0,
-      "environment_last_updated_date": "2021-10-13 09:09:48.743",
+      "environment_last_updated_date": "2022-02-17 11:10:16.162",
       "be_name": "BE1",
       "version_ind": false,
-      "number_of_entities_to_copy": 3,
-      "task_creation_date": "2021-09-09 12:45:49.442",
+      "number_of_entities_to_copy": 2,
+      "task_creation_date": "2022-02-15 13:59:41.62",
       "task_globals": false,
-      "environment_point_of_contact_first_name": "",
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-09-09 08:12:28.523",
-      "owner_type": "GROUP"
+      "environment_point_of_contact_first_name": null,
+      "task_type": "RESERVE",
+      "environment_creation_date": "2021-11-21 13:37:14.057",
+      "owner_type": "GROUP",
+      "creatorRoles": [
+        "admin"
+      ]
     },
     {
-      "task_last_updated_date": "2021-08-08 14:29:46.16",
+      "task_last_updated_date": "2022-02-17 16:12:38.274",
       "be_id": 1,
-      "selected_version_task_name": "yughfhgf",
-      "environment_id": 2,
+      "selected_version_task_name": null,
+      "reserve_retention_period_type": null,
+      "environment_id": 1,
       "selection_method": "L",
       "selected_ref_version_task_name": null,
       "refresh_reference_data": false,
-      "tester": null,
-      "be_last_updated_date": "2021-09-30 06:33:58.083",
+      "tester": "tester1",
+      "be_last_updated_date": "2022-01-11 13:21:54.425",
       "owners": [
         {
-          "owner": "owner1",
-          "owner_type": "ID"
+          "owner": "OwnerEnv1",
+          "owner_type": "GROUP"
         }
       ],
       "refcount": 0,
-      "tester_type": null,
-      "load_entity": true,
-      "reservation_ind":true,  
-      "selected_version_task_exe_id": 2,
-      "task_created_by": "owner1",
+      "tester_type": "ID",
+      "load_entity": false,
+      "selected_version_task_exe_id": 0,
+      "task_created_by": "admin",
       "be_last_updated_by": "admin",
       "scheduling_end_date": null,
       "retention_period_type": "Days",
       "environment_point_of_contact_phone1": null,
       "processnames": null,
-      "testers": [],
-      "selection_param_value": "3",
+      "testers": [
+        {
+          "tester_type": "ID",
+          "role_id": [
+            "2"
+          ],
+          "tester": "tester1"
+        },
+        {
+          "tester_type": "ID",
+          "role_id": [
+            "3"
+          ],
+          "tester": "testershai"
+        }
+      ],
+      "selection_param_value": "302",
       "environment_status": "Active",
       "be_status": "Active",
-      "selected_version_datetime": "20210808140941",
-      "task_last_updated_by": "owner1",
+      "selected_version_datetime": null,
+      "task_last_updated_by": "admin",
       "selected_ref_version_task_exe_id": 0,
       "task_execution_status": "Active",
       "sync_mode": null,
@@ -334,48 +331,51 @@ http://localhost:3213/api/tasks
       "environment_point_of_contact_last_name": null,
       "environment_point_of_contact_email": null,
       "be_description": "",
+      "reserve_retention_period_value": null,
       "parameters": null,
       "environment_expiration_date": null,
       "environment_point_of_contact_phone2": null,
       "environment_created_by": "admin",
       "roles": [],
-      "environment_last_updated_by": "owner1",
-      "be_creation_date": "2021-08-08 13:31:04.17",
-      "task_id": 3,
+      "environment_last_updated_by": "admin",
+      "be_creation_date": "2021-11-21 13:35:56.86",
+      "task_id": 210,
       "be_created_by": "admin",
       "source_environment_id": 1,
-      "role_id_orig": 0,
-      "scheduler": "immediate",
-      "environment_description": "ENV2",
+      "role_id_orig": 2,
+      "scheduler": null,
+      "environment_description": null,
       "selected_ref_version_datetime": null,
       "source_env_name": "ENV1",
-      "task_title": "cdcdvs",
+      "reserve_ind": false,
+      "task_title": "creDataVersion",
       "fabric_environment_name": null,
-      "environment_name": "ENV2",
-      "delete_before_load": true,
+      "environment_name": "ENV1",
+      "delete_before_load": false,
       "allow_write": true,
-      "owner": "owner1",
+      "owner": "OwnerEnv1",
       "task_status": "Active",
-      "retention_period_value": "5",
+      "retention_period_value": "10",
       "executioncount": 0,
-      "environment_last_updated_date": "2021-08-17 10:05:34.328",
+      "environment_last_updated_date": "2022-02-17 11:10:16.162",
       "be_name": "BE1",
       "version_ind": true,
       "number_of_entities_to_copy": 1,
-      "task_creation_date": "2021-08-08 14:29:46.16",
+      "task_creation_date": "2022-02-17 16:12:38.274",
       "task_globals": false,
       "environment_point_of_contact_first_name": null,
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-08-08 14:28:05.461",
-      "owner_type": "ID"
+      "task_type": "EXTRACT",
+      "environment_creation_date": "2021-11-21 13:37:14.057",
+      "owner_type": "GROUP",
+      "creatorRoles": [
+        "admin"
+      ]
     }
   ],
   "errorCode": "SUCCESS",
   "message": null
 }
 ```
-
-
 
 ## Get the Task's Logical Units List
 
