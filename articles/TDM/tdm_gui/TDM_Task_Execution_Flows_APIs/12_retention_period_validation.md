@@ -182,7 +182,7 @@ The validated retention period can be populated either by the combination of **r
       "id": "4"
     }
   ],
-  "errorCode": "SUCCESS",
+  "errorCode": "FAILED",
   "message": "The validation had failed for the following entities: 1, 2. The new expiration date calculated exceeds the retention period allowed for a tester."    
 }
 ```
