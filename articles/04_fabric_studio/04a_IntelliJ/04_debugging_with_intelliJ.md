@@ -2,7 +2,7 @@
 
 # Debugging with IntelliJ
 
-There are a range of key-features offered by IntelliJ IDEA that lets you accelerate your implementation. In this article, we will focus on Fabric Java project debugging capabilities.
+There are a range of key features offered by IntelliJ that lets you accelerate your implementation. In this article, we will focus on Fabric Java project debugging capabilities.
 
 
 ## Debugging
