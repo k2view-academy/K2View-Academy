@@ -2,19 +2,20 @@
 
 <web>
 
-Currently the Web Studio does not yet support Import or Export of a project. 
+Currently (Release 7.0) the Web Studio cannot Import or Export a project. 
 
 If you wish to use an existing project on which you already have worked, do the following:
 
-* Go to your existing project directory at your PC/Mac.
+* Go to your existing project directory on your PC/Mac.
 
-* Drag and Drop the **Implementation** (and optionally the **lib**) folders from your PC into the Web Studio explorer. Do it into the project’s root empty area:
+* Drag and Drop the **Implementation** (and optionally the **lib**) folders from your PC into the Web Studio explorer. Drage them into the project’s root empty area:
 
-  ![](C:/K2View-Academy/articles/04_fabric_studio/images/web/5_upload_proj.PNG)
+  ![image](images/web/5_upload_proj.PNG)
+       
 
 * You can also upload only specific elements. In this case – go to the specific folder and upload it there.
 
-* The upload progress will be displayed in the right lower corner of the screen:
+* The upload progress will be displayed in the lower right corner of the screen:
 
   <img src="C:/K2View-Academy/articles/04_fabric_studio/images/web/5_upload_progress.PNG" style="zoom:67%;" />
 
