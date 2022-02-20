@@ -60,7 +60,7 @@ chown root.root $K2_HOME/.ssl/k2vws.key
 
 ## Fabric JDBC Driver Hardening
 
-In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the [jdbc-server] section of the **config.ini** file as shown below:
+In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the \[jdbc-server\] section of the **config.ini** file as shown below:
 
 ```
 ## Turn on TLS for the Fabric driver protocol
