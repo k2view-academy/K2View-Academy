@@ -152,8 +152,8 @@ The JSON filtering parameter is optional. If is it not populated, the API return
 
 ### API Input
 
-- **filteringParams** - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
-Currently it supports the following filtering parameters:
+- **filteringParams** - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters. You can populate part or all parameters.
+Currently, it supports the following filtering parameters:
 
 <table width="900pxl">
 <tbody>
