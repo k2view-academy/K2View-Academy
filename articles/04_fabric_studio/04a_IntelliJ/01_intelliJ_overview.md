@@ -1,3 +1,5 @@
+<studio>
+  
 # Coding with IntelliJ
 
 ## Overview
@@ -16,3 +18,4 @@ We recommend installing IntelliJ IDEA in cases where your project relies heavily
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/12_shared_objects.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md)
+</studio>
