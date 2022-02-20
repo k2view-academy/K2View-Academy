@@ -1,3 +1,5 @@
+<studio>
+
 ## Installing IntelliJ
 
 
@@ -9,3 +11,5 @@ Note this applies to the Windows Standalone product as other platforms are not s
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/03_intelliJ_from_fabric_studio.md)
+
+  </studio>
