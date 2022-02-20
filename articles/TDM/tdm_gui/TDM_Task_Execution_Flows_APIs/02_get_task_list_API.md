@@ -147,27 +147,133 @@ The API invokes either  [regularTasksByUser](#get-regular-tasks) API to bring re
 - If the version_ind is **false** or **empty**: call the  **/regularTasksByUser** API.
 
 The returned tasks are filtered based on the additional input filtering parameters (if set). The input is a **dynamic JSON string**. 
-Currently it supports the following filtering parameters:
-
-- **task_type** : LOAD/EXTRACT
-- **version_ind** : true/false
-- **load_entity** : true/false
-- **delete_before_load** : true/false 
-- **selection_method** : below is the list of the valid values:
-  - 'L' (Entity list)
-  - 'P' or 'PR' (Parameters) 
-  - 'S' (Entity Clone), 
-  - 'R' (Random) 
-  - 'C' (Custom Logic)
-  - 'ALL' (Extract tasks: select a predefined entity list. Load Data Versioning tasks: select all entities of the selected version) 
-  -  'REF' (Reference Only)
-- **sync_mode** : OFF/FORCE
 
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's regular tasks.
 
 ### API Input
 
-- filteringParams - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
+- **filteringParams** - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
+Currently it supports the following filtering parameters:
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td width = "150pxl">
+<p><strong>Param Name</strong></p>
+</td>
+<td  width="400pxl">
+<p><strong>Valid Values</strong></p>
+</td>
+<td width="350pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>task_type</strong></p>
+</td>
+<td width="200">
+<ul>
+<li>LOAD</li>
+<li>EXTRACT</li>
+<li>RESERVE</li>
+</ul>
+</td>
+<td width="251">
+<p>Populate the task type to filter the returned tasks based on their type.</p>
+<p>Notes:</p>
+<ul>
+<li>To get a <strong>reserve-only</strong> task, populate the task type with <strong>RESERVE</strong>.</li>
+<li>To get a <strong>delete-only</strong> task, populate the task type with <strong>LOAD</strong>, <strong>load_entity</strong>&nbsp;with <strong>false</strong>, and <strong>delete_before_load</strong>&nbsp;with <strong>true.</strong></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>version_ind</strong>&nbsp;</p>
+</td>
+<td width="200">
+<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</td>
+<td width="251">
+<ul>
+<li>Populate with false to get regular tasks.</li>
+<li>Populate with true to get data versioning tasks.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>load_entity</strong></p>
+</td>
+<td width="200">
+<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</td>
+<td width="251">
+<ul>
+<li>Populate with true to get tasks that provisions data to the target environment.</li>
+<li>For other tasks: extract, reserve only, and delete only, populate this field with false.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>delete_before_load</strong>&nbsp;</p>
+</td>
+<td width="200">
+<ul>
+<li>true</li>
+<li>false</li>
+</ul>
+</td>
+<td width="251">
+<ul>
+<li>Populate with true to get delete and load or delete only tasks.</li>
+<li>Else, populate this parameter with false.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>selection_method</strong></p>
+</td>
+<td width="200">
+<ul>
+<li>'L' (Entity list)</li>
+<li>'P' or 'PR' (Parameters)</li>
+<li>'S' (Entity Clone)</li>
+<li>'R' (Random)</li>
+<li>'C' (Custom Logic)</li>
+<li>'ALL' (Extract tasks: select a predefined entity list. Load Data Versioning tasks: select all entities of the selected version)</li>
+<li>'REF' (Reference Only)</li>
+</ul>
+</td>
+<td width="251">
+<p>The entity&rsquo;s selection method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>sync_mode</strong>&nbsp;</p>
+</td>
+<td width="200">
+<ul>
+<li>OFF</li>
+<li>FORCE</li>
+</ul>
+</td>
+<td width="251">
+<p>Populate this parameter to get tasks that override the default sync mode (sync ON which syncs new data based on the LU&rsquo;s implementation sync policy).</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### API Input Examples:
    ```json
