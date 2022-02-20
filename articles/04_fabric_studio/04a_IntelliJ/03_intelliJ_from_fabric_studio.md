@@ -1,3 +1,5 @@
+<studio>
+
 # Fabric Studio - Launching IntelliJ IDEA
 
 
@@ -31,3 +33,5 @@ All your java extensions or Fabric built-in functions and libraries appear in th
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/04_debugging_with_intelliJ.md)
+  
+  </studio>
