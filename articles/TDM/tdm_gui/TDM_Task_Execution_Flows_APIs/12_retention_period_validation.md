@@ -117,24 +117,18 @@ If the entities are already reserved by the user, check the new expiration date 
 
 The validated retention period can be populated either by the combination of **retentionUnit** and **retentionValue** input parameters or by populating the **newEndDateTime** parameter. If the **retention unit and values** are populated, validate the reservation period based on these parameter. Else,  validate the reservation period based on the input **newEndDateTime**.
 
-- **retentionUnit** - populated by **Days**.
-- **retentionValue** - populated by a number to set the number of days.
-- **newEndDateTime** - populated with the new expiration date of the reservation period. Format: 'YYYYMMDDHHMMSS'. 
-- **listOfEntities** - contains the **environment_name**, **be_name**, and **target_entity_id** of each task's entity.  Note that if the **entitieslist** attribute is set in the overridden execution parameters, populate the listOfEntities with the entities of the **entitieslist**. Else, get the **selection_param_value** task's attribute if the task's **selection_method** is 'L' (entity list).  
-
-==========
 
 <table width="900pxl">
 <tbody>
 <tr>
-<td width="200pxl"><strong>Param Name</strong></td>
-<td width="200pxl">
+<td width="150pxl"><strong>Param Name</strong></td>
+<td width="150pxl">
 <p><strong>Mandatory</strong></p>
 </td>
-<td width="300pxl">
+<td width="200pxl">
 <p><strong>Valid Values</strong></p>
 </td>
-<td width="300pxl">
+<td width="400pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -192,9 +186,10 @@ The validated retention period can be populated either by the combination of **r
 <li>environment_name</li>
 <li>be_name</li>
 <li>target_entity_id.</li>
-<li>&nbsp;</li>
-<li>Note that if the <strong>entitieslist</strong> attribute is set in the overridden execution parameters, populate the <strong>listOfEntities</strong> with the entities of the <strong>entitieslist</strong>. Else, get the selection_param_value task's attribute if the task's <strong>selection_method</strong> is 'L' (entity list). </li>
 </ul>
+
+<p>Note that if the <strong>entitieslist</strong> attribute is set in the overridden execution parameters, populate the <strong>listOfEntities</strong> with the entities of the <strong>entitieslist</strong>. Else, get the selection_param_value task's attribute if the task's <strong>selection_method</strong> is 'L' (entity list). </p>
+
 </td>
 </tr>
 </tbody>
