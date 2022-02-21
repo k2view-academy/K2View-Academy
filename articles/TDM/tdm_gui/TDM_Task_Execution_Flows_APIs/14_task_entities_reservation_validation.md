@@ -27,9 +27,51 @@ Validate each input entity ID if it is reserved for another user on the input en
 
 The request body contains the following attributes:
 
-- **beID** - populated with the unique identifier (be_id field) of the task's Business Entity.
-- **envID** - populated with the task's environment_id (target environment).
-- **listOfEntities** - populated with the task's entity list.  Note that if the **entitieslist** attribute is set in the overridden execution parameters, populate the listOfEntities with the entities of the **entitieslist**. Else, get the **selection_param_value** task's attribute if the task's **selection_method** is 'L' (entity list).  
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>beID</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;" valign="top">
+<p>Populated with the unique identifier (be_id field) of the task's Business Entity</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>envID</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populated with the task's environment_id (target environment).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;"><strong>listOfEntities</strong></td>
+<td style="width: 167.409px;">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populated with the task's entity list. Note that if the <strong>entitieslist</strong>&nbsp;attribute is set in the overridden execution parameters, populate the listOfEntities with the entities of the&nbsp;<strong>entitieslist</strong>. Else, get the&nbsp;<strong>selection_param_value</strong>&nbsp;task's attribute if the task's&nbsp;<strong>selection_method</strong>&nbsp;is 'L' (entity list).</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### API Input Example
 
@@ -117,10 +159,54 @@ A tester user can reserve a limited number of entities per Business Entity and e
 
 ### API Input
 
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>noOfEntities</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;" valign="top">
+<p>Populated by the number of entities, processed by the task.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>envName</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populated by the target environment's name.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;"><strong>beName</strong></td>
+<td style="width: 167.409px;">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populated by the task's Business Entity name. For example, "Customer".</p>
+</td>
+</tr>
+</tbody>
+
 - **noOfEntities** - populated by the number of entities, processed by the task.
 - **envName** - populated by the target environment's name.
 - **beName** - populated by the task's Business Entity name.
-
 
 
 ### API Output Examples
