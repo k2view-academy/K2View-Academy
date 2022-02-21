@@ -1,5 +1,17 @@
 <!--block-->
 
+<img src="images/bi_1.PNG" style="zoom:80%;" />
+
+
+
+### The Fabric BI Solution
+
+Fabric includes a business intelligence application called BI which is embedded into the Fabric Web Framework. The Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data: PostgreSQL, Oracle and Fabric itself. 
+
+[Read more >](20220221_fabric_bi.md)
+
+<!--block-->
+
 <img src="images/04_15_03_attach.png" style="zoom:80%;" />
 
 
@@ -11,20 +23,6 @@ Fabric Studio has been fully integrated with IntelliJ .
 It is mostly recommended if you frequently develop Java functions; you will then benefit from the most advanced code-writing and debugging capabilities available in the market.  
 
 [Read more >](20210822_fabric_intelliJ.md)
-
-<!--block-->
-
-<img src="images/soft_deploy_1.PNG" style="zoom:80%;" />
-
-
-
-### Soft Deploy
-
-Soft Deploy is Fabric's ability to exclude automatic processes from the LU deployment. 
-
-Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use the Soft Deploy option to deploy their changes without triggering automatic processes.
-
-[Read more >](20210722_soft_deploy.md)
 
 <!--block-->
 
@@ -45,5 +43,4 @@ Let's check how it works by reviewing the example flow.
 [Read more >](20210701_image_manipulation_actors.md)
 
 <!--block-->
-
 

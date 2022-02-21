@@ -6,9 +6,9 @@
 
 The agenda for the next Webinar is:
 
-* K2View **2022 Roadmap** (20 min)
-* Fabric **BI** Tool (15 min)
-* Fabric **Web apps** – City Mobility App Example (15 min)
+* K2View 2022 Roadmap (20 min)
+* Fabric BI Tool (15 min)
+* Fabric Web apps – City Mobility App (15 min)
 * Q&A 
 
 
