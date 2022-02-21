@@ -3,6 +3,7 @@
 
 
 <ul>
+<li><a href="/community/spotlight/20220221_fabric_bi.md">The Fabric BI Solution</a></li>
 <li><a href="/community/spotlight/20210826_fabric_java_lib.md">New Fabric Java Actor</a></li>
 <li><a href="/community/spotlight/20210822_fabric_intelliJ.md">Develop on Fabric with IntelliJ</a></li>
 <li><a href="/community/spotlight/20210722_soft_deploy.md">Soft Deploy</a></li>
