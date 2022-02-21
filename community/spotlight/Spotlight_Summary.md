@@ -6,7 +6,7 @@
 
 ### The Fabric BI Solution
 
-Fabric includes a business intelligence application called **BI** which is embedded into the Fabric Web Framework. The Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data: PostgreSQL, Oracle, Fabric LUI (IID must bee set as a filter) and Common DB. 
+Fabric includes a business intelligence application called BI which is embedded into the Fabric Web Framework. The Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data: PostgreSQL, Oracle and Fabric itself. 
 
 [Read more >](20220221_fabric_bi.md)
 
