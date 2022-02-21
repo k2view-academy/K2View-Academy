@@ -159,7 +159,6 @@ A tester user can reserve a limited number of entities per Business Entity and e
 
 ### API Input
 
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -203,11 +202,15 @@ A tester user can reserve a limited number of entities per Business Entity and e
 </td>
 </tr>
 </tbody>
-
+====================
 - **noOfEntities** - populated by the number of entities, processed by the task.
 - **envName** - populated by the target environment's name.
 - **beName** - populated by the task's Business Entity name.
 
+### API Input Example
+  ```
+  http://localhost:3213/api/validatenoofreserved?noOfEntities=10&envName=ENV1&beName=Customer
+  ```
 
 ### API Output Examples
 
