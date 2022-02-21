@@ -2,7 +2,7 @@
 
 ### API URL
 
-/tasks/versionsForLoad
+/tasks/validateVersionForLoad
 
 ### HTTP Method
 
@@ -22,9 +22,51 @@ Note that  this API is needed since  the [versionsForLoad](11_get_available_data
 
 The request body contains the following filtering parameters:
 
-- **entitiesList**: populated by list of entities separated by a comma. This is an optional input. When populated, the API only brings data versions that contain the entities in the list.
-- **taskExecId**: populated by the unique identifier (task_execution_id) of the extract task's execution that created the selected data version. This value is returned in the **task_execution_id** output attribute of the [versionsForLoad](11_get_available_data_versions.md) API.
-- **lu_list**: list of the load task's LU names. For example, when populated with **Customer** and **Billing** , the API only validates the LUIs' execution status of  these LUs.
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>entitiesList</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;" valign="top">
+<p>Populated by list of entities separated by a comma.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>taskExecId</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populated by the unique identifier (task_execution_id) of the extract task's execution that created the selected data version. This value is returned in the task_execution_id output attribute of the <a href="11_get_available_data_versions.md">versionsForLoad</a> API.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;"><strong>lu_list</strong></td>
+<td style="width: 167.409px;">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>List of the load task's LU names. For example, when populated with Customer and Billing, the API only validates the LUIs' execution status of these LUs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### API Input Example
 
