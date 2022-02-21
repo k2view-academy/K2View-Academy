@@ -20,11 +20,77 @@ Get the list of the available data versions the match the input parameters. The 
 
 The request body contains the following filtering parameters:
 
-- **entitiesList**: populated by list of entities separated by a comma. This is an optional input. When populated, the API only brings data versions that contain the entities in the list.
-- **be_id**: populated by the unique identifier (be_id) of the task's Business Entity (BE). 
-- **source_env_name**: populated by the source environment from which the data version has been extracted.
-- **fromDate** and **toDate**: return a list of data versions within a given time interval. The date format of these parameters is "MM.DD.YYYY"
-- **lu_list**: list of LU names. For example, when populated with **Customer** and **Billing** , the API only returns data versions that contain both LUs.
+<table width="900pxl">
+<tbody>
+<tr>
+<td style="width: 197.912px;"><strong>Param Name</strong></td>
+<td style="width: 195.668px;">
+<p><strong>Mandatory</strong></p>
+</td>
+<td style="width: 485.227px;">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;" valign="top">
+<p><strong>entitiesList</strong></p>
+</td>
+<td style="width: 195.668px;" valign="top">
+<p>No</p>
+</td>
+<td style="width: 485.227px;" valign="top">
+<p>Populated with list of entities separated by a comma. When populated, the API only brings data versions that contain the entities in the list.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;" valign="top">
+<p><strong>be_id</strong></p>
+</td>
+<td style="width: 195.668px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 485.227px;">
+<p>Populated by the unique identifier (be_id) of the task's Business Entity (BE).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;"><strong>source_env_name</strong></td>
+<td style="width: 195.668px;">
+<p>Yes</p>
+</td>
+<td style="width: 485.227px;">
+<p>Populated by the source environment from which the data version has been extracted.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;"><strong>fromDate</strong></td>
+<td style="width: 195.668px;">
+<p>No</p>
+</td>
+<td style="width: 485.227px;">
+<p>Populated to return a list of data versions within a given time interval. The date format of these parameters is "MM.DD.YYYY" or "MM-DD-YYYYY".</p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;"><strong>toDate</strong></td>
+<td style="width: 195.668px;">
+<p>No</p>
+</td>
+<td style="width: 485.227px;">
+<p>Populated to return a list of data versions within a given time interval. The date format of these parameters is "MM.DD.YYYY" or "MM-DD-YYYYY".</p>
+</td>
+</tr>
+<tr>
+<td style="width: 197.912px;"><strong>lu_list</strong></td>
+<td style="width: 195.668px;">
+<p>Yes</p>
+</td>
+<td style="width: 485.227px;">
+<p>List of LU names. For example, when populated with <strong>Customer</strong>&nbsp;and&nbsp;<strong>Billing</strong>&nbsp;, the API only returns data versions that contain both LUs.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### API Input Examples
 
