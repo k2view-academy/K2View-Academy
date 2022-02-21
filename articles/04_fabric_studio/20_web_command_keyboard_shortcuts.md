@@ -4,15 +4,15 @@
 
 ## Command Palette 
 
-Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Find command** or use `⇧⌘P` in Mac or `F1` in Windows (or `Ctrl+Shift+P`) to bring up the **Command Palette**.
+Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` on a Mac or `F1` in Windows (or `Ctrl+Shift+P`) to bring up the **Command Palette**.
 
-- The commands appear with the associated key binding, also known as shortcuts (if it exists). If you forget a keyboard shortcut, use the **Command Palette** to help you out.
+- Each command appears with its associated shortcut (if one exists). If you forget a keyboard shortcut (also referred to as a "key binding"), use the **Command Palette** to help you out.
 
 - The Command Palette shows first the recently used commands and then all other commands.
 - If you do not remember the exact command, just start to type the keyword that might fit to filter relevant matches. The Command Palette will complete the command. 
-- The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands such as Open the Fabric console or Create new Broadway flow. Once the palette is opened type "Fabric" to filter and see them. 
+- The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands. Once the palette is opened type "Fabric" to filter and see them. 
 
-<img src="images/web/02_commands.gif" alt="command palette" style="zoom:80%;" />
+
 
 
 
@@ -20,14 +20,13 @@ Access all available Fabric Web Studio functionality and commands from the top m
 
 ## Keyboard Shortcuts
 
-Following are useful keyboard shortcuts for Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows; ⌥ at Mac stands for Alt).
+Following are useful keyboard shortcuts for Mac & Windows ( ⌘ refers to the CMD button on a Mac (CTRL in Windows), and  ⌥ stands for Alt on a Mac (ALT key in Windows)).
 
 To open the full list of shortcuts you can either:
 
 * Use top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
 * Use left bottom **Preferences** <img src="images/web/settings.png" style="zoom:67%;" /> gear icon > **Open Keyboard Shortcuts**
-* Use `CTRL+ALT+,`
-
+    
 ### General & Navigation
 
 <table>
