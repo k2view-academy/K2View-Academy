@@ -18,6 +18,8 @@ Get the list of TDM environments that are available for the user based on the in
 
 -  If the task type is [Extract](/articles/TDM/tdm_gui/16_extract_task.md) , then validate and return the list of available source environments.
 -  If the task type is [Load](/articles/TDM/tdm_gui/17_load_task_regular_mode.md), then validate and return both - source and target - available environments.
+-  If the task type is Reserve (reserve only task), then validate and return the list of available target environments.
+-  If the task is a delete only task, then validate and return the list of available target environments.
 
 ### API Input
 
@@ -192,7 +194,7 @@ Get the list of TDM environments that are available for the user based on the in
 <p>N/A</p>
 </td>
 <td width="300pxl" valign="top">
-<p>Populated by "extract" or "load"</p>
+<p>Populated by "extract", "load", or "reserve".</p>
 </td>
 </tr>
 </tbody>
@@ -276,7 +278,7 @@ http://localhost:3213/api/getEnvironmentsForTaskAttr?be=1&lus=1,2,3&refcount=1&d
 
 #### Get the Environments for an Owner User
 
-Note: an owner user can be the owner of some TDM environments and can still be attached as a tester to other TDM environments. If the user is the owner of the TDM environment, the **role_id** is populated by **owner**. If the user is attached as a tester to the TDM environment, the **role_id** is populated by the **ID** of the [TDM environment role](/articles/TDM/tdm_gui/10_environment_roles_tab.md).
+Note: an owner user can be the owner of some TDM environments and can still be attached as a tester to other TDM environments. If the user is the owner of the TDM environment, the **role_id** is populated by **owner**. If the user is attached as a tester to the TDM environment, the **role_id** is populated by the **ID** of the [TDM permission set](/articles/TDM/tdm_gui/10_environment_roles_tab.md).
 
 ```
 {
