@@ -17,7 +17,7 @@ The following screenshot displays a list of available Interface Types.
 
 ![image](images/05_04_02_DB_Interface.PNG)
 
-3. Populate the **DB Connection Name** and set **Active** to **True**.
+3. Populate the **DB Connection Name**, then click **Create**.
 
 4. Populate the [**Connection Details**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 
@@ -40,25 +40,25 @@ The following screenshot displays a list of available Interface Types.
 <web>
     
     
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
+1. Go to the **Top Menu**, then select > **Fabric** > **New Interface**.
 
 
 The following screenshots display a list of available Interface Types.
 ![image](images/05_04_01_WEB1_interface_types.PNG)
 
 
-2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
+2. Click the interface type, and the **Select Interface Name** window will open:  
 
 ![image](images/05_04_01_WEB5_interface_types.PNG)
 
-3. Populate the **DB Connection Name** and set **Active** to **True**.
+3. Populate the **Interface Name**, then click **Create**.
 
 4. Populate the [**Connection Details**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
     
-    * To check if the connection settings are correct, click the **Test Connection String**:
+    * To check if the connection settings are correct, click **Test Connection**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
 
