@@ -35,7 +35,7 @@ When running a TDM task, data from the selected entities is stored and synchroni
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting and storing an entity's data in Fabric in advance so that requests to load it into target environments can be implemented without accessing source systems. 
    - Synchronizing data from source systems to get the most updated data on entities when required.
-  - Version control - Support for [Data Flux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
+  - Version control - Support for [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
 
   #### Reference Tables
 
@@ -89,6 +89,8 @@ The following diagram displays the TDM task creation and [execution processes](0
 Fabric runs a [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) that executes pending execution requests: 
 -  Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the selected entities into Fabric. 
 -  Load task,  the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed and loads the entities to the selected target environment.
+-  Data task,  the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric to sync the target keys for delete  into Fabric and delete the entities from the selected target environment.
+-  Reserve task, the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which marks the entities are reserved entities in the TDM DB. 
 
 A dedicated Fabric process checks for completed executions and updates the TDM DB accordingly on the execution's status and statistics. In addition, Fabric receives information and statistics on executed tasks and saves them in the Fabric TDM LU.
 

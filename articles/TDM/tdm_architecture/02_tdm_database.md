@@ -58,16 +58,16 @@ The following table lists the TDM tables and their description.
 <ul>
 <li>Maps a list of LUs in each Business Entity.</li>
 <li>Maps the relationship of the LUs in a Business Entity.</li>
-<li>Maps the link of the combined Business Entity and LU to a product.</li>
+<li>Maps the link of the combined Business Entity and LU to a system (product).</li>
 </ul>
   <p><a href="/articles/TDM/tdm_gui/06_be_product_tdmdb_tables.md#product_logical_units">Click for more information about this table.</a></p>  
 </td>
-<td>Business Entity/Product</td>
+<td>Business Entity/System</td>
 </tr>
 <tr>
 <td><h4>products</td>
   <td><a href = "/articles/TDM/tdm_gui/05_tdm_gui_product_window.md">Products</a> (applications) list.</td>
-<td>Product</td>
+<td>Systems</td>
 </tr>
 <tr>
 <td><h4>environments</td>
@@ -104,6 +104,10 @@ The following table lists the TDM tables and their description.
   <td>List of <a href="/articles/TDM/tdm_gui/12_environment_globals_tab.md">Global parameters</a> set on an environment level.</td>
 <td>TDM Environments</td>
 </tr>
+<tr>    
+    <td><h4>tdm_reserved_entities</td>
+    <td>Reserved Entities List</td>
+    <td>Reserved Entities</td>
 <tr>
 <td><h4>tasks</td>
   <td><a href="/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#tasks">Tasks list</a>.</td>
@@ -149,6 +153,7 @@ The following table lists the TDM tables and their description.
 <tr>
 <td><h4>task_execution_override_attrs</td>
 <td>List of execution parameters like environments or Globals to be overridden on given task execution.</p>
+
    <p>The list of the overridden parameters is concatenated into a JSON file and populated in the override_parameters column. </p>
    <p>For example: {"SOURCE_ENVIRONMENT_NAME":"ENV3","TARGET_ENVIRONMENT_NAME":"ENV3"}</td> 
 <td>Task Execution</td>        
@@ -191,6 +196,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 
