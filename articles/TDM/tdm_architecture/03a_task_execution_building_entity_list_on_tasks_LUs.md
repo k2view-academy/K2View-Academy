@@ -23,19 +23,7 @@ The entity list depends on the task's selection method in the [Requested Entitie
 
 - **Random Selection**, randomly select the entities from the  [`<LU Name>_<params>`](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) table.
 
-- **Create Synthetic Entities**, duplicate the Entity ID, set in the task. Attach a different clone_id on each clone. 
-
-  Example: 
-
-  Select Customer 1 from the ENV1 source environment and clone it four times. The following LUIs are generated: 
-
-  - ENV1_1#params#{"clone_id"=1}
-
-  - ENV1_1#params#{"clone_id"=2}
-
-  - ENV1_1#params#{"clone_id"=3}
-
-  - ENV1_1#params#{"clone_id"=4}
+- **Create Synthetic Entities**, create duplications on the target environment of the  Entity ID, set in the task. Note that only mone LUI is created on the entity ID.
 
 - **Parameters**, select the entities based on the task's parameters from a [DB view], created in the TDM DB for each BE and source environment combination.  
 
