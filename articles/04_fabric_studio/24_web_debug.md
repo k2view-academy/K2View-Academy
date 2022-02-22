@@ -30,8 +30,12 @@ It consists of:
 
 ## Breakpoints
 
-Breakpoints can be set and toggled by clicking on the **editor margin** or using `F9` on the current line. In addition, use right-click to set a conditional breakpoint (by expression, hit count or log message). Finer breakpoint control (enable/disable/set condition) can be done in the Debug View's **BREAKPOINTS** section.
-
+Breakpoints can be set and toggled by right-clicking in the **editor margin** the line on which you want to add the breakpoint and selecting "Add Breakpoint". You can optionally add a conditional breakpoint or a logpoint. An additional method for adding a breakpoint is by selecting the line on which you want to add the breakpoint, and pressing `F9`. 
+  
+![Breakpoint box](images/web/breakpoint_box.png)  
+  
+Finer breakpoint control (enable/disable/set condition) can be done in the Debug View's **BREAKPOINTS** section.
+  
 * Breakpoints in the editor margin are shown as red filled circles.
 * Disabled breakpoints have a filled gray circle.
 * When a debugging session starts, breakpoints that cannot be registered with the debugger change to a gray hollow circle. The same might happen if the source is edited while a debug session without live-edit support is running.
@@ -124,7 +128,7 @@ The Web Studio, as a developers IDE, enables you to create executable Java appli
 
 You will find **Run|Debug** on the [CodeLens](/blogs/2017/02/12/code-lens-roundup.md) of your `main()` function.
 
-![CodeLens](C:\K2View\K2View-Academy-7.0\articles\04_fabric_studio\images\web\24_6_codelnes.png)
+![CodeLens](images/web/24_6_codelnes.png)
 
 > Tip: While CodeLens is disabled, you can still access the **Run|Debug** actions by hovering over your `main()` function.
 
@@ -134,7 +138,7 @@ Another way to start debugging is to right-click a Java file in the File Explore
 
 #### Shortcuts
 
-Use `F5` to start debug or `CTRL+F5` to start running without debug.
+Use `F5` to start debugging or `CTRL+F5` to start running without debugging.
 
 </web>
 
