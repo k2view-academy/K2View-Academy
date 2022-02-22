@@ -5,7 +5,7 @@
 
 The Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
 
-The Source Control <img src="images/web/scm.png" style="zoom:47%;" /> icon in the Activity Bar on the left indicates an **overview of how many changes** you currently have in your repository. 
+The Source Control <img src="images/web/scm.png" style="zoom:27%;" /> icon in the Activity Bar on the left indicates an **overview of how many changes** you currently have in your repository. 
 
 
 
@@ -57,7 +57,7 @@ Merge conflicts are recognized by Web Studio. Differences are highlighted and th
 
 ## Viewing Diffs
 
-The Git tool supports viewing of diffs within Web Studio, showing original and changed file side by side.
+The Git tool supports viewing of diffs within Web Studio, showing original and modified file side by side.
 
 
 
