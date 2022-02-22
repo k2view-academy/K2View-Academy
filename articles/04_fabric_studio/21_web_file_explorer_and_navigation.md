@@ -2,11 +2,11 @@
 
 # Exploring, Navigating and Managing Files
 
-This article explains how to explore files and their contents in the Fabric Web Studio, including files accessible from the Project Tree explorer and via other utilities.
+This article explains how to explore files and their contents in the Fabric Web Studio.
 
  
 
-The Fabric Web Studio is file and folder based. To explore your project it is recommended to open the Explorer View (opened by default) - the top most icon <img src="images/web/explorer.png" style="zoom:67%;" /> in the activity bar. The explorer that appears at the side bar contains two sub-views - the Project and the Open Editors.
+The Fabric Web Studio is file and folder based. To explore your project, open the Explorer View (opened by default) - the top most icon <img src="images/web/explorer.png" style="zoom:67%;" /> in the activity bar. The explorer that appears at the side bar contains two sub-views - *Project* and *Open Editors*.
 
 ## PROJECT ##
 
@@ -28,7 +28,7 @@ After expanding a folder, the contents of the folder are shown in the Explorer. 
 
 You can select multiple files in the **File Explorer** and its **OPEN EDITORS** sub-view to run actions (such as Delete or Open) on multiple items. Use the `Ctrl/Cmd` key with `click` to select individual files and `Shift` + `click` to select a range. 
 
-> **Tip:** If you select two items, you can now use the context menu **Compare with Each Other** command to quickly check the difference between two files.
+> **Tip:** If you select two or more items, you can use the right-click context menu **Compare with Each Other** command to quickly check the difference between two files.
 
 
 
@@ -46,7 +46,7 @@ Hovering over the filter box and selecting **Enable Filter on Type** (the three 
 
 ## OPEN EDITORS ##
 
-At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This is a list of open files. 
+At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This shows a list of open files. 
 
 <img src="images/web/21_2_open_editors.PNG" style="zoom:67%;" />
 
@@ -72,9 +72,9 @@ A file's outline can be revealed by clicking on the 3 dots ellipsis that appears
 
 ## Breadcrumbs
 
-The Editor panel has a navigation bar above its contents called [Breadcrumbs](https://en.wikipedia.org/wiki/Breadcrumb_(navigation)). It shows the current location and allows you to quickly navigate between folders, files, and symbols.
+The Editor panel has a [breadcrumb](https://en.wikipedia.org/wiki/Breadcrumb_(navigation)) navigation bar above its contents. It shows the current location and allows you to quickly navigate between folders, files, and symbols.
 
-Breadcrumbs always show the file path. If the current file type has language support for symbols, the symbol path is also shown up to the cursor position. For example, Java files will be signed with Java icon near by their name.
+The breadcrumb navigation bar always show the file path. If the current file type has language support for symbols, the symbol path is also shown up to the cursor position. For example, Java files will have a Java icon next to their name.
 
 
 
