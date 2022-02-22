@@ -105,9 +105,10 @@ The following table lists the TDM tables and their description.
 <td>TDM Environments</td>
 </tr>
 <tr>    
-    <td><h4>tdm_reserved_entities</td>
-    <td>Reserved Entities List</td>
-    <td>Reserved Entities</td>
+<td><h4>tdm_reserved_entities</td>
+<td>Reserved Entities List.</td>
+<td>Reserved Entities</td>
+</tr>    
 <tr>
 <td><h4>tasks</td>
   <td><a href="/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#tasks">Tasks list</a>.</td>
@@ -153,7 +154,6 @@ The following table lists the TDM tables and their description.
 <tr>
 <td><h4>task_execution_override_attrs</td>
 <td>List of execution parameters like environments or Globals to be overridden on given task execution.</p>
-
    <p>The list of the overridden parameters is concatenated into a JSON file and populated in the override_parameters column. </p>
    <p>For example: {"SOURCE_ENVIRONMENT_NAME":"ENV3","TARGET_ENVIRONMENT_NAME":"ENV3"}</td> 
 <td>Task Execution</td>        
