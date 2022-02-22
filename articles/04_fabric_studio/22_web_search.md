@@ -2,7 +2,7 @@
 
 # Search 
 
-The Fabric Web Studio allows you to quickly search terms and content over all files in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to open the Search box, where you can enter your search term. Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file an see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
+The Fabric Web Studio allows you to quickly search terms and content over all files in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to open the Search box, where you can enter your search term. Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file and see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
 
 ![search base](images/web/22_1_search.png)
 
