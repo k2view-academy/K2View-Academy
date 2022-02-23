@@ -151,6 +151,8 @@ The **Expand / Collapse** and **Refresh** links are displayed above the **Object
 </tr>
 </tbody>
 </table>
+
+ 
 [Click for more information about the Table Population Diagram Outline.](/articles/07_table_population/12_table_population_diagram_outline.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_source_object_types.md)
