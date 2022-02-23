@@ -26,7 +26,7 @@ The installation and configuration of Fabric's BI includes the following steps:
 
   - PostgreSQL is required for UAT / Production environments, but it is preferable to use PostgreSQL for Dev and QA as well.
   - Default SQLite DB can be used for demo purposes. SQLite DB does not require an explicite installation as it comes as part of the Exago installation.
-- Due to performance considerations, it is recommended to install the PostgreSQL on a different host than Exago.
+- Due to performance considerations, it is recommended to install the PostgreSQL on a different from BI server host.
 
 ### Configuration
 
