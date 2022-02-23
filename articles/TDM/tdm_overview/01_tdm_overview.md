@@ -16,8 +16,9 @@ The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 - Partial data requests, re-deployment of data and data appending: 
   - Provisioning predefined lists of Business Entities from a selected source environment to a selected target environment. All data related to the selected entities is extracted and copied to the relevant data systems.
   - Copying a sub-set of entities based on predefined parameters. For example, copying 10 customers in NY and using small business packages.
-- Synthetic data generation, cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
+- Entity clone, cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
+- Entity reservation, enable the user to reserve entities on the testing environment and avoid other users to delete or reload these entities on the environment till the user completes their functional testing on these entities.
 - Automatic data security and masking on an entity-by-entity basis.
 - Support for up-to-date data of the selected entities.
 - Cross-application integrity.
