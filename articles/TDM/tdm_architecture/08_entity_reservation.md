@@ -83,7 +83,13 @@ Adding a [new window] of reserved entities to enable the TDM users to run the fo
 
 ## Releasing Reserved Entities
 
-- **Explicit release**: release entities via the **new Reserved Entities window**. The entities are deleted from the reserve entities TDM table.
-- **Implicit release**: a reserved entity can be released by either of the following scenarios:
-  - The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case- the record is not deleted automatically from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the reservation period dates.
-  - A [delete only task] releases the deleted entities and deletes them from the reserve entities TDM table.
+**Explicit release**: release entities via the **new Reserved Entities window**. The entities are deleted from the reserve entities TDM table.
+
+**Implicit release**: a reserved entity can be released by either of the following scenarios:
+- The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case- the record is not deleted automatically from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the reservation period dates.
+
+- A [delete only task] releases the deleted entities and deletes them from the reserve entities TDM table.
+
+  
+
+[![Previous](/articles/images/Previous.png)](07_tdm_parameters_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
