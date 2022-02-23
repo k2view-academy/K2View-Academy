@@ -1,3 +1,5 @@
+<studio>
+      
 # Adding a Remote Fabric Interface Type
 
 A new DB interface can be created in Fabric based on **Fabric Remote** interface type. 
@@ -20,3 +22,5 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 5.	Click **Save**.
 
 [![Previous](/articles/images/Previous.png)](04_creating_a_new_database_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_editing_interface_settings.md)
+      
+</studio>
