@@ -21,7 +21,7 @@ The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 - Automatic data security and masking on an entity-by-entity basis.
 - Support for up-to-date data of the selected entities.
 - Cross-application integrity.
-- Data Flux features:
+- Data Versioning features:
   - Users can save (extract) specific versions of a selected list of entities or selected list of metadata (reference) tables.
   - Users can load a selected version of entities or metadata tables to the selected target environment.
 -  Provisioning of data on-demand or automatic provisioning based on scheduling parameters. For example, provisioning the data automatically every week.
