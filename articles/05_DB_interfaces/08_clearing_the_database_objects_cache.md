@@ -1,3 +1,5 @@
+<studio>
+  
 # Clearing the Database Objects Cache
 
 <web>
@@ -17,3 +19,5 @@ Fabric Studio caches all changes to database objects. A cache must be cleared wh
 
 
 [![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md)
+  
+</studio>
