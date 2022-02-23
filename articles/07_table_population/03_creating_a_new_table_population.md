@@ -10,10 +10,13 @@ A **Table Population** can be created by:
 
 * Using the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU table and a DB query population for each LU table.
 
+
+* From the **Project Tree** -> **Logical Units** -> **[Name of Logical Unit]** -> **Tables** -> right click on the **[Table Name]**, and select **New Table Population**. 
 </studio>
+<web>
 
-
-* By right clicking the [**Table Name**] under the **Project Tree** and then clicking **New Population**. 
+* From the **Project Tree** -> **Implementation** -> **Logical Units/Data Products** -> **[Name of Logical Unit]** -> **Tables** -> right click on the **[Table Name]**, and select **New Population**. 
+</web>
 
 <studio>
 
@@ -88,12 +91,14 @@ Note that for the population to be effective on the server side, LU deployment i
 
 When the LU Schema is created, each LU table is created with a population flow.
 
-Do the following steps If additional population flow is needed for an LU table:
+Do the following steps if an additional population flow is needed for an LU table:
 
-1.	Go to **Project Tree > Logical Units** > [**LU Name**].
-2.	Click **Tables**, right click [**Table Name**] > **New Population** to open the population template with predefined Stages and designated Actors.
-3.	Complete the missing information such as input arguments, DB interface, and save the flow.
-4.	In the LU Schema window connect the table population to the LU hierarchy.
+1.	Go to **Project Tree > Implementation > Logical Units/Data Products** > [**LU Name**].
+2.	Click **Tables**, right click [**Table Name**] > **New Population**. 
+3. Type the name of the new population in the box, then click **Enter**.
+4. The population template opens with predefined Stages and designated Actors.
+5.	Complete the missing information such as input arguments, DB interface, then save the flow.
+6.	In the LU Schema window connect the table population to the LU hierarchy.
 
 Note that for the population to be effective on the server side, LU deployment is required. When running in debug mode, the deployment to debug is performed automatically.
 
