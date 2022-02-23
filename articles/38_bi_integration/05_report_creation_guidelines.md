@@ -12,7 +12,7 @@ One of the basic reports is a report based on data from a Fabric LU Instance. Fo
 
    * Create the Fabric data source and define its objects and joins, as explained step-by-step in the [Metadata Setup](03_Metadata_Setup.md) article. 
    * Create the parameter(s) to be used by the filter, as explained in the [Parameters](04_parameters.md) article.
-2. Open the **Fabric Studio** and define the Interfaces with the same name as the data sources that you created in the Admin module. 
+2. Open the **Fabric Studio** and define the Interfaces with the same name as the data sources that you created in the Admin module (optional). 
 3. Open the **Designer** module (click on the Designer tab in the upper left).  
 4. Click the ![image](images/create_icon.PNG) icon to trigger creation of a new report.
 5. Select the report type. For example **Advanced Report**. 
@@ -49,6 +49,18 @@ WHERE task_execution.task_execution_id = '@task_execution_id@'
 ~~~
 
 The IID value can be provided using a parameter which is created in the **Admin** module and set either in **Admin** or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
+
+An alternative way to create a custom SQL object is via the **Admin** module as follows:
+
+1. Open the **Admin** module.
+
+2. Right click **Objects > Add**.
+
+   ![image](images/custom_sql_from_admin.PNG)
+
+3. Click **SQL** icon on the right side of the **Name** field to write the custom query using the Custom SQL Object screen.
+
+When a custom SQL is created in the **Admin** module, you can create a join between this object and other existing objects.
 
 ### Creating Reports Based on Fabric Commands
 
