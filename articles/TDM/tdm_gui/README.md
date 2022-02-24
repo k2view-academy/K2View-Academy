@@ -11,8 +11,8 @@
 <li><a href="07_tdm_gui_environment_overview.md">TDM Environments Overview</a></li>
 <li><a href="08_environment_window_general_information.md">Environment Window - General Information</a></li>
 <li><a href="09_environment_window_summary_section.md">Environment Window - Environment Summary Section</a></li> 
-<li><a href="10_environment_roles_tab.md">Environment Roles Tab</a></li>    
-<li><a href="11_environment_products_tab.md">Environment Products Tab</a></li>   <li><a href="12_environment_globals_tab.md">Environment Globals Tab</a></li>
+<li><a href="10_environment_roles_tab.md">Environment Permission Sets Tab</a></li>    
+<li><a href="11_environment_products_tab.md">Environment Systems Tab</a></li>   <li><a href="12_environment_globals_tab.md">Environment Globals Tab</a></li>
 <li><a href="13_environment_exclusion_lists.md">Environment Exclusion Lists Tab</a></li>
 <li><a href="14_task_overview.md">TDM Task Overview</a></li>  
 <li><a href="15_data_flux_task.md">TDM Data Flux Tasks</a></li>  
@@ -32,7 +32,6 @@
 ​    
 
 </ul>
-
 
 
 

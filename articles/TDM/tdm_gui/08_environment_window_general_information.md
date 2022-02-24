@@ -27,12 +27,12 @@ Set the environment type to one of the following:
 
 - **Target**, this environment can only be used as a target environment in a TDM task.
 
-- **Both**, this environment can be used as both a source and target environment in the TDM task. This mode is useful for [Data Flux tasks](15_data_flux_task.md). 
+- **Both**, this environment can be used as both a source and target environment in the TDM task. This mode is useful for [Data Versioning tasks](). 
 
   Example: 
 
-  - A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Flux task](16_extract_task.md#entity-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task data is saved in the TDM Fabric repository.
-  - During functional tests the data in the testing environment becomes corrupted and needs to be replaced with the last backed up version created in the testing environment. The tester creates a [Load Data Flux task] and sets the testing environment to be both source and target. 
+  - A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Versioning task](16_extract_task.md#entity-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task data is saved in the TDM Fabric repository.
+  - During functional tests the data in the testing environment becomes corrupted and needs to be replaced with the last backed up version created in the testing environment. The tester creates a [Load Data Versioning task] and sets the testing environment to be both source and target. 
 
 ## Override Sync Mode
 
@@ -65,7 +65,7 @@ Click for more information on [how overriding the sync mode impacts the task exe
 - The environment owner can edit an environment except for adding or removing environment owner users. Only Admin users can add or remove environment owners.
 - The environment owner can create and execute TDM tasks on their environment without limitations, unlike tester users who can define a task on an environment based on their permissions.
 
-Click for more information about [environment roles and permissions](10_environment_roles_tab.md).
+Click for more information about [environment permissions](10_environment_roles_tab.md).
 
 Click for more information about the [Owner TDM Permission Group](02_tdm_gui_user_types.md#owner).
 
