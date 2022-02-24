@@ -64,7 +64,7 @@ To read messages in batches, use the **SubscribeBatch** Actor and set **max_batc
 
 **Example 1 - Retrieve from DB and Publish to Kafka**
 
-The following example shows a Publish flow which includes a transaction. The performance of such flow is better in a transaction due to **Async** transaction mode because the acknowledgement is performed at commit only.
+The following example shows a Publish flow which includes a [transaction](../23_transactions.md). The performance of such flow is better in a transaction due to **Async** transaction mode because the acknowledgement is performed at commit only.
 
 ![image](../images/99_actors_04_2.PNG)
 
