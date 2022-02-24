@@ -45,7 +45,7 @@ In a regular run, timeout can be controlled by setting it to the required elapse
 ### Acknowledgement in Broadway Pub / Sub
 
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
-- In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
+- In a [Transaction](../23_transactions.md), the acknowledgment is performed during the commit. 
 - When not in Transaction, the acknowledgement is performed during the next received message. If the server fails after reading the message, the same message is processed again.  
 
 ### Pub / Sub Examples 
@@ -60,13 +60,31 @@ The following section of the example flow shows how to publish messages to an in
 
 To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
 
-The following example shows a Publish flow which includes a transaction. The performance of such flow is better due to having a transaction and due to **Async** transaction mode.
+### Examples of Pub/Sub Processing in Transaction
+
+**Example 1 - Retrieve from DB and Publish to Kafka**
+
+The following example shows a Publish flow which includes a transaction. The performance of such flow is better in a transaction due to **Async** transaction mode because the acknowledgement is performed at commit only.
 
 ![image](../images/99_actors_04_2.PNG)
 
-The following example shows a Subscribe flow which includes a transaction. If a failure occurs, all messages from the beginning of the transaction are rolled back. The **Subscribe** Actor reads all the messages again when a server is up again. If the same flow does not include a transaction, only the last message is repeated after the server fails and starts again.
+**Example 2 - Retrieve Data in Batches and Publish to Kafka**
+
+The following example shows a flow where the data is retrieved in batches using the **SubscribeBatch** Actor. The flow iterates over the messages of each batch, performing the required logic and publishing the results using the **Publish** Actor. 
+
+Since the flow includes a transaction and due to **Async** transaction mode, the commit is performed after completing a batch and before moving to another one. This behavior enables a quick processing of messages because the messages are published to Kafka asynchronously and the acknowledgement is performed once for the whole batch, rather than message by message.
+
+![](../images/99_actors_04_4.PNG)
+
+**Example 3 - Retrieve Data in Batches and Load to DB**
+
+Similar to the previous example behavior will be when at the end of the flow the messages are loaded to a DB. The commit to the Database is performed once for each batch and before moving to another one.
 
 ![image](../images/99_actors_04_3.PNG)
+
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](03_parsers_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_db_actors.md)
