@@ -2,14 +2,17 @@
 
 <img src="images/img13.jpg" style="zoom: 80%;" />
 
-### Next DevCom Webinar is coming on February 23rd!
+### Stay tuned for next Technical Meetup !
 
-The agenda for the next Webinar is:
 
-* K2View 2022 Roadmap (20 min)
-* Fabric BI Tool (15 min)
-* Fabric Web apps – City Mobility App (15 min)
-* Q&A 
+<!--block-->
+
+<img src="images/img6.png" style="zoom:80%;" />
+
+### K2View DevCom Webinar on February 23rd
+
+The 4th K2View Development Meetup took place on February 23rd - addrssing Fabric's  Roadmao, BI tool and Web Framework.
+[Read more >](webinar_20220223/20220223_Webinar_Agenda_And_Speakers.md)
 
 
 <!--block-->
