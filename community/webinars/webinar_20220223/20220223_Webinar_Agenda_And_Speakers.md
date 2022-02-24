@@ -19,18 +19,18 @@
 - New Features
 - Market Requirements
 
-[Click here to download the Fabric Web Studio presentation](WebStudioCommunityWebinar211027.pdf)
+[Click here to download the Fabric Web Studio presentation](Webinar23022022-ProductRoadmap2022.pdf)
 
 **Spotlight on Fabric BI (20 mins)**
 
 - Fabric Business Intelligence Architecture
 - Creating BI Reports
 
-[Click here to download the TDM Presentation](TDMWebinar211027.pdf)
+[Click here to download the TDM Presentation](Webinar23022022-FabricBI.pdf)
 
 **Web Apps (15 min)**
 
 - Fabric Web framework & City Mobility Demo App
 - Create a Simple Web Page
 
-[Click here to download the TDM Presentation](TDMWebinar211027.pdf)
+[Click here to download the TDM Presentation](Webinar23022022-FabricWebFramework.pdf)
