@@ -71,5 +71,5 @@ The TDM GUI displays a list of icons next to each task record:
 4. Click **Finish** in the last tab to create the task.
 Once the task has been edited a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
 
- [![Previous](/articles/images/Previous.png)](13_environment_exclusion_lists.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
+ [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.mds)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
 
