@@ -7,7 +7,7 @@
 
 <!--block-->
 
-<img src="images/img5.png" style="zoom:80%;" />
+<img src="images/img12.png" style="zoom:80%;" />
 
 ### K2View DevCom Webinar on February 23rd
 
