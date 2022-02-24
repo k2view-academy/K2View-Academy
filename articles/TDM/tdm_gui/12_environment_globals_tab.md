@@ -1,4 +1,4 @@
-# Environment Globals Tab
+# Environment Variables Tab
 
 The [Global variables](/articles/08_globals/01_globals_overview.md) defined in a Fabric TDM implementation can be overridden on an environment or [TDM task](23_task_globals_tab.md) level. 
 
