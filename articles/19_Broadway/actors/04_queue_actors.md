@@ -29,7 +29,7 @@ Arguments not supported by the message provider can be left empty and be ignored
 
 The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
-Starting from V6.5.1, **transaction_mode** input argument is added to the **Publish** Actor and it determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure . 
+Starting from V6.5.1, **transaction_mode** input argument is added to the **Publish** Actor and it determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure. Note that **Async** transaction mode is applicable only when the **Publish** Actor runs inside the transaction. 
 
 ### Timeout Setting
 
@@ -59,6 +59,10 @@ The following section of the example flow shows how to publish messages to an in
 
 
 To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
+
+The following example shows a Publish flow which includes a transaction. The performance of such flow is better due to having a transaction and due to **Async** transaction mode.
+
+![image](../images/99_actors_04_2.PNG)
 
 The following example shows a Subscribe flow which includes a transaction. If a failure occurs, all messages from the beginning of the transaction are rolled back. The **Subscribe** Actor reads all the messages again when a server is up again. If the same flow does not include a transaction, only the last message is repeated after the server fails and starts again.
 
