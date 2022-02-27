@@ -6,6 +6,8 @@ A TDM task is created in the TDM GUI. It holds a list of instructions and settin
 
 The actual data provisioning and/or entity reservation is performed by the task execution where each task can be executed multiple times.
 
+## Task Types
+
 The following task types are supported by TDM:
 
 - **Extract**, extracts the selected entities and/or Reference tables from the selected source environment and saves this data in Fabric for later use.
@@ -166,8 +168,10 @@ The following table describe the valid combinations of task types on a TDM task:
 
 The TDM Task List displays the following:
 
-- Task Title, task name.
-- Task Type, Load / Extract.
+- Task Title: task name.
+- Task Type: Extract, Load, Delete, or Reserve.
+- Task's Operation mode. For example: Load and Reserve or Delete and Load.
+- Task Status
 - [Data Versioning](15_data_flux_task.md), true / false.
 - BE name.
 - Source and Target environments. 
@@ -177,13 +181,19 @@ The TDM Task List displays the following:
 
 The following screenshot shows an example of the TDM Task List. 
 
+/////////// Needs to be updated ////
+
   ![tasks list](images/tdm_task_list_window.png)
 
   
 
-1.  Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. Fields in green are displayed by default. 
-2.  To display additional fields, click the fields.
-3.  To remove a field from the display, click the field:
+1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. Fields in green are displayed by default. 
+
+2. To display additional fields, click the fields.
+
+3. To remove a field from the display, click the field:
+
+   ////////////////Update the screenshot///////////////
 
 ![show hide columms](images/task_list_show_hide_columns.png)
 
@@ -198,13 +208,50 @@ The TDM GUI displays a list of icons next to each task record:
 
 
 
-### How Do I Create or Edit a Task?
+## How Do I Create or Edit a Task?
 
 1. Click **New Task** in the right corner of the Tasks List window.
 2. To open a selected task, click the **Task Title** (task name) of the task.
 3. Click the **Back** of **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
 Once the task has been edited a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
+
+## Task Tabs 
+
+### Mandatory Tabs
+
+#### 1. General
+
+Main task's information: 
+
+- Task title (name)
+- Task type(s)
+- Business Entity
+- Environment(s)
+
+#### 2. Additional Execution Parameters
+
+Data type (Entities and/or Reference tables), Data Versioning, Reservation/Retention Period, Post Execution Processes, etc..
+
+The list additional execution parameters are set based on the selected task types and the user's permissions.
+
+#### 3. Requested Entities
+
+Entities' selection method.
+
+#### 4. Execution Timing 
+
+Execution by request or Scheduled Execution.
+
+### Optional Tabs
+
+#### Task Variables
+
+Set the [value of variables] on the task level.
+
+#### Reference
+
+Select reference table(s) if the task includes reference tables.
 
  [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.mds)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
 
