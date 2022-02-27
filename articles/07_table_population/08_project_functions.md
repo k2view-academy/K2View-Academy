@@ -21,7 +21,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 [Click for Code Examples of a Root Function.](11_2_root_functions_code_examples.md)
 
-<studio>
+</studio>
 
 #### **LUDB Function** 
 *	A function that is invoked from an SQL query to perform more complex logic operations on LU data than those performed using standard SQL statements.
@@ -63,7 +63,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 * A specific Fabric function used by the Job’s mechanism. [Fabric Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) can only invoke functions of this type.
 
-</studio>
+</studio>  
 
 
 
