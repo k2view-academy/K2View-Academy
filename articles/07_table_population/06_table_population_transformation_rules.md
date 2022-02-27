@@ -38,7 +38,7 @@ To add a **Constant** to the Table Population:
 2.	Set the constant’s **Name** and **Value** by editing the **Constant** in the **Table Population**.
 3.	Connect the **Constant** to the object in the **Table Population**, for example to a column in the target **LU table** or to another Fabric object.
 
-To modify a **Constant**, double click it and edit the **Value**. 
+To modify a **Constant**, double click it and edit the **Value**.     
 
 To delete a **Constant**, select it in the Table Population and press **Delete**. 
 
