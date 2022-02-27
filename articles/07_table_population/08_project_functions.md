@@ -1,7 +1,7 @@
 # Project Functions
 
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). Project functions can be either connected in a map (population flow), to other Fabric objects or invoked from another function using Java code.
-Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md). A function can be defined as a Shared Object and can be used in any object in a project. If a function is defined in an LU, Reference or Web Services, it is accessible only within that specific object.
+Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md). A function can be defined as a Shared Object and can be used in any object in a project. If a function is defined in an LU, Reference or Web Service, it is accessible only within that specific object.
 
 ### Project Function Types
 
@@ -33,7 +33,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 #### **Decision Function**  
 *	A function that assesses whether a [sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) is performed on an LUI. 
 *	A Decision function can be defined on [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. 
-*	A Decision function must have no Input parameter and return a Boolean (True or False) parameter. An LUI sync is performed or not performed based on the returned result. 
+*	A Decision function must have no Input parameters and must return a Boolean (True or False) parameter. An LUI sync is performed or not performed based on the returned result. 
 
 [Click for Code Examples of a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases)
 
