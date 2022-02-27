@@ -6,7 +6,7 @@ The **Properties Tab** in the [Table Population](/articles/07_table_population/0
 *	[DB query or Root function Source Objects](/articles/07_table_population/02_source_object_types.md#table-population---source-object-types).
 *	[Target LU table](/articles/06_LU_tables/01_LU_tables_overview.md#lu-tables-overview).
 * Other objects of a [Table Population transformation](/articles/07_table_population/06_table_population_transformation_rules.md) like a Translation or Global.
-*	Properties of any selected field in a Population object.
+*	Properties of any selected field in a Population object.  
 
 Since each object has different properties, the tab’s layout is updated to display them when an object is selected in the map. 
 
