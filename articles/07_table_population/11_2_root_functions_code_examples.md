@@ -43,7 +43,7 @@ ludb().fetch(sql1, i_customer_id ).each(row-> {
       List<String> caseList = new ArrayList<String>();
       caseList.add(customerID);
       ...
-      yield(result);
+      yield(result);  
    });
 }
 ~~~
