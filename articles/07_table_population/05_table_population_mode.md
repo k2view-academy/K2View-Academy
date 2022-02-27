@@ -28,7 +28,7 @@ Update the NEW_NOTE column of the target table ACTIVITY for each ACTIVITY_ID of 
 *	The **k2_concat5** function maps the updated value to the NEW_NOTE column on ACTIVITY table. 
 *	The value of the NEW_NOTE column in the target table ACTIVITY is updated based on the ACTIVITY_ID key of each entry in the source object.
 
-[![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_table_population_properties_tab.md)
+[![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_table_population_properties_tab.md)  
 
 </studio>
 
