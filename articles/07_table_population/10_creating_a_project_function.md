@@ -14,7 +14,7 @@ To create a new function, either open an existing **Logic.java** file under the 
 
 <img src="images/web/10_create_func_java.PNG" style="zoom:80%;" />
 
-The Web Studio provides a snippet syntax helper: type **Ctrl+Space** and then type **fabric** for Fabric snippets. For functions you can type FF. This will show you several function types. Once you have selected a function, the syntax helper will offer you the syntax along with some options.
+The Web Studio provides a snippet syntax helper: type **Ctrl+Space** and then type **fabric** for Fabric snippets. For functions you can type FF. This will show you several function types. Once you have selected a function, the syntax helper will offer you the syntax along with some options.   
 
 <img src="images/web/10_create_func.PNG" style="zoom:80%;" />
 
