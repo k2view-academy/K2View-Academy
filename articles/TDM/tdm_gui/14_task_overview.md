@@ -253,5 +253,5 @@ Set the [value of variables] on the task level.
 
 Select reference table(s) if the task includes reference tables.
 
- [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.mds)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
+ [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_general_tab.md)
 
