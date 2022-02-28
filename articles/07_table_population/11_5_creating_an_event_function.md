@@ -53,7 +53,7 @@ Using the above information the function can execute any required business logic
 ### How Do I Attach or Remove an Event Function?
 
 1. To attach an Event function to the LU Schema, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Schema** to display the **LU Schema** window.
-2. In the **Sync** Schema Properties tab, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon to add an existing Even function from the list. 
+2. In the **Sync** Schema Properties tab, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon to add an existing Event function from the list. 
 3. Select an Event Type.
 4. To remove an Event function, click <img src="images/web/trash.PNG" style="zoom:67%;" /> icon next to the Event function definition in the Schema Properties.
 5.  **Save** the LU Schema.
