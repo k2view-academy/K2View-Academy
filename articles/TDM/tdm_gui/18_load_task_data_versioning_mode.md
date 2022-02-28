@@ -20,7 +20,7 @@ When checking the **Reference** Data Type setting, a [Reference tab](24_task_ref
 The following execution parameters are set on **Load Data Versioning tasks**:
 
 
-![additional exec params tab](images\load_task_additional_exe_params_data_versioning.png)
+![additional exec params tab](images/load_task_additional_exe_params_data_versioning.png)
 
 ### Data Versioning
 
@@ -60,7 +60,7 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 This tab is opened when the task's Data Type includes entities. It displays a list of available data versions that can be selected and reloaded to the target environment. By default, the TDM GUI displays a list of the data versions created during the last month. To set a different period, edit the **From Date** and **To Date** settings:
 
-![requested entities](D:\K2View-Academy\articles\TDM\tdm_gui\images\load_task_requested_entities_dataflux.png)
+![requested entities](images/load_task_requested_entities_dataflux.png)
 
 
 
