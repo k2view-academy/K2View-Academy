@@ -15,7 +15,7 @@ When checking the **Reference** Data Type setting, a [Reference tab](24_task_ref
 
 ## Additional Execution Parameters Tab
 
-The following execution parameters must be set on **Extract tasks**:
+The following execution parameters are set on **Extract tasks**:
 
 ![additional exe params - extract](images/extract_task_additional_exe_params_tab.png)
 
@@ -26,7 +26,7 @@ The following execution parameters must be set on **Extract tasks**:
 
 ### Data Type
 
-Check **Entities** to extract the selected entities into Fabric and/or **Reference** to extract the selected reference tables to Cassandra.
+Check **Entities** to extract the selected entities and/or **Reference** to extract the selected reference tables into the TDM warehouse (Fabric).
 
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 

@@ -1,102 +1,194 @@
 # TDM Load Task - Regular Mode
 
-A Load task extracts entities or Reference tables from a source environment and loads them to a target environment. A load task can also delete entities from target environments.
+A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A load task can also delete entities from target environments before loading then and/or reserve the target entities in the TDM DB. 
 
-A Load task has the following tabs:
+An Load task contains the following tabs:
 
-- [General](#general)
-- [Requested Entities](18_load_task_requested_entities_regular_mode.md)
-- [Request Parameters](19_load_task_request_parameters_regular_mode.md)
-- [Execution Timing](22_task_execution_timing_tab.md), this tab is displayed for all task types and modes. The following options are available  for the task's execution:
+- [General](14a_task_general_tab.md)
+- [Additional Execution Parameters](#additional-execution-parameters)
+- [Requested Entities](#requested-entities) - opened if the Data Type contains entities.
+- [Execution Timing](22_task_execution_timing_tab.md)
 
-  - **Execution by Request**, default option.
-  - **Scheduled execution**, set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that testers can select this option only if their role has a scheduling permission.
+When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
 
-
-Check **Set Global Variables** to open the [Task Globals](23_task_globals_tab.md) tab.
-
-Set **Reference** to **Reference Only** or **Both - reference and entities** to open the [Reference](24_task_reference_tab.md) tab.
-
-## General Tab
+When checking the **Reference** Data Type setting, a [Reference tab](24_task_reference_tab.md) opens.
 
 
-![general tab](images/load_general_tab_regular.png)
 
-The first tab in the TDM Task window which holds general information about a task. 
+## Additional Execution Parameters Tab
 
-### Task Title
-
-The task name. (Mandatory). Note that only one active task can have a specific Task Title. An error is displayed when an attempt is made to create several tasks with the same Task Title.
-
-### Task Type
-
-Load or Extract. Set the Task Type to **Load**.
-
-### Entity Versioning
-
-- Check to set the Task Mode to [Data Flux](15_data_flux_task.md). 
-- Uncheck to create a regular mode task.
-
-### Set Global Variables 
-Check to [override Globals on a task level](23_task_globals_tab.md).
-
-### Reference 
-
-[Reference handling](24_task_reference_tab.md). Select a value from the dropdown list:
-
-- **None**, default value. Do not include Reference tables in the task.
-- **Reference Only**, create a task to extract Reference tables only into Fabric. Do not include entities in the task.
-- **Both - reference and entities**, create a task to extract both entities and Reference tables into Fabric.
-
-### Number of Entities 
-
-This setting is displayed only for a regular mode task, that is when Entity Versioning is unchecked. 
-
-- Populate the Number of Entities with the number of entities processed by the task:
-
-  - Admin and Environment owners are set any number.
-
-  - Testers can set the number of entities that do not exceed the limited minimum number set for their TDM Environment roles for the selected source and target environments. For example, if a tester can read up to 100 entities from the source environment and write up to 5 entities into the target environment, then the maximum number of entities that can be set by the tester is 5. 
-
-  - To validate the Number of Entities set by testers, click **Next** to move to the next tab. If the tester exceeds their limitation, an error message is displayed.
-
-  
+The following execution parameters are set on **Load tasks**:
 
 
-### Environment Names
+![general tab](images/load_task_additional_exe_params_tab.png)
 
-- Select a **source environment** from the dropdown list of active TDM environments with [environment type](08_environment_window_general_information.md#environment-type) **Source** or **Both**. 
-- Select a **target environment** from the dropdown list of active TDM environments with [environment type](08_environment_window_general_information.md#environment-type) **Target** or **Both**. 
-Note that testers can only select a source environment they are attached to by a Read [TDM Environment role](10_environment_roles_tab.md) and target environment they are attached to by a Write [TDM Environment role](10_environment_roles_tab.md). 
+### Data Versioning
 
-### Business Entity
+- Check to set the task mode to [Data Versioning](15_data_flux_task.md). 
+- Leave the Data Versioning unchecked to create a regular mode task.
 
-The [BE](04_tdm_gui_business_entity_window.md) of the task. Select a BE from the dropdown list of the [BEs](05_tdm_gui_product_window.md#be-and-lu-product-relationship) included in the [environment’s products](11_environment_products_tab.md). 
+### Data Type
 
-### Logical Units
+Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting .
 
-Select all, partial, or one LU of the selected BE. 
+Note that the Entities must be checked in the task also includes an entity reservation (the Reserve task type is checked together with the Load task type).
 
-The following validations are set on the selected LUs:
+Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
-The selected LUs must include at least one [root LU](/articles/TDM/tdm_overview/03_business_entity_overview.md#root-lu) of the selected BE. 
+### Set Sync Policy
 
-An LU cannot be selected without its parent LU. 
+This setting enables the user to change the [default LUI sync mode](articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON). The following sync policy are available:
 
-**Example:**
+- **Sync New Data**: this is the default option (Sync ON).
+- **Do Not Sync From Source Data**: get the LUI data from the TDM warehouse (Fabric).
+- **Refresh all Data from Source**: extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
-A Customer BE has two levels of hierarchy: 
--  The  root LU is Customer Data.
--  Billing LU is a child of Customer Data.
--  Collection LU is a child of Billing LU. 
+Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  A Load Data Versioning task gets the data version from the TDM warehouse (Fabric)  and reloads it to the target environment.
 
-When creating a task on the Customer BE, to select the Collection LU the Billing LU is also selected.
+Click for more information on [how overriding the Sync mode and the Task Operation mode impact the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
-Click for additional [examples of BE hierarchies](/articles/TDM/tdm_overview/03_business_entity_overview.md).
+### Reservation Period
+
+The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
+
+Note that when the Reservation Period is set to zero, the entities are reserved for unlimited period.  
+
+Only Admin and Environment owner users can reserve entities for unlimited period. Users that are attached to the target environment as testers  must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
+
+The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days**, or **weeks**.
+
+### Additional Execution Parameters
+
+#### Set Task Variables 
+
+Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
+
+#### Replace Sequence
+
+When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required to avoid key duplications if the testing environment is not empty and contains entities.
+
+Notes:
+
+- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded "as is".
+- The Replace Sequence setting is disabled if the tester user does not have permissions to replace the sequence in the **Write** [TDM Environment permission setting](10_environment_roles_tab.md#role-permissions) on the task's target environment.
+- The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestrator.flow-from-the-template).
 
 ### Post Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
+
+
+
+## Requested Entities Tab
+
+This tab is opened when the task's Data Type includes entities. This tab defines the subset of entities for the task:
+
+![requested entities](images/load_task_requested_entities.png)
+
+The following selection methods are available on load tasks: 
+
+### Entity list 
+
+This is the **default option**. Populate the list of entities to process separated by a comma.  Note that a warning is given if the entity list has entities that are reserved for another user.
+
+### Custom Logic
+
+Select a Broadway flow to get the entity list for the task and set the number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
+
+### Parameters 
+
+Select entities from a predefined list of parameters. You must set the **parameters and their values** and the **number of entities** for the task.
+
+Note that entities that are reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
+
+![parameters](images/load_task_requested_entities_parameters.png)
+
+The parameters list must be [defined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) in the Fabric project.
+
+#### Use Parameters with Random Selection Checkbox
+
+  The Parameters selection has two modes: 
+
+  - When checked (default), TDM randomly selects the entities from the list of all entities that match the selected parameters whereby each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**. 
+
+    Example: 
+
+    - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution gets a random list of 5 customers from the list of 800 customers that match the selected parameters.  
+
+  - When unchecked, gets the first entities that match the selected parameters whereby each task execution gets the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**. 
+
+    Example:
+
+    - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters. 
+
+#### How Do I Add a Condition? 
+
+  To add a parameter:
+
+  -  Click **Add Condition**. 
+  - Select the parameter and the operator from the dropdown lists and populate their values.
+  - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
+The TDM GUI  displays the SQL query built based on the selected parameters.
+
+#### How Do I Populate a Parameter's Value?
+
+There are several types of parameters:
+
+- **Combo**, parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
+  
+  Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
+  
+- **Number**, the TDM GUI displays the minimum and maximum values on this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+  
+- **Date**, populate the value using the following format: **YYYYMMDD**.
+  
+- **Text**, populate the value using free text.
+  
+#### How Do I Add a Group of Parameters?
+
+Click **Add Group**. 
+
+Note that nested groups of parameters can be added for example to define an inner group in an outer group.
+
+
+
+![params example](images/parameters_example1.png)
+
+#### How Do I Remove A Parameter or a Parameters Group?
+
+1.  Click ![remove parameter](images/delete_parameters_icon.png) next to the parameter to delete a parameter.
+2.  Click **Remove Group** to remove a parameter's group.
+
+#### Getting the Number of Matching Entities
+
+Click Refresh next to the **Entities Matched** to calculate the number of entities that match the selected parameters.
+The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can crosscheck the matching entities of a selected combination of parameters and takes into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
+
+- Click ![refesh](images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
+
+Click for more information about the [TDM parameters tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) created by TDM in the TDM DB to display a hierarchical view of TDM parameters. 
+
+### Entity Clone (Synthetic)
+
+Create X clones of the selected entity in the target environment. When selecting this method, the real Entity ID must be populated to be replicated. 
+
+![synthetic](images/requested_entities_synthetic_mode.png)
+
+
+
+For example, if the **Number of Clones** setting is populated by  10 and the **Entity ID** is set to 6559, the task creates 10 clones (replicas) of Entity ID 6559 in the target environment. 
+
+The task replaces the sequences of each replica to avoid duplicate sequences in the target environment. 
+
+Testers can select this option only if they are permitted to clone entity in the task's target environment.
+
+
+
+### **Random Selection** 
+
+Get random list entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created  in the TDM DB for the root LU of the task's BE.  Entities that are reserved for another user are excluded from the selected entities. 
+
+Testers can select this option only if they are permitted to do so in the task's target environment.
 
 
 
