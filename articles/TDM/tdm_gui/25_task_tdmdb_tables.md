@@ -31,7 +31,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
 
   ### Requested Entities Columns
 
-  - **selection method**: populated based on the selection method in the [Requested Entities tab](14_task_overview.md#task-tabs). This column can be populated by either:
+  - **selection method**: populated based on the selection method in the [Requested Entities tab](14_task_overview.md#3-requested-entities). This column can be populated by either:
     - **L** - [Entities List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list) 
     - **R** - [Random Selection](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#random-selection)
     - **S** - [Enity Clone (Synthetic)](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
