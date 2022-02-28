@@ -16,7 +16,7 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 
 <web>
 
-The global variables are maintained in the **Globals.java** located under **Java/src** either in the Shared Objects or in the Logical Unit.
+The global variables are maintained in the **SharedGlobals.java** file located under **Java/src** either in the Shared Objects or in the Logical Unit.
 
 </web>
 
