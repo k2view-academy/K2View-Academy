@@ -20,7 +20,7 @@
 <li><a href="16_extract_task.md">TDM Extract Task</a></li>  
 <li><a href="17_load_task_regular_mode.md">TDM Load Task - Regular Mode</a></li> 
 <li><a href="18_load_task_data_versioning_mode.md">TDM Load Task - Data Versioning Mode</a></li>  
-<li><a href="19_delete_only_task">TDM Delete Task</a></li>  
+<li><a href="19_delete_only_task.md">TDM Delete Task</a></li>  
 <li><a href="20_reserve_only_task.md">TDM Reserve Task</a></li>  
 <li><a href="22_task_execution_timing_tab.md">Task Execution Timing Tab</a></li> <li><a href="23_task_globals_tab.md">Task Window - Globals Tab</a></li>  
 <li><a href="24_task_reference_tab.md">Task Window - Reference Tab</a></li>  
