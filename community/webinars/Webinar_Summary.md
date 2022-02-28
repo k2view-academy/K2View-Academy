@@ -11,7 +11,8 @@
 
 ### K2View DevCom Webinar on February 23rd
 
-The 4th K2View Development Meetup took place on February 23rd - addressing Fabric's Roadmap, BI tool and Web Framework.
+The 4th K2View Development Meetup took place on February 23rd - addressing Fabric's Roadmap, BI solution and Web Framework.
+
 [Read more >](webinar_20220223/20220223_Webinar_Agenda_And_Speakers.md)
 
 
