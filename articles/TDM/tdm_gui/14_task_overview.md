@@ -237,7 +237,7 @@ The list additional execution parameters are set based on the selected task type
 
 #### 3. Requested Entities
 
-Entities' selection method.
+Entities' selection method.The Requested Entities tab is opened if the task processes entities.
 
 #### 4. Execution Timing 
 
