@@ -2,7 +2,7 @@
 
 Fabric enables setting the execution order of [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) population objects within an [LU schema](/articles/03_logical_units/03_LU_schema_window.md). The execution order is set by a sequence number (1, 2, 3…).
 
-The default order of an LU table’s population is set when the LU schema is created. The default population execution order is based on the LU schema’s hierarchy. However, a different population execution order can be set above the automatically generated execution order. Meaning that a table higher in the LU schema’s hierarchy can be populated or modified after a table lower in the LU schema hierarchy has been modified or populated. Therefore, it is imperative to strategize and define the correct execution order of the [LU Table populations](01_table_population_overview.md).
+The default order of an LU table’s population is set when the LU schema is created. The default population execution order is based on the LU schema’s hierarchy. However, a different population execution order can be set that supersedes the automatically generated execution order. This could mean, for example, that a table higher in the LU schema’s hierarchy can be populated or modified after a table lower in the LU schema hierarchy has been modified or populated. Therefore, it is imperative to strategize and define the correct execution order of the [LU Table populations](01_table_population_overview.md).
 
 **Parallel Sync Ability**
 
@@ -13,7 +13,7 @@ To improve the sync time of an LUI, Fabric can support parallel syncs on several
 ### How Do I Set the Population Order?
 
 The LU schema's Root Table is always populated first. By default, its execution order is set to 1. Other tables in the LU schema are populated according to their hierarchy level in the LU schema in a parent plus one order.
-By default, all LU table populations on the same hierarchy level in an LU schema have the same execution order. The order can be modified and have different values if needed. For example, when tables T2 and T3 table are added to a schema under table T1, the population execution order of tables T2 and T3 will be the same and will be higher than the execution order of table T1.
+By default, all LU table populations on the same hierarchy level in an LU schema have the same execution order. The order can be modified and have different values if needed. For example, when tables T2 and T3 are added to a schema under table T1, the population execution order of tables T2 and T3 will be the same and will be higher than the execution order of table T1.
 An LU table may have more than one population. By default, all populations in the same LU table are set to the same population execution order, which can also be updated manually if needed. 
 
 **Example**
@@ -60,6 +60,6 @@ The population in an LU schema can be disabled / enabled according to requiremen
 
 Note that at least one population must be enabled in the root table.
 
-[Click for more information about Disable / Enable Populations](/articles/03_logical_units/13_disable_enable_populations_in_schema.md).
+[Click for more information about Disabling / Enabling Populations](/articles/03_logical_units/13_disable_enable_populations_in_schema.md).
 
 [![Previous](/articles/images/Previous.png)](14_table_population_based_Broadway.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_table_population_mode.md)
