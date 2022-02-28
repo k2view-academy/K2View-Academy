@@ -49,7 +49,7 @@ When an Environment Type is Both it can have both read and write access to both 
     - Select the environment as a source environment and create a task on up to 1000 entities.
     - Select the environment as a target environment and create a task on up to 10 entities.
 
-  Click for more information about [setting the number of entities on a TDM load task](17_load_task_regular_mode.md#number-of-entities). 
+  Click for more information about [setting the number of entities on a TDM load task](17_load_task_regular_mode.md#requested-entities-tab). 
 
 ### Testers
 
