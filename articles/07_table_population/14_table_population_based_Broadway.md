@@ -105,7 +105,7 @@ The following example displays a Broadway flow template created to populate the 
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-[Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
+[Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
 [![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
@@ -128,7 +128,7 @@ The following example displays a Broadway flow template created to populate the 
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-[Click here to see examples of prepared and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
+[Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
 [![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
