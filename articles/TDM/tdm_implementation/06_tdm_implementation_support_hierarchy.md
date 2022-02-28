@@ -169,13 +169,12 @@ Customer 1 has orders 10, 12 and 13 in the Production environment. The user crea
 
 ### TDM_LU_TYPE_REL_TAR_EID
 
-This table holds the link between the **parent-child target IDs**. The relationship is maintained per target environment. The table is used to [build a list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing a delete or [Data Flux](/articles/TDM/tdm_gui/20_load_task_dataflux_mode.md) load task. 
+This table holds the link between the **parent-child target IDs**. The relationship is maintained per target environment. The table is used to [build a list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing a delete or [Data Flux](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) load task. 
 
 #### Which Process Populates the TDM_LU_TYPE_REL_TAR_EID? 
 
 The TDM_LU_TYPE_REL_TAR_EID is populated by the sync of the parent LU which populates the related child IDs on each parent entity before deleting the parent entity from the target environment.  The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_REL_TAR_EID table only if the TDM task deletes entities from the target environment. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation and are run on the parent LU to get the target child IDs of each parent LUI.
 
-Click for more information about the [TDM task operation modes](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode).
 
 #### TDM_LU_TYPE_RELATION_EID Structure
 
