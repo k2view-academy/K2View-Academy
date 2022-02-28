@@ -66,13 +66,13 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
 
-      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) (the Entity Versioning is false) which  loads (inserts) the entities to the target environment.
+      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Entity Versioning is false) which  loads (inserts) the entities to the target environment.
 
       - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
 
         Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
-5. As  a result, if the Sync mode is set to **Do not sync** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, or a [Data Flux load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
+5. As  a result, if the Sync mode is set to **Do Not Sync From Source Data** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_delete_only_task.md) task, or a [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
 
 6. The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
 
@@ -108,7 +108,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
-Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) from a target environment using a TDM task.
+Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_delete_only_task.md) from a target environment using a TDM task.
 
 ### LU Debug
 
