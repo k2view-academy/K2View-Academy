@@ -31,7 +31,7 @@ The following execution parameters are set on **Load tasks**:
 
 Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting .
 
-Note that the Entities must be checked in the task also includes an entity reservation (the Reserve task type is checked together with the Load task type).
+Note that the Entities must be checked in the task also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task type is checked together with the Load task type).
 
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
@@ -192,5 +192,5 @@ Testers can select this option only if they are permitted to do so in the task's
 
 
 
- [![Previous](/articles/images/Previous.png)](16_extract_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_load_task_requested_entities_regular_mode.md)
+ [![Previous](/articles/images/Previous.png)](16_extract_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_load_task_data_versioning_mode.md)
 

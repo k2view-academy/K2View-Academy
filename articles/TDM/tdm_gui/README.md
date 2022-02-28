@@ -16,10 +16,10 @@
 <li><a href="12_environment_globals_tab.md">Environment Variables Tab</a></li>  
 <li><a href="13_reserved_entities_window.md">Reserved Entities Window</a></li>  
 <li><a href="14_task_overview.md">TDM Task Overview</a></li>  
-<li><a href="15_data_flux_task.md">TDM Data Flux Tasks</a></li>  
+<li><a href="15_data_flux_task.md">TDM Data Versioning Tasks</a></li>  
 <li><a href="16_extract_task.md">TDM Extract Task</a></li>  
 <li><a href="17_load_task_regular_mode.md">TDM Load Task - Regular Mode</a></li> 
-<li><a href="18_load_task_requested_entities_regular_mode.md">TDM Load Task - Regular Mode - Requested Entities Tab</a></li>  
+<li><a href="18_load_task_data_versioning_mode.md">TDM Load Task - Data Versioning Mode</a></li>  
 <li><a href="19_load_task_request_parameters_regular_mode.md">TDM Load Task - Request Parameters Tab</a></li>  
 <li><a href="20_load_task_dataflux_mode.md">TDM Load Task - Data Flux Mode</a></li>  
 <li><a href="21_load_task_requested_entities_dataflux_mode.md">TDM Load Task - Data Flux Mode - Requested Entities Tab</a></li>  
