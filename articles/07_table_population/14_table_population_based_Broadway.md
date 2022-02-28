@@ -2,13 +2,13 @@
 
 <studio>
 
-A [Table Population](/articles/07_table_population/01_table_population_overview.md) defines and executes mapping and transformation rules from a data source to a target. A table population can be created based on a source object or based on a Broadway flow. 
+A [Table Population](/articles/07_table_population/01_table_population_overview.md) defines and executes mapping and transformation rules from a data source to a target. A table population can be created based on a source object or on a Broadway flow. 
 
-A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is a core Broadway object that represents a business process and is built from several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](/articles/19_Broadway/03_broadway_actor.md).
+A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is built from actors which reside in stages. The flow appearance is similar to a Kanban board. A Broadway [actor](/articles/19_Broadway/03_broadway_actor.md) represents an action - for example, reading a data source, parsing an object, or concatenating a string. These actions are executed on a [stage](/articles/19_Broadway/19_broadway_flow_stages.md). 
 
 The advantages of using a Broadway flow for table population rather than a source object based population are:
 
-* Streamlining logic and all related validations into one business process whereby improving the project's maintainability.
+* Streamlining logic and all related validations into one business process thereby improving the project's maintainability.
 * Populating more than one table in a single population flow.
 * Replacing the source DB with another action such as an HTTP call.
 
@@ -70,7 +70,7 @@ The following example displays a Broadway flow template created to populate the 
     SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
     ~~~
 
-  * The **size** value determines the number of ACTIVITY_ID values included in the SQL.
+  * The **size** value determines the number of ACTIVITY_ID values included in the SQL statement.
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
@@ -128,7 +128,7 @@ The following example displays a Broadway flow template created to populate the 
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-[Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
+[Click here to see examples of prepared and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
 [![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
