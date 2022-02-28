@@ -118,7 +118,6 @@ Using the above information the function can execute any required business logic
 
 4. Open the LU Schema's properties window and attach the Event function to the **Events** property.
 
-Full example of an Event Function can be found in the Demo project.
 
 [![Previous](/articles/images/Previous.png)](11_4_creating_a_trigger_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_lookup_tables.md)
 
