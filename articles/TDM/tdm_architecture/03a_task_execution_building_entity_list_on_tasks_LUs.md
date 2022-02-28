@@ -25,7 +25,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Entity list</p>
+<p><h4>Entity list</p>
 </td>
 <td width="400pxl">
 <p>Run the task on the list of entities, set in the task itself or in the task overridden execution parameters</p>
@@ -36,7 +36,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Custom logic</p>
+<p><h4>Custom logic</p>
 </td>
 <td width="400pxl">
 <p>Run the selected Broadway flow to get the entity list</p>
@@ -47,7 +47,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Select a predefined entity list</p>
+<p><h4>Select a predefined entity list</p>
 </td>
 <td width="400pxl">
 <p>Run the SQL query or the Broadway flow defined in the <a href="/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist">trnMigrateList</a> translation object for the LU.</p>
@@ -58,7 +58,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Select all entities of the selected version</p>
+<p><h4>Select all entities of the selected version</p>
 </td>
 <td width="400pxl">
 <p>Select all entities that are successfully extracted by the selected data version. The entities are selected from TASK_EXECUTION_ENTITIES TDM DB table based on the task_execution_id of the selected data version.</p>
@@ -69,7 +69,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Parameters</p>
+<p><h4>Parameters</p>
 </td>
 <td width="400pxl">
 <p>Select the entities based on the task's parameters from a <a href="07_tdm_parameters_handling.md">DB view</a>, created in the TDM DB for each BE and source environment combination.</p>
@@ -80,7 +80,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Entity clone</p>
+<p><h4>Entity clone</p>
 </td>
 <td width="400pxl">
 <p>Create duplications on the target environment of the Entity ID, set in the task. Note that only one LUI is created on the entity ID.</p>
@@ -91,7 +91,7 @@ The entity list of the root LUs is based on the task's selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p>Random selection</p>
+<p><h4>Random selection</p>
 </td>
 <td width="400pxl">
 <p>Randomly select the entities from the <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables">&lt;LU Name&gt;_&lt;params&gt;</a> table.</p>
