@@ -387,7 +387,7 @@ TDM supports the override of the following parameters:
 </tr>
 <tr>
 <td width="223">
-<p><a href="/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities">numberOfEntities</a></p>
+<p>numberOfEntities</p>
 </td>
 <td width="185">
 <p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list is not set in the overridden parameters.</p>
