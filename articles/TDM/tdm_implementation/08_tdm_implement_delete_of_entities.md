@@ -3,7 +3,7 @@
 Every LU must include the ability to Delete Entities from a target environment to support the following load tasks:
 
 - Delete task, the task operation mode is [Delete and Load Entity](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-and-load-entity) or [Delete Entity without Load](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load). 
-- [Data Flux](/articles/TDM/tdm_gui/20_load_task_dataflux_mode.md) task, the entities are deleted and reloaded to the target environment.
+- [Data Flux](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) task, the entities are deleted and reloaded to the target environment.
 
 Note that if there is no need to support a delete of entities or Data Flux load tasks, the target tables do not need to be added to the LUs.
 
