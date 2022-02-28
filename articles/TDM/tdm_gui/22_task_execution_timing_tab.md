@@ -95,7 +95,7 @@ The **End By** setting can be set to run a task by the Scheduler until a predefi
 
   
 
-   [![Previous](/articles/images/Previous.png)](21_load_task_requested_entities_dataflux_mode.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_task_globals_tab.md)
+   [![Previous](/articles/images/Previous.png)](20_reserve_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_task_globals_tab.md)
 
   
 
