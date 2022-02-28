@@ -18,7 +18,7 @@ A Trigger function is a Project function invoked from the **On Change** [LU tabl
 * The same Trigger function can be attached to several LU tables in the same LU.
 * Several Trigger functions can be attached to an LU table. Their execution order is established when the function is attached to the LU table.
 
-### How Do I Create or Edit a Trigger Function?
+### How Do I Create or Edit a Trigger Function?  
 
 To create a Trigger function, refer to the steps in [How to Create Project Functions](10_creating_a_project_function.md).
 
