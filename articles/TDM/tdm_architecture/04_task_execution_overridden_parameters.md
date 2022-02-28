@@ -331,7 +331,7 @@ TDM supports the override of the following parameters:
 </tr>
 <tr>
 <td width="225pxl">
-<p><a href="/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#entities-list">entitieslist</a></p>
+<p><a href="/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list">entitieslist</a></p>
 </td>
 <td width="225pxl">
 <p>Populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task that clones an entity</p>
