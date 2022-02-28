@@ -112,11 +112,11 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### Entity Clone 
 
-[Create replicas](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
+[Create replicas](17_load_task_regular_mode.md#entity-clone-synthetic) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
 
 ##### Random Entity Selection
 
-[Randomly select entities](18_load_task_requested_entities_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
+[Randomly select entities](17_load_task_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
 
 ##### Request up to Date Entities
 
@@ -136,7 +136,7 @@ Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to au
 
 ##### Data Versioning 
 
-Create [Data Versioning] tasks.
+Create [Data Versioning](15_data_flux_task.md) tasks.
 
 ##### Max Number of Reserved Entities on Env
 
