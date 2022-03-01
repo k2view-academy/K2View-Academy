@@ -16,12 +16,12 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 
 <web>
 
-The global variables are maintained in the **SharedGlobals.java** file located under **Java/src** either in the Shared Objects or in the Logical Unit.
+The global variables are maintained in the **SharedGlobals.java** file located under **Java/src** in the Shared Objects or in the **Globals.java** file located under **Java/src** in the Logical Unit.
 
 </web>
 
 ### How Do I Create or Edit a Global?
-   
+
 <studio>
 
 1. Do either:
@@ -51,7 +51,7 @@ The global variables are maintained in the **SharedGlobals.java** file located u
 * Save the file (File -> Save or CTRL-S). 
 
 </web>
-   
+
 
 [Click for more information about using Globals - Code Examples](/articles/08_globals/04_globals_code_examples.md).
 

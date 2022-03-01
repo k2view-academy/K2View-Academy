@@ -30,12 +30,13 @@ A Global can be used either in a map ([Table Population](/articles/07_table_popu
 ### How Do I Use a Global in a Java File in Fabric?
 To enable using the Globals in Java code, the following import statements are generated automatically by the Fabric infrastructure for every new Java file created in Fabric like a function or Web Service: 
 
-<pre><code>
+~~~java
 // import of shared Globals
 import com.k2view.cdbms.shared.Globals; 
 // Import of Globals under the LU
-import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*; 
-</code></pre>
+import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*;
+~~~
+
 
 When opening a function or a Web Service in Fabric, a list of all Globals is displayed in the **Objects tab** in the left panel of the window. 
 * Globals that are defined in an LU or in Shared Objects are available for use in the LU functions of the same LU.
@@ -45,7 +46,7 @@ When opening a function or a Web Service in Fabric, a list of all Globals is dis
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
-![image](/articles/08_globals/images/08_02_01_list_of_Globals.png)
+![image](images/08_02_01_list_of_Globals.png)
 
 </studio>
 
