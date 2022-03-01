@@ -3,12 +3,31 @@
 ### Example of Creating a New Global and Using it in a Function
 
 <studio>
+	
+Go to **Project Tree > Logical Units > [LU name] > Java** and then click Globals.java to open the Globals window.
 
 ![image](images/08_04_01_NEW_GLOBAL.png)
+	
+Populate the settings as follows:
+  * Enter a **Global Name** in the **Name** column.
+  * Enter a value in the **Value** column.
+  * (Optional) Enter a **Category** in the **Category** column.
+  * (Optional) Enter a **Comment** in the **Comment** column.
+  * Check if the **Global** is **Final**.
+	
+Click **Save**.
 
 </studio>
 
-Open the **Globals** window under a **Logical Unit** and define a new Global.
+<web>
+	
+* Go to **Project Tree > Implementation > Logical Units/Data Products > [LU name]**
+* Expand **Java**
+* A hierarchy tree will open. Drill down until you see Logic.java, and double click on it. 
+	
+
+
+</web>
 
 After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
 
@@ -22,8 +41,9 @@ if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
 This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
 
 Notes: 
-- The **getGlobal** method has been added to Fabric by V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
-- Invoking directly the Global by the user code returns the Global's value as defined in the Studio implementation and does not return the overridden value if exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+- The **getGlobal** method has been added to Fabric as of release V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
+- Invoking the Global directly by the user code returns the Global's value and does not return the overridden value if exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
 	//do something
@@ -32,15 +52,7 @@ if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equa
 
 ### Example of Using a Global in an SQL Statement in a Function
 
-<studio>
-
-![image](images/08_04_06_global_in_sql.PNG)
-
-</studio>
-
-Open the **Globals** window under a **Logical Unit** and define a new Global.
-
-The global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional.
+A global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional. Here is an example of using a global called NEW_IND: 
 
 ~~~java
 String sql = "SELECT * From ACTIVITY WHERE CUSTOMER_ID = ? AND ACTIVITY_ID = ? AND NEW_NOTE_IND = @NEW_IND@";
