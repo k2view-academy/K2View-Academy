@@ -17,16 +17,10 @@ This is the first task tabs and defines the main information on the task. The fo
 
    At least one task type must be set on the task.
 
-3. 
 
-   - Extract
-   - Load
-   - Delete
-   - Reserve
+3. **Business Entity**: the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the dropdown list of all the TDM BEs.
 
-4. **Business Entity**: the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the dropdown list of all the TDM BEs.
-
-5. **Environments**: the environments that need to be set depend on the selected task types:
+4. **Environments**: the environments that need to be set depend on the selected task types:
 
    <table width="700pxl">
    <tbody>
@@ -84,7 +78,7 @@ This is the first task tabs and defines the main information on the task. The fo
 
    On each environment, the user needs to select one TDM environment from the dropdown list. The dropdown list displays the list of available environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   
 
-6. **Advanced Business Entity Options**, this is an **optional** setting that enables a partial selection of the systems or LUs in the task. The following popup window is opened when clicking this setting:
+5. **Advanced Business Entity Options**, this is an **optional** setting that enables a partial selection of the systems or LUs in the task. The following popup window is opened when clicking this setting:
 
    ![advanced BE options](images/task_advanced_be_options.png)
 
