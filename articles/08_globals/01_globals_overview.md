@@ -20,9 +20,9 @@ The global variables are maintained in the **SharedGlobals.java** file located u
 
 </web>
 
-<studio>
-
 ### How Do I Create or Edit a Global?
+   
+<studio>
 
 1. Do either:
     * Go to **Project Tree** > **Logical Units > [LU name] > Java** and then click **Globals.java** to open the **Globals** window.
@@ -42,8 +42,18 @@ The global variables are maintained in the **SharedGlobals.java** file located u
 
 </studio>
 
-[Click for more information about using Globals - Code Examples](/articles/08_globals/04_globals_code_examples.md).
+<web>
+	
+* Go to **Project Tree > Implementation > Logical Units/Data Products > [LU name]** .
+* Expand **Java** .
+* A hierarchy tree will open. Drill down until you see Globals.java, and double click on it.
+* Edit the Java file to add and define the global variable.
+* Save the file (File -> Save or CTRL-S). 
 
+</web>
+   
+
+[Click for more information about using Globals - Code Examples](/articles/08_globals/04_globals_code_examples.md).
 
 
 
