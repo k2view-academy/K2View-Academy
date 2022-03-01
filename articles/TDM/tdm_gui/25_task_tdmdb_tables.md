@@ -15,11 +15,176 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   ### Task General Information
 
   - **task_title**  - the task name. To prevent creating several active tasks with the same name, the **task_title** column has a **unique index** when the status is **Active**.
-  - **task_type** - **Extract** or **Load**.
+  - **task_type** - **Extract** , **Load**, or **Reserve**.
   - **be_id** - the task's BE. The be_id can be linked to the **product_logical_units** TDM DB table. 
-  - **number_of_entities_to_copy** - populated by the number of entities in the task.
+  - **number_of_entities** - populated by the number of entities in the task.
+  - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
+  - **delete_before_load**- populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
   - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task.
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
+
+  ### Reservation Information
+
+  - **reserve_ind**  - indicates if the task reserved entities on the environment.
+  - **reserve retention period fields** - define the reservation period on the task's entities.
+
+  ### Map the TDM GUI Task Types to Tasks TDM Table
+
+  <table width="900pxl">
+  <tbody>
+  <tr>
+  <td width="400pxl">
+  <p><strong>Task Type Combination</strong></p>
+  </td>
+  <td width="500pxl">
+  <p><strong>TDM Tasks Table Population</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Extract</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Extract</li>
+  <li>load_entity = false</li>
+  <li>delete_before_load=false</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Extract + Load</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=false</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Extract + Load + Reserve</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=false</li>
+  <li>reserve_ind =true</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Extract + Load + Delete</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Extract + Load + Delete + Reserve</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =true</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Load</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=false</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Load + Reserve</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=false</li>
+  <li>reserve_ind =true</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Load + Delete</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Load + Delete + Reserve</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =true</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="400pxl">
+  <p>Delete</p>
+  </td>
+  <td width="500pxl">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = false</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  <tr style="height: 118px;">
+  <td style="width: 294.673px; height: 118px;">
+  <p>Reserve</p>
+  </td>
+  <td style="width: 589.929px; height: 118px;">
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = false</li>
+  <li>delete_before_load=true</li>
+  <li>reserve_ind =false</li>
+  </ul>
+  </td>
+  </tr>
+  </tbody>
+  </table>
 
   ### Task Status
 
@@ -88,32 +253,36 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   </tr>
   <tr>
   <td width="300pxl">
-  <p>Create Synthetic Entities</p>
+  <p>Entity Clone (Synthetic)</p>
   </td>
   <td width="200pxl">
   <p>S</p>
   </td>
   <td width="400pxl">
-  <p>Populated by the cloned entity ID.</p>
+  <p>Populated with the cloned entity ID.</p>
   <p><strong>Example</strong>:</p>
   <ul>
   <li>7889</li>
   </ul>
   </td>
   </tr>
+  <tr>
+  <td width="300pxl">
+      <p>Custom Logic</p>    
+  </td>
+  <td>C</td>
+  <td>Populated with the name of the selected Broadway flow that runs and gets the entity list for the task execution.</td>    
+      </tr>    
   </tbody>
   </table>
-  <p>&nbsp;</p>
 
-  ​		This column is used by the [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) to create the entities list of the root LUs on each task.
+  This column is used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) on each task.
 
    
 
-  -  **entity_exclusion_list** - populated by the list of entities separated by a comma, if the [task level exclusion list](18_load_task_requested_entities_regular_mode.md#exclusion-list) is set on load task.
+  ### Data Versioning Parameters
 
-  ### Data Flux Parameters
-
-  - **version_ind** - populated by **true** in a [Data Flux task](15_data_flux_task.md).
+  - **version_ind** - populated by **true** in a [Data Versioning task](15_data_flux_task.md).
   - **selected_version_task_name**, **selected_version_datetime**, and **selected_version_task_exe_id** - the selected entities when creating a load Data Flux task to reload a selected version of entities into the target environment.
   - **selected_ref_version_task_name, selected_ref_version_datetime**, and **selected_ref_version_task_exe_id** - the selected Reference's version when creating a Data Flux task to copy [a selected version of Reference tables](24_task_reference_tab.md) into the target environment.
 
@@ -124,8 +293,6 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
 - source_env_name 
 
 - source_environment_id
-
-- fabric_environment_name
 
   #### Target Environment
 
@@ -148,60 +315,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
 
 #### Load Tasks - [Request Parameters](19_load_task_request_parameters_regular_mode.md)
 
-##### [Task Operation Mode](19_load_task_request_parameters_regular_mode.md#operation-mode)
 
-The task operation mode is set based on the combination of **load_entity** and **delete_before_load** columns:
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td width="400pxl">
-<p><strong>Operation Mode</strong></p>
-</td>
-<td width="250pxl">
-<p><strong>load_entity</strong></p>
-</td>
-<td width="250pxl">
-<p><strong>delete_before_load</strong></p>
-</td>
-</tr>
-<tr>
-<td width="400pxl">
-<p>Insert Entity without Delete</p>
-</td>
-<td width="250pxl">
-<p>true</p>
-</td>
-<td width="250pxl">
-<p>false</p>
-</td>
-</tr>
-<tr>
-<td width="400pxl">
-<p>Delete and Load Entity</p>
-</td>
-<td width="250pxl">
-<p>true</p>
-</td>
-<td width="250pxl">
-<p>true</p>
-</td>
-</tr>
-<tr>
-<td width="400pxl">
-<p>Delete Entity without Load</p>
-</td>
-<td width="250pxl">
-<p>false</p>
-</td>
-<td width="250pxl">
-<p>true</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-##### Other Parameters
+#### Other Parameters
 
 - **replace_sequences**
 - **sync_mode** - 
@@ -228,7 +343,7 @@ This table holds the following columns:
 
 ## Task_Globals
 
-This table holds all [Globals that are overridden by the task](23_task_globals_tab.md). A separate record is created for each Global.
+This table holds all [variables that are overridden by the task](23_task_globals_tab.md). A separate record is created for each variable.
 
 ## Task_Ref_Tables
 
