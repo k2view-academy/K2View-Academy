@@ -6,8 +6,8 @@
 <li><a href="02a_permission_group_mapping_window.md">TDM GUI - Permission Group Mapping Window</a></li>  
 <li><a href="03_tdm_gui_data_centers_window.md">Data Centers Window</a></li>
 <li><a href="04_tdm_gui_business_entity_window.md">Business Entity Windows</a></li>    
-<li><a href="05_tdm_gui_product_window.md">Product Windows</a></li>
-<li><a href="06_be_product_tdmdb_tables.md">Business Entities and Products - TDM DB Tables</a></li>   
+<li><a href="05_tdm_gui_product_window.md">System Windows</a></li>
+<li><a href="06_be_product_tdmdb_tables.md">Business Entities and Systems - TDM DB Tables</a></li>   
 <li><a href="07_tdm_gui_environment_overview.md">TDM Environments Overview</a></li>
 <li><a href="08_environment_window_general_information.md">Environment Window - General Information</a></li>
 <li><a href="09_environment_window_summary_section.md">Environment Window - Environment Summary Section</a></li> 
