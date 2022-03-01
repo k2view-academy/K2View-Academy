@@ -4,8 +4,6 @@ Globals are predefined global variables that can be accessed by different object
 
 A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table<studio> or Parser</studio>) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)).
 
-The following scenarios describe how Globals can be used in Fabric objects.
-
 <studio>
 
 ### How Do I Add a Global to a Table Population?
@@ -47,7 +45,7 @@ When opening a function or a Web Service in Fabric, a list of all Globals is dis
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
-![image](/images/08_02_01%20list%20of%20Globals.png)
+![image](/images/08_02_01 list of Globals.png)
 
 </studio>
 
@@ -66,10 +64,3 @@ For more information about Globals settings per environment, click [here](/artic
 For more information about overriding Globals using SET and SET_GLOBAL commands, click [here](/articles/08_globals/03_set_globals.md). 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/01_globals_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/03_set_globals.md)
-
-
-
-
-
-
-
