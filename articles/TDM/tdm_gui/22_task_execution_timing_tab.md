@@ -9,7 +9,7 @@ The Task Execution Timing tab is the last tab in the Task window and enables set
 
 Notes:
 
-- Testers can select Scheduled Execution only when their [TDM Environment role](10_environment_roles_tab.md#role-permissions) has permissions to select this method for the target environment. 
+- Testers can select Scheduled Execution only when their [TDM Environment permission set](10_environment_roles_tab.md) has permissions to select this method for the target environment. 
 - To execute a scheduled task, click ![execution](images/execute_task_icon.png).
 
 ### Scheduled Execution Parameters

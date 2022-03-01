@@ -63,4 +63,4 @@ Select a Broadway flow to get the entity list for the task and set the number of
 
 
 
- [![Previous](/articles/images/Previous.png)](19_delete_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22_task_execution_timing_tab)
+ [![Previous](/articles/images/Previous.png)](19_delete_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_task_tdmdb_tables.md)
