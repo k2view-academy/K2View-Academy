@@ -45,7 +45,7 @@ When opening a function or a Web Service in Fabric, a list of all Globals is dis
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
-![image](/images/08_02_01_list_of_Globals.png)
+![image](/articles/08_globals/images/08_02_01_list_of_Globals.png)
 
 </studio>
 
