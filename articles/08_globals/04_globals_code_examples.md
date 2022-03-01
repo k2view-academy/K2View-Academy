@@ -21,15 +21,15 @@ Click **Save**.
 
 <web>
 	
-* Go to **Project Tree > Implementation > Logical Units/Data Products > [LU name]**
-* Expand **Java**
-* A hierarchy tree will open. Drill down until you see Logic.java, and double click on it. 
-	
-
+* Go to **Project Tree > Implementation > Logical Units/Data Products > [LU name]** .
+* Expand **Java** .
+* A hierarchy tree will open. Drill down until you see Globals.java, and double click on it.
+* Edit the Java file to add and define the global variable.
+* Save the file (File -> Save or CTRL-S). 
 
 </web>
 
-After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
+After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU. The example below shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks):
 
 ~~~java
 if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
@@ -37,12 +37,9 @@ if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
 }
 ~~~
 
-
-This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
-
 Notes: 
 - The **getGlobal** method has been added to Fabric as of release V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
-- Invoking the Global directly by the user code returns the Global's value and does not return the overridden value if exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+- Invoking the Global directly by the user code returns the Global's value and does not return the overridden value if it exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
 
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
@@ -85,11 +82,9 @@ This example shows how a Global can be used in a [Table Population](/articles/07
 
 </studio>
 
-Open the **Globals** window under **Shared Objects** and define new Globals and use the Globals.
+This example shows how the Globals MISSING_INPUT and TOO_MANY_INPUTS can be used within a Fabric Web Service.
 
-This example shows how Globals can be used within a Fabric Web Service.
-
-Three Globals are defined under Shared Objects Globals in the SharedGlobals.java file and therefore can be used by the Fabric Web Service.
+Three Globals are defined in the SharedGlobals.java file and therefore can be used by the Fabric Web Service.
 
 ~~~java
 if (contrID == "" && adrID == "") {
@@ -111,8 +106,6 @@ if (contrID == "" && adrID == "") {
 ![image](images/08_04_05_FUNC_OR_WS.png)
 
 </studio>
-
-Open the **Globals** window under a **Logical Unit** and define a new Global and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
 
 The following examples show how a Global can be overridden in a cluster and per session.
 
