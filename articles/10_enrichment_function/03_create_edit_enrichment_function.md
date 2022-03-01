@@ -6,6 +6,12 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. 
 
+<web>
+
+When editing the Java script file, define the function as a *public class Enrichment*.
+
+</web>
+
 <studio>
 
 The steps which are unique for Enrichment functions are as follows:
@@ -28,11 +34,13 @@ An Enrichment function must be attached to one or more [LU tables](/articles/06_
 
 Do the following:
 
-1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
-2. In the Table Properties, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon in the **Enrichments** tab to add an existing Enrichment function from the list. 
-3. If needed, add additional Enrichment functions and use the arrows to set the correct execution order.
-4. To remove an Enrichment function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Enrichment function definition in the Table Properties.
-5. **Save** the LU Table.
+1. Go to **Project Tree** > **Implementation** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
+2. Click the side arrow icon <img src="images/web/side_window_opener.jpg" style="zoom:20%;" /> to open the Table Properties window. 
+3. Open the **Enrichments** tab.
+4. Click the <img src="images/web/plus.PNG" style="zoom:80%;" /> icon in the **Enrichments** tab to add an existing Enrichment function from the list. 
+5. If needed, add additional Enrichment functions and use the arrows to set the correct execution order.
+6. To remove an Enrichment function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Enrichment function definition in the Table Properties.
+7. **Save** the LU Table (File > Save or CTRL-S). 
 
 
 
