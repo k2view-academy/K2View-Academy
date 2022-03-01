@@ -1,4 +1,16 @@
+
+<web>
+
+# Enrichment Functions - Code Example 
+
+</web>
+
+<studio>
+
 # Enrichment Functions - Code Examples
+
+</studio>
+
 ### Example of an Enrichment Function that Populates a Table's Field
 
 Use an Enrichment function to validate the retrieved data and update a table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
@@ -18,7 +30,7 @@ Use an Enrichment function to validate the retrieved data and update a table. Fo
 
 2. Add a new column to the **CASES table** and attach the **Enrichment function** to the **CASES table** via the Table Properties tab. 
 
-Full example of the **fnMonthsOpenCase** Enrichment Function can be found in the Demo project.
+A detailed example of the **fnMonthsOpenCase** Enrichment Function can be found in the Demo project.
 
 <studio>
 
