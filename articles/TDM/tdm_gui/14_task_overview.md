@@ -220,7 +220,7 @@ Once the task has been edited a new version with a new task_id is created. The o
 
 ### Mandatory Tabs
 
-#### 1. General
+#### 1. [General](14a_task_general_tab.md)
 
 Main task's information: 
 
@@ -239,17 +239,17 @@ The list additional execution parameters are set based on the selected task type
 
 Entities' selection method.The Requested Entities tab is opened if the task processes entities.
 
-#### 4. Execution Timing 
+#### 4. [Execution Timing](22_task_execution_timing_tab.md) 
 
 Execution by request or Scheduled Execution.
 
 ### Optional Tabs
 
-#### Task Variables
+#### [Task Variables](23_task_globals_tab.md)
 
-Set the [value of variables] on the task level.
+Set the value of variables on the task level.
 
-#### Reference
+#### [Reference](24_task_reference_tab.md)
 
 Select reference table(s) if the task includes reference tables.
 
