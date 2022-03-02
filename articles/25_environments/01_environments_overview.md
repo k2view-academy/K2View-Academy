@@ -2,7 +2,7 @@
 
 <web>
 
-Currently the Web Studio does not yet support the Environments. This functionality will become available in the future.
+Currently, the Web Studio does not support the Environments. 
 
 </web>
 
