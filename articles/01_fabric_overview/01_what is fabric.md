@@ -23,14 +23,14 @@ A Digital Entity is a digital version of a person, place or thing and is usually
 To summarize, Fabric architecture yields significant savings in computing, power and storage which makes it a perfect data platform for mission-critical, operational and real-time use cases. 
 
 ### Fabric Use Cases
-Fabric is a great solution for:
-* Anything 360, like customer, order, device, server, car, credit-card or patient.
-* Micro services.
-* <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>.
-* ML / AI inference.
-* Real-time data processing and correlation.
-
-Note that Fabric is a less appropriate solution for storing and managing data that requires cross Digital Entities like reports, BI, analytics, ML / AI training and batch data processing.
+Fabric is a compelling solution for:
+* Anything 360, like: customer, order, device, server, car, credit-card or patient
+* Micro services
+* <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>
+* Machine Learning / Artificial Intelligence
+* Real-time data processing and correlation
+* BI analytics reports
+* Batch data processing
 
 ### Getting Started
 **Learn about Main Fabric Platform Modules:**
