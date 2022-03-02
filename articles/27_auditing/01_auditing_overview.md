@@ -2,7 +2,7 @@
 
 <web>
 
-Currently the Web Studio does not yet support the Auditing mechanism. This functionality will become available in the future.
+Currently the Web Studio does not support the Auditing mechanism.
 
 </web>
 
