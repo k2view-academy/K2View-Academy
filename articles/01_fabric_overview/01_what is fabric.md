@@ -32,8 +32,6 @@ Fabric is a compelling solution for:
 * BI analytics reports
 * Batch data processing
 
-Note that Fabric is a less appropriate solution for storing and managing data that requires cross Digital Entities like reports, BI, analytics, ML / AI training and batch data processing.
-
 ### Getting Started
 **Learn about Main Fabric Platform Modules:**
 * [Fabric Architecture.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)  
