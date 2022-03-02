@@ -4,13 +4,7 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 ### How Can I Create or Edit an Enrichment Function?
 
-The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. 
-
-<web>
-
-When editing the Java script file, define the function as a *public class Enrichment*.
-
-</web>
+The steps for creating an Enrichment function in Fabric Studio are the same as those for a [creating a Regular function](/articles/07_table_population/10_creating_a_project_function.md). 
 
 <studio>
 
