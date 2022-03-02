@@ -27,7 +27,7 @@ Fabric is a compelling solution for:
 * Anything 360, like: customer, order, device, server, car, credit-card or patient
 * Micro services
 * <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>
-* Maching Learning / Artifical Intelligence
+* Machine Learning / Artifical Intelligence
 * Real-time data processing and correlation
 * BI analytics reports
 * Batch data processing
