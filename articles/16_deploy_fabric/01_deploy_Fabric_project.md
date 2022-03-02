@@ -41,7 +41,7 @@ Note that Shared Objects are not independent objects in a project and therefore 
 
 <studio>
 
-They can use the Soft Deploy option to deploy their changes without triggering automatic processes such as:
+You can use the Soft Deploy option to deploy changes without triggering automatic processes such as:
 
 * User jobs
 * Parsers
@@ -55,7 +55,7 @@ To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), 
 
 <web>
 
-To activate Soft Deploy, search for it via the Preferences windows as explained [here](/articles/04_fabric_studio/04_user_preferences.md). 
+To activate Soft Deploy, right-click on a Logical Unit name, and select Soft Deploy. 
 
 </web>
 
@@ -63,7 +63,21 @@ To activate Soft Deploy, search for it via the Preferences windows as explained 
 
 Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
 
-To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console. 
+<studio>
+	
+To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console
+(click this icon from next to **Fabric** in the Debug Panel to open the console):   <img width="20" height="19" src="/articles/04_fabric_studio/images/open_debug_server_or_cassandra.png">
+
+</studio>
+
+<web>
+	
+To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric terminal
+(Choose **Fabric -> Open Fabric Terminal**)
+
+</web>
+
+
 ###### Syntax:
 
 ~~~
