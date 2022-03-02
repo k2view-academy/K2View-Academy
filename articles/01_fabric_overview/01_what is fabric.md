@@ -24,13 +24,14 @@ To summarize, Fabric architecture yields significant savings in computing, power
 
 ### Fabric Use Cases
 Fabric is a compelling solution for:
-* Anything 360, like customer, order, device, server, car, credit-card or patient.
-* Micro services.
-* <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>.
-* ML / AI inference and training.
-* Real-time data processing and correlation.
+* Anything 360, like: customer, order, device, server, car, credit-card or patient
+* Micro services
+* <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>
+* Maching Learning / Artifical Intelligence
+* Real-time data processing and correlation
 * BI analytics reports
 * Batch data processing
+* Search capabilities - enables executing queries across multiple [MicroDBs](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) 
 
 ### Getting Started
 **Learn about Main Fabric Platform Modules:**
