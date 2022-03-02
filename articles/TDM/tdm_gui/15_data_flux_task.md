@@ -8,19 +8,19 @@ Note that the testing environment is often used as a source and target environme
 
 
 
-## How do I Create a Data Flux Task?
+## How do I Create a Data Versioning Task?
 
-Go to the **Task** window, select **General tab** and then check **Entity Versioning**.
+Check the **Data Versioning** checkbox in the Additional Execution Parameters tab of the task window.
 
 
 
-## Who Can Create a Data Flux Task?
+## Who Can Create a Data Versioning Task?
 
 The following users can create a Data Versioning task:
 
 1. Admin users.
-2. Environment owner users who can create a Data Flux task for their environment.
-3. Testers who can create a TDM task for environments with **Entity Versioning** permissions that are attached to their [TDM Environment role](/articles/TDM/tdm_gui/10_environment_roles_tab.md).  
+2. Environment owner users who can create a Data Versioning task for their environment.
+3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](/articles/TDM/tdm_gui/10_environment_roles_tab.md).  
 
 
 
@@ -33,7 +33,7 @@ The following users can create a Data Versioning task:
 <p><strong>Task Type</strong></p>
 </td>
 <td valign="top" width="150pxl">
-<p><strong>Entity Versioning</strong></p>
+<p><strong>Data Versioning</strong></p>
 </td>
 <td valign="top" width="600pxl">
 <p><strong>Description</strong></p>
