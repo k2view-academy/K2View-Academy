@@ -21,7 +21,7 @@ The following execution parameters are set on **Reserve tasks**:
 
 ### Data Type
 
-Check the **Entities** to delete the requested entities from the target environment.
+Check the **Entities** to reserve the requested entities in the target environment.
 
 ### Reservation Period
 
