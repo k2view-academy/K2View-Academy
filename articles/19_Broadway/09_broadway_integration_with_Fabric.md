@@ -116,12 +116,12 @@ When a new Logical Unit is created, a **deploy.flow** will be generated automati
 
 * **nosync**
 
-  * NOSYNC TRUE: Only schema changes trigger sync after deploy.
-  * NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time instance is accessed.
+  * NOSYNC TRUE: Only schema changes trigger a sync after a deploy.
+  * NOSYNC FALSE: Any deploy (even without any changes) triggers a sync the first time an instance is accessed.
 
-* **is_first_deploy** - A Boolean representing if this is the first deploy.
+* **is_first_deploy** - A Boolean indicating if this is the first deploy.
 
-* **is_studio** - Will be true if this is the Studio debug environment Fabric instance.
+* **is_studio** - This value is true if this is the Studio debug environment Fabric instance.
 
   
 
