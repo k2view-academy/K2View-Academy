@@ -1,8 +1,8 @@
-# Business Entities and Products - TDM DB Tables
+# Business Entities and Systems - TDM DB Tables
 
 TDM settings are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). 
 
-Business Entity (BE) and System definitions update the following TDM DB tables:
+Business Entity (BE) and System definitions **update the following TDM DB tables:**
 
 ### Business_Entities
 
