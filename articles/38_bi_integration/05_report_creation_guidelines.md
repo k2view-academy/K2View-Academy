@@ -86,6 +86,32 @@ select * from k2_fabric_command_sql where command='batch_list status="@status_na
 
 Where **status_name** is a session parameter.
 
+### Creating Cross-Instance Reports Based on Fabric
 
+Starting V6.5.5, you can create cross-instance reports based on Fabric by utilizing the [SEARCH](/articles/18_fabric_cdc/cdc_consumers/search/05_search_command.md) command. 
+
+The syntax is:
+
+~~~sql
+select * from k2_fabric_command_sql where command='<search command syntax>'
+~~~
+
+**Examples of a report based on SEARCH command:**
+
+The following Custom SQL enables creating a report of all the states of Customer's addresses:
+
+~~~sql
+select * from k2_fabric_command_sql where command='search lutype=Customer tables=ADDRESS '{"query": {"query_string":{ "fields": ["STATE"], "query": "*"}}}';'
+~~~
+
+The following Custom SQL enables creating a report of Customer's addresses that belong to a specific state, providing the state name by a STATE session parameter:
+
+~~~sql
+select * from k2_fabric_command_sql where command='search lutype=Customer tables=ADDRESS '{"query": {"query_string":{ "fields": ["STATE"], "query": "@STATE@"}}}';'
+~~~
+
+Note that an installation of Elasticsearch is required for using a SEARCH command. 
+
+[Click to get more information about the SEARCH use cases and implementation steps](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md).
 
 [![Previous](/articles/images/Previous.png)](04_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_report_execution_guidelines.md)
