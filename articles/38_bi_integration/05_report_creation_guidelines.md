@@ -88,30 +88,32 @@ Where **status_name** is a session parameter.
 
 ### Creating Cross-Instance Reports Based on Fabric
 
-Starting V6.5.5, you can create cross-instance reports based on Fabric by utilizing the [SEARCH](/articles/18_fabric_cdc/cdc_consumers/search/05_search_command.md) command. 
+Starting V6.5.5, Fabric BI supports integration with Elastic Search, so you can create cross-instance reports based on Fabric [SEARCH](/articles/18_fabric_cdc/cdc_consumers/search/05_search_command.md) command using the Custom SQL Object screen. 
 
-The syntax is:
+Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen. Use the syntax as shown below:
 
 ~~~sql
 select * from k2_fabric_command_sql where command='<search command syntax>'
 ~~~
 
+Note that an installation of Elastic Search is required for using a SEARCH command. 
+
+[Click to get more information about the SEARCH use cases and implementation steps](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md).
+
 **Examples of a report based on SEARCH command:**
 
-The following Custom SQL enables creating a report of all the states of Customer's addresses:
+The following Custom SQL enables creating a report of Instance IDs per state:
 
 ~~~sql
 select * from k2_fabric_command_sql where command='search lutype=Customer tables=ADDRESS '{"query": {"query_string":{ "fields": ["STATE"], "query": "*"}}}';'
 ~~~
 
-The following Custom SQL enables creating a report of Customer's addresses that belong to a specific state, providing the state name by a STATE session parameter:
+The following Custom SQL enables creating a report of Instance IDs per state, given a state name is provided as a session parameter:
 
 ~~~sql
 select * from k2_fabric_command_sql where command='search lutype=Customer tables=ADDRESS '{"query": {"query_string":{ "fields": ["STATE"], "query": "@STATE@"}}}';'
 ~~~
 
-Note that an installation of Elasticsearch is required for using a SEARCH command. 
 
-[Click to get more information about the SEARCH use cases and implementation steps](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md).
 
 [![Previous](/articles/images/Previous.png)](04_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_report_execution_guidelines.md)
