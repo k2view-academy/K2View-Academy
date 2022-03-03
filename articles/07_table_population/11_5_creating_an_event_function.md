@@ -16,13 +16,13 @@ An Event function is a Project function invoked from the **Events** [LU Schema p
 
 * An Event function enables running user code upon the completion of a Sync or Delete Instance.
 * The function is triggered on one of the following events:
-  * Post Sync success, post Sync failure, post Delete Instance success.
+  * Sync success, Sync failure, a successful Delete Instance.
 * Any Event function on a shared or LU level can be attached to an LU Schema.
 * The same Event function can be attached to several LU Schema events.
 
 Notes:
 
-*  Event functions run synchronously. If needed, an event function can be defined to run asynchronously in the Event function's code. 
+* Event functions run synchronously. If needed, an event function can be defined to run asynchronously in the Event function's code. 
 * The implementer is responsible for handling Event function exceptions. It will decide whether to catch an exception or to display it to the user if the Event function fails.
 
 ### How Do I Create or Edit an Event Function?
@@ -52,7 +52,7 @@ Using the above information the function can execute any required business logic
 
 ### How Do I Attach or Remove an Event Function?
 
-1. To attach an Event function to the LU Schema, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Schema** to display the **LU Schema** window.
+1. To attach an Event function to the LU Schema, go to **Project Tree** > **Implementation** > **Logical Units/Data Products** > [**LU Name**] > **Schema** to display the **LU Schema** window.
 2. In the **Sync** Schema Properties tab, click <img src="images/web/plus.PNG" style="zoom:80%;" /> icon to add an existing Event function from the list. 
 3. Select an Event Type.
 4. To remove an Event function, click <img src="images/web/trash.PNG" style="zoom:67%;" /> icon next to the Event function definition in the Schema Properties.
