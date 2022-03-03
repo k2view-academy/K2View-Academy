@@ -18,7 +18,7 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_validate_the_no_of_reserved_entities.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_reservation_validation.md) Send the target environment and entity list if the task reserves entities and has an entity list. 
 
-[<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_available_data_versions.md) Send the selected task's attributes, and the selected environments and entity list.
+[<img src="images/task_select_versions.png" alt="drawing" width="200pxl" style="zoom:80%;" />](11_get_available_data_versions.md) Send the selected task's attributes, the selected environments, and entity list.
 
 [<img src="images/task_validate_version.png" alt="drawing" width="200pxl" style="zoom:80%;" />](13_data_version_entity_validation.md) Send the task_execution_id of the selected version for validation.
 
