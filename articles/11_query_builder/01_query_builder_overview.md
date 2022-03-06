@@ -1,5 +1,6 @@
 # Query Builder Overview
 
+<studio>
 The Query Builder is an embedded visual query building component that allows you to build complex SQL queries on a selected [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) using an intuitive interface. 
 
 The Query Builder window has two tabs: 
@@ -8,6 +9,7 @@ The Query Builder window has two tabs:
 
 Note: 
 The [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has a [Schema Filter](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#schema-filter) setting which enables filtering the DB schema’s list that is used by the Query Builder and the [DB queries](/articles/07_table_population/01_table_population_overview.md) in the DB interface.
+
 
 ### Opening the Query Builder Window
  The Query Builder window can be opened in several ways. Select one of the following options: 
@@ -28,6 +30,12 @@ The [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has 
 
 9.	[Broadway](/articles/19_Broadway/01_broadway_overview.md), click the **QB button** in the **DbCommand actor** to open the **Query Builder**.   
 <!--Next drops (drop 2)- add links to Broaway, Instance Group, Graphit-->
+ </studio>
+
+
+</studio>
+
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/11_query_builder/02_query_builder_window.md)
 
