@@ -44,7 +44,7 @@ The Data Interface Builder is an embedded visual query building component that a
 To open the Data Interface Explorer, execute the following steps:
  
 1.	In the left pane right-click **DB Interface Explorer**
-![image](/articles/11_query_builder/images/DBInterfaceExplorer.PNG)
+![image](/articles/11_query_builder/images/DBInterfaceExplorer.png)
 2. Select the DB and associated table that you wish to explore
 ![image](/articles/11_query_builder/images/DBInterfaceExplorer2.PNG)
  
