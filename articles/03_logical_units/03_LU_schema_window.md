@@ -286,7 +286,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Open the Data Viewer in a context of a selected table of the current LU. You can switch between the schema tables. The data will be displayed according to the selected table.</p>
+<p>Open the Table Data Viewer. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
