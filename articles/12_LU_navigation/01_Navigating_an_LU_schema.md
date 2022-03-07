@@ -204,7 +204,7 @@ The explorer tree will show a list of tables and their populations that are in t
 * Each table name is next to a <> icon
 * Each population name is under the table to which it belongs, with the name of the table attached to the beginning of the population name. 
  
- [Table list figure]
+![image](/articles/12_LU_navigation/images/10_03_01_Table_List_Web.png)
  
 -- Click on a table name, and the table viewer for that table will appear in the right window.
  
@@ -215,7 +215,7 @@ The explorer tree will show a list of tables and their populations that are in t
 From the project's explorer tree, expand **Implemenation > Logical Units/Data Products > [Logical Unit/Data Product Name] > Schema**
 
  
- [Schema figure]
+![image](/articles/12_LU_navigation/images/10_03_02_Explorer_and_Schema.png)
 
  
 The Schema (diagram outline) displays an overview of the LU/DP structure and can be used to search for a subset of tables included in the Schema, and for the data included in those tables. 
