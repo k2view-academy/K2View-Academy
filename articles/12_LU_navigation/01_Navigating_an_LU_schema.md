@@ -206,7 +206,7 @@ The explorer tree will show a list of tables and their populations that are in t
  
 ![image](/articles/12_LU_navigation/images/10_03_01_Table_List_Web.png)
  
--- Click on a table name, and the table viewer for that table will appear in the right window.
+-- Click on a table name, and the table schema editor for that table will appear in the right window.
  
 -- Click on a population name, and a [Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md) diagram will appear in the right window.  
  
