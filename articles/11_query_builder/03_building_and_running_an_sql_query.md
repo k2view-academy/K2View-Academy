@@ -29,7 +29,8 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh_WEB.PNG)    
     
 </web>
-    
+
+<studio>    
 ## Main Window - Editing an SQL Query  
 
 ### 1. Adding a DB Object to the Main Window
@@ -59,6 +60,9 @@ To remove columns from a DB object, do either:
 * Uncheck the selected columns. 
 * Right click the **DB object** > **Uncheck All** to remove all the table’s columns from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
 
+  
+    
+    
 ## Main Window - Advanced SQL Setting
 
 ### 5. Joining the Selected Tables 
@@ -121,6 +125,6 @@ Note that when running the Query Builder on a Fabric interface, you must run the
 
 The **Max rows** setting is used to set the maximum number of rows returned by the SQL query. The default value is 10,000 rows. You can set a different number of rows to be returned by the SQL query
 
-
+</studio> 
 
 [![Previous](/articles/images/Previous.png)](/articles/11_query_builder/02_query_builder_window.md)
