@@ -1,6 +1,8 @@
 # Using the Query Builder Window - Building and Running an SQL Query
 
 <studio>
+    
+    
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
 2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click **Execute Query**.
@@ -15,6 +17,7 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 
 
 ![image](/articles/11_query_builder/images/01_querytab.PNG)
+    
 </studio> 
     
 <web>
