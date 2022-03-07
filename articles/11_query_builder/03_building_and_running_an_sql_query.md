@@ -8,8 +8,6 @@
 
 Note that the Insert, Update and Delete statements performed by the DB query, might cause an auto-commit to the DB (based on the DB driver’s definition). 
 
-</studio>    
-    
 ## Query Tab - Viewing the List of DB Objects
 * Click the **+** or **–** icons to expand or collapse the list in the DB objects.
 * Click **Refresh** to refresh the DB objects list. 
@@ -17,7 +15,20 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 
 
 ![image](/articles/11_query_builder/images/01_querytab.PNG)
+</studio> 
+    
+<web>
+## Query Tab - Viewing the List of DB Objects
+* Click the **>** icon to expand or collapse the list in the DB objects. 
 
+Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh.PNG) 
+
+![image](/articles/11_query_builder/images/02_querytab_WEB)  
+    
+Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh.PNG)    
+    
+</web>
+    
 ## Main Window - Editing an SQL Query  
 
 ### 1. Adding a DB Object to the Main Window
