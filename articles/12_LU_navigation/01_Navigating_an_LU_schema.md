@@ -208,43 +208,52 @@ The explorer tree will show a list of tables and their populations that are in t
  
 -- Click on a table name, and the table viewer for that table will appear in the right window.
  
--- Click on a population name, and a Broadway flow diagram will appear in the right window. 
+-- Click on a population name, and a [Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md) diagram will appear in the right window.  
  
 ### How Do I Use the Logical Unit/Data Product Schema (diagram outline)?
  
 From the project's explorer tree, expand **Implemenation > Logical Units/Data Products > [Logical Unit/Data Product Name] > Schema**
 
+The Schema (diagram outline) displays an overview of the LU/DP structure and can be used to create or delete tables, group or ungroup tables, search for a subset of tables included in the Schema, and view the data included in those tables. For detailed instructions how to carry out these tasks, 
+[click here](/articles/03_logical_units/03_LU_schema_window.md). 
  
 ![image](/articles/12_LU_navigation/images/10_03_02_Explorer_and_Schema.png)
-
  
-The Schema (diagram outline) displays an overview of the LU/DP structure and can be used to search for a subset of tables included in the Schema, and for the data included in those tables. 
 
 To search for a table using the [diagram outline](/articles/03_logical_units/03_LU_schema_window.md):
-1. Click the **Search table or group** pull-down menu from the toolbar on top of the diagram outline.   [show this]
-2.	Enter the name of the table, and choose the table you want from this list that appears. If the table you are looking for does not appear in the list, it either does not exist in the Schema, or you have made a spelling error. 
+1. Click the **Search table or group** pull-down menu from the toolbar on top of the diagram outline.
+   ![image](/articles/12_LU_navigation/images/10_03_03_ToolBar.png)
+2.	Enter the name of the table, and choose the table you want from the list that appears. If the table you are looking for does not appear in the list, it either does not exist in the Schema, or you have made a spelling error. 
 3. The table is highlighted with a blue outline. 
+ 
+To search for data in a table using the [diagram outline](/articles/03_logical_units/03_LU_schema_window.md), do one of the following:
+* Click the **Data Viewer** icon in the toolbar (  ![image](/articles/03_logical_units/images/web/data_viewer.PNG)  ), and the Data Viewer will open. You can use the Data Viewer to execute an SQL query to retrieve data from a table (you select the table from withing the Data Viewer).
+* Click the **Table Data Viewer** icon in the toolbar (  ![image](/articles/03_logical_units/images/web/table_data_viewer.PNG)  ), and the Table Data Viewer will appear in the lower window. You can use the Table Data Viewer to execute an SQL query to retrieve data from the selected table. 
+ 
+For detailed instructions on how to work with a Logical Unit/Data Product, [click here](/articles/03_logical_units/01_LU_overview.md)
 
 ### What is the Navigation Map? 
  
-The Navigation map is activated by clicking the navigation map icon in the tool bar. 
+The Navigation map is activated by clicking the navigation map icon in the tool bar (  ![image](/articles/03_logical_units/images/web/navigation.PNG)  ). 
 
-[tool bar with the navigation map icon] 
- 
 This view can be used to move between the different areas of a Schema, and can be useful when looking at large Logical Units with many tables or hierarchy levels.
 
-[show a sample of this view]
+![image](/articles/12_LU_navigation/images/10_03_04_NavigationMap.png)
 
 
 ### What is in the Properties pane?
  
-The properties pane is accessed by clicking the arrow icon on the far right side of the diagram outline [show this icon]
+The properties pane is accessed by clicking the arrow icon on the far right side of the diagram outline:
+ 
+![image](/articles/12_LU_navigation/images/10_03_05_PropertiesIconLocation.png)
  
 If you have selected a table, the properties pane for that table appears. 
- [show this, list the options, and give a link to a detailed article, if one exists]
+
+![image](/articles/12_LU_navigation/images/10_03_06_TableProperties.png)
  
-If you have not selected a table, the properties pane for the LU/DP appears.
-  [show this, list the options, and give a link to a detailed article, if one exists]
+If you have not selected a table, the properties pane for the LU/DP Schema appears. You can tell that a table has not been selected, but the LU/DP has been selected when a blue frame forms around the LU/DP Schema.
+
+![image](/articles/12_LU_navigation/images/10_03_07_SchemaProperties.png)
 
 </web>
 
