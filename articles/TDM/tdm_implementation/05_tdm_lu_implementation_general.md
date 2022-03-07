@@ -39,7 +39,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 4. Add the LU_PARAMS LU table to each LU Schema (even if it is not required for defining LU parameters), so that the LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
- 
+
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
@@ -66,7 +66,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
 
-      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Entity Versioning is false) which  loads (inserts) the entities to the target environment.
+      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning is cleared) which  loads (inserts) the entities to the target environment.
 
       - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
 
