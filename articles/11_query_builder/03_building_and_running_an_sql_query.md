@@ -24,11 +24,9 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 ## Query Tab - Viewing the List of DB Objects
 * Click the **>** icon to expand or collapse the list in the DB objects. 
 
-Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh.PNG) 
-
-![image](/articles/11_query_builder/images/02_querytab_WEB)  
+![image](/articles/11_query_builder/images/02_querytab_WEB.PNG)  
     
-Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh.PNG)    
+Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh_WEB.PNG)    
     
 </web>
     
