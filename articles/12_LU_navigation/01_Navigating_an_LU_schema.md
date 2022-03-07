@@ -179,7 +179,6 @@ In the LU working area right click anywhere to display a context menu with the f
 </tbody>
 </table>
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/12_LU_navigation/02_searching_a_fabric_project.md) 
  
 </studio>
  
@@ -247,10 +246,11 @@ If you have selected a table, the properties pane for that table appears.
 If you have not selected a table, the properties pane for the LU/DP appears.
   [show this, list the options, and give a link to a detailed article, if one exists]
 
+</web>
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/12_LU_navigation/02_searching_a_fabric_project.md) 
  
-</web>
+
 
 
 
