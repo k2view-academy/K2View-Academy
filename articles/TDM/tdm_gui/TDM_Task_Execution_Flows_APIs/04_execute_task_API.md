@@ -30,7 +30,7 @@ Starts a task execution and return the execution's task_execution_id on success.
 
 ##### Entity Reservation Validations
 
-- Validate the number of reserved entities: if the task reserves the entities whether the reservationInd is set to true in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
+- Validate the number of reserved entities: if the task reserves the entities whether the reservationInd is set to **true** in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to 20 additional entities in ST1.
 - Validate the retention period to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
 If at least one of the validations fail, the API does not start the task and returns the validation errors.
@@ -153,7 +153,7 @@ If the validations pass successfully, start the task execution by populating the
 <p><strong>numberOfEntities</strong></p>
 </td>
 <td width="185">
-<p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list is not set in the overridden parameters.</p>
+<p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list if it is not set in the overridden parameters.</p>
 </td>
 <td width="99">
 <p>All tasks</p>
@@ -191,7 +191,7 @@ If the validations pass successfully, start the task execution by populating the
 <p><strong>reserveInd</strong></p>
 </td>
 <td width="185">
-<p>Populated with true or false. Set to true if the task execution needs to reserve the entities on the target environment.</p>
+	<p>Populated with <strong>true</strong> or <strong>false</strong>. Set to <strong>true</strong> if the task execution needs to reserve the entities on the target environment.</p>
 </td>
 <td width="99">
 <p>Load or Reserve tasks</p>
