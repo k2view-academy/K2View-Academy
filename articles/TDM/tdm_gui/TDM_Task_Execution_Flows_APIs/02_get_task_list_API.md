@@ -23,7 +23,7 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
   - Get all active regular tasks.
 - **Tester Users:**
   - **Extract Tasks**:
-    - Get all active tasks that do not require special permissions (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user or their group has a Read TDM Environment permission set on at least one TDM environment with the task's Business Entity (BE) and LUs..
+    - Get all active tasks that **do not require special permissions** (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user or their group has a Read TDM Environment permission set on at least one TDM environment with the task's Business Entity (BE) and LUs.
     - Get all active tasks that include reference tables or that require up-to-date data if the user or their group has a Read TDM Environment permission set with these permissions on at least one TDM environment with the task's Business Entity (BE) and LUs.
   - **Load Tasks:**
     - Get all active tasks that **do not require special permissions** (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user or their group has a Read TDM Environment permission set  on at least one TDM environment with the task's Business Entity (BE) and LUs, and a Write TDM Environment permission set on at least one TDM environment with the task's Business Entity (BE) and LUs.
@@ -148,12 +148,12 @@ The API invokes either  [regularTasksByUser](#get-regular-tasks) API to bring re
 
 The returned tasks are filtered based on the additional input filtering parameters (if set). The input is a **dynamic JSON string**. 
 
-The JSON filtering parameter is optional. If is it not populated, the API returns all user's regular tasks.
+The JSON filtering parameter is optional. If is it not populated, the API returns all of the user's regular tasks.
 
 ### API Input
 
-- **filteringParams** - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters. You can populate part or all parameters.
-Currently, it supports the following filtering parameters:
+- **filteringParams** - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters. You can populate part or all of the parameters.
+It supports the following filtering parameters:
 
 <table width="900pxl">
 <tbody>
@@ -218,7 +218,7 @@ Currently, it supports the following filtering parameters:
 <td width="251">
 <ul>
 <li>Populate with true to get tasks that provisions data to the target environment.</li>
-<li>For other tasks: extract, reserve only, and delete only, populate this field with false.</li>
+<li>For other tasks (extract, reserve only, and delete only), populate this field with false.</li>
 </ul>
 </td>
 </tr>
