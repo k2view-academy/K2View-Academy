@@ -33,7 +33,7 @@ Returns the details of the current or last execution of the given task_id. If th
 </tr>
 <tr>
 <td valign="top">
-<p><strong>taskId</strong></p>
+<p><strong>task_ID</strong></p>
 </td>
 <td width="200" valign="top">
 <p>Yes</p>
@@ -44,7 +44,7 @@ Returns the details of the current or last execution of the given task_id. If th
 </tr>
 <tr>
 <td valign="top">
-<p><strong>executionID</strong></p>
+<p><strong>execution_ID</strong></p>
 </td>
 <td width="200" valign="top">
 <p>No</p>
