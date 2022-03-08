@@ -2,7 +2,7 @@
 
 ## Get Task Execution Summary Report 
 
-### API URL
+### API URL   
 
 /taskSummaryReport/{executionId}/luName/{luName}
 
