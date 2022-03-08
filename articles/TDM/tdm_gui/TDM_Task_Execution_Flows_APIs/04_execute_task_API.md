@@ -30,7 +30,7 @@ Starts a task execution and return the execution's task_execution_id on success.
 
 ##### Entity Reservation Validations
 
-- Validate the number of reserved entities: if the task reserves the entities whether the reservationInd is set to **true** in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to 20 additional entities in ST1.
+- Validate the number of reserved entities: if the task reserves the entities whether the reserve_ind is set to **true** in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to 20 additional entities in ST1.
 - Validate the retention period to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
 If at least one of the validations fail, the API does not start the task and returns the validation errors.
