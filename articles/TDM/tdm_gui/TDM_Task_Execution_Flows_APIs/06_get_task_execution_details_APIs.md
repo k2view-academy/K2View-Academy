@@ -61,7 +61,7 @@ Returns the list of all executions of the input task. Returns one summary record
 <p>No</p>
 </td>
 <td valign="top">
-<p>When populated, the API only returns the task executions made by the input user.</p>
+<p>When populated, the API returns the task executions made by the user associated with this userId only.</p>
 </td>
 </tr>
 </tbody>
