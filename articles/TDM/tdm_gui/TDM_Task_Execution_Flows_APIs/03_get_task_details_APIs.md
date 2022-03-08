@@ -500,7 +500,7 @@ TDM_Tasks
 
 ### API Description
 
-Gets the list of Reference tables included in a given task. The **refcount** attribute of  **/tasks** API is populated by the number of Reference tables included in the task. If the **refcount** attribute is populated by zero, the task does not have Reference tables.
+Gets the list of Reference tables included in a given task. The **refcount** attribute of the  **/tasks** API is populated by the number of Reference tables included in the task. If the **refcount** attribute is populated by zero, the task does not have Reference tables.
 
 ### API Input
 
