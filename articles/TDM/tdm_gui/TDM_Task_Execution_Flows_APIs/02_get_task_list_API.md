@@ -183,14 +183,14 @@ It supports the following filtering parameters:
 <p>Populate the task type to filter the returned tasks based on their type.</p>
 <p>Notes:</p>
 <ul>
-<li>To get a <strong>reserve-only</strong> task, populate the task type with <strong>RESERVE</strong>.</li>
-<li>To get a <strong>delete-only</strong> task, populate the task type with <strong>LOAD</strong>, <strong>load_entity</strong>&nbsp;with <strong>false</strong>, and <strong>delete_before_load</strong>&nbsp;with <strong>true.</strong></li>
+<li>To get a reserve-only task, populate the task type with RESERVE.</li>
+<li>To get a delete-only task, populate the task type with LOAD, load_entity&nbsp;with <strong>false</strong>, and delete_before_load&nbsp;with <strong>true.</strong></li>
 </ul>
 </td>
 </tr>
 <tr>
 <td>
-<p><strong>version_ind</strong>&nbsp;</p>
+<p>version_ind&nbsp;</p>
 </td>
 <td width="200">
 <ul>
@@ -200,8 +200,8 @@ It supports the following filtering parameters:
 </td>
 <td width="251">
 <ul>
-<li>Populate with false to get regular tasks.</li>
-<li>Populate with true to get data versioning tasks.</li>
+  <li>Populate with <strong>false</strong> to get regular tasks.</li>
+  <li>Populate with <strong>true</strong> to get data versioning tasks.</li>
 </ul>
 </td>
 </tr>
@@ -217,8 +217,8 @@ It supports the following filtering parameters:
 </td>
 <td width="251">
 <ul>
-<li>Populate with true to get tasks that provisions data to the target environment.</li>
-<li>For other tasks (extract, reserve only, and delete only), populate this field with false.</li>
+  <li>Populate with <strong>true</strong> to get tasks that provisions data to the target environment.</li>
+<li>For other tasks (extract, reserve only, and delete only), populate this field with <strong>false</strong>.</li>
 </ul>
 </td>
 </tr>
@@ -234,8 +234,8 @@ It supports the following filtering parameters:
 </td>
 <td width="251">
 <ul>
-<li>Populate with true to get delete and load or delete only tasks.</li>
-<li>Else, populate this parameter with false.</li>
+  <li>Populate with <strong>true</strong> to get delete and load or delete only tasks.</li>
+  <li>Else, populate this parameter with <strong>false</strong>.</li>
 </ul>
 </td>
 </tr>
