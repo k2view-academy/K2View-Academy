@@ -53,7 +53,7 @@ Broadway enables you to create an Actor that inherits its properties and behavio
    }
    ~~~
 
-   * Implement an **action** method to define the Actor's logic. For example, when the Actor have an input argument **caseId** and an output argument **status**, do the following:
+   * Implement an **action** method to define the Actor's logic. For example, when the Actor has an input argument **caseId** and an output argument **status**, the action method will be as follows:
 
      ~~~java
      @Override
