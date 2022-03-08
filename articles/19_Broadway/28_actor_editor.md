@@ -53,34 +53,36 @@ Broadway enables you to create an Actor that inherits its properties and behavio
    }
    ~~~
 
-   * Implement an **action** method to define the Actor's logic. For example, when the Actor have an input argument **caseId** and an output argument **status**, do the following:
+3. Implement an **action** method to define the Actor's logic. For example, when the Actor has an input argument **caseId** and an output argument **status**, the method will be as follows:
 
-     ~~~java
-     @Override
-     public void action(Data input, Data output) throws Exception {
-         final String caseId = input.string("caseId");
-         try {
-             //your logic ....
-             output.put ("status", "OK");
-         } catch (Exception e){
-             handleError(e, output);
-         }
-     }
-     ~~~
+  ~~~java
+  @Override
+  public void action(Data input, Data output) throws Exception {
+      final String caseId = input.string("caseId");
+      try {
+          //your logic ....
+          output.put ("status", "OK");
+      } catch (Exception e){
+          handleError(e, output);
+      }
+  }
+  ~~~
 
-   * If the Actor maintains a state, implement a **close** method to reset it.
+4. If the Actor maintains a state, implement a **close** method to reset it.
 
-   * Since the Actors are serialized when running in [Recovery mode](29_recovery_point.md) and their input/output values are serialized to be displayed in the Data Viewer, make sure that Actor, its members and input/output fields are either serializable or transient. 
+5. Since the Actors are serialized when running in [Recovery mode](29_recovery_point.md) and their input/output values are serialized to be displayed in the Data Viewer, make sure that Actor, its members and input/output fields are either serializable or transient. 
 
-3. Once this new Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
+6. Once this new Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
 
-4. Populate the **Class** with your Java class's path. For example, when the Java class is located under the Logical Unit, the class is:
+7. Populate the **Class** with your Java class's path. For example, when the Java class is located under the Logical Unit, the class is:
 
    ~~~java
    com.k2view.cdbms.usercode.lu.<lu_name>.<class_name>
    ~~~
 
-5. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
+8. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
+
+   * The Actor's input argument can be change from the default to other type (such as drop-down list) by clicking![dots](images/99_19_dots.PNG)> **Advanced** in the input field and changing the type in the editor.
 
 ### Examples of New Actor Creation
 
@@ -108,6 +110,35 @@ Then define the required input and output arguments and run the Actor to debug i
 ​		![image](images/99_10_editor_3.PNG)
 
 
+
+If an input field should include a drop-down list of value, click![dots](images/99_19_dots.PNG)> **Advanced** in the input field and change the type in the editor. For example, as follows:
+
+~~~json
+{
+  "id": "com.k2view.dropdown",
+  "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ]
+}
+~~~
+
+If an input field should include a list of flows, the editor should include the following:
+
+~~~json
+{ 
+	"id": "com.k2view.innerflow" 
+}
+~~~
+
+
+
+Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
+
+​		<img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
 
 [![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
 
