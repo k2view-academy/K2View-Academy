@@ -2,13 +2,13 @@
 
 A TDM user can set a retention period either on the extracted data version or on the entity reservation (set a reservation period).
 
-In both cases the retention period is a combination of **unit** (Hours, Days, Weeks ...) and **value**. For example, populate the unit with 'Days' and the value with 2 to set a retention period of 2 days.
+In both cases the retention period is a combination of a **unit** (Hours, Days, Weeks ...) and a **value**. For example, populate the unit with 'Days' and the value with 2 to set a retention period of 2 days.
 
-An admin user of the environment's owner can set unlimited retention period by populating the value with zero.
+An admin user of the environment's owner can set an unlimited retention period by populating the value with zero.
 
-However, a tester user is limited and can set a retention period that does not exceed the [maximum retention period](10_retention_period_options.md) defined on extract task and entity's reservation period.
+A tester user is limited and can set a retention period that does not exceed the [maximum retention period](10_retention_period_options.md) defined on extract task and entity's reservation period.
 
-Therefore the retention period, either set on the task itself of the overridden execution parameters, **needs to be validated for a tester user** to verify that it does not exceed the maximum period.
+Therefore the retention period, either of the task itself or of the overridden execution parameters, **must be validated for a tester user** to verify that it does not exceed the maximum period.
 
 ## Which Task Requires a Retention Period Validation?
 
@@ -67,7 +67,7 @@ Get the maximum number of days from the [retentionperiodinfo](10_retention_perio
       }
   ```
 
-Note that if the task's retention period is set with a different unit (the unit is not set to 'Days'), it is needed to covert the task's retention period to days to validate it.
+Note that if the task's retention period is set with a different unit (that is, the unit is not set to 'Days'), the task's retention period must be converted to days to validate it.
 
 
 
@@ -89,7 +89,7 @@ Get the maximum number of days from the [retentionperiodinfo](10_retention_perio
   ```
 
 
-Note that if the task's retention period is set with a different unit (the unit is not set to 'Days'), it is needed to covert the task's retention period to days to validate it.
+Note that if the task's retention period is set with a different unit (that is, the unit is not set to 'Days'), the task's retention period must be converted to days to validate it.
 
 ### Option II
 
@@ -109,7 +109,7 @@ TDM_ReserveEntities
 
 #### API Description
 
-Validate if the given retention period on the input entity list and environment does not exceed the max retention period allowed for user. An admin user of the environment's owner can set unlimited retention period.
+Validate if the given retention period on the input entity list and environment does not exceed the max retention period allowed for user. An admin user of the environment's owner can set an unlimited retention period.
 
 If the entities are already reserved by the user, check the new expiration date against the existing start reservation date. Else, check the retention period against the current Datetime.
 
