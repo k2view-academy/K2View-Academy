@@ -14,7 +14,7 @@ TDM_Tasks
 
 ### API Description
 
-Get the list of the available data versions the match the input parameters. The user can select one of the data versions for the [Data Versioning](/articles/TDM/tdm_gui/15_data_flux_task.md) load task and reload the entities in the selected versions to the target environment. The API filters our expired data versions. For example, a data version that is created with a retention period of 5 days, will not be retrieved after 6 days.
+Get the list of the available data versions that match the input parameters. The user can select one of the data versions for the [Data Versioning](/articles/TDM/tdm_gui/15_data_flux_task.md) load task and reload the entities in the selected versions to the target environment. The API filters our expired data versions. For example, a data version that is created with a retention period of 5 days, will no longer be able to be retrieved after 6 days have passed.
 
 ### API Input
 
@@ -39,7 +39,7 @@ The request body contains the following filtering parameters:
 <p>No</p>
 </td>
 <td style="width: 485.227px;" valign="top">
-<p>Populated with list of entities separated by a comma. When populated, the API only brings data versions that contain the entities in the list.</p>
+<p>Populated with a list of entities separated by a comma. When populated, the API only brings data versions that contain the entities in the list.</p>
 </td>
 </tr>
 <tr>
