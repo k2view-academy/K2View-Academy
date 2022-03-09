@@ -2,11 +2,11 @@
 
 ## Get the Retention Period Options
 
-This API can be used to get the retention period options of both activities:
+This API can be used to get the retention period options of both of these activities:
 
 - Creating a data versioning extract task.
 
-- Reserving entities in the target environment. 
+- Reserving entities in the target environment.   
 
 ### API URL
 
