@@ -100,13 +100,15 @@ Note that an installation of Elastic Search is required for using a SEARCH comma
 
 [Click to get more information about the SEARCH use cases and implementation steps](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md).
 
-**Examples of a report based on SEARCH command:**
+**Example of a report based on SEARCH command:**
 
 The following Custom SQL enables creating a report of Instance IDs per state:
 
 ~~~sql
 select * from k2_fabric_command_sql where command='search lutype=Customer tables=ADDRESS '{"query": {"query_string":{ "fields": ["STATE"], "query": "*"}}}';'
 ~~~
+
+![](images/custom_sql_search.PNG)
 
 The following Custom SQL enables creating a report of Instance IDs per state, given a state name is provided as a session parameter:
 
