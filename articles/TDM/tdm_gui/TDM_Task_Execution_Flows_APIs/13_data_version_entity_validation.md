@@ -16,7 +16,7 @@ TDM_Tasks
 
 Checks if the list of requested entities are copied successfully in the selected data version across all the input LU names in the task's Business Entity hierarchy. For example, if the customer's order is not extracted succesfully to Fabric, the validation on the related customer returns it as a failed entity.
 
-Note that  this API is needed since  the [versionsForLoad](11_get_available_data_versions.md) API only checks the status of root LUI.
+Note that  this API is needed since  the [versionsForLoad](11_get_available_data_versions.md) API only checks the status of the root LUI.
 
 ### API Input
 
@@ -41,7 +41,7 @@ The request body contains the following filtering parameters:
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;" valign="top">
-<p>Populated by list of entities separated by a comma.&nbsp;</p>
+<p>Populated by a list of entities separated by a comma.&nbsp;</p>
 </td>
 </tr>
 <tr>
