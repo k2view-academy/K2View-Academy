@@ -1,9 +1,9 @@
 # Entity List Validations on Entity Reservation
 
-The following validation need to be implemented on the task's entity list when the task reserves the entities:
+The following validations must be implemented on the task's entity list when the task reserves the entities:
 
-- Verify that the entities are not reserved by another user on the environment.
-- Verify that the total number of reserved entities on the environment does not exceeds the user's permissions on the environment. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1. Therefore, the number of entities in the task execution cannot exceed 20 entities.
+- Verify that the entities are not reserved by another user in the environment.
+- Verify that the total number of reserved entities in the environment does not exceeds the user's permissions in the environment. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to an additional 20 entities in ST1. Therefore, the number of entities in the task execution cannot exceed 20 entities.
 
 ## Verify that the Entities are Available For Reservation
 
@@ -21,7 +21,7 @@ TDM_ReserveEntities
 
 ### API Description
 
-Validate each input entity ID if it is reserved for another user on the input environment. If the entity is reserved for another user on the environment, return a failure on the entity. 
+Validate each input entity ID if it is reserved for another user in the input environment. If the entity is reserved for another user in the environment, return a failure on the entity. 
 
 ### API Input
 
@@ -97,7 +97,7 @@ The request body contains the following attributes:
 
 ### API Output
 
-The API returns the list of entities that are reserved on the environment by another user and therefore cannot be reserved by the user.
+The API returns the list of entities that are reserved in the environment by another user and therefore cannot be reserved by the user.
 
 ### API Output Example
 
@@ -142,11 +142,11 @@ TDM_ReserveEntities
 
 ### API Description
 
-A tester user can reserve a limited number of entities per Business Entity and environment. The maximum number of reserved entities is set in the Environment permission set  attached to the user. Admin and environment owners can reserve unlimited number of entities on the environment.  The API performs the following validation if the user is not an admin user and is not the owner of the environment:
+A tester user can reserve a limited number of entities per Business Entity and environment. The maximum number of reserved entities is set in the Environment permission set  attached to the user. Admin and environment owners can reserve an unlimited number of entities in the environment.  The API performs the following validation if the user is not an admin user and is not the owner of the environment:
 
-- Get the Write permission set attached to the user. If the user does not have a Write permission set on the environment, an exception is thrown by the API.
+- Get the Write permission set attached to the user. If the user does not have a Write permission set in the environment, an exception is thrown by the API.
 
-- Sum the input number of entities with the number of entities that are already reserved by the user on the environment (if exist). Validate the the total number of reserved entities does not exceed the user's permissions. 
+- Sum the input number of entities with the number of entities that are already reserved by the user in the environment (if they exist). Validate that the the total number of reserved entities does not exceed the user's permissions. 
 
   **Example:** 
 
@@ -155,7 +155,7 @@ A tester user can reserve a limited number of entities per Business Entity and e
   - The user already has 40 customers reserved on ST1. 
   - The user asks to reserve 35 entities in the task:
     -  40+35 = 75. 
-  - The API returns an error since the user cannot exceed the number of 30 customers in the task.
+  - The API returns an error since the user cannot exceed a total of 70 customers (40 + 30) in the task.
 
 ### API Input
 
