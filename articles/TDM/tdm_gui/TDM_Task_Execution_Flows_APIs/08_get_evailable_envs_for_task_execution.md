@@ -14,7 +14,7 @@ TDM_Tasks
 
 ### API Description
 
-Get the list of TDM environments that are available for the user based on the input filtering parameters:
+Get the list of TDM environments that are available for the user based on the following input filtering parameters:
 
 -  If the task type is [Extract](/articles/TDM/tdm_gui/16_extract_task.md) , then validate and return the list of available source environments.
 -  If the task type is [Load](/articles/TDM/tdm_gui/17_load_task_regular_mode.md), then validate and return both - source and target - available environments.
