@@ -2,7 +2,7 @@
 
 ### API URL
 
-/environment/getAllGlobals 
+/environment/getAllGlobals    
 
 ### HTTP Method
 
