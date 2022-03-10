@@ -109,7 +109,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 
 - `dc=`
 - `cluster_name=`
-- `seeds:` - should be the IP of the first Cassandra node that will be started 
+- `seeds:` should be the IP of the first Cassandra node that will be started. 
 
 ~~~bash
 sed -i 's@dc=.*@dc=DC1@'  $INSLATT_DIR/cassandra/conf/cassandra-rackdc.properties
@@ -185,7 +185,7 @@ cassandra
 
    ~~~
 
-5. StartZookeeper on all 3 nodes:
+5. Start Zookeeper on all 3 nodes:
 
    ~~~bash
    $K2_HOME/kafka/bin/zookeeper-server-start -daemon $K2_HOME/kafka/zookeeper.properties
@@ -225,7 +225,7 @@ cassandra
    bash -l 
    ~~~
 
-   - update the IP's for: `cserver1` / `cserver2` / `cserver3` ....   and  `kserver1` / `kserver2` / `kserver3`  
+   - Update the IP's for: `cserver1` / `cserver2` / `cserver3` ....   and  `kserver1` / `kserver2` / `kserver3`  
 
    ~~~bash
    ## update the cassandra IP's
@@ -260,20 +260,21 @@ cassandra
 
 4. Start Fabric:
 
-   - On the first node of Fabric run the following (only after it is ready you can start the other Fabric nodes):
+   - On the first node of Fabric run the following (only after it is ready you can start other Fabric nodes):
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
      sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
      k2fabric start && k2fabric status
      ~~~
-
-
-   - Start the other Fabric nodes: 
-
-     ~~~bash
-     k2fabric start && k2fabric status
-     ~~~
+   
+   
+      - Start the other Fabric nodes: 
+   
+        ~~~bash
+        k2fabric start && k2fabric status
+        ~~~
+   
 
 
 5. Connect to the Fabric console using the following command:

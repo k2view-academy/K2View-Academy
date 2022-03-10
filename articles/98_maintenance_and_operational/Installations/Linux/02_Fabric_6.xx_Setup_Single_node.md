@@ -28,7 +28,7 @@
 
 Run the commands as shown below.
 
-1.  Run the pre setup commands,
+1.  Run the pre setup commands.
 
 2.  Start Cassandra.
 
@@ -69,14 +69,14 @@ cassandra
 
 ### Post Setup Run on One Node
 
-create new superuser for cassandra, and change the cassandra default user password
+Create new superuser for Cassandra, and change the **cassandra** default user's password:
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
 echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -u k2admin -p Q1w2e3r4t5
 ~~~
 
-**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. we refer the the following SED lines
+**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. We refer the the following SED lines:
 
 
 ~~~bash
@@ -184,7 +184,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
 
-4. Start Fabric
+4. Start Fabric:
 
    ~~~bash
    k2fabric start && k2fabric status
@@ -196,11 +196,11 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be use for login to the WEBUI
+   - Same user and password should be used for login to the WEBUI.
 
 ## PGSQL 
 
-TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
+TDM 7.xx is certified with PGSQL 9.6 & 13. You can supply access to his PG if you have one.
 TDM requires user & password with full create, delete and update privileges. 
 
 The customer can provide the **PGSQL**, or you can find installation instructions for **K2view** **PGSQL** installation:
