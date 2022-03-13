@@ -74,7 +74,7 @@ cassandra
 
 #### Post Setup Run on One Node
 
-create new superuser for cassandra, and change the cassandra default user password, update the RF
+Create new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
 
 Update the `DC1` to the DC name you used above:
 
@@ -94,8 +94,7 @@ Run **nodetool repair** command on all the 3 nodes:
 nodetool -u k2view -pw Q1w2e3r4t5 repair
 ~~~
 
-
-**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. we refer the the following SED lines
+**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. We refer to the following SED lines:
 
 
 ~~~bash
@@ -156,7 +155,7 @@ cassandra
 
 4. Pre setup:
 
-   - updade the IP's of `kserver1` , `kserver2` , `kserver3` 
+   - Updade the IP's of `kserver1` , `kserver2` , `kserver3` 
 
    ~~~bash
    export kserver1=172.31.11.198
@@ -232,17 +231,17 @@ cassandra
    export cserver1=192.168.168.212
    export cserver2=192.168.168.213
    export cserver3=192.168.168.214
-
+   
    ## update the fafka IP's 
    export kserver1=172.31.11.198
    export kserver2=172.31.35.204
    export kserver3=172.31.31.69
-
+   
    cp -r $K2_HOME/fabric/config.template $K2_HOME/config
-
+   
    sed -i 's@-Xmx2G@-Xmx8G@' $INSLATT_DIR/config/jvm.options
    sed -i 's@-Xms2G@-Xms8G@' $INSLATT_DIR/config/jvm.options
-
+   
    sed -i 's@#REPLICATION_OPTIONS=.*@REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 3}@' $K2_HOME/config/config.ini
    sed -i "s@#HOSTS=.*@HOSTS=$cserver1,$cserver2,$cserver3@" $K2_HOME/config/config.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
@@ -286,16 +285,16 @@ cassandra
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the WEB UI.
+   - Same user and password should be used for login to the Web Framework.
 
 
 
 ## PGSQL 
 
 TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
-TDM requires user & password with full create, delete and update privileges. 
+TDM requires user & password with full **create**, **delete** and **update** privileges. 
 
-the custumere can provide the **PGSQL**, or you can find installation instraction for **K2view** **PGSQL** installation:
+The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
 
 <ul>      
 <li>

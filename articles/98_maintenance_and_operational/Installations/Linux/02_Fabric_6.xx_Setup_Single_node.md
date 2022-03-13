@@ -173,9 +173,9 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#HOSTS=.*@HOSTS=$cserver1@" $K2_HOME/config/config.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
    ~~~
-   
+
    - In case of using Kafka + iidFinder, run also the following commands:
-   
+
    ~~~bash
    sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
    sed -i "s@#MESSAGES_BROKER_TYPE=.*@MESSAGES_BROKER_TYPE=KAFKA@" $K2_HOME/config/config.ini
@@ -208,9 +208,9 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 ## PGSQL 
 
 TDM 7.xx is certified with PGSQL 9.6 & 13. You can supply access to his PG if you have one.
-TDM requires user & password with full create, delete and update privileges. 
+TDM requires user & password with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or you can find installation instructions for **K2view** **PGSQL** installation:
+The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
 
 <ul>      
 <li>
