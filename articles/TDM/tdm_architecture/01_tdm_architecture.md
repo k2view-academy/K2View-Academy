@@ -6,7 +6,7 @@ The K2View TDM has the following components:
 
 - TDM GUI (self-service).
 - TDM DB.
-- Fabric.
+- Fabric. 
 
 ![tdm_architecture](images/tdm_architecture.png)
 
