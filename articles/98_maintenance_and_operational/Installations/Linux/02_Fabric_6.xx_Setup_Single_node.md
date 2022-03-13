@@ -184,6 +184,8 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
 
+:notebook_with_decorative_cover: **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
+
 4. Start Fabric:
 
    ~~~bash
@@ -196,7 +198,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the WEBUI.
+   - Same user and password should be used for login to the Web Framework.
 
 ## PGSQL 
 
