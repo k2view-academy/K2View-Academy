@@ -234,7 +234,13 @@ Below is an example of a Custom Logic flow:
 
 #### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
 
-Add the Custom Logic flow name to the **CustomLogicFlows** constTable TDM actor (imported from the TDM Library) 
+Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM actor (imported from the TDM Library).
+
+See example:
+
+![custom logic](images/custom_logic_table_example.png)
+
+
 
 [![Previous](/articles/images/Previous.png)](10_tdm_generic_broadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_tdm_error_handling_and_statistics.md)
 
