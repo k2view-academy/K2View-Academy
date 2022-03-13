@@ -172,6 +172,11 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i 's@#REPLICATION_OPTIONS=.*@REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 1}@' $K2_HOME/config/config.ini
    sed -i "s@#HOSTS=.*@HOSTS=$cserver1@" $K2_HOME/config/config.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
+   ~~~
+   
+   - In case of using Kafka + iidFinder, run also the following commands:
+   
+   ~~~bash
    sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
    sed -i "s@#MESSAGES_BROKER_TYPE=.*@MESSAGES_BROKER_TYPE=KAFKA@" $K2_HOME/config/config.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/config.ini
@@ -183,6 +188,8 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i 's@#IIF_REPLICATION_OPTIONS=.*@IIF_REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 1}@' $K2_HOME/config/iifConfig.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
+
+:notebook_with_decorative_cover: **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
 
 4. Start Fabric:
 
@@ -196,7 +203,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the WEBUI.
+   - Same user and password should be used for login to the Web Framework.
 
 ## PGSQL 
 

@@ -257,6 +257,9 @@ cassandra
    sed -i 's@#IIF_REPLICATION_OPTIONS=.*@IIF_REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 3}@' $K2_HOME/config/iifConfig.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093,$kserver2:9093,$kserver3:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
+   
+      :notebook_with_decorative_cover: **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
+
 
 4. Start Fabric:
 
