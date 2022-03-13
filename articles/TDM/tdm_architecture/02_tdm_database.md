@@ -131,7 +131,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>instance_table_count</td>
-<td>Holds the records added to each LU table in each LU and LUI. The table is populated by a Fabric sync and is used to generate the TDM Statistics details in the execution report.</td>
+<td>Holds the number of records that were added to each LU table in each LU and LUI. The value in this table increases each Fabric sync and is used to generate the TDM Statistics details in the execution report.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>activities</td>
-<td>TDM activities log. A new record is created for each TDM activity specifying its datetime, user, type (create or update), impacted TDM component and description.  </td>
+<td>TDM activities log. A new record is created for each TDM activity specifying its date, time, user, type (create or update), impacted TDM component and description.  </td>
 <td>TDM Activities</td>
 </tr>
 <tr>
