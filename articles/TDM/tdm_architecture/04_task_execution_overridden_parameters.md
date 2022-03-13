@@ -27,7 +27,7 @@ The [TDM Execution process](03_task_execution_processes.md#main-tdm-task-executi
 
 Set execution parameters like replace sequence, delete before load or insert to target indicators. These parameters are based on the task's settings and are set on a session level.
 
-### Overriding Globals Values
+### Overriding Globals Values 
 
 A project's Globals can be overridden on a [TDM environment](/articles/TDM/tdm_gui/12_environment_globals_tab.md) or [TDM task](/articles/TDM/tdm_gui/23_task_globals_tab.md) level.
 
