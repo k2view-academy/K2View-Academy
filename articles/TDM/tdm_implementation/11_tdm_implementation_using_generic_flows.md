@@ -126,8 +126,9 @@ The following updates must be performed manually:
 
 Performed by the **createDeleteAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **DeleteAllTables.flow** Broadway flow. The purpose of this flow is to invoke all DELETE flows in the opposite order of the population order, considering the target DB's foreign keys. 
 
+### Step 4 - TDM Orchestration Flows
 
-### Step 4 - Create the TDMOrchestrator.flow from the Template
+#### Create the TDMOrchestrator.flow from the Template
 
 Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as:
 
@@ -140,6 +141,10 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder and is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as follows:
 
 ![image](images/11_tdm_impl_02.PNG)
+
+#### TDMReserveOrchestrator Flow
+
+The **TDMReserveOrchestrator** that runs the [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). Import the flow from the TDM Library into the Shared Objects and redeploy the TDM LU. 
 
 ### Step 5 - Mask the Sensitive Data
 
@@ -188,9 +193,48 @@ The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_executio
 
 Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) fore more information about TDM implementation on non JDBC Data Source.
 
- 
+###  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
- 
+You can build one or multiple Broadway flows to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process to build the entity list for the task execution.  The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+
+The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
+
+#### Step 7.1 - Create the Custom Logic Flow
+
+The Custom Logic Broadway flow can be created either in the **Shared Objects or in a given LU**.
+
+##### Custom Logic High Level Structure
+
+- Stage 1: 
+
+  - Get the required entities
+  - Initialize the counter of the number of entities for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
+
+- Stages 2- 4: Loop on the selected entities: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations: 
+
+  1. Stage 2: Set the selected entity ID to a String using the **ToString** actor.
+
+  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library). This flow executes the following activities on each selected entity ID: 
+
+     - Check if the entity is reserved for another user in the task's target environment:
+       - If the entity is reserved for another user, skip the entity since it is unavailable.
+       - If the entity is available for the user, load the entity into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
+
+  3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library) to check the number of entities and stop the loop if the custom flow reached the task's number of entities. 
+
+     Example:
+
+     The task needs to get 5 entities. The select statement gets 20 entities. The the first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and populated in the Cassandra table and the entities' loop stops.
+
+Below is an example of a Custom Logic flow:
+
+![custom logic](images/custom_logic_example.png)
+
+
+
+#### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
+
+Add the Custom Logic flow name to the **CustomLogicFlows** constTable TDM actor (imported from the TDM Library) 
 
 [![Previous](/articles/images/Previous.png)](10_tdm_generic_broadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_tdm_error_handling_and_statistics.md)
 
