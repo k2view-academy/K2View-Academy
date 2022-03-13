@@ -174,7 +174,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
    ~~~
    
-   - in case of using kafka + iidFinder run also the following 
+   - In case of using Kafka + iidFinder, run also the following commands:
    
    ~~~bash
    sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
