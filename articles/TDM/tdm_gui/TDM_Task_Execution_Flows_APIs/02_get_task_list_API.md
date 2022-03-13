@@ -25,24 +25,51 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
   - **Extract Tasks**:
     - Get all active tasks that **do not require special permissions** (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user or their group has a Read TDM Environment permission set on at least one TDM environment with the task's Business Entity (BE) and LUs.
     - Get all active tasks that include reference tables or that require up-to-date data if the user or their group has a Read TDM Environment permission set with these permissions on at least one TDM environment with the task's Business Entity (BE) and LUs.
+    
   - **Load Tasks:**
     - Get all active tasks that **do not require special permissions** (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user or their group has a Read TDM Environment permission set  on at least one TDM environment with the task's Business Entity (BE) and LUs, and a Write TDM Environment permission set on at least one TDM environment with the task's Business Entity (BE) and LUs.
-    - Get all active tasks that **require special permissions** if the user or their group has at least one Read TDM Environment role, and one Write TDM Environment permission set with these permissions and the source and target environments have the task's Business Entity (BE) and LUs.
+    - Get all active tasks that **require special permissions** if the user or their group has at least one Read TDM Environment permission set, and one Write TDM Environment permission set with these permissions and the source and target environments have the task's Business Entity (BE) and LUs.
+    
+  - **Delete Tasks**:
+  
+    - Get all active delete tasks if the user has at least one Write TDM Environment permission set with a permission to [delete entities](/articles/TDM/tdm_gui/10_environment_roles_tab.md#delete-entity-from-target) and the environment has the task's Business Entity (BE) and LUs.
+  
+  - **Reserve Tasks**:
+  
+    - Get all active reserve tasks if the the user has at least one Write TDM Environment permission set and the [Max Number of Reserved Entities on Env](/articles/TDM/tdm_gui/10_environment_roles_tab.md#max-number-of-reserved-entities-on-env) setting is bigger than zero and the environment has the task's Business Entity (BE) and LUs.
+  
+      
 - **Owner Users:**
+  
   - **Extract Tasks**:
     - Get all active tasks if the user or their group is the owner of at least one source environment with the task's Business Entity (BE) and LUs.
     - Get active tasks based on the tester's selection logic, since an owner can also be attached to the TDM environment as a tester.
+    
   - **Load Tasks**:
     - Get all active tasks if the user or their group is the owner of at least one source environment and one target environment with the task's Business Entity (BE) and LUs.
     - Get active tasks based on the tester's selection logic, since an owner can also be attached to the TDM environment as a tester.
-  - Click for more information about the [TDM Environment role's permissions](/articles/TDM/tdm_gui/10_environment_roles_tab.md#role-permissions).
+    
+  - **Delete Tasks**:
+  
+    - Get all active tasks if the user or their group is the owner of at least one target environment with the task's Business Entity (BE) and LUs.
+    - Get all active delete tasks if the user has at least one Write TDM Environment permission set with a permission to [delete entities](/articles/TDM/tdm_gui/10_environment_roles_tab.md#delete-entity-from-target) and the environment has the task's Business Entity (BE) and LUs.
 
+  - **Reserve Tasks**:
+  
+    - Get all active tasks if the user or their group is the owner of at least one target environment with the task's Business Entity (BE) and LUs.
+  
+    - Get all active reserve tasks if the the user has at least one Write TDM Environment permission set and the [Max Number of Reserved Entities on Env](/articles/TDM/tdm_gui/10_environment_roles_tab.md#max-number-of-reserved-entities-on-env) setting is bigger than zero.
+  
+      
+  
+  Click for more information about the [TDM Environment role's permissions](/articles/TDM/tdm_gui/10_environment_roles_tab.md#role-permissions).
+  
   ### API Input
-
+  
   None. The user and their groups are taken from the Fabric session.
-
+  
   ### API Output Example
-
+  
   ```json
   {
     "result": [
