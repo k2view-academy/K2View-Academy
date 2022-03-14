@@ -102,7 +102,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract task with a regular mode (Entity Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
+- Creating an Extract task with a regular mode (Data Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
 
   <table class="md-table">
   <thead>
@@ -137,7 +137,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract Data Flux task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
+- Creating an Extract Data Versioning task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
 
   <table class="md-table">
   <thead>
