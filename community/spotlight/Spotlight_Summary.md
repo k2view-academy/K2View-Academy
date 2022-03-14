@@ -1,8 +1,8 @@
 <!--block-->
 
-<img src="images/lookup_1.PNG" style="zoom:80%;" />
+<img src="images/lookup_1.PNG"  />
 
-### Translation or Lookup of Data Using Broadway
+### Translation or Lookup of Data
 
 Lookup for a data set based on provided input is a common scenario in various population and data transformation flows. 
 
@@ -37,4 +37,6 @@ Fabric Studio has been fully integrated with IntelliJ .
 It is mostly recommended if you frequently develop Java functions; you will then benefit from the most advanced code-writing and debugging capabilities available in the market.  
 
 [Read more >](20210822_fabric_intelliJ.md)
+
+<!--block-->
 

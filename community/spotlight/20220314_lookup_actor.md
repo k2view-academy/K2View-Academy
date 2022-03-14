@@ -1,7 +1,5 @@
 ### Lookup Data Using Broadway
 
-<img src="images/lookup_1.PNG" style="zoom:80%;" />
-
 Lookup for a data row based on provided input is a common scenario in various population and data transformation flows. 
 
 The Broadway **Lookup** Actor enables performing a data lookup or a dat translation from various sources and based on flexible number of input parameters.
