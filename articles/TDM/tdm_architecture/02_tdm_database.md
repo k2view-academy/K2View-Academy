@@ -130,11 +130,6 @@ The following table lists the TDM tables and their description.
 <td>Task</td>
 </tr>
 <tr>
-<td><h4>instance_table_count</td>
-<td>Holds the number of records that were added to each LU table in each LU and LUI. The value in this table increases each Fabric sync and is used to generate the TDM Statistics details in the execution report.</td>
-<td>Task Execution</td>
-</tr>
-<tr>
 <td><h4>task_exe_error_detailed</td>
 <td>TDM Execution detailed error table.</td>
 <td>Task Execution</td>
