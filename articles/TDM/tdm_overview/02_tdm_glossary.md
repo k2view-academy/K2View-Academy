@@ -25,7 +25,7 @@
 <h4>Fabric</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity centric approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
+<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -137,7 +137,7 @@
 <h4>Data Versioning</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Data Versioning mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, select the required version and re-load the selected version of the data to the environment instead of the corrupted data.</p>
+<p>Data Versioning enables users to keep versions (backups) of data during functional tests and restore the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, select the required version and re-load the selected version of the data to the environment instead of the corrupted data.</p>
 </td>
 </tr>
 <tr>
@@ -145,7 +145,7 @@
 <h4>Entity Reservation</h4>
 </td>
 <td>
-<p>The Entity Reservation feature is made to enable a user to reserve (lock) entities on the testing environment and avoid other users from re-provision these entities into the testing environment till the user completes the functional tests and can release these entities.</p>
+<p>The Entity Reservation feature is made to enable a user to reserve (lock) entities in the testing environment and prevent other users from re-provisioning these entities into the testing environment until the user completes the functional tests and can release these entities.</p>
 <p>For more information see <a href="/articles/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
 </td>
 </tr>
