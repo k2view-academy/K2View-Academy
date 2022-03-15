@@ -80,7 +80,7 @@ This module is responsible for all transformations and data manipulations and is
 
 ### 2.3 Fabric Studio
 
-Fabric Studio is a Windows application development tool for building Fabric projects, designed to enable users to execute the following steps:
+Fabric Studio is a development tool for building Fabric projects, designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
 - Design LU and Schemas and create their associated instances.
