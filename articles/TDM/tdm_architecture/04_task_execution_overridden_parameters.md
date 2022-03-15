@@ -334,7 +334,7 @@ TDM supports the override of the following parameters:
 <p><a href="/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list">entitieslist</a></p>
 </td>
 <td width="225pxl">
-<p>Populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task that clones an entity</p>
+<p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can only contain one Business Entity ID when executing a task that clones a Business Entity.</p>
 </td>
 <td width="200pxl">
 <p>Load task</p>
@@ -390,7 +390,7 @@ TDM supports the override of the following parameters:
 <p>numberOfEntities</p>
 </td>
 <td width="185">
-<p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list is not set in the overridden parameters.</p>
+<p>Populated with a value that limits the number of entities to be processed by the task. This parameter is only relevant if an explicit entity list was not set.</p>
 </td>
 <td width="99">
 <p>All tasks</p>
