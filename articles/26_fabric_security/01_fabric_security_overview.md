@@ -12,7 +12,7 @@ By design, Fabric eliminates a significant number of potential large-scale breac
 
 ## Security Layers 
 
-In this section, we address how Fabric security tools address each layer in a Fabric cluster that has been fully deployed across multiple data centers, and how these tools interact with northbound or southbound systems spread across the cloud. 
+In this section, we address how Fabric security tools address each layer in a Fabric cluster that has been fully deployed across multiple data centers and that interacts with northbound or southbound systems spread across the cloud. 
 
 We  show, in detail, how to handle each of the following components that are crucial to any Fabric implementation: 
 
