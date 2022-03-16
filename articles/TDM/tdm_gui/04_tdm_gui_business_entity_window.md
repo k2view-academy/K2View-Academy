@@ -6,7 +6,7 @@ A [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (
 
 The **Business Entities** window displays a list of all BEs defined in the TDM.  Only **Admin users** can create, edit or delete a BE. Other users can open BEs for view only purposes.
 
--   To create a new BE, click the **New Business Entity** icon.
+-   To create a new BE, click the **New Business Entity** icon. 
 -   To open a selected BE, click the **Name** value of the BE.
 -   To delete a BE, click the ![be_Example](images/delete_icon.png) icon in the right corner of the Business Entity window.
 
