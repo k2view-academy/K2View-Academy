@@ -93,7 +93,10 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
             "selected_ref_version_datetime":null,
             "scheduling_parameters":"immediate",
             "schedule_expiration_date":null,
-            "override_parameters":"{\"NO_OF_ENTITIES\":6}"
+            "override_parameters":"{\"NO_OF_ENTITIES\":6}",
+            "reserve_ind": "true",
+        	"reserve_retention_period_type": "Days",
+        	"reserve_retention_period_value": 5
          }
       ],
       "Task Execution Summary":[
@@ -809,7 +812,10 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
         "selected_ref_version_datetime": null,
         "scheduling_parameters": "immediate",
         "schedule_expiration_date": null,
-        "override_parameters": null
+        "override_parameters": null,
+        "reserve_ind": "false",
+        "reserve_retention_period_type": null,
+        "reserve_retention_period_value": null 
       }
     ],
     "Task Execution Summary": [
@@ -1124,7 +1130,11 @@ http://localhost:3213/api/taskSummaryReport/490/luName/Billing
         "selected_ref_version_datetime": null,
         "scheduling_parameters": "immediate",
         "schedule_expiration_date": null,
-        "override_parameters": null
+        "override_parameters": null,
+        "reserve_ind": "false",
+        "reserve_retention_period_type": null,
+        "reserve_retention_period_value": null,
+        "fabric_execution_id": "c30a97f2-fc3e-4b66-9986-aa0c6108456a"
       }
     ],
     "Task Execution Summary": [
