@@ -39,7 +39,7 @@ The entity list of the root LUs is based on the task's selection method:
 <p><h4>Custom logic</p>
 </td>
 <td width="400pxl">
-<p>Run the selected Broadway flow to get the entity list</p>
+  <p>Run the selected <a href="/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method">Broadway flow</a> to get the entity list</p>
 </td>
 <td width="200pxl">
 <p>All task types</p>
