@@ -387,7 +387,7 @@ TDM supports the override of the following parameters:
 </tr>
 <tr>
 <td width="223">
-<p>numberOfEntities</p>
+<p><strong>numberOfEntities<strong></p>
 </td>
 <td width="185">
 <p>Populated with a value that limits the number of entities to be processed by the task. This parameter is only relevant if an explicit entity list was not set.</p>
