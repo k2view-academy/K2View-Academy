@@ -19,7 +19,7 @@ The following example displays the relationship between a BE, LU and a system:
 
 
 
-## Systems List Window
+## Systems List Window 
 
 The **Systems** window displays a list of all systems defined in the TDM.  Only **Admin users** can create, edit, or delete a system. Other users can open systems for view only purposes.
 
