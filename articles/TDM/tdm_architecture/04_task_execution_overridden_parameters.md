@@ -39,22 +39,22 @@ Note that task level Globals have a higher priority than TDM environment level G
 
 When executing a TDM task, set the Sync mode according to the following table:
 
-<table width="700pxl">
+<table width="900pxl">
 <tbody>
 <tr>
 <td valign="top" width="100pxl">
 <p><strong>Override Sync - Source Env Level</strong></p>
 </td>
-<td valign="top" width="100pxl">
+<td valign="top" width=200pxl">
 <p><strong>Override Sync - Task Level&nbsp;</strong></p>
 </td>
-<td valign="top" width="90pxl">
+<td valign="top" width="100pxl">
 <p><strong>Task Operation Mode</strong></p>
 </td>
-<td valign="top" width="90pxl">
+<td valign="top" width="100pxl">
 <p><strong>Task Execution Sync Mode</strong></p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="400pxl">
 <p><strong>Results</strong></p>
 </td>
 </tr>
@@ -319,7 +319,7 @@ TDM supports the override of the following parameters:
 <td width="225pxl">
 <p><strong>Parameter Name</strong></p>
 </td>
-<td width="225pxl">
+<td width="325pxl">
 <p><strong>Parameter Description</strong></p>
 </td>
 <td width="200pxl">
