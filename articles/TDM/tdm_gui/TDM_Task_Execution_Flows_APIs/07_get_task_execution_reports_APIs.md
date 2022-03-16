@@ -95,8 +95,8 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
             "schedule_expiration_date":null,
             "override_parameters":"{\"NO_OF_ENTITIES\":6}",
             "reserve_ind": "true",
-        	"reserve_retention_period_type": "Days",
-        	"reserve_retention_period_value": 5
+            "reserve_retention_period_type": "Days",
+            "reserve_retention_period_value": 5
          }
       ],
       "Task Execution Summary":[
