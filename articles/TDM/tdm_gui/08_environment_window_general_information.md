@@ -27,12 +27,12 @@ Set the environment type to one of the following:
 
 - **Target**, this environment can only be used as a target environment in a TDM task.
 
-- **Both**, this environment can be used as both a source and target environment in the TDM task. This mode is useful for [Data Versioning tasks](). 
+- **Both**, this environment can be used as both a source and target environment in the TDM task. This mode is useful for [Data Versioning tasks](/articles/TDM/tdm_gui/15_data_flux_task.md). 
 
   Example: 
 
   - A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Versioning task](16_extract_task.md#entity-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task data is saved in the TDM Fabric repository.
-  - During functional tests the data in the testing environment becomes corrupted and needs to be replaced with the last backed up version created in the testing environment. The tester creates a [Load Data Versioning task] and sets the testing environment to be both source and target. 
+  - During functional tests the data in the testing environment becomes corrupted and needs to be replaced with the last backed up version created in the testing environment. The tester creates a [Load Data Versioning task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) and sets the testing environment to be both source and target. 
 
 ## Override Sync Mode
 
