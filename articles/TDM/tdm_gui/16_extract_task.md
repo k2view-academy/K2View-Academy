@@ -78,7 +78,7 @@ The following selection methods are available on extract tasks:
 
 - **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is only available for the Admin and Environment owner users.
 - **Entity list**: this is the **default option**. Populate the list of entities to process separated by a comma. 
-- **Custom logic**: select a Broadway flow to get the entity list for the task and set the number of entities for the task:
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) to get the entity list for the task and set the number of entities for the task:
 
 
 
