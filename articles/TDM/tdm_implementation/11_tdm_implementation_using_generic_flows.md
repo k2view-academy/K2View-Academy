@@ -216,15 +216,14 @@ The Custom Logic Broadway flow can be created either in the **Shared Objects or 
 
   2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library). This flow executes the following activities on each selected entity ID: 
 
-     - Check if the entity is reserved for another user in the task's target environment:
-       - If the entity is reserved for another user, skip the entity since it is unavailable.
-       - If the entity is available for the user, load the entity into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
-
-  3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library) to check the number of entities and stop the loop if the custom flow reached the task's number of entities. 
-
-     Example:
-
-     The task needs to get 5 entities. The select statement gets 20 entities. The the first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and populated in the Cassandra table and the entities' loop stops.
+     - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
+     - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
+     
+3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library) to check the number of entities and stop the loop if the custom flow reached the task's number of entities. 
+  
+   Example:
+  
+   The task needs to get 5 entities. The select statement gets 20 entities. The the first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and populated in the Cassandra table and the entities' loop stops.
 
 Below is an example of a Custom Logic flow:
 
