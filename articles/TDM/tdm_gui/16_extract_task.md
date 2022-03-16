@@ -86,7 +86,7 @@ The following selection methods are available on extract tasks:
 
 Notes:
 
-- The number of entities populated by the tester user is [limited by their environment's role](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
+- The number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to Each Entity ID when building its LUI.
 
 
