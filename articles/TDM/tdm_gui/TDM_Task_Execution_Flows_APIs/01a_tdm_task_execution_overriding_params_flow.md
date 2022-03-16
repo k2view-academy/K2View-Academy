@@ -18,7 +18,7 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_validate_the_no_of_reserved_entities.png" alt="drawing" width="200pxl" style="zoom:80%;" />](14_task_entities_reservation_validation.md) Send the target environment and entity list if the task reserves entities and the task has an entity list.
 
-[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_options.md) Get the retention period options for entity reservation/
+[<img src="images/task_get_retention_period.png" alt="drawing" width="200pxl" style="zoom:80%;" />](10_retention_period_options.md) Get the retention period options for entity reservation period.
 
 [<img src="images/task_flow_override_exe_parameters.png" alt="drawing" width="200pxl" style="zoom:80%;" />](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters)
 
