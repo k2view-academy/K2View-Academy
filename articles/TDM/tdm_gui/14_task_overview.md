@@ -168,20 +168,20 @@ The following table describe the valid combinations of task types on a TDM task:
 
 The TDM Task List displays the following:
 
+- Task ID.
 - Task Title: task name.
-- Task Type: Extract, Load, Delete, or Reserve.
-- Task's Operation mode. For example: Load and Reserve or Delete and Load.
-- Task Status
-- [Data Versioning](15_data_flux_task.md), true / false.
+- Task's source and target environments.
 - BE name.
-- Source and Target environments. 
-- Selection criteria for entities.
+- Task Type: Extract, Load, Delete, or Reserve.
+- Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity..
+- Reserve Ind: indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
+- [Data Versioning](15_data_flux_task.md), true / false.
+- Data Type: Entities and/or Reference 
+- Selection Method: selection criteria for entities.
 - Number of processed entities.
 - General parameters like created by user and update date. 
 
 The following screenshot shows an example of the TDM Task List. 
-
-/////////// Needs to be updated ////
 
   ![tasks list](images/tdm_task_list_window.png)
 
@@ -193,9 +193,7 @@ The following screenshot shows an example of the TDM Task List.
 
 3. To remove a field from the display, click the field:
 
-   ////////////////Update the screenshot///////////////
-
-![show hide columms](images/task_list_show_hide_columns.png)
+   ![show hide columms](images/task_list_show_hide_columns.png)
 
 4. To find a field, click **Search** and filter the displayed tasks using the filters.
 
