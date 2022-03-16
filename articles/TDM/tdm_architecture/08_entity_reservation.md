@@ -10,8 +10,8 @@ The reserved entities are **marked as reserved in the TDM DB**. Note that the re
 
 A [TDM Task](/articles/TDM/tdm_gui/14_task_overview.md) can reserve entities in one of two ways:
 
-1. [Load tasks] (Data Provisioning), reserve the copied entities on target.
-2. [Reserve tasks],  reserve selected entities on the target environment. 
+1. [Load tasks](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md), reserve the copied entities on target.
+2. [Reserve tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md), reserve selected entities on the target environment. 
 
 In both cases, the **task execution** marks the **root target entity IDs** as reserved. On load and reserve tasks, the task execution reserves each root entity ID before loading it to the target environment. If the reserve fails due to any reason, the entity is marked as failed and it is not loaded to the target environment.
 
@@ -88,7 +88,7 @@ The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.
 **Implicit release**: a reserved entity can be released by either of the following scenarios:
 - The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case- the record is not deleted automatically from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the new reservation period dates.
 
-- A [delete only task] releases the deleted entities and deletes them from the reserve entities TDM table.
+- A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md) releases the deleted entities and deletes them from the reserve entities TDM table.
 
   
 
