@@ -109,7 +109,7 @@ Get the list of TDM environments that are available for the user based on the fo
 <p>L</p>
 </td>
 <td width="300pxl" valign="top">
-<p>Can be populated by the following values: "L" (entity list), "R" (random selection), "S" (entity cloning), "PR" (parameters with a random selection), "P" (parameters), "ALL" (all entities), or "REF" (reference only task).</p>
+<p>Can be populated by the following values: "L" (entity list), "R" (random selection), "S" (entity cloning), "C" (custom logic), "PR" (parameters with a random selection), "P" (parameters), "ALL" (all entities), or "REF" (reference only task).</p>
 </td>
 </tr>
 <tr>
