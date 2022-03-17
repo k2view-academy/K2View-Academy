@@ -109,8 +109,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
-    },
+      "task_executed_by": "joe"
     {
       "be_id": 10,
       "environment_id": 10,
@@ -138,7 +137,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
+      "task_executed_by": "joe"
     },
     {
       "be_id": 10,
@@ -167,7 +166,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
+      "task_executed_by": "joe"
     }
   ],
   "errorCode": "SUCCESS",
