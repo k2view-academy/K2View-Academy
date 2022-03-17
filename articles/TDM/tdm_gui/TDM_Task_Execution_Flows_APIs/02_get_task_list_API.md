@@ -217,7 +217,7 @@ It supports the following filtering parameters:
 </tr>
 <tr>
 <td>
-<p>version_ind&nbsp;</p>
+  <p><strong>version_ind</strong></p>
 </td>
 <td width="200">
 <ul>
