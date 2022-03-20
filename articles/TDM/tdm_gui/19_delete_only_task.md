@@ -53,7 +53,7 @@ This is the **default option**. Populate the list of entities to process separat
 
 ### Custom Logic
 
-Select a Broadway flow to get the entity list for the task and set the number of entities for the task:![custom logic](images/delete_task_requested_entities_custom_logic.png)
+Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/delete_task_requested_entities_custom_logic.png)
 
 
 
