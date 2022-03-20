@@ -78,7 +78,7 @@ The following selection methods are available on extract tasks:
 
 - **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is only available for the Admin and Environment owner users.
 - **Entity list**: this is the **default option**. Populate the list of entities to process separated by a comma. 
-- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) to get the entity list for the task and set the number of entities for the task:
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) to get the entity list for the task and set the maximum number of entities for the task:
 
 
 
@@ -86,7 +86,7 @@ The following selection methods are available on extract tasks:
 
 Notes:
 
-- The number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
+- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum nummber of entities of the task. If the custom logic selects a smaller number of entities, the number of entities will be set by the custom logic flow. For example: the maximum number of entities in the task is 50, but the customer logic only selects 30 entities. The task will process 30 entities.
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to Each Entity ID when building its LUI.
 
 
