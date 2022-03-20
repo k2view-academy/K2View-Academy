@@ -41,7 +41,7 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>Opening a space can be done by:</p>
 <ul>
-<li>Clicking on the space&rsquo;s name at the space list (when it is in the Ruinng status)</li>
+<li>Clicking on the space&rsquo;s name at the space list (when it is in the Runng status)</li>
 <li>Using the ellipsis menu (found in each space entry).</li>
 <li>Directly accessing the space by entering its URL address.</li>
 </ul>
