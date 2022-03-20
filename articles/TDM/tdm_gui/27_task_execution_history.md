@@ -36,9 +36,7 @@ The following information is displayed for each executed task:
 
 Click![task execution summary report](images/task_execution_summary_report_icon.png) next to each executed task to generate and download a Summary Execution report. Note that the report displays the [task execution overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md) if they exist.
 
-Example of Summary Execution Report:
-
-[summary execution report example](loadVIPCus_Summary_Execution_Report_EXECID_2.xlsx)
+Click [here](testParams2_Summary_Execution_Report_EXECID_217.xlsx) to download an example of Summary Execution Report.
 
 ## Logical Units Execution Summary
 
