@@ -46,7 +46,7 @@ To extract a specific version of Customer 1 from the PROD source env, the LUI is
 
 ### TDM Separator
 
-By default, the separator between the Source Env and the Entity ID (IID) is underscore and can be set another separator in the [TDM_GENERAL_PARAMETERS TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table. Populate the **param_name** using the **iid_separator** and the **param_value** with the separator's value.   
+By default, the separator between the Source Env and the Entity ID (IID) is underscore. This can be set to a different separator in the [TDM_GENERAL_PARAMETERS TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table. Populate the **param_name** using the **iid_separator** and the **param_value** with the separator's value.   
 
 
 
