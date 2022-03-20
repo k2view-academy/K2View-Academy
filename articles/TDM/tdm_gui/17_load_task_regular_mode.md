@@ -95,11 +95,11 @@ This is the **default option**. Populate the list of entities to process separat
 
 ### Custom Logic
 
-Select a Broadway flow to get the entity list for the task and set the number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
+Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
 
 ### Parameters 
 
-Select entities from a predefined list of parameters. You must set the **parameters and their values** and the **number of entities** for the task.
+Select entities from a predefined list of parameters. You must set the **parameters and their values** and the **maximum number of entities** for the task.
 
 Note that entities that are reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
 
