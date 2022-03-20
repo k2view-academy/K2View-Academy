@@ -41,11 +41,11 @@ The table below lists the features of the Cloud Platform that are currently avai
 <td style="width: 491.525px;">
 <p>Opening a space can be done by:</p>
 <ul>
-<li>Clicking on the space&rsquo;s name at the space list (when it is in the Runng status)</li>
+<li>Clicking on the space&rsquo;s name from the space list (when the space is up and running)</li>
 <li>Using the ellipsis menu (found in each space entry).</li>
 <li>Directly accessing the space by entering its URL address.</li>
 </ul>
-<p>Note that more than one user can access to a space on the same time.</p>
+<p>Note that more than one user can access a space at the same time.</p>
 </td>
 </tr>
 <tr>
@@ -74,7 +74,7 @@ The table below lists the features of the Cloud Platform that are currently avai
 <p>To delete a space:</p>
 <ul>
 <li>Using the ellipsis menu found in each space entry, click Delete, then enter the action in the popup dialog.</li>
-<li>The deletion process will then be shown at the spaces list. Once the process is complete, the space will no longer be shown at the spaces list.</li>
+<li>The deletion process will then be shown in the spaces list. Once the process is complete, the space will no longer be shown in the spaces list.</li>
 </ul>
 <p>Notes:</p>
 <ul>
