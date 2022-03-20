@@ -43,7 +43,9 @@ This setting enables the user to change the [default LUI sync mode](articles/14_
 - **Do Not Sync From Source Data**: get the LUI data from the TDM warehouse (Fabric).
 - **Refresh all Data from Source**: extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
-Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  A Load Data Versioning task gets the data version from the TDM warehouse (Fabric)  and reloads it to the target environment.
+Notes:
+- This setting is **only available when the Data Versioning checkbox is cleared (regular task)**.  A Load Data Versioning task gets the data version from the TDM warehouse (Fabric)  and reloads it to the target environment.
+- The **Do Not Sync From Source Data** option is not displayed if the user selects a combination of Extract and Load task types.
 
 Click for more information on [how overriding the Sync mode and the Task Operation mode impact the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
