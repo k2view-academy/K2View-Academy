@@ -85,7 +85,7 @@ Fabric Studio is a development tool for building Fabric projects, designed to en
 - Create interfaces to external sources.
 - Design LU and Schemas and create their associated instances.
 - Create resources of all types to be used across a project (such as functions, tables, variables).
-- Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
+- Execute data manipulations using the SQL builder or the integrated Java development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
 
