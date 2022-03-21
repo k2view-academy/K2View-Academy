@@ -226,7 +226,7 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 
 
 
->**Tip:** You can reorganize or reorder elements of editors. Drag and drop the editor title area to reposition it. You can do this either from the Editor (A) area or from the  Panel (E) area.
+>**Tip:** You can reorganize the editors and panels, placing them in convenient locations. Drag and drop the editor or panel tab to reposition the editor or panel in the location you want on the screen.  
 
 
 
