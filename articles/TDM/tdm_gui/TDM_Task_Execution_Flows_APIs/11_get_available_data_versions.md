@@ -89,6 +89,11 @@ The request body contains the following filtering parameters:
 <p>List of LU names. For example, when populated with <strong>Customer</strong>&nbsp;and&nbsp;<strong>Billing</strong>&nbsp;, the API only returns data versions that contain both LUs.</p>
 </td>
 </tr>
+<tr>
+<td><strong>target_env_name</strong></td>
+<td>Yes</td>
+<td>Populated with the target environment of the data version.</td>
+</tr>
 </tbody>
 </table>
 
@@ -96,31 +101,31 @@ The request body contains the following filtering parameters:
 
 ```json
 {
-
-	"be_id": 1,
-	"source_env_name": "TAR",
-	"fromDate": "01.01.2022",
-	"toDate": "01.31.2022",
-	"lu_list": [
+	"fromDate":"2022-02-18",
+	"toDate":"2022-03-21",
+	"entitiesList":"",
+	"lu_list":[
 		{"lu_name":"Customer"},
-		{"lu_name":"Billing"}
-	]
+		{"lu_name":"Billing"},
+		{"lu_name":"Orders"},
+		{"lu_name":"Collection"}],
+	"source_env_name":"TAR",
+	"target_env_name":"TAR","be_id":1
 }
 ```
 
 ```json
 {
-
-    "entitiesList": "1, 22, 33" ,	
-    "be_id": 1,
-    "source_env_name": "TAR",
-    "fromDate": "01.01.2022",
-    "toDate": "01.31.2022",
-    "lu_list": [
-    	{"lu_name":"Customer"},
-		{"lu_name":"Billing"}
-    ]
-
+	"fromDate":"2022-02-18",
+	"toDate":"2022-03-21",
+	"entitiesList":"1, 2, 33",
+	"lu_list":[
+		{"lu_name":"Customer"},
+		{"lu_name":"Billing"},
+		{"lu_name":"Orders"},
+		{"lu_name":"Collection"}],
+	"source_env_name":"TAR",
+	"target_env_name":"TAR","be_id":1
 }
 ```
 
