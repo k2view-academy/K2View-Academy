@@ -8,7 +8,7 @@ Create a Broadway flow to get the list of entities from the data source and popu
 
 For more information on how to populate the entity list based on a non JDBC data source, read [Step 6 -Get the Entity List for an Extract All Task Using a Broadway Flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) section of the Broadway Flows Implementation article.
 
-### Using a Custom Logic to Select Entities 
+### Using Custom Logic to Select Entities 
 
 Create Broadway flows to be executed by the task execution and get the entity list for the task. 
 
