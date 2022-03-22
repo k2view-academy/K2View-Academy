@@ -271,3 +271,6 @@ These configurations allow unparalleled flexibility whereby the DevOps Manager r
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/02_fabric_directories.md)
+
+
+
