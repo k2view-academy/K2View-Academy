@@ -9,7 +9,7 @@ The **TDM** folder in the Broadway Shared Objects folder includes generic flows 
 
 The **Templates** folder holds the flows used for creating DELETE and LOAD flows. Since the flows receive the Logical Unit name as an input parameter, they can be run several times for each LU.
 
-The following discusses the structure and functionality of various generic flows.
+The following discusses the structure and functionality of various generic flows. 
 
 ### TDM Orchestration Flows
 
