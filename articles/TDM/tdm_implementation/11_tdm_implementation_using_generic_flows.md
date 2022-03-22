@@ -72,7 +72,7 @@ This capability enables you to create your own function or Broadway flow to gene
 - Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. 
 - The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. 
   - If the task requires a sequence replacement, the masking actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
-  - If the task does not requir a sequence replacement, the original value is returned by the masking actors.
+  - If the task does not require a sequence replacement, the original value is returned by the masking actors.
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
 
