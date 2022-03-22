@@ -11,7 +11,7 @@ An Extract task contains the following tabs:
 
 When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
 
-When checking the **Reference** Data Type setting, a [Reference tab](24_task_reference_tab.md) opens.
+When setting the **Data Type** by checking the **Reference** setting, a [Reference tab](24_task_reference_tab.md) opens.
 
 ## Additional Execution Parameters Tab
 
@@ -34,7 +34,7 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 This setting enables the user to change the [default LUI sync mode](articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON) and extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
-Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  On Data Versioning, each task execution extracts the data from the data source and creates a new LUI.
+Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  If Data Versioning *is* checked, each task execution extracts the data from the data source and creates a new LUI.
 
 ### Retention Period
 
