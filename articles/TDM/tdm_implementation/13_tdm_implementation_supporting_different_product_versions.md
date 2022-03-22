@@ -19,7 +19,7 @@ The TDM implementation can get the values of these Globals to check the source a
 
 ## Update LU Schema
 
-The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, note the following:
+The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
 
 ### Adding or Removing LU Tables
 
@@ -33,7 +33,7 @@ The new columns can be added manually or  added by clicking the [Update Tables f
 
 Removing columns from an LU table must be implemented manually.
 
-### LU Schema - Support of Multiple System Versions
+### Support of Multiple System Versions
 
 It could be that new columns or new tables have been added to a table by a more recent system version. 
 
@@ -45,7 +45,7 @@ Examples:
 
 Adding new LU tables, and adding new columns to an LU table are described in more detail below:  
 
-  #### LU Schema - Adding New LU Table
+  #### Adding a New LU Table
 
 Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
 
@@ -64,7 +64,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 ```
 
 
-  #### LU Schema - Adding New Columns to an LU Table  
+  #### Adding New Columns to an LU Table  
 
   - Define multiple populations in the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global. Note that new columns can be selected by the query only when they already exist in the source environment.
 
