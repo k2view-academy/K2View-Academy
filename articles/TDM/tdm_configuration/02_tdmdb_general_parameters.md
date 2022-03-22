@@ -35,7 +35,7 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
 
 ### [Reservation Period](/articles/TDM/tdm_architecture/08_entity_reservation.md) Parameter
 
-An admin user of the environment's owner can reserve entities for an unlimited period. However, a tester user is limited and can set a retention period that does not exceed the maximum retention period, defined on the TDM DB. 
+An admin user of the environment's owner can reserve entities for an unlimited period. However, a tester user is limited and can only set a retention period that does not exceed the maximum retention period, defined in the TDM DB. 
 
 The maximum number of days for the entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter. 
 
