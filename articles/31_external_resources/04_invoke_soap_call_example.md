@@ -100,7 +100,7 @@ The following code is an example of a Utility function which gets the operation 
 
    
 
-  The following is an example of how a **LuFucntion** Actor in Broadway uses this function:
+  The following is an example of how a **LuFunction** Actor in Broadway uses this function:
 
 <img src="images/LuFuncActor_soap.png" alt="LuFucntion Actor using soap function" />
 
