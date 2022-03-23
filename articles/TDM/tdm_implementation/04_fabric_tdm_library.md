@@ -155,6 +155,13 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 - [Task execution jobs](/articles/TDM/tdm_architecture/03_task_execution_processes.md) are defined and run under the TDM LU.
 - The TDM cleanup job that cleans the TDM DB is defined under the TDM LU. 
 
+### Set a TTL (Time to Leave) on the TDM LUIs
+
+TDM 7.4 enables setting a TTL (time to leave) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
+
+- **TDM_LU_RETENTION_PERIOD_TYPE**: by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks, or Years.
+- **TDM_LU_RETENTION_PERIOD_VALUE**: by default, it is populated by 10. **Populate this Global with zero or empty value to avoid setting a TTL on the TDM LUIs**.
+
 ### TDM Deploy Flow
 
 The **deploy.flow** has been added to TDM LU in TDM 7.3. This process runs the following activities upon the TDM LU deployment:
