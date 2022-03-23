@@ -195,7 +195,7 @@ Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) fore more
 
 ###  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flows to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process to build the entity list for the task execution.  The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build one or multiple Broadway flows to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process to build the entity list for the task execution.  The project Broadway flow needs to select the entity list and call the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
@@ -203,22 +203,26 @@ The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_executio
 
 The Custom Logic Broadway flow can be created either in the **Shared Objects or in a given LU**.
 
+The Customer Logic Broadway flow has two external input parameters and gets their values from the task execution process:
+
+- LU_NAME
+- NUM_OF_ENTITIES: the maximum number of entities to be processed by the task execution.
+
 ##### Custom Logic High Level Structure
 
-- Stage 1: 
-
-  - Get the required entities
+- **Stage 1**: 
+  - Add a logic to get the required entities. For example: a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
   - Initialize the counter of the number of entities for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
-
-- Stages 2- 4: Loop on the selected entities: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations: 
-
-  1. Stage 2: Set the selected entity ID to a String using the **ToString** actor.
-
-  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library). This flow executes the following activities on each selected entity ID: 
-
-     - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
-     - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
-     
+  
+- **Stages 2- 4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations: 
+  1. Stage 2: Set the selected entity ID, returned by the actor of Stage 1,  to a String using the **ToString** actor.
+  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library):
+     - **Input**: **LU_NAME** parameter. This is an **external parameter** and gets its value by the task execution process.
+     - **Output**: **recordLoaded**. 
+     - This flow executes the following activities on each selected entity ID: 
+       - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
+       - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
+  
 3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library) to check the number of entities and stop the loop if the custom flow reached the task's number of entities. 
   
    Example:
