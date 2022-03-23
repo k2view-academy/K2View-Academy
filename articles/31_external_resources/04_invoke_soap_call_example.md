@@ -99,8 +99,8 @@ The following code is an example of a Utility function which gets the operation 
    The first two lines initiate the generated code.
 
    
-   
-  The following is an example of how a LuFucntion Actor in Broadway uses this function:
+
+  The following is an example of how a **LuFunction** Actor in Broadway uses this function:
 
 <img src="images/LuFuncActor_soap.png" alt="LuFucntion Actor using soap function" />
 
@@ -110,6 +110,17 @@ For your convenience, the following [demo server-side service](/articles/31_exte
 -  **CalculatorI**, an interface which contains the declarations according to the WSDL published.
 -  **CalculatorImpl**, which implements the calculation.
 -  **CalcPublisher**, the executable class that publishes the Web Service and exposes it in the localhost in port 10000.
+
+ 
+
+The following is an example of how a **Http** Actor in Broadway can be used to make a SOAP call:
+
+![](images/HttpActor_soap.png)
+
+
+
+To make a SOAP call, you must define Content-Type as **application/soap+xml** in the header. The above example defines the Content-Type as well as the Authorization parameters. However if the Http actor is using a predefined HTTP interface, you don't need to pass the Authorization string.
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/31_external_resources/03_invoke_http_rest_call_example.md)
