@@ -237,7 +237,7 @@ The list additional execution parameters are set based on the selected task type
 
 Entities' selection method.The Requested Entities tab is opened if the task processes entities.
 
-#### 4. [Execution Timing](22_task_execution_timing_tab.md) 
+#### 4. [Task Scheduling](22_task_execution_timing_tab.md) 
 
 Execution by request or Scheduled Execution.
 
