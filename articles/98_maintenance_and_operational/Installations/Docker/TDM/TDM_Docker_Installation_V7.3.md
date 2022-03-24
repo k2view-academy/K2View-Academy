@@ -8,7 +8,7 @@ We use the `c:/k2view/apps/`  as the path of the  TDM installation base. Use wha
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.3/TDM_7.3.0_download_links.docx?d=wfed14278f7f240b3a97a077879a3dfe7&csf=1&web=1&e=Fry5OY">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.4.0/TDM_7.4.0_download_links.docx?d=w66a0f38f3fd2421a87096d6c99be8b5d&csf=1&web=1&e=Uo0CL1">Download links</a></li>
 </ul>
 
 
