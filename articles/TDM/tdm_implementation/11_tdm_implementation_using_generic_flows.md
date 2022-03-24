@@ -185,6 +185,15 @@ Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementat
 
 Redeploy the related LUs and the TDM LU.
 
+#### Debugging the Broadway Flow
+Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
+- LU_NAME: popoulated with the LU name
+- EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
+- NUM_OF_ENTITIES: populated with the number of entities to be processed by the task
+
+The **loadLuExternalEntityListTable** flow creates the Cassandra table if needed and runs the Customized Logic flow.
+
+
 #### How does the Broadway Flow Generate an Entity List for the Task Execution? 
 
 The TDM library provides a list of Broadway actors and flows to support a generation of an entity list based on a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
@@ -237,7 +246,7 @@ The Customer Logic Broadway flow has **two external input parameters** and gets 
 
 ![custom logic](images/custom_logic_example.png)
 
-##### Debuging the Customized Flow
+##### Debugging the Customized Flow
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
 - LU_NAME: popoulated with the LU name
 - EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
