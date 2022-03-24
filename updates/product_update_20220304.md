@@ -7,6 +7,6 @@ We have just released Fabric 6.5.5, which includes the following enhancements:
 * **Broadway** - when searching for Actors, the filtering option now has CamelCase as higher priority. 
 * **Fabric BI** now supports integration with Elastic Search by using the Fabric search command.
 
-See the [Release Notes](https://support.k2view.com/Academy_6.5/Release_Notes_And_Upgrade/V6.5/Fabric_Release_Notes_V6.5.5.pdf.html) for the full list.
+See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V6.5/Fabric_Release_Notes_V6.5.5.pdf.html) for the full list.
 
 <img src="images/img10.png" alt="image" style="zoom: 67%;" />
