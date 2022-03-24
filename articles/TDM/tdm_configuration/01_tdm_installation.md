@@ -9,7 +9,7 @@ The following components must be installed as a prerequisite:
 - **Fabric Server** -  Fabric 6.5.5 and above for TDM 7.4.
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. 
 
-Click here to open the [TDM 7.4 Docker Installation document](/Release_Notes_And_Upgrade/TDM-V7.4/TDM_Docker_Installation_V7.4.md).
+Click here to open the [TDM 7.4 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.4.md).
 
 ## TDM Package Content
 
@@ -142,6 +142,8 @@ Following steps should be following if a new APIDOC should be generated to inclu
 - Add execution permissions to **createk2TDMDB.sh**.
 
 - Run **createk2TDMDB.sh** script.
+
+- Note that the **D_K2V_PG13_TDM7.4.tar.gz PG docker image already contains the TDM 7.4 DB.**
 
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
