@@ -224,7 +224,7 @@ The Customer Logic Broadway flow has **two external input parameters** and gets 
   - Add a logic to get the required entities. For example: a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
   - Initialize the counter of the number of entities for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
 
-- **Stages 2- 4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations: 
+- **Stages 2- 4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit for all iterations: 
 
   1. Stage 2: Set the selected entity ID, returned by the actor of Stage 1,  to a String using the **ToString** actor.
 
@@ -236,7 +236,7 @@ The Customer Logic Broadway flow has **two external input parameters** and gets 
        - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
        - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
 
-  3. Stage 4:  call **CheckAndStopLoop** TDM actor (imported from the TDM Library). This actor gets the **NUM_OF_ENTITIES external input parameter** from the task execution process.  It checks the number of entities inserted to the Cassandra table, and stop the loop if the custom flow reached the task's number of entities. 
+  3. Stage 4:  call **CheckAndStopLoop** TDM actor (imported from the TDM Library). This actor gets the **NUM_OF_ENTITIES external input parameter** from the task execution process.  It checks the number of entities inserted to the Cassandra table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
