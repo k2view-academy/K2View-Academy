@@ -40,4 +40,4 @@ Note that for the changes to become effective for the Fabric object (for example
 
 [Click for more information about Deployment from the Fabric Studio.](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio)
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
