@@ -65,7 +65,7 @@ The following screenshots display a list of available Interface Types.
 ![image](images/05_04_01_WEB3_interface_types.PNG)
 
     
-5. Optional: Edit the **Pool Properties**.
+5. Optional: Edit the **Connection Pool Settings**.
 
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
