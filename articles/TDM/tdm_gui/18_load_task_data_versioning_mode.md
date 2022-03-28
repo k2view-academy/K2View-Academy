@@ -74,7 +74,7 @@ This option is **only available for Admin users the the task's target environmen
 
 ### Entity list 
 
-This is the **default option**. Populates the list of entities separated by a comma in the **Entities List** setting.
+This is the **default option**. Populate the list of entities separated by a comma in the **Entities List** setting.
 
 The TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
 
