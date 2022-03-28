@@ -133,4 +133,4 @@ The **Post Connection Commands** tab of the DB Interface window enables definiti
     
 </web>
 
-[![Previous](/articles/images/Previous.png)](03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_adding_a_fabric_remote_interface_type.md)
+[![Previous](/articles/images/Previous.png)](03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_editing_interface_settings.md)
