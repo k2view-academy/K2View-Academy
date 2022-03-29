@@ -297,7 +297,6 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are 
 
   Click for more information about [TDM Hierarchy implementation](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md).
 
-- **INSTANCE_TABLE_COUNT**, this table holds the number of records populated on each LU table and is used to populate the [TDM execution Report](). 
 
 ### LU Level Translations
 
