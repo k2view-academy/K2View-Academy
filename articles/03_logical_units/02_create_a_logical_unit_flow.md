@@ -20,4 +20,14 @@ You can also duplicate a Logical Unit your project and save it as a new LU:
 
 </studio>
 
+<web>
+
+You can also duplicate a Logical Unit your project and save it as a new LU:
+
+1. Right click the **Logical Unit** > **Duplicate**.
+1. Enter a **name** for the new (duplicated) **Logical Unit** in the **Duplicate** field.       
+
+</web>
+
+
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/01_LU_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/03_LU_schema_window.md)
