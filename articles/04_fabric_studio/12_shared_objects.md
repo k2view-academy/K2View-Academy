@@ -27,7 +27,7 @@ The following components can be shared in a Fabric project:
 </studio>
 
 **Notes** 
-* If a function, a translation or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
+* If a function <studio>, a translation </studio> or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
 * Since Shared Objects **are not** self-deployed, changes to an item under a Shared Object used by several components require redeployment to become available.
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](/articles/04_fabric_studio/05_creating_a_new_project.md)
