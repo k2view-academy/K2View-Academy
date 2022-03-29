@@ -11,13 +11,13 @@ The following users can execute a TDM task:
 - **Admin users**.
 - **Environment owners** of the task's environment:
   - **Extract tasks**, the environment owner of the source environment.
-  - **Load tasks**, the environment owner of the target environment.
-  - **Reserve tasks**, the environment owner of the target environment.
+  - **Load, Reserve, or Delete tasks**, the environment owner of the target environment.
+
 - **Testers**:
   - The task's creator.
   - Other testers that are related to the same TDM Environment role as the task's creator:
-    - **Load tasks**, testers that are related to the same TDM Environment permission set in the target environment as the task's creator.
-    - **Extract tasks**, testers that are related to the same TDM Environment set in the source environment as the task's creator. 
+    - **Load, Reserve, or Delete tasks**, testers that are related to the same TDM Environment permission set in the target environment as the task's creator.
+    - **Extract tasks**, testers that are related to the same TDM Environment permission set in the source environment as the task's creator. 
 
 
 
