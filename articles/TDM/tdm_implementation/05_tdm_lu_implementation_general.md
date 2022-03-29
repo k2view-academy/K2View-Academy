@@ -28,7 +28,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 1. Add the **FABRIC_TDM_ROOT** LU table to the LU Schema and set it as a [Root table](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md). 
 2. Set the **Instance PK** column to **k2_tdm_eid**.   
-3. Add the **LU_PARAMS** and **INSTANCE_TABLE_COUNT** to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
+3. Add the **LU_PARAMS** to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 4. In Parent LUs, add the **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** relationship tables to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 
 
