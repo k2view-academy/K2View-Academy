@@ -148,7 +148,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 
 <web>
 
-The LU Tabs display the schema properties and they can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the right upper corner of the schema window.
+The LU Tabs display the schema properties. They can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the right upper corner of the schema window.
 
 <table style="width: 900px;">
 <tbody>
@@ -166,7 +166,7 @@ The LU Tabs display the schema properties and they can be collapsed or expanded 
 <p><strong>Misc</strong></p>
 </td>
 <td>
-<p>Contains various settins such as Storage, Cache location type and Enable data encryption.</p>
+<p>Contains various settings such as Storage, Cache location type and Enable data encryption.</p>
 </td>
 </tr>
 <tr>
