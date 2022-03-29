@@ -70,7 +70,7 @@ The Logical Unit Schema window shows the Root Table and hierarchy of the tables 
 
 * Each table is displayed with all of its fields in a scrollable table.
 
-    <studio>
+<studio>
 
 * Each field is displayed in a separate line, by name with a small colored icon. The icon’s color indicates the data type of the field:
 
@@ -79,7 +79,7 @@ The Logical Unit Schema window shows the Root Table and hierarchy of the tables 
     * Green: Real.
     * Blue: Integer.
     
-    </studio>
+</studio>
 
 To make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
 
