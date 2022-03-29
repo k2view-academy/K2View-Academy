@@ -46,7 +46,7 @@ The General Information section has the following settings:
 
   -  Each system version may have a different data source structure. For example, a development environment may have new tables and fields that are not in the production environment. 
   - At least one version must be set for a system. Multiple system versions can also be set. 
-  - The relevant system version must be selected when adding a system to an [Environment].
+  - The relevant system version must be selected when adding a system to an [Environment](11_environment_products_tab.md).
 
 To add a version to a system, click ![delete](images/plus_icon_prod_version.png) next to the Versions setting and enter the version's value which is the logical identifier of the system's version. For example 1, 1.5, dev or prod. The values must be aligned to the TDM Fabric implementation. 
 
