@@ -2,21 +2,23 @@
 
 ### Overview
 
-The Broadway [Actors inheritance mechanism](06_export_actor.md) enables reusing the same business logic in different places in a flow or in several flows of the project. 
+Actor Editor is a tool which enables creation of new Actors either based on an existing Actor or from scratch, based on your own Java class. 
 
-If an inherited Actor needs to be modified, open the Broadway flow with this Actor, edit it and save the updated Actor via the **Export Actor** menu with the **Override Current** option. 
+The Actor Editor is displayed as a dummy flow with one Actor that can be setup / modified using the extended Actor's Properties window.
 
-To simplify the Actor modification process and enhance it with additional editing options, Broadway provides an **Actor Editor** which enables creating new Actors and editing inherited ones.  
+When creating a new Actor, you need to do the following:
 
-The Actor Editor can be accessed by opening the **[Actor Name].actor** file from the Project tree. It is displayed as a dummy flow with one Actor that can be setup / modified using the extended Actor's [Properties window](03_broadway_actor_window.md).
+* Set either the **Parent Actor** to inherit from the existing Actor or the **Class** to be used for custom logic.
+* Define inputs and outputs as required.
+* Test your Actor by running it in Debug mode.
 
-### How Do I Use an Actor Editor?   
+### How Do I Create an Inherited Actor?   
 
 The Actor Editor can be used to create a new inherited Actor or modify an existing one via its **[Actor Name].actor** file. The Actor must inherit either from another Actor or from an [Inner Flow](22_broadway_flow_inner_flows.md) that has been saved as an Actor. 
 
 **To create** a new Actor, do the following:
 
-1. Right click the **Broadway** folder in the Project tree and click **New Actor**.
+1. Right click the **Broadway > New Actor**.
 2. Populate the new **Actor's name** and click **OK** to open the Actor Editor.
 3. Select the **Parent Actor** to get the parent's input and output arguments. 
 4. Debug the Actor by running it from the Main menu toolbar. If the Actor receives input parameters, they can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md).
@@ -36,8 +38,6 @@ Broadway enables you to create an Actor that inherits its properties and behavio
 **To create** a new Actor from scratch, do the following:
 
 1. Create your own Java class: Right click the **Java** folder in the Project tree either in the Shared Object or under the Logical Unit. Then click **New Java File**.
-
-   ![image](images/99_10_editor_2.PNG)
 
 2. Define the class as follows to inherit the core Actor's properties and behaviors:
 
@@ -82,7 +82,64 @@ Broadway enables you to create an Actor that inherits its properties and behavio
 
 8. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
 
-   * The Actor's input argument can be change from the default to other type (such as drop-down list) by clicking![dots](images/99_19_dots.PNG)> **Advanced** in the input field and changing the type in the editor.
+
+### How Do I Change the Input Argument Type?
+
+The Actor's input argument type can be changed from the default to other type using the built-in plug-ins.
+
+To change the type, do the following:
+
+1.  Click Add Input to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
+
+   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:60%;" />
+
+2. Modify the default to one of the following types as follows:
+
+   * To define a drop-down list of values:
+
+     ~~~javascript
+     {
+       "id": "com.k2view.dropdown",
+       "options": [
+         "1",
+         "2"
+       ]
+     }
+     ~~~
+
+   * To define an input from a list of Broadway flows:
+
+     ~~~javascript
+     { 
+     	"id": "com.k2view.innerflow" 
+     }
+     ~~~
+
+   * To define an input from a list of Logical Units:
+
+     ~~~javascript
+     {
+       "id": "com.k2view.logicalUnit",
+       "addEmptyEntry": true
+     }
+     ~~~
+
+   * To define an input from a list of Interfaces:
+
+     ~~~javascript
+     {
+       "id": "com.k2view.interface",
+       "interfaceType": [
+         "database"
+       ]
+     }
+     ~~~
+
+3. Click Submit to close the editor.
+
+4. Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
+
+   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 75%;" />
 
 ### Examples of New Actor Creation
 
@@ -111,7 +168,7 @@ Then define the required input and output arguments and run the Actor to debug i
 
 
 
-If an input field should include a drop-down list of value, click![dots](images/99_19_dots.PNG)> **Advanced** in the input field and change the type in the editor. For example, as follows:
+If an input field should be different than default, click![dots](images/99_19_dots.PNG)> **Advanced** in the input field and change the type in the editor. For example, as follows:
 
 ~~~json
 {
@@ -126,19 +183,9 @@ If an input field should include a drop-down list of value, click![dots](images/
 }
 ~~~
 
-If an input field should include a list of flows, the editor should include the following:
-
-~~~json
-{ 
-	"id": "com.k2view.innerflow" 
-}
-~~~
 
 
-
-Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
-
-​		<img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
+​	
 
 [![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
 
