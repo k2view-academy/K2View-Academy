@@ -91,7 +91,7 @@ To change the type, do the following:
 
 1.  Click Add Input to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
 
-   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:60%;" />
+   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:80%;" />
 
 2. Modify the default to one of the following types as follows:
 
@@ -139,7 +139,7 @@ To change the type, do the following:
 
 4. Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
 
-   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 75%;" />
+   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
 
 ### Examples of New Actor Creation
 
@@ -154,7 +154,7 @@ Let's create a new **CheckMaxVal** Actor that inherits its properties and behavi
    * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the parent using the **Add Actors** window.
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.     
-    ![image](images/99_10_editor_1.PNG)
+    <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:80%;" />
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
@@ -164,7 +164,7 @@ When creating a new Actor which inherits from custom Java class, do all the step
 
 Then define the required input and output arguments and run the Actor to debug it. 
 
-​		![image](images/99_10_editor_3.PNG)
+​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:80%;" />
 
 
 
