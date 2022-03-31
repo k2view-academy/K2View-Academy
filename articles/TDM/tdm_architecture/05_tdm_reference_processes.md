@@ -20,13 +20,13 @@ This job is executed on each Reference table by the [main task execution process
 The job updates the status of the processed Reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
 - If the copy succeeds, sets the status to **completed**.
-- If the copy fails, sets the status to **failed** and populates the error_msg field in the error message. (0)
+- If the copy fails, sets the status to **failed** and populates the error_msg field in the error message.
 
 ### Reference Cassandra Table
 [TDM Extract tasks](/articles/TDM/tdm_gui/16_extract_task.md) can extract data from different source environments or can create [different versions](/articles/TDM/tdm_gui/15_data_flux_task.md) of a selected Reference table. As a result, each Cassandra table created for a Reference table, must store different versions of the Reference table. Each Cassandra table created for a Reference table contains the following columns to store Reference data for different source environments and different versions:
 
 - SOURCE_ENV_NAME,  populated by the source environment.
-- TASK_EXECUTION_ID, by default populated by **ALL**. When running a TDM Extract task in [Data Flux mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
+- TASK_EXECUTION_ID, by default populated by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - REC_ID, an internal sequence set on each record and added to the **PK** of the Cassandra table.
 
 In addition to the columns above, each Cassandra table also contains the list of columns of the Reference table in the source DB.
@@ -102,7 +102,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract task with a regular mode (Entity Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
+- Creating an Extract task with a regular mode (Data Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
 
   <table class="md-table">
   <thead>
@@ -137,7 +137,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract Data Flux task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
+- Creating an Extract Data Versioning task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
 
   <table class="md-table">
   <thead>

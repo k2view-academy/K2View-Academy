@@ -6,10 +6,10 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** -  Fabric 6.5.2 and above for TDM 7.3.
+- **Fabric Server** -  Fabric 6.5.5 and above for TDM 7.4.
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. 
 
-Click here to open the [TDM 7.3 Docker Installation document](/Release_Notes_And_Upgrade/TDM-V7.3/TDM_Docker_Installation_V7.3.md).
+Click here to open the [TDM 7.4 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.4.md).
 
 ## TDM Package Content
 
@@ -47,7 +47,13 @@ To install a TDM package on a Fabric server do the following:
 
   **Example:**
 
-  **tar -zxvf tdmui7.2.0_3.tar.gz**
+  **tar -zxvf tdmui7.4_5.tar.gz**
+  
+  Run the following command to avoid an override of the apps.json file:
+  
+  ``` 
+  tar -zxvf <TDM GUI tar file> --exclude='fabric/staticWeb/apps.json'
+  ```
 
 - Restart the Fabric node.
 
@@ -104,7 +110,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 3. Deploy Fabric project's Web-Services to the local debug server.
 
-4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.1. This version is added to the generated APIDOC.
+4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.4. This version is added to the generated APIDOC.
 
 5. Open the Swagger editor using the following URL: https://editor.swagger.io/.
 
@@ -137,6 +143,8 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 - Run **createk2TDMDB.sh** script.
 
+- Note that the **D_K2V_PG13_TDM7.4.tar.gz PG docker image already contains the TDM 7.4 DB.**
+
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
 - Go to **$K2_HOME/TDMGUI/createTDMDB/updateTDMDB** directory in Fabric.
@@ -162,7 +170,7 @@ Click for more information about the [TDM Library](/articles/TDM/tdm_implementat
 
 ## Create K2masking Keyspace in Cassandra
 
-The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  If the **k2masking** keyspace does not exist in Cassandra DB, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
+The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  If the **k2masking** keyspace does not exist in Cassandra DB, create it using the **masking-create-cache-table.flow** from the library of Broadway examples, deploy the TDM LU (the deploy.flow creates the k2masking), or **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
 
 Click for more information about [sequence handling](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
 

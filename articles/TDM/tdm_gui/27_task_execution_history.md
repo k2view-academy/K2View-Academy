@@ -12,34 +12,35 @@ The TDM GUI has several windows that display a task's execution history:
 
 The Task Executions Summary displays a list of executed tasks. When a task is edited a new version of the task is created. Each version has its own record in the Tasks Lists window and has its own Task Execution Summary. 
 
-Open the [Tasks List window](14_task_overview.md#tdm-tasks-list-window) and click the ![task icon](images/task_execution_history_icon.png) next to a selected task to open its Task Execution Summary window and display a full list of the task's executions:
-
-![task execution summary](images/task_execution_summary.png)
+Open the [Tasks List window](14_task_overview.md#tdm-tasks-list-window) and click the ![task icon](images/task_execution_history_icon.png) next to a selected task to open its Task Execution Summary window and display a full list of the task's executions.
 
 Click **Show/Hide Columns** to open a popup window displaying a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
 
 The following information is displayed for each executed task:
 
 - Task_execution_id.
+
 - Source and target environments.
+
 - Task Executed By, the name of the user executing the task.
+
 - BE name.
+
 - Summary statistics about the processed entities, Reference tables and post execution processes.
+
 - Execution status, which is set to Completed when all a task's processes have been completed successfully.
+
+  
 
 ### Generating a Task Execution Summary Report
 
 Click![task execution summary report](images/task_execution_summary_report_icon.png) next to each executed task to generate and download a Summary Execution report. Note that the report displays the [task execution overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md) if they exist.
 
-Example of Summary Execution Report:
-
-[summary execution report example](loadVIPCus_Summary_Execution_Report_EXECID_2.xlsx)
+Click [here](testParams2_Summary_Execution_Report_EXECID_217.xlsx) to download an example of Summary Execution Report.
 
 ## Logical Units Execution Summary
 
-Displays an executed task's LUs and post execution processes. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window. 
-
-![lu_execution_summary](images/extract_task_execution_lu_summary.png)
+Displays an executed task's LUs and post execution processes. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
 
 Click **Show/Hide Columns** to open a popup window displaying a list of available fields for each task. Fields in green are displayed by default.  Click a field to remove it from the display.
 
@@ -47,35 +48,17 @@ The window displays a summary on each LU or post execution process of an execute
 
 ### Generating a Task Execution Report on each Process
 
-#### Load Tasks
-
 The execution report displays the following information about the LU execution:
 
 - General information.
 - Entities list.
 - Reference tables list.
 - Execution errors.
-- Replaced sequences.
+- Replaced sequences on Load tasks.
 
 To generate and download a Summary Execution Report on an LU, click the ![task execution summary report](images/task_execution_summary_report_icon.png) next to each LU.
 
 
-#### Extract Tasks
-
-
-##### Summary Report
-
-The Summary Report displays the following:
--  [Batch Command](/articles/TDM/tdm_architecture/03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) that syncs entities into Fabric.
--  A summary of an executed task's data on each Fabric node and Fabric cluster.
-
-To generate and download a summary report on an LU's execution, click ![summary report](images/extract_lu_summary_report.png).
-
-##### Detailed Report
-
-A Detailed Report displays the entities and Reference tables list, their execution status and error message if the execution of a given entity or Reference table fails.
-
-To generate and download a Detailed Report on an LU's execution, click ![detailed report](images/extract_lu_detailed_report.png). 
 
 ## Task Execution - Detailed Statistics
 
@@ -97,7 +80,7 @@ To display the Task Execution - Detailed Statistics window, click ![entities lis
 
 By default, the root LU's list of entities and Reference tables is displayed. To view the entities and Reference tables in the **Logical Units Hierarchy**, click the LU.
 
-The Source ID and Target ID sequences are displayed for each entity ID. When the task [replaces the source sequences](19_load_task_request_parameters_regular_mode.md#replace-sequences), the Target ID and Source ID can be different. If an LU in the tree has failed entities it is marked in red.
+The Source ID and Target ID sequences are displayed for each entity ID. When the task [replaces the source sequences](17_load_task_regular_mode.md#replace-sequence), the Target ID and Source ID can be different. If an LU in the tree has failed entities it is marked in red.
 
 ### Failed Entities List Tab
 

@@ -1,6 +1,6 @@
-# Task Execution Timing Tab 
+# Task Scheduling Tab 
 
-The Task Execution Timing tab is the last tab in the Task window and enables setting the execution timing options. Select one of the following options:
+The Task Scheduling tab is the last tab in the Task window and enables setting the execution timing options. Select one of the following options:
 
 - **Execution by Request**, click ![execution](images/execute_task_icon.png) to execute the task.
 - **Scheduled Execution**, sets the automatic execution of a task via a TDM Scheduler process on predefined intervals.  For example, execute the task every Monday at 2:15 AM.
@@ -9,7 +9,7 @@ The Task Execution Timing tab is the last tab in the Task window and enables set
 
 Notes:
 
-- Testers can select Scheduled Execution only when their [TDM Environment role](10_environment_roles_tab.md#role-permissions) has permissions to select this method for the target environment. 
+- Testers can select Scheduled Execution only when their [TDM Environment permission set](10_environment_roles_tab.md) has permissions to select this method for the target environment. 
 - To execute a scheduled task, click ![execution](images/execute_task_icon.png).
 
 ### Scheduled Execution Parameters
@@ -95,7 +95,7 @@ The **End By** setting can be set to run a task by the Scheduler until a predefi
 
   
 
-   [![Previous](/articles/images/Previous.png)](21_load_task_requested_entities_dataflux_mode.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_task_globals_tab.md)
+   [![Previous](/articles/images/Previous.png)](20_reserve_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_task_globals_tab.md)
 
   
 

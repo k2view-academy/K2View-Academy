@@ -1,10 +1,18 @@
 # TDM Implementation - Supporting Non JDBC Data Sources
 
-## How Do I Define the Entity List For Extract All Entities Tasks?
+## How Do I Define the Entity List?
+
+### Extract All Entities Tasks
 
 Create a Broadway flow to get the list of entities from the data source and populate it in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
 
 For more information on how to populate the entity list based on a non JDBC data source, read [Step 6 -Get the Entity List for an Extract All Task Using a Broadway Flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) section of the Broadway Flows Implementation article.
+
+### Using Custom Logic to Select Entities 
+
+Create Broadway flows to be executed by the task execution and get the entity list for the task. 
+
+For more information on how to build Custom Logic flows, read [Step 7 - Optional - Build Broadway Flows for the Custom Logic Selection Method](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method).
 
 ## Building the LU Tables Populations
 

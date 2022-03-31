@@ -2,13 +2,13 @@
 
 ## Get Task Execution Summary Report 
 
-### API URL
+### API URL   
 
 /taskSummaryReport/{executionId}/luName/{luName}
 
 ### HTTP Method
 
-POST
+GET
 
 ### API Category
 
@@ -20,8 +20,41 @@ Gets the task summary report.
 
 ### API Input
 
-- **executionId**
-- **luName** - populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.
+<table width="900pxl">
+<tbody>
+<tr>
+<td style="width: 196.489px;"><strong>Param Name</strong></td>
+<td style="width: 167.409px;">
+<p><strong>Mandatory</strong></p>
+</td>
+<td style="width: 516.284px;">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>executionId</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;" valign="top">
+<p>The unique identifier of the task execution (task_execution_id).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>luName</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 #### API Input Example
 
@@ -60,7 +93,10 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
             "selected_ref_version_datetime":null,
             "scheduling_parameters":"immediate",
             "schedule_expiration_date":null,
-            "override_parameters":"{\"NO_OF_ENTITIES\":6}"
+            "override_parameters":"{\"NO_OF_ENTITIES\":6}",
+            "reserve_ind": "true",
+            "reserve_retention_period_type": "Days",
+            "reserve_retention_period_value": 5
          }
       ],
       "Task Execution Summary":[
@@ -776,7 +812,10 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
         "selected_ref_version_datetime": null,
         "scheduling_parameters": "immediate",
         "schedule_expiration_date": null,
-        "override_parameters": null
+        "override_parameters": null,
+        "reserve_ind": "false",
+        "reserve_retention_period_type": null,
+        "reserve_retention_period_value": null 
       }
     ],
     "Task Execution Summary": [
@@ -1003,7 +1042,7 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
 
 ### HTTP Method
 
-POST
+GET
 
 ### API Category
 
@@ -1014,6 +1053,42 @@ TDM_Tasks
 Gets the task summary report on a given LU.
 
 ### API Input
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td style="width: 196.489px;"><strong>Param Name</strong></td>
+<td style="width: 167.409px;">
+<p><strong>Mandatory</strong></p>
+</td>
+<td style="width: 516.284px;">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>executionId</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;" valign="top">
+<p>The unique identifier of the task execution (task_execution_id).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196.489px;" valign="top">
+<p><strong>luName</strong></p>
+</td>
+<td style="width: 167.409px;" valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>Populate this parameter by the LU name.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 - **executionId**
 - **luName** - populate this parameter by the LU name.
@@ -1055,7 +1130,11 @@ http://localhost:3213/api/taskSummaryReport/490/luName/Billing
         "selected_ref_version_datetime": null,
         "scheduling_parameters": "immediate",
         "schedule_expiration_date": null,
-        "override_parameters": null
+        "override_parameters": null,
+        "reserve_ind": "false",
+        "reserve_retention_period_type": null,
+        "reserve_retention_period_value": null,
+        "fabric_execution_id": "c30a97f2-fc3e-4b66-9986-aa0c6108456a"
       }
     ],
     "Task Execution Summary": [
@@ -1215,7 +1294,7 @@ http://localhost:3213/api/taskSummaryReport/490/luName/Billing
 
 
 
-## Extract Tasks - Get Execution Reports on a Given LU
+## Extract Tasks - Get Execution Reports on Given LUs
 
 ### API URL
 
@@ -1244,6 +1323,52 @@ The API's run mode can have the following values:
 
 ### API Input
 
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl">
+<p><strong>Param Name</strong></p>
+</td>   
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>migrateIds</strong></p>
+</td>
+<td valign="top">
+<p>Yes</p>
+</td>
+<td valign="top">
+<p>Populated by the batch IDs related to the task execution. The batch ID is populated in the <strong>fabric_execution_id</strong>&nbsp;attribute of&nbsp;<strong>/task/{taskExeId}/history</strong>&nbsp;API's output.</p>
+<p>This parameter can be populated by one or several batch IDs.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>runModes</strong></p>
+</td>
+<td valign="top">
+<p>Yes</p>
+</td>
+<td style="width: 516.284px;">
+<p>The run mode can be populated by one of several of the following values:</p>
+<ul>
+<li>'D': detailed execution. Returns detailed information of all entities and their execution status.</li>
+<li>'S': summary information of the execution</li>
+<li>'H': get the batch command.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+#### API Input - Request Body Structure
 ```
 {
   "migrateIds": {},
@@ -1259,7 +1384,7 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 
 #### API Input Examples
 
-##### Get a Summary Report
+##### Get a Summary Report of one Batch ID
 
 ```json
 {"migrateIds": "3e8e8e44-9c97-4921-a622-f29161a8a112", "runModes": ["S", "H"]}
@@ -1267,11 +1392,15 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 
 
 
-##### Get Summary and Detailed Reports with the Entity List and their Execution Status
+##### Get Summary and Detailed Reports with the Entity List and their Execution Status on one Batch ID
 
 ```json
 {"migrateIds": "3e8e8e44-9c97-4921-a622-f29161a8a112", "runModes": ["D", "H", "S"]}
 ```
+##### Get Summary and Detailed Reports with the Entity List and their Execution Status on one Batch ID
 
+```json
+{"migrateIds": ["8a9ad3f6-74d8-4c1e-9a2a-7c87600ca7f2", "2721ad86-8c66-4304-9a4d-e00716a9450e"], "runModes": ["D", "H", "S"]}
+```
 
  [![Previous](/articles/images/Previous.png)](01_tdm_basic_task_execution_flow.md)

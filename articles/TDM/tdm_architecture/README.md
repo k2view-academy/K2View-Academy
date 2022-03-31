@@ -9,8 +9,8 @@
 <li><a href="04_task_execution_overridden_parameters.md">Task Execution - Overriding Parameters</a></li>
 <li><a href="05_tdm_reference_processes.md">TDM Reference Processes</a></li>
 <li><a href="06_tdmdb_cleanup_process.md">TDM Clean-Up Process</a></li>   
-<li><a href="07_tdm_parameters_handling.md">TDM Parameters Handling</a></li>       
+<li><a href="07_tdm_parameters_handling.md">TDM Parameters Handling</a></li>
+    <li><a href="08_entity_reservation.md">Entity Reservation</a></li>    
 </ul>
-
 
 
