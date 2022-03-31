@@ -4,7 +4,20 @@
 In Fabric an interface is a data communication channel to an external system that enables users to define connection parameters for a data source. All data needed by Fabric from the data source is transferred through an interface.
 
 When multiple data sources are needed by the project implementation, several interfaces are defined, one for each data source. It is therefore natural for a project to have multiple interfaces. 
+
+<studio>
+
 Fabric interfaces are defined as [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby they can be accessed by any objects in a project, such as [LUs](/articles/03_logical_units/01_LU_overview.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md#web-services-overview), [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) or [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
+
+</studio>
+
+<web>
+  
+Fabric interfaces are defined as [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby they can be accessed by any objects in a project, such as [LUs](/articles/03_logical_units/01_LU_overview.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md#web-services-overview), or [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).  
+  
+</web>
+
+
 
 ### DB Interfaces and Non-DB Interfaces
 
