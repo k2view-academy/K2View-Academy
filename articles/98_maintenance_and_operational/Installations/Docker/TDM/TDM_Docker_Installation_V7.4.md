@@ -8,8 +8,9 @@ We use the `c:/k2view/apps/`  as the path of the  TDM installation base. Use wha
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.4/TDM_7.4.0_download_links.docx?d=wfed14278f7f240b3a97a077879a3dfe7&csf=1&web=1&e=Fry5OY">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7B66A0F38F-3FD2-421A-8709-6D6C99BE8B5D%7D&file=TDM_7.4.0_download_links.docx&action=default&mobileredirect=true">Download links</a></li>
 </ul>
+
 
 ### Load the Images 
 
@@ -20,7 +21,7 @@ Create a K2V_TDM directory and download the following into it:
 ~~~bash
 docker load -i D_K2V_PG13_TDM7.4.tar.gz
 docker load -i D_k2view_cassandra_3.11.9.tar.gz
-docker load -i D_Fabric_6.5.5_21_TDMGUI.7.4_7.tar.gz 
+docker load -i D_Fabric_6.5.6_17_TDMGUI.7.4_7.tar.gz
 unzip compose_TDM_7.4_7.zip
 ~~~
 
