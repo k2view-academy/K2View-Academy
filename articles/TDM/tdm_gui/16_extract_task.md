@@ -1,59 +1,40 @@
 # TDM Extract Task
 
-An Extract task extracts the selected entities or Reference tables from the selected source environment and saves this data in Fabric for later use.
+An Extract task extracts the selected entities and/or Reference tables from the selected source environment and saves this data in Fabric for later use.
 
 An Extract task contains the following tabs:
 
-- [General](#general)
-- [Request Entities](#requested-entities)
-- [Request Parameters](#request-parameters)
-- [Execution Timing](#execution-timing)
+- [General](14a_task_general_tab.md)
+- [Additional Execution Parameters](#additional-execution-parameters)
+- [Requested Entities](#requested-entities) - opened if the Data Type contains entities.
+- [Task Scheduling](22_task_execution_timing_tab.md)
 
-When checking the **Set Global Variables** setting, a new [Task Globals](23_task_globals_tab.md) tab opens.
+When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
 
-When setting the **Reference** setting to **Reference Only** or **Both - reference and entities**, a [Reference tab](24_task_reference_tab.md) opens.
+When setting the **Data Type** by checking the **Reference** setting, a [Reference tab](24_task_reference_tab.md) opens.
 
-## General
+## Additional Execution Parameters Tab
 
-This is the first tab in the TDM task and holds general information about the task. For example:
+The following execution parameters are set on **Extract tasks**:
 
-![general tab](images/extract_task_general_tab.png)
+![additional exe params - extract](images/extract_task_additional_exe_params_tab.png)
 
-### Task Title
+### Data Versioning
 
-A task name. A mandatory setting. Note that only one active task can have a specific Task Title. An error is displayed when an attempt is made to create several tasks with the same task title.
+- Check to set the task mode to [Data Versioning](15_data_flux_task.md). 
+- Leave the Data Versioning unchecked to create a regular mode task.
 
-### Task Type
+### Data Type
 
-Load or Extract. Set the task type to **Extract**.
+Check **Entities** to extract the selected entities and/or **Reference** to extract the selected reference tables into the TDM warehouse (Fabric).
 
-### Entity Versioning
+Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
-- Check to set the task mode to [Data Flux](15_data_flux_task.md). 
-- Leave the Entity Versioning unchecked to create a regular mode task.
+### Set Sync Policy
 
-### Set Global Variables 
+This setting enables the user to change the [default LUI sync mode](articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON) and extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
-Check to [override Globals on a task level](23_task_globals_tab.md).
-
-### Reference 
-
-[Reference handling](24_task_reference_tab.md). Select a value from the dropdown list:
-
-- **None**, default value. Do not include Reference tables in the task.
-- **Reference Only**, create a task to extract Reference tables only into Fabric. Do not include entities in the task.
-- **Both - reference and entities**, create a task to extract both entities and Reference tables into Fabric.
-
-### Select All Entities 
-
-- When checked, the list of entities is retrieved from the query defined in the [trnMigList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) shared translation for the root LU of the task's BE, and the [Requested Entities](#requested-entities) tab is removed from the task.
-- Only Admin and Environment owner users can check the **Select All Entities** settings. Other users can only define a list of entities in the [Requested Entities](#requested-entities) tab.
-- This setting is disabled for **Reference Only** tasks.
-
-### Environment Name
-
-- Select a source environment from the dropdown list of active TDM environments with **Source** or **Both** [environment types](08_environment_window_general_information.md#environment-type). 
-- Note that tester users can only select an environment they are attached to by a [TDM Environment role](10_environment_roles_tab.md).
+Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  If Data Versioning *is* checked, each task execution extracts the data from the data source and creates a new LUI.
 
 ### Retention Period
 
@@ -61,7 +42,7 @@ This is the retention period set on the extracted LUIs. When this period ends, t
 
 Note that when the Retention Period is set to zero, no retention period is set on the extracted LUIs.
 
-**A retention period must be set on a Data Flux extract task**, i.e. the retention period must be set to a value greater than zero when Entity Versioning is checked.
+**A retention period must be set on a Data Versioning extract task**, i.e. the retention period must be set to a value greater than zero when the Data Versioning is checked.
 
 **The retention period is optional on a regular extract task.**
 
@@ -72,64 +53,41 @@ The start date of the retention period is the task's execution time. The **reten
 The **defaultPeriod** parameter is set to **5 days** and the **maxRetentionPeriod** parameter is set to **90 days**.
 
 The Retention Period window displays the following options:
-- When Entity Versioning is checked, the period is set by default to five days.
-- When Entity Versioning is cleared, the period is set by default to zero, i.e. no retention period is set for the extracted data. 
+
+- When Data Versioning is checked, the period is set by default to five days.
+- When Data Versioning is cleared, the period is set by default to zero, i.e. no retention period is set for the extracted data. 
 - The maximum retention period can be set to 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
 
-### Business Entity
+### Additional Execution Parameters
 
-The [BE](04_tdm_gui_business_entity_window.md) of the task. Select a BE from the dropdown list of the [BEs](05_tdm_gui_product_window.md#be-and-lu-product-relationship) included in the [environment’s products](11_environment_products_tab.md). 
+#### Set Task Variables 
 
-### Logical Units
-
-Select all, partial, or one LU of the selected BE. 
-
-The following validations are set on the selected LUs:
-
-The selected LUs must include at least one [root LU](/articles/TDM/tdm_overview/03_business_entity_overview.md#root-lu) of the selected BE. 
-
-You cannot select an LU without its parent LU. 
-
-**Example:**
-
-- Customer BE has two level in its hierarchy: the  root LU is the Customer Data, the Billing LU is a child of the Customer Data, and the Collection LU is the child of the Billing LU. You cannot select a Collection LU without the Billing LU when creating a task on Customer BE.
-
-Click for additional [examples of BE's hierarchies](/articles/TDM/tdm_overview/03_business_entity_overview.md).
+Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
 
 ### Post Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
 
-## Requested Entities
+## Requested Entities Tab
 
-This tab is displayed when the **Select All Entities** setting is unchecked. For example:
+This tab is opened when the task's Data Type includes entities. This tab defines the subset of entities for the task:
 
 ![requested entities](images/extract_task_requested_entities_tab.png)
 
-Populate the list of entities to process separated by a comma. 
+The following selection methods are available on extract tasks: 
+
+- **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is only available for the Admin and Environment owner users.
+- **Entity list**: this is the **default option**. Populate the list of entities to process separated by a comma. 
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) to get the entity list for the task and set the maximum number of entities for the task:
+
+
+
+![requested entities2](images/extract_task_requested_entities_tab_custom_logic.png)
 
 Notes:
 
-- The number of entities populated by the tester user is [limited by their environment's role](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
+- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum nummber of entities of the task. If the custom logic selects a smaller number of entities, the number of entities will be set by the custom logic flow. For example: the maximum number of entities in the task is 50, but the customer logic only selects 30 entities. The task will process 30 entities.
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to Each Entity ID when building its LUI.
-
-## Request Parameters
-
-This tab is only displayed for a regular mode task, i.e. the **Entity Versioning** setting is unchecked.  This tab holds the following optional setting: **Request Up to Date Entity**. 
-
-By default, the Requested Up to Date Entity is unchecked. You can check this setting to override the Sync mode on a task level and set the Sync mode of the task execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md). A tester can select this option only if their **Read** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
-
-## Execution Timing
-
-This is the last tab in the Task window and is available for all task types and modes.
-
-The following options are available for task execution:
-
-- **Execution by Request**, the default option.
-
-- **Scheduled execution**, set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that a tester can select this option only if their TDM Environment role has a scheduling permission.
-
-Click for more information about [TDM task scheduling](22_task_execution_timing_tab.md).
 
 
 

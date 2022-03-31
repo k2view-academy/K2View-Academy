@@ -1,25 +1,25 @@
-# TDM Implementation - Supporting Different Product Versions
+# TDM Implementation - Supporting Different System Versions
 
 During a project's lifecycle, there might be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
 
-This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of Product Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
+This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of System (product) Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
 
 
-## TDM Globals of Product Versions
+## TDM Globals of System Versions
 
-A  [TDM Product](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible product versions must be set on each TDM product. When adding a TDM Product to a TDM environment in the TDM GUI, the [product version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
+A  [TDM System](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible system versions must be set on each TDM System. When adding a TDM System, to a TDM environment in the TDM GUI, the [system version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
 
-The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The product versions are based on the product's version of the task's environments: 
+The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The system versions are based on the system's version of the task's environments: 
 
-- **TDM_SOURCE_PRODUCT_VERSION**, populated by the product's version of the task's source environment. 
+- **TDM_SOURCE_PRODUCT_VERSION**, populated by the system's version of the task's source environment. 
 
-- **TDM_TARGET_PRODUCT_VERSION**, populated by the product's version of the task's target environment.
+- **TDM_TARGET_PRODUCT_VERSION**, populated by the system's version of the task's target environment.
 
-The TDM implementation can get the values of these Globals to check the source and target product version of each execution.
+The TDM implementation can get the values of these Globals to check the source and target system version of each execution.
 
 ## Update LU Schema
 
-The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, note the following:
+The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
 
 ### Adding or Removing LU Tables
 
@@ -33,9 +33,9 @@ The new columns can be added manually or  added by clicking the [Update Tables f
 
 Removing columns from an LU table must be implemented manually.
 
-### LU Schema - Support of Multiple Product Versions
+### Support of Multiple System Versions
 
-It could be that new columns or new tables have been added to a table by a more recent product version. 
+It could be that new columns or new tables have been added to a table by a more recent system version. 
 
 Examples:
 
@@ -45,7 +45,7 @@ Examples:
 
 Adding new LU tables, and adding new columns to an LU table are described in more detail below:  
 
-  #### LU Schema - Adding New LU Table
+  #### Adding a New LU Table
 
 Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
 
@@ -64,7 +64,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 ```
 
 
-  #### LU Schema - Adding New Columns to an LU Table  
+  #### Adding New Columns to an LU Table  
 
   - Define multiple populations in the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global. Note that new columns can be selected by the query only when they already exist in the source environment.
 
@@ -114,7 +114,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
          return decision;
          ```
 
-  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and avoid adding them to the TDM Logic file, since the TDM logic file already contains product functions.
+  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and avoid adding them to the TDM Logic file, since the TDM logic file already contains the TDM product functions.
 
 ## Update Broadway Load Flows
 

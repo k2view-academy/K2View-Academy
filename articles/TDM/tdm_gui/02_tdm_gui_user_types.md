@@ -17,11 +17,11 @@ An Admin can execute all activities in the TDM GUI application.
 
 Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM GUI and are responsible for the following activities:
 
-- Create, edit or delete [products](05_tdm_gui_product_window.md).
+- Create, edit or delete [systems](05_tdm_gui_product_window.md).
 - Create, edit or delete [Business Entities](04_tdm_gui_business_entity_window.md) and attach Logical Units or post-execution processes to each Business Entity.
 - Create, edit or delete [environments](07_tdm_gui_environment_overview.md).
 - Attach [environment owners](08_environment_window_general_information.md#environment-owners) to each environment.
-- Define [TDM roles](10_environment_roles_tab.md) in each environment and define permissions per role.
+- Define [permission sets](10_environment_roles_tab.md) in each environment and define permissions per permission set.
 
 ## Owner 
 
@@ -30,17 +30,16 @@ An Owner can be assigned to a specific TDM testing environment. Admins can defin
 Environment Owners can execute the following activities in their environment:
 
 - Edit the environment details.
-- Add or remove [products](11_environment_products_tab.md) from the environment.
-- Add or remove [Globals](12_environment_globals_tab.md).
-- Add, edit or remove [Exclusion Lists](13_environment_exclusion_lists.md).
-- Create, edit or delete [TDM roles](10_environment_roles_tab.md) and define permissions per role.
-- Attach users to TDM roles.
+- Add or remove [systems](11_environment_products_tab.md) from the environment.
+- Set [environmen variables](12_environment_globals_tab.md).
+- Create, edit or delete [permission sets](10_environment_roles_tab.md) and define permissions per permission set.
+- Attach users to TDM environment's permission sets.
 
 Environment Owners cannot add or delete an environment and cannot add or remove Environment Owners from the environment.
 
 ## Tester User
 
-A Tester User can create, execute, and extract or load tasks based on their TDM role. 
+A Tester User can create, execute, and extract or load tasks based on their TDM environment's permission set. 
 
 ## Permission Groups Mapping
 

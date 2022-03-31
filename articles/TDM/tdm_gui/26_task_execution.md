@@ -1,22 +1,25 @@
 # Task Execution
 
-A task can be executed multiple times by either clicking ![task execution icon](images/execute_task_icon.png) or via a TDM scheduling process if the task's [Execution Timing](22_task_execution_timing_tab.md) is defined as **Scheduled Execution**.
+A task can be executed multiple times. A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM GUI by either clicking ![task execution icon](images/execute_task_icon.png), a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Basic_Task_Execution_APIs_Flow/04_execute_task_API.md), or via a TDM Scheduling process if the task's [Execution Timing](22_task_execution_timing_tab.md) is defined as **Scheduled Execution**.
 
 The TDM Scheduling process checks the **End Date** of the task's scheduling parameters. If the End Date is earlier than the current date, the process cleans the task's  **Scheduled Execution** parameters and skips the task execution. 
 
-## Who Can Execute a Task?
+## Who Can Execute a Task via the TDM GUI?
 
 The following users can execute a TDM task:
 
 - **Admin users**.
 - **Environment owners** of the task's environment:
   - **Extract tasks**, the environment owner of the source environment.
-  - **Load tasks**, the environment owner of the target environment.
+  - **Load, Reserve, or Delete tasks**, the environment owner of the target environment.
+
 - **Testers**:
   - The task's creator.
-  - Other testers that are related to the same TDM Environment role as the task's creator:
-    - **Load tasks**, testers that are related to the same TDM Environment role in the target environment as the task's creator.
-    - **Extract tasks**, testers that are related to the same TDM Environment role in the source environment as the task's creator. 
+  - Other testers that are related to the same TDM Environment permission set as the task's creator:
+    - **Load, Reserve, or Delete tasks**, testers that are related to the same TDM Environment permission set in the target environment as the task's creator.
+    - **Extract tasks**, testers that are related to the same TDM Environment permission set in the source environment as the task's creator. 
+
+
 
 ## Task Execution Order
 
@@ -49,9 +52,8 @@ The TDM GUI displays a list of the task's LUs and post execution processes and t
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
 
-- The **Logical Units Execution Summary** window displays the summary execution details of each LU or post execution process:
+- The **Logical Units Execution Summary** window displays the summary execution details of each LU or post execution process.
 
-  ![LU execution summary](images/extract_task_execution_lu_summary.png)
 
 ## Stop and Resume a Task Execution
 
@@ -61,9 +63,7 @@ A task can be stopped if the processed entities fail due to an error and can be 
 
 - Click ![resume](images/resume_execution_icon.png) next to a record in **stopped** execution status in the **Logical Unit Summary** to resume the execution of **all** stopped task LUs and post execution processes:
 
-  ![stopped LUs](images/stopped_task_lu_summary.png)
-
-
+  
 
 ## Holding Task Execution
 

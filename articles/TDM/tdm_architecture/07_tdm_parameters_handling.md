@@ -53,7 +53,7 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
   </tr>
   </tbody>
   </table>
-
+  
   
 - Synching Collection ID #1 inserts the following records into **COLLECTION_PARAMS** TDM DB table:
 
@@ -71,7 +71,7 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
   </tr>
   </tbody>
   </table>
-
+  
   
 - Synching Billing IDs #169, #170, #171, #172, and #173 inserts the following records into **BILLING_PARAMS** TDM DB table:
 
@@ -221,22 +221,23 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
   <td>{5}</td>
   <td>{2015-09-16 06:14:40,2016-01-13 04:27:36,2017-02-10 20:44:54}</td>
   <td>{Closed,Closed,Closed,Closed,New,New,In Progress}</td>
-<td>{Network,Billing,Billing,Network,Billing,Billing,Device}</td>
+  <td>{Network,Billing,Billing,Network,Billing,Billing,Device}</td>
   <td>65</td>
-<td>{5,4,3,1,2}</td>
+  <td>{5,4,3,1,2}</td>
   </tr>
-</tbody>
+  </tbody>
   </table>
-
   
-
-  
-[![Previous](/articles/images/Previous.png)](06_tdmdb_cleanup_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
   
   
   
 
+[![Previous](/articles/images/Previous.png)](06_tdmdb_cleanup_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_entity_reservation.md)
+
   
+
+
+
   
-  
+
   

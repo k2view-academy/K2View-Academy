@@ -20,9 +20,52 @@ Returns the list of all executions of the input task. Returns one summary record
 
 ### API Input
 
-- **taskId**: a mandatory parameter.
-- **numberOfExecutions**: an optional parameter to limit the output to the latest X executions. For example, when this parameter is set to 3, the API return the last 3 task executions.
-- **userId**: an optional parameter. When populated, the API only returns the task executions made by the input user.
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>taskId</strong></p>
+</td>
+<td valign="top" width="200">
+<p>Yes</p>
+</td>
+<td valign="top" width="251">
+<p>The task&rsquo;s unique identifier.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>numberOfExecutions</strong></p>
+</td>
+<td valign="top" width="200">
+<p>No</p>
+</td>
+<td width="251">
+<p>The parameter can be set to limit the output to the latest X executions. For example, when this parameter is set to 3, the API returns the last 3 task executions.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong> userId</strong></p>
+</td>
+<td>
+<p>No</p>
+</td>
+<td valign="top">
+<p>When populated, the API returns the task executions made by the user associated with this userId only.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### API Input Example
 
@@ -66,8 +109,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
-    },
+      "task_executed_by": "joe"
     {
       "be_id": 10,
       "environment_id": 10,
@@ -95,7 +137,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
+      "task_executed_by": "joe"
     },
     {
       "be_id": 10,
@@ -124,7 +166,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "tot_num_of_processed_ref_tables": 0,
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
-      "task_executed_by": null
+      "task_executed_by": "joe"
     }
   ],
   "errorCode": "SUCCESS",
@@ -465,6 +507,7 @@ http://localhost:3213/api/task/488/history
       "task_executed_by": "admin",
       "task_last_updated_date": "2021-06-16 15:34:40.555",
       "num_of_failed_ref_tables": 0,
+      "reserve_retention_period_type": "Days",  
       "environment_id": 10,
       "selection_method": "R",
       "lu_parent_id": 20,
@@ -489,6 +532,7 @@ http://localhost:3213/api/task/488/history
       "environment_point_of_contact_email": "",
       "lu_name": "Orders",
       "lu_id": 21,
+      "reserve_retention_period_value": 5,  
       "be_description": "",
       "parameters": null,
       "environment_expiration_date": null,
@@ -503,6 +547,7 @@ http://localhost:3213/api/task/488/history
       "parent_lu_id": 20,
       "lu_description": null,
       "execution_status": "completed",
+      "reserve_ind": true,  
       "fabric_environment_name": null,
       "environment_name": "TAR",
       "delete_before_load": true,
@@ -569,6 +614,7 @@ http://localhost:3213/api/task/488/history
       "task_executed_by": "admin",
       "task_last_updated_date": "2021-06-16 15:34:40.555",
       "num_of_failed_ref_tables": 0,
+      "reserve_retention_period_type": "Days",
       "environment_id": 10,
       "selection_method": "R",
       "lu_parent_id": 20,
@@ -593,6 +639,7 @@ http://localhost:3213/api/task/488/history
       "environment_point_of_contact_email": "",
       "lu_name": "Billing",
       "lu_id": 22,
+      "reserve_retention_period_value": 5,
       "be_description": "",
       "parameters": null,
       "environment_expiration_date": null,
@@ -607,6 +654,7 @@ http://localhost:3213/api/task/488/history
       "parent_lu_id": 20,
       "lu_description": null,
       "execution_status": "completed",
+      "reserve_ind": true,
       "fabric_environment_name": null,
       "environment_name": "TAR",
       "delete_before_load": true,
@@ -673,6 +721,7 @@ http://localhost:3213/api/task/488/history
       "task_executed_by": "admin",
       "task_last_updated_date": "2021-06-16 15:34:40.555",
       "num_of_failed_ref_tables": 0,
+      "reserve_retention_period_type": "Days",
       "environment_id": 10,
       "selection_method": "R",
       "lu_parent_id": 20,
@@ -697,6 +746,7 @@ http://localhost:3213/api/task/488/history
       "environment_point_of_contact_email": "",
       "lu_name": "Collection",
       "lu_id": 23,
+      "reserve_retention_period_value": 5,  
       "be_description": "",
       "parameters": null,
       "environment_expiration_date": null,
@@ -711,6 +761,7 @@ http://localhost:3213/api/task/488/history
       "parent_lu_id": 20,
       "lu_description": null,
       "execution_status": "completed",
+      "reserve_ind": true,  
       "fabric_environment_name": null,
       "environment_name": "TAR",
       "delete_before_load": true,
@@ -777,6 +828,7 @@ http://localhost:3213/api/task/488/history
       "task_executed_by": "admin",
       "task_last_updated_date": "2021-06-16 15:34:40.555",
       "num_of_failed_ref_tables": 0,
+      "reserve_retention_period_type": "Days",  
       "environment_id": 10,
       "selection_method": "R",
       "lu_parent_id": null,
@@ -801,6 +853,7 @@ http://localhost:3213/api/task/488/history
       "environment_point_of_contact_email": "",
       "lu_name": "Customer",
       "lu_id": 20,
+      "reserve_retention_period_value": 5,
       "be_description": "",
       "parameters": null,
       "environment_expiration_date": null,
@@ -815,6 +868,7 @@ http://localhost:3213/api/task/488/history
       "parent_lu_id": null,
       "lu_description": null,
       "execution_status": "completed",
+      "reserve_ind": true,  
       "fabric_environment_name": null,
       "environment_name": "TAR",
       "delete_before_load": true,

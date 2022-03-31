@@ -9,20 +9,30 @@ The **TDM** folder in the Broadway Shared Objects folder includes generic flows 
 
 The **Templates** folder holds the flows used for creating DELETE and LOAD flows. Since the flows receive the Logical Unit name as an input parameter, they can be run several times for each LU.
 
-The following discusses the structure and functionality of various generic flows.
+The following discusses the structure and functionality of various generic flows. 
+
+### TDM Orchestration Flows
+
+The TDM orchestration flows manage the execution on each task's entity. The following orchestration flow are executed by the [TDM execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) on each task's entity:
+
+- [**TDMOrchestrator**](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---tdm-orchestration-flows) - this flow runs on every LU of a [load and/or delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types)  execution. It encapsulates all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as initiation activities, running the delete and/or load flows, managing the TDM execution process as one transaction, error handling and statistics gathering.
+
+  [Click to learn how to create the TDMOrchestrator](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#create-the-tdmorchestratorflow-from-the-template).
+
+- **TDMReserveOrchestrator** - this flow runs on [a Reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md) execution. Unlike the TDMOrchestrator flow that runs on each LU, this process is only executed once by each task execution, and marks the root entities as a [Reserved Entity](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the TDM DB.
 
 ### Initialization
 
-TDM task initialization is performed using the **InitiateTDMLoad.flow** utility which includes several steps like:
+TDM task initialization is performed using the **InitiateTDMLoad** flow which includes several steps like:
 
 * Setting the values of global variables on a session level and setting sync mode.
 * Setting the source environment based on the task's source before getting the LUI.
 * Getting the LUI from Fabric.
 * Setting the target environment as a preparation step for Delete and Load.
 
-The **InitiateTDMLoad.flow** is performed as the first step of the **TDMOrchestrator.flow** task's flow.
+The **InitiateTDMLoad.flow** is performed as the first step of the **TDMOrchestrator** task's flow.
 
-[Click to learn how to create the TDMOrchestrator.flow](11_tdm_implementation_using_generic_flows.md#step-3---create-the-tdmorchestratorflow-from-template).
+
 
 ### Reference
 

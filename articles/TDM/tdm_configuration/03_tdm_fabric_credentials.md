@@ -19,7 +19,7 @@ Do the following to access TDM APIs outside the TDM GUI:
 
 1. Create a secured API key in Fabric.
 2. Attach a Fabric role with AUTH_CLAIMS permission to the secured API key. This permission is needed to add the user id and the groups to the JWT claim.
-3. The external system generates a JWT token singed by the secrete key of the secured API. This JWT can be send as a Bearer token to Fabric APIs including the TDM APIs.
+3. The external system generates a JWT token signed by the secret key of the secured API. This JWT can be sent as a Bearer token to Fabric APIs including the TDM APIs.
 4. The TDM API can get the user and their Fabric roles (=user groups) from the Fabric user session.
 
 Click for more information about [Fabric Web Services Security](/articles/26_fabric_security/05_fabric_webservices_security.md).

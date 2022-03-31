@@ -74,10 +74,9 @@ A task execution is complete when it does not have pending or running executions
 
 #### Updating Execution Summary TDM Tables
 
-Updates the following TDM DB tables:
+Updates the following TDM DB table:
 
 - [task_execution_summary](02_tdm_database.md#task_execution_summary)
-- [task_exe_error_summary](02_tdm_database.md#task_exe_error_summary)
 
 #### Sync the Task Execution ID to TDM LU
 

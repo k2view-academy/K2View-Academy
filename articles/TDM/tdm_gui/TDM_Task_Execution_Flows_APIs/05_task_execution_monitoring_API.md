@@ -18,8 +18,44 @@ Returns the details of the current or last execution of the given task_id. If th
 
 ### API Input
 
-- **taskId**: this is a mandatory parameter.
-- **executionID**: this is an optional parameter. This parameter can be populated by a task execution id to monitor a selected task execution.
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl">
+<p><strong>Param Name</strong></p>
+</td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>taskID</strong></p>
+</td>
+<td width="200" valign="top">
+<p>Yes</p>
+</td>
+<td width="251">
+<p>The task&rsquo;s unique identifier.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>executionID</strong></p>
+</td>
+<td width="200" valign="top">
+<p>No</p>
+</td>
+<td width="251" valign="top">
+<p>This parameter can be populated by a task execution id to monitor a selected task execution.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### API Input Examples
 
