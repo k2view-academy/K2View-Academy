@@ -13,7 +13,7 @@ Each Actor in the **db** category requires an **interface** input argument that 
 
 The **schema**, **table**, **fields** and **sql** input arguments of **db** Actors are case-insensitive. 
 
-Data writing Actors can work in a batch mode. When the **batch** input argument is set to true, the Actor accumulates statements and performs them as a batch for better performance. It needs to be run in a transaction and the errors are reported as the batch is committed (every X record or on commit).
+Data writing Actors can work in a batch mode. When the **batch** input argument is set to true, the Actor accumulates statements and performs them as a batch for better performance. It needs to be run in a transaction and the errors are reported as the batch is committed (every X record or on commit). The default batch size is set to 1,000. 
 
 If the DB command executed by the **db** Actor fails, the actual SQL statement is sent to the log file. For example:
 

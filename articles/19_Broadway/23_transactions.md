@@ -27,19 +27,17 @@ The **Load** Stage inside the loop is transactional. The **Source** Stage before
 
 ![image](images/99_23_one_commit.PNG)
 
-**Commit per Iteration Example**
+**Commit Per Each Iteration Example**
 
 If a non-transactional Stage is added at the end of the loop, the commit is performed per each iteration.
 
 ![image](images/99_23_each_commit.PNG)
 
-**Batch Commit Example**
+**Commit Every X Records Example**
 
-When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
+When the data set is very big (for example, 1M records) and a commit is required every X records, you can do it using a Stage Condition and the **JavaScript** Actor. 
 
-The following example shows how to perform a commit every 5 records using a Stage Condition and the **JavaScript** Actor.
-
-Writing the following code, Stage 1 is only reached every fifth record:
+The following example shows how to perform a commit every 5 records. Writing the following code, Stage 1 is only reached every fifth record:
 
 ~~~javascript
 var i = contextLoop.index();
