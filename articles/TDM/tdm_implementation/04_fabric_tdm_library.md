@@ -186,7 +186,7 @@ Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/arti
 
 ## TDM_LIBRARY LU
 
-The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are as follows:
+The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. These utilities are described below
 
 ### Globals
 
@@ -289,7 +289,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are 
   </tr>
   </table>
 
-- **LU_PARAMS**, parameters table.  Must be added to each LU schema even when it is not required for defining parameters on the LU, whereby the LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS**, parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 

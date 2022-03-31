@@ -1,3 +1,5 @@
+<studio>
+
 # Table Population - Source Object Types
 
 There are two types of **Source Objects** in a Table Population object:
@@ -166,3 +168,4 @@ The comparison below analyzes the differences and the similarities between two d
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/01_table_population_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/03_creating_a_new_table_population.md)
 
+</studio>

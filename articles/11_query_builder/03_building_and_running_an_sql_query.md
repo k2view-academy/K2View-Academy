@@ -1,5 +1,8 @@
 # Using the Query Builder Window - Building and Running an SQL Query
 
+<studio>
+    
+    
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
 2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click **Execute Query**.
@@ -14,7 +17,20 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 
 
 ![image](/articles/11_query_builder/images/01_querytab.PNG)
+    
+</studio> 
+    
+<web>
+## Query Tab - Viewing the List of DB Objects
+* Click the **>** icon to expand or collapse the list in the DB objects. 
 
+![image](/articles/11_query_builder/images/02_querytab_WEB.PNG)  
+    
+Note that you can collapse or refresh the list of DB objects using the following icons: ![image](/articles/11_query_builder/images/01_querytabRefresh_WEB.PNG)    
+    
+</web>
+
+<studio>    
 ## Main Window - Editing an SQL Query  
 
 ### 1. Adding a DB Object to the Main Window
@@ -44,6 +60,9 @@ To remove columns from a DB object, do either:
 * Uncheck the selected columns. 
 * Right click the **DB object** > **Uncheck All** to remove all the table’s columns from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
 
+  
+    
+    
 ## Main Window - Advanced SQL Setting
 
 ### 5. Joining the Selected Tables 
@@ -106,6 +125,6 @@ Note that when running the Query Builder on a Fabric interface, you must run the
 
 The **Max rows** setting is used to set the maximum number of rows returned by the SQL query. The default value is 10,000 rows. You can set a different number of rows to be returned by the SQL query
 
-
+</studio> 
 
 [![Previous](/articles/images/Previous.png)](/articles/11_query_builder/02_query_builder_window.md)

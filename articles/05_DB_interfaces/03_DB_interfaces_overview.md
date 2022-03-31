@@ -88,6 +88,7 @@ The following fields are displayed for all types of DB interfaces:
 <p>Password used for database access authentication.</p>
 </td>
 </tr>
+<studio>
 <tr>
 <td width="210">
 <p><strong>Proactive Indicator</strong></p>
@@ -97,6 +98,7 @@ The following fields are displayed for all types of DB interfaces:
 <p>Note that starting from V6.5 this property is removed from the interface definition and is only supported on the LU Table Population.</p>
 </td>
 </tr>
+</studio>
 <tr>
 <td width="210">
 <p><strong>Custom Connection String</strong></p>
@@ -129,14 +131,14 @@ The following fields are displayed for all types of DB interfaces:
 <p>Maximum number of connections per interface per node. Note that this parameter should not exceed the maximum number of connections allocated by the DB.</p>
 </td>
 </tr>
-<tr>
+<studio><tr>
 <td width="210">
 <h4>Schema Filter</h4>
 </td>
 <td width="433">
 <p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
-</tr>
+</tr></studio>
 <tr>
 <td width="210">
 <h4>Connection Properties</h4>

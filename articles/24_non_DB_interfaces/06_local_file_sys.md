@@ -7,12 +7,31 @@ A Local File System interface can be used when creating an [Interface Listener f
 
 To create a new interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Local File System** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 
    ![image](images/local_1.PNG)
 
 2. Populate the connection's settings and click **Save**.
+
+</studio>   
+
+
+<web>
+
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Local File System** from the **File System** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new Local File System Interface, then click **Create**:
+   ![image](images/local_1WEB.PNG)
+
+3. Populate the connection's settings and click **Save**.
+   ![image](images/local_2WEB.PNG)
+
+</web>   
+
+
 
 ### Connection Settings
 
@@ -54,12 +73,15 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
    * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
+<studio>
+   
 4. In the Jobs window, select the **Broadway flow** and **Execution mode** and then save the job.
 
    ![images](images/02_sftp_2.PNG)
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
 
+</studio>
 
 
 [![Previous](/articles/images/Previous.png)](05_HTTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_custom_interface.md) 

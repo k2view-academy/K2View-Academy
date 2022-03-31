@@ -1,4 +1,29 @@
-# Fabric Studio - Exporting and Importing a Fabric Project
+# Exporting and Importing a Fabric Project
+
+<web>
+
+Currently (Release 7.0) the Web Studio cannot Import or Export a project. 
+
+If you wish to use an existing project on which you already have worked, do the following:
+
+* Go to your existing project directory on your PC/Mac.
+
+* Drag and Drop the **Implementation** (and optionally the **lib**) folders from your PC into the Web Studio explorer. Drag them into the project’s root empty area:
+
+  ![image](images/web/5_upload_proj.PNG)
+       
+
+* You can also upload only specific elements. In this case – go to the specific folder and upload it there.
+
+* The upload progress will be displayed in the lower right corner of the screen:
+
+  ![image](images/web/5_upload_progress.PNG)
+
+Note that because this is a standard file upload action, there is no validation on what you are uploading and where.
+
+</web>
+
+<studio>
 
 Fabric Studio has a proprietary encapsulation functionality that packages an entire project or selected components. Fabric projects can be backed up and restored using the Export and Import options that trigger the encapsulation and decapsulation processes.
 
@@ -23,16 +48,16 @@ You can import an entire exported project or specific branches of a Project Tree
 **Notes**  
 * There is no backwards support compatibility. Importing a project exported from a higher version of K2View Fabric Studio is not supported.
 * Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group. For example, to copy Java files from Shared Objects to Reference Java files. 
-* The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overrides the entire file including its Java functions.  
-* When updating a specific function in a Java file, it is recommended that you add the function to the Java file manually. 
+* The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overwrites the entire file including its Java functions.  
+* When updating a specific function in a Java file, add the function to the Java file manually. 
 * Java files are imported into the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
-* Importing [Globals](/articles/08_globals/01_globals_overview.md) to an existing Globals file does not override the existing Java file. Both files are merged into one file unless they have the same name, in which case, the new file overrides the existing file with the value of the imported variable. 
+* Importing [Globals](/articles/08_globals/01_globals_overview.md) to an existing Globals file does not overwrite the existing Java file. Both files are merged into one file unless they have the same name, in which case, the new file overwrites the existing file with the value of the imported variable. 
 
 ### How Can I Import a K2EXPORT File Into My Project?
 
 **Import Options**
 
-* **Import All**, imports the entire exported project together with notes regarding overridden data and creating new LU.
+* **Import All**, imports the entire exported project together with notes regarding overwritten data and creating new LU.
 * **Custom Import**, enables you to select the exported objects or group items to be imported.
 
 **Import All Process**
@@ -42,16 +67,16 @@ You can import an entire exported project or specific branches of a Project Tree
 ![image](images/04_11_01_k2export_file.PNG)
 
 2. Select the **file** and click **Open**:  
-    a. If the file name exists, click either **OK** to confirm or **Ignore** to override or skip the files.\
+    a. If the file name exists, click either **OK** to confirm or **Ignore** to overwrite or skip the files.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file’s name.
     
     ![image](images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
 3. A confirmation window opens asking you whether you want to:\
-    a. Override the specific file.\
-    b. Override all the conflicting files in the import package.\
-    c. Decline the override of the specific file.\
-    d. Decline the override of all the conflicting files. 
+    a. Overwrite the specific file.\
+    b. Overwrite all the conflicting files in the import package.\
+    c. Decline the overwrite of the specific file.\
+    d. Decline the overwrite of all the conflicting files. 
     
     ![image](images/04_11_03_confirmation_window.PNG)
 
@@ -65,7 +90,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
 ![image](images/04_11_06_custom_import.PNG)
 
-The Custom Import window displays the number of imported and overridden items.
+The Custom Import window displays the number of imported and overwritten items.
 
 3.  Right click the **Target Project Tree** to display a context menu with the following options:
 
@@ -78,16 +103,16 @@ The Custom Import window displays the number of imported and overridden items.
 4. Click **Import & Close** to confirm the Import process or close the window to cancel it. 
 5. A confirmation window opens asking you whether you want to:
 
-    a. Override the specific file.\
-    b. Override all the conflicting files in the import package.\
-    c. Decline the override of the specific file.\
-    d. Decline the override of all conflicting files. 
+    a. Overwrite the specific file.\
+    b. Overwrite all the conflicting files in the import package.\
+    c. Decline the overwrite of the specific file.\
+    d. Decline the overwrite of all conflicting files. 
 
 ![image](images/04_11_03_confirmation_window.PNG)
 
 **Notes** 
 
-When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects override the existing objects. 
+When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects overwrite the existing objects. 
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
@@ -96,3 +121,4 @@ When importing objects with the same name and location in the Project Tree, a ye
 
 
 
+</studio>

@@ -1,6 +1,15 @@
 # Environments Overview
 
+<web>
+
+Currently, the Web Studio does not support the Environments. 
+
+</web>
+
+<studio>
+
 Fabric Environments are used to run the same project implementation on various data sources and parameters by switching between them according to specific needs. For example:
+
 -  Defining environments for development. 
 -  UAT testing and production. 
 -  Switching between several different testing environments in the K2View TDM. 
@@ -21,3 +30,4 @@ An environment can be defined on a cluster level and on a session level. Therefo
 
 
 
+</studio>

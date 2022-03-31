@@ -1,3 +1,5 @@
+<studio>
+
 # Enrichment Function vs. Root Function - Comparison Analysis
 
 Enrichment functions and [Root functions](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) are both Fabric [Project functions](/articles/07_table_population/08_project_functions.md) that can run complex logic on [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) like invoking [Fabric commands](/articles/02_fabric_architecture/04_fabric_commands.md), complex data manipulations and SQL statements on different [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). Both Enrichment functions and Root functions run during an [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
@@ -120,3 +122,4 @@ The following table displays the comparison analysis between Enrichment and Root
 
 [![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/01_enrichment_function_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
 
+</studio>
