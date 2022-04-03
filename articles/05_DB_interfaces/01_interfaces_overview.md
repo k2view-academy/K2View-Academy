@@ -13,7 +13,7 @@ Fabric interfaces are defined as [Shared Objects](/articles/04_fabric_studio/12_
 
 <web>
   
-Fabric interfaces are defined as [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby they can be accessed by any objects in a project, such as [LUs](/articles/03_logical_units/01_LU_overview.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md#web-services-overview), or [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).  
+Fabric interfaces are defined as [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby they can be accessed by any objects in a project, such as [LUs](/articles/03_logical_units/01_LU_overview.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md#web-services-overview), [Broadway](/articles/19_Broadway/01_broadway_overview.md), or [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).  
   
 </web>
 
