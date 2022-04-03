@@ -17,13 +17,17 @@ To create a new LDAP interface, do the following:
 
 <web>
    
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **LDAP** from the **Others** section to open the **New Interface** window.
+1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
+   
+2. From the window that appears, select **LDAP**. Alternatively, you can scroll down to find this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+   
+   ![image](images/local_3WEB.png)
 
-2. Enter a suitable name for your new LDAP Interface, then click **Create**:   
+3. Enter a suitable name for your new LDAP Interface, then click **Create**:   
    
    ![image](images/11_ldap_1WEB.PNG)
 
-2. Populate the connection's settings and click **Save**.
+4. Populate the connection's settings and click **Save**.
      
    ![image](images/11_ldap_2WEB.PNG)
 
@@ -55,7 +59,7 @@ To create a new LDAP interface, do the following:
 </tr>
 </tr>
 <tr>
-<td><strong>Securiy Level</strong></td>
+<td><strong>Security Level</strong></td>
 <td>Constant that holds the JNDI environment property for specifying the security level to use - <i>java.naming.security.authentication</i>. The following values are defined: 
     <li><strong>none</strong> - use no authentication (anonymous bind).</li> 
     <li><strong>simple</strong> - use simple authentication (a cleartext password). </li>
