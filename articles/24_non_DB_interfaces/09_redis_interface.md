@@ -21,7 +21,7 @@ To create a new Redis interface, do the following:
 
 1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
    
-2. From the window that appears, select **Redis**. You will need to scroll down to see this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+2. From the window that appears, select **Redis**. Alternatively, you can scroll down to find this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
    
    ![image](images/local_3WEB.png)
    
