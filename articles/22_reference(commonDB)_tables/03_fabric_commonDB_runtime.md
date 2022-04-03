@@ -123,26 +123,27 @@ The following commands are available from the Fabric Command Line.
 
 ### Status per table, on all tables
 ```
-fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
+fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 ```
 
 ```
-|table_name|status          |backlog|node                                |current_session_transaction|sync_error|notes|
-+----------+----------------+-------+------------------------------------+---------------------------+----------+-----+
-|REF_USAGE |WAITING_FOR_SYNC|0      |b028b082-4ad3-477a-8188-c07bbeecc6e1|                           |          |     |
-|REF_USAGE |WAITING_FOR_SYNC|0      |cde47595-5222-4642-8d37-1757d6719693|                           |          |     |
-|REF_USAGE |WAITING_FOR_SYNC|0      |809f729c-9334-4565-825b-3daf026ba34d|                           |          |     |
-|REF_USAGE |WAITING_FOR_SYNC|0      |13dfb26f-f6d7-42f7-96d6-6d45742964be|                           |          |     |
-|REF_USAGE |WAITING_FOR_SYNC|0      |f550f905-777f-43e5-a96a-ea8a673a5a81|                           |          |     |
-|REF_USAGE |WAITING_FOR_SYNC|0      |80ca785a-82c5-4cbf-9fce-b9d27b3c1f63|                           |          |     |
+
+|table name               |status|node        |backlog|offset|offset duration (min)|num of messages|transaction id|transaction type|sub status|current session transaction|sync error|notes|
++-------------------------+------+------------+-------+------+---------------------+---------------+--------------+----------------+----------+---------------------------+----------+-----+
+|common.ref_Asset         |READY |fabric_debug|0      |0     |0                    |0              |              |IDLE            |          |                           |          |     |
+|common.ref_Asset_Stations|READY |fabric_debug|0      |0     |0                    |0              |              |IDLE            |          |                           |          |     |
+|common.ref_Asset_Type    |READY |fabric_debug|0      |0     |0                    |0              |              |IDLE            |          |                           |          |     |
 
 ```
 
-Note that, in this example six different nodes are waiting to sync the same REF_USAGE table
 
-- table_name: - the name of the Reference Table.
-- status: - one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses).
-- node: - the ID of the node operating the Reference table's synchronization.
+- table_name: the name of the Reference Table.
+- status: one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses).
+- node: the ID of the node operating the Reference table's synchronization.
+- backlog: number of messages still to be processed during the synchronization process
+- offset: total number of message retrieved during the synchronization
+- offset duration: time to process all messages
+
 
 
 ### Status per population, on all tables
@@ -151,15 +152,25 @@ fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
 ```
 
 ```
-|table_name |population            |verified_time          |start_sync_time        |end_sync_time          |start_write_time       |last_write_time        |next_planned_sync      |sync_error  |node                                |notes|
-+-----------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------+------------------------------------+-----+
-|REFNUMBERS |refpop1               |2020-09-10 17:23:52.204|2020-09-10 17:23:52.204|2020-09-10 17:25:32.212|2020-09-10 17:25:32.275|2020-09-10 17:25:32.276|1970-01-01 02:00:00.000|null        |bac20345-74b0-4d45-baea-746bef4af388|     |
-|REFSIMPLE  |refpop2               |2020-09-10 17:23:52.199|2020-09-10 17:23:52.199|1970-01-01 02:00:00.000|2020-09-10 17:25:32.262|1970-01-01 02:00:00.000|1970-01-01 02:00:00.000|null        |bac20345-74b0-4d45-baea-746bef4af388|     |
+
+|table name               |population     |verified time          |start sync time        |end sync time          |start write time       |last write time        |next planned sync      |sync error|node        |notes|
++-------------------------+---------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+----------+------------+-----+
+|common.REF_ASSET         |population.flow|2022-03-16 17:55:32.324|2022-03-16 11:59:13.048|2022-03-16 11:59:13.631|2022-03-16 11:59:13.639|2022-03-16 11:59:13.743|1970-01-01 02:00:00.000|null      |fabric_debug|     |
+|common.REF_ASSET_STATIONS|population.flow|2022-03-16 17:55:32.346|2022-03-16 11:59:13.048|2022-03-16 11:59:14.460|2022-03-16 11:59:13.774|2022-03-16 11:59:14.476|1970-01-01 02:00:00.000|null      |fabric_debug|     |
+|common.REF_ASSET_TYPE    |population.flow|2022-03-16 17:55:32.361|2022-03-16 11:59:13.049|2022-03-16 11:59:13.238|2022-03-16 11:59:13.293|2022-03-16 11:59:13.295|1970-01-01 02:00:00.000|null      |fabric_debug|     |
+
+
 ```
 
-- table_name: - the name of the Reference table
-- population: - the name of the Population querying the External Sources
+- table_name: the name of the reference table
+- population: the name of the population querying the external sources
+- verified time: timestamp when last sync was verified  
+- start/end sync time: Sync time start and end times
+- start/last write time: Write time of first and last message
+- next planned sync: Timestamp for next sync
+- sync error: error message 
 - node: The ID of the node operating the sync
+- notes: details 
 
 
 
