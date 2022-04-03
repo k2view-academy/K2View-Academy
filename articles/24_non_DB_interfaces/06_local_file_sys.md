@@ -21,13 +21,21 @@ To create a new interface, do the following:
 
 <web>
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Local File System** from the **File System** section to open the **New Interface** window.
+1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
+   
+2. From the window that appears, select the interface type. Scroll down to see more interface types. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+   
+   ![image](images/local_3WEB.png)
+   
+3. Enter a suitable name for your new interface, then click **Create**:
+   ![image](images/local_1WEB.PNG). 
+   
+4. Set "Active" to ON. 
 
-2. Enter a suitable name for your new Local File System Interface, then click **Create**:
-   ![image](images/local_1WEB.PNG)
-
-3. Populate the connection's settings and click **Save**.
+4. Populate the connection's settings and click **Test Connection**.
    ![image](images/local_2WEB.PNG)
+   
+5. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
 
 </web>   
 
