@@ -19,13 +19,17 @@ To create a new Redis interface, do the following:
 
 <web>
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Redis** from the  **Fabric Extensions** section to open the **New Interface** window.
-
-2. Enter a suitable name for your new Redis Interface, then click **Create**:
+1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
+   
+2. From the window that appears, select **Redis**. You will need to scroll down to see this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+   
+   ![image](images/local_3WEB.png)
+   
+3. Enter a suitable name for your new Redis Interface, then click **Create**:
    
    ![image](images/09_redis_1WEB.PNG)
 
-2. Populate the connection settings and click **Save**. 
+4. Populate the connection settings and click **Save**. 
    
    ![image](images/09_redis_2WEB.PNG)
 
