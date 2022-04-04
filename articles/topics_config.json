@@ -13,7 +13,7 @@
 		{
 			"display name": "Fabric 6.2",
 			"branch name": "Academy_6.2",
-			"build": true
+			"build": false
 		}
 	],
 	"Views": [
