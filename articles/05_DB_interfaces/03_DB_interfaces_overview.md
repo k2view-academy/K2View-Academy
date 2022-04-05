@@ -26,7 +26,7 @@ The following fields are displayed for all types of DB interfaces:
 <p><strong>Name</strong></p>
 </td>
 <td width="700pxl">
-<p>Database Filename.</p>
+<p>Database Filename</p>
 </td>
 </tr>
 <tr>
@@ -47,7 +47,12 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
+<studio>
 <p><strong>Server</strong></p>
+</studio>
+<web>
+<p><strong>Host</strong></p>
+</web>
 </td>
 <td width="433">
 <p>Hostname or IP address of the database server.</p>
@@ -90,10 +95,12 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
+<studio>
 <p><strong>Custom Connection String</strong></p>
 </td>
 <td width="433">
 <p>Default = False. When set to True, the Custom Connection string is editable.</p>
+</studio>
 </td>
 </tr>
 <tr>
@@ -106,7 +113,12 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
+<studio>
 <p><strong>Min Connection Number</strong></p>
+</studio>
+<web>
+<p><strong>Minimum Connections</strong></p>
+</web>
 </td>
 <td width="433">
 <p>Minimum number of connections per interface allocated by Fabric per node that remain open throughout the entire time that the Fabric project runs.</p>
@@ -114,20 +126,34 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
+<studio>
 <p><strong>Max Connection Number</strong></p>
+</studio>
+<web>
+<p><strong>Maximum Connections</strong></p>
+</web>
 </td>
 <td width="433">
 <p>Maximum number of connections per interface per node. Note that this parameter should not exceed the maximum number of connections allocated by the DB.</p>
 </td>
 </tr>
-<studio><tr>
+<studio>
+<tr>
 <td width="210">
 <h4>Schema Filter</h4>
 </td>
 <td width="433">
 <p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
-</tr></studio>
+</studio>
+<tr>
+<td width="210">
+<h4>Post Connection Commands</h4>
+</td>
+<td width="433">
+<p>Optional - a list of SQL commands that are to be executed post JDBC interface connection on the DB interface. </p>
+</td>
+</tr>
 <tr>
 <td width="210">
 <h4>Connection Properties</h4>
