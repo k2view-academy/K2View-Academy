@@ -70,7 +70,7 @@ The following are some of the methods you can use to add a table to an [LU schem
 
    * The table is automatically created with a [population](/articles/07_table_population/14_table_population_based_Broadway.md) and added to the LU schema.
 
-2. From the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left panel, as described [here](05_create_a_new_LU_object).
+2. From the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left panel, as described [here](/articles/03_logical_units/05_create_a_new_LU_object.md).
 
    
 
