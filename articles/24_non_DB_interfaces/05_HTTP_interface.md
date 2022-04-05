@@ -25,7 +25,7 @@ To create a new HTTP interface, do the following:
    
 3. Populate the connection's settings and click **Save**.
    
-   ![image](images/03_http_2WEB.png)
+   ![image](images/03_http_2WEB.PNG)
 
 </web>
 
