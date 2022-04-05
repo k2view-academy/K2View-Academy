@@ -35,4 +35,4 @@ Note that for the changes to become effective for the Fabric object (for example
 
 [Click for more information about Deployment from the Fabric Studio.](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio)
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/06_editing_interface_settings.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/06_editing_interface_settings.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md)
