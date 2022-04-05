@@ -19,11 +19,11 @@ To create a new SSH interface, do the following:
 
 2. Enter a suitable name for your new SSH Interface, then click **Create**: 
    
-   ![image](images/10_ssh_1WEB.png)
+   ![image](images/10_ssh_1WEB.PNG)
 
 3. Populate the connection's settings and click **Save**.
     
-   ![image](images/10_ssh_2WEB.png)
+   ![image](images/10_ssh_2WEB.PNG)
 
 </web>
 
