@@ -32,10 +32,10 @@ To create a new interface, do the following:
    
 4. Set "Active" to ON. 
 
-4. Populate the connection's settings and click **Test Connection**.
+5. Populate the connection's settings and click **Test Connection**.
    ![image](images/local_2WEB.PNG)
    
-5. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
+6. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
 
 </web>   
 
