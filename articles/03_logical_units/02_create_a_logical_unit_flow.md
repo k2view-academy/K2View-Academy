@@ -16,7 +16,7 @@ Creating a Logical Unit involves several steps. The following is an overview of 
 You can also duplicate a Logical Unit your project and save it as a new LU:
 
 1. Right click the **Logical Unit** > **Duplicate Logical Unit**.
-1. Enter a **name** for the new (duplicated) **Logical Unit** in the **Name** field.       
+2. Enter a **name** for the new (duplicated) **Logical Unit** in the **Name** field.       
 
 </studio>
 
@@ -25,7 +25,7 @@ You can also duplicate a Logical Unit your project and save it as a new LU:
 You can also duplicate a Logical Unit your project and save it as a new LU:
 
 1. Right click the **Logical Unit** > **Duplicate**.
-1. Enter a **name** for the new (duplicated) **Logical Unit** in the **Duplicate** field.       
+2. Enter a **name** for the new (duplicated) **Logical Unit** in the **Duplicate** field.       
 
 </web>
 
