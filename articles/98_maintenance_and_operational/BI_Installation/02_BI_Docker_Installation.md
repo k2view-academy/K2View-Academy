@@ -12,7 +12,7 @@ When you have Fabric and/or PostgreSQL server running on a docker on your local 
   * On Linux - trough the Docker0 interface.
   * On Windows - trough the WSL network interface.
   * Not available for MAC.
-* Install the PostgreSQL locally to use it for Storage Management DB
+* Install the PostgreSQL locally to use it for Storage Management DB.
 * Keep the default SQLite as Storage Management DB. Note that the default SQLite DB can be used for demo or training purposes only.
 
 ## Docker Installation on Linux / Windows / OSX
