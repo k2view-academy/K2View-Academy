@@ -4,6 +4,17 @@
 
 The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric BI starts from ExagoBI application installation. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
 
+## Prerequisites
+
+When you have Fabric and/or PostgreSQL server running on a docker on your local machine (Windows or MAC),  use **docker compose** to join all containers in the same network based on Docker Installation instructions below or do one of the following:
+
+* Use the Docker GW:
+  * On Linux - trough the Docker0 interface.
+  * On Windows - trough the WSL network interface.
+  * Not available for MAC.
+* Install the PostgreSQL locally to use it for Storage Management DB.
+* Keep the default SQLite as Storage Management DB. Note that the default SQLite DB can be used for demo or training purposes only.
+
 ## Docker Installation on Linux / Windows / OSX
 
 1. Download the Docker image (D_k2view_BI_v2021.1.15.tar.gz) from [here](https://download.k2view.com/index.php/s/vZ2heS6xpqtMX0w).
