@@ -145,6 +145,7 @@ The following fields are displayed for all types of DB interfaces:
 <td width="433">
 <p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
+</tr>
 </studio>
 <tr>
 <td width="210">
