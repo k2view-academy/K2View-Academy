@@ -100,15 +100,15 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Default = False. When set to True, the Custom Connection string is editable.</p>
-</studio>
 </td>
 </tr>
+</studio>
 <tr>
 <td width="210">
 <p><strong>Connection String</strong></p>
 </td>
 <td width="433">
-<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
+<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/. To edit the connection string, click on the pencil icon on the right. </p>
 </td>
 </tr>
 <tr>
