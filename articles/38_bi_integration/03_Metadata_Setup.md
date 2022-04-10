@@ -34,7 +34,7 @@ To set up Fabric as a data source, use the Fabric-Connection template in the **A
    * Connection String - define as follows:
 
       ~~~bash
-      urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
+      urls=<host>:5124;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
       ~~~
 
 2. Click ![image](images/bi_setup_7.PNG)to test the connection.
