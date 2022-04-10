@@ -98,7 +98,7 @@ The following fields are displayed for all types of DB interfaces:
 <p>Default = False. When set to True, the Custom Connection string is editable.</p>
 </td>
 </tr>
-  </studio>
+</studio>
 <tr>
 <td width="210">
 <p><strong>Connection String</strong></p>
