@@ -1,3 +1,5 @@
+<studio>
+
 # Persistence Strategy
 
 The persistence of the data published by the Auditing mechanism can be controlled. By default, the persistence is defined in the Cassandra cluster used by Fabric (k2audit.k2_auditing table), however this can be customized and published to a Kafka queue, a file system or another platform or technology.
@@ -67,3 +69,4 @@ public class SamplePersist implements AuditBeanPersistence {
 
 [![Previous](/articles/images/Previous.png)](02_filtering_strategy.md)
 
+</studio>

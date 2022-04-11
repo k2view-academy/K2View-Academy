@@ -7,7 +7,7 @@ The Migrate command is a specific use-case of the Batch command which deals excl
 ```MIGRATE LU[@<DC>] with ASYNC='true';```
 
 Behind the scenes, Fabric activates the Batch command when running the Migrate command. 
-All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) can be applied to the Migrate command **without specifying the FABRIC_COMMAND parameter**.
+All the verbs defined for the [Batch process commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) can be applied to the Migrate command **without specifying the FABRIC_COMMAND parameter**.
 
 For example:
 The following two commands are equivallent.

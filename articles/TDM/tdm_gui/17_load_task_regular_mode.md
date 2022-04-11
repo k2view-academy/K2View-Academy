@@ -143,18 +143,18 @@ There are several types of parameters:
 - **Number**, the TDM GUI displays the minimum and maximum values on this parameter. If the populated values exceed a parameter's range, an error message is displayed.
   
 - **Date**, populate the value using the following format: **YYYY-MM-DD**. 
-  
+
   - Notes: 
-  
+
     - The date format is defined in **DATETIME_FORMAT**  parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is  'yyyy-MM-dd HH:mm:ss.SSS'.
-  
+
     - The parameter's search can be based either on a Date (removing the time from the Date format) or Datetime.  
-  
+
       Examples:
-  
+
       - 2021-12-28
       - 2022-04-03 10:00:00
-  
+
     - The date value is set without quoting.
   
 - **Text**, populate the value using free text.
