@@ -156,11 +156,8 @@ There are several types of parameters:
       - 2022-04-03 10:00:00
 
     - The date value is set without quoting.
-
-      
-
-- **Text**, populate the value using free text.
   
+- **Text**, populate the value using free text.
 #### How Do I Add a Group of Parameters?
 
 Click **Add Group**. 
