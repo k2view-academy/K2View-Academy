@@ -1,13 +1,14 @@
 # Create a New Logical Unit (LU) Object
 
-<studio>
-
 A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be added by either:
 
 * Creating a new Logical Unit.
-* Duplicating a Logical Unit and saving it. 
+* Duplicating a Logical Unit. 
 
 ### How Do I Create a New Logical Unit (LU)?
+
+<studio>
+
 1. Go to **Project Tree** > right click **Logical Units** > **New Logical Unit** > **Logical Unit** dialog box. 
 2. Enter the **Name** of the new **Logical Unit**. 
 3. Do either: 
@@ -15,25 +16,13 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
     * Do not check **Open LU Auto Discovery** and manually build the **Logical Unit**. 
 4. Click **OK**.
 
-[Click here for more information about the LU Creation Steps.](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
-
-### How Do I Duplicate a Logical Unit (LU)?
-
-1. Go to **Project Tree** > right click **Logical Unit** > **Logical Unit** dialog box. 
-2. Enter the **Name** of the new (duplicated) **Logical Unit**. 
-3. Click **OK**.  
-
-[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/06_auto_discovery_wizard.md)
-
 </studio>
 
 <web>
 
-A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md), also known as a Data Product, can be added in the Fabric Web Studio as follows:
-
 1. Go to **Project Tree** > right click **Logical Units / Data Products** > **New Data Product**. 
 
-2. Populate the **Name** of the new **Logical Unit** and click **Enter** to save it.
+2. Populate the **Name** of the new **Logical Unit** and click **Enter**.
 
 3. Proceed to manual creation of the LU schema:
 
@@ -51,7 +40,23 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md), also kn
 
    * Save your changes once all the required tables are added to the LU Schema.
 
+</web>
 
+[Click here for more information about the LU Creation Steps.](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
+
+### How Do I Duplicate a Logical Unit (LU)?
+
+1. Go to **Project Tree** > right click the origin logical unit > **Duplicate**. 
+2. Enter the **Name** of the new (duplicated) **Logical Unit**. 
+3. Click **OK**.  
+
+<studio>
+
+[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/06_auto_discovery_wizard.md)
+
+</studio>
+
+<web>
 
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_add_table_to_a_schema.md)
 
