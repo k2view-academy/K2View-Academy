@@ -21,11 +21,11 @@
 2. Expand **Web Services** > **Java** > **resources**
 3. Right click **resources** and select **New Graphit**. 
 
-    ![web graphit figure where you enter the name of the new graphit file]
+    ![](/articles/15_web_services_and_graphit/17_Graphit/images/01_new_graphit_file_web.png)
 
 3. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
 
-    ![web graphit figure showing the new graphit file in the tree]
+    ![](/articles/15_web_services_and_graphit/17_Graphit/images/02_graphit_resource_file_web.png)
     
 </web>
 
