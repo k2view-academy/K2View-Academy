@@ -72,7 +72,7 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_cut.png" width="20" height="20"></img> **Cut** to delete a node on the node level. 
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/07_hamburger.png" width="20" height="20"></img> and drag a node to another location in the hierarchy. 
  
-</web>
+</web> 
 
 
 ### How Do I Assign a Name To a Node?
