@@ -9,6 +9,8 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 - OS: Ubuntu Server 20.04, with the latest update.
 - Disable SELinux.
 - Apache Web server with installed modules:  mono-vbnc, mono-fastcgi-server4, libapache2-mod-fcgid.
+  - Note that if you need to run Fabric BI in secured environment, Apache must be installed with SSL support and certificate (according to your organization's procedure).
+
 - PHP 7.1 engine with the following modules : php-common php-opcache php-mcrypt php-cli php-gd php-curl php-xml
 - MONO: ExagoBI is compatible only with the following builds: 5.10.1.20 or 6.8.0.105, in case it's preinstalled, it will need to be removed prior to the ExagoBI installation (a   compatible version will be installed trough the Wizard)
 - Hardware - TDB.
@@ -35,15 +37,20 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    ~~~
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
-   
+
 5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
 6. In Cloud environments (such as AWS and Azure) or when Local IP is not accessible (behind NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** needs to be updated with the correct DNS/IP record.
-Update the line:
-~~~
-webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl> 
-~~~
-​		and replace the local IP with the current Information.
+  Update the line:
+
+  ~~~xml
+  <webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl> 
+  ~~~
+
+
+​		and replace the **local IP** with the current Information.  
+
+​		Note that if you need to run Fabric BI in secured environment, **http** should be 		replaced by **https** in the above line.
 
 
 7. In order to start the environment or after system restart make sure the Apache service and FastCGI service are running.
