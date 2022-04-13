@@ -45,7 +45,7 @@ When you have Fabric and/or PostgreSQL server running on a docker on your local 
 
    * Edit the file with a text editor, update the URL with the host IP or DNS name:
    
-   ~~~
+   ~~~xml
    <webreportsbaseurl>http://127.0.0.1/Exago</webreportsbaseurl>
    ~~~
    

@@ -3,7 +3,7 @@
 ExagoBI periodically released new versions. The following article describes the process of the ExagoBI upgrade for the existing BI implementation.
 
 ## Prerequisites
-Working installation of ExagoBI previous version.
+Working installation of Fabric BI previous version.
 
 ## Upgrading Linux
 
