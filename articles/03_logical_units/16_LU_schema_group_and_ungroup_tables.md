@@ -28,12 +28,22 @@ Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon.
 
 ![image](images/web/1_web_lu_overview.PNG)
 
- 
 ### How Can I Ungroup LU Tables? 
 
+##### Remove tables from a group
+
+When you wish to remove specific table/s from a group, while others will remain in the group, do the following:
+
 1. Select one or more tables to be removed from the group.
-2. Click the <img src="images/web/ungroup.PNG" style="zoom:67%;" /> icon in the **Logical Unit** toolbar.
+2. Click the <img src="images/web/ungroup.PNG" style="zoom:67%;" /> icon in the **Logical Unit Schema** toolbar.
 3. When all the tables are removed from the group, the group is deleted.
+
+##### Ungroup a group
+
+When you wish to remove a group - ungroup all tables from a group - do the following:
+
+1. Select the group. You will see a blue border around it.
+2. Click the <img src="images/web/ungroup.PNG" style="zoom:67%;" /> icon in the **Logical Unit Schema**  toolbar.
 
  </web>
 

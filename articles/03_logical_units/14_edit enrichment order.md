@@ -11,7 +11,7 @@ An Enrichment function is a Java function without input/output parameters that i
 The execution order of all Enrichment functions is determined at the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) level in the Enrichment Order tab. Only Enrichment functions that are directly related to specific tables are included in the display.
 
 ### How Can I Change the Enrichment Order? 
-Use the **Up** and **Down** arrows in the **Enrichment Order** tab of the [LU schema](03_LU_schema_window.md) to change the execution order of its Enrichment functions. 
+Use the **Up** and **Down** arrows in the **Enrichment Order** <studio>tab</studio><web>field at the **Enrichment Order List** section which appears within the **Properties** panel</web> of the [LU schema](03_LU_schema_window.md), to change the execution order of its Enrichment functions. 
 
 
 

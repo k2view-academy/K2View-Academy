@@ -8,8 +8,8 @@ A Table Population object holds the transformation and mapping rules of the data
 
 **From the Schema Window**
 
-1. Go to the **Project Tree** > **Logical Unit** > **Schema** to open the Schema window.
-1. Click on the **LU table** > select **Add Population** from the context menu. 
+1. Go to the **Project Tree** > **Logical Units / Data Products** > relevant logical unit >  **Schema** to open the Schema window.
+1. Click on the table > select **Add Population** from the context menu. 
 1. Populate the population name. The new population flow is open. 
 1. Add input argument(s) to the **PopulationArgs** Actor, make it **External** and save the population. 
 1. Re-open the schema. The new population is automatically added to the LU schema. 
@@ -36,6 +36,20 @@ Note that you can edit the execution order of the new population if needed.
 1. Re-open the **LU schema** screen.
 1. **Save** the changes to remove the deleted population object from the LU schema.
 
-<studio>Note that if the LU schema is open, you can click the **Refresh** icon on the toolbar.</studio>
+Note that if the LU schema is already opened, you can click the **Refresh** icon on the toolbar.
+
+<web>
+
+In either ways - reopening the file or refreshing, you will see a popup notification at right bottom of the screen, indicating and hinting you about the change. it will look like this:
+
+![](images/web/11_delete_refresh_toaster.png)
+
+To verify your changes and what was deleted, open the "Problems" panel view (can be opened from the top menu > View  or by pressing CTRL+SHIFT+M). For example:
+
+![](images/web/11_delete_problems.png)
+
+ </web>
+
+
 
 [![Previous](/articles/images/Previous.png)](10_delete_table_from_a_schema.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_LU_hierarchy_and_linking_table_population.md)

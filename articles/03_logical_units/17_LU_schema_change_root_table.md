@@ -24,13 +24,15 @@ You must link the previous Root Table to a parent table. This can be the new Roo
 
 2. Set it as root using the table context menu. Only a table with no input connections can be set as root.
 
-   ![](images/web/5_create_lu_schema_set_root.PNG)
+   ![](images/web/5_create_lu_schema_set_root1.png)
 
 3. After the table is set as root, the table properties tab is opened to set the required Instance ID column. In addition, the color of the root table's header is changed to dark blue.
 
+3. link the previous Root Table to a parent table.
+
 4. Save your changes once all the required tables are added to the LU Schema.
 
-You must link the previous Root Table to a parent table. 
+
 
 [![Previous](/articles/images/Previous.png)](16_LU_schema_group_and_ungroup_tables.md)
 
