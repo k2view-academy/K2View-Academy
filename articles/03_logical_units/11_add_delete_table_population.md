@@ -20,8 +20,8 @@ A Table Population object holds the transformation and mapping rules of the data
 **From the Project Tree**
 
 1. Go to the **Project Tree** > **Logical Unit** > right click the **LU table** > select **New Population** to create a new population object.  
-2. Open the **LU schema **window. The new population is automatically added to the LU schema. 
-3. Link the new **population** to its **parent **table.
+2. Open the **LU schema** window. The new population is automatically added to the LU schema. 
+3. Link the new **population** to its **parent** table.
 
 Note that you can edit the execution order of the new population if needed.
 

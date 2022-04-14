@@ -67,8 +67,6 @@ An LU schema structure displays a hierarchical representation of the data relate
 
 **Note:** An LU table can be added to an LU schema without a Table Population object. This table is not populated by the sync of the instance, but can be populated by a separate transaction.
 
-<studio>
-
 
 ## What Are the Table Population's Input Arguments?
 <web>
@@ -160,4 +158,3 @@ Click the link and press the **Delete** key<studio>, or right click and select *
 
 
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/11_add_delete_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/13_disable_enable_populations_in_schema.md)
-

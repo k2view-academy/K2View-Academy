@@ -1,4 +1,4 @@
-# Editing and Adding a Table to an LU Schema
+# Adding a Table to an LU Schema
 
 An [LU table](/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 

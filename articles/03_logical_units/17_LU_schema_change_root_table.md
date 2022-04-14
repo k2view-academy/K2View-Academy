@@ -12,10 +12,6 @@ Each LU schema must have a [Root Table](/articles/01_fabric_overview/02_fabric_g
 
 You must link the previous Root Table to a parent table. This can be the new Root Table.
 
-[Click for more information about Defining a Root Table and Instance ID Column.](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
-
-[![Previous](/articles/images/Previous.png)](16_LU_schema_group_and_ungroup_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_LU_schema_refresh_LU_options.md)
-
 </studio>
 
 <web>
@@ -32,8 +28,10 @@ You must link the previous Root Table to a parent table. This can be the new Roo
 
 4. Save your changes once all the required tables are added to the LU Schema.
 
-
-
-[![Previous](/articles/images/Previous.png)](16_LU_schema_group_and_ungroup_tables.md)
-
 </web>
+
+[Click for more information about Defining a Root Table and Instance ID Column.](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
+
+
+
+[![Previous](/articles/images/Previous.png)](16_LU_schema_group_and_ungroup_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_LU_schema_refresh_LU_options.md)
