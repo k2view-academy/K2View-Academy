@@ -152,11 +152,13 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
           -   IDLE
           
 - Sub_status:
+
           - In process
           - Index rebuild
           - Done                                                                                                            
 
 - Current Session Transaction values:
+
           - Started: the transaction has started on the current session, but is not committed yet
           - Commit in progress
           - Completed - commit is completed
