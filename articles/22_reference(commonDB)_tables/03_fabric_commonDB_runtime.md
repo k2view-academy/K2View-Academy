@@ -143,7 +143,23 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 - backlog: number of messages still to be processed during the synchronization process
 - offset: total number of message retrieved during the synchronization
 - offset duration: time to process all messages
-
+- Transaction Id: current processed transaction id
+          -   LONG_SNAPSHOT
+          -   SHORT_SNAPSHOT
+          -   SHORT_TRANSACTION
+          -   LONG_TRANSACTION
+          -   IDLE
+- Sub_status:
+          - In process
+          - Index rebuild
+          - Done                                                                                                            
+- Current Session Transaction values:
+          - Started: the transaction has started on the current session, but is not committed yet
+          - Commit in progress
+          - Completed - commit is completed
+          - Rollback in progress
+          - Rolled back
+          - Rollback is completed                                                                             
 
 
 ### Status per population, on all tables
