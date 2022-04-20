@@ -140,10 +140,12 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 - table_name: the name of the Reference Table.
 - status: one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses).
 - node: the ID of the node operating the Reference table's synchronization.
-- backlog: number of messages still to be processed during the synchronization process
-- offset: total number of message retrieved during the synchronization
-- offset duration: time to process all messages
-- Transaction Id: current processed transaction id
+- backlog: number of messages still to be processed during the synchronization process.
+- offset: total number of message retrieved during the synchronization.
+- offset duration: time to process all messages.
+- Transaction Id: current processed transaction id.
+
+- Transaction Type:
           
           -   LONG_SNAPSHOT
           -   SHORT_SNAPSHOT
