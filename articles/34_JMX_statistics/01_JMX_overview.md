@@ -24,4 +24,4 @@ Various statistics using JMX counters in Fabric can be gathered. The following i
 Note that all JMX metrics can be accessed using monitoring tools such as Grafana or Kibana.
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/02_JMX_infoformat.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/02_JMX_format.md)
