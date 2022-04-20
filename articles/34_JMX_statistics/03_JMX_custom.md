@@ -75,4 +75,4 @@ This method is returned by calling ```.close()``` on this object to indicate the
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_info.md)
+[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_format.md)
