@@ -31,7 +31,7 @@ Environment Owners can execute the following activities in their environment:
 
 - Edit the environment details.
 - Add or remove [systems](11_environment_products_tab.md) from the environment.
-- Set [environmen variables](12_environment_globals_tab.md).
+- Set [environment variables](12_environment_globals_tab.md).
 - Create, edit or delete [permission sets](10_environment_roles_tab.md) and define permissions per permission set.
 - Attach users to TDM environment's permission sets.
 
@@ -39,7 +39,7 @@ Environment Owners cannot add or delete an environment and cannot add or remove 
 
 ## Tester User
 
-A Tester User can create, execute, and extract or load tasks based on their TDM environment's permission set. 
+A Tester User can create and execute TDM tasks based on their TDM environment's permission set. 
 
 ## Permission Groups Mapping
 
