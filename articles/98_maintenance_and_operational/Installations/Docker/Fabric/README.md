@@ -1,6 +1,7 @@
 <strong>Fabric Docker Installation<strong>
 
 <ul>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V6.5.7.md">Fabric Full Docker Installation for V6.5.7</a></li>
 <li><a href="/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V6.5.6.md">Fabric Full Docker Installation for V6.5.6</a></li>      
 <li><a href="/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V6.5.5.md">Fabric Full Docker Installation for V6.5.5</a></li>
 <li><a href="/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V6.5.4.md">Fabric Full Docker Installation for V6.5.4</a></li>
