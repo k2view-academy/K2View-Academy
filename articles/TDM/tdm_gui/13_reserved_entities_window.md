@@ -1,6 +1,6 @@
 # Reserved Entities Window
 
-The Reserved Entities window enables a management of the [reserve entities]().
+The Reserved Entities window enables a management of the [reserve entities](/articles/TDM/tdm_architecture/08_entity_reservation.md).
 
 Each user can view the list of reserved entities on their environments:
 
