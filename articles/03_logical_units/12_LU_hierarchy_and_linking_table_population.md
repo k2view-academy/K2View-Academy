@@ -48,22 +48,19 @@ An LU schema structure displays a hierarchical representation of the data relate
   
     ![image](images/03_12_link_tables4.png)
 
+​	</studio>
 
-* The DB query population filters the selected data based on the link to the parent LU table. For example, the parent table of ADDRESS is CUSTOMER. The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LU Instance.
+​	<web>
 
-  </studio>
+* **Example 1:** The CASE_NOTE Table Population object can be linked to the CASES LU table by two columns: CASE_ID and NOTE_DATE. This is a valid link.
 
-  <web>
+  <img src="images/web/12_link_tables_3.PNG" alt="image" style="zoom:80%;" />
 
-  * **Example 1:** The CASE_NOTE Table Population object can be linked to the CASES LU table by two columns: CASE_ID and NOTE_DATE. This is a valid link.
+* **Example 2:** Linking the CASE_NOTE Table Population object to two different LU tables - CASES and ACTIVITY is invalid. The validation error will be displayed in the Problems pane upon save.
 
-    <img src="images/web/12_link_tables_3.PNG" alt="image" style="zoom:80%;" />
+  <img src="images/web/12_link_tables_4.PNG" alt="image" style="zoom:80%;" />
 
-  * **Example 2:** Linking the CASE_NOTE Table Population object to two different LU tables - CASES and ACTIVITY is invalid. The validation error will be displayed in the Problems pane upon save.
-
-    <img src="images/web/12_link_tables_4.PNG" alt="image" style="zoom:80%;" />
-
-  </web>
+</web>
 
 **Note:** An LU table can be added to an LU schema without a Table Population object. This table is not populated by the sync of the instance, but can be populated by a separate transaction.
 
