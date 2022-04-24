@@ -22,14 +22,28 @@ The CDC Message publishes transaction messages to **Kafka**  for each UPDATE, IN
 
 When the MicroDB is saved into Cassandra, the transaction's thread sends a **Publish Acknowledge**  message to the Kafka **CDC_TOPIC**. 
 
-The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](03_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic. 
+The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](03_cdc_messages.md) for each transaction. **Each CDC consumer has its own Kafka topic and its own CDC Publisher job**. 
 Note that Fabric concatenates the cluster id to each topic name if there are several Fabric clusters on one Cassandra cluster.
 
+By default, Fabric starts one instance of a  CDC Publisher job per CDC type. In case the **Kafka topic has multiple partitions, it is recommended to start additional instances of the CDC Publisher jobs and start one CDC Publisher jobs instance per each Kafka partition**. Kafka binds a partition to a job instance. 
+
+See an example how to start a CDC Publisher job instance using the **startjob** Fabric command:
+
+startjob CDC_TRANSACTION_PUBLISHER NAME='CDC_TRANSACTION_PUBLISHER' UID='PUBLISHER1' ARGS='{"consume_topic":"CDC_TOPIC","publish_topic":"Search","cdc_type":"Search","env":"_dev","group_id":"Search_gid", "max.poll.interval.ms":"100", "max.poll.records":"100", "session.timeout.ms:" "1000"} ';
+
+A separate UID needs to be set on each job instance. The "publish_topic" attribute needs to be populated by the CDC type, and the "group_id" needs to be populated by a concatenation of the CDC type and "_gid".
+
 Notes: 
+
 - Each transaction can generate multiple CDC messages. For example, if an LUI sync inserts five records into an LU table, a separate CDC message is generated for each insert.
--	All CDC messages initiated by a given transaction have the same value in their **trxId** property.
+
+- All CDC messages initiated by a given transaction have the same value in their **trxId** property.
+
 - Each CDC message has its own value in the **msgNo** property.
+
 - The **msgCount** property of each CDC message is populated by the number of CDC messages initiated by a transaction for a given CDC consumer. 
+
+  
 
 
 #### TRANSACTION_ACKNOWLEDGE_TIME_SEC Parameter
