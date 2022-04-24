@@ -155,3 +155,6 @@ Click the link and press the **Delete** key<studio>, or right click and select *
 
 
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/11_add_delete_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/13_disable_enable_populations_in_schema.md)
+
+
+
