@@ -5,7 +5,7 @@
 Fabric provides a set of built-in image manipulation Actors that allow to perform various activities, such as:
 
 - Load an image into a flow.
-- Write text on a given image.
+- Write a text on a given image.
 - Clone an image in memory.
 
 The Actors are:
