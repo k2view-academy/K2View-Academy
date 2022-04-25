@@ -1,4 +1,4 @@
-### Translation or Lookup Data Using Broadway
+### Translation or Lookup of Data Using Broadway
 
 Lookup for a data row based on provided input is a common scenario in various population and data transformation flows.  
 
@@ -14,7 +14,7 @@ Provide an input for a lookup key and run the flow. The Lookup Actor will then r
 
 **Example 2 - Lookup Data Based on File**
 
-It is similar to Example 1, but time the data is coming from a file rather than from the DB. In this case, use the **FileRead** Actor in order to read the CSV file and then use the **CsvParser** to parse it.
+It is similar to Example 1, but this time the data is coming from a file rather than from the DB. In this case, use the **FileRead** Actor in order to read the CSV file and then use the **CsvParser** to parse it.
 
 This example shows that two lookup keys were defined for retrieving the required data row.
 
