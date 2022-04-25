@@ -5,7 +5,7 @@ This actor uses the Google Big Query Java libraries to push data into your proje
 
 To use it you will need:
 
-- A project IB, Dataset and table on Big Query accessible from this [link](https://console.cloud.google.com/iam-admin)
+- A project IB, Dataset and a table on Big Query accessible from this [link](https://console.cloud.google.com/iam-admin)
 - A Json credentials file needed to authenticate your connection to Big Query
   -Install the libs in the Fabric home libs directory - avaialble from [maven repository](https://mvnrepository.com/artifact/com.google.cloud/gcloud-java-bigquery)
   -The Fabric library - InsertToBigQuery_lib.k2export file available [here]() 
