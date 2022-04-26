@@ -22,7 +22,7 @@ We start with loading the image using either **ResourceLoad** or **FileRead** Ac
 
 ![](images/image_manip_2.PNG)
 
-Then we retrieve the customer data from LU using the **FabricGet** Actor and implement it in  predefined spaces within the image. The updated image can also be viewed in the Data Viewer.
+Then we retrieve the customer data from LU using the **FabricGet** Actor and populate it in predefined spaces within the image. The updated image can also be viewed in the Data Viewer.
 
 ![](images/image_manip_3.PNG)
 
