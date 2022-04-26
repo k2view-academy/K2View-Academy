@@ -1,7 +1,7 @@
 # Interface Overview
 
 ### What Is an Interface?
-In Fabric an interface is a data communication channel to an external system that enables users to define connection parameters for a data source. All data needed by Fabric from the data source is transferred through an interface.
+In Fabric an interface is a data communication channel to an external system enabling users to define connection parameters for a data source. All data needed by Fabric from the data source is transferred through an interface.
 
 When multiple data sources are needed by the project implementation, several interfaces are defined, one for each data source. It is therefore natural for a project to have multiple interfaces. 
 
@@ -25,7 +25,7 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces:
 
 **DB Interfaces**
 
-DB interfaces enable Fabric server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
+DB interfaces enable Fabric server connections to databases such as SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
 
 [Click for more information about Database Interfaces.](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 

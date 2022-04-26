@@ -1,6 +1,6 @@
 # BI Configuration Deployment to Production
 
-When moving the BI configuration from a non-production to a production environment, you must keep the sensitive information safe. The BI configuration parameters are stored in the **WebReports.XML** file, and include the following:
+When moving the BI configuration from a non-production to a production environment, you must keep the sensitive information safe. The BI configuration parameters are stored in the **WebReports.xml** file, and include the following:
 
 * Data sources definition (including sensitive data, such as the connection strings).
 * Metadata definition (object and joins).
