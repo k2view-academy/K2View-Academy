@@ -51,7 +51,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Hostname or IP address of the database server.</p>
-<p>In case of the Cassandra interface, it is possible to define a list of IP nodes separated by ; sign for the establishment of the initial connection to the Cassandra cluster.</p>
+<p>In case of Cassandra interface, it is possible to define a list of IP nodes separated by ; sign for the establishment of the initial connection to the Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
@@ -68,7 +68,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Database, schema or service name.</p>
-<p>Note that for SQLite DB Interfaces, one needs to populate the database using the full path of the SQLite file.</p>
+<p>Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
 <p>For example: C:\SqliteDB\crm_db.db</p>
 </td>
 </tr>
@@ -94,7 +94,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Default = False. Defines whether Proactive Sync should be enabled.</p>
-<p>Note that starting from V6.5, this property is removed from the interface definition and is only supported on the LU Table Population.</p>
+<p>Note that starting from V6.5 this property is removed from the interface definition and is only supported on the LU Table Population.</p>
 </td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ The following fields are displayed for all types of DB interfaces:
 <h4>Schema Filter</h4>
 </td>
 <td width="433">
-<p>Name of the Database schema to access. Required when more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas used by the Query Builder and DB Queries.</p>
+<p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
 </tr>
 <tr>
