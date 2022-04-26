@@ -10,5 +10,5 @@ To use it you will need:
   -Install the libs in the Fabric home libs directory - available from [maven repository](https://mvnrepository.com/artifact/com.google.cloud/gcloud-java-bigquery)
   -The Fabric library - InsertToBigQuery_lib.k2export file available [here]() 
 
-Enjoy your inserts, and look out for more Google BigQuery related actors.
+Enjoy your inserts and look out for more Google BigQuery related actors.
 You can also create new ones and submit them to us by emailing us at: devcom@k2view.com
