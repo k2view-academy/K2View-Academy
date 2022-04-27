@@ -24,33 +24,32 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
 2. Populate the **Name** of the new **Logical Unit** and click **Enter**.
 
-3. Proceed to creation of the LU schema:
+3. Proceed with creation of the LU schema:
 
    * Open the **Schema** of the newly created Logical Unit and switch from the Project tree to the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left panel.
 
    * Click on the relevant interface data source, select the required tables, one or more, and add them to the schema using a right click. You can choose either:
 
      * "Add Tables to Schema", where each table is added to the schema independently.
-     * "Add Tables to Schema with Relations", where links between the added tables are also drew, based on data source foreign key definitions (if such were found).
-   
+     * "Add Tables to Schema with Relations", where links between the added tables are also drawn, based on data source foreign key definitions (if such were found).
+
      ![add table to schema](images/web/5_create_lu_schema.PNG)
-   
-     
-   
-     >**Tip:** You can recognize the tables that are connected to others according to the icon resides near them at the DB Interface Explorer tree.  In the example below, you can see that icon near the ACTIVITY table, appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />) that hint for connection to other table/s, where the icon near RECOMMENDATIONS table is without those arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
+
+
+     >**Tip:** You can recognize the tables that are connected to others according to the icon located near them in the DB Interface Explorer tree.  In the below example, you can see that the icon next to the ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />) that hint at connection to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
      >
-     >Moreover, when hovering on such "connected" tables, a tooltip will appear which show you the connections, with their directions. ![](images/web/05_fk_hint.png)
-   
+     >Moreover, when hovering on such "connected" tables, a tooltip will appear, showing you the connections, with their directions. ![](images/web/05_fk_hint.png)
+
      
-   
+
    * You can add more tables to the schema either from this data source interface or from other data sources.
-   
-     > **Note**: by adding a table to the schema in this way, table population flow is automatically created and associated to the table.
-   
-   * Connect the tables each with others, by drawing a link connection between output and input table's connectors.
-   
+
+     > **Note**: by adding a table to the schema this way, the table population flow is automatically created and is being associated with the table.
+
+   * Connect the tables with each other, by drawing a linking connection between the output and input table's connectors.
+
    * Set the root table as explained [here](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md).
-   
+
    * Save the schema. 
 
 </web>
