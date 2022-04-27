@@ -25,14 +25,14 @@ Note that only one column can be defined as **True** in the [Input Arguments](/a
 
 <web>
 
-To set the Root Table and Instance ID do the following:
+In order to set the Root Table and Instance ID do the following:
 
 1. Go to **Project Tree** > **Logical Units / Data Products** > click and open the schema of the relevant Data Product.
-2. Click on the table that should be the Root Table, open the table's menu and choose "set as root". Only a table with no input connections can be set as root. for others this option is disabled. 
+2. Click on the table that should be the Root Table, open its menu and choose "Set as root". Only a table with no input connections can be set as root. Such option is disabled for a table with input connection. 
 
-	![](images/web/5_create_lu_schema_set_root1.png)
+  ![](images/web/5_create_lu_schema_set_root1.png)
 
-3. The table properties tab is automatically opened to set the required Instance ID column, at the top Root Table section. Note that the color of the root table's header is changed to dark blue.
+3. The table properties tab is automatically opened to set the required Instance ID column, at the top Root Table section. Note that the color of the root table's header has changed to dark blue.
 
 4. Save your changes.
 
