@@ -16,7 +16,7 @@ Do the following:
 
   ~~~
   > sudo chown apache:apache WebReports.xml
-  > sudo chmod 777 WebReports.xml
+  > sudo chmod 600 WebReports.xml
   ~~~
 
 To start the configuration update process, run the command as follows:
