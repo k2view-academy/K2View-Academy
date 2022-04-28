@@ -1,12 +1,12 @@
 # BI Admin Configuration
 
-The **Admin** module of the BI application enables you to configure the BI application including the security, database, UI and other various settings. **WebReports.XML** is the main BI configuration file which stores these settings. Any change applied on the **Admin** module is reflected in the WebReports.XML file.
+The **Admin** module of the BI application enables you to configure the BI application including the security, database, UI and other various settings. **WebReports.xml** is the main BI configuration file which stores these settings. Any change applied on the **Admin** module is reflected in the WebReports.xml file.
 
-Note that WebReports.XML does not keep the default flag values. That is, if the default value of a flag is True, the flag only appears in WebReports.XML when its value is changed to False. 
+Note that WebReports.xml does not keep the default flag values. That is, if the default value of a flag is True, the flag only appears in WebReports.xml when its value is changed to False. 
 
-During the installation of the BI application, the pre-configured WebReports.XML is copied to your server and it serves the BI solution. 
+During the installation of the BI application, the pre-configured WebReports.xml is copied to your server and it serves the BI solution. 
 
-This article describes the configurations which exist in WebReports.XML and are required for the BI solution as well as other important settings.
+This article describes the configurations which exist in WebReports.xml and are required for the BI solution as well as other important settings.
 
 ### Allow Direct Access
 
@@ -16,7 +16,7 @@ As part of the BI solution, the BI application should be invoked by the REST cal
 
 ![image](images/99_allow_dir_access.PNG)
 
-This is how this flag is defined in WebReports.XML:
+This is how this flag is defined in WebReports.xml:
 
 ~~~xml
 <allowhomedirect>False</allowhomedirect>
@@ -48,7 +48,7 @@ In order to enforce the access rules on the project level, this ability is disab
 
 ![image](images/99_allow_new_root.PNG)
 
-This is how this flag is defined in WebReports.XML:
+This is how this flag is defined in WebReports.xml:
 
 ~~~xml
 <allowreporttreerootaccess>False</allowreporttreerootaccess>
@@ -60,7 +60,7 @@ Upon the project first deployment, the <project name> folder is created automati
 
 BI user roles are created to specify how a user or group of users interfaces with BI. Roles can restrict access to folders or data objects.
 
-The main reason for using roles is the ability to restrict or allow the creation of reports. Two roles are pre-configured in the **Admin** module and must be present in WebReports.XML:
+The main reason for using roles is the ability to restrict or allow the creation of reports. Two roles are pre-configured in the **Admin** module and must be present in WebReports.xml:
 
 * **create_report** role, which allows the creation of several kinds of reports in the **Designer** module.
 * **default** role, which does not allow creation of reports.
