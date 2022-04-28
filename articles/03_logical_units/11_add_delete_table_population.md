@@ -1,6 +1,6 @@
 # Add or Delete Population from LU Schema
 
-A Table Population object holds the transformation and mapping rules of the data and populates the data into the LU table. Each table can have one or several populations. 
+A Table Population object holds the transformation and mapping rules of the data and populates the data into the LU table. Each table can have one or more populations. 
 
 ### How Do I Add a Table Population To the LU Schema?
 
@@ -8,22 +8,22 @@ A Table Population object holds the transformation and mapping rules of the data
 
 **From the Schema Window**
 
-1. Go to the **Project Tree** > **Logical Units / Data Products** > relevant logical unit >  **Schema** to open the Schema window.
-1. Click on the table > select **Add Population** from the context menu. 
-1. Populate the population name. The new population flow is open. 
-1. Add input argument(s) to the **PopulationArgs** Actor, make it **External** and save the population. 
-1. Re-open the schema. The new population is automatically added to the LU schema. 
+1. Go to the **Project Tree** > **Logical Units / Data Products** > relevant logical unit >  **Schema** in order to open the Schema window.
+2. Click on the table > select **Add Population** from the context menu. 
+3. Populate the population name. The new population flow is open. 
+4. Add input argument(s) to the **PopulationArgs** Actor, make it **External** and save the population. 
+5. Re-open the schema. The new population is automatically added to the LU schema. 
 6. Link the new **population** to its **parent** table.
 
 </web>
 
 **From the Project Tree**
 
-1. Go to the **Project Tree** > **Logical Unit** > right click the **LU table** > select **New Population** to create a new population object.  
+1. Go to the **Project Tree** > **Logical Unit** > right click on the **LU table** > select **New Population** for creating a new population object.  
 2. Open the **LU schema** window. The new population is automatically added to the LU schema. 
 3. Link the new **population** to its **parent** table.
 
-Note that you can edit the execution order of the new population if needed.
+Note: If required, you can edit the execution order of the new population.
 
 <web>[Click for more information about Population Flow.](/articles/07_table_population/14_table_population_based_Broadway.md)</web>
 
@@ -33,18 +33,18 @@ Note that you can edit the execution order of the new population if needed.
 
 ### How Do I Delete a Table Population From an LU Schema? 
 1. Go to the **Project Tree** > **Population Object** > press the **Delete** key. 
-1. Re-open the **LU schema** screen.
-1. **Save** the changes to remove the deleted population object from the LU schema.
+2. Re-open the **LU schema** screen.
+3. **Save** the changes for removal of the deleted population object from the LU schema.
 
-Note that if the LU schema is already opened, you can click the **Refresh** icon on the toolbar.
+Note: if the LU schema is already open, you can click on the **Refresh** icon on the toolbar.
 
 <web>
 
-In either ways - reopening the file or refreshing, you will see a popup notification at right bottom of the screen, indicating and hinting you about the change. it will look like this:
+Either way - reopening the file or refreshing it - a popup notification will appear at the bottom right corner of the screen, advising of the change. It would look like this:
 
 ![](images/web/11_delete_refresh_toaster.png)
 
-To verify your changes and what was deleted, open the "Problems" panel view (can be opened from the top menu > View  or by pressing CTRL+SHIFT+M). For example:
+In order to verify your changes and/or deletions, open the "Problems" panel view (can be opened from the top menu > View  or by pressing CTRL+SHIFT+M). I.e.:
 
 ![](images/web/11_delete_problems.png)
 
