@@ -8,7 +8,7 @@ At any time, you might need to move reports between different environments, for 
 
 The BI application provides the utility to move your files (reports and dashboards) between different Storage Management DBs or even between different table prefixes within the same Storage Management Database. You can move either one or several reports at a time. 
 
-Note that when you move your files (reports and dashboards) between different BI servers and different Storage Management DBs, you must also copy the BI configuration file **WebReports.XML** from one BI server to another in order to keep the content aligned to the metadata definition.
+Note that when you move your files (reports and dashboards) between different BI servers and different Storage Management DBs, you must also copy the BI configuration file **WebReports.xml** from one BI server to another in order to keep the content aligned to the metadata definition.
 
 ### How Do I Move Files Between Storage Management DBs?
 
