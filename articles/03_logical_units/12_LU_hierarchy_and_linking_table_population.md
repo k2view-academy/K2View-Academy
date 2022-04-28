@@ -1,14 +1,14 @@
 # LU Hierarchy and Linking Populations
 
 ## Table Population Links Overview
-An LU schema structure displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
-* Each LU table can have one or several Table Population objects and each Table Population object, except the Table Population object of the Root LU table, must be linked to a parent table via its [input arguments](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#what-are-the-table-populations-input-arguments). 
+An LU schema structure displays a hierarchical presentation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
+* Each LU table can have one or several Table Population objects. Each such object - except the Table Population object of the Root LU table - should be linked to a parent table via its [input arguments](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#what-are-the-table-populations-input-arguments). 
 
 * Each Table Population object can be linked to a different parent LU table.
 
-  **For example:** an ADDRESS LU table is populated by two populations: 
+  **For instance:** an ADDRESS LU table is populated with two populations: 
 
-  * Population 1, populates the customer’s billing address. It is linked to the CUSTOMER table and selects source address records that belong to the CUSTOMER_ID.
+  * Population 1, populates the customer’s billing address. It is linked to the CUSTOMER table and selects the source address records belonging to the CUSTOMER_ID.
 
     <studio>
 
@@ -22,21 +22,21 @@ An LU schema structure displays a hierarchical representation of the data relate
 
     </web>
 
-  * Population 2, populates the the installation address of each subscription. It is linked to the SUBSCRIBER table and selects the source address records that belong to the SUSBCRIBER_ID.
+  * Population 2, populates the the installation address of each subscription. It is linked to the SUBSCRIBER table and it selects the source address records belonging to the SUSBCRIBER_ID.
 
     <studio>
-    
+
     <img src="images/03_12_link_tables2.png" alt="image" style="zoom:80%;" />
-    
+
     </studio>
-    
+
     <web>
-    
+
     <img src="images/web/12_link_tables_2.PNG" alt="image" style="zoom:80%;" />
-    
+
     </web>
 
-* A link from a Table Population object to a parent LU table can be based on several columns where all columns must be linked to the **same parent LU table**.
+* A link from a Table Population object to a parent LU table can be based on several columns, all of which should be linked to the **same parent LU table**.
 
   <studio>
 
@@ -45,34 +45,34 @@ An LU schema structure displays a hierarchical representation of the data relate
     ![image](images/03_12_link_tables3.png)
 
   * **Example 2:** Linking the INVOICE Table Population object to two different LU tables - BALANCE and SUBSCRIBER is invalid.
-  
+
     ![image](images/03_12_link_tables4.png)
-    
+
     </studio>
-    
+
     <web>
-    
+
   * **Example 1:** The CASE_NOTE Table Population object can be linked to the CASES LU table by two columns: CASE_ID and NOTE_DATE. This is a valid link.
-  
+
     <img src="images/web/12_link_tables_3.PNG" alt="image" style="zoom:80%;" />
-    
-  * **Example 2:** Linking the CASE_NOTE Table Population object to two different LU tables - CASES and ACTIVITY is invalid. The validation error will be displayed in the Problems pane upon save.
-  
+
+  * **Example 2:** Linking the CASE_NOTE Table Population object to two different LU tables - CASES and ACTIVITY - is invalid; a validation error will be displayed in the Problems panel when trying to save. 
+
     <img src="images/web/12_link_tables_4.PNG" alt="image" style="zoom:80%;" />
-  
+
     </web>
 
-**Note:** An LU table can be added to an LU schema without a Table Population object. This table is not populated by the sync of the instance, but can be populated by a separate transaction.
+**Note:** An LU table can be added to an LU schema without a Table Population object. Such table is not populated by the sync of the instance, but rather by a separate transaction.
 
 
 ## What Are the Table Population's Input Arguments?
 <web>
 
-Input arguments of a population flow are defined by the **PopulationArgs** Actor's input argument that must be set to **External** population type.
+Input arguments of a population flow are defined by the **PopulationArgs** Actor's input argument that must be set to an **External** population type.
 
 <img src="images/web/12_link_tables_5.PNG" alt="image" style="zoom:80%;" />
 
-Each population flow must have at least one Input parameter. A Root table's population can have only one input argument which is populated by the Instance ID.
+Each population flow should have at least one Input parameter. A Root table's population can have only one input argument, which is populated by the Instance ID.
 
 [Click for more information about population flows.](/articles/07_table_population/14_table_population_based_Broadway.md)
 
@@ -121,8 +121,8 @@ A link can be added in both directions:
 
 <web>
 
-1. Click the child population header.
-1. Connect each of its input fields connectors to a parent table output connectors.
+1. Click on the child population header.
+2. Connect each of its input fields connectors to a parent table output connectors.
 
 </web>
 
@@ -130,13 +130,13 @@ A link can be added in both directions:
 
 ## How Can I Link the Child Population to a Parent Table? 
 1. Click the **Child Population** header.
-1. Connect each **input field** to a **parent table** using one of the following methods:
+2. Connect each **input field** to a **parent table** using one of the following methods:
   * Drag the **connection line** to the **parent table** and **column**.
   * Right click, select **Add link from** > **parent table** > **column**.
 
 ## How Can I Link a Parent Table to a Child Population?
 1. Click the **parent table**.
-1. Connect each **parent column** to the **child population** using one of the following methods:
+2. Connect each **parent column** to the **child population** using one of the following methods:
   * Click the **child population** header and drag the **connection line** to the **parent table** and **column**.
   * Right click, select **Add link to** > **child population** > **column**.
 
@@ -150,7 +150,7 @@ A link can be added in both directions:
 
 ## How Can I Delete Table Population Links?
 
-Click the link and press the **Delete** key<studio>, or right click and select **Delete**</studio>.
+Either click on the link and press the **Delete** key<studio> or right-click and select **Delete**</studio>.
 
 
 
