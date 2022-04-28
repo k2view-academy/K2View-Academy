@@ -15,23 +15,23 @@ Note that Update Tables from Database does not delete or add tables to the LU sc
 
 <web>
 
-You can refresh you logical unit schema by using the Logical Unit Schema toolbar action icon <img src="images/web/schema_refresh.png" style="zoom:80%;" />
+You can refresh your Logical Unit Schema by using the Logical Unit Schema toolbar action icon <img src="images/web/schema_refresh.png" style="zoom:80%;" />
 
 
 
-When clicked, schema is refreshed with updates which were done outside the schema. For example - when table's populations were added or removed or when tables structure were changed (if table was updated via the project > LU > tables folder or was updated via Git pull action).
+When clicked, schema is refreshed with the updates that were done outside the schema. E.g. when table populations were added/removed or when table structures were changed (whether a table was updated either via the Project > LU > Tables folder or via the Git pull action).
 
-In such cases you might see a popup notification at right bottom of the screen, indicating and hinting you about the change. it will look like this:
+In such cases you might see a popup notification at the bottom right corner of the screen, advising about the change. It should look like this:
 
-![](C:/K2View/K2View-Academy-7.0/articles/03_logical_units/images/web/11_delete_refresh_toaster.png)
+![](images/web/11_delete_refresh_toaster.png)
 
-Open the "Problems" panel view (can be opened from the top menu > View  or by pressing CTRL+SHIFT+M), to understand better what was changed and if you have action items to do.
+Open the **Problems** panel view (can be opened from the top menu > View or by pressing CTRL+SHIFT+M), in order to better understand what changes took place and to check for any outstanding item actions.
 
-For example, when a table population was added, you will see a similar entries at the Problems panel. In the example below, the Studio hints that a population was added and that links shall be set to the parent table:
+For example, when a table population was added, you will see similar entries at the Problems panel. In the example below, the Studio suggests that a population was added and that links shall be set to the parent table:
 
 
 
-![](C:/K2View/K2View-Academy-7.0/articles/03_logical_units/images/web/18_refresh_problems_panel.png)
+![](images/web/18_refresh_problems_panel.png)
 
 </web>
 
