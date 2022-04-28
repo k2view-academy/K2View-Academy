@@ -32,9 +32,9 @@ Fabric includes a business intelligence application called BI which is embedded 
 
 ### Develop on Fabric with IntelliJ
 
-Fabric Studio has been fully integrated with IntelliJ . 
+Fabric Studio has been fully integrated with IntelliJ. 
 
-It is mostly recommended if you frequently develop Java functions; you will then benefit from the most advanced code-writing and debugging capabilities available in the market.  
+It is mostly recommended if you develop Java functions often. This will allow you to benefit from the most advanced code-writing and debugging capabilities available on the market.  
 
 [Read more >](20210822_fabric_intelliJ.md)
 
