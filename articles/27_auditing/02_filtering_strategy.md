@@ -4,15 +4,15 @@ The list of activities reported by the Auditing mechanism can be controlled.
 
 Once the AUDIT parameter is set to ON in **config.ini**, all Fabric activities are logged by the Fabric Auditing mechanism.
 
-To limit the auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** must be populated with the full path of the class defining the filter strategy. 
+In order to limit the auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** should be populated with the full path of the class defining the filter strategy. 
 
-###  How Can I Define Auditing Filter?
+###  How Can I Define the Auditing Filter?
 
-To define the auditing filter, start from the sample provided as part of the Fabric installation and modify it according to your needs. 
+In order to define the auditing filter, start from the sample provided as part of the Fabric installation and modify it according to your needs. 
 
-Alternatively create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the  filter class must implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
+Alternatively, create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the  filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
 
-Do the following steps to build the artifacts:
+Take the following steps in order to build the artifacts:
 
 1. Copy the project located under $K2_HOME/fabric/samples/AuditCustomStrategies locally.  
 
@@ -38,9 +38,9 @@ Do the following steps to build the artifacts:
 
    <img src="images/02_choose_artifacts.png" style="zoom:80%;" />
 
-   * Choose the **Main class**, can be either All, filter strategies or persistency strategies. 
+   * Choose the **Main class**, which can be either All, filter strategies or persistency strategies. 
    * Click **OK**.
-   
+
 8. Click **Build > Build Artifacts** in IntelliJ menu and select the **Build** action.
 
 9. The artifacts are created under the AuditCustomStrategies/out/artifacts folder. 
@@ -59,7 +59,7 @@ Do the following steps to build the artifacts:
     AUDIT=ON
     ~~~
 
-11. Restart the Fabric node.
+13. Restart the Fabric node.
 
 ### Example of Reporting Web Services Only
 
