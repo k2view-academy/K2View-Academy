@@ -92,4 +92,4 @@ The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.
 
   
 
-[![Previous](/articles/images/Previous.png)](07_tdm_parameters_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](07_tdm_parameters_handling.md)
