@@ -1,3 +1,5 @@
+<studio>
+
 # Offline Deploy
 
 New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server (also known as an Offline Deploy).
@@ -136,5 +138,6 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 
 
 
-
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
+
+</studio>

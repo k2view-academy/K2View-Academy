@@ -65,7 +65,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <td valign="top" width="400pxl">
 <p>Populate this translation for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
 <p>If there is a need to define a query per source environment, populate the source environment name and create a separate record for each Logical Unit and source_env_name combination. Otherwise, leave the source environment empty.</p>
-    <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information how to implement a Broadway flow to get the entities (populated in EXTERNAL_TABLE_FLOW trnMigrateList field).</p>    
+        <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information on how to implement a Broadway flow to get the entities (populated in EXTERNAL_TABLE_FLOW trnMigrateList field).</p>   
   <p><strong>Example 1:</strong></p>
   <ul><li>LU_NAME= ORDER</li>
     <li>SOURCE_ENV_NAME = ENV1</li>
@@ -186,7 +186,7 @@ Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/arti
 
 ## TDM_LIBRARY LU
 
-The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are as follows:
+The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. These utilities are described below
 
 ### Globals
 
@@ -289,7 +289,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are 
   </tr>
   </table>
 
-- **LU_PARAMS**, parameters table.  Must be added to each LU schema even when it is not required for defining parameters on the LU, whereby the LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS**, parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 

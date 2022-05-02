@@ -1,3 +1,5 @@
+<studio>
+
 # Instance Groups
 
 ## How Do I Create a New Instance Group?
@@ -34,5 +36,5 @@ All instances with ID values between 600 and 700 are synced into Fabric.
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/13_migrate_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
 
-
+</studio>
 
