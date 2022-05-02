@@ -1,5 +1,13 @@
 # Auditing Overview
 
+<web>
+
+Currently the Web Studio does not support the Auditing mechanism.
+
+</web>
+
+<studio>
+
 Fabric has a robust Auditing mechanism that logs various activities running on Fabric. These can be logins, Web Service calls, and various Fabric commands. 
 
 Two major Auditing features can be controlled:
