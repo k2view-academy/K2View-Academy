@@ -268,21 +268,16 @@ The views which appear by default at the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/log.png" alt="log viewer" /></td>
     <td style="padding-left: 30px;"><strong>Log Viewer</strong></td>
-    <td style="width:60%">Enables you to select and view Fabric logs, in a rich and useful mode. When clicked it allows you to select which log to open (from the Side Bar). To learn more about Log Viewer and how to use it effectively see [here](TBD).</td>
+    <td style="width:60%">Enables you to select and view Fabric logs, in a rich and useful mode. When clicked it allows you to select which log to open (from the Side Bar). To learn more about Log Viewer and how to use it effectively see <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">here</a>.</td>
 </tr>
 </tbody>
 </table>
 
 
 
-
-
-
 >**Tip:** You can reorder views on the Activity Bar by dragging and dropping them.
 
   
-
-
 
 ## Command Palette
 
