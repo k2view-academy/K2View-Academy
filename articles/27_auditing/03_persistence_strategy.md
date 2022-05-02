@@ -11,7 +11,7 @@ In addition to the above product strategies, a new strategy can be defined by cr
 
 ### How Can I Set The Persistence Strategy to Kafka?
 
-When you have a requirement to make the audit records available to another channel, the persistence should be changed from Cassandra to Kafka. For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka and then create a Broadway flow that will consume the Kafka messages and load them into your required target DB.
+When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from Cassandra to Kafka. For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka and then create a Broadway flow that will consume the Kafka messages and load them into your required target DB.
 
 In order to switch the persistency strategy to Kafka, do the following:
 
