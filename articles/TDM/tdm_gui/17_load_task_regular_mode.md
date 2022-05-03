@@ -83,7 +83,7 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 ## Requested Entities Tab
 
-This tab is opened when the task's Data Type includes entities. This tab defines the subset of entities for the task:
+This tab opens when the task's Data Type includes entities. This tab defines the subset of entities for the task:
 
 ![requested entities](images/load_task_requested_entities.png)
 
@@ -91,13 +91,13 @@ The following selection methods are available on load tasks:
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities to process separated by a comma.  Note that a warning is given if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them.  Note that a warning is given if the entity list has entities that are reserved for another user.
 
 ### Custom Logic
 
-Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
+Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
 
-TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window to enable the user to send values for these parameters. See example:
+TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
 
 ![custom logic](images/load_task_requested_entities_custom_logic_2.png)
 
@@ -109,25 +109,25 @@ Note:
 
 ### Parameters 
 
-Select entities from a predefined list of parameters. You must set the **parameters and their values** and the **maximum number of entities** for the task.
+Select entities from a predefined list of parameters. You should set the **parameters and their values** and the **maximum number of entities** for the task.
 
-Note that entities that are reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
+Note that entities reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
 
 ![parameters](images/load_task_requested_entities_parameters.png)
 
-The parameters list must be [defined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) in the Fabric project.
+The list of parameters should be [defined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) in the Fabric project.
 
 #### Use Parameters with Random Selection Checkbox
 
   The Parameters selection has two modes: 
 
-  - When checked (default), TDM randomly selects the entities from the list of all entities that match the selected parameters whereby each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**. 
+  - When checked (default), TDM randomly selects the entities from the list of all entities, those that match the selected parameters whereby each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**. 
 
     Example: 
 
     - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution gets a random list of 5 customers from the list of 800 customers that match the selected parameters.  
 
-  - When unchecked, gets the first entities that match the selected parameters whereby each task execution gets the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**. 
+  - When unchecked, it gets the first entities that match the selected parameters whereby each task execution gets the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**. 
 
     Example:
 
@@ -150,7 +150,7 @@ There are several types of parameters:
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
-- **Number**, the TDM GUI displays the minimum and maximum values on this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number**, the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
   
 - **Date**, populate the value using the following format: **YYYY-MM-DD**. 
   
@@ -158,21 +158,21 @@ There are several types of parameters:
   
     - The date format is defined in **DATETIME_FORMAT**  parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is  'yyyy-MM-dd HH:mm:ss.SSS'.
   
-    - The parameter's search can be based either on a Date (removing the time from the Date format) or Datetime.  
+    - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.  
   
       Examples:
   
       - 2021-12-28
       - 2022-04-03 10:00:00
   
-    - The date value is set without quoting.
+    - The date value is set without quotation marks.
   
 - **Text**, populate the value using free text.
 #### How Do I Add a Group of Parameters?
 
 Click **Add Group**. 
 
-Note that nested groups of parameters can be added for example to define an inner group in an outer group.
+Note that nested groups of parameters can be added, for example, in order to define an inner group in an outer group.
 
 
 
@@ -180,13 +180,13 @@ Note that nested groups of parameters can be added for example to define an inne
 
 #### How Do I Remove A Parameter or a Parameters Group?
 
-1.  Click ![remove parameter](images/delete_parameters_icon.png) next to the parameter to delete a parameter.
+1.  Click ![remove parameter](images/delete_parameters_icon.png) next to the parameter in order to delete it.
 2.  Click **Remove Group** to remove a parameter's group.
 
 #### Getting the Number of Matching Entities
 
-Click Refresh next to the **Entities Matched** to calculate the number of entities that match the selected parameters.
-The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can crosscheck the matching entities of a selected combination of parameters and takes into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
+Click Refresh next to the **Entities Matched** in order to calculate the number of entities that match the selected parameters.
+The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can both crosscheck the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
 
 - Click ![refesh](images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
@@ -194,17 +194,17 @@ Click for more information about the [TDM parameters tables and View](/articles/
 
 ### Entity Clone (Synthetic)
 
-Create X clones of the selected entity in the target environment. When selecting this method, the real Entity ID must be populated to be replicated. 
+Create X clones of the selected entity in the target environment. When selecting this method, the real Entity ID must be populated in order to be replicated. 
 
 ![synthetic](images/requested_entities_synthetic_mode.png)
 
 
 
-For example, if the **Number of Clones** setting is populated by  10 and the **Entity ID** is set to 6559, the task creates 10 clones (replicas) of Entity ID 6559 in the target environment. 
+For example, if the **Number of Clones** setting is populated with 10 and the **Entity ID** is set to 6559, the task creates 10 clones (replicas) of Entity ID 6559 in the target environment. 
 
-The task replaces the sequences of each replica to avoid duplicate sequences in the target environment. 
+The task replaces the sequences of each replica in order to avoid duplicated sequences in the target environment. 
 
-Testers can select this option only if they are permitted to clone entity in the task's target environment.
+Testers may select this option only if they are permitted to clone an entity in the task's target environment.
 
 
 

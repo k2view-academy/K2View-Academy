@@ -49,13 +49,13 @@ The following selection methods are available on load tasks:
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities to process separated by a comma.  Note that a warning is given if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task, separating them with a comma.  Note that a warning is given if the entity list has entities that are reserved for another user.
 
 ### Custom Logic
 
 Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/delete_task_requested_entities_custom_logic.png)
 
-TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window to enable the user to send values for these parameters. See example:
+TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
 
 ![custom logic](images/delete_task_requested_entities_custom_logic_2.png)
 
