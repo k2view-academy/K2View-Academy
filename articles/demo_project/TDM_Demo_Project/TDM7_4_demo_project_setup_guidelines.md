@@ -68,7 +68,7 @@ The target DBs are empty and the source DBs are populated with customers.
      ```
 
 
-3. Open **pgAdmin 4** and start restoring the databases from backup files. It is recommended to check the **Clean before restore** option when restoring the backup file.
+3. Whether you install the PG on your windows environment or use a Docker, load the PG DB files to create the TDM Demo DB schemas. Open the **pgAdmin 4** and start restoring the databases from backup files. It is recommended to check the **Clean before restore** option when restoring the backup file.
 
 Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installation](/articles/TDM/tdm_configuration/01_tdm_installation.md#create-the-tdm-postgresql-db-in-case-of-new-installation).
 
