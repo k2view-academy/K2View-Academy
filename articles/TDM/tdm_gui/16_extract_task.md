@@ -70,21 +70,21 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 ## Requested Entities Tab
 
-This tab is opened when the task's Data Type includes entities. This tab defines the subset of entities for the task:
+This tab opens when the task's Data Type includes entities. This tab defines the subset of entities for the task:
 
 ![requested entities](images/extract_task_requested_entities_tab.png)
 
 The following selection methods are available on extract tasks: 
 
-- **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is only available for the Admin and Environment owner users.
-- **Entity list**: this is the **default option**. Populate the list of entities to process separated by a comma. 
-- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) to get the entity list for the task and set the maximum number of entities for the task:
+- **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is available only for the Admin and Environment owner users.
+- **Entity list**: this is the **default option**. Populate the list of entities for the task. The entities populated should be separated with a comma. 
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and to set the maximum number of entities for the task:
 
 
 
 ![requested entities2](images/extract_task_requested_entities_tab_custom_logic.png)
 
-TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window to enable the user to send values for these parameters. See example:
+TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
 
 ![requested entities2](images/extract_task_requested_entities_tab_custom_logic_2.png)
 
@@ -94,7 +94,7 @@ Notes:
 
 - The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. If the custom logic selects a smaller number of entities, the number of entities will be set by the custom logic flow. For example: the maximum number of entities in the task is 50, but the customer logic only selects 30 entities. The task will process 30 entities.
 - It is possible to set an array value in a Custom Logic's parameter. For example: {1,2,3}, {"Open", "Close"}. 
-- Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to Each Entity ID when building its LUI.
+- Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
 
 
