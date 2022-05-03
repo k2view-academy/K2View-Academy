@@ -11,7 +11,7 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 <web>
 
-Currently a space is created with a new Fabric project structure, ready for working on the project from scratch. You can use an existing project on which you already have worked.
+Currently a space is created with a Fabric demo project structure. You can use an existing project on which you already have worked.
 
 [Click for more information on how to load an existing project to the Web Studio.](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 

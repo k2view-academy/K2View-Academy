@@ -1,28 +1,5 @@
 # Exporting and Importing a Fabric Project
 
-<web>
-
-Currently (Release 7.0) the Web Studio cannot Import or Export a project. 
-
-If you wish to use an existing project on which you already have worked, do the following:
-
-* Go to your existing project directory on your PC/Mac.
-
-* Drag and Drop the **Implementation** (and optionally the **lib**) folders from your PC into the Web Studio explorer. Drag them into the project’s root empty area:
-
-  ![image](images/web/5_upload_proj.PNG)
-       
-
-* You can also upload only specific elements. In this case – go to the specific folder and upload it there.
-
-* The upload progress will be displayed in the lower right corner of the screen:
-
-  ![image](images/web/5_upload_progress.PNG)
-
-Note that because this is a standard file upload action, there is no validation on what you are uploading and where.
-
-</web>
-
 <studio>
 
 Fabric Studio has a proprietary encapsulation functionality that packages an entire project or selected components. Fabric projects can be backed up and restored using the Export and Import options that trigger the encapsulation and decapsulation processes.
@@ -114,11 +91,45 @@ The Custom Import window displays the number of imported and overwritten items.
 
 When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects overwrite the existing objects. 
 
-
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
 
-
-
-
-
 </studio>
+
+<web>
+
+### Import / Upload files
+
+Importing project files or folders into your project can be done either by:
+
+* Using the **File > Upload Files...** available at top menu bar, when the target folder at the project tree is selected.
+* Drag and drop them from your PC/Mac folder into the required location.
+
+* Using the context menu (right click) on the target folder at the project tree.
+       
+
+The upload progress will be displayed in the lower right corner of the screen:
+
+  ![image](images/web/5_upload_progress.PNG)
+
+
+
+> Note: 
+>
+> * Because this is a standard IDE file upload action, there is no validation on what you are uploading and where. 
+> * When asked about overriding elements, your selection affects on all uploaded files.
+
+
+
+### Export / Download 
+
+To export files or folders:
+
+1. choose them at the project tree and then 
+2. Use the **File > Download** available at top menu bar or context menu (right click) > Download option.
+
+The files and folders are then downloaded into your PC/Mac.
+
+> Note that when selecting folders or multiple files the download outcome is a compressed "tar" file.
+
+</web>
+

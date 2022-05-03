@@ -2,11 +2,13 @@
 
 An exposed Fabric Web Service enables you to access specific data attributes stored in Fabric using input parameter/s and the relevant structured response like JSON, XML or CSV. 
 
-Fabric Studio supports defining a Web Service function, saving it to the project file and deploying it to the Fabric Server. A Web Service is a Java function.
+Fabric Studio supports defining a Java Web Service function, saving it to the project file and deploying it to the Fabric Server. 
+
+Fabric provides also a UI utility - [Graphit](/articles/15_web_services_and_graphit/17_Graphit\01_graphit_overview.md) - which can be used to design web services in a user-friendly interface and requires minimal coding. 
 
 ### How Do I Create a New Web Service?
 
-The following steps discuss how a new Web Service is created and include options for generating parts of code automatically:
+The following steps discuss how a new Java based Web Service is created and include options for generating parts of code automatically:
 
 <studio>
 
@@ -59,7 +61,6 @@ The following steps discuss how a new Web Service is created and include options
 1. Go to **Project Tree** > **Web Services** and right-click **Java** to select **New Java File**.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-1WEB.PNG" alt="drawing"/>  
-   
    
 2. Fill in the name for the web service in the pop-up input box at the top of the screen
    
