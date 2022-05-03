@@ -97,6 +97,16 @@ This is the **default option**. Populate the list of entities to process separat
 
 Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
 
+TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window to enable the user to send values for these parameters. See example:
+
+![custom logic](images/load_task_requested_entities_custom_logic_2.png)
+
+
+
+Note:
+
+- It is possible to set an array value in a Custom Logic's parameter. For example: {1,2,3}, {"Open", "Close"}. 
+
 ### Parameters 
 
 Select entities from a predefined list of parameters. You must set the **parameters and their values** and the **maximum number of entities** for the task.

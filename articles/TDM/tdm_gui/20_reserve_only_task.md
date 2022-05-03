@@ -61,6 +61,8 @@ This is the **default option**. Populate the list of entities to process separat
 
 Select a Broadway flow to get the entity list for the task and set the number of entities for the task:![custom logic](images/reserve_task_requested_entities_custom_logic.png)
 
+TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window to enable the user to send values for these parameters. See example:
 
+![custom logic](images/reserve_task_requested_entities_custom_logic_2.png)
 
  [![Previous](/articles/images/Previous.png)](19_delete_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_task_tdmdb_tables.md)
