@@ -65,4 +65,9 @@ TDM 7.5 supports the creatiion of external input parameters on a Custom Logic Fl
 
 ![custom logic](images/reserve_task_requested_entities_custom_logic_2.png)
 
+Note:
+
+- It is possible to set an array value in a Custom Logic's parameter. For example: {1,2,3}, {"Open", "Close"}.
+
+
  [![Previous](/articles/images/Previous.png)](19_delete_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_task_tdmdb_tables.md)
