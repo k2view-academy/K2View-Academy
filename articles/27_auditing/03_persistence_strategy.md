@@ -11,9 +11,7 @@ In addition to the above product strategies, a new strategy can be defined by cr
 
 ### How Can I Set The Persistence Strategy to Kafka?
 
-When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from Cassandra to Kafka. For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka and then create a Broadway flow that will consume the Kafka messages and load them into your required target DB.
-
-In order to switch the persistency strategy to Kafka, do the following:
+In order to switch the persistence strategy to Kafka, do the following:
 
 1. Update the  **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** file to: 
 
@@ -31,7 +29,38 @@ In order to switch the persistency strategy to Kafka, do the following:
 
 4. Restart the Fabric node.
 
-5. Additionally, create a Broadway flow that will consume the Audit messages from Kafka topic and load them into your required target DB.
+#### Example - Logging Audit to PostgreSQL via Kafka
+
+When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from Cassandra to Kafka. 
+
+For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** and restart the Fabric node as explained above.
+
+Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
+
+The below Broadway flow consumes the Audit messages from Kafka topic and loads them into the target PostgreSQL DB.
+
+![](images/03_kafka_persistance.png)
+
+The Kafka message looks as follows:
+
+~~~json
+{
+	"action": "GetCommand",
+	"username": "admin",
+	"result": "LU type 'OracleLu' not found. Please deploy it using K2view Fabric Studio",
+	"sessionId": "264adf99",
+	"query": "get OracleLu.5 ",
+	"params": {
+		"DC_NAME": "null",
+		"LU_NAME": "OracleLu",
+		"IID": "5"
+	},
+	"protocol": "DRIVER",
+	"address": "127.0.0.1"
+}
+~~~
+
+
 
 ### How Can I Define A New Persistence Strategy?
 
@@ -55,7 +84,7 @@ Build artifacts by doing the same steps as described [in the Filtering Strategy 
 
 3. Restart the Fabric node.
 
-### An Example of Setting New Persistence Strategy
+#### Example - Setting New Persistence Strategy
 
 The following example displays the persistency class **com.k2view.external.fabric.audit.persistencies.SamplePersist** which writes the Audit operations into a file.
 
