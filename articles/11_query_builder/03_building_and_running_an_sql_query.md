@@ -162,9 +162,9 @@ To use the Query Builder:
 
 * The Results table supports some manipulations that lets you tune the display for your needs, in addition to *Columns to show* option:
 
-  * Sort Order, Click on the column's header sort icon ![sort](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\order_icon.png) to reorder the table (Ascending/Descending).
+  * Sort Order, Click on the column's header sort icon ![sort](images/web/order_icon.png) to reorder the table (Ascending/Descending).
 
-  * Filter, Click on the column's header filter icon ![sort](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\filter_icon.png)to filter table's display accordingly.
+  * Filter, Click on the column's header filter icon ![sort](images/web/filter_icon.png)to filter table's display accordingly.
 
   * Group, Click on the column's header left arrow to group the table rows by this column. 
 
@@ -173,7 +173,7 @@ To use the Query Builder:
     * You can group by several columns
     * To ungroup click again on the column header arrow.
 
-    ![grouping](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\01_results_grouping.png)
+    ![grouping](images/web/01_results_grouping.png)
 
 
 
