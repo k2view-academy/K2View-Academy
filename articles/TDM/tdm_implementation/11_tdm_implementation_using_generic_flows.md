@@ -212,12 +212,14 @@ The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_executio
 
 The Custom Logic Broadway flow can be created either in the **Shared Objects or in a given LU**.
 
-The Customer Logic Broadway flow has **two external input parameters** and gets their values from the task execution process:
+The Customer Logic Broadway flow always has **two external input parameters** and gets their values from the task execution process:
 
 - LU_NAME
-- NUM_OF_ENTITIES: the maximum number of entities to be processed by the task execution. The number is set in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters).
+- NUM_OF_ENTITIES: the maximum number of entities to be processed by the task execution. The number is set in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
 
-##### Custom Logic High Level Structure
+TDM 7.5 supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task.  For example, add an external parameter of a customer status to the flow. The flow selects the customers for the task based on the input status. This way you can filter the selected customers by their status and still use the same flow to select them.
+
+#### Custom Logic High Level Structure
 
 - **Stage 1**: 
 
@@ -246,7 +248,7 @@ The Customer Logic Broadway flow has **two external input parameters** and gets 
 
 ![custom logic](images/custom_logic_example.png)
 
-##### Debugging the Customized Flow
+#### Debugging the Customized Flow
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
 - LU_NAME: popoulated with the LU name
 - EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
