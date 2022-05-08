@@ -1,3 +1,5 @@
+<studio>
+
 # Persistence Strategy
 
 The persistence of the data published by the Auditing mechanism can be controlled. Product provides two persistence strategies:
@@ -94,3 +96,4 @@ public class SamplePersist implements AuditBeanPersistence {
 
 [![Previous](/articles/images/Previous.png)](02_filtering_strategy.md)
 
+</studio>

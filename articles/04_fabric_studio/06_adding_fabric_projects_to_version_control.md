@@ -1,3 +1,5 @@
+<studio>
+
 # Adding Fabric Projects to Version Control
 
 ### Fabric Version Control Overview
@@ -15,7 +17,7 @@ Note that although there is an option for working with Apache Sub-version (SVN),
 Click for more information about the K2Admin Studio. 
 
 ### How Do I Start Working with Version Control?
- 
+
 To start using Configuration Control, do either:
 
 * Create a new project and add the project to version control.
@@ -51,7 +53,7 @@ Download and install **TortoiseGit** or GitHub for Windows on the Fabric Studio 
 2.	Enter the **Username** and **Password** and then click **OK** to open the Fabric Studio Main Window.
 
 ### Checking a Project Out of GIT
- 
+
 **How Do I Check a Project Out of GIT?**
 1.	Go to the **File Browser** and click **Checkout Directory** and then **Project**.
 2.	Add the **GitHub Repository URL** and click **OK** to open the **Authentication** dialog box.
@@ -61,7 +63,7 @@ Download and install **TortoiseGit** or GitHub for Windows on the Fabric Studio 
 [Click for more information about Best Practices for Working with SVN and GIT.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### Checking a Project Out of SVN
- 
+
 **How Do I Check a Project Out of SVN?**
 
 1.	Go to the **File Explorer** and click **Checkout Directory and Project**. 
@@ -142,7 +144,7 @@ When a project is registered in the Version Control system, the following indica
 </table>
 
 ### What Are the Version Control Operations?
-  
+
 **TortioseGit Operations**
 
 <table>
@@ -401,9 +403,8 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 
 [Click for more information about Best Practices for Working with SVN and GIT.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+[![Previous](/articles/images/Previous.png)](08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 
 
-
-
+</studio>
