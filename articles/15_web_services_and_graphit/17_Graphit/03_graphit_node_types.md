@@ -2,7 +2,7 @@
 
 Node Type options define how content is structured and how a tag is presented in an output document. By default, nodes are not assigned a Type or Property when they are created.
 ### What Are the Node Type Options?
-The following table lists the node types. We suggest that you run each graphit file in Debug mode and observe the response. 
+The following table lists the node types. We suggest that you run each Graphit file in Debug mode and observe the response. 
 
 <table>
 <tbody>
@@ -32,19 +32,18 @@ The following table lists the node types. We suggest that you run each graphit f
 <tr>
 <td valign="top" width="50pxl">SQL</td>
 <td valign="top" width="900pxl">Defines how an SQL statement retrieves information from Fabric or other database interfaces.
-    Enter the SQL statement manually or hover over and then click the SQL field. <No Type>  
-
-Note that if the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. 
-  
-
--  If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> option is selected, the executed query is copied into the Graphit implementation.
--  Fields can be expanded automatically according to the SQL statement defined in the Query Builder. During runtime, the SQL query is executed and the results can be used in the nested nodes. 
-
-The SQL Type also enables looping results and executing nested codes on each returned row.&nbsp;&nbsp;<br />
-
-Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.&nbsp;<br />
-
-To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.</td>
+    Enter the SQL statement manually or hover over and then click the SQL icon. 
+    <br/><b>Note</b>: if the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
+<ul>
+<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup is opened and when closed the executed query is copied into the Graphit implementation.
+</li>    
+<li>Fields can be expanded automatically according to the SQL statement defined in the Query Builder. During runtime, the SQL query is executed and the results can be used in the nested nodes.
+</li>    
+</ul>
+The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
+Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.<br/>
+To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.
+</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grsqlgraphit">grSQL</a></td>
 </tr>
 <tr>
@@ -71,7 +70,6 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <td valign="top" width="50pxl">Raw</td>
 <td valign="top" width="900pxl">Presents data as output without manipulation. For example, a header for XML format.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grrawgraphit">grRaw</a></td>
-
 </tr>
 </tbody>
 </table>

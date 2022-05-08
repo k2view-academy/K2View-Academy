@@ -31,7 +31,7 @@ Following are the actions you can make with the DB Explorer View.
 
 When no editor is opened, then you can examine the source data and execute SQL statements in the Query Builder (QB). Select the DB Interface or any table under it on the tree, and choose the required SQL statement(s) to open the right panel of the Query Builder.
 
-To open the Query Builder you can also click the DB icon that appears near their names. Clicking on the icon that is next to the table will open a SELECT statement on it, at the Query Builder Editor panel.
+To open the Query Builder you can also click the DB icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" alt="BD icon" style="zoom:75%;" /> that appears near their names - either the data source or a table. Clicking on the icon that is next to the table will open a SELECT statement on it, at the Query Builder Editor panel.
 
 > Notes:
 >
