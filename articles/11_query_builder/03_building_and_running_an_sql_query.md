@@ -2,7 +2,7 @@
 
 <studio>
     
-    
+
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
 2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click **Execute Query**.
@@ -21,14 +21,11 @@ Note that the Insert, Update and Delete statements performed by the DB query, mi
 <web>
 
 ## Viewing the List of DB Objects
-* Click the **>** icon to expand or collapse the list in the DB objects. 
+Expand or collapse the DB objects tree. The below screen shows how it looks like when opened via the DB Interface Explorer, where similar tree appear at Query Builder popup (when opened at Schema Editor, Graphit and Broadway)
 
 ![image](images/02_querytab_WEB.PNG)  
 
-> Note that you can collapse or refresh the list of DB objects using the following icons: ![image](images/01_querytabRefresh_WEB.PNG)        
-
 </web>
-
 <studio>    
 
 ## Main Window - Editing an SQL Query  
@@ -136,7 +133,7 @@ To use the Query Builder:
 
 
 
-![image](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\01_QB2.png)
+![image](images/web/01_QB2.png)
 
 
 

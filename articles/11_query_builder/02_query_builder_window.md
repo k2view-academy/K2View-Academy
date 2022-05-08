@@ -33,7 +33,7 @@ Displays the data that is received from the executed query. Click **Export to Ex
 
 When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder is opened the right main panel
 
-![image](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\01_QB1.png)
+![image](images/web/01_QB1.png)
 
 
 
@@ -45,11 +45,11 @@ When Opened from Schema Editor, Graphit or Broadway, the Query Builder is opened
 
 You can open Query Builder where Fabric is the data source. In this case, several fields will be shown at the Query Editor window top bar: Sync mode, Select LU, Instance ID. Fill in and set their values and accordingly the query will be executed.
 
-![fabric top](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\01_fabric_interface_top_bar.png)
+![fabric top](images/web/01_fabric_interface_top_bar.png)
 
 
 
-> You can control of the Query Editor and Results windows sizes: Hover your mouse on the horizontal separator, which appears between these parts, and you will see the ellipsis indication and your cursor type will turn to be cursor-resize ![cursor-resize](C:\K2View\K2View-Academy-7.0\articles\11_query_builder\images\web\cursor-resize.png). Then use the cursor to resize the windows heights.
+> You can control of the Query Editor and Results windows sizes: Hover your mouse on the horizontal separator, which appears between these parts, and you will see the ellipsis indication and your cursor type will turn to be cursor-resize ![cursor-resize](images/web/cursor-resize.png). Then use the cursor to resize the windows heights.
 
 
 
