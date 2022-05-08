@@ -143,7 +143,7 @@ To use the Query Builder:
  * The Query Editor window can hold and execute several queries. When clicking on the Execute button all of them will be execute one by one, where the Results window will show the results of the last query.
  * If Query Editor window contains several queries and you wish to run part of them, you do not need to delete the other. To execute specific commands, select them and then click on Execute.
  * You can add Fabric commands to the Query Editor and they will be executed too. 
- * When Fabric is the selected data source interface, set the top bar fields before execute th
+ * When Fabric is the selected data source interface, set the top bar fields before execute the query.
 
 ### Results Window
 
