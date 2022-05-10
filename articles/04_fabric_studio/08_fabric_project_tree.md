@@ -2,9 +2,9 @@
 
 A Fabric project has a tree-like structure known as the Project Tree which displays components in a hierarchical order. Each entity in the tree initiates different actions.
 
-To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.
-
 The Project Tree is displayed on the left side of the Fabric Studio window.
+
+To initiate an action, right click a component and select the action. For example, to create a new flow right click Broadway in the Project Tree.
 
 ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/Logical_Units_Tree.png)
 
@@ -15,6 +15,7 @@ The Project Tree is displayed on the left side of the Fabric Studio window.
 ### Project Tree Components
 
 The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch. In the example above the main branch is used.
+
 Each project has the following main components: 
 
 * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include the following sub-branches:
@@ -37,7 +38,7 @@ Each project has the following main components:
 
 * **Web Services**, a collection of functions that can be exposed through Fabric’s Web Service layer which may include the following sub-components:
   * Java
-  * Resources, files and GraphIt objects.
+  * Resource files and Graphit objects.
 
 * [**Logical Units**](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
