@@ -1,7 +1,9 @@
 # Fabric Project Tree
 
-A Fabric project has a tree-like structure known as the Project Tree which displays components in a hierarchical order. Each entity in the tree initiates different actions.\
-To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.\
+A Fabric project has a tree-like structure known as the Project Tree which displays components in a hierarchical order. Each entity in the tree initiates different actions.
+
+To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.
+
 The Project Tree is displayed on the left side of the Fabric Studio window.
 
 ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/Logical_Units_Tree.png)
@@ -11,9 +13,10 @@ The Project Tree is displayed on the left side of the Fabric Studio window.
 [Click for more information about Creating a New Project.](/articles/04_fabric_studio/05_creating_a_new_project.md) 
 
 ### Project Tree Components
- 
-The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch. In the example above the Master is used.
+
+The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch. In the example above the main branch is used.
 Each project has the following main components: 
+
 * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include the following sub-branches:
   * [Globals](/articles/08_globals/01_globals_overview.md) 
   * Environments 
@@ -34,14 +37,15 @@ Each project has the following main components:
 
 * **Web Services**, a collection of functions that can be exposed through Fabric’s Web Service layer which may include the following sub-components:
   * Java
-  * Resources, files and Graphit objects.
+  * Resources, files and GraphIt objects.
 
 * [**Logical Units**](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 
-### Project Components Prefix Coventions 
- 
-Using a common prefix for each project component improves maintenance throughout a shared implementation.\
+### Project Components Prefix Conventions 
+
+Using a common prefix for each project component improves maintenance throughout a shared implementation.
+
 The following lists the recommended project component prefixes conventions:
 
 <table>
