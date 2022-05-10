@@ -6,7 +6,7 @@ To start working with Version Control, do either:
 
 * Add a new project to **Version Control** and then check the **Add Project to Version Control** checkbox. 
    * Check out an existing project. 
-Make sure you have all the requirements, for example:
+   Make sure you have all the requirements, for example:
    * Type of configuration control for the project: GIT or SVN. 
    * Installation of the configuration control client: TortoiseGit or TortoiseSVN.
    * Project repository URL. 
