@@ -8,7 +8,7 @@ To initiate an action, right click a component and select the action. For exampl
 
 <studio>
 
-The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch. In the example above the Master is used.
+The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch. In the example above the main branch is used.
 
 ![image](../../articles/13_LUDB_viewer_and_studio_debug_capabilities/images/Logical_Units_Tree.png)
 
