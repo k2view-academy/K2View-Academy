@@ -4,12 +4,31 @@ The HTTP interface type defines the connections to an HTTP/s host and can be use
 
 To create a new HTTP interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **HTTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 
    ![image](images/03_http_1.png)
 
 2. Populate the connection's settings and click **Save**.
+
+</studio>
+
+<web>
+
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **HTTP** from the **Others** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new HTTP Interface, then click **Create**:
+
+   ![image](images/03_http_1WEB.png)
+   
+3. Populate the connection's settings and click **Save**.
+   
+   ![image](images/03_http_2WEB.PNG)
+
+</web>
+
 
 ### Connection Settings
 

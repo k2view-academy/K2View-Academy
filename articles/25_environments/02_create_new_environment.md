@@ -1,3 +1,5 @@
+<studio>
+
 # Create and Edit Environment
 
 The following steps are used to create an environment in Fabric:
@@ -29,6 +31,7 @@ When editing an existing environment, skip this step.
    
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
    
+
 Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) for more information about Fabric security hardening.
 
 
@@ -171,3 +174,5 @@ Repeat steps 1-3 to create the environments and then do the following:
 Note that environments can be deployed to the Fabric Server either from the [Fabric Studio](03_deploy_env_from_Fabric_Studio.md) or using a command line to perform an [offline deployment](04_offline_deployment.md) from an XML file.
 
 [![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_deploy_env_from_Fabric_Studio.md)
+
+</studio>

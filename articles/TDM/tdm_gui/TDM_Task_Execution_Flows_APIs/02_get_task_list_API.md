@@ -4,7 +4,7 @@
 
 ### API URL
 
-/regularTasksByUser
+/regularTasksByUser 
 
 ### HTTP Method
 

@@ -1,15 +1,19 @@
 # Table Population Overview
 
 ### What Is a Table Population? 
-A **Table Population** defines and executes mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
+A **Table Population** defines and executes mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like <studio>[Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), </studio>[Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
 
 Each table can have one or several table populations that can be executed simultaneously or according to a predefined [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md).
 Each table population extracts data from a data source, transforms it when needed and then populates the data into an LU table. Table populations can be categorized as follows:
+
+<studio>
 
 * Based on a source object:
   * DB query, (default) that executes an SQL Select query on a predefined DB interface. 
   * [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
     Note that tables can also be populated or updated by [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md#enrichment-function-overview) which, unlike Root functions, are executed after all LU tables are populated.
+
+</studio>
 
 * Based on a Broadway flow, whereby a Broadway Flow template is created to extract the data from the source and populate it into the target LU table. A Broadway Flow template can be enhanced with additional logic pre and post loading.
 
@@ -26,14 +30,17 @@ Note that an LU table can be added to an [LU Schema](/articles/03_logical_units/
 
 [Click for more information about Building an LU Hierarchy and Linking Table Populations.](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) 
 
+<studio>
+
 ### Table Population Window
+
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
 
 [Click for more information about How to Create a New Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
 The following is an example of the Table Population window. 
 
-![image](/articles/07_table_population/images/07_01_01_table_pop_window.png)
+![image](images/07_01_01_table_pop_window.png)
 
 The Table Population window has the following sections:
 *	[Population Header](/articles/07_table_population/01_table_population_overview.md#population-window-header). 
@@ -145,7 +152,15 @@ The **Expand / Collapse** and **Refresh** links are displayed above the **Object
 </tbody>
 </table>
 
+ 
 [Click for more information about the Table Population Diagram Outline.](/articles/07_table_population/12_table_population_diagram_outline.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/02_source_object_types.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_source_object_types.md)
 
+</studio>
+
+<web>
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_creating_a_new_table_population.md)
+
+</web>

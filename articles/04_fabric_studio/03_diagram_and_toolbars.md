@@ -1,6 +1,9 @@
+<studio>
+
 # Diagram and Toolbars
 
-The Diagram window is the main working area in the Fabric Studio. When multiple functional windows are open in the same working area, you can switch between different windows using the tabs on the top of the main working area.\
+The Diagram window is the main working area in the Fabric Studio. When multiple functional windows are open in the same working area, you can switch between different windows using the tabs on the top of the main working area.  
+
 Below are some examples of Fabric components which have a Diagram window working area:
 
 <table width="642">
@@ -98,8 +101,8 @@ Below are some examples of Fabric components which have a Diagram window working
 
 
 ### Diagram Toolbars
-A Diagram window may have several toolbars.\
-To customize the **Diagram** window, right click the **upper toolbar** and then select one or more of the following options: 
+A Diagram window may have several toolbars. To customize the **Diagram** window, right click the **upper toolbar** and then select one or more of the following options: 
+
 * Edit
 * Alignment
 * Zoom
@@ -108,8 +111,9 @@ To customize the **Diagram** window, right click the **upper toolbar** and then 
 * Customize
 
 ### Edit Toolbar Icon
-The ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) Edit icon is displayed in the bottom right corner of the Diagram window.   
-Click ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) to display the following options: 
+The ![image](images/04_03_edit_icon1.png) Edit icon is displayed in the bottom right corner of the Diagram window.   
+Click ![image](images/04_03_edit_icon1.png) to display the following options: 
+
 * Undo icon
 * Redo icon
 * Delete icon
@@ -401,3 +405,5 @@ Click ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) to displa
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04_user_preferences.md)
+
+</studio>
