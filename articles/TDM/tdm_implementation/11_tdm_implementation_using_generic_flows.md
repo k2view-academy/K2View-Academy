@@ -219,12 +219,31 @@ The Customer Logic Broadway flow always has **two external input parameters** an
 
 TDM 7.5 supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task.  For example, add an external parameter of a customer status to the flow. The flow selects the customers for the task based on the input status. This way you can filter the selected customers by their status and still use the same flow to select them.
 
+**Notes:** 
+
+- The input parameter name must not contain spaces.
+
+- Define a String input parameter to get a list of values into the parameter and split it into an array in the flow. For example: "CA,NY". The Broadway flow can split this string by the comma delimiter. The values must be delimited by the delimiter set in the Split actor.
+
+- You can get an input select statement with binding parameters.  The parameters' values must be sent into a separate input parameter. 
+
+  Example of the input parameters:
+
+  - **SQLQuery**: 
+
+    select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
+
+  - **SQLParams:**
+
+    Open,Billing Issue
+
 #### Custom Logic High Level Structure
 
 - **Stage 1**: 
 
   - Add a logic to get the required entities. For example: a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
   - Initialize the counter of the number of entities for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
+  - Note that if the flow needs to get an array of parameters,  it is recommended to define the input external parameter as a String and add a **Split** actor to the flow to split the values by the delimiter and populate them into an array of String.
 
 - **Stages 2- 4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit for all iterations: 
 
@@ -244,11 +263,31 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
      The task needs to get 5 entities. The select statement gets 20 entities. The the first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and populated in the Cassandra table and the entities' loop stops.
 
-  Below is an example of a Custom Logic flow:
+
+Below are examples of a Custom Logic flow:
+
+**Example 1 - get a the Contract status as an input and build the Select statement accordingly:** 
 
 ![custom logic](images/custom_logic_example.png)
 
+
+
+**Example 2 - get an input String of States, separated by a comma. Split the input string into and array and send it to the SQL query**:
+
+Example of the input States: 
+
+- NY,CA
+
+![custom logic](images/custom_logic_example_2.png)
+
+
+
+**Example 3 - get an input Select Statement and a parameters for the Select Statement:**
+
+- 
+
 #### Debugging the Customized Flow
+
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
 - LU_NAME: popoulated with the LU name
 - EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
