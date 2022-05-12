@@ -93,7 +93,7 @@ TDM 7.5 supports the creation of external input parameters on a Custom Logic Flo
 Notes:
 
 - The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. If the custom logic selects a smaller number of entities, the number of entities will be set by the custom logic flow. For example: the maximum number of entities in the task is 50, but the customer logic only selects 30 entities. The task will process 30 entities.
-- It is possible to set an array value in a Custom Logic's parameter. For example: {1,2,3} or {"Open", "Close"}. 
+- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
 

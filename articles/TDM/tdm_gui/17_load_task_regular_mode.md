@@ -105,7 +105,7 @@ TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In t
 
 Note:
 
-- It is possible to set an array value in a Custom Logic's parameter. For example: {1,2,3}, {"Open", "Close"}. 
+- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
 
 ### Parameters 
 

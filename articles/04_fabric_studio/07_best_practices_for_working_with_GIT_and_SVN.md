@@ -1,7 +1,7 @@
 # Best Practices for Working with GIT and SVN
 
 ### How Do I Start Using Version Control?
- 
+
 To start working with Version Control, do either:
 
 * Add a new project to **Version Control** and then check the **Add Project to Version Control** checkbox. 
@@ -27,7 +27,7 @@ When working with version control in Fabric projects, we recommend:
 [Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
 
 ### Best Practices for Working with GIT
- 
+
 When working with Git in Fabric projects we recommend:
 *  Using Git as the preferred version control. Git allows better collaboration, faster commit time, has no single point of failure and enables working offline on local branches without interruption.
 * Pulling the latest version of the project before starting to change the code.

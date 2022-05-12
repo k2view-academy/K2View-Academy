@@ -15,7 +15,6 @@ The name of the currently active project in the Studio is displayed at the top o
 [Click for more information about Creating a New Project.](05_creating_a_new_project.md) 
 
 
-
 ### Project Tree Components
 
 Each project has the following main components: 
@@ -39,6 +38,7 @@ Each project has the following main components:
 * **Logical Units**, a collection of all [Logical Units](/articles/03_logical_units/01_LU_overview.md) defined in the project.
 
 * **References**, reference information that can be used throughout the LU instances and may include the following sub-branches:
+  
   * Broadway
 
   * Java, Functions, Globals, Resources
@@ -60,8 +60,6 @@ Each project has the following main components:
 <web>
 
 <img src="images/web/project_tree.png" />
-
-
 
 In addition to the context menu (right click) at the project tree, to initiate an action you can use the **Fabric** item at top menu bar and also via **View > command Pallete...** top menu bar item. 
 
@@ -87,9 +85,6 @@ Each project has the following main components (under Project > Implementation):
 </web>
 
 [Click for more information about UI Components and Menus.](01_UI_components_and_menus.md)
-
-
-
 
 ### Project Components Prefix Conventions 
 
