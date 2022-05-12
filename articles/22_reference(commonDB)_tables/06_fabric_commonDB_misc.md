@@ -1,9 +1,7 @@
-
-
-## CommonDB Table Initialization
+# CommonDB Table Initialization
 When a new node comes up online or rejoins the current Fabric cluster, all common tables must also be updated on this node. There are two enrollment options:
 
-**Option 1: Directly from kafka**
+**Option 1: Directly from Kafka**
 
 A new node connects directly to each Kafka topic for each Reference table to check whether a snapshot is available:
 - The table is regularly synced as defined in its sync schedule and therefore a snapshot is available.
@@ -49,11 +47,11 @@ When running the following ```drop lutype k2_ref;``` command from any Fabric Nod
 - All existing consumer/producers are terminated.
 
 
-   
+
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/07_fabric_commonDB_configuration.md)
 
 
-   
+
