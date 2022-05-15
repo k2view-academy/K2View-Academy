@@ -92,9 +92,7 @@ The following are some of the methods you can use for adding a table to an [LU s
       Define and populate the table's columns: 
 
       * When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
-      * Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on 
-
-        ​	More information can be found [here](/articles/06_LU_tables/02_create_an_LU_table.md )
+      * Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
 
 
 
