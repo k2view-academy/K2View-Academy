@@ -3,15 +3,15 @@
 ## What Is the Fabric Studio?
 Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
 
-Fabric Studio offers a user friendly look-and-feel development environment known as the *Implementation Layer*. Each project is initiated and maintained through this platform and working space. 
+Fabric Studio offers a user-friendly look-and-feel development environment known as the *Implementation Layer*. Each project is initiated and maintained via this platform and working space. 
 
-As an integrated tool, the Fabric Studio allows you to:
+As an integrated tool, Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
-* Use robust ETL (Extract, Transform, Load) options to define the mapping logic for the various tables in the LUs. Transformation objects used can be [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md) <studio>as well as [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio>.
-* Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project to the Fabric runtime environment. 
+* Use robust ETL (Extract, Transform, Load) options in order to define the mapping logic for various tables in the LUs. The transformation objects that are used may be [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md) <studio>as well as [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio>.
+* Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project into the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
-The Fabric Studio also enables you to integrate your projects into source version control systems based on Git <studio>or the Apache Sub-version (SVN) Standard</studio>.
+Additionally, the Fabric Studio enables you to integrate your projects into source version control systems based on either Git <studio>or the Apache Subversion (SVN) standard</studio>.
 
 <studio>
 
@@ -46,13 +46,13 @@ The Start Page has links, including:
 
 [Click for more information about Creating a New Project.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-Click the K2View icon on the top left corner of the Studio to restore, move, size, minimize, maximize or close the Fabric Studio.
+Click the K2View icon on the top left corner of the Studio in order to restore, move, change size, minimize, maximize or close the Fabric Studio.
 
 The Start Page can be reopened, even after it is closed, by using the *Tools* actions.
 
 
 
-Once a project is opened, the debug panel appears on the upper left of the window, and the activity toolbar appears along the left side of the window.
+Once a project is opened, the debug panel appears on the upper left side of the window, and the activity toolbar appears along the left side of the window.
 
 
 
@@ -60,7 +60,7 @@ Once a project is opened, the debug panel appears on the upper left of the windo
 
 ![debug toolbar](images/fabric_studio_debug_panel.png)
 
-The debug panel enables access to the Fabric debug server, Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
+The debug panel enables access to the Fabric debug server, Cassandra debug server and to the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
 
 <table>
 <tbody>
@@ -73,7 +73,7 @@ The debug panel enables access to the Fabric debug server, Cassandra debug serve
 <td width="60pxl" valign="top"><p>
     <img src="images/deploy_LUs_to_debug_server.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
-<p>Deploy all updated LUs to Fabric debug server</p>
+<p>Deploy all updated LUs into Fabric debug server</p>
 <p>(appears white before the deploy, green after a successful deploy)</p>
 </td>
 </tr>
@@ -194,17 +194,17 @@ The File tab has the following options:
 * Recent Projects.
 
 #### New Item Tab
-Click **New Item** to open a **New Item** under a selected **LU** or **Shared Objects**:
-* Select an **LU** from the current **Logical Unit** dropdown list to create the new item under the selected **LU**. For example, a new [Function](/articles/07_table_population/11_3_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
-* To create a new item under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the current Logical Unit dropdown list should be blank.
+Click **New Item** to open a **New Item** under a selected **LU** or under **Shared Objects**:
+* Select an **LU** from the current **Logical Unit** dropdown list in order to create the new item under the selected **LU**. Examples for such new items are [Function](/articles/07_table_population/11_3_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
+* In order to create a new item under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the current Logical Unit dropdown list should be empty.
 
-Note that this area allows you to open a new item only for LU or Shared Objects. 
+Note that this area allows you to open a new item only for LU or for Shared Objects. 
 
 </studio>
 
 <web>
 
-The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it adopts a common user interface and layout,  maximizes the space provided for the editor while leaving ample room to browse and access the full context of your project.
+The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it adopts a common user interface and layout, maximizing the space provided for the editor while leaving enough room to browse and access the full context of your project.
 
 
 
@@ -212,31 +212,31 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 
  The Fabric Web Studio adopts Visual Studio Code concepts. The UI is divided into several main areas:
 
-* **Editor** (A) - The main area to edit all your project files and entities. You can open as many editors as you like side by side vertically and horizontally.
-* **Activity Bar** (B) -  Located on the far left-hand side and lets you switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled.
-* **Side Bar** (C) - Contains different views like the Explorer to assist you while working on your Fabric project.
-* **Status Bar** (D) - Information about the opened project and the files you are editing.
-* **Panels** (E) - Enables you to see different panels below the editor region for debug information, compilations errors and warnings, or the integrated Fabric console. Panels can also be moved to the right to allow more vertical space.
-* **Minimap** & **Outline** (F) - Code outline, Gives you a high-level overview of your source code, which is useful for quick navigation and code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
+* **Editor** (A) - The main area in which you edit all your project files and entities. You may open as many editors as you like side by side vertically and horizontally.
+* **Activity Bar** (B) -  Located on the far left-hand side and allows you to switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled.
+* **Side Bar** (C) - Contains different views, like the Explorer, assisting you while working on your Fabric project.
+* **Status Bar** (D) - Information about the open project and the files you are editing.
+* **Panel** (E) - Shows you different panel modules below the editor area. Examples for such panel modules are the Fabric Terminal, Problems (comprised of compilation errors and warnings) and Debug Information. These can be moved to the right side of the screen, allowing for more vertical space. 
+* **Minimap** & **Outline** (F) - Code outline, provides you with a high-level overview of your source code, which is useful for a quick navigation and a code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area in order to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
 * **Fabric Apps Panel** (G) - Since the Web Studio works as part of the Fabric Web Platform, you can navigate to its other apps via this panel. 
-* **Top Menu** (H) - From the top menu you can either carry out IDE operations, or activate certain Fabric commands. 
+* **Top Menu** (H) - From the top menu you can either carry out IDE operations or activate certain Fabric commands. 
 
 
 ![basic layout](images/web/1_main_ui.jpg)
 
 
 
->**Tip:** You can reorganize the editors and panels, placing them in convenient locations. Drag and drop the editor or panel tab to reposition the editor or panel in the location you want on the screen.  
+>**Tip:** You can reorganize the editors and panels, placing them in convenient locations. Drag and drop the editor or the panel tab in order to reposition the editor or the panel in the desired location on the screen.  
 
 
 
 ## Activity Bar and Views
 
-The **Activity Bar** lets you quickly switch between views. Once you click on a view, the **Side Bar** is changed accordingly and allows you to make the relevant operations for this view. 
+The **Activity Bar** lets you switch quickly between views. Once you click on a view, the **Side Bar** changes accordingly and allows you to make the relevant operations for this view. 
 
-The Web Studio comes with several default views in the Activity Bar, as described below. You can open those as well as other views using the **View: Open View** command. If a selected view does not yet appear in the Activity Bar, it will be added at this point in time. 
+The Web Studio comes with several default views in the Activity Bar, as described below. You can open those, as well as other views, using the **View: Open View** command. Selecting a view, adds it to the Activity Bar. 
 
-The views which appear by default at the Web Studio are as follows:
+The views that appear by default on the Web Studio are as follows:
 
 <table>
 <tbody style="vertical-align: text-top; ">
@@ -248,7 +248,7 @@ The views which appear by default at the Web Studio are as follows:
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
 <td style="padding-left: 30px;"><strong>Search</strong></td>
-<td style="width:60%">Provides a global search and replace across your project files. This tool, which is opened from the Side Bar, lets you make smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a>.</td>
+<td style="width:60%">Provides a global search and replace across your project files. This tool, which is opened from the Side Bar, allows you make smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
@@ -275,7 +275,7 @@ The views which appear by default at the Web Studio are as follows:
 
 
 
->**Tip:** You can reorder views on the Activity Bar by dragging and dropping them.
+>**Tip:** You can change the order of views in the Activity Bar by dragging and dropping them.
 
   
 
@@ -283,7 +283,7 @@ The views which appear by default at the Web Studio are as follows:
 
 The Command Palette is an interactive window that provides access to the Fabric Web Studio functionality, including keyboard shortcuts for many common operations. You can open files, execute editor commands, and launch Fabric dedicated editors such as Create New LU, Create new Broadway flow and many more.
 
-You can reach the command palette from the top menu by selecting **View > Find command** or use ⇧⌘P in Mac or F1 in Windows to bring it up.
+You can reach the Command Palette from the top menu by selecting **View > Find command** or use ⇧⌘P in Mac or F1 in Windows to bring it up.
 
 To learn more about useful Command Palette commands and shortcuts see [here](20_web_command_keyboard_shortcuts.md).
 
@@ -291,13 +291,13 @@ To learn more about useful Command Palette commands and shortcuts see [here](20_
 
 ## Color Themes
 
-As part of Web studio Settings Capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
+As part of Web Studio Settings Capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
 
 To select a color theme
 
-1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) resides at left bottom of the Web Studio. 
+1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) located at the bottom left area of Web Studio. 
 2. Use the cursor keys to preview the colors of the theme.
-3. Select the theme you want and press Enter.
+3. Select a desired theme and click Enter.
 
 
 
@@ -307,8 +307,8 @@ To select a color theme
 
 >**Notes:** 
 >
->1. Fabric Web Studio is basically a Visual Studio Code-like editor, with slight differences. While you can look and learn from VS Code's vast user guides, keep in mind that they are not the same.
->2. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of being code editor oriented, file and folder based.
+>1. Fabric Web Studio is basically a Visual Studio code-like editor, with small differences. While you can look and learn from VS Code's many user guides, keep in mind that they are not the same.
+>2. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of having a code editor orientation and being a file and folder based.
 >3. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project.
 
 </web>
@@ -317,7 +317,7 @@ To select a color theme
 
 ### The Project Tree
 
-The Project Tree displays the components of the current project as a hierarchy of entities. The project is the top-level of the hierarchy. Each project has the following branches (sub-objects): 
+The Project Tree displays the components of the current project as a hierarchy of entities. The project is the top-level in the hierarchy. Each project has the following branches (sub-objects): 
 
 * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the objects used by all Logical Units and project references.
 * References, reference information that may be used throughout the instance. References includes also [common project's tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
