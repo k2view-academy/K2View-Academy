@@ -107,7 +107,7 @@ To use OAuth the following preparations shall be done:
   JWK_ENDPOINT=https://<auth-server>/jwks
   ```
 
-* Grant permissions to the expected access token scopes:
+* Grant permissions to the expected access token's *scopes*:
   1. Create roles for the scopes - each scope shall be mapped to a Fabric's role.
   2. Grant permission to each role, as needed.
 
@@ -115,6 +115,14 @@ Fabric extends the standard OAuth authorization delegation capabilities, other t
 The access token (JWT) can be sent with extra optional payload parameter, which represents the client ID.
 This ID shall be mapped to APIKEY in Fabric and permissions shall be granted to as needed.
 By default, this optional parameter name is "client_id".
+
+Fabric follows the OAuth standards to verify the web services API calls. When a web services is requested:
+1. Fabric looks for a JWT access token at the `Authorization: Bearer` header.
+2. Fabric decodes the JWT and looks for the kid.
+3. Fabric looks for kid in the JWK set which was published by the Athurization server.
+4. Fabric verifies the JWT using the JWK matched key.
+
+> Note that Fabric, as the Resource Server, is agnostic to the OAuth grant types and flows, i.e. either Authorization Code or Client Credentials. 
 
 
 ### Basic Authentication
