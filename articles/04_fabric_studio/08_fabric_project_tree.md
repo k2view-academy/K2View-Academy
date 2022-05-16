@@ -69,7 +69,7 @@ Initiating an action may be done by any of the following three methods:
 - using the **Fabric** item (top menu bar)
 
 
-- via **View > command Pallete...** (the top menu bar) 
+- via **View > command Palette...** (top menu bar) 
 
 ### Project Tree Components
 
