@@ -2,13 +2,13 @@
 
 ## Authentication Methods
 
-Fabric secures and controls Web Services (WS) access via an authentication mechanism in which each API call must be verified. 
+Fabric secures and controls Web Services (WS) access via an authentication and authorization mechanisms in which each API call must be verified. 
 
-Fabric supports three methods for that purpose:
+Fabric supports several methods for that purpose:
 
 1. **API Key**, a token which is sent as `Authorization: Bearer` header
 
-2. **JWT** ( JSON Web Tokens), an open industry standard method (RFC 7519) that securely represents claims between two parties. 
+2. **JWT** ( JSON Web Tokens), an open industry standard method ([RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) that securely represents claims between two parties. 
 
    The JWT authentication has 2 variants:
 
@@ -18,7 +18,8 @@ Fabric supports three methods for that purpose:
    
       Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
-3. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
+3. **Open Auth (OAuth)** authorization delegation protocol, via an access token (self-encoded JWT) which is sent as `Authorization: Bearer` header
+4. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
 
 ### API Key
 
@@ -94,6 +95,26 @@ Fabric supports these delegated authentications:
 
 * When JWT is verified, Fabric sets the session with this user and roles by taking the groups and setting them as user's roles for this session.
 
+### Open Auth (OAuth)
+
+Fabric supports the standard Open Auth (OAuth) protocol for its web services autorization. 
+To use OAuth the following preparations shall be done:
+
+* Set the JWK endpoint at the config.ini, using the JWK_ENDPOINT parameter located under oauth2 section. It shall look like the following:
+  ```
+  [oauth2]
+  ## The JSON Web Key (JWK)'s endpoint that holds the keys for the access token (JWT) verification
+  JWK_ENDPOINT=https://<auth-server>/jwks
+  ```
+
+* Grant permissions to the expected access token scopes:
+  1. Create roles for the scopes - each scope shall be mapped to a Fabric's role.
+  2. Grant permission to each role, as needed.
+
+Fabric extends the standard OAuth authorization delegation capabilities, other than via scopes:
+The access token (JWT) can be sent with extra optional payload parameter, which represents the client ID.
+This ID shall be mapped to APIKEY in Fabric and permissions shall be granted to as needed.
+By default, this optional parameter name is "client_id".
 
 
 ### Basic Authentication
