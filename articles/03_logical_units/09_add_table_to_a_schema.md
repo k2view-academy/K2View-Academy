@@ -68,26 +68,25 @@ The following are some of the methods you can use for adding a table to an [LU s
 
    
 
-   #### Choose From List
+#### Choose From List
 
-   Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
-   ![add table select from list](images/web/9_add_new_table.PNG)
+Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
+![add table select from list](images/web/9_add_new_table.PNG)
 
    
+#### Create New from Source with SQL Query
 
-   #### Create New from Source with SQL Query
+Name the table and click on Create. Query Builder popup window appears:
 
-   Name the table and click on Create. Query Builder popup window appears:
+![QB popup](images/web/01_QB_WEB_popup1.png)
 
-   ![QB popup](images/web/01_QB_WEB_popup1.png)
+In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
 
-   In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
+![QB popup](images/web/01_QB_WEB_popup2.png)
 
-   ![QB popup](images/web/01_QB_WEB_popup2.png)
+Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
 
-   Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
-
-   ![QB popup](images/web/01_QB_WEB_popup3.png)
+![QB popup](images/web/01_QB_WEB_popup3.png)
 
 #### Create New Manually
 
