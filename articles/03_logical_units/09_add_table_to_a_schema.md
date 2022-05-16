@@ -66,19 +66,16 @@ The following are some of the methods you can use for adding a table to an [LU s
    * Create New from source with SQL query
    * Create New manually
 
-   
 
 #### Choose From List
 
 Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
 ![add table select from list](images/web/9_add_new_table.PNG)
 
-   
+
 #### Create New from Source with SQL Query
 
-Name the table and click on Create. Query Builder popup window appears:
-
-![QB popup](images/web/01_QB_WEB_popup1.png)
+Name the table and click on Create. Query Builder popup window appears.
 
 In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
 
