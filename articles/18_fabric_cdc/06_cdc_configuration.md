@@ -38,7 +38,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 </tr>
 <tr>
 <td valign="top" width="300pxl">
-<p>#MAX_CONCURRENT_TRX=20</p>
+<p>#MAX_CONCURRENT_TRX=2147483647</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
@@ -67,7 +67,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 </tr>
 <tr>
 <td valign="top" width="300pxl">
-<p>#TRX_MAX_DURATION_SEC=86400</p>
+<p>#TRX_MAX_DURATION_SEC=300</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
