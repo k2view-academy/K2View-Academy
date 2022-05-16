@@ -62,40 +62,43 @@ The following are some of the methods you can use for adding a table to an [LU s
 
 2. From the **Project Explorer**, open your Logical Unit > Schema and on the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window top bar, click the <img src="images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window, where you can choose one of three options:
 
-   * **Choose from list** - select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
-     ![add table select from list](images/web/9_add_new_table.PNG)
-   
-   
-      * **Create New from source with SQL query**. Name the table and click on Create. Query Builder popup window will appear.
-   
-         ![QB popup](images/web/01_QB_WEB_popup1.png)
-         
-         - Choose the required Interface. Then either write the SQL query in upper part of the Query Editor or expand the Interface schema and tables list to find the relevant table and select it.
-         
-         ![QB popup](images/web/01_QB_WEB_popup2.png)
+   * Choose from list
+   * Create New from source with SQL query
+   * Create New manually
+
    
 
+   #### Choose From List
 
-​      
+   Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
+   ![add table select from list](images/web/9_add_new_table.PNG)
 
-   Once a query exists in the Query Editor, you can examine it by clicking on Execute.
+   
 
-      ![QB popup](images/web/01_QB_WEB_popup3.png)
+   #### Create New from Source with SQL Query
 
-   When done, click on the Create button.
+   Name the table and click on Create. Query Builder popup window appears:
 
-​      
+   ![QB popup](images/web/01_QB_WEB_popup1.png)
 
-   * **Create New** manually: Name the table and click on Create. A new empty table popup window will appear.
+   In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
 
-      ![QB popup](images/web/01_QB_WEB_popup4_manual.png)
+   ![QB popup](images/web/01_QB_WEB_popup2.png)
 
-      Define and populate the table's columns: 
+   Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
 
-      * When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
-      * Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
+   ![QB popup](images/web/01_QB_WEB_popup3.png)
 
+#### Create New Manually
 
+Name the table and click on **Create**. A new empty table popup window appears.
+
+Define and populate the table's columns: 
+
+* When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
+* Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
+
+![QB popup](images/web/01_QB_WEB_popup4_manual.png)
 
 The table is automatically created (unless already exists and just added to the schema) with the [population](/articles/07_table_population/14_table_population_based_Broadway.md) and is added to the LU schema.
 
