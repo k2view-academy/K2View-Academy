@@ -58,24 +58,25 @@ The following are some of the methods you can use for adding a table to an [LU s
 
 <web>
 
-1. From the **DB Interface Explorer**: click on the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon -  activity panel on the left - as described [here](/articles/03_logical_units/05_create_a_new_LU_object.md). This option is useful when you wish to add tables from data sources.
+1. From the **DB Interface Explorer**, click on the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon from the Activity panel on the left as described [here](/articles/03_logical_units/05_create_a_new_LU_object.md). This option is useful when you wish to add tables from data sources.
 
-2. From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window top bar, click the <img src="images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the Add New Table popup window, where you can choose one of three options:
+2. From the **Project Explorer**, open your Logical Unit > Schema and on the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window top bar, click the <img src="images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window, where you can choose one of three options:
 
-   * Choose from list, Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
+   * **Choose from list** - select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
      ![add table select from list](images/web/9_add_new_table.PNG)
+   
+   
+      * **Create New from source with SQL query**. Name the table and click on Create. Query Builder popup window will appear.
+   
+         ![QB popup](images/web/01_QB_WEB_popup1.png)
+         
+         - Choose the required Interface. Then either write the SQL query in upper part of the Query Editor or expand the Interface schema and tables list to find the relevant table and select it.
+         
+         ![QB popup](images/web/01_QB_WEB_popup2.png)
+   
 
 
-   * **Create New** is based on a data source query: Name the table and click on Create. Query Builder popup window will appear.
-
-      ![QB popup](images/web/01_QB_WEB_popup1.png)
-
-
-   Choose the required Interface. Then either write the SQL query in upper part of the Query Editor or expand the Interface schema and tables list to find the relevant table and select it.
-
-      ![QB popup](images/web/01_QB_WEB_popup2.png)
-
-      
+​      
 
    Once a query exists in the Query Editor, you can examine it by clicking on Execute.
 
@@ -83,7 +84,7 @@ The following are some of the methods you can use for adding a table to an [LU s
 
    When done, click on the Create button.
 
-      
+​      
 
    * **Create New** manually: Name the table and click on Create. A new empty table popup window will appear.
 
