@@ -12,14 +12,14 @@ The Query Builder is an embedded visual query building component that allows you
 <studio>
 
 1.	[**Fabric Studio Toolbars Tab**](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) > <img src="/articles/11_query_builder/images/12_1_1%20icon.png"> **Query Builder**.
-2.	**Project Tree**, right-click on **DB Interface** > **Show Query Builder.**
-3.	**Fabric Studio Java Editor**, right-click on the **Editor** pane > **Open Query Builder** > **Schema**.
+  2.**Project Tree**, right-click on **DB Interface** > **Show Query Builder.**
+  3.**Fabric Studio Java Editor**, right-click on the **Editor** pane > **Open Query Builder** > **Schema**.
 
 ![image](/articles/11_query_builder/images/12_1_2%20Schema.png)
 
 4.	[**Table Population**](/articles/07_table_population/01_table_population_overview.md) or **Parser Maps**, if the Source Object is a DB query, double-click on the **Source Object** or click on **Edit Query** in the [**Source Object Properties tab**](/articles/07_table_population/04_table_population_properties_tab.md#source-object---db-query-properties).
-5.	[**Logical Unit Schema window**](/articles/03_logical_units/03_LU_schema_window.md), right-click and select either **New Table from SQL Based DB Query** or **New Table From SQL Based Root Function** to [create a new LU table](/articles/06_LU_tables/02_create_an_LU_table.md) based on the SQL query. Both options open the Query Builder window to build the SQL query. The LU table and its population are automatically generated based on the SQL query defined in the Query Builder.
-6.	[**Translation object**](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema), the data in a **Translation** field can be validated using the Query Builder if the **Field Type = SQL**. Click **SQL** next to the field in order to open the Query Builder.
+  5.[**Logical Unit Schema window**](/articles/03_logical_units/03_LU_schema_window.md), right-click and select either **New Table from SQL Based DB Query** or **New Table From SQL Based Root Function** to [create a new LU table](/articles/06_LU_tables/02_create_an_LU_table.md) based on the SQL query. Both options open the Query Builder window to build the SQL query. The LU table and its population are automatically generated based on the SQL query defined in the Query Builder.
+  6.[**Translation object**](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema), the data in a **Translation** field can be validated using the Query Builder if the **Field Type = SQL**. Click **SQL** next to the field in order to open the Query Builder.
 
 ![image](images/12_1_3%20query%20builder.png)
 
@@ -41,7 +41,7 @@ The Query Builder is an embedded visual query building component that allows you
 
 4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), Click the QB icon in the **DbCommand actor**. A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the actor.
 
-> You can select the Query Builder where Fabric is the data source.
+You can select the Query Builder, where Fabric is the data source.
 
 </web>
 
