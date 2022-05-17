@@ -13,7 +13,7 @@ The following components can be shared in a Fabric project:
     Note: If a Global is defined in both a Shared Object and a specific Logical Unit, the one used is the one defined in the specific Logical Unit. Other Logical Units use the definitions in the Shared Object.
   * Resources, various files that can be saved both as part of a project and in version control.
 * [Broadway](/articles/19_Broadway/01_broadway_overview.md) - set of flows that can be used for the data movement, its transformation and orchestration. A Broadway flow, defined at a Shared Objects level, may be used in any LU included in the project. 
-* [Database Types/Custom Interface Types](/articles/05_DB_interfaces/10_database_types.md ) - where you can define a new database type that has a JDBC driver, which is not part of the Product package. Addition, you can edit product-supported database types that are used when defining interfaces.
+* [Database Types/Custom Interface Types](/articles/05_DB_interfaces/10_database_types.md ) - where you can define a new database type that has a JDBC driver, which is not a part of the Product package. Additionally, you can edit product-supported database types that are used when defining interfaces.
 
 <studio>
 
@@ -23,8 +23,8 @@ The following components can be shared in a Fabric project:
 </studio>
 
 **Notes** 
-* If either a function <studio>, a translation </studio> or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
-* Since Shared Objects **are not** self-deployed, changes to an item under a Shared Object, used by several components, require redeployment in order to become available.
+* If either a function <studio>, a translation </studio> or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code gets priority.
+* Since Shared Objects **are not** self-deployed, changes made to an item under a Shared Object, used by several components, require redeployment in order to become available.
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
