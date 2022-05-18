@@ -1,9 +1,9 @@
 # Query Builder Overview
 
-The Query Builder is an embedded visual query building component that allows you to build complex SQL queries on a selected [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) (external data source) as well as on Fabric, using an intuitive interface. 
+The Query Builder is an embedded visual query building component that allows you to build complex SQL queries on a selected [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) (an external data source) as well as on Fabric, using an intuitive interface. 
 
 > Note: 
-> The [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has a [Schema Filter](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#schema-filter) setting, which enables filtering the DB schema’s list that is used by the Query Builder and the [DB queries](/articles/07_table_population/01_table_population_overview.md) in the DB interface.
+> The Query Builder is affected by the Schema filtering, which is defined in the [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 ## Opening the Query Builder Window
 
