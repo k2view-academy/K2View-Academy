@@ -106,13 +106,13 @@ This table is displayed on the bottom right of the main window and enables editi
 
 ![image](images/select_case.png)
 
-2.	Select the **Function** and the **DB object** column in order to add to the **SQL query**.
+2.	Select the **Function** and the **DB object** column in order to add them to the **SQL query**.
 
 ![image](images/06_03.png)
 
 3.	Populate the **Column Name** column to add an **alias** to the selected DB object column.
 4.	Populate the **Sort Type** and **Sort Order** columns to add an **Order by** to the SQL query.
-5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This also updates the Grouping column to add a 'Group by' to the SQL query.
+5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This updates the Grouping column and is reflected as a 'Group by' statement in the SQL query.
 6.	Populate the **Criteria** and **Or** columns in order to add the DB object column to the WHERE statement of the SQL query.
 
 ## Query Settings Toolbar
@@ -150,18 +150,18 @@ To use the Query Builder:
 
 * The Results window shows up to 1000 entries.
 
-* The Results window top bar is divided to information part, on the right side, and actions on the left side:
+* The Results window's top bar is divided to information part (on the right side) and actions (on the left side):
 
   * Information part contains 
     * Number of displayed rows (as explained, up to 1000 rows)
     * Query status - success/failure. In case of a failure, a failure reason will be shown in the results area, instead of the results table.
     * Duration took to execute the query. Note that the duration is not the time until result table is rendered and displayed as a table in the results window.
-    * How many rows were affected during the query execution. In case of select statement, no rows are affected so it will show zero.
+    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it shows zero.
   * Actions part contains:
-    * Columns to show - allows you to tune the results table's display. When clicked, a popup opens where you can set the result tables columns to be shown.
+    * Columns to show - allows you to adjust the Results table display. When clicked, a popup opens where you can set up the Result tables columns that will be shown.
     * CSV - allows you to download the results.
 
-* The Results table supports some manipulations that lets you tune the display for your needs, in addition to *Columns to show* option:
+* The Results table enables some manipulations that let you adjust the display according to your needs, in addition to the *Columns to show* option:
 
   * Sort Order - click on the column's header sort icon ![sort](images/web/order_icon.png) to reorder the table (Ascending/Descending).
 
