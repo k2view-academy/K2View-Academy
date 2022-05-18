@@ -4,9 +4,9 @@
 ​    
 
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
-2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
-3.	To execute the SQL statement, click on **Execute Query**.
-4.	Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
+  2.Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
+  3.To execute the SQL statement, click on **Execute Query**.
+  4.Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
 
 Note that the Insert, Update and Delete statements performed by the DB query, might cause an auto-commit to the DB (based on the DB driver’s definition). 
 
@@ -102,18 +102,18 @@ Each SQL statement that is combined by the UNION operator has a **Q** icon in th
 This table is displayed on the bottom right of the main window and enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
 
 ### Adding an SQL Function to a DB object Column 
-1.	Click the **3 dots** in the **Expression** column to open the **Expression Editor** window. 
+1.	Click on the **3 dots** in the **Expression** column for opening the **Expression Editor** window. 
 
 ![image](images/select_case.png)
 
-2.	Select the **Function** and the **DB object** column to add to the **SQL query**.
+2.	Select the **Function** and the **DB object** column in order to add to the **SQL query**.
 
 ![image](images/06_03.png)
 
 3.	Populate the **Column Name** column to add an **alias** to the selected DB object column.
 4.	Populate the **Sort Type** and **Sort Order** columns to add an **Order by** to the SQL query.
-5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This also updates the Grouping column to add a Group by to the SQL query.
-6.	Populate the **Criteria** and **Or** columns to add the DB object column to the WHERE statement of the SQL query.
+5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This also updates the Grouping column to add a 'Group by' to the SQL query.
+6.	Populate the **Criteria** and **Or** columns in order to add the DB object column to the WHERE statement of the SQL query.
 
 ## Query Settings Toolbar
 The **Enable Pre-Execution Commands** checkbox enables running commands on the selected DB before running the SQL query. When this checkbox is checked, the Pre-Execution Commands window opens.
