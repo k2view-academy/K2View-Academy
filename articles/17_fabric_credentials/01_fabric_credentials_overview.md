@@ -1,7 +1,7 @@
 # Fabric Credentials Overview
 
 ## RBAC in Fabric 
- Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
+Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
 
 - Creating / dropping users, roles and API Keys.
 - Assigning users to roles.
@@ -176,9 +176,10 @@ Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_A
 Create the users and define their credentials, as follows: 
 
 - [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
-- [Assign the role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
+- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role) - starting from Fabric V6.5.8.
+- [Assign a role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
 - [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
-- [Grant the permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
+- [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
 
 - Exit Fabric and log in with this user or use the token to invoke a [Web Service]().
 

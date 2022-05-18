@@ -12,9 +12,9 @@ LU views are part of the [Logical Unit](/articles/03_logical_units/01_LU_overvie
 
 LU view's column data type is the same as the respective LU table's column data type. LU views don't have their own properties and can't be indexed. 
 
-There are two techniques in which LU view data can be accessed: either via a direct querying of an instance's MicroDB or via the Declarative field level authorization mechanism. When using the latter technique, the query on an LU table is replaced by a query on an LU view, which is based on a Fabric user's Security Profile.
+There are two techniques in which LU view data can be accessed: either via a direct querying of an instance's MicroDB or via the Declarative field level authorization mechanism. When using the latter technique, the query on an LU table is replaced by a query on an LU view. This replacement is based on a security profile of a Fabric user's role.
 
-Click for more information about Declarative field level authorization mechanism.
+[Click for more information about Declarative field level authorization mechanism](/articles/17_fabric_credentials/04_fields_level_authorization.md).
 
 ### How Do I Create a New LU View?
 
