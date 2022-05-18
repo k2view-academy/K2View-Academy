@@ -20,7 +20,7 @@ Click for more information about Declarative field level authorization mechanism
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**], right-click **Views** > **New View** to display the **View** window.
 2. Create an SQL statement that represents the view. You can do it by either clicking on **Open Query Builder** or by writing the query manually.
-3. Once the query is ready, click on **Validate Query** to validate the syntax. 
+3. Once the query is ready, click on **Validate Query** in order to validate the syntax. 
 4. Save the view. 
 
 ![](images/lu_views_1.PNG)
