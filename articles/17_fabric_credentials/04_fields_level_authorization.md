@@ -36,3 +36,5 @@ Note that you can also use a Fabric command to [assign a security profile to a r
 
 
 
+[![Previous](/articles/images/Previous.png)](03_fabric_credentials_backup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_security_profiles.md)
+

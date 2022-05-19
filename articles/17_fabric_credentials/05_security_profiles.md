@@ -25,3 +25,4 @@ Starting from Fabric V6.5.8, Fabric introduces **Security Profiles** that are pa
 
 
 
+[![Previous](/articles/images/Previous.png)](04_fields_level_authorization.md)
