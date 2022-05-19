@@ -181,7 +181,7 @@ Create the users and define their credentials, as follows:
 - [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
 - [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
 
-- Exit Fabric and log in with this user or use the token to invoke a [Web Service]().
+- Exit Fabric and log in with this user or use the token to invoke a Web Service.
 
 ## Admin User
 
