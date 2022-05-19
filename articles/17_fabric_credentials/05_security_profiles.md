@@ -9,14 +9,18 @@ Starting from Fabric V6.5.8, Fabric introduces the **Security Profiles** which a
 
 ### How Do I Create a Security Profile?
 
-1. Go to **Project Tree** > **Logical Units** > [**LU Name**] and click on **Security Profiles** to display the **Security Profiles** window. <img src="images/security_profile_empty.PNG" style="zoom:80%;" />
-2. Populate the Security Profile name and description in the upper screen part. 
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] and click on **Security Profiles** to display the **Security Profiles** window.
+ 
+   <img src="images/security_profile_empty.PNG" style="zoom:80%;" />
+3. Populate the Security Profile name and description in the upper screen part. 
    * Multiple security profiles can be created at a time, though the name must be unique.
    * If some security profiles were already created under a different Logical Unit, their names will appear in the drop-down list.
-3. Then, for each security profile populate the pairs of LU table and LU view.
+4. Then, for each security profile populate the pairs of LU table and LU view.
    * Note that each LU table can be only defined once under each security profile.
-4. Save the security profile.<img src="images/security_profile_1.PNG" style="zoom:80%;" />
-5. Deploy the Logical Unit.
+5. Save the security profile.
 
-### 
+   <img src="images/security_profile_1.PNG" style="zoom:80%;" />
+6. Deploy the Logical Unit.
+
+
 
