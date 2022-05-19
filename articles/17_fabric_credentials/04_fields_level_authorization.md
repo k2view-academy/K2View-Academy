@@ -2,13 +2,13 @@
 
 ### Overview
 
-Starting from Fabric V6.5.8, Fabric introduces the **Declarative Field level authorization** mechanism. The purpose of this mechanism is to enable access restriction to sensitive data, using a Role Based Access approach. Fabric can expose the data requesting user to either original or manipulated data, based on his predefined role in Fabric. This mechanism is applicable to all channels that query the Fabric data: Web Services, Graphit, Broadway actors and Fabric BI.
+Starting from Fabric V6.5.8, Fabric introduces the **Declarative Field Level Authorization** mechanism. The purpose of this mechanism is to enable access restriction to sensitive data, using a Role Based Access approach. Fabric can expose the data requesting user to either original or manipulated data, based on his predefined role in Fabric. This mechanism is applicable to all channels that query the Fabric data: Web Services, Graphit, Broadway actors and Fabric BI.
 
-For example, the customer details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to see/view a customer's SSN, whereas some roles (such as Admin) are. The Declarative Field level authorization mechanism allows defining a [security profile](05_security_profiles.md) which allows attaching an LU tables and [LU views](/articles/06_LU_tables/06_LU_views.md) in order to redirect the WS to retrieving the masked SSN instead of providing the original SSN. The steps of how to do it are described further in this article.
+For example, the customer details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to see/view a customer's SSN, whereas some roles (such as Admin) are. The Declarative Field Level Authorization mechanism allows defining a [security profile](05_security_profiles.md) that allows attaching an LU tables and [LU views](/articles/06_LU_tables/06_LU_views.md) in order to redirect the WS to retrieving the masked SSN instead of providing the original SSN. The steps of how to do it are described further in this article.
 
 ### E2E Field Level Authorization Definition
 
-The following steps should be performed in order to enable the field level authorization:
+The following steps should be performed in order to enable the Field Level Authorization:
 
 1. Apply data manipulation on a table with sensitive data. For example, you can add a new field -MASKED_SSN - to the CUSTOMER LU table and populate it with a masked value of the original SSN field in the CUSTOMER population flow:
 
@@ -32,7 +32,7 @@ The following steps should be performed in order to enable the field level autho
 
    ![](images/assign_security_profile_1.PNG)
 
-Note that you can also use a Fabric command to [assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
+Note that you can also use a Fabric command to [assign a security profile to a role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
 
 
 
