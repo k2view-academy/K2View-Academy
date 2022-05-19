@@ -8,7 +8,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 
  The following are the Web Services properties:
 
- <table width="900pxl">
+<table width="900pxl">
 <tbody>
 <tr>
 <td width="200pxl" valign="top" >
@@ -102,21 +102,20 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <tr>
 <td width="200pxl" valign="top"><p><h5>Serialize null</h5></p></td>
 <td width="700pxl" valign="top">
-    <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
-    </td>    
+<p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
+</td>    
 </tr>    
 <tr>
- <td width="200pxl" valign="top"><p><h5>Custom Payload</h5></p></td>
+<td width="200pxl" valign="top"><p><h5>Custom Payload</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters panel, or if it is to be implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric. Click here to see a code snippet for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---xml">an XML format payload</a> or for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---json">a JSON format payload.</a>
 This flag must be set to True in the properties panel in order to be activated.
 </td>
-
 </tr>
 <tr>
- <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
+<td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
 Default is set to False.</p>
-When set to False, this means (for example) if according to the user's role permission he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
+When set to False, this means that if for example according to the user's role permission he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so even if the user can execute the Web-Service itself.
 <br>Added for Fabric release 6.5.3</td>
 </tr>
 <tr>

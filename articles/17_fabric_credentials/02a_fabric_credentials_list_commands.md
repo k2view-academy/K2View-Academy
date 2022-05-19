@@ -1,8 +1,6 @@
 # Fabric Credentials List Commands
 
-The following table describes the methods to see the access control information using Fabric `list` commands.
-
-
+The following table describes the methods to see the access control information using Fabric `LIST` commands.
 
 <table width="900pxl">
 <tbody>
@@ -14,6 +12,15 @@ The following table describes the methods to see the access control information 
 <p><strong>Description</strong>: Retrives the list of roles, as stored at Fabric.&nbsp;</p>
 <p>To read more about creating roles see&nbsp;<a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role">here</a>.&nbsp;</p>
 <p>To read more about deleting roles see <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#revoke">here</a>.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<h4>LIST SECURITY_PROFILES</h4>
+</td>
+<td width="700pxl">
+<p><strong>Description</strong>: Retrives the list of securify profiles, as stored at Fabric.&nbsp;</p>
+<p>To read more about creating security profiles see&nbsp;<a href="04_fields_level_authorizations.md">here</a>.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -82,6 +89,7 @@ The following table describes the methods to see the access control information 
 </tr>
 </tbody>
 </table>
+
 
 
 
