@@ -112,9 +112,9 @@ Using the OAuth requires the following preparations:
   2. Grant permission to each role, per requirements.
 
 Fabric extends the standard OAuth authorization delegation capabilities, other than via scopes:
-The access token (JWT) can be sent with extra optional payload parameter, which represents the client ID.
+The access token (JWT) can be sent with an extra optional payload parameter, representing the client ID.
 This ID shall be mapped to APIKEY in Fabric and permissions shall be granted to as needed.
-By default, this optional parameter name is "client_id".
+By default, the name of this optional parameter is "client_id".
 
 Fabric follows the OAuth standards to verify the web services API calls. When a web services is requested:
 1. Fabric looks for a JWT access token at the `Authorization: Bearer` header.
