@@ -468,7 +468,7 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' toke
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
-<li>revoke test_role from test_user;</li>
+<li>revoke role test_role from user test_user;</li>
 </ul>
 </td>
 </tr>
@@ -481,7 +481,7 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' toke
 <p><strong>Usage:</strong> REVOKE SECURITY_PROFILE &lt;security_profile&gt; FROM ROLE &lt;role&gt;</p>
 <p><strong>Examples:</strong></p>
 <ul>
-<li>revoke sp1 from test_role;</li>
+<li>revoke security_profile sp1 from role test_role;</li>
 </ul>
 </td>
 </tr>
@@ -497,6 +497,7 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' toke
 </tr>
 </tbody>
 </table>
+
 
 
 
