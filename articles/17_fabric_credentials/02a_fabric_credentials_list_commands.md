@@ -20,7 +20,7 @@ The following table describes the methods to see the access control information 
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Retrives the list of securify profiles, as stored at Fabric.&nbsp;</p>
-<p>To read more about creating security profiles see&nbsp;<a href="04_fields_level_authorization.md">here</a>.&nbsp;</p>
+<p>To read more about creating security profiles see&nbsp;<a href="05_security_profiles.md">here</a>.&nbsp;</p>
 </td>
 </tr>
 <tr>
