@@ -8,7 +8,7 @@ Fabric supports several methods for that purpose:
 
 1. **API Key** - a token which is sent as `Authorization: Bearer` header
 
-2. **JWT** ( JSON Web Tokens), an open industry standard method ([RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) that securely represents claims between two parties. 
+2. **JWT** (JSON Web Tokens) - an open industry standard method ([RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) that securely represents claims between two parties. 
 
    The JWT authentication has 2 variants:
 
