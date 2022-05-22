@@ -6,7 +6,7 @@ Fabric secures and controls Web Services (WS) access via an authentication and a
 
 Fabric supports several methods for that purpose:
 
-1. **API Key**, a token which is sent as `Authorization: Bearer` header
+1. **API Key** - a token which is sent as `Authorization: Bearer` header
 
 2. **JWT** ( JSON Web Tokens), an open industry standard method ([RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) that securely represents claims between two parties. 
 
@@ -18,8 +18,8 @@ Fabric supports several methods for that purpose:
    
       Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
-3. **Open Auth (OAuth)** authorization delegation protocol, via an access token (self-encoded JWT) which is sent as `Authorization: Bearer` header
-4. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
+3. **Open Auth (OAuth)** - authorization delegation protocol, via an access token (self-encoded JWT) which is sent as `Authorization: Bearer` header
+4. **Basic Authentication** - an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
 
 ### API Key
 
