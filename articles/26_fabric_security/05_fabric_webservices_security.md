@@ -98,7 +98,7 @@ Fabric supports these delegated authentications:
 ### Open Auth (OAuth)
 
 Fabric supports the standard Open Auth (OAuth) protocol for its web services autorization. 
-To use OAuth the following preparations shall be done:
+Using the OAuth requires the following preparations:
 
 * Set the JWK endpoint at the config.ini, using the JWK_ENDPOINT parameter located under oauth2 section. It shall look like the following:
   ```
