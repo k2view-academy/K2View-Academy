@@ -108,8 +108,8 @@ Using the OAuth requires the following preparations:
   ```
 
 * Grant permissions to the expected access token's *scopes*:
-  1. Create roles for the scopes - each scope shall be mapped to a Fabric's role.
-  2. Grant permission to each role, as needed.
+  1. Create roles for the scopes - each scope should be mapped to a Fabric's role.
+  2. Grant permission to each role, per requirements.
 
 Fabric extends the standard OAuth authorization delegation capabilities, other than via scopes:
 The access token (JWT) can be sent with extra optional payload parameter, which represents the client ID.
