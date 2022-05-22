@@ -116,7 +116,7 @@ The access token (JWT) can be sent with an extra optional payload parameter, rep
 This ID shall be mapped to APIKEY in Fabric and permissions shall be granted to as needed.
 By default, the name of this optional parameter is "client_id".
 
-Fabric follows the OAuth standards to verify the web services API calls. When a web services is requested:
+Fabric follows the OAuth standards for verifying web services API calls. When requesting a web service:
 1. Fabric looks for a JWT access token at the `Authorization: Bearer` header.
 2. Fabric decodes the JWT and looks for the kid.
 3. Fabric looks for kid in the JWK set which was published by the Athurization server.
