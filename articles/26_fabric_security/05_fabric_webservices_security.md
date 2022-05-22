@@ -19,7 +19,7 @@ Fabric supports several methods for that purpose:
       Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
 3. **Open Auth (OAuth)** - authorization delegation protocol, via an access token (self-encoded JWT) which is sent as `Authorization: Bearer` header
-4. **Basic Authentication** - an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
+4. **Basic Authentication** - an authentication scheme built into an HTTP protocol, which is sent as `Authorization: Basic` header.
 
 ### API Key
 
