@@ -16,6 +16,10 @@ There are two techniques in which LU view data can be accessed: either via a dir
 
 [Click for more information about Declarative field level authorization mechanism](/articles/17_fabric_credentials/04_fields_level_authorization.md).
 
+Note that once an LU view is connected to a security profile, it cannot be accessed directly by a query on MicroDB. This restriction is done is in order to prevent unauthorized access to sensitive data.
+
+[Click for more information about Security Profiles](/articles/17_fabric_credentials/05_security_profiles.md).
+
 ### How Do I Create a New LU View?
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**], right-click **Views** > **New View** to display the **View** window.
