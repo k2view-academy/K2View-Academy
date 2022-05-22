@@ -122,7 +122,7 @@ Fabric follows the OAuth standards for verifying web services API calls. When re
 3. Fabric looks for kid in the JWK set which was published by the Athurization server.
 4. Fabric verifies the JWT using the JWK matched key.
 
-> Note that Fabric, as the Resource Server, is agnostic to the OAuth grant types and flows, i.e. either Authorization Code or Client Credentials. 
+> Note: Fabric, being the Resource Server, is agnostic to the OAuth grant types and flows, i.e. either Authorization Code or Client Credentials. 
 
 
 ### Basic Authentication
