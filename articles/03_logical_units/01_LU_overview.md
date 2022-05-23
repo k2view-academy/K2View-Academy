@@ -36,7 +36,7 @@ Digital Entity data is often split between different data sources. In some cases
 
 In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
 
-For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommanded approach will be to create LU for each Digital Entity sub type (in our example, different Customer Types).
+For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create LU for each Digital Entity sub type (in our example, different Customer Types).
 
 Below is a table of **pros and cons** of each alternative:
 
