@@ -27,7 +27,9 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * Search Interface. This interface type supports cross-instance searches and is needed to enable Fabric to connect to the search engine when a Search is defined on LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
 * Data Catalog Interface. This interface type is required for enabling Fabric Data Catalog. [Click for more information about Data Catalog Interface](/articles/33_data_catalog/02a_data_catalog_interface.md).
 
-
+<studio>
 From Fabric V6.5.1 and on a test connection and Active properties were added to all Non-DB interfaces.
+</studio>
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_SFTP_interface.md) 

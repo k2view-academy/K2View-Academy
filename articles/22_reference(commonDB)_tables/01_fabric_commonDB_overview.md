@@ -21,21 +21,20 @@ Reference Table that can be populating by using Fabric transactions. In this spe
 
 # **Where are Reference Tables Stored?**
 
-A CommonDB schema is an SQLite database used for storing Reference Tables. Up to Fabric release 6.5, all reference tables were stored under the same schema - i.e. under the same SQlite file. 
+A CommonDB schema is an SQLite database used for storing Reference Tables. Up to Fabric release 6.5, all reference tables were stored under the same schema - i.e. under the same SQLite file. 
 
-Since Fabric release 6.5.3 it is possible to store reference tables in separate schemas, therefore all commonDB databases and their associated tables can be dissociated one from an other. 
+Since Fabric release 6.5.3 it is possible to store reference tables in separate schemas, therefore all CommonDB databases and their associated tables can be dissociated one from an other. 
 
-When a reference table is stored, a new SQlite file, bearing the name of the schema specified in the [Reference Table Property](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#reference-tables-properties), is created and can also be shared by more reference tables.
+When a reference table is stored, a new SQLite file, bearing the name of the schema specified in the [Reference Table Property](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#reference-tables-properties), is created and can also be shared by more reference tables.
 
 Using this reference table segregation schema reduces considerably locking instances of reference tables that usually happens during multiple write-processes.
 
-
 In a distributed system, a copy of all the *CommonDB* and other *reference tables schemas* are stored on each Fabric Node.
-Fabric handles their cross-synchronization and ensures that the local CommonDB SQLites file are always available for queries from within each Fabric session. 
+Fabric handles their cross-synchronization and ensures that the local CommonDB SQLite file are always available for queries from within each Fabric session. 
 
-This enables writing JOIN clauses, locally, between any common table and any LUI using regular SQL queries, thus providing instantenous data access and local computing resources to these queries. 
+This enables writing JOIN clauses, locally, between any common table and any LUI using regular SQL queries, thus providing instantaneous data access and local computing resources to these queries. 
 
 
- 
+
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md) 
 

@@ -1,17 +1,19 @@
+<studio>
+
 # Data Population in a Translation
 
 ## How Can I Populate Translation Data?
- 
+
 There are several options for populating data in a Translation in the Fabric Studio: 
 * Manual population via the Translation window. 
 * Importing the Translation’s data from a file. The data is loaded from the file only once.
 * Importing the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database each time the Translation is invoked. 
- 
+
 Import options are enabled via the Import screen.
 
 
 ## How Can I Import Translation Data from a File?
- 
+
 After defining the [Translation Schema](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema) do the following:
 1.	Go to **Translation Data tab** > **Import Data**.
 2.	Click the **Import from File** tab. 
@@ -45,7 +47,7 @@ Import the data from the CSV file as follows:
 
 
 ## How Can I Import Translation Data from a Database Table?
- 
+
 After defining the [Translation Schema](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema), do the following: 
 1.	Go to **Translation Data tab** > **Import Data**.
 2.	Go to the **Import from DB Table** tab. 
@@ -60,7 +62,7 @@ After defining the [Translation Schema](/articles/09_translations/01_translation
 
 
 ## How Can I Import Translation Data Using DB SQL?
- 
+
 After defining the [Translation Schema](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema) do the following:
 1.	Go to **Translation Data tab** > **Import Data** > **Import from DB SQL** tab.
 2.	Do the following in the **Database** section:
@@ -72,3 +74,4 @@ After defining the [Translation Schema](/articles/09_translations/01_translation
 
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/02_creating_a_new_translation_in_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/09_translations/04_using_translations_in_fabric.md)
 
+</studio>
