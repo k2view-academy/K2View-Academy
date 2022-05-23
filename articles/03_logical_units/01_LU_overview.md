@@ -25,7 +25,7 @@ Using our example from above (Customer 360):
 * Assume that Company ABC has 35 million customers:
    * LU/LUT = Customer.
    * LUI = one single customer database.
-Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
+     Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
 
 ## Things to Consider Before Designing an LU 
 Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
@@ -36,7 +36,7 @@ Digital Entity data is often split between different data sources. In some cases
 
 In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
 
-For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommanded approach will be to create LU for each Digital Entity sub type (in our example, different Customer Types).
+For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create LU for each Digital Entity sub type (in our example, different Customer Types).
 
 Below is a table of **pros and cons** of each alternative:
 
