@@ -15,8 +15,8 @@ Fabric supports three methods for that purpose:
    **a.** Signed by Fabric 
 
    **b.** Signed by the WS client
-   
-      Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
+
+   Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
 3. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
 
@@ -143,13 +143,12 @@ There are two options to generate an API key: either via the Web Framework Admin
 
   ```text
   create token 'Secured1' SECURED;
-  
+
   |Secretkey                           |
   +------------------------------------+
   |c55a86d1-9de6-4aaa-bf9e-cedf1391c95b|
   ```
 
-  
 
 If the secured option has not been selected,  the token name is used as the token value, for the API Key Authentication method.
 
