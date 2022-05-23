@@ -105,4 +105,15 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 </tbody>
 </table>
 
+
+### NoTx Actor
+
+Starting from Fabric V6.5.8, you can mark an interface as non-transactional in the context of an active transaction using the **NoTx** Actor. It is used to exclude an interface from a transaction so it will not get the begin, commit and rollback commands.
+
+If the Actor is called outside a transaction or the interface in question is already part of the active transaction, an exception will be thrown.
+
+The use case for using this Actor is [TDM Clone Entity](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.). It requires Fabric to be marked as non-transactional interface in order to prevent locking of the Instance SQLite file while the transaction is open on target DB.
+
+
+
 [![Previous](/articles/images/Previous.png)](22_broadway_flow_inner_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_error_handling.md)
