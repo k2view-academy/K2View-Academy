@@ -51,7 +51,7 @@ The authorization and permissions are done according to the credentials that wer
 
 
 
-### JWT: Signed by the WS client
+### JWT: Signed by the WS Client
 
 The authentication flow for this method works as follows:
 
@@ -68,7 +68,7 @@ The authorization and permissions are done according to the roles which are assi
 
 
 
-#### External trusted authentication 
+#### External Trusted Authentication 
 
 In some cases the client itself - a service in the organization which calls Fabric - has already authenticated the user (human or another system). For example, the client can be a service that interacts with an IDP (Identity Provider) to authenticate users by using SAML. In such a case, the client holds the actual user and the groups he is assigned to, and upon which he wants Fabric to act. For example for Fabric to use this information for roles permissions.
 
@@ -120,30 +120,28 @@ When activated, a browser popup will appear, when sending the request. The user 
 
 ## Generating API Key  
 
-There are two options to generate an API key: via the Admin App or by using a Fabric command. In both methods you can choose if the API Key shall be secured or not, as described here: 
+There are two options to generate an API key: either via the Web Framework Admin or by using a Fabric command. In both cases you can choose whether the API Key shall be secured or not, as described below.
 
-* Admin App: 
+* Web Framework Admin: 
 
-  1. Open the **Admin Panel** web page and select **Admin**, **Security** and then click the **API keys** tab.
+  1. Open the **Admin Panel** web page and select **Admin** > **Security** and then click the **API keys** tab.
   2. Click the **Add API Key +** button on the upper right of the window.
 
   3. Fill in the Name (Mandatory) and choose if it shall be secured (Optional) by using the checkbox on the page.
 
   4. Click  **Save**.
 
-  When the secured option has been selected, the secret key is displayed in a pop-up window and can be copied, for later use. The secret key is used to sign the JWT.
-
-  
+  When the secured option has been selected, the secret key is displayed in a pop-up window and can be copied, for a later use. The secret key is used to sign the JWT.
 
   For example:
 
-  <img src="/articles/26_fabric_security/images/07_fabric_webToken.PNG">
+  <img src="images/07_fabric_webToken.PNG">
 
 * Fabric command: `CREATE TOKEN <'token_name'> [SECURED]`.  When "SECURED" is used, the secret key is retrieved back.
 
   For example:
 
-  ```tex
+  ```text
   create token 'Secured1' SECURED;
   
   |Secretkey                           |
