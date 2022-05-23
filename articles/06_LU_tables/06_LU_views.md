@@ -4,7 +4,7 @@
 
 Starting from Fabric V6.5.8, **LU views** are introduced to Fabric. 
 
-**LU view** is a result set of a stored query on Fabric DB, which can be queried just as any persistent [LU table](01_LU_tables_overview.md). This pre-established query command is kept in the Fabric MicroDB dictionary, allowing an easy access to a required data collection.
+**LU views** are designed to keep a pre-defined query on [LU tables](01_LU_tables_overview.md) in the Fabric MicroDB, allowing an easy access to a required data collection.
 
 The SQL statement of the LU view can include a SELECT statement from one LU table or several joint LU tables. Additionally, it supports the use of [LUDB functions](/articles/07_table_population/11_3_creating_an_LUDB_function.md). 
 
@@ -16,7 +16,7 @@ There are two techniques in which LU view data can be accessed: either via a dir
 
 [Click for more information about Declarative field level authorization mechanism](/articles/17_fabric_credentials/04_fields_level_authorization.md).
 
-Note that once an LU view is connected to a security profile, it cannot be accessed directly by a query on MicroDB. This restriction is done is in order to prevent unauthorized access to sensitive data.
+Note that once an LU view is connected to a security profile, it cannot be accessed directly by a query on MicroDB. This restriction is done in order to prevent unauthorized access to sensitive data.
 
 [Click for more information about Security Profiles](/articles/17_fabric_credentials/05_security_profiles.md).
 
