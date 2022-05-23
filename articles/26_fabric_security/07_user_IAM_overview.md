@@ -18,7 +18,7 @@ It is important to keep the definitions of these terms in mind:
 
 
 
-Fabric provides user identification and access management (IAM) for web, console, and web-services access, either using Fabric's local repository or by using the organization’s identify provider (IDP) which Fabric integrated with as Service Provider (SP). 
+Fabric provides user identification and access management (IAM) for web, console, and web-services access, either using Fabric's local repository or by using the organization’s identity provider (IDP) which Fabric integrates with as Service Provider (SP). 
 
 Using the organization’s IDP gives the organization full and dynamic control of access permissions to Fabric. It lets the organization add or remove users and grant or revoke their permissions, using its own admin centralized tools. In addition, the organization has a centralized auditing log which covers their users’ access to all its services and resources. 
 

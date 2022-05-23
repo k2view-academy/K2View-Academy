@@ -91,7 +91,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>To set the environement or Globals for the current session onto which role is defined</p>
+<p>To set the environment or Globals for the current session onto which role is defined/p>
 </td></tr>
 <tr>
 <td width="300pxl">
@@ -152,7 +152,7 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 <p>Credentials</p>
 </td>
 <td width="600pxl">
-<p>Holds the API Key definitions of each role. The API Key is encryted.</p>
+<p>Holds the API Key definitions of each role. The API Key is encrypted.</p>
 </td>
 </tr>
 <tr>
