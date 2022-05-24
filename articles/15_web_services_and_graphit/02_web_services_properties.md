@@ -115,9 +115,9 @@ This flag must be set to True in the properties panel in order to be activated.
 <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web Service. 
 Default is set to False.</p>
-For example, when set to False and according to the roles permissions the user cannot perform Get instance 100 of a given LU, he will not be able to do so also by using the Web Service. This is so even if the user can execute the Web Service itself.
+For example, when set to False and according to the role permissions, the user can neither perform Get Instance 100 of a given LU nor do so using the Web Service. This is valid even if the user can execute the Web Service itself.
 <br>Added for Fabric V6.5.3
-<br>Starting from Fabric V6.5.8, when a user role has a security profile that restricts the access to LU tables, setting Elevated Permission to True annuls this restriction.
+<br>Starting from Fabric V6.5.8, when a user role has a security profile that prevents him from accessing some LU tables, setting Elevated Permission to True dismisses this restriction.
 </td>
 </tr>
 <tr>
