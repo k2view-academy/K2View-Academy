@@ -18,7 +18,7 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 
    * Note that the LU view must have the same number of columns as the original LU table, otherwise the Web Service or GraphIt calling it will fail replacing the table by a view. If however you need to hide a column, you can always use the `NULL AS <column name>` syntax.
 
-   <img src="images/lu_view_ex.PNG"  />
+   ![](images/lu_view_ex.png)
 
    [Click to get more information about LU views creation](/articles/06_LU_tables/06_LU_views.md).
 
