@@ -14,9 +14,11 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 
    ![](images/masking_example_1.PNG)
 
-2. Create an LU view that retrieves the manipulated value instead of the original value. For example, create an LU view, using the following query, that exposes the value of the MASKED_SSN field instead of the original SSN value. Note that data manipulation can also be done using an [LUDB function](/articles/07_table_population/11_3_creating_an_LUDB_function.md).
+2. Create an LU view that retrieves the manipulated value instead of the original value. For example, create an LU view, using the following query, that exposes the value of the MASKED_SSN field instead of the original SSN value. Data manipulation can also be done using an [LUDB function](/articles/07_table_population/11_3_creating_an_LUDB_function.md).
 
-   <img src="../06_LU_tables/images/lu_views_1.PNG" style="zoom:80%;" />
+   * Note that the LU view must have the same number of columns as the original LU table, otherwise the Web Service or GraphIt calling it will fail replacing the table by a view. If however you need to hide a column, you can always use the `NULL AS <column name>` syntax.
+
+   <img src="images/lu_view_ex.PNG"  />
 
    [Click to get more information about LU views creation](/articles/06_LU_tables/06_LU_views.md).
 
@@ -42,7 +44,8 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 
 6. Multiple security profiles can be assigned to the same role. 
 
-   
+    
+
 Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
 
 
