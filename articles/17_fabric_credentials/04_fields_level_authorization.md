@@ -43,8 +43,8 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 6. Multiple security profiles can be assigned to the same role. 
 
    
+Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
 
-   Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
 
 
 
