@@ -18,6 +18,7 @@ Starting from Fabric V6.5.8, Fabric introduces **Security Profiles** that are pa
    * A security profile with the same name can be created under different LUs.
 3. Then, for each security profile select an LU table and assign it with a corresponding LU view.
    * Each LU table can only be defined once under each security profile.
+   * Each LU table can be assigned to more than one security profile. 
    * Each LU view can be attached to more than one LU table.
 4. Save the security profile.
 

@@ -6,6 +6,8 @@ Starting from Fabric V6.5.8, Fabric introduces the **Declarative Field Level Aut
 
 For example, the customer details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to view a customer's SSN, whereas some roles (such as admin) are. The Declarative Field Level Authorization mechanism allows defining a [security profile](05_security_profiles.md) that can redirect the WS to retrieving the masked SSN as opposed of the original one. The following section describes how to field setup the **Declarative Field Level Authorization** mechanism.
 
+Known limitation: Field Level Authorization is not applied on GraphIt that is invoked directly as a Web Service. In order to enforce the authorization mechanism, you need to create a Web Service to invoke a GraphIt file.  
+
 ### E2E Field Level Authorization Definition
 
 1. Apply data manipulation on a table with sensitive data. For example, you can add a new field called MASKED_SSN to the CUSTOMER LU table and populate it with a masked value of the original SSN field using the CUSTOMER population flow:
@@ -20,19 +22,29 @@ For example, the customer details WS retrieves an SSN, which is considered as se
 
 3. Create a security profile. Then select an LU table and assign it with a corresponding LU view.
 
-   * Note that each LU table can only be defined once under each security profile.
+   * Each LU table can only be defined once under each security profile.
+   * Each LU table can be assigned to more than one security profile. 
+   * Each LU view can be attached to more than one LU table.
 
    <img src="images/security_profile_1.PNG" style="zoom:80%;" />
 
    [Click to get more information about the security profiles](05_security_profiles.md). 
 
-4. Deploy the LU.
+4. Save the security profile and deploy the LU.
 
-5. Open the [Web Admin](/articles/30_web_framework/03_web_admin_application.md) and assign the created security profile to the user role.
+5. Assign the created security profile to the user role by either:
 
-   ![](images/assign_security_profile_1.PNG)
+   * Using a Fabric command to [assign a security profile to a role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
 
-Note: You can also use a Fabric command to [assign a security profile to a role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
+   * Or, by opening the [Web Admin](/articles/30_web_framework/03_web_admin_application.md) > Security > Roles:
+
+     ![](images/assign_security_profile_1.PNG)
+
+6. Multiple security profiles can be assigned to the same role. 
+
+   
+
+   Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
 
 
 
