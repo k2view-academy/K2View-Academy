@@ -108,13 +108,13 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 
 ### NoTx Actor
 
-Starting from Fabric V6.5.8, you can mark an interface as non-transactional in the context of an active transaction using the **NoTx** Actor. It is used to exclude an interface from a transaction so it will not get the begin, commit and rollback commands.
+Starting from Fabric V6.5.8, you can mark an interface as non-transactional in the context of an active transaction using the **NoTx** Actor. It is used to exclude an interface from a transaction so it will not get the **begin**, **commit** and **rollback** commands.
 
 If the Actor is called outside a transaction or the interface in question is already part of the active transaction, an exception will be thrown.
 
-The use case for using this Actor is [TDM Clone Entity](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#entity-clone-synthetic). The Entity Clone task gets one LU instance of the cloned entity and each Clone reads the data from a single LUI instance. We need to exclude the select of the LUI from the transaction to enable running several Clone processes in parallel and avoid locking the LUI. It requires Fabric to be marked as non-transactional interface in order to prevent locking of the Instance SQLite file while the transaction is open on target DB.
+The use case for using this Actor is  the Clone Entity flow in TDM which requires Fabric to be marked as non-transactional interface in order to prevent locking of the LUI SQLite file while the transaction is open on target DB.
 
-[Click for more information about TDM](/articles/TDM/tdm_overview/01_tdm_overview.md).
+[Click for more information about the TDM Clone Entity](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#entity-clone-synthetic).
 
 
 
