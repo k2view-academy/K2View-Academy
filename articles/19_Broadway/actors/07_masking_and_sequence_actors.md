@@ -26,14 +26,14 @@ Common input arguments of masking Actors are:
   - Any custom string value 
 
    By default, the category is set to **enable_masking** on all masking actors except for the **MaskingSequence** actor where the category is set by default to **enable_sequences**.
- 
+
    The masking actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
-   
+
    - If the related session level key **is not set**, or is set to **true** - generate a new value.    
    - Else, if the related session level key is set to **false** - return the original value.
-  
+
    Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. For example,  the MaskingSequence actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
- 
+
 * **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
 * **useExecutionId**, indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId**, indicates whether to use the Instance ID as part of the masking cache. 
@@ -45,6 +45,13 @@ Common input arguments of masking Actors are:
 * **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId**, environment and execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
   * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
   * If interface is **NONE**, no uniqueness check is done.
+
+* **onEmpty**, determines what to do with the input value when it is either an empty string or NULL:
+
+  * **LEAVE_EMPTY** - return the input value as is.
+  * **MASK_NO_CACHE** - mask an empty value but don't cache it.
+  * **MASK_AND_CACHE** - mask an empty value and cache it.
+
 
 
 The following input arguments are specific to the **MaskingSequence** Actor:
