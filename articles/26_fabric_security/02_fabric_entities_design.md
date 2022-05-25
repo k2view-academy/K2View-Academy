@@ -31,7 +31,7 @@ For example:
 
 The following illustration shows how Logical Unit Instances inherit their own private encryption keys based on the Fabric master key and the LU to which they belong.
 
-<img src="/articles/26_fabric_security/images/02_fabric_encryption_process.png">
+<img src="images/02_fabric_encryption_process.png">
 
 
 
