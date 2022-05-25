@@ -4,7 +4,7 @@
 
 Starting from Fabric V6.5.8, Fabric introduces the **Declarative Field Level Authorization** mechanism. The purpose of this mechanism is to enable access restriction to sensitive data, using a Role Based Access approach. Fabric can expose either original or manipulated data to the Fabric user based on his predefined role. This mechanism is applicable to all channels that query the Fabric data: Web Services, GraphIt, Broadway actors.
 
-For example, the Customer Details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to view a customer SSN, whereas some other other roles (such as admin) are. The Declarative Field Level Authorization mechanism allows defining a [security profile](05_security_profiles.md) that can redirect the WS to retrieving the masked SSN as opposed to the original one. The following section describes how to field setup the **Declarative Field Level Authorization** mechanism.
+For example, the Customer Details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to view a customer SSN, whereas some other user roles (such as admin) are. The Declarative Field Level Authorization mechanism allows defining a [security profile](05_security_profiles.md) that can redirect the WS to retrieving the masked SSN as opposed to the original one. The following section describes how to field setup the **Declarative Field Level Authorization** mechanism.
 
 Known limitation: Field Level Authorization is not applied on GraphIt that is invoked directly as a Web Service. In order to enforce the authorization mechanism, you need to create a Web Service to invoke a GraphIt file.  
 
@@ -44,7 +44,6 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 
 6. Multiple security profiles can be assigned to the same role. 
 
-    
 
 Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
 
