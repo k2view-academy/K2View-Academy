@@ -2,7 +2,7 @@
 
 This article describes the setup and integration steps you need to do to connect your Single-Sign-On account at Azure AD (Microsoft Azure Active Directory) to Fabric. This will grant you the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
 
-Note that guidelines exist also at [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/fabric-tutorial), a Fabric is part of the Azure AD's app marketplace. 
+You can read more about the guidelines at this link: [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/fabric-tutorial), as Fabric is part of the Azure AD's app marketplace. 
 
 ### Prerequisite Requirements
 
@@ -108,6 +108,5 @@ In addition to the instructions which are detailed [here](/articles/26_fabric_se
 
 
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md)
 
-
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/13_user_IAM_configiration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md)

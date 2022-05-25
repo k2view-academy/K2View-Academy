@@ -28,7 +28,6 @@ This article describes the setup and integration steps to connect your Single-Si
    </table>
    
    
-   
 4. At the *Browse App Integration Catalog* page, search for "Fabric by K2View" via the search box and select it.
 
    <table>
@@ -54,7 +53,6 @@ This article describes the setup and integration steps to connect your Single-Si
    </table>
    
    
-
 6. On next page, click **'Done'**. The app is created and is ready to configure the specific deployment setup.
 
    <table><tbody><tr>    <td>    <img src="images/15_okta4_done.png">    </td></tr></tbody></table>
@@ -97,5 +95,5 @@ This article describes the setup and integration steps to connect your Single-Si
 
     
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/16_user_IAM_auditing.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
 

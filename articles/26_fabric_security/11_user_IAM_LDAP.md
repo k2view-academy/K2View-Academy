@@ -34,4 +34,9 @@ Following is the logical flow that illustrate these steps:
 
  
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/12_web_login.md)
+For more information and guides of to setup Fabric with LDAP refer to the examples for [Azure AD LDAP](/articles/26_fabric_security/11.1_user_IAM_AD_LDAP.md) and [Azure AD LDAPS](/articles/26_fabric_security/11.2_user_IAM_AD_LDAPS.md). For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#ldap--ldaps-configuration).
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/16_user_IAM_auditing.md)
+
