@@ -114,10 +114,19 @@ This flag must be set to True in the properties panel in order to be activated.
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
-<td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
-Default is set to False.</p>
-When set to False, this means (for example) if according to the user's role permission he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
-<br>Added for Fabric release 6.5.3</td>
+ <td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
+ Default is set to False.</p>
+ When set to False, this means that webservice runs according to the caller permissions. For example, if according to the user's role permissions he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
+ <br>Added for Fabric release 6.5.3
+</td>
+</tr>
+<tr>
+ <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
+<td width="700pxl" valign="top"><p>When Elevated Permission is set to false, the develoepr might still wishes that WS caller will be able to activiate methods which in general is not allowed to, e.g. when running Fabric command. Developer can then grant permission for the caller only for the WS session.</p>
+<p>To apply these permissions, develoepr shall specifiy, using the Additional Permissions select list, at the WS Properties pane, which methods are allowed. Alternatively, it can be set and defined using the WS function "additionalPermissions" annotation.
+<br>Permissions shall be granted carefully.
+<p>
+Added for Fabric release 6.5.8</td>
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
