@@ -8,7 +8,7 @@ Most database management systems store data in silos, organized according to the
 
 Fabric's unique data approach offers a new paradigm for data management, especially when it comes to protecting data integrity. This approach uses a *Logical Unit*. Fabric uses the Logical Unit to store and enable access to data using an entity-centric predefined structure that considerably reinforces its security and integrity. This is yet another crucial and unparalleled advantage that Fabric offers in addition to other benefits such as very fast access and high availability of the data. 
 
-A Logical Unit is configured by the user for general use and each time data is accessed, a *Logical Unit Instance* is created. 
+A Logical Unit is configured by the user for general use and each time data is accessed, a *Logical Unit Instance* is created, based on a sync policy. 
 
 ## Logical Unit Encryption 
 
@@ -31,7 +31,7 @@ For example:
 
 The following illustration shows how Logical Unit Instances inherit their own private encryption keys based on the Fabric master key and the LU to which they belong.
 
-<img src="/articles/26_fabric_security/images/02_fabric_encryption_process.png">
+<img src="images/02_fabric_encryption_process.png">
 
 
 
