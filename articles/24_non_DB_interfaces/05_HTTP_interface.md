@@ -84,19 +84,7 @@ Fabric supports the following:
   * Token Timeout, request timeout to the authorization server.
 
 
-* **OAuth 2.0 Password Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server *in the header of the request*. The authentication server then returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
-  
-  * User, Password, Access Token URL.
-
-  * Client ID, provided by the external resource / authorized vendor.
-
-  * Client Secret, provided by the external resource / authorized vendor. Note that although the secret key is encrypted and saved, it is displayed in clear text in the Fabric Studio.
-
-  * Scope (optional), specifies the scope of the access request.  In turn, the authorization server uses the scope response parameter to inform the client of the scope of the access token issued. The value of the scope is expressed as a list of space-delimited, case-sensitive strings.
-
-  * Token Timeout, request timeout to the authorization server.
-
-
+* **OAuth 2.0 Password Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the client-ID and Client-Secret to the authorization server in the header of the request, rather than in the request body. This type is more recommended.
 
 * **OAuth 2.0 Client Credentials**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
 
@@ -108,7 +96,7 @@ Fabric supports the following:
 
   * Token Timeout, request timeout to the authorization server.
 
-
+* **OAuth 2.0 Client Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Client Credentials" but in this type Fabric provides the client-ID and Client-Secret to the authorization server in the header of the request, rather than in the request body. This type is more recommended.
 
 If the service provider does not require authentication, select **None** in the Authentication Type.
 
