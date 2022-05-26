@@ -12,7 +12,7 @@ If there is no active Fabric session, the user should provide his credentials th
 
 #### SAML Authenticator
 
-User is redirected to the configured SAML IDP and, from its login page, enters his credentials. For example at Okta IDP:
+User is redirected to the configured SAML IDP and, from the login page, enters his credentials. For example at Okta IDP:
 
 <img src="images/12_okta_sso_login.jpg">
 
