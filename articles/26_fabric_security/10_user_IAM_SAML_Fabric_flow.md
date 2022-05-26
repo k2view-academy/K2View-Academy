@@ -25,12 +25,12 @@ The user clicks on a link that leads him to a Fabric app (1 in the diagram below
 
 - The user then either has an existing active browser session with the identity provider or establishes one by logging into the identity provider, via the IDP login page (4).
 - The identity provider builds the authentication response in the form of an XML-document containing the user’s identifier, signs it using an X.509 certificate and posts this information to Fabric, along with various other assertions and attributes (5).
-- Fabric verifies and opens the response using the certification and encryption keys and algorithms, then processes and extracts the content, including the groups/roles the user is associated with (6).
-- Fabric establishes a Fabric session for the user, enabling him access according to permissions granted to him by Fabric and its apps. The Fabric session provides (via the *UsercCode*) the information about the user and the roles with which he is associated (7).
+- Fabric verifies and opens the response, using the certification and encryption keys and algorithms. Fabric then processes and extracts the content, including the groups/roles that the user is associated with (6).
+- Fabric establishes a Fabric session for the user, enabling him access according to permissions granted to him by Fabric and its apps. The Fabric session provides (via the *UsercCode*) the information about the user and the roles that he is associated with (7).
 
 
 
-Following is the logical flow that illustrate these steps: 
+Below is the logical flow illustrating these steps: 
 
 <img src="/articles/26_fabric_security/images/11_Fabric_SAML_login.jpg">
 
