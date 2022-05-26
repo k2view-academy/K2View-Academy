@@ -66,15 +66,15 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 10. From the **SAML Signing Certificate** section (3), click **Download** to get the Azure IDP certificate key to be uploaded into Fabric, for signing the authentication requests.
 
-   <table>
-   <tbody>
-   <tr>
-   	<td >
-   	<img src="images/14_azure5.png">
-   	</td>
-   </tr>
-   </tbody>
-   </table>
+  <table>
+  <tbody>
+  <tr>
+  	<td >
+  	<img src="images/14_azure5.png">
+  	</td>
+  </tr>
+  </tbody>
+  </table>
 
 11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
 
@@ -104,7 +104,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 ## Configuration instructions: At Fabric
 
-In addition to the instructions that are detailed [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration), to setup SAML with Azure AD requires to add an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
+In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration), setting-up SAML with Azure AD requires adding an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
 
 
 
