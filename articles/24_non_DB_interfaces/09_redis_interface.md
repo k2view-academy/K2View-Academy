@@ -7,12 +7,34 @@ A Redis interface connection is used by K2View TDM or by Broadway Actors to hand
 
 To create a new Redis interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Redis** from the  **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/09_redis_1.PNG)
 
 2. Populate the connection settings and click **Save**.
 
+</studio>   
+
+<web>
+
+1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
+   
+2. From the window that appears, select **Redis**. Alternatively, you can scroll down to find this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+   
+   ![image](images/local_3WEB.png)
+   
+3. Enter a suitable name for your new Redis Interface, then click **Create**:
+   
+   ![image](images/09_redis_1WEB.PNG)
+
+4. Populate the connection settings and click **Save**. 
+   
+   ![image](images/09_redis_2WEB.PNG)
+
+</web>   
+   
 ### Connection Settings
 
 

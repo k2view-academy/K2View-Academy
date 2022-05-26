@@ -1,3 +1,5 @@
+<studio>
+
 # Deploy from Fabric Studio
 
 New or already existing Fabric project implementations must be deployed to the server side so that all recent code changes are compiled and are ready to be used.
@@ -39,3 +41,5 @@ To deploy the Fabric implementation to the Fabric debug server, do either:
 - Click **Deploy** in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)
+
+</studio>

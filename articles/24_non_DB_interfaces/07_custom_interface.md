@@ -16,12 +16,30 @@ m.get("username");
 
 To create a new interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Custom** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/custom_1.PNG)
 
 2. Populate the connection's settings and click **Save**.
 
+</studio>
+	
+<web>
+
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Custom** from the **Others** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new Custom Interface, then click **Create**:
+   ![image](images/custom_1WEB.PNG)
+
+2. Populate the connection's settings and click **Save**.
+   ![image](images/custom_2WEB.PNG)
+
+
+</web>
+	
+	
 ### Connection Settings
 
 <table>
