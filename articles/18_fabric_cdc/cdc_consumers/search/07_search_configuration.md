@@ -20,4 +20,4 @@ Note that an installation of Elasticsearch is required. The Elasticsearch is not
 
 
 
-[![Previous](/articles/images/Previous.png)](06_search_solution_limitations.md)
+[![Previous](/articles/images/Previous.png)](06_search_solution_limitations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_search_troubleshooting.md)
