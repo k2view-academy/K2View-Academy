@@ -7,7 +7,8 @@
 <li><a href="04_search_templates.md">Search Templates</a></li>
 <li><a href="05_search_command.md">Search Command</a></li>
 <li><a href="06_search_solution_limitations.md">Search Solution - Limitations</a></li>
-<li><a href="07_search_configuration.md">Search Configuration</a></li>   
+<li><a href="07_search_configuration.md">Search Configuration</a></li>  
+<li><a href="08_search_troubleshooting.md">Search - Troubleshooting</a>
 </ul> 
 
 
