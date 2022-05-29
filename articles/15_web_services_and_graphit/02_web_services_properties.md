@@ -122,11 +122,16 @@ This flag must be set to True in the properties panel in order to be activated.
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
-<td width="700pxl" valign="top"><p>When Elevated Permission is set to false, the develoepr might still wishes that WS caller will be able to activiate methods which in general is not allowed to, e.g. when running Fabric command. Developer can then grant permission for the caller only for the WS session.</p>
-<p>To apply these permissions, develoepr shall specifiy, using the Additional Permissions select list, at the WS Properties pane, which methods are allowed. Alternatively, it can be set and defined using the WS function "additionalPermissions" annotation.
-<br>Permissions shall be granted carefully.
+<td width="700pxl" valign="top"><p>When Elevated Permission is set to false, the developer might still wishes that the WS caller will be able to activate methods which in general is not allowed to, e.g. when running Fabric command. Developer can then grant permission for the caller only for the WS session.</p>
+<p>To apply these permissions, the developer shall specify which methods are allowed. At the WS Properties pane:
+<ol>
+    <li>Set the "Elevated Permission" to False. The "Additional Permissions" property becomes enabled.
+    <li>Open the "Additional Permissions" and choose the methods that shall be permitted, using the checkboxes.
+</ol>
+Alternatively, the permissions can be set in code, using the function "additionalPermissions" annotation.
 <p>
-Added for Fabric release 6.5.8</td>
+<br>Permissions shall be granted carefully.
+<br>Added for Fabric release 6.5.8</td>
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
