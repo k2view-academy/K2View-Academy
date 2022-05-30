@@ -37,7 +37,7 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p>Return Type</p></td>
 <td width="700pxl" valign="top">
-<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long, Map, List, Customized Class or Object. Output values in the list can be overridden with new values.&nbsp; Fabric knows how to serialize complex structures automatically when sent as JSON in the request body. </p>
+<p>Type of Output value returned from the Web Service and displayed in a dropdown list, e.g., String, Long, Map, List, Customized Class or Object. These Output values can be overridden with new values.&nbsp; Fabric knows how to automatically serialize complex structures  when sent as JSON in the request body. </p>
 </td>
 </tr>
 <tr>
