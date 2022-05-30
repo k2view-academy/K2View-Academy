@@ -108,7 +108,7 @@ Web Services properties:
 <tr>
  <td width="200pxl" valign="top"><p><h5>Custom Payload</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters panel, or whether it is manually to be implemented by the implementor. <br/>Default is False, whereby input parameters are automatically handled by Fabric. Click here to see a code snippet for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---xml">an XML format payload</a> or for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---json">a JSON format payload.</a>
-This flag must be set to True in the properties panel in order to be activated.
+This flag should be set to True in the properties panel in order to be activated.
 </td>
 
 </tr>
