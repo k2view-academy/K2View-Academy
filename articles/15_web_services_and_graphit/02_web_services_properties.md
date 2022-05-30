@@ -74,12 +74,12 @@ Web Services properties:
 <td width="700pxl" valign="top">
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
-<li><strong>GET</strong>, get data.&nbsp;</li>
-<li><strong>POST</strong>, create new data based on the data provided.&nbsp;</li>
-<li><strong>PUT</strong>, update data.&nbsp;</li>
-<li><strong>DELETE</strong>, delete data.</li>
+<li><strong>GET</strong> - get data.&nbsp;</li>
+<li><strong>POST</strong> - create new data based on the data provided.&nbsp;</li>
+<li><strong>PUT</strong> - update data.&nbsp;</li>
+<li><strong>DELETE</strong> - delete data.</li>
  </ul> 
-<p>To select a method, click the dropdown list and enable it. Note that at least one method should be selected.</p>
+<p>To select a method, click the dropdown list and enable it; at least one method should be selected.</p>
 </td>
 </tr>
 <tr>
