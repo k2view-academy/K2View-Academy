@@ -86,7 +86,7 @@ Web Services properties:
 <td width="200pxl" valign="top"><p><h5>Is Raw</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
-<p>Values are True or False.</p>
+<p>Values are either True or False.</p>
 <p>Default = False. When True, Fabric brings the data response as is without parsing or formatting the response to be aligned with the Web Service's output format.</p>
 </td>
 </tr>
