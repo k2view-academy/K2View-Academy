@@ -6,7 +6,7 @@ Fabric Web Services properties include definitions, methods, categories and esse
 
 <img src="images/Web-Service-KI-2-1.png" alt="drawing"/> 
 
- The following are the Web Services properties:
+Web Services properties:
 
  <table width="900pxl">
 <tbody>
