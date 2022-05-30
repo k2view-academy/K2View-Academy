@@ -43,7 +43,7 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions that are all related to the same service. The default population of Version is 1.</p>
+<p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions, all related to the same service. The default population of Version is 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
 <li>If the version is not part of the URL, the API will respond with the latest version.</li>
