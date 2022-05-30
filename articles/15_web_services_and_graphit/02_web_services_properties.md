@@ -96,7 +96,7 @@ Web Services properties:
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
 <p>Additional formats: XML and CSV.</p>
- <p>To select the format/s, click the dropdown menu and enable them.</p>
+ <p>To select a format/s, click the dropdown menu and enable it/them.</p>
 </td>
 </tr>
 <tr>
