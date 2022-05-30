@@ -72,16 +72,16 @@ Fabric supports the following:
 
   * Password
 
-  * Access Token URL, address of the authorization server providing the access token.
+  * Access Token URL - address of the authorization server providing the access token.
 
-  * Client ID, provided by the external resource / authorized vendor. 
+  * Client ID - provided by the external resource/authorized vendor. 
  
-  * Client Secret, provided by the external resource / authorized vendor. Note that although the Client Server is encrypted and saved it is displayed in clear text in the Fabric Studio.
+  * Client Secret - provided by the external resource/authorized vendor. Note that although the Client Server is encrypted and saved it is displayed in clear text in the Fabric Studio.
 
-  * Scope (optional), validates that the required actions are permitted by the authenticating server which returns the access token's scope  to the client. 
+  * Scope (optional) - validates that the required actions are permitted by the authenticating server which returns the access token's scope  to the client. 
   The value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
 
-  * Token Timeout, request timeout to the authorization server.
+  * Token Timeout - requests timeout to the authorization server.
 
 
 * **OAuth 2.0 Password Credentials - Basic Auth Headers** - an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the User and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and is considered as best practice.
