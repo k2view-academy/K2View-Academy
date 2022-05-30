@@ -84,7 +84,7 @@ Fabric supports the following:
   * Token Timeout, request timeout to the authorization server.
 
 
-* **OAuth 2.0 Password Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the User and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and considered as the best practice.
+* **OAuth 2.0 Password Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the User and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and is considered as best practice.
 
 * **OAuth 2.0 Client Credentials**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
 
