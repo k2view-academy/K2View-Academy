@@ -87,7 +87,7 @@ Web Services properties:
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are either True or False.</p>
-<p>Default = False. When True, Fabric brings the data response as is, without parsing or formatting it, to be aligned with the Web Service's output format.</p>
+<p>Default = False. When True, Fabric brings the data response as is, without parsing or formatting it, thus aligning it with the Web Service's output format.</p>
 </td>
 </tr>
 <tr>
