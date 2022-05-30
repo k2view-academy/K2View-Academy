@@ -123,12 +123,12 @@ This flag should be set to True in the properties panel in order to be activated
 <tr>
  <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
 <td width="700pxl" valign="top"><p>When an Elevated Permission is set to False, the developer might still wish that the WS caller will be able to activate certain methods, which, in general, is not allowed. An example for such activation is running a Fabric command. In such case, the developer can grant the caller the permission only for the WS session.</p>
-<p>To apply these permissions, the developer shall specify which methods are allowed. At the WS Properties pane:
+<p>To apply these permissions, the developer should specify what methods are allowed. At the WS Properties pane:
 <ol>
     <li>Set the "Elevated Permission" to False. The "Additional Permissions" property becomes enabled.
-    <li>Open the "Additional Permissions" and choose the methods that shall be permitted, using the checkboxes.
+    <li>Open the "Additional Permissions" and choose the methods that should be permitted, using the checkboxes.
 </ol>
-Alternatively, the permissions can be set in code, using the function "additionalPermissions" annotation.
+Alternatively, the permissions can be set in a code, using the function "additionalPermissions" annotation.
 <p>
 <br>Permissions shall be granted carefully.
 <br>Added for Fabric release 6.5.8</td>
