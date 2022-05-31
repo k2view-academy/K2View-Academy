@@ -112,7 +112,7 @@ Starting from Fabric V6.5.8, you can mark an interface as non-transactional in t
 
 If the Actor is called outside a transaction or if the interface in question is already a part of an active transaction, an exception will be thrown.
 
-The use case for using this Actor is the Clone Entity flow in TDM which requires Fabric to be marked as non-transactional interface. This, in order to prevent locking the LUI SQLite file whilst the transaction is open on a Target DB.
+The use case for using this Actor is the Clone Entity flow in TDM, which requires the marking of Fabric as a non-transactional interface. This, in order to prevent locking the LUI SQLite file whilst the transaction is open on a Target DB.
 
 [Click for more information about the TDM Clone Entity](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#entity-clone-synthetic).
 
