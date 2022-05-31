@@ -108,7 +108,7 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 
 ### NoTx Actor
 
-Starting from Fabric V6.5.8, you can mark an interface as non-transactional in the context of an active transaction using the **NoTx** Actor. The purpose of the **NoTx** Actor is to exclude an interface from a transaction in order not to execute the **begin**, **commit** and **rollback** commands.
+Starting from Fabric V6.5.8, an interface can be marked as non-transactional in the context of an active transaction using the **NoTx** Actor. The purpose of the **NoTx** Actor is to exclude an interface from a transaction in order not to execute the **begin**, **commit** and **rollback** commands.
 
 If the Actor is called outside a transaction or if the interface in question is already a part of an active transaction, an exception will be thrown.
 
