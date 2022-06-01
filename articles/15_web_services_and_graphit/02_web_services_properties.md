@@ -59,7 +59,7 @@ Web Services properties:
 <td width="700pxl" valign="top">
 <p>The URL path of a web service. This is the actual name to be used when external applications who use the web service call it.</p>
 <p>The URL path requires permissions and should be unique per each path/version/response format/request format.</p>
-<p>Web service Permissions:&nbsp;<strong>set on the URL with the parameter **token=** and its value.</strong>&nbsp;</p>
+<p>
 <p>For example, two web services sharing the same URL path:</p>
 <ul>
 <li>wsGetCustomerInfo version is set to 1.</li>
