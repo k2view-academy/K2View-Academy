@@ -66,7 +66,7 @@ Web Services properties:
 <li>wsGetCustomerInfoDev&nbsp;version is set to 2.</li>
 </ul>
 <p>For example:</p>
-<p>http://localhost:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When the above URL is run, it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
+<p>http://localhost:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When this URL is called, it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
 </td>
 </tr>
 <tr>
