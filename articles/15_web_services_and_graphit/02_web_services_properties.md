@@ -114,9 +114,9 @@ This flag should be set to True in the properties panel in order to be activated
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
- <td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
+ <td width="700pxl" valign="top"><p>Indicates whether user permissions should be elevated to the Web-Service or not. 
  Default is set to False.</p>
- When set to False, this means that webservice runs according to the caller permissions. For example, if according to the user's role permissions he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
+ When set to False, it means that a web service runs according to the caller permissions. For instance, if according to a user's role permissions he cannot get instance 1 on a given LU, he won't be able to do so also when using the web service. This is despite the fact that the user can execute the web service itself.
  <br>Added for Fabric release 6.5.3
 </td>
 </tr>
