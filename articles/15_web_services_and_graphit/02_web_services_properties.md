@@ -72,7 +72,7 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p><h5>Verb</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Methods supported by the Web Service, as follows:&nbsp;</p>
+<p>Methods supported by the web service, as follows:&nbsp;</p>
 <ul>
 <li><strong>GET</strong> - get data.&nbsp;</li>
 <li><strong>POST</strong> - create new data based on the data provided.&nbsp;</li>
