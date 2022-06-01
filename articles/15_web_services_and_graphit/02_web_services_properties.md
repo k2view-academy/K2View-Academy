@@ -102,7 +102,7 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p><h5>Serialize null</h5></p></td>
 <td width="700pxl" valign="top">
-    <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
+    <p>If set to True, which is default, Fabric sends fields with a null value in the response. Otherwise, it ignores fields with null values.</p>
     </td>    
 </tr>    
 <tr>
