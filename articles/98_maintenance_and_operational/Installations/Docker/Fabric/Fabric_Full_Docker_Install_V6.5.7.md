@@ -91,7 +91,7 @@ More detailed requirements for each are described below.
 5. UNZIP the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_6.5.7_23.tar.gz 
+   unzip compose_fabric_6.5.7_23.tar.gz 
    ```
 
    !!! Note: open the “.env” file and update the names of the images as needed.
