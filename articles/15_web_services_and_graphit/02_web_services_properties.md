@@ -23,7 +23,7 @@ Web Services properties:
 <p>Name</p>
 </td>
 <td width="700pxl" valign="top"> 
- <p>Name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix.</p>
+ <p>Name of the assigned web service function. The assigned name should be meaningful and should have a ws% prefix.</p>
 </td>
 </tr>
 <tr>
@@ -31,19 +31,19 @@ Web Services properties:
 <p>Category</p>
 </td>
 <td width="700pxl" valign="top">
- <p>Characteristics or class of the Web Service. Note that each category has a separate Java file.</p>
+ <p>Characteristics or class of the web service. Note that each category has a separate Java file.</p>
  </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p>Return Type</p></td>
 <td width="700pxl" valign="top">
-<p>Type of Output value returned from the Web Service and displayed in a dropdown list, e.g., String, Long, Map, List, Customized Class or Object. These Output values can be overridden with new values.&nbsp; When sent as JSON, Fabric knows how to automatically serialize complex structures. </p>
+<p>Type of Output value returned from the web service and displayed in a dropdown list, e.g., String, Long, Map, List, Customized Class or Object. These Output values can be overridden with new values.&nbsp; When sent as JSON, Fabric knows how to automatically serialize complex structures. </p>
 </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Representation of the Web Service&rsquo;s versioning control status. A version number is incorporated into the Web Service&rsquo;s URL and is used to enable several web service versions. The default population of Version is 1.</p>
+<p>Representation of the web service&rsquo;s versioning control status. A version number is incorporated into the web service&rsquo;s URL and is used to enable several web service versions. The default population of Version is 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
 <li>If the version is not part of the URL, the API will respond with the latest version.</li>
@@ -87,7 +87,7 @@ Web Services properties:
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are either True or False.</p>
-<p>Default = False. When True, Fabric retrieves the data response as is, without parsing or formatting it, thus aligning it with the Web Service's output format.</p>
+<p>Default = False. When True, Fabric retrieves the data response as is, without parsing or formatting it, thus aligning it with the web service's output format.</p>
 </td>
 </tr>
 <tr>
