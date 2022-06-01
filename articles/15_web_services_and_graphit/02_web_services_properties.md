@@ -135,9 +135,9 @@ Alternatively, the permissions can be set in a code, using the function "additio
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
-<td width="700pxl" valign="top"><p>Indicates whether a Web Service requires authentication or not. 
+<td width="700pxl" valign="top"><p>Indicates whether a web service requires authentication or not. 
 Default is set to True.</p>
-When set to False, it will allow calling the Web Service by skipping the Authentication step. This mode should be used carefully - use it only if a Web Service should be accessible for everyone, without enforcing an API key, a user/password, etc. 
+When set to False, it will allow calling the web service by skipping the Authentication step. This mode should be used carefully - use it only if a Web Service should be accessible for everyone, without enforcing an API key, a user/password, etc. 
 <br>Added for Fabric release 6.5.4</td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@ When set to False, it will allow calling the Web Service by skipping the Authent
 <tr>
 <td width="200pxl" valign="top"><p><h5>Result Metadata</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Response example to be displayed in Swagger before the Web Service call.</p>
+<p>Response example to be displayed in Swagger before the web service call.</p>
 <p>Set example-JSON, example-XML and example-CSV.</p>
 </td>
 </tr>
@@ -160,22 +160,22 @@ When set to False, it will allow calling the Web Service by skipping the Authent
 
 ## How Do I Generate HTML Format or Legacy JSON/XML ? 
 
-To generate these formats, open the Java Logic file and add the following tag above the public class which encapsulates the Web Services defined in the specific Logic category:
+To generate these formats, open the Java Logic file and add the following tag above the public class, which encapsulates the web services defined in the specific Logic category:
 
 ```java 
 @legacy
 public class Logic extends WebServiceUserCode {...}
 ```
 
-Then add the UNKNOWN value to the Produce function call in the line where the Web Service is defined: 
+Then add the UNKNOWN value to the Produce function call in the line where the web service is defined: 
 
 ```java 
 @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
 ```
 
-Modify the Properties panel of the Web Service with Produce = "UNKNOWN" and Return Type = "Object". 
+Modify the Properties panel of the web service with Produce = "UNKNOWN" and Return Type = "Object". 
 
-After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
+After deploying the web service, call it from the browser using the appropriate token, parameter and format.
 
 Example with HTML format:
 ```html 
