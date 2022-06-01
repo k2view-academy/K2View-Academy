@@ -43,7 +43,7 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Representation of the Web Service&rsquo;s versioning control status. A version number is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions. The default population of Version is 1.</p>
+<p>Representation of the Web Service&rsquo;s versioning control status. A version number is incorporated into the Web Service&rsquo;s URL and is used to enable several web service versions. The default population of Version is 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
 <li>If the version is not part of the URL, the API will respond with the latest version.</li>
@@ -57,10 +57,10 @@ Web Services properties:
 <tr>
 <td width="200pxl" valign="top"><p><h5>Path</h5></p></td>
 <td width="700pxl" valign="top">
-<p>The URL path of a Web Service. This is the actual name to be used when external applications who use the Web Service call it.</p>
-<p>The URL path requires permissions and should be unique per each Path/Version/Response Format/Request Format.</p>
-<p>Web Service Permissions:&nbsp;<strong>set on the URL with the parameter **token=** and its value.</strong>&nbsp;</p>
-<p>For example, two Web Services sharing the same URL path:</p>
+<p>The URL path of a web service. This is the actual name to be used when external applications who use the web service call it.</p>
+<p>The URL path requires permissions and should be unique per each path/version/response format/request format.</p>
+<p>Web service Permissions:&nbsp;<strong>set on the URL with the parameter **token=** and its value.</strong>&nbsp;</p>
+<p>For example, two web services sharing the same URL path:</p>
 <ul>
 <li>wsGetCustomerInfo version is set to 1.</li>
 <li>wsGetCustomerInfoDev&nbsp;version is set to 2.</li>
