@@ -123,7 +123,7 @@ This flag should be set to True in the properties panel in order to be activated
 <tr>
  <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
 <td width="700pxl" valign="top"><p>When an Elevated Permission is set to False, the developer might still wish that the web service caller will be able to activate certain methods, which, in general, is not allowed. An example for such activation is running a Fabric command. In such case, the developer can grant the caller the permission only for the web service session.</p>
-<p>To apply these permissions, the developer should specify what methods are allowed. At the web service Properties pane:
+<p>To apply these permissions, the developer should specify what methods are allowed. At the Web Service Properties pane:
 <ol>
     <li>Set the "Elevated Permission" to False. The "Additional Permissions" property becomes enabled.
     <li>Open the "Additional Permissions" and choose the methods that should be permitted, using the checkboxes.
