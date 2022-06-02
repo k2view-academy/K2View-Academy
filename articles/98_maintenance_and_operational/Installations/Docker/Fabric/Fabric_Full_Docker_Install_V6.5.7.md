@@ -65,7 +65,7 @@ More detailed requirements for each are described below.
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.7/Server/fabric-6.5.7_23/compose_fabric_6.5.7_23.zip
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.7/Server/fabric-6.5.7_23/compose_fabric_6.5.7_23.tar.gz
    <br>md5: 0a339308e713bfe7e3954c530865bfef</br></td>
    </tr>
    </tbody>
@@ -77,7 +77,7 @@ More detailed requirements for each are described below.
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.9/D_k2view_cassandra_3.11.9.tar.gz
    wget https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz  
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.7/Server/fabric-6.5.7_23/D_k2view_fabric_6.5.7_23.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.7/Server/fabric-6.5.7_23/compose_fabric_6.5.7_23.zip
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.7/Server/fabric-6.5.7_23/compose_fabric_6.5.7_23.tar.gz
    ```
 4. Load the Docker images as follows:
 
@@ -88,10 +88,10 @@ More detailed requirements for each are described below.
    ```
 
    You can see the images names by using the command `docker image`
-5. UNZIP the Config archives as follows:
+5. untar the Config archives as follows:
 
    ```bash
-   unzip compose_fabric_6.5.7_23.tar.gz 
+   tar -zxvf compose_fabric_6.5.7_23.tar.gz 
    ```
 
    !!! Note: open the “.env” file and update the names of the images as needed.
