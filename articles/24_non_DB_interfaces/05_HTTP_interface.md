@@ -106,7 +106,7 @@ If the service provider does not require authentication, select **None** in the 
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface. 
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the relative path to the interface. 
 Note that HTTPS requests are included in this HTTP Actor, whose security settings are defined in the interface.  
 
 
