@@ -55,60 +55,48 @@ Each Authentication Type (except for the **None** type) requires specific securi
 
 Fabric supports the following: 
 
-* ***Basic* HTTP Authentication**, built into the HTTP protocol. Fabric (the client) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. This interface requires the following properties:
+* ***Basic* HTTP Authentication** - built into the HTTP protocol. Fabric (the client) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. This interface requires the following properties:
 
   * User
   * Password
 
-  Note that since this mechanism does not provide confidentiality it is usually used over HTTPS and not HTTP.
+  Note: this mechanism does not provide confidentiality, hence it is usually used over HTTPS and not HTTP.
 
-* ***Bearer* Authentication** (aka token authentication), an HTTP Authentication Type / schema that uses cryptic string security tokens called Bearer Tokens. Fabric (the client) sends this token in the `Authorization` header when sending requests to a resource. This interface requires the following properties:
+* ***Bearer* Authentication** (aka token authentication) - an HTTP Authentication Type/schema that uses cryptic string security tokens called Bearer Tokens. Fabric (the client) sends this token in the `Authorization` header when sending requests to a resource. This interface requires the following properties:
 
   * token
 
-* **OAuth 2.0 Password Credentials**, an OAuth protocol's grant type flow. Fabric (the client) first interacts  with an authorization server, provides a user and password and gets an access token which is then used for the resource server's calls. This interface requires the following properties:
+* **OAuth 2.0 Password Credentials** - an OAuth protocol's grant type flow. Fabric (the client) first interacts  with an authorization server, provides a user and password and gets an access token which is then used for the resource server's calls. This interface requires the following properties:
 
   * User 
 
   * Password
 
-  * Access Token URL, address of the authorization server providing the access token.
+  * Access Token URL - address of the authorization server providing the access token.
 
-  * Client ID, provided by the external resource / authorized vendor. 
+  * Client ID - provided by the external resource/authorized vendor. 
  
-  * Client Secret, provided by the external resource / authorized vendor. Note that although the Client Server is encrypted and saved it is displayed in clear text in the Fabric Studio.
+  * Client Secret - provided by the external resource/authorized vendor. Note that although the Client Server is encrypted and saved it is displayed in clear text in the Fabric Studio.
 
-  * Scope (optional), validates that the required actions are permitted by the authenticating server which returns the access token's scope  to the client. 
+  * Scope (optional) - validates that the required actions are permitted by the authenticating server which returns the access token's scope  to the client. 
   The value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
 
-  * Token Timeout, request timeout to the authorization server.
+  * Token Timeout - requests timeout to the authorization server.
 
 
-* **OAuth 2.0 Password Credentials - Basic Auth Headers**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server *in the header of the request*. The authentication server then returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
-  
-  * User, Password, Access Token URL.
+* **OAuth 2.0 Password Credentials - Basic Auth Headers** - an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the User and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and is considered as best practice.
 
-  * Client ID, provided by the external resource / authorized vendor.
+* **OAuth 2.0 Client Credentials** - an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. This interface requires the following properties in Fabric:
 
-  * Client Secret, provided by the external resource / authorized vendor. Note that although the secret key is encrypted and saved, it is displayed in clear text in the Fabric Studio.
+  * Client ID - provided by the external resource/authorized vendor.
 
-  * Scope (optional), specifies the scope of the access request.  In turn, the authorization server uses the scope response parameter to inform the client of the scope of the access token issued. The value of the scope is expressed as a list of space-delimited, case-sensitive strings.
+  * Client Secret - provided by the external resource/authorized vendor. Note that although the secret key is encrypted and saved, it is displayed in clear text in the Fabric Studio.
 
-  * Token Timeout, request timeout to the authorization server.
+  * Scope (optional) - specifies the scope of the access request.  In turn, the authorization server uses the scope response parameter to inform the client of the scope of the access token issued. The value of the scope is expressed as a list of space-delimited, case-sensitive strings.
 
+  * Token Timeout - requests timeout to the authorization server.
 
-
-* **OAuth 2.0 Client Credentials**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
-
-  * Client ID, provided by the external resource / authorized vendor.
-
-  * Client Secret, provided by the external resource / authorized vendor. Note that although the secret key is encrypted and saved, it is displayed in clear text in the Fabric Studio.
-
-  * Scope (optional), specifies the scope of the access request.  In turn, the authorization server uses the scope response parameter to inform the client of the scope of the access token issued. The value of the scope is expressed as a list of space-delimited, case-sensitive strings.
-
-  * Token Timeout, request timeout to the authorization server.
-
-
+* **OAuth 2.0 Client Credentials - Basic Auth Headers** - an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Client Credentials" but in this type Fabric provides the client-ID and Client-Secret to the authorization server in the request header, rather than in the request body. This type is more recommended.
 
 If the service provider does not require authentication, select **None** in the Authentication Type.
 
@@ -118,8 +106,8 @@ If the service provider does not require authentication, select **None** in the 
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface. 
-Note that HTTPS requests are included in this HTTP Actor whose security settings are defined in the interface.  
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the relative path to the interface. 
+Note that HTTPS requests are included in this HTTP Actor, whose security settings are defined in the interface.  
 
 
 
