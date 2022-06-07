@@ -121,6 +121,19 @@ For example, when set to False and according to the roles permissions the user c
 </td>
 </tr>
 <tr>
+ <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
+<td width="700pxl" valign="top"><p>When an Elevated Permission is set to False, the developer might still wish that the web service caller will be able to activate certain methods, an act which is prohibited according to his role permissions. An example of such method is running a BATCH command. In such case, the developer can grant the caller the permission only for the web service session.</p>
+<p>To apply these permissions, the developer should specify what methods are allowed. At the Web Service Properties pane:
+<ol>
+    <li>Set the "Elevated Permission" to False. The "Additional Permissions" property becomes enabled.
+    <li>Open the "Additional Permissions" and choose the methods that should be permitted, using the checkboxes.
+</ol>
+Alternatively, the permissions can be set in a code, using the function "additionalPermissions" annotation.
+<p>
+<br>Permissions shall be granted carefully.
+<br>Added for Fabric release 6.5.8</td>
+</tr>
+<tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates if a Web Service requires authentication or not. 
 Default is set to True.</p>
