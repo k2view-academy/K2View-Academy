@@ -102,13 +102,25 @@ The following tables discuss how user access control is managed using Fabric com
 
 ## ASSIGN Command
 
-**ASSIGN** commands are used to assign a role either for a user or for a token:
+**ASSIGN** commands are used to assign a security profile to a role, a role either for a user or for a token:
 
 <table width="900pxl">
 <tbody>
 <tr>
 <td width="400pxl">
-<p><h4>ASSIGN ROLE &lt;ROLE&gt; to user &lt;USER&gt;</p>
+<p><h4>ASSIGN SECURITY_PROFILE &lt;security_profile&gt; to ROLE &lt;role&gt;</p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong>: Assign a security profile to role.</p>
+<p><strong>Usage</strong>:</p>
+<p>ASSIGN SECURITY_PROFILE &lt;security_profile&gt; to ROLE &lt;role&gt;</p>
+<p><strong>Example: </strong></p>
+<p>assign security_profile sp1 to role role1;</p>
+</td>
+</tr>
+<tr>
+<td width="400pxl">
+<p><h4>ASSIGN ROLE &lt;role&gt; to USER &lt;user&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a user.</p>
@@ -120,7 +132,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="400pxl">
-<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API Key&gt;</p>
+<p><h4>ASSIGN ROLE &lt;role&gt; to TOKEN &lt;API Key&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a token.</p>
@@ -131,6 +143,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -377,15 +390,17 @@ Below is a list of GRANT WS_NAME command parameters:
   - Product Web Services: assign the API key to the user. The permissions for Product Web Services are defined by combining the API Key assigned to the user and the permissions of the roles assigned to the user. 
 
 **Example**
-<pre><code>
-    create user test_read with password '1234'; 
-    create role readonly;  
-    assign role readonly to user test_read; 
-    create token test_read_token user 'this is token: test_read_token'; 
-    assign role readonly to token test_read_token; 
-    grant READ on * to readonly;
 
-</code></pre>
+~~~
+create user test_read with password '1234'; 
+create role readonly;  
+assign role readonly to user test_read; 
+create token test_read_token user 'this is token: test_read_token'; 
+assign role readonly to token test_read_token; 
+grant READ on * to readonly;
+~~~
+
+
 
 When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' token, Fabric throws the following error:
   "Com.k2view.cdbms.exceptions.UnauthorizedException: ```test_read``` is not allowed to perform [DELETE_INSTANCE]"
@@ -448,12 +463,25 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' toke
 <p><strong>Description:</strong> Unassign a role from a user or a token.</p>
 <p><strong>Usage:</strong></p>
 <ul>
-<li class="CellBodyLeft">REVOKE ROLE &lt;ROLE&gt; FROM USER &lt;user&gt;</li>
-<li class="CellBodyLeft">REVOKE ROLE &lt;ROLE&gt; FROM TOKEN &lt;token&gt;</li>
+<li class="CellBodyLeft">REVOKE ROLE &lt;role&gt; FROM USER &lt;user&gt;</li>
+<li class="CellBodyLeft">REVOKE ROLE &lt;role&gt; FROM TOKEN &lt;token&gt;</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
-<li>revoke test_role from test_user;</li>
+<li>revoke role test_role from user test_user;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><h4>REVOKE SECURITY_PROFILE</p>
+</td>
+<td width="700pxl">
+<p><strong>Description:</strong> Unassign security profile from a role.</p>
+<p><strong>Usage:</strong> REVOKE SECURITY_PROFILE &lt;security_profile&gt; FROM ROLE &lt;role&gt;</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>revoke security_profile sp1 from role test_role;</li>
 </ul>
 </td>
 </tr>
@@ -469,6 +497,8 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' toke
 </tr>
 </tbody>
 </table>
+
+
 
 
 

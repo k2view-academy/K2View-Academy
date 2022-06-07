@@ -6,6 +6,7 @@
 <li><a href="/articles/06_LU_tables/03_table_indexes.md">Table Indexes</li>
 <li><a href="/articles/06_LU_tables/04_table_properties.md">Table Properties</a></li>
 <li><a href="/articles/06_LU_tables/05_business_tables.md">Business Tables</a></li>
+<li><a href="/articles/06_LU_tables/06_LU_views.md">LU Views</a></li>
 
 </ul>
 

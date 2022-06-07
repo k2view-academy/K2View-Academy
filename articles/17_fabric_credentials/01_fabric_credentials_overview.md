@@ -1,13 +1,14 @@
 # Fabric Credentials Overview
 
 ## RBAC in Fabric 
- Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
+Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
 
 - Creating / dropping users, roles and API Keys.
 - Assigning users to roles.
 - Granting access on different levels, for example:
   - Access to LUIs can be defined on a user level.
   - Access to the methods that access LUIs can be defined on a role level.
+- Assigning security profiles to roles - starting from Fabric V6.5.8.
 
 Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned as “administrators”. 
 
@@ -31,7 +32,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>DESCRIPTION</strong></p>
 </td>
 </tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>ACTIVATE_KEY</strong></p>
@@ -40,7 +40,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>This permission is needed to generate a new key when using Fabric's key generator capability</p>
 </td>
 </tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>ASSIGN_ROLE</strong></p>
@@ -49,7 +48,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>This permission is needed to assign a role to a specific user</p>
 </td>
 </tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>EDIT_ROLE</strong></p>
@@ -58,7 +56,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>Used to modify the scope of permissions for a specific role permission</p>
 </td>
 </tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>BATCH</strong></p>
@@ -67,8 +64,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>Used to enable user to run batch processes</p>
 </td>
 </tr>
-
-
 <tr>
 <td width="300pxl">
 <p><strong>DELETE_INSTANCE</strong></p>
@@ -77,16 +72,13 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>Used to delete one or multiple instances from Fabric</p>
 </td>
 </tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong></p>
-
 </td>
 <td width="600pxl">
 <p>Ability to run the deploy command on a project or entire environment</p>
 </td></tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
@@ -94,15 +86,13 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <td width="600pxl">
 <p>The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB</p>
 </td></tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>To set the environement or Globals for the current session onto which role is defined</p>
+<p>To set the environment or Globals for the current session onto which role is defined/p>
 </td></tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>ALL_WS</strong></p>
@@ -110,7 +100,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <td width="600pxl">
 <p>Allows all web-services related permissions</p>
 </td></tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>WS_* / gr<LUNAME></strong></p>
@@ -118,7 +107,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <td width="600pxl">
 <p>Allows specific web services and graphit files to be invoked</p>
 </td></tr>
-
 <tr>
 <td width="300pxl">
 <p><strong>ALL</strong></p>
@@ -164,7 +152,7 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 <p>Credentials</p>
 </td>
 <td width="600pxl">
-<p>Holds the API Key definitions of each role. The API Key is encryted.</p>
+<p>Holds the API Key definitions of each role. The API Key is encrypted.</p>
 </td>
 </tr>
 <tr>
@@ -188,11 +176,12 @@ Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_A
 Create the users and define their credentials, as follows: 
 
 - [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
-- [Assign the role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
+- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role) - starting from Fabric V6.5.8.
+- [Assign a role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
 - [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
-- [Grant the permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
+- [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
 
-- Exit Fabric and log in with this user or use the token to invoke a [Web Service]().
+- Exit Fabric and log in with this user or use the token to invoke a Web Service.
 
 ## Admin User
 
