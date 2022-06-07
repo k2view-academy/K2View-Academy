@@ -15,7 +15,7 @@ If your organization is using an SSO service, you can connect Fabric to it. Fabr
 
 Security Assertion Markup Language (SAML) is a standard protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP). 
 
-The SP requests and obtains an authentication assertion from the IDP. On the basis of this assertion, the SP can make an access control decision. That is, it can decide whether to give access to some or all of the the SP resources. The interactions are XML based and use certification, encryption and other methods to secure these interactions and avoid frauds.
+The SP requests and obtains an authentication assertion from the IDP. On the basis of this assertion, the SP can make an access control decision. That is, it can decide whether to give access to some or all of the SP resources. The interactions are XML based and use certification, encryption and other methods to secure these interactions and avoid frauds.
 
 
 
