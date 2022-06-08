@@ -56,7 +56,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
      - **File Name** - populate the file name by [LU Table Name].[flow name]
      - **Parameters** -
-       - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name must be identical to the data source table name.
+       - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name should be identical to the data source table name.
        - **KEY** - populate the key to delete the LU table before populating it.
        - **SOURCE_INTERFACE** - the interface name for the source DB query.
 
