@@ -39,269 +39,213 @@ Note that task level Globals have a higher priority than TDM environment level G
 
 When executing a TDM task, set the Sync mode according to the following table:
 
-<table width="900pxl">
+<table style="height: 1403px;" width="900pxl">
 <tbody>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 100px;">
+<td style="height: 100px; width: 97.7841px;" valign="top">
 <p><strong>Override Sync - Source Env Level</strong></p>
 </td>
-<td valign="top" width=200pxl">
-<p><strong>Override Sync - Task Level&nbsp;</strong></p>
+<td style="height: 100px; width: 189.815px;" valign="top">
+<p><strong>Set Sync Policy - Task Level</strong></p>
 </td>
-<td valign="top" width="100pxl">
-<p><strong>Task Operation Mode</strong></p>
+<td style="height: 100px; width: 96.8466px;" valign="top">
+<p><strong>Task Type</strong></p>
 </td>
-<td valign="top" width="100pxl">
+<td style="height: 100px; width: 98.4091px;" valign="top">
 <p><strong>Task Execution Sync Mode</strong></p>
 </td>
-<td valign="top" width="400pxl">
+<td style="height: 100px; width: 384.361px;" valign="top">
 <p><strong>Results</strong></p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 64px;">
+<td style="height: 64px; width: 97.7841px;" valign="top">
 <p>None</p>
 </td>
-<td valign="top" width="100pxl">
-<p>None</p>
+<td style="height: 64px; width: 189.815px;" valign="top">
+<p>Sync New Data</p>
 </td>
-<td valign="top" width="90pxl">
-<p>All</p>
+<td style="height: 64px; width: 96.8466px;" valign="top">
+<p>Extract, Load, Delete</p>
 </td>
-<td valign="top" width="90pxl">
+<td style="height: 64px; width: 98.4091px;" valign="top">
 <p>On</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="height: 64px; width: 384.361px;" valign="top">
 <p>LUIs are synced according to their sync method. See the <a href="/articles/14_sync_LU_instance/10_sync_behavior_summary.md">Sync Behavior Summary table</a>.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 64px;">
+<td style="height: 64px; width: 97.7841px;" valign="top">
 <p>None</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Request up-to-date entity</p>
+<td style="height: 64px; width: 189.815px;" valign="top">
+<p>Refresh all Data From Source</p>
 </td>
-<td valign="top" width="90pxl">
-<p>All</p>
+<td style="height: 64px; width: 96.8466px;" valign="top">
+<p>Extract, Load, Delete</p>
 </td>
-<td valign="top" width="90pxl">
+<td style="height: 64px; width: 98.4091px;" valign="top">
 <p>Force</p>
 </td>
-<td valign="top" width="200pxl">
-<p>LUI are synced from the source.</p>
+<td style="height: 64px; width: 384.361px;" valign="top">
+<p>LUIs are synced from the source.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 64px;">
+<td style="height: 64px; width: 97.7841px;" valign="top">
 <p>Always sync</p>
 </td>
-<td valign="top" width="100pxl">
-<p>None</p>
+<td style="height: 64px; width: 189.815px;" valign="top">
+<p>Sync New Data</p>
 </td>
-<td valign="top" width="100pxl">
-<p>All</p>
+<td style="height: 64px; width: 96.8466px;" valign="top">
+<p>Extract, Load, Delete</p>
 </td>
-<td valign="top" width="100pxl">
+<td style="height: 64px; width: 98.4091px;" valign="top">
 <p>Force</p>
 </td>
-<td valign="top" width="200pxl">
-<p>LUI are synced from the source.</p>
+<td style="height: 64px; width: 384.361px;" valign="top">
+<p>LUIs are synced from the source.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 64px;">
+<td style="height: 64px; width: 97.7841px;" valign="top">
 <p>Always sync</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Request up-to-date entity</p>
+<td style="height: 64px; width: 189.815px;" valign="top">
+<p>Refresh all Data From Source</p>
 </td>
-<td valign="top" width="100pxl">
-<p>All</p>
+<td style="height: 64px; width: 96.8466px;" valign="top">
+<p>Extract, Load, Delete</p>
 </td>
-<td valign="top" width="100pxl">
+<td style="height: 64px; width: 98.4091px;" valign="top">
 <p>Force</p>
 </td>
-<td valign="top" width="200pxl">
-<p>LUI are synced from the source.</p>
+<td style="height: 64px; width: 384.361px;" valign="top">
+<p>LUIs are synced from the source.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 64px;">
+<td style="height: 64px; width: 97.7841px;" valign="top">
 <p>Do not sync</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Request up-to-date entity</p>
+<td style="height: 64px; width: 189.815px;" valign="top">
+<p>Refresh all Data From Source</p>
 </td>
-<td valign="top" width="100pxl">
-<p>All</p>
+<td style="height: 64px; width: 96.8466px;" valign="top">
+<p>Extract, Load, Delete</p>
 </td>
-<td valign="top" width="100pxl">
+<td style="height: 64px; width: 98.4091px;" valign="top">
 <p>Force</p>
 </td>
-<td valign="top" width="200pxl">
-<p>LUI are synced from the source.</p>
+<td style="height: 64px; width: 384.361px;" valign="top">
+<p>LUIs are synced from the source.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
+<tr style="height: 110px;">
+<td style="height: 110px; width: 97.7841px;" valign="top">&nbsp;</td>
+<td style="height: 110px; width: 189.815px;" valign="top">
+<p>Sync New Data</p>
 <p>Do not sync</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-</td>
-<td valign="top" width="100pxl">
-<p>None</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Insert</p>
+<td style="height: 110px; width: 96.8466px;" valign="top">
+<p>Load</p>
 </td>
-<td valign="top" width="100pxl">
+<td style="height: 110px; width: 98.4091px;" valign="top">
 <p>Off</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="height: 110px; width: 384.361px;" valign="top">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:</li>
-    Get the data from Fabric.
-</ul>
+Get the data from Fabric.</ul>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>Delete and insert&nbsp;</p>
+<tr style="height: 155px;">
+<td style="height: 155px; width: 97.7841px;" valign="top">
+<p>None</p>
 </td>
-<td valign="top" width="100pxl">
-<p>On</p>
+<td style="height: 155px; width: 189.815px;" valign="top">
+<p>Do Not Sync From Source Data</p>
 </td>
-    <td valign="top" width="100pxl"></td>
-    <td valign="top" width="100pxl"></td>
-<td valign="top" width="200pxl">
+<td style="height: 155px; width: 96.8466px;" valign="top">Load and Delete</td>
+<td style="height: 155px; width: 98.4091px;" valign="top">On</td>
+<td style="height: 155px; width: 384.361px;" valign="top">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
 <li>Source LU tables:</li>
-    Get the data from Fabric.
+Get the data from Fabric.
 <li>Target LU tables:</li>
-    Sync the data from the target environment.
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>Delete only</p>
-</td>
-<td valign="top" width="100pxl">
-<p>On</p>
-</td>
-    <td valign="top" width="100pxl"></td>
-    <td valign="top" width="100pxl"></td>
-<td valign="top" width="200pxl">
-    <br>Target LU tables are synced</br>    
-    <br>from the target environment.</br>
-</td>
-</tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>Do not sync</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-<td valign="top" width="100pxl">
-<p>Do not sync source data</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-<td valign="top" width="100pxl">
-<p>Insert</p>
-</td>
-<td valign="top" width="100pxl">
-<p>Off</p>
-</td>
-<td valign="top" width="300pxl">
-<ul>
-<li>First sync, return an error.</li>
-    <li>If the LUIs exist in Fabric:</li>
-     Get the data from Fabric.&nbsp;
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>Delete and insert&nbsp;</p>
-</td>
-<td valign="top" width="100pxl">
-<p>On</p>
-</td>
-    <td valign="top" width="100pxl"></td>
-    <td valign="top" width="100pxl"></td>
-<td valign="top" width="200pxl">
-<ul>
-<li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric:
-<ul>
-<li>Source LU tables:</li>
-    Get the data from Fabric.
-<li>Target LU tables:</li>
-     Get the data from the target environment.
-</ul>
+Sync the data from the target environment.</ul>
 </li>
 </ul>
 </td>
 </tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>None</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<tr style="height: 155px;">
+<td style="height: 155px; width: 97.7841px;">
+<p>Do not sync</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Do not sync source data</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<td style="height: 155px; width: 189.815px;">
+<p>Sync New Data</p>
 </td>
-<td valign="top" width="100pxl">
-<p>Insert</p>
-</td>
-<td valign="top" width="100pxl">
-<p>Off</p>
-</td>
-<td valign="top" width="200pxl">
-<ul>
-<li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric:</li>
-    Get the data from Fabric.
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top" width="100pxl">
-<p>Delete and insert&nbsp;</p>
-</td>
-<td valign="top" width="100pxl">
-<p>On</p>
-</td>
-     <td valign="top" width="100pxl"></td>
-     <td valign="top" width="100pxl"></td>
-<td valign="top" width="200pxl">
+<td style="height: 155px; width: 96.8466px;">Load and Delete</td>
+<td style="height: 155px; width: 98.4091px;">On</td>
+<td style="height: 155px; width: 384.361px;">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
 <li>Source LU tables:</li>
-    Get the data from Fabric.
+Get the data from Fabric.
 <li>Target LU tables:</li>
-    Get the data from the target environment.
-</ul>
+Sync the data from the target environment.</ul>
 </li>
 </ul>
+</td>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 97.7841px;" valign="top">
+<p>N/A</p>
+</td>
+<td style="height: 54px; width: 189.815px;" valign="top">
+<p>N/A</p>
+</td>
+<td style="height: 54px; width: 96.8466px;" valign="top">Delete</td>
+<td style="height: 54px; width: 98.4091px;" valign="top">On</td>
+<td style="height: 54px; width: 384.361px;" valign="top">Target LU tables are synced from the target environment.</td>
+</tr>
+<tr style="height: 125px;">
+<td style="height: 125px; width: 97.7841px;" valign="top">
+<p>N/A</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td style="height: 125px; width: 189.815px;" valign="top">
+<p>Do Not Sync From Source Data</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td style="height: 125px; width: 96.8466px;" valign="top">
+<p>Load</p>
+</td>
+<td style="height: 125px; width: 98.4091px;" valign="top">
+<p>Off</p>
+</td>
+<td style="height: 125px; width: 384.361px;" valign="top">
+<ul>
+<li>First sync, return an error.</li>
+<li>If the LUIs exist in Fabric:</li>
+Get the data from Fabric.&nbsp;</ul>
 </td>
 </tr>
 </tbody>
 </table>
-
 
 
 # Overriding Additional Task Execution Parameters
