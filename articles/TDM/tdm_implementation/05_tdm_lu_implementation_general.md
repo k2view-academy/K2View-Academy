@@ -70,11 +70,11 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 5. Link the remaining source LU tables to the main LU tables, in a way that if the main source LU table is not populated, the remaining source LU tables remain empty as well.
 
-9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
+6. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
    
-9. Edit **trnLuParams** and **LU_PARAMS** to enable a subset of entities from selected parameters for this LU. 
+7. Edit **trnLuParams** and **LU_PARAMS** in order to enable a subset of entities from selected parameters for this LU. 
 
    Click for more information about [Handling TDM Parameters](07_tdm_implementation_parameters_handling.md).
 
