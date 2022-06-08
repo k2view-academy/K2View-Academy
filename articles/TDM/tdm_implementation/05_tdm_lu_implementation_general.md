@@ -44,7 +44,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represent the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
 
-2. Verify that the the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
+2. Verify that the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
 3. Create the population of the main source LU tables:
 
