@@ -50,7 +50,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
    Generate a Broadway flow for the populated based on [populationRootTable.pop.flow](#populating-the-main-source-lu-table---logic) template (imported from the TDM Library): 
 
-   - Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
+   - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window opens.
 
    - Populate the popup window's settings as follows:
 
