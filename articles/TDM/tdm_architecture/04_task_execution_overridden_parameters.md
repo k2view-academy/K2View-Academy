@@ -189,7 +189,7 @@ Sync the data from the target environment.</ul>
 </tr>
 <tr style="height: 155px;">
 <td style="height: 155px; width: 97.7841px;">
-<p>Do not sync</p>
+<p>Do Not Sync</p>
 </td>
 <td style="height: 155px; width: 189.815px;">
 <p>Sync New Data</p>
