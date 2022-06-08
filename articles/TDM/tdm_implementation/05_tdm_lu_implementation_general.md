@@ -16,7 +16,7 @@ Each LU in a TDM project has the following structure:
 
   - **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities to a target environment and therefore must extract the source data of these entities.
 
-  - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the target environment to enable deleting an entity from a target environment if required by the TDM task.
+  - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the target environment in order to enable deleting an entity from a target environment if required by the TDM task.
 
     Click for more information about [Fabric implementation and deleting entities from the target environment](08_tdm_implement_delete_of_entities.md).
 
