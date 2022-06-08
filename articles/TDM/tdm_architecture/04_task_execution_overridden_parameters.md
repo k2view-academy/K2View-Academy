@@ -372,7 +372,7 @@ TDM supports the override of the following parameters:
 <p><strong>reserveInd</strong></p>
 </td>
 <td width="185">
-<p>Populated with true or false. Set to true if the task execution needs to reserve the entities on the target environment.</p>
+<p>Populated with True or False. Set to True if the task execution needs to reserve the entities on the target environment.</p>
 </td>
 <td width="99">
 <p>Load or Reserve tasks</p>
