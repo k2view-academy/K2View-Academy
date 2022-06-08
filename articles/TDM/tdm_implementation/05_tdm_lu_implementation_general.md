@@ -48,7 +48,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 3. Create the population of the main source LU tables:
 
-   Generate a Broadway flow for the populated based on **populationRootTable.pop.flow** template (imported from the TDM Library): 
+   Generate a Broadway flow for the populated based on [populationRootTable.pop.flow] template (imported from the TDM Library): 
 
    - Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
 
@@ -64,28 +64,12 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
      ![template](images/create_main_source_lu_flow_by_template.png)
 
-4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
-
-      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning is cleared) which  loads (inserts) the entities to the target environment.
-
-      - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
-
-        Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
-
-5. As  a result, if the Sync mode is set to **Do Not Sync From Source Data** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_delete_only_task.md) task, or a [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
-
-6. The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
-
-   See example of a Broadway flow that populates Customer LU table:
-
    
 
-   ![root example](images/pop_root_lu_table_flow_example.png)
+4. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, since the Broadway flow deletes the LU table before populating it.
 
-   
+5. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
 
-7. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, since the Broadway flow deletes the LU table before populating it.
-8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
 9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
@@ -116,5 +100,34 @@ The LUI must include the source environment which must be set as the [active env
 
 - Populate the source environment of the LUI using `_dev_`.  For example, **_dev_1**.
 - Create and deploy a source and target environments to the Fabric Debug server, set the source environment as an active environment in the Fabric Debug server and populate the deployed source environment name in the LUI. For example, **UAT_1**.   Note that the main target LU table replaces the active environment to the target environment.
+
+### Populating the Main Source LU Table - Logic
+
+The Broadway flow of the main source LU table is generated based on the **populationRootTable.pop.flow** template and deletes and re-populates the main source LU table under the following conditions:
+
+- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning is checkbox is cleared) which  loads (inserts) the entities to the target environment.
+
+- The **Set Sync Policy** task's setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source system. 
+
+  Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
+
+The source LU tables are not populated by the LUI sync in the following cases:
+
+- The Sync Policy  is set to **Do Not Sync From Source Data** by the user.
+- A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md).
+- A  [reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md).
+- A [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
+
+The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
+
+See example of a Broadway flow that populates Customer LU table:
+
+
+
+![root example](images/pop_root_lu_table_flow_example.png)
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](04_fabric_tdm_library.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_implementation_support_hierarchy.md)
