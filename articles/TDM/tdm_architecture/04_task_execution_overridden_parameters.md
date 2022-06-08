@@ -33,7 +33,7 @@ A project's Globals can be overridden on either a [TDM environment](/articles/TD
 
 The TDM execution process sets the values on the Globals on a [session level](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
-Note that task level Globals have a higher priority than TDM environment level Globals, i.e. if a Global variable is set on both - the task and the related environment levels - the task's Global value is set.
+Note: Task level Globals have a higher priority than TDM environment level Globals. I.e. if a Global variable is set on both - the task and the related environment levels - the task's Global value is set.
 
 ### Overriding the Sync Mode on the Task Execution 
 
