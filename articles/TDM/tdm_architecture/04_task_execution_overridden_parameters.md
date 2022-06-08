@@ -128,7 +128,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </tr>
 <tr style="height: 64px;">
 <td style="height: 64px; width: 97.7841px;" valign="top">
-<p>Do not sync</p>
+<p>Do Not Sync</p>
 </td>
 <td style="height: 64px; width: 189.815px;" valign="top">
 <p>Refresh all Data From Source</p>
