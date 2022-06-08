@@ -66,9 +66,9 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
    
 
-4. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, since the Broadway flow deletes the LU table before populating it.
+4. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, as the Broadway flow deletes the LU table before populating it.
 
-5. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
+5. Link the remaining source LU tables to the main LU tables, in a way that if the main source LU table is not populated, the remaining source LU tables remain empty as well.
 
 9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
