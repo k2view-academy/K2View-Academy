@@ -37,7 +37,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ​	Click for more information about supporting [hierarchy in the TDM implementation](06_tdm_implementation_support_hierarchy.md).
 
-5. Add the LU_PARAMS LU table to each LU Schema. Note that **the LU_PARAMS table must be added to the LU schema even if it is not required for defining LU parameters**. In this case the LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+5. Add the LU_PARAMS LU table to each LU Schema. Note that **the LU_PARAMS table must be added to the LU schema even if it is not required for defining LU parameters**. In this case the LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
