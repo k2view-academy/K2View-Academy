@@ -1,10 +1,12 @@
+<studio>
+
 # Table Population Properties Tab
 
 The **Properties Tab** in the [Table Population](/articles/07_table_population/01_table_population_overview.md) window displays additional information about different objects in the Population window, as follows:
 *	[DB query or Root function Source Objects](/articles/07_table_population/02_source_object_types.md#table-population---source-object-types).
 *	[Target LU table](/articles/06_LU_tables/01_LU_tables_overview.md#lu-tables-overview).
 * Other objects of a [Table Population transformation](/articles/07_table_population/06_table_population_transformation_rules.md) like a Translation or Global.
-*	Properties of any selected field in a Population object.
+*	Properties of any selected field in a Population object.  
 
 Since each object has different properties, the tab’s layout is updated to display them when an object is selected in the map. 
 
@@ -124,7 +126,10 @@ The Function Properties tab displays the properties of either a source [**Root f
 </tbody>
 </table>
 
+
 ### Lookup Properties
 [Click for more information about Lookups properties.](/articles/07_table_population/11_lookup_tables.md#lookup-properties-tab)
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/05_table_population_mode.md)
+[![Previous](/articles/images/Previous.png)](05_table_population_mode.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_table_population_transformation_rules.md)
+
+</studio>

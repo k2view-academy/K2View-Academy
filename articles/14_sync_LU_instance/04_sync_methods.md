@@ -1,9 +1,10 @@
 # Sync Methods
 
 ## Sync Properties
- Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), or [Table Population](/articles/07_table_population/01_table_population_overview.md) level.
-T
+Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), or [Table Population](/articles/07_table_population/01_table_population_overview.md) level.
+
 **A Sync property contains the following settings:**
+
 <table>
 <tbody>
 <tr>
@@ -175,7 +176,7 @@ T
 </table>
 
 [Click for more information about LU Sync Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
- 
+
 ## Truncate Before Sync 
 The **Truncate Before Sync** property can be set on an LU table or a Table Population. When Truncate Before Sync = True, whether on the LU table or on one of its populations, the entire LU table is truncated before the related populations are executed for this LU table. Therefore, there is a logical dependence between this setting and the sync mode.
 

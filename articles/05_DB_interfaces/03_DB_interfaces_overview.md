@@ -26,7 +26,7 @@ The following fields are displayed for all types of DB interfaces:
 <p><strong>Name</strong></p>
 </td>
 <td width="700pxl">
-<p>Database Filename.</p>
+<p>Database Filename</p>
 </td>
 </tr>
 <tr>
@@ -48,6 +48,7 @@ The following fields are displayed for all types of DB interfaces:
 <tr>
 <td width="210">
 <p><strong>Server</strong></p>
+<p><strong>Host</strong></p>
 </td>
 <td width="433">
 <p>Hostname or IP address of the database server.</p>
@@ -88,15 +89,7 @@ The following fields are displayed for all types of DB interfaces:
 <p>Password used for database access authentication.</p>
 </td>
 </tr>
-<tr>
-<td width="210">
-<p><strong>Proactive Indicator</strong></p>
-</td>
-<td width="433">
-<p>Default = False. Defines whether Proactive Sync should be enabled.</p>
-<p>Note that starting from V6.5 this property is removed from the interface definition and is only supported on the LU Table Population.</p>
-</td>
-</tr>
+<studio>
 <tr>
 <td width="210">
 <p><strong>Custom Connection String</strong></p>
@@ -105,17 +98,19 @@ The following fields are displayed for all types of DB interfaces:
 <p>Default = False. When set to True, the Custom Connection string is editable.</p>
 </td>
 </tr>
+</studio>
 <tr>
 <td width="210">
 <p><strong>Connection String</strong></p>
 </td>
 <td width="433">
-<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
+<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/. To edit the connection string, click on the pencil icon on the right.</p>
 </td>
 </tr>
 <tr>
 <td width="210">
 <p><strong>Min Connection Number</strong></p>
+<p><strong>Minimum Connections</strong></p>
 </td>
 <td width="433">
 <p>Minimum number of connections per interface allocated by Fabric per node that remain open throughout the entire time that the Fabric project runs.</p>
@@ -124,17 +119,28 @@ The following fields are displayed for all types of DB interfaces:
 <tr>
 <td width="210">
 <p><strong>Max Connection Number</strong></p>
+<p><strong>Maximum Connections</strong></p>
 </td>
 <td width="433">
 <p>Maximum number of connections per interface per node. Note that this parameter should not exceed the maximum number of connections allocated by the DB.</p>
 </td>
 </tr>
+ <studio>
 <tr>
 <td width="210">
 <h4>Schema Filter</h4>
 </td>
 <td width="433">
 <p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
+</td>
+</tr>
+</studio>
+<tr>
+<td width="210">
+<h4>Post Connection Commands</h4>
+</td>
+<td width="433">
+<p>Optional - a list of SQL commands that are to be executed post JDBC interface connection on the DB interface.</p>
 </td>
 </tr>
 <tr>
@@ -147,6 +153,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 
