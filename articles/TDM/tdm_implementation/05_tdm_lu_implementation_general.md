@@ -2,7 +2,7 @@
 
 A TDM task copies a [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (BE) from a source environment to a target environment. A BE can have multiple [LUs](/articles/03_logical_units/01_LU_overview.md) with either a flat or a hierarchical structure. For instance, a Customer BE consists of Customer Care, Billing, Ordering and Usage LUs. The ability to break a BE up into several LUs enables maximum flexibility and avoides duplication of development. Additionally, defining a hierarchical structure of parent-child LUs enables creating LUs, based on the natural root entity of the related data sources, instead of forcefully setting unified root entities on all LUs related to a given BE.
 
-Each LU in a TDM project should have additional components in order to support TDM functionality, as described below:   
+Each LU in a TDM project should have additional components in order to support TDM functionalities, as described below:   
 
 ## Basic LU Structure
 
@@ -42,13 +42,13 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
-1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represent the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
+1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represent the main (root) tables in the data source. For example, the Customer table is the main source LU table of the Customer LU.
 
 2. Verify that the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
 3. Create the population of the main source LU tables:
 
-   Generate a Broadway flow for the populated based on [populationRootTable.pop.flow](#populating-the-main-source-lu-table---logic) template (imported from the TDM Library): 
+   Generate a Broadway flow for the LU table population based on [populationRootTable.pop.flow](#populating-the-main-source-lu-table---logic) template (imported from the TDM Library): 
 
    - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window opens.
 
@@ -70,7 +70,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 5. Link the remaining source LU tables to the main LU tables, in a way that if the main source LU table is not populated, the remaining source LU tables remain empty as well.
 
-6. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
+6. Mask sensitive data in the LU tables by creating a Broadway flow with [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to populate the LU tables with the sensitive data. 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
    
@@ -80,34 +80,34 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 4 - Add the Target LU Tables to the LU Schema
 
-1. Define the LU tables to extract the target keys to enable deleting an entity from the target.
+1. Define the LU tables in order to extract the target keys from the target environment. These keys are used by the [delete flows](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) for deleting an entity from the target.
 
 2. Link the main target LU table to the FABRIC_TDM_ROOT table.
 
 3. Add the **fnDecisionDeleteFromTarget** Decision function to all target LU tables. Note that this Decision function is under Shared Objects and is imported from the [TDM Library](04_fabric_tdm_library.md).
 
-4. Create the population of the main target LU table based on a Broadway flow. The Broadway flow should set the task's target environment to be the active environment, enabling the selection of the target IDs from the target environment. 
+4. Create the population of the main target LU table based on a Broadway flow. The Broadway flow should set the task's target environment to be the **active environment**, enabling the selection of target IDs from the target environment. 
 
 5. Link the remaining target LU tables to the main target LU table.
 
 Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
-Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_delete_only_task.md) from a target environment using a TDM task.
+Click for more information about [deleting entities](/articles/TDM/tdm_gui/14_task_overview.md#task-types) from a target environment using a TDM task.
 
 ### LU Debug
 
 The LUI should include the source environment, which should be set as the [active environment](/articles/25_environments/01_environments_overview.md) in Fabric. When running a [Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) on the LU to debug its implementation, do either:
 
 - Populate the source environment of the LUI using `_dev_`.  For example, **_dev_1**.
-- Create and deploy a source and target environments to the Fabric Debug server, set the source environment as an active environment in the Fabric Debug server and populate the deployed source environment name in the LUI. For example, **UAT_1**.   Note that the main target LU table replaces the active environment to the target environment.
+- Create and deploy a source and target environments to the Fabric Debug server, set the source environment as an active environment in the Fabric Debug server and populate the deployed source environment name in the LUI. For example, **UAT_1**. Note that the main target LU table sets the **target environment** to be the **active environment**.
 
 ### Populating the Main Source LU Table - Logic
 
-The Broadway flow of the main source LU table is generated based on the **populationRootTable.pop.flow** template and deletes and re-populates the main source LU table under the following conditions:
+The Broadway flow of the main source LU table is generated based on the **populationRootTable.pop.flow** template. It deletes and re-populates the main source LU table under the following conditions:
 
-- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning is checkbox is cleared) which  loads (inserts) the entities to the target environment.
+- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning checkbox is cleared).
 
-- The **Set Sync Policy** task's setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source system. 
+- The **Set Sync Policy** task's setting is not set to **Do not Sync Source Data** to prevent synchronizing the entities from the source system. 
 
   Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
@@ -116,7 +116,7 @@ The source LU tables are not populated by the LUI sync in the following cases:
 - The Sync Policy  is set to **Do Not Sync From Source Data** by the user.
 - A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md).
 - A  [reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md).
-- A [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
+- A [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md): the selected data version is copied from Fabric. 
 
 The Broadway flow also validates whether the entity exists in the source table. If the entity is not found in the main source tables, an Exception is thrown and the entity is rejected.
 
