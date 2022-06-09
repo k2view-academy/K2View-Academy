@@ -4,7 +4,7 @@ A task execution can override execution parameters, as follows:
 
 - Setting the active environment based on the task's environments.
 - Setting key-value parameters on a session level.
-- Overriding Globals values on a session level.
+- Overriding [Globals'](/articles/08_globals/01_globals_overview.md) values on a session level.
 - Overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
 - Overriding additional execution parameters without changing the task itself.
 
@@ -12,11 +12,11 @@ A task execution can override execution parameters, as follows:
 
 #### Extract Tasks
 
-The [TDM Execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the task's environment as the [active environment](/articles/25_environments/05_set_and_list_commands.md) on the executed task.
+The [task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the task's environment as the [active environment](/articles/25_environments/05_set_and_list_commands.md) on the executed task.
 
 #### Load Tasks
 
-The [TDM Execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the [active environment](/articles/25_environments/05_set_and_list_commands.md):
+The [task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the [active environment](/articles/25_environments/05_set_and_list_commands.md):
 
 1. Sets the task's source environment as the active environment. 
 2. Gets the LUI from Fabric.
@@ -25,15 +25,20 @@ The [TDM Execution process](03_task_execution_processes.md#main-tdm-task-executi
 
 ### Setting Key-Value Parameters
 
-Set execution parameters like replace sequence, delete before load or insert to target indicators. These parameters are based on the task's settings and are set on a session level.
+Set execution parameters like the following indicators:
+- Replace sequence
+- Delete before load
+- Insert to target
+
+These parameters are based on the task's settings and are set on a session level.
 
 ### Overriding Globals Values 
 
-A project's Globals can be overridden on either a [TDM environment](/articles/TDM/tdm_gui/12_environment_globals_tab.md) or a [TDM task](/articles/TDM/tdm_gui/23_task_globals_tab.md) level.
+A project's Global can be overridden on either a [TDM environment](/articles/TDM/tdm_gui/12_environment_globals_tab.md) or a [TDM task](/articles/TDM/tdm_gui/23_task_globals_tab.md) level.
 
-The TDM execution process sets the values on the Globals on a [session level](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
+The task execution process sets the values on the Globals on a [session level](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
-Note: Task level Globals have a higher priority than TDM environment level Globals. I.e. if a Global variable is set on both - the task and the related environment levels - the task's Global value is set.
+Note: Task level variables have a higher priority than TDM environment level variable. I.e. if a variable (Global) is set on both - the task and the related environment levels - the task's Global value gets the higher priority.
 
 ### Overriding the Sync Mode on the Task Execution 
 
