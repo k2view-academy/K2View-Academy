@@ -128,7 +128,7 @@ This example shows how both Subscriber and Billing datasets are collected into o
 
 Output:
 
-<img src="images/grCollectResp.PNG"></img>
+<img src="images/grCollectResp.png"></img>
 
 #### grRaw.graphit
 This example illustrates XML output in raw format. Observe the header value displayed in the response: ```(?xml version="1.0" encoding="UTF-8"...)```<br></br>
