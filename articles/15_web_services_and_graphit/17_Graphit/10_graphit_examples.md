@@ -136,7 +136,7 @@ This example illustrates XML output in raw format. Observe the header value disp
 
 Output:
 
-<img src="images/grRawResp.PNG"></img>
+<img src="images/grRawResp.png"></img>
 
 
 ###  Graphit Node Properties Examples
