@@ -32,8 +32,7 @@ String cnt_plt = ludb("Customer", i_id).fetch(CUST_STATUS,val_plt).firstValue().
 
 
 if ((Integer.parseInt(cnt_brz)==0)&&((Integer.parseInt(cnt_gld) !=0)||(Integer.parseInt(cnt_plt) !=0))){
-	return graphit("
-	GldPlus.graphit",i_id);}
+	return graphit("grSqlGldPlus.graphit",i_id);}
 else{
 	return graphit("grSqlBrz.graphit",i_id);}
 ```
