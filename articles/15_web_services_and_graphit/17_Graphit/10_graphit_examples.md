@@ -104,7 +104,7 @@ Output:
 This example illustrates how two values retrieved from a previously-defined SQL query are concatenated.<br></br>
 <img src="images/12_graphit_examples_tags.PNG"></img>
 Output:
-<img src="images/grStringResp.PNG"></img>
+<img src="images/grStringResp.png"></img>
 
 #### grCondition.graphit
 The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
