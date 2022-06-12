@@ -108,7 +108,7 @@ Output:
 
 #### grCondition.graphit
 The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
-<img src="images/13_graphit_examples_tags.PNG"></img>
+<img src="images/13_graphit_examples_tags.png"></img>
 
 Output:
 
