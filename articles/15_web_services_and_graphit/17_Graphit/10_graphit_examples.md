@@ -96,7 +96,7 @@ Output:
 
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
-<img src="images/11_graphit_examples_tags.PNG"></img>
+<img src="images/10_graphit_examples_tags.PNG"></img>
 Output:
 <img src="images/grSQL2Resp.png"></img>
 
@@ -108,7 +108,7 @@ Output:
 
 #### grCondition.graphit
 The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
-<img src="images/13_graphit_examples_tags.png"></img>
+<img src="images/13_graphit_examples_tags.PNG"></img>
 
 Output:
 
