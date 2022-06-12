@@ -104,7 +104,9 @@ The following fields are displayed for all types of DB interfaces:
 <p><strong>Connection String</strong></p>
 </td>
 <td width="433">
-<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/. To edit the connection string, click on the pencil icon on the right.</p>
+<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
+<p>For Cassandra interface: the consistency and serial consistency level parameters could be set using the server connection string.</p>
+<p>For example: consistency=QUORUM&serialConsistencyLevel=SERIAL</p>
 </td>
 </tr>
 <tr>

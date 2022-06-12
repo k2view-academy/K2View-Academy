@@ -92,19 +92,19 @@ This example illustrates a simple JavaScript routine that returns the highest nu
 
 Output:
 
-<img src="images/grFormatResp.PNG"></img>
+<img src="images/grFormatResp.png"></img>
 
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
-<img src="images/11_graphit_examples_tags.PNG"></img>
+<img src="images/11_graphit_examples_tags.png"></img>
 Output:
-<img src="images/grSQL2Resp.PNG"></img>
+<img src="images/grSQL2Resp.png"></img>
 
 #### grString.graphit
 This example illustrates how two values retrieved from a previously-defined SQL query are concatenated.<br></br>
 <img src="images/12_graphit_examples_tags.PNG"></img>
 Output:
-<img src="images/grStringResp.PNG"></img>
+<img src="images/grStringResp.png"></img>
 
 #### grCondition.graphit
 The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
@@ -112,15 +112,17 @@ The condition defined in this file triggers either the TRUE or FALSE node depend
 
 Output:
 
-<img src="images/grConditionResp.PNG"></img>
+<img src="images/grConditionResp.png"></img>
 
 #### grGroup.graphit
-The ${x} string has been added to both TRUE and FALSE groups while the ${y} value is not declared in the groups. The display ${x} also lists the group of origin.<br></br>
+
+The **x** string has been added to both TRUE and FALSE groups while the **y** value is not declared in the groups. The display ${x} also lists the group of origin.<br></br>
+
 <img src="images/14_graphit_examples_tags.PNG"></img>
 
 Output:
 
-<img src="images/grGroupResp.PNG"></img>
+<img src="images/grGroupResp.png"></img>
 
 #### grCollect.graphit
 This example shows how both Subscriber and Billing datasets are collected into one single array.<br></br>
@@ -128,7 +130,7 @@ This example shows how both Subscriber and Billing datasets are collected into o
 
 Output:
 
-<img src="images/grCollectResp.PNG"></img>
+<img src="images/grCollectResp.png"></img>
 
 #### grRaw.graphit
 This example illustrates XML output in raw format. Observe the header value displayed in the response: ```(?xml version="1.0" encoding="UTF-8"...)```<br></br>
@@ -136,7 +138,7 @@ This example illustrates XML output in raw format. Observe the header value disp
 
 Output:
 
-<img src="images/grRawResp.PNG"></img>
+<img src="images/grRawResp.png"></img>
 
 
 ###  Graphit Node Properties Examples
