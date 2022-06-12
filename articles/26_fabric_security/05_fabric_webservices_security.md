@@ -2,15 +2,15 @@
 
 ## Authentication Methods
 
-Fabric secures and controls Web Services (WS) access via an authentication mechanism in which each API call must be verified. 
+Fabric secures and controls Web Services (WS) access via an authentication and authorization mechanisms in which each API call must be verified. 
 
-Fabric supports three methods for that purpose:
+Fabric supports several methods for that purpose:
 
-1. **API Key**, a token which is sent as `Authorization: Bearer` header
+1. **API Key** - a token which is sent as `Authorization: Bearer` header
 
-2. **JWT** ( JSON Web Tokens), an open industry standard method (RFC 7519) that securely represents claims between two parties. 
+2. **JWT** (JSON Web Tokens) - an open industry standard method ([RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) that represents claims between two parties in a secured manner. 
 
-   The JWT authentication has 2 variants:
+   The JWT authentication has 2 variant types:
 
    **a.** Signed by Fabric 
 
@@ -18,7 +18,8 @@ Fabric supports three methods for that purpose:
 
    Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
-3. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
+3. **Open Auth (OAuth)** - an authorization delegation protocol. An OAuth Access Token is a string used by a client to make requests to Fabric. This token (self-encoded JWT) is sent as `Authorization: Bearer` header.
+4. **Basic Authentication** - an authentication method built into an HTTP protocol. A client provides a username and a password to make requests to Fabric. These credentials are sent as `Authorization: Basic` header.
 
 ### API Key
 
@@ -94,6 +95,34 @@ Fabric supports these delegated authentications:
 
 * When JWT is verified, Fabric sets the session with this user and roles by taking the groups and setting them as user's roles for this session.
 
+### Open Auth (OAuth)
+
+Fabric supports the standard Open Auth (OAuth) protocol for its web services autorization. 
+Using the OAuth requires the following preparations:
+
+* Set the JWK endpoint at the config.ini, using the JWK_ENDPOINT parameter located under oauth2 section. It should look like the following:
+  ```
+  [oauth2]
+  ## The JSON Web Key (JWK)'s endpoint that holds the keys for the access token (JWT) verification
+  JWK_ENDPOINT=https://<auth-server>/jwks
+  ```
+
+* Grant permissions according to *scopes* provided in an access token:
+  1. Create roles for the scopes - each scope should be mapped to a Fabric role.
+  2. Grant permission to each role, per requirements.
+
+Fabric extends the standard OAuth authorization capabilities, beyond the provided scopes:
+The access token (JWT) can be sent with an extra optional payload parameter, representing the client ID.
+This ID should be mapped to APIKEY in Fabric and it should be granted permissions upon demand.
+By default, the name of this optional parameter is "client_id".
+
+Fabric follows the OAuth standards for verifying web services API calls. When a client requests a web service:
+1. Fabric looks for a JWT access token at the `Authorization: Bearer` header.
+2. Fabric decodes the JWT and looks for the "kid" parameter.
+3. Fabric looks for the "kid" parameter in the JWK set; the set which is published by the Authorization server, is gained by Fabric.
+4. Fabric verifies the JWT using the JWK matching key.
+
+> Note: Fabric, being the Resource Server, supports both OAuth grant types, i.e. *Authorization Code* and *Client Credentials*. 
 
 
 ### Basic Authentication

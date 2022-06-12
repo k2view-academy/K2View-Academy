@@ -111,6 +111,8 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
+<p>For Cassandra interface: the consistency and serial consistency level parameters could be set using the server connection string.</p>
+<p>For example: consistency=QUORUM&serialConsistencyLevel=SERIAL</p>
 </td>
 </tr>
 <tr>
@@ -147,6 +149,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 

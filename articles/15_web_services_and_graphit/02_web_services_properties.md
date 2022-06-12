@@ -1,12 +1,12 @@
 # **Web Service Properties** 
 
-Fabric Web Services properties include the definitions, methods, categories and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
+Fabric Web Services properties include definitions, methods, categories and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
 <img src="images/Web-Service-KI-2-1.png" alt="drawing"/> 
 
- The following are the Web Services properties:
+Web Services properties:
 
 <table width="900pxl">
 <tbody>
@@ -23,7 +23,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <p>Name</p>
 </td>
 <td width="700pxl" valign="top"> 
- <p>Name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix.</p>
+ <p>Name of the assigned web service function. The assigned name should be meaningful and should have a ws% prefix.</p>
 </td>
 </tr>
 <tr>
@@ -31,19 +31,19 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <p>Category</p>
 </td>
 <td width="700pxl" valign="top">
- <p>Characteristics or class of the Web Service. Note that each category has a separate Java file.</p>
+ <p>Characteristics or class of the web service. Note that each category has a separate Java file.</p>
  </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p>Return Type</p></td>
 <td width="700pxl" valign="top">
-<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long, Map, List, Customized Class or Object. Output values in the list can be overridden with new values.&nbsp; Fabric knows how to serialize complex structures automatically when sent as JSON in the request body. </p>
+<p>Type of Output value returned from the web service and displayed in a dropdown list, e.g., String, Long, Map, List, Customized Class or Object. These Output values can be overridden with new values.&nbsp; When sent as JSON, Fabric knows how to automatically serialize complex structures. </p>
 </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions that are all related to the same service. By default, the version is populated by 1.</p>
+<p>Representation of the web service&rsquo;s versioning control status. A version number is incorporated into the web service&rsquo;s URL and is used to enable several web service versions. The default population of Version is 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
 <li>If the version is not part of the URL, the API will respond with the latest version.</li>
@@ -57,37 +57,37 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <tr>
 <td width="200pxl" valign="top"><p><h5>Path</h5></p></td>
 <td width="700pxl" valign="top">
-<p>The URL path of the Web Service. The actual name to be called by external applications when using the Web Service.</p>
-<p>The URL path requires permissions and should be unique per Path / Version / Response Format / Request Format.</p>
-<p>Web Service Permissions:&nbsp;<strong>set on the URL with the parameter **token=** and its value.</strong>&nbsp;</p>
-<p>For example, two Web Services sharing the same URL path:</p>
+<p>The URL path of a web service. This is the actual name to be used when external applications who use the web service call it.</p>
+<p>The URL path requires permissions and should be unique per each path/version/response format/request format.</p>
+<p>
+<p>For example, two web services sharing the same URL path:</p>
 <ul>
 <li>wsGetCustomerInfo version is set to 1.</li>
 <li>wsGetCustomerInfoDev&nbsp;version is set to 2.</li>
 </ul>
 <p>For example:</p>
-<p>http://localhost:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When the above URL is run it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
+<p>http://localhost:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When this URL is called, Fabric invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
 </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p><h5>Verb</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Methods supported by the Web Service, as follows:&nbsp;</p>
+<p>Methods supported by the web service, as follows:&nbsp;</p>
 <ul>
-<li><strong>GET</strong>, get data.&nbsp;</li>
-<li><strong>POST</strong>, create new data based on the data provided.&nbsp;</li>
-<li><strong>PUT</strong>, update data.&nbsp;</li>
-<li><strong>DELETE</strong>, delete data.</li>
+<li><strong>GET</strong> - get data.&nbsp;</li>
+<li><strong>POST</strong> - create new data based on the data provided.&nbsp;</li>
+<li><strong>PUT</strong> - update data.&nbsp;</li>
+<li><strong>DELETE</strong> - delete data.</li>
  </ul> 
-<p>To select a method, click the dropdown list and enable it. Note that at least one method should be selected.</p>
+<p>To select a method, click the dropdown list and enable it; at least one method should be selected.</p>
 </td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p><h5>Is Raw</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
-<p>Values are True or False.</p>
-<p>Default = False. When True, Fabric brings the data response as is without parsing or formatting the response to be aligned with the Web Service's output format.</p>
+<p>Values are either True or False.</p>
+<p>Default = False. When True, Fabric retrieves the data response as is, without parsing or formatting it, thus aligning it with the web service's output format.</p>
 </td>
 </tr>
 <tr>
@@ -95,8 +95,8 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
-<p>Additional formats: XML and CSV.</p>
- <p>To select the format/s, click the dropdown menu and enable them.</p>
+<p>Additional formats: XML, CSV.</p>
+ <p>To select a format/s, click the dropdown menu and enable it/them.</p>
 </td>
 </tr>
 <tr>
@@ -121,10 +121,23 @@ For example, when set to False and the user role has no WRITE permissions, the u
 </td>
 </tr>
 <tr>
+ <td width="200pxl" valign="top"><p><h5>Additional Permissions</h5></p></td>
+<td width="700pxl" valign="top"><p>When an Elevated Permission is set to False, the developer might still wish that the web service caller will be able to activate certain methods, an act which is prohibited according to his role permissions. An example of such method is running a BATCH command. In such case, the developer can grant the caller the permission only for the web service session.</p>
+<p>To apply these permissions, the developer should specify what methods are allowed. At the Web Service Properties pane:
+<ol>
+    <li>Set the "Elevated Permission" to False. The "Additional Permissions" property becomes enabled.
+    <li>Open the "Additional Permissions" and choose the methods that should be permitted, using the checkboxes.
+</ol>
+Alternatively, the permissions can be set in a code, using the function "additionalPermissions" annotation.
+<p>
+<br>Permissions shall be granted carefully.
+<br>Added for Fabric release 6.5.8</td>
+</tr>
+<tr>
  <td width="200pxl" valign="top"><p><h5>Require Authentication</h5></p></td>
-<td width="700pxl" valign="top"><p>Indicates if a Web Service requires authentication or not. 
+<td width="700pxl" valign="top"><p>Indicates whether a web service requires authentication or not. 
 Default is set to True.</p>
-When set to False, it will allow calling the Web Service by skipping the Authentication step. This mode should be used carefully - use it only if a Web Service should be accessible for everyone without enforcing an API key, a user/password, etc. 
+When set to False, it will allow calling the web service by skipping the Authentication step. This mode should be used carefully - use it only if a Web Service should be accessible for everyone, without enforcing an API key, a user/password, etc. 
 <br>Added for Fabric release 6.5.4</td>
 </tr>
 <tr>
@@ -134,7 +147,7 @@ When set to False, it will allow calling the Web Service by skipping the Authent
 <tr>
 <td width="200pxl" valign="top"><p><h5>Result Metadata</h5></p></td>
 <td width="700pxl" valign="top">
-<p>Response example to be displayed in Swagger before the Web Service call.</p>
+<p>Response example to be displayed in Swagger before the web service call.</p>
 <p>Set example-JSON, example-XML and example-CSV.</p>
 </td>
 </tr>
@@ -147,22 +160,22 @@ When set to False, it will allow calling the Web Service by skipping the Authent
 
 ## How Do I Generate HTML Format or Legacy JSON/XML ? 
 
-To generate these formats, open the Java Logic file and add the following tag above the public class which encapsulates the Web Services defined in the specific Logic category:
+To generate these formats, open the Java Logic file and add the following tag above the public class, which encapsulates the web services defined in the specific Logic category:
 
 ```java 
 @legacy
 public class Logic extends WebServiceUserCode {...}
 ```
 
-Then add the UNKNOWN value to the Produce function call in the line where the Web Service is defined: 
+Then add the UNKNOWN value to the Produce function call in the line where the web service is defined: 
 
 ```java 
 @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
 ```
 
-Modify the Properties panel of the Web Service with Produce = "UNKNOWN" and Return Type = "Object". 
+Modify the Properties panel of the web service with Produce = "UNKNOWN" and Return Type = "Object". 
 
-After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
+After deploying the web service, call it from the browser using the appropriate token, parameter and format.
 
 Example with HTML format:
 ```html 
