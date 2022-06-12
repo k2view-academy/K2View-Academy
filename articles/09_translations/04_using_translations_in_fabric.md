@@ -1,3 +1,5 @@
+<studio>
+
 # Using Translations in Fabric
 
 Translations can be used in the [Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), a Reference table or a Parser Map when a specific set of Data Transformation rules is required. Translations can also be used in any [Fabric Project functions](/articles/07_table_population/08_project_functions.md) or [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md).
@@ -5,7 +7,7 @@ Translations can be used in the [Table Population](/articles/07_table_population
 [Click for more information about Translations – Code Examples.](/articles/09_translations/05_translations_code_examples.md)
 
 ### How Do I Add a Translation to a Table Population?
- 
+
 1.	Go to **Project Tree** > **Logical Units** > **[LU Name]**. 
 2.	Click **Tables** > **[Table Name]** > **[Table Population]**
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
@@ -22,7 +24,7 @@ Translations can be used in the [Table Population](/articles/07_table_population
 
 
 ## How Do I Add a Translation to a Parser Map?
- 
+
 1.	Go to **Project Tree** > **Logical Units** > **[LU Name]**. 
 2.	Click **Parsers** > **[Parser Map]**.
 3.	Click the **Objects** tab in the right panel of the **Parser Map** working area.
@@ -34,7 +36,7 @@ Translations can be used in the [Table Population](/articles/07_table_population
 
 
 ## How Do I Use a Translation in a Java File in Fabric?
- 
+
 Translations can be used in any [Project functions](/articles/07_table_population/08_project_functions.md) defined in Fabric. 
 * Translations used in an LU function can be defined either on an [Logical Unit](/articles/03_logical_units/01_LU_overview.md) or on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level.
 * Translations used in [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) must be defined on a Shared Objects level.
@@ -125,5 +127,6 @@ When editing a Java file, two built-in functions are available and displayed in 
 
 [Click for more information about Translations – Code Examples.](/articles/09_translations/05_translations_code_examples.md)
 
-
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/03_data_population_in_a_translation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/09_translations/05_translations_code_examples.md)
+
+</studio>

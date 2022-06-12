@@ -4,13 +4,33 @@
 
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). 
 
-Functions can be edited in the Fabric Studio by either:
+Functions can be edited in the Fabric Studio by opening the function’s code from the Project Tree.
 
--  Opening the function’s code from the Project Tree.
--  Opening the specific category’s **Logic.java** source file.
--  Opening the function in **IntelliJ**, an Integrated Development Environment (IDE) for developing computer software. 
+Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, Web Services, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md) (using an **LuFunction** Actor).
 
-Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, Web Services, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md).
+<web>
+
+To create a new function, either open an existing **Logic.java** file under the **Logical Unit** or click on **Logical Units** > [**LU Name**] > **Java** > right click on **src** > **New Java Logic File** (when you want to create a new Category).
+
+<img src="images/web/10_create_func_java.PNG" style="zoom:80%;" />
+
+The Web Studio provides a snippet syntax helper: type **Ctrl+Space** and then type **fabric** for Fabric snippets. For functions you can type FF. This will show you several function types. Once you have selected a function, the syntax helper will offer you the syntax along with some options.   
+
+<img src="images/web/10_create_func.PNG" style="zoom:80%;" />
+
+For example, selecting **fabric-function-trigger** will provide the following function template:
+
+~~~java
+@desc("")
+@type(TriggerFunction)
+public static void functionName(TableDataChange tableDataChange) throws Exception {
+
+}
+~~~
+
+</web>
+
+<studio>
 
 1.	To create a function from an existing **Table Population**, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] and double click  [**Population Name**] to open the existing population. Then do either:
     * Right click in the working area and select **Insert New Function**. 
@@ -31,6 +51,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
     *	Click **Save** to display the **New Item** dialog box. 
     *	Complete the **Name** field and then click **OK**.
     
+
 ### How Do I Define a Function's Parameters Manually? 
 
 The Function Manager window displays the following panes on the right of the window:
@@ -124,4 +145,8 @@ To invoke several functions in the same category, modify the import as follows:
 import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.*;
 ~~~
 
+
+
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/08_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
+
+</studio>

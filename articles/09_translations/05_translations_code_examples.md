@@ -1,3 +1,5 @@
+<studio>
+
 # Translations - Code Examples
 
 ### Example of using a Translation in a Fabric Function 
@@ -27,7 +29,7 @@ Full example of **fnErrorCheck** function that retrieves the Translation’s out
 
 2.	Create a **Table Population** that uses the **Translation** to transform data from one set of values to another.
 
-![image](/articles/09_translations/images/09_04_03%20Table%20Population.png)
+![image](images/09_04_03%20Table%20Population.png)
 
 This example displays how to apply the Data Transformation Rule in a Table Population. The Translation **trnOrderType** defines a list of Input/Output combinations. When the target table is populated, Fabric populates the **ORDER_TYPE**  in the target table’s ORDERS column using the **trnOrderType** Translation and a value in the **query_public_orders.order_type** source field.
 
@@ -45,9 +47,8 @@ Full example of how the **trnOrderType** Translation is used in a Table Populati
        
        ![image](/articles/09_translations/images/09_04_05%20Translation%20data.png)
        
-       
  3.	Create a function that uses this Translation to execute the relevant SQL query. 
- 
+
 
 ~~~
 Map<String, Map<String, String> tranData = getTranslationsData("trnCheckAnalysisQueries");
@@ -62,4 +63,4 @@ Full example of **fnEnrichment_CUSTOMER** function that retrieves the Translatio
 
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/04_using_translations_in_fabric.md)
 
-
+</studio>
