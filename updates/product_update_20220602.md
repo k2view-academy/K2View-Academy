@@ -7,6 +7,7 @@ We have just released Fabric 6.5.8, which includes the following:
 * **Broadway** usability improvements, new actors have been introduced and existing actors enhanced. 
 * **Additional Permissions** property on WS enables activating methods to be accessible by the WS which are restricted for a user who is running this WS (based on the user role definition).
 * **Bug Fixes**
+
 See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V6.5/Fabric_Release_Notes_V6.5.8.pdf.html) for the full list.
 
 <img src="images/img5.png" alt="image" style="zoom: 67%;" />
