@@ -92,13 +92,13 @@ This example illustrates a simple JavaScript routine that returns the highest nu
 
 Output:
 
-<img src="images/grFormatResp.PNG"></img>
+<img src="images/grFormatResp.png"></img>
 
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
 <img src="images/11_graphit_examples_tags.PNG"></img>
 Output:
-<img src="images/grSQL2Resp.PNG"></img>
+<img src="images/grSQL2Resp.png"></img>
 
 #### grString.graphit
 This example illustrates how two values retrieved from a previously-defined SQL query are concatenated.<br></br>
