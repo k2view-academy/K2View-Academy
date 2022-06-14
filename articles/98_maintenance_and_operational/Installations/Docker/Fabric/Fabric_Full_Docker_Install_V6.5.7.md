@@ -106,12 +106,12 @@ More detailed requirements for each are described below.
    cd compose_fabric_6.5.7_23
    # run:  
    docker-compose up -d 
-
+   
    # or  
    sudo /usr/local/bin/docker-compose up -d  
    ```
 
-   Cassandra and Fabric will start automaticlly.
+   Cassandra and Fabric will start automatically.
 
 ## Stopping Services
 
@@ -126,10 +126,10 @@ More detailed requirements for each are described below.
 
    ```bah
    docker exec -u=cassandra -it cassandra bash su - cassandra 
-
+   
    ## stop cassandra  
    stop-server
-
+   
    ## restart cassandra  
    stop-server && cassandra
    ```
