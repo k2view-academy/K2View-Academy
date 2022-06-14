@@ -1,7 +1,7 @@
 ### The Fabric 6.5.8 Official Release
 
 We have just released Fabric 6.5.8, which includes the following:
-* **Fabric Views** in order to keep a predefined query on LU tables in the Fabric MicroDB.
+* **Fabric Views** are introduced to keep a predefined query on LU tables in the Fabric MicroDB.
 * **Field Level Authorization** is a mechanism to access restriction to sensitive data, by redirecting the call from querying the LU table to its corresponding LU view.
 * **WS Auth&Auth - OAuth Support** for Fabric Web Services authorization.
 * **Broadway** usability improvements, new actors have been introduced and existing actors enhanced. 
