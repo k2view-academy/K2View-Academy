@@ -12,13 +12,13 @@ The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 
 - Built-in self-service web application where testers can request data to be provisioned on-demand and in real-time. 
 - Central storage of provisioned entities in Fabric.
-- Copying data into live testing environments. 
-- Partial data requests, re-deployment of data and data appending: 
+- Copying data into live testing environments.
+- Request for subset of entities for data provisioning:
   - Provisioning predefined lists of Business Entities from a selected source environment to a selected target environment. All data related to the selected entities is extracted and copied to the relevant data systems.
-  - Copying a sub-set of entities based on predefined parameters. For example, copying 10 customers in NY and using small business packages.
+  - Copying a subset of entities based on predefined parameters. For example, selecting from source some customers based in NY with small business packages and copying  this selection to the testing environment.
 - Entity clone, cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
-- Entity reservation, enable the user to reserve entities in the testing environment and avoid other users to delete or reload these entities in the environment until the user completes their functional testing on these entities.
+- Entity reservation - enables the user to reserve entities in the testing environment to prevent other users from deleting or reloading these entities in the environment until the user completes their functional testing.
 - Automatic data security and masking on an entity-by-entity basis.
 - Support for up-to-date data of the selected entities.
 - Cross-application integrity.
