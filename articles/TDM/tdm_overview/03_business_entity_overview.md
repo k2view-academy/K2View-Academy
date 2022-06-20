@@ -7,7 +7,7 @@ A Business Entity (BE) represents the main entity of the selected data to be pro
 -  BEs are defined in the [TDM GUI](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md) and are saved in the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md).
 -  Each LU can be attached to multiple BEs. 
 
-Breaking the BE into several LUs enables maximum flexibility and avoiding duplicate development. The hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
+Breaking down the BE into several LUs enables maximum flexibility and it avoids duplicate development. The hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
 
 **Example**
 
