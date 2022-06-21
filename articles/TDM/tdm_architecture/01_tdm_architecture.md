@@ -46,8 +46,8 @@ Reference or Operational tables that are copied as they are, can be extracted fr
 #### Fabric ETL Capabilities
 
 - [Fabric ETL](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#33-fabric-etl-layer) capabilities are used to extract data from data sources and load it into selected target environments. 
-- [Broadway](/articles/19_Broadway/01_broadway_overview.md) is a Fabric module used to design data movement, its transformation and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric. Broadway supports a wide range of data sources as well as data transformation logic such as:
-  -  Replacing sequences to avoid a collision with the target environment.
+- [Broadway](/articles/19_Broadway/01_broadway_overview.md) is a Fabric module used to design data movement, its transformation and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine activated by Fabric. Broadway supports a wide range of data sources as well as data transformation logic such as:
+  -  Replacing sequences in order to prevent a collision with the target environment.
   -  Masking sensitive data before loading it to the target environment. 
 
 ### TDM - Multi DCs Architecture
