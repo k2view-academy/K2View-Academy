@@ -27,15 +27,15 @@ In addition, the TDM back-end APIs and processes are defined and executed in Fab
 
 #### Fabric as a Staging Repository
 
-When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to the definitions of its LUs. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
+When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to its LUs definitions. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
 
 -  Convenience - Encapsulating the data of a business entity into one place so that it can be queried by consumers (many business entities have data residing in multiple data sources). 
--  Security - Individual encryption on MicroDB or field levels allows for more robust security.
+-  Security - MicroDB encryption (each MicroDB is encrypted separately) and field-level encryption provide more robust security.
 -  Masking capabilities -  masking sensitive data when storing entities.
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
-   - Extracting and storing an entity's data in Fabric in advance so that requests to load it into target environments can be implemented without accessing source systems. 
-   - Synchronizing data from source systems to get the most updated data on entities when required.
-  - Version control - Support for [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
+   - Extracting an entity's data from source environments and storing it in Fabric in advance so that requests for loading it into target environments can be implemented without accessing source systems. 
+   - Synchronizing data from source systems in order to get the most up-to-date data on entities when required.
+  - Version control - TDM enables creating and executing [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks in order to maintain various versions (snapshots) of each selected list of entities. Each version is kept as a separate LUI. For example, saving a version of a customer's list every 2 hours in order to back up the data during functional tests. 
 
   #### Reference Tables
 
