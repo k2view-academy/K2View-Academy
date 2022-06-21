@@ -115,7 +115,7 @@
 <h4>System</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A system (product) or application that is installed in the source or target environment. For example, the UAT1 environment contains CRM and Billing products. Each product can have multiple data sources.</p>
+<p>A system (product) or application that is installed on the source or target environment. For example, the UAT1 environment contains CRM and Billing products. Each product can have multiple data sources.</p>
 </td>
 </tr>
 <tr>
