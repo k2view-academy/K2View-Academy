@@ -57,7 +57,7 @@
 <h4>LU / LUT</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions/instructions used to create and maintain the data of a Digital Entity.</p>
+<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions/instructions used to create and maintain the data of a Data product.</p>
 </td>
 </tr>
 <tr>
