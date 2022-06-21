@@ -90,7 +90,7 @@
 <h4>TDM Permission Group</h4>
 </td>
 <td width="600pxl">
-<p>There are three main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner, and Tester.&nbsp;</p>
+<p>There are 3 main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner and Tester.&nbsp;</p>
 <p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM GUI - Permission Groups</a>.</p>
 </td>
 </tr>
