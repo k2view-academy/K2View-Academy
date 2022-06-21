@@ -70,7 +70,7 @@ K2view TDM architecture ensures efficient and quick data transmission between di
 - Each Data Center (DC) has its own Fabric and Cassandra nodes. 
 - The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
 - The data is distributed automatically by Cassandra between DCs.
-- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote get LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
+- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
 
 ## TDM  - Data Provisioning Flow
 
