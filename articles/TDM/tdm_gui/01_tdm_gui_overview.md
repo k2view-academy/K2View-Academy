@@ -1,6 +1,6 @@
 # TDM GUI Overview
 
-The TDM GUI is a web-based application that helps users to easily control and manage test data. It has two main functions:
+The TDM GUI is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
 - TDM administrative activities - defines TDM Business Entities, environments, roles and permissions.
 - TDM copy activities - creates and executes TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
@@ -11,9 +11,9 @@ The TDM GUI uses APIs to connect to the TDM DB in order to retrieve and update T
 
 ## TDM GUI - Login
 
-The TDM GUI application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).  The user logins into the Fabric Web Framework and **Fabric authenticates the user**.  
+The TDM GUI application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
 
-Fabric works with several authentication providers.  Each authenticator is responsible for user authentication, and provides user-ID and his roles. The following are the supported by Fabric as authentication providers:
+Fabric works with several authentication providers. Each authenticator is responsible for user authentication, and provides user-ID and his roles. The following are the supported by Fabric as authentication providers:
 
 - **Fabric**, for console, WS and web access, using its repository. This is Fabric's default authentication method. 
 - **LDAP** server, for console, WS and web access. Done via LDAP integration. 
