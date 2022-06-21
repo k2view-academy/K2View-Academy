@@ -73,7 +73,7 @@
 <h4><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Micro-database, a small SQL database used to store Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the saved property's definition in the LU Schema.</p>
+<p>A micro-database, a small SQL database, is used to store Digital Entity Instance (LUI) data. It is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the saved property's definition in the LU Schema.</p>
 </td>
 </tr>
 <tr>
