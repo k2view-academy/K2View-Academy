@@ -52,7 +52,7 @@ Reference or Operational tables that are copied as they are, can be extracted fr
 
 ### TDM - Multi DCs Architecture
 
-The organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
+An organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
 
 **Example:**
 
