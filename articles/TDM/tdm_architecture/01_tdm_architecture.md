@@ -52,7 +52,7 @@ Reference or Operational tables that are copied as they are, can be extracted fr
 
 ### TDM - Multi DCs Architecture
 
-The organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
+An organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
 
 **Example:**
 
@@ -69,16 +69,16 @@ K2view TDM architecture ensures efficient and quick data transmission between di
 
 - Each Data Center (DC) has its own Fabric and Cassandra nodes. 
 - The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
-- The data is distributed automatically by Cassandra between DC’s.
-- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote get LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
+- The data is distributed automatically by Cassandra between DCs.
+- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
 
 ## TDM  - Data Provisioning Flow
 
-In general, data provisioning can be divided into two main sections:
--   Data provisioning requests created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
-    - **What** : A Business Entity to be provisioned like customer, employee, order, product, source and target environments, subset of entities and general request parameters like Sync mode.
-    - **When** : When the task needs to be executed. Execute by request or by setting scheduling parameters to execute the task periodically.     
--   Task execution, a task can be executed manually via the **TDM GUI** or periodically via the **TDM Scheduler** process based on predefined scheduling parameters. 
+In general, data provisioning can be divided into 2 main sections:
+-   Data provisioning requests are created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
+    - **What** - a Business Entity to be provisioned such as customer, employee, order, product, source and target environments, subset of entities and general request parameters like Sync mode.
+    - **When** - when a task has to be executed. Execute either by a request or by setting scheduling parameters for a periodical task execution.     
+-   Task execution - a task can be executed manually via the **TDM GUI** or periodically via the **TDM Scheduler** process based on predefined scheduling parameters. 
 
 The following diagram displays the TDM task creation and [execution processes](03_task_execution_processes.md):
 
@@ -87,11 +87,11 @@ The following diagram displays the TDM task creation and [execution processes](0
   
 
 Fabric runs a [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) that executes pending execution requests: 
--  Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the selected entities into Fabric. 
--  Load task,  the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed and loads the entities to the selected target environment.
--  Delete task,  the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric to sync the target keys for delete  into Fabric and delete the entities from the selected target environment.
--  Reserve task, the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which marks the entities are reserved entities in the TDM DB. 
+-  Extract tasks - selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the selected entities into Fabric. 
+-  Load task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed and loads the entities to the selected target environment.
+-  Delete task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric to sync the target keys for delete  into Fabric and delete the entities from the selected target environment.
+-  Reserve task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which marks the entities are reserved entities in the TDM DB. 
 
-A dedicated Fabric process checks for completed executions and updates the TDM DB accordingly on the execution's status and statistics. In addition, Fabric receives information and statistics on executed tasks and saves them in the Fabric TDM LU.
+A dedicated Fabric process checks for completed executions and updates the TDM DB accordingly on the execution's status and statistics. Additionally, Fabric receives information and statistics about executed tasks and saves them in the Fabric TDM LU.
 
   [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_database.md)
