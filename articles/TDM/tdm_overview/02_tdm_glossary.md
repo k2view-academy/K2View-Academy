@@ -17,7 +17,7 @@
 <h4>TDM (Test Data Management)</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>TDM offers an automated <a href="https://cubesolve.com/" rel="nofollow">solution</a> for copying subsets of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from source systems into selected testing environments to provide real, high-quality data to testing teams.</p>
+<p>TDM offers an automated <a href="https://cubesolve.com/" rel="nofollow">solution</a> for copying subsets of Business Entities (like customer, order, patient, product and household) from source systems into selected testing environments. The solution provides real, high-quality data for testing teams.</p>
 </td>
 </tr>
 <tr>
@@ -25,7 +25,7 @@
 <h4>Fabric</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
+<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -41,7 +41,7 @@
 <h4>TDM GUI</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>The self-service web application of the TDM product. Used for TDM setup and for creating, executing, and monitoring TDM tasks.</p>
+<p>TDM product’s self-service web application. It is used in TDM setup and in TDM tasks’ creation, execution and monitoring.</p>
 </td>
 </tr>
 <tr>

@@ -7,7 +7,7 @@ A Business Entity (BE) represents the main entity of the selected data to be pro
 -  BEs are defined in the [TDM GUI](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md) and are saved in the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md).
 -  Each LU can be attached to multiple BEs. 
 
-Breaking the BE into several LUs enables maximum flexibility and avoiding duplicate development. The hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
+Breaking down the BE into several LUs enables maximum flexibility and it avoids duplicate development. The hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
 
 **Example**
 
@@ -37,7 +37,7 @@ Alternatively, you can request to load a list of selected Order IDs whereby the 
 A parent-child hierarchy of LUs can also be defined under a BE. The relationship between the **parent and child** LUs is **one to many**. Each parent LUI can have many child LUIs. 
 
 #### Root LU 
-If an LU in a BE has no parent LU, it is named **Root LU** whereby its root entity equals the root entity of the BE. A BE must have at least one Root LU. 
+If an LU in a BE has no parent LU, it is named **Root LU** whereby its root entity is equal to the root entity of the BE. A BE must have at least one Root LU. 
 
 **Example of Customer #1 Hierarchy**
 
