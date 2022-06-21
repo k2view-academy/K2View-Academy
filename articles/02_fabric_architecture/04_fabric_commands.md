@@ -30,7 +30,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">Get LUI</a></p>
+<p><a href="#get-commands">Get LUI</a></p>
 </td>
 <td width="550pxl" valign="top">
 <p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
