@@ -107,7 +107,7 @@
 <h4>Environment</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. An environment can contain multiple systems and multiple data sources. The list of source and target environments available for TDM must be defined in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
+<p>An Environment is a logical definition of either a source or a target environment, e.g., Production, UAT1, UAT2, etc. An environment can contain multiple systems and data sources. The list of source and target environments available for TDM must be defined both in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
 </td>
 </tr>
 <tr>
