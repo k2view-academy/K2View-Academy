@@ -39,7 +39,7 @@ When running a TDM task, data from the selected entities is stored and synchroni
 
   #### Reference Tables
 
-Reference or Operational tables that need to be copied as-is can be extracted from the source environment and saved into Cassandra under the k2view_tdm [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). These tables can be later loaded into selected target environments.
+Reference or Operational tables that are copied as they are, can be extracted from the source environment and saved into Cassandra under the k2view_tdm [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). These tables can be later loaded into selected target environments.
 
 [Click here for more information about TDM Reference Handling](05_tdm_reference_processes.md).
 
