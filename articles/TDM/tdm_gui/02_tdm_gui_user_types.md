@@ -73,7 +73,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
 
 - User id **janeR1** is a team leader and is attached to **testingTeamLeaders** Fabric role.
 
-- User **leo10** is the the TDM administrator and is attached to **testingAdmin** Fabric role. 
+- User **leo10** is the TDM administrator and is attached to **testingAdmin** Fabric role. 
 
 - Each group has a Fabric role with the same name as the Fabric role.
 
