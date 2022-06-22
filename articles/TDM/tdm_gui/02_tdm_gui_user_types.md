@@ -51,7 +51,7 @@ The users are defined and each user can be attached to one or several user group
 
 The user groups are defined in the organization's service provider and must be defined in advance in Fabric as [Fabric roles](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role). 
 
-Assuming a **one-to-one relation between a user group and a Fabric role**.
+Our assumption is a **one-to-one relation between a user group and a Fabric role**.
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
