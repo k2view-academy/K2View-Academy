@@ -59,7 +59,7 @@ The mapping of each Fabric role to a TDM Permission Group is done by the [Permis
 
 The TDM GUI application **identifies the user type (Permission Group) by its Fabric roles**.
 
-The following diagram describes the mapping between Fabric roles to TDM permission groups:
+The following diagram illustrates the mapping between Fabric roles and TDM permission groups:
 
 ![permission group mapping](images/TDM_permission_group_mapping_to_fabric_roles.png)
 
