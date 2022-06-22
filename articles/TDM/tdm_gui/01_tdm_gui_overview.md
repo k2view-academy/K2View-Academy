@@ -22,7 +22,7 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
-To connect the TDM GUI log in the Fabric Web Framework, click the applications menu icon: ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option:
+You can click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option in order to log into the TDM GUI.
 
 ![application list](images/fabric_web_applications_list.png)
 
