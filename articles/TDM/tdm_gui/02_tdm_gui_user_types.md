@@ -103,7 +103,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
   </tr>
   </table>
 
-- User id **johnD123** logs in to the Fabric Web Framework and is authenticated by Fabric. This user connects the TDM GUI application.
+- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects the TDM GUI application.
 
 - The TDM gets the following attributes from the user session:
 
