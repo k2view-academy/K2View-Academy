@@ -88,7 +88,7 @@ The following diagram displays the TDM task creation and [execution processes](0
 
 Fabric runs a [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) that executes pending execution requests: 
 -  Extract tasks - selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the selected entities into Fabric. 
--  Load task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed and loads the entities to the selected target environment.
+-  Load task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed, and loads the entities to the selected target environment.
 -  Delete task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which [retrieves the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric to sync the target keys for delete  into Fabric and delete the entities from the selected target environment.
 -  Reserve task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), which marks the entities are reserved entities in the TDM DB. 
 
