@@ -57,7 +57,7 @@
 <h4>LU / LUT</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions/instructions used to create and maintain the data of a Digital Entity.</p>
+<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions/instructions used to create and maintain the data of a Data product.</p>
 </td>
 </tr>
 <tr>
@@ -73,7 +73,7 @@
 <h4><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Micro-database, a small SQL database used to store Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the saved property's definition in the LU Schema.</p>
+<p>A micro-database, a small SQL database, is used to store Digital Entity Instance (LUI) data. It is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the saved property's definition in the LU Schema.</p>
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@
 <h4>TDM Permission Group</h4>
 </td>
 <td width="600pxl">
-<p>There are three main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner, and Tester.&nbsp;</p>
+<p>There are 3 main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner and Tester.&nbsp;</p>
 <p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM GUI - Permission Groups</a>.</p>
 </td>
 </tr>
@@ -107,7 +107,7 @@
 <h4>Environment</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. An environment can contain multiple systems and multiple data sources. The list of source and target environments available for TDM must be defined in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
+<p>An Environment is a logical definition of either a source or a target environment, e.g., Production, UAT1, UAT2, etc. An environment can contain multiple systems and data sources. The list of source and target environments available for TDM must be defined both in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
 </td>
 </tr>
 <tr>
@@ -115,7 +115,7 @@
 <h4>System</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A system (product) or application that is installed in the source or target environment. For example, the UAT1 environment contains CRM and Billing products. Each product can have multiple data sources.</p>
+<p>A system (product) or application that is installed on the source or target environment. For example, the UAT1 environment contains CRM and Billing products. Each product can have multiple data sources.</p>
 </td>
 </tr>
 <tr>

@@ -13,16 +13,16 @@ The TDM GUI uses APIs to connect to the TDM DB in order to retrieve and update T
 
 The TDM GUI application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
 
-Fabric works with several authentication providers. Each authenticator is responsible for user authentication, and provides user-ID and his roles. The following are the supported by Fabric as authentication providers:
+Fabric works with several authentication providers. Each authenticator is responsible for user's authentication, and provides a user-ID and his roles. The following are authentication providers, supported by Fabric:
 
-- **Fabric**, for console, WS and web access, using its repository. This is Fabric's default authentication method. 
-- **LDAP** server, for console, WS and web access. Done via LDAP integration. 
-- **ADLDAP** (Active Directory) server, for console, WS and web access. Done via LDAP integration. 
-- **SAML** server, for web and WS access. Done via SAML IDP integration. 
+- **Fabric** - for console, WS and web access, using its repository. This is Fabric's default authentication method. 
+- **LDAP** server - for console, WS and web access. Done via LDAP integration. 
+- **ADLDAP** (Active Directory) server - for console, WS and web access. Done via LDAP integration. 
+- **SAML** server - for web and WS access. Done via SAML IDP integration. 
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
-To connect the TDM GUI log in the Fabric Web Framework, click the applications menu icon: ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option:
+You can click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option in order to log into the TDM GUI.
 
 ![application list](images/fabric_web_applications_list.png)
 
