@@ -221,21 +221,31 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 **Notes:** 
 
-- The input parameter name must not contain spaces.
+- The input parameter name must **not contain spaces or double quotes**.
 
-- Define a String input parameter to get a list of values into the parameter and split it into an array in the flow. For example: "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
+- Sending multiple values in one single parameter: you can define a String input parameter to get a list of values into the parameter and split it into an array in the flow. For example: "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 
-- You can get an input Select statement with binding parameters. The parameters' values must be sent into a separate input parameter. 
+- You can get an input Select statement with binding parameters. The parameters' values can either be sent into a separate input parameter or added to the select statement. 
 
-  An example of a Select query and its parameters:
+  **Examples of input Select query**:
 
-  - **SQLQuery**: 
+  1. An example of a Select query and its parameters:
 
-    select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
+     - **SQLQuery**: 
 
-  - **SQLParams:**
+       select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
 
-    Open,Billing Issue
+     - **SQLParams:**
+  
+       Open,Billing Issue
+  
+  2. An example of a Select query with concatenated parameters: 
+  
+     - **SQLQuery:**
+  
+       Select Distinct act.customer_id From activity act,   cases ca Where act.activity_id = ca.activity_id And ca.status <> 'Closed' And   ca.case_type  in  ('Device Issue', 'Billing Issue');
+  
+     
 
 #### Custom Logic High Level Structure
 
