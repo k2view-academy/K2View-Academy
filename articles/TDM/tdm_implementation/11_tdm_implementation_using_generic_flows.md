@@ -67,8 +67,9 @@ See example:
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
 #### Customize the Sequence Logic
-Fabric 6.5.3 supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
+Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
 This capability enables you to create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. This works as follows: 
+
 - Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. 
 - The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. 
   - If the task requires a sequence replacement, the masking actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
@@ -78,12 +79,20 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ### Step 3 - Create, Load, and Delete Flows
 
-In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the following input parameters:
+- In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the following input parameters:
 
--  **LU name**
-- **Target Interface**
-- **Target Schema**
-- **Override Existing Flows**: when set to **true**, the flow deletes and recreates existing load and delete flows. When set to **false** the flow skips existing load and delete flows and only create new flows if needed. The **default** value is **false**.
+  -  **LU name**
+
+  - **Target Interface**
+
+  - **Target Schema**
+
+  - **Override Existing Flows**: when set to **true**, the flow deletes and recreates existing load and delete flows. When set to **false** the flow skips existing load and delete flows and only create new flows if needed. The **default** value is **false**.
+
+
+- Note that if the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
+
+####  createFlowsFromTemplates Flow Logic
 
 The **createFlowsFromTemplates.flow** executes the inner flows listed below. These inner flows generate the load and delete flows. The LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names: 
 
