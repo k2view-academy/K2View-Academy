@@ -53,8 +53,8 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
 
 B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has 2 [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in the **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
 
-   Note that this flow should run once per TDM implementation and not per each LU since the sequences are used across several LUs in the TDM project.
-   The sequences flows and Actors are created under **Shared Objects** to enable several LUs to use a Sequence Actor.
+   Note: This flow should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
+   The sequences flows and Actors are created under **Shared Objects**, enabling several LUs to use a Sequence Actor.
 
 
 
