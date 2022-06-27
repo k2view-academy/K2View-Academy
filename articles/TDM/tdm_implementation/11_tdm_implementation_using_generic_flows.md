@@ -29,7 +29,7 @@ If the **k2masking** keyspace does not exist in the DB interface defined for cac
 
 Note: The k2masking can also be created by the deploy.flow of the TDM LU.
 
-Do the following to create the sequences for your TDM implementation:
+Take the following steps in order to create the sequences for your TDM implementation:
 
 #### Generate the Sequence Actors
 
