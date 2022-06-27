@@ -23,7 +23,7 @@ Following the Actor's update completion, refresh the project by clicking the ![i
 
 ### Step 2 - Create Sequences
 
-Since sequences are required when populating a target database, setting and initiating sequences are mandatory when creating a TDM implementation. 
+When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when creating a TDM implementation. 
 
 If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or the **create_masking_cache_table.sql** of the TDM Library.  
 
