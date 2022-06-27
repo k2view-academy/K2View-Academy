@@ -170,8 +170,8 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   There are 3 possible scenarios for handling masking:
 
   * When the TDM task is for synthetic data creation, masking is always enabled.
-  * When The TDM task is for Data Flux, masking is always disabled.
-  * In all other scenarios masking behavior depends on the MASK_FLAG settings.
+  * When the TDM task is for Data Flux, masking is always disabled.
+  * In all other scenarios, masking behavior depends on the MASK_FLAG settings.
   
 * Note that TDM 7.3 creates only **one LUI instance for all clones** when executing a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes (LUI Sync and the Load flows) to get a different data in the masked fields on each clone.
 
