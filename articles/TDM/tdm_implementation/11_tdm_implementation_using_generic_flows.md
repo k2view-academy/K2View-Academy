@@ -15,7 +15,7 @@ This setting is implemented using the **TDMFilterOutTargetTables** Actor. To fil
 * ALL_LUS - when a filtered table is relevant for all TDM LUs.
 * [LU name] - when a table belongs to a specific LU. In some cases you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE -RELATION_EID TDM DB table. For example, add the Orders table to Customer LU to get the list of customer's orders. These tables need to be added to **TDMFilterOutTargetTables** Actor to avoid creating load or delete flows for them since they are loaded or deleted by the child LUs. 
 
-Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the Project Tree to apply the changes in the **TDMFilterOutTargetTables** Actor and deploy the LU. In this example, the **TDMFilterOutTargetTables** Actor will look like this: 
+Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree) to apply the changes in the **TDMFilterOutTargetTables** Actor and deploy the LU. In this example, the **TDMFilterOutTargetTables** Actor will look like this: 
 
 ![image](images/11_tdm_impl_actor_2.PNG)
 
