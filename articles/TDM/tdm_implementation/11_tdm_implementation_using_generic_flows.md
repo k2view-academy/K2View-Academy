@@ -43,7 +43,7 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
 
    ![image](images/tdmSeqListExample.png)
 
-   Example of an inner flow to get the initial sequence value:
+   An example of an inner flow for getting the initial sequence value:
 
    ![image](images/CustomerIdInitFlow.png)
 
