@@ -147,7 +147,7 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 * Manage the TDM process as one transaction.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder and is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as shown in the figure below:
+The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder; it is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as shown in the figure below:
 
 ![image](images/11_tdm_impl_02.PNG)
 
