@@ -173,7 +173,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   * When the TDM task is for Data Flux, masking is always disabled.
   * In all other scenarios, masking behavior depends on the MASK_FLAG settings.
   
-* Note that TDM 7.3 creates only **one LUI instance for all clones** when executing a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes (LUI Sync and the Load flows) in order to get different data in the masked fields on each clone.
+* Note that TDM 7.3 creates only **one LUI instance for all clones** when executing a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes (LUI Sync and Load flows) in order to get different data in the masked fields on each clone.
 
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
