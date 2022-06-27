@@ -103,7 +103,7 @@ Performed by the **createLoadTableFlows.flow** that receives the Logical Unit na
 #### Update the Load Flows with the Sequence Actors: 
 The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
-In addition, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityId_Actor** to the Load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_cases** flow and send the target case ID as an input parameter to the actor:  
+Additionally, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityId_Actor** to the Load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_cases** flow and send the target case ID as an input parameter to the actor:  
 
    ![image](images/loadFlow_seq_example.png)
 
