@@ -98,7 +98,7 @@ The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D
 
 **A. Create a LOAD flow per table**
 
-Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow in order to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
+Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow in order to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**, e.g. load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
 #### Update the Load Flows with the Sequence Actors: 
 The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
