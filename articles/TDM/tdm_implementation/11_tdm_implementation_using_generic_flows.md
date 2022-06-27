@@ -71,7 +71,7 @@ Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and
 This capability enables you to create your own function or Broadway flow in order to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. It works as follows: 
 
 - Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. 
-- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. 
+- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task attributes. 
   - If the task requires a sequence replacement, the masking actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
   - If the task does not require a sequence replacement, the original value is returned by the masking actors.
 
