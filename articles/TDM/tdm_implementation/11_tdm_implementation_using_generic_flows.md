@@ -33,7 +33,7 @@ Take the following steps in order to create the sequences for your TDM implement
 
 #### Generate the Sequence Actors
 
-A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation as follows:
+A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the relevant information for your TDM implementation as follows:
    - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
    - **CACHE_DB_NAME** - populate this setting using **DB_CASSANDRA** where the Sequence Cache tables are stored.
    - **SEQUENCE_REDIS_OR_DB** - indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
