@@ -94,7 +94,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ####  createFlowsFromTemplates Flow Logic
 
-The **createFlowsFromTemplates.flow** executes the inner flows listed below. These inner flows generate the load and delete flows. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names: 
+The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D). These inner flows generate the load and delete flows. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names: 
 
 **A. Create a LOAD flow per table**
 
