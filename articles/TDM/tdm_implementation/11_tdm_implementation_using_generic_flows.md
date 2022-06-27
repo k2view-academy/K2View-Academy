@@ -47,7 +47,7 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
 
    ![image](images/CustomerIdInitFlow.png)
 
-   The table's values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the Sequences Actors. 
+   The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the Sequences Actors. 
 
    After the Actor's update is completed, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the project tree to apply the changes in the **TDMSeqList** Actor and deploy the **TDM LU**.
 
