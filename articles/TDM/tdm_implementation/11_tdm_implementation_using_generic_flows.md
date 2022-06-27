@@ -79,7 +79,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ### Step 3 - Create, Load, and Delete Flows
 
-- In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the following input parameters:
+- In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder in order to create the delete and load flows under the LU. The flow gets the following input parameters:
 
   -  **LU name**
 
@@ -87,7 +87,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
   - **Target Schema**
 
-  - **Override Existing Flows**: when set to **true**, the flow deletes and recreates existing load and delete flows. When set to **false** the flow skips existing load and delete flows and only create new flows if needed. The **default** value is **false**.
+  - **Override Existing Flows** - when set to **true**, the flow deletes and recreates existing load and delete flows. When set to **false** the flow skips existing load and delete flows and creates only new flows if needed. The **default** value is **false**.
 
 
 - Note that if the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
