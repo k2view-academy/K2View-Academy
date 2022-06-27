@@ -119,7 +119,7 @@ Performed by the **createDeleteTableFlows.flow** that receives the Logical Unit 
 
 The following updates must be performed manually:
 
-* Populate the **sql** input argument of the **Get Table Data** Actor with the SELECT query that retrieves the keys of the data to be deleted. For example, in the delete_ACTIVITY.flow, write the following query since the CUSTOMER_ID and ACTIVITY_ID are the keys of the ACTIVITY table.
+* Populate the **sql** input argument of the **Get Table Data** Actor with the SELECT query that retrieves the keys of the data to be deleted. For example, in the delete_ACTIVITY.flow, write the following query as the CUSTOMER_ID and ACTIVITY_ID are the keys of the ACTIVITY table.
 
   ~~~sql
   SELECT CUSTOMER_ID, ACTIVITY_ID FROM TAR_ACTIVITY;
