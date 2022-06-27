@@ -90,7 +90,7 @@ Click for more information about [customizing the replace sequence logic](/artic
   - **Override Existing Flows** - when set to **true**, the flow deletes and recreates existing load and delete flows. When set to **false**, the flow skips existing load and delete flows and creates only new flows if needed. The **default** value is **false**.
 
 
-- Note that if the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
+- Note: If the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
 
 ####  createFlowsFromTemplates Flow Logic
 
