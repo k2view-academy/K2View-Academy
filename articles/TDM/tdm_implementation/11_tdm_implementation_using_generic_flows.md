@@ -27,7 +27,7 @@ When populating a target database, sequences are required. Therefore, setting an
 
 If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or the **create_masking_cache_table.sql** of the TDM Library.  
 
-Note that the k2masking can also be created by the deploy.flow of the TDM LU.
+Note: The k2masking can also be created by the deploy.flow of the TDM LU.
 
 Do the following to create the sequences for your TDM implementation:
 
