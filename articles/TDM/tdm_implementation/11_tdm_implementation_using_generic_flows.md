@@ -183,7 +183,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
 The entity list of the full entity subset can be generated using an SQL query on the source DB or running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
 
-Create a Broadway flow under the related root LU or the shared objects. It is recommended to locate the Broadway flow under the shard objects to enable running the flow on several root LUs of given Business Entity. The Broadway flow must include the following stages: 
+Create a Broadway flow under the related root LU or the shared objects. It is recommended to locate the Broadway flow under the shared objects to enable running the flow on several root LUs of a given Business Entity. The Broadway flow must include the following stages: 
 - Stage 1: Get the list of entities.
 - Stage 2: Call the **insertToLuExternalEntityList**  Actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list Cassandra table:
    - Set the input LU_NAME to be external and get its value from the task execution process.  
