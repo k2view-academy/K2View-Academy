@@ -196,9 +196,9 @@ Redeploy the related LUs and the TDM LU.
 
 #### Debugging the Broadway Flow
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
-- LU_NAME: popoulated with the LU name
-- EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
-- NUM_OF_ENTITIES: populated with the number of entities to be processed by the task
+- LU_NAME - popoulated with the LU name
+- EXTERNAL_TABLE_FLOW - populated with the name of the Custom Logic flow
+- NUM_OF_ENTITIES - populated with the number of entities to be processed by the task
 
 The **loadLuExternalEntityListTable** flow creates the Cassandra table if needed and runs the Customized Logic flow.
 
