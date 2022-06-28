@@ -280,7 +280,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
      **Example**:
 
-     The task needs to get 5 entities. The select statement gets 20 entities. The the first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the Cassandra table; then the entities' loop stops.
+     The task needs to get 5 entities. The select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the Cassandra table; then the entities' loop stops.
 
 
 Below are examples of a Custom Logic flow:
