@@ -209,7 +209,7 @@ The TDM library provides a list of Broadway actors and flows to support a genera
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that belong to the current task execution (i.e., that have the current task execution id).
 
-Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) fore more information about TDM implementation on non JDBC Data Source.
+Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more information about TDM implementation on non JDBC Data Source.
 
 ###  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
