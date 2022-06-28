@@ -13,19 +13,17 @@ Before beginning to create Broadway flows, define the tables that are filtered o
 This setting is implemented using the **TDMFilterOutTargetTables** Actor. To filter more tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
 * ALL_LUS - when a filtered table is relevant for all TDM LUs.
-* [LU name] - when a table belongs to a specific LU. In some cases you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE -RELATION_EID TDM DB table. For example, add the Orders table to Customer LU to get the list of customer's orders. These tables need to be added to **TDMFilterOutTargetTables** Actor to avoid creating load or delete flows for them since they are loaded or deleted by the child LUs. 
+* [LU name] - when a table belongs to a specific LU. In some cases you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE -RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer's orders. 
 
-Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU. In this example, the **TDMFilterOutTargetTables** Actor will look like this: 
+These tables should be added to the **TDMFilterOutTargetTables** Actor as it would prevent the load/delete flows creation for the tables; these tables are already loaded/deleted by the child LUs. 
 
-![image](images/11_tdm_impl_actor_2.PNG)
-
-
+Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU. 
 
 ## Step 2 - Create Sequences
 
-When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when creating a TDM implementation. 
+When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when implementing TDM. 
 
-If the **k2masking** keyspace does not exist in the DB interface, which is defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the Broadway examples library or the **create_masking_cache_table.sql** of the TDM Library.  
+If the **k2masking** keyspace does not exist in the DB interface, which is defined for caching the masked values, create it using either the **masking-create-cache-table.flow** from the Broadway examples library or the **create_masking_cache_table.sql** from the TDM Library.  
 
 Note: The k2masking can also be created by the deploy.flow of the TDM LU.
 
@@ -54,13 +52,13 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
 B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has 2 [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in the **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
 
    Note: This flow should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
-   The sequences flows and Actors are created under **Shared Objects**, enabling several LUs to use a Sequence Actor.
+   The sequences' flows and Actors are created under **Shared Objects**, enabling several LUs to use a Sequence Actor.
 
 
 
 ### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
 
-The **TDMSeqSrc2TrgMapping** table has been added in tdm 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
+The **TDMSeqSrc2TrgMapping** table has been added in TDM 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
 
 See the below example:
 
@@ -71,7 +69,7 @@ Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and
 This capability enables you to create your own function or Broadway flow in order to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. It works as follows: 
 
 - Set the category to **enable_sequences** in order to use the actor for sequence (ID) replacement. 
-- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task attributes. 
+- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to either **true** or **false** based on the TDM task attributes. 
   - If the task requires a sequence replacement, the masking actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
   - If the task does not require a sequence replacement, the original value is returned by the masking actors.
 
@@ -98,7 +96,7 @@ The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D
 
 **A. Create a LOAD flow per table**
 
-Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow in order to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**, e.g. load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
+The load flows are generated by the **createLoadTableFlows.flow**, that receives the following input parameters: Logical Unit name, target interface and target schema. It then retrieves the list of tables from the LU schema, and creates a separate Broadway flow on each table in order to load its data into the related target table in the target DB. The name of each newly created flow is **load_[Table Name].flow**, e.g. load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
 ### Update the Load Flows with the Sequence Actors: 
 The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
@@ -111,7 +109,7 @@ Additionally, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityI
 
 **B. Create the main LOAD flow**
 
-Performed by the **createLoadAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **LoadAllTables.flow** Broadway flow. The purpose of this flow is to invoke all LOAD flows based on the LU Schema's execution order.
+The main load flow is generated by the **createLoadAllTablesFlow.flow** that receives the following input parameter: Logical Unit name. It then creates the  **LoadAllTables.flow** Broadway flow. The purpose of this flow is to invoke all load flows based on the LU Schema's execution order.
 
 **C. Create a DELETE flow per table**
 
@@ -144,7 +142,7 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 * Initiate the TDM load.
 * Delete the target data, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Flux load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode).
 * Load the new data into the target, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Flux load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode). 
-* Manage the TDM process as one transaction.
+* Manage the TDM process as one transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway actor: NoTx. This fix is needed for the entity clone since all replicas work on one single LUI. Fabric cannot open parallel transactions on the same LUI and therefore need be excluded from the delete and load Broadway transaction to habe a better parallelism when processing of the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
 The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder; it is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as shown in the figure below:
@@ -159,7 +157,7 @@ The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_g
 
 TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables masking sensitive fields such as SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target database.
 
-* In order to mask a sensitive field - prior to loading it into Fabric - create a Broadway population flow for the table that includes this field and add one or more **Masking** actors. 
+* In order to mask a sensitive field - prior to loading it into Fabric - create a Broadway population flow for the table that contains this field and add one or more **Masking** actors. 
 
   ![image](images/11_tdm_impl_05.PNG)
 
@@ -169,11 +167,11 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   There are 3 possible scenarios for handling masking:
 
-  * When the TDM task is for synthetic data creation, masking is always enabled.
-  * When the TDM task is for Data Flux, masking is always disabled.
+  * When the TDM task clones an entity, masking is always enabled.
+  * When the TDM task loads a data version, masking is always disabled.
   * In all other scenarios, masking behavior depends on the MASK_FLAG settings.
   
-* Note that TDM 7.3 creates only **one LUI instance for all clones** when executing a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes (LUI Sync and Load flows) in order to get different data in the masked fields on each clone.
+* Note that from TDM 7.3 and onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and Load flows) in order to get different data in the masked fields on each clone.
 
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
@@ -185,9 +183,9 @@ The entity list of the full entity subset can be generated using an SQL query on
 
 Create a Broadway flow under the related root LU or the shared objects. It is recommended to locate the Broadway flow under the shared objects to enable running the flow on several root LUs of a given Business Entity. The Broadway flow must include the following stages: 
 - Stage 1: Get the list of entities.
-- Stage 2: Call the **insertToLuExternalEntityList**  Actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list Cassandra table:
+- Stage 2: Call the **insertToLuExternalEntityList**  actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list table  created in Cassandra DB:
    - Set the input LU_NAME to be external and get its value from the task execution process.  
-   - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations.  
+   - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit on all iterations.  
 
 
 Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
@@ -195,7 +193,7 @@ Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementat
 Redeploy the related LUs and the TDM LU.
 
 ### Debugging the Broadway Flow
-Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
+Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following external input parameters:
 - LU_NAME - popoulated with the LU name
 - EXTERNAL_TABLE_FLOW - populated with the name of the Custom Logic flow
 - NUM_OF_ENTITIES - populated with the number of entities to be processed by the task
@@ -205,15 +203,15 @@ The **loadLuExternalEntityListTable** flow creates the Cassandra table if needed
 
 ### How does the Broadway Flow Generate an Entity List for the Task Execution? 
 
-The TDM library provides a list of Broadway actors and flows to support a generation of an entity list based on a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
+The TDM library provides a list of Broadway actors and flows to support generating an entity list by a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
 
-The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that belong to the current task execution (i.e., that have the current task execution id).
+The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that are a part of current task execution, having the current task execution id.
 
 Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more information about TDM implementation on non JDBC Data Source.
 
 ##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process for building the entity list for the task execution. The project Broadway flow needs to select the entity list and call the TDM library actors in order to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process in order to building the entity list for the task. The project Broadway flow needs to select the entity list and call the TDM library actors in order to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
@@ -273,10 +271,10 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the counter of the number of entities , loaded into the Cassandra table.
      - This flow executes the following activities on each selected entity ID: 
-       - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip it, as it is unavailable.
-       - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
+       - Checks if the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
+       - Loads the available entities into the **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and updates the counter of the number of entities. 
 
-  3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library). The **NUM_OF_ENTITIES** is an **external input parameter** and it gets its value from the task execution process. It checks the number of entities inserted to the Cassandra table, and stops the loop if the custom flow reaches the task's number of entities. 
+  3. Stage 4: Calls **CheckAndStopLoop** TDM actor (imported from the TDM Library). The **NUM_OF_ENTITIES** is an **external input parameter** and it gets its value from the task execution process. It checks the number of entities inserted to the Cassandra table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
@@ -301,13 +299,13 @@ Example of the input States:
 
 
 
-**Example 3 - get an input Select Statement and a parameters for the Select Statement:**
+**Example 3 - get an input Select Statement with parameters for the Select Statement:**
 
 ![custom logic](images/custom_logic_example_3.png)
 
 ### Debugging the Customized Flow
 
-Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
+Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following extenal input external:
 - LU_NAME - popoulated with the LU name
 - EXTERNAL_TABLE_FLOW - populated with the Custom Logic flow name
 - NUM_OF_ENTITIES - populated with the number of entities to be processed by the task
