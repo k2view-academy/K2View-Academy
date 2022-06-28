@@ -308,11 +308,11 @@ Example of the input States:
 #### Debugging the Customized Flow
 
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
-- LU_NAME: popoulated with the LU name
-- EXTERNAL_TABLE_FLOW: populated with the name of the Custom Logic flow
-- NUM_OF_ENTITIES: populated with the number of entities to be processed by the task
+- LU_NAME - popoulated with the LU name
+- EXTERNAL_TABLE_FLOW - populated with the Custom Logic flow name
+- NUM_OF_ENTITIES - populated with the number of entities to be processed by the task
 
-The **loadLuExternalEntityListTable** flow creates the Cassandra table if needed and runs the Customized Logic flow.
+The **loadLuExternalEntityListTable** flow creates the Cassandra table, if needed, and runs the Customized Logic flow.
 
 #### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
 
