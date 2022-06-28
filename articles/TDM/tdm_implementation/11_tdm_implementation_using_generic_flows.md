@@ -232,7 +232,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 - The input parameter name must **not contain spaces or double quotes**.
 
-- Sending multiple values in one single parameter: you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
+- Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 
 - You can get an input Select statement with binding parameters. The parameters' values can either be sent into a separate input parameter or added to the select statement. 
 
@@ -260,18 +260,18 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 - **Stage 1**: 
 
-  - Add a logic requiring the entities; e.g. a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
-  - Initialize the entities' number counter for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
+  - Add a logic, requiring the entities - e.g. a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
+  - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM actor (imported from the TDM Library).
   - Note: If the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** actor to the flow in order to split the values by the delimiter and populate them into a String's array.
 
-- **Stages 2-4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
+- **Stages 2-4**: **Loop on the selected entities** - set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
   1. Stage 2: Set the selected entity ID, returned by the actor of Stage 1, to a String using the **ToString** actor.
 
   2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library):
 
-     - **Input**: **LU_NAME** parameter. This is an **external parameter** and gets its value by the task execution process.
-     - **Output**: **recordLoaded**. This is the counter of the number of entities , loaded into the Cassandra table.
+     - **Input** - **LU_NAME** parameter. This is an **external parameter** and gets its value by the task execution process.
+     - **Output** - **recordLoaded**. This is the counter of the number of entities , loaded into the Cassandra table.
      - This flow executes the following activities on each selected entity ID: 
        - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
        - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
