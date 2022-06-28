@@ -232,7 +232,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 - The input parameter name must **not contain spaces or double quotes**.
 
-- Sending multiple values in one single parameter: you can define a String input parameter to get a list of values into the parameter and split it into an array in the flow. For example: "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
+- Sending multiple values in one single parameter: you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 
 - You can get an input Select statement with binding parameters. The parameters' values can either be sent into a separate input parameter or added to the select statement. 
 
@@ -260,9 +260,9 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 - **Stage 1**: 
 
-  - Add a logic requiring the entities. For example: a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
+  - Add a logic requiring the entities; e.g. a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
   - Initialize the entities' number counter for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
-  - Note that if the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** actor to the flow to split the values by the delimiter and populate them into a String's array.
+  - Note that if the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** actor to the flow in order to split the values by the delimiter and populate them into a String's array.
 
 - **Stages 2-4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
