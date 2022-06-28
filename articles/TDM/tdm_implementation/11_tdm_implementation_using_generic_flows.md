@@ -142,7 +142,7 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 * Initiate the TDM load.
 * Delete the target data, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Flux load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode).
 * Load the new data into the target, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Flux load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode). 
-* Manage the TDM process as one transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway actor: NoTx. This fix is needed for the entity clone since all replicas work on one single LUI. Fabric cannot open parallel transactions on the same LUI and therefore need be excluded from the delete and load Broadway transaction to habe a better parallelism when processing of the entity’s replicas.
+* Manage the TDM process as one transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway actor: NoTx. This fix is needed for the entity clone as all replicas work on one single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have a better parallelism when processing the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
 The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder; it is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as shown in the figure below:
@@ -179,7 +179,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
 ## Step 6 - Optional - Get the Entity List for an Extract All Task Using a Broadway Flow
 
-The entity list of the full entity subset can be generated using an SQL query on the source DB or running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
+The entity list of the full entity subset can be generated either by using an SQL query on the source DB or by running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
 
 Create a Broadway flow under the related root LU or the shared objects. It is recommended to locate the Broadway flow under the shared objects to enable running the flow on several root LUs of a given Business Entity. The Broadway flow must include the following stages: 
 - Stage 1: Get the list of entities.
@@ -232,7 +232,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 
-- You can get an input Select statement with binding parameters. The parameters' values can either be sent into a separate input parameter or added to the select statement. 
+- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the select statement. 
 
   **Examples of input Select query**:
 
