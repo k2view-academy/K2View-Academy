@@ -213,7 +213,7 @@ Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more 
 
 ###  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flows in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process for building the entity list for the task execution. The project Broadway flow needs to select the entity list and call the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process for building the entity list for the task execution. The project Broadway flow needs to select the entity list and call the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
