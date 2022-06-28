@@ -4,7 +4,7 @@ The TDM library has sets of generic flows that allow you to create a standard TD
 
 ## How Do I Create TDM Broadway Flows?
 
-### Step 1 - Define Tables to Filter Out
+## Step 1 - Define Tables to Filter Out
 
 Before beginning to create Broadway flows, define the tables that are filtered out by the Broadway template, which generates the DELETE and LOAD flows. The library includes settings for the following filtered auxiliary tables:
 
@@ -21,7 +21,7 @@ Following the Actor's update completion, refresh the project by clicking the ![i
 
 
 
-### Step 2 - Create Sequences
+## Step 2 - Create Sequences
 
 When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when creating a TDM implementation. 
 
@@ -31,7 +31,7 @@ Note: The k2masking can also be created by the deploy.flow of the TDM LU.
 
 Take the following steps in order to create the sequences for your TDM implementation:
 
-#### Generate the Sequence Actors
+### Generate the Sequence Actors
 
 A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the relevant information for your TDM implementation as follows:
    - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
@@ -58,7 +58,7 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
 
 
-#### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
+### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
 
 The **TDMSeqSrc2TrgMapping** table has been added in tdm 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
 
@@ -66,7 +66,7 @@ See the below example:
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
-#### Customize the Sequence Logic
+### Customize the Sequence Logic
 Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
 This capability enables you to create your own function or Broadway flow in order to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. It works as follows: 
 
@@ -77,7 +77,7 @@ This capability enables you to create your own function or Broadway flow in orde
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
 
-### Step 3 - Create, Load, and Delete Flows
+## Step 3 - Create, Load, and Delete Flows
 
 - In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder in order to create the delete and load flows under the LU. The flow gets the following input parameters:
 
@@ -92,7 +92,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 - Note: If the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
 
-####  createFlowsFromTemplates Flow Logic
+###  createFlowsFromTemplates Flow Logic
 
 The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D). These inner flows generate the load and delete flows. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names: 
 
@@ -100,7 +100,7 @@ The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D
 
 Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow in order to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**, e.g. load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
-#### Update the Load Flows with the Sequence Actors: 
+### Update the Load Flows with the Sequence Actors: 
 The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
 Additionally, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityId_Actor** to the Load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_cases** flow and send the target case ID as an input parameter to the actor:  
@@ -135,9 +135,9 @@ The following updates must be performed manually:
 
 Performed by the **createDeleteAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **DeleteAllTables.flow** Broadway flow. The purpose of this flow is to invoke all DELETE flows in the opposite order of the population order, considering the target DB's foreign keys. 
 
-### Step 4 - TDM Orchestration Flows
+## Step 4 - TDM Orchestration Flows
 
-#### Create the TDMOrchestrator.flow from the Template
+### Create the TDMOrchestrator.flow from the Template
 
 Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as:
 
@@ -151,11 +151,11 @@ The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway 
 
 ![image](images/11_tdm_impl_02.PNG)
 
-#### TDMReserveOrchestrator Flow
+### TDMReserveOrchestrator Flow
 
 The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). Import the flow from the TDM Library into the Shared Objects and redeploy the TDM LU. 
 
-### Step 5 - Mask the Sensitive Data
+## Step 5 - Mask the Sensitive Data
 
 TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables masking sensitive fields such as SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target database.
 
@@ -179,7 +179,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
 [Click here to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
 
-### Step 6 - Optional - Get the Entity List for an Extract All Task Using a Broadway Flow
+## Step 6 - Optional - Get the Entity List for an Extract All Task Using a Broadway Flow
 
 The entity list of the full entity subset can be generated using an SQL query on the source DB or running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
 
@@ -194,7 +194,7 @@ Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementat
 
 Redeploy the related LUs and the TDM LU.
 
-#### Debugging the Broadway Flow
+### Debugging the Broadway Flow
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
 - LU_NAME - popoulated with the LU name
 - EXTERNAL_TABLE_FLOW - populated with the name of the Custom Logic flow
@@ -203,7 +203,7 @@ Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Librar
 The **loadLuExternalEntityListTable** flow creates the Cassandra table if needed and runs the Customized Logic flow.
 
 
-#### How does the Broadway Flow Generate an Entity List for the Task Execution? 
+### How does the Broadway Flow Generate an Entity List for the Task Execution? 
 
 The TDM library provides a list of Broadway actors and flows to support a generation of an entity list based on a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
 
@@ -211,13 +211,13 @@ The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_executio
 
 Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more information about TDM implementation on non JDBC Data Source.
 
-###  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
+##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
 You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process for building the entity list for the task execution. The project Broadway flow needs to select the entity list and call the TDM library actors in order to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
-#### Step 7.1 - Create the Custom Logic Flow
+### Step 7.1 - Create the Custom Logic Flow
 
 The Custom Logic Broadway flow can be created in either the **Shared Objects** or **a given LU**.
 
@@ -256,7 +256,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
   
      
 
-#### Custom Logic High Level Structure
+### Custom Logic High Level Structure
 
 - **Stage 1**: 
 
@@ -305,7 +305,7 @@ Example of the input States:
 
 ![custom logic](images/custom_logic_example_3.png)
 
-#### Debugging the Customized Flow
+### Debugging the Customized Flow
 
 Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the following input external parameters:
 - LU_NAME - popoulated with the LU name
@@ -314,7 +314,7 @@ Run the **loadLuExternalEntityListTable** TDM flow (imported from the TDM Librar
 
 The **loadLuExternalEntityListTable** flow creates the Cassandra table, if needed, and runs the Customized Logic flow.
 
-#### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
+### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
 
 Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM actor (imported from the TDM Library).
 
