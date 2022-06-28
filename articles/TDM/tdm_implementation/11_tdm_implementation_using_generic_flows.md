@@ -273,7 +273,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the counter of the number of entities , loaded into the Cassandra table.
      - This flow executes the following activities on each selected entity ID: 
-       - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip the entity since it is unavailable.
+       - Check if the entity is reserved for another user in the task's target environment when running load task without a sequence replacement, delete, or reserve task. If the entity is reserved for another user, skip it, as it is unavailable.
        - Load the available entities into the  **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and update the counter of the number of entities. 
 
   3. Stage 4: Call **CheckAndStopLoop** TDM actor (imported from the TDM Library). The **NUM_OF_ENTITIES** is an **external input parameter** and it gets its value from the task execution process. It checks the number of entities inserted to the Cassandra table, and stops the loop if the custom flow reaches the task's number of entities. 
