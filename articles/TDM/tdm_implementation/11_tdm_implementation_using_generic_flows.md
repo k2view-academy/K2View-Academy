@@ -224,7 +224,7 @@ The Custom Logic Broadway flow can be created in either the **Shared Objects** o
 The Custom Logic Broadway flow always has **2 external input parameters** and it gets their values from the task execution process:
 
 - LU_NAME
-- NUM_OF_ENTITIES: the maximum number of entities to be processed by the task execution. The number is set in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
+- NUM_OF_ENTITIES - the maximum number of entities to be processed by the task execution. The number is set either in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
 
 TDM 7.5 supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task. For example, you can add an external parameter name customer_status to the flow. The flow selects the customers for the task based on the input customer_status parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
 
