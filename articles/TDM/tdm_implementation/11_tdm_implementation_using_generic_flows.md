@@ -262,7 +262,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
 
   - Add a logic requiring the entities; e.g. a DbCommand actor that runs a select statement on the CRM DB. The actor needs to return the list of the selected entity IDs.
   - Initialize the entities' number counter for execution: add the **InitRecordCount** TDM actor (imported from the TDM Library).
-  - Note that if the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** actor to the flow in order to split the values by the delimiter and populate them into a String's array.
+  - Note: If the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** actor to the flow in order to split the values by the delimiter and populate them into a String's array.
 
 - **Stages 2-4**: **Loop on the selected entities**: set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
