@@ -17,7 +17,7 @@ The job updates the status of the processed Reference table in the [task_ref_exe
 - SOURCE_ENV_NAME - populated by the source environment.
 - TASK_EXECUTION_ID - populated - by default - by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - TDM_REC_ID - an internal sequence set on each record and added to the **PK** of the Cassandra table.
-- RED_DATA - a text field that contains a JSON with the selected source record.
+- RED_DATA - a text field, which contains a JSON with the selected source record.
 
 The **PK** (primary key) of each Cassandra table consists of the following columns:
 
