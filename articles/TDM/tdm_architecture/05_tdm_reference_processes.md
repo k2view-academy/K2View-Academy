@@ -53,7 +53,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   </tbody>
   </table>
 
-- CUSTOMER_TYPE is populated as following in **ENV2**:
+- CUSTOMER_TYPE is populated in **ENV2** as follows:
 
   <table class="md-table">
   <thead>
@@ -89,7 +89,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMET_TYPE Reference table from ENV1. The Cassandra table is populated as following:
+- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMET_TYPE Reference table from ENV1. The Cassandra table is populated as follows:
 
   
   
