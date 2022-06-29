@@ -89,7 +89,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMET_TYPE Reference table from ENV1. The Cassandra table is populated as follows:
+- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1. The Cassandra table is populated as follows:
 
   
   
