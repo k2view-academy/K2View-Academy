@@ -14,9 +14,9 @@ The job updates the status of the processed Reference table in the [task_ref_exe
 ### Reference Cassandra Table
 [TDM Extract tasks](/articles/TDM/tdm_gui/16_extract_task.md) can either extract data from different source environments or create [different versions](/articles/TDM/tdm_gui/15_data_flux_task.md) of a selected Reference table. As a result, each Cassandra table, which is created for a Reference table, must store different versions of the Reference table. Each such Cassandra table contains the following columns with the purpose of storing Reference data for different source environments and different versions:
 
-- SOURCE_ENV_NAME -  populated by the source environment.
-- TASK_EXECUTION_ID - by default populated by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
-- TDM_REC_ID -  an internal sequence set on each record and added to the **PK** of the Cassandra table.
+- SOURCE_ENV_NAME - populated by the source environment.
+- TASK_EXECUTION_ID - populated - by default - by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
+- TDM_REC_ID - an internal sequence set on each record and added to the **PK** of the Cassandra table.
 - RED_DATA - a text field that contains a JSON with the selected source record.
 
 The **PK** (primary key) of each Cassandra table consists of the following columns:
@@ -27,9 +27,9 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
 **Example:**
 
-- CUSTOMER_TYPE Reference table. This table has three fields: CUSTOMER_TYPE, CUSTOMER_SUB_TYPE and DESCRIPTION.
+- CUSTOMER_TYPE Reference table. This table has 3 fields: CUSTOMER_TYPE, CUSTOMER_SUB_TYPE and DESCRIPTION.
 
-- CUSTOMER_TYPE is populated as follows in **ENV1**:
+- CUSTOMER_TYPE is populated in **ENV1** as follows:
 
   <table class="md-table">
   <thead>
