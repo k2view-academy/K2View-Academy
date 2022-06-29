@@ -8,8 +8,8 @@ This job is executed on each Reference table by the [main task execution process
 
 The job updates the status of the processed Reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
-- If the copy succeeds, sets the status to **completed**.
-- If the copy fails, sets the status to **failed** and populates the error_msg field in the error message.
+- If the copy succeeds, it sets the status to **completed**.
+- If the copy fails, it sets the status to **failed** and populates the error_msg field with the error message.
 
 ### Reference Cassandra Table
 [TDM Extract tasks](/articles/TDM/tdm_gui/16_extract_task.md) can either extract data from different source environments or create [different versions](/articles/TDM/tdm_gui/15_data_flux_task.md) of a selected Reference table. As a result, each Cassandra table, which is created for a Reference table, must store different versions of the Reference table. Each such Cassandra table contains the following columns with the purpose of storing Reference data for different source environments and different versions:
