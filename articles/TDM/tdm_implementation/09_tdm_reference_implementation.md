@@ -1,6 +1,6 @@
 # TDM - Reference Implementation
 
-<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract Reference tables from several source environments and to save them into the Cassandra DB. It also enables saving different versions of a Reference table and source environment into the Cassandra DB and creating and executing TDM load tasks to copy them from the Cassandra DB into the target environment. 
+<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract Reference tables from several source environments and to save them into the Cassandra DB. Additionally, it enables saving different versions of a Reference table and source environment into the Cassandra DB as well as creating and executing TDM load tasks to copy them from the Cassandra DB into the target environment. 
 
 Note: The TDM Reference solution is not based on [Fabric Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and the tables are saved in Cassandra. 
 
