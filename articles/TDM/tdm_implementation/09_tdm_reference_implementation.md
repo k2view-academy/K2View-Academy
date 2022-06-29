@@ -106,7 +106,7 @@ Example:
 
 
 
-Note that is it also possible to populate the list of target's PK fields in trnRefList. These fields can be later used to customized the load flow to run an Upsert on the target reference table.
+Note: It is also possible to populate the list of target's PK fields in trnRefList. These fields can be later used to customized the load flow to run an Upsert on the target reference table.
 
 
 
