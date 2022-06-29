@@ -120,7 +120,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract Data Versioning task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
+- Creating an Extract Data Versioning task for CUSTOMET_TYPE Reference table on ENV1. The records of the created version are added to the Cassandra table:
 
   
   
