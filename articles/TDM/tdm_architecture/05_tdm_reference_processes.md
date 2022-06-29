@@ -89,7 +89,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMET_TYPE Reference table from ENV1. The Cassandra table is populated as follows:
+- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1. The Cassandra table is populated as follows:
 
   
   
@@ -120,7 +120,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
  
 
-- Creating an Extract Data Versioning task for CUSTOMET_TYPE Reference table on ENV1. The records of the created version are added to the Cassandra table:
+- Creating an Extract Data Versioning task for CUSTOMER_TYPE Reference table on ENV1. The records of the created version are added to the Cassandra table:
 
   
   
@@ -161,7 +161,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   
   
 
-- Create an Extract Task with a regular mode for CUSTOMET_TYPE on ENV2:
+- Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2:
 
   <table style="height: 234px; width: 929px;" width="900pxl">
   <tbody>
@@ -226,7 +226,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
 - The source data of ENV1 is updated and a new record is added to CUSTOMER_TYPE table for a Government customer type.
 
-- Execute again the regular Extract Task for CUSTOMET_TYPE on ENV1 again:
+- Execute again the regular Extract Task for CUSTOMER_TYPE on ENV1 again:
 
   
   
