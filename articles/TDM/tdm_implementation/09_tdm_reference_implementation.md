@@ -8,7 +8,7 @@ A TDM implementation has the following steps:
 
 ### Step 1 - Populate trnRefList Translation
 
-The list of Reference tables available for [TDM extract tasks](/articles/TDM/tdm_gui/24_task_reference_tab.md#reference-tab---extract-task) is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate trnRefList with the list of available Reference tables for each LU. The following settings must be populated for each record:
+The list of Reference tables available for [TDM extract tasks](/articles/TDM/tdm_gui/24_task_reference_tab.md#reference-tab---extract-task) is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate trnRefList with the list of available Reference tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** - populated by the LU name.
 - **ID** - populated by a sequence.
