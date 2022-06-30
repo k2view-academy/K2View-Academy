@@ -6,7 +6,7 @@ The TDM Library has all the utilities required to implement a TDM project and to
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
 
-The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5_LIBRARY.k2export) .
+The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5.1_LIBRARY.k2export) .
 
 ## TDM Library - Shared Objects
 
