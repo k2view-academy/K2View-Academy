@@ -53,7 +53,8 @@ The transaction is then committed since Stage 1 is not marked as transactional a
 The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional.  
 
 - The transaction begins at the **Load** Stage and is followed by a commit since the **Commit** Stage is not transactional.
-- Then the second transaction begins at the **Load 2** Stage and is followed by a commit in the second iteration after the end of **Load** Stage. At the end of data set, the commit occurs at the end of the loop.
+- Then the second transaction begins at the **Load 2** Stage and is followed by a commit in the second iteration after the end of **Load** Stage. 
+- On the last iteration of a data set, the commit occurs at the end of the loop at the **Load 2** Stage.
 
 ![image](images/99_23_complex_ex.PNG)
 
