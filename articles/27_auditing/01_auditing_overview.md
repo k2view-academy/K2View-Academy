@@ -69,10 +69,11 @@ When an activity is logged by the Fabric Auditing mechanism, it has the followin
 <tr style="height: 18px;">
 <td style="height: 18px; width: 73px;">session_id</td>
 <td style="height: 18px; width: 323px;">Session ID. When few actions are executed as a result of entry point (e.g. Web Service), session ID is the same for all the related entries.</td>
-<td style="height: 18px; width: 286px;">73ae6592</td>
+<td style="height: 18px; width: 286px;">07a40433-17a3-4054-9aaf-59d19378c555</td>
 </tr>
 </tbody>
 </table>
+
 
 
 For example, when the user performs login and authentication to the Web Framework, the activity is audited as follows:
