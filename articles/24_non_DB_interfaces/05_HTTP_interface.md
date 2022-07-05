@@ -102,7 +102,7 @@ If the service provider does not require authentication, select **None** in the 
 
 
 
-### Example of Calling a WS Using a HTTP Interface in a Broadway Flow
+### Example of Calling a WS via HTTP Interface in a Broadway Flow
 
 ![image](images/03_http_3.PNG)
 
