@@ -121,8 +121,12 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 
 **DB Class Methods - Common Use Cases**
 
-The following table describes common use cases when working with DB interfaces.\
+The following table describes common use cases when working with DB interfaces.
+
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+
+
+
 <table>
 <tbody>
 <tr>
@@ -178,8 +182,10 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 </table>
 
 ### Using Binding Variables on SQL Statements
-In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
+In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.
+
 When using prepared statement queries always use binding parameters: 
+
 * Add a question mark in the SQL statement for each parameter in the SQL query.
 * Each input parameter must be sent as a parameter to the execute() or fetch() methods.
 * The order of the input parameters must be aligned with the order of these parameters in the SQL statement.
@@ -187,8 +193,10 @@ When using prepared statement queries always use binding parameters:
 See the example in the table above.
 
 ### How Can I Invoke the Result Set of the DB Query?
-**DB.ROWS and DB.ROW Classes**\
-The fetch() method returns the Db.Rows object which represents a result set of a query.\
+**DB.ROWS and DB.ROW Classes**
+
+The fetch() method returns the Db.Rows object which represents a result set of a query.
+
 You can iterate the result set and get a Db.Row object for each record, or alternatively, get the first value or the first row of the result set using firstValue() and firstRow() methods. 
 
 **Notes** 
@@ -205,8 +213,8 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 ### Loop on the Result Set Methods
 
 The following methods can be used to loop a result set:
-1.	Using **forEach/each** loop also closes the ResultSet and is the recommended way to iterate over a result.\
-Note that the **each** method is similar to the **forEach** method and uses a Lambda interface to let  exceptions pass through and also enables closing a result set when an exception breaks the loop.
+1.	Using **forEach/each** loop also closes the ResultSet and is the recommended way to iterate over a result.
+2.	Note that the **each** method is similar to the **forEach** method and uses a Lambda interface to let  exceptions pass through and also enables closing a result set when an exception breaks the loop.
 
 **Example 1**
 
@@ -305,7 +313,6 @@ Fabric has the following set of deprecated methods for handling DB interfaces:
 Although they work, a warning message is displayed when deprecated methods are used in Fabric code. It is recommended to use the new Fabric methods to invoke DB interfaces instead of working with deprecated methods. 
 
 [![Previous](/articles/images/Previous.png)](08_clearing_the_database_objects_cache.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_database_types.md)
-
 
 
 
