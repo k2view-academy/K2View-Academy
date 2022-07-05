@@ -75,7 +75,7 @@ Fabric supports the following:
   * Access Token URL - address of the authorization server providing the access token.
 
   * Client ID - provided by the external resource/authorized vendor. 
- 
+
   * Client Secret - provided by the external resource/authorized vendor. Note that although the Client Server is encrypted and saved it is displayed in clear text in the Fabric Studio.
 
   * Scope (optional) - validates that the required actions are permitted by the authenticating server which returns the access token's scope  to the client. 
@@ -102,12 +102,37 @@ If the service provider does not require authentication, select **None** in the 
 
 
 
-### Example of Using an HTTP/HTTPS Interface in a Broadway Flow
+### Example of Calling a WS Using a HTTP Interface in a Broadway Flow
 
-![image](images/03_http_2.PNG)
+![image](images/03_http_3.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the relative path to the interface. 
-Note that HTTPS requests are included in this HTTP Actor, whose security settings are defined in the interface.  
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the relative path to the interface. The **params** input argument must be populated when relevant. The **format** input argument must be populated with the required output format, e.g. JSON.
+
+For example, in order to invoke a Fabric Web Service, do the following:
+
+1.  Define HTTP interface with the relevant authentication type, e.g. *Bearer*, and set the Token value.
+
+   ![image](images/03_http_4.PNG)
+
+2. In a Broadway flow, use either **Http** or **HttpJson** Actor to invoke a WS. Populate the input arguments as follows:
+
+   * Set **interface** to the predefined Http interface.
+
+   * Set **path** to the WS, relative to the interface. For example:
+
+     ~~~
+     /api/isAlive
+     ~~~
+
+   * When the interface receives input parameters, they can be sent using the **params** input argument. Then the path will look like this:
+
+     ~~~xml
+     /api/wsCustomerSSN?
+     ~~~
+
+   * When using **Http** Actor, set **format** input argument to be the required output format, e.g. JSON.
+
+3. Use a **JsonParser** Actor to parse the WS output.
 
 
 
