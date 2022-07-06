@@ -264,12 +264,7 @@ The LU Schema toolbar includes the following elements:
 <table style="width: 900px;">
 <tbody>
 
-<tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.png" alt="" /></td>
-<td width="630pxl">
-<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
-</td>
-</tr>
+
 
 <tr>
 
@@ -278,6 +273,14 @@ The LU Schema toolbar includes the following elements:
 <p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
 </td>
 </tr>
+
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.png" alt="" /></td>
+<td width="630pxl">
+<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
+</td>
+</tr>
+
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_group.PNG" alt="" /></td>
 <td width="630pxl">
@@ -327,7 +330,7 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/search_tg.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_search_table_or_group.png" alt="" /></td>
 <td width="630pxl">
 <p>Search a table or a table's group in the LU schema.</p>
 </td>
