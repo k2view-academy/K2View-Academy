@@ -314,7 +314,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/mini-map-off.svg" alt="" /></td>
 <td width="630pxl">
-<p>Open the navigation small panel of the LU schema.</p>
+<p>Open the schema's mini-map and navigation panel.</p>
 </td>
 </tr>
 <tr>
