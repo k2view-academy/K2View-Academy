@@ -45,14 +45,8 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 - Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, Fabric should notify another system about the customer’s status. 
 - Masking sensitive data in LU tables.
 
-
-<web>
-
-
-
+<br>
 **<u>Please note</u>:** While enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
-
-</web>
 
 <studio>
 
