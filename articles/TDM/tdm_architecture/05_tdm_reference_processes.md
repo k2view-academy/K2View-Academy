@@ -160,10 +160,9 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   </table>
   
   
-
 - Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2:
 
-  <table style="height: 234px; width: 929px;" width="900pxl">
+  <table width="900pxl">
   <tbody>
   <tr class="md-end-block md-focus-container" style="height: 18px;">
   <th style="width: 161.432px; height: 18px;"><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
@@ -230,7 +229,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 
   
   
-  <table style="height: 234px; width: 929px;" width="900pxl">
+  <table width="900pxl">
   <tbody>
   <tr class="md-end-block md-focus-container" style="height: 18px;">
   <th style="width: 161.432px; height: 18px;"><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
@@ -295,7 +294,7 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   </tbody>
   </table>
   
-   
+  
 
 - The table is re-populated by the data of ENV1 and ALL version. The records of the specific version of ENV1 - 1234, remain unchanged. 
 
