@@ -6,10 +6,10 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** -  Fabric 6.5.5 and above for TDM 7.4.
+- **Fabric Server** -  Fabric 6.5.8 and above for TDM 7.5.1
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. 
 
-Click here to open the [TDM 7.4 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.4.md).
+Click here to open the [TDM 7.5.1 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.5.1.md).
 
 ## TDM Package Content
 
@@ -47,7 +47,7 @@ To install a TDM package on a Fabric server do the following:
 
   **Example:**
 
-  **tar -zxvf tdmui7.4_5.tar.gz**
+  **tar -zxvf tdmui7.5.1_5.tar.gz**
   
   Run the following command to avoid an override of the apps.json file:
   
@@ -110,7 +110,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 3. Deploy Fabric project's Web-Services to the local debug server.
 
-4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.4. This version is added to the generated APIDOC.
+4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.5.1. This version is added to the generated APIDOC.
 
 5. Open the Swagger editor using the following URL: https://editor.swagger.io/.
 
@@ -143,7 +143,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 - Run **createk2TDMDB.sh** script.
 
-- Note that the **D_K2V_PG13_TDM7.4.tar.gz PG docker image already contains the TDM 7.4 DB.**
+- Note that the **D_K2V_PG13_TDM7.5.1.tar.gz PG docker image already contains the TDM 7.5.1 DB.**
 
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
@@ -164,7 +164,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 The TDM back-end layer is implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU to enable the TDM GUI invoking the TDM APIs. 
 
-Note that if you already have a TDM 7.0.x project, you need to delete the TDM category from the Web Services before importing the TDM Library's Web Services.
+Note that if you already have a TDM 7.x project, you need to delete the TDM category from the Web Services before importing the TDM Library's Web Services.
 
 Click for more information about the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).  
 
