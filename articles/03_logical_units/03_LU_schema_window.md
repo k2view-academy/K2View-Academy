@@ -309,13 +309,13 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schem_data_viewer.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_table_data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the Table Data Viewer bottom panel. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/navigation.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_navigation_map.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the navigation small panel of the LU schema.</p>
 </td>
