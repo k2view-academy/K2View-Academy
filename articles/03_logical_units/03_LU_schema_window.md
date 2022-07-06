@@ -291,13 +291,13 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/new_table.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_add_new_table.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Add a new table to the schema by either creating one or selecting one from the list.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/auto_layout.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_auto_layout.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Schema auto-layout.</p>
 </td>
