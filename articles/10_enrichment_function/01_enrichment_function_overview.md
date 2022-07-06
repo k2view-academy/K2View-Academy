@@ -46,7 +46,7 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 - Masking sensitive data in LU tables.
 
 <br>
-**<u>Please note</u>:** While enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
+**Please note:** While enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
 
 <studio>
 
