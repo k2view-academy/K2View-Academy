@@ -273,13 +273,13 @@ The LU Schema toolbar includes the following elements:
 
 <tr>
 
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_refresh.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_refresh_icon.png" alt="" /></td>
 <td width="630pxl">
 <p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/group.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_group.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Group the selected tables.</p>
 </td>
