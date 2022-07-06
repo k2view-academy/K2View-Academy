@@ -213,6 +213,15 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 
 <table>
 <tbody>
+
+<tr>
+<td width="60">![image](images/web/magnifier.png);</td>
+<td width="557">
+<p>Magnifier - click it to activate,
+then move it anywhere over the schema diagram in order to magnify existing features.</p>
+</td>
+</tr>
+
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
