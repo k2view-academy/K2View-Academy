@@ -217,7 +217,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <tr>
 <td width="60">![image](images/web/magnifier.png);</td>
 <td width="557">
-<p>Magnifier - click it to activate, then move it anywhere over the schema diagram in order to magnify existing features.</p>
+<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
 </td>
 </tr>
 
