@@ -12,7 +12,6 @@ Note the following about **Enrichment functions**:
 
 - One or more Enrichment function can be attached to an LU table using the [Enrichment Functions](/articles/06_LU_tables/04_table_properties.md#enrichment-functions) field in the LU table’s Properties tab.
 
-  
 
 <studio>
 
@@ -45,6 +44,14 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 - Populating an LU table based on the calculated data from other LU tables. For example, calculating the total amount of a customer's payments and updating the value in the CUSTOMER LU table.
 - Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, Fabric should notify another system about the customer’s status. 
 - Masking sensitive data in LU tables.
+
+
+
+<web>
+
+**Please note:** while enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
+
+</web>
 
 <studio>
 
