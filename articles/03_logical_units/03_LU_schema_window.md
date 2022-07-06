@@ -34,7 +34,11 @@ In order to open the **Logical Unit Schema** window, go to the **Project Tree**,
 
 <web>
 
-![image](images/web/3_lu_schema_window.PNG)
+![image](images/web/03_lu_schema_window_H.png)
+
+
+
+
 
 </web>
 
