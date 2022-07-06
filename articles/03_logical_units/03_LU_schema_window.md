@@ -215,13 +215,6 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <tbody>
 
 <tr>
-<td width="60">![image](images/web/magnifier.png);</td>
-<td width="557">
-<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
-</td>
-</tr>
-
-<tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
 <p>Group SubGraph.</p>
@@ -266,11 +259,20 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 
 The LU Schema toolbar includes the following elements:
 
-![image](images/web/3_lu_schema_toolbar.png)
+![image](images/web/schema_toolbar.png)
 
 <table style="width: 900px;">
 <tbody>
+
 <tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.png" alt="" /></td>
+<td width="630pxl">
+<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
+</td>
+</tr>
+
+<tr>
+
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_refresh.png" alt="" /></td>
 <td width="630pxl">
 <p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
