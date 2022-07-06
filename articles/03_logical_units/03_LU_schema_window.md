@@ -285,7 +285,7 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.PNG" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_ungroup.PNG" /></td>
 <td width="630pxl">
 <p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
 </td>
@@ -293,7 +293,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/new_table.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Add new table to the schema by either creating one or selecting one from the list.</p>
+<p>Add a new table to the schema by either creating one or selecting one from the list.</p>
 </td>
 </tr>
 <tr>
