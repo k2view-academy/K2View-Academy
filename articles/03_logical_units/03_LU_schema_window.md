@@ -50,7 +50,7 @@ The Logical Unit Schema window has three main sections:
 ### Logical Unit Schema Diagram
 The Logical Unit schema diagram is a working area where you can define the Logical Unit’s structure. 
 * A Logical Unit schema diagram displays a hierarchy of all business entities related to a Root Table. 
-* Each table can have one or more populations, where each population is linked to its parent table.
+* Each table can have one or more population/s, where each population is linked to its parent table.
 
 [Click for more information about Logical Unit Tables.](/articles/06_LU_tables/01_LU_tables_overview.md)
 
@@ -156,7 +156,7 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 
 ### Logical Unit Properties Panel
 
-The properties panel displays the schema properties. It can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the right upper corner of the schema window.
+The properties panel displays the schema properties. It can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper right corner of the schema window.
 
 <table style="width: 900px;">
 <tbody>
@@ -183,14 +183,6 @@ The properties panel displays the schema properties. It can be collapsed or expa
 </td>
 <td style="width: 414px;">
 <p>Used to configure the Reference Tables that are accessible from this LU.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 119px;">
-<p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order List</strong></a></p>
-</td>
-<td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Enrichment functions that are directly related to specific LU tables are included in the display.</p>
 </td>
 </tr>
 </tbody>
