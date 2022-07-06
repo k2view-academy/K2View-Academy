@@ -321,9 +321,9 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/zoom.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_zoom_in_out.PNG" alt="" /></td>
 <td width="630pxl">
-<p>Zoom in / zoom out.</p>
+<p>Zoom in/zoom out.</p>
 </td>
 </tr>
 <tr>
