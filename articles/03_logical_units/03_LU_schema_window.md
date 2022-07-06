@@ -7,7 +7,7 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 * [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema).
 * Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md).
 * Resources, files that can be saved as part of a project. E.g., an Excel file.
-* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
+* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md). 
 * [Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
 <studio>    
