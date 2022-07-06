@@ -66,7 +66,7 @@ The Logical Unit schema diagram is a working area where you can define the Logic
 
 <web>
 
-![image](images/web/1_web_lu_overview.PNG)
+![image](images/web/crm1.PNG)
 
 </web>
 
