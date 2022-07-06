@@ -50,7 +50,7 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 
 
 
-**Please note:** While enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
+**<u>Please note</u>:** While enrichment functions usage is very beneficial, we recommend using the population flows instead, for better control and visibility.
 
 </web>
 
