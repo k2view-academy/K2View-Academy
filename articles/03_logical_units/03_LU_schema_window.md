@@ -303,13 +303,13 @@ The LU Schema toolbar includes the following elements:
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/data_viewer.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the Data Viewer popup in order to run queries on IID of the current LU.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/table_data_viewer.PNG" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schem_data_viewer.PNG" alt="" /></td>
 <td width="630pxl">
 <p>Open the Table Data Viewer bottom panel. The data will be displayed according to the selected table.</p>
 </td>
