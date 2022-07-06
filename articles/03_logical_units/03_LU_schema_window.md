@@ -260,59 +260,59 @@ The LU Schema toolbar includes the following elements:
 
 <tr>
 
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_refresh_icon.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/refresh.png" alt="" /></td>
 <td width="630pxl">
 <p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
 </td>
 </tr>
 
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_magnifier_black.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.svg" alt="" /></td>
 <td width="630pxl">
 <p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
 </td>
 </tr>
 
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_ungroup.png" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.svg" /></td>
 <td width="630pxl">
 <p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
 </td>
 </tr>
 
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_group.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/group.svg" alt="" /></td>
 <td width="630pxl">
 <p>Group the selected tables.</p>
 </td>
 </tr>
 
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_add_new_table.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/new-table.svg" alt="" /></td>
 <td width="630pxl">
 <p>Add a new table to the schema by either creating one or selecting one from the list.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_auto_layout.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/auto-layout.svg" alt="" /></td>
 <td width="630pxl">
 <p>Schema auto-layout.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/view-data-off.svg" alt="" /></td>
 <td width="630pxl">
 <p>Open the Data Viewer popup in order to run queries on IID of the current LU.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_table_data_viewer.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/data-viewer.svg" alt="" /></td>
 <td width="630pxl">
 <p>Open the Table Data Viewer bottom panel. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_navigation_map.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/mini-map-off.svg" alt="" /></td>
 <td width="630pxl">
 <p>Open the navigation small panel of the LU schema.</p>
 </td>
