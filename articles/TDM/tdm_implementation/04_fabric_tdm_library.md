@@ -6,7 +6,7 @@ The TDM Library has all the utilities required to implement a TDM project and to
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
 
-The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5_LIBRARY.k2export) .
+The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5.1_LIBRARY.k2export) .
 
 ## TDM Library - Shared Objects
 
@@ -20,6 +20,7 @@ Since the TDM categories contain the product's Web Services, it is recommended t
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
 -  **DB_CASSANDRA**: This is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
+-  **CASSANDRA_LD**: a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
 -  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. Note that if you work on a PostgreSQL with SSL connection, you must edit the custom connection string of the TDM interface as follows:
     - jdbc:postgresql://[ip address]:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=[full path of the .crt file]
     - Example:
@@ -110,7 +111,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p><h5>trnRefList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of available reference tables for <strong>extract tasks</strong>.</p>
+<p>Define the list of available reference tables for <strong>TDM tasks</strong>.</p>
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Reference implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
