@@ -275,9 +275,16 @@ The LU Schema toolbar includes the following elements:
 </tr>
 
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.png" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_magnifier_black.png" alt="" /></td>
 <td width="630pxl">
 <p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
+</td>
+</tr>
+
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_ungroup.PNG" /></td>
+<td width="630pxl">
+<p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
 </td>
 </tr>
 
@@ -287,12 +294,7 @@ The LU Schema toolbar includes the following elements:
 <p>Group the selected tables.</p>
 </td>
 </tr>
-<tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/schema_ungroup.PNG" /></td>
-<td width="630pxl">
-<p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
-</td>
-</tr>
+
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_add_new_table.PNG" alt="" /></td>
 <td width="630pxl">
