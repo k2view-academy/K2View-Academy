@@ -4,19 +4,19 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 
 ### Sync Mode = ON
 
-<table>
+<table style="width: 600px;">
 <tbody>
 <tr>
-<td style="width: 200px;">
+<td style="width: 150px;">
 <p><strong>Sync Method</strong></p>
 </td>
-<td style="width: 200px; text-align: center;">
+<td style="width: 150px; text-align: center;">
 <p><strong>None</strong></p>
 </td>
-<td style="width: 200px; text-align: center;" colspan="2">
+<td style="width: 150px; text-align: center;" colspan="2">
 <p><strong>Decision</strong></p>
 </td>
-<td style="width: 200px; text-align: center;" colspan="2">
+<td style="width: 150px; text-align: center;" colspan="2">
 <p><strong>Time Interval</strong></p>
 </td>
 </tr>
@@ -77,19 +77,19 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 
 ### Sync Mode = FORCE
 
-<table>
+<table style="width: 600px;">
 <tbody>
 <tr>
-<td style="width: 200px;">
+<td style="width: 150px;">
 <p><strong>Sync Method</strong></p>
 </td>
-<td style="width: 200px; text-align: center;">
+<td style="width: 150px; text-align: center;">
 <p><strong>None</strong></p>
 </td>
-<td style="width: 200px; text-align: center;" colspan="2">
+<td style="width: 150px; text-align: center;" colspan="2">
 <p><strong>Decision</strong></p>
 </td>
-<td style="width: 200px; text-align: center;"  colspan="2">
+<td style="width: 150px; text-align: center;"  colspan="2">
 <p><strong>Time Interval</strong></p>
 </td>
 </tr>
