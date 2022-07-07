@@ -32,6 +32,8 @@ The masking actor uses the Fabric hashing utility to hash the original value, ge
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway actors.
 
+Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about Fabric hashing mechanism.
+
 #### Customized Masking Logic 
 
 K2view enables users to create their own masking functions:
