@@ -1,6 +1,6 @@
 # Sync of a Logical Unit Instance - Overview
 
-The Sync mechanism synchronizes data between data sources and the Fabric database. During a sync, extraction and transformation processes are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) whereby data is retrieved from the source systems and then loaded into the Fabric database. 
+The Sync mechanism synchronizes data between data sources and the Fabric database. During the sync, extraction and transformation processes are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) whereby data is retrieved from the source systems and then loaded into the Fabric database. 
 
 **A sync on an LUI can be initiated in two modes**:
 * Proactive sync , synchronizing LUI proactively by interacting with a CDC tool that feeds Fabric with data changes from source systems. This solution is based on an initial load process that sets a baseline for the data in Fabric before the feeds are received from the CDC tool. 
