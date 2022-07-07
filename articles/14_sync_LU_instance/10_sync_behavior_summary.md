@@ -2,125 +2,154 @@
 
 A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
 
-<table width="106%">
+### Sync Mode = ON
+
+<table style="width: 800px;">
 <tbody>
 <tr>
-<td width="20%">
-<p><strong>Sync Mode</strong></p>
-</td>
-<td colspan="5" width="35%">
-<p><strong>On</strong></p>
-</td>
-<td colspan="5" width="44%">
-<p><strong>Force</strong></p>
-</td>
-</tr>
-<tr>
-<td width="20%">
+<td style="width: 200px;">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="7%">
+<td style="width: 200px; text-align: center;">
 <p><strong>None</strong></p>
 </td>
-<td colspan="2" width="12%">
+<td style="width: 200px; text-align: center;" colspan="2">
 <p><strong>Decision</strong></p>
 </td>
-<td colspan="2" width="15%">
-<p><strong>Time Interval</strong></p>
-</td>
-<td width="7%">
-<p><strong>None</strong></p>
-</td>
-<td colspan="2" width="13%">
-<p><strong>Decision</strong></p>
-</td>
-<td colspan="2" width="22%">
+<td style="width: 200px; text-align: center;" colspan="2">
 <p><strong>Time Interval</strong></p>
 </td>
 </tr>
 <tr>
-<td width="20%">
+<td >
 <p><strong>Result</strong></p>
 </td>
-<td width="7%">
+<td style="text-align: center;">
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="5%">
+<td style="text-align: center;">
 <p><strong>True</strong></p>
 </td>
-<td width="6%">
+<td style="text-align: center;">
 <p><strong>False</strong></p>
 </td>
-<td width="6%">
+<td style="text-align: center;">
 <p><strong>Pass</strong></p>
 </td>
-<td width="9%">
-<p><strong>Not Pass</strong></p>
-</td>
-<td width="7%">
-<p><strong>&nbsp;</strong></p>
-</td>
-<td width="6%">
-<p><strong>True</strong></p>
-</td>
-<td width="7%">
-<p><strong>False</strong></p>
-</td>
-<td width="8%">
-<p><strong>Pass</strong></p>
-</td>
-<td width="13%">
+<td style="text-align: center;">
 <p><strong>Not Pass</strong></p>
 </td>
 </tr>
 <tr>
-<td width="20%">
+<td >
 <p>First Sync</p>
 </td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 71px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 67px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
 </tr>
 <tr>
-<td width="20%">
+<td >
 <p>Schema Change</p>
 </td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 71px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 67px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
 </tr>
 <tr>
-<td width="20%">
+<td style="width: 150px;">
 <p>Normal Operation</p>
 </td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 71px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 67px;" align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td style="width: 64px;" align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
 </tr>
 </tbody>
 </table>
 
-Note that when the Sync mode = OFF Fabric does not perform a sync. 
+
+
+### Sync Mode = FORCE
+
+<table style="width: 800px;">
+<tbody>
+<tr>
+<td style="width: 200px;">
+<p><strong>Sync Method</strong></p>
+</td>
+<td style="width: 200px; text-align: center;">
+<p><strong>None</strong></p>
+</td>
+<td style="width: 200px; text-align: center;" colspan="2">
+<p><strong>Decision</strong></p>
+</td>
+<td style="width: 200px; text-align: center;"  colspan="2">
+<p><strong>Time Interval</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Result</strong></p>
+</td>
+<td style="text-align: center;">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td style="text-align: center;">
+<p><strong>True</strong></p>
+</td>
+<td style="text-align: center;">
+<p><strong>False</strong></p>
+</td>
+<td style="text-align: center;">
+<p><strong>Pass</strong></p>
+</td>
+<td style="text-align: center;">
+<p><strong>Not Pass</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>First Sync</p>
+</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+</tr>
+<tr>
+<td>
+<p>Schema Change</p>
+</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+</tr>
+<tr>
+<td>
+<p>Normal Operation</p>
+</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26" /></td>
+</tr>
+</tbody>
+</table>
+
+
+
+When the Sync mode = OFF, Fabric does not perform a sync. 
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/09_skip_sync.md)
