@@ -4,7 +4,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 
 ### Sync Mode = ON
 
-<table style="width: 800px;">
+<table>
 <tbody>
 <tr>
 <td style="width: 200px;">
@@ -77,7 +77,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 
 ### Sync Mode = FORCE
 
-<table style="width: 800px;">
+<table>
 <tbody>
 <tr>
 <td style="width: 200px;">
