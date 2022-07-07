@@ -5,6 +5,7 @@ By default, a sync transaction is not limited by time. However, you can limit th
 If a timeout is set and the sync exceeds the predefined timeout, Fabric rollbacks the changes and throws the following exception: *Timeout occurred*.
 
 A sync timeout can be defined either per session or at an LU schema level.
+
 <img src="images/6_7_sync_timeout_levels.png" alt="image" style="zoom:80%;" />
 
 ### How Do I Set the Sync Timeout on an LU Schema?
