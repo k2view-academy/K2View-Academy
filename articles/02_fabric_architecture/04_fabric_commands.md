@@ -387,8 +387,8 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md).
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
-  - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync)
-
+  - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
+  
 - Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 - **SET OUTPUT** command, set the output format of the query's results. 
@@ -400,14 +400,23 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 - **SET FROM** command, update several settings in one compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
 
   - Scope, holds one or more set commands like "sync" or "environment".
-  - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
-  Examples 
-
-  * set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
-  * set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
-  * set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
   
-- **SET USER_ROLES** command, returns the list of roles of the connected user (valid since Fabric 6.4.2).
+  - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
+
+  - Examples:
+  
+    ~~~
+    fabric>set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
+    (1 row affected)
+    
+    fabric>set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
+    (1 row affected)
+    
+    fabric>set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
+    (1 row affected)
+    ~~~
+  
+- **SET USER_ROLES** command, returns the list of roles of the connected user.
 
 - **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
 
@@ -449,26 +458,14 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
-
 * **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+  * Syntax: set db_proxy=[interface name].
+  * Description: Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
 
-  * Syntax
+  * If interface name is not specified, the command will show the current interface name.
 
-    * set db_proxy=[<interface name>]
-
-  * Description
-
-    * Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
-
-  * Notes
-
-    * If interface name is not specified, the command will show the current interface name.
-
-    * To turn it off use: set db_proxy=off.
-
-    * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
-
-      
+  * To turn it off use: set db_proxy=off.
+  * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
 
 #### Fabric Setting via JDBC Connection URL
 
@@ -494,9 +491,7 @@ The values are kept in the Cassandra **global_settings** table under [k2system k
 
 #### Fabric Security Commands
 
-- Master key generation commands used to encrypt LUI data and to encrypt an [interface’s](/articles/05_DB_interfaces/01_interfaces_overview.md) details.\
-  Click to open the Fabric [Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) articles and to read more about Fabric Security Hardening.
-
+- Master key generation commands used to encrypt LUI data and to encrypt an [interface’s](/articles/05_DB_interfaces/01_interfaces_overview.md) details. Click to open the Fabric [Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) articles and to read more about Fabric Security Hardening.
 - Fabric [Credentials Commands](/articles/17_fabric_credentials/01_fabric_credentials_overview.md), a list of commands for setting Fabric credentials like, users, roles, tokens or permissions.
 
 ###  Deploy and Drop Commands

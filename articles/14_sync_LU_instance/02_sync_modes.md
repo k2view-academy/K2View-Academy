@@ -1,21 +1,21 @@
 # Sync Modes
 
 ## Set Sync Command 
-The Fabric **Set Sync** command is used to define the synchronization mode of an instance from source systems. The default value is On.
+The Fabric **SET SYNC** command is used to define the synchronization mode of an instance from source systems. The default value is On.
 
-SYNTAX: SET SYNC [SYNC MODE];
+* Syntax: SET SYNC [SYNC MODE];
 
 ## Sync Modes
-<table style="width: 560px;">
+<table style="width: 600px;">
 <tbody>
 <tr>
-<td style="width: 76px;">
+<td style="width: 90px;">
 <p><strong>Sync Mode</strong></p>
 </td>
-<td style="width: 146px;">
+<td style="width: 160px;">
 <p><strong>Description</strong></p>
 </td>
-<td style="width: 316px;">
+<td style="width: 350px;">
 <p><strong>When is an Instance Synced?</strong></p>
 </td>
 </tr>
@@ -42,11 +42,8 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>Don't sync.</p>
 </td>
 <td style="width: 316px;">
-<ul>
-<li>Synchronization is not performed, however if the LU instance already exists in Fabric, it will bring the existing LU instance data based on the most updated LU Schema definition.</li>
-<li>If the LU instance does not yet exist in Fabric, &nbsp;the following warning message is displayed:</li>
-     Instance '&lt;LU Name&gt;:&lt;Instance ID&gt;' was not found and Sync is disabled.
-</ul>
+<p>Synchronization is not performed, however if the LU instance already exists in Fabric, it will bring the existing LU instance data based on the most updated LU Schema definition.</p>
+<p>If the LU instance does not yet exist in Fabric, &nbsp;the following warning message is displayed:<i>Instance '&lt;LU Name&gt;:&lt;Instance ID&gt;' was not found and Sync is disabled.</i></p>
 </td>
 </tr>
 <tr>
@@ -74,6 +71,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </tr>
 </tbody>
 </table>
+
 
 Note that the sync returns an error message when a source is not available. To change this, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
@@ -132,7 +130,9 @@ This checkbox defines the Sync mode of the first GET of each LU instance (LUI) a
 ## Get Sync Mode
 The Fabric UserCode class holds the method that returns the Sync mode set for the current session: 
 
+~~~java
 public static String getSyncMode();
+~~~
 
 This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the Sync Mode is Force, then return True to sync the instance. Else, do not sync the instance.
@@ -140,10 +140,17 @@ If the Sync Mode is Force, then return True to sync the instance. Else, do not s
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**.
 
 ## Always Sync
-- The Always Sync mode enables synchronizing the attached LUI when running select queries on the LUI. The sync of the LUI is executed before the execution of the select queries.
-- To define an Always Sync mode either:
-   - Set the ALWAYS_SYNC parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file to True. The default value is False.
-   - Run the **SET ALWAYS_SYNC=TRUE** [Fabric command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) to override the **Always Sync** mode and set it to true on the session level. 
+The Always Sync mode enables synchronizing the attached LUI when running SELECT queries on the LUI. The sync of the LUI is executed before the execution of the SELECT queries. 
+
+* Syntax: set always_sync=[true/false];
+
+To define an Always Sync mode either:
+- Set the ALWAYS_SYNC parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file to True. The default value is False. 
+- Run the **SET ALWAYS_SYNC=TRUE** command to set it to True on the session level. 
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/01_sync_LUI_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)
 

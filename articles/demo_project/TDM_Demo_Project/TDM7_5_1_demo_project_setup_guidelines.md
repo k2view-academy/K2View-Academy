@@ -1,8 +1,8 @@
-# TDM 7.4 Demo Project - Setup and Implementation Guidelines
+# TDM 7.5.1 Demo Project - Setup and Implementation Guidelines
 
 ## Databases Setup
 
-The TDM demo project is aligned with TDM V7.4 and is based on PostgreSQL databases:
+The TDM demo project is aligned with TDM V7.5.1 and is based on PostgreSQL databases:
 
 <table>
 <tr>
