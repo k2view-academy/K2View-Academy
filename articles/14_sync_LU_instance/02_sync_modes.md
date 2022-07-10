@@ -171,13 +171,13 @@ To define a Sync On Demand mode either:
 
 <studio>
 
-<img src="images/sync_on_demand_ex1.PNG" style="zoom:80%;" />
+<img src="images/sync_on_demand_ex1.png" style="zoom:80%;" />
 
 </studio>
 
 <web>
 
-<img src="images/sync_on_demand_ex2.PNG" style="zoom:80%;" />
+<img src="images/sync_on_demand_ex2.png" style="zoom:80%;" />
 
 </web>
 
