@@ -20,7 +20,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
 <web>
 
-1. Go to **Project Tree** > right click **Logical Units / Data Products** > **New Data Product**. 
+1. Go to **Project Tree** > right-click **Logical Units / Data Products** > **New Data Product**. 
 
 2. Populate the **Name** of the new **Logical Unit** and click **Enter**.
 
@@ -30,10 +30,21 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
    * Click on the relevant interface data source, select the required tables, one or more, and add them to the schema using a right-click. You can choose either:
 
-     * "Add Tables to Schema", where each table is added to the schema independently.
-     * "Add Tables to Schema with Relations", where links between the added tables are also drawn, based on data source foreign key definitions (if such were found).
+     * "Add Tables To Schema" - where each table is added to the schema independently.
 
-     ![add table to schema](images/web/5_create_lu_schema.PNG)
+     * "Add Tables To Schema with Relations" - where links between the added tables are also drawn, based on data source foreign key definitions (if such were found).
+
+       ![add table to schema](images/web/5_create_lu_schema.PNG)
+
+     * "Add Tables to Schema with Descendants" - where **a** selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. In this table choice, the chosen table has linked children, grandchildren, etc. (i.e. descendants). Choosing it to be added to the schema, it is asked for all its descendants to be brough along and be displayed in the schema as well.
+
+       This option is valid if:
+
+       - Schema is completely empty
+       - Root table is defined in the system
+       - IID is defined in the system
+
+     ​
 
 
      >**Tip:** You can recognize tables that are connected to others according to the icon located on their left-hand-side in the DB Interface Explorer tree. In the below example, you can see that the icon next to ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />), which hints at a connection/s to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
