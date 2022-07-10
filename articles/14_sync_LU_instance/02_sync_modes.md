@@ -3,7 +3,9 @@
 ## Set Sync Command 
 The Fabric **SET SYNC** command is used to define the synchronization mode of an instance from source systems. The default value is On.
 
-* Syntax: SET SYNC [SYNC MODE];
+Syntax: 
+
+* SET SYNC [SYNC MODE];
 
 ## Sync Modes
 <table style="width: 600px;">
@@ -134,20 +136,68 @@ The Fabric UserCode class holds the method that returns the Sync mode set for th
 public static String getSyncMode();
 ~~~
 
-This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
-If the Sync Mode is Force, then return True to sync the instance. Else, do not sync the instance.
+This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). 
+
+For example, if the Sync Mode is Force, then return True to sync the instance. Else, do not sync the instance.
 
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**.
 
 ## Always Sync
-The Always Sync mode enables synchronizing the attached LUI when running SELECT queries on the LUI. The sync of the LUI is executed before the execution of the SELECT queries. 
+Starting from Fabric 7.0, this feature is replaced by **SET SYNC_ON_DEMAND = ALWAYS**.
 
-* Syntax: set always_sync=[true/false];
+## Sync On Demand
 
-To define an Always Sync mode either:
-- Set the ALWAYS_SYNC parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file to True. The default value is False. 
-- Run the **SET ALWAYS_SYNC=TRUE** command to set it to True on the session level. 
+The purpose of a Sync On Demand mode is to reduce the time spent by Fabric doing the LUI sync by synchronizing the relevant data only. In this mode, the sync is only performed on the tables which are part of the executed SELECT statement and only if the sync conditions occur.
 
+The logic of the Sync On Demand (either set to true or always) is as follows:
+
+* The GET command doesn't trigger the instance synchronization, but only attaches it to the scope.
+* Then, on SELECT statement, the evaluation is performed whether or not to perform a sync. The evaluation is done only for the LU tables in the SELECT statement or their parent tables up to the Root table. The synchronization logic follows the standard Sync mechanism rules which are based on a LU predefined [sync method](/articles/14_sync_LU_instance/04_sync_methods.md) and [sync mode](/articles/14_sync_LU_instance/02_sync_modes#sync-modes.md).
+* When Sync On Demand is set to true, every table can be synchronized only once per each GET, even if the source table was changed.
+* When Sync On Demand is set to always, every table can be synchronized on each SELECT, assuming the  sync conditions occur.
+
+Sync On Demand is also supported when AUTO_MDB_SCOPE is set to true (the "No Get" mode).
+
+Syntax: 
+
+* SET SYNC_ON_DEMAND = [TRUE/FALSE/ALWAYS];
+
+To define a Sync On Demand mode either:
+
+- Set the SYNC_ON_DEMAND parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file to True. The default value is False. 
+- Run the **SET SYNC_ON_DEMAND=TRUE** command to set it to True on the session level. 
+
+#### Sync On Demand Examples
+
+<studio>
+
+<img src="images/sync_on_demand_ex1.PNG" style="zoom:80%;" />
+
+</studio>
+
+<web>
+
+<img src="images/sync_on_demand_ex2.PNG" style="zoom:80%;" />
+
+</web>
+
+**Example 1: Sync On Demand = TRUE**
+
+* Perform GET LUI.
+* Select from the CASES LU table. As a result: 
+  * Fabric checks if sync should be performed (based on sync mode and synch method). If yes, the SELECT statement triggers a sync of the selected table and its parent tables according to the LU Schema. 
+  * For the given schema, the select from the CASES LU table will trigger the sync of CUSTOMER, ACTIVITY and CASES LU tables.
+* Select from the CASE_NOTE LU table. As a result: 
+  * The CUSTOMER, ACTIVITY and CASES LU tables are not synchronized since they were already synchronized once for this GET command. Only the CASE_NOTE LU table is synchronized.
+
+**Example 2: Sync On Demand = ALWAYS**
+
+* Perform GET LUI.
+* Select from the CASES LU table. As a result: 
+  * Fabric checks if sync should be performed (based on sync mode and synch method). If yes, the CUSTOMER, ACTIVITY and CASES LU tables are synchronized.
+
+* Select from the CASE_NOTE LU table. As a result: 
+  * Fabric checks if sync should be performed (based on sync mode and synch method). If yes, the CUSTOMER, ACTIVITY, CASES and CASE_NOTE LU tables are synchronized.
 
 
 
