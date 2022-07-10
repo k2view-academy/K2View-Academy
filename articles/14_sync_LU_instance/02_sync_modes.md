@@ -153,8 +153,8 @@ The logic of the Sync On Demand is as follows:
 
 * The GET command doesn't trigger the instance synchronization, but only attaches it to the scope.
 * Then, on SELECT statement, the evaluation is performed whether or not to perform a sync. The evaluation is done only for the LU tables in the SELECT statement or their parent tables up to the Root table. The synchronization logic follows the standard Sync mechanism rules which are based on a LU predefined [sync method](/articles/14_sync_LU_instance/04_sync_methods.md) and [sync mode](/articles/14_sync_LU_instance/02_sync_modes#sync-modes.md).
-* When Sync On Demand is set to true, every table can be synchronized only once per each GET, even if the source table was changed.
-* When Sync On Demand is set to always, every table can be synchronized on each SELECT, assuming the  sync conditions occur.
+* When Sync On Demand is set to **true**, every table can be synchronized only once per each GET, even if the source table was changed.
+* When Sync On Demand is set to **always**, every table can be synchronized on each SELECT, assuming the  sync conditions occur.
 
 Sync On Demand is also supported when AUTO_MDB_SCOPE is set to true (the "No Get" mode).
 
