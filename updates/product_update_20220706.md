@@ -10,4 +10,4 @@ We have just released TDM 7.5.1, which includes the following enhancements:
 
 See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/TDM-V7.5.1/TDM_Release_Notes_V7.5.1.pdf.html) for the full list.
 
-<img src="images/img6.png" alt="image" style="zoom: 67%;" />
+<img src="images/img10.png" alt="image" style="zoom: 67%;" />
