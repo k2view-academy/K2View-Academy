@@ -153,7 +153,7 @@ The logic of the Sync On Demand is as follows:
 
 * Performing the GET command doesn't trigger the instance synchronization, as the synchronization is done in SYNC OFF mode. If the instance doesn't yet exist in Fabric, a full sync is performed. 
 * When executing the SELECT statement on LU tables, the evaluation is performed whether or not a sync is required. The evaluation is done only for the LU tables and their populations in the SELECT statement and for their parents up to the Root table. The synchronization logic follows the standard Sync mechanism rules that are based on a LU predefined [sync method](/articles/14_sync_LU_instance/04_sync_methods.md) and [sync mode](/articles/14_sync_LU_instance/02_sync_modes#sync-modes.md).
-* When executing the SELECT statement on LU [business tables](/articles/06_LU_tables/05_business_tables.md), the evaluation is performed on a business table and its parents (which may or may not lead up to the Root table).
+* When executing the SELECT statement on LU [business tables](/articles/06_LU_tables/05_business_tables.md), the evaluation is performed on a business table and its parents.
 * Sync On Demand can run in 2 different modes as follows:
   * When Sync On Demand is set to **true**, every table can be synchronized only once per each GET, even if several SELECT statements were executed on the source table and it was changed in between.
   * When Sync On Demand is set to **always**, every table can be synchronized on each SELECT, assuming the sync conditions are met.
