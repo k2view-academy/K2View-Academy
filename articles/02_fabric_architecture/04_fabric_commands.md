@@ -362,10 +362,10 @@ The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overv
 Fabric has commands that display a Fabric configuration and its settings. For example:
 
 - Fabric cluster information:
-  - CLUSTERID, returns the cluster identifier defined on the node.id.
-  - CLUSTERSTATUS, returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
-  - TIME, gets the node system time.
-  - VERSION INFO, the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric, use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
+  - **CLUSTERID**, returns the cluster identifier defined on the node.id.
+  - **CLUSTERSTATUS**, returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
+  - **TIME**, gets the node system time.
+  - **VERSION INFO**, the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric, use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
   - **DESCRIBE,** to query Fabric's metadata structure.
@@ -388,8 +388,9 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
   - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
+  - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
   
-- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 

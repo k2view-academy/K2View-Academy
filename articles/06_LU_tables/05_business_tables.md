@@ -1,22 +1,31 @@
 # Business Tables
 
-The ability to create business tables and to store them in the LU schema has been added to Fabric V6.5.4. 
-Business tables are tables that give the user the ability to decide whether a table should have one or more populations and whether these populations should be connected, or not, to other tables in the LU schema.
+Starting from Fabric V6.5.4, Fabric supports business tables. Business tables are stand-alone LU tables that have no connection (direct or via other LU tables) to the LU Root table. They may have one or more populations, or no populations at all. Several business tables can be connected one to another.
 
-Such tables allow the user to compute, transform and store new data inside the LU MicroDBs. 
-Such data could be statistics, LUI-based calculations, or a mix of different functions and populations. 
+Business tables allow the user to compute, transform and store new data inside the LU MicroDB. 
+Such data could be statistics, LUI-based calculations or any other business logic.
 
-In the example below, we can see different examples for such tables:
+The below displays an example for various business tables:
 
-- **Business** table: 1 population, not connected to an LU parent table,
+- **CASES_STAT** business table has one population and no parent tables.
 
-- **Business Child** table: 2 populations with 1 connected to its parent *Business* table, and the other population connected to the LU invoice table.
+- **CASE_CLASSIFICATION** business table has one population and an associated business table - CASES_STAT - as its parent.
 
-- **Business2** table: Unconnected to any other table in the schema and with no population.
+- **LU_STAT** business table has no populations and no parent tables.
+
+<studio>
 
 ![image](images/business_tables.PNG)
 
-It is important to note that considering the flexibility of the populations types introduced with these tables, the appropriate population *execution order* will need to be carefully selected by the user, otherwise the table/field in question will not be filled. 
+</studio>
+
+<web>
+
+![image](images/business_tables_web.png)
+
+</web>
+
+Considering the flexibility of the population types introduced with these tables, the appropriate population [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) would need to be carefully set by the user, otherwise the business tables could not be populated as required. 
 
 
 
