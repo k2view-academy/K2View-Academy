@@ -21,7 +21,7 @@ The below displays an example for various business tables:
 
 <web>
 
-![image](images/business_tables_web.PNG)
+![image](images/business_tables_web.png)
 
 </web>
 
