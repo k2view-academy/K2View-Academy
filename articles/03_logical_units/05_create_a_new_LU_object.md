@@ -28,21 +28,23 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
    * Open the **Schema** of the newly created Logical Unit and switch from the Project tree to the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left panel.
 
-   * Click on the relevant interface data source, select the required tables, one or more, and add them to the schema using a right-click. You can choose either:
+   * Click on the relevant interface data source, select the required tables, one or more, and add them to the schema using a right-click. The options to choose from are either:
 
-     * "Add Tables To Schema" - where each table is added to the schema independently.
+     * "Add Tables To Schema" - where each selected table is added to the schema independently.
 
-     * "Add Tables To Schema with Relations" - where tables upon their links (if any and if defined as FKs in the original data source) are added to the schema to be displayed.
+     * "Add Tables To Schema with Relations" - where selected tables upon their links (if any & if defined as FKs in the original data source) are added to the schema to be displayed; see below image:
 
-       ![images](images/web_add_tables_w_relations2.PNG)
+       ![images](images/web/add_tables_w_relations2.png)
 
-       ![images](images/web/add_tables_w_relations.PNG)
+       ​
+
+       ![image](images/web/add_tables_w_relations.PNG)
 
        ​
 
        ![add table to schema](images/web/5_create_lu_schema.PNG)
 
-     * "Add Tables to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add it the schema, asking for all its descendants to be brought along and be displayed in the schema as well (when right-clicked on the table, 2nd option in the window, below) .
+     * "Add Table to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add such table the schema, asking for all its descendants to be both brought along and  displayed in the schema as well (2nd option in the window, below) .
 
        If a selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. 
 
