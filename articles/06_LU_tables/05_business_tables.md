@@ -13,8 +13,17 @@ The below displays an example for various business tables:
 
 - **LU_STAT** business table has no populations and no parent tables.
 
+<studio>
 
 ![image](images/business_tables.PNG)
+
+</studio>
+
+<web>
+
+![image](images/business_tables_web.PNG)
+
+</web>
 
 Considering the flexibility of the population types introduced with these tables, the appropriate population [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) would need to be carefully set by the user, otherwise the business tables could not be populated as required. 
 
