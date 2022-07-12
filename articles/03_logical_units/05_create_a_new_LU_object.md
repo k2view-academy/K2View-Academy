@@ -44,13 +44,15 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
        ![add table to schema](images/web/5_create_lu_schema.PNG)
 
-     * "Add Table to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add such table the schema, asking for all its descendants to be both brought along and  displayed in the schema as well (2nd option in the below image).
+     * "Add Table to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add such table the schema, asking for all its descendants to be both brought along and  displayed in the schema as well (2nd option in the window in the below image).
 
        If a selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. 
 
        This option is valid if: (a) Schema is completely empty (b) Root table is defined in the system (c) IID is defined in the system.
 
-          ![images](images/web/add_table_w_descendants2.png)
+       ![images](images/web/add_table_w_descendants3.png)
+
+          
 
 
 
