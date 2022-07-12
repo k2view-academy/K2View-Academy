@@ -36,15 +36,17 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
        ![add table to schema](images/web/5_create_lu_schema.PNG)
 
-     * "Add Tables to Schema with Descendants" - where **a** selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. In this table choice, the chosen table has linked children, grandchildren, etc. (i.e. descendants). Choosing it to be added to the schema, it is asked for all its descendants to be brough along and be displayed in the schema as well.
+     * "Add Tables to Schema with Descendants" - when the original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants), you may choose it to be
+       added to the schema, and ask for all its descendants to be brought along and be displayed in the schema as well (when right-clicked on the table, 2nd option in the window, below) .
 
-       This option is valid if:
+       If a selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. 
 
-       - Schema is completely empty
-       - Root table is defined in the system
-       - IID is defined in the system
+       This option is valid if: (a) Schema is completely empty (b) Root table is defined in the system (c) IID is defined in the system.
 
-     ​
+       ​
+
+
+   ![image](images/web/add_table_w_descendants.png)
 
 
      >**Tip:** You can recognize tables that are connected to others according to the icon located on their left-hand-side in the DB Interface Explorer tree. In the below example, you can see that the icon next to ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />), which hints at a connection/s to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
