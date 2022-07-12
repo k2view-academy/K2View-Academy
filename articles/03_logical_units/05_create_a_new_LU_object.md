@@ -32,12 +32,17 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
      * "Add Tables To Schema" - where each table is added to the schema independently.
 
-     * "Add Tables To Schema with Relations" - where links between the added tables are also drawn, based on data source foreign key definitions (if such were found).
+     * "Add Tables To Schema with Relations" - where tables upon their links (if any and if defined as FKs in the original data source) are added to the schema to be displayed.
+
+       ![images](images/web_add_tables_w_relations2.PNG)
+
+       ![images](images/web/add_tables_w_relations.PNG)
+
+       ​
 
        ![add table to schema](images/web/5_create_lu_schema.PNG)
 
-     * "Add Tables to Schema with Descendants" - when the original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants), you may choose it to be
-       added to the schema, and ask for all its descendants to be brought along and be displayed in the schema as well (when right-clicked on the table, 2nd option in the window, below) .
+     * "Add Tables to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add it the schema, asking for all its descendants to be brought along and be displayed in the schema as well (when right-clicked on the table, 2nd option in the window, below) .
 
        If a selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. 
 
