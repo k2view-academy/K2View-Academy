@@ -34,7 +34,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
      * "Add Tables To Schema with Relations" - where selected tables upon their links (if any & if defined as FKs in the original data source) are added to the schema to be displayed; see below image:
 
-       ![images](images/web/add_tables_w_relations2.png)
+       ![images](images/web/add_tables_w_relations2.PNG)
 
        ​
 
@@ -44,16 +44,14 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
        ![add table to schema](images/web/5_create_lu_schema.PNG)
 
-     * "Add Table to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add such table the schema, asking for all its descendants to be both brought along and  displayed in the schema as well (2nd option in the window, below) .
+     * "Add Table to Schema with Descendants" - The original source contains a table, which, knowingly, has linked children, grandchildren, etc. (i.e. descendants). The user may choose to add such table the schema, asking for all its descendants to be both brought along and  displayed in the schema as well (2nd option in the below image).
 
        If a selected table has a PK, which has only field 1, adding it to an empty schema turns it into the root table. Additionally, the field - defined in the data source as primary key - is turned into the IID. 
 
        This option is valid if: (a) Schema is completely empty (b) Root table is defined in the system (c) IID is defined in the system.
 
-       ​
+          ![images](images/web/add_table_w_descendants2.png)
 
-
-   ![image](images/web/add_table_w_descendants.png)
 
 
      >**Tip:** You can recognize tables that are connected to others according to the icon located on their left-hand-side in the DB Interface Explorer tree. In the below example, you can see that the icon next to ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />), which hints at a connection/s to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
