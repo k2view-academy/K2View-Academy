@@ -34,9 +34,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
      * "Add Tables to Schema with Relations" - where selected tables upon their links (if relations were defined in the original data source as FKs) are added to the schema to be displayed; see below image:
 
-       ![images](images/web/add_tables_w_relations3.png)
-
-       ​
+       ![images](images/web/add_tables_w_relations3.png)​
 
      * "Add Table to Schema with Descendants" - where the selected table, linked to children, grandchildren, etc. (i.e. descendants) is chosen to be added to the schema, and is asked for all its descendants to be brought along as well (2nd option in the window in the below image).
 
