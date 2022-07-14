@@ -40,6 +40,8 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
        If the selected table has a PK, which contains only one field, adding it to an empty schema turns it into the root table. Moreover, the field - defined in the data source as primary key - is turned into the IID. 
 
+       When using this option, you can choose, via the open popup, whether to enable Backwards Discovery. When selected, tables identified as the parent tables of the selected table, are added too into the schema as child tables, along with their descendants.
+
        ![images](images/web/add_table_w_descendants3.png)
 
 
