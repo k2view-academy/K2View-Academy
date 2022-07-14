@@ -1,4 +1,4 @@
-# Create a New Logical Unit (LU) Object
+# Create a New Logical Unit (LU)
 
 A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be added by either:
 
