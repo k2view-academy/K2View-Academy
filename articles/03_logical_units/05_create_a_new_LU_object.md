@@ -40,12 +40,14 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
        If the selected table has a PK, which contains only one field, adding it to an empty schema turns it into the root table. Moreover, the field - defined in the data source as primary key - is turned into the IID. 
 
+       When using this option, you can choose, via an opened popup, if to enable Backwards Discovery. When selected, tables identified as the parent tables of the selected table, are added too into the schema as child tables, along with their descendants
+   
        ![images](images/web/add_table_w_descendants3.png)
 
 
 
 
-     >**Tip:** You can recognize tables that are connected to others according to the icon located on their left-hand-side in the DB Interface Explorer tree. In the below example, you can see that the icon next to ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />), which hints at a connection/s to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
+      >**Tip:** You can recognize tables that are connected to others according to the icon located on their left-hand-side in the DB Interface Explorer tree. In the below example, you can see that the icon next to ACTIVITY table appears with arrows (<img src="images/web/05_table_icon_with_connection.png" style="zoom:50%;" />), which hints at a connection/s to other table/s, whereas the icon next to RECOMMENDATIONS table is lacking the arrows (<img src="images/web/05_table_icon_without_connection.png" style="zoom: 50%;" />). 
      >
      >Moreover, when hovering on such "connected" tables, a tooltip will appear, showing you the connections, with their directions. ![](images/web/05_fk_hint.png)
 
