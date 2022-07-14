@@ -127,7 +127,7 @@ To deploy the Reference Tables, go to the **Project Tree**, right click **Refere
 
 Note:
 
-If the reference table as been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
+If the reference table has been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
 
   
 
