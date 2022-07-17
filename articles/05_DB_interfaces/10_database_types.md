@@ -1,6 +1,6 @@
 
 
-# Database Types / Custom Interface Types
+# Custom Interface Types / Database Types 
 
 ### Overview
 
@@ -8,9 +8,9 @@ Fabric supports creating a new custom interface type based on a JDBC driver's sp
 
 Once saved, the database type appears in the Interface type dropdown list and can be selected when [creating a new Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
 
-### How Do I Create a Database Type?
+### How Do I Create a New Custom Interface Type/Database Type, from the beginning or based on a template ?
 
-To create a new database type, do the following:
+To create a new custom interface type/database type, do the following:
 
 
 <studio>
@@ -29,7 +29,11 @@ To create a new database type, do the following:
 
 <web>
 
-1-6
+1. Go to **Project Tree** > **Implementation** > **Shared Objects** > **Custom Interface Types/Database Types**.
+   - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
+   - Choose/click on **New Custom DB Interface Type** in the opened context menu.
+   - Choose the **Custom type** from the available list, or alternatively, choose **New Custom Type** option. Press **Enter** to confirm or **Escape** to cancel.
+2. Name the **new custom type**. Note that the field is prepopulated with *Type name*, which you should change.
 
 </web>
 
@@ -51,7 +55,7 @@ To create a new database type, do the following:
    * **Name** and a **Value** for parameters to be used as a part of JDBC connection properties.
    * When setting the **Enable Interface Override**, the parameters are displayed under the Connection Properties section of the [Interface window](03_DB_interfaces_overview.md), parameter values can be updated. 
    * When setting the **Connection Property**, the connection properties map is sent to the JDBC driver.
-6. **Save** the database type.
+6. **Save** the customer interface type/database type.
 
 
 
