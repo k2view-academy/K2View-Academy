@@ -1,26 +1,19 @@
-<web>
-   
-# Database Types
-
-This feature is not yet available on Fabric 7. Stay tuned.
-   
-</web>
-   
 
 
-<studio>
-   
-# Database Types
+# Database Types / Custom Interface Types
 
 ### Overview
 
-Fabric supports creating a new database type based on a JDBC driver's specifications or overriding existing database types without the need for product enhancement. 
+Fabric supports creating a new custom interface type based on a JDBC driver's specifications or overriding existing database types without the need for product enhancement. 
 
 Once saved, the database type appears in the Interface type dropdown list and can be selected when [creating a new Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
 
 ### How Do I Create a Database Type?
 
 To create a new database type, do the following:
+
+
+<studio>
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Database Types** and select **New Database Type**.
 
@@ -29,12 +22,22 @@ To create a new database type, do the following:
 2. Populate the **Driver's Settings**: 
 
    * **Name**, a unique Database type name.
+
    * **Class Name**, **URL Template** and **Default Port** (optional). Settings from the JDBC driver.
 
+</studio>
+
+<web>
+
+1-6
+
+</web>
+
+
 3. Optional: Edit the **Pool Properties** and **Fabric Properties** fields. 
-   
+
 * Note that the Pool Properties and Fabric Properties should be modified only by advanced users. During initial setup, use the default values.
-  
+
 4. Optional: Populate the **Studio – Metadata** settings (to be used by Fabric Studio only):
    * **SQL Query for Tables List** and **SQL Query for Column List**, with SQL queries to retrieve the lists of tables and columns from the schema.
    * **SQL Query for FKs List** and **SQL Query for PKs List**, with SQL queries to retrieve the list of foreign keys (FK) and primary keys (PK) of the tables. These keys can be used by the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) when creating a new [Logical Unit](/articles/03_logical_units/01_LU_overview.md). 
@@ -44,11 +47,15 @@ To create a new database type, do the following:
       * Insensitive (default).
       * SensitiveUpperCase.
       * SensitiveLowerCase.
-6. Set **JDBC Connection Properties** as follows:
+5. Set **JDBC Connection Properties** as follows:
    * **Name** and a **Value** for parameters to be used as a part of JDBC connection properties.
    * When setting the **Enable Interface Override**, the parameters are displayed under the Connection Properties section of the [Interface window](03_DB_interfaces_overview.md), parameter values can be updated. 
    * When setting the **Connection Property**, the connection properties map is sent to the JDBC driver.
-7. **Save** the database type.
+6. **Save** the database type.
+
+
+
+
 
 #### Example of JDBC Connection Properties Definition
 
@@ -103,8 +110,8 @@ Note that the JDBC drivers are not part of the [Fabric Deployment](/articles/01_
 ~~~
 /home/k2view/ExternalJars/
 ~~~
-   
-</studio>
+
+
 
 
 [![Previous](/articles/images/Previous.png)](09_fabric_API_for_DB_interfaces.md)
