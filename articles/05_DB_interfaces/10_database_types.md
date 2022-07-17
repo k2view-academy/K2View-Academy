@@ -8,7 +8,7 @@ Fabric supports creating a new custom interface type based on a JDBC driver's sp
 
 Once saved, the database type appears in the Interface type dropdown list and can be selected when [creating a new Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
 
-### How Do I Create a New Custom Interface Type/Database Type, from the beginning or based on a template ?
+### How Do I Create a New Custom Interface Type/Database Type, from the start or based on a template ?
 
 To create a new custom interface type/database type, do the following:
 
@@ -30,17 +30,25 @@ To create a new custom interface type/database type, do the following:
 <web>
 
 1. Go to **Project Tree** > **Implementation** > **Shared Objects** > **Custom Interface Types/Database Types**.
+
    - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
+
+     ![images](images/05_10_web_location_of_custom_interface_types.png)
+
    - Choose/click on **New Custom DB Interface Type** in the opened context menu.
+
    - Choose the **Custom type** from the available list, or alternatively, choose **New Custom Type** option. Press **Enter** to confirm or **Escape** to cancel.
-2. Name the **new custom type**. Note that the field is prepopulated with *Type name*, which you should change.
+
+   ![images](images/05_10_web_choose_custom_type_from_list.png)
+
+   - Name the **new custom type**. Note that the field is prepopulated with *Type name*, which you should change.
 
 </web>
 
 
 3. Optional: Edit the **Pool Properties** and **Fabric Properties** fields. 
 
-* Note that the Pool Properties and Fabric Properties should be modified only by advanced users. During initial setup, use the default values.
+* Note that the Pool Properties and Fabric Properties should be modified only by advanced users. During an initial setup, use the default values.
 
 4. Optional: Populate the **Studio – Metadata** settings (to be used by Fabric Studio only):
    * **SQL Query for Tables List** and **SQL Query for Column List**, with SQL queries to retrieve the lists of tables and columns from the schema.
@@ -119,4 +127,6 @@ Note that the JDBC drivers are not part of the [Fabric Deployment](/articles/01_
 
 
 [![Previous](/articles/images/Previous.png)](09_fabric_API_for_DB_interfaces.md)
+
+
 
