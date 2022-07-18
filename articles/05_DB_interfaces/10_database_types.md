@@ -17,7 +17,7 @@ When creating a database type from a template based on an existing database type
 To create a new custom interface type/database type _based on a template_, do the following:
 <studio>
 
-1. Go to **Project Tree** > **Shared Objects**, right-click **Database Types** and select **New Database Type From Template** and then select the DB type, for example Oracle.
+1. Go to Project Tree > Shared Objects, right-click Database Types and select New Database Type From Template and then select the DB type, for example Oracle.
 
 2. Edit the required properties. For example, add the following connection property for Oracle:
 
@@ -58,7 +58,7 @@ To create a new custom interface type/database type _from start_, do the followi
 
 <studio>
 
-1. Go to **Project Tree** > **Shared Objects**, right-click **Database Types** and select **New Database Type**.
+1. Go to Project Tree > Shared Objects, right-click Database Types and select New Database Type.
 
    ![image](images/05_10_1.PNG)
 
@@ -72,7 +72,7 @@ To create a new custom interface type/database type _from start_, do the followi
 
 <web>
 
-1. Go to **Project Tree** > **Implementation** > **Shared Objects** > **Custom Interface Types/Database Types**.
+1. Go to Project Tree > Implementation > Shared Objects > Custom Interface Types/Database Types.
 
    - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
 
@@ -87,7 +87,7 @@ To create a new custom interface type/database type _from start_, do the followi
 
 3. Optional: Edit the **Pool Properties** and **Fabric Properties** fields. 
 
-* Note that the Pool Properties and Fabric Properties should be modified only by advanced users. During an initial setup, use the default values.
+   * Note that the Pool Properties and Fabric Properties should be modified only by advanced users. During an initial setup, use the default values.
 
 4. Optional: Populate the **Studio – Metadata** settings (to be used by Fabric Studio only):
    * **SQL Query for Tables List** and **SQL Query for Column List**, with SQL queries to retrieve the lists of tables and columns from the schema.
