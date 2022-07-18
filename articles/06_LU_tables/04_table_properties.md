@@ -8,10 +8,10 @@ The Table Properties tab is displayed in the right pane of the Table's window.
 
 The Properties tab displays a list of properties that must be defined for each LU table, as follows:
 
-<table width="623">
+<table width="900pxl">
 <tbody>
 <tr>
-<td width="150pxl">
+<td width="200pxl">
 <p><strong>Main</strong></p>
 </td>
 <td width="700pxl">
@@ -23,18 +23,18 @@ The Properties tab displays a list of properties that must be defined for each L
 </td>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>Instance ID Column</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p>A unique field that is used as the LU table Instance ID.</a></p>
 </td>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>Columns Collation</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p>There are three options:</p>
 <ul>
 <li>BINARY, (default) compares the exact string in the field with the SQL statement.</li>
@@ -44,20 +44,20 @@ The Properties tab displays a list of properties that must be defined for each L
 </td>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>Full Text Search</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p>When set to True, enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p>There are four <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
 <ul>
 <li>None.</li>
@@ -68,18 +68,27 @@ The Properties tab displays a list of properties that must be defined for each L
 </td>
 </tr>
 <tr>
-<td width="150">
-<p><strong>Truncate Before Sync</strong></p>
+<td width="200pxl">
+<p><strong>Delete Mode</strong></p>
 </td>
-<td width="474">
-<p>When <a href="/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync">Truncate Before Sync</a> = True, the entire LU table is truncated before the populations are executed.</p>
+<td width="700pxl">
+    <p>This property defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong>, or <strong>NonUpdated</strong>: </p>
+        <li>All - the entire LU table is truncated before the populations are executed.</li>
+        <li>Off - neither of the records is updated. The previous records remain "as is".</li>
+        <li>NonUpdated - delete only the previous records that are not updated by the current sync (old data). 
+     <p>&nbsp;</p>
+     <p>Notes:</p>
+   <ul>
+    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send CDC messages only for the updated records instead of sending delete messages for all the truncated records and insert messages for the newly inserted records if the Delete Mode is set to All.</li>
+    <li>It is recommended to define a PK on the LU table and set the <a href="/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties">LU table population mode</a> to Upsert or Updade if the Delete Mode is NonUpdated in order to delete only the old data. If the LU table does not have a PK, the new records are added to the LU table and all the previous records are deleted.</li>
+ </ul>     
 </td>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>Enrichment Functions</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> which are executed after all LU tables are populated.</p>
 <ul>
 <li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no Enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
@@ -90,16 +99,17 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 </tr>
 <tr>
-<td width="150">
+<td width="200pxl">
 <p><strong>On Change</strong></p>
 </td>
-<td width="474">
+<td width="700pxl">
 <p><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> which are executed when there is a change in LU table's data.</p>
 <p>To select a Trigger function, click the three dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](03_table_indexes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_business_tables.md)
