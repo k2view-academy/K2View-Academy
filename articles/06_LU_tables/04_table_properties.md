@@ -24,7 +24,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Instance ID Column</strong></p>
+<p><h4>Instance ID Column</h4></p>
 </td>
 <td width="700pxl">
 <p>A unique field that is used as the LU table Instance ID.</a></p>
@@ -32,7 +32,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Columns Collation</strong></p>
+<p><h4>Columns Collation</h4></p>
 </td>
 <td width="700pxl">
 <p>There are three options:</p>
@@ -45,7 +45,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Full Text Search</strong></p>
+<p><h4>Full Text Search</h4></p>
 </td>
 <td width="700pxl">
 <p>When set to True, enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
@@ -55,7 +55,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Sync Method</strong></p>
+<p><h4>Sync Method</h4></p>
 </td>
 <td width="700pxl">
 <p>There are four <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
@@ -69,7 +69,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Delete Mode</strong></p>
+<p><h4>Delete Mode</h4></p>
 </td>
 <td width="700pxl">
     <p>This property defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong>, or <strong>NonUpdated</strong>: </p>
@@ -85,7 +85,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>Enrichment Functions</strong></p>
+<p><h4>Enrichment Functions</h4></p>
 </td>
 <td width="700pxl">
 <p><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> which are executed after all LU tables are populated.</p>
@@ -99,7 +99,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="200pxl">
-<p><strong>On Change</strong></p>
+<p><h4>On Change</h4></p>
 </td>
 <td width="700pxl">
 <p><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> which are executed when there is a change in LU table's data.</p>
