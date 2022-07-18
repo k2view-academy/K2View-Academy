@@ -76,7 +76,6 @@ The Properties tab displays a list of properties that must be defined for each L
         <li>All - the entire LU table is truncated before the populations are executed.</li>
         <li>Off - neither of the records is updated. The previous records remain "as is".</li>
         <li>NonUpdated - delete only the previous records that are not updated by the current sync (old data). 
-     <p>&nbsp;</p>
      <p>Notes:</p>
    <ul>
     <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send CDC messages only for the updated records instead of sending delete messages for all the truncated records and insert messages for the newly inserted records if the Delete Mode is set to All.</li>
