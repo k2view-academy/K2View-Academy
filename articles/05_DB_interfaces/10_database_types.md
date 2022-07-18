@@ -32,7 +32,7 @@ To create a new custom interface type/database type _based on a template_, do th
 </studio>
 
 <web>
-1. Go to **Project Tree** > **Implementation** > **Shared Objects** > **Custom Interface Types/Database Types**.
+1. Go to Project Tree > Implementation > Shared Objects > Custom Interface Types/Database Types.
 
    - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
 
