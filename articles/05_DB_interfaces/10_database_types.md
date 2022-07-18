@@ -139,7 +139,7 @@ When introducing a new database type, the JDBC driver is saved under:
 
 Each database type is kept in a separate folder in order to avoid overlapping or conflicts with other drivers (dynamically loaded). <web>When creating a new custom interface type, such folder is automtically created, so that you just need to drop thre the driver files.</web>
 
-Note that the JDBC drivers are not part of the [Fabric Deployment](/articles/01_fabric_overview/02_fabric_glossary.md#deployment) and must be copied to the Fabric server to the following folder prior to running the Linux server:
+Note that the JDBC drivers are not a part of the [Fabric Deployment](/articles/01_fabric_overview/02_fabric_glossary.md#deployment) and must be copied to the Fabric server to the following folder prior to running the Linux server:
 
 ~~~
 /home/k2view/ExternalJars/
