@@ -58,7 +58,7 @@ To create a new custom interface type/database type _from start_, do the followi
 
 <studio>
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Database Types** and select **New Database Type**.
+1. Go to **Project Tree** > **Shared Objects**, right-click **Database Types** and select **New Database Type**.
 
    ![image](images/05_10_1.PNG)
 
