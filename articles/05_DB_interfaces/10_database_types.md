@@ -12,7 +12,7 @@ Once saved, the database type appears in the Interface type dropdown list and ca
 
 A new database type can be created from a template to customize a built-in database type or when a new database type is very similar to an existing type. 
 
-When creating a database type from a template based on an existing database type (e.g. Oracle), make sure to save it according to your needs: either with the same name (Oracle) in order to override default configurations, or with a different name which will be handled as a new database type, aside the original.
+When creating a database type from a template based on an existing database type (e.g. Oracle), make sure to save it according to your needs: either with the same name (Oracle) in order to override default configurations, or with a different name which will be handled as a new database type, along side the original.
 
 To create a new custom interface type/database type _based on a template_, do the following:
 <studio>
