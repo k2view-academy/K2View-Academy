@@ -176,9 +176,42 @@ T
 
 [Click for more information about LU Sync Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
  
-## Truncate Before Sync 
-The **Truncate Before Sync** property can be set on an LU table or a Table Population. When Truncate Before Sync = True, whether on the LU table or on one of its populations, the entire LU table is truncated before the related populations are executed for this LU table. Therefore, there is a logical dependence between this setting and the sync mode.
+## Delete Mode and Truncate Before Sync properties
 
+There are several ways to define the delete mode of the previous records in the LU table (populated previous to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependence between the delete mode and the sync mode.
+
+
+### 1. LU Table Settings
+The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are All (default value), Off, or NonUpdated:
+
+ - All - the entire LU table is truncated before the populations are executed.
+ - Off - neither of the records is updated. The previous records remain "as is".
+ - NonUpdated - delete only the previous records that are not updated by the current sync (old data).
+
+Notes: 
+- It is recommended to set the NonUpdated value when the LU table has CDC fields in order to send CDC messages only for the updated records instead of sending delete messages for all the truncated records and insert messages for the newly inserted records if the Delete Mode is set to All.
+- It is recommended to define a PK on the LU table and set the LU table population mode to Upsert or Updade if the Delete Mode is NonUpdated in order to delete only the old data. If the LU table does not have a PK, the new records are added to the LU table and all the previous records are deleted.
+
+
+### 2. LU Table Population Settings
+
+#### 2.1 Table Population Object
+A table population object that is [based on a source object](/articles/07_table_population/01_table_population_overview.md) contains the following property: **Truncate Before Sync**.
+
+This property is set on the [LU table population target properties](/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties). The Truncate Before Sync = True is equivalent to the **All** value in the Delete Mode LU table's property.
+
+Notes:
+
+- When the Truncate Before Sync is set on True on a given LU table population, it truncates the entire LU table before populating it. Setting the Truncate Before Sync to True overrides the LU table's Delete Mode. 
+- Then the Truncate Before Sync is set on False, the delete mode it taken from the LU table. 
+
+#### 2.2. [Table Populations Based on Broadway Flows](/articles/07_table_population/14_table_population_based_Broadway.md)
+
+The following Broadway actor can be added to the flow to override the LU table's Delete Mode: 
+
+- XXXXXXXXXX
+
+ 
 ## Sync Methods - Use Cases
 <table style="width: 850pxl">
 <tbody>
