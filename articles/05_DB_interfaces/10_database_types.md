@@ -110,7 +110,7 @@ To create a new custom interface type/database type _from start_, do the followi
 
 #### Example of JDBC Connection Properties Definition
 
-- Create a new **MySQL2** Database type which includes the **useSSL** JDBC Connection Property and add it to the URL Template as shown below:
+- Create a new **MySQL2** Database type that includes the **useSSL** JDBC Connection Property and add it to the URL Template as shown below:
 
 ~~~
 &abc=[useSSL]
