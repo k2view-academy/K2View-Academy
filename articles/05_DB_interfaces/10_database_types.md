@@ -99,7 +99,7 @@ To create a new custom interface type/database type _from start_, do the followi
       * SensitiveUpperCase.
       * SensitiveLowerCase.
 5. Set **JDBC Connection Properties** as follows:
-   * **Name** and a **Value** for parameters to be used as a part of JDBC connection properties.
+   * A **Name** and a **Value** for parameters to be used as a part of JDBC connection properties.
    * When setting the **Enable Interface Override**, the parameters are displayed under the Connection Properties section of the [Interface window](03_DB_interfaces_overview.md), parameter values can be updated. 
    * When setting the **Connection Property**, the connection properties map is sent to the JDBC driver.
 6. **Save** the customer interface type/database type.
