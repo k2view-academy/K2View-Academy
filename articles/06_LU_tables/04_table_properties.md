@@ -90,10 +90,10 @@ The Properties tab displays a list of properties that must be defined for each L
 <td width="700pxl">
 <p>Refers to <a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> that are executed after all LU tables are populated.</p>
 <ul>
-<li>The execution order is determined on an LU level and is based on the Sync policy of the attached table. When no Enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
-<li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
+<li>The execution order is determined on an LU level and is based on the Sync policy of the attached table. When no Enrichment function is attached - the display is &lsquo;Empty&rsquo;.</li>
+<li>When one or more Enrichment functions are attached &ndash; the display is &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
 </ul>
-<p>To select an Enrichment function, click the three dots next to the Enrichment functions property and select the function name. Only functions without input and output parameters are displayed.</p>
+<p>To select an Enrichment function, click the 3 dots next to the Enrichment functions property and select the function name. Only functions without input and output parameters are displayed.</p>
 </td>
 </tr>
 </tr>
