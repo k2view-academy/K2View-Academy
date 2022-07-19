@@ -226,7 +226,7 @@ The following Broadway actor can be added to the flow in order to override the L
 </td>
 <td style="width: 700pxl">
 <p>The source does neither change nor become unavailable and therefore requires a one-time only load.</p>
-<p>After it is loaded, Fabric becomes the system of record for the data whereby Fabric may get update transactions on the data. For example, add a new payment.</p>
+<p>After it is loaded, Fabric becomes the System of Record for the data and may get <a href="/articles/23_fabric_transactions/01_fabric_transactions_overview.md#fabric-transactions">update transactions</a> on the data. For example, add a new payment.</p>
 </td>
 </tr>
 <tr>
