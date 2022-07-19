@@ -68,7 +68,7 @@ The Function Properties tab displays the properties of either a source [**Root f
 <p>When Truncate Before Sync = True, the <strong>entire LU Table</strong> is truncated before the table population is executed. The Truncate Before Sync = True is equivalent to the All value in the <a href="/articles/06_LU_tables/04_table_properties.md#delete-mode">Delete Mode</a> LU table's property. Setting the Truncate Before Sync to True overrides the LU table's Delete Mode. When the Truncate Before Sync is set on False, the delete mode it taken from the LU table. 
 Note that it is not recommended to set the Truncate Before Sync to True if the population mode is not Insert, since it truncates all records from the LU table before running the population.</p>
 <p><strong>IID Finder</strong>, set the IID Finder properties on a population level used when creating the staging.xml file.</p>
-<p><strong>Open Table Schema</strong> - link to the Table Schema window.</p>
+<p><strong>Open Table Schema</strong> - links to the Table Schema window.</p>
 </td>
 </tr>
 </tbody>
