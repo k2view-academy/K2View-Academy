@@ -69,7 +69,7 @@
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>NA</p>
+<p>N/A</p>
 </td>
 </tr>
 </tbody>
@@ -168,7 +168,7 @@
 <p><strong>Parameters</strong></p>
 </td>
 <td width="500">
-<p>&nbsp;</p>
+<p>N/A</p>
 </td>
 </tr>
 </tbody>
