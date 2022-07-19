@@ -25,7 +25,7 @@ The properties include:
 <p><strong>DB Connection</strong> - displays the DB interface of the Source Object. Non-editable.</p>
 <p><strong>SQL</strong> - displays the query. To edit it, click the Edit Query link.</p>
 <p><strong>Edit Query</strong> - links to the <a href="/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview"> Query Builder</a>.</p>
-<p><strong>Input Arguments&nbsp;</strong> - displays a list of Input arguments which are all True by default.</p>
+<p><strong>Input Arguments&nbsp;</strong>- displays a list of Input arguments which are all True by default.</p>
 <p>The fields that should be linked to the <strong>parent table</strong> are set to <strong>True. </strong>Other fields that do not need to be linked to a parent table can be set to <strong>False</strong>. In the DB query of a root table, only one field can be defined as <strong>True</strong> and it is populated by the Instance ID.</p>
 </td>
 </tr>
