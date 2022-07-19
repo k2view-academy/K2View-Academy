@@ -44,7 +44,7 @@ The Function Properties tab displays the properties of either a source [**Root f
 <p><strong>Category</strong> - Non-editable.</p>
 <p><strong>Function Type</strong> - Non-editable.</p>
 <p><strong>Description</strong> - Non-editable.</p>
-<p><strong>Open Function</strong> - links to the Function window.</p>
+<p><strong>Open Function</strong> - a link to the Function window.</p>
 <p><strong>Inputs Default Value</strong> - displays the Input parameters of the function.</p>
 <p>If the function object is a <strong>Root function</strong>, it must have at least one Input parameter.</p>
 <p>If it is a Root function of a root table, it must have only one parameter.</p>
