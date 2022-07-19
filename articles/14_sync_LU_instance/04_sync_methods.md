@@ -225,7 +225,7 @@ The following Broadway actor can be added to the flow in order to override the L
 <p><strong>None</strong></p>
 </td>
 <td style="width: 700pxl">
-<p>The source does not change or becomes unavailable and therefore requires a one-time only load.</p>
+<p>The source does neither change nor become unavailable and therefore requires a one-time only load.</p>
 <p>After it is loaded, Fabric becomes the system of record for the data whereby Fabric may get update transactions on the data. For example, add a new payment.</p>
 </td>
 </tr>
@@ -242,7 +242,7 @@ The following Broadway actor can be added to the flow in order to override the L
 <p><strong><a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision Function &nbsp;</a></strong></p>
 </td>
 <td style="width: 395px;">
-<p>Requires specific logic to check if the data needs to be synced from the source.</p>
+<p>Requires specific logic to check whether the data needs to be synced from the source.</p>
 </td>
 </tr>
 </tbody>
