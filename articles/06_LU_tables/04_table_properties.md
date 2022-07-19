@@ -102,8 +102,8 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><h4>On Change</h4></p>
 </td>
 <td width="700pxl">
-<p><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> which are executed when there is a change in LU table's data.</p>
-<p>To select a Trigger function, click the three dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
+<p>Refers to <a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> that are executed when there is a change in LU table's data.</p>
+<p>To select a Trigger function, click the 3 dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
 </td>
 </tr>
 </tbody>
