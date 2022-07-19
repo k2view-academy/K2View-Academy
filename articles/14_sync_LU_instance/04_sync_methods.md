@@ -92,8 +92,8 @@
 </td>
 <td width="500">
 <p>Synchronization is implemented automatically after each predefined time interval in order to check whether the latest update of the LU instance in Fabric occurred before the time interval of the specific instance.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; When Yes, data is extracted from the source and reloaded to Fabric.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; If not, the current data in Fabric is used.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; If it has, data is extracted from the source and reloaded to Fabric.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; If it hasn't, the current data in Fabric is used.</p>
 </td>
 </tr>
 <tr>
