@@ -74,7 +74,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <td width="700pxl">
     <p>This property defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong>, or <strong>NonUpdated</strong>: </p>
         <li>All - the entire LU table is truncated before the populations are executed.</li>
-        <li>Off - neither of the records is updated. The previous records remain "as is".</li>
+        <li>Off - the previous records are not deleted.</li>
         <li>NonUpdated - delete only the previous records that are not updated by the current sync (old data). 
      <p>Notes:</p>
    <ul>
