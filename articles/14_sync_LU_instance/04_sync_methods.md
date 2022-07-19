@@ -128,7 +128,7 @@
 <p><strong>Description</strong></p>
 </td>
 <td width="500">
-<p>Synchronization is implemented according to the Decision function which returns a Boolean (True / False) parameter. If the Decision function returns False, do not sync the object.</p>
+<p>Synchronization is implemented according to the Decision function, which returns a Boolean (True/False) parameter. If the Decision function returns False, do not sync the object.</p>
 </td>
 </tr>
 <tr>
