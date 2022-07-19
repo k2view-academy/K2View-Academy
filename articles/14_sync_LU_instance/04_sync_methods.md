@@ -91,7 +91,7 @@
 <p><strong>Description</strong></p>
 </td>
 <td width="500">
-<p>Synchronization is implemented automatically after each predefined time interval to check if the latest update of the instance in Fabric occurred before the time interval of the specific instance.</p>
+<p>Synchronization is implemented automatically after each predefined time interval in order to check if the latest update of the instance in Fabric occurred before the time interval of the specific instance.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; When Yes, data is extracted from the source and reloaded to Fabric.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; If not, the current data in Fabric is used.</p>
 </td>
