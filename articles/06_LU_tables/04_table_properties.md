@@ -58,7 +58,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><h4>Sync Method</h4></p>
 </td>
 <td width="700pxl">
-<p>There are four <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
+<p>There are 4 <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
 <ul>
 <li>None.</li>
 <li>Inherited (default).</li>
