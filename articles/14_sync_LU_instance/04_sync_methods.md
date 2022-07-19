@@ -296,7 +296,7 @@ The following Broadway actor can be added to the flow in order to override the L
 </td>
 <td width="294">
 <p>An LU that can be populated by different source systems.</p>
-<p>Set a different population with different logic for each table and then check the environment on the decision function of each population to decide if the population needs to be executed based on the environment.</p>
+<p>Set a different population with a different logic for each table and then check the environment on the decision function of each population to decide whether the population needs to be executed based on the environment.</p>
 </td>
 </tr>
 </tbody>
