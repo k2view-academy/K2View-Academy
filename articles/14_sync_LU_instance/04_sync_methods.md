@@ -234,7 +234,7 @@ The following Broadway actor can be added to the flow in order to override the L
 <p><strong>Time Interval</strong></p>
 </td>
 <td style="width: 395px;">
-<p>Sync every X times to ensure the data is up to date.</p>
+<p>Syncs every X times to ensure the data is up to date.</p>
 </td>
 </tr>
 <tr>
