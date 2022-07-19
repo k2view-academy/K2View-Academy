@@ -35,11 +35,11 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><h4>Columns Collation</h4></p>
 </td>
 <td width="700pxl">
-<p>There are three options:</p>
+<p>There are 3 options:</p>
 <ul>
-<li>BINARY, (default) compares the exact string in the field with the SQL statement.</li>
-<li>NOCASE, enables the Select statement to ignore upper / lower case fonts when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set either to &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
-<li>RTRIM, enables the Select statement to ignore white space characters on the right of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value &lsquo;.</li>
+<li>BINARY - (default) compares the exact string in the field with the SQL statement.</li>
+<li>NOCASE - enables the Select statement to ignore upper / lower case fonts when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set either to &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
+<li>RTRIM - enables the Select statement to ignore white space characters on the right of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value &lsquo;.</li>
 </ul>
 </td>
 </tr>
