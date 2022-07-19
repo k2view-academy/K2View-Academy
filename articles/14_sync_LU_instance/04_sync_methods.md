@@ -178,7 +178,7 @@
  
 ## Delete Mode and Truncate Before Sync properties
 
-There are several ways to define the delete mode of the previous records in the LU table (populated prior to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependence between the delete mode and the sync mode.
+There are several ways to define the delete mode of the previous records in the LU table (populated prior to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependency between the delete mode and the sync mode.
 
 
 ### 1. LU Table Settings
