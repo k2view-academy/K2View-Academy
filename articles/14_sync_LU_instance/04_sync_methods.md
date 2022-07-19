@@ -242,7 +242,7 @@ The following Broadway actor can be added to the flow in order to override the L
 <p><strong><a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision Function &nbsp;</a></strong></p>
 </td>
 <td style="width: 395px;">
-<p>Requires specific logic to check whether the data needs to be synced from the source.</p>
+<p>Requires a specific logic to check whether the data needs to be synced from the source.</p>
 </td>
 </tr>
 </tbody>
