@@ -182,7 +182,7 @@ There are several ways to define the delete mode of the previous records in the 
 
 
 ### 1. LU Table Settings
-The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are All (default value), Off, or NonUpdated:
+The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated prior to the current sync). The values are All (default value), Off, or NonUpdated:
 
  - All - the entire LU table is truncated before the populations are executed.
  - Off - neither of the records is updated. The previous records remain "as is".
