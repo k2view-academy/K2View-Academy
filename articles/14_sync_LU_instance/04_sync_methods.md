@@ -1,8 +1,8 @@
 # Sync Methods
 
 ## Sync Properties
- Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), or [Table Population](/articles/07_table_population/01_table_population_overview.md) level.
-T
+ Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) and/or [Table Population](/articles/07_table_population/01_table_population_overview.md) level.
+
 **A Sync property contains the following settings:**
 <table>
 <tbody>
