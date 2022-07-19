@@ -78,7 +78,7 @@ The Properties tab displays a list of properties that must be defined for each L
         <li>NonUpdated - delete only the previous records that are not updated by the current sync (old data). 
      <p>Notes:</p>
    <ul>
-    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send CDC messages only for the updated records instead of sending delete messages for all the truncated records and insert messages for the newly inserted records if the Delete Mode is set to All.</li>
+    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and insert messages for the newly inserted records.</li>
     <li>It is recommended to define a PK on the LU table and set the <a href="/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties">LU table population mode</a> to Upsert or Updade if the Delete Mode is NonUpdated in order to delete only the old data. If the LU table does not have a PK, the new records are added to the LU table and all the previous records are deleted.</li>
  </ul>     
 </td>
