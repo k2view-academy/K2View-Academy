@@ -207,7 +207,7 @@ Notes:
 
 #### 2.2. [Table Populations Based on Broadway Flows](/articles/07_table_population/14_table_population_based_Broadway.md)
 
-The following Broadway actor can be added to the flow to override the LU table's Delete Mode: 
+The following Broadway actor can be added to the flow in order to override the LU table's Delete Mode: 
 
 - XXXXXXXXXX
 
