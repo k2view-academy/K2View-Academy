@@ -18,11 +18,11 @@ When a flow has an iteration and is split into branches due to conditions within
 
 The following flow displays an example of searching for a match in the input list and returning the iteration index once the match is found. The best practice for this kind of flows is not to define the external output inside the iteration but rather outside. Note that **Result** Actor at the **Return Result** Stage is linked to both IF and ELSE branches. The returned value belongs to the Actor that runs the last, **IF-LoopIndex** in this case.
 
-![image](images/iterate_with_condition1.png)
+<img src="images/iterate_with_condition1.png" alt="image" style="zoom:80%;" />
 
 If however you need to get the last index of both IF and ELSE branches (when each of them was true), the flow should be as below. 
 
-![image](images/iterate_with_condition2.png)
+<img src="images/iterate_with_condition2.png" alt="image" style="zoom:80%;" />
 
 
 
