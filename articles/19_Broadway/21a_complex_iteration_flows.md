@@ -11,9 +11,10 @@ This article describes how Broadway performs complex iteration use cases, such a
 
 * Looping over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
 * Using different connection line types when iterating over a complex object's elements.
-* Iterating over a loop split into branches.
 
 If the connected elements of the object are on the same level of hierarchy such as two fields of the same array, the iteration's behavior is the same as an iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements). 
+
+To get more information about the use cases on how to iterate over a loop with conditions and handle the Actors output correctly, refer to [Iterations With Conditions article](21b_iterations_with_condition.md).
 
 ### Iterate Over an Element and a Nested Array
 
@@ -60,17 +61,9 @@ Another recommended way to handle two collections of different sizes is to use [
 
 ![image](images/iterate_blend2.PNG)
 
-### Iterating Over a Loop Split into Branches
-
-When a flow is split into branches and includes an additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
-
-The following flow displays an example of a flow that has a split inside the iteration. If Stage 2 is true, its branch will start and execute Stage 5. Then, either Stage 8 or 11 will be executed starting an additional split. 
-
-Note that after the loop is completed, both Stage 17 and 18 will run since they depend on Stage 2 and not on the conditions inside the loop.
-
-![image](images/iterate_over_branches.PNG)
 
 
 
-[![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22_broadway_flow_inner_flows.md)
+
+[![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21b_iterations_with_condition.md)
 

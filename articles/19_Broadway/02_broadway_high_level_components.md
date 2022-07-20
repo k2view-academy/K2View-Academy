@@ -72,9 +72,9 @@ In the case of multiple forks (such as multiple splits in the stage), the *else*
 ## Actor Inheritance
 
 Actors obey an inheritance hierarchy. This enables activities such as:
-- pinning a constant value and re-using it across multiple flows, 
-- re-using some Actor logic such as JavaScript or SQL
-- overriding the Actor Java implementation and tailoring it to a specific use case.  
+- Pinning a constant value and re-using it across multiple flows. 
+- Re-using some Actor logic such as JavaScript or SQL.
+- Overriding the Actor Java implementation and tailoring it to a specific use case.  
 
 [Click for more information about Actor Inheritance](06_export_actor.md).
 
