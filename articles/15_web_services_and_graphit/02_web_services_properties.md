@@ -117,7 +117,7 @@ This flag must be set to True in the properties panel in order to be activated.
 Default is set to False.</p>
 For example, when set to False and the user role has no WRITE permissions, the user will not be able to write into Fabric using the Web Service. However when Elevated Permission is set to True on a Web Service, this restriction is dismissed. Added for Fabric V6.5.3
 <p>Starting from Fabric V6.5.8, when a user role has a security profile that prevents him from accessing some LU tables, setting Elevated Permission to True dismisses this restriction. 
-<br>Click here for more information about <a href="/articles/17_fabric_credentials/05_security_profiles.md">Security Prfiles.</a></p>
+<br>Click here for more information about <a href="/articles/17_fabric_credentials/05_security_profiles.md">Security Profiles.</a></p>
 </td>
 </tr>
 <tr>
