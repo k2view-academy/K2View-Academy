@@ -10,7 +10,7 @@ The following flow displays an example of a flow of iterations with conditions. 
 
 Note that after the loop is completed, both Stage 17 and 18 will run since they depend on Stage 2 and not on the conditions inside the loop.
 
-![image](images/iterate_over_branches.PNG)
+<img src="images/iterate_over_branches.PNG" alt="image" style="zoom:70%;" />
 
 ### Using Actors Outputs of Split Iteration
 
@@ -18,11 +18,11 @@ When a flow has an iteration and is split into branches due to conditions within
 
 The following flow displays an example of searching for a match in the input list and returning the iteration index once the match is found. The best practice for this kind of flows is not to define the external output inside the iteration but rather outside. Note that **Result** Actor at the **Return Result** Stage is linked to both IF and ELSE branches. The returned value belongs to the Actor that runs the last, **IF-LoopIndex** in this case.
 
-<img src="images/iterate_with_condition1.png" alt="image" style="zoom:80%;" />
+<img src="images/iterate_with_condition1.png" alt="image" style="zoom:70%;" />
 
 If however you need to get the last index of both IF and ELSE branches (when each of them was true), the flow should be as below. 
 
-<img src="images/iterate_with_condition2.png" alt="image" style="zoom:80%;" />
+<img src="images/iterate_with_condition2.png" alt="image" style="zoom:70%;" />
 
 
 
