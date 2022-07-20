@@ -32,3 +32,13 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
 
 [![Previous](/articles/images/Previous.png)](05_business_tables.md)
+
+<web>
+
+1. Go to Project Tree > Implementation > Logical Units / Data Products
+   - Choose Logical Units / Data Products by clicking anywhere along the line
+   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each) 
+   - Choose/click on the *Views* component of the selected Logical Unit / Data Product
+   - Choose New View from the opened context menu
+   - Name the new View. Note that the field is prepopulated with *View Name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
+2. Go to DB Interface Explorer (icon on the vertical left panel of the screen)
