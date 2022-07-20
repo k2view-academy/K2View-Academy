@@ -36,9 +36,31 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 <web>
 
 1. Go to Project Tree > Implementation > Logical Units / Data Products
+
    - Choose Logical Units / Data Products by clicking anywhere along the line
    - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each) 
    - Choose/click on the *Views* component of the selected Logical Unit / Data Product
    - Choose New View from the opened context menu
    - Name the new View. Note that the field is prepopulated with *View Name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
-2. Go to DB Interface Explorer (icon on the vertical left panel of the screen)
+
+2. Go to DB Interface Explorer (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png)icon on the vertical left panel of the screen)
+
+   - Choose/click on a DB, for example: fabric, by clicking on > symbol on its left 
+
+   - Choose a Logical Unit / Data Product, for example: Customer, by clicking on > symbol on its left. A visible sub-folder, called TABLE, opens, containing available table names.
+
+   - Choose a table, for example: CUSTOMER, right-click on it and a popup message appears: Add Select Statement
+
+   - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
+
+   - Populate the Instance ID box manually (top panel, rightmost box). The other 2 boxes (indicating the Mode & Logical Unit) are prepopulated, but can be changed via their drop-down arrows.
+
+     ![images](images/web_lu_table_lu_view_top_panel.png)  
+
+3. Clicking on Execute runs the Select statement, which results with a display of a created view at the bottom half of the main window.
+
+   ![images](images/web_lu_table_lu_view_executing_select.png)
+
+
+
+</web>
