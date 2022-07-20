@@ -49,6 +49,8 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
    - Name the new View. Note that the field is prepopulated with *View Name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
 
+     ![images](images/web_lu_table_lu_view_enter_view_name.png)
+
 2. Go to DB Interface Explorer (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png)icon on the vertical left panel of the screen)
 
    - Choose/click on a DB, for example: fabric, by clicking on > symbol on its left 
