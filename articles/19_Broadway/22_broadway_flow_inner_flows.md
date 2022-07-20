@@ -40,4 +40,4 @@ When a flow has inner flows, an inner flow can be opened from the main flow:
 
 ![image](images/99_22_03.PNG)
 
-[![Previous](/articles/images/Previous.png)](21a_complex_iteration_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_transactions.md)
+[![Previous](/articles/images/Previous.png)](21b_iterations_with_condition.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_transactions.md)
