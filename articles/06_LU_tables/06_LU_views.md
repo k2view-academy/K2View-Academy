@@ -51,7 +51,9 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
      ![images](images/web_lu_table_lu_view_enter_view_name.png)
 
-2. Go to DB Interface Explorer (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png)icon on the vertical left panel of the screen)
+2. Following the new view creation, go to DB Interface Explorer (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png)icon on the vertical left panel of the screen, as seen below)
+
+   ![images](images/web_lu_table_lu_view_following_new_view_creation_click_on_db_interface_explorer.png)
 
    - Choose/click on a DB, for example: fabric, by clicking on > symbol on its left 
 
