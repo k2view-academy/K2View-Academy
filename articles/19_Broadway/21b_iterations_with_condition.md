@@ -4,7 +4,7 @@ This article describes various use cases when a combination of an iteration and 
 
 ### Split Due to Stage Condition in Iteration
 
-When a flow is split into branches due to conditions and includes an additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
+When a flow is split into branches due to conditions and it includes an additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
 
 The following flow displays an example of a flow of iterations with conditions. If Stage 2 is true, its branch will start and execute Stage 5. Then, either Stage 8 or 11 will be executed starting an additional split. 
 
