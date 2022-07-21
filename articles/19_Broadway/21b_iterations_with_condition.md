@@ -20,7 +20,7 @@ The following flow displays an example of a match search in the input list and a
 
 <img src="images/iterate_with_condition1.png" alt="image" style="zoom:70%;" />
 
-If, however, you need to get the last index of both IF and ELSE branches (when each of them is true), the flow should be as depicted below. 
+If, however, you need to get the last index of both IF and ELSE branches (when each of them is true), the flow should be as depicted below: 
 
 <img src="images/iterate_with_condition2.png" alt="image" style="zoom:70%;" />
 
