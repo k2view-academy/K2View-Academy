@@ -30,7 +30,10 @@ The Instance Group is deployed together with its LU.
 
      ![images](images/20_14_web_choose_new_instance_group.png)
 
-   -  ​
+   -  Name the new instance group. Note that the field is prepopulated with *Instance Group name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
+
+      ![images](images/20_14_web_instance_group_name.png)
+
    - ​
 
 </web>
