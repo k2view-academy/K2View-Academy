@@ -1,8 +1,9 @@
-<studio>
-
 # Instance Groups
 
 ## How Do I Create a New Instance Group?
+
+<studio>
+
 1. Go to the **Fabric Studio**, select the **LU** > **Instance Groups** and right click and select **New Instance Group**.
 2. Write a valid **SQL query** to select the instances to be included in the Instance Group.
    * The query can be written using the Query Builder by clicking **Open Query Builder**.
@@ -12,6 +13,20 @@
 <img src="images/23_jobs_and_batch_services_commandsExamples.PNG">
 
 The Instance Group is deployed together with its LU.
+
+</studio>
+
+<web>
+
+1. Go to Project Tree > Implementation > Logical Units / Data Products
+   - Choose Logical Units / Data Products by clicking anywhere along the line
+   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each)
+   - Choose/click on the *Instance Groups* component of the selected Logical Unit / Data Product
+   -  
+
+</web>
+
+<studio>
 
 ## How Do I Invoke an Instance Group from the Batch Command
 
