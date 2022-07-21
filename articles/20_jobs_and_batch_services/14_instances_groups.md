@@ -19,10 +19,19 @@ The Instance Group is deployed together with its LU.
 <web>
 
 1. Go to Project Tree > Implementation > Logical Units / Data Products
+
    - Choose Logical Units / Data Products by clicking anywhere along the line
+
    - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each)
+
    - Choose/click on the *Instance Groups* component of the selected Logical Unit / Data Product
-   -  
+
+   -  Choose *New Instance Group* from the opened context menu (top option, below)
+
+     ![images](images/20_14_web_choose_new_instance_group.png)
+
+   -  ​
+   - ​
 
 </web>
 
