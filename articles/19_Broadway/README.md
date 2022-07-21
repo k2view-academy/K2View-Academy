@@ -19,6 +19,7 @@
 <li><a href="19_broadway_flow_stages.md">Broadway Stages</a></li>
 <li><a href="21_iterations.md">Iterations in Broadway</a></li>
 <li><a href="21a_complex_iteration_flows.md">Complex Iteration Flows</a></li>
+<li><a href="21b_iterations_with_condition.md">Iterations With Conditions</a></li>
 <li><a href="22_broadway_flow_inner_flows.md">Inner Flows</a></li>
 <li><a href="23_transactions.md">Transactions</a></li>
 <li><a href="24_error_handling.md">Error Handling</a></li>
