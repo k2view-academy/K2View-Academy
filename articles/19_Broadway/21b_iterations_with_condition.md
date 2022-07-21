@@ -16,7 +16,7 @@ Note: Following the completion of the loop, both Stages 17 and 18 will run as th
 
 When a flow has an iteration and it is split into branches due to conditions within the iteration, you need to carefully define your required output. 
 
-The following flow displays an example of a match search in the input list and an iteration index return once the match is found. The best practice for this kind of flow is not to define the external output inside the iteration but rather outside. Note that **Result** Actor at the **Return Result** Stage is linked to both IF and ELSE branches. The returned value belongs to the Actor that runs the last, **IF-LoopIndex** in this case.
+The following flow displays an example of a match search in the input list and an iteration index return once the match has been found. The best practice for this kind of flow is not to define the external output inside the iteration but rather outside. Note that **Result** Actor at the **Return Result** Stage is linked to both IF and ELSE branches. The returned value belongs to the Actor that runs the last, **IF-LoopIndex** in this case.
 
 <img src="images/iterate_with_condition1.png" alt="image" style="zoom:70%;" />
 
