@@ -1,6 +1,6 @@
 # Iterations With Conditions
 
-This article describes various use cases when a combination of an iteration and conditions is used in a flow. It provides recommendations of how to handle such use cases correctly.
+This article describes various use cases when a combination of an iteration and conditions is used in a flow. It provides recommendations for correct handling of such use cases.
 
 ### Split Due to Stage Condition in Iteration
 
