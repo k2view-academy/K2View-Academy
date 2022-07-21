@@ -14,7 +14,7 @@ Note: Following the completion of the loop, both Stages 17 and 18 will run as th
 
 ### Using Outputs of Actors in Split Iteration
 
-When a flow has an iteration and is split into branches due to conditions within the iteration, you need to carefully define which output you need. 
+When a flow has an iteration and it is split into branches due to conditions within the iteration, you need to carefully define your required output. 
 
 The following flow displays an example of searching for a match in the input list and returning the iteration index once the match is found. The best practice for this kind of flow is not to define the external output inside the iteration but rather outside. Note that **Result** Actor at the **Return Result** Stage is linked to both IF and ELSE branches. The returned value belongs to the Actor that runs the last, **IF-LoopIndex** in this case.
 
