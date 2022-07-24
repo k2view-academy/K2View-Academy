@@ -61,8 +61,14 @@ The Instance Group is deployed together with its LU.
 
 
    - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
-   - Validate the populated Select statement by clicking on 
-   -  
+
+   - Validate the populated Select statement by clicking on Validate icon in the top bar, regardless whether it was entered automatically or manually.
+
+   - Note: 1 column can be chosen and therefore, if you get a message like in the below scenario, stating *The query must return one column only.*
+
+     ![images](images/20_14_message_query_must_return_one_column_only.png)
+
+   ​
 
 4. ​
 
