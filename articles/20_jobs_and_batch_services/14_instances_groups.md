@@ -22,17 +22,29 @@ The Instance Group is deployed together with its LU.
 
    - Choose Logical Units / Data Products by clicking anywhere along the line
 
-   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each)
+   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each) by clicking on it
 
-   - Choose/click on the *Instance Groups* component of the selected Logical Unit / Data Product
+   - Choose/highlight the *Instance Groups* component of the selected Logical Unit / Data Product and right-click on it
 
-   -  Choose *New Instance Group* from the opened context menu (top option, below)
+   -  Choose/click on *New Instance Group* from the opened context menu (top option, as seen below)
 
      ![images](images/20_14_web_choose_new_instance_group.png)
 
-   -  Name the new instance group. Note that the field is prepopulated with *Instance Group name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
+   -  A message pops up, asking you to name the new instance group. When done, press **Enter** to confirm or **Escape** to cancel.
 
       ![images](images/20_14_web_instance_group_name.png)
+
+      Note:
+
+      1. The field is prepopulated with *Instance Group name*, which you should change.
+
+      2. The name should start with a letter and should contain only alphanumeric characters and underscore.
+
+         ![images](images/20_14_web_instance_name_characteristics.png)
+
+   -  ​
+
+      ​
 
    - ​
 
