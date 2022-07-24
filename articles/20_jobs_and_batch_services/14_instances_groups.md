@@ -51,7 +51,18 @@ The Instance Group is deployed together with its LU.
 
 ![images](images/20_14_web_choose_db_interface_explorer_left_panel.png)
 
-3. ​
+3. Correspondently, click on CRM_DB (left-side window) > main > table
+
+   - Clicking on table displays a list (alphabetically) of available tables
+
+   - Choose **1** table, right-click on it and choose *Add Select Statement* (upper option of 2)
+
+     ![images](images/20_14_web_add_select_statement.png)
+
+
+   - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
+
+4. ​
 
 </web>
 
