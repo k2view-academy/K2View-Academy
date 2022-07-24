@@ -61,7 +61,8 @@ The Instance Group is deployed together with its LU.
 
 
    - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
-   - Validate the populated Select statement by clicking on ![images](images/20_14_validate.png)
+   - Validate the populated Select statement by clicking on 
+   -  
 
 4. ​
 
