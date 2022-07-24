@@ -76,6 +76,8 @@ The Instance Group is deployed together with its LU.
 
 4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom half of the main screen.
 
+   ![images](images/20_14_web_results_display.png)
+
 </web>
 
 <studio>
