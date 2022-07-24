@@ -46,31 +46,35 @@ The Instance Group is deployed together with its LU.
 
 2. Following the new instance group creation: 
 
-   - pick a suitable DB from the drop down list in the main window, for example CRM_DB
-   - click on DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
+   - Pick a suitable DB from the drop down list in the main window, for example CRM_DB
+   - Click on DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
 
 ![images](images/20_14_web_choose_db_interface_explorer_left_panel.png)
 
 3. Correspondently, click on CRM_DB (left-side window) > main > table
 
-   - Clicking on table displays a list (alphabetically) of available tables
+   - Clicking on table displays an alphabetical list of available tables
 
-   - Choose **1** table, right-click on it and choose *Add Select Statement* (upper option of 2)
+   - Choose a table (for example ADDRESS), then select **1** column (only) from it (for example CITY). Right-click on the column and choose *Add Select Statement* (upper option of 2, as seen below)
 
-     ![images](images/20_14_web_add_select_statement.png)
+     ![images](images/20_14_web_add_select_statement2.png)
+
+     ​
 
 
    - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
 
-   - Validate the populated Select statement by clicking on Validate icon in the top bar, regardless whether it was entered automatically or manually.
+   - Validate the automatically/manually populated Select statement by clicking on the Validate icon in the top bar. A message is consequently generated at the bottom part of the main window. (below)
 
-   - Note: 1 column can be chosen and therefore, if you get a message like in the below scenario, stating *The query must return one column only.*
+     ![images](images/20_14_query_is_valid.png)
+
+   - Note: As mentioned above, **only 1** column from a table should be selected. In case you've mistakenly chosen a whole table, the validation process would yield the following message: *The query must return one column only.* (below)
 
      ![images](images/20_14_message_query_must_return_one_column_only.png)
 
-   ​
+     ​
 
-4. ​
+4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom half of the main screen.
 
 </web>
 
