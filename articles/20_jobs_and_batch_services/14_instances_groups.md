@@ -42,11 +42,15 @@ The Instance Group is deployed together with its LU.
 
          ![images](images/20_14_web_instance_name_characteristics.png)
 
-   -  ​
-
       ​
 
-   - ​
+2. Following the new instance group creation, go to DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
+
+
+
+
+
+
 
 </web>
 
