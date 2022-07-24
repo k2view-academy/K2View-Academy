@@ -44,13 +44,14 @@ The Instance Group is deployed together with its LU.
 
       ​
 
-2. Following the new instance group creation, go to DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
+2. Following the new instance group creation: 
 
+   - pick a suitable DB from the drop down list in the main window, for example CRM_DB
+   - click on DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
 
+![images](images/20_14_web_choose_db_interface_explorer_left_panel.png)
 
-
-
-
+3. ​
 
 </web>
 
