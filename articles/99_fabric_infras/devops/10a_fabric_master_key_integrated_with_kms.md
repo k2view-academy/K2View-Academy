@@ -31,7 +31,7 @@ To define Fabric to work with KMS, the information shall be acquired first from 
    REGION=
    CUSTOMER_KEY_ID=
    ~~~
-
+   >  Note: Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
 
 4. At Fabric, run ``activatekey name='masterkey_key_name' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 
@@ -66,7 +66,7 @@ At AWS, when using multi region keys, the replicated keys might be used at diffe
    KEY_RING_ID=
    CREDENTIAL_FILE=
    ~~~
-
+   >  Note: Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
 
 ## Symmetric and Asymmetric Master Key Encryption Types
 
