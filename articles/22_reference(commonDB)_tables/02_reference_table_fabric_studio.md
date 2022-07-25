@@ -7,6 +7,8 @@ This information is stored in an external table and not in each LUI MicroDB.
 
 ## How to Create a New Reference Table in Fabric from an External Source
 
+<studio>
+
 1.  Go to **Project Tree** > **References** , right click, then select **Create References Based On DB Tables**. This will display the DB Browser menu, Context menu and References popup window. 
 
 2.  Click **DB Connection** (top of the window) and select a data source interface. 
@@ -34,7 +36,26 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
 
-  
+</studio>  
+
+<web>
+
+1. Go to Project Tree > Implementation > Logical Units / Data Products
+
+   - Choose Logical Units / Data Products by clicking anywhere along the line
+   - Choose/click on the *References* Logical Unit / Data Product (anywhere along the line; recognizable by a green circle on its left hand side)
+   - Choose/highlight the *Tables* component > right-click on it
+   - Choose *New Table* from the opened context menu (top option, below)
+
+   ![images](images/22_02_web_references_new_table.png)
+
+   - ​
+
+2. ​
+
+3. ​
+
+   ​
 
 ## Editing and Viewing Reference Tables
 
