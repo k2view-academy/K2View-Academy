@@ -39,7 +39,7 @@ To define Fabric to work with KMS, the information shall be acquired first from 
 
 According to the specific Fabric deployment and to customer definitions, config.ini shall be set. 
 
-For example, at AWS, when using multi region keys, the replication keys might need to be used at different Fabric nodes, according to their region.
+At AWS, when using multi region keys, the replicated keys might be used at different Fabric nodes, according to their region.
 
 ## Integration with GCP KMS
 
@@ -74,5 +74,5 @@ While KMS providers enable working with either symmetric and asymmetric encrypti
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/11_kafka_plain_sasl_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md)
 
