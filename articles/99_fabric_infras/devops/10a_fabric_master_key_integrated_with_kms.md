@@ -55,7 +55,7 @@ For example, at AWS, when using multi region keys, the replication keys might ne
 
    - Set the values at config.ini under ``[encryption_gcp_kms]`` section, according to the KMS information.
 
-   - Locate the credential file at Fabric machine.
+   - Locate the credential file at Fabric machine and populate its full path location at ``CREDENTIAL_FILE`` parameter. Alternatively, credentials file can set as environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
 
    >  Note: These actions shall be done at all Fabric nodes. 
    ~~~
