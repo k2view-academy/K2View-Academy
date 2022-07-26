@@ -2,21 +2,24 @@
 
 # Custom Interface Types / Database Types 
 
-### Overview
+## Overview
 
 Fabric supports creating a new custom interface type based on a JDBC driver's specifications or overriding existing database types without the need for product enhancement. 
 
-Once saved, the database type appears in the Interface type dropdown list and can be selected when [creating a new Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
+Once saved, the database type appears in the Interface type list and can be selected when [creating a new Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
 
-### How Do I Create a New Custom Interface Type/Database Type, from the start or based on a template ?
+## How Do I Create a New Custom Interface Type/Database Type?
 
 A new database type can be created from a template to customize a built-in database type or when a new database type is very similar to an existing type. 
-
 When creating a database type from a template based on an existing database type (e.g. Oracle), make sure to save it according to your needs: either with the same name (Oracle) in order to override default configurations, or with a different name which will be handled as a new database type, along side the original.
 
-To create a new custom interface type/database type _based on a template_, do the following:
-<studio>
+You can also create a new database type from start that is not based on a template. 
 
+### Create a Database Type from a Template
+
+To create a new custom interface type/database type _based on a template_, do the following:
+
+<studio>
 1. Go to Project Tree > Shared Objects, right-click Database Types and select New Database Type From Template and then select the DB type, for example Oracle.
 
 2. Edit the required properties. For example, add the following connection property for Oracle:
@@ -38,9 +41,9 @@ To create a new custom interface type/database type _based on a template_, do th
 
      ![images](images/05_10_web_location_of_custom_interface_types.png)
 
-   - Choose/click on **New Custom DB Interface Type** in the opened context menu.
+   - Click on **New Custom DB Interface Type** in the opened context menu.
 
-   - Choose the **Custom type** from the available list. Press **Enter** to confirm or **Escape** to cancel.
+   - Choose one of the existing DB interface types from the available list. Press **Enter** to confirm or **Escape** to cancel.
 
      ![images](images/05_10_web_choose_custom_type_from_list.png)
 
@@ -53,8 +56,9 @@ To create a new custom interface type/database type _based on a template_, do th
 4. **Save** the custom interface type.   
 </web>
 
-To create a new custom interface type/database type _from start_, do the following:
+### Create a Database Type from Start
 
+To create a new custom interface type/database type _from start_, do the following:
 
 <studio>
 
