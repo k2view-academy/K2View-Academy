@@ -3,6 +3,7 @@
 Fabric master key mechanism can be integrated with KMS, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
 
 To define Fabric to work with KMS, the information shall be acquired first from KMS and then shall be set at Fabric.
+> By default, Fabric uses its internal master key mechnaism 
 
 ## Integration with AWS KMS
 
@@ -37,9 +38,7 @@ To define Fabric to work with KMS, the information shall be acquired first from 
 
 ### Multi Region Support
 
-According to the specific Fabric deployment and to customer definitions, config.ini shall be set. 
-
-At AWS, when using multi region keys, the replicated keys might be used at different Fabric nodes, according to their region.
+For multi region Fabric deployment it might be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/), for a better perfromance. In such case, config.ini shall be set different among Fabric nodes, i.e. with relevant region replicated keys.
 
 ## Integration with GCP KMS
 
