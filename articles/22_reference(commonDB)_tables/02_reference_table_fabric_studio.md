@@ -1,6 +1,6 @@
 # How to Create a New Reference Table in Fabric Studio
 
-A  Reference table holds information that is common to either all LU instances or to multiple LUs. For optomization reasons, this information is stored in an external table and not in each LUI MicroDB.
+A  Reference table holds information that is common to either all LU instances or to multiple LUs. For optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
 
 
 
@@ -80,13 +80,15 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
    ![images](images/22_02_web_new_table_created_devicestable2022.png)
 
-3. In order to populate a column's name, type in a name in the allocated box
+3. In order to populate a column's name, type in a name in the allocated box, by simply overwriting the prepopulated entry, <Name>. Then click anywhere on the screen in order for the system to accept this column's name. Consequently, the Data Type box is populated and the system provides space for a next column creation.
 
-4. ​
-
-5. ​
+   ![images](images/22_02_web_create_new_column.png)
 
    ​
+
+4. Go to File > Save.
+
+</web>
 
 ## Editing and Viewing Reference Tables
 
