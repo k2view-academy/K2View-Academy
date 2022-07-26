@@ -74,15 +74,17 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
      ![images](images/22_02_web_table_name.png)
 
-   - As an example, the new table has been named DEVICESTABLE2022
+     ​
 
-      
+2. As an example, the new table has been named DEVICESTABLE2022
 
-   - In order to populate a column's name, type in a name in the allocated box
+   ![images](images/22_02_web_new_table_created_devicestable2022.png)
 
-2. ​
+3. In order to populate a column's name, type in a name in the allocated box
 
-3. ​
+4. ​
+
+5. ​
 
    ​
 
