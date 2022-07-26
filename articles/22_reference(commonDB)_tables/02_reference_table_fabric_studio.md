@@ -47,22 +47,26 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
 4. Click on the > symbol on the left side of *table*
 
-5. A few *table* options appear. Right-click on one, for example: Asset_Transaction. A popup window appears. Choose the *Create Reference Table* option (last option).
+5. A few *table* options appear. Right-click on one, for example: Asset_Transaction. A popup window appears. Choose the *Create Reference Table* option (last option) as seen below
 
-6. ​
+   ![images](images/22_02_web_create_reference_table.png)
 
-7. The automatically newly created reference table looks like the below
+   ​
+
+6. An automatically-generated new reference table has been created; as seen below, it is comprised of the predefined columns names (listed on the vertical left side)
 
    ![images](images/22_02_web_reference_table_creation_final_result.png)
 
-**Manual Creation of a New Reference Table**
+   Note: A new reference table can also be manually created.
+
+## Manual Creation of a New Reference Table
 
 1. Go to Project Tree > Implementation > Logical Units / Data Products
 
    - Choose Logical Units / Data Products by clicking anywhere along the line
    - Choose/click on the *References* Logical Unit / Data Product (anywhere along the line)
    - Choose/highlight the *Tables* component > right-click on it
-   - Choose *New Table* from the opened context menu (top option, below)
+   - Choose the *New Table* option from the opened context menu (top option, below)
 
    ![images](images/22_02_web_references_new_table.png)
 
@@ -70,7 +74,11 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
      ![images](images/22_02_web_table_name.png)
 
-   - ​
+   - As an example, the new table has been named DEVICESTABLE2022
+
+      
+
+   - In order to populate a column's name, type in a name in the allocated box
 
 2. ​
 
