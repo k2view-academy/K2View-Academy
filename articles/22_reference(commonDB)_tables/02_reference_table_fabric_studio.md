@@ -40,9 +40,20 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 <web>
 
 1. Click on DB Interface Explorer icon![images](images/22_02_web_db_interface_explorer_icon.png), located on the vertical left side of the screen.
-2. Click on > symbol on the left side of a DB, for example: ASSET_DB
-3. Right-click on Asset. A popup window appears. Choose the *Create Reference Table* option (last option).
-4. ​
+
+2. Click on the > symbol on the left side of a DB, for example: ASSET_DB
+
+3. Click on the > symbol on the left side of *main*
+
+4. Click on the > symbol on the left side of *table*
+
+5. A few *table* options appear. Right-click on one, for example: Asset_Transaction. A popup window appears. Choose the *Create Reference Table* option (last option).
+
+6. ​
+
+7. The automatically newly created reference table looks like the below
+
+   ![images](images/22_02_web_reference_table_creation_final_result.png)
 
 **Manual Creation of a New Reference Table**
 
