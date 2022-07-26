@@ -21,45 +21,43 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 [Click for more information about Security Profiles](/articles/17_fabric_credentials/05_security_profiles.md).
 
 ### How Do I Create a New LU View?
-
+<studio>
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**], right-click **Views** > **New View** to display the **View** window.
 2. Create an SQL statement that represents the view. You can do it by either clicking on **Open Query Builder** or by writing the query manually.
 3. Once the query is ready, click on **Validate Query** in order to validate the syntax. 
 4. Save the view. 
 
 ![](images/lu_views_1.PNG)
-
-
-
-[![Previous](/articles/images/Previous.png)](05_business_tables.md)
+</studio>
 
 <web>
 
 1. Go to Project Tree > Implementation > Logical Units / Data Products
 
-   - Choose Logical Units / Data Products by clicking anywhere along the line
+   - Choose the relevant data product 
 
-   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each) 
+   - Right click on the *Views* folder of the selected data product
 
-   - Choose/click on the *Views* component of the selected Logical Unit / Data Product
-
-   - Choose *New View* from the opened context menu (top option, below)
+   - Choose *New View* from the opened context menu
 
      ![images](images/web_lu_table_lu_view_new_view_option.png)
 
-   - Name the new View. Note that the field is prepopulated with *View Name*, which you should change. Press **Enter** to confirm or **Escape** to cancel.
+   - Name the new View. Press **Enter** to confirm or **Escape** to cancel.
 
      ![images](images/web_lu_table_lu_view_enter_view_name.png)
 
-2. Following the new view creation, go to DB Interface Explorer (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png)icon on the vertical left panel of the screen, as seen below)
+2. Following the new view creation, you can either type the view's query by your own or be assited by the Studio's Query Builder. 
+   To create the query with Query Builder:
+   
+   - click on DB Interface Explorer icon (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png) on the Activity Bar
 
    ![images](images/web_lu_table_lu_view_following_new_view_creation_click_on_db_interface_explorer.png)
 
-   - Choose/click on a DB, for example: fabric, by clicking on > symbol on its left 
+   - Choose fabric 
 
-   - Choose a Logical Unit / Data Product, for example: Customer, by clicking on > symbol on its left. A visible sub-folder, called TABLE, opens, containing available table names.
+   - Choose a Logical Unit / Data Product. A visible sub-folder, usually called TABLE, opens, containing available table names.
 
-   - Choose a table, for example: CUSTOMER, right-click on it and a popup message appears: Add Select Statement
+   - Choose a table or some of its columns (appear when expanding the table), right-click on it and a popup message appears: Add Select Statement
 
    - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
 
@@ -71,6 +69,6 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
    ![images](images/web_lu_table_lu_view_executing_select.png)
 
-
-
 </web>
+
+[![Previous](/articles/images/Previous.png)](05_business_tables.md)
