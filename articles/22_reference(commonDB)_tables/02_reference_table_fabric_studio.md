@@ -39,10 +39,17 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
 <web>
 
+1. Click on DB Interface Explorer icon![images](images/22_02_web_db_interface_explorer_icon.png), located on the vertical left side of the screen.
+2. Click on > symbol on the left side of a DB, for example: ASSET_DB
+3. Right-click on Asset. A popup window appears. Choose the *Create Reference Table* option (last option).
+4. ​
+
+**Manual Creation of a New Reference Table**
+
 1. Go to Project Tree > Implementation > Logical Units / Data Products
 
    - Choose Logical Units / Data Products by clicking anywhere along the line
-   - Choose/click on the *References* under Logical Unit / Data Product (anywhere along the line)
+   - Choose/click on the *References* Logical Unit / Data Product (anywhere along the line)
    - Choose/highlight the *Tables* component > right-click on it
    - Choose *New Table* from the opened context menu (top option, below)
 
