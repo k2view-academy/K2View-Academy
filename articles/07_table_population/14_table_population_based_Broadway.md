@@ -101,11 +101,11 @@ Starting from Fabric V6.5.9, Broadway population supports having an LU Instance 
 
 1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID. Note that the population’s input remains same as the column name in Source DB, CUSTOMER_ID in this example.
 
-   ![](images/07_14_InstanceIdLU.PNG)
+   ![](images/07_14_InstanceIdLU.png)
 
 2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's  column name. Then map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
 
-   ![](images/07_14_InstanceIdPop.PNG)
+   ![](images/07_14_InstanceIdPop.png)
 
 
 
