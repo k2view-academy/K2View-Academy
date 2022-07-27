@@ -52,10 +52,10 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open t
 
 ![image](images/99_03_actor_desc.PNG)
 
-To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). Once there is a remark you can pull it up by clicking the green asterisk.
+To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
-![image](images/99_03_actor_remark.PNG)
+<img src="images/99_03_actor_remark.PNG" alt="image" style="zoom:67%;" />
 
-To delete a remark, remove its text and close the remark. 
+Once there is a remark you can pull it up by clicking the green asterisk <img src="images/asterisk.png" style="zoom:80%;" />. To delete a remark, remove its text and close the remark. 
 
 [![Previous](/articles/images/Previous.png)](02a_broadway_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)
