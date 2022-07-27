@@ -34,7 +34,7 @@ The following example displays a Broadway flow template created to populate the 
 
     <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
 
-  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, meaning the population inherits the respective LU Table's Delete Mode.
+  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the population inherits the respective LU Table's Delete Mode.
 
   *  [Click for more information about LU table's Delete Mode](/articles/06_LU_tables/04_table_properties.md#delete-mode).
 
@@ -84,10 +84,10 @@ The starting points for creating a population based on a Broadway flow are:
 
 * [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
 * [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
-  * Right click and select **New table from SQL based Broadway flow**.
+  * Right-click and select **New table from SQL based Broadway flow**.
   * Drag a DB table and select **Create table based Broadway flow**.
-* Project Tree, right click a table object and select **Create Table Population based Broadway Flow**.
-* Reference, right click and select **Create References from DB tables**.
+* Project Tree, right-click a table object and select **Create Table Population based Broadway Flow**.
+* Reference, right-click and select **Create References from DB tables**.
 
 The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface, and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
 
@@ -97,13 +97,13 @@ Note that for the population to be effective on the server side, LU deployment i
 
 ### Support Instance ID Different From Source DB Column
 
-Starting from Fabric V6.5.9, Broadway population supports having an LU Instance ID column name different from the Source DB column name, when populating the LU Root table. To utilize this feature, do the following steps:
+Starting from Fabric V6.5.9, when populating the LU Root table, Broadway population supports having an LU Instance ID column name, which is different from the Source DB column name. To utilize this feature, take the following steps:
 
-1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID. Note that the population’s input remains same as the column name in Source DB, CUSTOMER_ID in this example.
+1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID. Note that the population’s input remains the same as the column name in the Source DB - CUSTOMER_ID in this example.
 
    ![](images/07_14_InstanceIdLU.png)
 
-2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's  column name. Then map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
+2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's column name. Then map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
 
    ![](images/07_14_InstanceIdPop.png)
 
