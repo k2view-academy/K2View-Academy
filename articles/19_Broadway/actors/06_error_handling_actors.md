@@ -2,9 +2,9 @@
 
 Broadway has a built-in Error Handling mechanism that handles exceptions in a flow using **Error Handlers**. An error handler is defined using a Broadway Actor. Any Actor or  [Inner flow](/articles/19_Broadway/22_broadway_flow_inner_flows.md) can act as an error handler. 
 
-This article describes the advanced error handling features provided by the **ErrorHandler** and **ErrorFields** Actors.
+This article describes the **ErrorHandler** and **ErrorFields** Actors which are dedicated for error handling.
 
-For information about the basic Broadway Error Handling mechanism, refer to [Error Handling](/articles/19_Broadway/24_error_handling.md).
+For information about the basic Broadway Error Handling mechanism, refer to [Error Handling](/articles/19_Broadway/24_error_handling.md) article.
 
 ### How Do I Use the ErrorHandler Actor?
 
