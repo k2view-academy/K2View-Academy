@@ -1,16 +1,16 @@
-# LU Views
+# Data Product / Logical Unit Views
 
 ### Overview
 
 Starting from Fabric V6.5.8, **LU views** are introduced to Fabric. 
 
-**LU views** are designed to keep a pre-defined query on [LU tables](01_LU_tables_overview.md) in the Fabric MicroDB, allowing an easy access to a required data collection.
+**Views** are designed to keep a pre-defined query on [LU tables](01_LU_tables_overview.md) in the Fabric MicroDB, allowing an easy access to a required data collection.
 
 The SQL statement of the LU view can include a SELECT statement from one LU table or several joint LU tables. Additionally, it supports the use of [LUDB functions](/articles/07_table_population/11_3_creating_an_LUDB_function.md). 
 
-LU views are part of the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) definition; however, they are not part of the LU Schema. LU views are populated with data at the end of the sync process, after all LU tables population has been completed. 
+Views are part of the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) definition; however, they are not part of the LU Schema. LU views are populated with data at the end of the sync process, after all LU tables population has been completed. 
 
-LU view's column data type is the same as the respective LU table's column data type. LU views don't have their own properties and can't be indexed. 
+a view's column data type is the same as the respective LU table's column data type. LU views don't have their own properties and can't be indexed. 
 
 There are two techniques in which LU view data can be accessed: either via a direct querying of an instance's MicroDB or via the Declarative field level authorization mechanism. When using the latter technique, the query on an LU table is replaced by a query on an LU view. This replacement is based on a security profile of a Fabric user's role.
 
@@ -40,32 +40,31 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
    - Choose *New View* from the opened context menu
 
-     ![images](images/web_lu_table_lu_view_new_view_option.png)
+     <img src="images/web_lu_table_lu_view_new_view_option.png" alt="images" style="zoom:80%;" />
 
    - Name the new View. Press **Enter** to confirm or **Escape** to cancel.
 
      ![images](images/web_lu_table_lu_view_enter_view_name.png)
 
-2. Following the new view creation, you can either type the view's query by your own or be assited by the Studio's Query Builder. 
+2. Following the new view creation, you can either type the view's query by your own or be assisted by the Studio's Query Builder. 
    To create the query with Query Builder:
-   
-   - click on DB Interface Explorer icon (![images](images/web_lu_table_lu_view_db_interface_explorer_icon.png) on the Activity Bar
 
-   ![images](images/web_lu_table_lu_view_following_new_view_creation_click_on_db_interface_explorer.png)
+   - click on DB Interface Explorer icon (![](/articles/04_fabric_studio/images/web/datasource_explorer.png)) on the Activity Bar
+   - Choose "fabric" and the data product.
+   - Choose a table or some of its columns (appear when expanding the table), right-click on it and  choose Add Select Statement at the opened context menu.
+   - The accordingly select statement will appear at the Views Editor screen.
 
-   - Choose fabric 
+3. You can validate the query using the Validate button.
 
-   - Choose a Logical Unit / Data Product. A visible sub-folder, usually called TABLE, opens, containing available table names.
+4. You can check the view's outcome by clicking on Execute button. For this, you shall populate the Instance ID box. Note that data product (logical unit) is prepopulated.
 
-   - Choose a table or some of its columns (appear when expanding the table), right-click on it and a popup message appears: Add Select Statement
+5. Save the view
 
-   - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
+  
 
-   - Populate the Instance ID box manually (top panel, rightmost box). The other 2 boxes (indicating the Mode & Logical Unit) are prepopulated, but can be changed via their drop-down arrows.
+  ![images](images/web_lu_table_lu_view_top_panel.png)  
 
-     ![images](images/web_lu_table_lu_view_top_panel.png)  
-
-3. Clicking on Execute runs the Select statement, which results with a display of a created view at the bottom half of the main window.
+6. Clicking on Execute runs the Select statement, which results with a display of a created view at the bottom half of the main window.
 
    ![images](images/web_lu_table_lu_view_executing_select.png)
 

@@ -20,13 +20,11 @@ The Instance Group is deployed together with its LU.
 
 1. Go to Project Tree > Implementation > Logical Units / Data Products
 
-   - Choose Logical Units / Data Products by clicking anywhere along the line
+   - Choose the data product
 
-   - Choose any one of the available Logical Units / Data Products (recognizable by a green circle on the left of each) by clicking on it
+   - Right-click on the *Instance Groups* folder
 
-   - Choose/highlight the *Instance Groups* component of the selected Logical Unit / Data Product and right-click on it
-
-   -  Choose/click on *New Instance Group* from the opened context menu (top option, as seen below)
+   -  Choose/click on *New Instance Group* from the opened context menu 
 
      ![images](images/20_14_web_choose_new_instance_group.png)
 
@@ -34,53 +32,38 @@ The Instance Group is deployed together with its LU.
 
       ![images](images/20_14_web_instance_group_name.png)
 
-      Note:
+      > Note: The name should start with a letter and should contain only alphanumeric characters and underscore.
 
-      1. The field is prepopulated with *Instance Group name*, which you should change.
+2. Following the new instance group creation, write a valid SQL query to select the instances to be included in the Instance Group. The query can be written manually or by using the DB Explorer to build it.
 
-      2. The name should start with a letter and should contain only alphanumeric characters and underscore.
+   - When writing the SQL query manually pick a suitable DB from the top drop down list in the main window
+   
+     ![images](images/20_14_choose_interface.jpg)
+   
+   - When using the DB Explorer to build it
+   
+      - Click on DB Interface Explorer icon (![images](images/20_14_web_db_interface_explorer_icon.png)) on the Activity Bar
+     - Choose the DB interface which shall be used to build the instance group.
+     - Choose the relevant table, then select **1** column only from it. Right-click on the column and choose *Add Select Statement*
 
-         ![images](images/20_14_web_instance_name_characteristics.png)
+       ![images](images/20_14_web_add_select_statement2.png)
 
-      ​
+       Clicking on this message populates the Instance Group Editor area.
 
-2. Following the new instance group creation: 
-
-   - Pick a suitable DB from the drop down list in the main window, for example CRM_DB
-   - Click on DB Instance Group Explorer (![images](images/20_14_web_db_interface_explorer_icon.png) icon on the vertical left panel, as seen below)
-
-![images](images/20_14_web_choose_db_interface_explorer_left_panel.png)
-
-3. Correspondently, click on CRM_DB (left-side window) > main > table
-
-   - Clicking on table displays an alphabetical list of available tables
-
-   - Choose a table (for example ADDRESS), then select **1** column (only) from it (for example CITY). Right-click on the column and choose *Add Select Statement* (upper option of 2, as seen below)
-
-     ![images](images/20_14_web_add_select_statement2.png)
-
-     ​
-
-
-   - Clicking on this message automatically populates the upper half of the main window with an internally generated Select statement. Note: a Select statement can also be manually typed in.
-
-   - Validate the automatically/manually populated Select statement by clicking on the Validate icon in the top bar. A message is consequently generated at the bottom part of the main window. (below)
+3. Validate the SQL statement by clicking on the Validate icon in the top bar. A message is consequently appeared at the bottom results panel.
 
      ![images](images/20_14_query_is_valid.png)
 
-   - Note: As mentioned above, **only 1** column from a table should be selected. In case you've mistakenly chosen a whole table, the validation process would yield the following message: *The query must return one column only.* (below)
+     >  Note: As mentioned above, **only 1** column from a table should be selected. In case you've mistakenly chosen more than that, the validation process would yield the following message: *The query must return one column only.*
+         ![images](images/20_14_message_query_must_return_one_column_only.png)
 
-     ![images](images/20_14_message_query_must_return_one_column_only.png)
-
-     ​
-
-4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom half of the main screen.
+4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom result panel. Of course this shows the current result and can hint about the actual results that will yielded on runtime.
 
    ![images](images/20_14_web_results_display.png)
 
 </web>
 
-<studio>
+
 
 ## How Do I Invoke an Instance Group from the Batch Command
 
