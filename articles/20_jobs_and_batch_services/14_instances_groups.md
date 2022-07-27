@@ -24,13 +24,11 @@ The Instance Group is deployed together with its LU.
 
    - Right-click on the *Instance Groups* folder
 
-   -  Choose/click on *New Instance Group* from the opened context menu 
-
+   -  Choose/click on *New Instance Group* from the opened context menu
      ![images](images/20_14_web_choose_new_instance_group.png)
 
    -  A message pops up, asking you to name the new instance group. When done, press **Enter** to confirm or **Escape** to cancel.
-
-      ![images](images/20_14_web_instance_group_name.png)
+     ![images](images/20_14_web_instance_group_name.png)
 
       > Note: The name should start with a letter and should contain only alphanumeric characters and underscore.
 
