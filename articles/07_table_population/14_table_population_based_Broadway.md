@@ -34,7 +34,9 @@ The following example displays a Broadway flow template created to populate the 
 
     <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
 
-  *  Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's [Delete Mode](/articles/06_LU_tables/04_table_properties.md#delete-mode) which is set to OFF by default, meaning the population inherits the respective LU Table's Delete Mode.
+  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, meaning the population inherits the respective LU Table's Delete Mode.
+
+  *  [Click for more information about LU table's Delete Mode](/articles/06_LU_tables/04_table_properties.md#delete-mode).
 
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The **SourceDbQuery** Actor inherits from the [DbCommand Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments.
 
@@ -97,13 +99,11 @@ Note that for the population to be effective on the server side, LU deployment i
 
 Starting from Fabric V6.5.9, Broadway population supports having an LU Instance ID column name different from the Source DB column name, when populating the LU Root table. To utilize this feature, do the following steps:
 
-1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID.
+1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID. Note that the population’s input remains same as the column name in Source DB, CUSTOMER_ID in this example.
 
    ![](images/07_14_InstanceIdLU.PNG)
 
-   * Note that the population’s input remains same as the column name in Source DB, CUSTOMER_ID in this example.
-
-2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's  column name. Then map the output of **SourceDbQuery** actor to the new input of **DbLoad** Actor.
+2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's  column name. Then map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
 
    ![](images/07_14_InstanceIdPop.PNG)
 
