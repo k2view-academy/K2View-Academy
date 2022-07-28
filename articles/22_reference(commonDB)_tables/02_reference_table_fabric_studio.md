@@ -75,11 +75,12 @@ A new reference table can be created also manually.
 
 2. Follow the [instructions](/articles/06_LU_tables/02_create_an_LU_table.md#create-a-new-lu-table-manually) for creating a new table.
 
-3. Save the file
+![images](images/22_02_web_new_table_created_devicestable2022.png)
+
+    3. Save the file
 
 4. Create a corresponding table population. 
 
-   ![images](images/22_02_web_new_table_created_devicestable2022.png)
 
 </web>
 
