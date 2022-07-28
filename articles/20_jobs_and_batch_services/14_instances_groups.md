@@ -40,7 +40,7 @@ The Instance Group is deployed together with its LU.
    
    - When using the DB Explorer to build it
    
-      - Click on DB Interface Explorer icon (![images](images/20_14_web_db_interface_explorer_icon.png)) on the Activity Bar
+     - Click on DB Interface Explorer icon (![images](images/20_14_web_db_interface_explorer_icon.png)) on the Activity Bar
      - Choose the DB interface which shall be used to build the instance group.
      - Choose the relevant table, then select **1** column only from it. Right-click on the column and choose *Add Select Statement*
 
@@ -48,7 +48,7 @@ The Instance Group is deployed together with its LU.
 
        Clicking on this message populates the Instance Group Editor area.
 
-3. Validate the SQL statement by clicking on the Validate icon in the top bar. consequently, a message appears at the bottom results panel.
+3. Validate the SQL statement by clicking on the Validate icon in the top bar. Consequently, a message appears at the bottom results panel.
 
      ![images](images/20_14_query_is_valid.png)
 
