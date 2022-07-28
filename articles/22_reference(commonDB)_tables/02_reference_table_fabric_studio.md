@@ -119,7 +119,7 @@ To view Reference tables content:
 1. Switch to DB Interface Explorer View by clicking on its icon ( ![images](images/22_02_web_db_interface_explorer_icon.png)), located on the Activity Bar.
 2. Click to open the Query Builder on Fabric 
 3. Choose "common" 
-4. Choose the required reference table or some of its columns and right-click to add select statement. Then click on the Execute button to view its content in the results panel.
+4. Choose the required reference table or some of its columns and right-click to add a select statement. Then click on the Execute button to view its content in the results panel.
 
 </web>
 
