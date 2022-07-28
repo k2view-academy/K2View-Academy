@@ -58,7 +58,7 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
 4. You can check the view's outcome by clicking on Execute button. For this, you shall populate the Instance ID box. Note that data product (logical unit) is prepopulated.
 
-5. Save the view
+5. Save the view.
 
   
 
