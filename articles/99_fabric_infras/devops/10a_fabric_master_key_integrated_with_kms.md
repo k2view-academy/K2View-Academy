@@ -67,6 +67,8 @@ For multi region Fabric deployment it might be required to work with [AWS multi 
    ~~~
    >  Note: Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
 
+4. At Fabric, run ``activatekey name='masterkey_key_name' generatorType='Java_AES' storeType='GCP_KMS'``.
+
 ## Symmetric and Asymmetric Master Key Encryption Types
 
 While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type. This type shall be selected at KMS when creating the master key. 
