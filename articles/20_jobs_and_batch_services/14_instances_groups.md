@@ -4,7 +4,7 @@
 
 <studio>
 
-1. Go to the **Fabric Studio**, select the **LU** > **Instance Groups** and right click and select **New Instance Group**.
+1. Go to the **Fabric Studio**, select the **LU** > **Instance Groups** and right-click and select **New Instance Group**.
 2. Write a valid **SQL query** to select the instances to be included in the Instance Group.
    * The query can be written using the Query Builder by clicking **Open Query Builder**.
 3. Validate the query by clicking **Validate Query**.
