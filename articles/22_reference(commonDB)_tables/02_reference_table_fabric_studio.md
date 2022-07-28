@@ -81,7 +81,7 @@ A new reference table can be created also manually.
 
    ![images](images/22_02_web_new_table_created_devicestable2022.png)
 
-5. </web>
+</web>
 
 
 ## Editing and Viewing Reference Tables
