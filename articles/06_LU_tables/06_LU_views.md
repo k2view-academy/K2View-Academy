@@ -49,7 +49,7 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 2. Following the new view creation, you can either type the view's query by your own or be assisted by the Studio's Query Builder. 
    To create the query with Query Builder:
 
-   - click on DB Interface Explorer icon (![](/articles/04_fabric_studio/images/web/datasource_explorer.png)) on the Activity Bar
+   - Click on DB Interface Explorer icon (![](/articles/04_fabric_studio/images/web/datasource_explorer.png)) on the Activity Bar
    - Choose "fabric" and the data product.
    - Choose a table or some of its columns (appear when expanding the table), right-click on it and  choose Add Select Statement at the opened context menu.
    - The accordingly select statement will appear at the Views Editor screen.
