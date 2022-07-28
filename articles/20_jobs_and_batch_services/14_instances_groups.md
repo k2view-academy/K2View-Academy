@@ -48,7 +48,7 @@ The Instance Group is deployed together with its LU.
 
        Clicking on this message populates the Instance Group Editor area.
 
-3. Validate the SQL statement by clicking on the Validate icon in the top bar. A message is consequently appeared at the bottom results panel.
+3. Validate the SQL statement by clicking on the Validate icon in the top bar. consequently, a message appears at the bottom results panel.
 
      ![images](images/20_14_query_is_valid.png)
 
