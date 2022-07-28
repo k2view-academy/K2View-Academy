@@ -77,7 +77,7 @@ A new reference table can be created also manually.
 
 ![images](images/22_02_web_new_table_created_devicestable2022.png)
 
-    3. Save the file
+3. Save the file
 
 4. Create a corresponding table population. 
 
