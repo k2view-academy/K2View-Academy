@@ -8,7 +8,7 @@ A  Reference table holds information that is common to either all LU instances o
 
 <studio>
 
-1.  Go to **Project Tree** > **References** , right click, then select **Create References Based On DB Tables**. This will display the DB Browser menu, Context menu and References popup window. 
+1.  Go to **Project Tree** > **References** , right-click, then select **Create References Based On DB Tables**. This will display the DB Browser menu, Context menu and References popup window. 
 
 2.  Click **DB Connection** (top of the window) and select a data source interface. 
 
