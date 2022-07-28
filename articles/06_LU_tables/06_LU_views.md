@@ -10,7 +10,7 @@ The SQL statement of the LU view can include a SELECT statement from one LU tabl
 
 Views are part of the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) definition; however, they are not part of the LU Schema. LU views are populated with data at the end of the sync process, after all LU tables population has been completed. 
 
-a view's column data type is the same as the respective LU table's column data type. LU views don't have their own properties and can't be indexed. 
+A view's column data type is the same as the respective LU table's column data type. LU views don't have their own properties and can't be indexed. 
 
 There are two techniques in which LU view data can be accessed: either via a direct querying of an instance's MicroDB or via the Declarative field level authorization mechanism. When using the latter technique, the query on an LU table is replaced by a query on an LU view. This replacement is based on a security profile of a Fabric user's role.
 
