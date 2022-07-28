@@ -100,7 +100,7 @@ To access the Reference Viewer do the following:
 
 <studio>
 
-1.  Go to **Project Tree** > **References**, right click **References Viewer**, and then select the **table**. The Data Viewer window is displayed according to its hierarchy in the Instances Tree pane.
+1.  Go to **Project Tree** > **References**, right-click **References Viewer**, and then select the **table**. The Data Viewer window is displayed according to its hierarchy in the Instances Tree pane.
 
 2.  Click the **data file** to display the components hierarchy in the Instance DB Tree pane.
 
@@ -119,7 +119,7 @@ To view Reference tables content:
 1. Switch to DB Interface Explorer View by clicking on its icon ( ![images](images/22_02_web_db_interface_explorer_icon.png)), located on the Activity Bar.
 2. Click to open the Query Builder on Fabric 
 3. Choose "common" 
-4. choose the required reference table or some of its columns and right-click to add select statement. Then Click on the Execute button to its content in the results panel.
+4. Choose the required reference table or some of its columns and right-click to add select statement. Then click on the Execute button to its content in the results panel.
 
 </web>
 
