@@ -55,7 +55,7 @@ The Instance Group is deployed together with its LU.
      >  Note: As mentioned above, **only 1** column from a table should be selected. In case you've mistakenly chosen more than that, the validation process would yield the following message: *The query must return one column only.*
          ![images](images/20_14_message_query_must_return_one_column_only.png)
 
-4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom result panel. Of course this shows the current result and can hint about the actual results that will yielded on runtime.
+4. Clicking on the Execute icon (in the top bar) runs the select statement, which results with a display of the newly created instance group at the bottom results panel. Of course this shows the current result and can hint about the actual results that will yielded on runtime.
 
    ![images](images/20_14_web_results_display.png)
 
