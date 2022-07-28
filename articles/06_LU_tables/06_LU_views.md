@@ -36,7 +36,7 @@ Note that once an LU view is connected to a security profile, it cannot be acces
 
    - Choose the relevant data product 
 
-   - Right click on the *Views* folder of the selected data product
+   - Right-click on the *Views* folder of the selected data product
 
    - Choose *New View* from the opened context menu
 
