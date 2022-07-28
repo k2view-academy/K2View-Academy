@@ -158,7 +158,7 @@ By default, reference tables are synched in the background of each table accordi
 The following functions or other tables can be attached to the Reference table:
 
 - [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) - performs data manipulations on the table's content.
-- Other Reference Tables, on which the current Reference table is depending (e.g. it needs data from these tables).
+- Other Reference Tables, on which the current Reference table depends (e.g. it needs data from these tables).
 - Index Post Sync - determines if an index should be created on a Reference table after data is synced. This capability is relevant for huge reference databases (more than 200M records) and can accelerate the overall data sync time. Added in release 6.5.1.  
 
 </studio>
