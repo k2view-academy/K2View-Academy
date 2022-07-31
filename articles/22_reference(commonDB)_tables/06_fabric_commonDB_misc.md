@@ -3,7 +3,7 @@
 ## CommonDB Table Initialization
 When a new node comes up online or rejoins the current Fabric cluster, all common tables must also be updated on this node. There are two enrollment options:
 
-**Option 1: Directly from kafka**
+**Option 1: Directly From Kafka**
 
 A new node connects directly to each Kafka topic for each Reference table to check whether a snapshot is available:
 - The table is regularly synced as defined in its sync schedule and therefore a snapshot is available.
@@ -22,14 +22,12 @@ A new node is online and requests an update:
 
 ### What Happens When I Deploy a New Reference Table ?
 
-Deploying a new Reference table has the following consequences:
 - A new table/index is created in the CommonDB.
 - A new Kafka topic is created if a new table has been added.
 - A new Kafka consumer is created for each node.
 - New sync jobs are started, also if the deployment process failed so as not to prevent existing synchronization processes.
 
-### What Happens When I Deploy an existing Reference Table ?
-Deploying a new reference table has the following consequences:
+### What Happens When I Deploy an Existing Reference Table ?
 - All currently running Reference table synchronization jobs stop.
 - New sync jobs are started also if the deployment process failed so as not to prevent existing synchronization processes.
 - All existing configuration parameters are used such as sync_job_retry_interval on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
@@ -49,11 +47,11 @@ When running the following ```drop lutype k2_ref;``` command from any Fabric Nod
 - All existing consumer/producers are terminated.
 
 
-   
+
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/07_fabric_commonDB_configuration.md)
 
 
-   
+
