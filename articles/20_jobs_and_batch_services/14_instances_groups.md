@@ -1,5 +1,7 @@
 # Instance Groups
 
+While running a batch/migrate you shall define the set of LU IDs. This can be determined via an Instance group - a pre-defined SQL, or directly in an SQL command. 
+
 ## How Do I Create a New Instance Group?
 
 <studio>

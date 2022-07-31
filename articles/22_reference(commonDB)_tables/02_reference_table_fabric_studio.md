@@ -44,13 +44,14 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 2. Choose the DB Interface and the required table
 
 3. Right-click on the table. A popup window appears. Choose the *Create Reference Table* option as seen below
+
    ![images](images/22_02_web_create_reference_table.png)
 
 4. An automatically-generated new reference table has been created; as seen below, it is comprised of external data source table.
 
-   > Note: Once the reference table is auto generated, a corresponding population flow is auto generated too. 
+     > Note: Once the reference table is auto generated, a corresponding population flow is auto generated too. 
 
-   ![images](images/22_02_web_reference_table_creation_final_result.png)
+      ![images](images/22_02_web_reference_table_creation_final_result.png)
 
    
 
