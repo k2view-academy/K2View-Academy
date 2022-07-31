@@ -110,15 +110,13 @@ LIST BF LU_NAME=<'LU Name'> FLOW=<'BF FLOW'>;
 **Example**:
 
 ~~~
-fabric>list bf lu_name=Customer flow=CheckMaxAndDivide;
+fabric>list bf lu_name='Customer' flow='broadwayOverview';
 ~~~
 
 ```
-|param |name  |type|schema       |mandatory|default|
-+------+------+----+-------------+---------+-------+
-|input |a     |any |{}           |true     |null   |
-|input |b     |any |{}           |true     |null   |
-|output|result|real|{type=number}|false    |       |
+|param|name  |type|schema|mandatory|isDefault|
++-----+------+----+------+---------+---------+
+|input|params|any |{}    |false    |false    |
 ```
 
 

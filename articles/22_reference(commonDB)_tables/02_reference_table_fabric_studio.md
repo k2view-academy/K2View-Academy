@@ -13,7 +13,7 @@ This information is stored in an external table and not in each LUI MicroDB.
 
 3.  Click **main** to display the Tables directory in the source DB.
 
-4. Select a **table**. To select multiple tables, press the Ctrl key.
+4.  Select a **table**. To select multiple tables, press the Ctrl key.
 
 ![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
 
@@ -30,7 +30,7 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 ![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
 6. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
-If the table does not appear immediately, click ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) Refresh on the top of the Project Tree.
+  If the table does not appear immediately, click ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) Refresh on the top of the Project Tree.
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
 
@@ -88,7 +88,6 @@ By default, reference tables are synched in the background of each table accordi
 
 - Decision function, syncs the table according to the [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) defined under the **References**  > **Java** folder. 
 
-  
 
 #### Miscellaneous
 

@@ -1,3 +1,5 @@
+<studio>
+
 # Broadway Integration with Fabric Studio
 
 The Fabric Studio includes several integration points that are used by Broadway Actors to simplify the creation of Broadway flows.
@@ -14,13 +16,13 @@ To create the population based on the Broadway flow, right click the table name 
 
 ### Interface Listener For Broadway Flows
 
-From version 6.5.3, a new actor [*InterfaceListener*](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
+From version 6.5.3, a new actor [**InterfaceListener**](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
 The flow described below, is still supported and can be defined via Fabric Studio.
 
 The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either an SFTP or a local file system. Each file is only picked up once by the Listener and the file name must not be repeated otherwise it will be disregarded.  
 
-![images](/articles/24_non_DB_interfaces/images/broadway_file_read.PNG)
+![images](../24_non_DB_interfaces/images/broadway_file_read.PNG)
 
 The Listener invokes the attached Broadway flow that needs the **FileRead** Actor to read the files. The **interface** and the **path** input arguments of the **FileRead** Actor must be defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
@@ -98,18 +100,29 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
 
-### Broadway Flows: Automatic Execution upon LU Deploy
+</studio>
 
-A Broadway flow can run automatically as a result of a deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the deploy.flow.
+## Automatic Flows Execution upon LU Deploy
 
-* If the deploy.flow is defined on the shared level only, it will be inherited to all the LUs.
-* If a soft deploy is defined to the deployed environment, a deploy will not trigger the deploy.flow execution.
-* When a new Logical Unit is created, a deploy.flow will be generated automatically with the following constants:
-  * lu_name - contains the name of deployed LU.
-  * nosync – 
-    * NOSYNC TRUE: Only schema changes trigger sync after deploy.
-    * NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time instance is accessed.
-  * Is_first_deploy - A Boolean representing if this is the first deploy.
-  * is_studio - Will be true if this is the studio debug environment fabric instance.
+A Broadway flow can run automatically as a result of a Deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the **deploy.flow**.
 
-[![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
+* If the **deploy.flow** is defined on the Shared level only, it will be inherited by all the LUs.
+
+* If a Soft Deploy is defined to the deployed environment, a deploy will not trigger the **deploy.flow** execution.
+
+When a new Logical Unit is created, a **deploy.flow** will be generated automatically with the following constants:
+
+* **lu_name** - contains the name of deployed LU.
+
+* **nosync**
+
+  * NOSYNC TRUE: Only schema changes trigger a sync after a deploy.
+  * NOSYNC FALSE: Any deploy (even without any changes) triggers a sync the first time an instance is accessed.
+
+* **is_first_deploy** - A Boolean indicating if this is the first deploy.
+
+* **is_studio** - This value is true if this is the Studio debug environment Fabric instance.
+
+  
+
+[![Previous](/articles/images/Previous.png)](08_show_only_connected_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)

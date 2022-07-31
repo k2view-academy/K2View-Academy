@@ -5,7 +5,7 @@ The implementation of a Fabric project can be divided into two steps:
 - **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio in order to implement the business requirements.
 - **Deployment** of the project into the Fabric server so that the first deployment of the new project or all recent changes since its last deployment are compiled and become effective on the server side. 
 
-A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) and [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) and is required whenever these objects are created or modified. 
+A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) <studio>and [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio> and is required whenever these objects are created or modified. 
 
 Deployment is needed for any change operated in any of these objects, excluding the migration of source data into the Fabric server. 
 The deployment of a Fabric project is performed on the following levels:
@@ -21,18 +21,27 @@ The deployment of a Fabric project is performed on the following levels:
   - Each Graphit object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. 
 - **Deployment of Environments**. 
 
+<studio>
+
 Deployment can be performed either:
+
 - [From the Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio) using **Deploy to Server**.
 - [Offline Deploy](03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
 A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
 
+</studio>
+
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric server. For example, when an interface is updated, all LU using this interface should be re-deployed to make this change effective.
 
 ### Soft Deploy
 
-**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use the Soft Deploy option to deploy their changes without triggering automatic processes such as:
+**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions.
+
+<studio>
+
+You can use the Soft Deploy option to deploy changes without triggering automatic processes such as:
 
 * User jobs
 * Parsers
@@ -42,11 +51,33 @@ To activate Soft Deploy when doing a deployment from the Fabric Studio, mark the
 
 To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
+</studio>
+
+<web>
+
+To activate Soft Deploy, right-click on a Logical Unit name, and select Soft Deploy. 
+
+</web>
+
 ### How Do I Check Which Project Is Deployed to Fabric? 
 
 Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
 
-To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console. 
+<studio>
+	
+To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console
+(click this icon from next to **Fabric** in the Debug Panel to open the console):   <img width="20" height="19" src="/articles/04_fabric_studio/images/open_debug_server_or_cassandra.png">
+
+</studio>
+
+<web>
+	
+To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric terminal
+(Choose **Fabric -> Open Fabric Terminal**)
+
+</web>
+
+
 ###### Syntax:
 
 ~~~
@@ -103,7 +134,10 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
+<studio>
+
 ### How Do I Get the Deployed Implementation?
+
 After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementer can download the code deployed in the environment and check it.
 
 ###### Syntax:
@@ -115,5 +149,6 @@ After the project is deployed to the server, there might be a need to clarify wh
 
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
 
-
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
+
+</studio>
