@@ -20,14 +20,12 @@ A new node is online and requests an update:
 
 ### What Happens When I Deploy a New Reference Table ?
 
-Deploying a new Reference table has the following consequences:
 - A new table/index is created in the CommonDB.
 - A new Kafka topic is created if a new table has been added.
 - A new Kafka consumer is created for each node.
 - New sync jobs are started, also if the deployment process failed so as not to prevent existing synchronization processes.
 
-### What Happens When I Deploy an existing Reference Table ?
-Deploying a new reference table has the following consequences:
+### What Happens When I Deploy an Existing Reference Table ?
 - All currently running Reference table synchronization jobs stop.
 - New sync jobs are started also if the deployment process failed so as not to prevent existing synchronization processes.
 - All existing configuration parameters are used such as sync_job_retry_interval on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
