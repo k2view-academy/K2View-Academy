@@ -2,17 +2,17 @@
 
 An [LU table](/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 
-The following are some of the methods you can use for adding a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md): 
+The following are some of the methods you can use for adding a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md). 
 
 <studio>
 
-1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating or editing an LU by which the tables and their populations are automatically created and added to the LU schema.
+While using one of the first three methods, the tables are also created in Fabric LU and then added to the schema. The last one enables adding an existing LU table, which is not in use in the schema.
 
-   -- or --
+1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating tables and their populations and adding them to the LU schema.
 
-2. From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window:
+2. Use the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) appears at the right side of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window:
 
-   * Go to the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs). 
+   * Click on the DB Objects tab.
    * Click **DB Connection** and select a [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) from the drop-down menu.
    * From the window underneath the **DB Connection** drop-down menu, open the table tree, select a **Table**, open its drop-down menu and drag the table from its title into the **LU schema**. You can drag several tables at the same time.
    * A right-click menu appears; select one of the following from it: **Create Table Based DB Query** or **Create Table Based Root Function** or **Create Table Based Broadway Flow**.
@@ -21,26 +21,29 @@ The following are some of the methods you can use for adding a table to an [LU s
 
       ![image](images/03_09_01_tables1.png)
 
-   -- or --
+   
 
-3. Drag a **Table** into the **LU Schema window**:
-
-    * Go to the [Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md).
-    * Select a **Table** and drag it into the **LU Schema window**.
-
-    ![image](images/03_09_02_tables2.png)
-
-    -- or --
-
-4. Right click the **Schema window** and select one of the following options:
+3. Right click the **Schema window** and select one of the following options:
 
     * **New Table from SQL Based DB Query**.
     * **New Table from SQL Based Root Function**.
+    
     * **New Table from SQL Based Broadway Flow**.
+    
 
     All the above 3 options open the Query Builder. The LU table and its populations are automatically generated, based on an SQL query defined in the Query Builder.
+    
+    ![image](images/03_09_03_tables3.png)
 
-      ![image](images/03_09_03_tables3.png)
+
+
+4. Drag a **Table** into the **LU Schema window**:
+
+   * Go to the [Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md).
+
+   * Select a **Table** and drag it into the **LU Schema window**.
+   
+      ![image](images/03_09_02_tables2.png)
 
 
 
@@ -57,6 +60,8 @@ The following are some of the methods you can use for adding a table to an [LU s
 </studio>
 
 <web>
+
+While using one of the first two methods, the tables are also created in Fabric LU and then added to the schema. The last one enables adding an existing LU table, which is not in use in the schema.
 
 1. From the **DB Interface Explorer**, click on the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon from the Activity panel on the left as described [here](/articles/03_logical_units/05_create_a_new_LU_object.md). This option is useful when you wish to add tables from data sources.
 
