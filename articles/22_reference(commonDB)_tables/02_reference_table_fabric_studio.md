@@ -105,11 +105,11 @@ To access the Reference Viewer do the following:
 
 2.  Click the **data file** to display the components hierarchy in the Instance DB Tree pane.
 
-![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
+![image](images/05_create_new_common_tables_dataviewer.PNG)
 
 2.  Click the **table name** to display the table's data in the main Data Viewer window. 
 
-![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
+![image](images/04_create_new_common_tables_dataviewer.PNG)
 
 </studio>
 
@@ -200,23 +200,35 @@ The following functions or other tables can be attached to the Reference table:
 
 </web>
 
-## Attach the Reference Table to an LU Schema
+## Attach the Reference Table to a Logical Unit Schema
 
 Before accessing the Reference Table from a specific LU, or before it can be used as a [lookup object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab), it must be attached to the LU.
 
 ### Configure LU to Use a Reference Table
 
-1. Open the **LU Schema Window**
+<studio>
+
+1. Open the **Schema Window**
 
 2. In the right panel, select the [References](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) tab.
 
 3. Check the relevant **Reference table(s)** option.
 
-   <studio>
-
-![image](/articles/22_reference(commonDB)_tables/images/07_create_new_common_tables_LU_Ref.PNG)
+   ![image](images/07_create_new_common_tables_LU_Ref.PNG)
 
 </studio>
+
+<web>
+
+1. Open the **Schema Window**
+
+2. In the right panel, expand the **Dependent References** section
+
+3. Add the required Reference tables to the Reference List: Use the plus (+) button to add another table and then select a table from the list
+
+   ![image](images/22_02_web_dependent_ref_at_schema.jpg)
+
+</web>
 
 4. Click **Save** to save the association created between the LU and the Reference Table(s). 
 
@@ -228,11 +240,9 @@ Note: Reference tables can also be accessed via [Lookup tables](/articles/07_tab
 
 Reference Tables must be deployed before being used. As a result of the deployment, a synchronization [job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) process is triggered in the background to ensure that all commonDB copies are kept in-sync across the Fabric Cluster.
 
-To deploy the Reference Tables, go to the **Project Tree**, right-click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.
+To deploy the Reference Tables, go to the **Project Tree**, right-click **References**, select one of **Deploy** options, as needed.  
 
-Note:
-
-If the reference table has been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
+> Note: If the reference table has been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
 
   
 
