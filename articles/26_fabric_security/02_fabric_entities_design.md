@@ -148,7 +148,7 @@ As described here, the Fabric master-key command refers to its modules - the key
 * When integrated with AWS, use ``activatekey name='<name>' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 * When integrated with GCP, use ``activatekey name='<name>' generatorType='Java_AES' storeType='GCP_KMS'``.
 
-> Note: At any point, these commands can be executed with these parameters or the defaults - self generated and self stored master key - and since then encryptions will be done with the newest key. Fabric will still be able to decrypt data that was encrypted with previous keys, of any type. For example, if Fabric already works with a self generated master key and at some point it is required to adopt KMS, then configuration shall be set at the config.ini and then the above relevant  ``activatekey`` command (AWS, GCP) shall be executed. 
+> Note: At any point, these commands can be executed with these parameters or their defaults - self generated and self stored master key - and from this point encryptions will be done with the newest key. Fabric will still be able to decrypt data that was encrypted with previous keys, of any type. For example, if Fabric already works with a self generated master key and at some point it is required to adopt KMS, then configuration shall be set at the config.ini and then the above relevant  ``activatekey`` command (AWS, GCP) shall be executed. 
 
 #### Key Rotation
 
