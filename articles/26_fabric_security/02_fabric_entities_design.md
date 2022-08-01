@@ -91,7 +91,7 @@ A key can be generated using the following command:
 
 > Notes:
 >
-> * When Fabric is going live, it checks whether a master key is already exist and if not - it creates it.
+> * When Fabric is going live, it checks whether a master key already exists and if it does not - it creates it.
 > * The *generator-type* and *store-type* parameters are optional. If not specified Fabric uses its defaults -  "Java_AES" and "Stripe_AES" respectively.
 
 ### Master Key Rotation
