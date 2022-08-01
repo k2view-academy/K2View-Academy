@@ -143,7 +143,7 @@ For information of what shall be configured for working with KMS, refer to [Fabr
 
 #### Fabric Master Key Commands
 
-As described here, the Fabric master-key command refers to its modules - the key generation and the key storage, according to its input parameters. When working with KMS, these parameters shall be provided as following:
+As described here, the Fabric master-key command refers to its modules - the key generation and the key storage, according to its input parameters. When working with KMS, these parameters shall be provided as follows:
 
 * When integrated with AWS, use ``activatekey name='<name>' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 * When integrated with GCP, use ``activatekey name='<name>' generatorType='Java_AES' storeType='GCP_KMS'``.
