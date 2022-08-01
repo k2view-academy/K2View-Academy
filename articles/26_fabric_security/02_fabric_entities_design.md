@@ -164,7 +164,7 @@ KMS is usually strictly isolated to a single region, with no sharing of keys, po
 * AWS, Key shall be created as multi region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data which is encrypted in one region can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
 * GCP, Supports multi regional, as well as "general" region. Best practice recommendations are descried and [here](https://cloud.google.com/kms/docs/locations#choosing). 
 
-In Fabric perspective, while its nodes might be able to access to a key on any KMS region, it still shall be carefully considered due to performance aspects on cross region access.
+From Fabric perspective, while its nodes may be able to access a key on any KMS region, it still should be carefully considered due to performance aspects on cross region access.
 
 
 
