@@ -122,7 +122,7 @@ The application uses the two forms of the data key - clear/plain and encrypted. 
 
 The encrypting process is a little different among cloud providers:
 
-* [AWS]([https://aws.amazon.com/kms](https://aws.amazon.com/kms/)) - the application calls to KMS to generate a data key and it then gets the data key back in its 2 forms. 
+* [AWS](https://aws.amazon.com/kms/) - the application calls to KMS to generate a data key and it then gets the data key back in its 2 forms. 
 * [GCP](https://cloud.google.com/security-key-management) - the application itself generates the data key and calls to KMS to encrypt it.
 
 Then, in either of KMS providers, the application uses the clear/plain form to encrypt the data and also stores the encrypted data key in order to enabled decrypting it later. The application shall decide whether to reuse a data key for later encryptions or whether to regenerate different ones, either every time or in some frequency.  
