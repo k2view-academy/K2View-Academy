@@ -159,7 +159,7 @@ When working with KMS there are two levels or key rotation: The data key rotatio
 
 #### Multi Region Support
 
-KMS is usually strictly isolated to a single region, with no sharing of keys, policies, or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
+KMS is usually strictly isolated to a single region, with no sharing of keys, policies or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
 
 * AWS, Key shall be created as multi region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data which is encrypted in one region can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
 * GCP, Supports multi regional, as well as "general" region. Best practice recommendations are descried and [here](https://cloud.google.com/kms/docs/locations#choosing). 
