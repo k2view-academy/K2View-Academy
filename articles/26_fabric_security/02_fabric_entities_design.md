@@ -49,7 +49,7 @@ As an alternative for using its built-in master key generator, Fabric enables in
 
 By default, Fabric uses its built-in master-key storage mechanism, which stores the master key securely. When used, it first encrypts the master key using a *protection key*. To do so, the JAVA_AES library randomly generates a new 256 bit key using an AES-256 algorithm. Fabric also uses an Initialization Vector algorithm to encrypt the master key. 
 
-Once the master key is encrypted, it is broken into bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using Cassandra distribution data logic, the parts of the key are stored across different nodes of the cluster. 
+Once the master key is encrypted, it is broken into bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using the Cassandra distribution data logic, the parts of the key are stored across different nodes of the cluster. 
 
 #### Securing the Protection Key
 
