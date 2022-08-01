@@ -43,7 +43,7 @@ Fabric Master Key mechanism is based on two modules: key generator and key stora
 By default, Fabric uses its built-in master-key generator, which uses strong Java methods aimed for AES key generation algorithms. A 
 Master key can be regenerated via the [Master Key Rotation](#master-key-rotation) mechanism.
 
-As an alternative for using its built-in master key generator, Fabric enables integration with [KMS](#kms) (Key Management Service) to generate and encrypt its master key.   
+As an alternative for using its built-in master key generator, Fabric enables integration with [KMS](#kms) (Key Management Services) to generate and encrypt its master key.   
 
 ### Master Key Storage
 
