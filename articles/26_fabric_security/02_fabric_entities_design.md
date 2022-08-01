@@ -63,7 +63,7 @@ To use it:
 
   > Note:  When Fabric is loaded for the first time, it checks if such entry exists and if not - generate it.
 
-When used, Fabric accesses first to the KeyStore, opens it using user and password credentials, gets the protection key stored in it, and uses it with an initialization vector (IV) to encrypt or decrypt the Fabric master key.
+When used, Fabric accesses first the KeyStore, opens it using user and password credentials, gets the protection key stored in it, and uses it with an initialization vector (IV) to encrypt or decrypt the Fabric master key.
 
 > Notes:
 >
