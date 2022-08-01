@@ -122,8 +122,8 @@ The application uses the two forms of the data key - clear/plain and encrypted. 
 
 The encrypting process is a little different among cloud providers:
 
-* [AWS]([https://aws.amazon.com/kms](https://aws.amazon.com/kms/)), The application calls to KMS to generate a data key and it then gets the data key back in its 2 forms. 
-* [GCP](https://cloud.google.com/security-key-management), The application itself generates the data key and calls to KMS to encrypt it.
+* [AWS]([https://aws.amazon.com/kms](https://aws.amazon.com/kms/)) - The application calls to KMS to generate a data key and it then gets the data key back in its 2 forms. 
+* [GCP](https://cloud.google.com/security-key-management) - The application itself generates the data key and calls to KMS to encrypt it.
 
 Then, in either of KMS providers, the application uses the clear/plain form to encrypt the data and also stores the encrypted data key in order to enabled decrypting it later. The application shall decide whether to reuse a data key for later encryptions or whether to regenerate different ones, either every time or in some frequency.  
 
@@ -161,8 +161,8 @@ When working with KMS, there are two levels of key rotation: The data key rotati
 
 KMS is usually strictly isolated to a single region, with no sharing of keys, policies or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
 
-* AWS, Key should be created as a multi-region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data - which is encrypted in one region - can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
-* GCP, Supports a multi-regional key, as well as a "general" region key. Best practice recommendations are described [here](https://cloud.google.com/kms/docs/locations#choosing). 
+* AWS - key should be created as a multi-region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data - which is encrypted in one region - can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
+* GCP - supports a multi-regional key, as well as a "general" region key. Best practice recommendations are described [here](https://cloud.google.com/kms/docs/locations#choosing). 
 
 From Fabric perspective, while its nodes may be able to access a key on any KMS region, it still should be carefully considered due to performance aspects on cross region access.
 
