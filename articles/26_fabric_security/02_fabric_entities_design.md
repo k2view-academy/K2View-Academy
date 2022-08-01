@@ -118,7 +118,7 @@ KMS exposes two-tiered key hierarchy to clients:
 * **Master Key** (one or more, as needed), at AWS it is known as CMK (Customer Master Key) and at GCP it is called KEK (Key Encryption Key). The master key, which is protected with HSM, lives in KMS and never leaves it. Clients cannot get it, but rather they are aware of its identity and ask KMS to use it. 
 * **Data Key**, used by applications to encrypt the data. The KMS does not store data keys but rather generates (at AWS) and protects them using the master keys.  
 
-The application uses the two forms of the data key - clear/plain and encrypted. While the encrypted form is stored and persistent, the clear/plain form must not be stored elsewhere, just exists at the runtime memory.
+The application uses the two forms of the data key - clear/plain and encrypted. While the encrypted form is stored and persistent, the clear/plain form must not be stored anywhere, it just exists at the runtime memory.
 
 The encrypting process is a little different among cloud providers:
 
