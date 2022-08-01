@@ -89,20 +89,20 @@ The order of data cannot be consistent since it is performance consumed, unless 
 
 ## Override RESTful API Response
 
-In order to override the RESTful API reponse that is generated automatically, use HttpServletResponse Class.
+In order to override the RESTful API response that is generated automatically, use **HttpServletResponse** Class.
 
 For Example:
 
-```
+```java
 HttpServletResponse response = response();
 response.setStatus(201);
 ```
 Or
-```
+```java
 HttpServletResponse response = response();
 response.setHeader(String,String);
-
 ```
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)
 
+
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Fabric_smart_proxy.md)
 
