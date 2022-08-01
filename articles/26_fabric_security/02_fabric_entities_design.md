@@ -114,7 +114,7 @@ KMS is a cloud service that provides a centralized key management with interface
 
 >  Note: While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type and thus the below explanations refer to this type only. 
 
-KMS exposes to clients two-tiered key hierarchy: 
+KMS exposes two-tiered key hierarchy to clients: 
 * **Master Key** (one or more, as needed), at AWS it is known as CMK (Customer Master Key) and at GCP it is called KEK (Key Encryption Key). The master key, which is protected with HSM, lives in KMS and never leaves it. Clients cannot get it, but rather they are aware of its identity and asks KMS to use it. 
 * **Data Key**, used by applications to encrypt the data. The KMS does not store data keys but rather generate (at AWS) and protect them using the master keys.  
 
