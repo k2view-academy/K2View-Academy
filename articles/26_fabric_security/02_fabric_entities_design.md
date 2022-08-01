@@ -61,7 +61,7 @@ To use it:
 
 * Generate a secret key and store it in the KeyStore using ```keytool -genseckey``` command as described [here](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md ) 
 
-  > Note:  When Fabric is loaded for the first time it checks if  such entry exists and if not - generate it.
+  > Note:  When Fabric is loaded for the first time, it checks if such entry exists and if not - generate it.
 
 When used, Fabric accesses first to the KeyStore, opens it using user and password credentials, gets the protection key stored in it, and uses it with an initialization vector (IV) to encrypt or decrypt the Fabric master key.
 
