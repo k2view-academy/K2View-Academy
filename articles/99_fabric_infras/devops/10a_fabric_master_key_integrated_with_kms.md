@@ -3,7 +3,7 @@
 Fabric master key mechanism can be integrated with KMS, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
 
 To define Fabric to work with KMS, the information shall be acquired first from KMS and then shall be set at Fabric.
-> By default, Fabric uses its internal master key mechnaism 
+> By default, Fabric uses its internal master key mechanism. 
 
 ## Integration with AWS KMS
 
@@ -32,13 +32,16 @@ To define Fabric to work with KMS, the information shall be acquired first from 
    REGION=
    CUSTOMER_KEY_ID=
    ~~~
-   >  Note: Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
+   >  Notes: 
+   >
+   >  * Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
+   >  * In case Fabric node already has a trust with AWS (with AWS's user who shall connect to KMS), then ACCESS_KEY_ID and SECRET_ACCESS_KEY can be omitted.
 
 4. At Fabric, run ``activatekey name='masterkey_key_name' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 
 ### Multi Region Support
 
-For multi region Fabric deployment it might be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/), for a better perfromance. In such case, config.ini shall be set different among Fabric nodes, i.e. with relevant region replicated keys.
+For multi region Fabric deployment it might be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/), to achieve better performance. In such case, config.ini shall be set different among Fabric nodes, i.e. with relevant region replicated keys.
 
 ## Integration with GCP KMS
 
@@ -65,7 +68,10 @@ For multi region Fabric deployment it might be required to work with [AWS multi 
    KEY_RING_ID=
    CREDENTIAL_FILE=
    ~~~
-   >  Note: Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
+   >  Note: 
+   >
+   >  * Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
+   >  * In case Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then CREDENTIAL_FILE can be omitted.
 
 4. At Fabric, run ``activatekey name='masterkey_key_name' generatorType='Java_AES' storeType='GCP_KMS'``.
 
