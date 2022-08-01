@@ -53,7 +53,7 @@ Once the master key is encrypted, it is broken into bytes. Each byte is stored i
 
 #### Securing the Protection Key
 
-To secure the protection key itself along with the ability to control and rotate it, it is recommended to configure Fabric to store it within KeyStore mechanism. 
+To secure the protection key itself, along with the ability to control and rotate it, it is recommended to configure Fabric to store it within KeyStore mechanism. 
 
 To use it:
 
