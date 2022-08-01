@@ -106,7 +106,7 @@ Upon retrieval of a specific Instance ID, Fabric collects the master key's infor
 
 ### KMS
 
-Fabric supports, since 6.5.9 release, integrations with KMS (Key Management Service) to generate and encrypt its master key.   
+Fabric supports, since 6.5.9 release, integrations with KMS (Key Management Services) to generate and encrypt its master key.   
 
 #### Background
 
