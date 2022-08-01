@@ -69,7 +69,7 @@ When used, Fabric accesses first the KeyStore, opens it using user and password 
 >
 > * KeyStore usage can be turned on later, not from the beginning of the specific Fabric setup, where master key will be re-generated using the KeyStore's protection key. Once the KeyStore is added to Fabric, it cannot be removed.
 > * Fabric supports protection key rotation, where previous protection keys can still be used to get entities already encrypted by old ones. For supporting it, the KeyStore contains the history of all encryptions. Each encryption of a master key creates a record in the KeyStore with the protection key and the key description of the encrypted master key. 
-> * When ``MASTERKEY_KEY_STORE_ENABLED`` is set to ``false`` Fabric still uses a protection key, which it generates, to encrypt the master key. Yet, this protection key cannot be controlled.
+> * When ``MASTERKEY_KEY_STORE_ENABLED`` is set to ``false``, Fabric still uses a protection key, which it generates, to encrypt the master key. Yet, this protection key cannot be controlled.
 >
 
 
