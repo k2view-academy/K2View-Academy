@@ -53,9 +53,9 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
 
    - This user shall be granted with appropriate permissions to the specific KMS master key. At least "*Cloud KMS CryptoKey Encrypter/Decrypter*" role shall be assigned to this user.
 
-3. At Fabric:
+3. In Fabric:
 
-   - Set the values at config.ini under ``[encryption_gcp_kms]`` section, according to the KMS information.
+   - Set the values in config.ini under ``[encryption_gcp_kms]`` section, according to the KMS information.
 
    - Locate the credential file at Fabric machine and populate its full path location at ``CREDENTIAL_FILE`` parameter. Alternatively, credentials file can set as environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
 
