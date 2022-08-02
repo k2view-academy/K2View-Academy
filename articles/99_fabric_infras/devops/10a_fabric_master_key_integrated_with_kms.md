@@ -19,7 +19,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 2. Get from AWS the user IAM access credentials: access key ID and its secret access key.
 
-   - This user shall be granted with appropriate permissions to the specific KMS customer master key. The associated users can be also found at the key page > key policy section. 
+   - This user shall be granted with appropriate permissions to the specific KMS customer master key. The associated users can also be found in the key page > key policy section. 
 
 3. At Fabric, Set the values at config.ini under ``[encryption_aws_kms]`` section, according to the KMS information. 
 
