@@ -355,17 +355,17 @@ The following table lists the  DELETE commands:
 
 ### Release LU
 
-The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
+The Fabric **RELEASE** command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
 
 ### Fabric View
 
 Fabric has commands that display a Fabric configuration and its settings. For example:
 
 - Fabric cluster information:
-  - CLUSTERID, returns the cluster identifier defined on the node.id.
-  - CLUSTERSTATUS, returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
-  - TIME, gets the node system time.
-  - VERSION INFO, the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric, use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
+  - **CLUSTERID**, returns the cluster identifier defined on the node.id.
+  - **CLUSTERSTATUS**, returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
+  - **TIME**, gets the node system time.
+  - **VERSION INFO**, the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric, use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
   - **DESCRIBE,** to query Fabric's metadata structure.

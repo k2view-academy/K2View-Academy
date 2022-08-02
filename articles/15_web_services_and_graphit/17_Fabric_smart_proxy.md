@@ -1,6 +1,6 @@
 # Fabric Smart Proxy
 
-Fabric Web Services are Java functions that, among other purposes, allow external access to Logical Unit's data. The Fabric Web Services are exposed through the Fabric Web Service layer. Fabric receives multiple requests concurrently, thus the Web Service response time is highly important. 
+Fabric Web Services are REST APIs that, among other purposes, allow external access to Logical Unit's data. The Fabric Web Services are exposed through the Fabric Web Service layer. Fabric receives multiple requests concurrently, thus the Web Service response time is highly important. 
 
 Fabric Smart Proxy mechanism allows to redirect the Web Service calls between multiple nodes based on the input. The logic behind establishing what node should be invoked is based on a built-in hash function, which is applied on the value of the Web Service input argument. 
 
@@ -33,7 +33,7 @@ WEBSERVER_FILTERS=[{"class":"com.k2view.cdbms.ws.ProxyAPI", "params":{"fabric_re
 
 <img src="images/web-service-proxy.png" style="zoom:80%;" />
 
-When the Web Service has several input arguments, all of them need to be listed as the fabric_tokens value.
+When a Web Service has several input arguments, all of them need to be listed as the fabric_tokens value.
 
 
 
