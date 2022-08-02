@@ -4,10 +4,10 @@ Fabric Web Services are Java functions that allow, among other purposes, accessi
 
 Fabric Smart Proxy mechanism allows to redirect the Web Service calls between multiple nodes based on the input. The logic of how to establish which node should be invoked is based on a built-in hash function which is applied on the value of the Web Service input argument. 
 
-By default, the Smart Proxy mechanism is off, but it can be applied by setting the web server filters via the config.ini file as explained further in this article.
-
 One of the most common scenarios for using this mechanism is optimization of the LUI retrieval process, to reduce the Web Service response time. 
 When LUI data is retrieved by the Web Service, Fabric uses the cache mechanism to load an instance into the memory. Since the Fabric MDB cache files are stored on server, it is more difficult to utilize the cache in a multi-node environment. This is due to the fact that each Web Service call might be redirected to a different node and consequently the cache will be stored in different servers. So, when the same Web Service is invoked for the same instance, the cache most likely is not going to be reused. The Smart Proxy mechanism can solve this issue by redirecting the call to the same node when the same input is received and by that reducing the Web Service response time.
+
+By default, the Smart Proxy mechanism is off, but it can be applied by setting the web server filters via the config.ini file as explained further in this article.
 
 ## How Do I Setup Web Server Filters?
 
