@@ -51,7 +51,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
 
 2. Get from GCP the user access credentials, as JSON file, which can be achieved when creating the user. 
 
-   - This user shall be granted with appropriate permissions to the specific KMS master key. At least "*Cloud KMS CryptoKey Encrypter/Decrypter*" role shall be assigned to that user.
+   - This user shall be granted with appropriate permissions to the specific KMS master key. At least "*Cloud KMS CryptoKey Encrypter/Decrypter*" role shall be assigned to this user.
 
 3. At Fabric:
 
