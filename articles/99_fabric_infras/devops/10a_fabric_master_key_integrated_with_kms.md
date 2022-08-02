@@ -1,7 +1,7 @@
 # Fabric Master Key Integrated with KMS
 
-Fabric master key mechanism can be integrated with KMS, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
-
+Fabric master key mechanism can be integrated with KMS, since Fabric v6.5.9 release, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
+ 
 To define Fabric to work with KMS, the information should first be acquired from KMS and then set in Fabric.
 > By default, Fabric uses its internal master key mechanism. 
 
