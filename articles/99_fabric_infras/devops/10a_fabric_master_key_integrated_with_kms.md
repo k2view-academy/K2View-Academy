@@ -9,11 +9,11 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 1. Get from KMS the specific customer master key information - region and customer master key ID
 
-   - *Key ID*, can be seen in the KMS keys list, for example
+   - *Key ID* - can be seen in the KMS keys list, for example
 
      ![](images/10a_aws_KMS_key_list.jpg)
 
-   - *Region*, the region name where the CMK is created. Note that keys are created per region. For more information about multi region support see [here](). You can see the region (as well as the ID) also when drilling down into the key page, from the key list page (KMS > Customer Managed Keys):
+   - *Region* - the region name where the CMK is created. Note that keys are created per region. For more information about multi region support see [here](). You can see the region (as well as the ID) also when drilling down into the key page, from the key list page (KMS > Customer Managed Keys):
 
      ![](images/10a_aws_KMS_CMK.jpg)
 
