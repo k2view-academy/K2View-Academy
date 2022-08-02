@@ -33,7 +33,7 @@ WEBSERVER_FILTERS=[{"class":"com.k2view.cdbms.ws.ProxyAPI", "params":{"fabric_re
 
 <img src="images/web-service-proxy.png" style="zoom:80%;" />
 
-
+When the Web Service has several input arguments, all of them need to be listed as the fabric_tokens value.
 
 
 
