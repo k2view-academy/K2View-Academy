@@ -2,6 +2,8 @@
 
 Fabric Studio enables you to develop, test and monitor projects within the Studio using Fabric’s test and log capabilities. 
 
+<studio>
+
 To display a list of recent messages from the server, click
 <img src="images/13_02_01%20Server%20icon.png" alt="image" style="zoom:75%;" /> Server / Activity Logs (left menu). By default, this window only displays warnings and error messages, however additional messages and notices can also be reviewed.
 
@@ -66,6 +68,49 @@ return "0";
 The runtime log (k2fabric.log) can be reviewed in the Fabric Server’s Logs directory or in the Studio’s Output logs.
 
 ![image](images/13_02_10%20Debug.jpg)
+
+
+
+</studio>
+
+<web>
+
+Press the Log icon ![log](../04_fabric_studio/images/web/log.png)at the Activity Bar to open the Log Viewer, where you can see list of logs. 
+
+
+
+![log viewer](images/web/02_logview.png)
+
+
+
+The most useful log file is the k2fabric.log. Click and see it at main pane.
+
+
+
+Log files are shown with two important features:
+
+* Showing you the log files with syntax coloring and highlighting.
+* Allowing you to easily identify and navigate faults using the right minimap.
+
+![log main panel and minimap](images/web/02_color_and_minimap.png)
+
+
+
+Like any file which is shown and automatically opened at the main panel, you can drag and drop it to other panels. for example - drag the log to the bottom panel and track on issues, while continuing work and debug your project at the main panel. In the below illustration, Graphit file is opened at main panel while log is at the bottom panel
+
+![move to bottom](images/web/02_move_to_bottom1.gif)
+
+Use the bottom status bar log items to:
+
+- Clear log view (without modifying the file).
+- Reset back the log view.
+- Set if automatically follow log's tail based on scroll position.
+
+![log main panel and minimap](images/web/02_log_statusbar.png)
+
+
+
+</web>
 
 
 

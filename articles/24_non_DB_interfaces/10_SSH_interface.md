@@ -4,11 +4,29 @@ The SSH interface type defines the communication details with a remote machine u
 
 To create a new SSH interface, do the following:
 
+<studio>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SSH** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/10_ssh_1.png)
 
 2. Populate the connection's settings and click **Save**.
+
+</studio>
+
+
+<web>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SSH** from the **File System** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new SSH Interface, then click **Create**: 
+   
+   ![image](images/10_ssh_1WEB.PNG)
+
+3. Populate the connection's settings and click **Save**.
+    
+   ![image](images/10_ssh_2WEB.PNG)
+
+</web>
+
 
 ### Connection Settings
 

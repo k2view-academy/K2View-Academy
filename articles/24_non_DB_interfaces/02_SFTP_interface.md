@@ -6,11 +6,27 @@ When creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/
 
 To create a new SFTP interface, do the following:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
+<studio>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **File System** section to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
-
+   
 2. Populate the connection's settings and click **Save**.
+</studio>
+
+<web>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
+
+2. Enter a suitable name for your new SFTP Interface, then click **Create**
+  
+   ![image](images/02_sftp_1WEB.PNG)
+
+3. Populate the connection's settings and click **Save**.
+
+   ![image](images/02_sftp_2WEB.PNG)
+
+</web>
+
 
 ### Connection Settings
 
@@ -52,7 +68,9 @@ To create a new SFTP interface, do the following:
 <td><strong>Actions</strong></td>
 <td>
 <p>Test Connection. Click to test the connection.</p>
+<studio>
 <p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
+</studio>
 </td>
 </tr>
 </tbody>
@@ -60,7 +78,7 @@ To create a new SFTP interface, do the following:
 
 
 
-
+<studio>
 
 ### Example of Using an SFTP Interface
 
@@ -82,26 +100,27 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
 
+</studio>
 
 ### Using the InterfaceListener Actor 
 
 The *InterfaceListener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another Broadway flow upon arrival of a new file on the interface.
 
-To create an interface listener job from a broadway flow, choose the **InterfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
+To create an interface listener job from a Broadway flow, choose the **InterfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
 
-![images](/articles/24_non_DB_interfaces/images/12_interfaceListenerActor_1.PNG)
+![images](images/12_interfaceListenerActor_1.PNG)
 
-Fill in the following parameters in the properties tab:
+Fill in the following parameters in the Properties tab:
 
-- flowName: name of the flow to be triggered by this actor.
-- interfaceName: the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points.
+- **flowName**: name of the flow to be triggered by this actor.
+- **interfaceName**: the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points.
 
 Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
 
-- Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
+- **affinity**: this sets which node/DC name IP address is to be used to run the Broadway job.
 
-- Params: This refers to the arguments that can be parsed to the Broadway flow. 
-For example, multiple parameters can be parsed as a key/value object from an external link or from a **Constant** or **Javascript** actor.
+- **params**: This refers to the arguments that can be parsed to the Broadway flow. 
+For example, multiple parameters can be parsed as a key/value object from an external link or from a **Constant** or **JavaScript** actor.
 
 
 

@@ -87,7 +87,7 @@ Transactions also take into account Broadway inner flows. If a Transactional Sta
 
 ## Error Handling
 
-Every Stage can be assigned with an error handling mechanism. The *ErrorHandler* Actor is used to hold the logic needed to deal with the error, as well as the decision whether the flow should continue or stop. The ErrorHandler Actor can be a simple logical statement or an entire inner flow.
+Every Stage can be assigned with an error handling mechanism. The **ErrorHandler** Actor is used to hold the logic needed to deal with the error, as well as the decision whether the flow should continue or stop. The ErrorHandler Actor can be a simple logical statement or an entire inner flow.
 
 <img src="images/overview_error.png" >
 

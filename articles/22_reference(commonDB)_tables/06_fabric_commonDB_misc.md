@@ -1,9 +1,7 @@
-
-
-## CommonDB Table Initialization
+# CommonDB Table Initialization
 When a new node comes up online or rejoins the current Fabric cluster, all common tables must also be updated on this node. There are two enrollment options:
 
-**Option 1: Directly From Kafka**
+**Option 1: Directly from Kafka**
 
 A new node connects directly to each Kafka topic for each Reference table to check whether a snapshot is available:
 - The table is regularly synced as defined in its sync schedule and therefore a snapshot is available.
