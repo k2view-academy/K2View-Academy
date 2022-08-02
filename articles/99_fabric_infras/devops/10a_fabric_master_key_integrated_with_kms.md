@@ -77,7 +77,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
 
 ## Symmetric and Asymmetric Master Key Encryption Types
 
-While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type. This type should be selected at KMS when creating the master key. 
+While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type. This type should be selected in KMS when creating the master key. 
 
 
 
