@@ -57,7 +57,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
 
    - Set the values in config.ini under ``[encryption_gcp_kms]`` section, according to the KMS information.
 
-   - Locate the credential file at Fabric machine and populate its full path location at ``CREDENTIAL_FILE`` parameter. Alternatively, credentials file can set as environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
+   - Locate the credential file in Fabric machine and populate its full path location at ``CREDENTIAL_FILE`` parameter. Alternatively, credentials file can set as an environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
 
    >  Note: These actions shall be done at all Fabric nodes. 
    ~~~
