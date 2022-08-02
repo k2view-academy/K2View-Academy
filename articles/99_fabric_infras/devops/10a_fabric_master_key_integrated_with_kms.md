@@ -71,7 +71,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
    >  Note: 
    >
    >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form.
-   >  * In case Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then CREDENTIAL_FILE can be omitted.
+   >  * In case a Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then CREDENTIAL_FILE can be omitted.
 
 4. In Fabric, run ``activatekey name='masterkey_key_name' generatorType='Java_AES' storeType='GCP_KMS'``.
 
