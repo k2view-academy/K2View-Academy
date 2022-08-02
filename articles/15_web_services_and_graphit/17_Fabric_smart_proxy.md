@@ -9,9 +9,9 @@ When LUI data is retrieved by the Web Service, Fabric uses the cache mechanism t
 
 By default, the Smart Proxy mechanism is off, but it can be applied by setting the web server filters via the config.ini file as explained further in this article.
 
-## How Do I Setup Web Server Filters?
+## How Do I Set Up Web Server Filters?
 
-The Web Server filters are empty in the config.ini. To setup the filter, uncomment the default setting:
+The Web Server filters are empty in the config.ini. To set up the filter, uncomment the default setting:
 
 ~~~
 #WEBSERVER_FILTERS=
