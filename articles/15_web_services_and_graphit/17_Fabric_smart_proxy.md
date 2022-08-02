@@ -7,7 +7,7 @@ Fabric Smart Proxy mechanism allows to redirect the Web Service calls between mu
 One of the most common reasons for using this mechanism is the need to optimize the LUI retrieval process, in order to reduce the Web Service response time. 
 When LUI data is retrieved by the Web Service, Fabric uses the cache mechanism to load an instance into the memory. As the Fabric MDB cache files are stored on a server, it is more difficult to utilize the cache in a multi-node environment. This is due to the fact that each Web Service call might be redirected to a different node and consequently the cache will be stored in different servers. As a result, when the same Web Service is invoked again for the same instance ID, the cache is most likely not going to be reused. The Smart Proxy mechanism can solve this issue by redirecting the call to the same node when the same input is received and thus reduce the Web Service response time.
 
-By default, the Smart Proxy mechanism is off, but it can be applied by setting the web server filters via the config.ini file as explained further in this article.
+The Smart Proxy mechanism is off By default. It can be applied by setting the web server filters via the config.ini file as explained further in this article.
 
 ## How Do I Set Up Web Server Filters?
 
