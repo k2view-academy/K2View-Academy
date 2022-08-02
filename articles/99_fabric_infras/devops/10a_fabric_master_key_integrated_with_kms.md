@@ -34,10 +34,10 @@ To define Fabric to work with KMS, the information should first be acquired from
    ~~~
    >  Notes: 
    >
-   >  * Relevant parameters are encrypted and are not saved at the file in their clear/plain form.
+   >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form.
    >  * In case Fabric node already has a trust with AWS (with AWS's user who shall connect to KMS), then ACCESS_KEY_ID and SECRET_ACCESS_KEY can be omitted.
 
-4. At Fabric, run ``activatekey name='masterkey_key_name' generatorType='AWS_KMS' storeType='AWS_KMS'``.
+4. In Fabric, run ``activatekey name='masterkey_key_name' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 
 ### Multi Region Support
 
