@@ -7,7 +7,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 ## Integration with AWS KMS
 
-1. Get from KMS the specific customer master key information - region and customer master key ID
+1. From KMS, get the specific customer master key information - region and customer master key ID
 
    - *Key ID* - can be seen in the KMS keys list, for example
 
@@ -17,7 +17,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
      ![](images/10a_aws_KMS_CMK.jpg)
 
-2. Get from AWS the user IAM access credentials: access key ID and its secret access key.
+2. From AWS, get the user IAM access credentials: access key ID and its secret access key.
 
    - This user shall be granted with appropriate permissions to the specific KMS customer master key. The associated users can also be found in the key page > key policy section. 
 
@@ -45,11 +45,11 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
 
 ## Integration with GCP KMS
 
-1. Get from KMS the specific master key information - product/project ID, location, master key ID, keyring ID
+1. From KMS, get the specific master key information - product/project ID, location, master key ID, keyring ID
 
    ![](images/10a_gcp_KMS_MK.jpg)
 
-2. Get the user's access credentials from GCP, as a JSON file, which can be achieved when creating the user. 
+2. From GCP, get the user's access credentials , as a JSON file, which can be achieved when creating the user. 
 
    - This user shall be granted with appropriate permissions to the specific KMS master key. At least "*Cloud KMS CryptoKey Encrypter/Decrypter*" role shall be assigned to this user.
 
