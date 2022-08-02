@@ -1,29 +1,32 @@
-### Broadway with Cassandra Interface Consistency Level
+### Best Practice for Preventing SQL Injection
 
 **Question:**
 
-Do we need to / Can we change the consistency level on WRITE and READ for **DbLoad** and **DbCommand** actors? 
+Does the product have any built-in input filter functions for detecting potential SQL injection from user Web Service inputs?
 
 **Answer:**
 
-The consistency level is set via the Cassandra interface using the server connection string.
-Should you need to change the consistency level during your flow, define an additional interface and use it on your actor.
+Our recommendation is to use prepared statements and only use parameters as arguments to pre-built prepared statements.
 
-[Read more >](https://github.com/k2view-academy/K2View-Academy/issues/303)
-
+[Read more >](https://github.com/k2view-academy/K2View-Academy/issues/608)
 
 
-### Stopping CDC on Local Debug
+
+### Creating a Flow With 2 Nested GET & SELECT Statements
 
 **Question:**
 
-How do I disable CDC on the local Fabric / Debug?
+How can I create a flow with 2 nested GET with SELECT statements per each?
 
 **Answer:**
 
-You can update the config.ini parameter of the local Fabric debug and set the CDC_PUBLISH_MODE parameter to OFF in order to avoid publishing CDC messages to the server. Alternatively, you can set this parameter to IF_SETUP (Studio Debug default) in order to publish the CDC messages, in case the CDC publisher has been configured in the config.ini file. [Click to read CDC messages](https://support.k2view.com/Academy_6.5/articles/18_fabric_cdc/03_cdc_messages.html).
+When a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2, the exception is thrown:
+*[SQLITE_ERROR] SQL error or missing database (database LU2 is locked)*
+The exception is thrown when trying to RELEASE an instance of LU2 and it happens due to open results set of the SELECT on LU1. The exception is thrown only when running with Debug Mode = OFF.
 
-[Read more >](https://github.com/k2view-academy/K2View-Academy/issues/287)
+This problem can be resolved by modifying the flow as follows:
+
+[Read more >](https://github.com/k2view-academy/K2View-Academy/issues/615)
 
 
 

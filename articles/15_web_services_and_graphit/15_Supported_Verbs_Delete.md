@@ -8,7 +8,7 @@ A successful response to DELETE requests SHOULD be:
 - **HTTP 202 Accepted**, if the action has been queued.  
 - **HTTP 204 No Content**, if the action has been performed but the response does not include an entity. 
 
-DELETE operations are **idependent**. When a resouce is deleted, it is removed from the collection of resources and remains so, even when the DELETE API is called on the same resource repeatedly. The **404 NOT FOUND** response code is returned when the DELETE API is called on a deleted resource for the second time. Some may argue that this makes the DELETE method non-idempotent. It is a matter of discussion and personal opinion.
+DELETE operations are **idempotent**. When a resource is deleted, it is removed from the collection of resources and remains so, even when the DELETE API is called on the same resource repeatedly. The **404 NOT FOUND** response code is returned when the DELETE API is called on a deleted resource for the second time. Some may argue that this makes the DELETE method non-idempotent. It is a matter of discussion and personal opinion.
 
 If the request passes through a cache and the Request-URI identifies one or more currently cached entities, these entries SHOULD be handled as stale. Responses to this method are **not cacheable**.
 
@@ -308,6 +308,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 Delete works like GET. All parameters should be populated on the URL or header.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/14_Supported_Verbs_Put.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/16_rest_api_additions.md)
 
+
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/14_Supported_Verbs_Put.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/16_rest_api_additions.md)
 

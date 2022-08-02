@@ -355,7 +355,7 @@ The following table lists the  DELETE commands:
 
 ### Release LU
 
-The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
+The Fabric **RELEASE** command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
 
 ### Fabric View
 

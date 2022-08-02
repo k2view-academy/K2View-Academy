@@ -98,7 +98,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
   Update data on CUSTOMER LU instance id 1, CUSTOMER table
 
   Request Body
-```
+```json
  {
 	"row" : {"LAST_NAME":"TEST1"},
 	"where":"CUSTOMER=1 or ADDRESS='Betsey'"
@@ -198,7 +198,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
   
   Request Body
 
-```
+```json
  {
 	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
 	"where":"ADDRESS_ID=3"
@@ -211,7 +211,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{&lt;Customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 Parameters should be populated in the body in the following structure:
-```
+```json
 {
 “parameter name 1”:”value”,
 “parameter name 2”:”value”
@@ -309,15 +309,14 @@ Parameters should be populated in the body in the following structure:
 
   In the body request put:
 
-  ```
+  ```json
   {
    "i_order_id": "1",
    "i_order_status": "Open"
   }
   ```
 
-  Call Web Service Orders and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call Web Service Orders and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open.
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)
-
 
