@@ -21,9 +21,9 @@ To define Fabric to work with KMS, the information should first be acquired from
 
    - This user shall be granted with appropriate permissions to the specific KMS customer master key. The associated users can also be found in the key page > key policy section. 
 
-3. At Fabric, Set the values at config.ini under ``[encryption_aws_kms]`` section, according to the KMS information. 
+3. In Fabric, set the values at config.ini under ``[encryption_aws_kms]`` section, according to the KMS information. 
 
-   > Note: This shall be done at all Fabric nodes. 
+   > Note: This shall be done in all Fabric nodes. 
 
    ~~~
    [encryption_aws_kms]
