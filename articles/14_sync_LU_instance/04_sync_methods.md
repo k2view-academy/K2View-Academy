@@ -175,7 +175,7 @@
 </table>
 
 [Click for more information about LU Sync Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
- 
+
 ## Delete Mode and Truncate Before Sync properties
 
 There are several ways to define the delete mode of the previous records in the LU table (populated prior to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependency between the delete mode and the sync mode.
@@ -207,11 +207,102 @@ Notes:
 
 #### 2.2. [Table Populations Based on Broadway Flows](/articles/07_table_population/14_table_population_based_Broadway.md)
 
-The following Broadway actor can be added to the flow in order to override the LU table's Delete Mode: 
+The following Broadway actor can be added to the flow in order to override the LU table's Delete Mode: **SyncDeleteMode**.
 
-- XXXXXXXXXX
+The actor can have one of the following values:
 
- 
+- Off (default) - when set, get the delete mode from the LU table.
+- All - delete all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
+- NonUpdated - delete only the previous records that are not updated by the current sync (old data).
+
+The actor is automatically added to the generated Broadway flow with Off value. 
+
+
+
+### 3. Delete Mode - LU Table and Population Levels
+
+In general, the delete mode is set on the LU table. However, the delete mode can be overridden by the LU table population if the delete mode of the LU table is Off or NonUpdated as detailed in the table below:
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="170pxl"><strong>LU table - Delete Records Property</strong></td>
+<td width="170pxl"><strong>Population - Truncate Before Sync</strong></td>
+<td width="170pxl"><strong>BF population - SyncDeleteMode value</strong></td>
+<td width="390pxl"><strong>Expected Behavior</strong></td>
+</tr>
+<tr>
+<td width="170pxl">All</td>
+<td width="170pxl">FALSE/TRUE</td>
+<td width="170pxl">All/Off/NonUpdated</td>
+<td width="390pxl">Delete all previous records before running the table's populations.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">FALSE</td>
+<td width="170pxl">Off</td>
+<td width="390pxl">Do not delete the previous records before the sync.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">FALSE</td>
+<td width="170pxl">All</td>
+<td width="390pxl">Delete all previous records only if the Broadway population flow runs.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">FALSE</td>
+<td width="170pxl">NonUpdated</td>
+<td width="390pxl">Delete the non-updated records only if the Broadway population flow runs.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">TRUE</td>
+<td width="170pxl">Off</td>
+<td width="390pxl">Delete all previous records if the table population object runs.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">TRUE</td>
+<td width="170pxl">All</td>
+<td width="390pxl">Delete all previous records if any of the populations runs.</td>
+</tr>
+<tr>
+<td width="170pxl">Off</td>
+<td width="170pxl">TRUE</td>
+<td width="170pxl">NonUpdated</td>
+<td width="390pxl">&gt; Delete all previous records if the table population object runs.<br />&gt; Delete the non-updated records if only the Broadway flow population runs.</td>
+</tr>
+<tr>
+<td width="170pxl">NonUpdated</td>
+<td width="170pxl">FALSE</td>
+<td width="170pxl">Off/NonUpdated</td>
+<td width="390pxl">&nbsp;Delete the non-updated records if any of the populations run as set in the LU table.</td>
+</tr>
+<tr>
+<td width="170pxl">NonUpdated</td>
+<td width="170pxl">FALSE</td>
+<td width="170pxl">All</td>
+<td width="390pxl">&gt; Delete all previous records is the Broadway population flow runs.<br />&gt; If only the population object runs, delete the non-updated records as defined in the LU table level.</td>
+</tr>
+<tr>
+<td width="170pxl">NonUpdated</td>
+<td width="170pxl">TRUE</td>
+<td width="170pxl">Off/NonUpdated</td>
+<td width="390pxl">&gt; Delete all previous records if the table population object runs.<br />&gt; If only the Broadway population flow runs, delete the non-updated records as defined in the LU table level.</td>
+</tr>
+<tr>
+<td width="170pxl">NonUpdated</td>
+<td width="170pxl">TRUE</td>
+<td width="170pxl">All</td>
+<td width="390pxl">Delete all previous records in any of the population runs</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
 ## Sync Methods - Use Cases
 <table style="width: 850pxl">
 <tbody>
