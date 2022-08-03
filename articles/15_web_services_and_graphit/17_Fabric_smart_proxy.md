@@ -31,8 +31,8 @@ The web server filter parameters are defined as follows:
 * fabric_retry allows to define a number redirection retries in case of a failure.
 * fabric_tokens is a list of argument names to be used for redirection.
 * fabric_affinity allows to define a subset of the nodes in a cluster, so that a node for redirection will be chosen from this subset rather than from the whole cluster.
-* read_timeout_sec is a time that define the read timeout on the HTTP URL connection.
-* connect_timeout_sec is the connection timeout to be set on the http URL connection.
+* read_timeout_sec is a timeframe that defines the read timeout on the HTTP URL connection.
+* connect_timeout_sec is the connection timeout to be set on the HTTP URL connection.
 
 All the parameters can keep their default value except for the fabric_tokens parameter which value must be replaced  from token1, token2 to the name(s) of the input argument(s) used by the Web Services. 
 
