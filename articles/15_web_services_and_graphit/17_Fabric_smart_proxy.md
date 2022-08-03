@@ -28,7 +28,7 @@ The web server filter parameters are defined as follows:
 * fabric_redirect is the process of forwarding a client from the requested URL to another URL. 
   * A CLIENT side redirect is a direct forward to a destination URL. The browser itself is doing the redirect. 
   * A SERVER side redirect means the server calls the WS and returns the response (back to back).
-* fabric_retry allows to define a number redirect retries in case of failure.
+* fabric_retry allows to define a number redirect retries in case of a failure.
 * fabric_tokens is a list of argument names to be used for redirect.
 * fabric_affinity allows to define a subset of the nodes in a cluster, to choose a node for redirect.
 * read_timeout_sec is a time that define the read timeout on the HTTP URL connection.
