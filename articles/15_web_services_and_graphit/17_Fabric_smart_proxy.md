@@ -11,7 +11,7 @@ The Smart Proxy mechanism is off by default. It can be applied by setting the we
 
 ## How Do I Set Up Web Server Filters?
 
-The Web Server filters are empty in the config.ini. To set up the filter, uncomment the default setting:
+The Web Server filters in the config.ini are empty. To set up the filter, uncomment the default setting:
 
 ~~~
 #WEBSERVER_FILTERS=
