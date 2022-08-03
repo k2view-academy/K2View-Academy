@@ -34,7 +34,7 @@ The web server filter parameters are defined as follows:
 * read_timeout_sec is a timeframe that defines the read timeout on the HTTP URL connection.
 * connect_timeout_sec is the connection timeout to be set on the HTTP URL connection.
 
-All the parameters can keep their default values except for the fabric_tokens parameter whose value must be replaced from token1, token2 to the name(s) of the input argument(s) used by the Web Services. 
+All the parameters can keep their default values except for the fabric_tokens parameter whose value - token1, token2 - must be replaced with the name(s) of the input argument(s) used by the Web Services. 
 
 For example, when a Web Service has an input parameter called **ID**, the filter should be set to:
 
