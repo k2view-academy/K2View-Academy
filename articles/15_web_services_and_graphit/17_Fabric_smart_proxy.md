@@ -36,7 +36,7 @@ The web server filter parameters are defined as follows:
 
 All the parameters can keep their default value except for the fabric_tokens parameter which value must be replaced  from token1, token2 to the name(s) of the input argument(s) used by the Web Services. 
 
-For example, when a Web Service has input parameter called **ID**, the filter should be set to:
+For example, when a Web Service has an input parameter called **ID**, the filter should be set to:
 
 ~~~
 WEBSERVER_FILTERS=[{"class":"com.k2view.cdbms.ws.ProxyAPI", "params":{"fabric_redirect":"SERVER", "fabric_retry":"1", "fabric_tokens":"ID", "fabric_affinity":"", "read_timeout_sec":"60", "connect_timeout_sec":"60"}}]
