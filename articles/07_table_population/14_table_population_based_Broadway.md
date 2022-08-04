@@ -42,7 +42,7 @@ The following example displays a Broadway flow template created to populate the 
 
   * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 
-  * The **sql** input argument holds a query that is either populated automatically or must be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
+  * The **sql** input argument holds a query that is populated either automatically or should be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
 
   * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance since it enables generating less calls to the source DB.
 
