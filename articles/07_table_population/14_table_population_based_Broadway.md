@@ -4,7 +4,7 @@ A [Table Population](/articles/07_table_population/01_table_population_overview.
 
 A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is a core Broadway object that represents a business process and is built from several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](/articles/19_Broadway/03_broadway_actor.md).
 
-The advantages of using a Broadway flow for table population rather than a source object based population are:
+The advantages of using a Broadway flow for a table population rather than a source object based population are:
 
 * Streamlining logic and all related validations into one business process whereby improving the project's maintainability.
 * Populating more than one table in a single population flow.
