@@ -111,45 +111,5 @@ The Properties tab displays a list of properties that must be defined for each L
 </tbody>
 </table>    
 
-   
-
-   
-
-========================================================         
-
-</td>
-</tr>
-<tr>
-<td width="200pxl">
-
-<p><h4>Enrichment Functions</h4></p>
-</td>
-<td width="700pxl">
-
-<p>Refers to <a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> that are executed after all LU tables are populated.</p>
-<ul>
-<li>The execution order is determined on an LU level and is based on the Sync policy of the attached table. When no Enrichment function is attached - the display is &lsquo;Empty&rsquo;.</li>
-<li>When one or more Enrichment functions are attached - the display is &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
-</ul>
-<p>To select an Enrichment function, click the 3 dots next to the Enrichment functions property and select the function name. Only functions without input and output parameters are displayed.</p>
-</td>
-</tr>
-</tr>
-<tr>
-<td width="200pxl">
-
-<p><h4>On Change</h4></p>
-</td>
-<td width="700pxl">
-
-<p>Refers to <a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> that are executed when there is a change in LU table's data.</p>
-<p>To select a Trigger function, click the 3 dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
 
 [![Previous](/articles/images/Previous.png)](03_table_indexes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_business_tables.md)
