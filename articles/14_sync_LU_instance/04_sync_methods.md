@@ -323,7 +323,7 @@ In general, the Delete Mode is set on the LU table. However, the Delete Mode can
 <p><strong>Time Interval</strong></p>
 </td>
 <td style="width: 395px;">
-<p>Syncs every X times to ensure the data is up to date.</p>
+<p>Syncs every X times to ensure the data is up-to-date.</p>
 </td>
 </tr>
 <tr>
