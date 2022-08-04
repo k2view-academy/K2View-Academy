@@ -64,7 +64,7 @@ The following example displays a Broadway flow template created to populate the 
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
-  * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or column name to a query.
+  * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or a column name to a query.
 
   * [Click for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
 
