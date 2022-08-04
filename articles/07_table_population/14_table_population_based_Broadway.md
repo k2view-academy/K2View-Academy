@@ -2,7 +2,7 @@
 
 A [Table Population](/articles/07_table_population/01_table_population_overview.md) defines and executes mapping and transformation rules from a data source to a target. A table population can be created based on a source object or based on a Broadway flow. 
 
-A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is a core Broadway object that represents a business process and is built from several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](/articles/19_Broadway/03_broadway_actor.md).
+A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is a core Broadway object that represents a business process and is built from several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/19_Broadway/03_broadway_actor.md).
 
 The advantages of using a Broadway flow for a table population rather than a source object based population are:
 
