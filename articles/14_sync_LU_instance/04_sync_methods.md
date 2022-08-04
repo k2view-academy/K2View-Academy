@@ -178,19 +178,19 @@
 
 ## Delete Mode and Truncate Before Sync properties
 
-There are several ways to define the delete mode of the previous records in the LU table (populated prior to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependency between the delete mode and the sync mode.
+Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the delete policy on the previous records from the LU table (populated prior to the current sync) before the related LU table populations are executed for this table. Therefore, there is a logical dependency between the delete mode and the sync mode.
 
 
 ### 1. LU Table Settings
-The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated prior to the current sync). The values are All (default value), Off, or NonUpdated:
+The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated prior to the current sync). The values are **All** (default value), **Off**, or **NonUpdated**:
 
- - All - the entire LU table is truncated before the populations are executed.
- - Off - the previous records are not deleted.
- - NonUpdated - delete only the previous records that are not updated by the current sync (old data).
+ - **All** - the entire LU table is truncated before the populations are executed.
+ - **Off** - the previous records are not deleted.
+ - **NonUpdated** - delete only the previous records that are not updated by the current sync (old data).
 
 Notes: 
-- It is recommended to set the NonUpdated value when the LU table has CDC fields in order to send CDC messages only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.
-- If the Delete Mode is NonUpdated, it is recommended to define a PK on the LU table and set the LU table population mode to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.
+- It is recommended to set the **NonUpdated** value when the LU table has **CDC fields** in order to send CDC messages only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.
+- If the Delete Mode is **NonUpdated**, it is recommended to define a **PK** on the LU table and set the LU table population mode to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.
 
 
 ### 2. LU Table Population Settings
@@ -207,21 +207,19 @@ Notes:
 
 #### 2.2. [Table Populations Based on Broadway Flows](/articles/07_table_population/14_table_population_based_Broadway.md)
 
-The following Broadway actor can be added to the flow in order to override the LU table's Delete Mode: **SyncDeleteMode**.
+A new Broadway actor has been added in Fabric 6.5.9:  **SyncDeleteMode**. This actor is automatically added to the generated Broadway flow with Off value.
 
 The actor can have one of the following values:
 
-- Off (default) - when set, get the delete mode from the LU table.
-- All - delete all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
-- NonUpdated - delete only the previous records that are not updated by the current sync (old data).
-
-The actor is automatically added to the generated Broadway flow with Off value. 
+- **Off **(default) - when set, get the delete mode from the LU table.
+- **All** - delete all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
+- **NonUpdated** - delete only the previous records that are not updated by the current sync (old data).
 
 
 
 ### 3. Delete Mode - LU Table and Population Levels
 
-In general, the delete mode is set on the LU table. However, the delete mode can be overridden by the LU table population if the delete mode of the LU table is Off or NonUpdated as detailed in the table below:
+In general, the Delete Mode is set on the LU table. However, the Delete Mode can be overridden by the LU table population if the LU table's Delete Mode  is **not** set to All as detailed in the table below:
 
 <table width="900pxl">
 <tbody>
@@ -295,7 +293,7 @@ In general, the delete mode is set on the LU table. However, the delete mode can
 <td width="170pxl">NonUpdated</td>
 <td width="170pxl">TRUE</td>
 <td width="170pxl">All</td>
-<td width="390pxl">Delete all previous records in any of the population runs</td>
+<td width="390pxl">Delete all previous records in any of the population runs.</td>
 </tr>
 </tbody>
 </table>

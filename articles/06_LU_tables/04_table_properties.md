@@ -72,19 +72,21 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><h4>Delete Mode</h4></p>
 </td>
 <td width="700pxl">
-    <p>This property defines the delete mode of the previous records in the LU table (populated previous to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong>, or <strong>NonUpdated</strong>: </p>
+    <p>Fabric 6.5.9 adds the Delete Mode property to the LU table. This property replaces the previous Truncate Before Sync LU table's property and defines the delete policy of the previous records in the LU table (populated previous to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong>, or <strong>NonUpdated</strong>: </p>
         <li>All - the entire LU table is truncated before the populations are executed.</li>
         <li>Off - the previous records are not deleted.</li>
         <li>NonUpdated - delete only the previous records that are not updated by the current sync (old data). 
-     <p>Notes:</p>
+       <p></p>
+       <p>Click <a href="/articles/14_sync_LU_instance/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties">here </a> for more information about the Delete Mode.</p>  
+   <p>Notes:</p>
    <ul>
     <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.</li>
     <li>If the Delete Mode is NonUpdated, it is recommended to define a PK on the LU table and set the <a href="/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties">LU table population mode</a> to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.</li>
- </ul>     
+ </ul>
 </td>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl">  
 <p><h4>Enrichment Functions</h4></p>
 </td>
 <td width="700pxl">
@@ -98,7 +100,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl">  
 <p><h4>On Change</h4></p>
 </td>
 <td width="700pxl">
@@ -107,7 +109,46 @@ The Properties tab displays a list of properties that must be defined for each L
 </td>
 </tr>
 </tbody>
+</table>    
+
+   
+
+   
+
+========================================================         
+
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+
+<p><h4>Enrichment Functions</h4></p>
+</td>
+<td width="700pxl">
+
+<p>Refers to <a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> that are executed after all LU tables are populated.</p>
+<ul>
+<li>The execution order is determined on an LU level and is based on the Sync policy of the attached table. When no Enrichment function is attached - the display is &lsquo;Empty&rsquo;.</li>
+<li>When one or more Enrichment functions are attached - the display is &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
+</ul>
+<p>To select an Enrichment function, click the 3 dots next to the Enrichment functions property and select the function name. Only functions without input and output parameters are displayed.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td width="200pxl">
+
+<p><h4>On Change</h4></p>
+</td>
+<td width="700pxl">
+
+<p>Refers to <a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> that are executed when there is a change in LU table's data.</p>
+<p>To select a Trigger function, click the 3 dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
+</td>
+</tr>
+</tbody>
 </table>
+
 
 
 
