@@ -66,7 +66,7 @@ The following example displays a Broadway flow template created to populate the 
 
   * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or a column name to a query.
 
-  * [Click for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
+  * [Click here for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
 
 * **Stage 1**, a placeholder in the template that enables adding additional activities that can be performed on the data prior to loading it to the target DB. This feature is similar to using a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
 
