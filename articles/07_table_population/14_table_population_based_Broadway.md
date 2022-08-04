@@ -93,7 +93,7 @@ The population is created as a template with predefined Stages and designated Ac
 
 Note that for the population to be effective on the server side, LU deployment is required. When running in debug mode, the deployment to debug is performed automatically.
 
-[Click for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
+[Click here for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
 ### Support Instance ID Different From Source DB Column
 
