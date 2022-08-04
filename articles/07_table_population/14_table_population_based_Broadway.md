@@ -14,7 +14,7 @@ The advantages of using a Broadway flow for a table population rather than a sou
 
 ### Flow Population Template
 
-A Broadway population is created as a template with predefined Stages and designated Actors. The template flow is ready to be used and can be executed as part the Logical Unit population without any changes. If needed the flow can be modified by adding or removing Actors and Stages.
+A Broadway population is created as a template with predefined Stages and designated Actors. The template flow is ready to be used and can be executed as part of the Logical Unit population without any changes. If needed, the flow can be modified by adding or removing Actors and Stages.
 
 The following example displays a Broadway flow template created to populate the CASES table in the Logical Unit. 
 
