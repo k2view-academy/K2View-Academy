@@ -34,9 +34,9 @@ The following example displays a Broadway flow template created to populate the 
 
     <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
 
-  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the population inherits the respective LU Table's Delete Mode.
+  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the Delete Mode is taken from the LU table's properties. Additional values are All and NonUpdated.
 
-  *  [Click for more information about LU table's Delete Mode](/articles/06_LU_tables/04_table_properties.md#delete-mode).
+  *  [Click for more information about LU table's Delete Mode](/articles/06_LU_tables/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties).
 
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The **SourceDbQuery** Actor inherits from the [DbCommand Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments.
 
