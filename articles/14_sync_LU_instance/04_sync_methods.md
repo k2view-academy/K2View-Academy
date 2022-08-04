@@ -136,7 +136,7 @@
 <p><strong>Parameters</strong></p>
 </td>
 <td width="500">
-<p>Decision function: select the Decision function from the Predefined Decision Functions dropdown list.</p>
+<p>Select the Decision function from the Predefined Decision Functions dropdown list.</p>
 </td>
 </tr>
 </tbody>
