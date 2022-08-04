@@ -275,7 +275,7 @@ In general, the Delete Mode is set on the LU table. However, the Delete Mode can
 <td width="170pxl">NonUpdated</td>
 <td width="170pxl">FALSE</td>
 <td width="170pxl">Off/NonUpdated</td>
-<td width="390pxl">&nbsp;Delete the non-updated records if any of the populations run as set in the LU table.</td>
+<td width="390pxl">Delete the non-updated records if any of the populations run as set in the LU table.</td>
 </tr>
 <tr>
 <td width="170pxl">NonUpdated</td>
