@@ -60,10 +60,10 @@ The Properties tab displays a list of properties that must be defined for each L
 <td width="700pxl">
 <p>There are 4 <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
 <ul>
-<li>None.</li>
-<li>Inherited (default).</li>
-<li>Time Interval.</li>
-<li>Decision Function.</li>
+<li>None</li>
+<li>Inherited (default)</li>
+<li>Time Interval</li>
+<li>Decision Function</li>
 </ul>
 </td>
 </tr>
