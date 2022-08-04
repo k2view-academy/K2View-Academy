@@ -101,9 +101,9 @@
 <p><strong>Parameters</strong></p>
 </td>
 <td width="500">
-<p>Perform sync every:&nbsp;</p>
+<p>Sync is performed every:&nbsp;</p>
 <p>Format = D.HH:MM:SS.</p>
-<p> When set to 00:00:00 - if sync mode is force or on - always sync. <p>
+<p> When set to 00:00:00 - if sync mode is force or on - sync always takes place when getting the LUI. <p>
 <p>Default = 1 day (1:00:00:00).</p>
 </td>
 </tr>
