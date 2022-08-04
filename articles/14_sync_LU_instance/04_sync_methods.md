@@ -219,7 +219,7 @@ The actor can have one of the following values:
 
 ### 3. Delete Mode - LU Table and Population Levels
 
-In general, the Delete Mode is set on the LU table. However, the Delete Mode can be overridden by the LU table population if the LU table's Delete Mode  is **not** set to All as detailed in the table below:
+In general, the Delete Mode is set on the LU table. However, the Delete Mode can be overridden by the LU table population if the LU table's Delete Mode is **not** set to All as detailed in the table below:
 
 <table width="900pxl">
 <tbody>
@@ -263,13 +263,13 @@ In general, the Delete Mode is set on the LU table. However, the Delete Mode can
 <td width="170pxl">Off</td>
 <td width="170pxl">TRUE</td>
 <td width="170pxl">All</td>
-<td width="390pxl">Delete all previous records if any of the populations runs.</td>
+<td width="390pxl">Delete all previous records if any of the populations run.</td>
 </tr>
 <tr>
 <td width="170pxl">Off</td>
 <td width="170pxl">TRUE</td>
 <td width="170pxl">NonUpdated</td>
-<td width="390pxl">&gt; Delete all previous records if the table population object runs.<br />&gt; Delete the non-updated records if only the Broadway flow population runs.</td>
+<td width="390pxl">&gt; Delete all previous records if the table population object runs.<br />&gt; Delete the non-updated records only if the Broadway flow population runs.</td>
 </tr>
 <tr>
 <td width="170pxl">NonUpdated</td>
