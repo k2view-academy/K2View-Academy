@@ -182,7 +182,7 @@ Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property re
 
 
 ### 1. LU Table Settings
-The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated prior to the current sync). The values are **All** (default value), **Off**, or **NonUpdated**:
+The **Delete Mode** property is set on the LU table and defines the delete mode of the previous records in the LU table (populated prior to the current sync). The values are **All** (default value), **Off** or **NonUpdated**:
 
  - **All** - the entire LU table is truncated before the populations are executed.
  - **Off** - the previous records are not deleted.
