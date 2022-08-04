@@ -103,7 +103,7 @@ Starting from Fabric V6.5.9, when populating the LU Root table, Broadway populat
 
    ![](images/07_14_InstanceIdLU.png)
 
-2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's column name. Then map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
+2. Update the CUSTOMER_ID column of the **DbLoad** Actor to ID, to correspond to the LU table's column name. Then, map the output of **SourceDbQuery** Actor to the new input of **DbLoad** Actor.
 
    ![](images/07_14_InstanceIdPop.png)
 
