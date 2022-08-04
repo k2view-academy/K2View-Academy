@@ -18,6 +18,10 @@ The below displays an example for various business tables:
 
 Considering the flexibility of the population types introduced with these tables, the appropriate population [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) would need to be carefully set by the user, otherwise the business tables could not be populated as required. 
 
+Note that when creating a population for a business table with no parent, the **SourceDBQuery** Actor should be replaced by the **DbCommand** Actor as shown below:
+
+![image](images/business_tables_1.PNG)
+
 
 
 [![Previous](/articles/images/Previous.png)](04_table_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_LU_views.md)
