@@ -281,7 +281,7 @@ In general, the Delete Mode is set on the LU table. However, the Delete Mode can
 <td width="170pxl">NonUpdated</td>
 <td width="170pxl">FALSE</td>
 <td width="170pxl">All</td>
-<td width="390pxl">&gt; Delete all previous records is the Broadway population flow runs.<br />&gt; If only the population object runs, delete the non-updated records as defined in the LU table level.</td>
+<td width="390pxl">&gt; Delete all previous records if the Broadway population flow runs.<br />&gt; If only the population object runs, delete the non-updated records as defined in the LU table level.</td>
 </tr>
 <tr>
 <td width="170pxl">NonUpdated</td>
