@@ -118,7 +118,7 @@
 <p><strong>Sync Method</strong></p>
 </td>
 <td width="700pxl">
-<p>Decision</p>
+<p>Decision.</p>
 </td>
 </tr>
 </thead>
