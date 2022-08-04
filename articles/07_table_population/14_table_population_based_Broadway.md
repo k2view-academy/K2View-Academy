@@ -44,7 +44,7 @@ The following example displays a Broadway flow template created to populate the 
 
   * The **sql** input argument holds a query that is populated either automatically or should be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
 
-  * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance since it enables generating less calls to the source DB.
+  * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance as it generates less calls to the source DB.
 
   * The WHERE clause is generated automatically in the same way as for regular populations and is not visible in the Actor's UI. 
 
