@@ -122,8 +122,8 @@ Starting from Fabric V6.5.9, when populating the LU Root table, Broadway populat
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-[Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
+[Click here to display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[Click to display an example of a population flow in the Demo project.](/articles/demo_project/README.md)
+[Click here to display an example of a population flow in the Demo project.](/articles/demo_project/README.md)
 
 [![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)
