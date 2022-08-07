@@ -315,7 +315,7 @@ In general, the Delete Mode is set on the LU table. However, the Delete Mode can
 </td>
 <td style="width: 700pxl">
 <p>The source either does not change or becomes unavailable, and therefore requires a one-time load only.</p>
-<p>After it is loaded, Fabric becomes the System of Record for the data and may get <a href="/articles/23_fabric_transactions/01_fabric_transactions_overview.md#fabric-transactions">update transactions</a> on the data. For example: add a new payment.</p>
+<p>After it is loaded, Fabric becomes the System of Record for the data and may get <a href="/articles/23_fabric_transactions/01_fabric_transactions_overview.md#fabric-transactions">update transactions</a> on the data. For example: adding a new payment.</p>
 </td>
 </tr>
 <tr>
