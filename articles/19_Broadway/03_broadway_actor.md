@@ -54,7 +54,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open t
 
 To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
-<img src="images/99_03_actor_remark.PNG" alt="image" style="zoom:67%;" />
+<img src="images/99_03_actor_remark.PNG" alt="image"  />
 
 Once there is a remark you can pull it up by clicking the green asterisk <img src="images/asterisk.png" style="zoom:80%;" />. To delete a remark, remove its text and close the remark. 
 

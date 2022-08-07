@@ -126,7 +126,7 @@ Note that when populating an input value for an **SQL** parameter, click **QB** 
 
 ### Add Input Button
 
-Some Actors such as JavaScript and DbCommand, enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings:
+Some Actors such as JavaScript and **DbCommand**, enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings:
 
 - Parameter Type = Any.
 - Population Type = Link.
@@ -153,7 +153,7 @@ The actions in the output parameters are:
 
 ### Add Output Button
 
-Some Actors, such as InnerFlow, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
+Some Actors, such as **InnerFlow**, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
 
 To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
 
