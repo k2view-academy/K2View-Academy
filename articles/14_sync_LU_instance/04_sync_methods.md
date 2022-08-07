@@ -211,9 +211,9 @@ A new Broadway actor has been added in Fabric 6.5.9:  **SyncDeleteMode**. This a
 
 The actor can have one of the following values:
 
-- **Off** (default) - when set, get the delete mode from the LU table.
-- **All** - delete all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
-- **NonUpdated** - delete only the previous records that are not updated by the current sync (old data).
+- **Off** (default) - when set, it gets the delete mode from the LU table.
+- **All** - deletes all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
+- **NonUpdated** - deletes only the previous records that are not updated by the current sync (old data).
 
 
 
