@@ -178,7 +178,7 @@
 
 ## Delete Mode and Truncate Before Sync properties
 
-Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the delete policy on the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode.
+Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the delete policy on the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode. The Delete Mode can be either set on the LU table or the table's populations:
 
 
 ### 1. LU Table Settings
@@ -215,6 +215,11 @@ The actor can have one of the following values:
 - **Off** (default) - when set, it gets the delete mode from the LU table.
 - **All** - deletes all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
 - **NonUpdated** - deletes only the previous records that are not updated by the current sync (old data).
+
+Notes:
+
+- The **SyncDeleteMode** has the **schema** and **table** input parameters. By default, the schema is populated with the LU name and the table is populated with the populated table name. The table can be populated with a different LU table to delete table B by table A's population. 
+- Unlike the table population object, the population flow deletes all the LU table's records before populating the table if the **SyncDeleteMode** actor is populated with **All** on the population flow. This may cause *undesired results when the population flow deletes records populated by other populations in this table.* Therefore, if any one of the LU table's populations needs to delete the previous records from the LU table before its population, it is recommended to set the **Delete Mode** to **All on the LU table level** and set the SyncDeleteMode to Off on the table's populations . 
 
 
 
