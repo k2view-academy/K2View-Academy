@@ -178,7 +178,7 @@
 
 ## Delete Mode and Truncate Before Sync properties
 
-Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the policy regarding the deletion of the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode. The Delete Mode can be either set on the LU table or the table's populations:
+Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the policy regarding the deletion of the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode. The Delete Mode can be set either on the LU table or on the table's populations:
 
 
 ### 1. LU Table Settings
@@ -218,8 +218,8 @@ The actor can have one of the following values:
 
 Notes:
 
-- The **SyncDeleteMode** has the **schema** and **table** input parameters. By default, the schema is populated with the LU name and the table is populated with the populated table name. The table can be populated with a different LU table to delete table B by table A's population. 
-- Unlike the table population object, the population flow deletes all the LU table's records before populating the table if the **SyncDeleteMode** actor is populated with **All** on the population flow. This may cause *undesired results when the population flow deletes records populated by other populations in this table.* Therefore, if any one of the LU table's populations needs to delete the previous records from the LU table before its population, it is recommended to set the **Delete Mode** to **All on the LU table level** and set the SyncDeleteMode to Off on the table's populations . 
+- The **SyncDeleteMode** has the **schema** and **table** external input parameters. By default, the schema parameter gets the LU name and the table parameter gets the populated table name. In order to enable a **population of multiple LU tables** by a single Broadway population flow, it is possible to override the table input parameter in both actors in the population flow: **SyncDeleteMode** and **DbLoad**. This way it possible to add multiple instances of the DbLoad and SyncDeleteMode actors in one single population flow.   
+- Unlike the table population object, the population flow deletes all the LU table's records before populating the table if the **SyncDeleteMode** actor is populated with **All** on the population flow. This may cause *undesired results when the population flow deletes records populated by other populations in this table.* Therefore, if running all LU table populations deletes the previous records from the LU table before its population, it is recommended to set the **Delete Mode** to All on the **LU table level** and to set the SyncDeleteMode to Off on the table's populations. 
 
 
 
