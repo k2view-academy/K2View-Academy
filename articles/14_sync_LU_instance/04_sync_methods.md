@@ -178,7 +178,7 @@
 
 ## Delete Mode and Truncate Before Sync properties
 
-Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the delete policy on the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode. The Delete Mode can be either set on the LU table or the table's populations:
+Fabric 6.5.9 adds the **Delete Mode** property to the LU table. This property replaces the previous **Truncate Before Sync** LU table's property. The Delete Mode defines the policy regarding the deletion of the previous records (populated prior to the current sync) from the LU table by the current sync. Therefore, there is a logical dependency between the delete mode and the sync mode. The Delete Mode can be either set on the LU table or the table's populations:
 
 
 ### 1. LU Table Settings
