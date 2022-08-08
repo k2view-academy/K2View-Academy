@@ -1,7 +1,7 @@
 # Fabric Master Key Integrated with KMS
 
 Fabric master key mechanism can be integrated with KMS, since Fabric v6.5.9 release, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
- 
+
 To define Fabric to work with KMS, the information should first be acquired from KMS and then set in Fabric.
 > By default, Fabric uses its internal master key mechanism. 
 
@@ -34,7 +34,7 @@ To define Fabric to work with KMS, the information should first be acquired from
    ~~~
    >  Notes: 
    >
-   >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form.
+   >  * Relevant config.ini parameters are encrypted and are not saved in the file in their clear/plain form.
    >  * In case a Fabric node already has a trust with AWS (with AWS's user who shall connect to KMS), then ACCESS_KEY_ID and SECRET_ACCESS_KEY can be omitted.
 
 4. In Fabric, run ``activatekey name='masterkey_key_name' generatorType='AWS_KMS' storeType='AWS_KMS'``.
@@ -62,7 +62,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
    >  Note: These actions shall be done in all Fabric nodes. 
    ~~~
    [encryption_gcp_kms]
-   PRODUCT_ID=
+   PROJECT_ID=
    LOCATION_ID=
    KEY_ID=
    KEY_RING_ID=
@@ -70,7 +70,7 @@ For multi-region Fabric deployment, it may be required to work with [AWS multi r
    ~~~
    >  Note: 
    >
-   >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form.
+   >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form. In addition, the credential file is encrypted and is not saved in its plain/clear form. On runtime, when calling to GCP, Fabric knows to provides it properly, in its plain form. 
    >  * In case a Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then CREDENTIAL_FILE can be omitted.
 
 4. In Fabric, run ``activatekey name='masterkey_key_name' generatorType='Java_AES' storeType='GCP_KMS'``.

@@ -83,7 +83,7 @@ A key can be generated using the following command:
 **Examples:**
 
 1. Rotating the logical unit instance encryption master key:
-   ```activatekey name='masterkey_key_name' [generatorType='Java_AES'] [storeType='Stripe_AES']```
+   ```activatekey name='<masterkey_key_name>' [generatorType='Java_AES'] [storeType='Stripe_AES']```
 
 2. Rotating the the master key for hashing:
 
@@ -133,17 +133,17 @@ For decrypting data, the application shall take the encrypted data key from its 
 
 When a KMS integration is used, Fabric treats KMS's data-key as its master key: 
 
-When integrated with AWS, instead of generating a master key, it calls to AWS KMS to get a data key within its 2 forms. When integrated with GCP, it generates a data key and calls to GCP KMS to encrypt it. Then, Fabric treats the *encrypted* data key as its master key.  
+When integrated with AWS, instead of generating a master key, it calls to AWS KMS to get an encrypted data key. When integrated with GCP, it generates a data key and calls to GCP KMS to encrypt it. Then, Fabric treats the *encrypted* data key as its master key.  
 
 To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls to KMS to decrypt it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
 
 #### Setup 
 
-For information of what shall be configured for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md ).
+To work with KMS you shall set its information in config.ini and accordingly generate a new Fabric master key. For information of what shall be configured and done for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md ).
 
 #### Fabric Master Key Commands
 
-As described here, the Fabric master-key command refers to its modules - the key generation and the key storage, according to its input parameters. When working with KMS, these parameters shall be provided as follows:
+As described, the Fabric master-key command refers to its two modules - the key generation and the key storage, according to its input parameters. When working with KMS, these parameters shall be provided as follows:
 
 * When integrated with AWS, use ``activatekey name='<name>' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 * When integrated with GCP, use ``activatekey name='<name>' generatorType='Java_AES' storeType='GCP_KMS'``.
@@ -152,10 +152,19 @@ As described here, the Fabric master-key command refers to its modules - the key
 
 #### Key Rotation
 
-When working with KMS, there are two levels of key rotation: The data key rotation and the KMS master key rotation. 
+When working with KMS, there are two levels of key rotation: The Fabric master key rotation and the KMS master key rotation. 
 
-* Data key rotation, which is used as a Fabric master key, is done in Fabric using the ``activatekey `` command and is described [here](#master-key-rotation).
-* KMS master key rotation is done in KMS and according to the master key settings - automatically or manually. This rotation is transparent to Fabric, so that it decrypts also data keys, sent to by Fabric, that were encrypted with older master keys.
+* Fabric master key rotation, is done in Fabric using the ``activatekey `` command and is described [here](#master-key-rotation).
+* KMS master key rotation is done in the KMS according to the master key settings and policy. This rotation is transparent to Fabric, so that KMS decrypts also data keys, sent to by Fabric, that were encrypted with older master key versions.
+
+#### Key Replacement
+
+When required, KMS master key can be replaced. In such case, a new KMS master key-id is provided and set at Fabric configuration. Then, ``activatekey`` command shall be executed in order to generate a new Fabric master key that will use the replaced KMS master key. Fabric preserves, for each of its master keys, the KMS master-key-id that it is associated to. In this way, Fabric can decrypts data which was encrypted with previous KMS master keys.
+
+> Notes:
+>
+> * At AWS, manual key rotation is done only by creating a new master key, that is - using key replacement. GCP supports manual rotation similar to the automatic rotation, i.e. without replacing the key.
+> * In order that Fabric will be able to decrypt older KMS master keys, these keys shall be preserved at the KMS. If it is required to delete them, then before doing it Fabric migrate process shall be done on the data, to re-encrypt them with the new master key.
 
 #### Multi Region Support
 
