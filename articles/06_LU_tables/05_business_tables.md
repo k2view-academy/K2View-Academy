@@ -20,7 +20,7 @@ Considering the flexibility of the population types introduced with these tables
 
 Note that when creating a population for a business table with no parent, the **SourceDBQuery** Actor should be replaced by the **DbCommand** Actor as shown below:
 
-![image](images/business_tables_1.PNG)
+![image](images/business_tables_1.png)
 
 
 
