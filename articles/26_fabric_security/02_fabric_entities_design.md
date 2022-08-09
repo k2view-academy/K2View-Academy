@@ -163,7 +163,7 @@ When required, KMS master key can be replaced. In such case, a new KMS master ke
 
 > Notes:
 >
-> * At AWS, manual key rotation is done only by creating a new master key, that is - using key replacement. GCP supports manual rotation similar to the automatic rotation, i.e. without replacing the key.
+> * At AWS, manual key rotation is done only by creating a new master key, that is - using a key replacement. GCP supports manual rotation similar to the automatic rotation, i.e. without replacing the key.
 > * In order that Fabric will be able to decrypt older KMS master keys, these keys shall be preserved at the KMS. If it is required to delete them, then before doing it Fabric migrate process shall be done on the data, to re-encrypt them with the new master key.
 
 #### Multi Region Support
