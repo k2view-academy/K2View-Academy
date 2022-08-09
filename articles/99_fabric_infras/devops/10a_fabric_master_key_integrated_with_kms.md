@@ -41,7 +41,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 ### Multi Region Support
 
-For multi-region Fabric deployment, it may be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/) in order to achieve better performance. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region replicated keys.
+For a multi-region Fabric deployment, it may be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/) in order to achieve better performance. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region replicated keys.
 
 ## Integration with GCP KMS
 
