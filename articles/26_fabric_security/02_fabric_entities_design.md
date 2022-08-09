@@ -139,7 +139,7 @@ To encrypt or decrypt data, each Fabric node,  while going live, takes the store
 
 #### Setup 
 
-In order to work with KMS you shall set its information in config.ini and accordingly generate a new Fabric master key. For information of what shall be configured and done for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md ).
+In order to work with KMS you should set its information in config.ini and accordingly generate a new Fabric master key. For information of what should be configured and done for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md ).
 
 #### Fabric Master Key Commands
 
