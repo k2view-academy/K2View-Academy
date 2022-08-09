@@ -127,7 +127,7 @@ The encrypting process is a little different among cloud providers:
 
 Then, in either of KMS providers, the application uses the clear/plain form to encrypt the data and it also stores the encrypted data key in order to enabled decrypting it later. The application shall decide whether to reuse a data key for later encryptions or whether to regenerate different ones, either every time or in some frequency.  
 
-For decrypting data, the application shall take the encrypted data key from its storage, call to KMS to decrypt it into its clear/plain form, and use it for decrypting the data.
+For decrypting data, the application shall take the encrypted data key from its storage, call the KMS to decrypt it into its clear/plain form, and use it for decrypting the data.
 
 #### Fabric Working-flow with KMS 
 
