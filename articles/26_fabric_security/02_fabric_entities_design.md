@@ -154,7 +154,7 @@ As described, the Fabric master-key command refers to its two modules - the key 
 
 When working with KMS, there are two levels of key rotation: The Fabric master key rotation and the KMS master key rotation. 
 
-* Fabric master key rotation, is done in Fabric using the ``activatekey `` command and is described [here](#master-key-rotation).
+* Fabric master key rotation is done in Fabric using the ``activatekey `` command and is described [here](#master-key-rotation).
 * KMS master key rotation is done in the KMS according to the master key settings and policy. This rotation is transparent to Fabric, so that KMS decrypts also data keys, sent to by Fabric, that were encrypted with older master key versions.
 
 #### Key Replacement
