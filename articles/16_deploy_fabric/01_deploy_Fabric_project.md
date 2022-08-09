@@ -94,7 +94,10 @@ You can check which objects are deployed in the Fabric server using the Fabric *
 - **list LU_TYPES/LUT**, provides a list of LU Types deployed to the Fabric server and can display an LU's [storage type](/articles/32_LU_storage/01_LU_storage_overview.md). This command can be invoked for all deployed LU Types or for a specific one.
 - **list WS**, provides a list of all Web Service methods deployed to the Fabric server. 
 - **list ENVIRONMENTS/ENVS**, provides a list of environments deployed to the Fabric server.
-- **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server .
+- **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server:
+  - If LU_NAME is supplied, the command lists only Broadway flows belonging to the LU.
+  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify LU_NAME to assure a single flow is found.
+
 - **list INSTANCE_GROUPS/IGS**, lists all instance groups of all LU Types deployed to the server.
 - **list DB_SOURCES**, lists all the DB interfaces.
 - **list INTERFACES**, lists all the interfaces. 
