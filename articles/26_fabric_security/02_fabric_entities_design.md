@@ -159,7 +159,7 @@ When working with KMS, there are two levels of key rotation: The Fabric master k
 
 #### Key Replacement
 
-When required, KMS master key can be replaced. In such case, a new KMS master key-id is provided and set in Fabric configuration. Then, ``activatekey`` command shall be executed in order to generate a new Fabric master key that will use the replaced KMS master key. Fabric preserves, for each of its master keys, the KMS master-key-id that it is associated to. In this way, Fabric can decrypts data which was encrypted with previous KMS master keys.
+When required, KMS master key can be replaced. In such case, a new KMS master key-id is provided and set in Fabric configuration. Then, ``activatekey`` command shall be executed in order to generate a new Fabric master key that will use the replaced KMS master key. Fabric preserves, for each of its master keys, the KMS master-key-id that it is associated to. This way, Fabric can decrypts data that was encrypted with previous KMS master keys.
 
 > Notes:
 >
