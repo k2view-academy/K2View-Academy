@@ -110,7 +110,7 @@ Fabric supports, since v6.5.9 release, integrations with KMS (Key Management Ser
 
 #### Background
 
-KMS is a cloud service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. Key Management service is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
+KMS is a cloud service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. Key Management Service is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
 
 >  Note: While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type and thus the below explanations refer to this type only. 
 
