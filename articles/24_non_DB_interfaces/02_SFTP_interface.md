@@ -104,23 +104,20 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 ### Using the InterfaceListener Actor 
 
-The *InterfaceListener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another Broadway flow upon arrival of a new file on the interface.
+The **InterfaceListener** Actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another Broadway flow upon arrival of a new file on the interface.
 
-To create an interface listener job from a Broadway flow, choose the **InterfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
+To create an Interface Listener job from a Broadway flow, add the **InterfaceListener** Actor to the flow.
 
 ![images](images/12_interfaceListenerActor_1.PNG)
 
-Fill in the following parameters in the Properties tab:
+Fill in the following parameters in the Actor's Properties tab:
 
-- **flowName**: name of the flow to be triggered by this actor.
-- **interfaceName**: the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points.
+- **flowName**, the flow to be triggered by the Interface Listener.
+- **interfaceName**, the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points.
 
-Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
+- **affinity**, sets which node/DC name IP address is to be used to run the Interface Listener job.
 
-- **affinity**: this sets which node/DC name IP address is to be used to run the Broadway job.
-
-- **params**: This refers to the arguments that can be parsed to the Broadway flow. 
-For example, multiple parameters can be parsed as a key/value object from an external link or from a **Constant** or **JavaScript** actor.
+- **params**, refer to the arguments that can be passed to the flow. For example, multiple parameters can be parsed as a key/value object from an external link or from a **Const** or **JavaScript** Actor.
 
 
 
