@@ -135,7 +135,7 @@ When a KMS integration is used, Fabric treats KMS's data-key as its master key:
 
 When integrated with AWS, instead of generating a master key, it calls the AWS KMS to get an encrypted data key. When integrated with GCP, it generates a data key and calls the GCP KMS to encrypt it. Then, Fabric treats the *encrypted* data key as its master key.  
 
-To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls to KMS to decrypt it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
+To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
 
 #### Setup 
 
