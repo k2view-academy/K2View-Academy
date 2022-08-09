@@ -23,7 +23,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 3. In Fabric, set the values in config.ini under ``[encryption_aws_kms]`` section, according to the KMS information. 
 
-   > Note: This shall be done in all Fabric nodes. 
+   > Note: This shall be done on all Fabric nodes. 
 
    ~~~
    [encryption_aws_kms]
