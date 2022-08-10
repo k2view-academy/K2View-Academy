@@ -20,7 +20,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 
 By storing the data in Fabric, it becomes more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from application silos and moving to a data-driven architecture.
 
-Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
+Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to the amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology/architecture to do this for multiple customers simultaneously. 
 
 Fabric solves the following high-level requirements:
 
@@ -36,7 +36,7 @@ Fabric does all this using a patented approach for storing, syncing and securing
 
 ## 2. Fabric Server Main Components
 
-Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
+Fabric relies on a resilient architecture and a strong set of 3rd party technologies that are widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
 
 ![](images/fabOverviewPic.png)
@@ -96,7 +96,7 @@ Fabric Studio is a development tool for building Fabric projects, designed to en
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations as per required by the business flow design and to expose the data to third-party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations per the required business flow design and to expose the data to 3rd party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
 
 ![](images/fabDataFlow.png)
 
@@ -108,18 +108,18 @@ The following discusses the protocols and standard interfaces through which data
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
 Fabric provides standard JDBC and ADO.NET drivers to execute queries and data manipulation statements (SQL/DML) from any external JVM or .NET process.
-A user / application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can also be used to run SQL SELECT queries to retrieve data.
+A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can also be used to run SQL SELECT queries to retrieve data.
 
 
 #### 3.2.2 REST API and Web Services
-External sources can also read and write data using standard [REST Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric storage.
+External sources can also read and write data using standard [REST Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDB residing in Fabric storage.
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
-#### 3.2.3  CDC (Change Data Capture) using Queue Messaging
-Fabric supports real-time, inbound data updates via Queue Messaging interfaces. Fabric's [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution then notifies external systems about any LUI data changes published via the queue messaging interface. 
+#### 3.2.3  CDC (Change Data Capture) using Message Queuing
+Fabric supports real-time, inbound data updates via Message Queue interfaces. Fabric's [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution then notifies external systems about any LUI data changes published via the message queue interface. 
 
-Any update occurring on the MicroDBs will trigger a [CDC message](/articles/18_fabric_cdc/03_cdc_messages.md) onto the queue, allowing subscribing 3rd-party systems to stream the MicroDB updates.
+Any update occurring on the MicroDBs will trigger a [CDC message](/articles/18_fabric_cdc/03_cdc_messages.md) onto the queue, allowing subscribing 3rd party systems to stream the MicroDB updates.
 
 
 
@@ -226,7 +226,7 @@ This module manages access rights, authentication and authorization of users, We
 
 Fabric relies on end-to-end encryption for API requests and for generating SSL-based tokens.
 
-Fabric uses secured [tokens](/articles/26_fabric_security/05_fabric_webservices_security.md#tokens) to enable the execution of Web Services requests. Users can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into Cassandra. Note that for the purpose of developing or testing , non-secured tokens can be generated.
+Fabric uses secured [tokens](/articles/26_fabric_security/05_fabric_webservices_security.md#tokens) to enable the execution of Web Services requests. Users can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into Cassandra. Note that for the purpose of developing or testing, non-secured tokens can be generated.
 
 ### 5.1.2 JWT Tokens
 
@@ -245,7 +245,7 @@ To read more about Fabric's Identity Management architecture, flows and systems'
 Fabric secures the schemas and instances generated whenever a new LU is created. The encryption process relies on a combination of the LU type, LUI and the master key generated for each LU.
 
 The master key (AES-256) generated by Fabric is split into multiple bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using Cassandra distribution data logic, each node stores only part of the master key. In addition, a master key rotation scheme, allows users to regularly change the master key. New LUIs are encrypted with the new key, while previous ones are re-encrypted with the new key during the next synchronization.
-Fabric encrypts each LUI using the AES-256 in an OFB mode encryption algorithm and a combination of the LU name, LUI ID and master key. As a result, Fabric creates a different key for each Instance ID, since each Instance ID has a different value. Therefore, in the improbable event that an LUI is breached, other entities  remain safe since they have each been encrypted with their own secret key.
+Fabric encrypts each LUI using the AES-256 in an OFB mode encryption algorithm and a combination of the LU name, LUI ID and master key. As a result, Fabric creates a different key for each Instance ID, since each Instance ID has a different value. Therefore, in the improbable event where an LUI is breached, other entities remain safe as they have, each, been encrypted with their own secret key.
 To reduce load and improve compression, specific fields of an LUI can be encrypted rather than the entire instance.
 
 
@@ -263,7 +263,7 @@ To protect your company&#39;s data, Fabric's masking service creates a structura
 
 ### 6.1 Fabric Cluster
 
-Fabric relies on Cassandra distributed storage to store the massive amount of data pertaining to the LUIs generated by data retrieved from external data sources and potentially transformed by Fabric data processing modules. Fabric also provides strong capabilities to publish data to external third parties. To this effect, Fabric can be configured as a cluster constituted of multiple nodes spread over multiple datacenters and therefore provide boosted accessibility levels to Fabric for any 3rd parties issuing inbound data queries.
+Fabric relies on Cassandra distributed storage to store the massive amount of data pertaining to the LUIs generated by data retrieved from external data sources and potentially transformed by Fabric data processing modules. Fabric also provides strong capabilities to publish data to external 3rd parties. To this effect, Fabric can be configured as a cluster, which constitutes of multiple nodes that spread over multiple datacenters. This provides boosted accessibility levels to Fabric for any 3rd parties issuing inbound data queries.
 These configurations allow unparalleled flexibility whereby the DevOps Manager responsible for Fabric configuration, can decide to adapt the number of Fabric nodes according to the demand at any given time, and also increase or reduce the number of Cassandra nodes depending on the quantity of storage needed for the LUIs.
 
 ![](/articles/02_fabric_architecture/images/fabCluster.png)
