@@ -108,7 +108,7 @@ The following discusses the protocols and standard interfaces through which data
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
 Fabric provides standard JDBC and ADO.NET drivers to execute queries and data manipulation statements (SQL/DML) from any external JVM or .NET process.
-A user / application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can also be used to run SQL SELECT queries to retrieve data.
+A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can also be used to run SQL SELECT queries to retrieve data.
 
 
 #### 3.2.2 REST API and Web Services
