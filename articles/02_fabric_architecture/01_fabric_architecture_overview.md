@@ -116,7 +116,7 @@ External sources can also read and write data using standard [REST Web Services]
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
-#### 3.2.3  CDC (Change Data Capture) using Queue Messaging
+#### 3.2.3  CDC (Change Data Capture) using Message Queuing
 Fabric supports real-time, inbound data updates via Queue Messaging interfaces. Fabric's [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution then notifies external systems about any LUI data changes published via the queue messaging interface. 
 
 Any update occurring on the MicroDBs will trigger a [CDC message](/articles/18_fabric_cdc/03_cdc_messages.md) onto the queue, allowing subscribing 3rd-party systems to stream the MicroDB updates.
