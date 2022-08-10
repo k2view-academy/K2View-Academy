@@ -20,7 +20,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 
 By storing the data in Fabric, it becomes more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from application silos and moving to a data-driven architecture.
 
-Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
+Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to the amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
 Fabric solves the following high-level requirements:
 
