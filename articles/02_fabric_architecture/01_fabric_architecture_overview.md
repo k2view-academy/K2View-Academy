@@ -112,7 +112,7 @@ A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction
 
 
 #### 3.2.2 REST API and Web Services
-External sources can also read and write data using standard [REST Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric storage.
+External sources can also read and write data using standard [REST Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDB residing in Fabric storage.
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
