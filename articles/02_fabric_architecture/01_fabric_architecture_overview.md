@@ -36,7 +36,7 @@ Fabric does all this using a patented approach for storing, syncing and securing
 
 ## 2. Fabric Server Main Components
 
-Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
+Fabric relies on a resilient architecture and a strong set of 3rd party technologies that are widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
 
 ![](images/fabOverviewPic.png)
