@@ -96,7 +96,7 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations as per required by the business flow design and to expose the data to 3rd party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations per the required business flow design and to expose the data to 3rd party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
 
 ![](images/fabDataFlow.png)
 
