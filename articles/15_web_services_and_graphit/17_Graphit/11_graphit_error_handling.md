@@ -41,12 +41,12 @@ and overrides the response with the following:
 - header_key value: 'Web Service Not Found'
 
 
-If the response is not a 404, it returns these original Web Service details:	
+If the response is not 404, it returns these original Web Service details:	
 - response status
 - exception error message
 - request header User-Agent
 
-In the figure below, you can see both of these responses: *404 not found* is shown in the upper half of the figure, and *any other response* (that is, if the response is not a 404), is shown in the lower half of the figure.  
+In the figure below, you can see both of these responses: *404 not found* is shown in the upper part of the figure, and *any other response* (that is, if the response is not 404), is shown in the lower part of the figure.  
 
 <img src="images/66_graphit_error_handling.png"></img>
 
