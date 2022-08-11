@@ -17,7 +17,7 @@ This article describes how to extend an Actor or to modify an extended Actor usi
 
 ### How Do I Export an Actor?
 
-1. Add an **Actor** to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. Using these settings, the **string** output argument is displayed as **'Thu  06-08-20 15:30 PM'**.
+1. Add an **Actor** to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. 
 
 2. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
@@ -29,7 +29,7 @@ This article describes how to extend an Actor or to modify an extended Actor usi
 
 5. Optional: set the hidden or final value for each input or output argument.
 
-6. Click **SUBMIT**. 
+6. Click **Submit**. 
 
 
 The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
@@ -60,7 +60,7 @@ To override an extended Actor, do the following:
 
 4. Optional: set the hidden or final value for each input or output argument.
 
-5. Click **SUBMIT** to save the changes.
+5. Click **Submit** to save the changes.
 
 To extend the behavior of the exported Actor, do the following:
 
@@ -75,7 +75,7 @@ To extend the behavior of the exported Actor, do the following:
 
 4. Optional: set the hidden or final value for each input or output argument.
 
-5. Click **SUBMIT** to save the changes.
+5. Click **Submit** to save the changes.
 
 
 
