@@ -186,8 +186,8 @@ The **Delete Mode** property is set on the LU table and defines the delete mode 
 
  - **All** - the entire LU table is truncated before the populations are executed.
  - **Off** - the previous records are not deleted.
- - **NonUpdated** - deletes only the previous records that are not updated by the current sync (old data).
-
+ - **NonUpdated** - deletes the previous records (created by the earlier sync) if the data no longer exists for the LUI in the source.
+ 
 Notes: 
 - It is recommended to set the **NonUpdated** value when the LU table has **CDC fields** in order to send CDC messages only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.
 - If the Delete Mode is **NonUpdated**, it is recommended to define a **PK** on the LU table and set the LU table population mode to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.
@@ -214,7 +214,7 @@ The actor can have one of the following values:
 
 - **Off** (default) - when set, it gets the delete mode from the LU table.
 - **All** - deletes all records from the LU table before sync. This value is equivalent to Truncate Before Sync = True on a table population object.
-- **NonUpdated** - deletes only the previous records that are not updated by the current sync (old data).
+- **NonUpdated** - deletes the previous records (created by the earlier sync) if the data no longer exists for the LUI in the source.
 
 Notes:
 
