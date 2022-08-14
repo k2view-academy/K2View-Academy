@@ -1,6 +1,6 @@
 <!--block-->
 
-<img src="images/swagger_1.png"  />
+<img src="images/swagger_0.png"  />
 
 ### WS Elevated and Additional Permissions
 
