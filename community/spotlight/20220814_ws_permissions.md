@@ -13,6 +13,6 @@ For example, when the user role has no READ and WRITE permissions and an Elevate
 
 At the Web Service Properties pane, open the **Additional Permissions** and choose the methods that should be permitted, using the checkboxes.
 
-<img src="images/swagger_0.PNG"  />
+<img src="images/swagger_0.png"  />
 
 Then execute the Web Service. Note that the permissions should be granted carefully.
