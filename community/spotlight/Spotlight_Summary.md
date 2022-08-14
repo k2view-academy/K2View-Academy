@@ -1,5 +1,18 @@
 <!--block-->
 
+<img src="images/swagger_1.PNG"  />
+
+### WS Elevated and Additional Permissions
+
+Fabric Web Services have two properties related to user role permissions:
+
+* Elevated Permission - indicates if user permissions should be elevated to the Web Service.
+* Additional Permissions - allows to the Web Service to activate certain methods which are prohibited to the user's role permissions. Applicable when Elevated Permission is set to False.
+
+[Read more >](20220814_ws_permissions.md)
+
+<!--block-->
+
 <img src="images/lookup_1.PNG"  />
 
 ### Translation or Lookup of Data
@@ -9,8 +22,6 @@ Lookup for a data set based on provided input is a common scenario in various po
 The Broadway **Lookup** Actor enables performing a data lookup or a data translation from various sources and based on flexible number of input parameters.
 
 [Read more >](20220314_lookup_actor.md)
-
-
 
 <!--block-->
 
@@ -23,20 +34,6 @@ The Broadway **Lookup** Actor enables performing a data lookup or a data transla
 Fabric includes a business intelligence application, called **BI**, which is embedded into the Fabric Web Framework. The Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources in order to read the data: PostgreSQL, Oracle and Fabric itself. 
 
 [Read more >](20220221_fabric_bi.md)
-
-<!--block-->
-
-<img src="images/04_15_03_attach.png" style="zoom:80%;" />
-
-
-
-### Develop on Fabric with IntelliJ
-
-Fabric Studio has been fully integrated with IntelliJ. 
-
-It is mostly recommended if you develop Java functions often. This will allow you to benefit from the most advanced code-writing and debugging capabilities available on the market.  
-
-[Read more >](20210822_fabric_intelliJ.md)
 
 <!--block-->
 

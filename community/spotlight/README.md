@@ -3,6 +3,7 @@
 
 
 <ul>
+<li><a href="/community/spotlight/20220814_ws_permissions.md">WS Elevated and Additional Permissions</a></li>
 <li><a href="/community/spotlight/20220314_lookup_actor.md">Translation or Lookup Data Using Broadway</a></li>
 <li><a href="/community/spotlight/20220221_fabric_bi.md">The Fabric BI Solution</a></li>
 <li><a href="/community/spotlight/20210826_fabric_java_lib.md">New Fabric Java Actor</a></li>
