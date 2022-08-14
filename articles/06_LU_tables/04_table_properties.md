@@ -75,7 +75,7 @@ The Properties tab displays a list of properties that must be defined for each L
     <p>Fabric 6.5.9 adds the Delete Mode property to the LU table. This property replaces the previous Truncate Before Sync LU table's property and defines the delete policy of the previous records in the LU table (populated prior to the current sync). The values are <strong>All</strong> (default value), <strong>Off</strong> or <strong>NonUpdated</strong>: </p>
         <li>All - the entire LU table is truncated before the populations are executed.</li>
         <li>Off - the previous records are not deleted.</li>
-        <li>NonUpdated - deletes only the previous records that are not updated by the current sync (old data). 
+        <li>NonUpdated - deletes the previous records (created by the earlier sync) if the data no longer exists for the LUI in the source. 
        <p></p>
        <p>Click <a href="/articles/14_sync_LU_instance/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties">here </a> for more information about the Delete Mode.</p>  
    <p>Notes:</p>
