@@ -218,7 +218,7 @@ The actor can have one of the following values:
 
 Notes:
 
-- The **SyncDeleteMode** has the **schema** and **table** external input parameters. By default, the schema parameter gets the LU name and the table parameter gets the populated table name. In order to enable a **population of multiple LU tables** by a single Broadway population flow, it is possible to override the table input parameter in both actors in the population flow: **SyncDeleteMode** and **DbLoad**. This way it possible to add multiple instances of the DbLoad and SyncDeleteMode actors in one single population flow.   
+- The **SyncDeleteMode** has the **table** external input parameter. By default, the table parameter gets the populated table name. In order to enable a **population of multiple LU tables** by a single Broadway population flow, it is possible to override the table input parameter in both actors in the population flow: **SyncDeleteMode** and **DbLoad**. This way it possible to add multiple instances of the DbLoad and SyncDeleteMode actors in one single population flow.   
 - Unlike the table population object, the population flow deletes all the LU table's records before populating the table if the **SyncDeleteMode** actor is populated with **All** on the population flow. This may cause *undesired results when the population flow deletes records populated by other populations in this table.* Therefore, if running all LU table populations deletes the previous records from the LU table before its population, it is recommended to set the **Delete Mode** to All on the **LU table level** and to set the SyncDeleteMode to Off on the table's populations. 
 
 
