@@ -47,8 +47,7 @@ In a way each Kafka queue plays the role of a virtual table that publishes all t
 
 Note:
 
-The Node originating the update will also update its own CommonDB table by reading the very same message it published on Kafka and by using the update data available on Kafka's message.
-
+The Node originating the update will also update its own CommonDB table by reading the very same message it published to Kafka and by using the updated data available on Kafka's message.
   
 
 

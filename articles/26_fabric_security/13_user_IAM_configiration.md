@@ -162,7 +162,7 @@ The `adldap_auth` or `ldap_auth` sections must define the following:
 
 The values should be provided by the LDAP owner.
 
-The full instructions for LDAP and LDAPS can be found [here]().
+The instructions for LDAP and LDAPS can be found [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
 <br/>
 
@@ -174,7 +174,7 @@ In order to use a custom authenticator do the following at the config.ini:
 2. Add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
    - Under this section add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added too and will be passed to the authenticator when activated.
 
-For more information about customer authenticator implementation see [here]().
+For more information about customer authenticator implementation see [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
 
 
 
