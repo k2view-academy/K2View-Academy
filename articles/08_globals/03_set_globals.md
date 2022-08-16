@@ -140,8 +140,6 @@ The **SET** command can be used to set a variable **per session** so that the va
 </table>
 
 
-
-
 Click [here](/articles/08_globals/05_globals_overrides_priorities.md) for more information and more examples on variable scopes, level and priorities, as reflected also by the SET command.  
 
 
@@ -165,7 +163,7 @@ When running the `set;` command without parameters in a Fabric console, the valu
 
 * The command results display both final and non-final Globals.
 
-##### Example
+**Example**
 
 This example discusses the following: 
 
@@ -175,7 +173,7 @@ This example discusses the following:
 
 Notes that this example does not show Global overrides.
 
-The result of the `set;` command is similar to the following. Note that the coloring and the separation by unit-type that are shown here are just an illustration, used to clarify the explainations.
+The result of the `set;` command is similar to the following. Note that the coloring and the separation by unit-type that are shown here are just an illustration, used to clarify the explanations.
 
 ![image](images/08_03_globals_console.png)
 
@@ -187,5 +185,4 @@ The white colored Globals are those which were set specifically for CRM and Cust
 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/02_globals_use_cases.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/04_globals_code_examples.md)
-
 
