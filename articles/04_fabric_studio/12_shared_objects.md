@@ -5,21 +5,26 @@ Shared Objects can be used in all components of a Fabric project. For example, [
 ### Which Objects Can be Shared in a Fabric Project?
 
 The following components can be shared in a Fabric project:
-* Environments, where you can define the number of environments according to your needs and also switch between environments in the same Fabric project.
-* Database Types, where you can define a new database type that has a JDBC driver that is not part of the Product package. In addition, you can also edit product-supported database types which are used when defining interfaces.
-* [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), a list of source connection details defined for the project.  
+* [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) - a list of source connection details defined for the project.  
 * [Java files](/articles/04_fabric_studio/09_logic_files_and_categories.md) and resource files:
   * SharedLogic.java, (default) containing all shared [Functions](/articles/07_table_population/06_table_population_transformation_rules.md#functions) from all categories, except for Product functions.
   * SharedLogic.java, per category, containing all shared [Functions](/articles/07_table_population/06_table_population_transformation_rules.md#functions) for a defined physical category. Each SharedLogic.java file is positioned under the relevant Category folder.
   * SharedGlobals.java, containing all shared [Globals](/articles/08_globals/01_globals_overview.md) in a set of global parameters. 
-Note that if a Global that is defined in both a Shared Object and a specific Logical Unit, the Global defined in the specific Logical Unit is used. Other Logical Units use the definitions in the Shared Object.
-  * Resources, various files that can be saved both as part of a project and also in version control.
-* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), sets of translations which can be used for the transformation of data. A Translation defined at a Shared Objects level may be used in any LU included in the project. 
-* [Broadway](/articles/19_Broadway/01_broadway_overview.md), set of flows which can be used for the data movement, its transformation and orchestration. A Broadway flow defined at a Shared Objects level may be used in any LU included in the project. 
+    Note: If a Global is defined in both a Shared Object and a specific Logical Unit, the one used is the one defined in the specific Logical Unit. Other Logical Units use the definitions in the Shared Object.
+  * Resources, various files that can be saved both as part of a project and in version control.
+* [Broadway](/articles/19_Broadway/01_broadway_overview.md) - set of flows that can be used for the data movement, its transformation and orchestration. A Broadway flow, defined at a Shared Objects level, may be used in any LU included in the project. 
+* [Database Types/Custom Interface Types](/articles/05_DB_interfaces/10_database_types.md ) - where you can define a new database type that has a JDBC driver, which is not a part of the Product package. Additionally, you can edit product-supported database types that are used when defining interfaces.
+
+<studio>
+
+* [Environments](/articles/25_environments/01_environments_overview.md) - where you can define the number of environments according to your needs and also switch between environments in the same Fabric project.
+* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) - sets of translations that can be used for data transformation. A Translation defined in a Shared Objects level may be used in any LU, which is included in the project. 
+
+</studio>
 
 **Notes** 
-* If a function, a translation or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
-* Since Shared Objects **are not** self-deployed, changes to an item under a Shared Object used by several components require redeployment to become available.
+* If either a function <studio>, a translation </studio> or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code gets priority.
+* Since Shared Objects **are not** self-deployed, changes made to an item under a Shared Object, used by several components, require redeployment in order to become available.
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 

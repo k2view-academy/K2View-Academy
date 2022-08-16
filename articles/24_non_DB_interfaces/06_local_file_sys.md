@@ -7,12 +7,39 @@ A Local File System interface can be used when creating an [Interface Listener f
 
 To create a new interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Local File System** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 
    ![image](images/local_1.PNG)
 
 2. Populate the connection's settings and click **Save**.
+
+</studio>   
+
+
+<web>
+
+1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
+   
+2. From the window that appears, select the interface type. Scroll down to see more interface types. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
+   
+   ![image](images/local_3WEB.png)
+   
+3. Enter a suitable name for your new interface, then click **Create**:
+   ![image](images/local_1WEB.PNG). 
+   
+4. Set "Active" to ON. 
+
+5. Populate the connection's settings and click **Test Connection**.
+   ![image](images/local_2WEB.PNG)
+   
+6. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
+
+</web>   
+
+
 
 ### Connection Settings
 
@@ -54,12 +81,15 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
    * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
+<studio>
+   
 4. In the Jobs window, select the **Broadway flow** and **Execution mode** and then save the job.
 
    ![images](images/02_sftp_2.PNG)
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
 
+</studio>
 
 
 [![Previous](/articles/images/Previous.png)](05_HTTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_custom_interface.md) 

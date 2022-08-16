@@ -1,3 +1,5 @@
+<studio>
+
 # Root Functions - Code Examples
 
 ### Example of a Root Function that Includes a Fabric Command
@@ -41,7 +43,7 @@ ludb().fetch(sql1, i_customer_id ).each(row-> {
       List<String> caseList = new ArrayList<String>();
       caseList.add(customerID);
       ...
-      yield(result);
+      yield(result);  
    });
 }
 ~~~
@@ -55,4 +57,6 @@ Create a dummy Root function when the LU table is populated by an [Enrichment fu
 if (1 == 2) yield(new Object[]{null});
 ~~~
 [![Previous](/articles/images/Previous.png)](11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_3_creating_an_LUDB_function.md)
+
+</studio>
 
