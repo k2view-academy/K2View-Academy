@@ -170,7 +170,7 @@ Click for more information about the [TDM Library](/articles/TDM/tdm_implementat
 
 ## Create K2masking Keyspace in Cassandra
 
-The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  If the **k2masking** keyspace does not exist in Cassandra DB, create it using the **masking-create-cache-table.flow** from the library of Broadway examples, deploy the TDM LU (the deploy.flow creates the k2masking), or **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
+The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the  TDM LU to  Fabric. Alternatively, you can run  the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
 
 Click for more information about [sequence handling](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
 
