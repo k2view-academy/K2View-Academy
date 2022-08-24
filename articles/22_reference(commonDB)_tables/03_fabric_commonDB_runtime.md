@@ -57,6 +57,12 @@ The following commands are available from the Fabric Command Line.
 <td valign="top" width="400pxl"><p>REF_STATUS provides the tables sync status for the specified reference tables across all nodes.</p><p>In addition, it provides the ‘Current Session Transaction’, i.e. the status of the latest transaction, executed on the table in the current session.</p><p>Default scope is table.</p></td>
 <td valign="top" width="300pxl"><p>REF_STATUS;</p><p>REF_STATUS TABLES=’ALL’ SCOPE=’population’;</p></td>
 </tr> 
+  
+<tr>
+  <td valign="top" width="300pxl"><h5>REF_CANCEL TABLE_NAME='table name';<p></p><p>Added on Fabric release 6.5.9</p></h5></td>
+<td valign="top" width="400pxl"><p>Will trigger a reference/common table cancel sync activity. If reference sync is in the middle of extracting data from source, this command will cancel this activity. All enqueued sync activities for the selected table will be cancelled as well and Kafka offset will be promoted accordingly.</p></td>
+<td valign="top" width="300pxl"><p>REF_CANCEL TABLE_NAME='CUSTOMER';</p></td>
+</tr> 
 
 </tbody>
 </table>
