@@ -33,7 +33,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">Get LUI</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
+<p>Get an <a href="#get-commands">LUI</a> into Fabric.</p>
 </td>
 </tr>
 <tr>
