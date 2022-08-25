@@ -128,7 +128,7 @@
 <li>Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
 <li>Load task, the batch process initiates a&nbsp;<a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>
 <li>Delete task, the batch process initiates a <a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a>&nbsp;from Fabric to sync the target keys for delete into Fabric and delete the entities from the selected target environment.</li>
-<li>Reserve task, the batch process initiates a&nbsp;<a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Broadway flow</a>&nbsp;which marks the entities as <a href="/articles/tdm_architecture/08_entity_reservation.md">reserved entities</a> in the TDM DB.</li>
+<li>Reserve task, the batch process initiates a&nbsp;<a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Broadway flow</a>&nbsp;which marks the entities as <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">reserved entities</a> in the TDM DB.</li>
 </ul>
 </td>
 </tr>
