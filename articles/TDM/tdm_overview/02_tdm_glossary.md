@@ -17,7 +17,7 @@
 <h4>TDM (Test Data Management)</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>TDM offers an automated <a href="https://cubesolve.com/" rel="nofollow">solution</a> for copying subsets of Business Entities (like customer, order, patient, product and household) from source systems into selected testing environments. The solution provides real, high-quality data for testing teams.</p>
+<p>TDM offers an automated solution for copying subsets of Business Entities (like customer, order, patient, product and household) from source systems into selected testing environments. The solution provides real, high-quality data for testing teams.</p>
 </td>
 </tr>
 <tr>
