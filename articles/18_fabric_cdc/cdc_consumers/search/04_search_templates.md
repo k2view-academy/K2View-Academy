@@ -1,7 +1,7 @@
 # Search Index Types Templates
 
 Fabric enables adding templates for Search fields when the default settings do not match a search's needs. For example, to search by fields that contain special characters like an email address. 
--  Each template is in JSON format and creates index settings in Elasticsearch.
+-  Each template is in JSON format and creates index settings in the Search provider.
 -  All templates must be saved in the Fabric server under the **$K2_HOME/config/cdc-tags** directory.
 -  Fabric has  **default templates** that are saved under the **cdc-tags** directory:
 
@@ -86,7 +86,7 @@ Fabric enables adding templates for Search fields when the default settings do n
 
 3. Edit the **Search** options under the **DataChangeIndicators** tag and add the template names to the Options tag. The following example displays adding a **precision-match-20 template**:
 
-   ```
+   ```xml
    <DataChangeIndicators>
        <DataChange name="Search" enabled="true">
          <Options>
@@ -96,8 +96,6 @@ Fabric enables adding templates for Search fields when the default settings do n
            <option>precision-match-20</option>
          </Options>
    ```
-
-   
 
 4. Save and close the **.k2proj** file.
 
@@ -125,18 +123,18 @@ For example:
 
 #### Update Search Columns Using Templates
 
-Fabric only supports using templates on Search fields when the template is set as a type during the first deployment of the corresponding LU table. This is because Fabric creates an index in Elasticsearch for each LU Table that has Search fields. Using a template on a Search field requires different index settings in Elasticsearch. 
+Fabric only supports using templates on Search fields when the template is set as a type during the first deployment of the corresponding LU table. This is because Fabric creates an index in the Search provider for each LU Table that has Search fields. Using a template on a Search field requires different index settings in the Search provider. 
 
-Since the index settings cannot be changed once created in Elasticsearch, to update a Search field from a supported Elasticsearch type to a template, do the following:
+Since the index settings cannot be changed once created in the Search provider, to update a Search field from a supported Search provider type to a template, do the following:
 
-- Create an index with the update settings in Elasticsearch.
-- Re-index the data from the old Elasticsearch index to the new index.
-- Drop the old Elasticsearch index.
-- Add an alias with the same settings as the previous index to the new Elasticsearch index.
+- Create an index with the update settings in the Search provider.
+- Re-index the data from the old Search provider index to the new index.
+- Drop the old Search provider index.
+- Add an alias with the same settings as the previous index to the new Search provider index.
 
   
 
-  [Click for more information about creating Elasticsearch indexes](03_creating_elasticsearch_indexes_on_search_fields.md).
+  [Click for more information about creating Search indexes](03_creating_elasticsearch_indexes_on_search_fields.md).
 
   
   

@@ -72,4 +72,4 @@ If the IIDFinder has not been configured with the SSL/TLS setup as required, the
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/06_kafka_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/08_oracleGG_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/06_kafka_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/11_kafka_plain_sasl_hardening.md)

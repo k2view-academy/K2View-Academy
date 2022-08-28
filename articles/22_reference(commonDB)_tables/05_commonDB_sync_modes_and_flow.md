@@ -1,4 +1,4 @@
-# commonDB Architecture
+# CommonDB Architecture
 
 
 ## Synchronization Modes

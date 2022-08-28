@@ -2,7 +2,7 @@
 
 ## Creating a Search Engine Interface 
 
-The Search Engine is used to connect Fabric to the Elasticsearch engine when running Search commands. During a search, the Search Engine's interface is populated with the Elasticsearch engine's connection details.  
+The Search Engine is used to connect Fabric to the specific search provider when running Search commands. During the search, the Search Engine's interface is populated with the search engine's connection details.  
 
 
 To  create a new Search Engine interface:
@@ -29,7 +29,7 @@ To  create a new Search Engine interface:
 <p>Host(s)</p>
 </td>
 <td valign="top" width="700pxl">
-<p>Comma-delimited list of Elasticsearch server hosts and ports.</p>
+<p>Comma-delimited list of the search provider's hosts and ports.</p>
 </td>
 </tr>
 <tr>
@@ -59,6 +59,8 @@ To  create a new Search Engine interface:
 </tbody>
 </table>
 
+
+
 ## Fabric Studio - Defining Search Fields
 
 Search fields must be defined on the selected LU table's columns to enable a cross-instance search based on these columns. For example, to enable a search of all customers named "John Doe", define the FIRST_NAME and LAST_NAME columns of the customer schema as search indexes.
@@ -75,7 +77,7 @@ Note that Fabric Studio does not enable defining more than 63 columns in the sam
 The default built-in types of Search fields are:
 
 - **keyword**, enables a search by this column. In the background Fabric creates two search indexes for the keyword field, a keyword index and an additional index based on the type of field. The keyword index enables searching for an exact match (case sensitive) of the searched value. 
-- **date**, enables a search on a date column.  Date fields must be populated by a date format identified by Elasticsearch. Click to see the list of the date formats supported by Elasticsearch:
+- **date**, enables a search on a date column.  Date fields must be populated by a date format defied by Elasticsearch / OpenSearch. Click to see the list of the date formats supported by Elasticsearch:
   * [https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats)
 - **data**, can be returned by the search, a search cannot be initiated by this column.
 - [search templates](04_search_templates.md), Fabric supports adding templates for Search fields to support specific cases.
