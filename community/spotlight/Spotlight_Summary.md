@@ -13,7 +13,7 @@ Fabric Web Services have two properties related to user role permissions:
 
 <!--block-->
 
-<img src="images/lookup_1.PNG"  />
+<img src="images/lookup_1.PNG" style="zoom:80%;" />
 
 
 
@@ -21,7 +21,7 @@ Fabric Web Services have two properties related to user role permissions:
 
 Lookup for a data set based on provided input is a common scenario in various population and data transformation flows. 
 
-The Broadway **Lookup** Actor enables performing a data lookup or a data translation from various sources and based on flexible number of input parameters.
+The Broadway **Lookup** Actor enables performing a data lookup from various sources and based on flexible number of input parameters.
 
 [Read more >](20220314_lookup_actor.md)
 
