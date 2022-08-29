@@ -1,19 +1,21 @@
 <!--block-->
 
-<img src="images/swagger_0.png"  />
+<img src="images/swagger_0.png" style="zoom:80%;" />
 
 ### WS Elevated and Additional Permissions
 
 Fabric Web Services have two properties related to user role permissions:
 
-* Elevated Permission - indicates if user permissions should be elevated to the Web Service.
-* Additional Permissions - allows to the Web Service to activate certain methods which are prohibited to the user's role permissions. Applicable when Elevated Permission is set to False.
+* Elevated Permission - whether user permissions should be elevated to WS.
+* Additional Permissions - enables WS to activate certain methods which are prohibited to the user's role permissions.
 
 [Read more >](20220814_ws_permissions.md)
 
 <!--block-->
 
 <img src="images/lookup_1.PNG"  />
+
+
 
 ### Translation or Lookup of Data
 
