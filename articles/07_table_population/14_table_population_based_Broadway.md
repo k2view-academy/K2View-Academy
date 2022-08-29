@@ -94,8 +94,12 @@ The following example displays a Broadway flow template created to populate the 
 * **Post Load** Stage, a placeholder added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This feature is  similar to using an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
 
 
-
 <studio>
+ 
+### How Do I Create a Population Based on a Broadway Flow?
+ 
+The starting points for creating a population based on a Broadway flow are:
+ 
 * [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
 * [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
   * Right-click and select **New table from SQL based Broadway flow**.
