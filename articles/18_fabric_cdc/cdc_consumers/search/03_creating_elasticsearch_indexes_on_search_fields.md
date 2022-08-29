@@ -1,10 +1,10 @@
-# Creating Elasticsearch Indexes on Search Fields
+# Creating Indexes on Search Fields
 
-Fabric creates a separate index in Elasticsearch on each LU table that has Search fields.
+Fabric creates a separate index in the Search provider (Elasticsearch or OpenSearch) on each LU table that has Search fields.
 
-Search indexes are created in Elasticsearch after a [CDC Schema](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-schema) message or a [CDC Schema Update](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-schema-update) message when a Search field is added on a new LU table. 
+Search indexes are created after a [CDC Schema](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-schema) message or a [CDC Schema Update](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-schema-update) message when a Search field is added on a new LU table. 
 
-The following displays mapping of Fabric LU Search fields and Elasticsearch indexes:
+The following displays mapping of Fabric LU Search fields and Search indexes:
 
 <table width="900pxl">
 <tbody>
@@ -42,9 +42,6 @@ The following displays mapping of Fabric LU Search fields and Elasticsearch inde
     </tr>
     </tbody>
 </table>
-
-​          
-
 ### Example:
 
 - Define Search fields on the ADDRESS LU table of the Customer LU. Define the following table columns as Search fields:
@@ -55,10 +52,10 @@ The following displays mapping of Fabric LU Search fields and Elasticsearch inde
   - ZIP_CODE
 
 - Deploy the Customer LU. 
-- Fabric creates an Elasticsearch index for the ADDRESS LU table. The fields below are set as the **Columns** of the index.
+- Fabric creates an search index for the ADDRESS LU table. The fields below are set as the **Columns** of the index.
 - Sync Customer 123 into Fabric. This customer has 3 ADDRESS records.
-- The [CDC Table Change Info](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-table-change-info) message initiates an update of the Elasticsearch index:
-  - Save the data of the Search fields on each ADDRESS record of Customer 1. Each ADDRESS record creates a separate document in the Elasticsearch index.
+- The [CDC Table Change Info](/articles/18_fabric_cdc/03_cdc_messages.md#cdc-table-change-info) message initiates an update of the search index:
+  - Save the data of the Search fields on each ADDRESS record of Customer 1. Each ADDRESS record creates a separate document in the search index.
 
 
 

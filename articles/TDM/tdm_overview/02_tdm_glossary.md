@@ -17,7 +17,7 @@
 <h4>TDM (Test Data Management)</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>TDM offers an automated <a href="https://cubesolve.com/" rel="nofollow">solution</a> for copying subsets of Business Entities (like customer, order, patient, product and household) from source systems into selected testing environments. The solution provides real, high-quality data for testing teams.</p>
+<p>TDM offers an automated solution for copying subsets of Business Entities (like customer, order, patient, product and household) from source systems into selected testing environments. The solution provides real, high-quality data for testing teams.</p>
 </td>
 </tr>
 <tr>
@@ -125,10 +125,10 @@
 <td valign="top" width="600pxl">
 <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM GUI. The following task types are supported by the TDM:</p>
 <ul>
-<li>Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
-<li>Load task, the batch process initiates a&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>
-<li>Delete task, the batch process initiates a <a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a>&nbsp;from Fabric to sync the target keys for delete into Fabric and delete the entities from the selected target environment.</li>
-<li>Reserve task, the batch process initiates a&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.4/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which marks the entities are reserved entities in the TDM DB.</li>
+<li>Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
+<li>Load task, the batch process initiates a&nbsp;<a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>
+<li>Delete task, the batch process initiates a <a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a>&nbsp;from Fabric to sync the target keys for delete into Fabric and delete the entities from the selected target environment.</li>
+<li>Reserve task, the batch process initiates a&nbsp;<a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Broadway flow</a>&nbsp;which marks the entities as <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">reserved entities</a> in the TDM DB.</li>
 </ul>
 </td>
 </tr>
@@ -146,7 +146,7 @@
 </td>
 <td>
 <p>The Entity Reservation feature is made to enable a user to reserve (lock) entities in the testing environment and prevent other users from re-provisioning these entities into the testing environment until the user completes the functional tests and can release these entities.</p>
-<p>For more information see <a href="/articles/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
+<p>For more information see <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
 </td>
 </tr>
 </tbody>

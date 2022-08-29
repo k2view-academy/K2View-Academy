@@ -1,16 +1,18 @@
 # Search Overview and Use Cases
 
-Fabric CDC has built-in integration with Elasticsearch that enables cross-instance searches. Note that an installation of Elasticsearch is required.
+Fabric CDC has built-in integration with the Elasticsearch search provider that enables cross-instance searches. For example, to search for all customers named “John Doe” and live in “New-York”.
 
-For example, to search for all customers named “John Doe” and live in “New-York”.
+Note that an installation of the Search provider is required.
+
+Starting from Fabric V6.5.9, AWS OpenSearch is also supported as the Search provider. The setting which search provider to use is defined in config.ini. The default Search provider is Elasticsearch.
 
 A search is implemented on LUIs only when the LU has [Search fields](02_search_implementation.md#creating-search-fields).
 
-Deployment of the LU creates indexes in Elasticsearch, where every data change in the LUI updates the data in Elasticsearch.
+Deployment of the LU creates indexes in the Search Engine, where every data change in the LUI updates the data in the Search Engine.
 
 LUIs must be loaded to Fabric to enable a cross-instance search. For example, a search for all customers named “John Doe” and live in “New-York” will only return customers that exist in Fabric.
 
-A search can be executed either by running a Search request directly in Elasticsearch, or by using [Fabric Search Command](05_search_command.md). 
+A search can be executed either by running a Search request directly in the Search provider, or by using [Fabric Search Command](05_search_command.md). 
 
 ### Search Use Cases
 

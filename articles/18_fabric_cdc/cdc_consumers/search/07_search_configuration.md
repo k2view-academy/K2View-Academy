@@ -2,11 +2,11 @@
 
 ### Fabric Config.ini File
 
-Configure the [CDC sections](/articles/18_fabric_cdc/06_cdc_configuration.md) including the **cdc_data_consume** sections. The cdc_data_consume sections are used by the 
+Configure the [CDC sections](/articles/18_fabric_cdc/06_cdc_configuration.md) including the **cdc_data_consume** sections. The cdc_data_consume sections are used by the CDC Transaction Consumer job.
 
-### Elasticsearch Configuration
+### Configuration
 
-Edit the **elasticsearch.yml** configuration file parameters:
+Edit the configuration file parameters, based on the Search provider: **elasticsearch.yml** or **opensearch.yml**.
 
 - network.host: populated by the Elasticsearch IP address.
 
@@ -16,7 +16,7 @@ Edit the **elasticsearch.yml** configuration file parameters:
 - Add the following parameter to the Memory section:
   - **bootstrap.system_call_filter: false**
 
-Note that an installation of Elasticsearch is required. The Elasticsearch is not included in the Fabric installation package.
+Note that an installation of the Search provider is required, as it is not included in the Fabric installation package.
 
 
 

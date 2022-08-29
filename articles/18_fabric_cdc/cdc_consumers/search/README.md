@@ -3,7 +3,7 @@
 <ul>
 <li><a href="01_search_overview_and_use_cases.md">Search Overview and Use Cases</a></li>
 <li><a href="02_search_implementation.md">Search Implementation Steps</a></li>
-<li><a href="03_creating_elasticsearch_indexes_on_search_fields.md">Creating Elasticsearch Indexes on Search Fields</a></li>
+<li><a href="03_creating_elasticsearch_indexes_on_search_fields.md">Creating Indexes on Search Fields</a></li>
 <li><a href="04_search_templates.md">Search Templates</a></li>
 <li><a href="05_search_command.md">Search Command</a></li>
 <li><a href="06_search_solution_limitations.md">Search Solution - Limitations</a></li>

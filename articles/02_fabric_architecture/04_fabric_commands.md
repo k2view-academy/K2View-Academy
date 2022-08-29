@@ -376,9 +376,13 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 
 ### Fabric Settings
 
+#### SET Command
+
+The Fabric ```set;``` command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that starting V6.5.9 the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
+
 #### Fabric Setting - Session Level
 
-The Fabric **SET** command enables updating Fabric settings on a session level:
+The Fabric SET command enables updating Fabric settings on a session level. 
 
 - Set [global variables](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
@@ -391,6 +395,8 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
   
 - Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
+
+- **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: LATEST, ANY, TRY_LATEST. LASTEST (default) - bring the latest MicroDB version from Cassandra. The default can be changed in config.ini.
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 
@@ -457,6 +463,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   ~~~
   
   Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
+  
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 * **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.

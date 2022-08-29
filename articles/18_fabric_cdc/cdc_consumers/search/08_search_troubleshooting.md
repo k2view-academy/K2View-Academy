@@ -39,11 +39,9 @@ The Elasticsearch throws the following exception:
 org.elasticsearch.ElasticsearchStatusException: Unable to parse response body
 ```
 
-
-
 **Resolution:**
 
-This is a known issue in the elastic driver. Fabric 6.5.6 and onwards uses an advanced elastic driver version: 7.13.4, which doesn't have this issue.
+This is a known issue in the ES driver. Fabric 6.5.6 and onwards uses an advanced ES driver version: 7.13.4, which doesn't have this issue.
 
 
 

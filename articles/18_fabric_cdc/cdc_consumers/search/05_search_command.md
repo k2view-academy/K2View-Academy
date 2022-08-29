@@ -1,28 +1,28 @@
 # Search Command
 
-The **SEARCH** command runs a search on Elasticsearch for specific LU tables and columns and returns a result set with the search results.
+The **SEARCH** command runs a search on the Search provider for specific LU tables and columns and returns a result set with the search results.
 
 #### Usage: 
 
 ```
-SEARCH lutype=<LUT_Name> TABLES=<tables names> AS_JSON=<false/true> '<Search Query>';   
+SEARCH lutype=<LUT_Name> TABLES=<tables names> AS_JSON=<false/true> '<Search Query>'; 
 ```
 
 - The **TABLES** parameter can be populated by one or several LU tables, separated by a comma. Several LU tables can be included in a search only if they have the same list of Search fields (search indexes).       
-- The **Search Query** parameter is populated by a JSON with Elasticsearch query.
-- The **AS_JSON** parameter (when set to true) returns a table with only one row and one column named "json" that contains the original elastic search API JSON payload response. This option can be used when looking for extra information returned by an elastic search API that is not retrieved using the Fabric search command parsing mechanism. Default value: false. 
+- The **Search Query** parameter is populated by a JSON with the Search provider query.
+- The **AS_JSON** parameter (when set to true) returns a table with only one row and one column named "json" that contains the original search API JSON payload response. This option can be used when looking for extra information returned by an search API that is not retrieved using the Fabric search command parsing mechanism. Default value: false. 
 - The **SEARCH** command returns the records that match the search query. The following information is displayed for each record:
   - LUI of each record.
   - List of Search fields, defined in the specified LU table.
-  - Score returned by Elasticsearch.
+  - Score returned by the Search provider.
 
 ## Search Command - Examples
 
 The following contains examples of SEARCH commands for common use cases. 
 
-Note that the SEARCH command can run any search query, supposed by Elasticsearch.
+Note that the SEARCH command can run any search query, supposed by the Search provider.
 
-- To see the full list of search queries supported by the Elasticsearch in the Elasticsearch website: 
+To see the full list of search queries supported by the Elasticsearch in the Elasticsearch website: 
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html 
 
@@ -36,7 +36,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - query_string
 
@@ -55,7 +55,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - match/match_phrase
 
@@ -79,7 +79,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [case-insensitive-match](02_search_implementation.md#search-index-types-templates) template to the Search options in the .k2proj file and select it as the type for the Search field. This setting is needed to enable case insensitive searches on the full email address. By default (text) - the @ and . chars split the tokens. Therefore, when using the default setting, the search command matches tali@gmail.com to tali@k2view.com.
 
-- #### Elasticsearch Method
+- #### Search Method
   - match
 
 - #### Search Example
@@ -99,7 +99,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 - #### Search Index Type	
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
   - query + match + fuzziness
 
 - #### Search Examples
@@ -134,7 +134,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [case-insensitive-match template](02_search_implementation.md#search-index-types-templates) to the Search options in the .k2proj file and select it as the type for the Search field. This setting is needed to enable a case insensitive search on the full email address. By default (text), the @ and . chars split the tokens. Therefore, when using  the default setting, the search command matches tali@gmail.com to tali@k2view.com.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   -  match + fuzziness
 
@@ -157,7 +157,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - This matching rule only works for Text columns. If the LU table's column is set to another data type, the matching rule will not work.
 
-- #### Elasticsearch Method Options
+- #### Search Method Options
 
   - **match_phrase + slop**. The value of the **slop** parameter defines the number of words that can be located between the words of the search. The default of the slop is zero.
   - Set the **match** method on each one of the required words. 
@@ -185,7 +185,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - This matching rule only works for Text columns. If the LU table's column is set to another data type, the matching rule will not work.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - match
 
@@ -220,7 +220,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [precision-match-20](02_search_implementation.md#search-index-types-templates) template to the Search options in the .k2proj file and select it as the type for the search field.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + must + N-gram tokenizers
 
@@ -249,7 +249,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [precision-match-20](02_search_implementation.md#search-index-types-templates) template to the Search options in the .k2proj file and select it as the type for the Search field.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + must + fuzziness +  N-gram tokenizers
   - Note that a fuzzy search supports up to two mistakes.
@@ -276,7 +276,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [precision-match-20](02_search_implementation.md#search-index-types-templates) template to the Search options in the .k2proj file and select it as the type for the Search field.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + should + fuzziness +  N-gram tokenizers
   - Note that a fuzzy search supports up to two mistakes.
@@ -296,7 +296,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword/date
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + must + match
   - bool + must + query_string
@@ -316,7 +316,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + must + multi_match.
   - Note that when using the **must** method, all conditions must match. However, when using the **should**  method you can set a **minimum_should_match** parameter to define how many conditions need to match the search query.
@@ -351,7 +351,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - Add a [predictive-search](02_search_implementation.md#search-index-types-templates) template to the Search options in the .k2proj file and select it as the type for the search field.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + query_string + fuzziness
   - Note that a fuzzy search supports up to two mistakes.
@@ -373,7 +373,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - match_phrase + slop
 
@@ -391,7 +391,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - keyword
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - range
 
@@ -410,7 +410,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
   - date
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - query_string
 
@@ -428,9 +428,9 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 - #### Search Index Type
 
   - keyword/date
-  - Note that empty String is kept as a null value in the Elasticsearch.
+  - Note that empty String is kept as a null value in the the Search provider.
 
-- #### Elasticsearch Method
+- #### Search Method
 
   - bool + should + must_not + exist
 
@@ -446,7 +446,6 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
 
 [![Previous](/articles/images/Previous.png)](04_search_templates.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_search_solution_limitations.md)
-
 
 
 

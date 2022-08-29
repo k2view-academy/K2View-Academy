@@ -204,7 +204,7 @@ sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.prope
        password="admin-secret"
        user_admin="admin-secret";
     };
-
+   
    Client {
        org.apache.zookeeper.server.auth.DigestLoginModule required
        username="kafka"
@@ -261,4 +261,4 @@ $CONFLUENT_HOME/bin/kafka-console-producer --broker-list <broker-ip>:9093 --topi
 $CONFLUENT_HOME/bin/kafka-console-consumer --bootstrap-server <bootstrap-ip>:9093 --topic <topic-name> --consumer.config ~/producer.properties
 ```
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/08_oracleGG_hardening.md)
