@@ -392,8 +392,9 @@ The Fabric SET command enables updating Fabric settings on a session level.
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
   - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
+  - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
   
-- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
 
 - **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: LATEST, ANY, TRY_LATEST. LASTEST (default) - bring the latest MicroDB version from Cassandra. The default can be changed in config.ini.
 

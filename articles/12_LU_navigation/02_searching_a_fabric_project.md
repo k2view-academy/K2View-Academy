@@ -23,6 +23,8 @@ Searches can be made for the following Fabric components.
 
 ## How Do I Search for an Item?
 
+<studio>
+
 Fabric Studio offers different types of Search options, these include:
 * Find a string.
 * Search and replace.
@@ -30,8 +32,8 @@ Fabric Studio offers different types of Search options, these include:
 
 ### Searching for a String 
 
-1. Do either:\
-    a. Press **Ctrl+Shift+F**.\
+1. Do either of the following:
+    a. Press **Ctrl+Shift+F**.
     b. Go to the **Tools tab** and click **Find in Files**.
     
     ![image](/articles/12_LU_navigation/images/10_02_01%20Tools%20tab.png)
@@ -62,8 +64,57 @@ Act with caution when using with the Replace option, be careful not to damage yo
 * To search for a specific string in the code, press **Ctrl+F**. 
 * To search for a specific string in the Project Tree, type the item name or part of it in the Project Tree **Search** bar (bottom left corner of the Studio) and press **enter**. The results are displayed in the Project Tree under the respective objects.
 
+</studio>
 
+<web>
+    
+Fabric Studio offers the following Search options:
+    
+* Search from the explorer tree.
+* Search from within code
+* Search from within a Logical Unit/Data Product schema.
+
+### Search from the Explorer Tree 
+
+Do either of the following:\
+* Press **Ctrl+Shift+F**.\
+  or
+* Go to the **Main Menu** and select **View > Search**.
+    
+The Search box will open. Enter the search item here. 
+    
+![image](/articles/12_LU_navigation/images/10_03_09_SearchBox.png)
+
+Note that there are options you can choose by clicking on one or more of the icons on the right of the box (Match Case, Match Whole Word, Use Regular Expression, and Include Ignored Files). 
+    
+You can also indicate which files to include or exclude, which can help to make your search more efficient. 
+    
+The search results will be displayed in the lower part of the left pane immediately (you do not have to press ENTER or any other similar action). 
+    
+### Search from Within Code
+
+From a JAVA code sample that has been opened in the right side of the window, do **CTRL-F**. A Find box will appear.
+    
+![image](/articles/12_LU_navigation/images/10_03_08_FindBox.png)
+
+You have similar options here to the search from the explorer tree, specifically: Match Case, Match Whole Word, and Use Regular Expression. 
+    
+The box will show you how many results have been found (eg. 3 out of 12). If there are no results, a "no results" message will appear. 
+    
+You can also narrow the search by selecting part of the code, then choosing the small hamburger option in the right side of the Find box ("Find in selection"). 
+    
+### Search from Within a Schema
+    
+From an open Schema's tool bar, click on the **Search table or group** drop-down menu, and enter the name of the table for which you are searching. 
+    
+![image](/articles/12_LU_navigation/images/10_03_03_ToolBar.png)
+    
+</web>    
+    
+    
+    
 [![Previous](/articles/images/Previous.png)](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md)
+
 
 
 

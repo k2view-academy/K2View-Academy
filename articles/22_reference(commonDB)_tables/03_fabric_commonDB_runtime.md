@@ -142,7 +142,6 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 
 ```
 
-
 - table_name: the name of the Reference Table.
 - status: one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses).
 - node: the ID of the node operating the Reference table's synchronization.

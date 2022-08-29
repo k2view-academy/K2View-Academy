@@ -4,11 +4,34 @@ The JMS interface type defines the connection to a JMS Queue or Topic using a JM
 
 To create a new JMS interface, do the following:
 
+<studio>
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **JMS** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/jms_1.png)
 
 2. Populate the connection's settings and click **Save**.
+
+</studio>
+
+
+<web>
+
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **JMS** from the **Event Streaming and Queue** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new JMS Interface, then click **Create**: 
+   
+   ![image](images/jms_1WEB.png)
+
+3. Populate the connection's settings and click **Save**.
+   
+   ![image](images/jms_2WEB.png)
+   
+   
+</web>
+
+
+
 
 ### Connection Settings
 

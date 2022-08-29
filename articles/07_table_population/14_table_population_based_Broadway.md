@@ -1,16 +1,20 @@
 # Table Populations Based on Broadway Flows
 
-A [Table Population](/articles/07_table_population/01_table_population_overview.md) defines and executes mapping and transformation rules from a data source to a target. A table population can be created based on a source object or based on a Broadway flow. 
+<studio>
+
+A [Table Population](/articles/07_table_population/01_table_population_overview.md) defines and executes mapping and transformation rules from a data source to a target. A table population can be created based on a source object or on a Broadway flow. 
 
 A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) is a core Broadway object that represents a business process and is built from several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/19_Broadway/03_broadway_actor.md).
 
 The advantages of using a Broadway flow for a table population rather than a source object based population are:
 
-* Streamlining logic and all related validations into one business process whereby improving the project's maintainability.
+* Streamlining logic and all related validations into one business process thereby improving the project's maintainability.
 * Populating more than one table in a single population flow.
 * Replacing the source DB with another action such as an HTTP call.
 
 [Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
+
+</studio>
 
 ### Flow Population Template
 
@@ -32,9 +36,19 @@ The following example displays a Broadway flow template created to populate the 
 
   *  The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, when the CASES table is related to the ACTIVITY table in the LU Schema, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
 
+    <studio>
+    
     <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
+    
+    </studio>
+    
+    <web>
+    
+    <img src="images/web/14_parent_child.PNG" style="zoom:75%;" />
+    
+    </web>
 
-  * Starting from Fabric V6.5.9, **SyncDeleteMode** Actor is added to the template. The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the Delete Mode is taken from the LU table's properties. Additional values are All and NonUpdated.
+  * The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the Delete Mode is taken from the LU table's properties. Additional values are All and NonUpdated.
 
   *  [Click for more information about LU table's Delete Mode](/articles/14_sync_LU_instance/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties).
 
@@ -60,7 +74,7 @@ The following example displays a Broadway flow template created to populate the 
     SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
     ~~~
 
-  * The **size** value determines the number of ACTIVITY_ID values included in the SQL.
+  * The **size** value determines the number of ACTIVITY_ID values included in the SQL statement.
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
@@ -68,20 +82,20 @@ The following example displays a Broadway flow template created to populate the 
 
   * [Click here for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
 
-* **Stage 1**, a placeholder in the template that enables adding additional activities that can be performed on the data prior to loading it to the target DB. This feature is similar to using a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
+* **Stage 1**, a placeholder in the template that enables adding additional activities that can be performed on the data prior to loading it to the target DB. 
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
   * The target **interface**, **schema**, **table** and INSERT, UPDATE or UPSERT **commands** are set using the Actor's input arguments. 
-  * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** in order to enable looping over the query results.
-  * Note that by default, **schema** and **table** input arguments are defined as an [External population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) in order to enable populating these parameters dynamically. When required, a **Const** or **Link** population type can be defined. 
+
+  * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
+  * Note that by default, **schema** and **table** input arguments are defined as an [External population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) to enable populating these parameters dynamically. When required, a **Const** or **Link** population type can be defined. 
 
 * **Post Load** Stage, a placeholder added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This feature is  similar to using an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
 
-### How Do I Create a Population Based on a Broadway Flow?
 
-The starting points for creating a population based on a Broadway flow are:
 
+<studio>
 * [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
 * [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
   * Right-click and select **New table from SQL based Broadway flow**.
@@ -89,11 +103,22 @@ The starting points for creating a population based on a Broadway flow are:
 * Project Tree, right-click a table object and select **Create Table Population based Broadway Flow**.
 * Reference, right-click and select **Create References from DB tables**.
 
-The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface, and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
+### Example of Creating a Population Based Broadway Flow
 
-Note that for the population to be effective on the server side, LU deployment is required. When running in debug mode, the deployment to debug is performed automatically.
+1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
 
-[Click here for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
+   ![image](images/07_14_01.PNG)
+
+2. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
+
+3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
+
+[Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
+
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
+
+</studio>
+
 
 ### Support Instance ID Different From Source DB Column
 
@@ -108,10 +133,9 @@ Starting from Fabric V6.5.9, when populating the LU Root table, Broadway populat
    ![](images/07_14_InstanceIdPop.png)
 
 
-
 ### Example of Creating a Population Based Broadway Flow
 
-1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target. 
+1. In the Project Tree, right click  on the LU table  > **New Population** and provide the population name. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
 
    ![image](images/07_14_01.PNG)
 
@@ -122,8 +146,10 @@ Starting from Fabric V6.5.9, when populating the LU Root table, Broadway populat
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-[Click here to display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[Click here to display an example of a population flow in the Demo project.](/articles/demo_project/README.md)
+[Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)
+[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
+
+
+</web>

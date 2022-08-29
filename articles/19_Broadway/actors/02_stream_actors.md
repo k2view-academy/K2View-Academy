@@ -19,7 +19,7 @@ The following example shows a flow where the **FileRead** Actor reads the data f
 
 Since the **FileRead** Actor can only work on one file in the flow at a time, it can be preceded by the file system handling Actors. For example, using the **ls** Actor to list the files in a given directory and iterating over the files using the **FileRead** Actor. 
 
-Another way to handle multiple input files is by creating an [Interface Listener Job](../09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows) that listens to the predefined interface and path and invokes the Braodway flow when a file arrives. 
+Another way to handle multiple input files is by creating an [Interface Listener Job](../09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows) that listens to the predefined interface and path and invokes the Broadway flow when a file arrives. 
 
 The **file.flow** example shows a flow with various steps that handle streams including compressing data, creating a directory and files, listing the files and moving them between directories.
 
