@@ -1237,6 +1237,56 @@ http://localhost:3213/api/taskSummaryReport/490/luName/Billing
         "fabric_execution_id": "c30a97f2-fc3e-4b66-9986-aa0c6108456a"
       }
     ],
+          "Source Environment": {
+         "Environment Name": [
+         {
+             "name": "SRC"
+         }
+         ],
+         "Source Environment Products": [
+         {
+            "product_name": "BILLING",
+            "source_product_version": "PROD"
+         },
+         {
+            "product_name": "COLLECTION",
+            "source_product_version": "1"
+         },
+         {
+            "product_name": "CRM",
+            "source_product_version": "1"
+         },
+         {
+            "product_name": "ORDERING",
+            "source_product_version": "1"
+         }
+         ]
+     },
+    "Target Environment": {
+      "Environment Name": [
+        {
+          "name": "TAR"
+        }
+      ],
+      "Target Environment Products": [
+        {
+          "product_name": "BILLING",
+          "target_product_version": "PROD"
+        },
+        {
+          "product_name": "COLLECTION",
+          "target_product_version": "1"
+        },
+        {
+          "product_name": "CRM",
+          "target_product_version": "1.5"
+        },
+        {
+          "product_name": "ORDERING",
+          "target_product_version": "1"
+        }
+      ]
+    },
     "Task Execution Summary": [
       {
         "lu_name": "Billing",
