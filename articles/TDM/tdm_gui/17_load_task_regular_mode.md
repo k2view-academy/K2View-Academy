@@ -59,6 +59,10 @@ Only Admin and Environment owner users can reserve entities for unlimited period
 
 The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days**, or **weeks**.
 
+### Reservation Note
+
+This setting has been added by TDM 7.5.2. The user can populate it with a free text. The reservation note is displayed in the [Reserved Entities window](13_reserved_entities_window.md) (Notes fields) and can be used for filtering the reserved entities display. The reservation note can be edited using the Reserved Entities window.
+
 ### Additional Execution Parameters
 
 #### Set Task Variables 
