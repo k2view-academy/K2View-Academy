@@ -55,9 +55,9 @@ The reservation period settings are displayed **if the load task also reserves t
 
 Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
-Only Admin and Environment owner users can reserve entities for unlimited period. Users that are attached to the target environment as testers  must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
+Only Admin and Environment owner users can reserve entities for an unlimited period. Users that are attached to the target environment as testers must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
-The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days**, or **weeks**.
+The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days** or **weeks**.
 
 ### Reservation Note
 
@@ -75,7 +75,7 @@ When checked, the task execution process replaces the IDs of all selected entiti
 
 Notes:
 
-- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded "as is".
+- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded 'as is'.
 - The Replace Sequence setting is disabled if the tester user does not have permissions to replace the sequence in the **Write** [TDM Environment permission setting](10_environment_roles_tab.md#role-permissions) on the task's target environment.
 - The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestrator.flow-from-the-template).
 
@@ -95,7 +95,7 @@ The following selection methods are available on load tasks:
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them.  Note that a warning is given if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them. Note that a warning is given if the entity list has entities that are reserved for another user.
 
 ### Custom Logic
 
