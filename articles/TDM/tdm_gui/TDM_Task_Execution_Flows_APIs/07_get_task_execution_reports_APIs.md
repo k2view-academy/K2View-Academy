@@ -50,7 +50,7 @@ Gets the task summary report. TDM 7.5.2 adds the 'Source Environment' and 'Targe
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;">
-<p>Populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.</p>
+<p>Populates this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.</p>
 </td>
 </tr>
 </tbody>
@@ -1184,7 +1184,7 @@ Gets the task summary report on a given LU.
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;">
-<p>Populate this parameter by the LU name.</p>
+<p>Populates this parameter by the LU name.</p>
 </td>
 </tr>
 </tbody>
