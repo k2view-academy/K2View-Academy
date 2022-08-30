@@ -8,7 +8,7 @@ The **Business Entities** window displays a list of all BEs defined in the TDM. 
 
 -   To create a new BE, click the **New Business Entity** icon. 
 -   To open a selected BE, click the **Name** value of the BE.
--   To delete a BE, click the ![be_Example](images/delete_icon.png) icon in the right corner of the Business Entity window.
+-   To delete a BE, click the<img src="images/delete_icon.png" alt="be_Example" style="zoom:80%;" /> icon in the right corner of the Business Entity window.
 
 ## Business Entity Window    
 
@@ -39,17 +39,14 @@ To use a BE in a TDM task, it must have one or more LUs assigned.
 ![be_Example](images/BE_add_lu_window.png)
 
 2. Do either: 
+   * Check **All Logical Units** to attach all LUs that are deployed to Fabric and that are not attached to the BE. The LUs are attached to the BE in a flat structure whereby the Parent LU is empty. When needed, the LUs can be edited to populate the Parent LU and the Data Center settings.
+   * Check **Select** and select an LU from the **Logical Unit** dropdown list:
 
-   - Check **All Logical Units** to attach all LUs that are deployed to Fabric and that are not attached to the BE. The LUs are attached to the BE in a flat structure whereby the Parent LU is empty. When needed, the LUs can be edited to populate the Parent LU and the Data Center settings.
-
-   - Check **Select** and select an LU from the **Logical Unit** dropdown list:
-
-     - Click ![be_plus](images/plus_icon.png) or ![be_delete](images/delete_icon.png) to add or remove LUs to / from the BE. 
+     - Click <img src="images/plus_icon.png" alt="be_plus" style="zoom:80%;" /> or <img src="images/delete_icon.png" alt="be_delete" style="zoom:80%;" /> to add or remove LUs to / from the BE. 
      - Populate the following optional settings for each selected LU:
        - **Logical Unit Description**.
        - **Parent Logical Unit**, set a parent LU to build a [hierarchy in the BE](/articles/TDM/tdm_overview/03_business_entity_overview.md). 
-       
- 3. Click **Add Logical Units** to add the selected LUs to the BE.
+3. Click **Add Logical Units** to add the selected LUs to the BE.
 
 Notes:
  - Both Parent and Child LUs must be attached to the same BE.
@@ -59,7 +56,7 @@ Notes:
 
 #### Editing LU Settings
 
-Click ![be_edit](images/be_edit_icon.png) or ![be_delete](images/be_delete_icon.png) to edit or delete the LU from the BE. Note that the LU is deleted from the BE in the TDB DB. 
+Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to edit or delete the LU from the BE. Note that the LU is deleted from the BE in the TDB DB. 
 
 Click for more information about [TDM DB tables that hold the BE and LU relationship](06_be_product_tdmdb_tables.md).
 
@@ -67,7 +64,7 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 ### Post Execution Processes Tab
 
-This tab enables adding post-execution processes that must run at the end of the task's execution after all the related LUs have been executed. For example, sending a mail to the tester to notify them that the execution of a task has ended. 
+This tab enables adding post-execution processes that must run at the end of the task's execution after all the related LUs have been executed. For example, sending an mail to the tester to notify them that the execution of a task has ended. 
 
 Post-execution processes are Broadway flows defined in Fabric by the TDM implementer. The relationship between a post-execution process and a BE is many to many. That is, a BE can have several post-execution processes, and a post-execution process can be attached to multiple BEs. 
 

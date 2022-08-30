@@ -13,7 +13,6 @@ Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open 
 - [Trace](/articles/29_tracing/05_trace_view.md) - a powerful Fabric mechanism for writing internal operations performed by Fabric into trace files. Tracing can be set on both global and session levels. The result of the tracing process is logged into a file that can be loaded for viewing in the Web Framework.
 - [Data Explorer](/articles/36_data_editor/01_data_editor_overview.md) - a web utility for viewing and editing Fabric [LU](/articles/06_LU_tables/01_LU_tables_overview.md) and [reference](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) data. The Data Editor also shows the data structure and relationships between the tables within a Fabric LU schema.
 - [Data Catalog](/articles/33_data_catalog/01_data_catalog_overview.md) - a graphical tool that visualizes the data structure, relationships and data flow within the Logical Unit. The Data Catalog describes how an organization collects, transforms and stores its data inventory and enables users to follow a data flow from its source to its target.
-- [BI](/articles/38_bi_integration/00_BI_integration.md) - a business intelligence application and a reporting tool. It enables the design and execution of reports and dashboards, and can connect to various data sources to read the data. 
 - Documentation - links to frequently-used K2View documentation, such as the Knowledge Base, Fabric Java docs or Web Framework integration documentation.
 
 

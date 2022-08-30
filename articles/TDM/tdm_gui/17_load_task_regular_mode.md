@@ -1,6 +1,6 @@
 # TDM Load Task - Regular Mode
 
-A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A load task can also delete entities from target environments before loading then and/or reserve the target entities in the TDM DB. Note that the Reserve task type is also checked by default when the Load task type is checked.
+A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A load task can also delete entities from target environments before loading them and/or reserve the target entities in the TDM DB. Note that the Reserve task type is also checked by default when the Load task type is checked.
 
 An Load task contains the following tabs:
 
@@ -29,9 +29,9 @@ The following execution parameters are set on **Load tasks**:
 
 ### Data Type
 
-Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting .
+Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting.
 
-Note that the Entities must be checked in the task also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task type is checked together with the Load task type).
+Note that the Entities must be checked in the task if it also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task type is checked together with the Load task type).
 
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
@@ -53,11 +53,15 @@ Click for more information on [how overriding the Sync mode and the Task Operati
 
 The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
 
-Note that when the Reservation Period is set to zero, the entities are reserved for unlimited period.  
+Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
-Only Admin and Environment owner users can reserve entities for unlimited period. Users that are attached to the target environment as testers  must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
+Only Admin and Environment owner users can reserve entities for an unlimited period. Users that are attached to the target environment as testers must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
-The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days**, or **weeks**.
+The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days** or **weeks**.
+
+### Reservation Note
+
+This setting has been added by TDM 7.5.2. The user can populate it with a free text. The reservation note is displayed in the [Reserved Entities window](13_reserved_entities_window.md) (Notes fields) and can be used for filtering the reserved entities display. The reservation note can be edited using the Reserved Entities window.
 
 ### Additional Execution Parameters
 
@@ -71,7 +75,7 @@ When checked, the task execution process replaces the IDs of all selected entiti
 
 Notes:
 
-- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded "as is".
+- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded 'as is'.
 - The Replace Sequence setting is disabled if the tester user does not have permissions to replace the sequence in the **Write** [TDM Environment permission setting](10_environment_roles_tab.md#role-permissions) on the task's target environment.
 - The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestrator.flow-from-the-template).
 
@@ -91,7 +95,7 @@ The following selection methods are available on load tasks:
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them.  Note that a warning is given if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them. Note that a warning is given if the entity list has entities that are reserved for another user.
 
 ### Custom Logic
 
@@ -111,7 +115,7 @@ Note:
 
 Select entities from a predefined list of parameters. You should set the **parameters and their values** and the **maximum number of entities** for the task.
 
-Note that entities reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
+Note that entities reserved for another user in the environment are excluded from the task. You can select one or several parameters. In addition, you can add the same parameter multiple times with different values:
 
 ![parameters](images/load_task_requested_entities_parameters.png)
 
@@ -137,7 +141,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
   To add a parameter:
 
-  -  Click **Add Condition**. 
+  - Click **Add Condition**. 
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
 The TDM GUI  displays the SQL query built based on the selected parameters.
@@ -156,7 +160,7 @@ There are several types of parameters:
   
   - Notes: 
   
-    - The date format is defined in **DATETIME_FORMAT**  parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is  'yyyy-MM-dd HH:mm:ss.SSS'.
+    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
   
     - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.  
   
@@ -210,7 +214,7 @@ Testers may select this option only if they are permitted to clone an entity in 
 
 ### **Random Selection** 
 
-Get random list entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created  in the TDM DB for the root LU of the task's BE.  Entities that are reserved for another user are excluded from the selected entities. 
+Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for another user are excluded from the selected entities. 
 
 Testers can select this option only if they are permitted to do so in the task's target environment.
 

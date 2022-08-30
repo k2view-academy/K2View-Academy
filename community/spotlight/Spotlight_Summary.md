@@ -27,15 +27,19 @@ The Broadway **Lookup** Actor enables performing a data lookup from various sour
 
 <!--block-->
 
-<img src="images/bi_1.PNG" style="zoom:80%;" />
+<img src="images/image_manip_1.PNG" style="zoom:80%;" />
 
 
 
-### The Fabric BI Solution
+### Image Manipulation Actors
 
-Fabric includes a business intelligence application, called **BI**, which is embedded into the Fabric Web Framework. The Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources in order to read the data: PostgreSQL, Oracle and Fabric itself. 
+Fabric provides a set of built-in image manipulation Actors that allow to perform various activities, such as:
 
-[Read more >](20220221_fabric_bi.md)
+- Load an image into a flow.
+- Write a text on a given image.
+- Clone an image in memory.
+
+[Read more >](20210701_image_manipulation_actors.md)
 
 <!--block-->
 

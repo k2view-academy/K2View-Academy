@@ -43,9 +43,9 @@ A Tester User can create and execute TDM tasks based on their TDM environment's 
 
 ## Permission Groups Mapping
 
-### How does TDM Identify the User Type (Permission Group)? 
+### How Does TDM Identify the User Type (Permission Group)? 
 
-The TDM GUI application is pre-integrated with [Fabric Web Framwork](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session. 
+The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session. 
 
 The users are defined and each user can be attached to one or several user groups in the organization. 
 
@@ -69,7 +69,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
 
 - User id **johnD123** is a tester and is attached to **testers1** and **testers2** Fabric roles.
 
-- User id **clarkG** is a tester and it attached to **testers1** Fabric role.
+- User id **clarkG** is a tester and is attached to **testers1** Fabric role.
 
 - User id **janeR1** is a team leader and is attached to **testingTeamLeaders** Fabric role.
 
@@ -77,7 +77,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
 
 - Each group has a Fabric role with the same name as the Fabric role.
 
-- The testesr1, testesr2, testingTeamLeaders, and testingAdmin Fabric roles are mapped to TDM Permission Groups as follows:
+- The **testers1**, **testers2**, **testingTeamLeaders**, and **testingAdmin** Fabric roles are mapped to TDM Permission Groups as follows:
 
   <table width="900pxl">
   <tbody>
@@ -86,7 +86,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
   <td><strong>TDM Permission Group</strong></td>
   </tr>
   <tr>
-  <td>testesr1</td>
+  <td>testers1</td>
   <td>Tester</td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
   </tr>
   </table>
 
-- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects the TDM GUI application.
+- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects to the TDM GUI application.
 
 - The TDM gets the following attributes from the user session:
 
