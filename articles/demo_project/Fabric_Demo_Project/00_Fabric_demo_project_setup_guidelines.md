@@ -14,7 +14,7 @@ To set up the project and connect the databases, do the following:
 
     ![image](images/demo_proj_01.PNG)
 
-3. Download the [BILLING_DB.db](Demo_sources/billing_db.db), [CRM_DB.db](Demo_sources/crm_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer. Note the location where you placed these files. 
+3. Download the [CRM_DB.db](Demo_sources/crm_db.db), [BILLING_DB.db](Demo_sources/billing_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer. Note the location where you placed these files. 
 
 4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB Interfaces, as follows:
     - Double-click to open the Interfaces from the Project tree.
@@ -30,7 +30,6 @@ To set up the project and connect the databases, do the following:
     - Save the changes and close the DB interface.
     
     [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
-
 
 
 
