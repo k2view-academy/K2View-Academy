@@ -115,7 +115,7 @@ Note:
 
 Select entities from a predefined list of parameters. You should set the **parameters and their values** and the **maximum number of entities** for the task.
 
-Note that entities reserved for another user in the environment are excluded from the task. You can select one of several parameters. In addition, you can add the same parameter multiple times with different values:
+Note that entities reserved for another user in the environment are excluded from the task. You can select one or several parameters. In addition, you can add the same parameter multiple times with different values:
 
 ![parameters](images/load_task_requested_entities_parameters.png)
 
@@ -141,7 +141,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
   To add a parameter:
 
-  -  Click **Add Condition**. 
+  - Click **Add Condition**. 
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
 The TDM GUI  displays the SQL query built based on the selected parameters.
@@ -160,7 +160,7 @@ There are several types of parameters:
   
   - Notes: 
   
-    - The date format is defined in **DATETIME_FORMAT**  parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is  'yyyy-MM-dd HH:mm:ss.SSS'.
+    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
   
     - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.  
   
@@ -214,7 +214,7 @@ Testers may select this option only if they are permitted to clone an entity in 
 
 ### **Random Selection** 
 
-Get random list entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created  in the TDM DB for the root LU of the task's BE.  Entities that are reserved for another user are excluded from the selected entities. 
+Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for another user are excluded from the selected entities. 
 
 Testers can select this option only if they are permitted to do so in the task's target environment.
 
