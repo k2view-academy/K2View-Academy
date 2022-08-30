@@ -1467,7 +1467,7 @@ The API's run mode can have the following values:
 
 - 'S': summary information of the execution
 
-- 'H': get the batch command.
+- 'H': gets the batch command.
 
 
 
@@ -1506,11 +1506,11 @@ The API's run mode can have the following values:
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;">
-<p>The run mode can be populated by one of several of the following values:</p>
+<p>The run mode can be populated by one or several of the following values:</p>
 <ul>
 <li>'D': detailed execution. Returns detailed information of all entities and their execution status.</li>
 <li>'S': summary information of the execution</li>
-<li>'H': get the batch command.</li>
+<li>'H': gets the batch command.</li>
 </ul>
 </td>
 </tr>
