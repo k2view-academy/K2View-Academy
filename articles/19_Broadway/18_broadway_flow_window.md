@@ -24,7 +24,7 @@ The **Broadway flow** window includes the following elements described in this a
 
 The Main menu is a toolbar located at the top of the window. It has the following options:
 
-![image](images/99_18_01_main_menu.PNG)
+<img src="images/99_18_01_main_menu.PNG" alt="image" style="zoom:80%;" />
 
 <table style="width: 900px;">
 <tbody>
@@ -112,7 +112,6 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="height: 18px; width: 174px;">Collapse</td>
 <td style="height: 18px; width: 381px;">Collapse the Stage.</td>
 </tr>
-
 <tr>
 <td style="height: 18px; width: 174px;">Focus</td>
 <td style="height: 18px; width: 381px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch’s Stages are collapsed too.</td>
