@@ -13,7 +13,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
      ![](images/10a_aws_KMS_key_list.jpg)
 
-   - *Region* - the region name where the CMK is created. Note that keys are created per region. For more information about multi-region support see [here](). You can see the region (as well as the ID) also when drilling down into the key page, from the key list page (KMS > Customer Managed Keys):
+   - *Region* - the region name where the CMK is created. You can see the region (as well as the ID) also when drilling down into the key page, from the key list page (KMS > Customer Managed Keys):
 
      ![](images/10a_aws_KMS_CMK.jpg)
 
@@ -41,7 +41,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 ### Multi Region Support
 
-For a multi-region Fabric deployment, it may be required to work with [AWS multi region keys](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/) in order to achieve better performance. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region replicated keys.
+While Fabric might be deployed across several regions, it can use same KMS key which defined at a specific AWS region. it is still may be required to work with [AWS multi region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html). In this article AWS recommends to consider this option carefully. This article also explains the process of multi-region keys creation. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region definitions (key-id is the same).
 
 ## Integration with GCP KMS
 
