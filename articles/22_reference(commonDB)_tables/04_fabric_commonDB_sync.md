@@ -48,11 +48,8 @@ In a way each Kafka queue plays the role of a virtual table that publishes all t
 Note:
 
 The Node originating the update will also update its own CommonDB table by reading the very same message it published to Kafka and by using the updated data available on Kafka's message.
-  
 
 
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](03_fabric_commonDB_runtime.md)
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
-
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_commonDB_sync_modes_and_flow.md)

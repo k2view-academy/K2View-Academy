@@ -19,10 +19,8 @@ UPDATE_SIZE=10000
 #SNAPSHOT_SIZE=100
 ```
 
-
-
 ### Update Distribution
-Fabric allows users to use server's RAM to distribute messages - when in single-node configuration only - in order to avoid the need for Kafka configurations. It is very important to note that in that case, overall data persistency cannot be ensured.
+Fabric allows users to use server's RAM to distribute messages (in a single-node configuration only) in order to avoid the need for Kafka configurations. It is very important to note that in that case, overall data persistency cannot be ensured.
 
 ```
 # Messages distribution mode - MEMORY / KAFKA
@@ -44,12 +42,12 @@ PROCESS_UPDATE_MESSAGE_RETRIES_COUNT=3
 CONSUMER_IDLE_TIME=60000
 ```
 
-### Max retry for common area operation
+### Max Retry for Common Area Operation
 ```OPERATION_RETRIES_COUNT=3```
 
 ### Affinity 
 
-Using the [affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) parameter, the table synchronization process can be allocated to a specific node (by default, no affinity is set)
+Using the [affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) parameter, the table synchronization process can be allocated to a specific node (by default, no affinity is set).
 
 ```
 SYNC_JOBS_AFFINITY=10.23.10.11
@@ -69,7 +67,7 @@ If 2500 insert commands are required, each bulk of 1000 commands is sent to Kafk
 These 2500 inserts are divided into 3 transactions, the first 2 containing 1000 rows to insert, and the third one 500.
 
 ```
-TRANSACTION_BULK_SIZE= 1000
+TRANSACTION_BULK_SIZE=1000
 ```
 
 
@@ -80,13 +78,13 @@ MAX_TRANSACTIONS_COMMIT=100
 ```
 
 
-### Memory queue size for snapshot
+### Memory Queue Size for Snapshot
 ```
 # defines maximum snapshot size - in the case below set to 100 MB
 #SNAPSHOT_SIZE=100
 ```
 
-### Snapshot table TTL
+### Snapshot Table TTL
 
 ```
 # in seconds - Default is one week
@@ -170,9 +168,9 @@ CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
 
 
 
-## commonDB Statistics
+## CommonDB Statistics
 
-Fabric provides the following statistics about commonDB-related operations. These can be viewed sing the JMX metrics tool located at: ```http://<IP address>:3213/static/status/status.html```
+Fabric provides the following statistics about CommonDB-related operations. These can be viewed sing the JMX metrics tool located at: ```http://<IP address>:3213/static/status/status.html```
 
 
 **commonUpdate**
@@ -225,6 +223,5 @@ last, totalLast, average, count, timestamp, sinceDate.
 
 
 
-
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/06_fabric_commonDB_misc.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](06_fabric_commonDB_misc.md)
 

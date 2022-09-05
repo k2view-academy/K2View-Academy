@@ -4,7 +4,7 @@
 ## Synchronization Overview
 
 This article discusses synchronization between any Fabric session and the external source from where the Reference table is populated. 
-For information about the Cross-nodes Synchronization process within a Fabric Cluster, refer to this [article](04_fabric_commonDB_sync.md).   
+For information about the cross-nodes Synchronization process within a Fabric Cluster, refer to this [article](04_fabric_commonDB_sync.md).   
 
 ## Use Cases
 
@@ -29,98 +29,63 @@ In this scenario a system needs to operate a synchronization process every day a
 The following commands are available from the Fabric Command Line.
 
 <table width="900pxl">
-<tbody>
-  
-<tr>
+<tbody><tr>
 <td valign="top" width="300pxl"><p><strong>Command Name</strong></p></td>
 <td valign="top" width="400pxl"><p><strong>Description</strong></p></td>
 <td valign="top" width="300pxl"><p><strong>Example</strong></p></td>
-</tr>
-
-
-
-<tr>
+</tr><tr>
 <td valign="top" width="300pxl"><h5>REF_SYNC [LU_NAME='lu name'] [TABLES='ALL' or '&lttable 1,table 2,etc...&gt'] [FORCE=true/false];</h5></td>
 <td valign="top" width="400pxl"><p>Start sync job for the specified common tables.</p></td>
 <td valign="top" width="300pxl"><p>REF_SYNC TABLES=’ALL’;</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>REF_SYNC_WAIT [LU_NAME='lu name'] [TABLES='ALL' or '&lttable 1,table 2,etc...&gt'];</h5></td>
 <td valign="top" width="400pxl"><p>Waits for the list of tables to be synced or a transaction to be completed on the session, until a pre-defined timeout.</p><p>Should be run after the REF_SYNC command or after insert/delete/update on the common table.</p></td>
 <td valign="top" width="300pxl"><p>REF_SYNC_WAIT TABLES=’ALL’;</p></td>
-</tr> 
-
-
-<tr>
+</tr><tr>
 <td valign="top" width="300pxl"><h5>REF_STATUS [LU_NAME='lu name'] [TABLES='ALL' or '&lttable 1,table 2,etc...&gt'] [SCOPE='table' or 'population'];</h5></td>
 <td valign="top" width="400pxl"><p>REF_STATUS provides the tables sync status for the specified reference tables across all nodes.</p><p>In addition, it provides the ‘Current Session Transaction’, i.e. the status of the latest transaction, executed on the table in the current session.</p><p>Default scope is table.</p></td>
 <td valign="top" width="300pxl"><p>REF_STATUS;</p><p>REF_STATUS TABLES=’ALL’ SCOPE=’population’;</p></td>
-</tr> 
-  
-<tr>
+</tr> <tr>
   <td valign="top" width="300pxl"><h5>REF_CANCEL TABLE_NAME='table name';<p></p><p>Added on Fabric release 6.5.9</p></h5></td>
 <td valign="top" width="400pxl"><p>Will trigger a reference/common table cancel sync activity. If reference sync is in the middle of extracting data from source, this command will cancel this activity. All enqueued sync activities for the selected table will be cancelled as well and Kafka offset will be promoted accordingly.</p></td>
 <td valign="top" width="300pxl"><p>REF_CANCEL TABLE_NAME='CUSTOMER';</p></td>
-</tr> 
-
-</tbody>
+</tr> </tbody>
 </table>
+
 
 
 ## Reference Tables Synchronization Statuses Commands
 
 
 <table width="900pxl">
-<tbody>
-  
-<tr>
+<tbody><tr>
 <td valign="top" width="300pxl"><p><strong>Status</strong></p></td>
 <td valign="top" width="400pxl"><p><strong>Description</strong></p></td>
-</tr>
-
-<tr>
+</tr><tr>
 <td valign="top" width="300pxl"><h5>WAITING_FOR_SYNC</h5></td>
 <td valign="top" width="400pxl"><p>Request for sync has been issued but the sync has not started yet</p></td>
-</tr> 
-
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>IN_SYNC</h5></td>
 <td valign="top" width="400pxl"><p>Sync in process.</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>READY</h5></td>
 <td valign="top" width="400pxl"><p>Sync completed</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>READY_WITH_BACKLOG</h5></td>
 <td valign="top" width="400pxl"><p>Sync has been completed, and with messages still waiting in the backlog queue</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>IN_BACKGROUND_SYNC</h5></td>
 <td valign="top" width="400pxl"><p>Sync in background is currently running.</p><p>Current Session's Transaction values</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>STARTED</h5></td>
 <td valign="top" width="400pxl"><p>The transaction has started in the current session, but has not yet been committed.</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>COMMIT IN PROGRESS/COMPLETED</h5></td>
 <td valign="top" width="400pxl"><p>Commit is in progress/completed</p></td>
-</tr> 
-
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl"><h5>ROLLBACK IN PROGRESS/ROLLED BACK</h5></td>
 <td valign="top" width="400pxl"><p>Rollback is in progress/completed</p></td>
-</tr> 
-
-</tbody>
+</tr> </tbody>
 </table>
 
 
@@ -150,28 +115,32 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 - offset duration: time to process all messages.
 - Transaction Id: current processed transaction id.
 
-- Transaction Type:
-          
-          -   LONG_SNAPSHOT
-          -   SHORT_SNAPSHOT
-          -   SHORT_TRANSACTION
-          -   LONG_TRANSACTION
-          -   IDLE
-          
+- Transaction Type:       
+  
+      -   LONG_SNAPSHOT
+      -   SHORT_SNAPSHOT
+      -   SHORT_TRANSACTION
+      -   LONG_TRANSACTION
+      -   IDLE
+      
 - Sub_status:
 
-          - In process
-          - Index rebuild
-          - Done                                                                                                            
+
+     - In process
+
+     - Index rebuild
+     - Done                                                                                                       
 
 - Current Session Transaction values:
 
-          - Started: the transaction has started on the current session, but is not committed yet
-          - Commit in progress
-          - Completed - commit is completed
-          - Rollback in progress
-          - Rolled back
-          - Rollback is completed                                                                             
+     - Started: the transaction has started on the current session, but is not committed yet
+     - Commit in progress
+     - Completed - commit is completed
+     - Rollback in progress
+     - Rolled back
+     - Rollback is completed
+
+     ​                                                                             
 
 
 ### Status per population, on all tables
@@ -217,7 +186,7 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 
 ## Reference Table Data Manipulations
 
-  
+
 - To select and modify data in Reference Tables set the ```common_local_trx``` flag to TRUE, before running a commit.
     ```fabric>set COMMON_LOCAL_TRX=true;```
   
@@ -248,6 +217,6 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 
 
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](02_reference_table_fabric_studio.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_fabric_commonDB_sync.md)
