@@ -80,12 +80,12 @@ This module is responsible for all transformations and data manipulations and is
 
 ### 2.3 Fabric Studio
 
-Fabric Studio is a Windows application development tool for building Fabric projects, designed to enable users to execute the following steps:
+Fabric Studio is a development tool for building Fabric projects, designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
 - Design LU and Schemas and create their associated instances.
 - Create resources of all types to be used across a project (such as functions, tables, variables).
-- Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
+- Execute data manipulations using the SQL builder or the integrated Java development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
 
@@ -271,3 +271,5 @@ These configurations allow unparalleled flexibility whereby the DevOps Manager r
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/02_fabric_directories.md)
+
+

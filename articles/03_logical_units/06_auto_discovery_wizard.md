@@ -1,5 +1,7 @@
+<studio>
+
 # Auto Discovery Wizard
- 
+
 ## Auto Discovery Wizard Overview 
 The Fabric Studio Auto Discovery Wizard enables you to automatically generate or edit an LU schema based on predefined database constraints like a Primary Key or a Foreign Key. 
 
@@ -10,7 +12,7 @@ The Auto Discovery Wizard can run in two modes:
 ## How Do I Use the Auto Discovery Wizard?
 
 ### STEP 1: Define the DB Interface
-The first screen displays a list of all [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
+The first screen displays a list of all [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project (go to Shared Objects -> Interfaces). Select the DB interface for the Auto Discovery process.
 
 ![image](/articles/03_logical_units/images/03_06_wizard_01.png)
 
@@ -119,7 +121,7 @@ If the selected Root Table is not defined as the root of the identified ERD, con
 
 The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard identifies the CRM_DB.CUSTOMER table as the Root Table of the CRM_DB.  
 
- 
+
 When saving the CRM_DB.ACTIVITY table as a Root Table:
 1. **If Enable Backwards Discovery** is unchecked (default), then Auto Discovery creates the following LU and filters out the remaining tables of the ERD diagram.
 
@@ -136,4 +138,8 @@ Display the suggested logical unit diagram and click **Finish** to create the LU
 
 Optional: you can check tables out of the LU schema to create them as LU tables and add them manually to your LU if needed. 
 
+
+
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/07_build__or_update_an_LU_schema.md) 
+
+</studio>

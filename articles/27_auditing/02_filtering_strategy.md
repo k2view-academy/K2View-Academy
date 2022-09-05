@@ -1,3 +1,5 @@
+<studio>
+
 # Filtering Strategy
 
 The list of activities reported by the Auditing mechanism can be controlled. 
@@ -100,3 +102,7 @@ The WS calls are populated in the  **k2_auditing** table in Cassandra as follows
 
 
 [![Previous](/articles/images/Previous.png)](01_auditing_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_persistence_strategy.md) 
+
+
+
+</studio>
