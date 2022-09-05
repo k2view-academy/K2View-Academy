@@ -5,7 +5,7 @@ This information is stored in an external table and not in each LUI MicroDB.
 
 
 
-## How to Create a New Reference Table in Fabric from an External Source
+### How to Create a New Reference Table from an External Source
 
 1.  Go to **Project Tree** > **References** , right click, then select **Create References Based On DB Tables**. This will display the DB Browser menu, Context menu and References popup window. 
 
@@ -43,8 +43,6 @@ Reference tables can be edited by either changing the default data mapping, addi
 When the Broadway flow population option is selected as defined above in Step 4, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow).
 
 
-
-
 ### How to View Reference Table Data 
 
 To access the Reference Viewer do the following:
@@ -58,18 +56,14 @@ To access the Reference Viewer do the following:
 
 ![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
 
-
-
 ### Reference Tables Properties
 
 Additional properties can be defined in the **Table Properties** panel in the right pane of the selected Table tab.
 
-
-
 #### Main Properties
 
 - Name, can be defined or modified.
-- Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic [commonDB schema](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md#overview). In the illustration below the reference table *ref_geoCodeUSA* is attached to the *extraRefDB* schema. 
+- Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic [CommonDB schema](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md#overview). In the illustration below the reference table *ref_geoCodeUSA* is attached to the *extraRefDB* schema. 
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
   - NOCASE, folds upper case characters to their lower case equivalents.
@@ -88,7 +82,6 @@ By default, reference tables are synched in the background of each table accordi
 
 - Decision function, syncs the table according to the [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) defined under the **References**  > **Java** folder. 
 
-  
 
 #### Miscellaneous
 
@@ -117,21 +110,17 @@ Before accessing the Reference Table from a specific LU, or before it can be use
 
 Note: Reference tables can also be accessed via [Lookup tables](/articles/07_table_population/11_lookup_tables.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), [jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) and [Broadway Actors](/articles/19_Broadway/04_built_in_actor_types.md#db).
 
-
-
 ## Deploy the Reference Tables
 
-Reference Tables must be deployed before being used. As a result of the deployment, a synchronization [job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) process is triggered in the background to ensure that all commonDB copies are kept in-sync across the Fabric Cluster.
+Reference Tables must be deployed before being used. As a result of the deployment, a [synchronization job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) process is triggered in the background to ensure that all CommonDB copies are kept in-sync across the Fabric Cluster.
 
 To deploy the Reference Tables, go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.
 
-Note:
-
-If the reference table has been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
+Note that if a reference table has been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must be re-deployed.
 
   
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](01_fabric_commonDB_overview.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_fabric_commonDB_runtime.md)
 

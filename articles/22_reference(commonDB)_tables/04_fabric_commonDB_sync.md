@@ -21,7 +21,7 @@ All other Fabric nodes must synchronize the reference table so as to provide oth
 
 Moreover, what happens when two sales managers both make changes on the same row and entry in the same Reference Table?
 
-Fabric provides a resilient mechanism to unsure that the most updated data is always available and distributed across all Fabric nodes in the same cluster. 
+Fabric provides a resilient mechanism to ensure that the most updated data is always available and distributed across all Fabric nodes in the same cluster. 
 
 
 ## Examples
@@ -50,11 +50,10 @@ Note:
 The Node originating the update will also update its own CommonDB table by reading the very same message it published to Kafka and by using the updated data available on Kafka's message.
 
   
-  
 
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](03_fabric_commonDB_runtime.md)
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_commonDB_sync_modes_and_flow.md)
 
