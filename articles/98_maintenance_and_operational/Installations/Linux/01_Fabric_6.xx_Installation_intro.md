@@ -25,7 +25,7 @@ Minimum hardware for each Linux execution server is as follows:
 > **Note:** If you must use a SAN, it must be flash and in RAID-0.
 > **NAS are not certified.**
 
-Operating System: Redhat/CentOS latest Operating System and above, with latest patches.
+Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with latest patches.
 
 The following File Server volumes must be made available:
 
@@ -90,7 +90,12 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ~~~
 
-
+> **Note:** To verify whether what is your current  RHEL/Centos version, run one of the followinng commands:
+~~~bash
+rpm -E %{rhel}
+hostnamectl
+cat /etc/os-release
+~~~
 
 ### Linux Ports 
 
