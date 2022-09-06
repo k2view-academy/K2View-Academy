@@ -275,11 +275,11 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 </tbody>
 </table>
 
-**Example:**
+**Examples:**
 
 `http://10.21.1.69:3213/api/v1.0/fabric-commands
 
-Request Body
+1. Request Body
 
 ```
 {
@@ -317,6 +317,41 @@ Response Body
 }
 ```
 
+  2. Request Body
+
+```
+{
+    "commands": [
+        {
+            "command":"ref_sync LU_NAME=? TABLES=?;",
+            "params":['CRM','ALL']
+
+        }
+    ]
+ }
+```
+
+Response Body
+
+```
+{
+  "results": [
+    {
+      "resultSet": {
+        "columns": [
+          "Table name"
+        ],
+        "rows": [
+          [
+            "lion.ref_USA_CoV19_cases_Oct2020"
+          ]
+        ]
+      },
+      "duration": 75
+    }
+  ]
+}
+```
 ##  
 
 ##  Post Custom Web Service 
