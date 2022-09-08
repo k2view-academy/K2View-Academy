@@ -33,7 +33,7 @@ For more information about working with external JAR files, see [here](/articles
 
 To activate the authenticator, configure it in the **config.ini** file. For more information see [here]().
 
-After the authenticator has been configured properly, restart Fabric.
+After the authenticator has been properly configured, restart Fabric.
 
 
 
