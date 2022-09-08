@@ -16,7 +16,7 @@ A custom authenticator implements the  `com.k2view.fabric.authentication.provide
 
 It implements 3 methods:
 
-- `authenticate()` which is responsible to authenticate the input credentials parameters. Its return a *AuthnResponse* object.
+- `authenticate()` which is responsible for authenticating the input credentials' parameters. It returns an *AuthnResponse* object.
 - `listUsers()` which whose returen is a list (iterator) of users (*UserItem* object), according to the input parameters filters.
 - `type()` where the authenticator declares a type of format "AuthenticationType.CUSTOM". This is used for both operational and auditing purposes.  
 
