@@ -4,7 +4,7 @@ Fabric enables you to use a custom authenticator for the users' IAM.
 
 Authenticator is responsible for the following: 
 
-- Verifying user's credentials, as populated at the login page.
+- Verifying user's credentials, as populated in the login page.
 - Supplying the user-name and his associated roles. 
 
 In addition, when relevant and available, it provides a way to acquire and display user list information. 
@@ -16,9 +16,9 @@ A custom authenticator implements the  `com.k2view.fabric.authentication.provide
 
 It implements 3 methods:
 
-- `authenticate()` which is responsible to authenticate the input credentials parameters. Its return a *AuthnResponse* object.
-- `listUsers()` which whose returen is a list (iterator) of users (*UserItem* object), according to the input parameters filters.
-- `type()` where the authenticator declares a type of format "AuthenticationType.CUSTOM". This is used for both operational and auditing purposes.  
+- `authenticate()` which is responsible for authenticating the input credentials' parameters. It returns an *AuthnResponse* object.
+- `listUsers()` which returns a list (iterator) of users (*UserItem* object).
+- `type()` where the authenticator declares a type of format "AuthenticationType.CUSTOM". This is used for both operational and auditorial purposes.  
 
 
 ### How to pack and deploy custom authenticator
@@ -31,9 +31,9 @@ For more information about working with external JAR files, see [here](/articles
 
 ### How to activate custom authenticator
 
-To activate the authenticator, configure it in the **config.ini** file. for more information see [here]().
+To activate the authenticator, configure it in the **config.ini** file. For more information see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#proprietary-custom-authenticator).
 
-After the authenticator has been configured properly, restart Fabric.
+After the authenticator has been properly configured, restart Fabric.
 
 
 
