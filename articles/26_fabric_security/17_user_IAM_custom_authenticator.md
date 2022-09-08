@@ -4,7 +4,7 @@ Fabric enables you to use a custom authenticator for the users' IAM.
 
 Authenticator is responsible for the following: 
 
-- Verifying user's credentials, as populated at the login page.
+- Verifying user's credentials, as populated in the login page.
 - Supplying the user-name and his associated roles. 
 
 In addition, when relevant and available, it provides a way to acquire and display user list information. 
