@@ -31,7 +31,7 @@ For more information about working with external JAR files, see [here](/articles
 
 ### How to activate custom authenticator
 
-To activate the authenticator, configure it in the **config.ini** file. for more information see [here]().
+To activate the authenticator, configure it in the **config.ini** file. For more information see [here]().
 
 After the authenticator has been configured properly, restart Fabric.
 
