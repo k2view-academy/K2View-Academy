@@ -61,11 +61,11 @@
 
     * When selecting one value, use the **DbFetchField** Actor instead of the **DbCommand** Actor.
     
-16. Document and record all your project level Actors (whether built-in or new) with their inputs & outputs variables to enable better visibility and support of your flows.
+16. Document and record all your project level Actors (whether built-in or new) with their inputs & outputs variables in order to enable better visibility and support of your flows.
 
-17. When using **InnerFlowAsync**, especially in iterations, use **InnerFlowJoin** to verify all the asynchronous inner-flow instances have completed.
+17. When using **InnerFlowAsync**, especially in iterations, use **InnerFlowJoin** to verify that all the asynchronous inner-flow instances have completed.
 
-18. Actor output of type "stream" can only be linked to one input parameter of one actor. Linking "stream" output to more than one target results in functional failure, as the stream can only be read once.
+18. An Actor output of type 'stream' can be linked to only one input parameter of one Actor. Linking 'stream' output to more than one target results in a functional failure, as the stream can only be read once.
 
 19. Use Error Handle for each Stage containing **HTTP** Actor or **DB** Actor.
 
