@@ -7,9 +7,9 @@
     * Start each stage with a number identifying the stage order in the flow and its split information. For example, 
       **080.2 ABCD…** means it is the 8th stage in the flow and the 2nd split of that stage.
 
-    * Names of Actors always start with an uppercase letter. If the name contains multiple words, each word should start with an uppercase letter such as **DbLoad** , **KafkaProducer**,  etc.
+    * Names of Actors always start with an uppercase letter. If the name contains multiple words, each word should start with an uppercase letter such as **DbLoad**, **KafkaProducer**,  etc.
 
-    * For variables, use the Camel case format, starting with a lowercase letter, such as **firstName** , **lastName** , etc.  
+    * For variables, use the Camel case format, starting with a lowercase letter, such as **firstName**, **lastName**, etc.  
 
 2. Use built-in Broadway Actors when possible to reduce the complexity and ensure the quality of the code.
   
