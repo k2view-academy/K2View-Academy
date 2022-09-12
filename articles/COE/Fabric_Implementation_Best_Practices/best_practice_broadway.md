@@ -2,7 +2,7 @@
 
 1. Use meaningful names and naming conventions. Some examples are shown here: 
 
-    * Stages should start with an uppercase letter and can have spaces between the words for easier readability.  For example:  **Read payment file**  ,   **Extract from CRM tables** , etc. 
+    * Stages should start with an uppercase letter and can have spaces between the words for easier readability.  For example:  **Read payment file**, **Extract from CRM tables**, etc. 
 
     * Start each stage with a number identifying the stage order in the flow and its split information. For example, 
       **080.2 ABCD…** means it’s the 8th stage in the flow and the second split of that stage.
