@@ -27,7 +27,7 @@
   
 9. Remove unused Actors or utilize the **‘Disable’** functionality if you expect that some Actors will not be used in the future.
 
-10. When applicable, use the **HttpJson** Actor instead of the **Http** Actor.
+10. Where applicable, use the **HttpJson** Actor instead of the **Http** Actor.
 
     * The **HttpJson** Actor sends a request to a web server stringifying the request into JSON and parsing the JSON result.
 
