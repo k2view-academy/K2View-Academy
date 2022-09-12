@@ -29,7 +29,7 @@
 
 10. Where applicable, use the **HttpJson** Actor instead of the **Http** Actor.
 
-    * The **HttpJson** Actor sends a request to a web server stringifying the request into JSON and parsing the JSON result.
+    * The **HttpJson** Actor sends a request to a web server, stringifying the request into JSON and parsing the JSON result.
 
     * If there is a JSON parsing error, the Actor will throw an exception. 
     
