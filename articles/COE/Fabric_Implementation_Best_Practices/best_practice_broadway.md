@@ -21,7 +21,7 @@
   
 6. An Actor can be exported to create another Actor that inherits the current Actor’s logic. If the same business functionality is expected to be used for multiple stages or flows, exporting the Actor will save time, reduce errors, and increase efficiency by reusing it for all relevant locations.
   
-7. Use the  **ErrorHandler** Actor to leverage built-in reactions to different exception types. Use JavaScript as **ErrorHandler** when customization is needed.
+7. Use the  **ErrorHandler** Actor to leverage built-in reactions to different exception types. Use JavaScript as **ErrorHandler** when a customization is needed.
   
 8. Use the **contextLoop.index()** function to get the current loop index instead of using an additional **Counter** Actor.
   
