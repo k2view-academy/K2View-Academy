@@ -63,4 +63,10 @@
     
 16. Document and record all your project level Actors (whether built-in or new) with their inputs & outputs variables to enable better visibility and support of your flows.
 
+17. When using **InnerFlowAsync**, especially in iteration, use **InnerFlowJoin** to verify all the asynchronous inner-flow instances have completed.
+
+18. Actor output of type "stream" can only be linked to one input parameter of one actor. Linking "stream" output to more than one target results in functional failure, as the stream can only be read once.
+
+19. Use Error Handle for each Stage containing **HTTP** Actor or **DB** Actor.
+
 [![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md) 
