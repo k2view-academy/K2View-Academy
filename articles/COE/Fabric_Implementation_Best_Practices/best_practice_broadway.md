@@ -5,7 +5,7 @@
     * Stages should start with an uppercase letter and can have spaces between the words for easier readability.  For example:  **Read payment file**, **Extract from CRM tables**, etc. 
 
     * Start each stage with a number identifying the stage order in the flow and its split information. For example, 
-      **080.2 ABCD…** means it’s the 8th stage in the flow and the second split of that stage.
+      **080.2 ABCD…** means it is the 8th stage in the flow and the 2nd split of that stage.
 
     * Names of Actors always start with an uppercase letter. If the name contains multiple words, each word should start with an uppercase letter such as **DbLoad** , **KafkaProducer**,  etc.
 
