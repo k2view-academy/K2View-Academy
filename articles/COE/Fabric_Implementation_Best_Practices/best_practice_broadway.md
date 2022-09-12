@@ -7,7 +7,7 @@
     * Start each stage with a number identifying the stage order in the flow and its split information. For example, 
       **080.2 ABCD…** means it is the 8th stage in the flow and the 2nd split of that stage.
 
-    * Names of Actors always start with an uppercase letter. If the name contains multiple words, each word should start with an uppercase letter such as **DbLoad**, **KafkaProducer**,  etc.
+    * Names of Actors always start with an uppercase letter. If the name contains multiple words, each word should start with an uppercase letter such as **DbLoad**, **KafkaProducer**, etc.
 
     * For variables, use the Camel case format, starting with a lowercase letter, such as **firstName**, **lastName**, etc.  
 
@@ -15,7 +15,7 @@
   
 3. Try to limit the number of stages and the number of Actors within each stage. Use inner flows where applicable, especially when creating a split across several consecutive stages or when using nested iterations.
   
-4. There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3 to 4 nesting levels.
+4. There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels.
   
 5. Utilize the **DBLoad** Actor,  as it has a built-in functionality for INSERT, UPDATE or UPSERT commands (e.g. instead of DBCommand ).
   
