@@ -37,7 +37,7 @@
 
     * If no error appears until the last step (inside iteration), stop the context by using **contextLoop.stop()**;
 
-    * If the last iteration fails (you can check that by using **contextLoop.index(**)), throw an exception.
+    * If the last iteration fails (you can check this by using **contextLoop.index(**)), throw an exception.
     
 12. Broadway has a built-in Transactions Management mechanism. When using this mechanism for iterations, there are three options:
 
