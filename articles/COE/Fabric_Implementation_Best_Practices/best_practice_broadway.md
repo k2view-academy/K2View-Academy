@@ -17,7 +17,7 @@
   
 4. There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels.
   
-5. Utilize the **DBLoad** Actor,  as it has a built-in functionality for INSERT, UPDATE or UPSERT commands (e.g. instead of DBCommand ).
+5. Utilize the **DBLoad** Actor, as it has a built-in functionality of running INSERT, UPDATE or UPSERT commands (e.g. instead of DBCommand ).
   
 6. An Actor can be exported to create another Actor that inherits the current Actor’s logic. If the same business functionality is expected to be used for multiple stages or flows, exporting the Actor will save time, reduce errors, and increase efficiency by reusing it for all relevant locations.
   
