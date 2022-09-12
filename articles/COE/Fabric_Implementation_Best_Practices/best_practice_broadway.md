@@ -39,7 +39,7 @@
 
     * If the last iteration fails (you can check this by using **contextLoop.index(**)), throw an exception.
     
-12. Broadway has a built-in Transactions Management mechanism. When using this mechanism for iterations, there are three options:
+12. Broadway has a built-in Transactions Management mechanism. When using this mechanism for iterations, there are 3 options:
 
     * Commit after each iteration 
     * Commit at the end
