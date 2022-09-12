@@ -35,7 +35,7 @@
     
 11. Set the number of iterations to the number of requested attempts, and use the **ErrorHandler** Actor to catch an error. 
 
-    * If no error appears until the last step (inside iteration), stop the context by using **contextLoop.stop()**;
+    * If no error appears until the last step (inside an iteration), stop the context by using **contextLoop.stop()**;
 
     * If the last iteration fails (you can check this by using **contextLoop.index(**)), throw an exception.
     
