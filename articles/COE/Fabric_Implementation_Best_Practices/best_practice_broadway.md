@@ -1,6 +1,6 @@
 # Broadway 
 
-1. Use meaningful names and naming conventions. Some examples are shown here: 
+1. Use meaningful names and naming conventions. Some examples are shown below: 
 
     * Stages should start with an uppercase letter and can have spaces between the words for easier readability.  For example:  **Read payment file**, **Extract from CRM tables**, etc. 
 
