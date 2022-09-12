@@ -45,11 +45,11 @@
     * Commit at the end
     * Commit in batch
 
-    Data volumes, performance, and business requirements should be taken into consideration when deciding which of he above methods to use. For example:
+    Data volumes, performance, and business requirements should be taken into consideration when deciding which of the above methods to use. For example:
 
 	 - If the data set is big (For example: 1M records), consider **commit in batch** to improve the performance.  
 
-	 - If rollback of the entire data set is needed upon failure, use **commit at the end** method.
+	 - If a rollback of the entire data set is needed upon failure, use **commit at the end** method.
 
 13. For long running flows (for example, hours), consider using the **Recovery point** feature. In case of a flow failure, a re-run will utilize the serialized data and start from the last saved recovery point rather than from the beginning.
   
@@ -63,7 +63,7 @@
     
 16. Document and record all your project level Actors (whether built-in or new) with their inputs & outputs variables to enable better visibility and support of your flows.
 
-17. When using **InnerFlowAsync**, especially in iteration, use **InnerFlowJoin** to verify all the asynchronous inner-flow instances have completed.
+17. When using **InnerFlowAsync**, especially in iterations, use **InnerFlowJoin** to verify all the asynchronous inner-flow instances have completed.
 
 18. Actor output of type "stream" can only be linked to one input parameter of one actor. Linking "stream" output to more than one target results in functional failure, as the stream can only be read once.
 
