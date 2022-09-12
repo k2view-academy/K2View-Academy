@@ -11,7 +11,7 @@
 
     * For variables, use the Camel case format, starting with a lowercase letter, such as **firstName**, **lastName**, etc.  
 
-2. Use built-in Broadway Actors when possible to reduce the complexity and ensure the quality of the code.
+2. Use built-in Broadway Actors when possible in order to reduce the complexity and to ensure the quality of the code.
   
 3. Try to limit the number of stages and the number of Actors within each stage. Use inner flows when applicable, especially when creating a split across several consecutive stages or when using nested iterations.
   
