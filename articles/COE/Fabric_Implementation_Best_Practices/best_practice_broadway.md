@@ -47,11 +47,11 @@
 
     Data volumes, performance, and business requirements should be taken into consideration when deciding which of the above 3 methods to use. For example:
 
-	 - If the data set is big (for example: 1M records), consider **commit in batch** to improve the performance.  
+	 - If the data set is big (e.g. 1M records), consider **commit in batch** to improve the performance.  
 
 	 - If a rollback of the entire data set is needed upon a failure, use **commit at the end** method.
 
-13. For long running flows (for example, hours), consider using the **Recovery point** feature. In case of a flow failure, a re-run will utilize the serialized data and start from the last saved recovery point rather than from the beginning.
+13. For long running flows (e.g. hours), consider using the **Recovery point** feature. In case of a flow failure, a re-run will utilize the serialized data and start from the last saved recovery point rather than from the beginning.
   
 14. When dragging multiple links (of **Iterate** link type) from outside the loop to Actors inside it, consider using a **Const** Actor inside the loop, dragging one **iterate** line to it and many **value** lines from it.
 
