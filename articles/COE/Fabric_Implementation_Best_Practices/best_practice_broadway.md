@@ -13,7 +13,7 @@
 
 2. Use built-in Broadway Actors when possible in order to reduce the complexity and to ensure the quality of the code.
   
-3. Try to limit the number of stages and the number of Actors within each stage. Use inner flows when applicable, especially when creating a split across several consecutive stages or when using nested iterations.
+3. Try to limit the number of stages and the number of Actors within each stage. Use inner flows where applicable, especially when creating a split across several consecutive stages or when using nested iterations.
   
 4. There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3 to 4 nesting levels.
   
