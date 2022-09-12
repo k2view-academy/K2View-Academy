@@ -25,7 +25,7 @@
   
 8. Use the **contextLoop.index()** function to get the current loop index instead of using an additional **Counter** Actor.
   
-9. Remove Actors that are not being used, or utilize the **‘Disable’** functionality if you expect that some Actors will not be used in the future.
+9. Remove unused Actors or utilize the **‘Disable’** functionality if you expect that some Actors will not be used in the future.
 
 10. When applicable, use the **HttpJson** Actor instead of the **Http** Actor.
 
