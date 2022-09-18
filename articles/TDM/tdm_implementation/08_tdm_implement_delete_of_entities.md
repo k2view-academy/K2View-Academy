@@ -57,7 +57,7 @@ Do the following to populate the target LU tables based on the target environmen
 
       Click for more information about [Broadway as a population and Fabric command actors](/articles/19_Broadway/09_broadway_integration_with_Fabric.md).
 
-4. Note that the populations of the target tables are based on on **the same interfaces as the source LU tables**, but the connection details change to the target environment, since the population of the main target LU table sets the target environment to be the acvtive environment.
+4. Note that the populations of the target tables are based on on **the same interfaces as the source LU tables**, but the connection details change to the target environment, since the population of the main target LU table sets the target environment to be the active environment.
 
 ## Adding Broadway Flows to Delete the Entities
 
