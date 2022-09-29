@@ -2,7 +2,7 @@
 
 ### Overview
 
-A PubSub Configuration interface type defines the Fabric connection to Apache Kafka using the Kafka abstraction layer. The configuration is performed via the **[default_pubsub]** or additional custom sections of config.ini, as described further in this article.
+A PubSub Configuration interface type defines the Fabric connection to Apache Kafka using the Kafka abstraction layer. The configuration is performed via the **[default_pubsub]** section or additional custom sections of config.ini, as described further in this article.
 
 The PubSub Configuration interface replaces the existing [Kafka Interface](03_kafka_interface.md). Kafka interface is still supported for backward compatibility. For more details about moving the existing project to the new abstraction layer configuration, refer to the Fabric Upgrade Procedure to 7.0.
 
