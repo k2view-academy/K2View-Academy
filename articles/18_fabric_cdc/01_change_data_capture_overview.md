@@ -16,7 +16,7 @@ The following HL flow describes the CDC flow and the population of CDC data in c
 
 - Each CDC message is sent to Kafka. Each CDC consumer has its own Kafka topic. 
 
-- The Fabric CDC_TRANSACTION_CONSUMER job consumes the Search topic from Kafka and updates Elasticsearch. Other consumers must create their own consumer processes to consume Kafka CDC messages. 
+- The Fabric CDC_TRANSACTION_CONSUMER job consumes the **search** topic from Kafka and updates Elasticsearch. Other consumers must create their own consumer processes to consume Kafka CDC messages. 
 
 Note that publication of CDC changes must be [predefined](05_cdc_consumers_implementation.md) in the Fabric Studio. When defining an LU in the Fabric Studio, selected LU table columns can be set to publish CDC messages each time they are updated. 
 
