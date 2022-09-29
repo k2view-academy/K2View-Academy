@@ -19,7 +19,7 @@ ENTITY_STATUS = failed
 
 PopulateTableErrorsWithFailed.flow also sets the error category as *Entity Failed* in the **task_exe_error_detailed** table, while PopulateTableErrorsWithReject.flow sets a record as *Record Rejected*.
 
-The error handling utility is invoked from each Load flow's **Load Data To Target** Stage. An error is suppressed in order to continue a task execution and reach the statistics gathering step.
+The error handling utility is invoked from each Load flow's **Load Data To Target** Stage. An error can be suppressed in order to continue a task execution and reach the statistics gathering step.
 
 By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress** setting is unchecked, i.e. the entity is rejected due to the error:
 
@@ -31,11 +31,12 @@ By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress*
 
 ### How Do I Gather Statistics in TDM?
 
-The TDM library includes the PopulateTableStats.flow that gathers statistics during a TDM task execution:
+The [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report) includes the Statistics Report tab that compares the number of records in each table in the source and target environments.  
 
-PopulateTableStats.flow populates statistics data into the **task_exe_stats_detailed** table, including the number of records in the source and target tables. 
+The TDM library includes the **StatsLoader** Broadway actor that populates the statistics data into **task_exe_stats_detailed** TDM DB table. The generated load flows include the following Broadway actors:
 
-PopulateTableStats.flow is invoked from each Load flow's **Get Statistics** Stage to gather statistics and the **Report Statistics** Stages to be loaded into the TDM DB tables. 
+- **StatsReader** : gets the load statistics from the **DbLoad** actor which loads the data to the target DB. 
+- **StatsLoader** : gets the statistical information from the StatsReader and populates them in task_exe_stats_detailed TDM DB table. This table is extracted by the [task execution report API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/07_get_task_execution_reports_APIs.md#get-task-execution-summary-report) to generate the the Statistics Report tab of the Task Execution Report. 
 
 ![image](images/12_tdm_err_stat_02.PNG)
 
