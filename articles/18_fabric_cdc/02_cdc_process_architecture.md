@@ -32,7 +32,7 @@ Fabric has a built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUM
 
 ### CDC Transaction Debug 
 
-The **DEBUG_CDC_JOB** Fabric job can be run as a CDC consumer to debug a CDC topic whereby it consumes the CDC messages of a given CDC topic and writes them to the log file. 
+The **DEBUG_CDC_JOB** Fabric job can be run as a CDC consumer to debug a CDC topic, whereby it consumes the CDC messages of a given CDC topic and writes them to the log file. 
 
 Example: 
 
