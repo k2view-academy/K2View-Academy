@@ -187,7 +187,7 @@ To define a Sync On Demand mode either:
 
 * Perform GET LUI.
 * Select from the CASES LU table. As a result: 
-  * Fabric checks whether sync should be performed (based on sync mode and synch method). If it should, the SELECT statement triggers a sync of the selected table and its parent tables according to the LU Schema. 
+  * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, the SELECT statement triggers a sync of the selected table and its parent tables according to the LU Schema. 
   * For the given schema, the select from the CASES LU table triggers the sync of CUSTOMER, ACTIVITY and CASES LU tables.
 * Select from the CASE_NOTE LU table. As a result: 
   * The CUSTOMER, ACTIVITY and CASES LU tables are not synchronized since they were already synchronized once for this GET command. Only the CASE_NOTE LU table is synchronized.
@@ -196,10 +196,10 @@ To define a Sync On Demand mode either:
 
 * Perform GET LUI.
 * Select from the CASES LU table. As a result: 
-  * Fabric checks whether sync should be performed (based on sync mode and synch method). If it should, the CUSTOMER, ACTIVITY and CASES LU tables would be synchronized.
+  * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, the CUSTOMER, ACTIVITY and CASES LU tables would be synchronized.
 
 * Select from the CASE_NOTE LU table. As a result: 
-  * Fabric checks whether sync should be performed (based on sync mode and synch method). If it should, all 4 LU tables CUSTOMER, ACTIVITY, CASES and CASE_NOTE would be synchronized.
+  * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, all 4 LU tables CUSTOMER, ACTIVITY, CASES and CASE_NOTE would be synchronized.
 
 
 
