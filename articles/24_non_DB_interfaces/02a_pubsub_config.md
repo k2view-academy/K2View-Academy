@@ -32,7 +32,7 @@ The main configuration setting of the **[default_pubsub]** section of config.ini
 
 ### Group ID, Topic and Partitions
 
-The **GROUP_ID**, **TOPIC** and **PARTITIONS** parameters are mandatory when setting up Kafka. These parameters should either be defined as:
+The **GROUP_ID**, **TOPIC** and **PARTITIONS** parameters are mandatory when setting up Kafka. These parameters should be defined as either:
 
 * The [Pub / Sub Actors](/articles/19_Broadway/actors/04_queue_actors.md)' input arguments, or 
 * In the custom section of config.ini while adding the section name to the PubSub Configuration interface that the Actor is using. 
