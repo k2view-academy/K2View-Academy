@@ -23,9 +23,9 @@ The main configuration setting of the **[default_pubsub]** section of config.ini
 * **TYPE** - can be either KAFKA (default) or MEMORY (an internal queue that runs on localhost and can be used for development or debug purpose only).
 * **BOOTSTRAP_SERVERS** - holds the IP address of the Kafka servers. It is possible to populate several IP addresses separated by a comma.
 * **TRANSACTION_MODE** - determines how the publisher handles transactions. There are 3 such modes:
-  * **ASYNC** (default) - Messages are sent asynchronously. Acknowledgement is received only after commit is performed. Async mode doesn't guarantee that all messages are committed.
-  * **BROKER** - The transactional producer allows to send data to multiple partitions and guarantees all these writes are either committed or discarded. This is done by grouping multiple calls to send into a transaction. Once a transaction is started, you can either commit or rollback to complete it.
-  * **IGNORE** - Messages are sent synchronously. Commit is done one by one.
+  * **ASYNC** (default) - messages are sent asynchronously. Acknowledgement is received only after commit is performed. Async mode doesn't guarantee that all messages are committed.
+  * **BROKER** - the transactional producer allows to send data to multiple partitions and guarantees all these writes are either committed or discarded. This is done by grouping multiple calls to send into a transaction. Once a transaction is started, you can either commit or rollback to complete it.
+  * **IGNORE** - messages are sent synchronously. Commit is done one by one.
 * Security protocol and other SSL/SASL properties, mandatory to be set when Kafka is defined with either SSL or SASL. 
   * The supported protocols are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
   * The supported SASL flavors are: SASL_SCRAM, SASL_LDAP, SASL_GSSAPI, SASL_PLAIN.
