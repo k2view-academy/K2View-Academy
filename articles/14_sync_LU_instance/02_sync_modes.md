@@ -147,7 +147,7 @@ Starting from Fabric 7.0, this feature is replaced by **SET SYNC_ON_DEMAND = ALW
 
 ## Sync On Demand
 
-The purpose of a Sync On Demand mode is to reduce the time spent by Fabric performing the LUI sync by synchronizing only the relevant data. In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables, and it follows the standard Sync mechanism rules.
+The purpose of a Sync On Demand mode is to reduce the time spent by Fabric performing the LUI sync by synchronizing only the relevant data. In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables, and it follows the standard Sync mechanism rules that are based on a LU predefined [sync method](/articles/14_sync_LU_instance/04_sync_methods.md) and [sync mode](/articles/14_sync_LU_instance/02_sync_modes#sync-modes.md).
 
 The logic of the Sync On Demand is as follows:
 
