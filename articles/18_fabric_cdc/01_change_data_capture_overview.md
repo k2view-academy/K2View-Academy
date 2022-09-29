@@ -22,7 +22,7 @@ Note that publication of CDC changes must be [predefined](05_cdc_consumers_imple
 
 To publish CDC columns to CDC consumers, LUs with CDC indexes must be deployed to Fabric:
 
-- When the LU is deployed to Fabric for the first time, a [CDC Schema](03_cdc_messages.md#cdc-schema) message is published to Kafka to create the CDC indexes in the CDC consumers.
+- When the LU is deployed to Fabric for the first time, a [CDC Schema](03_cdc_messages.md#cdc-schema) message is published to Kafka, creating the CDC indexes in the CDC consumers.
 - When the LU is redeployed to Fabric, a [CDC Schema Update](03_cdc_messages.md#cdc-schema-update) message is published to Kafka about the schema's updates in the affected CDC LU tables.
 
 
