@@ -26,7 +26,7 @@ The main configuration setting of the **[default_pubsub]** section of config.ini
   * **ASYNC** (default) - messages are sent asynchronously. An acknowledgement is received only after a commit is performed. Async mode doesn't guarantee that all messages would be committed.
   * **BROKER** - the transactional producer allows sending data to multiple partitions and guarantees all these writes are either committed or discarded. This is done by grouping multiple calls to be sent into a transaction. Once a transaction is started, you can either commit or rollback to complete it.
   * **IGNORE** - messages are sent synchronously. Commit is done one by one.
-* Security protocol and other SSL/SASL properties, mandatory to be set when Kafka is defined with either SSL or SASL. 
+* **Security protocol** and other **SSL/SASL properties** - mandatory to be set when Kafka is defined with either SSL or SASL. 
   * The supported protocols are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
   * The supported SASL flavors are: SASL_SCRAM, SASL_LDAP, SASL_GSSAPI, SASL_PLAIN.
 
