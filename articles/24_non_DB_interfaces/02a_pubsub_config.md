@@ -37,7 +37,7 @@ The **GROUP_ID**, **TOPIC** and **PARTITIONS** parameters are mandatory when set
 * The [Pub / Sub Actors](/articles/19_Broadway/actors/04_queue_actors.md)' input arguments, or 
 * In the custom section of config.ini while adding the section name to the PubSub Configuration interface that the Actor is using. 
 
-If the GROUP_ID, TOPIC and PARTITIONS are not found in either of the above, the exception will be thrown at run time.
+If the GROUP_ID, TOPIC and PARTITIONS parameters are not found in either of the above, the exception will be thrown at run time.
 
 
 
