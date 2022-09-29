@@ -8,7 +8,7 @@ Note that prior to Fabric 7.0, the **search_loader_pubsub** section's name was *
 
 ### Configuration
 
-Edit the configuration file parameters, based on the Search provider: **elasticsearch.yml** or **opensearch.yml**.
+Edit the configuration file parameters, based on the search provider: **elasticsearch.yml** or **opensearch.yml**.
 
 - network.host: populated by the Elasticsearch IP address.
 
@@ -18,7 +18,7 @@ Edit the configuration file parameters, based on the Search provider: **elastics
 - Add the following parameter to the Memory section:
   - **bootstrap.system_call_filter: false**
 
-Note that an installation of the Search provider is required, as it is not included in the Fabric installation package.
+Note that an installation of the search provider is required, as it is not included in the Fabric installation package.
 
 
 
