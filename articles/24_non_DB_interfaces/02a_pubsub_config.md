@@ -8,7 +8,7 @@ The PubSub Configuration interface replaces the existing [Kafka Interface](03_ka
 
 ### Default PubSub Settings
 
-All the Kafka connection settings are defined in the **[default_pubsub]** section of config.ini and not in the interface. The **[default_pubsub]** section allows to define the Kafka settings in one place and make them applicable across various Fabric processes. 
+All the Kafka connection settings are defined in the **[default_pubsub]** section of config.ini and not in the interface. The **[default_pubsub]** section allows to define the Kafka settings in one location and apply them across various Fabric processes. 
 
 The only parameter included in the interface definition is the **Config Section**. It holds the name of the config.ini section(s) where the connection settings are defined. By default, it is set to **default_pubsub**. 
 
