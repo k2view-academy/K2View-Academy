@@ -1,6 +1,6 @@
 # CDC Process Architecture
 
-The Fabric CDC process aggregates LUI data updates in the [MicroDB](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#211-microdb-) and publishes CDC message(s) with the committed changes to the CDC consumer(s). 
+The Fabric CDC process aggregates LUI data updates in a [MicroDB](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#211-microdb-) and publishes CDC message(s) with the committed changes to the CDC consumer(s). 
 
 The following diagram describes the CDC process:
 
