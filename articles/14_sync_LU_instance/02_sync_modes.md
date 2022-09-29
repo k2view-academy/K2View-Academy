@@ -190,7 +190,7 @@ To define a Sync On Demand mode either:
   * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, the SELECT statement triggers a sync of the selected table and its parent tables according to the LU Schema. 
   * For the given schema, the select from the CASES LU table triggers the sync of CUSTOMER, ACTIVITY and CASES LU tables.
 * Select from the CASE_NOTE LU table. As a result: 
-  * The CUSTOMER, ACTIVITY and CASES LU tables are not synchronized since they were already synchronized once for this GET command. Only the CASE_NOTE LU table is synchronized.
+  * The CUSTOMER, ACTIVITY and CASES LU tables are not synchronized as they were already synchronized once for this GET command. Only the CASE_NOTE LU table is synchronized.
 
 **Example 2: Sync On Demand = ALWAYS**
 
