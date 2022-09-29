@@ -8,7 +8,7 @@ The following diagram describes the CDC process:
 
 ### MicroDB Update
 
-A transaction on an LUI may involve several updates on some of its LU tables. Each update (write) in the MicroDB SQLite file of the LUI activates a Fabric trigger that sends the change to the **CDC Message**. The CDC Message publishes a message to Kafka for each INSERT, UPDATE, or DELETE event in the MicroDB. Each message has the LUI (IID), event type, old and new values of each CDC column, PK columns of the LU table and transaction ID.
+A transaction on an LUI may involve several updates on some of its LU tables. Each update (write) in the MicroDB SQLite file of the LUI activates a Fabric trigger that sends the change to the **CDC Message**. The CDC Message publishes a message to Kafka for each INSERT, UPDATE or DELETE event in the MicroDB. Each message has the LUI (IID), event type, old and new values of each CDC column, PK columns of the LU table and transaction ID.
 
 If the transaction is committed, a **Commit message** is sent by the **CDC Message**. If the transaction is interrupted, rolled back or failed, a **Rollback message** is sent by the **CDC Message**.
 
