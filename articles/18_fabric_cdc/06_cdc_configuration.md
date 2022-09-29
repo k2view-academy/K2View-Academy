@@ -2,7 +2,7 @@
 
 All of the Kafka connection settings are defined in the **[default_pubsub]** section of the config.ini and are applicable across various Fabric processes, including the CDC connection to Kafka.
 
-When it is required to have different Kafka settings for CDC, it can be done using the **[cdc]** section. This section does not have to include all the parameters, but only those which should override the default section's settings. 
+When different Kafka settings for CDC are required, it can be done using the **[cdc]** section. This section does not have to include all the parameters, but only those that should override the default section's settings. 
 
 [Click for more information about PubSub Configuration](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
