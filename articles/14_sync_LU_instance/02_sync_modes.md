@@ -199,7 +199,7 @@ To define a Sync On Demand mode either:
   * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, the CUSTOMER, ACTIVITY and CASES LU tables would be synchronized.
 
 * Select from the CASE_NOTE LU table. As a result: 
-  * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, all 4 LU tables CUSTOMER, ACTIVITY, CASES and CASE_NOTE would be synchronized.
+  * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, all 4 LU tables - CUSTOMER, ACTIVITY, CASES and CASE_NOTE - would be synchronized.
 
 
 
