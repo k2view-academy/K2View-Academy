@@ -158,7 +158,7 @@ The logic of the Sync On Demand is as follows:
   * When Sync On Demand is set to **true**, every table can be synchronized only once per each GET, even if several SELECT statements were executed on the source table and it was changed in between.
   * When Sync On Demand is set to **always**, every table can be synchronized on each SELECT, assuming the sync conditions are met.
 
-* Sync On Demand is also supported when **AUTO_MDB_SCOPE** is set to **true** (the "No Get" mode).
+* Sync On Demand is also supported when **AUTO_MDB_SCOPE** is set to **true** (the 'No Get' mode).
 
 Syntax: 
 
