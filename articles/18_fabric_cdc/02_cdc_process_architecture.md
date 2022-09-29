@@ -29,7 +29,9 @@ By default, Fabric starts one instance of a  CDC Publisher job per CDC type. In 
 
 See an example how to start a CDC Publisher job instance using the **startjob** Fabric command:
 
+~~~
 startjob CDC_TRANSACTION_PUBLISHER NAME='CDC_TRANSACTION_PUBLISHER' UID='PUBLISHER1' ARGS='{"consume_topic":"CDC_TOPIC","publish_topic":"Search","cdc_type":"Search","env":"_dev","group_id":"Search_gid", "max.poll.interval.ms":"100", "max.poll.records":"100", "session.timeout.ms:" "1000"} ';
+~~~
 
 A separate UID needs to be set on each job instance. The "publish_topic" attribute needs to be populated by the CDC type, and the "group_id" needs to be populated by a concatenation of the CDC type and "_gid".
 

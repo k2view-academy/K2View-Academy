@@ -2,30 +2,32 @@
 
 A Kafka interface type defines the connections to Apache Kafka and can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/04_queue_actors.md), iidFinder or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
+Note: the Kafka interface is replaced by the [PubSub Configuration](03a_pubsub_config.md) interface and is only supported for backward compatibility.
+
 To create a new Kafka interface, do the following:
 
 <studio>
-   
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**. Then select **Kafka** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/04_kafka_1.PNG)
 
 2. Populate the relevant properties and click **Save**.
-   
+  
+
 </studio>
 
 
 <web>
-   
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**. Then select **Kafka** from the **Event Streaming and Queue** section to open the **New Interface** window.
 
-   
 2. Enter a suitable name for your new SFTP Interface, then click **Create**:
-   
+  
    ![image](images/04_kafka_1WEB.PNG)
 
 3. Populate the relevant properties and click **Save**.
- 
+
    ![image](images/04_kafka_2WEB.PNG)
 
 </web>
@@ -112,4 +114,4 @@ The above Broadway flow uses a **Publish** Actor to publish the data to the pred
 
 
 
-[![Previous](/articles/images/Previous.png)](02_SFTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_JMS_interface.md) 
+[![Previous](/articles/images/Previous.png)](02a_pubsub_config.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_JMS_interface.md) 

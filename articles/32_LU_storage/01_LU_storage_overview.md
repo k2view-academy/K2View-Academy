@@ -2,9 +2,11 @@
 
 A [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a business entity like a customer.
 
-Fabric uses the Cassandra DB as a Logical Unit's [storage layer](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage) where each business entity's instance is saved as a [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) in an **entity** table (and in an **entity_chunks** table for [big LUs](03_big_lu_storage.md)) under the Cassandra **k2view_[LU_name]_[cluster id if exists]** keyspace.  
+Fabric can use the Cassandra DB as a Logical Unit's [storage layer](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage) where each business entity's instance is saved as a [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) in an **entity** table (and in an **entity_chunks** table for [big LUs](03_big_lu_storage.md)) under the Cassandra ```k2view_[LU_name]_[cluster id if exists]``` keyspace.  
 
 [Click for more information about Cassandra keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#cassandra-keyspaces-for-fabric).
+
+Below are described the additional storage types supported by Fabric.
 
 ### Storage Types
 

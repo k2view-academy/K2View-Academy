@@ -18,7 +18,9 @@ The **queue** category Actors enable the Pub / Sub services functionality of the
 -  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
 -  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
-Publisher and Subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Actor's **interface** input argument. 
+Publisher and Subscriber applications must be defined in Fabric using a PubSub Configuration Interface and then be set in the Actor's **interface** input argument. 
+
+[Click for more details about PubSub Configuration Interface](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
 The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
@@ -29,7 +31,11 @@ Arguments not supported by the message provider can be left empty and be ignored
 
 The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
-Starting from V6.5.1, **transaction_mode** input argument is added to the **Publish** Actor and it determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure. Note that **Async** transaction mode is applicable only when the **Publish** Actor runs inside the transaction. 
+The **transaction_mode** input argument on the **Publish** Actor determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). 
+
+* **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure. Note that **Async** transaction mode is applicable only when the **Publish** Actor runs inside the transaction. 
+* **Broker** transaction mode means that the transactional producer allows to send data to multiple partitions and guarantees all these writes are either committed or discarded.
+* **Ignore** transaction mode means that messages are sent synchronously and the commit is done one by one.
 
 ### Timeout Setting
 
@@ -42,7 +48,7 @@ The **Subscribe** Actor has two timeout related settings:
 When debugging the flow, the **Subscribe** Actor waits only 1 sec to prevent the [Debug run](../25_broadway_flow_window_run_and_debug_flow.md) from getting stuck.
 In a regular run, timeout can be controlled by setting it to the required elapsed time. It can also be set to -1, meaning an infinite wait for messages.
 
-### Acknowledgement in Broadway Pub / Sub
+### Acknowledgement
 
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the commit. 

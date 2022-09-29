@@ -607,26 +607,49 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 ### Fabric Broadway
 
-The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
+The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed:
+
+~~~
+broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN>
+~~~
 
 Below are the types of execution parameters:
 
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
 
+* Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Two modes exist:
+  
+  * **COLUMN** (default) –The outputs are returned as each output in a column.
+  
+    ~~~
+    |result |date         |                                                 
+    |+-----+--------------+                                                 
+    |15     |2022-07-19   |
+    ~~~
+  
+  * **ROW** – The Broadway flow outputs are returned as each output in a row.
+  
+    ~~~
+    |column |value       |                                                     
+    |+-------+-----------+                                                   
+    |result   |15        |                                                   
+    |date     |2022-07-19|
+    ~~~
+  
 * Recovery parameters:
-  
+
   * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
-  
+
   * **recoveryTtl** (optional), *time to live* in seconds for the recovery point to be kept in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway *config.ini* section with the RECOVERY_TTL_SEC key.
-  
+
   * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
-  
+
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
-  
+
 * Profiler Telemetry:
-  
+
   * To invoke the Broadway profiler, set **profilerTelemetry** to true. This will add the profiler results to the command results, under the **profilerTelemetry** key.
-  
+
     [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
 **Example of running in a recovery mode:**
