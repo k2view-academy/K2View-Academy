@@ -2,7 +2,9 @@
 
 ### Fabric Config.ini File
 
-Configure the [CDC sections](/articles/18_fabric_cdc/06_cdc_configuration.md) including the **search_loader_pubsub** sections. The cdc_data_consume sections are used by the CDC Transaction Consumer job.
+Configure the [CDC sections](/articles/18_fabric_cdc/06_cdc_configuration.md) including the **search_loader_pubsub** section which is used by the CDC Transaction Consumer job.
+
+Note that prior to Fabric 7.0, the **search_loader_pubsub** section's name was **cdc_data_consume**.
 
 ### Configuration
 
