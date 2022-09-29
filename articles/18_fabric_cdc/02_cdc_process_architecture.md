@@ -26,7 +26,7 @@ The **msgCount** property of each CDC message is populated by the number of CDC 
 
 ### CDC Consumer
 
-Fabric has a built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUMER jobs start automatically when deploying an LU with **search** indexes. The Jobs UID is **Search**. The CDC consumer job consumes the messages in the Kafka **Search** topic and creates search indexes in Elasticsearch.
+Fabric has a built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUMER jobs start automatically when deploying an LU with **search** indexes. The Jobs UID is **search**. The CDC consumer job consumes the messages in the Kafka **search** topic and creates **search** indexes in Elasticsearch.
 
 [Click for more information about Fabric Search capabilities](cdc_consumers/search/01_search_overview_and_use_cases.md).
 
