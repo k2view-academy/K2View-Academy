@@ -199,10 +199,10 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   - **selection method**: populated based on the selection method in the [Requested Entities tab](14_task_overview.md#3-requested-entities). This column can be populated by either:
     - **L** - [Entities List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list) 
     - **R** - [Random Selection](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#random-selection)
-    - **S** - [Enity Clone (Synthetic)](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
+    - **S** - [Entity Clone (Synthetic)](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
     - **PR** - [Parameters with a random selection checkbox](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
     - **P** - [Parameters when a random selection checkbox is cleared](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
-    - **ALL** - [Select All entities of the Selected Version](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-all-entities-of-the-selected-version) on load Data Versionng tasks, or [Select a Predefined Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-a-predefined-entity-list)select all entities on [Extract](16_extract_task.md) tasks.
+    - **ALL** - [Select All entities of the Selected Version](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-all-entities-of-the-selected-version) on load Data Versioning tasks, or [Select a Predefined Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-a-predefined-entity-list)select all entities on [Extract](16_extract_task.md) tasks.
     - **REF** - create a [Reference Only](24_task_reference_tab.md) task.
     - **C** - [Custom Logic](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic).
   - **selection_param_value**: populated when the task selection method is Entities List, Parameters, Custom Logic, or Entity Clone:
