@@ -18,11 +18,11 @@ To create the population based on the Broadway flow, right click the table name 
 
 The [**InterfaceListener**](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) Actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
-The flow described below, is still supported and can be defined via Fabric Studio.
+In addition, it is also supported via a flow as below and an Interface Listener job that can be defined via Fabric Studio.
 
 The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either an SFTP or a local file system. Each file is only picked up once by the Listener and the file name must not be repeated otherwise it will be disregarded.  
 
-![images](../24_non_DB_interfaces/images/broadway_file_read.PNG)
+![images](images/file_read_listener.png)
 
 The Listener invokes the attached Broadway flow that needs the **FileRead** Actor to read the files. The **interface** and the **path** input arguments of the **FileRead** Actor must be defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
@@ -38,7 +38,7 @@ The **Fabric** category of [built-in Actors](04_built_in_actor_types.md) execute
 * **FabricSet** Actor, sets a value on the Fabric session.
 * **FabricSetRead** Actor, reads a key from the Fabric session.
 
-Starting from V6.5.1, the **FabricGet** Actor supports fetching multiple instances from different LUs and enables setting **parallel** and **stop_on_error** arguments. To sync multiple LUIs, do either:
+The **FabricGet** Actor supports fetching multiple instances from different LUs and enables setting **parallel** and **stop_on_error** arguments. To sync multiple LUIs, do either:
 
 * Connect a list of LU types to the **luType** input argument and a list of Instance IDs to the **iid** input argument.
 
