@@ -82,7 +82,7 @@ More detailed requirements for each are described below.
 4. Load the Docker images as follows:
 
    ```bash
-   12 docker load -i D_k2view_cassandra_3.11.12.tar.gz 
+    docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_2.tar.gz
     docker load -i D_k2view_fabric_6.5.9_96.tar.gz 
    ```
