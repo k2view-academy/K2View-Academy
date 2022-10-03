@@ -22,7 +22,7 @@ A Graphit file opens, containing a newly created Graphit node, which should be p
 
 2. From the open pop-up window, select an LU from the drop-down list.
 
-    ![](images/get_command_builder_select_lu.png)
+    ![](images/get_command_builder_select_lu_bigger.png)
 
     Click **Add**
 
