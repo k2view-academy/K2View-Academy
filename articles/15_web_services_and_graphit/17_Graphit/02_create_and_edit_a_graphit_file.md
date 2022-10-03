@@ -60,13 +60,13 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
 
-![](images/new_item_name_and_category.png)
+    ![](images/new_item_name_and_category.png)
 
-Once **Ok**'ed, the newly created Graphit file name appears at the **Project tree**, under its category.
+    Once **Ok**'ed, the newly created Graphit file name appears at the **Project tree**, under its category.
 
-![](images/project_tree_incl_graphit_file_name.png)
+    ![](images/project_tree_incl_graphit_file_name.png)
 
-You can see that it has automatically received a **'.graphit' suffix**.
+    You can see that it has automatically received a **'.graphit' suffix**.
 
 </studio>
 
