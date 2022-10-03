@@ -26,7 +26,7 @@ A Graphit file opens, containing a newly created Graphit node, which should be p
 
     Click **Add**
 
-    ![](images/get_command_builder_add.png)
+    ![](images/get_command_builder_add_bigger.png)
 
 
 
