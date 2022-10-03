@@ -121,4 +121,4 @@ Fill in the following parameters in the Actor's Properties tab:
 
 
 
-[![Previous](/articles/images/Previous.png)](01_nondb_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_kafka_interface.md) 
+[![Previous](/articles/images/Previous.png)](01_nondb_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02a_pubsub_config.md) 
