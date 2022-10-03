@@ -14,7 +14,7 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
-![images](images/new_graphit_file_studio.png)
+![images](images/new_graphit_file_studio_bigger.png)
 
 A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
@@ -28,9 +28,16 @@ A Graphit file opens, containing a newly created Graphit node, which should be p
 
 2. From the open pop-up window, select an LU from the drop-down list.
 
-    ![](images/get_command_builder_select_lu.png)
+    ![](images/get_command_builder_select_lu_bigger.png)
 
+<<<<<<< HEAD
 3. Click **Add**
+=======
+    Click **Add**
+
+    ![](images/get_command_builder_add_bigger.png)
+
+>>>>>>> c668608234bc76ddb95373489a297a169911d125
 
     Once this 1st node is created it will looks like this:
 
@@ -38,11 +45,19 @@ A Graphit file opens, containing a newly created Graphit node, which should be p
 
     You can later change the **get** command, when needed, by clicking on the ![](images/get_icon.png) icon, triggering the *Get Command Builder* pop-up window again.
 
+<<<<<<< HEAD
 4. Click on the plus icon ![](images/create_sibling_child_node.png)in order to add a sibling node to the example layout.
+=======
+You can change the **get** command by clicking on the ![](images/get_icon_bigger.png) icon, triggering the *Get Command Builder* pop-up window again.
+>>>>>>> c668608234bc76ddb95373489a297a169911d125
 
 5. Name the newly created node by populating the left-hand-field.
 
+<<<<<<< HEAD
     Note that only nodes with a tag name are displayed in the output document, when a Graphit web service is called.
+=======
+4. Populate the left-hand-field in the second node with *CUSTOMER_DATA* and choose an **sql** command from the right-hand-field using the drop-down arrow. ![](images/populate_second_node_bigger.png)
+>>>>>>> c668608234bc76ddb95373489a297a169911d125
 
 6. Choose an **sql** command, as the node type, using the drop-down arrow. ![](images/populate_second_node.png)
 
