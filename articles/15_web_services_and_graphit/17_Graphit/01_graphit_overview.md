@@ -5,7 +5,7 @@ Graphit provides a very user-friendly interface and requires minimal coding whil
 
 ### Main Features
 Using Graphit you can do the following:
-- Create dynamic CSV, XML and JSON documents. 
+- Create dynamic JSON, XML and CSV documents. 
 - Accept external input as variables. 
 - Use variables in queries.
 - Execute queries on an LUDB, iterate over the results and use the returned values to create the response document.
@@ -15,7 +15,7 @@ Using Graphit you can do the following:
 - Use outer level query results as arguments. 
 - Recursively generate nested tags and structures.
 - Customize the format of a value and define whether to generate a tag when the values are null or empty.
- 
+
 
 
 

@@ -1,26 +1,19 @@
 # Web Services Overview 
 
-Fabric data is stored internally using Logical Unit modelling. To enable the data to be accessed externally, exposed Web Services are built to query all Fabric data and to present the relevant response to the outside world. 
+Fabric data is stored internally using Logical Unit modelling. To enable the data to be accessed externally, Fabric exposes set of out-of-the-box web services to query Fabric Logical Unit instances data, as well as provides implementors an easy way to expose other required web services.
 
-Other common uses for Fabric Web Services include: 
-
-- Deploying new applications. 
-- Exposing data via API instead of by direct DB access. 
-
-- Interacting with other systems based on Fabric data. 
+These two options are powerful as no product release is required when new web services are needed during the project lifetime.
 
 ## What Is a Fabric Web Service? 
 
-A **Fabric** **Web** **Service** is a Java function that can be exposed through the Fabric Web Service layer. 
+A Fabric Web Service is either a Java function that can be exposed through the Fabric Web Service layer or a Graphit file. Graphit is a powerful low-code utility that provides a user-friendly visual interface to design a web-service layout. 
 
-Web Services should be deployed to Fabric separately and can then be invoked either by a client or directly from any web browser. In the Fabric Studio, Web Service functions can be defined and saved to the project file and be deployed to the Fabric server. 
+Fabric Web Services are part of the Fabric project files and once project is deployed, the web services are exposed and available to external calls. 
 
-Fabric Web Services apply REST API guidelines which can be fully integrated into the latest Open API (Swagger) platform. 
+Fabric provides implementors methods to test and debug their web services, either by the built-in debugging capabilities at Graphit or by using Fabric Web Framework API web application (using Swagger Open API interface)
 
-## What Is a RESTful API? 
+Fabric Web Services apply REST API guidelines. 
 
-**Representational State Transfer** (**REST**) is a software architectural style that defines a set of constraints and standards used for creating Web Services. 
 
-Web Services that conform to the REST architectural style known as RESTful Web Services (RWS), provide interoperability between computer systems on the internet. RESTful Web Services allow requesting systems to access and manipulate textual representations of web resources via a uniform and predefined set of stateless operations.  
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
