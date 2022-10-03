@@ -6,9 +6,9 @@
 
 <studio>
 
-Go to **Project Tree**, click on **Web Services** > **Graphit ** > right-click & choose **New Graphit File**. 
+Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
-![](images/new_graphit_file_studio.png)
+![images](images/new_graphit_file_studio.png)
 
 A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
