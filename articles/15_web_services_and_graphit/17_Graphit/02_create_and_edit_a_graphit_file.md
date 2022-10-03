@@ -8,7 +8,7 @@
 
 Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
-![images](images/new_graphit_file_studio.png)
+![images](images/new_graphit_file_studio_bigger.png)
 
 A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
@@ -34,11 +34,11 @@ The 1st created node in the Graphit window is complete
 
 ![](images/first_graphit_node.png)
 
-You can change the **get** command by clicking on the ![](images/get_icon.png) icon, triggering the *Get Command Builder* pop-up window again.
+You can change the **get** command by clicking on the ![](images/get_icon_bigger.png) icon, triggering the *Get Command Builder* pop-up window again.
 
 3. Click on the plus icon ![](images/create_sibling_child_node.png)in order to add a sibling node to the example layout.
 
-4. Populate the left-hand-field in the second node with *CUSTOMER_DATA* and choose an **sql** command from the right-hand-field using the drop-down arrow. ![](images/populate_second_node.png)
+4. Populate the left-hand-field in the second node with *CUSTOMER_DATA* and choose an **sql** command from the right-hand-field using the drop-down arrow. ![](images/populate_second_node_bigger.png)
 
    ​
 
