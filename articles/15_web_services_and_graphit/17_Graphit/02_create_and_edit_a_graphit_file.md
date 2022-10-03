@@ -99,15 +99,21 @@ You can see that it has automatically received a **'.graphit' suffix**.
 
 
 
-### What Are the Hierarchical Structure Options? 
+### Editing Actions Options
 
-​    
-- Click <img src="images/04_plus_web.png"></img> **Parent Node** to create a new parent node under the original node on the same level.
-- Click <img src="images/05_arrow_web.png" width="20" height="20"></img> **Child Node** to create a new child node under the parent node.
-- Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_trash_bin_web.png" width="20" height="20"></img> **Delete** to delete a node on the node level.  
-- Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_copy_web.png" width="20" height="20"></img> **Copy** to delete a node on the node level. 
-- Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_cut_web.png" width="20" height="20"></img> **Cut** to delete a node on the node level. 
-- Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/07_hamburger_web.png" width="20" height="20"></img> and drag a node to another location in the hierarchy. 
+- Click <img src="images/add_sibling.png"></img> at left of a node, to create a new sibling node placed under the original node, on the same level.
+
+- Click <img src="images/add-child.png"></img> at left of a node, to create a new child node under the parent node.
+- Click <img src="images/drag-icon.png" ></img> to drag a node to another location in the hierarchy. 
+- Click  <img src="images/drag-open-icon.png" > to expand a collapsed node.
+- Click <img src="images/delete_node.png" ></img> to delete a node on the node level.  
+- Click <img src="images/copy.png" ></img> to copy a node so that can be paste into another location at this Graphit or to another Graphit file. 
+- Click <img src="images/cut.png"></img> to copy a node so that can be moved into another location at this Graphit or to another Graphit file.  Moving nodes within a Graphit file can be done also via drag and drop.
+- Click <img src="images/paste_child.png" >to paste a previously copied/cut node as a child node.
+- Click <img src="images/paste_sibling.png" >to paste a previously copied/cut node as a sibiling node.
+- Click <img src="images/plus-icon.png" >to add property to the node
+- Click <img src="images/db-icon.png" >to open Query builder for a *sql* node type
+- Click <img src="images/selection.png" >to open Helper for a *get* and *Broadway* node types.
 
 
 
