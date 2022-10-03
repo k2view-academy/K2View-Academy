@@ -283,8 +283,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   ### Data Versioning Parameters
 
   - **version_ind** - populated by **true** in a [Data Versioning task](15_data_flux_task.md).
-  - **selected_version_task_name**, **selected_version_datetime**, and **selected_version_task_exe_id** - the selected entities when creating a load Data Flux task to reload a selected version of entities into the target environment.
-  - **selected_ref_version_task_name, selected_ref_version_datetime**, and **selected_ref_version_task_exe_id** - the selected Reference's version when creating a Data Flux task to copy [a selected version of Reference tables](24_task_reference_tab.md) into the target environment.
+  - **selected_version_task_name**, **selected_version_datetime**, and **selected_version_task_exe_id** - the selected entities when creating a load Data Versioning task to reload a selected version of entities into the target environment.
+  - **selected_ref_version_task_name, selected_ref_version_datetime**, and **selected_ref_version_task_exe_id** - the selected Reference's version when creating a Data Versioning task to copy [a selected version of Reference tables](24_task_reference_tab.md) into the target environment.
 
   ### Environments Columns
 
