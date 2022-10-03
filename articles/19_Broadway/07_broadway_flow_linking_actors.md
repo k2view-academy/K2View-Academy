@@ -22,7 +22,7 @@ This link is valid since the source **Const** Actors run before the target **DbC
 
 **Example 2: Invalid Link**
 
-A **Const** Actor named FileName sends the file name as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target FileRead Actor:
+A **Const** Actor named FileName sends the file name as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target **FileRead** Actor:
 
 ![link-example2](images/invalid_link_example.png)
 
@@ -101,6 +101,7 @@ To create a **Link**, do either:
 
    ![Adding link](images/99_20_add_link_1.PNG)
    
+
 To delete a **Link**, click the link's connection line and press **Delete** on your keyboard.
 
 To edit a **Link**, click the link's connection line to open the [Link Object Properties window](07_broadway_flow_linking_actors.md#link-object-properties) and edit the **Link Type** or **Varargs** settings.

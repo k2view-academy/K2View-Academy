@@ -4,11 +4,10 @@
 
 The **Actor's Properties** window is displayed when adding a new Actor to a flow or when clicking an Actor object in the Flow window. The Actor window holds the following sections:
 
-<table>
+<table style="width: 600px;">
 <tbody>
 <tr>
-<td rowspan="4" valign="top" width="400pxl"><img src="images/99_03_actor_properties.PNG" alt="Properties window" /></td>
-<td valign="top" width="600pxl">
+<td style="width: 590.8px;" valign="top">
 <p><strong>Object Name</strong></p>
 <p>Displays the Actor name in the following format:</p>
 <ul>
@@ -19,7 +18,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 </td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">
+<td style="width: 590.8px;" valign="top">
 <p><strong>Parameters Filter</strong></p>
 <p>Filters the input and output fields in the Actor window using the following options:</p>
 <ul>
@@ -36,30 +35,29 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 </td>
 </tr>
 <tr>
-<td width="300pxl">
+<td style="width: 590.8px;">
 <p><strong>INPUTS</strong></p>
 <p>Displays the input parameters in the following format:</p>
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter. </p>
-  <p>Click <strong>Add Input</strong> to add more parameters. The button is applicable for selected Actor types only.</p>
+<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter.</p>
+<p>Click <strong>Add Input</strong> to add more parameters. The button is applicable for selected Actor types only.</p>
 </td>
 </tr>
 <tr>
-<td width="300pxl">
+<td style="width: 590.8px;">
 <p><strong>OUTPUTS</strong></p>
 <p>Displays the output parameters in the following format:</p>
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter. </p>
-  <p> Click <strong>Add Output</strong> to add more parameters. The button applicable for selected Actor types only.</p>
+<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter.</p>
+<p>Click <strong>Add Output</strong> to add more parameters. The button applicable for selected Actor types only.</p>
 </td>
 </tr>
 </tbody>
 </table>
-
 
 
 
