@@ -12,13 +12,13 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 <studio>
 
-Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
+1. Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
-![images](images/new_graphit_file_studio_bigger.png)
+    ![images](images/new_graphit_file_studio_bigger.png)
 
-A Graphit file opens, containing a newly created Graphit node, which should be populated.
+    A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
-1. Start with choosing, via a drop-down list, any of the below commands/functions (node types): 
+2. Start with choosing, via a drop-down list, any of the below commands/functions (node types): 
 
     ![](images/commands_functions_node_types.png)
 
@@ -26,45 +26,24 @@ A Graphit file opens, containing a newly created Graphit node, which should be p
 
     It is useful to place the **get** command - a function that retrieves the LUI (Logical Unit Instance) - in the beginning of the Graphit layout although it can be implemented on any of the nodes. 
 
-2. From the open pop-up window, select an LU from the drop-down list.
+3. From the open pop-up window, select an LU from the drop-down list and then click **Add**.
 
-    ![](images/get_command_builder_select_lu_bigger.png)
-
-<<<<<<< HEAD
-3. Click **Add**
-=======
-    Click **Add**
-
-    ![](images/get_command_builder_add_bigger.png)
-
->>>>>>> c668608234bc76ddb95373489a297a169911d125
-
+     ![](images/get_command_builder_add_bigger.png)
     Once this 1st node is created it will looks like this:
 
     ![](images/first_graphit_node.png)
+    
+    You can later change the **get** command, when needed, by clicking on the ![](images/selection.png) icon, triggering the *Get Command Builder* pop-up window again.
 
-    You can later change the **get** command, when needed, by clicking on the ![](images/get_icon.png) icon, triggering the *Get Command Builder* pop-up window again.
 
-<<<<<<< HEAD
-4. Click on the plus icon ![](images/create_sibling_child_node.png)in order to add a sibling node to the example layout.
-=======
-You can change the **get** command by clicking on the ![](images/get_icon_bigger.png) icon, triggering the *Get Command Builder* pop-up window again.
->>>>>>> c668608234bc76ddb95373489a297a169911d125
+4. Click on the plus icon ![](images/add_sibling.png)in order to add a sibling node to the example layout.
 
 5. Name the newly created node by populating the left-hand-field.
-
-<<<<<<< HEAD
     Note that only nodes with a tag name are displayed in the output document, when a Graphit web service is called.
-=======
-4. Populate the left-hand-field in the second node with *CUSTOMER_DATA* and choose an **sql** command from the right-hand-field using the drop-down arrow. ![](images/populate_second_node_bigger.png)
->>>>>>> c668608234bc76ddb95373489a297a169911d125
 
 6. Choose an **sql** command, as the node type, using the drop-down arrow. ![](images/populate_second_node.png)
 
-    
-
-7. Click on the query builder icon ![](images/query_builder_icon.png) on the 2nd node, to generate a query in a Query Builder window.
-
+7. Click on the query builder icon ![](images/db-icon.png) on the 2nd node, to generate a query in a Query Builder window.
     Read [here](https://support.k2view.com/Academy/articles/11_query_builder/01_query_builder_overview.html) for more information about Query Builder.
 
     Following the creation of the 2nd node and its population, a message pops up, asking whether you want to create table fields, i.e. laying out and exposing the SQL fields at the Graphit; choose **YES**.
@@ -75,15 +54,10 @@ You can change the **get** command by clicking on the ![](images/get_icon_bigger
 
     The below image shows the **nested nodes layout result** 
 
-    
-    
-    NEED NEW IMAGE WITHOUT THE SAVE POPUP
-    
-    
-    
+    ![](images/new_graphit_example.png)
+
     Note that exposing the SQL fields is optional and even if you choose NO the fields will be rendedred at the output document. Yet, exposing them let you to manipulate them. Sometimes it is preferred by implementros for better visualization of the output document, seeing full layout structure.
-    
-    
+
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
 
 ![](images/new_item_name_and_category.png)
