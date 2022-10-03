@@ -1,18 +1,73 @@
 # Create and Edit a Graphit file
 
+***As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout.***
+
 ### How Do I Create a New Graphit File?
 
 <studio>
 
-1. Go to **Project Tree**, click **Web Services** > **Resources**.
-2. Right click **New Resource Files** and select **New Graphit File**. 
+Go to **Project Tree**, click on **Web Services** > **Graphit ** > right-click & choose **New Graphit File**. 
 
-    ![](/articles/15_web_services_and_graphit/17_Graphit/images/01_new_graphit_file.png)
+![](images/new_graphit_file_studio.png)
 
-3. Assign a **Name** to the new Graphit file and **Save** it. Note that the filename must have a **gr%** prefix and contain alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under Resources.
+A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
-    ![](/articles/15_web_services_and_graphit/17_Graphit/images/02_graphit_resource_file.png)
-    
+1. Start with choosing, via a drop-down arrow, any of the below commands/functions (node types): 
+
+    ![](images/commands_functions_node_types.png)
+
+    Initiate the example by choosing a **get** command
+
+    It is useful to place the **get** command - a function that retrieves the LUI (Logical Unit Instance) - in the beginning of the Graphit layout although it can be implemented on any of the nodes. 
+
+2. From the open pop-up window, select an LU from the drop-down list.
+
+    ![](images/get_command_builder_select_lu.png)
+
+    Click **Add**
+
+    ![](images/get_command_builder_add.png)
+
+
+
+The 1st created node in the Graphit window is complete
+
+![](images/first_graphit_node.png)
+
+You can change the **get** command by clicking on the ![](images/get_icon.png) icon, triggering the *Get Command Builder* pop-up window again.
+
+3. Click on the plus icon ![](images/create_sibling_child_node.png)in order to add a sibling node to the example layout.
+
+4. Populate the left-hand-field in the second node with *CUSTOMER_DATA* and choose an **sql** command from the right-hand-field using the drop-down arrow. ![](images/populate_second_node.png)
+
+   ​
+
+Clicking on the query builder icon ![](images/query_builder_icon.png) on the 2nd node, generates a query in a separate window, a Query Builder window.
+
+In order to execute the query, insert an incident number.
+
+For more information about a Query Builder, visit <https://support.k2view.com/Academy/articles/11_query_builder/01_query_builder_overview.html>
+
+Following the creation of the 2nd node and its population, a message pops up, asking whether you want to create table fields; choose **YES**.
+
+ ![](images/create_table_fields_message.png)
+
+The below image shows the **nested nodes layout result**, which is followed by a pop-up message that asks you whether you wish to **save** the Graphit file.
+
+![](images/saving_graphit_nested_nodes_layout.png)
+
+Choosing **Yes** is followed by another pop-up message, asking you to assign a **Name** and a **Category** for your Graphit file.
+
+![](images/new_item_name_and_category.png)
+
+Once **Ok**'ed, the newly created Graphit file name appears at the **top of its layout** ![](images/graphit_layout_name.png) 
+
+as well as in the **Project tree**, under its category.
+
+![](images/project_tree_incl_graphit_file_name.png)
+
+In both cases, you can see that it has automatically received a **'.graphit' suffix**.
+
 </studio>
 
 <web>
@@ -23,10 +78,10 @@
 
     ![](/articles/15_web_services_and_graphit/17_Graphit/images/01_new_graphit_file_web.png)
 
-3. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
+4. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
 
     ![](/articles/15_web_services_and_graphit/17_Graphit/images/02_graphit_resource_file_web.png)
-    
+
 </web>
 
 ### How Do I Edit a Graphit File?
@@ -41,19 +96,19 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 <studio>
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/03_edit_graphit_file.png)
-    
+​    
 </studio>
 
 <web>
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/03_edit_graphit_web_file.png)
-    
+​    
 </web>
 
 ### What Are the Hierarchical Structure Options? 
 
 <studio>
-    
+​    
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/04_plus.png" width="20" height="20"></img> **Parent Node** to create a new parent node under the original node on the same level.
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/05_arrow.png" width="20" height="20"></img> **Child Node** to create a new child node under the parent node.
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_trash_bin.png" width="20" height="20"></img> **Delete** to delete a node on the node level.  
@@ -64,14 +119,14 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 </studio>
 
 <web>
-    
+​    
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/04_plus_web.png" width="20" height="20"></img> **Parent Node** to create a new parent node under the original node on the same level.
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/05_arrow_web.png" width="20" height="20"></img> **Child Node** to create a new child node under the parent node.
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_trash_bin_web.png" width="20" height="20"></img> **Delete** to delete a node on the node level.  
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_copy_web.png" width="20" height="20"></img> **Copy** to delete a node on the node level. 
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_cut_web.png" width="20" height="20"></img> **Cut** to delete a node on the node level. 
 - Click <img src="/articles/15_web_services_and_graphit/17_Graphit/images/07_hamburger_web.png" width="20" height="20"></img> and drag a node to another location in the hierarchy. 
- 
+
 </web> 
 
 
