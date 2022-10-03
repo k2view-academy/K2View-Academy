@@ -20,7 +20,12 @@ The **[default_pubsub]** section is also used by CDC and Common DB processes for
 
 The main configuration setting of the **[default_pubsub]** section of config.ini are:
 
-* **TYPE** - can be either KAFKA (default) or MEMORY (an internal queue that runs on localhost and can be used for development or debug purpose only).
+* **TYPE** - the PubSub type that can have one of the following values:
+  * **KAFKA** (default) - execute the message handling via Apache Kafka.
+  * **MEMORY** - execute the message handling via an internal queue that runs on localhost. This type can only be used for debug purpose.
+  * **NO_OP** - do not send or receive the messages. This type can only be used for debug purpose.
+  * **ERROR** - simulate throwing an Unsupported Operation exception. This type can only be used for debug purpose.
+
 * **BOOTSTRAP_SERVERS** - holds the IP address of the Kafka servers. It is possible to populate several IP addresses separated by a comma.
 * **TRANSACTION_MODE** - determines how the publisher handles transactions. There are 3 such modes:
   * **ASYNC** (default) - messages are sent asynchronously. An acknowledgement is received only after a commit is performed. Async mode doesn't guarantee that all messages would be committed.
