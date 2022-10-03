@@ -160,6 +160,8 @@ The logic of the Sync On Demand is as follows:
 
 * Sync On Demand is also supported when **AUTO_MDB_SCOPE** is set to **true** (the 'No Get' mode).
 
+Note that an implementor should manage the transaction efficiently. Thus when a Web Service or GraphIt invokes several SELECT statements on the same LU, it is under the implementor's responsibility to manage the transaction in order to minimize the number of writes into the MDB Storage. 
+
 Syntax: 
 
 * SET SYNC_ON_DEMAND = [TRUE/FALSE/ALWAYS];
@@ -200,6 +202,15 @@ To define a Sync On Demand mode either:
 
 * Select from the CASE_NOTE LU table. As a result: 
   * Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, all 4 LU tables - CUSTOMER, ACTIVITY, CASES and CASE_NOTE - would be synchronized.
+
+**Example 3: Several SELECTs in a Web Service or GraphIt**
+
+* Set Sync On Demand to either true or always, whatever is required.
+* Perform GET LUI.
+* Begin the transaction.
+* Perform all the required SELECT statements:
+  * On each SELECT, Fabric checks whether sync should be performed (based on sync mode and sync method). If it should, the relevant tables are synchronized - as per the above logic.
+* Commit the transaction.
 
 
 
