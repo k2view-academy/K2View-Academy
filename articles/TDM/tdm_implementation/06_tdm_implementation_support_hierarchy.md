@@ -56,11 +56,11 @@ The TDM_LU_TYPE_RELATION_EID is populated by carrying out a sync on the parent L
 </tr>
 <tr>
 <td valign="top" width="200pxl">version_name</td>
-<td valign="top" width="700pxl">Populated by the task name (version name) of DataFlux extract tasks. During regular extract tasks, this column is populated by an empty string.</td>
+<td valign="top" width="700pxl">Populated by the task name (version name) of Data Versioning extract tasks. During regular extract tasks, this column is populated by an empty string.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">version_datetime</td>
-<td valign="top" width="700pxl">Populated by the execution time (version DateTime) of the DataFlux extract tasks. During regular extract tasks, this column is populated by a default value: 1/1/1970.</td>
+<td valign="top" width="700pxl">Populated by the execution time (version DateTime) of the Data Versioning extract tasks. During regular extract tasks, this column is populated by a default value: 1/1/1970.</td>
 </tr>
 </tbody>
 </table>
@@ -116,7 +116,7 @@ Customer 1 has orders 10, 12, and 13 in the Production environment. The **LUI** 
 
 **Example 2:**
 
-Customer 1 has orders 10, 12 and 13 in the Production environment. The user creates and executes a TDM extract [DataFlux task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) to save a version of Customer 1 in Production. The execution date and time is 8-Jan-2021 at 14:15:30 PM. The **LUI** of Customer 1 is **Production_1_saveCust1_20210108141530**. The sync of the **Production_1_saveCust1_20210108141530** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
+Customer 1 has orders 10, 12 and 13 in the Production environment. The user creates and executes a TDM extract [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) to save a version of Customer 1 in Production. The execution date and time is 8-Jan-2021 at 14:15:30 PM. The **LUI** of Customer 1 is **Production_1_saveCust1_20210108141530**. The sync of the **Production_1_saveCust1_20210108141530** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
 
 <table width="900pxl">
 <tbody>
