@@ -2,7 +2,7 @@
 
 As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing and debugging capabilities.
 
-A Graphit file is structured as a hierarchical representation of nodes, where each node defines a tag in the structure of the JSON, XML or CSV document. Yet, some of the nodes can be a non-output tags, such as condition and function tags.
+A Graphit file is structured as a hierarchical representation of nodes, where each node defines a tag in the structure of the JSON, XML or CSV document. Yet, some of the nodes can represent non-output tags, such as condition and function tags.
 
 Nodes can have children nodes and each child node can have children nodes, whereby creating nested tags in the generated document. 
 
