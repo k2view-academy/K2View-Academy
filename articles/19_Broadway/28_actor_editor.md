@@ -164,13 +164,11 @@ Broadway allows creating custom editors (plug-ins) for input argument types on a
 
 3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor. Then modify the default to the name of your editor:
 
-   ~~~javascript
-   { 
-   	"id": "<editor name>" 
-   }
-   ~~~
-
+   <img src="images/99_10_editor_6.PNG" alt="image" style="zoom: 80%;" />
+   
 4. If your editor receives additional inputs, add them to the definition map in the same way as for the existing editors (see the examples above). 
+
+Note that the ```Server/fabric/staticWeb/editors``` folder includes all the existing built-in editors. Thus even though you can modify the code of the built-in editor, it's not recommended to do so because your changes will be lost during the Fabric's version upgrade.  
 
 ### Examples of New Actor Creation
 
@@ -179,14 +177,19 @@ Broadway allows creating custom editors (plug-ins) for input argument types on a
 Let's create a new **CheckMaxVal** Actor that inherits its properties and behaviors from a **JavaScript** Actor: It receives two integers and returns their maximum value. Do the following:
 
 1. Right click the **Broadway** folder in the Project tree and click **New Actor**.
+
 2. Populate the **CheckMaxVal** Actor's name and click **OK**.
+
 3. Define the Actor as follows:
    * Set Badge to **Max**.
-   * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the parent using the **Add Actors** window.
+   * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the **JavaScript** Actor using the **Add Actors** window.
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.     
-    <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:80%;" />
+
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
+
+   <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:80%;" />
+
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
 **New Actor Which Inherits from Custom Java Class**
