@@ -74,11 +74,14 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 1. Go to **Project Tree**, click on **Implementation** > **Logical Units / Data Products** > **Web Services**.
 2. Expand **Web Services** > right-click on **Graphit/Demo** and choose **New Graphit**
+ ![](images/web_choose_new_graphit.png)
+    
+    ASSIGNING A NAME
     
     
-3. Right click **resources** and select **New Graphit**. 
+3. Click on **Choose Category** to select an existing category name for the Graphit file 
 
-    ![](images/01_new_graphit_file_web.png)
+   
 
 4. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
 
