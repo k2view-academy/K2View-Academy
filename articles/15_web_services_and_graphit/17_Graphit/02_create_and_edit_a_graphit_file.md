@@ -32,7 +32,7 @@ When creating a document, the Node Name, Type and Properties can be defined for 
     Once this 1st node is created it will looks like this:
 
     ![](images/first_graphit_node.png)
-    
+
     You can later change the **get** command, when needed, by clicking on the ![](images/selection.png) icon, triggering the *Get Command Builder* pop-up window again.
 
 
@@ -50,7 +50,6 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
     ![](images/create_table_fields_message.png)
 
-    
 
     The below image shows the **nested nodes layout result** 
 
@@ -72,28 +71,40 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 <web>
 
-1. Go to **Project Tree**, click on **Implementation** > **Logical Units / Data Products** > **Web Services**.
-2. Expand **Web Services** > right-click on **Graphit/Demo** and choose **New Graphit**
- ![](images/web_choose_new_graphit.png)
-    
-    ASSIGNING A NAME
-    
-    
-3. Click on **Choose Category** to select an existing category name for the Graphit file 
+1. Go to **Project Tree**, click on **Implementation** -> **Logical Units / Data Products** -> **Web Services**
+2. Expand **Web Services** -> right-click on **Graphit/Demo** and choose **New Graphit**
 
-   or click on New Category to enter a new category name, followed by Enter for saving it
-    
-   The following step is to enter a name for your new Graphit file, followed by Enter for saving it. Note that the name should contain only alpha-numeric characters.
-    
-   Once the Graphit file is saved, its name appears at the **top of its layout**
-    
-   as well as in the **Project tree**, under its category.
-    
-   In both cases, you can see that it has automatically received a **'.graphit' suffix**.
+![](images/web_choose_new_graphit.png)
 
-4. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
 
-    ![](images/02_graphit_resource_file_web.png)
+
+3. Click on **Choose Category** to select an existing category name for the Graphit file
+
+![](images/web_choose_category.png)
+
+or click on **New Category** to enter a new category name, followed by *Enter* for saving it
+
+![](images/web_enter_new_category.png)
+
+The following step is to enter a name for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
+
+![](images/web_enter_new_graphit_name.png)
+
+Once the Graphit file is saved, its name appears at the **top of its layout**
+
+![](images/web_newly_created_customer.graphit_file.png)
+
+
+
+as well as in the **Project tree**, under its category.
+
+![](images/web_category_and_name_of_graphit_inside_project_tree.png)
+
+
+
+In both cases, you can see that it has automatically received a **'.graphit' suffix**.
+
+
 
 </web>
 
@@ -110,12 +121,12 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 - Click  <img src="images/drag-open-icon.png" > to expand a collapsed node.
 - Click <img src="images/delete_node.png" ></img> to delete a node on the node level.  
 - Click <img src="images/copy.png" ></img> to copy a node so that can be paste into another location at this Graphit or to another Graphit file. 
-- Click <img src="images/cut.png"></img> to copy a node so that can be moved into another location at this Graphit or to another Graphit file.  Moving nodes within a Graphit file can be done also via drag and drop.
-- Click <img src="images/paste_child.png" >to paste a previously copied/cut node as a child node.
-- Click <img src="images/paste_sibling.png" >to paste a previously copied/cut node as a sibiling node.
-- Click <img src="images/plus-icon.png" >to add property to the node
-- Click <img src="images/db-icon.png" >to open Query builder for a *sql* node type
-- Click <img src="images/selection.png" >to open Helper for a *get* and *Broadway* node types.
+- Click <img src="images/cut.png"></img> to copy a node so that can be moved into another location at this Graphit or to another Graphit file. Moving nodes within a Graphit file can be done also via drag and drop.
+- Click <img src="images/paste_child.png" > to paste a previously copied/cut node as a child node.
+- Click <img src="images/paste_sibling.png" > to paste a previously copied/cut node as a sibling node.
+- Click <img src="images/plus-icon.png" > to add property to the node
+- Click <img src="images/db-icon.png" > to open Query builder for a *sql* node type
+- Click <img src="images/selection.png" > to open Helper for a *get* and *Broadway* node types.
 
 
 
