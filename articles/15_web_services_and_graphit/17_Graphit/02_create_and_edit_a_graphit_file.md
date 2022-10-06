@@ -72,8 +72,10 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
 <web>
 
-1. Go to **Project Tree**, click **Implementation** > **Logical Units/ Data Products**.
-2. Expand **Web Services** > **Java** > **resources**
+1. Go to **Project Tree**, click on **Implementation** > **Logical Units / Data Products** > **Web Services**.
+2. Expand **Web Services** > right-click on **Graphit/Demo** and choose **New Graphit**
+    
+    
 3. Right click **resources** and select **New Graphit**. 
 
     ![](images/01_new_graphit_file_web.png)
