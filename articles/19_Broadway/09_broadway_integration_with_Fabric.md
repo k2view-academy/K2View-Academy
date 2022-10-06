@@ -42,11 +42,13 @@ The **FabricGet** Actor supports fetching multiple instances from different LUs 
 
 * Connect a list of LU types to the **luType** input argument and a list of Instance IDs to the **iid** input argument.
 
-  <img src="images/99_07_FABRIC_0.PNG" alt="image" style="zoom:75%;" />
+
+<img src="images/99_07_FABRIC_0.PNG" alt="image"  />
 
 * Or, add a new input to the Actor, change the input name to the **luType** name and set the value as **iid**. In this case, the **luType** input argument of the Actor should be set to the empty value.
 
-  <img src="images/99_07_FABRIC_1.PNG" alt="image" style="zoom:75%;" />
+
+<img src="images/99_07_FABRIC_1.PNG" alt="image"  />
 
 
 

@@ -120,7 +120,7 @@ fabric>list bf lu_name='Customer' flow='broadwayOverview';
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
-![image](images/99_03_sql.PNG)
+<img src="images/99_03_sql.PNG" alt="image" style="zoom:80%;" />
 
 ### Add Input Button
 
@@ -131,13 +131,13 @@ Some Actors such as JavaScript and **DbCommand**, enable adding input parameters
 
 If the population type is updated to a **Const**, select the parameter type from the dropdown list.
 
-To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
+To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG)> Delete or Insert.
 
 Note that the input parameters of the ancestor Actor cannot be deleted.
 
 ### Output Parameters Properties
 
-![Sql_input](images/99_03_outputs.PNG)
+<img src="images/99_03_outputs.PNG" alt="Sql_input" style="zoom:80%;" />
 
 The Actor's output parameters are displayed in the Actor's Properties window in the following format:
 
@@ -153,7 +153,7 @@ The actions in the output parameters are:
 
 Some Actors, such as **InnerFlow**, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
 
-To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
+To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG)> Delete or Insert.
 
 Note that the output parameters of the ancestor Actor cannot be deleted.
 

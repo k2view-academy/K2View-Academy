@@ -8,7 +8,7 @@ To open the Tutorial and example flows, in the [Broadway Flow](18_broadway_flow_
 ![image](images/99_17_01_tutorial.PNG)
 
 Explanations in the Tutorial are written in **Remarks** and can be displayed by either:
-- Clicking ![image](images/99_17_main_ast.PNG) in the [Main menu](18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
+- Clicking <img src="images/99_17_main_ast.PNG" alt="image" style="zoom:80%;" /> in the [Main menu](18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
 - Clicking ![image](images/99_17_green_ast.PNG) in the right corner of a [Stage](19_broadway_flow_stages.md) or [Actor](04_built_in_actor_types.md) to see its remarks.
 
 More remarks can be added by selecting **Remark** from either the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu).
