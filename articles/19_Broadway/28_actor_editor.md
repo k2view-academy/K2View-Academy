@@ -12,6 +12,13 @@ When creating a new Actor, you need to do the following:
 * Define inputs and outputs as required.
 * Test your Actor by running it in Debug mode.
 
+This article describes the following:
+
+* How to create an inherited Actor.
+* How to create a new Actor from scratch.
+* How to modify the Actor's input arguments.
+* How to create custom editor (plug-in) for Actor's input arguments.
+
 ### How Do I Create an Inherited Actor?   
 
 The Actor Editor can be used to create a new inherited Actor or modify an existing one via its **[Actor Name].actor** file. The Actor must inherit either from another Actor or from an [Inner Flow](22_broadway_flow_inner_flows.md) that has been saved as an Actor. 
@@ -83,13 +90,13 @@ Broadway enables you to create an Actor that inherits its properties and behavio
 8. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
 
 
-### How Do I Change the Input Argument Type?
+### How Do I Modify the Input Argument Type?
 
-The Actor's input argument type can be changed from the default to other type using the built-in plug-ins.
+The Actor's input argument type can be modified from the default type to other type using the plug-ins.
 
 To change the type, do the following:
 
-1.  Click Add Input to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
+1. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
 
    <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:80%;" />
 
@@ -135,11 +142,35 @@ To change the type, do the following:
      }
      ~~~
 
+   * The full list of existing editors can be found in under ```Server/fabric/staticWeb/editors``` folder. 
+
 3. Click Submit to close the editor.
 
 4. Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
 
    <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
+
+### How Do I Create a Custom Editor?
+
+Broadway allows creating custom editors (plug-ins) for input argument types on a project level. In order to create a custom editor, do the following:
+
+1. Create a folder called as your editor's name under the ```Server/fabric/staticWeb/editors``` folder. 
+
+   * This folder must include the **index.html** file and optionally any other folders and/or files required by this editor.
+
+2. In the index.html file, implement the **broadwayPluginLoad** function that receives a **broadwayPluginAPI** object. 
+
+   * The examples of the function implementation can be found in the **staticWeb** under any of the existing editors. 
+
+3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor. Then modify the default to the name of your editor:
+
+   ~~~javascript
+   { 
+   	"id": "<editor name>" 
+   }
+   ~~~
+
+4. If your editor receives additional inputs, add them to the definition map in the same way as for the existing editors (see the examples above). 
 
 ### Examples of New Actor Creation
 

@@ -5,7 +5,7 @@ Iterations are used to repeatedly perform a section of a Broadway flow in a data
 
 Common use cases are iterating over a database result set, over data returned by an HTTP call or an API or, over Kafka messages. For example, the [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the data in the source DB to load it into the target DB. 
 
-This article described how Broadway performs the following:
+This article describes how Broadway performs the following:
 
 * Defines an iteration in a flow.
 * Loops over one or more elements of a result set.

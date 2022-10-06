@@ -6,7 +6,7 @@ To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 2. Populate the **flow name** and click **OK** to open an empty Flow area.
 
-![image](images/99_18_01_main_flow_area.PNG)
+<img src="images/99_18_01_main_flow_area.PNG" alt="image" style="zoom:80%;" />
 
 The **Broadway flow** window includes the following elements described in this article:
 
@@ -102,72 +102,68 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="16" width="360pxl">
-<p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
-</td>
-<td width="120pxl">Paste Selection</td>
-<td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
+<td style="width: 200px;">Paste Selection</td>
+<td style="width: 700px;">Paste the copied selection, for example an Actor from another Stage.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;">Collapse</td>
-<td style="height: 18px; width: 381px;">Collapse the Stage.</td>
+<td style="height: 18px; ">Collapse</td>
+<td style="height: 18px; ">Collapse the Stage.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;">Focus</td>
-<td style="height: 18px; width: 381px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch’s Stages are collapsed too.</td>
-
+<td style="height: 18px;">Focus</td>
+<td style="height: 18px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch&rsquo;s Stages are collapsed too.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
-<td style="width: 381px; height: 18px;">Add a new Stage after or before the selected one.</td>
+<td style="height: 18px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
+<td style="height: 18px;">Add a new Stage after or before the selected one.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
-<td style="width: 381px; height: 18px;">Delete the selected Stage and its dependent branch.</td>
+<td style="height: 18px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
+<td style="height: 18px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
-<td style="width: 381px; height: 18px;">Split the selected Stage.</td>
+<td style="height: 18px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
+<td style="height: 18px;">Split the selected Stage.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
-<td style="width: 381px; height: 18px;">Merge the selected Stage.</td>
+<td style="height: 18px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
+<td style="height: 18px;">Merge the selected Stage.</td>
 </tr>
 <tr>
-<td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
-<td style="width: 381px; height: 36px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
+<td style="height: 36px; "><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
+<td style="height: 36px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
 <tr>
-<td style="height: 17px; width: 174px;"><a href="29_recovery_point.md">Recovery Point</a></td>
-<td style="width: 381px; height: 17px;">Click to set the flow recovery point to enable the flow to re-run from this point on during a failure.</td>
+<td style="height: 17px;"><a href="29_recovery_point.md">Recovery Point</a></td>
+<td style="height: 17px;">Click to set the flow recovery point to enable the flow to re-run from this point on during a failure.</td>
 </tr>
 <tr>
-<td style="height: 54px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are green.</td>
+<td style="height: 54px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
+<td style="height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are green.</td>
 </tr>
 <tr>
-<td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
-<td style="width: 381px; height: 36px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
+<td style="height: 36px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
+<td style="height: 36px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
-<td style="height: 54px; width: 174px;"><a href="24_error_handling.md">Error Handler</a></td>
-<td style="width: 381px; height: 54px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
+<td style="height: 54px;"><a href="24_error_handling.md">Error Handler</a></td>
+<td style="height: 54px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
-<td style="height: 36px; width: 174px;"><a href="30_support_parallel_execution.md">Parallel</a></td>
-<td style="width: 381px; height: 36px;">Click to set a number of Actors to be run parallelly within a Stage. When set, displays the number of parallel threads.</td>
+<td style="height: 36px;"><a href="30_support_parallel_execution.md">Parallel</a></td>
+<td style="height: 36px;">Click to set a number of Actors to be run parallelly within a Stage. When set, displays the number of parallel threads.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="23_transactions.md">Transaction</a></td>
-<td style="width: 381px; height: 18px;">Click to open or close the transaction.</td>
+<td style="height: 18px; width: 118.425px;"><a href="23_transactions.md">Transaction</a></td>
+<td style="width: 406.775px; height: 18px;">Click to open or close the transaction.</td>
 </tr>
 <tr>
-<td style="height: 54px; width: 174px;">Breakpoint</td>
-<td style="width: 381px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title. The list of flow's breakpoints is displayed in the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/04_breakpoints_panel.md">Breakpoints Panel</a>.</td>
+<td style="height: 54px; width: 118.425px;">Breakpoint</td>
+<td style="width: 406.775px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title. The list of flow's breakpoints is displayed in the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/04_breakpoints_panel.md">Breakpoints Panel</a>.</td>
 </tr>
 <tr>
-<td style="height: 72px; width: 174px;">Remark</td>
-<td style="width: 381px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
+<td style="height: 72px; width: 118.425px;">Remark</td>
+<td style="width: 406.775px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -176,58 +172,53 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 
 To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Actor.
 
-<table style="width: 900px;">
+<table style="width:900px; height: 352px;">
 <tbody>
-<tr>
-<td rowspan="11" width="400pxl">
-<p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
-</td>
-<td width="80pxl">Collapse / Expand</td>
-<td width="420pxl">Collapse or expand the Actor and display its title.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 200px;">Collapse / Expand</td>
+<td style="height: 18px; width: 700px;">Collapse or expand the Actor and display its title.</td>
 </tr>
-<tr>
-<td width="200"><a href="08_show_only_connected_actors.md">Show Only Connected</a></td>
-<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 169.4px;"><a href="08_show_only_connected_actors.md">Show Only Connected</a></td>
+<td style="width: 370.8px; height: 36px;">Mark to display the selected Actor and its connections.</td>
 </tr>
-<tr>
-<td width="200">Copy Selection</td>
-<td style="width: 465px;">Copy the selected Actor.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;">Copy Selection</td>
+<td style="width: 370.8px; height: 18px;">Copy the selected Actor.</td>
 </tr>
-<tr>
-<td width="200"><a href="07_broadway_flow_linking_actors.md">Link</a></td>
-<td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 169.4px;"><a href="07_broadway_flow_linking_actors.md">Link</a></td>
+<td style="width: 370.8px; height: 36px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
-<tr>
-<td width="200"><a href="03_broadway_actor.md#how-do-i-add-actor-to-stage">Add Actor</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 169.4px;"><a href="03_broadway_actor.md#how-do-i-add-actor-to-stage">Add Actor</a></td>
+<td style="width: 370.8px; height: 36px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
-<tr>
-<td width="200"><a href="06_export_actor.md">Export Actor</a></td>
-<td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 169.4px;"><a href="06_export_actor.md">Export Actor</a></td>
+<td style="width: 370.8px; height: 54px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
-<tr>
-<td width="200"><a href="32_reset_actor_state.md">Reset on iteration 0</a></td>
-<td style="width: 465px;">
+<tr style="height: 82px;">
+<td style="height: 82px; width: 169.4px;"><a href="32_reset_actor_state.md">Reset on iteration 0</a></td>
+<td style="width: 370.8px; height: 82px;">
 <p>Click to reset the Actor's state on the inner loop start (zero iteration). The menu option is visible only when the Actor is inside an internal iteration.</p>
 </td>
 </tr>
-
-<tr>
-<td width="200">Disable Actor</td>
-<td style="width: 465px;">Click to disable / enable the Actor in the flow.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;">Disable Actor</td>
+<td style="width: 370.8px; height: 18px;">Click to disable / enable the Actor in the flow.</td>
 </tr>
-<tr>
-<td width="200">Delete Actor</td>
-<td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;">Delete Actor</td>
+<td style="width: 370.8px; height: 18px;">Click to delete the selected Actor from the flow.</td>
 </tr>
-
-<tr>
-<td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
-<td style="width: 465px;">Product Actor's description.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;"><a href="03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
+<td style="width: 370.8px; height: 18px;">Product Actor's description.</td>
 </tr>
-<tr>
-<td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Remark</a></td>
-<td style="width: 465px;">Additional info added to the Actor instance.</td>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;"><a href="03_broadway_actor.md#actor-description-and-remark"> Remark</a></td>
+<td style="width: 370.8px; height: 18px;">Additional info added to the Actor instance.</td>
 </tr>
 </tbody>
 </table>
@@ -267,11 +258,11 @@ The Broadway flow window has a built-in mechanism for errors validation which is
 
 Click the icon to display the window footer with the error messages:
 
-![image](images/99_validation_output.PNG)
+<img src="images/99_validation_output.PNG" alt="image" style="zoom:80%;" />
 
 Click the error and choose to ignore the exception or fix the problem.
 
-For example, a flow includes an inherited **myDate** Actor that needs to be deleted. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
+For example, a flow includes a **DbCommand** Actor that has mandatory input arguments which are currently empty. After the Actor is updating with the missing arguments, the validation errors are dismissed. 
 
 
 
