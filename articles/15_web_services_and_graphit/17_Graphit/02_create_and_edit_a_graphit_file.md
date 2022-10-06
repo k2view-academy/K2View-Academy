@@ -62,7 +62,7 @@ When creating a document, the Node Name, Type and Properties can be defined for 
 
     ![](images/new_item_name_and_category.png)
 
-    Once **Ok**'ed, the newly created Graphit file name appears at the **Project tree**, under its category.
+    Once **Ok**'ed, the newly created Graphit file name appears in the **Project tree**, under its category.
 
     ![](images/project_tree_incl_graphit_file_name.png)
 
