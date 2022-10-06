@@ -81,7 +81,15 @@ When creating a document, the Node Name, Type and Properties can be defined for 
     
 3. Click on **Choose Category** to select an existing category name for the Graphit file 
 
-   
+   or click on New Category to enter a new category name, followed by Enter for saving it
+    
+   The following step is to enter a name for your new Graphit file, followed by Enter for saving it. Note that the name should contain only alpha-numeric characters.
+    
+   Once the Graphit file is saved, its name appears at the **top of its layout**
+    
+   as well as in the **Project tree**, under its category.
+    
+   In both cases, you can see that it has automatically received a **'.graphit' suffix**.
 
 4. Assign a name to the new Graphit file and press Enter to save it. Note that the filename must contain only alpha-numeric characters. Once the file is saved, it is displayed under the project's Web Services folder under resources.
 
