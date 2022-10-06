@@ -98,7 +98,7 @@ To change the type, do the following:
 
 1. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
 
-   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:80%;" />
+   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:70%;" />
 
 2. Modify the default to one of the following types as follows:
 
@@ -148,7 +148,7 @@ To change the type, do the following:
 
 4. Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
 
-   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
+   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 70%;" />
 
 ### How Do I Create a Custom Editor?
 
@@ -164,7 +164,7 @@ Broadway allows creating custom editors (plug-ins) for input argument types on a
 
 3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor. Then modify the default to the name of your editor:
 
-   <img src="images/99_10_editor_6.PNG" alt="image" style="zoom: 80%;" />
+   <img src="images/99_10_editor_6.png" alt="image" style="zoom: 70%;" />
    
 4. If your editor receives additional inputs, add them to the definition map in the same way as for the existing editors (see the examples above). 
 
@@ -188,7 +188,7 @@ Let's create a new **CheckMaxVal** Actor that inherits its properties and behavi
 
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
 
-   <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:80%;" />
+   <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:70%;" />
 
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
@@ -198,7 +198,7 @@ When creating a new Actor which inherits from custom Java class, do all the step
 
 Then define the required input and output arguments and run the Actor to debug it. 
 
-​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:80%;" />
+​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:70%;" />
 
 
 
