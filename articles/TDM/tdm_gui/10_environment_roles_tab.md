@@ -118,7 +118,7 @@ TDM tests the connections of the source and target environments at the beginning
 
 [Randomly select entities](17_load_task_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
 
-##### Request up to Date Entities
+##### Refresh All Data from Source
 
 Ask to sync the entities from the source when executing [extract](16_extract_task.md#request-parameters) or [load](19_load_task_request_parameters_regular_mode.md#override-sync-mode) tasks. 
 
