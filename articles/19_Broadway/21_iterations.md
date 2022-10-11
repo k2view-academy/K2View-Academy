@@ -23,7 +23,7 @@ The scope of the iteration's logic starts immediately after the iteration line a
 
 In the following example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. The iteration is closed at the end of **Iterate on array** Stage.
 
-![image](images/iterate_simple1.PNG)
+<img src="images/iterate_simple1.PNG" alt="image" style="zoom:80%;" />
 
 ### How Do I Iterate Over a Data Set?
 
@@ -41,7 +41,7 @@ The **result** output returns an array of maps. In each iteration, takes the val
 
 #### Iterate Over an Element in a Result Array
 
-Iterate on all the values of the **CASE_ID** field in the **result** output array.
+Iterate on all the values of the **CASE_ID** and **NOTE_ID** fields in the **result** output array.
 
 ![image](images/iterate_path1.PNG)
 
