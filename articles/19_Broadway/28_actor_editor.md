@@ -186,9 +186,7 @@ Let's create a new **CheckMaxVal** Actor that inherits its properties and behavi
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.     
 
-4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
-
-   <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:70%;" />
+4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.<img src="images/99_10_editor_1.PNG" alt="image" style="zoom:70%;" />
 
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
@@ -199,8 +197,6 @@ When creating a new Actor which inherits from custom Java class, do all the step
 Then define the required input and output arguments and run the Actor to debug it. 
 
 ​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:70%;" />
-
-
 
 If an input field should be different than default, click![dots](images/99_19_dots.PNG)> **Advanced** in the input field and change the type in the editor. For example, as follows:
 
