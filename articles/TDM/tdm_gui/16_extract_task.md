@@ -56,7 +56,7 @@ The Retention Period window displays the following options:
 
 - When Data Versioning is checked, the period is set by default to five days.
 - When Data Versioning is cleared, the period is set by default to zero, i.e. no retention period is set for the extracted data. 
-- The maximum retention period can be set to 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
+- As a result of the above, the retention period can be set in the task to a maximum period of 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
 
 ### Additional Execution Parameters
 
