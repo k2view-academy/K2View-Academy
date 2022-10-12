@@ -13,7 +13,7 @@
 <li><a href="07_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
 <li><a href="08_show_only_connected_actors.md">Show Only Connected Actors</a></li>  
 <studio><li><a href="09_broadway_integration_with_Fabric.md">Broadway Integration with Fabric</a></li></studio>
-<web><li><a href="09_broadway_integration_with_Fabric.md">Automatic Flows Execution upon LU Deploy</a></li></web>
+<li><a href="09a_automatic_flows_execution_upon_deploy.md">Automatic Flows Execution Upon Deploy</a></li>
 <li><a href="17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
 <li><a href="18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="19_broadway_flow_stages.md">Broadway Stages</a></li>

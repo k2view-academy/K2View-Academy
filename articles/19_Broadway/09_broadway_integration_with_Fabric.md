@@ -6,7 +6,7 @@ The Fabric Studio includes several integration points that are used by Broadway 
 
 ### Broadway as a Population
 
-A Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) to replace  complex Java code in the population logic by [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
+A Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) to replace  complex Java code in the population logic by Stages and Actors in the flow. 
 
 To create the population based on the Broadway flow, right click the table name in the **Project Tree** and select **New Table Population Based Broadway Flow**. The population template is created and can be modified as needed.
 
@@ -16,7 +16,7 @@ To create the population based on the Broadway flow, right click the table name 
 
 ### Interface Listener For Broadway Flows
 
-The [**InterfaceListener**](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) Actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
+The **InterfaceListener** Actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
 In addition, it is also supported via a flow as below and an Interface Listener job that can be defined via Fabric Studio.
 
@@ -49,8 +49,6 @@ The **FabricGet** Actor supports fetching multiple instances from different LUs 
 
 
 <img src="images/99_07_FABRIC_1.PNG" alt="image"  />
-
-
 
 
 ### Use of LU Functions and Graphit in Broadway
@@ -100,31 +98,10 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 ### Interfaces List
 
-Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
+Several Broadway Actors include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
+
+
+
+[![Previous](/articles/images/Previous.png)](08_show_only_connected_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09a_automatic_flows_execution_upon_deploy.md)
 
 </studio>
-
-## Automatic Flows Execution upon LU Deploy
-
-A Broadway flow can run automatically as a result of a Deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the **deploy.flow**.
-
-* If the **deploy.flow** is defined on the Shared level only, it will be inherited by all the LUs.
-
-* If a Soft Deploy is defined to the deployed environment, a deploy will not trigger the **deploy.flow** execution.
-
-When a new Logical Unit is created, a **deploy.flow** will be generated automatically with the following constants:
-
-* **lu_name** - contains the name of deployed LU.
-
-* **nosync**
-
-  * NOSYNC TRUE: Only schema changes trigger a sync after a deploy.
-  * NOSYNC FALSE: Any deploy (even without any changes) triggers a sync the first time an instance is accessed.
-
-* **is_first_deploy** - A Boolean indicating if this is the first deploy.
-
-* **is_studio** - This value is true if this is the Studio debug environment Fabric instance.
-
-  
-
-[![Previous](/articles/images/Previous.png)](08_show_only_connected_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
