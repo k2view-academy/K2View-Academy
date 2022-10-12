@@ -25,28 +25,28 @@ The transaction ends after the last Stage marked as a transaction. A transaction
 
 The **Load** Stage inside the loop is transactional. The **Source** Stage before the loop can be transactional or not. The commit is performed at the end of the data set. 
 
-![image](images/99_23_one_commit.PNG)
+<img src="images/99_23_one_commit.PNG" alt="image" style="zoom:80%;" />
 
 **Commit Per Each Iteration Example**
 
 If a non-transactional Stage is added at the end of the loop, the commit is performed per each iteration.
 
-![image](images/99_23_each_commit.PNG)
+<img src="images/99_23_each_commit.PNG" alt="image" style="zoom:80%;" />
 
 **Commit Every X Records Example**
 
 When the data set is very big (for example, 1M records) and a commit is required every X records, you can do it using a Stage Condition and the **JavaScript** Actor. 
 
-The following example shows how to perform a commit every 5 records. Writing the following code, Stage 1 is only reached every fifth record:
+The following example shows how to perform a commit every 5 records. Writing the following code, the **Check** Stage is only reached every fifth record:
 
 ~~~javascript
 var i = contextLoop.index();
 (i+1)%5 == 0;
 ~~~
 
-The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
+The transaction is then committed since the **Check** Stage is not marked as transactional and a new transaction begins.
 
-![image](images/99_23_batch_with_cond.PNG)
+<img src="images/99_23_batch_with_cond.PNG" alt="image" style="zoom:80%;" />
 
 **Commit During an Iteration Example**
 
@@ -80,7 +80,7 @@ Note that if there are several conditions or too many parallel branches in the f
 
 Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) used in a Broadway flow can be shared or non-shared during the transaction.
 
-* Using a **shared** interface in a flow, Fabric opens a connection only once within the same transaction, when the first Actor calls this interface. All other Actors use the same connection. Shared interfaces used by Broadway are: DB Interface, file system or SFTP.
+* Using a **shared** interface in a flow, Fabric opens a connection only once within the same transaction, when the first Actor calls this interface. All other Actors use the same connection. Shared interfaces used by Broadway are: DB Interface, File system or SFTP.
 * Using a **non-shared** interface, Fabric establishes a connection each time an Actor calls the interface in the flow. A non-shared interface used by Broadway is HTTP.  
 
 ### How Do I Mark or Unmark a Stage as a Transaction?
@@ -89,27 +89,12 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 
 ![image](images/99_23_general_ex.PNG)
 
-
-
-<table>
-<tbody>
-<tr>
-<td valign="center" ><strong>To mark</strong> a Stage, click <img src="images/99_19_dots.PNG" alt="..." /> > Transaction.</td>
-<td valign="center" ><strong>To unmark</strong> a Stage, uncheck Transaction.</td>
-</td>
-</tr>
-<tr>
-<td valign="center" ><img src="images/99_23_02.PNG" alt="Mark" /></td>
-<td valign="center" ><img src="images/99_23_03.PNG" alt="UnMark" /></td>
-</td>
-</tr>
-</tbody>
-</table>
-
+* <strong>To mark</strong> a Stage, click<img src="images/99_19_dots.PNG" alt="..." />in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select Transaction.
+* <strong>To unmark</strong> a Stage, uncheck Transaction.
 
 ### NoTx Actor
 
-Starting from Fabric V6.5.8, an interface can be marked as non-transactional in the context of an active transaction using the **NoTx** Actor. The purpose of the **NoTx** Actor is to exclude an interface from a transaction in order to prevent execution of **begin**, **commit** and **rollback** commands. The actor should be placed in a flow before any action is done on a transaction.
+An interface can be marked as non-transactional in the context of an active transaction using the **NoTx** Actor. The purpose of the **NoTx** Actor is to exclude an interface from a transaction in order to prevent execution of **begin**, **commit** and **rollback** commands. The actor should be placed in a flow before any action is done on a transaction.
 
 If the Actor is called outside a transaction or if the interface in question is already a part of an active transaction, an exception will be thrown.
 

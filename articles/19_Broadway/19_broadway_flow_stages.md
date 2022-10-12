@@ -27,7 +27,7 @@ A Stage can be added anywhere in the flow.
 
 Each Stage can be split into two (and so on) to create several stages on the same dependency level.
 
-To split a Stage, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select  **Split**.
+To split a Stage, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Split**.
 
 The Split's logic depends on the position of the Stage in the flow and includes the following rules:
 - The first Stage in the flow (root) cannot be split.
