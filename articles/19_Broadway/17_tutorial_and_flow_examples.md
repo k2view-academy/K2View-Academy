@@ -41,4 +41,4 @@ A **JsonParser** Actor can either parse a single JSON object or multiple JSON ob
 
 ![image](images/99_17_02_tutorial.PNG)
 
-[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_broadway_flow_window.md)
+[![Previous](/articles/images/Previous.png)](09a_automatic_flows_execution_upon_deploy.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_broadway_flow_window.md)
