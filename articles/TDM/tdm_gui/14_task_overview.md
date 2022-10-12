@@ -187,7 +187,7 @@ The following screenshot shows an example of the TDM Task List.
 
   
 
-1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. Fields in green are displayed by default. 
+1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. The marked fields are displayed by default. 
 
 2. To display additional fields, click the fields.
 
