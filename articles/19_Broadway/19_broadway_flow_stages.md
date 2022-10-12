@@ -53,11 +53,11 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 
 To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor is green.
 
-<img src="images/99_19_condition.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_19_condition.PNG" alt="image" style="zoom: 67%;" />
 
 To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) > **Else**.
 
-<img src="images/99_19_else.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_19_else.PNG" alt="image" style="zoom: 67%;" />
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 

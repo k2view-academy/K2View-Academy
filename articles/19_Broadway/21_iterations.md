@@ -23,7 +23,7 @@ The scope of the iteration's logic starts immediately after the iteration line a
 
 In the following example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. The iteration is closed at the end of **Iterate on array** Stage.
 
-<img src="images/iterate_simple1.PNG" alt="image" style="zoom:80%;" />
+<img src="images/iterate_simple1.PNG" alt="image" style="zoom: 67%;" />
 
 ### How Do I Iterate Over a Data Set?
 
