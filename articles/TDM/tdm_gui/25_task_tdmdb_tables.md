@@ -176,7 +176,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   </td>
   <td style="width: 589.929px; height: 118px;">
   <ul>
-  <li>task_type = Load</li>
+  <li>task_type = Reserve</li>
   <li>load_entity = false</li>
   <li>delete_before_load=true</li>
   <li>reserve_ind =false</li>

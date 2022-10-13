@@ -187,7 +187,7 @@ The following screenshot shows an example of the TDM Task List.
 
   
 
-1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. Fields in green are displayed by default. 
+1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. 
 
 2. To display additional fields, click the fields.
 
@@ -195,7 +195,7 @@ The following screenshot shows an example of the TDM Task List.
 
    ![show hide columms](images/task_list_show_hide_columns.png)
 
-4. To find a field, click **Search** and filter the displayed tasks using the filters.
+4. To find a field, populate the **Search** bar in order to filter the tasks by the searched value.
 
 The TDM GUI displays a list of icons next to each task record:
 

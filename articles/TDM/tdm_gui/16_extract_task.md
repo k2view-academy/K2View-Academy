@@ -32,7 +32,7 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 ### Set Sync Policy
 
-This setting enables the user to change the [default LUI sync mode](articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON) and extract the LUI from the data source whenever the task is executed (Sync FORCE).
+This setting enables the user to change the [default LUI sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON) and extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
 Note that **this setting is only available when the Data Versioning checkbox is cleared (regular task)**.  If Data Versioning *is* checked, each task execution extracts the data from the data source and creates a new LUI.
 
@@ -46,7 +46,7 @@ Note that when the Retention Period is set to zero, no retention period is set o
 
 **The retention period is optional on a regular extract task.**
 
-The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**.
+The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**, depends on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 **Example:** 
 
@@ -56,7 +56,7 @@ The Retention Period window displays the following options:
 
 - When Data Versioning is checked, the period is set by default to five days.
 - When Data Versioning is cleared, the period is set by default to zero, i.e. no retention period is set for the extracted data. 
-- The maximum retention period can be set to 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
+- As a result of the above, the retention period can be set in the task to a maximum period of 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
 
 ### Additional Execution Parameters
 
@@ -92,7 +92,8 @@ TDM 7.5 supports the creation of external input parameters on a Custom Logic Flo
 
 Notes:
 
-- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. If the custom logic selects a smaller number of entities, the number of entities will be set by the custom logic flow. For example: the maximum number of entities in the task is 50, but the customer logic only selects 30 entities. The task will process 30 entities.
+- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
+- The maximum number of entities in the task is limited to the number of entities returned from  the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic only returns 30 entities, the task will process 30 entities.
 - It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
