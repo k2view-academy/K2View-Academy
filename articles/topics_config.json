@@ -13,7 +13,7 @@
 		{
 			"display name": "Fabric 6.4",
 			"branch name": "Academy_6.4",
-			"build": true
+			"build": false
 		},
 		{
 			"display name": "Fabric 6.2",
