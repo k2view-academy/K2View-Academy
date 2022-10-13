@@ -32,7 +32,7 @@ It is recommended to use inner flows as error handlers when the same error valid
 
 Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
 
-![image](images/99_24_01.PNG)
+<img src="images/99_24_01.PNG" alt="image" style="zoom:80%;" />
 
 **Example 1 - Using an Error Handler in a Flow** 
 
@@ -50,7 +50,7 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
 2. To catch the DB exception, add the **DbExeptionCheck** error handler using the **JavaScript** Actor to the **LU Table** Stage as follows:
 
-   ![image](images/99_24_08.PNG)
+   <img src="images/99_24_08.PNG" alt="image" style="zoom:80%;" />
 
 3. The following validation is performed by the **JavaScript** error handler:
 
@@ -64,6 +64,8 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
    ~~~
 
 4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the error handler catches it and returns **true** to continue the flow.
+
+Note that catching an exception can also be done using a dedicated **ErrorHandler** Actor as explained [here](actors/06_error_handling_actors.md).
 
 **Example 3 - Catching an Exception using an Error Handler Implemented by an Inner Flow**
 
@@ -87,13 +89,13 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 4. Add an **error** input argument to the  **JavaScript** Actor and set it to **External**. Using the **error** object, analyze the error and handle it as needed.
 
-   ![image](images/99_24_09.PNG)
+   <img src="images/99_24_09.PNG" alt="image" style="zoom:80%;" />
 
-5. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
+5. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow**. 
 
-6. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an error handler in the LU Table Stage. 
+6. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow** as an error handler in the LU Table Stage. 
 
-   ![image](images/99_24_10.PNG)
+   <img src="images/99_24_10.PNG" alt="image" style="zoom:80%;" />
 
 7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the error handler catches and executes an inner flow which returns **true** to continue the flow.
 
@@ -104,7 +106,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
    - Throw an exception using a **JavaScript** Actor: *throw "Can't divide by zero!"*.
    - Validate the input using a **JavaScript** error handler which checks: *a != 0*.
 
-   ![image](images/99_24_04.PNG)
+   <img src="images/99_24_04.PNG" alt="image" style="zoom:80%;" />
 
 2. Save the flow as **CheckZeroDiv** and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **CheckZeroDiv_Actor**.
 
@@ -124,9 +126,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 4. Several types of validations can be performed using different inner flows. For example, add a validation that input numbers are not negative and if yes - throw an exception and stop the flow. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
 
-   <img src="images/99_24_07.PNG"/>
-
-
+   
 
 [![Previous](/articles/images/Previous.png)](23_transactions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_broadway_flow_window_run_and_debug_flow.md)
 
