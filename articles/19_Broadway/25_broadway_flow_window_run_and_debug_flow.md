@@ -38,11 +38,11 @@ If the breakpoints have been added to the flow, the flow stops at the first brea
 
 If a flow has an inner flow with breakpoints, the execution of the flow stops at the inner flow’s breakpoints. The inner flow is then brought to the front and displayed at the top of the current flow in the Fabric Studio.
 
-  - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
+ - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
 
 - Click <img src="images/99_25_step.PNG" alt="image" style="zoom:80%;" /> **Debug Step** to debug the current step and move to the next step.
 
-To stop the flow, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run**.
+- Click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run** to stop the flow.
 
 When Debug is ON or Live Debug, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
