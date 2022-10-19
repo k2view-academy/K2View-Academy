@@ -157,6 +157,7 @@ Broadway allows creating custom editors (plug-ins) for input argument types on a
 1. Create a folder called as your editor's name under the ```Server/fabric/staticWeb/editors``` folder. 
 
    * This folder must include the **index.html** file and optionally any other folders and/or files required by this editor.
+   * Since the product built-in editors are also located in the same folder, the custom editor’s folder naming convention is not to start from “com.k2view”. 
 
 2. In the index.html file, implement the **broadwayPluginLoad** function that receives a **broadwayPluginAPI** object. 
 

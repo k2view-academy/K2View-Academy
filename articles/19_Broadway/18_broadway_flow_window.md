@@ -66,9 +66,9 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200">Search Actor</td>
+<td width="200">Search</td>
 <td style="width: 465px;">
-<p>Search the Actor by name, parameter name, schema, external name or const value.</p>
+<p>Search the flow. Any object can be searched: Stage, Actor, parameter (input/output) or a schema element. Search can be open using CTRL+F.</p>
 </td>
 </tr>
 <tr>
@@ -91,6 +91,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 
 
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).

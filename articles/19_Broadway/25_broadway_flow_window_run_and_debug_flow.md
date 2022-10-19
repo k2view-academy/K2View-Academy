@@ -76,8 +76,6 @@ The Broadway Debug process *learns* the Schema of an Actor's arguments and can s
 
 Note that the Update Schema option can also be applied on complex structures.
 
-<img src="images/compare_schema_1.PNG" alt="image" style="zoom:67%;" />
-
 
 
 [![Previous](/articles/images/Previous.png)](24_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)
