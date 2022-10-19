@@ -13,18 +13,18 @@
 		{
 			"display name": "Fabric 6.4",
 			"branch name": "Academy_6.4",
-			"build": false
+			"build": true
 		},
 		{
 			"display name": "Fabric 6.2",
 			"branch name": "Academy_6.2",
-			"build": false
+			"build": true
 		}
 	],
 	"Views": [
 		{
 			"view name": "studio",
-			"tooltip": "Studio",
+			"tooltip": "Desktop-Studio",
 			"default": true,
 			"enabled": true,
 			"icon on": "images/icon_studio_on.png",
@@ -32,7 +32,7 @@
 		},
 		{
 			"view name": "web",
-			"tooltip": "Web",
+			"tooltip": "Web-Studio",
 			"default": false,
 			"enabled": false,
 			"icon on": "images/icon_web_on.png",
