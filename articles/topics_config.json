@@ -19,7 +19,7 @@
 	"Views": [
 		{
 			"view name": "studio",
-			"tooltip": "Desktop Studio",
+			"tooltip": "Desktop-Studio",
 			"default": true,
 			"enabled": true,
 			"icon on": "images/icon_studio_on.png",
@@ -27,7 +27,7 @@
 		},
 		{
 			"view name": "web",
-			"tooltip": "Web Studio",
+			"tooltip": "Web-Studio",
 			"default": false,
 			"enabled": false,
 			"icon on": "images/icon_web_on.png",
