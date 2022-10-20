@@ -474,8 +474,8 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
   * To turn it off use: set db_proxy=off.
   * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
-* **SET PERSISTENT_RESULT** command, enables uploading all the following SELECT statements from Fabric to memory - when set to true. 
-  * Syntax: set persistent_result = true.
+* **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
+  * Syntax: set buffer_result_set = true.
   * To inactivate it, set it back to false. 
   * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
 
