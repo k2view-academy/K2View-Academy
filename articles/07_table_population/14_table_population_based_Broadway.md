@@ -95,11 +95,11 @@ The following example displays a Broadway flow template created to populate the 
 
 
 <studio>
- 
+
 ### How Do I Create a Population Based on a Broadway Flow?
- 
+
 The starting points for creating a population based on a Broadway flow are:
- 
+
 * [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
 * [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
   * Right-click and select **New table from SQL based Broadway flow**.
@@ -126,7 +126,7 @@ The starting points for creating a population based on a Broadway flow are:
 
 ### Support Instance ID Different From Source DB Column
 
-Starting from Fabric V6.5.9, when populating the LU Root table, Broadway population supports having an LU Instance ID column name, which is different from the Source DB column name. To utilize this feature, take the following steps:
+When populating the LU Root table, Broadway population supports having an LU Instance ID column name, which is different from the Source DB column name. To utilize this feature, take the following steps:
 
 1. Change the Instance ID name in the LU Root table from the Source DB column name to another name. For example, from CUSTOMER_ID to ID. Note that the population’s input remains the same as the column name in the Source DB - CUSTOMER_ID in this example.
 
