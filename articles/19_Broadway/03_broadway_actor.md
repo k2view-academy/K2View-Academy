@@ -21,8 +21,7 @@ To add an Actor to a Stage in a Broadway flow:
 1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right.
 2.  Click **SUBMIT** to finish the action and to add the Actor to the Stage.
 
-
-![image](images/99_04_01_add_actor.PNG)
+<img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
 ### How Do I Save a Flow as an Actor?
 A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.

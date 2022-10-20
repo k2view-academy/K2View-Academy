@@ -24,7 +24,7 @@ Output data can also be exposed (using the external parameter) as a result of th
 
 In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, and **b** is supplied as an external input to the flow and the result is exposed as external flow result.
 
-![image](images/input-output-args.PNG)
+<img src="images/input-output-args.PNG" alt="image" style="zoom: %75;" />
 
 [Click for more information about Actor's Inputs and Outputs](03_broadway_actor_window.md#actors-inputs-and-outputs).
 
@@ -42,7 +42,7 @@ The Broadway UI uses JSON Schemas to describe the data and enable designing data
 Broadway can learn the schema from the data format that is injected. 
 Just run the flow, and the metadata is automatically derived from the input data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
-<img src="images/overview_edit_schema.PNG" />
+<img src="images/overview_edit_schema.PNG" style="zoom:80%;" />
 
 [Click for more information about the Broadway Data Editor and how you can edit the schema using it](27_broadway_data_inspection.md).
 
@@ -53,7 +53,7 @@ Broadway deals with such cases by using iterations which are shown with the **It
 
 This signals Broadway to perform the operation for every entry in the data set.
 
-<img src="images/overview_iterate.png" >
+<img src="images/overview_iterate.png" style="zoom:80%;"  >
 
 [Click for more information about iterations in Broadway](21_iterations.md).
 
@@ -65,7 +65,7 @@ Based on the result obtained, Broadway will decide how the flow should be contin
 
 In the case of multiple forks (such as multiple splits in the stage), the *else* fork will be executed if none of the other splits were executed.
 
-<img src="images/overview_condition.png">
+<img src="images/overview_condition.png" style="zoom:80%;" >
 
 [Click for more information about Stage Conditions](19_broadway_flow_stages.md#what-is-a-stage-condition).
 
@@ -89,7 +89,7 @@ Transactions also take into account Broadway inner flows. If a Transactional Sta
 
 Every Stage can be assigned with an error handling mechanism. The **ErrorHandler** Actor is used to hold the logic needed to deal with the error, as well as the decision whether the flow should continue or stop. The **ErrorHandler** Actor can be a simple logical statement or an entire inner flow.
 
-<img src="images/overview_error.png" >
+<img src="images/overview_error.png" style="zoom:80%;"  >
 
 [Click for more information about Error Handling](24_error_handling.md).
 

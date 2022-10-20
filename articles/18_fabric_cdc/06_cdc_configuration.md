@@ -5,13 +5,13 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 200px;" valign="top">
+<td style="width: 150px;" valign="top">
 <p><strong>Section Name</strong></p>
 </td>
 <td style="width: 350px;">
 <p><strong>Parameter Name</strong></p>
 </td>
-<td style="width: 350px;">
+<td style="width: 400px;">
 <p><strong>Parameter Description</strong></p>
 </td>
 </tr>
@@ -40,6 +40,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 </tr>
 </tbody>
 </table>
+
 
 All of the Kafka connection settings are defined in the **[default_pubsub]** section of the config.ini and are applicable across various Fabric processes, including the CDC connection to Kafka.
 

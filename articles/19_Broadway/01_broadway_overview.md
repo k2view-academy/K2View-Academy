@@ -17,7 +17,7 @@ Broadway is a flexible engine and is seamlessly integrated into the Fabric comma
 
 A Broadway flow is built from [Stages](19_broadway_flow_stages.md) which are executed from left to right. A flow can be split into different execution paths based on conditions. More than one Stage can be executed in each fork in the path.
 
-![image](images/Broadway_flow.png)
+<img src="images/Broadway_flow.png" alt="image" style="zoom:80%;" />
 
 In the example above, the **Fetch** Stage is executed first. The system then executes either the **Transform Consumer** or (else) the **Transform Business** Stage and finally the **Load** Stage.
 
@@ -26,7 +26,7 @@ In the example above, the **Fetch** Stage is executed first. The system then exe
 
 Each Stage can contain one or more [Actors](03_broadway_actor.md) which are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. Actors are executed by Stages.
 
-![image](images/Broadway_actors.png)
+<img src="images/Broadway_actors.png" alt="image" style="zoom:80%;" />
 
 In the example above, the **Fetch** Stage queries data and transfers it as input to the Actors in the next Stages. Based on the data, either the **Transform Consumer** Stage or the **Transform Business** Stage is executed. In turn, these Stages execute the Actors that build data for the **DbLoad** Actor in the last Stage.
 
@@ -39,7 +39,7 @@ An entire Broadway flow can be exported and encapsulated into an Actor and then 
 
 When Broadway transfers data between Actors, the data is displayed in the Broadway Studio. Complex data types (objects, arrays) are automatically detected and analyzed, and both metadata and data are visually rendered for easy debugging and extraction.
 
-![image](images/Broadway_data_inspection.png)
+<img src="images/Broadway_data_inspection.png" alt="image" style="zoom:80%;" />
 
 The example above displays how the system automatically identifies the data structure of the **FetchCustomer** Actor. This enables selecting specific fields from the data and passing them to the appropriate Actors.
 
