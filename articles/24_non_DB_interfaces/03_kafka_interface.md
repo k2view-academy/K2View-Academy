@@ -108,8 +108,6 @@ To create a new Kafka interface, do the following:
 
 ![image](images/04_kafka_2.PNG)
 
-
-
 The above Broadway flow uses a **Publish** Actor to publish the data to the predefined Kafka interface. The data is published to the **Example** topic which overrides the topic in the Interface definition.
 
 
