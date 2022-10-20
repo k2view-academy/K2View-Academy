@@ -357,7 +357,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 
 #### SET Command
 
-The Fabric ```set;``` command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that starting V6.5.9 the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
+The Fabric SET command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
 
 #### Fabric Setting - Session Level
 
