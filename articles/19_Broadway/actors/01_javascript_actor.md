@@ -10,7 +10,7 @@ The **javascript.flow** and **javascript-advanced.flow** examples show various w
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the examples. 
 
-![image](../images/99_actors_01_1.PNG)
+<img src="../images/99_actors_01_1.PNG" alt="image" style="zoom:80%;" />
 
 
 ### Special Keywords and Conventions
@@ -31,7 +31,7 @@ The Actor's description includes the detailed explanation of the Actor's capabil
 
 To summarize the values of an array, use the **self** keyword to access the Actor's state. The state is maintained between the executions of the same Actor in the flow. For example, when the **SumArray** Actor is invoked in an [Iteration](../21_iterations.md) in the flow, its JavaScript code is executed across all the Actor's executions.
 
-![image](../images/99_actors_01_2.PNG)
+<img src="../images/99_actors_01_2.PNG" alt="image" style="zoom:80%;" />
 
 - To access iteration data, use the **contextLoop** object's methods **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**. 
 

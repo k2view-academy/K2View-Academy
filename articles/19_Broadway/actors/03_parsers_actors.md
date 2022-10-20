@@ -29,11 +29,11 @@ Parser Actors are usually followed by an iteration that allow iterating over eac
 
 The following example shows how to find a subscriber description by the given subscriber type. This is done by providing the subscriber type as an external input argument, then reading and parsing a CSV file which has a list of types and their description. 
 
-![image](../images/99_actors_03_2.PNG)
+<img src="../images/99_actors_03_2.PNG" alt="image" style="zoom:80%;" />
 
 The parser processes the file's rows consecutively by validating the data in the **Find** Stage using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) via access to the **flowArgs** arguments and the **contextLoop** object. When the required given subscriber type is found, the iteration stops, and the flow returns the description. 
 
-```java
+```javascript
 if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
     contextLoop.stop();
     input1.SUBSCRIBER_DESC;
