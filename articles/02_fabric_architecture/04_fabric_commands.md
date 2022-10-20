@@ -197,37 +197,31 @@ Note that this command sets the consistency level on the session level. The defa
 
 The following table lists the GET commands:
 
-<table width="900pxl">
+<table style="width: 787px;" width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
-<p><strong>Name</strong></p>
+<td style="width: 300px;" valign="top">
+<p><strong>Name and Description</strong></p>
 </td>
-<td valign="top" width="250pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="300pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Syntax</strong></p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>GET</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
+<td style="width: 201.613px;" valign="top">
+<p><strong>GET</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
 <p>Setting the PARALLEL parameter to true enables running parallel GET commands on different LU types. Setting this parameter to false disables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR (added in V6.5.1) supports a GET of several LUIs even if the sync of one LUI fails (when set to false).</p>
 </td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>get Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
@@ -237,38 +231,32 @@ The following table lists the GET commands:
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>GETF</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<td style="width: 201.613px;" valign="top">
+<p><strong>GETF</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>getf Customer.fnCreateInstId(235);</p>
 <p>This function adds 1000 to the input value and returns the value 1235, Fabric gets Customer # 1235.</p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>USE</h5>
+<td style="width: 201.613px;" valign="top">
+<p><strong>USE</strong> - an alias of GET command.</p>
 </td>
-<td valign="top" width="250pxl">
-<p>USE command as an alias of GET command.</p>
-</td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>use Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34 WITH parallel=true;</p>
@@ -277,6 +265,7 @@ The following table lists the GET commands:
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -295,63 +284,53 @@ The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE pa
 
 The following table lists the  DELETE commands:
 
-<table width="900pxl">
+<table style="width: 650px;" width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
-<p><strong>Name</strong></p>
+<td style="width: 300px;" valign="top">
+<p><strong>Name and Description</strong></p>
 </td>
-<td valign="top" width="250pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="200pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Syntax</strong></p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>DELETE INSTANCE</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
+<td style="width: 456.55px;" valign="top">
+<p><strong>DELETE INSTANCE</strong> - Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 289.35px;" valign="top">
 <p>Delete one instance:</p>
 <p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
 <p>Delete multiple instances:</p>
 <p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 95.15px;" valign="top">
 <p>delete CRM.10;</p>
 <p>delete CRM.10, CRM.3;</p>
 <p>delete CRM.5, Customer.30;</p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>DELETE INSTANCES IF NOT EXIST</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
+<td style="width: 456.55px;" valign="top">
+<p><strong>DELETE INSTANCE IF NOT EXIST</strong> - Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
 <ul>
 <li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
 <li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
 </ul>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 289.35px;" valign="top">
 <p>delete instances if not exist &lt;LUT_Name&gt;;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 95.15px;" valign="top">
 <p>delete instances if not exist CRM;</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Release LU
 
