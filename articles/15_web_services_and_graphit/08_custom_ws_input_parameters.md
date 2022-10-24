@@ -84,5 +84,5 @@ To define it for a Java function, edit the annotation as explained [here](/artic
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/07_deploy_web_services.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/09_swagger.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/07_deploy_web_services.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/11_web_services_and_graphit/09_swagger.md)
 
