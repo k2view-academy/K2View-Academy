@@ -112,5 +112,5 @@ You can see that it has automatically received a **'.graphit' suffix**.
 
 
 
-[![Previous](/articles/17_Graphit/images/Previous.png)](/articles/15_web_services_and_graphit/05_custom_ws.md)[<img align="right" width="60" height="54" src="/articles/17_Graphit/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/07_custom_ws_create_java_ws.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_custom_ws.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_custom_ws_create_java_ws.md)
 
