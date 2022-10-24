@@ -203,4 +203,4 @@ For example, when set to False and the user role has no WRITE permissions, the u
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/03_create_a_web_service.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_custom_ws_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_advanced_error_handling.md)
