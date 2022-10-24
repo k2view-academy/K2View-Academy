@@ -54,7 +54,7 @@ To define it for Graphit:
 
 2. Edit the **Overwrite Path** section. 
 
-    <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_path.png"></img> 
+    <img src="17_Graphit/images/ws_graphit_path.png"></img> 
 
 
 
