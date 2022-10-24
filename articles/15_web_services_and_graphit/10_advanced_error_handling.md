@@ -24,7 +24,7 @@ If the response is 404 (page not found) it returns these original Web Service de
 and overrides the response with the following:		
 - response status: 500.
 
-<img src="images/67_graphit_error_handling_2.png"></img>
+<img src="17_Graphit/images/67_graphit_error_handling_2.png"></img>
 
 ### Example 2 - error.graphit file
 
@@ -48,7 +48,8 @@ If the response is not 404, it returns these original Web Service details:
 
 In the figure below, you can see both of these responses: *404 not found* is shown in the upper part of the figure, and *any other response* (that is, if the response is not 404), is shown in the lower part of the figure.  
 
-<img src="images/66_graphit_error_handling.png"></img>
+<img src="17_Graphit/images/66_graphit_error_handling.png"></img>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/09_custom_ws_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/11_swagger.md)
