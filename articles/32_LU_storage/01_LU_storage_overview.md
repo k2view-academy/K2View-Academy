@@ -12,11 +12,11 @@ Below are described the additional storage types supported by Fabric.
 
 The location of a Logical Unit's permanent storage depends on the settings of the LU Schema's **Storage** property. The following storage types exist:
 
-* **Default**, inherits storage settings in the **[fabricdb]** section of the **config.ini** file.
+* **Default**, inherits storage settings in the **[fabric]** section of the **config.ini** file.
 * **None**, does not store the instance in Cassandra after a GET retrieves instance data from the source DB. 
 * **Cassandra**, stores LU instances in the Cassandra DB after the execution of the GET command.
-* **S3**, stores LU instances in the AWS S3 Storage after the execution of the GET command. The storage connection details are defined in the **[s3_storage]** section of the **config.ini**. Available starting from Fabric V6.5.8.
-* **Azure Blob Store**, stores LU instances in the Azure Blob Store Storage after the execution of the GET command. The storage connection details are defined in the **[azure_blob_storage]** section of the **config.ini**. Available starting from Fabric V6.5.8.
+* **S3**, stores LU instances in the AWS S3 Storage after the execution of the GET command. The storage connection details are defined in the **[s3_storage]** section of the **config.ini**. 
+* **Azure Blob Store**, stores LU instances in the Azure Blob Store Storage after the execution of the GET command. The storage connection details are defined in the **[azure_blob_storage]** section of the **config.ini**. 
 
 To display an LU's storage type, use the Fabric LIST command.
 
