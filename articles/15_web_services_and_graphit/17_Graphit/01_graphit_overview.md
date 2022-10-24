@@ -1,9 +1,14 @@
 # Graphit Overview
 
-Graphit is a Fabric UI utility which can be used to design Fabric [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) responses. 
-Graphit provides a very user-friendly interface and requires minimal coding while enabling powerful debugging capabilities. The content of a response is defined during its execution, either according to specific parameters relevant to the specific Web Service call, or by retrieving dynamic information from other databases or interfaces.
+Graphit is a Fabric UI utility which can be used to design [Project Custom Web Services](/articles/15_web_services_and_graphit/05_custom_ws.md) responses. Graphit provides a very user-friendly interface and requires minimal coding while enabling testing capabilities. 
 
-### Main Features
+A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
+
+Having the Graphit Editor a powerful utility to build such documents, it is being used also aside of web services. Thus you can build Graphit files also at other LUs, not only at Web Services LU, and invoke them internally from other project implementation components like Java functions or Broadway. to learn more about invoking Graphit read [here](TBD).
+
+
+
+## Main Features
 Using Graphit you can do the following:
 - Create dynamic JSON, XML and CSV documents. 
 - Accept external input as variables. 
@@ -19,5 +24,6 @@ Using Graphit you can do the following:
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md)
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/02_graphit_basic_editing.md)
 

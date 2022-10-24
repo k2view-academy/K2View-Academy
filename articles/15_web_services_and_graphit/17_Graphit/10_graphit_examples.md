@@ -15,48 +15,6 @@ After deploying and invoking the Graphit file directly as a Web Service:
 
 
 
-###  Example of a Web Service that invokes the relevant Graphit file depending on a specific condition    
-The following wsGraphitExample2 Web Service gets an input LUI for the CUSTOMER LU and returns a response stating whether a customer has a Bronze, Gold or Platinum status in their subscription lines.
-
-Code:
-
-```java
-String val_brz="Bronze";
-String val_gld="Gold";
-String val_plt="Platinum";
-
-String CUST_STATUS = "SELECT count(*) FROM SUBSCRIBER where SUBSCRIBER.VIP_STATUS=?";
-String cnt_brz = ludb("Customer", i_id).fetch(CUST_STATUS,val_brz).firstValue().toString();
-String cnt_gld = ludb("Customer", i_id).fetch(CUST_STATUS,val_gld).firstValue().toString();
-String cnt_plt = ludb("Customer", i_id).fetch(CUST_STATUS,val_plt).firstValue().toString();
-
-
-if ((Integer.parseInt(cnt_brz)==0)&&((Integer.parseInt(cnt_gld) !=0)||(Integer.parseInt(cnt_plt) !=0))){
-	return graphit("grSqlGldPlus.graphit",i_id);}
-else{
-	return graphit("grSqlBrz.graphit",i_id);}
-```
-
-The first Graphit file displays the customer's basic information and their subscriber lines with a Gold or Platinum VIP status while the second Graphit file displays the customer's basic information and corresponding subscriber lines in Bronze VIP status.
-
-Graphit file 1: **grSQLGldPlus.graphit**:
-
-<img src="images/60_graphit_examples.PNG"></img>
-
-
-Graphit file 2: **grSQLBrz.graphit**:
-
-<img src="images/62_graphit_examples.PNG"></img>
-
-
-Output from the Swagger GUI for grSQLGldPlus.graphit with Customer Instance ID = 1234:
-
-<img src="images/59_graphit_examples.PNG"></img>
-
-Output from the Swagger GUI for grSQLBrz.graphit with Customer Instance ID = 1000:
-
-<img src="images/59a_graphit_examples.PNG"></img>
-
 ### Simple Example of a CSV Output
 This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
 
@@ -235,6 +193,5 @@ The response has been reorganized using the subscriber_id as a key.<br></br>
 Output:
 
 <img src="images/grKeysResp.png"></img>
-
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/11_graphit_error_handling.md)

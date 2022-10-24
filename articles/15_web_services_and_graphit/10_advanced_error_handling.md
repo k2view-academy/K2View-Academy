@@ -1,14 +1,14 @@
-# GraphIt - Error Handling
+# Web Services Advanced Error Handling
 
-Once an ```error.graphit``` file is created on the project implementation, its execution is triggered each time an exception is returned as a result of a
-Fabric Web Service call. (Important to note that if you have prepared a "catch" for the exception, there will be no trigger to execute the file). 
-
-The creation of an ```error.graphit``` file allows the implementors to set a standard payload response structure to any exception, regardless of the cause.
-The payload structure can be in JSON or XML format, depending on the original Web Service call requested format. In case of CSV format ```error.graphit``` file will not be triggered.
-
-For example, one trigger could be a ```page not found``` message caused by an external client calling a Web Service that was not deployed. A different example of a trigger can be the provisioning of an invalid APIKEY in the request, etc.
+Fabric provides a central place to manage web services errors. This is useful, for example, for cases where a specific a standard payload response structure to any exception is expected, regardless of the original cause response. Another example is when a caller expect to always get 200 as the response status and inside the response data to get the actual status.
 
 The implementor has full flexibility to analyze the reason for the underlying failure that caused the trigger, and as such, set the Web Service response body, header and status accordingly.
+
+> Note that if you have prepared a "catch" for the exception, there will be no trigger to execute the file.
+
+The advanced error handling is done by building a dedicated Graphit file named ```error.graphit```. Once it is created on the project implementation (WS LU), its execution is triggered each time an exception is returned as a result of a Fabric Web Service call. 
+
+The payload structure can be in JSON or XML format, depending on the original Web Service call requested format. In case of CSV format ```error.graphit``` file will not be triggered.
 
 This feature was added as a part of Fabric release 6.5.3.
 

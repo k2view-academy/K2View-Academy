@@ -1,5 +1,7 @@
 # Invoking Graphit Files
-Graphit files can be invoked either directly as a Web Service or embedded into a Web Service. Note that the Graphit files must first be deployed to the Fabric server. 
+Graphit files can be invoked either externally as Web Services or internally from other Fabric implementation components. 
+
+In either options you can transfer Graphit input parameters, while invoking it. To learn how to define parameters in Graphit read [here]().
 
 ## How Do I Invoke Direct Calls?
 1. Go the the **Project Tree** and click **Resources** under **Web Services**. 
@@ -10,7 +12,7 @@ Note that the Fabric server must be predefined in the [Server Configuration tab]
 
 For more information, refer to the example in [Graphit Parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-calling-graphit-directly-from-swagger) to see how to deploy and invoke a Graphit file as a Web Service.
 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/47_invoking_graphit_files.png)
+![](images/47_invoking_graphit_files.png)
 Note that the Graphit file can be invoked in both GET or POST modes. To use the GET method, set the parameters in the **Graphit parameter window**. When the Graphit file is invoked as a Web Service, Swagger will prompt you to enter the values.
 
 For more information about Get and Post verbose, click [GET](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) or [POST](/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md).
@@ -23,13 +25,13 @@ Graphit files are mainly used in a Web Service to structure the Web Service's re
 The function's parameters are:
   - File_name, the name you assign the Graphit file that should generate the response document. If the Web Service's name is the same as the Graphit file's name, set this parameter to Null.
   - Input parameters, which can be populated by a parameter name or by a map object.
-  
+
 The Response variable gets the CSV, JSON or XML response string which can then be returned as the Web Service output.
-  
+
 Example:
 Using the grSQL Graphit file and Customer_Id as input parameters:
  <p><code>Object response = graphit("grSql.graphit",Customer_Id);</code></p> 
- 
+
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/48_invoking_graphit_files.PNG)
 
 After deploying and invoking the Web Service,![](/articles/15_web_services_and_graphit/17_Graphit/images/45_graphit_with_parameters.png) open Swagger and check that the Customer_id has been successfully parsed.

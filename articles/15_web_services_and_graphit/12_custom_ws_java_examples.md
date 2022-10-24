@@ -18,12 +18,8 @@
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
 ```java
 String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
-
-
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
-
 log.info("WS executed Successfully for Customer ID :" + i_id);
-
 return rows;
 ```
 
@@ -217,7 +213,7 @@ Web Service response
 ```
 
 
- 
+
 
 ### Example of a complex TDM Web Service 
 

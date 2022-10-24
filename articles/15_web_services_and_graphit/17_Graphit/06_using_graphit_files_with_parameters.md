@@ -1,29 +1,37 @@
-# Graphit Parameters
+# Defining and Using Graphit Parameters
 
 Graphit allows you to define input parameters whereby the generated documents are executed using various settings like LUIs, LU table columns and other specific parameters that require processing.
 
 Parameters can be set when:
-- Running Graphit in Debug mode in the Fabric Studio.
-- Invoking Graphit directly from Swagger or another http link.
-- Calling Graphit from a Web Service whereby parameters are parsed as a mapped object. 
+- Testing a Graphit file in the Graphit Editor.
+- Invoking Graphit as web service via HTTP request.
+- Calling Graphit from another implementation component such as Java Function or Broadway. 
 
-## Graphit Window - How Do I Configure Graphit Parameters?
-Click **://** in the **Graphit window** to open the **Graphit Parameters** dialog box. 
 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/38_graphit_with_parameters.PNG)
 
-Graphit Parameters are added to support the following:
-- Running Graphit from the Fabric Studio in Debug mode. The debug server on which the Graphit Web Service runs has been selected in the **User Preferences** panel, under the [**server configuration**](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) section.  
-- Running a GET request for the Graphit file according to the parameters defined in the Graphit Parameters dialog box. The parameters are added to the [URL](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md#get-based-on-graphit-file). In addition, the input parameters are displayed when invoking the Graphit file using [Swagger](/articles/15_web_services_and_graphit/09_swagger.md).
+## Defining Graphit Parameters
 
-Note that if the parameters have not been added to the Graphit Parameters dialog box, you can create a POST request for the Graphit file and add the parameters in the Request body. Alternatively, you can wrap the Graphit file using a Web Service and send the parameters to the Graphit file via the Web Service. 
+1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
+2. The **URL Parameters & Properties** right side panel is opened where at top you can find the **Input Parameter & Path** section. At the beginning no parameters are defined.
+3. To add a new parameter click on the plus  (+) sign at the top of the Parameters sub section.
+   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_1.png"></img>
+
+4. New Parameter pane is opened where you can define for the new parameter: name, type, description and if it is mandatory.
+   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_2.png"></img>
+
+5. You can then add more parameters as needed. you can expand and collapse each of parameters pane, where in collapsed mode only the name appears as well as the debug value for testing. 
+   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_4.png"></img>
+
+> Note: the debug value is not saved with the Graphit file and it is used only in the Graphit Editor, for testing the web-service.
+
+
 
 ## How Do I Configure Parameters When Running Graphit From Fabric Studio?
 When creating a Graphit file, parameters can be defined using the **${}** symbols to refer to the value that is set in the Parameters window. In this specific case, you must also define a **Debug** value in the Parameter window. If not, the response is empty.
 
 
 **Example**: 
- 
+
  The **grSql.graphit** file generates a JSON file that returns the values of the following fields:
 - Customer_ID, SSN, first_name and last_name of a customer whose Instance ID = 547.  
 - Date and status of Case ID = 1394.
