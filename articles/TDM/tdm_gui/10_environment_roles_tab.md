@@ -30,7 +30,7 @@ A description of the TDM Environment permission set. (Optional).
 
 - Read access can be granted on a source environment, i.e. the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
 
-- Write access can be granted on a target environment, i.e. the environment type is **Source** or **Both**.
+- Write access can be granted on a target environment, i.e. the environment type is **Target** or **Both**.
 
 When an Environment Type is Both it can have both read and write access to both the source and target. The TDM Environment permission sets in these environments can have both read and write access or read or write only access.
 
@@ -118,7 +118,7 @@ TDM tests the connections of the source and target environments at the beginning
 
 [Randomly select entities](17_load_task_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
 
-##### Request up to Date Entities
+##### Refresh All Data from Source
 
 Ask to sync the entities from the source when executing [extract](16_extract_task.md#request-parameters) or [load](19_load_task_request_parameters_regular_mode.md#override-sync-mode) tasks. 
 
