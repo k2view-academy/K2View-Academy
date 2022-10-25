@@ -26,72 +26,53 @@ Parameters can be set when:
 
 
 
-## How Do I Configure Parameters When Running Graphit From Fabric Studio?
-When creating a Graphit file, parameters can be defined using the **${}** symbols to refer to the value that is set in the Parameters window. In this specific case, you must also define a **Debug** value in the Parameter window. If not, the response is empty.
+## Set Parameters When Testing in Graphit
+When creating a Graphit file, parameters can be defined using the **${}** symbols to refer to the value that is set in the Properties and Parameters Panel. To test it at Graphit, you shall populate the Debug value in the Properties and Parameters Panel.
 
 
-**Example**: 
 
- The **grSql.graphit** file generates a JSON file that returns the values of the following fields:
-- Customer_ID, SSN, first_name and last_name of a customer whose Instance ID = 547.  
-- Date and status of Case ID = 1394.
-- Generic SELECT statement that retrieves Instance 547: get Customer.${customer_id}.
-
-The queries for the SELECT statements are:
-- Select customer_id,ssn,first_name,last_name From Customer.CUSTOMER where CUSTOMER_ID = ${customer_id}.
-- Select * from CASE_NOTE where case_id = ${case_id}
-
-The following screenshot displays the Graphit file:
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/35_graphit_with_parameters.PNG)
-
-Before running the file, a **Debug** value is assigned to the **${customer_id}** and **${case_id}** input parameters.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/38_graphit_with_parameters.PNG)  
-
-Click **Run** to see the results on the right side of the output window.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/39_graphit_with_parameters.PNG)
-
-## How Do I Configure Parameters When Calling Graphit Directly From Swagger?
-Add the parameters to the Parameters window to create a GET request for the Graphit file and populate the parameters in Swagger. 
-
-Note that to execute the Graphit file, first populate the parameter's value in Swagger. The Debug values are only taken as input in Debug mode.
-
-Example:
-
-Using the same **grSql.graphit** Graphit file as in the previous example, in the following screenshot the **customer_id Debug** value has been left empty intentionally.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/40_graphit_with_parameters.PNG)
-
-As indicated below, the two Parameters fields are marked as required.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/42_graphit_with_parameters.PNG)
-
-The **customer_id=547** and **case_id=1394** values are filled in the Parameters fields. 
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/43_graphit_with_parameters.PNG)
-
-Note that when deleting all parameters in the Parameters dialog box together, the values in the GET section in the Swagger GUI cannot be specified but can be injected in the POST section, with a successful response upon execution.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/44_graphit_with_parameters.PNG)
-
-## How Do I Configure Parameters When Invoking Graphit From a Web Service?
-A Graphit file can be invoked directly or be wrapped by a WS. When wrapped by a WS, the WS sends the parameters to Graphit which then parses them accordingly when generating the XML, JSON or CSV documents. The input parameters for the Graphit file can be populated by a parameter name or by a map object.
-
-Example:
-
-<pre><code>Map&lt;String, Object&gt; temp = new HashMap&lt;&gt;();
-temp.put("input1",1000);
-temp.put("input2",2463);
-return graphit("grSql2.graphit", temp);</code></pre>
+EXAMPLE
 
 
-This code calls the following Graphit file which uses **${input1}** and **${input2}** as parameters for the **customer_id** and **subscriber_id** to populate the JSON output with relevant invoices:
-![](/articles/15_web_services_and_graphit/17_Graphit/images/46a_graphit_with_parameters.PNG)
-        
-        
-## How Do I Parse Metadata Parameters Such as Table Names or Fields Names in Graphit SQL ?
+
+## Transfer Parameters When Calling Graphit as Web Service
+
+
+TBD: Refer to WS article
+
+
+
+## Transfer Parameters When Invoking Graphit From a Function
+A Graphit file can be invoked from Fabric internal implementation components. When calling Graphit from a java function, the input parameters shall be populated by a parameter name or by a map object.
+
+**Example 1**: sending parameters as a map -
+
+<pre><code>Map&lt;String, Object&gt; graphitParams = new HashMap&lt;&gt;();
+graphitParams.put("input1",1000);
+graphitParams.put("input2",2463);
+return graphit("grSql2.graphit", graphitParams);</code></pre>
+
+This code calls the following Graphit file which uses **${input1}** and **${input2}** as parameters.
+
+
+
+**Example 2**: sending parameters as parameter list -        
+
+TBD
+
+
+
+>  Note: you can send "format" as one of the parameters when wishes to get the result document in a specific format, ither than the default which is JSON.
+
+
+
+## Use The Input Parameters 
+
+TBD + examples
+
+
+
+
 
 Let's suppose you need to write a graphit file that retrieves data from a table and/or a field with dynamic names parsed from variables.
 In that case you can invoke the field name as a parameters in a Graphit node defined as non-prepared SQL statement. 
@@ -109,7 +90,6 @@ Node defined as SQL non-prepared:
 
 ```select SSN from customer where ${fieldName} = ${customer_id}```
 
-
 In this case, the ```${fieldName}``` variable will be given the (string) value ```'customer_id'``` while the variable ```${customer_id}``` will be given the value ```39```.
 In that way, variables may be used in a graphit file (from a javascript function node) and hold the name of the field and the value to be processed to the WHERE statement.
 
@@ -118,7 +98,6 @@ See example in screenshot:
 
 
 In addition, rather than defining the variable ```fieldName``` within the javascript function node of your graphit file, you can define it in the java webservice that invokes the graphit file itself, and parse it as a map object as was shown in the [previous section](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#how-do-i-configure-parameters-when-invoking-graphit-from-a-web-service) of this article.   
-
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)
 

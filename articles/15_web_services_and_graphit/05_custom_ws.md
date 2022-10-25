@@ -2,24 +2,23 @@
 
 While the built-in out-of-the-box web services are very useful and comprehensive, Fabric provides a very proudful capability of creating custom web services. This enables building new webservices, according to the project needs, deploy them and immediately use them, without the need to wait for a new product release. This expedites project's go to market and ongoing updates.
 
-Fabric supports two types of method to build and expose the customized web services: 
+To build and expose web services use Graphit Editor, aimed for building visually, with minimal coding needs, structured documents, like JSON and XML, to be published as web services. 
 
-* Using Graphit - a unique UI utility which can be used to design web services in a user-friendly interface and requires minimal coding.
-* Defining a Java Web Service function. 
+Note that Fabric provides also methods and helpers to build web services as Java functions, but it is recommended to use it only in specific cases where Graphit does not fit the needs.
 
-
-
-Using these methods you can easily build your web services and exposes them as REST API. Similar to the built-in web services, the custom web services outcome are JSON, XML or CSV formats. 
+Similar to the built-in web services, the custom web services outcome are JSON, XML or CSV formats. 
 
 Fabric also provides utilities and helpers to ease the building of the web service logic and the output 
 
-In addition, Fabric lets you, easily, via a UI properties pane to:
+In addition to helping implementors to easily crafting web services logic and output, Fabric lets you via the Studio UI to:
 
 * Have web services versioning.
-* control to strict the outcome format among the 3 formats.
-* control and set web services verb 
-* control and strict web services permissions 
-* control the web services path
+* Control and strict the outcome format.
+* Control and set web services verb. 
+* Control and strict web services permissions.
+* Control the web services path.
+* set and use the web services input parameters.
+* Test the web services. 
 
 
 
