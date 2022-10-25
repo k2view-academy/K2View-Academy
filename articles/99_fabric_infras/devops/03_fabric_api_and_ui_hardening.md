@@ -4,7 +4,7 @@
 
 ### Step 1 - Keys Generation
 
-1. Run the following script on one of the Fabric nodes to generate the following key: ```k2vws.key```
+Run the following script on one of the Fabric nodes to generate the following key: ```k2vws.key```
 
 ~~~bash
 mkdir $K2_HOME/.ssl
@@ -23,7 +23,7 @@ keytool -genkey -noprompt \
 
 ### Step 2 - Copy the *k2vws.key* key to all Fabric nodes
 
-1. Copy the `$K2_HOME/.ssl/k2vws.key` on each Fabric node into the same location ```$K2_HOME/.ssl```
+Copy the `$K2_HOME/.ssl/k2vws.key` on each Fabric node into the same location ```$K2_HOME/.ssl```
 
 ``` bash
 tar -czvf k2vmws.tar.gz -C $K2_HOME/.ssl .
@@ -33,7 +33,7 @@ mkdir -p $K2_HOME/.ssl && tar -zxvf k2vmws.tar.gz -C $K2_HOME/.ssl
 
 ### Step 3 - Configure Fabric to use TLS for API or WebUI
 
-1. Run the snippet below on each fabric node, and restart Fabric.
+Run the snippet below on each fabric node, and restart Fabric.
 
 
 ```bash
@@ -60,12 +60,12 @@ chown root.root $K2_HOME/.ssl/k2vws.key
 
 ## Fabric JDBC Driver Hardening
 
-In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the \[jdbc-server\] section of the **config.ini** file as shown below:
+In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the **\[jdbc-server\]** section of the **config.ini** file as shown below:
 
 ```
 ## Turn on TLS for the Fabric driver protocol
 SECURE=true
 ```
-N.B To disable hardening, simply set the *SECURE* flag to false
+To disable hardening, simply set the *SECURE* flag to false.
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)

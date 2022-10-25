@@ -62,8 +62,6 @@ The following section of the example flow shows how to publish messages to an in
 
 ![image](../images/99_actors_04_1.PNG)
 
-
-
 To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
 
 ### Examples of Pub/Sub Processing in Transaction
