@@ -1,4 +1,6 @@
-# Web Services - Code Examples
+# Java Function Web Services - Code Examples
+
+While is it recommended to build web services with Graphit, you might use Java function for this purpose. Below are several examples, especially such which  
 
 ### Example List
 
@@ -160,20 +162,20 @@ For example:
 Requested body 
 
 ```
-{
-  "person": {
-    "address": [
-      
-        "number": 10,
-        "city": "Net York",
-        "street": "5th Ave."
+    {
+      "person": {
+        "address": [
+         { 
+            "number": 10,
+            "city": "Net York",
+            "street": "5th Ave."
+          }
+        ],
+        "name": "Lion",
+        "id": "1234",
+        "age": 45
       }
-    ],
-    "name": "Lion",
-    "id": "1234",
-    "age": 45
-  }
-}
+    }
 ```
 
 Web Service markup
