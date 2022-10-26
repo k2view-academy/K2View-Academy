@@ -117,11 +117,26 @@ The starting points for creating a population based on a Broadway flow are:
 
 3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
+</studio>
+
+<web>
+
+### Example of Creating a Population Based Broadway Flow
+
+1. In the Project Tree, right click  on the LU table  > **New Population** and provide the population name. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
+
+   ![image](images/07_14_01.PNG)
+
+
+
+2. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
+
+
+3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
+
 [Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
-
-</studio>
+</web>
 
 
 ### Support Instance ID Different From Source DB Column
@@ -137,23 +152,7 @@ When populating the LU Root table, Broadway population supports having an LU Ins
    ![](images/07_14_InstanceIdPop.png)
 
 
-### Example of Creating a Population Based Broadway Flow
-
-1. In the Project Tree, right click  on the LU table  > **New Population** and provide the population name. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target.
-
-   ![image](images/07_14_01.PNG)
-
-
-
-2. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
-
-
-3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
-
-
-[Click here to see Broadway flow examples](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
 [![Previous](/articles/images/Previous.png)](03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_LU_table_population_execution_order.md)
 
 
-</web>
