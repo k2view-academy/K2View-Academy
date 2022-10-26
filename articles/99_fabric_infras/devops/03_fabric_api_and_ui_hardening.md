@@ -12,7 +12,7 @@ Run the Web server self-signed script on one of the Fabric nodes. The script’s
 
 In case of multiple Fabric nodes, if you want that all the nodes will have the same certificate - copy the `${user.home}/.keystore` on each node into the same location.
 
-In case that Fabric is running in Docker container, the user may be different. Then need to change the file owner by running the following command:
+In case that Fabric is running in Docker container, the user may be different. Then you need to change the file owner by running the following command:
 
 ~~~bash
 chown root.root ~/.keystore
