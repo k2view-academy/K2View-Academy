@@ -29,8 +29,6 @@ The **Subscribe** Actor should always listen to the same topic. The **Publish** 
 
 Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
-The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
-
 The **transaction_mode** input argument on the **Publish** Actor determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). 
 
 * **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure. Note that **Async** transaction mode is applicable only when the **Publish** Actor runs inside the transaction. 

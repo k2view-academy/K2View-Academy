@@ -17,6 +17,7 @@ The location of a Logical Unit's permanent storage depends on the settings of th
 * **Cassandra**, stores LU instances in the Cassandra DB after the execution of the GET command.
 * **S3**, stores LU instances in the AWS S3 Storage after the execution of the GET command. The storage connection details are defined in the **[s3_storage]** section of the **config.ini**. 
 * **Azure Blob Store**, stores LU instances in the Azure Blob Store Storage after the execution of the GET command. The storage connection details are defined in the **[azure_blob_storage]** section of the **config.ini**. 
+* **Google Cloud Storage**, stores LU instances in the Google Cloud Storage after the execution of the GET command. The storage connection details are defined in the **[gcs_storage]** section of the **config.ini**.
 
 To display an LU's storage type, use the Fabric LIST command.
 

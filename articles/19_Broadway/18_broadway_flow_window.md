@@ -68,7 +68,8 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <tr>
 <td width="200">Search</td>
 <td style="width: 465px;">
-<p>Search the flow. Any object can be searched: Stage, Actor, parameter (input/output) or a schema element. Search can be open using CTRL+F.</p>
+<p>Search the flow. Any object can be searched: Stage, Actor, parameter (input/output) or a schema element. </p>
+<p>Search can be open using CTRL+F.</p>
 </td>
 </tr>
 <tr>
@@ -91,6 +92,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 
 
 
