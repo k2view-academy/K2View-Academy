@@ -15,10 +15,9 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 **Non-DB Interfaces** are used to define a connection with data sources that are not Databases. The following non-DB interfaces are described:
 
 * [SFTP Interface](02_SFTP_interface.md)
-* [PubSub Configuration](02a_pubsub_config.md) which replaces the [Kafka Interface](03_kafka_interface.md).
-  * Note that Kafka Interface is still supported for backward compatibility. 
+* [PubSub Configuration](02a_pubsub_config.md) which replaces the [Kafka Interface](03_kafka_interface.md) / [JMS Interface](04_JMS_interface.md).
+  * Note that both Kafka and JMS Interfaces are still supported for backward compatibility. 
 
-* [JMS Interface](04_JMS_interface.md)
 * [HTTP Interface](05_HTTP_interface.md)
 * [Local File System Interface](06_local_file_sys.md)
 * [Custom Interface](07_custom_interface.md)

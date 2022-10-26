@@ -79,7 +79,7 @@ The **db-commands.flow** example shows how the **DbCommand** Actor can be used t
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the **db-commands.flow** example. 
 
-![image](../images/99_actors_05_1.PNG)
+<img src="../images/99_actors_05_1.PNG" alt="image" style="zoom:80%;" />
 
 
 #### Example of Passing Parameters to SQL
