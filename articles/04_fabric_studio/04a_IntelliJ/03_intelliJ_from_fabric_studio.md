@@ -1,4 +1,6 @@
-# Fabric Studio - Launching the IntelliJ IDE
+<studio>
+
+# Fabric Studio - Launching IntelliJ
 
 
 ## Access IntelliJ from Fabric studio
@@ -15,9 +17,9 @@ IntelliJ will start in the background and open-up on the selected file:
 
 ![image](images/04_14_02_javafile.png) 
 
-- As can be seen in the figure above, all Fabric-related Java files and resources for your project are accessible from the left-hand project tree panel.
+- As can be seen in the figure above, all Fabric-related Java files and resources for your project are accessible from the project tree panel on the left.
 
-- In cases where both Fabric Studio Java Editor and IntelliJ IDE are opened on your machine, any manual code update in either environment will be instanteneously reflected in the other.
+- In cases where both the Fabric Studio Java Editor and IntelliJ are opened, any manual code update in either environment will be instantaneously reflected in the other.
 
 - In addition, all the libraries and dependencies featured in your project are also be exposed in the project tree.
 
@@ -31,3 +33,5 @@ All your java extensions or Fabric built-in functions and libraries appear in th
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/04_debugging_with_intelliJ.md)
+  
+  </studio>

@@ -3,6 +3,7 @@
 <ul>
 <li><a href="/articles/24_non_DB_interfaces/01_nondb_interfaces_overview.md">Non-DB Interfaces Overview</a></li>
 <li><a href="/articles/24_non_DB_interfaces/02_SFTP_interface.md">SFTP Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/02a_pubsub_config.md">PubSub Configuration Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/03_kafka_interface.md">Kafka Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/04_JMS_interface.md">JMS Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/05_HTTP_interface.md">HTTP Interface</a></li>

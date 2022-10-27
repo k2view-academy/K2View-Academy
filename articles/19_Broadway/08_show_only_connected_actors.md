@@ -17,5 +17,15 @@ The following Actors are displayed:
 
 <img src="images/show_connected_examples.png" alt="image" style="zoom:80%;" />
 
+<studio>
+
 [![Previous](/articles/images/Previous.png)](07_broadway_flow_linking_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_broadway_integration_with_Fabric.md)
+
+</studio>
+
+<web>
+
+[![Previous](/articles/images/Previous.png)](07_broadway_flow_linking_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09a_automatic_flows_execution_upon_deploy.md)
+
+</web>
 

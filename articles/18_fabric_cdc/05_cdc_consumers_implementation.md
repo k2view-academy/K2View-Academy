@@ -33,8 +33,6 @@ The Fabric Studio can be customized. Consumers can be added for CDC fields by ed
    
    Note that the **Search** name cannot be used for additional data change consumers since it is reserved for **ElasticSearch**. 
    
-   
-   
 4. Save and close the .k2proj file.
 
 5. Close and reopen your project to reload the changes in the .k2proj file.
@@ -49,8 +47,6 @@ The Fabric Studio can be customized. Consumers can be added for CDC fields by ed
    Note that Fabric concatenates the [cluster id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) to each topic name if there are several Fabric clusters on one Cassandra cluster.
 
 ### Creating Indexes for Other CDC Consumers
-
-
 
 When defining LU in the Fabric Studio, selected tables and columns can be set to publish CDC messages each time they are updated. 
 For example, to notify an external consumer system about a customer's change of address, the following columns are defined as CDC columns in the ADDRESS table in the CUSTOMER LU: 

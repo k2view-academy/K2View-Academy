@@ -4,11 +4,26 @@ The SMTP interface type defines the connections to the SMTP (Simple Mail Transfe
 
 To create a new SMTP interface, do the following:
 
+<studio>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SMTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/08_smtp_1.PNG)
 
 2. Populate the connection's settings and **Save**.
+
+</studio>
+
+<web>
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SMTP** from the **Others** section to open the **New Interface** window.
+
+2. Enter a suitable name for your new SMTP Interface, then click **Create**:
+   ![image](images/08_smtp_1WEB.PNG)
+
+2. Populate the connection's settings and **Save**.
+   ![image](images/08_smtp_2WEB.PNG)
+
+
+</web>
 
 ### Connection Settings
 

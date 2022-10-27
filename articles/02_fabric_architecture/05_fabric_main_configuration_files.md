@@ -161,6 +161,23 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td style="width: 184px;" valign="top">
+<p>PubSub</p>
+</td>
+<td style="width: 323px;" valign="top">
+<ul>
+<li>default_pubsub</li>
+</ul>
+</td>
+<td style="width: 371px;" valign="top">
+<ul>
+<li>
+<p>PubSub abstraction layer configuration which defines the Kafka settings across various Fabric processes.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 184px;" valign="top">
 <p><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md#nodes-configuration-in-clusters">Fabric Jobs</a></p>
 </td>
 <td style="width: 323px;" valign="top">
@@ -265,9 +282,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <td style="width: 323px;" valign="top">
 <ul>
 <li>common_area_config</li>
-<li>common_area_kafka_producer</li>
-<li>common_area_kafka_consumer</li>
-<li>kafka_ssl_properties</li>
+<li>common_area_pubsub</li>
 <li>common_area_memory_queues_config&nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
@@ -309,9 +324,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <td style="width: 323px;" valign="top">
 <ul>
 <li>cdc</li>
-<li>cdc_data_publish</li>
-<li>cdc_data_publish_ssl</li>
-<li>cdc_data_consume</li>
+<li>search_loader_pubsub</li>
 <li>search_engine</li>
 </ul>
 </td>
@@ -337,6 +350,8 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 </tbody>
 </table>
+
+
 
 
 
@@ -383,7 +398,7 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
     - maximum number of nodes
     - ```logical_id:2 4 or logical_id:2-4``` whereby 2 is the recommended number and 4 the maximum number of nodes to be allocated to jobs.
     - In cases where only one value is defined, it will be assumed that it refers to the maximum number of nodes. 
-   
+  
 - **cluster_id**, cluster identifier. The cluster_id is set to support a configuration of several Fabric clusters on one Cassandra cluster. The cluster_id is concatenated to each [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) name. For example- if the cluster_id is set to “fabric1”, then Fabric concatenates “_fabric1” to each keyspace.
 
 

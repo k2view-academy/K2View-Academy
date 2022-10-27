@@ -197,37 +197,31 @@ Note that this command sets the consistency level on the session level. The defa
 
 The following table lists the GET commands:
 
-<table width="900pxl">
+<table style="width: 787px;" width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
-<p><strong>Name</strong></p>
+<td style="width: 300px;" valign="top">
+<p><strong>Name and Description</strong></p>
 </td>
-<td valign="top" width="250pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="300pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Syntax</strong></p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>GET</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
+<td style="width: 201.613px;" valign="top">
+<p><strong>GET</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
 <p>Setting the PARALLEL parameter to true enables running parallel GET commands on different LU types. Setting this parameter to false disables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR (added in V6.5.1) supports a GET of several LUIs even if the sync of one LUI fails (when set to false).</p>
 </td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>get Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
@@ -237,38 +231,32 @@ The following table lists the GET commands:
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>GETF</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<td style="width: 201.613px;" valign="top">
+<p><strong>GETF</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>getf Customer.fnCreateInstId(235);</p>
 <p>This function adds 1000 to the input value and returns the value 1235, Fabric gets Customer # 1235.</p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>USE</h5>
+<td style="width: 201.613px;" valign="top">
+<p><strong>USE</strong> - an alias of GET command.</p>
 </td>
-<td valign="top" width="250pxl">
-<p>USE command as an alias of GET command.</p>
-</td>
-<td valign="top" width="300pxl">
+<td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
 <p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-<td valign="top" width="250pxl">
+<td style="width: 237.938px;" valign="top">
 <p>use Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34 WITH parallel=true;</p>
@@ -277,6 +265,7 @@ The following table lists the GET commands:
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -295,63 +284,53 @@ The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE pa
 
 The following table lists the  DELETE commands:
 
-<table width="900pxl">
+<table style="width: 650px;" width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
-<p><strong>Name</strong></p>
+<td style="width: 300px;" valign="top">
+<p><strong>Name and Description</strong></p>
 </td>
-<td valign="top" width="250pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="200pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Syntax</strong></p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 300px;" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>DELETE INSTANCE</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
+<td style="width: 456.55px;" valign="top">
+<p><strong>DELETE INSTANCE</strong> - Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 289.35px;" valign="top">
 <p>Delete one instance:</p>
 <p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
 <p>Delete multiple instances:</p>
 <p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 95.15px;" valign="top">
 <p>delete CRM.10;</p>
 <p>delete CRM.10, CRM.3;</p>
 <p>delete CRM.5, Customer.30;</p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="100pxl">
-<h5>DELETE INSTANCES IF NOT EXIST</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
+<td style="width: 456.55px;" valign="top">
+<p><strong>DELETE INSTANCE IF NOT EXIST</strong> - Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
 <ul>
 <li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
 <li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
 </ul>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 289.35px;" valign="top">
 <p>delete instances if not exist &lt;LUT_Name&gt;;</p>
 </td>
-<td valign="top" width="200pxl">
+<td style="width: 95.15px;" valign="top">
 <p>delete instances if not exist CRM;</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Release LU
 
@@ -378,7 +357,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 
 #### SET Command
 
-The Fabric ```set;``` command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that starting V6.5.9 the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
+The Fabric SET command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
 
 #### Fabric Setting - Session Level
 
@@ -392,8 +371,9 @@ The Fabric SET command enables updating Fabric settings on a session level.
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
   - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
+  - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
   
-- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
 
 - **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: LATEST, ANY, TRY_LATEST. LASTEST (default) - bring the latest MicroDB version from Cassandra. The default can be changed in config.ini.
 
@@ -473,6 +453,11 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
   * To turn it off use: set db_proxy=off.
   * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
+* **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
+  * Syntax: set buffer_result_set = true.
+  * To inactivate it, set it back to false. 
+  * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
+
 
 #### Fabric Setting via JDBC Connection URL
 
@@ -606,26 +591,49 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 ### Fabric Broadway
 
-The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
+The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed:
+
+~~~
+broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN>
+~~~
 
 Below are the types of execution parameters:
 
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
 
+* Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Two modes exist:
+  
+  * **COLUMN** (default) –The outputs are returned as each output in a column.
+  
+    ~~~
+    |result |date         |                                                 
+    |+-----+--------------+                                                 
+    |15     |2022-07-19   |
+    ~~~
+  
+  * **ROW** – The Broadway flow outputs are returned as each output in a row.
+  
+    ~~~
+    |column |value       |                                                     
+    |+-------+-----------+                                                   
+    |result   |15        |                                                   
+    |date     |2022-07-19|
+    ~~~
+  
 * Recovery parameters:
-  
+
   * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
-  
+
   * **recoveryTtl** (optional), *time to live* in seconds for the recovery point to be kept in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway *config.ini* section with the RECOVERY_TTL_SEC key.
-  
+
   * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
-  
+
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
-  
+
 * Profiler Telemetry:
-  
+
   * To invoke the Broadway profiler, set **profilerTelemetry** to true. This will add the profiler results to the command results, under the **profilerTelemetry** key.
-  
+
     [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
 **Example of running in a recovery mode:**

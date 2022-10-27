@@ -35,17 +35,15 @@ To customize Fabric Studio and add an additional CDC consumer for a Broadway flo
 
 Select the LU table columns to be published to the CDC topic of Broadway. 
 
-
-
 [Click for more information about CDC Implementation Steps](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md). 
-
-
 
 ## Creating a Kafka Interface
 
-Create a new Interface. Set the **Interface Type** to **Kafka**.  Populate the **Bootstrap Servers** using the host and port of the Kafka server. For example: localhost:9092. Note that several servers delimited by a comma can be set.
+Create a new Interface. Set the **Interface Type** to **PubSub Configuration**. In the config.ini, populate the **Bootstrap Servers** using the host and port of the Kafka server. For example: localhost:9092. Note that several servers delimited by a comma can be set.
 
-## Creating a Broadway Flow to Consume the CDC Messages
+[Click for more information about PubSub Configuration interface](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
+
+## Creating a Flow to Consume the CDC Messages
 
 Define a Broadway flow. Add the built-in **Subscribe** Actor and set its input parameters as follows:
 
@@ -56,7 +54,7 @@ Define a Broadway flow. Add the built-in **Subscribe** Actor and set its input p
 - Notes:
 	- The topic name of each CDC consumer is based on the concatenation of the CDC consumer name and Fabric cluster id if exists.
 	- When deploying an LU to a local Fabric server, Fabric concatenates the [Fabric version]_[Fabric project name] to the topic name.
-For example: CDCTraining_6_4_kb_fabric_project.
+  For example: CDCTraining_6_4_kb_fabric_project.
 
   [Click for examples of Pub/Sub Broadway flows](/articles/19_Broadway/actors/04_queue_actors.md#pub--sub-examples).
 

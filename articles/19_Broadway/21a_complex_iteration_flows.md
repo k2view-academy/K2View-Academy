@@ -36,7 +36,7 @@ To get more information about the use cases on how to iterate over a loop with c
 
 * This is a private case of the previous scenario with the same connected elements.
 * The **serialNumber** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **First** link type.
-* The iteration runs over all **serialNumber**fields  of the [resources] array, and for each **serialNumber** takes the first element of its hardware nested array.
+* The iteration runs over all **serialNumber** fields  of the [resources] array, and for each **serialNumber** takes the first element of its hardware nested array.
 
 <img src="images/iterate_mult_05.PNG" alt="image" style="zoom:80%;" />
 

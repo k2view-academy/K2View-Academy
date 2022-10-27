@@ -2,11 +2,34 @@
 
 ### Example of Creating a New Global and Using it in a Function
 
+<studio>
+	
+Go to **Project Tree > Logical Units > [LU name] > Java** and then click Globals.java to open the Globals window.
+
 ![image](images/08_04_01_NEW_GLOBAL.png)
+	
+Populate the settings as follows:
+  * Enter a **Global Name** in the **Name** column.
+  * Enter a value in the **Value** column.
+  * (Optional) Enter a **Category** in the **Category** column.
+  * (Optional) Enter a **Comment** in the **Comment** column.
+  * Check if the **Global** is **Final**.
+	
+Click **Save**.
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
+</studio>
 
-After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
+<web>
+	
+* Go to **Project Tree > Implementation > Logical Units/Data Products > [LU name]** .
+* Expand **Java** .
+* A hierarchy tree will open. Drill down until you see Globals.java, and double click on it.
+* Edit the Java file to add and define the global variable.
+* Save the file (File -> Save or CTRL-S). 
+
+</web>
+
+After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU. The example below shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks):
 
 ~~~java
 if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
@@ -14,12 +37,10 @@ if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
 }
 ~~~
 
-
-This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
-
 Notes: 
-- The **getGlobal** method has been added to Fabric by V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
-- Invoking directly the Global by the user code returns the Global's value as defined in the Studio implementation and does not return the overridden value if exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+- The **getGlobal** method has been added to Fabric as of release V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
+- Invoking the Global directly by the user code returns the Global's value and does not return the overridden value if it exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
 	//do something
@@ -28,11 +49,7 @@ if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equa
 
 ### Example of Using a Global in an SQL Statement in a Function
 
-![image](images/08_04_06_global_in_sql.PNG)
-
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
-
-The global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional.
+A global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional. Here is an example of using a global called NEW_IND: 
 
 ~~~java
 String sql = "SELECT * From ACTIVITY WHERE CUSTOMER_ID = ? AND ACTIVITY_ID = ? AND NEW_NOTE_IND = @NEW_IND@";
@@ -40,6 +57,8 @@ ludb().fetch(sql, input1, input2).each(row->{
     yield(row.cells());
 });
 ~~~
+
+<studio>
 
 ### Example of Using a Global in a Table Population
 
@@ -53,15 +72,19 @@ This example shows how a Global can be used in a [Table Population](/articles/07
 
 [Click to display an example of Globals under a Logical Unit in the Demo project.](/articles/demo_project/README.md)
 
+</studio>
+
 ### Example of Using a Global in a Fabric Web Service
+
+<studio>
 
 ![image](images/08_04_04_GLOBAL_IN_WS.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) and use the Globals.
+</studio>
 
-This example shows how Globals can be used within a Fabric Web Service.
+This example shows how the Globals MISSING_INPUT and TOO_MANY_INPUTS can be used within a Fabric Web Service.
 
-Three Globals are defined under Shared Objects Globals in the SharedGlobals.java file and therefore can be used by the Fabric Web Service.
+Three Globals are defined in the SharedGlobals.java file and therefore can be used by the Fabric Web Service.
 
 ~~~java
 if (contrID == "" && adrID == "") {
@@ -78,9 +101,11 @@ if (contrID == "" && adrID == "") {
 
 ### Example of Overriding a Global in a Function or a Web Service
 
+<studio>
+
 ![image](images/08_04_05_FUNC_OR_WS.png)
 
-Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
+</studio>
 
 The following examples show how a Global can be overridden in a cluster and per session.
 
@@ -127,7 +152,6 @@ result.put("p_error", receivedErr);
 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/03_set_globals.md)  [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/05_globals_overrides_priorities.md)
-
 
 
 

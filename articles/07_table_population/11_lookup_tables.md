@@ -1,3 +1,5 @@
+<studio>
+
 # Lookup Tables
 
 A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md). A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
@@ -13,9 +15,9 @@ The input in a Lookup table is optional if the Lookup has only one record. For e
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Do either:
     *	To create an **LUI Table Lookup** or **Reference Table Lookup**:    
-Click **LUI Tables Lookup / Reference Tables Lookup** to display the list of tables, select the table and drag it to the working area.
+    Click **LUI Tables Lookup / Reference Tables Lookup** to display the list of tables, select the table and drag it to the working area.
     *	To create a **Database Table Lookup**:  
-Click **Database** to display the list of tables, select the table and drag it to the working area and then click **Create as DB Table Lookup**.
+    Click **Database** to display the list of tables, select the table and drag it to the working area and then click **Create as DB Table Lookup**.
 
 5.	Connect the Lookup’s **Input** and **Output** fields to the table columns. 
     *	Optional: connect the Lookup **Input** fields to the **Source Table**.
@@ -107,3 +109,5 @@ The following information is displayed in the Lookup Properties:
 
 
 [![Previous](/articles/images/Previous.png)](11_4_creating_a_trigger_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_table_population_diagram_outline.md)
+
+</studio>

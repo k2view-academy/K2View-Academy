@@ -3,9 +3,11 @@
 When working in the Fabric Studio, use a Window tab to navigate between multiple project components in the same main window’s working area.
 
 ### How Do I Use the Window Tab Menu?
-Right click the **Window Tab Header** to display a context menu with the following options:
+Right click the **Window Tab Header** to display a context menu with the following options:   
 
-![image](/articles/04_fabric_studio/images/04_02_window_tab_header.png)
+<studio>
+
+![image](images/04_02_window_tab_header.png)
 
 <table width="700pxl">
 <tbody>
@@ -133,5 +135,101 @@ Right click the **Window Tab Header** to display a context menu with the followi
 </tr>
 </tbody>
 </table>
- 
+</studio>
+
+<web>
+
+![image](images/web/2_window_tab_header.PNG)
+
+
+
+
+
+<table width="700pxl">
+<tbody>
+<tr>
+<td width="200pxl">
+<p><strong>Command</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Close</strong></p>
+</td>
+<td width="500pxl">
+<p>Close object.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Close Others</strong></p>
+</td>
+<td width="500pxl">
+<p>Close all open objects except the current.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Close to the Right</strong></p>
+</td>
+<td width="500pxl">
+<p>Close all open objects to the right of the current.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Close Saved</strong></p>
+</td>
+<td width="500pxl">
+<p>Close all saved objects.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Close All</strong></p>
+</td>
+<td width="500pxl">
+<p>Close all objects.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Copy Path</strong></p>
+</td>
+<td width="500pxl">
+<p>Copy full path to the object. For example: /opt/apps/fabric/pod_workspace/project/Implementation/LogicalUnits/Customer/vdb.k2vdb.xml</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Copy Relative Path</strong></p>
+</td>
+<td width="500pxl">
+<p>Copy relative path to the object. For example: Implementation/LogicalUnits/Customer/vdb.k2vdb.xml </p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Reveal in Explorer</strong></p>
+</td>
+<td width="500pxl">
+<p>Show the open object in the Project Tree.</p>
+</td>
+</tr>
+<tr>
+<td width="200pxl">
+<p><strong>Open Folder</strong></p>
+</td>
+<td width="500pxl">
+<p>Open the object&rsquo;s folder.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</web>
+
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/01_UI_components_and_menus.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/03_diagram_and_toolbars.md)

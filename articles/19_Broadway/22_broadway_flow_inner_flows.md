@@ -21,13 +21,13 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
 1. Create a flow that encapsulates a specific business logic. For example, given two input numbers, divide a bigger number by a smaller number. 
 
-   ![image](images/99_22_01.PNG)
+   <img src="images/99_22_01.PNG" alt="image" style="zoom:80%;" />
 
-2. Save the flow as a new Actor. For example, if the flow name is **CheckMaxAndDivide**, the new Actor's name will be **CheckMaxAndDivide_Actor**.
+2. Save the flow as a new Actor providing a new Actor's name. For example, **CheckMaxAndDivide**.
 
 4. Add the new Actor to another flow.
 
-   ![image](images/99_22_02.PNG)
+   <img src="images/99_22_02.PNG" alt="image" style="zoom:80%;" />
 
 Full example of a Broadway flow with inner flow Actors can be found in the Demo project.
 
@@ -35,7 +35,7 @@ Full example of a Broadway flow with inner flow Actors can be found in the Demo 
 
 When a flow has inner flows, an inner flow can be opened from the main flow:
 
-1. Click the **inner flow Actor** to display the **Open** button in the Actor properties menu next to the inner flow's name.
+1. Click the **InnerFlow** Actor to display the **Open** button in the Actor properties menu next to the inner flow's name.
 2. Click **Open** to open the inner flow.
 
 ![image](images/99_22_03.PNG)

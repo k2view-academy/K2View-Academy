@@ -33,6 +33,7 @@ Using this reference table segregation schema reduces considerably locking insta
 
 In a distributed system, a copy of all the CommonDB and other *reference tables schemas* are stored on each Fabric Node. Fabric handles their cross-synchronization and ensures that the local CommonDB SQLite files are always available for queries from within each Fabric session. 
 
+
 This enables writing JOIN clauses, locally, between any common table and any LUI using regular SQL queries, thus providing instantaneous data access and local computing resources to these queries. 
 
 

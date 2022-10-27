@@ -21,8 +21,7 @@ To add an Actor to a Stage in a Broadway flow:
 1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right.
 2.  Click **SUBMIT** to finish the action and to add the Actor to the Stage.
 
-
-![image](images/99_04_01_add_actor.PNG)
+<img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
 ### How Do I Save a Flow as an Actor?
 A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.
@@ -48,14 +47,10 @@ The description of the Actor is part of the Actor's file. A remark is a user's c
 
 When exporting an Actor, the Actor's remarks are copied to the description of the new Actor type.
 
-Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode as in the following example:
+Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode.
 
-![image](images/99_03_actor_desc.PNG)
+To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
-To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). Once there is a remark you can pull it up by clicking the green asterisk.
-
-![image](images/99_03_actor_remark.PNG)
-
-To delete a remark, remove its text and close the remark. 
+Once there is a remark you can pull it up by clicking the green asterisk <img src="images/asterisk.png" style="zoom:80%;" />. To delete a remark, remove its text and close the remark. 
 
 [![Previous](/articles/images/Previous.png)](02a_broadway_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)

@@ -12,6 +12,13 @@ When creating a new Actor, you need to do the following:
 * Define inputs and outputs as required.
 * Test your Actor by running it in Debug mode.
 
+This article describes the following:
+
+* How to create an inherited Actor.
+* How to create a new Actor from scratch.
+* How to modify the Actor's input arguments.
+* How to create custom editor (plug-in) for Actor's input arguments.
+
 ### How Do I Create an Inherited Actor?   
 
 The Actor Editor can be used to create a new inherited Actor or modify an existing one via its **[Actor Name].actor** file. The Actor must inherit either from another Actor or from an [Inner Flow](22_broadway_flow_inner_flows.md) that has been saved as an Actor. 
@@ -83,15 +90,15 @@ Broadway enables you to create an Actor that inherits its properties and behavio
 8. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
 
 
-### How Do I Change the Input Argument Type?
+### How Do I Modify the Input Argument Type?
 
-The Actor's input argument type can be changed from the default to other type using the built-in plug-ins.
+The Actor's input argument type can be modified from the default type to other type using the plug-ins.
 
 To change the type, do the following:
 
-1.  Click Add Input to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
+1. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
 
-   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:80%;" />
+   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:70%;" />
 
 2. Modify the default to one of the following types as follows:
 
@@ -135,11 +142,34 @@ To change the type, do the following:
      }
      ~~~
 
+   * The full list of existing editors can be found in under ```Server/fabric/staticWeb/editors``` folder. 
+
 3. Click Submit to close the editor.
 
 4. Then click![dots](images/99_19_dots.PNG)again and switch the Link Type from **Link** to **Const**.
 
-   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 80%;" />
+   <img src="images/99_10_editor_4.PNG" alt="image" style="zoom: 70%;" />
+
+### How Do I Create a Custom Editor?
+
+Broadway allows creating custom editors (plug-ins) for input argument types on a project level. In order to create a custom editor, do the following:
+
+1. Create a folder called as your editor's name under the ```Server/fabric/staticWeb/editors``` folder. 
+
+   * This folder must include the **index.html** file and optionally any other folders and/or files required by this editor.
+   * As the product built-in editors are also located in the same folder, the custom editor’s folder naming convention is not to start with “com.k2view”. 
+
+2. In the index.html file, implement the **broadwayPluginLoad** function that receives a **broadwayPluginAPI** object. 
+
+   * The examples of the function implementation can be found in the **staticWeb** under any of the existing editors. 
+
+3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor. Then modify the default to the name of your editor:
+
+   <img src="images/99_10_editor_6.png" alt="image" style="zoom: 70%;" />
+   
+4. If your editor receives additional inputs, add them to the definition map in the same way as for the existing editors (see the examples above). 
+
+Note that the ```Server/fabric/staticWeb/editors``` folder includes all the existing built-in editors. Thus even though you can modify the code of the built-in editor, it's not recommended to do so because your changes will be lost during the Fabric's version upgrade.  
 
 ### Examples of New Actor Creation
 
@@ -148,14 +178,17 @@ To change the type, do the following:
 Let's create a new **CheckMaxVal** Actor that inherits its properties and behaviors from a **JavaScript** Actor: It receives two integers and returns their maximum value. Do the following:
 
 1. Right click the **Broadway** folder in the Project tree and click **New Actor**.
+
 2. Populate the **CheckMaxVal** Actor's name and click **OK**.
+
 3. Define the Actor as follows:
    * Set Badge to **Max**.
-   * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the parent using the **Add Actors** window.
+   * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the **JavaScript** Actor using the **Add Actors** window.
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.     
-    <img src="images/99_10_editor_1.PNG" alt="image" style="zoom:80%;" />
-4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
+
+4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.<img src="images/99_10_editor_1.PNG" alt="image" style="zoom:70%;" />
+
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
 **New Actor Which Inherits from Custom Java Class**
@@ -164,9 +197,7 @@ When creating a new Actor which inherits from custom Java class, do all the step
 
 Then define the required input and output arguments and run the Actor to debug it. 
 
-​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:80%;" />
-
-
+​		<img src="images/99_10_editor_3.PNG" alt="image" style="zoom:70%;" />
 
 If an input field should be different than default, click![dots](images/99_19_dots.PNG)> **Advanced** in the input field and change the type in the editor. For example, as follows:
 

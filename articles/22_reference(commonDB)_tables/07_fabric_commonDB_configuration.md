@@ -1,6 +1,4 @@
-# CommonDB - Fabric Configuration 
-
-## CommonDB Configuration Settings
+# CommonDB Configuration 
 
 All configuration parameters are located in the *common_area_config* section of the config.ini file located in the *Fabric Home directory* of each Fabric Node.
 
@@ -92,59 +90,15 @@ MAX_TRANSACTIONS_COMMIT=100
 COMMONS_TABLE_TTL=86400 
 ```
 
-## CommonDB Kafka-Related Configuration Settings
-
-All configuration parameters are located in the *common_area_kafka_producer* and *common_area_kafka_consumer* sections of the Config.ini file located in the *Fabric Home directory* of each Fabric Node:
-
-### Kafka Producer
-
-```
-#ACKNOWLEDGMENT=all
-#RETRIES=0
-#BATCH_SIZE=16384
-#BOOTSTRAP_SERVERS=localhost:9093
-#LINGER_MS=1
-#MAX_BLOCK_MS=60000
-#REPLICATION=3
-#BUFFER_MEMORY=33554432
-#KEY_SERIALIZER=org.apache.kafka.common.serialization.LongSerializer
-#VALUE_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
-```
-
-### Kafka Consumer
-
-```
-#AUTO_OFFSET_RESET=earliest
-#BOOTSTRAP_SERVERS=localhost:9093
-#ENABLE_AUTO_COMMIT=false
-#MAX_POLL_RECORDS=500
-#MAX_POLL_INTERVAL_MS=5000
-#SESSION_TIMEOUT_MS=30000
-#KEY_DESERIALIZER=org.apache.kafka.common.serialization.LongDeserializer
-#VALUE_DESERIALIZER=org.apache.kafka.common.serialization.ByteArrayDeserializer
-#DEFAULT_DURATION_TIME=100
-```
-
-### Kafka Security
-
-Fabric supports the following Kafka security encryption, authentication and authorization configuration parameters: 
-
-```
-#SSL_ENABLED=false
-#SECURITY_PROTOCOL=SSL
-#TRUSTSTORE_LOCATION=kafka.client.truststore.jks
-#TRUSTSTORE_PASSWORD=
-#KEYSTORE_LOCATION=kafka.client.keystore.jks
-#KEYSTORE_PASSWORD=
-#KEY_PASSWORD=
-#ENDPOINT_IDENTIFICATION_ALGORITHM=
-#SSL_CIPHER_SUITES=
-#SSL_ENABLED_PROTOCOLS=
-#SSL_TRUSTSTORE_TYPE=
-```
 
 
+## CommonDB Kafka Configuration Settings
 
+All the Kafka connection settings are defined in the **[default_pubsub]** section of the config.ini and are applicable across various Fabric processes including the Common DB connection to Kafka.
+
+When it is required to have different Kafka settings for Common DB, it can be done using the **[common_area_pubsub]** section. This section does not have to include all the parameters, but only those which should override the default section's settings. 
+
+[Click for more information about PubSub Configuration](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
 ## Cassandra Snapshots Settings
 

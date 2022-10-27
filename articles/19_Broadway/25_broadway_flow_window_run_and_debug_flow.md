@@ -12,15 +12,6 @@ Prior to running or debugging a flow, set the types and values of input argument
 
 3. Set the **value** of each input argument. The value's format is defined by the selected argument type.
 
-   <table>
-   <tbody>
-   <tr>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png" alt="value1" style="zoom:80%;"/></p></td>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png" alt="value2" style="zoom:80%;"/></p></td>
-   </tr>
-   </tbody>
-   </table>
-
 4. Click **OK** to save the types and their values.
 
 ### Running and Debugging a Broadway Flow
@@ -47,11 +38,11 @@ If the breakpoints have been added to the flow, the flow stops at the first brea
 
 If a flow has an inner flow with breakpoints, the execution of the flow stops at the inner flow’s breakpoints. The inner flow is then brought to the front and displayed at the top of the current flow in the Fabric Studio.
 
-  - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
+ - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
 
 - Click <img src="images/99_25_step.PNG" alt="image" style="zoom:80%;" /> **Debug Step** to debug the current step and move to the next step.
 
-To stop the flow, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run**.
+- Click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run** to stop the flow.
 
 When Debug is ON or Live Debug, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
@@ -61,7 +52,7 @@ Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:
 
 When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
 
-![image](images/99_25_blue_balloons.PNG)
+<img src="images/99_25_blue_balloons.PNG" alt="image" style="zoom:80%;" />
 
 To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
 
@@ -73,19 +64,17 @@ The Broadway Debug process *learns* the Schema of an Actor's arguments and can s
 
 1. When debugging an Actor, the parameter port turns red indicating that the Schema needs to be updated:
 
-   <img src="images/debug_update_schema.png"  />
+   <img src="images/debug_update_schema.png" style="zoom:80%;" />
 
 2. Click the **parameter's port** (red) to open the Compare Schema window.
 
-  ![](images/compare_schema.png)
+  <img src="images/compare_schema.png" style="zoom:67%;" />
 
 3. Click **Update** to update the output parameter's Schema. 
 
-<img src="images/debug_update_schema_1.png"  />
+<img src="images/debug_update_schema_1.png" style="zoom:80%;" />
 
 Note that the Update Schema option can also be applied on complex structures.
-
-![image](images/compare_schema_1.PNG)
 
 
 

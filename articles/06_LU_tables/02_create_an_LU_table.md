@@ -1,23 +1,76 @@
 # Create an LU Table
 
-### How Do I Create a New LU Table?
 LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md#logical-unit-lu-overview). There are several ways to create a new LU table.
+
+There are three main methods for creating a new LU table:
+
+1. Based on Data Source table
+2. Manually
+3. Duplicate an existing table
+
+
+
+## Duplicate an existing table 
+
+From the project tree:
+
+<studio>
+
+*	Copying an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
+*	Using the **Save As** option. Note that this option does not copy the Table Population.
+
+</studio>
+
+<web>
+
+
+
+</web>
+
+
+
+## Create a New LU Table Based on Data Source
 
 From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
+<studio>
+
 *	Right click the work area and select either the **New Table From SQL Based DB Query** , the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
-*	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
+
+</studio>
+
+<web>
+
+* Create a table based on data source table, using the **DB Interface Explorer**:
+
+  * Switch from the Project tree to the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left Activity Bar.
+
+  * Click on the relevant interface data source and select the required table.
+
+  * Right click on the table and choose "Add Tables to Schema". The table will be created in Fabric, according to the selected table definitions, along with its population and will be added to the schema. 
+
+    > Note that you can expand the table at the DB Interface Explorer and select specific columns. When doing it, the created Fabric table will contain only the columns which were selected.
+
+* Create a table based on data source tables, using **Query Builder**:
+
+  * At schema window top bar, click the <img src="/articles/03_logical_units/images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window
+  * Choose "Create New from source with SQL query".
+  * Name the table and click on Create.
+  * Query Builder popup window appears.
+  * In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and its table list to find the relevant table and select it.
+  * Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
+
+</web>
 
 From the Project Tree: 
+
 *	Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU schema. If a table exists, you can select to either override the existing implementation or not.
 *	Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU schema. Note that if the table is used as the Master of Data, there is no need to create a Table Population.
-*	Copying an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
-*	Creating a set of tables based on an **XSD file**.
-*	Using the **Save As** option. Note that this option does not copy the Table Population.
+*	
 
 [Click for More Information about Adding a Table to a Schema](/articles/03_logical_units/09_add_table_to_a_schema.md).
- 
-### How Do I Create a New LU Table Manually?  
+
+### Create a New LU Table Manually
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** > **New Table** to display the **Columns tab** in the **Table Schema** window.
 2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):
     * Complete the settings of each table column like the **Name** or **Data Type**.
@@ -64,6 +117,9 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 <li>Integer</li>
 <li>Real</li>
 <li>Text</li>
+<li>Datetime, saved as java.sql.Timestamp class (supported till nano-seconds)</li>
+<li>Date, saved as java.sql.Date class</li>
+<li>Time, saved as java.sql.Time class</li>
 <li>Blob</li>
 </ul>
 <p>Note that if the Oracle field type is <strong>Number</strong>, Fabric sets the <strong>Data Type</strong> of this field to <strong>Real</strong> in the <strong>LU table</strong> and the number in Fabric has a decimal point. Therefore, if a column in the <strong>LU table</strong> does not need a decimal point (for example, for the CUSTOMER ID), change the <strong>Data Type</strong> of the <strong>LU Table</strong> column to <strong>Integer</strong> or <strong>Text</strong>.</p>

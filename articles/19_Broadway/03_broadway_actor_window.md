@@ -4,11 +4,10 @@
 
 The **Actor's Properties** window is displayed when adding a new Actor to a flow or when clicking an Actor object in the Flow window. The Actor window holds the following sections:
 
-<table>
+<table style="width: 600px;">
 <tbody>
 <tr>
-<td rowspan="4" valign="top" width="400pxl"><img src="images/99_03_actor_properties.PNG" alt="Properties window" /></td>
-<td valign="top" width="600pxl">
+<td style="width: 590.8px;" valign="top">
 <p><strong>Object Name</strong></p>
 <p>Displays the Actor name in the following format:</p>
 <ul>
@@ -19,7 +18,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 </td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">
+<td style="width: 590.8px;" valign="top">
 <p><strong>Parameters Filter</strong></p>
 <p>Filters the input and output fields in the Actor window using the following options:</p>
 <ul>
@@ -36,30 +35,29 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 </td>
 </tr>
 <tr>
-<td width="300pxl">
+<td style="width: 590.8px;">
 <p><strong>INPUTS</strong></p>
 <p>Displays the input parameters in the following format:</p>
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter. </p>
-  <p>Click <strong>Add Input</strong> to add more parameters. The button is applicable for selected Actor types only.</p>
+<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter.</p>
+<p>Click <strong>Add Input</strong> to add more parameters. The button is applicable for selected Actor types only.</p>
 </td>
 </tr>
 <tr>
-<td width="300pxl">
+<td style="width: 590.8px;">
 <p><strong>OUTPUTS</strong></p>
 <p>Displays the output parameters in the following format:</p>
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter. </p>
-  <p> Click <strong>Add Output</strong> to add more parameters. The button applicable for selected Actor types only.</p>
+<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter.</p>
+<p>Click <strong>Add Output</strong> to add more parameters. The button applicable for selected Actor types only.</p>
 </td>
 </tr>
 </tbody>
 </table>
-
 
 
 
@@ -110,38 +108,36 @@ LIST BF LU_NAME=<'LU Name'> FLOW=<'BF FLOW'>;
 **Example**:
 
 ~~~
-fabric>list bf lu_name=Customer flow=CheckMaxAndDivide;
+fabric>list bf lu_name='Customer' flow='broadwayOverview';
 ~~~
 
 ```
-|param |name  |type|schema       |mandatory|default|
-+------+------+----+-------------+---------+-------+
-|input |a     |any |{}           |true     |null   |
-|input |b     |any |{}           |true     |null   |
-|output|result|real|{type=number}|false    |       |
+|param|name  |type|schema|mandatory|isDefault|
++-----+------+----+------+---------+---------+
+|input|params|any |{}    |false    |false    |
 ```
 
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
-![image](images/99_03_sql.PNG)
+<img src="images/99_03_sql.PNG" alt="image" style="zoom:80%;" />
 
 ### Add Input Button
 
-Some Actors such as JavaScript and DbCommand, enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings:
+Some Actors such as JavaScript and **DbCommand**, enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings:
 
 - Parameter Type = Any.
 - Population Type = Link.
 
 If the population type is updated to a **Const**, select the parameter type from the dropdown list.
 
-To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
+To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG)> Delete or Insert.
 
 Note that the input parameters of the ancestor Actor cannot be deleted.
 
 ### Output Parameters Properties
 
-![Sql_input](images/99_03_outputs.PNG)
+<img src="images/99_03_outputs.PNG" alt="Sql_input" style="zoom:80%;" />
 
 The Actor's output parameters are displayed in the Actor's Properties window in the following format:
 
@@ -155,9 +151,9 @@ The actions in the output parameters are:
 
 ### Add Output Button
 
-Some Actors, such as InnerFlow, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
+Some Actors, such as **InnerFlow**, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
 
-To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
+To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG)> Delete or Insert.
 
 Note that the output parameters of the ancestor Actor cannot be deleted.
 

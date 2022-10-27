@@ -12,15 +12,15 @@ Note that setting a recovery point on a Stage with DB result set, on a [transact
 
 ### How Do I Set a Recovery Point?
 
-Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display ![image](images/99_29_recovery_icon.PNG) icon. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
+Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display <img src="images/99_29_recovery_icon.PNG" alt="image" style="zoom:80%;" /> icon. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
 
 **Example**
 
 The following flow prepares the data, creates a table, selects data from a DB and then inserts the data into the created table.
 
-Set the recovery point at the **Create Table** Stage. If the flow crashes after this Stage, it can be re-run and will start from the **Query** Stage. 
+Set the recovery point at the **Simple Method** Stage. If the flow crashes after this Stage, it can be re-run and will start from the **Start Loop** Stage. 
 
-![image](images/99_29_recovery_01.PNG)
+<img src="images/99_29_recovery_01.PNG" alt="image" style="zoom:80%;" />
 
 
 
@@ -39,14 +39,14 @@ The flow can be executed in one of the following ways:
   
   * Click **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
   
-  * When the flow gets to the breakpoint, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run** to abort the debug session from the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
+  * When the flow gets to the breakpoint, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" />**Stop Run** to abort the debug session from the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
   
   * Then run the flow again by clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
   
 
 The **RecoveryInfo** Actor can be used to receive the recovery information, such as the Recovery ID and the number of attempts to recover. To get the recovery information, place the Actor in a flow after a Recovery Point.
 
-![image](images/99_29_recovery_02.png)
+<img src="images/99_29_recovery_02.png" alt="image" style="zoom:80%;" />
 
 
 

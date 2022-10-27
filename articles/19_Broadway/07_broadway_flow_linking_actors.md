@@ -16,55 +16,33 @@ Note that an Actor can only be linked to input parameters with Population Type =
 
 Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB query.
 
-![link-example1](images/valid_link_example.png)
+<img src="images/valid_link_example.png" alt="link-example1" style="zoom:80%;" />
 
 This link is valid since the source **Const** Actors run before the target **DbCommand** Actor.
 
 **Example 2: Invalid Link**
 
-A **Const** Actor named FileName sends the file name as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target FileRead Actor:
+A **Const** Actor named FileName sends the file name as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target **FileRead** Actor:
 
-![link-example2](images/invalid_link_example.png)
+<img src="images/invalid_link_example.png" alt="link-example2" style="zoom:80%;" />
 
 ### Link Object Properties
 
 A link holds the following settings:
 
-<table width="900pxl">
-<tbody>
-<tr>
-<td valign="top" width="300pxl"><img src="images/99_20_link_attributes.PNG" alt="Link properties" /></td>
-<td valign="top" width="600pxl">
-<ul class="unchanged rich-diff-level-one">
-<li class="unchanged">
-<p class="unchanged"><strong>From (source) parameters</strong>, From Actor, From Parameter and From Parameter Type. These parameters are read-only parameters and cannot be edited.</p>
-</li>
-<li class="unchanged">
-<p class="unchanged"><strong>To (target) parameters</strong>, To Actor, To Parameter and To Parameter Type. These parameters are read-only and cannot be edited. Note that Broadway attempts to handle the differences between the source and target types. For example: if the source type is Integer and the target type is String, then Broadway casts the source integer to a String.</p>
-</li>
-<li class="unchanged">
-<p class="unchanged"><strong>Link Type</strong>, can be edited to set one of the following link types:</p>
-<ul class="unchanged">
-<li class="unchanged">
-<p class="unchanged"><strong>Value</strong>, (default option). Sends the value of the parameter.</p>
-</li>
-<li class="unchanged">
-<p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an array is linked to an output with a single element of the same type - for example, linking an array of string to a string output - the link is created automatically with an <strong>Iterate</strong> link type.</p>
-<p class="unchanged"><a href="21_iterations.md">Click for more information about handling iterations.</a></p>
-</li>
-<li class="unchanged">
-<p class="unchanged"><strong>First</strong>, sends the first value of the parameter. For example, sends the first record of the result set.</p>
-</li>
-</ul>
-</li>
-<li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful for building a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string using the Varargs setting.</p>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+* <strong>From (source) parameters</strong>, From Actor, From Parameter and From Parameter Type. These parameters are read-only parameters and cannot be edited.
+
+* <strong>To (target) parameters</strong>, To Actor, To Parameter and To Parameter Type. These parameters are read-only and cannot be edited. Note that Broadway attempts to handle the differences between the source and target types. For example: if the source type is Integer and the target type is String, then Broadway casts the source integer to a String.
+
+* <strong>Link Type</strong>, can be edited to set one of the following link types:
+
+  * <strong>Value</strong>, (default option). Sends the value of the parameter.
+
+  * <strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an array is linked to an output with a single element of the same type - for example, linking an array of string to a string output - the link is created automatically with an <strong>Iterate</strong> link type. [Click for more information about handling iterations.](21_iterations.md)
+
+  * <strong>First</strong>, sends the first value of the parameter. For example, sends the first record of the result set.
+
+* <strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful for building a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string using the Varargs setting.
 
 **Example of Varargs Setting**
 
@@ -87,7 +65,7 @@ In a flow there may be a need to concatenate several strings into a single strin
   **Notes:**
 
   - The number of strings that can be concatenated is unlimited. 
-  - All additional links to the target array are created automatically when **Varagrs** is set to ON.
+  - All additional links to the target array are created automatically when **Varargs** is set to ON.
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
 
 
@@ -101,6 +79,7 @@ To create a **Link**, do either:
 
    ![Adding link](images/99_20_add_link_1.PNG)
    
+
 To delete a **Link**, click the link's connection line and press **Delete** on your keyboard.
 
 To edit a **Link**, click the link's connection line to open the [Link Object Properties window](07_broadway_flow_linking_actors.md#link-object-properties) and edit the **Link Type** or **Varargs** settings.
@@ -135,7 +114,7 @@ The source parameter holds the following Schema:
 
 To connect a specific element in the Schema, click ![image](images/99_27_red_cross.PNG) adjacent to the Actor's output argument to expand the **yellow segment** of the **Data Inspection** and view the parameters list in the object:
 
-![data inspection](images/99_20_data_inspection_example.PNG)
+<img src="images/99_20_data_inspection_example.PNG" alt="data inspection" style="zoom:80%;" />
 
  To link a Schema to a target Actor, do either:
 - Click the parameter name in the **Data Inspection** and drag the **connection line** to the **input parameter** of the target Actor.

@@ -57,7 +57,6 @@ A MicroDB provides several advantages:
 - Using SQLite, they offer standard SQL operations.
 - No business impact whereby providing continued availability of data during major structural modifications.  
 
-    
 #### 2.1.2 CommonDB
 The CommonDB is an additional SQLite database schema used for storing [reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their [synchronization](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) across nodes. 
 
@@ -65,9 +64,11 @@ The CommonDB is always made available for queries in every Fabric session. This 
 
 
 #### 2.1.3 Cassandra
-Fabric uses Cassandra for three main purposes:
+Fabric uses Cassandra (or Cassandra managed services such as AWS Keyspaces or Astra) for three main purposes:
 
 - Storage of all MicroDB (LUI) as compressed blob chunks.
+  - Note that additional storage types are supported as an LU storage layer. [Click for more information about LU Storage Types](/articles/32_LU_storage/01_LU_storage_overview.md).
+
 - Fabric application management database.
 - General data-store for any project need.
 
@@ -80,12 +81,12 @@ This module is responsible for all transformations and data manipulations and is
 
 ### 2.3 Fabric Studio
 
-Fabric Studio is a Windows application development tool for building Fabric projects, designed to enable users to execute the following steps:
+Fabric Studio is a development tool for building Fabric projects, designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
 - Design LU and Schemas and create their associated instances.
 - Create resources of all types to be used across a project (such as functions, tables, variables).
-- Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
+- Execute data manipulations using the SQL builder or the integrated Java development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
 
@@ -271,3 +272,4 @@ These configurations allow unparalleled flexibility whereby the DevOps Manager r
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/02_fabric_directories.md)
+
