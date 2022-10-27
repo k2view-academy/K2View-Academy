@@ -96,9 +96,9 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 
 Graphit Editor provides three builders to ease of creating Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder
 
-### Get Command Builder
+### *Get* Command Builder
 
-On selecting "get" as the node type or when clicking on the <img src="images/selection.png" > icon of a node which is already of "get" type, the Get Command Builder popup will be opened.
+On selecting "get" as the node type or when clicking on the <img src="images/selection.png" > icon of a node which is already of "get" type, the *Get* Command Builder popup will be opened.
 
 <img src="images/get_command_builder.png" >
 
@@ -108,13 +108,15 @@ Select the logical unit and click "Add".
 
 The popup will be closed and the get command will appear with the appropriate syntax. 
 
-The iid parameter is smartly acquired from the logical unit root table iid and populated, and it is also automatically added as the GraphIt file input parameter.
+The *iid* parameter is smartly acquired from the logical unit root table iid and populated, and it is also automatically added as the GraphIt file input parameter.
 
 <img src="images/get_command_builder_added.png" >
 
 
 
-### Broadway Command Builder
+### *Broadway* Command Builder
+
+You can call and activate a Broadway flow from Graphit and combine it as part of the logic and output of the Graphit file.
 
 On selecting "Broadway" as the node type or when clicking on the <img src="images/selection.png" > icon of a node which is already of "Broadway" type, the Broadway Command Builder popup will be opened.
 
@@ -124,7 +126,15 @@ On selecting "Broadway" as the node type or when clicking on the <img src="image
 
 
 
-**TBD**
+1. Select the logical unit that the required Broadway flow is located in.
+
+2. Select the Broadway flow.
+
+3. Choose if the Broadway flow input parameters will be automatically added as the Graphit file input parameters. This is the default option and can save you time and avoid mistakes. Yet you can uncheck this checkbox, in cases where flow input parameters are pre-set manually at the Graphit file, as constants or according to previous query results. 
+
+   > Note: for simplicity this checkbox affect on all Broadway flow input parameters 
+
+4. Choose if to add and reveal the Broadway flow output as fields in the Graphit or not. This option is similar to the option provided via the SQL Query Builder Helper.
 
 
 
