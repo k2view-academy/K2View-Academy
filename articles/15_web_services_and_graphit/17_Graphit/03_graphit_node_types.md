@@ -56,14 +56,14 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Get</td>
 <td valign="top" width="900pxl">Define  the Fabric Get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
-    Enter the Get command statement manually or hover over and then click the Helper icon to open the Command Builder.  TO EXPAND EXPLAIN
+    Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Broadway</td>
 <td valign="top" width="900pxl">Define a call to a Broadway flow that will be activated.<br/>
-    Enter the command statement manually or hover over and then click the Helper icon to open the Command Builder.  TO EXPAND EXPLAIN
+    Enter the command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
@@ -89,6 +89,46 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 </tr>
 </tbody>
 </table>
+
+
+
+## Command Builders
+
+Graphit Editor provides three builders to ease of creating Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder
+
+### Get Command Builder
+
+On selecting "get" as the node type or when clicking on the <img src="images/selection.png" > icon of a node which is already of "get" type, the Get Command Builder popup will be opened.
+
+<img src="images/get_command_builder.png" >
+
+
+
+Select the logical unit and click "Add".
+
+The popup will be closed and the get command will appear with the appropriate syntax. 
+
+The iid parameter is smartly acquired from the logical unit root table iid and populated, and it is also automatically added as the GraphIt file input parameter.
+
+<img src="images/get_command_builder_added.png" >
+
+
+
+### Broadway Command Builder
+
+On selecting "Broadway" as the node type or when clicking on the <img src="images/selection.png" > icon of a node which is already of "Broadway" type, the Broadway Command Builder popup will be opened.
+
+
+
+<img src="images/bw_command_builder.png" >
+
+
+
+**TBD**
+
+
+
+
 
 
 
