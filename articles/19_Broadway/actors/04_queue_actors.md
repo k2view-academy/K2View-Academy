@@ -4,8 +4,8 @@ Broadway has a group of [built-in Actors](../04_built_in_actor_types.md) that ma
 These Actors belong to the **queue** category and they are:
 
 - **Publish** Actor, publishes messages using a message provider.
-- **Subscribe** Actor, subscribes to messages provided by a message provider.
-- **SubscribeBatch** Actor, subscribes to messages and reads them in batches. 
+- **Subscribe** Actor, subscribes to messages and returns them one by one.
+- **SubscribeBatch** Actor, subscribes to messages and returns them in batches. 
 
 Message provider types supported in Broadway are:
 * Apache Kafka.
@@ -60,7 +60,7 @@ The following section of the example flow shows how to publish messages to an in
 
 ![image](../images/99_actors_04_1.PNG)
 
-To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
+The messages are read in batches of 100 by default. To change the batch size, set **max_batch_records** to the required number.
 
 ### Examples of Pub/Sub Processing in Transaction
 
