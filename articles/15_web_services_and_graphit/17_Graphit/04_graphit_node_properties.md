@@ -1,18 +1,37 @@
 # Graphit Node Properties
 
-### What Are Node Properties?
-
 Node Properties are additional instructions that can be given to a node. For example, how to format a number, which database to query, or if the node is active or disabled. 
 
-To assign a property to a node, click the **(+)** adjacent to the node and select the  property from the dropdown menu. 
+### Add Node Properties
 
-Note that there is a short description of each property in the dropdown menu.
+node_properties_added.png
 
-<img src="../images/graphit/19_node_properties_menu.png" width="500" height="350"></img>
+To assign a property to a node:
+
+1. Click the <img src="images/plus-icon.png" > adjacent to the node and at the left side of the opened popup select the required property from the list. On selection:
+
+   - A short description of the property is displayed at the bottom of the popup.  
+   - Property optional values will appear at the right side. Some of them are editable at the right side sub-panel.
+
+   <img src="images/node_properties.png" ></img>
+
+2. Select a value among the options.
+
+3. Click "Add". Popup will be closed and the property with its value will appear aside of the node, as a label.
+
+   <img src="images/node_properties_added_dark.png" ></img>
+
+> Notes:
+>
+> * You can add several properties to each node.
+> * Properties are not editable.
+> * You can remove a node's property by clicking elsewhere on its label.  
 
 
-### What Are the Node Properties Options?
-Please refer to the files in the following table's Example column. We suggest that you run each file in Debug mode and observe the response. The files are saved in the Project environment under Project Tree > Web Services > Resources. 
+
+
+### Node Properties Options
+Following table describes the node properties. Please refer to the files in the following table's Example column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. 
 <table>
 <tbody>
 <tr>
@@ -107,7 +126,6 @@ Note that this property affects the node and its children nodes.&nbsp;</td>
 </tr>
 </tbody>
 </table>
-
 
 
 

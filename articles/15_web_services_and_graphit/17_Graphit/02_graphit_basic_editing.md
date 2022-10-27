@@ -16,7 +16,7 @@ Once your created a Graphit file you can start edit it. To learn how to create a
 
 * The Graphit editor is built from a main editing area, a top toolbar, and a right panel which is opened when an action in the top toolbar is selected.
 
-<img src="images\graphit_editor.png" style="zoom:22%;" />
+<img src="images\graphit_editor.png"  />
 
 * The editor manages Graphit files which are built from nodes that can be added as a sibling or as a child of any other existing node, in the main editing area.
 * Nodes can be moved or copied within a GraphIt file using Drag&Drop or Copy&Paste actions. Node can be copied and pasted between files.
@@ -40,17 +40,17 @@ Once your created a Graphit file you can start edit it. To learn how to create a
 
 ## Nodes Editing Actions
 
-Use the following actions for managing nodes:
+Use the following actions for managing nodes such as create, copy, paste, move, delete:
 
-- Click <img src="images/add_sibling.png"></img> at left of a node, to create a new sibling node placed under the original node, on the same level.
-- Click <img src="images/add-child.png"></img> at left of a node, to create a new child node under the parent node.
+- Click <img src="images/add_sibling.png"></img> at left of a node, to create a new sibling node placed under the original node, on the same level. Appears on hoovering the node.
+- Click <img src="images/add-child.png"></img> at left of a node, to create a new child node under the parent node. Appears on hoovering the node.
 - Click <img src="images/drag-icon.png" ></img> to drag a node to another location in the hierarchy. 
 - Click  <img src="images/drag-open-icon.png" > to expand a collapsed node.
-- Click <img src="images/delete_node.png" ></img> to delete a node on the node level.  
-- Click <img src="images/copy.png" ></img> to copy a node so that can be paste into another location at this Graphit or to another Graphit file. 
-- Click <img src="images/cut.png"></img> to copy a node so that can be moved into another location at this Graphit or to another Graphit file. Moving nodes within a Graphit file can be done also via drag and drop.
-- Click <img src="images/paste_child.png" > to paste a previously copied/cut node as a child node.
-- Click <img src="images/paste_sibling.png" > to paste a previously copied/cut node as a sibling node.
+- Click <img src="images/delete_node.png" ></img> to delete a node on the node level.  Appears on hoovering the node.
+- Click <img src="images/copy.png" ></img> to copy a node so that can be paste into another location at this Graphit or to another Graphit file. Appears on hoovering the node.
+- Click <img src="images/cut.png"></img> to copy a node so that can be moved into another location at this Graphit or to another Graphit file. Moving nodes within a Graphit file can be done also via drag and drop. Appears on hoovering the node.
+- Click <img src="images/paste_child.png" > to paste a previously copied/cut node as a child node. Appears on hoovering the node.
+- Click <img src="images/paste_sibling.png" > to paste a previously copied/cut node as a sibling node. Appears on hoovering the node.
 
 
 
@@ -62,7 +62,25 @@ Use the following actions for node editing:
 
 
 
+## Testing Graphit
+
+You can easily execute and test your Graphit file by using the top tollbar actions.
+
+Before testing you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, on executing, the result panel will inform you that they are missing.
+
+On executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel will be opened, where you can see the outcome of the Graphit execution. similarly and easily you can examine the outcome of the file in other format - XML or CSV, by clicking their action icons at the top toolbar.
+
+You can leave this panel opened and continue editing the file. Then you can click on refresh <img src="images/refraesh-icon.png"></img> icon at the top tollbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md)
+
+You can also examine the Graphit's performance at the **Profiler** panel which is opened when choosing the <img src="images/profiler-icon.png"></img> icon at the top toolbar.
+
+
+
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/03_graphit_node_types.md)
 
