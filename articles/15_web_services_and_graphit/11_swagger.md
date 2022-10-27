@@ -1,83 +1,100 @@
-# Web Services Testing Ap
+# Web Services Testing Application
 
-Fabric lets developers to effortlessly interact and try out exposes web services - either Fabric built in or custom web services - for easy consumption via a visualize utility - Swagger.
+Fabric lets developers to effortlessly interact and try out either Fabric built in or custom web services - via a visualize utility - Swagger UI.
 
+This utility is available as a web application, named "API" at Fabric [Web Framework]("/articles/30_web_framework/01_web_framework_overview.md" ). Using it you quickly can find the web services with neatly categorized documentation, and test them with fine UI, which lets you easily populating parameters, according to the service verb. 
 
+Fabric builds and generates an Open API Specification (OAS version 3) document , which Swagger UI reads and serves, providing these powerful capabilities.
 
+To open the app, go to the Fabric Web Framework and select "API" from its menu.
 
+<studio>
 
+In addition, you can invoke the web service directly from the Studio, where it automatically opens the web browser with the Swagger testing app and navigate you to the selected web service.
 
+To do so - find the the web service - Graphit of Java function, at the project tree, right click on its name and choose **Invoke Web Service**.
 
-
-
-
-
-
-
-Quickly find and work with resources and endpoints with neatly categorized documentation
-
-It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client side consumption
-
-As Fabric is aligned with the OpenAPI Specification (OAS version 3), . 
-
-OAS defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
-
-### Invoking and Testing Web Services Using Fabric Studio
-
-1. Go to: **http://[Fabric server]:3213/api** and then define the **IP Address** of the Fabric server. 
-   
-   Or, 
-   
-2. Go to **User Preferences** > **Server Configuration** and do the following:
-   
-    a. Set the **Web Service Invoke Path Template** to **static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>**.  
-
-    b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
-
-   <img src="images/Web-Service-Swagger-1.png" alt="drawing"/>
-
-  Once the link to Swagger is invoked, you can focus on a given version of the invoked URL path. For example, by adding /v1 to the URL as shown below.
-
-   <img src="images/Web-Service-Swagger-1-1.png" alt="drawing"/>
-
-The relevant invoked Web Service is expanded and points to the correct verb. 
-*	If only the GET verb is defined as eligible for the invoked Web Service, it will only display the GET verb  as an option.
-
-*	If all the four verbs are defined as eligible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
-
-3. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
-
-   <img src="images/Web-Service-Swagger-2.png" alt="drawing"/>
-
-   If JSON / XML or CSV examples have been defined in the Web Service properties in the Studio, they are displayed in Swagger.
-
-   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-4.png" alt="drawing"/>
-
-4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
-
-   Use the **authenticate** Product Web Service and enter the API Key or Username / Password as input in the body request to skip the Authorize as Client step in the remaining Web Services calls. 
-
-5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
-
-   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-3.png" alt="drawing"/>
-
-6. The default **Media Type** is set to **application/json** and can be modified to another supported eligible format (XML or CSV) and respond accordingly.
-
-   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-5.png" alt="drawing"/>
-
-### Swagger - Supported Web Services Categories
-Fabric Web Services are displayed in Swagger in categories and in alphabetical order.
+</studio>
 
 
-   * Common - all built-in product Web Services that bring reference table metadata and data.
-   
-   * Fabric - pre-built API to run Fabric commands, Data Catalog requests, Authentication and Heart bits/Statuses queries   
-   
-   * Graphit - all Graphit files defined as a part of the project implementations.
-   
+
+The API testing app page shows the Web Services in categories and in alphabetical order. 
+
+
+   * Common - all built-in product Web Services that bring reference table metadata and data. 
+   * Fabric - pre-built API to run Fabric commands, Authentication and Heart bits/Statuses queries   
    * LU - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
-   
-   * Project defined categories for Web Services.
+   * Project defined categories for custom Web Services.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_annotations.md)
+Built in out-of-the-box web services will be always exist and project is according to the project's implementation. 
+
+Read [here](01_web_services_overview.md) about various web services types.
+
+
+
+> Notes: 
+>
+> * Graphit files which are located under resources folder at the project tree are displayed under Graphit category.
+> * Categories do not affect on Web service URL path.
+> * Web services are shown according to user's permissions. If he has no permissions to web services under a category, he will not see this category in the page.
+
+
+
+<img src="images/swagger_base.png" alt=""/>
+
+
+
+Each category can be expanded and collapsed, showing the various web services along with their verb methods, where presented verbs are those which were declared and defined ahead. 
+
+For example, expanding the LU category will show this:
+
+<img src="images/swagger_LU.png" alt="drawing"/>
+
+For the project's custom web services the verb methods are set via the implementation. 
+
+
+
+Click a web service to view more details including its parameters, with indication if each is mandatory. If a description of the method or comments have been added to the Input parameters, they will be displayed, as shown in the following examples (customer_id description):
+
+
+
+The **Media type** select list show options according to the format that defined for the web service. 
+
+<img src="images/Web-Service-Swagger-2.png" alt="drawing"/>
+
+
+
+To test a web service:
+
+1. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization). if you are already authenticated, this step is not needed. 
+
+2. Click **Try it Out**!. populate the parameters and then click **Execute** to display the response.
+
+    <img src="images/Web-Service-Swagger-3.png" alt="drawing"/>
+
+    You can see that the Request URL is shown too, as well as the curl command, which guide you how to use it in your application when accessing too the web service.
+
+3. You can change **Media Type** when applicable, and easily see the result in other format, For example, as XML:
+
+   <img src="images/Web-Service-Swagger-5.png" alt="drawing"/>
+
+
+
+## Web Services Versions
+
+You can easily switch to another version and test it: 
+
+At the top URL field, define the version, for example, by adding /v2 and click on Explore. 
+
+As shown below, when changed, you will see an indication as badge, aside the title. The shown and tested web service will be only those which match to that version.
+
+   <img src="images/swagger_version_filter.png" alt="drawing"/>
+
+
+
+
+
+
+*	[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/10_advanced_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md)
+
 

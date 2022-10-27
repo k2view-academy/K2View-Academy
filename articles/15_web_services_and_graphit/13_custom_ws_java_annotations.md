@@ -139,6 +139,5 @@ Use either Notepad or IntelliJ to edit the annotation.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/09_swagger.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/11_response_codes.md)
-
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/14_rest_api_additions.md)
 

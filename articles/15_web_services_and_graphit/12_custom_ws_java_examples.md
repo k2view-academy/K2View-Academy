@@ -1,12 +1,10 @@
 # Java Function Web Services - Code Examples
 
-While is it recommended to build web services with Graphit, you might use Java function for this purpose. Below are several examples, especially such which  
+While is it recommended to build web services with Graphit, you might use Java function for this purpose.   
 
 ### Example List
 
-* [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance)
-* [Complex response - multiple entries from various LU tables](#example-of-a-wscustomerinfo2-web-service-that-brings-a-dbrows-structure-as-an-output-for-a-given-instance)
-* [Versioning](#example-of-versioning)
+* [Simple response - single entry from  the LU root table](#simple-response-single-entry-from-the-LU-root-table)
 * [Complex JSON input using standard Java objects](#example-of-a-complex-java-input-structure)
 * [Complex JSON input using customized Java objects](#example-of-a-complex-customized-input-structure)
 * [complex TDM](#example-of-a-complex-tdm-web-service)
@@ -15,7 +13,7 @@ While is it recommended to build web services with Graphit, you might use Java f
 
 
 
-### Simple example of a wsCustomerInfo Web Service that brings a line of data for a given instance  
+### Simple response - single entry from  the LU root table  
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
 ```java
@@ -38,95 +36,7 @@ Output
 ]
 ```
 
-###  Example of a wsCustomerInfo2 Web Service that brings a Db.Rows structure as an output for a given instance   
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
-
-```java
-String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION,sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE " +
-		"from CUSTOMER cust, CONTRACT cont, SUBSCRIBER sub where cont.CONTRACT_ID=sub.SUBSCRIBER_ID";
-
-Db.Rows rows = ludb("Customer", i_id).fetch(sql);
-
-log.info("WS executed Successfully for Customer ID :" + i_id);
-
-return rows;
-```
-
-Output 
-
-```
-[
-  {
-    "CUSTOMER_ID": "1",
-    "SSN": "5153527856",
-    "CUSTOMER_NAME": "Tali Griffin",
-    "CONTRACT_ID": "1.0",
-    "CONTRACT_DESCRIPTION": "5G tether",
-    "SUBSCRIBER_ID": "1",
-    "MSISDN": "9614867860",
-    "IMSI": "531015353732639",
-    "SIM": "2988735759833578",
-    "SUBSCRIBER_TYPE": "1"
-  },
-  {
-    "CUSTOMER_ID": "1",
-    "SSN": "5153527856",
-    "CUSTOMER_NAME": "Tali Griffin",
-    "CONTRACT_ID": "2.0",
-    "CONTRACT_DESCRIPTION": "10G 3G",
-    "SUBSCRIBER_ID": "2",
-    "MSISDN": "7997099409",
-    "IMSI": "457470703125000",
-    "SIM": "3751389217697811",
-    "SUBSCRIBER_TYPE": "3"
-  },
-  {
-    "CUSTOMER_ID": "1",
-    "SSN": "5153527856",
-    "CUSTOMER_NAME": "Tali Griffin",
-    "CONTRACT_ID": "3.0",
-    "CONTRACT_DESCRIPTION": "Roaming special",
-    "SUBSCRIBER_ID": "3",
-    "MSISDN": "3924663547",
-    "IMSI": "759668646918403",
-    "SIM": "2395410334354832",
-    "SUBSCRIBER_TYPE": "1"
-  },
-  {
-    "CUSTOMER_ID": "1",
-    "SSN": "5153527856",
-    "CUSTOMER_NAME": "Tali Griffin",
-    "CONTRACT_ID": "4.0",
-    "CONTRACT_DESCRIPTION": "450 min",
-    "SUBSCRIBER_ID": "4",
-    "MSISDN": "7042855196",
-    "IMSI": "345797729492187",
-    "SIM": "9009227816906040",
-    "SUBSCRIBER_TYPE": "4"
-  },
-  {
-    "CUSTOMER_ID": "1",
-    "SSN": "5153527856",
-    "CUSTOMER_NAME": "Tali Griffin",
-    "CONTRACT_ID": "5.0",
-    "CONTRACT_DESCRIPTION": "Unlimited call",
-    "SUBSCRIBER_ID": "5",
-    "MSISDN": "7183304985",
-    "IMSI": "734794108072916",
-    "SIM": "5671433642523324",
-    "SUBSCRIBER_TYPE": "4"
-  }
-]
-```
-
-### Example of versioning
-
-Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share the same URL path named test/getCustomerInfo. The version property of wsCustomerInfo is set to 1 and the version property of wsCustomerInfo1 is set to 2.
-
-- To invoke a call to wsCustomerInfo, call the following URL: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
-
-- To invoke a call to wsCustomerInfo2, call the following URL: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
 ### Example of a complex Java input structure
 A complex JSON format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
@@ -152,6 +62,8 @@ Web Service inside logic
      String id = m.get("id"); // will return 78999
      String company = m.get("company"); // will return Telco1
 ```
+
+
 
 ### Example of a complex customized input structure
 
@@ -292,6 +204,8 @@ if (otherRootRecs != null) {
 return mainOutput;
 ```
 
+
+
 ### Example of a Custom Payload - JSON
 
 The following Web Service is similar to the [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages the input request payload by itself. 
@@ -410,4 +324,4 @@ The code for inserting this into the DB is similar to the code in the wsInsertCa
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_deploy_web_services.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/11_swagger.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/13_custom_ws_java_annotations.md)

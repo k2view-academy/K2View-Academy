@@ -91,6 +91,38 @@ Response Body
 
 
 
+##  Authenticate
+
+**POST** `/api/authenticate`
+
+
+Generate a JWT digital signed cookie for Web-Services calls on the same session. Next Fabric Web-services calls will not require a token as a parameter. 
+
+The web service expects either API Key to be sent in the request body or username and password, as following:
+
+- Authenticate by apikey 
+
+  Request Body:
+
+```
+{
+  "apikey": "string"
+}
+```
+
+- Authenticate by user/password
+
+  Request Body:
+
+```
+{
+  "username": "string",
+  "password": "string",
+}
+```
+
+
+
 ## Fabric isAlive
 
 Indicates whether the Fabric is up and running. 
