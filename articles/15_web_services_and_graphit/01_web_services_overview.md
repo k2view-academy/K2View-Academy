@@ -20,7 +20,7 @@ To learn more about built-in out-of-the-box Logical Units and Common tables Web 
 
 To learn more about Fabric built-in Web Services - read [here](/articles/15_web_services_and_graphit/04_built_in_fabric_ws.md).
 
-To learn more about creating and handling project's customized project's Web Service - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md).
+To learn more about creating and handling project's custom-built Web Service - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md).
 
 
 
