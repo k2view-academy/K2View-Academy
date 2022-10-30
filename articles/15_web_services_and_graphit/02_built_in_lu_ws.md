@@ -1,6 +1,6 @@
 # Built-In Logical Units APIs
 
-Fabric provides out of the box web services APIs for querying project's LU data and meta data resources.
+Fabric provides out-of-the-box web services APIs for querying a project's LU data and meta data resources.
 
 An appropriate HTTP status codes is used to indicate the status of the executed operation, following standard status codes which are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
 
@@ -75,7 +75,7 @@ All API access is over HTTPS, and accessed from Fabric URL endpoint `https://<Do
 
 - `https://localhost:3213/api/lu/CUSTOMER`
 
-  Bring metadata for CUSTOMER LU
+  Brings metadata for CUSTOMER LU
 
 
 
@@ -331,11 +331,11 @@ Environment variable
 
 
 - `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A, ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND  B.ADDRESS_TYPE=’P’`
-  
+
   Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
 - `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&set=sync,force&set=ENVIRONMENT,ENV1&set=GLOBAL_LION,10`
-  
+
   Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and  run it on ENV1 and set GLOBAL_LION to 10
 
 
@@ -393,7 +393,7 @@ Environment variable
 1. Insert data into CUSTOMER LU instance id 1, LION table, where table name is specified at the post body
     `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1`
     Request Body:
-    
+
     ```json
     {"rows":{"LION":[{"ID":11, "NAME":"lion11"},{"ID":12,"NAME":"lion12"},{"ID":13,"NAME":"lion13"}]}}
     ```
@@ -520,7 +520,6 @@ The request body shall contain the row data to be updated along with optional "w
 
   Delete LUI 1 from PATIENT LU
 
-  
 
 
 ## Delete Data From LU Table
@@ -584,7 +583,6 @@ The request body shall contain the row data to be updated along with optional "w
 
   Delete data from PATIENT LU instance id 1, INVOICE table by where clause
 
-  
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_built_in_common_ws.md)
 
