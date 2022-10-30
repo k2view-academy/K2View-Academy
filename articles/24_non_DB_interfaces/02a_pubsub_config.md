@@ -4,13 +4,13 @@
 
 A PubSub Configuration interface type defines the Fabric connection to message provider (such as  Apache Kafka or JMS) using the PubSub abstraction layer. The configuration is performed via the **[default_pubsub]** section as described further in this article.
 
-For more details about moving the existing project to the new abstraction layer configuration, refer to the Fabric Upgrade Procedure to 7.0.
+For details about moving the existing project to the new abstraction layer configuration, refer to the Fabric Upgrade Procedure to 7.0.
 
 ### Default PubSub Settings
 
 All the PubSub connection settings are defined in the **[default_pubsub]** section of config.ini and not in the interface. The **[default_pubsub]** section allows to define the connection settings in one location and apply them across various Fabric processes. 
 
-The only parameter included in the interface definition is the **Config Section**. It holds the name of the config.ini section(s) where the connection settings are defined. By default, it is set to **default_pubsub**. 
+The only parameter included in the interface definition is the **Config Section**. It holds the name of the config.ini section where the connection settings are defined. By default, it is set to **default_pubsub**. 
 
 The **[default_pubsub]** section is also used by CDC and Common DB processes for the same purpose of connecting to Kafka. For more details about overriding the CDC and Common DB connection settings, refer to the [CDC Configuration](/articles/18_fabric_cdc/06_cdc_configuration.md) and [CommonDB Configuration](/articles/22_reference(commonDB)_tables/07_fabric_commonDB_configuration.md) articles.
 
@@ -45,7 +45,7 @@ If the GROUP_ID, TOPIC and PARTITIONS parameters are not found in either of the 
 
 ### How Do I Override The Default Settings?
 
-When different connection settings are required for various processes, you can create additional section(s) in the config.ini and add their names to the interface’s Config Section parameter, separated by comma. 
+When different connection settings are required for various processes, you can create additional section(s) in the config.ini and add their names to the interface’s **Config Section** parameter, separated by comma. 
 
 The first section name from this list, which is found in the config.ini, will be used. If, for any reason, the section name defined in the interface does not exist in the config.ini, the settings will be taken from the **[default_pubsub]** section. The new section does not have to include all the parameters, but only those that override the default section's settings.
 
