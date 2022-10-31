@@ -42,13 +42,13 @@ Note that the password of the certification file should be defined here:
 
 ## Fabric JDBC Driver Hardening
 
-In order to securely access Fabric Data via its JDBC driver, the TLS option can be switched on by adding the following lines to the **[jdbc-server]** section of the **config.ini** file as shown below:
+In order to securely access Fabric Data via its JDBC driver, the TLS option is set to true by default in the **[jdbc-server]** section of the **config.ini** file:
 
 ```
 ## Turn on TLS for the Fabric driver protocol
-SECURE=true
+#SECURE=true
 ```
-To disable hardening, simply set the *SECURE* flag to false.
+To disable hardening, set the SECURE flag to false.
 
 
 
