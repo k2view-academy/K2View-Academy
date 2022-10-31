@@ -346,25 +346,8 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are 
 <p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="200pxl">
-<p><h4>trnParsList</p>
-</td>
-<td valign="top" width="300pxl">
-<p>Translation for splitting large files.&nbsp;</p>
-</td>
-<td valign="top" width="400pxl">
-<p>Copy the translation to the LU if needed and populate it with the list of large parsers.&nbsp;</p>
-</td>
-</tr>
 </tbody>
 </table>
-
-
-
-### Split Large Parsers
-
-**parExecuteJob**, is the main parser that runs other parsers and splits them to run in parallel. The **trnParsList** translation object holds the large parser names to be split. Copy this parser to the LU if needed. 
 
 
 
