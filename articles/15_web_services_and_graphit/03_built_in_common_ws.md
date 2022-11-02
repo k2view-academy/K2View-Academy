@@ -10,7 +10,7 @@ All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `
 
 ## Get Common DB Schema (Metadata)
 
-Retrieves the Common DB schema, describing its table structures.
+Retrieves the Common DB schema, describing the structures of its tables.
 
 **GET** `/api/common[?format=json|xml]`
 
