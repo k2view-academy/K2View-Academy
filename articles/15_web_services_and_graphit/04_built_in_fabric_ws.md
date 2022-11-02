@@ -1,8 +1,8 @@
 # Fabric Built-In APIs
 
-Fabric provides out of the box web services / APIs.
+Fabric provides out-of-the-box web services/APIs.
 
-All API access is over HTTPS, and accessed from Fabric URL endpoint `https://<Domain Name>:<PORT>`
+All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
 
 
@@ -11,7 +11,7 @@ All API access is over HTTPS, and accessed from Fabric URL endpoint `https://<Do
 **POST** `/api/fabric-commands`
 
 
-Run fabric command or a set of fabric commands. 
+Run either a fabric command or a set of fabric commands. 
 
 **Examples:**
 
@@ -96,9 +96,9 @@ Response Body
 **POST** `/api/authenticate`
 
 
-Generate a JWT digital signed cookie for Web-Services calls on the same session. Next Fabric Web-services calls will not require a token as a parameter. 
+Generate a JWT digitally signed cookie for Web-Services calls on the same session. Consequently, future Fabric Web-services calls will not require a token as a parameter. 
 
-The web service expects either API Key to be sent in the request body or username and password, as following:
+The web service expects either an API Key to be sent in the request body or username and password, as follows:
 
 - Authenticate by apikey 
 
@@ -135,7 +135,6 @@ Indicates whether the Fabric is up and running.
 
 - `https://localhost:3213/api/isAlive`
 
-  
 
 
 
