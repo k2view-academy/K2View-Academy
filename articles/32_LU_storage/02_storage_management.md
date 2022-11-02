@@ -23,7 +23,7 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
   
   - When the storage type in the config.ini is set to **NONE**, the instance is not saved to Fabric storage.
   
-  - As experimental feature on Fabric 6.5.2, it is also possible to define S3 or AZURE_BLOB_STORE as the storage type.
+  - It is also possible to define S3 or AZURE_BLOB_STORE or GCS as the storage type.
   
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache files on the server.
 
