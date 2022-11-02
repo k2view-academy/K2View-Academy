@@ -1,10 +1,10 @@
 # Project Custom APIs
 
-While the built-in out-of-the-box web services are very useful and comprehensive, Fabric provides a very proudful capability of creating custom web services. This enables building new webservices, according to the project needs, deploy them and immediately use them, without the need to wait for a new product release. This expedites project's go to market and ongoing updates.
+While the built-in out-of-the-box web services are very useful and comprehensive, Fabric provides a very powerful capability of creating custom web services. This enables building new web services, according to the project needs, deploy them and immediately use them, without the need to wait for a new product release. This expedites the project's go-to-market strategy and ongoing updates.
 
-To build and expose web services use Graphit Editor, aimed for building visually, with minimal coding needs, structured documents, like JSON and XML, to be published as web services. 
+In order to build and expose web services, use Graphit Editor, aimed for building visually, with minimal coding needs, structured documents, like JSON and XML, to be published as web services. 
 
-Note that Fabric provides also methods and helpers to build web services as Java functions, but it is recommended to use it only in specific cases where Graphit does not fit the needs.
+Note that Fabric also provides methods and helpers to build web services as Java functions, but it is recommended to use it only in specific cases where Graphit does not fit the needs.
 
 Similar to the built-in web services, the custom web services outcome are JSON, XML or CSV formats. 
 
