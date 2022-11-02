@@ -9,7 +9,7 @@ Each Fabric role must get **ALL_WS** permission to enable the role's users to op
 
 Assuming a **one-to-one relation between a user group and a Fabric role**.
 
-Of course each Fabric role can get different set of permissions. For example, a tester role must not have an access to an API that creates or edits TDM [Business Entities (BEs)](/articles/TDM/tdm_overview/03_business_entity_overview.md), since only TDM admin users can create or edit Business Entity.
+Of course each Fabric role can get different set of permissions. For example, a tester role should not have access to the API that creates or edits TDM [Business Entities (BEs)](/articles/TDM/tdm_overview/03_business_entity_overview.md), since only TDM admin users can create or edit Business Entities.
 
 
 
