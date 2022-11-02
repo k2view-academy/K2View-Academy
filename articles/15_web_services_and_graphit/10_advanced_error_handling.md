@@ -10,9 +10,11 @@ The advanced error handling is done by building a dedicated Graphit file named `
 
 The payload structure can be in JSON or XML format, depending on the original Web Service call requested format. In case of CSV format ```error.graphit``` file will not be triggered.
 
+Being a non-standard Graphit file, which is not invoked programmatically, the Graphit top toolbar does not exist for `error.graphit` .
+
 This feature was added as a part of Fabric release 6.5.3.
 
-### Example 1 - simple error.graphit file
+### Example 1
 
 The following ```error.graphit``` file checks the original Web Service response status.
 
@@ -26,7 +28,7 @@ and overrides the response with the following:
 
 <img src="17_Graphit/images/67_graphit_error_handling_2.png"></img>
 
-### Example 2 - error.graphit file
+### Example 2 
 
 The following ```error.graphit``` file checks the original Web Service response status.
 
