@@ -39,7 +39,7 @@ Some of the properties are available on both Java and Graphit, as following:
 <tr>
 <td valign="top"><p><h5>Version</h5></p></td>
 <td valign="top">
-<p>Representation of the web service versioning. A version number is incorporated into the web service&rsquo;s URL and is used to enable several web service versions, for example to serve various calients. Version is not mandatory and can be omitted. The default population of Version is 1.</p>
+<p>Representation of the web service versioning. A version number is incorporated into the web service&rsquo;s URL and is used to enable several web service versions, for example to serve various clients. Version is not mandatory and can be omitted. The default population of Version is 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
 <li>If the version is not part of the URL, the API will respond with the latest version.</li>
@@ -154,6 +154,7 @@ When set to False, it will allow calling the web service by skipping the Authent
 </tr>
 </tbody>
 </table>    
+
 
 
 Following are properties which are available only for java function web services:

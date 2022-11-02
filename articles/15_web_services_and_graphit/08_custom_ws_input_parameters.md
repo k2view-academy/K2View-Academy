@@ -27,6 +27,8 @@ Input parameters can be transferred to the project custom Web Services either as
 - Standard web service parameters, according to the verb.
 - Part of the URL path
 
+For POST and PUT verb methods, parameters shall be transferred in the request body and yet Fabric knows to use URL based parameters also for these verb methods.
+
 ### Transferring Input Parameters as Standard web service parameters
 
 When input parameters are not set as part of the URL path, transfer them according to the web service verb (method). 
