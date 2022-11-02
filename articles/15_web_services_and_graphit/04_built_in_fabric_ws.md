@@ -125,7 +125,7 @@ The web service expects either an API Key to be sent in the request body or user
 
 ## Fabric isAlive
 
-Indicates whether the Fabric is up and running. 
+Indicates whether Fabric is up and running. 
 
 **GET** `/api/isAlive`
 
