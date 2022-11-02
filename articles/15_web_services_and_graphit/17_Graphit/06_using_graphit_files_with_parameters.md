@@ -26,39 +26,68 @@ Parameters can be set when:
 
 
 
-## Set Parameters When Testing in Graphit
-When creating a Graphit file, parameters can be defined using the **${}** symbols to refer to the value that is set in the Properties and Parameters Panel. To test it at Graphit, you shall populate the Debug value in the Properties and Parameters Panel.
+## Using Parameters 
+
+To use the input parameters in the Graphit file logic, you shall refer to them by using the **${}** bracket.
+
+For example, to use it at the GET command which requires the iid, when input parameter us "Customer_ID" and LU is "Customer": 
+
+`get Customer.${Customer_ID}`.
+
+In this example you can also have the LU name to be a parameter, like this: `get ${LU}.${Customer_ID}` .
+
+Parameters that can be used are not only input parameters but also those which set or retrieved at the Graphit logic:
+
+* Parameter that was set as constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can used on a later nodes. For example for GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as input parameter. 
+* Parameter that was retrieved from a SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters to later logic at the Graphit, for example in a WHERE statement at a next SQL command.
 
 
 
-EXAMPLE
+When using the parameters in function nodes you shall use it as variables. For example, supposed  `input1` and  `input2` are defined as input parameters, then in a function node you can do `input1 + input2` to get their sum.
 
 
 
-## Transfer Parameters When Calling Graphit as Web Service
+## Set Input Parameters When Testing in Graphit
+To test & debug a Graphit file:
+
+1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
+2. At The **URL Parameters & Properties**  > **Input Parameter & Path** section, populate the "Debug Value" fields.
+3. Test the GraphIt by using either of the JSON, XML or CSV icons at the top toolbar.
 
 
-TBD: Refer to WS article
+
+## Transfer Input Parameters When Calling Graphit as Web Service
+
+
+To learn how to send input parameters when the Graphit is exposed as web service, read [here](/articles/15_web_services_and_graphit/08_custom_ws_input_parameters.md).
 
 
 
-## Transfer Parameters When Invoking Graphit From a Function
-A Graphit file can be invoked from Fabric internal implementation components. When calling Graphit from a java function, the input parameters shall be populated by a parameter name or by a map object.
+## Transfer Input Parameters When Invoking From Fabric Implementation Components
+A Graphit file can be invoked internally, from another Fabric Implementation Components. 
 
-**Example 1**: sending parameters as a map -
+### Invoking From a Java Function
 
-<pre><code>Map&lt;String, Object&gt; graphitParams = new HashMap&lt;&gt;();
+When calling Graphit from a java function, the input parameters shall be populated by a parameter name or by a map object.
+
+**Example 1**: sending parameters as a map:
+
+
+```java
+Map<String, Object> graphitParams = new HashMap<>();
 graphitParams.put("input1",1000);
 graphitParams.put("input2",2463);
-return graphit("grSql2.graphit", graphitParams);</code></pre>
+return graphit("gr1.graphit", graphitParams);
+```
+
 
 This code calls the following Graphit file which uses **${input1}** and **${input2}** as parameters.
 
 
 
-**Example 2**: sending parameters as parameter list -        
+**Example 2**: sending parameters as parameter list, as parameter name followed by the parameter value, similar to the below  example: 
 
-TBD
+`return graphit("gr2.graphit", "input1", 1000, "input2", 2463);`
 
 
 
@@ -66,38 +95,23 @@ TBD
 
 
 
-## Use The Input Parameters 
+### Invoking From Broadway
 
-TBD + examples
+When calling Graphit from a Broadway, using the Graphit Actor, you can either use the "params" input object or the auto added input parameters. The input parameters are added automatically to the actor according to the Graphit definitions, that is - Broadway looks at the Graphit structure and generate them. 
 
+When running it, the actor looks first at the input parameters (first level) and if not found, looks at the "params" input argument.
 
+In the below example Broadway Graphit Actor calls to a GraphIt file which get2 two input parameters, named "input1" and "input2" and summarizes them. The two input parameters usage are demonstrated below:
 
-
-
-Let's suppose you need to write a graphit file that retrieves data from a table and/or a field with dynamic names parsed from variables.
-In that case you can invoke the field name as a parameters in a Graphit node defined as non-prepared SQL statement. 
-
-For example, let's consider the following:
-
-Parameters declaration window:
-**customer_id** is defined as string and is given the value 39.
-
-Node defined as a function:
-
-``` var fieldName = 'customer_id' ```
-
-Node defined as SQL non-prepared:
-
-```select SSN from customer where ${fieldName} = ${customer_id}```
-
-In this case, the ```${fieldName}``` variable will be given the (string) value ```'customer_id'``` while the variable ```${customer_id}``` will be given the value ```39```.
-In that way, variables may be used in a graphit file (from a javascript function node) and hold the name of the field and the value to be processed to the WHERE statement.
-
-See example in screenshot:
-![](/articles/15_web_services_and_graphit/17_Graphit/images/46b_graphit_with_parameters.PNG)
+<img src="images/invoke_by_bw_input_parameters.png" >
 
 
-In addition, rather than defining the variable ```fieldName``` within the javascript function node of your graphit file, you can define it in the java webservice that invokes the graphit file itself, and parse it as a map object as was shown in the [previous section](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#how-do-i-configure-parameters-when-invoking-graphit-from-a-web-service) of this article.   
+
+<img src="images/invoke_by_bw_input_params_arg.png" >
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)
 
