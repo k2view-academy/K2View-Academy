@@ -8,7 +8,7 @@ Note that Fabric also provides methods and helpers to build web services as Java
 
 Similar to the built-in web services, the custom web services outcome are JSON, XML or CSV formats. 
 
-Fabric also provides utilities and helpers to ease the building of the web service logic and the output. 
+Fabric also provides utilities and helpers to ease the building of the web services logic and the output. 
 
 In addition to helping implementors to easily craft web services logic and output, Fabric lets you via the Studio UI to:
 
