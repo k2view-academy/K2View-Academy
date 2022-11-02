@@ -2,11 +2,11 @@
 
 Fabric provides out-of-the-box web services APIs for querying a project's LU data and meta data resources.
 
-An appropriate HTTP status codes is used to indicate the status of the executed operation, following standard status codes which are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
+An appropriate HTTP status code is used to indicate the status of the executed operation, following standardized status codes that are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
 
-Any web-service call passes authentication and authorization validations before executed. For more information see [here]().
+Any web-service call passes authentication and authorization validations before being executed. For more information - see [here]().
 
-All API access is over HTTPS, and accessed from Fabric URL endpoint `https://<Domain Name>:<PORT>`
+All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
 
 
@@ -81,7 +81,7 @@ All API access is over HTTPS, and accessed from Fabric URL endpoint `https://<Do
 
 ## Get LU Data
 
-Retrieves whole LUI data or a specific table of LUI
+Retrieves either the whole LUI data or a specific LUI table
 
 <span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">GET</span>   `/api/lu/<LU Name>/<iid>/[<TABLE NAME>][?fields=<VALUE1,VALUE2>][&where=<WHERE STATEMENT>][&query=<QUERY STATMENT>][&limit=<Number of rows to get>][&set={mode,value}][&format=json|xml]`
 
@@ -156,7 +156,7 @@ Retrieves whole LUI data or a specific table of LUI
 <p>fields</p>
 </td>
 <td  valign="top" >
-<p>specify specific fields to be retrieved</p>
+<p>Specify specific fields to be retrieved</p>
 </td>
 <td  valign="top" >
 <p>N</p>
@@ -295,7 +295,7 @@ Environment variable
 <p>limit</p>
 </td>
 <td  valign="top" >
-<p>number of rows to get per retrieved table</p>
+<p>Number of rows to get per retrieved table</p>
 </td>
 <td  valign="top" >
 <p>N</p>
@@ -315,28 +315,28 @@ Environment variable
 
 - `https://localhost:3213/api/lu/CUSTOMER/1`
 
-  Bring all data for CUSTOMER LU Instance ID 1
+  Brings all data for CUSTOMER LU Instance ID 1
 
   Response Body: response body supports streaming solution
 
 
 - `https://localhost:3213/api/lu/CUSOMTER/1/ALLERGIES`
 
-  Bring data for CUSTOMER LU Instance ID 1, table ALLERGIES  
+  Brings data for CUSTOMER LU Instance ID 1, table ALLERGIES  
 
 
 - `https://localhost:3213/api/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’`
 
-  Bring data for CUSTOMER LU Instance ID 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
+  Brings data for CUSTOMER LU Instance ID 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
 
 - `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A, ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND  B.ADDRESS_TYPE=’P’`
 
-  Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
+  Brings data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
 - `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&set=sync,force&set=ENVIRONMENT,ENV1&set=GLOBAL_LION,10`
 
-  Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and  run it on ENV1 and set GLOBAL_LION to 10
+  Brings data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and run it on ENV1 and set GLOBAL_LION to 10.
 
 
 
@@ -371,7 +371,7 @@ Environment variable
 </tr>
 <tr>
 <td>TABLE NAME</td>
-<td>table names to post data into</td>
+<td>Table names to post data into</td>
 <td>N</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -390,7 +390,7 @@ Environment variable
 
  **Example:**
 
-1. Insert data into CUSTOMER LU instance id 1, LION table, where table name is specified at the post body
+1. Inserts data into CUSTOMER LU instance id 1, LION table, where table name is specified at the post body
     `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1`
     Request Body:
 
@@ -398,7 +398,7 @@ Environment variable
     {"rows":{"LION":[{"ID":11, "NAME":"lion11"},{"ID":12,"NAME":"lion12"},{"ID":13,"NAME":"lion13"}]}}
     ```
 
-2. Insert data into CUSTOMER LU instance id 1, LION table, where table name is specified at URL
+2. Inserts data into CUSTOMER LU instance id 1, LION table, where table name is specified at URL
 
    `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1/LION`
    Request Body:
@@ -455,13 +455,13 @@ Environment variable
 </tbody>
 </table>
 
-The request body shall contain the row data to be updated along with optional "where" element, as the where condition statement.
+The request body shall contain the row data to be updated along with an optional 'where' element, as the where condition statement.
 
 **Example:**
 
 - `https://localhost:3213/api/v1.0/lu/CUSTOMER/1/INVOICE`
 
-  Update data on CUSTOMER LU instance id 1, CUSTOMER table
+  Updates data on CUSTOMER LU instance id 1, CUSTOMER table
 
   Request Body
 
@@ -518,7 +518,7 @@ The request body shall contain the row data to be updated along with optional "w
 
 - `https://localhost:3213/api/lu/PATIENT`
 
-  Delete LUI 1 from PATIENT LU
+  Deletes LUI 1 from PATIENT LU
 
 
 
@@ -581,7 +581,7 @@ The request body shall contain the row data to be updated along with optional "w
 
 - `https://localhost:3213/api/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’`
 
-  Delete data from PATIENT LU instance id 1, INVOICE table by where clause
+  Deletes data from PATIENT LU instance id 1, INVOICE table by using a 'where' clause
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_built_in_common_ws.md)
