@@ -202,7 +202,7 @@ Redeploy the related LUs and the TDM LU.
 
 ### How does the Broadway Flow Generate an Entity List for the Task Execution? 
 
-The TDM library provides a list of Broadway actors and flows to support generating an entity list by a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
+The TDM library provides a list of Broadway actors and flows to support generating an entity list by a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library actors to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that are a part of current task execution, having the current task execution id.
 
@@ -210,7 +210,7 @@ Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more 
 
 ##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process in order to building the entity list for the task. The project Broadway flow needs to select the entity list and call the TDM library actors in order to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build one or multiple Broadway flow/s in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process in order to building the entity list for the task. The project Broadway flow needs to select the entity list and call the TDM library actors in order to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
@@ -271,7 +271,7 @@ TDM 7.5 supports the creation of **additional external parameters** in the flow,
      - **Output** - **recordLoaded**. This is the counter of the number of entities , loaded into the Cassandra table.
      - This flow executes the following activities on each selected entity ID: 
        - Checks if the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
-       - Loads the available entities into the **[LU_NAME]_entity_list Cassandra** table in **k2_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and updates the counter of the number of entities. 
+       - Loads the available entities into the **[LU_NAME]_entity_list Cassandra** table in **k2view_tdm** keyspace (this table is also populated by the  Extract All Broadway flow), and updates the counter of the number of entities. 
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM actor (imported from the TDM Library). The **NUM_OF_ENTITIES** is an **external input parameter** and it gets its value from the task execution process. It checks the number of entities inserted to the Cassandra table, and stops the loop if the custom flow reaches the task's number of entities. 
 
