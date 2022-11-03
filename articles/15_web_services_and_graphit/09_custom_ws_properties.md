@@ -63,7 +63,7 @@ At Java function, it is done via the @version annotation.
 <td valign="top">
 <p>Enable overriding the URL path of a web service.</p>
 Note that in case where more than a single web service has the same path, the deployment will fail.<br>
-For Graphit <studio>and Java function it is done via the Properties Panel.</studio>, <web>where for Java function it is done using the path property of the @webservice annotation.</web><br>
+For Graphit <studio>and Java function it is done via the Properties Panel.</studio>, <web>whereas for Java function it is done using the path property of the @webservice annotation.</web><br>
 </td>
 </tr>
 <tr>
@@ -125,7 +125,7 @@ In case formats are set, then when trying to call the web service with the 'form
 <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
 At Graphit, it is done by setting the 'show Null' node property . 
 <p>
-<studio>At Java function, it is done via the Properties Panel.</studio><web>At Java function, it is done via the @serializeNull annotation.</web>
+<studio>At Java function, it is done via the Properties Panel.</studio><web> At Java function, it is done via the @serializeNull annotation.</web>
 </td>    
 </tr>    
 <tr>
@@ -157,7 +157,7 @@ When set to False, it will allow calling the web service by skipping the Authent
 
 
 
-Following are properties that are available only for java function web services:
+Following are properties that are available only for Java function web services:
 
 <table>
 <tbody>
