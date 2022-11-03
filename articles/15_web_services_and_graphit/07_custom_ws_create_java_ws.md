@@ -1,14 +1,13 @@
 # Create Custom Java Web Service
 
-The following steps discuss how a new Java based Web Service is created and include options (steps 2-8) for generating parts of code automatically:
+The following steps discuss how a new Java-based Web Service is created, and include options (steps 2-8) for generating parts of code automatically:
 
 <studio>
 
-1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
+1. Go to **Project Tree**, right-click **Web Services** > **New Web Service** to display the **Function Editor** window.
 
    <img src="images/Web-Service-KI-3-1.png" alt="drawing"/>
 
-   
 
 2. Click either the **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
@@ -20,7 +19,7 @@ The following steps discuss how a new Java based Web Service is created and incl
 
    <img src="images/Web-Service-KI-3-3.png" alt="drawing"/>  
 
-5. Click the **table** that retrieves the data, check the **Columns list** and right click the **column** that is the **Input** parameter for data retrieval. 
+5. Click the **table** that retrieves the data, check the **Columns list** and right-click the **column** that is the **Input** parameter for data retrieval. 
 
 6. Click **Add Selected to Input Parameters**.
 
@@ -29,7 +28,7 @@ The following steps discuss how a new Java based Web Service is created and incl
    Note that the Column Name, Data Type, Mandatory and Comments are displayed in the Input Parameters list in the lower right pane.
 
 
-7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. 
+7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right-click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. 
 
 
    The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also write your own code. 
@@ -49,15 +48,15 @@ The following steps discuss how a new Java based Web Service is created and incl
 
 <web>
 
-1. At Fabric top menu choose **New Web Services** > **New Java Web Service**.
+1. In Fabric top menu bar - choose **New Web Service** > **New Java Web Service**.
 
    <img src="images/new_java_ws_web.png" alt="drawing"/>  
 
-2. In the pop-up input box at the top of the screen select a category from list or choose to create new one.
+2. In the pop-up input box, at the top of the screen, either select a category from the list or choose to create a new one.
 
-3. In the next pop-up input box fill in the name for the web service.
+3. In the next pop-up input box - fill in the name for the web service.
 
-4. The Logic Java file will be then opened and populated with the default template skeleton of a web service function.
+4. The Logic Java file will then be opened and populated with the default template skeleton of a web service function.
 ```java
 @desc("")
 @webService(path = "", verb = {MethodType.GET, MethodType.POST}, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON}, elevatedPermission = false)
@@ -68,7 +67,7 @@ public static void webServiceName(@param(description="") String param1) throws E
 5. Write your web service logic in the Java Editor.
 6. Set the [Web Service Properties](09_custom_ws_properties.md) by changing the function annotations. 
 
-> Notes that you can add web services function by pressing CTRL -> SPACE and selecting the requested snippet (hint: start typing fabric to reveal the required one - "fabric-function-ws").
+> Notes that you can add web services functions by pressing CTRL -> SPACE and selecting the requested snippet (hint: start typing fabric to reveal the required one - "fabric-function-ws").
 
 </web>
 
