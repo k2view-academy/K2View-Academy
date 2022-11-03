@@ -1,6 +1,6 @@
 # Graphit Basic Editing
 
-Once your created a Graphit file you can start edit it. To learn how to create a Graphit as web service read [here]("/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md" ). Similarly you can create Graphit under any other logical unit.
+Once you've created a Graphit file, you can start edit it. To learn how to create a Graphit as web service read [here]("/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md" ). Similarly you can create Graphit under any other logical unit.
 
 
 
@@ -25,7 +25,6 @@ Once your created a Graphit file you can start edit it. To learn how to create a
   * Any node that has an output representation shall be named.
 * You might use node properties to define some of the logic or the output form of  a node. To learn more about *node properties* read [here](TBD).
 
-  
 
 ## Top Toolbar Actions
 
