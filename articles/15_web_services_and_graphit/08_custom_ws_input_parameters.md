@@ -4,19 +4,19 @@ Fabric lets you pass input parameters to the custom web services, with various w
 
 ## Defining The Input Parameters
 
-Fabric provides easy methods to define the expected input parameters for a web service, either Graphit or a Java function. For each of the parameters you can define its name, type and whether it is mandatory.
+Fabric provides easy methods to define the expected input parameters for a web service, either Graphit or Java function. For each of the parameters you can define its name, type and whether it is mandatory.
 
 To learn how to define input parameters for Graphit - read [here](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)
 
 <studio>
 
-To learn how to define input parameters for a Java function - read [here](/articles/07_table_population/10_creating_a_project_function.md#how-do-i-define-a-functions-parameters-manually)
+To learn how to define input parameters for Java function - read [here](/articles/07_table_population/10_creating_a_project_function.md#how-do-i-define-a-functions-parameters-manually)
 
 </studio>
 
 <web>
 
-To learn how to define input parameters for a Java function using annotations - read [here](/articles/15_web_services_and_graphit/10_annotations.md#param)
+To learn how to define input parameters for Java function using annotations - read [here](/articles/15_web_services_and_graphit/10_annotations.md#param)
 
 </web>
 
@@ -62,7 +62,7 @@ To define it for Graphit:
 
 <studio>
 
-To define it for a Java function, edit the **Path** property at the right **Properties Panel** in the Java functions Editor.
+To define it for Java function, edit the **Path** property at the right **Properties Panel** in the Java functions Editor.
 
 For example: 
 
@@ -80,7 +80,7 @@ Where:
 
 <web>
 
-To define it for a Java function, edit the annotation as explained [here](/articles/15_web_services_and_graphit/10_annotations.md#path).
+To define it for Java function, edit the annotation as explained [here](/articles/15_web_services_and_graphit/10_annotations.md#path).
 
 </web>
 
