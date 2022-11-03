@@ -10,7 +10,7 @@ Note that a Java class that implements a web service must specify the *@WebServi
 
 ### Web services methods within the Logic Java file
 
-When creating a new webservice java file, the web service is added as a method within the public class Logic in the java logic file k2_ws.java . 
+When creating a new web service Java file, the web service is added as a method within the public class Logic in the Java logic file k2_ws.java . 
 In the example below we have added 6 methods, each of which is configured with a different set of annotations and properties: 
 - testWSannotations1(), 
 - testWSannotations2(),
@@ -18,7 +18,7 @@ In the example below we have added 6 methods, each of which is configured with a
 - testWSannotations4(),
 - testWSannotations5(),
 - testWSannotations6()
-  
+
 ```
 public class Logic extends WebServiceUserCode {
 
@@ -58,20 +58,20 @@ public static Object testWSannotations6(String name) throws Exception {
 ```
 
 ### Annotations
-Referring to the 6 web services defined in the code snippet above, we can observe that the following annotations are used:
+Referring to the 6 web services defined in the above code snippet, we can observe that the following annotations are used:
 
 #### @webService
-This annotation is automatically added before each of the web-services defined in the project. 
+This annotation is automatically added before each of the web services defined in the project. 
 
 #### @desc
 The [description tag](/articles/15_web_services_and_graphit/02_web_services_properties.md#description) is added before the public function declaration - e.g.
 ```("Show example of annotations 3")``` 
 
 #### @serializeNull
-When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is de-activated for a given webservice (this is done from the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
+When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is de-activated for a given web service (this is done from the property panel of the web service Java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
 #### @param
-This annotation allows users to parse a specific function or variable as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
+This annotation allows users to parse a specific function or variable as a parameter to the web service when it is called. This way the web service can benefit from dynamic input and output capabilities.
 
 ```
 class inputPersonalData {
@@ -85,7 +85,7 @@ class inputPersonalData {
 	} 
 ```
 
-Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable and therefore override the value of the input variable with the specified new value specified - e.g:
+Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable, and therefore it overrides the value of the input variable with the specified new value - e.g:
 
 ```
 	@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
@@ -94,48 +94,48 @@ Due to Java limitations, not allowing to parse complex variables as input parame
 
 ```public static Object testWSannotations8(@param(required=true, name="name.private") String testStr1```
 - ```required=true``` flag must be set to true. If this is set to false, the new name will be disregarded.
-- ```name="name.private"``` the new value of the variable *name.private* is taken as input instead of the value held in ```String testStr1``` 
+- ```name="name.private"``` the new value of the variable *name.private* is taken as an input instead of the value held in ```String testStr1``` 
 
 
 
 #### Path
-If left empty the value of the path will be the method name itself i.e., using the first example of annotations in the code snippet above:
+If left empty, the value of the path will be the method name itself, i.e., using the first example of annotations in the code snippet above:
 ```api/v1/testWSannotations1```
 
 Or, the path can be indicated explicitly, as shown in testWSannotations5:
 
 ```@webService(path = "a/b/c", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})```
 
-It is also possible to se the path to the following directory: ```api/v1/a/b/c```
+It is also possible to set the path to the following directory: ```api/v1/a/b/c```
 
 
-In addition, variables can also be parsed into the path, as shown in the ```testWSannotations6``` example:
+Additionally, variables can also be parsed into the path, as shown in the ```testWSannotations6``` example:
 
 - {name}/polak will set the path to: ```api/v1/ido/polak``` provided that {name} was previously assigned to the value "ido"
 - nameit/{name1}/{name2}/ will set the path to: ```api/v1/nameit/ido/bob``` provided that {name1} and {name2} were respectively assigned to the values "ido" and "bob"
 
-***Note that if the path has duplicates, the webservice deployment will fail.***
+***Note that if the path contains duplications, the web service deployment will fail.***
 
 
 
 #### Verbs 
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties) are added:
 
-- [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the java web service window in Fabric Studio.
+- [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the Java web service window in Fabric Studio.
 
 #### Properties
 The following flags are used to set the web services formats:
 - [custom payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) - in this case is set to true: ``` isCustomPayload = true``` 
-- [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) - can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
-- [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) - brings the data response as is or not: e.g. ```isRaw = true```
-- [elevated permission](/articles/15_web_services_and_graphit/02_web_services_properties.md#elevated_permission) - inidicates if users permissions should be elevated to the web-service or not.
+- [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) - can be either XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
+- [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) - brings the data response 'as is' or not: e.g. ```isRaw = true```
+- [elevated permission](/articles/15_web_services_and_graphit/02_web_services_properties.md#elevated_permission) - indicates whether users' permissions should be elevated to the web service or not.
 
 #### @legacy
 Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.
 To enable backwards compatibility while preserving the existing Web Services response structure, the ```@legacy``` annotation must be added at the category level. 
 Use either Notepad or IntelliJ to edit the annotation. 
  * Web Services under a category with an @legacy annotation respond according to the legacy (older) structure. 
- * New Web Services under the same category use the appropriate (newer) Web Service response structure.
+ * New Web Services under the same category use the appropriate (more recent) Web Service response structure.
 
 
 
