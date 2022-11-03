@@ -1,6 +1,6 @@
 # Create Custom Web Service with Graphit
 
-As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing  capabilities.
+As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing capabilities.
 
 A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
 
@@ -46,9 +46,9 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 
     The below image shows the **nested nodes layout result** 
-    
+
     ![](17_Graphit/images/new_graphit_example.png)
-    
+
     Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. Sometimes it is preferred by implementors for a better visualized output document, seeing a full layout of the structure.
 
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
@@ -82,7 +82,7 @@ or click on **New Category** to enter a new category name, followed by *Enter* f
 
 The following step is to enter a name for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
 
-Using the file name you can control and set both the web-service version and its verb. For more information read [here](09_custom_ws_properties.md#Graphit). The popup itself provides some hints about the recommended naming conventions.
+Using the file name you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The popup itself provides some hints about the recommended naming conventions.
 
 ![](17_Graphit/images/web_enter_new_graphit_name.png)
 
