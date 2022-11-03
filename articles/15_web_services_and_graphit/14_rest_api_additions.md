@@ -12,7 +12,7 @@ A user may ask for http://www.somesite.com/widgets/blue/, but receives http://ww
 
 Copy the **rewrite.config** file to **$FABRIC_HOME\webserver\WEB-INF**.
 
-To use this functionality, users must have at least a basic knowledge of Rewrite rules / conditions and their different parameters. 
+To use this functionality, users must have at least a basic knowledge of Rewrite rules/conditions and their different parameters. 
 
 Useful tutorials: 
 
@@ -40,7 +40,7 @@ The response format can be defined in several ways:
 
 In general, URIs allow only ASCII values. However, there are specific cases like internationalized domain names (IDN), where non-ASCII characters may be used in the domain name. For the purposes of communicating data using query string parameters, you cannot directly send non-ASCII (unsafe) characters. Also, some characters like spaces, “=”, and “&” have a specific meaning when sent in the query string section of the URI and are reserved. 
 
-To handle unsafe characters and to distinguish between data and reserved characters that have special meaning in a URI, the URI must be URL Encoded. This encoding replaces non-ACII and reserved characters parameter data with ASCII equivalents. This is also known as Percent Encoding since each unsafe character is replaced with a value starting with percent sign (“%”).
+To handle unsafe characters and to distinguish between data and reserved characters that have special meaning in a URI, the URI must be URL Encoded. This encoding replaces non-ACII and reserved characters parameter data with ASCII equivalents. This is also known as Percent Encoding, since each unsafe character is replaced with a value starting with percent sign (“%”).
 All parameter values should be URL encoded to ensure correct transmission. For example, the query string: “name=Mañana” is URL encoded as “name= %20Ma%C3%B1ana”. 
 A URI cannot have a space and is encoded to the value “%20”. 
 The Spanish letter “ñ” is not a valid ASCII value and is encoded as “%C3%B1”. 
@@ -53,7 +53,7 @@ There is no use case for transmitting repeated parameters since the required res
 
 ## Request Data Encoding
 
-By default, UTF-8 is used to decode the request body since this handles the majority of characters for the supported languages. However, in situations where customers choose to use a different encoding, it can be specified in the Content-Type header’s optional “charset” parameter: Content-Type: application/json; charset=latin-1 will use the provided charset to decode the request body data. 
+By default, UTF-8 is used to decode the request body as this handles the majority of characters for the supported languages. However, in situations where customers choose to use a different encoding, it can be specified in the Content-Type header’s optional “charset” parameter: Content-Type: application/json; charset=latin-1 will use the provided charset to decode the request body data. 
 
 Users are responsible for ensuring that their data is correctly encoded using the required charset before transmission to K2View API. Failure to do so may result in incorrect characters or an inability to process the request. It is also important to note that this only applies to the encoding of the request body and does not apply to the encoding used in any response body data.
 
@@ -61,7 +61,7 @@ Users are responsible for ensuring that their data is correctly encoded using th
 
 ## Response Data Encoding 
 
-When a response body is returned, the raw JSON or XML data is always encoded using UTF-8. The response body’s encoding cannot be configured or specifed. This is done to ensure that the response content can always be correctly rendered. A request body using a different encoding is allowed, since the requester can control the contents being sent. However, the output data may contain characters that are not  part of the encoding used for the request, if for example, a consistent character set has not been used throughout the application. UTF-8 covers the full change of characters and is therefore the default, and generally preferred, encoding.
+When a response body is returned, the raw JSON or XML data is always encoded using UTF-8. The response body’s encoding cannot be configured or specifed. This is done to ensure that the response content can always be correctly rendered. A request body using a different encoding is allowed, as the requester can control the sent contents. However, the output data may contain characters that are not  part of the encoding used for the request, if for example, a consistent character set has not been used throughout the application. UTF-8 covers the full change of characters and is therefore the default, and generally preferred, encoding.
 
 
 
@@ -79,7 +79,7 @@ The order of data cannot be consistent since it is performance consumed, unless 
 
 ## Override Response
 
-In order to override the RESTful API response that is generated automatically, use **HttpServletResponse** Class.
+In order to override the RESTful API response that is automatically generated, use **HttpServletResponse** Class.
 
 For Example:
 
@@ -114,7 +114,7 @@ Modify the Properties panel of the web service with Produce = "UNKNOWN" and Retu
 
 After deploying the web service, call it from the browser using the appropriate token, parameter and format.
 
-Example with HTML format:
+An example with an HTML format:
 
 ```html 
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
