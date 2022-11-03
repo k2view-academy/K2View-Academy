@@ -1,6 +1,6 @@
 # Custom Web Service Properties
 
-Fabric Web Services properties include metadata that contribute to the definitions, functionalities and characteristics of the Web Service.  
+Fabric Web Services properties include metadata that contributes to the definitions, functionalities and characteristics of the Web Service.  
 
 At Graphit, it is done at the Properties Panel, which opens when clicking on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar. Some other settings are done via the nodes' types or properties.
 
@@ -62,7 +62,7 @@ At Java function, it is done via the @version annotation.
 <td valign="top"><p><h5>Path</h5></p></td>
 <td valign="top">
 <p>Enable overriding the URL path of a web service.</p>
-Note that in case more than a single web service has the same path, the deployment will fail.<br>
+Note that in case where more than a single web service has the same path, the deployment will fail.<br>
 For Graphit <studio>and Java function it is done via the Properties Panel.</studio>, <web>where for Java function it is done using the path property of the @webservice annotation.</web><br>
 </td>
 </tr>
@@ -81,7 +81,7 @@ At Graphit, the verb setting is done by incorporating it as a part of the file n
 <ul>
 <li>The verb name is not case sensitive.</li>
 <li>The verb name is not a part of the URL path of the web service. It is used to hint the server how to expose and serve  it.</li>
-<li>According to the name, different preview URL is shown at the Properties Panel. For example, for POST and PUT verbs, a request body will be shown as an example of how parameters shall be sent, while for GET and DELETE verbs, only a URL path will be shown and parameters are a part of it. </li>
+<li>According to the name, a different URL preview is shown at the Properties Panel. For example, for POST and PUT verbs, a request body will be shown as an example of how parameters shall be sent, while for GET and DELETE verbs, only a URL path will be shown and parameters are a part of it. </li>
 </ul> 
 </p>
 <p>
@@ -100,7 +100,7 @@ More than a single verb method can be set for a Java function web service.
 <td valign="top">
 <p>Indicates whether the output structure should be automatically manipulated by Fabric.</p>
 <p>Values are either True or False.</p>
-<p>Default = False. When True, Fabric retrieves the data response as is, without parsing or formatting it, thus aligning it with the web service's output format.</p>
+<p>Default = False. When True, Fabric retrieves the data response 'as is', without parsing or formatting it, thus aligning it with the web service's output format.</p>
 At Graphit, it is done by setting a node type as "raw". 
 <p>
 <studio>At Java function, it is done via the Properties Panel or by using the @isRaw annotation. </studio><web>At Java function, it is done via the isRaw property of the @webservice annotation.</web>
@@ -116,7 +116,7 @@ At Graphit, it is done by setting a node type as "raw".
 To select a format at Graphit - that is, restricting it to a specific format - set this format property to the top root node. If no restriction is required, then do not set a format on the top root node.</p>
 To select a format at Java function, <studio> click the dropdown menu and enable it/them</studio><web> set the produce property of the @webservice annotation</web>
 <br>
-In case formats are set, then when trying to call to the web service with the 'format' parameter, which does not match the set format/s, an appropriate error response will be returned.
+In case formats are set, then when trying to call the web service with the 'format' parameter, which does not match the set format/s, an appropriate error response will be returned.
 </td>
 </tr>
 <tr>
