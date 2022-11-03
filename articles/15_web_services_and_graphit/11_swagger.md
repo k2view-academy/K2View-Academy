@@ -22,11 +22,11 @@ The API testing app page shows the Web Services in categories and in alphabetica
 
 
    * Common - all built-in product Web Services that bring reference table metadata and data. 
-   * Fabric - pre-built API to run Fabric commands, Authentication and Heart bits/Statuses queries   
+   * Fabric - pre-built API to run Fabric commands, Authentication and heartbeats/status queries.   
    * LU - all built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
    * Project defined categories for custom Web Services.
 
-Built-in out-of-the-box web services will be always exist and project is according to the project's implementation. 
+Built-in out-of-the-box web services will always exist and are according to the project's implementation. 
 
 Read [here](01_web_services_overview.md) about various web services types.
 
@@ -72,7 +72,7 @@ To test a web service:
 
     <img src="images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-    You can see that the Request URL is shown too, as well as the curl command, which guides you through how to use it in your application when accessing too the web service.
+    You can see that the Request URL is shown too, as well as the curl command, which guides you how to use it in your application when accessing the web service.
 
 3. You can change **Media Type** when applicable, and easily see the result in another format, e.g., as XML:
 
