@@ -1,10 +1,10 @@
 # Java Function Web Services - Code Examples
 
-While is it recommended to build web services with Graphit, you might use Java function for this purpose.   
+While it is recommended to build web services with Graphit, you might use Java function for this purpose.   
 
 ### Example List
 
-* [Simple response - single entry from  the LU root table](#simple-response-single-entry-from-the-LU-root-table)
+* [Simple response - single entry from the LU root table](#simple-response-single-entry-from-the-LU-root-table)
 * [Complex JSON input using standard Java objects](#example-of-a-complex-java-input-structure)
 * [Complex JSON input using customized Java objects](#example-of-a-complex-customized-input-structure)
 * [complex TDM](#example-of-a-complex-tdm-web-service)
@@ -15,7 +15,7 @@ While is it recommended to build web services with Graphit, you might use Java f
 
 ### Simple response - single entry from  the LU root table  
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object, which is then converted by Fabric into DB.Rows structure.
 ```java
 String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
@@ -67,7 +67,7 @@ Web Service inside logic
 
 ### Example of a complex customized input structure
 
-This example is similar to the above example, this time with customized Java classes.
+This example is similar to the above example, however, this time it is with customized Java classes.
 
 For example:
 
@@ -131,7 +131,7 @@ Web Service response
 
 ### Example of a complex TDM Web Service 
 
-The wsGetTaskExeStatsForEntity Web Service used by TDMGUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
+The wsGetTaskExeStatsForEntity Web Service used by TDM GUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
 
 ```java
 String sqlGetEntityData = "select lu_name luName, target_entity_id targetId, entity_id sourceId, " +
@@ -208,9 +208,9 @@ return mainOutput;
 
 ### Example of a Custom Payload - JSON
 
-The following Web Service is similar to the [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages the input request payload by itself. 
+The following Web Service is similar to the [Simple response - single entry from the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance), but it manages the input request payload by itself. 
 
-Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel located on the top right corner of the **Web Service** window.
+Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel, located in the top right corner of the **Web Service** window.
 
 It starts by reading the request body payload and acquiring it using `request().getInputStream()`:
 
@@ -247,9 +247,9 @@ The wsCustomerInfoCustomPayload function is available in the Demo project.
 
 ### Example of a Custom Payload - XML 
 
-The following Web Service inserts rows into the CASES table in the CUSTOMER LU where the input is retrieved in XML format.
+The following Web Service inserts rows into the CASES table in the CUSTOMER LU, where the input is retrieved in an XML format.
 
-Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel located on the top right corner of the **Web Service** window.
+Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel, located in the top right corner of the **Web Service** window.
 
 The wsInsertCasesCustomPayloadXML function is available in the Demo project.
 
@@ -273,7 +273,7 @@ Request body
 </cases>
 ```
 
-To parse the XML several import statements are added to the file:
+In order to parse the XML, several import statements are added to the file:
 
 ```java
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -311,7 +311,7 @@ To read the list of cases, a loop iteration was performed on the case list:
 NodeList nList = doc.getElementsByTagName("case");
 ```
 
-Each element and attribute of the case can then be read, for example:
+Each element and attribute of the case can then be read; for example:
 
 ```java
 Node node1 = elem.getElementsByTagName("activity_id").item(0);
