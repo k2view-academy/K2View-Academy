@@ -3,9 +3,9 @@
 Graphit allows you to define input parameters whereby the generated documents are executed using various settings like LUIs, LU table columns and other specific parameters that require processing.
 
 Parameters can be set when:
-- Testing a Graphit file in the Graphit Editor.
-- Invoking Graphit as web service via HTTP request.
-- Calling Graphit from another implementation component such as Java Function or Broadway. 
+- Testing a Graphit file in the Graphit Editor
+- Invoking Graphit as web service via HTTP request
+- Calling Graphit from another implementation component such as Java Function or Broadway 
 
 
 
