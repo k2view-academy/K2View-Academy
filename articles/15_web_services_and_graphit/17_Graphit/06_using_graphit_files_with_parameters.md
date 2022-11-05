@@ -38,12 +38,12 @@ In this example you can also have the LU name to be a parameter, like this: `get
 
 Parameters that can be used are not only input parameters but also those that set or retrieved at the Graphit logic:
 
-* A Parameter that was set as a constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can used on later nodes. For example, for GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as input parameter. 
-* A Parameter that was retrieved from a SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters to later logic at the Graphit, for example in a WHERE statement at a next SQL command.
+* A Parameter that was set as a constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can be used on later nodes. For example, for a GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as an input parameter. 
+* A Parameter that was retrieved from either an SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters for later logic in the Graphit, for example in a WHERE statement in a next SQL command.
 
 
 
-When using the parameters in function nodes you shall use it as variables. For example, supposed  `input1` and  `input2` are defined as input parameters, then in a function node you can do `input1 + input2` to get their sum.
+When using the parameters in function nodes, you shall use them as variables. For example, assuming that `input1` and `input2` are defined as input parameters, then in a function node you can do `input1 + input2` to get their sum.
 
 
 
@@ -52,7 +52,7 @@ To test & debug a Graphit file:
 
 1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
 2. At The **URL Parameters & Properties**  > **Input Parameter & Path** section, populate the "Debug Value" fields.
-3. Test the GraphIt by using either of the JSON, XML or CSV icons at the top toolbar.
+3. Test the Graphit by using either of the JSON, XML or CSV icons at the top toolbar.
 
 
 
