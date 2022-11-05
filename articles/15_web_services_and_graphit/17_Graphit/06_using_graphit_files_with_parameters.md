@@ -12,17 +12,17 @@ Parameters can be set when:
 ## Defining Graphit Parameters
 
 1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
-2. The **URL Parameters & Properties** right side panel is opened where at top you can find the **Input Parameter & Path** section. At the beginning no parameters are defined.
-3. To add a new parameter click on the plus  (+) sign at the top of the Parameters sub section.
+2. The **URL Parameters & Properties** right side panel opens and its top section is called **Input Parameter & Path**. In the beginning, no parameters are defined.
+3. To add a new parameter, click on the plus (+) sign at the top of the Parameters sub section.
    <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_1.png"></img>
 
-4. New Parameter pane is opened where you can define for the new parameter: name, type, description and if it is mandatory.
+4. A New Parameter pane opens, where you can define for a new parameter: name, type, description and whether it is mandatory.
    <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_2.png"></img>
 
-5. You can then add more parameters as needed. you can expand and collapse each of parameters pane, where in collapsed mode only the name appears as well as the debug value for testing. 
+5. You can then add more parameters as needed. You can expand and collapse each of parameter pane, where in a collapsed mode only the name appears, as well as the debug value for testing. 
    <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_4.png"></img>
 
-> Note: the debug value is not saved with the Graphit file and it is used only in the Graphit Editor, for testing the web-service.
+> Note: The debug value is not saved with the Graphit file and it is used only in the Graphit Editor, for testing the web service.
 
 
 
@@ -30,16 +30,16 @@ Parameters can be set when:
 
 To use the input parameters in the Graphit file logic, you shall refer to them by using the **${}** bracket.
 
-For example, to use it at the GET command which requires the iid, when input parameter us "Customer_ID" and LU is "Customer": 
+For example, to use it in the GET command - which requires the iid - when inputting parameter, use 'Customer_ID' and LU is 'Customer': 
 
 `get Customer.${Customer_ID}`.
 
 In this example you can also have the LU name to be a parameter, like this: `get ${LU}.${Customer_ID}` .
 
-Parameters that can be used are not only input parameters but also those which set or retrieved at the Graphit logic:
+Parameters that can be used are not only input parameters but also those that set or retrieved at the Graphit logic:
 
-* Parameter that was set as constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can used on a later nodes. For example for GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as input parameter. 
-* Parameter that was retrieved from a SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters to later logic at the Graphit, for example in a WHERE statement at a next SQL command.
+* A Parameter that was set as a constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can used on later nodes. For example, for GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as input parameter. 
+* A Parameter that was retrieved from a SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters to later logic at the Graphit, for example in a WHERE statement at a next SQL command.
 
 
 
