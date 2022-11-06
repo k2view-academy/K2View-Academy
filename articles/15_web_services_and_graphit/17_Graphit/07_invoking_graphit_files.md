@@ -1,12 +1,12 @@
 # Invoking Graphit Files
 Graphit files can be invoked either externally as Web Services or internally from other Fabric implementation components. 
 
-In either options you can transfer Graphit input parameters, while invoking it. To learn how to define parameters in Graphit read [here]().
+In either one of the options you can transfer Graphit input parameters, while invoking it. To learn how to define parameters in Graphit - read [here]().
 
 ## How Do I Invoke Direct Calls?
-1. Go the the **Project Tree** and click **Resources** under **Web Services**. 
+1. Go to the **Project Tree** and click **Resources** under **Web Services**. 
 
-2. Right click the **Graphit file** > **Invoke Graphit Web Service** > **Fabric server**.
+2. Right-click the **Graphit file** > **Invoke Graphit Web Service** > **Fabric server**.
 
 Note that the Fabric server must be predefined in the [Server Configuration tab](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
 
@@ -23,10 +23,10 @@ Graphit files are mainly used in a Web Service to structure the Web Service's re
 <p><code>Object response = graphit(&lt;file name&gt;, &lt;Input parameters&gt;).</code></p>
 
 The function's parameters are:
-  - File_name, the name you assign the Graphit file that should generate the response document. If the Web Service's name is the same as the Graphit file's name, set this parameter to Null.
-  - Input parameters, which can be populated by a parameter name or by a map object.
+  - File_name - the name you assign the Graphit file that should generate the response document. If the Web Service's name is the same as the Graphit file's name, set this parameter to Null.
+  - Input parameters - that can be populated by either a parameter name or a map object.
 
-The Response variable gets the CSV, JSON or XML response string which can then be returned as the Web Service output.
+The Response variable gets the CSV, JSON or XML response string, which can then be returned as the Web Service output.
 
 Example:
 Using the grSQL Graphit file and Customer_Id as input parameters:
@@ -88,10 +88,10 @@ The Profiler option can also be selected from the Graphit Editor by choosing the
 
 
 Note that multiple parameters can be parsed to Graphit by:
-- Passing a map as a parameter in which the parameters and their values have been stored as key / value pairs.
+- Passing a map as a parameter in which the parameters and their values have been stored as key/value pairs.
 - Passing a list of arguments and then looping over the list.
 
-In addition, when designing a Web Service you can use all [REST APIs and requests formats](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) generally supported by Web Services. Schemas with complex requests can be designed whereby different Graphit files are invoked depending on the data retrieved from its sources or LUI. 
+Additionally, when designing a Web Service, you can use all [REST APIs and requests formats](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) generally supported by Web Services. Schemas with complex requests can be designed whereby different Graphit files are invoked depending on the data retrieved from its sources or LUI. 
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md)
