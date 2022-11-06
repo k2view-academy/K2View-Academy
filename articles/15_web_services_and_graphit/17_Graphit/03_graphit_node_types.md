@@ -39,7 +39,7 @@ The following table lists the node types. We suggest that you run each Graphit f
 <ul>
 <li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup is opened; when it closes, the built query is copied into the Graphit node content.
 </li>    
-<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder popup, you are asked about. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when shall be used on further nodes.
+<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder popup, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields shall be used on further nodes.
 </li>    
 </ul>
 The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
@@ -70,7 +70,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Condition</td>
-<td valign="top" width="900pxl">Builds IF-ELSE statements that should include a condition. The nested nodes are / not executed according to the result of the condition.&nbsp;</td>
+<td valign="top" width="900pxl">Builds IF-ELSE statements that should include a condition. The nested nodes are/aren't executed according to the result of the condition.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grconditiongraphit">grCondition</a></td>
 </tr>
 <tr>

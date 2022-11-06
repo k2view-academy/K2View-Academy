@@ -15,23 +15,23 @@ A decision can be made whether to convert this amount into GBP or EUR currency, 
 
 The following screenshot displays how dataset nodes and JavaScript nodes are defined as children of the main Balance node:
 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/50_invoke_javacode_from_graphit.PNG)
+![](images/50_invoke_javacode_from_graphit.PNG)
 
 
 The following screenshot displays how Debug mode is run with the customer_id set to 1000 and the conversion currency set to False (i.e. GBP currency):
 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/51_invoke_javacode_from_graphit.PNG)
+![](images/51_invoke_javacode_from_graphit.PNG)
 
 
 The following screenshot displays how the Web Service is deployed and launched in Swagger:
 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/52_invoke_javacode_from_graphit.PNG)
+![](images/52_invoke_javacode_from_graphit.PNG)
 
 Note that an http link has been generated to invoke the Web Service for customer_id = 1000, and the convGBP flag is set to False, meaning that the conversion is set to EUR currency: ``` "http://10.21.1.76:3213/api/grSql?customer_id=1000&convGBP=false" ```
 
 
 ## Lambda Functions
-Java functions can be bound to Graphit using a Web Service. To do so, create a Lambda expression based on the Scripter.F functional interface in a key/value map entry, where the key contains the name of the function that is invoked in Graphit and the value contains its logic.
+Java functions can be bound to Graphit using a Web Service. To do so, create a Lambda expression based on the 'Scripter.F' functional interface in a key/value map entry, where the key contains the name of the function that is invoked in Graphit and the value contains its logic.
 
 ### Example
 
@@ -47,11 +47,11 @@ return graphit("LambdaGraphit1.graphit", scope);
 
 Graphit file LambdaGraphit1.graphit: 
 Note that the function times defined above are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node 
-![](/articles/15_web_services_and_graphit/17_Graphit/images/52a_invoke_javacode_from_graphit.PNG)
+![](images/52a_invoke_javacode_from_graphit.PNG)
 
 
 Output using the Swagger GUI:
-![](/articles/15_web_services_and_graphit/17_Graphit/images/52b_invoke_javacode_from_graphit.PNG)
+![](images/52b_invoke_javacode_from_graphit.PNG)
 
 
 Limitations:

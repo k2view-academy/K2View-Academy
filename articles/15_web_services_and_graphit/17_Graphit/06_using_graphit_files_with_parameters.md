@@ -11,16 +11,16 @@ Parameters can be set when:
 
 ## Defining Graphit Parameters
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
+1. Click on the <img src="images/url-icon.png"></img> icon at the top Graphit Editor toolbar.
 2. The **URL Parameters & Properties** right side panel opens and its top section is called **Input Parameter & Path**. In the beginning, no parameters are defined.
 3. To add a new parameter, click on the plus (+) sign at the top of the Parameters sub section.
-   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_1.png"></img>
+   <img src="images/ws_graphit_props_1.png"></img>
 
 4. A New Parameter pane opens, where you can define for a new parameter: name, type, description and whether it is mandatory.
-   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_2.png"></img>
+   <img src="images/ws_graphit_props_2.png"></img>
 
 5. You can then add more parameters as needed. You can expand and collapse each of parameter pane, where in a collapsed mode only the name appears, as well as the debug value for testing. 
-   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_props_4.png"></img>
+   <img src="images/ws_graphit_props_4.png"></img>
 
 > Note: The debug value is not saved with the Graphit file and it is used only in the Graphit Editor, for testing the web service.
 
@@ -36,10 +36,10 @@ For example, to use it in the GET command - which requires the iid - when inputt
 
 In this example you can also have the LU name to be a parameter, like this: `get ${LU}.${Customer_ID}` .
 
-Parameters that can be used are not only input parameters but also those that set or retrieved at the Graphit logic:
+Parameters that can be used are not only input parameters but also those that are set in Graphit logic or retrieved from SQL queries:
 
-* A Parameter that was set as a constant variable value, in a function node type. For example: when defining at a function node this  ` var LU = 'Customer' ` the `LU` variable can be used on later nodes. For example, for a GET command like  `get ${LU}.${Customer_ID}` . In that case LU was not defined as an input parameter. 
-* A Parameter that was retrieved from either an SQL query or Broadway flow calls. The output fields of such commands result, can be used as parameters for later logic in the Graphit, for example in a WHERE statement in a next SQL command.
+* A Parameter that was set as a constant variable value, in a function node type. E.g., when defining ` var LU = 'Customer' ` at a function node, the `LU` variable can be used on later nodes, like  `get ${LU}.${Customer_ID}`. 
+* A Parameter that was retrieved from either an SQL query or Broadway flow calls. The output fields of such command's result, can be used as parameters for later logic in the Graphit, for example in a WHERE statement in a next SQL command.
 
 
 
@@ -50,7 +50,7 @@ When using the parameters in function nodes, you shall use them as variables. Fo
 ## Set Input Parameters When Testing in Graphit
 To test & debug a Graphit file:
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon in the top Graphit Editor toolbar.
+1. Click on the <img src="images/url-icon.png"></img> icon in the top Graphit Editor toolbar.
 2. In the **URL Parameters & Properties**  > **Input Parameter & Path** section, populate the 'Debug Value' field.
 3. Test the Graphit by using either the JSON, XML or CSV icons in the top toolbar.
 
@@ -97,11 +97,11 @@ This code calls the following Graphit file, which uses **${input1}** and **${inp
 
 ### Invoking From Broadway
 
-When calling Graphit from Broadway, using the Graphit Actor, you can either use the 'params' input object or the auto added input parameters. The input parameters are automatically added to the actor according to the Graphit definitions, that is - Broadway looks at the Graphit structure and generates them. 
+When calling Graphit from Broadway, using the Graphit Actor, you can use one of the following two methods to transfer parameters to the Graphit: the 'params' input object or the auto-added input arguments. The input arguments are automatically added to the actor according to the Graphit definitions, that is - Broadway looks at the Graphit structure and generates them. 
 
-When running it, the actor first looks at the input parameters (first level) and if not found, it looks at the 'params' input argument.
+When running it, the actor first looks at the auto-added input arguments and if not found, it looks at the 'params' input argument.
 
-In the below example, Broadway Graphit Actor calls to a Graphit file, which get2 2 input parameters, named 'input1' and 'input2' and summarizes them. The 2 input parameters usage is demonstrated below:
+In the below example, Broadway Graphit Actor calls to a Graphit file, which gets 2 input parameters, named 'input1' and 'input2' and sums them. The 2 parameters transfer methods are demonstrated below (the first image shows the auto-adding method and the second image the 'params' input object method):
 
 <img src="images/invoke_by_bw_input_parameters.png" >
 
@@ -113,7 +113,7 @@ In the below example, Broadway Graphit Actor calls to a Graphit file, which get2
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_graphit_debugging.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_invoking_graphit_files.md)
 
 
 

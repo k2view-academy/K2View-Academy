@@ -153,7 +153,7 @@ Output:
 #### grFormat.graphit
 The **format** flag has been set to XML in the CRM_DB node. If the format is specified, the node will only be evaluated and added if the output format matches the format value.
 
-The example below sets JSON in the output format. There CRM_DB node is not displayed in the response since its format is in XML.
+The example below sets JSON in the output format. The CRM_DB node is not displayed in the response since its format is in XML.
 
 ![grFormat](images/23_graphit_examples_tags.PNG)
 
