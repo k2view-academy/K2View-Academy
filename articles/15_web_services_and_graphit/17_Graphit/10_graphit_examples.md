@@ -1,4 +1,6 @@
-# Graphit - Code Examples
+# Graphit Examples
+This article contains several Graphit files examples. Graphit file names, when are mentioned, refers to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
+
 ### A simple Example of a Customer Info Web Service that brings data for an LUI
 
 The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
@@ -26,8 +28,6 @@ Run the Graphit file in a Debug mode with 2 and 3 as consecutive values for the 
 
 <img src="images/65_graphit_examples.PNG"></img>
 
-
-
 Notes:
 
 - The csvRow has been set to the SUBSCRIBER_ID node. Therefore, a new line has been created for each new subscriber_id entry.
@@ -37,14 +37,29 @@ Notes:
 
 
 ###  Graphit Node Types Examples
-#### grFormat.graphit
-In this example, all children nodes of the CRM_DB and the BILLING_DB nodes are defined as **field**. The response populates the document with the names and values of each specific field.<br></br>
-<img src="images/09_graphit_examples_tags.PNG"></img>
+#### grRaw.graphit
+This example illustrates an XML output in raw format. Observe the header value displayed in the response.  
+
+<img src="images/graphit_example_raw.png"></img>
+
+
+
 Output:
 
-<img src="images/grFormatResp.png"></img>
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><SUBSCRIBERS><CRM_DB><SUBSCRIBER_ID>97</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>98</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>99</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>100</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>101</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>102</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>103</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>104</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>105</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>106</SUBSCRIBER_ID></CRM_DB></SUBSCRIBERS>
+```
+
+When removing the 'raw' from the node's type, the output will be as following:
+
+```xml
+<Root><SUBSCRIBERS><CRM_DB><SUBSCRIBER_ID>97</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>98</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>99</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>100</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>101</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>102</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>103</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>104</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>105</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>106</SUBSCRIBER_ID></CRM_DB></SUBSCRIBERS></Root>
+```
+
+
 
 #### grFunction.graphit
+
 This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
 <img src="images/10_graphit_examples_tags.PNG"></img>
 
@@ -90,13 +105,7 @@ Output:
 
 <img src="images/grCollectResp.png"></img>
 
-#### grRaw.graphit
-This example illustrates an XML output in raw format. Observe the header value displayed in the response: ```(?xml version="1.0" encoding="UTF-8"...)```<br></br>
-<img src="images/16_graphit_examples_tags.PNG"></img>
 
-Output:
-
-<img src="images/grRawResp.png"></img>
 
 
 ###  Graphit Node Properties Examples
@@ -153,14 +162,11 @@ Output:
 #### grFormat.graphit
 The **format** flag has been set to XML in the CRM_DB node. If the format is specified, the node will only be evaluated and added if the output format matches the format value.
 
-The example below sets JSON in the output format. The CRM_DB node is not displayed in the response since its format is in XML.
+The example below requests JSON in the output format. The CRM_DB node, with all its sub nodes, is not displayed in the response since its format is in XML.
 
-![grFormat](images/23_graphit_examples_tags.PNG)
+![grFormat](images/graphit_examples_format1.png)
 
 
-Output:
-
-<img src="images/grFormat2Resp.png"></img>
 
 #### grShowEmpty.graphit
 The **showempty** flag has been set to False and is applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
