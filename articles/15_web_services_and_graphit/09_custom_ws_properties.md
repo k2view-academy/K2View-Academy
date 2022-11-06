@@ -2,7 +2,7 @@
 
 Fabric Web Services properties include metadata that contributes to the definitions, functionalities and characteristics of the Web Service.  
 
-At Graphit, it is done at the Properties Panel, which opens when clicking on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar. Some other settings are done via the nodes' types or properties.
+At Graphit, it is done at the Properties Panel, which opens when clicking on the <img src="17_Graphit/images/url-icon.png"></img> icon at the top Graphit Editor toolbar. Some other settings are done via the nodes' types or properties.
 
 These settings are available only when 'Expose as Endpoint' is checked.
 

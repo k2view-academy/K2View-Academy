@@ -121,7 +121,7 @@ http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 ```
 
 The response is displayed in the body of the browser's web page:
-<img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\images\Web-Service-KI-2-1_Produce2.PNG">
+<img src="images/Web-Service-KI-2-1_Produce2.PNG">
 
 
 

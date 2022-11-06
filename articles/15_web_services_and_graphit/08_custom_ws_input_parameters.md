@@ -52,7 +52,7 @@ A combination of the 2 methods can be used as well, e.g. "demo/{x}?y=".
 
 To define it for Graphit:
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
+1. Click on the <img src="17_Graphit/images/url-icon.png"></img> icon at the top Graphit Editor toolbar.
 
 2. Edit the **Override Path** section. 
 
