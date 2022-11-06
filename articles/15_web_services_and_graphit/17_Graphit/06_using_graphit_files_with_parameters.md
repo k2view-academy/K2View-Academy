@@ -64,7 +64,7 @@ To learn how to send input parameters when the Graphit is exposed as a web servi
 
 
 ## Transfer Input Parameters When Invoking From Fabric Implementation Components
-A Graphit file can be invoked internally, from other Fabric Implementation Components. 
+A Graphit file can be invoked internally, from other Fabric Implementation Components. Each component provides methods to transfer the Graphit input parameters.
 
 ### Invoking From a Java Function
 
@@ -113,7 +113,7 @@ In the below example, Broadway Graphit Actor calls to a Graphit file, which gets
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_graphit_debugging.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_invoking_graphit_files.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_invoke_javacode_from_graphit.md)
 
 
 

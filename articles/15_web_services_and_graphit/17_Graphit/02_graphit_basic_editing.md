@@ -63,19 +63,7 @@ Use the following actions for node editing:
 
 ## Testing Graphit
 
-You can easily execute and test your Graphit file by using the top tollbar actions.
-
-Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, upon executing, the result panel will inform you that they are missing.
-
-Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons at the top toolbar.
-
-You can leave this panel open and continue editing the file. Then, you can click on refresh <img src="images/refraesh-icon.png"></img> icon at the top tollbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
-
-
-
-You can also examine the Graphit's performance at the **Profiler** panel, which opens when selecting the <img src="images/profiler-icon.png"></img> icon in the top toolbar.
-
-
+You can easily execute and test your Graphit file by using the top tollbar actions, as explained [here](05_invoking_graphit_files.md).
 
 
 

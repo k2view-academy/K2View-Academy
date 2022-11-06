@@ -12,7 +12,9 @@ To open the app, go to the Fabric Web Framework and select 'API' from its menu.
 
 In addition, you can invoke the web service directly from the Studio, where it automatically opens the web browser with the Swagger testing app and navigates you to the selected web service.
 
-To do so - find the the web service - Graphit or Java function, at the project tree, right-click on its name and choose **Invoke Web Service**.
+To do so - find the the web service - Graphit or Java function, at the project tree, right-click on its name and choose **Invoke Graphit Web Service**.
+
+![](17_Graphit/images/47_invoking_graphit_files.png)
 
 </studio>
 
