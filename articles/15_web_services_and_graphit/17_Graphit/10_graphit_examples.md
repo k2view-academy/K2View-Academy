@@ -1,5 +1,5 @@
 # Graphit Examples
-This article contains several Graphit files examples. Graphit file names, when are mentioned, refers to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
+This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
 
 ### A simple Example of a Customer Info Web Service that brings data for an LUI
 
@@ -162,7 +162,7 @@ Output:
 #### grFormat.graphit
 The **format** flag has been set to XML in the CRM_DB node. If the format is specified, the node will only be evaluated and added if the output format matches the format value.
 
-The example below requests JSON in the output format. The CRM_DB node, with all its sub nodes, is not displayed in the response since its format is in XML.
+The example below requests JSON in the output format. The CRM_DB node, with all its sub nodes, is not displayed in the response as its format is in XML.
 
 ![grFormat](images/graphit_examples_format1.png)
 
@@ -177,7 +177,7 @@ Output:
 <img src="images/grShowEmptyResp.png"></img>
 
 #### grShowNull.graphit
-The **showNull** flag has been set to False and is applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag has is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
+The **showNull** flag has been set to False and is applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
 <img src="images/25_graphit_examples_tags.PNG"></img>
 
 Output:
