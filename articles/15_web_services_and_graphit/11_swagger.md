@@ -1,6 +1,6 @@
 # Web Services Testing Application
 
-Fabric lets developers to effortlessly interact and try out either Fabric built-in or custom web services - via a visualization utility - Swagger UI.
+Fabric lets developers to effortlessly interact and try out either Fabric built-in or custom-built web services - via a visualization utility - Swagger UI.
 
 This utility is available as a web application, named 'API' at Fabric [Web Framework]("/articles/30_web_framework/01_web_framework_overview.md" ). Using it, you can quickly find the web services with neatly categorized documentation, and test them with a fine UI, which lets you easily populate parameters, according to the service verb. 
 
@@ -24,7 +24,7 @@ The API testing app page shows the Web Services in categories and in alphabetica
    * Common - all built-in product Web Services that bring reference table metadata and data. 
    * Fabric - pre-built API to run Fabric commands, Authentication and heartbeats/status queries.   
    * LU - all built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
-   * Project defined categories for custom Web Services.
+   * Project defined categories for custom-built web services.
 
 Built-in out-of-the-box web services will always exist and are according to the project's implementation. 
 
@@ -50,7 +50,7 @@ For example, expanding the LU category will show this:
 
 <img src="images/swagger_LU.png" alt="drawing"/>
 
-For the project's custom web services, the verb methods are set via the implementation. 
+For the project's custom-built web services, the verb methods are set via the implementation. 
 
 
 
@@ -96,5 +96,4 @@ As shown below, when changed, you will see an indication as a badge, aside the t
 
 
 *	[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/10_advanced_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md)
-
 

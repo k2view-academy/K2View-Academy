@@ -1,6 +1,6 @@
-# Custom Web Services Input Parameters
+# Custom-Built Web Services Input Parameters
 
-Fabric lets you pass input parameters to the custom web services, with various ways to define it and with a flexibility when passing them. 
+Fabric lets you pass input parameters to the custom-built web services, with various ways to define it and with a flexibility when passing them. 
 
 ## Defining The Input Parameters
 
@@ -22,7 +22,7 @@ To learn how to define input parameters for Java function using annotations - re
 
 ## Transferring The Input Parameters 
 
-Input parameters can be transferred to the project custom Web Services either as:
+Input parameters can be transferred to the project custom-built Web Services either as:
 
 - Standard web service parameters, according to the verb.
 - Part of the URL path

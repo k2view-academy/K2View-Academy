@@ -1,6 +1,6 @@
 # Graphit Overview
 
-Graphit is a Fabric UI utility, which can be used to design [Project Custom Web Services](/articles/15_web_services_and_graphit/05_custom_ws.md) responses. Graphit provides a very user-friendly interface and requires minimal coding while enabling testing capabilities. 
+Graphit is a Fabric UI utility, which can be used to design [Project Custom-Built Web Services](/articles/15_web_services_and_graphit/05_custom_ws.md) responses. Graphit provides a very user-friendly interface and requires minimal coding while enabling testing capabilities. 
 
 A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
 

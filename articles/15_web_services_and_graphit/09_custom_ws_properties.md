@@ -1,4 +1,4 @@
-# Custom Web Service Properties
+# Custom-Built Web Service Properties
 
 Fabric Web Services properties include metadata that contributes to the definitions, functionalities and characteristics of the Web Service.  
 

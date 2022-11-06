@@ -6,7 +6,7 @@ Fabric supports 2 types of Web Services:
   * Project's out-of-the-box Web Services for querying and manipulating Logical Units, and Common tables. 
   * Base Web Services.
 
-* Custom Web Services, that are developed as part of the project's implementation, according to dedicated project needs.
+* Custom-Built Web Services, that are developed as part of the project's implementation, according to dedicated project needs.
 
 
 

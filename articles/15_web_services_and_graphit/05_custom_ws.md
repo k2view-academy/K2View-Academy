@@ -1,14 +1,14 @@
-# Project Custom Web Services/APIs
+# Project Custom-Built Web Services/APIs
 
 ## Overview
 
-While the built-in out-of-the-box web services are very useful and comprehensive, Fabric provides a very powerful capability of creating custom web services. This enables building new web services, according to the project needs, deploying these web services and using them immediately, without the need to wait for a new product release. This expedites the project's go-to-market strategy and ongoing updates.
+While the built-in out-of-the-box web services are very useful and comprehensive, Fabric provides a very powerful capability of creating custom-built web services. This enables building new web services, according to the project needs, deploying these web services and using them immediately, without the need to wait for a new product release. This expedites the project's go-to-market strategy and ongoing updates.
 
 In order to build and expose web services, use Graphit, a visual development Editor, which is aimed for building structured documents - with minimal coding needs, like JSON and XML - to be published as web services.
 
 Note that Fabric also provides methods and helpers to build web services as Java functions, but it is recommended to use these only in specific cases, where Graphit does not fit the needs.
 
-Similar to the built-in web services, the custom web services outcome is in either JSON, XML or CSV formats. 
+Similar to the built-in web services, the custom-built web services outcome is in either JSON, XML or CSV formats. 
 
 Fabric also provides utilities and helpers to ease the building of the web services logic and the output. 
 
@@ -26,7 +26,7 @@ In addition to helping implementors to easily craft web services logic and outpu
 
 ## Invoking Custom APIs
 
-The custom web services are exposed in a similar pattern to the built-in web services:
+The custom-built web services are exposed in a similar pattern to the built-in web services:
 
 `/api/[VERSION_NO]/<web-service name>[?<parameters>&format=<FORMAT>&graphitProfiler=true]`
 
