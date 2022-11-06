@@ -1,4 +1,4 @@
-<strong>Web Services / APIs<strong>
+<strong>Web Services/APIs<strong>
 
 <ul>
     <li><a href="/articles/15_web_services_and_graphit/01_web_services_overview.md">Web Services Overview</a></li>
