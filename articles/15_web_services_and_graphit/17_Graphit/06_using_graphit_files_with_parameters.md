@@ -50,25 +50,25 @@ When using the parameters in function nodes, you shall use them as variables. Fo
 ## Set Input Parameters When Testing in Graphit
 To test & debug a Graphit file:
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
-2. At The **URL Parameters & Properties**  > **Input Parameter & Path** section, populate the "Debug Value" fields.
-3. Test the Graphit by using either of the JSON, XML or CSV icons at the top toolbar.
+1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon in the top Graphit Editor toolbar.
+2. In the **URL Parameters & Properties**  > **Input Parameter & Path** section, populate the 'Debug Value' field.
+3. Test the Graphit by using either the JSON, XML or CSV icons in the top toolbar.
 
 
 
-## Transfer Input Parameters When Calling Graphit as Web Service
+## Transfer Input Parameters When Calling Graphit as a Web Service
 
 
-To learn how to send input parameters when the Graphit is exposed as web service, read [here](/articles/15_web_services_and_graphit/08_custom_ws_input_parameters.md).
+To learn how to send input parameters when the Graphit is exposed as a web service - read [here](/articles/15_web_services_and_graphit/08_custom_ws_input_parameters.md).
 
 
 
 ## Transfer Input Parameters When Invoking From Fabric Implementation Components
-A Graphit file can be invoked internally, from another Fabric Implementation Components. 
+A Graphit file can be invoked internally, from other Fabric Implementation Components. 
 
 ### Invoking From a Java Function
 
-When calling Graphit from a java function, the input parameters shall be populated by a parameter name or by a map object.
+When calling Graphit from a Java function, the input parameters shall be populated by either a parameter name or by a map object.
 
 **Example 1**: sending parameters as a map:
 
@@ -81,7 +81,7 @@ return graphit("gr1.graphit", graphitParams);
 ```
 
 
-This code calls the following Graphit file which uses **${input1}** and **${input2}** as parameters.
+This code calls the following Graphit file, which uses **${input1}** and **${input2}** as parameters.
 
 
 
@@ -91,17 +91,17 @@ This code calls the following Graphit file which uses **${input1}** and **${inpu
 
 
 
->  Note: you can send "format" as one of the parameters when wishes to get the result document in a specific format, ither than the default which is JSON.
+>  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default format, which is JSON.
 
 
 
 ### Invoking From Broadway
 
-When calling Graphit from a Broadway, using the Graphit Actor, you can either use the "params" input object or the auto added input parameters. The input parameters are added automatically to the actor according to the Graphit definitions, that is - Broadway looks at the Graphit structure and generate them. 
+When calling Graphit from Broadway, using the Graphit Actor, you can either use the 'params' input object or the auto added input parameters. The input parameters are automatically added to the actor according to the Graphit definitions, that is - Broadway looks at the Graphit structure and generates them. 
 
-When running it, the actor looks first at the input parameters (first level) and if not found, looks at the "params" input argument.
+When running it, the actor first looks at the input parameters (first level) and if not found, it looks at the 'params' input argument.
 
-In the below example Broadway Graphit Actor calls to a GraphIt file which get2 two input parameters, named "input1" and "input2" and summarizes them. The two input parameters usage are demonstrated below:
+In the below example, Broadway Graphit Actor calls to a Graphit file, which get2 2 input parameters, named 'input1' and 'input2' and summarizes them. The 2 input parameters usage is demonstrated below:
 
 <img src="images/invoke_by_bw_input_parameters.png" >
 
