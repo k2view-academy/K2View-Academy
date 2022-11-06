@@ -4,14 +4,14 @@
 ## JavaScript Functions
 JavaScript functions can be added to the Graphit file in the Fabric Studio using the Graphit Editor. To do so, add a new node to an already-defined root and configure it as a function that runs a code to determine the value of the node. Values extracted from datasets in parent nodes can be parsed down to the JavaScript function.
 
-Note: You can refer to parameters directly using their name defined in the Parameters Window.
+Note: You can refer to parameters directly, using their defined name in the Parameters Window.
 
 ### Example
 In the following example, a Graphit Web Service retrieves the sum of all payments made by a customer from the Received Invoices table.
-A decision can be made whether to convert this amount into GBP or EUR currency depending on the value of the convGBP parameter.
+A decision can be made whether to convert this amount into GBP or EUR currency, depending on the value of the convGBP parameter.
 
--  True, displays the amount in GBP.
--  False displays the amount in EUR.
+-  True - displays the amount in GBP.
+-  False - displays the amount in EUR.
 
 The following screenshot displays how dataset nodes and JavaScript nodes are defined as children of the main Balance node:
 
@@ -31,8 +31,8 @@ Note that an http link has been generated to invoke the Web Service for customer
 
 
 ## Lambda Functions
-Java functions can be bound to Graphit using a Web Service. To do so, create a Lambda expression based on the Scripter.F functional interface in a key / value map entry, where the key contains the name of the function that is invoked in Graphit and the value contains its logic.
-  
+Java functions can be bound to Graphit using a Web Service. To do so, create a Lambda expression based on the Scripter.F functional interface in a key/value map entry, where the key contains the name of the function that is invoked in Graphit and the value contains its logic.
+
 ### Example
 
 Web Service file: LambdaGraphit1.ws
@@ -46,7 +46,7 @@ return graphit("LambdaGraphit1.graphit", scope);
 ```
 
 Graphit file LambdaGraphit1.graphit: 
-Note that the function times defined above are called from the node **field 1** (defined as a function) on a variable called **dbl** declared in the parent node 
+Note that the function times defined above are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/52a_invoke_javacode_from_graphit.PNG)
 
 
@@ -55,9 +55,9 @@ Output using the Swagger GUI:
 
 
 Limitations:
-This type of function cannot be debugged in the Graphit Editor since the functional parameters cannot be created in the Studio. 
+This type of function cannot be debugged in the Graphit Editor as the functional parameters cannot be created in the Studio. 
 However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
-  
+
  
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
