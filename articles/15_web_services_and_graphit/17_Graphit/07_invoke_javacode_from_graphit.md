@@ -29,5 +29,5 @@ However, the code can be tested by either deploying it to Fabric or by debugging
 
  
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md)
 
