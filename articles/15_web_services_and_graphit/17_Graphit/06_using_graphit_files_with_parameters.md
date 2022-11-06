@@ -113,7 +113,7 @@ In the below example, Broadway Graphit Actor calls to a Graphit file, which gets
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_invoke_javacode_from_graphit.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/05_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/07_invoke_javacode_from_graphit.md)
 
 
 
