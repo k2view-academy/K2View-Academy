@@ -15,7 +15,7 @@ return graphit("LambdaGraphit1.graphit", scope);
 ```
 
 Graphit file LambdaGraphit1.graphit: (can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services > resources )
-Note that the function times defined above are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node 
+Note that the above defined function times are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node 
 ![](images/52a_invoke_javacode_from_graphit.PNG)
 
 
@@ -25,7 +25,7 @@ Output using the Swagger GUI:
 
 Limitations:
 This type of function cannot be debugged in the Graphit Editor as the functional parameters cannot be created in the Studio. 
-However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
+However, the code can be tested by either deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
 
  
 
