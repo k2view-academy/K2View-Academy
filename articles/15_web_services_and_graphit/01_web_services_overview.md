@@ -1,26 +1,27 @@
 # Web Services Overview 
 
-Fabric data is stored internally using Logical Unit modelling. To enable the data to be accessed externally, exposed Web Services are built to query all Fabric data and to present the relevant response to the outside world. 
+Fabric supports 2 types of Web Services:
 
-Other common uses for Fabric Web Services include: 
+* Product built-in Web Services, which is divided into:
+  * Project's out-of-the-box Web Services for querying and manipulating Logical Units, and Common tables. 
+  * Base Web Services.
 
-- Deploying new applications. 
-- Exposing data via API instead of by direct DB access. 
+* Custom-Built Web Services, that are developed as part of the project's implementation, according to dedicated project needs.
 
-- Interacting with other systems based on Fabric data. 
 
-## What Is a Fabric Web Service? 
 
-A **Fabric** **Web** **Service** is a Java function that can be exposed through the Fabric Web Service layer. 
+Fabric Web Services apply and follow REST API guidelines and standards.
 
-Web Services should be deployed to Fabric separately and can then be invoked either by a client or directly from any web browser. In the Fabric Studio, Web Service functions can be defined and saved to the project file and be deployed to the Fabric server. 
+Fabric provides an Open API testing utility (based on Swagger) as part of the Web Framework applications, where an implementor can test web services of any type listed above.
 
-Fabric Web Services apply REST API guidelines which can be fully integrated into the latest Open API (Swagger) platform. 
 
-## What Is a RESTful API? 
 
-**Representational State Transfer** (**REST**) is a software architectural style that defines a set of constraints and standards used for creating Web Services. 
+To learn more about built-in out-of-the-box Logical Units and Common tables Web Services - read [here](/articles/15_web_services_and_graphit/02_built_in_lu_ws.md).
 
-Web Services that conform to the REST architectural style known as RESTful Web Services (RWS), provide interoperability between computer systems on the internet. RESTful Web Services allow requesting systems to access and manipulate textual representations of web resources via a uniform and predefined set of stateless operations.  
+To learn more about Fabric built-in Web Services - read [here](/articles/15_web_services_and_graphit/04_built_in_fabric_ws.md).
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
+To learn more about creating and handling project's custom-built Web Service - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md).
+
+
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/02_built_in_lu_ws.md)

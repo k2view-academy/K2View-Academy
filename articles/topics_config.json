@@ -113,6 +113,10 @@
 					"value": "19_Broadway"
 				},
 				{
+					"display name": "Graphit",
+					"value": "15_web_services_and_graphit/17_Graphit"
+				},
+				{
 					"display name": "Jobs and Batch Services",
 					"value": "20_jobs_and_batch_services"
 				},
@@ -229,7 +233,7 @@
 					"value": "24_non_DB_interfaces"
 				},
 				{
-					"display name": "Web Services and Graphit",
+					"display name": "Web Services",
 					"value": "15_web_services_and_graphit"
 				},
 				{
