@@ -1,11 +1,11 @@
 # Graphit Examples
 This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
 
-### A simple Example of a Customer Info Web Service that brings data for an LUI
+### A Simple Example of Retrieving Data for an LUI
 
 The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
 
-Output data is returned in a JSON structure and adds information on whether the customer is either a:
+Output data is returned in a JSON format and adds information on whether the customer is either a:
 -  VIP member, with a total balance of over USD 10,000.
 -  Gold member, with a total balance of over USD 1,000. 
 
@@ -17,7 +17,7 @@ After deploying and invoking the Graphit file directly as a Web Service:
 
 
 
-### A simple Example of a CSV Output
+### A Simple Example of a CSV Output
 This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
 
 #### grCSV.graphit
@@ -80,7 +80,7 @@ Output:
 <img src="images/grStringResp.png"></img>
 
 #### grCondition.graphit
-The condition defined in this file triggers either the TRUE or FALSE node, depending on the randomly generated values of **x** and **y**.<br></br>
+The condition defined in this file triggers either the TRUE or the FALSE node, depending on the randomly generated values of **x** and **y**.<br></br>
 <img src="images/13_graphit_examples_tags.PNG"></img>
 
 Output:
