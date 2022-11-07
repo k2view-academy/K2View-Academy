@@ -7,13 +7,13 @@ In either one of the options you can transfer Graphit input parameters, while in
 
 ## Testing and Debugging Graphit file inside the Graphit Editor
 
-You can easily execute and test your Graphit file by using the top tollbar actions.
+You can easily execute and test your Graphit file by using the top toolbar actions.
 
 Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, upon executing, the result panel will inform you that they are missing.
 
-Upon executing, for example clicking on the <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons at the top toolbar.
+Upon executing, for example clicking on the <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
 
-You can leave this panel open and continue editing the file. Then, you can click on refresh <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/refraesh-icon.png"></img> icon at the top tollbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
+You can leave this panel open and continue editing the file. Then, you can click on the refresh <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/refraesh-icon.png"></img> icon at the top toolbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
 
 
 
@@ -23,19 +23,19 @@ You can also examine the Graphit's performance at the **Profiler** panel, which 
 
 ## Invoke Graphit Externally
 
-Graphit files which are located in the Web Service LU, can be exposed to external calls, as web service endpoint.
+Graphit files that are located in the Web Service LU, can be exposed to external calls, as web service endpoint.
 
-Those files which are located under 'Resources' folder at the project tree, are always exposed as web services, while for those which are located under 'Graphit' folder you can control if it will be exposed or not (the default is that they are exposed).
+Those files, located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
 
 To change this settings:
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon at the top Graphit Editor toolbar.
+1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon in the top Graphit Editor toolbar.
 
-2. Check or uncheck the **Expose as Endpoint** checkbox. 
+2. Check/uncheck the **Expose as Endpoint** checkbox. 
 
    <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_path.png"></img> 
 
-To learn more of how invoking Graphit externally and how to transfer it input parameters read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
+To learn more about how to externally invoke Graphit and how to transfer its input parameters - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
 You can use the Web services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, automatically pointing the Graphit file. To do so, at the project tree right-click the Graphit file and choose **Invoke Graphit Web Service**
 
@@ -47,7 +47,7 @@ You can use the Web services Testing App to easily invoke Graphit web service en
 
 
 
-> Graphit files which are located in LUs other that the Web are not exposed as web service and can be invoked only by Fabric implementation components.
+> Graphit files, that are located in LUs other than the Web, are not exposed as web service and can be invoked only by Fabric implementation components.
 
 
 
@@ -63,15 +63,15 @@ When calling Graphit from a Java function, use the following Implementation User
 
 The input parameters shall be populated by either a parameter name or by a map object. The Graphit function result is Object.
 
-To learn more of how transferring input parameters when calling Graphit from a function read [here](06_using_graphit_files_with_parameters.md#invoking-from-a-java-function).
+To learn more about how to transfer input parameters when calling Graphit from a function - read [here](06_using_graphit_files_with_parameters.md#invoking-from-a-java-function).
 
 >  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default format, which is JSON.
 
 ### Invoking From Broadway
 
-to call Graphit from a Broadway flow use the Graphit Actor, where you can select the Graphit file as well as set and connect the input parameters.
+To call Graphit from a Broadway flow use the Graphit Actor, where you can select the Graphit file as well as set and connect the input parameters.
 
-To learn more of how transferring input parameters when calling Graphit from a Broadway actor read [here](06_using_graphit_files_with_parameters.md#invoking-from-broadway).
+To learn more about how to transfer input parameters when calling Graphit from a Broadway actor - read [here](06_using_graphit_files_with_parameters.md#invoking-from-broadway).
 
 
 
