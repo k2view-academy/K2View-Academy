@@ -11,13 +11,13 @@ You can easily execute and test your Graphit file by using the top toolbar actio
 
 Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, upon executing, the result panel will inform you that they are missing.
 
-Upon executing, for example clicking on the <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
+Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
 
-You can leave this panel open and continue editing the file. Then, you can click on the refresh <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/refraesh-icon.png"></img> icon at the top toolbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
+You can leave this panel open and continue editing the file. Then, you can click on the refresh <img src="images/refraesh-icon.png"></img> icon at the top toolbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
 
 
 
-You can also examine the Graphit's performance at the **Profiler** panel, which opens when selecting the <img src="D:/OneDrive - K2View/K2View-Academy-7.0/articles/15_web_services_and_graphit/17_Graphit/images/profiler-icon.png"></img> icon in the top toolbar.
+You can also examine the Graphit's performance at the **Profiler** panel, which opens when selecting the <img src="images/profiler-icon.png"></img> icon in the top toolbar.
 
 
 
@@ -29,11 +29,11 @@ Those files, located under 'Resources' folder in the project tree, are always ex
 
 To change this settings:
 
-1. Click on the <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\url-icon.png"></img> icon in the top Graphit Editor toolbar.
+1. Click on the <img src="images/url-icon.png"></img> icon in the top Graphit Editor toolbar.
 
 2. Check/uncheck the **Expose as Endpoint** checkbox. 
 
-   <img src="D:\OneDrive - K2View\K2View-Academy-7.0\articles\15_web_services_and_graphit\17_Graphit\images\ws_graphit_path.png"></img> 
+   <img src="images/ws_graphit_path.png"></img> 
 
 To learn more about how to externally invoke Graphit and how to transfer its input parameters - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
