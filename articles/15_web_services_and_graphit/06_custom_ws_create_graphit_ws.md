@@ -1,6 +1,6 @@
 # Create Custom-Built Web Service with Graphit
 
-As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing capabilities.
+As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing capabilities. To learn more about Graphit utility - read [here](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md).
 
 A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
 
@@ -102,9 +102,11 @@ as well as in the **Project tree**, under its category.
 
 You can see that it has automatically received a **'.graphit' suffix**.
 
-
-
 </web>
+
+To learn more about editing Graphit file - using the Graphit Editor - read [here](/articles/15_web_services_and_graphit/17_Graphit/02_graphit_basic_editing.md).
+
+
 
 > NOTE: Prior to  Fabric 7, Graphit files were located only under Java/resources folder. This option is still available, for backward compatibility.
 
