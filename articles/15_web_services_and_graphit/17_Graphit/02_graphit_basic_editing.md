@@ -1,6 +1,6 @@
 # Graphit Basic Editing
 
-Once you've created a Graphit file, you can start editing it. To learn how to create a Graphit as web service - read [here]("/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md" ). Similarly, you can create Graphit under any other Logical Unit.
+Once you've created a Graphit file, you can start editing it. To learn how to create a Graphit as web service - read [here](/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md). Similarly, you can create Graphit under any other Logical Unit.
 
 
 
@@ -16,14 +16,14 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 
 * The Graphit editor is built from a main editing area, a top toolbar, and a right panel that opens when an action in the top toolbar is selected.
 
-<img src="images\graphit_editor.png"  />
+<img src="images\graphit_editor.png"/>
 
 * The editor manages Graphit files that are built from nodes that can be added as either a sibling or a child of any other existing node, in the main editing area.
 * Nodes can be moved or copied within a GraphIt file using Drag&Drop or Copy&Paste actions. A node can be copied and pasted between files.
-* Upon a node creation, you shall first select its node type and accordingly accomplish its logic and/or output form. The node type can be changed later during editing. To learn more about *node types* - read [here](TBD). Note:
+* Upon a node creation, you shall first select its node type and accordingly accomplish its logic and/or output form. The node type can be changed later during editing. To learn more about *node types* - read [here](03_graphit_node_types.md). Note:
   * Not all nodes have an output representation, as they define a logical functionality.
   * Any node that has an output representation shall be named.
-* You may use node properties to define some of the logic or the output form of a node. To learn more about *node properties* - read [here](TBD).
+* You may use node properties to define some of the logic or the output form of a node. To learn more about *node properties* - read [here](04_graphit_node_properties.md).
 
 
 ## Top Toolbar Actions
