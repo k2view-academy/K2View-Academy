@@ -1,4 +1,4 @@
-# Project Custom-Built APIs
+# Project Custom-Built Web Services/APIs
 
 ## Overview
 
@@ -14,13 +14,13 @@ Fabric also provides utilities and helpers to ease the building of the web servi
 
 In addition to helping implementors to easily craft web services logic and output, Fabric lets you, via the Studio UI, to:
 
-* Have web services versioning.
-* Control and strict the outcome format.
-* Control and set web services verb. 
-* Control and strict web services permissions.
-* Control the web services path.
-* Set and use the web services input parameters.
-* Test the web services. 
+* Set versioning - read [here](09_custom_ws_properties.md). 
+* Control and strict the outcome format - read [here](09_custom_ws_properties.md).
+* Control and set verb - read [here](09_custom_ws_properties.md). 
+* Control and strict permissions - read [here](09_custom_ws_properties.md).
+* Control the path - read [here](09_custom_ws_properties.md).
+* Set and use input parameters - read [here](08_custom_ws_input_parameters.md).
+* Test the web services - read [here](11_swagger.md). 
 
 
 

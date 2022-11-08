@@ -63,7 +63,7 @@ At Java function, it is done via the @version annotation.
 <td valign="top">
 <p>Enable overriding the URL path of a web service.</p>
 Note that in case where more than a single web service has the same path, the deployment will fail.<br>
-For Graphit <studio>and Java function it is done via the Properties Panel.</studio>, <web>whereas for Java function it is done using the path property of the @webservice annotation.</web><br>
+For Graphit <studio>and Java function</studio> it is done via the Properties Panel<web>, whereas for Java function it is done using the path property of the @webservice annotation</web>.<br>
 </td>
 </tr>
 <tr>
@@ -154,6 +154,7 @@ When set to False, it will allow calling the web service by skipping the Authent
 </tr>
 </tbody>
 </table>    
+
 
 
 
