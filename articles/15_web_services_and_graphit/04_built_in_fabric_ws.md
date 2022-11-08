@@ -15,7 +15,9 @@ Run either a fabric command or a set of fabric commands.
 
 **Examples:**
 
-1. Request Body
+1. Retrieves the logical units list 
+
+Request Body
 
 ```
 {
@@ -53,7 +55,9 @@ Response Body
 }
 ```
 
-    2. Request Body
+2. Activate the ref_sync command to sync reference tables
+
+Request Body
 
 ```
 {
