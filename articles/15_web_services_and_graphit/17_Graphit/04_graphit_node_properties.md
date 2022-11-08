@@ -73,7 +73,7 @@ The following table describes the node properties. Please refer to the files in 
 <tr>
 <td valign="top" >Attribute</td>
 <td valign="top" >Defines in XML whether a value is set as an attribute or as a child node (default).&nbsp;</td>
-<td valign="top" ><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grattributegraphit...">grAttribute</a></td>
+<td valign="top" ><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grattributegraphit">grAttribute</a></td>
 </tr>
 <tr>
 <td valign="top" >Format</td>
