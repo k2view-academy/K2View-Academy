@@ -1,7 +1,7 @@
 # Invoking Graphit Files
 Graphit files can be invoked either externally as Web Services or internally from other Fabric implementation components. 
 
-In either one of the options you can transfer Graphit input parameters, while invoking it. To learn how to define parameters in Graphit - read [here]().
+In either one of the options you can transfer Graphit input parameters, while invoking it. To learn how to define parameters in Graphit - read [here](06_using_graphit_files_with_parameters.md).
 
 
 

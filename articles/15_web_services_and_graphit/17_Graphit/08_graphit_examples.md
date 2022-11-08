@@ -1,23 +1,27 @@
 # Graphit Examples
 This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
 
-### A Simple Example of Retrieving Data for an LUI
+### Retrieving Data for an LUI
+
+The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, using GET and SQL commands.
+
+<img src="images/grsql.png"></img>
+
+
+
+### Building Output Data Based On SQL Result Calculations
 
 The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
 
-Output data is returned in a JSON format and adds information on whether the customer is either a:
+Output data is returned with further information on whether the customer is either a:
 -  VIP member, with a total balance of over USD 10,000.
 -  Gold member, with a total balance of over USD 1,000. 
 
-<img src="images/58_graphit_examples.PNG"></img>
-
-After deploying and invoking the Graphit file directly as a Web Service:
-
-<img src="images/59_graphit_examples.PNG"></img>
+<img src="images/advanced_with_calc_example.png"></img>
 
 
 
-### A Simple Example of a CSV Output
+### CSV Output Example
 This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
 
 #### grCSV.graphit
@@ -66,12 +70,6 @@ This example illustrates a simple JavaScript routine that returns the highest nu
 Output:
 
 <img src="images/grFormatResp.png"></img>
-
-#### grSQL.graphit
-This example illustrates a parent node that is defined as SQL non-prepared, whereas its children nodes are defined as SQL.<br></br>
-<img src="images/11_graphit_examples_tags.png"></img>
-Output:
-<img src="images/grSQL2Resp.png"></img>
 
 #### grString.graphit
 This example illustrates how 2 values, retrieved from a previously-defined SQL query, are concatenated.<br></br>

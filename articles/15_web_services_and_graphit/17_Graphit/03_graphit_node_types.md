@@ -4,7 +4,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 
 
-The following table lists the node types. We suggest that you run each Graphit file in a Debug mode and observe the response. 
+The following table lists the node types. Please refer to the files in the following table's Example column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
 <table>
 <tbody>
@@ -46,7 +46,7 @@ The SQL Type also enables looping results and executing nested codes on each ret
 Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.<br/>
 To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.
 </td>
-<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grsqlgraphit">grSQL</a></td>
+<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#retrieving-data-for-an-lui">grSQL</a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">String</td>
@@ -56,6 +56,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Get</td>
 <td valign="top" width="900pxl">Defines the Fabric Get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
+
 
     Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
