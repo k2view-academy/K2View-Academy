@@ -127,5 +127,5 @@ The response is displayed in the body of the browser's web page:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Fabric_smart_proxy.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/13_custom_ws_java_annotations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/15_Fabric_smart_proxy.md)
 

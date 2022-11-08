@@ -4,7 +4,7 @@ Fabric provides out-of-the-box web services for querying project's Common data a
 
 An appropriate HTTP status code is used to indicate the status of the executed operation, following standardized status codes that are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
 
-Any web-service call passes authentication and authorization validations before being executed. For more information - see [here]().
+Any web-service call passes authentication and authorization validations before being executed. For more information - see [here](articles/26_fabric_security/05_fabric_webservices_security.md).
 
 All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
@@ -180,9 +180,9 @@ Retrieves the Common DB schema, describing the structures of its tables.
 
   Brings all data from CITIES common table related to the demo schema
 
-- `https://localhost:3213/api/common/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL AVIV'`
+- `https://localhost:3213/api/common/ADDRESSES?fields=CTIY_NAME&where=CITY=’London'`
 
-  Brings city_name from ADDRESSES common table where city is ’TEL AVIV’
+  Brings city_name from ADDRESSES common table where city is ’London’
 
 
 
@@ -309,7 +309,7 @@ The request body shall contain the row data to be updated along with an optional
 
 ```json
  {
-	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
+	"row" : {"ADDRESS_NAME":"London"} ,
 	"where":"ADDRESS_ID=3"
 }
 ```

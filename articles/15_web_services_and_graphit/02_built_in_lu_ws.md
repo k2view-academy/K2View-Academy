@@ -4,7 +4,7 @@ Fabric provides out-of-the-box web services APIs for querying a project's LU dat
 
 An appropriate HTTP status code is used to indicate the status of the executed operation, following standardized status codes that are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
 
-Any web-service call passes authentication and authorization validations before being executed. For more information - see [here]().
+Any web-service call passes authentication and authorization validations before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
 All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
@@ -334,9 +334,9 @@ Environment variable
 
   Brings data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
-- `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&set=sync,force&set=ENVIRONMENT,ENV1&set=GLOBAL_LION,10`
+- `https://localhost:3213/api/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&set=sync,force&set=ENVIRONMENT,ENV1&set=GLOBAL_LOCATION_ACCURACY,10`
 
-  Brings data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and run it on ENV1 and set GLOBAL_LION to 10.
+  Brings data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and run it on ENV1 and set GLOBAL_LOCATION_ACCURACY to 10.
 
 
 
@@ -390,21 +390,21 @@ Environment variable
 
  **Example:**
 
-1. Inserts data into CUSTOMER LU instance id 1, LION table, where table name is specified at the post body
+1. Inserts data into CUSTOMER LU instance id 1, SUBSCRIBER table, where table name is specified at the post body
     `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1`
     Request Body:
 
     ```json
-    {"rows":{"LION":[{"ID":11, "NAME":"lion11"},{"ID":12,"NAME":"lion12"},{"ID":13,"NAME":"lion13"}]}}
+    {"rows":{"SUBSCRIBER ":[{"ID":11, "NAME":"John Smith"},{"ID":12,"NAME":"Laura Smith"},{"ID":13,"NAME":"Dan Smith"}]}}
     ```
 
-2. Inserts data into CUSTOMER LU instance id 1, LION table, where table name is specified at URL
+2. Inserts data into CUSTOMER LU instance id 1, SUBSCRIBER table, where table name is specified at URL
 
-   `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1/LION`
+   `https://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1/SUBSCRIBER`
    Request Body:
 
    ```json
-   {"rows":[{"ID":11, "NAME":"lion11"},{"ID":12,"NAME":"lion12"},{"ID":13,"NAME":"lion13"}]}
+   {"rows":[{"ID":11, "NAME":"John Smith"},{"ID":12,"NAME":"Laura Smith"},{"ID":13,"NAME":"Dan Smith"}]}
    ```
 
 
@@ -579,7 +579,7 @@ The request body shall contain the row data to be updated along with an optional
 
 **Example:**
 
-- `https://localhost:3213/api/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’`
+- `https://localhost:3213/api/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’John Smith’`
 
   Deletes data from PATIENT LU instance id 1, INVOICE table by using a 'where' clause
 
