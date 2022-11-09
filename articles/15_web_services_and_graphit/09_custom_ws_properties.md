@@ -47,6 +47,7 @@ Some of the properties are available on both Java and Graphit, as follows:
 <li>If the version is a part of the URL and the latest API version is lower, the API will respond with the latest version.</li>
 <li>If the version is a part of the URL and is lower than the lowest API version, the API will return the correct error response code.</li>
 <li>If the version is a part of the URL and is in between 2 API versions, the API will respond with the lower version.</li>
+</ul>
 <br>
 At Graphit, the versioning setting is done by incorporating it as a part of the file name. For example: "a.v1.graphit". <br>
 <studio>
@@ -55,7 +56,7 @@ At Java function, it is done via the Properties Panel.
 <web>
 At Java function, it is done via the @version annotation.
 </web>
-</ul>
+
 </td>
 </tr>
 <tr>
@@ -63,7 +64,12 @@ At Java function, it is done via the @version annotation.
 <td valign="top">
 <p>Enable overriding the URL path of a web service.</p>
 Note that in case where more than a single web service has the same path, the deployment will fail.<br>
-For Graphit <studio>and Java function</studio> it is done via the Properties Panel<web>, whereas for Java function it is done using the path property of the @webservice annotation</web>.<br>
+<studio>
+    For both Graphit and Java function it is done via the Properties Panel.
+</studio>
+<web>
+    For Graphit it is done via the Properties Panel, whereas for Java function it is done using the path property of the @webservice annotation
+</web>.
 </td>
 </tr>
 <tr>
