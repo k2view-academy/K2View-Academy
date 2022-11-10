@@ -18,10 +18,10 @@ Create a K2V_TDM directory and download the following into it:
 3. Note that if the precise name of the specific image is different than shown, use the name that you downloaded. 
 
 ~~~bash
-docker load -i D_K2V_PG13_TDM7.5.2_2.tar.gz
-docker load -i D_k2view_cassandra_3.11.9.tar.gz
-docker load -i D_Fabric_6.5.9_96_TDMGUI7.5.2_3.tar.gz
-unzip compose_TDM_7.5.2_3.zip
+docker load -i D_K2V_PG13_TDM7.5.2_4.tar.gz
+docker load -i D_k2view_cassandra_3.11.12.tar.gz
+docker load -i D_Fabric_6.5.9_96_TDMGUI7.5.2_4.tar.gz
+unzip compose_TDM_7.5.2_4.zip
 ~~~
 
 You can see the images names by using the command **docker images**. 
@@ -30,7 +30,7 @@ You can see the images names by using the command **docker images**.
 
 1. Navigate to the compose folder as shown: 
 ~~~bash
-    cd compose_TDM_7.5.2_3
+    cd compose_TDM_7.5.2_4
 ~~~
 2. Run the compose file using docker as shown: 
 ~~~bash
