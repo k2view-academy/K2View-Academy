@@ -1,6 +1,6 @@
 # Java Function Web Services - Code Examples
 
-While it is recommended to build web services with Graphit, you might use Java function for this purpose.   
+While it is recommended to build web services with Graphit, you may use Java function for this purpose.   
 
 ### Example List
 
@@ -131,7 +131,7 @@ Web Service response
 
 ### Example of a complex TDM Web Service 
 
-The wsGetTaskExeStatsForEntity Web Service used by TDM GUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
+The wsGetTaskExeStatsForEntity Web Service used by TDM GUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or a child of the given input LUI, call recursive functions to get a full hierarchy path. 
 
 ```java
 String sqlGetEntityData = "select lu_name luName, target_entity_id targetId, entity_id sourceId, " +
