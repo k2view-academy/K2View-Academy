@@ -8,7 +8,7 @@ The Task Execution process consists of the following steps:
 2. Initiating a Batch process on each task's LU and implementing post execution processes in asynchronous mode.
 3. Updating the status of the completed processes.
 
-A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM GUI, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Basic_Task_Execution_APIs_Flow/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
+A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM GUI, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
 
 A task can include Entities and/or Reference tables, both of which can have post-execution processes. For example, sending a mail to a user after a task has been executed. 
 
