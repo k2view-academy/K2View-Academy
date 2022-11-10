@@ -10,7 +10,7 @@ These settings are available only when 'Expose as Endpoint' is checked.
 
 <studio>
 
-At Java function, Web Service Properties panel is located on the top right corner of the **Web Service** window. 
+At Java function, the Web Service Properties panel is located on the top right corner of the **Web Service** window. 
 
 <img src="images/Web-Service-KI-2-1.png" alt="drawing"/> 
 
@@ -18,7 +18,7 @@ At Java function, Web Service Properties panel is located on the top right corne
 
 <web>
 
-At Java function, Web Service properties settings is done using annotations, as explained [here](/articles/15_web_services_and_graphit/10_annotations.md). 
+At Java function, the Web Service properties setting is done using annotations, as explained [here](/articles/15_web_services_and_graphit/10_annotations.md). 
 
 </web>
 
