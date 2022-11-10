@@ -46,9 +46,9 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 
     The below image shows the **nested nodes layout result** 
-    
+
     ![](17_Graphit/images/new_graphit_example.png)
-    
+
     Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. Sometimes it is preferred by implementors for a better visualized output document, seeing a full layout of the structure.
 
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
@@ -104,7 +104,7 @@ You can see that it has automatically received a **'.graphit' suffix**.
 
 </web>
 
-To learn more about editing Graphit file - using the Graphit Editor - read [here](/articles/15_web_services_and_graphit/17_Graphit/02_graphit_basic_editing.md).
+To learn more about editing a Graphit file - using the Graphit Editor - read [here](/articles/15_web_services_and_graphit/17_Graphit/02_graphit_basic_editing.md).
 
 
 
