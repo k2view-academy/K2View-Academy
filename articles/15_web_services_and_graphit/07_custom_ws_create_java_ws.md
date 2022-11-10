@@ -1,6 +1,6 @@
 # Create Custom Java Web Service
 
-The following steps discuss how a new Java-based Web Service is created, and include options (steps 2-8) for generating parts of code automatically:
+The following steps discuss how a new Java-based Web Service is created, and include options (steps 2-8) for generating parts of the code automatically:
 
 <studio>
 
@@ -9,9 +9,9 @@ The following steps discuss how a new Java-based Web Service is created, and inc
    <img src="images/Web-Service-KI-3-1.png" alt="drawing"/>
 
 
-2. Click either the **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
+2. Click either the **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File** or **Newest** **LU File**.
 
-3. Select the preferred **DB Connection**. To access Fabric, select **Newest**  [**LU Name**](/articles/03_logical_units/01_LU_overview.md). Note that for the newest file of an LU to be part of the DB Connections list, at least one LUI must be executed using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
+3. Select the preferred **DB Connection**. To access Fabric, select **Newest** [**LU Name**](/articles/03_logical_units/01_LU_overview.md). Note that for the newest file of an LU to be a part of the DB Connections list, at least one LUI must be executed using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md).
 
    <img src="images/Web-Service-KI-3-2.png"/>  
 
@@ -67,7 +67,7 @@ public static void webServiceName(@param(description="") String param1) throws E
 5. Write your web service logic in the Java Editor.
 6. Set the [Web Service Properties](09_custom_ws_properties.md) by changing the function annotations. 
 
-> Notes that you can add web services functions by pressing CTRL -> SPACE and selecting the requested snippet (hint: start typing fabric to reveal the required one - "fabric-function-ws").
+> Notes that you can add web services functions by pressing CTRL -> SPACE and selecting the requested snippet (tip: start typing fabric to reveal the required one - "fabric-function-ws").
 
 </web>
 
