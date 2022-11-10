@@ -35,9 +35,9 @@ The following table lists the node types. Please refer to the files in the follo
 <td valign="top" width="50pxl">SQL</td>
 <td valign="top" width="900pxl">Defines an SQL statement that retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click the SQL icon to open the Query Builder. 
-    <br/><b>Note</b>: if the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
+    <br/><b>Note</b>: If the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
 <ul>
-<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup is opened; when it closes, the built query is copied into the Graphit node content.
+<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup opens; when it closes, the built query is copied into the Graphit node content.
 </li>    
 <li>Fields can be automatically expanded into nested nodes. When closing the Query Builder popup, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields shall be used on further nodes.
 </li>    
