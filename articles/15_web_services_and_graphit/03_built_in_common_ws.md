@@ -1,6 +1,6 @@
 # Built-In Common DB Tables APIs
 
-Fabric provides out-of-the-box web services for querying project's Common data and meta data resources.
+Fabric provides out-of-the-box web services for querying project's Common data and metadata resources.
 
 An appropriate HTTP status code is used to indicate the status of the executed operation, following standardized status codes that are defined by [[RFC7231](https://spec.openapis.org/oas/v3.1.0#bib-RFC7231)] and listed in the [IANA Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml).
 
