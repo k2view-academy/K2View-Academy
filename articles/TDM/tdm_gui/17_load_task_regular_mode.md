@@ -37,7 +37,7 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 ### Set Sync Policy
 
-This setting enables the user to change the [default LUI sync mode](articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON). The following sync policy are available:
+This setting enables the user to change the [default LUI sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON). The following sync policy are available:
 
 - **Sync New Data**: this is the default option (Sync ON).
 - **Do Not Sync From Source Data**: get the LUI data from the TDM warehouse (Fabric).
