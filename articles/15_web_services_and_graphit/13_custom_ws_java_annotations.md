@@ -132,7 +132,7 @@ The following flags are used to set the web services formats:
 
 #### @legacy
 Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.
-To enable backwards compatibility while preserving the existing Web Services response structure, the ```@legacy``` annotation must be added at the category level. 
+To enable a backward compatibility while preserving the existing Web Services response structure, the ```@legacy``` annotation must be added at the category level. 
 Use either Notepad or IntelliJ to edit the annotation. 
  * Web Services under a category with an @legacy annotation respond according to the legacy (older) structure. 
  * New Web Services under the same category use the appropriate (more recent) Web Service response structure.
