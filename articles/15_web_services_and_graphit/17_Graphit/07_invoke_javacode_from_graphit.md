@@ -14,8 +14,8 @@ scope.put("times3", (Scripter.F) p->(double)p[0] *3);
 return graphit("LambdaGraphit1.graphit", scope);
 ```
 
-Graphit file LambdaGraphit1.graphit: (can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services > resources )
-Note that the above defined function times are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node 
+Graphit file LambdaGraphit1.graphit: (can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services > resources).
+Note that the above defined function times are called from the node **field 1** (defined as a function) on a variable called **dbl**, declared in the parent node. 
 ![](images/52a_invoke_javacode_from_graphit.PNG)
 
 
