@@ -24,8 +24,8 @@ To learn how to define input parameters for Java function using annotations - re
 
 Input parameters can be transferred to the project custom-built Web Services either as:
 
-- Standard web service parameters, according to the verb.
-- Part of the URL path
+- Standard web service parameters, according to the verb
+- A part of the URL path
 
 For POST and PUT verb methods, parameters shall be transferred in the request body and yet, Fabric knows to use URL based parameters also for these verb methods.
 
