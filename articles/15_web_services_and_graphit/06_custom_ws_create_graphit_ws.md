@@ -12,7 +12,7 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
     A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
-2. Start with choosing, via a drop-down list, any of the below commands/functions (node types): 
+2. Start with choosing, from the drop-down list, any of the below commands/functions (node types): 
 
     ![](17_Graphit/images/commands_functions_node_types.png)
 
@@ -23,14 +23,14 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 3. From the open pop-up window, select an LU from the drop-down list and then click **Add**.
 
      ![](17_Graphit/images/get_command_builder_add_bigger.png)
-    Once this 1st node is created it will looks like this:
+    Once this 1st node is created, it will looks like this:
 
     ![](17_Graphit/images/first_graphit_node.png)
 
     You can later change the **get** command, when needed, by clicking on the ![](17_Graphit/images/selection.png) icon, triggering the *Get Command Builder* pop-up window again.
 
 
-4. Click on the plus icon ![](17_Graphit/images/add_sibling.png)in order to add a sibling node to the example layout.
+4. Hover over the node and click on the plus icon ![](17_Graphit/images/add_sibling.png)in order to add a sibling node to the example layout.
 
 5. Name the newly created node by populating the left-hand-field.
     Note that only nodes with a tag name are displayed in the output document, when a Graphit web service is called.
@@ -45,11 +45,11 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
     ![](17_Graphit/images/create_table_fields_message.png)
 
 
-    The below image shows the **nested nodes layout result** 
+    The below image shows the **nested nodes layout result**: 
 
     ![](17_Graphit/images/new_graphit_example.png)
 
-    Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. Sometimes it is preferred by implementors for a better visualized output document, seeing a full layout of the structure.
+    Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. It is sometimes preferred by implementors for a better visualized output document, to see a full layout of the structure.
 
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
 
@@ -72,29 +72,29 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 
 
-3. Click on **Choose Category** to select an existing category name for the Graphit file
+3. Click on **Choose Category** to select an existing category name for the Graphit file:
 
 ![](17_Graphit/images/web_choose_category.png)
 
-​	or click on **New Category** to enter a new category name, followed by *Enter* for saving it
+or click on **New Category** to enter a new category name, followed by *Enter* for saving it:
 
 ![](17_Graphit/images/web_enter_new_category.png)
 
-The following step is to enter a name for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
+The following step is to enter **a name** for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
 
-Using the file name you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The popup itself provides some hints about the recommended naming conventions.
+Using the file name, you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The popup itself provides some tips about the recommended naming conventions.
 
 ![](17_Graphit/images/web_enter_new_graphit_name.png)
 
 
 
-The Graphit file is saved, its name appears at the top of its layout and it is opened, containing a newly created Graphit node, which should be populated.
+The Graphit file is saved, its name appears at the top of its layout, it is open and it contains a newly created Graphit node, which should be populated:
 
 ![](17_Graphit/images/web_newly_created_customer.graphit_file.png)
 
 
 
-4. Start with choosing, via a drop-down list, any of the below commands/functions (node types): 
+4. Start with choosing, from the drop-down list, any of the below commands/functions (node types): 
 
 ![](17_Graphit/images/light_commands_functions_node_types.png)
 
@@ -106,14 +106,14 @@ It is useful to place the **get** command - a function that retrieves the LUI (L
 
 ![](17_Graphit/images/light_get_command_builder_add_bigger.png)
 
-Once this 1st node is created it will looks like this:
+Once this 1st node is created, it will looks like this:
 ![](17_Graphit/images/light_first_graphit_node.png)
 
 You can later change the **get** command, when needed, by clicking on the ![](17_Graphit/images/selection.png) icon, triggering the *Get Command Builder* pop-up window again.
 
 
 
-6. Click on the plus icon ![](17_Graphit/images/add_sibling.png)in order to add a sibling node to the example layout.
+6. Hover over the node and click on the plus icon ![](17_Graphit/images/add_sibling.png)in order to add a sibling node to the example layout.
 7. Name the newly created node by populating the left-hand-field.
 
 Note that only nodes with a tag name are displayed in the output document, when a Graphit web service is called.
@@ -127,11 +127,11 @@ Following the creation of the 2nd node and its population, a message pops up, as
 
 ![](17_Graphit/images/create_table_fields_message.png)
 
-The below image shows the **nested nodes layout result** 
+The below image shows the **nested nodes layout result**: 
 
 ![](17_Graphit/images/light_new_graphit_example.png)
 
-Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. Sometimes it is preferred by implementors for a better visualized output document, seeing a full layout of the structure.
+Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. It is sometimes preferred by implementors for a better visualized output document, to see a full layout of the structure.
 
 10. **Save** the Graphit file. 
 
@@ -150,7 +150,7 @@ To learn more about editing a Graphit file - using the Graphit Editor - read [he
 
 
 
-> NOTE: Prior to  Fabric 7, Graphit files were located only under Java/resources folder. This option is still available, for backward compatibility.
+> NOTE: Prior to  Fabric 7, Graphit files were located only under Java/resources folder. This option is still available, for a backward compatibility.
 
 
 
