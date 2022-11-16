@@ -9,7 +9,7 @@ This article describes how Broadway performs the following:
 
 * Defines an iteration in a flow.
 * Loops over one or more elements of a result set.
-* Creates a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
+* Allows to create a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
 * [Controls the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
 To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_complex_iteration_flows.md) article.
@@ -62,14 +62,16 @@ Note that combining the link types changes the data flow as follows:
 
 [Click for more information about Complex Iteration Flows](/articles/19_Broadway/21a_complex_iteration_flows.md).
 
-### How Can I Create a Nested Iteration?
+### Nested Iterations
 
 Iterations can also be nested. For example, a value in an iteration can be used as an input for another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage to each level of the loop.
 There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels and using [Inner Flows](22_broadway_flow_inner_flows.md) when more are needed.
 
-In the following image, the first name is an input to a query that gets a list of relevant phone numbers. Stage 2 is run on every entry in Stage 1 and Stage 3 on every entry in Stage 2.
+In the following image, the outer iteration selects a list of customers from each provided table. Then the nested iteration logs each customer entry. The **Select ** Stage is run on every entry in the **Input ** Stage and the **Log** Stage on every entry in the **Select** Stage.
 
 ![image](images/iterate_nested_iterations.png)
+
+Note: the nested iteration is not executed when the outer's iteration result set is empty. 
 
 ### ForLoop Actor
 
