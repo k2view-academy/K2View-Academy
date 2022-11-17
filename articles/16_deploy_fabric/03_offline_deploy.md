@@ -24,7 +24,7 @@ There are two ways to perform an Offline Deployment:
 
    a. Right click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
 
-   ![16_03_offline_deploy1](images/16_03_offline_deploy1.png)
+   <img src="images/16_03_offline_deploy1.png" alt="16_03_offline_deploy1" style="zoom: 80%;" />
 
    b. Right click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
