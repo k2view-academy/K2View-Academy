@@ -221,5 +221,5 @@ The customer can provide the **PGSQL**, or find below the installation instructi
 
 
 
-[![Previous](/articles/images/Previous.png)](01_Fabric_6.xx_Installation_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Fabric_6.xx_Setup_Single_DC_multi_nodes.md)  
+[![Previous](/articles/images/Previous.png)](01_Fabric_7.xx_Installation_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](003_Fabric_7.x.x_Setup_Single_DC_multi_nodes.md)  
 

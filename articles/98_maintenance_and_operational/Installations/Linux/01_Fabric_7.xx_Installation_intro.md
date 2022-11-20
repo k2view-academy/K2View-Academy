@@ -183,4 +183,4 @@ Open the following ports on Linux server, and make sure they are accessible from
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Fabric_6.xx_Setup_Single_node.md)  
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Fabric_7.x.x_Setup_Single_node.md)  

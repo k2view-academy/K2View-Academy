@@ -308,5 +308,4 @@ The customer can provide the **PGSQL**, or find below the installation instructi
 
 
 
-
-[![Previous](/articles/images/Previous.png)](02_Fabric_6.xx_Setup_Single_node.md) 
+[![Previous](/articles/images/Previous.png)](03_Fabric_7.x.x_Setup_Single_DC_multi_nodes.md) 
