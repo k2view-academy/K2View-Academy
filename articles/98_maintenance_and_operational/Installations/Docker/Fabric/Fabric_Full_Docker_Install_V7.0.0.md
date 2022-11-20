@@ -1,10 +1,10 @@
 ## FABRIC v7.0.0_226 DOCKER INSTALLATION
 
-### PREREQUISITES
+### Prerequisites
 
 These pre-requisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:
 
-- **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher
+- **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher.
   or
 - **Docker-Desktop** for Windows or Mac.
 
@@ -20,18 +20,18 @@ More detailed requirements for each are described below.
    - HDD, 200GB must be available.
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.
-2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ )
+2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
 
    **Note**: The /var/lib/docker should have at list 200GB of free memory.
-3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).
-4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ).
-5. Assign appropriate privileges to the k2view user, and allocate to this user at least 50GB of space as follows:
+3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
+4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
+5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
 
    ```bash
    ## update the k2view user home directory and password!! 
    useradd -m -d /<update the path>/k2view/ k2view passwd k2view 
    ```
-6. Give the k2view user privileges to run docker & docker-compose via **SUDO**.
+6. Give the **k2view** user privileges to run docker & docker-compose via **SUDO**.
 
 #### Minimum hardware requirements for Docker-Desktop
 
@@ -39,12 +39,11 @@ More detailed requirements for each are described below.
 2. Windows or Mac machine with a minimum of 16G RAM.
 3. Windows or Mac machine with minimum 120G of hard disk space.
 
-### USING THE CONTAINER
+### How Do I Setup and Run Docker Environment?
 
-#### Load the Container Image
+#### Load Container Images
 
-1. Retrieve the latest versions of Fabric and Cassandra.
-2. Retrieve the latest version of Kafka. The Kafka and configuration files can be retrieved from the following locations:
+1. Download the latest versions of Fabric, Cassandra, Kafka and docker-compose using on the below links:
 
    <table style="border-collapse: collapse; width: 100%;">
    <tbody>
@@ -70,6 +69,7 @@ More detailed requirements for each are described below.
    </tr>
    </tbody>
    </table>
+
 3. Copy all files to the k2view directory as follows:
 
    ```bash
@@ -79,6 +79,7 @@ More detailed requirements for each are described below.
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.0/Server/fabric-7.0.0_226/D_k2view_fabric_7.0.0_226.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.0/Server/fabric-7.0.0_226/compose_fabric_7.0.0_226.tar.gz
    ```
+   
 4. Load the Docker images as follows:
 
    ```bash
@@ -87,35 +88,33 @@ More detailed requirements for each are described below.
     docker load -i D_k2view_fabric_7.0.0_226.tar.gz 
    ```
 
-   You can see the images names by using the command `docker image`
-5. untar the Config archives as follows:
+   You can see the names of the images by using the command `docker images`
+   
+5. Extract the Config archives as follows:
 
    ```bash
    tar -zxvf compose_fabric_7.0.0_226.tar.gz 
    ```
 
-   !!! Note: open the “.env” file and update the names of the images as needed.
 
-### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
+#### Run Single Fabric, Cassandra and Kafka Instances
 
-**Note:** this compose file doesn't include Kafka. if you need you can open the docker-compose.yml and un-remark it.
+Run docker-compose as follows:
 
-1. Run docker-compose as follows:
+```bash
+cd compose_fabric_7.0.0_226-HF2
+# run:  
+docker-compose up -d 
 
-   ```bash
-   cd compose_fabric_7.0.0_226-HF2
-   # run:  
-   docker-compose up -d 
+# or  
+sudo /usr/local/bin/docker-compose up -d  
+```
 
-   # or  
-   sudo /usr/local/bin/docker-compose up -d  
-   ```
+Cassandra and Fabric will start automatically.
 
-   Cassandra and Fabric will start automatically.
+### How Do I Stop Services in Docker Environment?
 
-## Stopping Services
-
-1. To stop the Docker-Compose, do the following:
+1. To stop the docker-compose, do the following:
 
    ```bash
    cd compose_fabric_7.0.0_226
@@ -126,10 +125,10 @@ More detailed requirements for each are described below.
 
    ```bah
    docker exec -u=cassandra -it cassandra bash su - cassandra 
-
+   
    ## stop cassandra  
    stop-server
-
+   
    ## restart cassandra  
    stop-server && cassandra
    ```

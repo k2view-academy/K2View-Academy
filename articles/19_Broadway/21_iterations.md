@@ -67,7 +67,7 @@ Note that combining the link types changes the data flow as follows:
 Iterations can also be nested. For example, a value in an iteration can be used as an input for another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage to each level of the loop.
 There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels and using [Inner Flows](22_broadway_flow_inner_flows.md) when more are needed.
 
-In the following image, the outer iteration selects a list of customers from each provided table. Then the nested iteration logs each customer entry. The **Select ** Stage is run on every entry in the **Input ** Stage and the **Log** Stage on every entry in the **Select** Stage.
+In the following image, the outer iteration selects a list of customers from each provided table. Then the nested iteration logs each customer entry. The **Select** Stage is run on every entry in the **Input** Stage and the **Log** Stage on every entry in the **Select** Stage.
 
 ![image](images/iterate_nested_iterations.png)
 

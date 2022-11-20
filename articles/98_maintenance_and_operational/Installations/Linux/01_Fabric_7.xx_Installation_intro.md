@@ -1,10 +1,18 @@
-# Fabric 6.xx Installation
+# Fabric 6.xx and Up Pre-Installation Steps
 
 ## Introduction 
 
-Follow the instructions here to install Fabric in a production environment.
+This article describes mandatory steps for system setup which are required to be performed prior to Fabric/TDM installation, such as:
 
-## Prerequisites 
+* Hardware setup
+* Users creation
+* Environment variables setup
+* Required packages for Linux RHEL/CentOs 8
+* Required firewall ports
+
+Follow the below instructions to prepare Linux environment for Fabric/TDM installation.
+
+## Hardware Requisites 
 
 Minimum hardware for each Linux execution server is as follows:
 
@@ -27,6 +35,8 @@ Minimum hardware for each Linux execution server is as follows:
 
 Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with latest patches.
 
+#### File System Requisites
+
 The following File Server volumes must be made available:
 
 -   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (Owned by fabric user)
@@ -46,7 +56,9 @@ The following File Server volumes must be made available:
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
 > The number of servers should be increased based on project scope and data retention requirements.
 
-Add the following users:
+## OS Preparation
+
+Create mandatory system users via the following commands:
 
 ~~~bash
 mkdir -p /opt/apps
@@ -54,8 +66,13 @@ chmod 755 /opt/apps
 useradd -m -d /opt/apps/fabric fabric
 useradd -m -d /opt/apps/cassandra cassandra
 useradd -m -d /opt/apps/kafka kafka
+~~~
 
-## Update the OS limits as follows:
+
+
+Update the OS limits as follows:
+
+~~~bash
 echo "root soft    nproc     unlimited" >> /etc/security/limits.conf
 echo "cassandra - nofile 100000" >> /etc/security/limits.conf
 echo "cassandra - nproc 50000" >> /etc/security/limits.conf
@@ -68,10 +85,12 @@ echo "kafka soft nofile 100000" >> /etc/security/limits.conf
 echo "kafka - nproc 50000" >> /etc/security/limits.conf
 ~~~
 
-#### Update /etc/sysctl.conf ####
+
+
+Update /etc/sysctl.conf:
 
 ~~~bash
-echo "## Added by K2view - GabiO" >> /etc/sysctl.conf
+echo "## Added by K2view" >> /etc/sysctl.conf
 echo "vm.max_map_count = 1048575" >> /etc/sysctl.conf
 echo "fs.file-max = 1000000" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_keepalive_time = 60" >> /etc/sysctl.conf
@@ -82,24 +101,23 @@ sysctl -p
 
 
 
-#### Add the following packages for RHEL/CentOs 8
+Add the following packages for RHEL/CentOs 8:
 
 ~~~bash
 dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
-
 ~~~
 
-> **Note:** To verify whether what is your current  RHEL/Centos version, run one of the followinng commands:
+> **Note:** To verify what is your current  RHEL/Centos version by running one of the following commands:
 ~~~bash
 rpm -E %{rhel}
 hostnamectl
 cat /etc/os-release
 ~~~
 
-### Linux Ports 
+## Firewall Ports 
 
-Open the following ports on the LINUX server, and make sure they are accessible from outside the server: 
+Open the following ports on Linux server, and make sure they are accessible from outside the server: 
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
@@ -128,8 +146,12 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 <td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 11px;">3213, 9443</td>
+<td style="width: 50%; height: 11px;">3213 </td>
 <td style="width: 50%; height: 11px;">K2View Fabric</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 11px;">9443 </td>
+<td style="width: 50%; height: 11px;">K2View Fabric (SSL)</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">6379</td>
@@ -153,10 +175,11 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">5432</td>
-<td style="width: 50%; height: 18px;">pdsql</td>
+<td style="width: 50%; height: 18px;">pgsql</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
