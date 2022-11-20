@@ -1,4 +1,4 @@
-# Fabric 6.xx and Up Pre-Installation Steps
+# Fabric 7.xx Pre-Installation Steps
 
 ## Introduction 
 
