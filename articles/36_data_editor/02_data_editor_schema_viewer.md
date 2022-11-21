@@ -20,7 +20,7 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 * Each table links to the table Data Viewer screen.
 * The schema name appears in the screen title as well as in the breadcrumbs in the top Data Explorer Catalog bar.  
 
-<img src="images/30_dataeditor_02.png" alt="Data Explorer Catalog" />
+<img src="images/30_dataeditor_02.png" alt="Data Explorer Catalog" style="zoom:67%;" />
 
  Note that a table might appear more than once when there is more than one population stage.
 
@@ -28,8 +28,7 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 
 #### Actions Bar
 
-
-<img src="images/30_dataeditor_03.png" alt="Data Explorer Catalog" />
+<img src="images/30_dataeditor_03.png" alt="Data Explorer Catalog" style="zoom:80%;" />
 
  The first three options in the Actions bar are used to fetch LUI:
 
@@ -37,13 +36,11 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 
 * **IID** text field, where the LU IID are populated.
 
-* **Set IID** that activates LUI data retrieval. Once an LUI is retrieved its value is shown on the top, in an input chip form, and is also displayed as breadcrumbs when drilling down the tree. 
+* **Use IID** that activates LUI data retrieval. Once an LUI is retrieved its value is shown on the top, in an input chip form, and is also displayed as breadcrumbs when drilling down the tree. 
   
     <img src="images/30_dataeditor_chip_icon.PNG" alt="chip" />
   
   * An error message is displayed when an LUI is not found.
-
-
 
 Note that you can drill down the tree also when an IID has not been defined and set it later at any level. When the LUI is fetched, data from its level is displayed. 
 
@@ -54,11 +51,9 @@ Other available actions include:
 * **Refresh**, click to refresh the retrieved data.
 * **Info**, click to display the sync information: when this data was synced and when it is going to be synced next, according to [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md#sync-behavior---summary-table) rules. This option is enabled only when an LUI is fetched and is otherwise disabled and grayed-out.
 
-
-
 ### Reference / Common Tables 
 
- This screen displays the common tables list. Click an entry in the list to navigate to the table Data Viewer screen.
+This screen displays the common tables list. Click an entry in the list to navigate to the table Data Viewer screen.
 
 
 
