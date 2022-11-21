@@ -40,7 +40,7 @@ For detailed documentation about the integration development guidelines, support
 
 <img src="images/30_01_doc.PNG" alt="image" style="zoom:80%;" />
 
-### Static Web Resources within the LU
+### Static Web Resources Within LU
 
 Starting from Fabric 6.5.2, it is possible to locate all static web resources under the LU. 
 
