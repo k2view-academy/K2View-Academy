@@ -1,6 +1,6 @@
 # Reset Actor State
 
-Starting from Fabric 6.5.1, Broadway enables resetting the Actor's state within the flow. This functionality might be needed when your flow has a loop within a loop. For example, let's say you need to aggregate a string across multiple iterations using the **StringBuild** Actor. The aggregation is done in the inner loop and should be reset on each inner loop start.
+Broadway enables resetting the Actor's state within the flow. This functionality might be needed when your flow has a loop within a loop. For example, let's say you need to aggregate a string across multiple iterations using the **StringBuild** Actor. The aggregation is done in the inner loop and should be reset on each inner loop start.
 
 ### How to Reset the Actor State?
 
