@@ -1,6 +1,14 @@
 # Fabric 6.xx + TDM 7.xx Installation 1 DC  Multi Nodes
 
-**Note** Fabrix 7.x.x required JDK 17 (included in the package), However, the certifed version of Cassandra and Kafka required JDK 8.* Package ( latest tested version included with each supplied Package)
+Fabric 7.x.x requires JDK 17 (included in the Fabric installation package). However, the certified version of Cassandra and Kafka require JDK 8.* package (latest tested version included with each supplied package).
+
+[Click here to get the Cassandra setup details.](Cassandra_Setup.md)
+
+[Click here to get the Apache Kafka setup details.](Apache_Kafka_Setup.md)
+
+## Pre-Installation Steps
+
+Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities that must be performed prior to either Fabric or TDM installation. Note this step is mandatory and must be performed at least once per each server.
 
 ## Setup for Cassandra
 
