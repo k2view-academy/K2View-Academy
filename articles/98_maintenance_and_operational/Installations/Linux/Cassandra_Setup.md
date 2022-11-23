@@ -2,7 +2,7 @@
 
 ### Load The Package 
 
-1. Retrieve the latest Cassandra package (located at: [latest version](https://download.k2view.com/index.php/s/JCaRQITovgh6mcz)).
+1. Retrieve the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
 2. Connect to the Linux execution server as "cassandra" user and copy the package to the home directory.
 
