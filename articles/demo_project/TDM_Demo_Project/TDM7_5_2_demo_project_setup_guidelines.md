@@ -82,7 +82,8 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
    - If you use a Fabric docker and a **local PG DBs**, populate the **Server** setting of the PG interfaces with **host.docker.internal**.
    - If you use a **docker** for the PG and Cassandra DBs, populate the **Server** setting with the **docker's internal IP address** (run **hostname -I** command in the docker to get the internal IP address), or **host.docker.internal**.
 6. Deploy the Environments to Fabric.
-7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
+7. Edit the deploy.flow of the TDM LU and populate the source environment of the Set Env actor with the source environment name.
+8.  Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
 ##  TDM GUI Definitions
 
@@ -95,6 +96,8 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
    Below is the BE's structure:
 
    ![Customer BE](images/Customer_demo_BE.png)
+   
+   Add the post execution process to the Customer BE and set the execution order to 1.
 
 2. Create the following Systems (products):  
 
