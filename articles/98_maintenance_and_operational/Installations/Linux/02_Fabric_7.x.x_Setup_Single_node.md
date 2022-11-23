@@ -12,13 +12,19 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ## Setup for Fabric 7.x & TDM 7.x
 
+the Fabric package supplied is preconfigured to run as single node with cassandra on the same host to achive that, some setting are set as default:
+
+Cassandra seed IP - 127.0.0.1 (localhost)
+DC = DC1
+
+
 ### Load the Package 
 
 1.  Download the package from the links that were provided to you.
 
 2.  Untar the package:
    ~~~bash
-   tar -zxvf [package name].tar.gz 
+   tar -zxvf [package name].tar.gz && bash -l
    ~~~
 
 3. Pre setup:
@@ -28,44 +34,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
    bash -l 
    ~~~
 
-   - Presumption: Cassandra, Kafka and Fabric are running on the same node. If not, you have to update the IP's for: **cserver1** and  **kserver1**. 
-
-
-   ~~~bash
-   # Cassandra IP
-   export cserver1=$(hostname -I |awk {'print $1'})
-   # Kafka IP
-   export kserver1=$(hostname -I |awk {'print $1'})
-   cp -r $K2_HOME/fabric/config.template $K2_HOME/config
-
-   # update heap memory if you have minimume of 32G
-   ## sed -i 's@-Xmx2G@-Xmx8G@' $INSTALL_DIR/config/jvm.options
-   ## sed -i 's@-Xms2G@-Xms8G@' $INSTALL_DIR/config/jvm.options
-
-   cp config/adminInitialCredentials.template config/adminInitialCredentials
-   sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
-
-   sed -i 's@#REPLICATION_OPTIONS=.*@REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 1}@' $K2_HOME/config/config.ini
-   sed -i "s@#HOSTS=.*@HOSTS=$cserver1@" $K2_HOME/config/config.ini
-   sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
-   ~~~
-
-   - In case of using Kafka + iidFinder, run also the following commands:
-
-   ~~~bash
-   sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
-   sed -i "s@#MESSAGES_BROKER_TYPE=.*@MESSAGES_BROKER_TYPE=KAFKA@" $K2_HOME/config/config.ini
-   sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/config.ini
-   sed -i "s@HOSTS=.*@HOSTS=$cserver1@" $K2_HOME/config/iifConfig.ini
-   sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/iifConfig.ini
-   sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
-   sed -i "s@#KAFKA_BOOTSTRAP_SERVERS=.*@KAFKA_BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
-   sed -i "s@#ZOOKEEPER_BOOTSTRAP_SERVERS=.*@ZOOKEEPER_BOOTSTRAP_SERVERS=$kserver1:2181@" $K2_HOME/config/iifConfig.ini
-   sed -i 's@#IIF_REPLICATION_OPTIONS=.*@IIF_REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 1}@' $K2_HOME/config/iifConfig.ini
-   sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
-   ~~~
-
-:notebook_with_decorative_cover: **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
+   **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
 
 4. Start Fabric:
 
