@@ -5,7 +5,7 @@ Fabric 7.x.x requires JDK 17 (included in the Fabric installation package). Howe
 
 ## Pre-Installation Steps
 
-Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities that must be performed prior to either Fabric or TDM installation. Note this step is mandatory and must be performed at least once per each server.
+Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities that should be performed prior to either Fabric or TDM installation. Note that this is mandatory and must be performed at least once per each server.
 
 ## Setup for Cassandra
 
@@ -15,7 +15,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 2. Connect to the Linux execution server as "cassandra" user and copy the package to the home directory.
 
-3. Untar the package (the package name varies based on the version) as follows:
+3. Untar the package (the package name varies according to the version) as follows:
 
    ~~~bash
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
