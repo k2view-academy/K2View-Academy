@@ -39,19 +39,19 @@ Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above
 
 The following File Server volumes must be made available:
 
--   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (owned by fabric user)
+-   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (owned by the fabric user)
 
--   Volume of 100G\* **/opt/apps/fabric/storage** (owned by fabric user)
+-   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the fabric user)
 
--   Volume of 50G **/opt/apps/cassandra/** (owned by cassandra user)
+-   Volume of 50G **/opt/apps/cassandra/** (owned by the cassandra user)
 
--   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by cassandra user)
+-   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by the cassandra user)
 
--   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by cassandra user)
+-   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by the cassandra user)
 
--   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by cassandra user)
+-   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by the cassandra user)
 
--   Volume of 100G\* **/opt/apps/kafka/** (owned by kafka user)
+-   Volume of 100G\* **/opt/apps/kafka/** (owned by the kafka user)
 
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
 > The number of servers should be increased based on project scope and data retention requirements.
