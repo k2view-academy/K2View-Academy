@@ -13,7 +13,7 @@
    ~~~
 
 
-### Setup Single Node Cassandraa
+### Set Up Single Node Cassandraa
 
 the Cassandra package supplied is preconfigured to run as single node with fabric on the same host
 to achive that, some setting are set as default:
