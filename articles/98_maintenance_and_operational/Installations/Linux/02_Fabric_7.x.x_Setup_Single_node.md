@@ -12,10 +12,10 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ## Setup for Fabric 7.x & TDM 7.x
 
-the Fabric package supplied is preconfigured to run as single node with cassandra on the same host to achive that, some setting are set as default:
+The supplied Fabric package is preconfigured to run as a single node with cassandra on the same host. In order to achieve this, the following settings are predefined:
 
-Cassandra seed IP - 127.0.0.1 (localhost)
-DC = DC1
+* Cassandra seed IP - 127.0.0.1 (localhost)
+* DC = DC1
 
 
 ### Load the Package 
@@ -48,12 +48,12 @@ DC = DC1
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the Web Framework.
+   - The above login details can be used in both fabric console and Web Framework.
 
 ## PGSQL 
 
-TDM 7.xx is certified with PGSQL 9.6 & 13. You can supply access to Existing PG if you have one.
-TDM requires user & password with full **create**, **delete** and **update** privileges. 
+TDM 7.xx is certified with PGSQL 9.6 & 13. You can provide access to Existing PG if you have one.
+TDM requires login details with full **create**, **delete** and **update** privileges. 
 
 The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
 
