@@ -1,5 +1,5 @@
 # Apache Kafka Setup
-the Cassandra package supplied is preconfigured to run as single node with fabric on the same host to achive that, some setting are set as default:
+The supplied Cassandra package is preconfigured to run as a single node with fabric on the same host. In order to achive this, the following settings are predefined:
 
 * advertised.listeners = 127.0.0.1
 
