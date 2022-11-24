@@ -1,5 +1,5 @@
 # Apache Kafka Setup
-the Cassandra package supplied is preconfigured to run as single node with fabric on the same host to achive that, some setting are set as default:
+The supplied Cassandra package is preconfigured to run as a single node with fabric on the same host. In order to achive this, the following settings are predefined:
 
 * advertised.listeners = 127.0.0.1
 
@@ -13,9 +13,9 @@ the Cassandra package supplied is preconfigured to run as single node with fabri
 
 1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
 
-2. Connect to Linux as "kafka" user and copy the package to the home directory.
+2. Log in to the Linux server as the user "Kafka" and copy the package to the home directory.
 
-3. Untar the package (the package name varies based on the version) as follows:
+3. Untar the package (the package name varies according to the version) as follows:
 
    ~~~bash
    tar -zxvf k2view_Confluent_7.xxx.tar.gz && bash -l
@@ -30,7 +30,7 @@ the Cassandra package supplied is preconfigured to run as single node with fabri
    $K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties
    ~~~
 
-5. Verify the Kafka and Zookeeper are running:
+5. Verify that the Kafka and Zookeeper are running:
 
    ~~~bash
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
