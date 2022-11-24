@@ -2,9 +2,6 @@
 
 Fabric 7.x.x requires JDK 17 (included in the Fabric installation package). However, the certified version of Cassandra and Kafka require JDK 8.* package (latest tested version included with each supplied package).
 
-[Click here to get the Cassandra setup details.](Cassandra_Setup.md)
-
-[Click here to get the Apache Kafka setup details.](Apache_Kafka_Setup.md)
 
 ## Pre-Installation Steps
 
@@ -14,7 +11,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ### Load The Package 
 
-1. Retrieve the latest Cassandra package (located at: [latest version](https://download.k2view.com/index.php/s/JCaRQITovgh6mcz)).
+1. Retrieve the latest Cassandra package (located at: [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
 2. Connect to the Linux execution server as "cassandra" user and copy the package to the home directory.
 
@@ -118,7 +115,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 
 - `dc=`
 - `cluster_name=`
-- `seeds:` should be the IP of the first Cassandra node that will be started. 
+- `seeds:` should be the IP of the first Cassandra node that will be started. (replace the IP 172.31.47.245 from the following)
 
 ~~~bash
 sed -i 's@dc=.*@dc=DC1@'  $INSTALL_DIR/cassandra/conf/cassandra-rackdc.properties
@@ -154,7 +151,7 @@ cassandra
 
 ### Load the Package 
 
-1. Download the package from: [latest version](https://download.k2view.com/index.php/s/PTswLot7a21eFET).
+1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
 
 2. Connect to Linux as "kafka" user and copy the package to the home directory.
 
