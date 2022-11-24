@@ -23,7 +23,7 @@ More detailed requirements for each are described below:
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
 
    **Note**: The /var/lib/docker should have at list 200GB of free memory.
-3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
+3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
 4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
 5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
 
