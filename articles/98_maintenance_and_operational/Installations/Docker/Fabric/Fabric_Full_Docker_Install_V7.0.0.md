@@ -1,8 +1,8 @@
-## FABRIC v7.0.0_226 DOCKER INSTALLATION
+## FABRIC V7.0.0_226 DOCKER INSTALLATION
 
 ### Prerequisites
 
-These pre-requisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:
+These prerequisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher.
   or
