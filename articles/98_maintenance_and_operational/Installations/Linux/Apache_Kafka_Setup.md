@@ -13,7 +13,7 @@ The supplied Cassandra package is preconfigured to run as a single node with fab
 
 1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
 
-2. Connect to Linux as "kafka" user and copy the package to the home directory.
+2. Log in to the Linux server as the user "Kafka" and copy the package to the home directory.
 
 3. Untar the package (the package name varies according to the version) as follows:
 
