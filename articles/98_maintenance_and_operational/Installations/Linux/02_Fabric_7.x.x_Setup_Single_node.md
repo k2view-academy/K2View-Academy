@@ -14,8 +14,8 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 The supplied Fabric package is preconfigured to run as a single node with cassandra on the same host. In order to achieve this, the following settings are predefined:
 
-Cassandra seed IP - 127.0.0.1 (localhost)
-DC = DC1
+* Cassandra seed IP - 127.0.0.1 (localhost)
+* DC = DC1
 
 
 ### Load the Package 
