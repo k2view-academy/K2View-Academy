@@ -33,7 +33,7 @@ More detailed requirements for each are described below:
    ```
 6. Grant the **k2view** user privileges to run docker & docker compose via **SUDO**.
 
-#### Minimum hardware requirements for Docker-Desktop
+#### Minimum hardware requirements for Docker Desktop
 
 1. Windows or Mac machine with an 8 core CPU.
 2. Windows or Mac machine with a minimum of 16G RAM.
