@@ -28,7 +28,7 @@ Minimum hardware for each Linux execution server is as follows:
 
 -   Network: Minimum 1G per sec between the nodes and source databases.
 
--   Storage: The preferred storage is attached local SSD's in a non-RAID configuration.
+-   Storage: The preferred storage is an attached local SSD's in a non-RAID configuration.
 
 > **Note:** If you must use a SAN, it must be flash and in RAID-0.
 > **NAS are not certified.**
