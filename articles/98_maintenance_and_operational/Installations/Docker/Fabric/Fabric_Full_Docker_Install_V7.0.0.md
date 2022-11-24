@@ -39,11 +39,11 @@ More detailed requirements for each are described below:
 2. Windows or Mac machine with a minimum of 16G RAM.
 3. Windows or Mac machine with minimum 120G of hard disk space.
 
-### How Do I Setup and Run Docker Environment?
+### How Do I Set Up and Run Docker Environment?
 
 #### Load Container Images
 
-1. Download the latest versions of Fabric, Cassandra, Kafka and docker compose using on the below links:
+1. Download the latest versions of Fabric, Cassandra, Kafka and docker compose using 1 the below 4 links:
 
    <table style="border-collapse: collapse; width: 100%;">
    <tbody>
