@@ -108,7 +108,7 @@ dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-lang
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 ~~~
 
-> **Note:** To verify what is your current  RHEL/Centos version by running one of the following commands:
+> **Note:** Running one of the following commands, would indicate your Linux flavour:
 ~~~bash
 rpm -E %{rhel}
 hostnamectl
