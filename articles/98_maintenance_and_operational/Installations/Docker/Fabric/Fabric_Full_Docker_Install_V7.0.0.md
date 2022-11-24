@@ -2,10 +2,10 @@
 
 ### Prerequisites
 
-These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use one of the following environments:
+These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use 1 of the following 2 environments:
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** (or higher) for a Linux environment
-  or
+  
 - **Docker Desktop** for Windows/Mac environments
 
 More detailed requirements for each are described below:
@@ -22,7 +22,7 @@ More detailed requirements for each are described below:
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
 
-   **Note**: The /var/lib/docker should have at list 200GB of free memory.
+   **Note**: The /var/lib/docker should have at least 200GB of free memory.
 3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
 4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
 5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
@@ -31,19 +31,19 @@ More detailed requirements for each are described below:
    ## update the k2view user home directory and password!! 
    useradd -m -d /<update the path>/k2view/ k2view passwd k2view 
    ```
-6. Give the **k2view** user privileges to run docker & docker compose via **SUDO**.
+6. Grant the **k2view** user privileges to run Docker & Docker Compose via **SUDO**.
 
-#### Minimum hardware requirements for Docker-Desktop
+#### Minimum hardware requirements for Docker Desktop
 
 1. Windows or Mac machine with an 8 core CPU.
 2. Windows or Mac machine with a minimum of 16G RAM.
 3. Windows or Mac machine with minimum 120G of hard disk space.
 
-### How Do I Setup and Run Docker Environment?
+### How Do I Set Up and Run Docker Environment?
 
 #### Load Container Images
 
-1. Download the latest versions of Fabric, Cassandra, Kafka and docker compose using on the below links:
+1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
 
    <table style="border-collapse: collapse; width: 100%;">
    <tbody>
@@ -99,7 +99,7 @@ More detailed requirements for each are described below:
 
 #### Run Single Fabric, Cassandra and Kafka Instances
 
-Run docker-compose as follows:
+Run Docker Compose as follows:
 
 ```bash
 cd compose_fabric_7.0.0_226-HF2
@@ -114,7 +114,7 @@ Cassandra and Fabric will start automatically.
 
 ### How Do I Stop Services in Docker Environment?
 
-1. To stop the docker-compose, do the following:
+1. To stop the Docker Compose, do the following:
 
    ```bash
    cd compose_fabric_7.0.0_226
