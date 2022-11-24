@@ -24,7 +24,7 @@ Minimum hardware for each Linux execution server is as follows:
 
     -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM.
 
-    -   For servers that run one component (preferred method) - 32GB RAM.
+    -   For servers that run a single component (preferred method) - 32GB RAM.
 
 -   Network: Minimum 1G per sec between the nodes and source databases.
 
