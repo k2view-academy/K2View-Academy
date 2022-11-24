@@ -33,7 +33,7 @@ Minimum hardware for each Linux execution server is as follows:
 > **Note:** If you must use a SAN, it must be flash disc based and in RAID-0.
 > **NAS are not certified.**
 
-Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with latest patches.
+Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with the latest patches.
 
 #### File System Requisites
 
