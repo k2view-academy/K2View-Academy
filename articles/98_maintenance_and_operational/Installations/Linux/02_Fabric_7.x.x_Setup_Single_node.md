@@ -48,7 +48,7 @@ The supplied Fabric package is preconfigured to run as a single node with cassan
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the Web Framework.
+   - The above login details can be used in both fabric console and Web Framework.
 
 ## PGSQL 
 
