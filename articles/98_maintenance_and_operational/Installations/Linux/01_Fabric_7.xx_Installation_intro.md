@@ -30,7 +30,7 @@ Minimum hardware for each Linux execution server is as follows:
 
 -   Storage: The preferred storage is an attached local SSD's in a non-RAID configuration.
 
-> **Note:** If you must use a SAN, it must be flash and in RAID-0.
+> **Note:** If you must use a SAN, it must be flash disc based and in RAID-0.
 > **NAS are not certified.**
 
 Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with latest patches.
