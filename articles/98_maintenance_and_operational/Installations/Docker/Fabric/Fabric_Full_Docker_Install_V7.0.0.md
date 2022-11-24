@@ -99,7 +99,7 @@ More detailed requirements for each are described below:
 
 #### Run Single Fabric, Cassandra and Kafka Instances
 
-Run docker-compose as follows:
+Run Docker Compose as follows:
 
 ```bash
 cd compose_fabric_7.0.0_226-HF2
@@ -114,7 +114,7 @@ Cassandra and Fabric will start automatically.
 
 ### How Do I Stop Services in Docker Environment?
 
-1. To stop the docker-compose, do the following:
+1. To stop the Docker Compose, do the following:
 
    ```bash
    cd compose_fabric_7.0.0_226
