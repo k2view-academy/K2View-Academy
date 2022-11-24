@@ -31,7 +31,7 @@ More detailed requirements for each are described below:
    ## update the k2view user home directory and password!! 
    useradd -m -d /<update the path>/k2view/ k2view passwd k2view 
    ```
-6. Give the **k2view** user privileges to run docker & docker compose via **SUDO**.
+6. Grant the **k2view** user privileges to run docker & docker compose via **SUDO**.
 
 #### Minimum hardware requirements for Docker-Desktop
 
