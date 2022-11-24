@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-This article describes mandatory steps for system setup which are required to be performed prior to Fabric/TDM installation, such as:
+This article describes mandatory steps to be taken for a system setup prior to Fabric/TDM installation; such steps are:
 
 * Hardware setup
 * Users creation
