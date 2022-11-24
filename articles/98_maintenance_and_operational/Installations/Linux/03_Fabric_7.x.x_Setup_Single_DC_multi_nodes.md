@@ -13,7 +13,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 1. Retrieve the latest Cassandra package (located at: [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
-2. Connect to the Linux execution server as "cassandra" user and copy the package to the home directory.
+2. Log in to the Linux server as the user "Cassandra" and copy the package to the home directory.
 
 3. Untar the package (the package name varies according to the version) as follows:
 
@@ -31,7 +31,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
    ~~~
 
 
-### Setup the first 3 Cassandra nodes
+### Set up the first 3 Cassandra nodes
 
 Run the commands as shown below for each node in turn. When doing so, update the parameters that are unique to your project. 
 
@@ -81,7 +81,7 @@ cassandra
 
 #### Post Setup Run on One Node
 
-Create new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
+Create a new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
 
 Update the `DC1` to the DC name you used above:
 
@@ -101,7 +101,7 @@ Run **nodetool repair** command on all the 3 nodes:
 nodetool -u k2view -pw Q1w2e3r4t5 repairPTswLot7a21eFET
 ~~~
 
-**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. We refer to the following SED lines:
+**Note**: If you decide to change the password in the above setting, you would be required to run the following commands, when setting up the Fabric server. We refer to the following SED lines:
 
 
 ~~~bash
@@ -109,7 +109,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
 sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 ~~~
 
-### Setup Cassandra Nodes 4 and Above
+### Set up Cassandra Nodes 4 and Above
 
 **Pre setup run on the 3 node**, update the following as needed:
 
@@ -147,15 +147,15 @@ cassandra
 
 
 
-## Setup Kafka Cluster
+## Set up Kafka Cluster
 
 ### Load the Package 
 
 1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
 
-2. Connect to Linux as "kafka" user and copy the package to the home directory.
+2. Log in to the Linux as the user "Kafka" and copy the package to the home directory.
 
-3. Untar the package (the package name varies based on the version) as follows:
+3. Untar the package (the package name varies according to the version) as follows:
 
    ~~~bash
    tar -zxvf k2view_Confluent_5.xxx.tar.gz && bash -l
@@ -204,7 +204,7 @@ cassandra
    $K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties
    ~~~
 
-7. Verify the Kafka and Zookeeper are running:
+7. Verify that the Kafka and Zookeeper are running:
 
    ~~~bash
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
@@ -270,7 +270,7 @@ cassandra
 
 4. Start Fabric:
 
-   - On the first node of Fabric run the following (only after it is ready you can start other Fabric nodes):
+   - Run the following on the first node of Fabric (you can start other fabric nodes only after it is ready):
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
@@ -293,14 +293,14 @@ cassandra
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the Web Framework.
+   - Same login details should be used to log in to the Web Framework.
 
 
 
 ## PGSQL 
 
-TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
-TDM requires user & password with full **create**, **delete** and **update** privileges. 
+TDM 7.xx is certified with PGSQL 9.6 & 13. You can provide access to the existing PostgreSQL DB if you have one.
+TDM requires login details with full **create**, **delete** and **update** privileges. 
 
 The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
 
