@@ -15,7 +15,7 @@ the Cassandra package supplied is preconfigured to run as single node with fabri
 
 2. Connect to Linux as "kafka" user and copy the package to the home directory.
 
-3. Untar the package (the package name varies based on the version) as follows:
+3. Untar the package (the package name varies according to the version) as follows:
 
    ~~~bash
    tar -zxvf k2view_Confluent_7.xxx.tar.gz && bash -l
