@@ -17,9 +17,9 @@
 
 The supplied Cassandra package is preconfigured to run as a single node with fabric on the same host. In order to achieve this, the following settings are predefined:
 
-DC=DC1
-cluster_name:integration
-Listen_address: 127.0.0.1 (localhost)
+* DC=DC1
+* cluster_name:integration
+* Listen_address: 127.0.0.1 (localhost)
 
 To start working, run the commands as shown below.
 
