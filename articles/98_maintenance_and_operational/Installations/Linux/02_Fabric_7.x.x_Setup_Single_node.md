@@ -35,7 +35,9 @@ The supplied Fabric package is preconfigured to run as a single node with cassan
    ~~~
 
    **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
+   
    **Note:** If you decide to change the default password in the cassandra server setup, you would be required to run the following commands; we refer to the following SED lines:
+   
    
 
 4. Start Fabric:
