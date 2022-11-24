@@ -117,7 +117,7 @@ cat /etc/os-release
 
 ## Firewall Ports 
 
-Open the following ports on Linux server, and make sure they are accessible from outside the server: 
+For a successful operation, the following ports should be open in the internal server firewall, and if required, also in the external firewall: 
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
