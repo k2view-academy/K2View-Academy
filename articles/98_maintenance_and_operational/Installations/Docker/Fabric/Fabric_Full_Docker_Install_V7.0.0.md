@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-These prerequisites are for development, training, demo or a small Proof-of-Concept installation. You can use one of the following environments:
+These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use one of the following environments:
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher.
   or
