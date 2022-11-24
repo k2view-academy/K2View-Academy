@@ -1,25 +1,25 @@
-## FABRIC v7.0.0_226 DOCKER INSTALLATION
+## FABRIC V7.0.0_226 DOCKER INSTALLATION
 
 ### Prerequisites
 
-These pre-requisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:
+These prerequisites are for development, training, demo or a small Proof-of-Concept installation. You can use one of the following environments:
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher.
   or
 - **Docker-Desktop** for Windows or Mac.
 
-More detailed requirements for each are described below.
+More detailed requirements for each are described below:
 
 #### Docker over CentOs/RedHat
 
-1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with latest patches, for each:
+1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with the latest patches, for each:
 
-   - Modern Xeon Processor.
-   - 8 Physical Cores.
-   - 16 GB RAM.
-   - HDD, 200GB must be available.
+   - Modern Xeon Processor
+   - 8 Physical Cores
+   - 16 GB RAM
+   - HDD, 200GB must be available
 
-   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.
+   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
 
    **Note**: The /var/lib/docker should have at list 200GB of free memory.
