@@ -6,7 +6,7 @@ These prerequisites are for the purpose of development, training, a demo or a sm
 
 - **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** (or higher) for a Linux environment
   or
-- **Docker-Desktop** for Windows/Mac environments
+- **Docker Desktop** for Windows/Mac environments
 
 More detailed requirements for each are described below:
 
