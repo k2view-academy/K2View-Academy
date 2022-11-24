@@ -8,7 +8,7 @@ These prerequisites are for a development, training, demo, or a small Proof-of-C
   or
 - **Docker-Desktop** for Windows or Mac.
 
-More detailed requirements for each are described below.
+More detailed requirements for each are described below:
 
 #### Docker over CentOs/RedHat
 
