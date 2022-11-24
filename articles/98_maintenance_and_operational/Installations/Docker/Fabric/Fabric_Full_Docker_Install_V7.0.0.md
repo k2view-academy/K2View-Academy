@@ -12,12 +12,12 @@ More detailed requirements for each are described below:
 
 #### Docker over CentOs/RedHat
 
-1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with latest patches, for each:
+1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with the latest patches, for each:
 
-   - Modern Xeon Processor.
-   - 8 Physical Cores.
-   - 16 GB RAM.
-   - HDD, 200GB must be available.
+   - Modern Xeon Processor
+   - 8 Physical Cores
+   - 16 GB RAM
+   - HDD, 200GB must be available
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
