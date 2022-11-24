@@ -41,7 +41,7 @@ Create a new superuser for Cassandra, and change the **cassandra** default user'
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
 ~~~
 
-**Note**: If you decide to change the password from the above example, note that you will need to update it later in point that you preconfigure the Fabric. We refer to the following SED lines:
+**Note**: If you decide to change the password in the above setting, you would be required to run the following commands, when setting u the Fabric server. We refer to the following SED lines:
 
 
 ~~~bash
