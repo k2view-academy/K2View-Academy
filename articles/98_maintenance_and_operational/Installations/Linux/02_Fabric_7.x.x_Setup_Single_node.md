@@ -38,7 +38,10 @@ The supplied Fabric package is preconfigured to run as a single node with cassan
    
    **Note:** If you decide to change the default password in the cassandra server setup, you would be required to run the following commands; we refer to the following SED lines:
    
-   
+ ~~~bash
+ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
+ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
+ ~~~
 
 4. Start Fabric:
 
