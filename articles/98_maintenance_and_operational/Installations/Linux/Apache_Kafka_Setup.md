@@ -30,7 +30,7 @@ The supplied Cassandra package is preconfigured to run as a single node with fab
    $K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties
    ~~~
 
-5. Verify the Kafka and Zookeeper are running:
+5. Verify that the Kafka and Zookeeper are running:
 
    ~~~bash
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
