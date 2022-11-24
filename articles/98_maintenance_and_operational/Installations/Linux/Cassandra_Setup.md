@@ -36,7 +36,7 @@ cassandra
 
 ### Post Setup on One Node
 
-Create new superuser for Cassandra, and change the **cassandra** default user's password:
+Create a new superuser for Cassandra, and change the **cassandra** default user's password:
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
