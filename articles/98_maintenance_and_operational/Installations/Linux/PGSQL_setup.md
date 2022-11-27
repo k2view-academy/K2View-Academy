@@ -75,7 +75,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 - Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` 
 - Alternatively, you can copy the files to the pgsql console and run them with the **psql** command. 
-  The files are located at ~/ k2vtdm2.sql ~/ k2vtdm3.sql
+  The files are located in ~/ k2vtdm2.sql ~/ k2vtdm3.sql
 
   Example:
    
