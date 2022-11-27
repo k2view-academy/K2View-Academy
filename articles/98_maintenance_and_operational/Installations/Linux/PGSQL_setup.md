@@ -1,6 +1,6 @@
 # Setup for PGSQL 13.3
 
-When using TDM, you need to have a Postres SQL database engine. This document shows how to install such an engine. 
+When using TDM, you need to have a PostresSQL database engine. This document explains how to install such an engine. 
 
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
 - You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
