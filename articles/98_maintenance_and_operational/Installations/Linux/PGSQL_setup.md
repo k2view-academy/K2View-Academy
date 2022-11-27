@@ -7,7 +7,7 @@ TDM 7.xx is certified to be used with PGSQL 9.6 & 13.
 - TDM requires login details with full **create**, **delete** and **update** privileges. 
 - It is also possibile to install a PostgreSQL database from the K2View predefined **tarball** file.
 - The tarball provided by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
-- The user and password are **postgres**, port is the default port (5432).  
+- The login details (user and password) are **postgres**, port is the default port (5432).  
  
 Important file locations are:
 - Certification files:  /opt/apps/pgsql/bin/.crt 
@@ -73,9 +73,9 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   echo "ALTER USER postgres WITH SUPERUSER;"| psql
   ~~~
 
-- Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` 
+- Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql` and `TDMGUI/createTDMDB/k2vtdm3.sql` 
 - Alternatively, you can copy the files to the pgsql console and run them with the **psql** command. 
-  The files are located in ~/ k2vtdm2.sql ~/ k2vtdm3.sql
+  The files are located under ~/ k2vtdm2.sql ~/ k2vtdm3.sql
 
   Example:
    
