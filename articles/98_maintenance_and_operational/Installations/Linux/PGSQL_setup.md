@@ -91,7 +91,7 @@ Connect via a pgadmin and set this up as shown in the below example:
 
 <img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
-### Check That the Connection is Secure
+### Check that the Connection is Secure
 
 - From the server side, run the following command from the console:
 
