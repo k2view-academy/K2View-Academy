@@ -36,7 +36,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ## Setup  ##
 
-- Connect as the **pgsql** user on the server console.
+- Connect as the **pgsql** user on the server console
 
 - Download or copy the tarball file from this link: [pg13.3_tls_enabled.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_enabled.tar.gz).
 
