@@ -1,6 +1,6 @@
 # Setup for PGSQL 13.3
 
-When using TDM, you need to have a PostgreSQL database. This document explains how to install such database. 
+When using TDM, you need to have a **PostgreSQL** database; this document describes how to install it. 
 
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
 - You can provide access to a PostgreSQL database if you have one. If you do not, one is provided with the TDM application.  
