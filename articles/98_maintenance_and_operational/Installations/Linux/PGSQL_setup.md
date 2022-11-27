@@ -18,7 +18,7 @@ Locations of important files are as follows:
 - RedHat/CentOs 8, AWS Linux 2
 - 2 vCPU
 - 8G RAM
-- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql`
+- 100G free disk space, ensure it is assigned to `/opt/apps/pgsql`
   
 ## Preliminary Steps ##
   
