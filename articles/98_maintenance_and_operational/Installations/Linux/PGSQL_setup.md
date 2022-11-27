@@ -4,7 +4,7 @@ When using TDM, you need to have a PostresSQL database engine. This document exp
 
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
 - You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
-- TDM requires a username & password with full create, delete and update privileges. 
+- TDM requires login details with full create, delete and update privileges. 
 - You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
 - The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
 - The user and password are **postgres**, port is the default port (5432).  
