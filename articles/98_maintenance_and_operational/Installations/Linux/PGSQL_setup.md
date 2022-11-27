@@ -87,7 +87,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ## How to Connect From pgadmib4 in TLS Mode
 
-Connect via a pgadmin and set this up as shown in the example below:
+Connect via a pgadmin and set this up as shown in the below example:
 
 <img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
