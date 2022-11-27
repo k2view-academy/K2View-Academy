@@ -5,7 +5,7 @@ When using TDM, you need to have a PostgreSQL database. This document explains h
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
 - You can provide access to a PostgreSQL database if you have one. If you do not, one is provided with the TDM application.  
 - TDM requires login details with full **create**, **delete** and **update** privileges. 
-- You also have the option install a PostgreSQL database from the K2View predefined **tarball** file.
+- It is also a possibility to install a PostgreSQL database from the K2View predefined **tarball** file.
 - The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
 - The user and password are **postgres**, port is the default port (5432).  
  
