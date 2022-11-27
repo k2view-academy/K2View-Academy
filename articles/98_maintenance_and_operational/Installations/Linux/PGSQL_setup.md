@@ -9,7 +9,7 @@ TDM 7.xx is certified to be used with PGSQL 9.6 & 13.
 - The tarball provided by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
 - The user and password are **postgres**, port is the default port (5432).  
  
-Locations of important files are as follows:
+Important files locations are:
 - Certification files:  /opt/apps/pgsql/bin/.crt 
 - Configuration files:  /opt/apps/pgsql/data 
 
