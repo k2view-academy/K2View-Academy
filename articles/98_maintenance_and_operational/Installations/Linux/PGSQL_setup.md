@@ -63,7 +63,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile stop
   ~~~
 
-- Run the following commands from the server console to create the TDM database and the **tdm** user:
+- Run the following commands from the server console in order to create the TDM database and the **tdm** user:
 
   ~~~bash
   createuser tdm --login --superuser
