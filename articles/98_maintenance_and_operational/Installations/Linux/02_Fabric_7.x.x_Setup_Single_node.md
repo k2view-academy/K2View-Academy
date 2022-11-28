@@ -12,7 +12,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ## Setup for Fabric 7.x & TDM 7.x
 
-The supplied Fabric package is preconfigured to run as a single node with cassandra on the same host. In order to achieve this, the following settings are predefined:
+The supplied Fabric package is preconfigured to run as a single node with Cassandra on the same host. In order to achieve this, the following settings are predefined:
 
 * Cassandra seed IP - 127.0.0.1 (localhost)
 * DC = DC1
@@ -36,8 +36,7 @@ The supplied Fabric package is preconfigured to run as a single node with cassan
 
    **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
    
-   **Note:** If you decide to change the default password in the cassandra server setup, you would be required to run the following commands; we refer to the following SED lines:
-   
+   **Note:** If you decide to change the default password in the Cassandra server setup, you would be required to run the following commands; we refer to the following SED lines:
  ~~~bash
  sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
  sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
@@ -49,20 +48,20 @@ The supplied Fabric package is preconfigured to run as a single node with cassan
    k2fabric start && k2fabric status
    ~~~
 
-5. Connect to the Fabric console with:
+5. Connect to the Fabric console using the following command:
 
    ~~~bash
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - The above login details can be used in both fabric console and Web Framework.
+   * The same login details should be used to log in to the Web Framework.
 
 ## PGSQL 
 
 TDM 7.xx is certified with PGSQL 9.6 & 13. You can provide access to the existing PostgreSQL DB if you have one.
 TDM requires login details with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
+The customer can provide the **PGSQL**, or find below the installation instructions for **K2View** **PGSQL**:
 
 <ul>      
 <li>
@@ -70,5 +69,4 @@ The customer can provide the **PGSQL**, or find below the installation instructi
 
 
 
-[![Previous](/articles/images/Previous.png)](01_Fabric_7.xx_Installation_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](003_Fabric_7.x.x_Setup_Single_DC_multi_nodes.md)  
 

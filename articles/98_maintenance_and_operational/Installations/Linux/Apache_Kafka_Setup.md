@@ -7,8 +7,6 @@ The supplied Cassandra package is preconfigured to run as a single node with fab
 
 * replication.factor = 1
 
-
-
 ### Load the Package 
 
 1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
@@ -37,4 +35,4 @@ The supplied Cassandra package is preconfigured to run as a single node with fab
    ~~~
 
 
-## 
+##

@@ -8,7 +8,7 @@ TDM 7.xx is certified to be used with PGSQL 9.6 & 13.
 - It is also possibile to install a PostgreSQL database from the K2View predefined **tarball** file.
 - The tarball provided by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
 - The login details (user and password) are **postgres**, port is the default port (5432).  
- 
+
 Important file locations are:
 - Certification files:  /opt/apps/pgsql/bin/.crt 
 - Configuration files:  /opt/apps/pgsql/data 
@@ -21,7 +21,7 @@ Important file locations are:
 - 100G free disk space, ensure it is assigned to `/opt/apps/pgsql`
   
 ## Preliminary Steps ##
-  
+
   Add the following users:
 
 ~~~bash
@@ -58,7 +58,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   ~~~
 
 - You can stop the **pgsql** using the following commands:
-   
+  
   ~~~bash
   ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile stop
   ~~~
@@ -78,7 +78,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   The files are located under ~/ k2vtdm2.sql ~/ k2vtdm3.sql
 
   Example:
-   
+  
   ~~~bash
   cd ~/
   psql -d TDMDB -a -f ~/k2vtdm2.sql
@@ -143,5 +143,5 @@ datname  | usename  | ssl |  client_addr
 - Open and edit all Environments: check the Custom Connection String checkbox of the TDM interface and add **&ssl=true** to the TDM’s connection string. 
 - Redeploy the Environments to Fabric.
 
-[![Previous](/articles/images/Previous.png)](01_Fabric_6.xx_Installation_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Fabric_6.xx_Setup_Single_DC_multi_nodes.md)  
+
 

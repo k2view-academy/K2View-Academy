@@ -270,7 +270,7 @@ cassandra
 
 4. Start Fabric:
 
-   - Run the following on the first node of Fabric (you can start other fabric nodes only after it is ready):
+   - Run the following on the first node of Fabric (you can start other Fabric nodes only after it is ready):
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
@@ -293,7 +293,7 @@ cassandra
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same login details should be used to log in to the Web Framework.
+   - The same login details should be used to log in to the Web Framework.
 
 
 
@@ -302,15 +302,9 @@ cassandra
 TDM 7.xx is certified with PGSQL 9.6 & 13. You can provide access to the existing PostgreSQL DB if you have one.
 TDM requires login details with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
+The customer can provide the **PGSQL**, or find below the installation instructions for **K2View** **PGSQL**:
 
 <ul>      
 <li>
 <a href="/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md">Setup PGSQL 13.3</a></li>
 
-
-
-
-
-
-[![Previous](/articles/images/Previous.png)](03_Fabric_7.x.x_Setup_Single_DC_multi_nodes.md) 
