@@ -9,6 +9,6 @@ Fabric 7.0 has just been released and it includes many exciting features:
 * **Sync On Demand** helps reducing sync time syncing minimal set of tables. 
 * **Broadway** and **Graphit** augmented with powerful new features and a new color scheme. 
 
-The full list can be found in the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.pdf.html) and [Upgrade Procedure to 7.0](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Upgrade_Procedure_To_V7.0.pdf.html) documents.
+See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.pdf.html) and [Upgrade Procedure to 7.0](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Upgrade_Procedure_To_V7.0.pdf.html) for the full list.
 
 <img src="images/fabric_7.png" alt="image" style="zoom: 50%;" />
