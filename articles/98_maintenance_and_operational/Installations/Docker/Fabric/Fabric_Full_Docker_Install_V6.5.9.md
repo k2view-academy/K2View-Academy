@@ -42,7 +42,7 @@ More detailed requirements for each are described below:
 
 #### Load Container Images
 
-1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
+1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using the below 4 links:
 
    <table style="border-collapse: collapse; width: 100%;">
    <tbody>
