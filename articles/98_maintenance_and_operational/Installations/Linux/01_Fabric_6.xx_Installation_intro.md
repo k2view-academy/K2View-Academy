@@ -1,8 +1,7 @@
 # Fabric 6.xx Pre-Installation Steps
-
 ## Introduction 
 
-This article describes mandatory steps for system setup which are required to be performed prior to Fabric/TDM installation, such as:
+This article describes mandatory steps to be taken for a system setup prior to Fabric/TDM installation; such steps are:
 
 * Hardware setup
 * Users creation
@@ -24,34 +23,34 @@ Minimum hardware for each Linux execution server is as follows:
 
     -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM.
 
-    -   For servers that run one component (preferred method) - 32GB RAM.
+    -   For servers that run a single component (preferred method) - 32GB RAM.
 
 -   Network: Minimum 1G per sec between the nodes and source databases.
 
--   Storage: The preferred storage is attached local SSD's in a non-RAID configuration.
+-   Storage: The preferred storage is an attached local SSD's in a non-RAID configuration.
 
-> **Note:** If you must use a SAN, it must be flash and in RAID-0.
+> **Note:** If you must use a SAN, it must be flash disc based and in RAID-0.
 > **NAS are not certified.**
 
-Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with latest patches.
+Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with the latest patches.
 
 #### File System Requisites
 
 The following File Server volumes must be made available:
 
--   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (Owned by fabric user)
+-   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (owned by the fabric user)
 
--   Volume of 100G\* **/opt/apps/fabric/storage** (Owned by fabric user)
+-   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the fabric user)
 
--   Volume of 50G **/opt/apps/cassandra/** (Owned by cassandra user)
+-   Volume of 50G **/opt/apps/cassandra/** (owned by the cassandra user)
 
--   Volume of 2T\* **/opt/apps/cassandra/storage/data** (Owned by cassandra user)
+-   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by the cassandra user)
 
--   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (Owned by cassandra user)
+-   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by the cassandra user)
 
--   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (Owned by cassandra user)
+-   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by the cassandra user)
 
--   Volume of 100G\* **/opt/apps/kafka/** (Owned by kafka user)
+-   Volume of 100G\* **/opt/apps/kafka/** (owned by the kafka user)
 
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
 > The number of servers should be increased based on project scope and data retention requirements.
@@ -108,7 +107,7 @@ dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-lang
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 ~~~
 
-> **Note:** To verify what is your current  RHEL/Centos version by running one of the following commands:
+> **Note:** Running one of the following commands, would indicate your Linux flavour:
 ~~~bash
 rpm -E %{rhel}
 hostnamectl
@@ -117,7 +116,7 @@ cat /etc/os-release
 
 ## Firewall Ports 
 
-Open the following ports on Linux server, and make sure they are accessible from outside the server: 
+For a successful operation, the following ports should be open in the internal server firewall, and if required, also in the external firewall: 
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
@@ -179,6 +178,7 @@ Open the following ports on Linux server, and make sure they are accessible from
 </tr>
 </tbody>
 </table>
+
 
 
 
