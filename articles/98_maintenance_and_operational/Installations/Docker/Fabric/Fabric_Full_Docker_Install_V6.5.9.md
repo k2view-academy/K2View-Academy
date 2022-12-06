@@ -1,50 +1,48 @@
 ## FABRIC v6.5.9_120-HF3 DOCKER INSTALLATION
 
-### PREREQUISITES
+### Prerequisites
 
-These pre-requisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:
+These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use 1 of the following 2 environments:
 
-- **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** or higher
-  or
-- **Docker-Desktop** for Windows or Mac.
+- **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** (or higher) for a Linux environment
+- **Docker Desktop** for Windows/Mac environments
 
-More detailed requirements for each are described below.
+More detailed requirements for each are described below:
 
 #### Docker over CentOs/RedHat
 
-1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with latest patches, for each:
+1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with the latest patches, for each:
 
-   - Modern Xeon Processor.
-   - 8 Physical Cores.
-   - 16 GB RAM.
-   - HDD, 200GB must be available.
+   - Modern Xeon Processor
+   - 8 Physical Cores
+   - 16 GB RAM
+   - HDD, 200GB must be available
 
-   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.
-2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ )
+   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
+2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
 
-   **Note**: The /var/lib/docker should have at list 200GB of free memory.
-3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).
-4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ).
-5. Assign appropriate privileges to the k2view user, and allocate to this user at least 50GB of space as follows:
+   **Note**: The /var/lib/docker should have at least 200GB of free memory.
+3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
+4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
+5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
 
    ```bash
    ## update the k2view user home directory and password!! 
    useradd -m -d /<update the path>/k2view/ k2view passwd k2view 
    ```
-6. Give the k2view user privileges to run docker & docker-compose via **SUDO**.
+6. Grant the **k2view** user privileges to run Docker & Docker Compose via **SUDO**.
 
-#### Minimum hardware requirements for Docker-Desktop
+#### Minimum hardware requirements for Docker Desktop
 
 1. Windows or Mac machine with an 8 core CPU.
 2. Windows or Mac machine with a minimum of 16G RAM.
 3. Windows or Mac machine with minimum 120G of hard disk space.
 
-### USING THE CONTAINER
+### How Do I Set Up and Run Docker Environment?
 
-#### Load the Container Image
+#### Load Container Images
 
-1. Retrieve the latest versions of Fabric and Cassandra.
-2. Retrieve the latest version of Kafka. The Kafka and configuration files can be retrieved from the following locations:
+1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
 
    <table style="border-collapse: collapse; width: 100%;">
    <tbody>
@@ -70,7 +68,7 @@ More detailed requirements for each are described below.
    </tr>
    </tbody>
    </table>
-3. Copy all files to the k2view directory as follows:
+2. Copy all files to the k2view directory as follows:
 
    ```bash
    cd ~/ 
@@ -98,7 +96,7 @@ More detailed requirements for each are described below.
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
 
-**Note:** this compose file doesn't include Kafka. if you need you can open the docker-compose.yml and un-remark it.
+**Note:** this compose file doesn't have Kafka enabled by default. if you need it you can open the docker-compose.yml and un-remark it.
 
 1. Run docker-compose as follows:
 
