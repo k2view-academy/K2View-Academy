@@ -37,14 +37,14 @@ Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) f
 
 1. Go to **Project Tree** > **Shared Objects** > **Environments** > **Environments** to open the window.
 
-   <img src="images/25_02_1_WEB.PNG" alt="image" style="zoom:80%;" />
+   <img src="images/25_02_1_WEB.png" alt="image" style="zoom:80%;" />
 
 2. Click **Create Environment** to start the environment creation. 
 
    * Enter a meaningful name for the environment in the **Name** field.
    * (Optional) In the **Description** field, add a description of the environment.
 
-<img src="images/environment.PNG" alt="image"  />
+<img src="images/environment.png" alt="image"  />
 
 The following activities can be done on each environment:
 
@@ -83,7 +83,7 @@ Once an Environment is added in the top window area, all DB and non-DB interface
 
 By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment by clicking the Active toggle in the interface.
 
-<img src="images/25_02_2_WEB.PNG" alt="image" style="zoom:80%;" />
+<img src="images/25_02_2_WEB.png" alt="image" style="zoom:80%;" />
 
 </web>
 
