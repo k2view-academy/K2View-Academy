@@ -8,11 +8,7 @@ Fabric Environments are used to run the same project implementation on various d
 
 An environment is defined by a partial or a full list of a project's [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) together with their connection details (server, port, etc.) and must be deployed to the server. In addition, an environment can override the values in [globals](/articles/08_globals/01_globals_overview.md). 
 
-<studio>
-
 Only one environment can be active at a specific time after it is selected from a predefined list of environments and switched as needed. 
-
-</studio>
 
 An environment can be deployed either from the [Fabric Studio](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) or from the Fabric server (aka [offline environment deployment](/articles/25_environments/04_offline_deployment.md)).
 
@@ -25,5 +21,4 @@ An environment can be defined on a cluster level and on a session level. Therefo
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_create_new_environment.md)
-
 
