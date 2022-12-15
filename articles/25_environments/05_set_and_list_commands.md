@@ -1,5 +1,3 @@
-<studio>
-
 # SET and LIST Commands for Environments
 
 - The **SET** command displays an active environment from the list of the environments deployed to the Fabric Server.
@@ -67,8 +65,14 @@
     ~~~
     
 
-
+<studio>
 
 [![Previous](/articles/images/Previous.png)](04_offline_deployment.md)
 
 </studio>
+
+<web>
+
+[![Previous](/articles/images/Previous.png)](02_create_new_environment.md)
+
+</web>

@@ -1,18 +1,15 @@
-<studio>
-
 # Create and Edit Environment
 
 The following steps are used to create an environment in Fabric:
 
-1. Creating the environment in the Fabric Studio using the Environments List grid.
-2. Populating the connection details of the interfaces via the Selected Environment grid.
+1. Creating the environment in the Fabric Studio using the Environments List.
+2. Populating the connection details of the interfaces via the Selected Environment.
 3. Overriding Globals at any Shared, Reference or LU level via the dedicated tab in the Selected Environment grid.   
 4. Deploying all environments to the server while defining the active environment.
 
-
 ### Step 1 - Creating the Environment
 
-When editing an existing environment, skip this step.  
+<studio>
 
 1. Go to **Project Tree** > **Shared Objects** and double click **Environments** to open the Environments window.
 
@@ -34,8 +31,37 @@ When editing an existing environment, skip this step.
 
 Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) for more information about Fabric security hardening.
 
+</studio>
+
+<web>
+
+1. Go to **Project Tree** > **Shared Objects** > **Environments** > **Environments** to open the window.
+
+   <img src="images/25_02_1_WEB.png" alt="image" style="zoom:80%;" />
+
+2. Click **Create Environment** to start the environment creation. 
+
+   <img src="images/environment.png" alt="image"  />
+
+   * Enter a meaningful name for the environment in the **Name** field.
+   * (Optional) In the **Description** field, add a description of the environment.
+
+The following activities can be done on each environment:
+
+* Click the **Test Connection**<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the Test Connection is finished, the results (success or failure) are displayed next to each interface name:
+
+  <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
+
+* Click the **Delete** <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the Environment.
+
+* Click the **Active**<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the Environment.
+
+</web>
+
 
 ### Step 2 - Defining Interface Settings per Environment 
+
+<studio>
 
 Once **Name** in the **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a separate tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
 
@@ -49,99 +75,52 @@ By default, all interfaces are enabled whereby the settings of each interface ca
 
    ![image](images/25_02_2.PNG)
 
+</studio>
+
+<web>
+
+Once an Environment is added in the top window area, all DB and non-DB interfaces in the project appear in the left lower window area. You can go over them and populate the relevant connection details such as host and port. 
+
+By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment by clicking the Active toggle in the interface.
+
+<img src="images/25_02_2_WEB.png" alt="image" style="zoom:80%;" />
+
+</web>
+
 ### Step 3 - Overriding Globals per Environment
 
 In addition to the interfaces that are automatically copied to the created environment, Globals can also be overridden per environment via the Globals tab. 
 
 The Globals tab grid has the following columns:
 
-<table border="1" cellpadding="1" cellspacing="1" style="width:685px">
-
-<tbody>
-
- <tr>
-
-  <td style="width:109px">Logical Unit</td>
-
-  <td style="width:562px">
-
-  <p>(Read only, inactive). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p>
-
-
-
-  <ul>
-
-   <li>LU, displays the LU name.</li>
-
-   <li>References, indicated by "k2_ref".</li>
-
-   <li>Shared Objects, this column is empty. </li>
-
-  </ul>
-
-
-
-  <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>
-
-  </td>
-
- </tr>
-
- <tr>
-
-  <td style="width:109px">Category</td>
-
-  <td style="width:562px">(Read only, inactive). Displays the original category.  </td>
-
- </tr>
-
- <tr>
-
-  <td style="width:109px">Name</td>
-
-  <td style="width:562px">(Read only, inactive). Displays the name of the variable.</td>
-
- </tr>
-
- <tr>
-
-  <td style="width:109px">Value</td>
-
-  <td style="width:562px">
-
-  <p>Displays the value defined for this environment:</p>
+<table>
+ <tbody> 
+     <tr>  
+        <td ><strong>Logical Unit</strong></td>  
+        <td >  
+            <p>(Read only). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p><ul>
+            <li>LU, displays the LU name.</li>
+            <li>References, indicated by "k2_ref".</li>
+            <li>Shared Objects, this column is empty. </li>  </ul>  
+            <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>  </td> </tr>
+     <tr>
+         <td style="width:109px"><strong>Category</strong></td>  
+         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+     <tr>  
+         <td style="width:109px"><strong>Name</strong></td>
+         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+     <tr>  
+         <td style="width:109px"><strong>Value</strong></td>
+         <td style="width:562px">  
+             <p>Displays the value defined for this environment:</p> 
+             <li>If this value is not updated, the Global inherits the original implementation value.</li> 
+             <li>When the value is updated, it is displayed in a bold font.</li> 
+    </ul></td></tr>
+	<tr><td style="width:109px"><strong>Comment</strong></td>
+        <td style="width:562px">Explaining why the value has been updated. </td></tr></tbody></table>
 
 
-
-  <ul>
-
-   <li>If this value is not updated, the Global inherits the original implementation value.</li>
-
-   <li>When the value is updated, it is displayed in a bold font.</li>
-
-  </ul>
-
-  </td>
-
- </tr>
-
- <tr>
-
-  <td style="width:109px">Comment</td>
-
-  <td style="width:562px">Explaining why the value has been updated. </td>
-
- </tr>
-
-</tbody>
-
-</table>
-
-
-
-<p> </p>
-
-
+<studio>
 
 ![image](images/globals_table_with_change.png)
 
@@ -149,15 +128,28 @@ The Globals tab grid has the following columns:
 
 -  To revert to the previous value, click the left gray area of the Global variable entry and then click **Reset To Original Values**. 
 
+</studio>
 
+<web>
+
+
+
+<img src="images/globals_table_with_change_WEB.png" alt="image" style="zoom:80%;" />
+
+* To edit the Global variable value, click the Edit <img src="images/edit_icon.png"  /> icon and type in the new value. The Edit icon becomes the Reset  <img src="images/reset_icon.png"  />icon, also when this window is next accessed.
+* To revert to the previous value, click the Reset  <img src="images/reset_icon.png"  />icon. Alternatively, select several rows and click the Reset  <img src="images/reset_button.png"  />button.
+
+</web>
 
 Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. 
 -  New Global variables cannot be created per environment.
--  When an implementation has been updated, for example: adding a new Global in Shared Objects, close and then open the Environment window to see the changes in the Globals grid table.
+-  When an implementation has been updated, for example: adding a new Global in LU, close and then open the Environment window (after deploying the updated LU) to see the changes in the Globals grid table.
 
 ### Step 4 - Deploying the Environments
+
+<studio>
 
 Repeat steps 1-3 to create the environments and then do the following:
 
@@ -173,6 +165,20 @@ Repeat steps 1-3 to create the environments and then do the following:
 
 Note that environments can be deployed to the Fabric Server either from the [Fabric Studio](03_deploy_env_from_Fabric_Studio.md) or using a command line to perform an [offline deployment](04_offline_deployment.md) from an XML file.
 
+
+
 [![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_deploy_env_from_Fabric_Studio.md)
 
 </studio>
+
+<web>
+
+Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png"  /> button. 
+
+Save of the Environments is performed automatically prior to deploy. If at least one of the Environments has illegal or empty name, the deploy will fail.
+
+
+
+[![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_set_and_list_commands.md)
+
+</web>
