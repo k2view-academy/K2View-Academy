@@ -41,20 +41,20 @@ Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) f
 
 2. Click **Create Environment** to start the environment creation. 
 
+   <img src="images/environment.png" alt="image"  />
+
    * Enter a meaningful name for the environment in the **Name** field.
    * (Optional) In the **Description** field, add a description of the environment.
 
-<img src="images/environment.png" alt="image"  />
-
 The following activities can be done on each environment:
 
-* Click the Test Connection<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the Test Connection is finished, the results (success or failure) are displayed next to each interface name:
+* Click the **Test Connection**<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the Test Connection is finished, the results (success or failure) are displayed next to each interface name:
 
   <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
 
-* Click the Delete <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the Environment.
+* Click the **Delete** <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the Environment.
 
-* Click the Active<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the Environment.
+* Click the **Active**<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the Environment.
 
 </web>
 
@@ -93,31 +93,32 @@ In addition to the interfaces that are automatically copied to the created envir
 
 The Globals tab grid has the following columns:
 
-<table border="1" cellpadding="1" cellspacing="1" style="width:685px">
+<table>
  <tbody> 
      <tr>  
-        <td style="width:109px">Logical Unit</td>  
-        <td style="width:562px">  
+        <td ><strong>Logical Unit</strong></td>  
+        <td >  
             <p>(Read only). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p><ul>
             <li>LU, displays the LU name.</li>
             <li>References, indicated by "k2_ref".</li>
             <li>Shared Objects, this column is empty. </li>  </ul>  
             <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>  </td> </tr>
      <tr>
-         <td style="width:109px">Category</td>  
+         <td style="width:109px"><strong>Category</strong></td>  
          <td style="width:562px">(Read only). Displays the original category.  </td></tr>
      <tr>  
-         <td style="width:109px">Name</td>
+         <td style="width:109px"><strong>Name</strong></td>
          <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
      <tr>  
-         <td style="width:109px">Value</td>
+         <td style="width:109px"><strong>Value</strong></td>
          <td style="width:562px">  
              <p>Displays the value defined for this environment:</p> 
              <li>If this value is not updated, the Global inherits the original implementation value.</li> 
              <li>When the value is updated, it is displayed in a bold font.</li> 
     </ul></td></tr>
-	<tr><td style="width:109px">Comment</td>
+	<tr><td style="width:109px"><strong>Comment</strong></td>
         <td style="width:562px">Explaining why the value has been updated. </td></tr></tbody></table>
+
 
 <studio>
 
@@ -131,10 +132,12 @@ The Globals tab grid has the following columns:
 
 <web>
 
+
+
 <img src="images/globals_table_with_change_WEB.png" alt="image" style="zoom:80%;" />
 
-* To edit the Global variable value, click the Edit <img src="images/edit_icon.png" style="zoom:80%;" /> icon and type in the new value. The Edit icon becomes the Reset  <img src="images/reset_icon.png" style="zoom:80%;" />icon, also when this window is next accessed.
-* To revert to the previous value, click the Reset  <img src="images/reset_icon.png" style="zoom:80%;" />icon. Alternatively, select several rows and click the Reset  <img src="images/reset_button.png" style="zoom:80%;" />button.
+* To edit the Global variable value, click the Edit <img src="images/edit_icon.png"  /> icon and type in the new value. The Edit icon becomes the Reset  <img src="images/reset_icon.png"  />icon, also when this window is next accessed.
+* To revert to the previous value, click the Reset  <img src="images/reset_icon.png"  />icon. Alternatively, select several rows and click the Reset  <img src="images/reset_button.png"  />button.
 
 </web>
 
@@ -170,7 +173,7 @@ Note that environments can be deployed to the Fabric Server either from the [Fab
 
 <web>
 
-Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png" style="zoom:80%;" /> button. 
+Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png"  /> button. 
 
 Save of the Environments is performed automatically prior to deploy. If at least one of the Environments has illegal or empty name, the deploy will fail.
 
