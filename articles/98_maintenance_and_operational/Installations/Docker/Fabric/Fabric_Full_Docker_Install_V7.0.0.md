@@ -44,7 +44,7 @@ More detailed requirements for each are described below:
 
 1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
 
-   322 `<table style="border-collapse: collapse; width: 100%;">`
+  <table style="border-collapse: collapse; width: 100%;">
 
    <tbody>
    <tr>
