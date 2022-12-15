@@ -12,7 +12,11 @@ Only one environment can be active at a specific time after it is selected from 
 
 An environment can be deployed either from the [Fabric Studio](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) or from the Fabric server (aka [offline environment deployment](/articles/25_environments/04_offline_deployment.md)).
 
+<studio>
+
 Offline environment deployment can be implemented by a CI/CD process that copies an environment's configuration XML file to a predefined server's location and deploys it using a Fabric command. 
+
+</studio>
 
 Explicit definition of the environments in a project is optional. When no environment is defined and a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) is deployed to a Fabric server, all the project's interfaces are deployed together with their connection details to a default *_dev* environment. The default environment is not displayed in the Fabric Studio or in the environment's configuration XML file.
 

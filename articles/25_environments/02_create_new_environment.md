@@ -162,15 +162,20 @@ Repeat steps 1-3 to create the environments and then do the following:
 
 Note that environments can be deployed to the Fabric Server either from the [Fabric Studio](03_deploy_env_from_Fabric_Studio.md) or using a command line to perform an [offline deployment](04_offline_deployment.md) from an XML file.
 
+
+
+[![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_deploy_env_from_Fabric_Studio.md)
+
 </studio>
 
 <web>
 
 Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png" style="zoom:80%;" /> button. 
 
+Save of the Environments is performed automatically prior to deploy. If at least one of the Environments has illegal or empty name, the deploy will fail.
+
+
+
+[![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_set_and_list_commands.md)
+
 </web>
-
-
-
-[![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_deploy_env_from_Fabric_Studio.md)
-
