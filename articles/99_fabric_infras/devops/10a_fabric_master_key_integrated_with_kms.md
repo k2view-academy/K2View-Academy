@@ -58,7 +58,7 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
 3. In Fabric:
 
-   - Locate the credential file in Fabric machine and populate its full path location in the ``CREDENTIAL_FILE`` parameter. Alternatively, credentials file can be set as an environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
+   - Locate the credential file in Fabric machine and populate its full path location in the ``CREDENTIAL_FILE`` parameter. Alternatively, the credential file can be set as an environment variable called *GOOGLE_APPLICATION_CREDENTIALS*.
    - Set the values in config.ini under ``[encryption_gcp_kms]`` section, according to the KMS information, as following:
 
       ~~~
