@@ -34,22 +34,27 @@ The following illustration shows how Logical Unit Instances inherit their own pr
 
 
 
-## Fabric Master Key 
+## Key Management
 
-Fabric Master Key mechanism is based on two modules: key generator and key storage, where both are configurable.
+Fabric Key Management mechanism, which is responsible for encrypting and decrypting elements, is based on two modules: master key generator and master key storage, where both are configurable.
+
+By default, Fabric uses its built-in key management mechanism for both modules - generating and storing the master key. Fabric enables integration with  external [KMS](#kms) (Key Management Service). External KMS integration is supported since Fabric v6.5.9.
+
+> Note that the terminology of Fabric master key is still valid when integrating with external KMS, because internally, towards Fabric  modules, it is used as master key, which responsible for encrypting  and decrypting data.
 
 ### Master Key Generation
 
-By default, Fabric uses its built-in master-key generator, which uses strong Java methods aimed for AES key generation algorithms. A 
-Master key can be regenerated via the [Master Key Rotation](#master-key-rotation) mechanism.
-
-As an alternative for using its built-in master key generator, Fabric enables integration with [KMS](#kms) (Key Management Services) to generate and encrypt its master key. KMS integration is supported since Fabric v6.5.9.
+The Fabric built-in master-key generator uses strong Java methods aimed for AES key generation algorithms. A master key can be regenerated via the [Master Key Rotation](#master-key-rotation) mechanism.
 
 ### Master Key Storage
 
-By default, Fabric uses its built-in master-key storage mechanism, which stores the master key securely. When used, it first encrypts the master key using a *protection key*. To do so, the JAVA_AES library randomly generates a new 256 bit key using an AES-256 algorithm. Fabric also uses an Initialization Vector algorithm to encrypt the master key. 
+Fabric stores its master key securely, using the master-key storage mechanism. 
+
+First, it encrypts the master key using a *protection key*. To do so, the JAVA_AES library randomly generates a new 256 bit key using an AES-256 algorithm. Fabric also uses an Initialization Vector algorithm to encrypt the master key. 
 
 Once the master key is encrypted, it is broken into bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using the Cassandra distribution data logic, the parts of the key are stored across different nodes of the cluster. 
+
+> Note: This is done also when Fabric master key is managed externally, when Fabric is integrated with external KMS.
 
 #### Securing the Protection Key
 
@@ -104,38 +109,38 @@ Master key rotation enables generating and activating a new master key. The new 
 
 Upon retrieval of a specific Instance ID, Fabric collects the master key's information used for the encryption of the LU instance and performs on-the-fly de-encryption of the data.
 
-### KMS
+### External KMS
 
-Fabric supports, since v6.5.9 release, integrations with KMS (Key Management Service) in order to generate and encrypt its master key.  
+Fabric supports, since v6.5.9 release, integrations with external KMS (Key Management Service) in order to generate and encrypt its master key.  
 
 #### Background
 
-KMS is a cloud service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. Key Management Service is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
+KMS is a service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. Key Management Service is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
 
 >  Note: While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type and thus the below explanations refer to this type only. 
 
 KMS exposes two-tiered key hierarchy to clients: 
-* **Master Key** (one or more, as needed) - at AWS it is known as CMK (Customer Master Key) and at GCP it is called KEK (Key Encryption Key). The master key, which is protected with HSM, lives in KMS and never leaves it. Clients cannot get it, but are rather aware of its identity and ask KMS to use it. 
-* **Data Key** - used by applications to encrypt the data. The KMS does not store data keys but rather generates (at AWS) and protects them using the master keys.  
+* **Master Key** - at AWS it is known as CMK (Customer Master Key) and at GCP it is called KEK (Key Encryption Key). The master key, which is protected with HSM, lives in KMS and never leaves it. Clients cannot get it, but are rather aware of its identity and ask KMS to use it. 
+* **Data Encryption Key** (DEK) - used by applications to encrypt and decrypt the data. The KMS does not store data keys but rather generates (at AWS) and protects them using the master keys.  
 
 The application uses the two forms of the data key - clear/plain and encrypted. While the encrypted form is stored and persistent, the clear/plain form must not be stored anywhere; it just exists at the runtime memory.
 
 The encrypting process is a little different among cloud providers:
 
 * [AWS](https://aws.amazon.com/kms/) - the application calls the KMS to generate a data key and it then gets the data key back in its 2 forms. 
-* [GCP](https://cloud.google.com/security-key-management) - the application itself generates the data key and calls the KMS to encrypt it.
+* [GCP](https://cloud.google.com/security-key-management) and [KMIP](http://docs.oasis-open.org/kmip/kmip-spec/v2.1/os/kmip-spec-v2.1-os.html) - the application itself generates the data key and calls the KMS to encrypt it.
 
 Then the application uses the clear/plain form to encrypt the data and it also stores the encrypted data key in order to enabled decrypting it later. The application shall decide whether to reuse a data key for later encryptions or whether to regenerate different ones, either every time or in a predefined frequency.  
 
 For decrypting data, the application shall take the encrypted data key from its storage, call the KMS to decrypt it into its clear/plain form, and use it for decrypting the data.
 
-#### Fabric Working-flow with KMS 
+#### Fabric Working-flow with external KMS 
 
 When a KMS integration is used, Fabric treats KMS's data-key as its master key: 
 
-When integrated with AWS, instead of generating a master key, it calls the AWS KMS to get an encrypted data key. When integrated with GCP, it generates a data key and calls the GCP KMS to encrypt it. Then, Fabric treats the *encrypted* data key as its master key.  
+When integrated with AWS, instead of generating a master key, it calls the AWS KMS to get an encrypted data key. When integrated with GCP or KMIP KMS, it generates a data key and calls the KMS to encrypt/seal it. Then, Fabric treats the *encrypted* data key as its master key.  
 
-To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
+To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt/unseal it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
 
 #### Setup 
 
@@ -147,12 +152,13 @@ As described, the Fabric master-key command refers to its two modules - the key 
 
 * When integrated with AWS, use ``activatekey name='<name>' generatorType='AWS_KMS' storeType='AWS_KMS'``.
 * When integrated with GCP, use ``activatekey name='<name>' generatorType='Java_AES' storeType='GCP_KMS'``.
+* When integrated with KMIP, use ``activatekey name='<name>' generatorType='Java_AES' storeType='KMIP_KMS'``.
 
-> Note: At any point, these commands can be executed with these parameters or their defaults - self generated and self stored master key - and from this point encryptions will be done with the newest key. Fabric will still be able to decrypt data that has been encrypted with previous keys, of any type. For example, if Fabric already works with a self generated master key and at some point it is required to adopt KMS, then configuration should be set in the config.ini and then the above relevant ``activatekey`` command (AWS, GCP) shall be executed. 
+> Note: At any point, these commands can be executed with these parameters or their defaults - self generated and self stored master key - and from this point encryptions will be done with the newest key. Fabric will still be able to decrypt data that has been encrypted with previous keys, of any type. For example, if Fabric already works with a self generated master key and at some point it is required to adopt external KMS, then configuration should be set in the config.ini and then the above relevant ``activatekey`` command shall be executed. 
 
 #### Key Rotation
 
-When working with KMS, there are two levels of key rotation: The Fabric master key rotation and the KMS master key rotation. 
+When working with an external KMS, there are two levels of key rotation: The Fabric master key rotation and the KMS master key rotation. 
 
 * Fabric master key rotation is done in Fabric using the ``activatekey `` command and is described [here](#master-key-rotation).
 * KMS master key rotation is done in the KMS according to the master key settings and policy. This rotation is transparent to Fabric, so that KMS decrypts also data keys, sent by Fabric, that were encrypted with older master key versions.
@@ -163,12 +169,12 @@ When required, KMS master key can be replaced. In such case, a new KMS master ke
 
 > Notes:
 >
-> * At AWS, manual key rotation is done only by creating a new master key, that is - using a key replacement. GCP supports manual rotation similar to the automatic rotation, i.e. without replacing the key.
+> * At AWS, manual key rotation is done only by creating a new master key, that is - using a key replacement. Others, like GCP support manual rotation similar to the automatic rotation, i.e. without replacing the key.  
 > * In order to enable Fabric to decrypt older KMS master keys, these keys shall be preserved in the KMS. If it is required to delete them, then before doing it, Fabric migration process should be done on the data, to re-encrypt them with the new master key.
 
 #### Multi Region Support
 
-KMS is usually strictly isolated to a single region, with no sharing of keys, policies or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
+Cloud KMS is usually strictly isolated to a single region, with no sharing of keys, policies or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
 
 * AWS - key should be created as a multi-region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data - which is encrypted in one region - can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
 * GCP - supports a multi-regional key, as well as a "general" key. Best practice recommendations are described [here](https://cloud.google.com/kms/docs/locations#choosing). 
