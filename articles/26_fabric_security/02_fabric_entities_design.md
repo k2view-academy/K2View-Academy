@@ -125,7 +125,7 @@ KMS exposes two-tiered key hierarchy to clients:
 
 The application uses the two forms of the data key - clear/plain and encrypted. While the encrypted form is stored and persistent, the clear/plain form must not be stored anywhere; it just exists at the runtime memory.
 
-The encrypting process is a little different among cloud providers:
+The encrypting process is a little different among providers:
 
 * [AWS](https://aws.amazon.com/kms/) - the application calls the KMS to generate a data key and it then gets the data key back in its 2 forms. 
 * [GCP](https://cloud.google.com/security-key-management) and [KMIP](http://docs.oasis-open.org/kmip/kmip-spec/v2.1/os/kmip-spec-v2.1-os.html) - the application itself generates the data key and calls the KMS to encrypt it.
