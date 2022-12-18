@@ -103,7 +103,7 @@ A key can be generated using the following command:
 
 The master key rotation supports the LUI encryption master key. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled daily or weekly job, calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt data from all instances.
 
-Note that the job does not have to be time-based but must be triggered by any other condition such as the number of LUIs per node.
+Note that the job does not have to be time-based, but it can be triggered by any other conditions such as the number of LUIs per node.
 
 Master key rotation enables generating and activating a new master key. The new master key impacts Instance IDs saved in Cassandra from the moment they are generated onwards. The existing Instance IDs are not impacted by the new key until they are next synced and saved in Cassandra.
 
