@@ -6,7 +6,7 @@
 
 ### The Logical Unit 
 
-Most database management systems store data in silos, organized according to the type of data stored. For example: customer data, financial data, address data or device data. When data is required, hundreds or thousands of tables may need to be queried using complex joins in order to deliver the information. This process is very cumbersome, complex and time consuming. Most importantly, data safety is challenged and security is increasingly compromised each time these tables are accessed. 
+Most database management systems store data in silos, organized according to the type of data stored, e.g., customer data, financial data, address data and device data. When data is required, hundreds or thousands of tables may need to be queried using complex joins in order to deliver the information. This process is very cumbersome, complex and time consuming. Most importantly, data safety is challenged and security is increasingly compromised each time these tables are accessed. 
 
 Fabric's unique data approach offers a new paradigm for data management, especially when it comes to protecting data integrity. This approach uses a *Logical Unit*. Fabric uses the Logical Unit to store and enable access to data using an entity-centric predefined structure that considerably reinforces its security and integrity as each entity is stored separately within a *Logical Unit Instance*. Each time data is accessed, a *Logical Unit Instance* is created or updated, based on a sync policy. 
 
