@@ -2,10 +2,10 @@
 
 The following steps are used to create an environment in Fabric:
 
-1. Creating the environment in the Fabric Studio using the Environments List.
-2. Populating the connection details of the interfaces via the Selected Environment.
-3. Overriding Globals at any Shared, Reference or LU level via the dedicated tab in the Selected Environment grid.   
-4. Deploying all environments to the server while defining the active environment.
+1. Creating the environment in the Fabric Studio using the Environments window.
+2. Populating the connection details of the interfaces via the selected environment.
+3. Overriding Globals at any Shared, Reference or LU level via the dedicated tab in the selected environment view.   
+4. Deploying all environments to server.
 
 ### Step 1 - Creating the Environment
 
@@ -48,13 +48,13 @@ Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) f
 
 The following activities can be done on each environment:
 
-* Click the **Test Connection**<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the Test Connection is finished, the results (success or failure) are displayed next to each interface name:
+* Click the **Test Connection**<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the test connection is completed, the results (success or failure icon) are displayed next to each interface name:
 
   <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
 
-* Click the **Delete** <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the Environment.
+* Click the **Delete** <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the environment.
 
-* Click the **Active**<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the Environment.
+* Click the **Active**<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the environment.
 
 </web>
 
@@ -79,7 +79,7 @@ By default, all interfaces are enabled whereby the settings of each interface ca
 
 <web>
 
-Once an Environment is added in the top window area, all DB and non-DB interfaces in the project appear in the left lower window area. You can go over them and populate the relevant connection details such as host and port. 
+Once an environment is added in the top window area, all DB and non-DB interfaces in the project appear in the left lower window area. You can go over them and populate the connection details, such as host and port. 
 
 By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment by clicking the Active toggle in the interface.
 
@@ -92,6 +92,8 @@ By default, all interfaces are enabled whereby the settings of each interface ca
 In addition to the interfaces that are automatically copied to the created environment, Globals can also be overridden per environment via the Globals tab. 
 
 The Globals tab grid has the following columns:
+
+<studio>
 
 <table>
  <tbody> 
@@ -120,7 +122,6 @@ The Globals tab grid has the following columns:
         <td style="width:562px">Explaining why the value has been updated. </td></tr></tbody></table>
 
 
-<studio>
 
 ![image](images/globals_table_with_change.png)
 
@@ -132,10 +133,35 @@ The Globals tab grid has the following columns:
 
 <web>
 
-
+<table>
+ <tbody> 
+     <tr>  
+        <td ><strong>Logical Unit</strong></td>  
+        <td >  
+            <p>(Read only). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p><ul>
+            <li>LU, displays the LU name.</li>
+            <li>References, indicated by "k2_ref".</li>
+            <li>Shared Objects, this column is empty. </li>  </ul>  
+            <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>  </td> </tr>
+     <tr>
+         <td style="width:109px"><strong>Category</strong></td>  
+         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+     <tr>  
+         <td style="width:109px"><strong>Name</strong></td>
+         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+     <tr>  
+         <td style="width:109px"><strong>Value</strong></td>
+         <td style="width:562px">  
+             <p>Displays the value defined for this environment:</p> 
+             <li>If this value is not updated, the Global inherits the original implementation value and the Edit icon is displayed next to the value.</li> 
+             <li>When the value is updated, the Edit icon is replaced by to the Reset icon (as explained below).</li> 
+    </ul></td></tr>
+	<tr><td style="width:109px"><strong>Comments</strong></td>
+        <td style="width:562px">Free text. </td></tr></tbody></table>
 
 <img src="images/globals_table_with_change_WEB.png" alt="image" style="zoom:80%;" />
 
+* Sort and filter can be applied on any of the grid's columns.
 * To edit the Global variable value, click the Edit <img src="images/edit_icon.png"  /> icon and type in the new value. The Edit icon becomes the Reset  <img src="images/reset_icon.png"  />icon, also when this window is next accessed.
 * To revert to the previous value, click the Reset  <img src="images/reset_icon.png"  />icon. Alternatively, select several rows and click the Reset  <img src="images/reset_button.png"  />button.
 
@@ -144,8 +170,8 @@ The Globals tab grid has the following columns:
 Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. 
--  New Global variables cannot be created per environment.
--  When an implementation has been updated, for example: adding a new Global in LU, close and then open the Environment window (after deploying the updated LU) to see the changes in the Globals grid table.
+-  New global variables cannot be created per environment.
+-  When an implementation has been updated, for example: adding a new global variable in LU, deploy the updated LU, close the Environment window and reopen it to see the changes in the Globals grid.
 
 ### Step 4 - Deploying the Environments
 
@@ -173,9 +199,9 @@ Note that environments can be deployed to the Fabric Server either from the [Fab
 
 <web>
 
-Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png"  /> button. 
+Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png"  />button. 
 
-Save of the Environments is performed automatically prior to deploy. If at least one of the Environments has illegal or empty name, the deploy will fail.
+Save of the environments is performed automatically prior to deploying them. If at least one of the environments has illegal or empty name, the deploy will fail.
 
 
 
