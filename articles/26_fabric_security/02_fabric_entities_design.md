@@ -14,7 +14,7 @@ Fabric's unique data approach offers a new paradigm for data management, especia
 
 Fabric encrypts each Logical Unit Instance (LUI) using an AES-256 algorithm along with an initialization vector (IV) and creates a unique encryption key for each LUI. The LUI data can only be read using the Fabric master key, which is also always encrypted. 
 
-This additional atomic-level encryption delivers greater protection for sensitive data and entirely eliminates the chance of a large-scale data breach of your systems. Each entity is uniquely protected and its encryption secrets are not relevant to the other millions or more of entities stored in Fabric.   
+This additional atomic-level encryption provides greater protection of sensitive data, in addition to completely eliminating the risk of a large-scale data breach of systems. Each entity is uniquely protected and its encryption secrets do not effect the other millions (or more) of entities stored in Fabric.   
 
 
 ## Fabric Hashing Mechanism
