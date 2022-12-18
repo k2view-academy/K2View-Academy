@@ -171,7 +171,7 @@ Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. 
 -  New global variables cannot be created per environment.
--  When an implementation has been updated - e.g., adding a new global variable in an LU - deploy the updated LU, close the Environment window and reopen it to see the changes in the Globals grid.
+-  When an implementation has been updated - e.g., adding a new global variable in an LU - deploy the updated LU, close the Environments window and reopen it to see the changes in the Globals grid.
 
 ### Step 4 - Deploying the Environments
 
@@ -199,9 +199,9 @@ Note that environments can be deployed to the Fabric Server either from the [Fab
 
 <web>
 
-Once the environments' definition is completed, deploy them to the server by clicking Deploy Environments <img src="images/deploy_button.png"  />button. 
+Once the environments' definition is completed, deploy them to the server by clicking the **Deploy Environments** <img src="images/deploy_button.png"  /> button. 
 
-The environments' saving is performed automatically, prior to their deployment. If at least one of the environments has either an illegal or an empty name, the deployment would fail.
+The environments' saving is performed automatically, prior to their deployment. If at least one of the environments has an empty name, the deployment would fail.
 
 
 
