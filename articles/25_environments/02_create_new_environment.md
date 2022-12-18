@@ -79,7 +79,7 @@ By default, all interfaces are enabled whereby the settings of each interface ca
 
 <web>
 
-Once an environment is added in the top window area, all DB and non-DB interfaces in the project appear at the bottom left area of the window. You can go over them and populate the connection details, such as host and port. 
+Once an environment is added in the top window area, all DB and non-DB interfaces in the project appear at the bottom left area of the window. You can go over them and populate their connection details, such as a host and a port. 
 
 By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment by clicking the Active toggle in the interface.
 
