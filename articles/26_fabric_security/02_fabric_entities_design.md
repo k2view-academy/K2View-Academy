@@ -54,7 +54,7 @@ Firstly, it encrypts the master key using a *protection key*. To do so, the JAVA
 
 Secondly, following the master key encryption, it is broken into bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using the Cassandra distribution data logic, the parts of the key are stored across different nodes of the cluster. 
 
-> Note: This is done also when Fabric master key is managed externally, when Fabric is integrated with external KMS.
+> Note: This is done also when the Fabric master key is managed externally, when Fabric is integrated with external KMS.
 
 #### Securing the Protection Key
 
