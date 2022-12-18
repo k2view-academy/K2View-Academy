@@ -38,7 +38,7 @@ The following illustration shows how Logical Unit Instances inherit their own pr
 
 Fabric Key Management mechanism, which is responsible for encrypting and decrypting elements, is based on 2 modules: a master key generator and a master key storage, where both are configurable.
 
-By default, Fabric uses its built-in key management mechanism for both modules - generating and storing the master key. Fabric enables integration with external [KMS](#kms) (Key Management Services). External KMS integration is supported since Fabric v6.5.9.
+By default, Fabric uses its built-in key management mechanism for both modules - generating and storing the master key. Fabric enables integration with external [KMS](#kms) (Key Management Services); such integration is supported since Fabric v6.5.9.
 
 > Note that the terminology of Fabric master key is still valid when integrating with external KMS, because internally, towards Fabric  modules, it is used as a master key, responsible for encrypting and decrypting data.
 
