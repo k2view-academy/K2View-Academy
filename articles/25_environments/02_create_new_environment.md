@@ -199,9 +199,9 @@ Note that environments can be deployed to the Fabric Server either from the [Fab
 
 <web>
 
-Once the environments definition is completed, deploy the environments to the server by clicking Deploy Environments <img src="images/deploy_button.png"  />button. 
+Once the environments' definition is completed, deploy them to the server by clicking Deploy Environments <img src="images/deploy_button.png"  />button. 
 
-Save of the environments is performed automatically prior to deploying them. If at least one of the environments has illegal or empty name, the deploy will fail.
+The environments' saving is performed automatically, prior to their deployment. If at least one of the environments has either an illegal or an empty name, the deployment would fail.
 
 
 
