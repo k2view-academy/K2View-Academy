@@ -35,7 +35,7 @@ To define Fabric to work with KMS, the information should first be acquired from
    >  Notes: 
    >
    >  * Relevant config.ini parameters are encrypted and are not saved in the file in their clear/plain form.
-   >  * Changes at the config.ini file shall be done on all Fabric nodes.
+   >  * Changes in the config.ini file shall be done on all Fabric nodes.
    >  * In case a Fabric node already has a trust with AWS (with AWS's user who shall connect to KMS), then ACCESS_KEY_ID and SECRET_ACCESS_KEY can be omitted.
 
 4. In Fabric, run ``activatekey name='<name>' generatorType='AWS_KMS' storeType='AWS_KMS'``.
