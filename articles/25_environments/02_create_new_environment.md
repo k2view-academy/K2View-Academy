@@ -1,6 +1,6 @@
 # Create and Edit Environment
 
-The following steps are used to create an environment in Fabric:
+The following steps are used for creating an environment in Fabric:
 
 1. Creating the environment in the Fabric Studio using the Environments window.
 2. Populating the connection details of the interfaces via the selected environment.
