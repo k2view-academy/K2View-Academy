@@ -97,11 +97,11 @@ A key can be generated using the following command:
 > Notes:
 >
 > * When Fabric is going live, it checks whether a master key already exists and if it does not - it creates it.
-> * The *generator-type* and *store-type* parameters are optional. If not specified, Fabric uses its defaults -  "Java_AES" and "Stripe_AES" respectively.
+> * The *generator-type* and *store-type* parameters are optional. If not specified, Fabric uses its defaults - "Java_AES" and "Stripe_AES" respectively.
 
 ### Master Key Rotation
 
-The master key rotation supports the LUI encryption master key. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled daily or weekly job calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt data from all instances.
+The master key rotation supports the LUI encryption master key. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled daily or weekly job, calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt data from all instances.
 
 Note that the job does not have to be time-based but must be triggered by any other condition such as the number of LUIs per node.
 
@@ -111,11 +111,11 @@ Upon retrieval of a specific Instance ID, Fabric collects the master key's infor
 
 ### External KMS
 
-Fabric supports, since v6.5.9 release, integrations with external KMS (Key Management Service) in order to generate and encrypt its master key.  
+Fabric supports, since v6.5.9 release, integrations with external KMS (Key Management Services) in order to generate and encrypt its master key.  
 
 #### Background
 
-KMS is a service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. Key Management Service is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
+KMS is a service that provides a centralized key management with interfaces to generate, rotate and manage cryptographic keys. KMS is provided by various Cloud providers, with various capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
 
 >  Note: While KMS providers enable working with either symmetric and asymmetric encryption types, Fabric supports the symmetric type and thus the below explanations refer to this type only. 
 
@@ -140,7 +140,7 @@ When a KMS integration is used, Fabric treats KMS's data-key as its master key:
 
 When integrated with AWS, instead of generating a master key, it calls the AWS KMS to get an encrypted data key. When integrated with GCP or KMIP KMS, it generates a data key and calls the KMS to encrypt/seal it. Then, Fabric treats the *encrypted* data key as its master key.  
 
-To encrypt or decrypt data, each Fabric node,  while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt/unseal it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
+To encrypt or decrypt data, each Fabric node, while going live, takes the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt/unseal it. Having the data key in its clear/plain form, Fabric can encrypt and decrypt data.
 
 #### Setup 
 
@@ -177,7 +177,7 @@ When required, KMS master key can be replaced. In such case, a new KMS master ke
 Cloud KMS is usually strictly isolated to a single region, with no sharing of keys, policies or audit information across regions. Yet, KMS providers have solutions in which a key can be used in other regions. 
 
 * AWS - key should be created as a multi-region key. AWS multi-region keys are a set of interoperable KMS keys that have the same key ID and key material, and that can be replicated to different regions. Using multi-region keys, data - which is encrypted in one region - can be decrypted in a different region with the replicated key. For more information read [here](https://aws.amazon.com/blogs/security/encrypt-global-data-client-side-with-aws-kms-multi-region-keys/).
-* GCP - supports a multi-regional key, as well as a "general" key. Best practice recommendations are described [here](https://cloud.google.com/kms/docs/locations#choosing). 
+* GCP - supports a multi-regional key, as well as a 'general' key. Best practice recommendations are described [here](https://cloud.google.com/kms/docs/locations#choosing). 
 
 From Fabric perspective, while its nodes may be able to access a key on any KMS region, it still should be carefully considered due to performance aspects on cross region access.
 
