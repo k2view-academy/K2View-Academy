@@ -42,7 +42,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 ### Multi Region Support
 
-While Fabric might be deployed across several regions, it can use same KMS key which defined at a specific AWS region. it is still may be required to work with [AWS multi region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html). In this article AWS recommends to consider this option carefully. This article also explains the process of multi-region keys creation. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region definitions (key-id is the same).
+While Fabric might be deployed across several regions, it can use the same KMS key, which is defined in a specific AWS region. It still may be required to work with [AWS multi region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html). In this article, AWS recommends to consider this option carefully. This article also explains the process of multi-region keys creation. In such case, config.ini shall be set differently among the Fabric nodes, i.e. with relevant region's definitions (key-id is the same).
 
 
 
