@@ -72,8 +72,8 @@ While Fabric might be deployed across several regions, it can use the same KMS k
       >  Note: 
       >
       >  * Relevant parameters are encrypted and are not saved in the file in their clear/plain form. In addition, the credential file is encrypted and is not saved in its plain/clear form. On runtime, when calling the GCP, Fabric knows to provides it properly, in its plain form. 
-      >  * Changes at the config.ini file shall be done on all Fabric nodes.
-      >  * In case a Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then CREDENTIAL_FILE can be omitted.
+      >  * Changes in the config.ini file shall be done on all Fabric nodes.
+      >  * In case a Fabric node already has a trust with GCP (with GCP's user or role who shall connect to KMS), then the CREDENTIAL_FILE parameter can be omitted.
 
 4. In Fabric, run ``activatekey name='<name>' generatorType='Java_AES' storeType='GCP_KMS'``.
 
