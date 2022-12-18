@@ -171,7 +171,7 @@ Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. 
 -  New global variables cannot be created per environment.
--  When an implementation has been updated, for example: adding a new global variable in LU, deploy the updated LU, close the Environment window and reopen it to see the changes in the Globals grid.
+-  When an implementation has been updated - e.g., adding a new global variable in an LU - deploy the updated LU, close the Environment window and reopen it to see the changes in the Globals grid.
 
 ### Step 4 - Deploying the Environments
 
