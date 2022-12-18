@@ -12,7 +12,7 @@ Fabric's unique data approach offers a new paradigm for data management, especia
 
 ### Logical Unit Instances Encryption
 
-Fabric encrypts each Logical Unit Instance (LUI) using an AES256 algorithm along with an initialization vector (IV) and creates a unique encryption key for each LUI. The LUI data can only be read using the Fabric master key, which is also always encrypted. 
+Fabric encrypts each Logical Unit Instance (LUI) using an AES-256 algorithm along with an initialization vector (IV) and creates a unique encryption key for each LUI. The LUI data can only be read using the Fabric master key, which is also always encrypted. 
 
 This additional atomic-level encryption delivers greater protection for sensitive data and entirely eliminates the chance of a large-scale data breach of your systems. Each entity is uniquely protected and its encryption secrets are not relevant to the other millions or more of entities stored in Fabric.   
 
@@ -40,7 +40,7 @@ Fabric Key Management mechanism, which is responsible for encrypting and decrypt
 
 By default, Fabric uses its built-in key management mechanism for both modules - generating and storing the master key. Fabric enables integration with external [KMS](#kms) (Key Management Services); such integration is supported since Fabric v6.5.9.
 
-> Note that the terminology of Fabric master key is still valid when integrating with external KMS, because internally, towards Fabric  modules, it is used as a master key, responsible for encrypting and decrypting data.
+> Note that the terminology of Fabric master key is still valid when integrating with external KMS, because internally, towards Fabric modules, it is used as a master key, responsible for encrypting and decrypting data.
 
 ### Master Key Generation
 
@@ -50,7 +50,7 @@ The Fabric built-in master-key generator uses strong Java methods aimed for AES 
 
 Fabric stores its master key securely, using the master-key storage mechanism. 
 
-First, it encrypts the master key using a *protection key*. To do so, the JAVA_AES library randomly generates a new 256 bit key using an AES-256 algorithm. Fabric also uses an Initialization Vector algorithm to encrypt the master key. 
+First, it encrypts the master key using a *protection key*. To do so, the JAVA_AES library randomly generates a new 256 bit key using an AES-256 algorithm. Fabric also uses an initialization vector algorithm to encrypt the master key. 
 
 Once the master key is encrypted, it is broken into bytes. Each byte is stored in a separate record in a dedicated Cassandra table. Using the Cassandra distribution data logic, the parts of the key are stored across different nodes of the cluster. 
 
