@@ -6,7 +6,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 This job is executed on each Reference table by the [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) of the Extract task and populates the Reference table in the Cassandra DB. It selects the data of the Reference table from the source DB. The source DB Interface Name and Schema Name settings are taken from trnRefList. The job creates the Reference Cassandra table - in case it does not exist - and then selects the data from the source table and populates it into the Cassandra table. 
 
-The job updates the status of the processed Reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
+The  job updates the status of the processed Reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
 - If the copy succeeds, it sets the status to **completed**.
 - If the copy fails, it sets the status to **failed** and populates the error_msg field with the error message.
@@ -222,7 +222,6 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   </table>
   
   
-
 - The source data of ENV1 is updated and a new record is added to CUSTOMER_TYPE table for a Government customer type.
 
 - Execute again the regular Extract Task for CUSTOMER_TYPE on ENV1 again:
@@ -295,7 +294,6 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
   </table>
   
   
-
 - The table is re-populated by the data of ENV1 and ALL version. The records of the specific version of ENV1 - 1234, remain unchanged. 
 
   
