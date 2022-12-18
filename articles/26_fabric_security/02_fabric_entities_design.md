@@ -24,7 +24,7 @@ As part of managing data securely, Fabric hashes keys that point to the data. Fo
 Examples for hashing:
 
 - An **Instance Key** used to encrypt LU Instances is the hashed combination of the LU name it belongs to, its own LU Instance, and the master key.
-- The **Fabric Masking** utility uses Fabric hashing capability when hashing the original value of any encrypted field of a given LUI. 
+- The **Fabric Masking** utility uses Fabric hashing capability for hashing the original value of any encrypted field of a given LUI. 
 
 ## Fabric Encryption: Project Perspective
 
@@ -36,7 +36,7 @@ The following illustration shows how Logical Unit Instances inherit their own pr
 
 ## Key Management
 
-Fabric Key Management mechanism, which is responsible for encrypting and decrypting elements, is based on two modules: a master key generator and a master key storage, where both are configurable.
+Fabric Key Management mechanism, which is responsible for encrypting and decrypting elements, is based on 2 modules: a master key generator and a master key storage, where both are configurable.
 
 By default, Fabric uses its built-in key management mechanism for both modules - generating and storing the master key. Fabric enables integration with  external [KMS](#kms) (Key Management Service). External KMS integration is supported since Fabric v6.5.9.
 
