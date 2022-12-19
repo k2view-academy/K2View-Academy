@@ -4,7 +4,7 @@ Starting with V7.1, Fabric includes a **Reports** application which enables buil
 
 Fabric Reports is implemented using ActiveReportsJS by GrapeCity, and is included in Fabric's license and Fabric installation package. No separate installation or configuration is required. All the Fabric Reports components operate in a web-browser environment. They are embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.html).  
 
-
+![](images/reports_viewer.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
