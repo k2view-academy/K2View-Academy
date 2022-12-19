@@ -31,6 +31,8 @@ By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress*
 
 ### How Do I Gather Statistics in TDM?
 
+#### TDM Task Execution Report
+
 The [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report) includes the Statistics Report tab that compares the number of records in each table in the source and target environments.  
 
 The TDM library includes the **StatsLoader** Broadway actor that populates the statistics data into **task_exe_stats_detailed** TDM DB table. The generated load flows include the following Broadway actors:
@@ -43,5 +45,29 @@ See an example below:
 ![image](images/12_tdm_err_stat_02.PNG)
 
 
+
+#### TDM Custom TMX Statistics
+
+Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. In addition Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for a better monitoring. 
+
+TDM 7.5.3 adds the following customized TMX metrics to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
+
+- **TotalLoadedRecordsPerLoadFlow** - number of records loaded to the target DB by per load Broadway flow. The following information is provided:
+
+  - LU name (luName)
+  - Table name (tableName)
+  - Flow name (flowName)
+  - Number of records (RecCount)
+
+  Note that this metric has been added since the **broadwayFlow** JMX metric provides data about the number of flow's execution and not about the total number of records, loaded by each flow. 
+
+- **TaskExecutionPerBE** - number of task executions per Business Entity (BE). The following information is provided:
+
+  - BE name (beName)
+  - Number of executions (RecCount)
+
+- **TotalTaskExecutions** - total number of task executions. Note that each task execution is accumulated as one execution even if the task contains multiple LUs.
+
+- **TotalTaskExecutionsPerStatus** - total number of task executions per execution status. Note that each task execution is accumulated as one execution even if the task contains multiple LUs. 
 
 [![Previous](/articles/images/Previous.png)](11_tdm_implementation_using_generic_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
