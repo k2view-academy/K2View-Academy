@@ -36,6 +36,10 @@ The target DBs are empty and the source DBs are populated with customers.
 
 ### Creating the Demo DBs in the Local PostgreSQL DB
 
+2 Options:
+
+I.
+
 1. Download and extract **TDM_Demo_DBs.zip** file. This file contains the SQL script and the DB backup files from the **Demo DBs** directory.
 
 2. Create the demo databases in PostgreSQL: 
@@ -72,6 +76,14 @@ The target DBs are empty and the source DBs are populated with customers.
 
 Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installation](/articles/TDM/tdm_configuration/01_tdm_installation.md#create-the-tdm-postgresql-db-in-case-of-new-installation).
 
+
+
+II.
+
+Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM LU. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
+
+
+
 ## Fabric Implementation
 
 1. Open the Fabric Studio and create a new project.
@@ -85,6 +97,10 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
 ##  TDM GUI Definitions
+
+2 Options:
+
+I.
 
 1. Create a Customer Business Entity (BE) that includes the following LUs:
    - Customer
@@ -123,6 +139,12 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 ​     
 
 See instructions on how to work with the TDM GUI in the following [link](/articles/TDM/tdm_gui/README.md).
+
+
+
+II. 
+
+Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM LU. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
 
 
 

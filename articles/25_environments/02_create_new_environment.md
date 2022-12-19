@@ -65,7 +65,7 @@ The following activities can be done on each environment:
 
 Once **Name** in the **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a separate tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
 
-By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment.
+By default, all interfaces are enabled. However each interface can be disabled if it is not applicable for the environment. 
 
 1. Select the interface and enable or disable it for the environment by either:
    * Clicking the **Enabled** column checkbox.
@@ -79,9 +79,9 @@ By default, all interfaces are enabled whereby the settings of each interface ca
 
 <web>
 
-Once an environment is added (upper part of the window), all DB and non-DB interfaces in the project appear at the bottom left area of the window. You can go over them and populate their connection details, such as a host and a port. 
+Once an environment is added (upper part of the window), all DB and non-DB interfaces in the project appear at the bottom left area of the window. You can go over them and populate their connection details, such as Host and Port. 
 
-By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment by clicking the Active toggle in the interface.
+By default, all interfaces are enabled. However each interface can be disabled if it is not applicable for the environment. This can be done by clicking the Active toggle in the interface.
 
 <img src="images/25_02_2_WEB.png" alt="image" style="zoom:80%;" />
 
@@ -100,32 +100,34 @@ The Globals tab grid has the following columns:
      <tr>  
         <td ><strong>Logical Unit</strong></td>  
         <td >  
-            <p>(Read only). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p><ul>
+          <p>(Read only). Indicates whether this global variable is defined under either a specific Logical Unit or Shared Objects:</p><ul>
             <li>LU, displays the LU name.</li>
             <li>References, indicated by "k2_ref".</li>
             <li>Shared Objects, this column is empty. </li>  </ul>  
-            <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>  </td> </tr>
+          <p>When a Global with the same name is defined under both Shared Objects and LU, it is displayed twice, accordingly.</p>  </td> </tr>
      <tr>
-         <td style="width:109px"><strong>Category</strong></td>  
-         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+         <td><strong>Category</strong></td>  
+         <td>(Read only). Displays the original category.  </td></tr>
      <tr>  
-         <td style="width:109px"><strong>Name</strong></td>
-         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+         <td><strong>Name</strong></td>
+         <td>(Read only). Displays the name of the variable.</td></tr>
      <tr>  
-         <td style="width:109px"><strong>Value</strong></td>
-         <td style="width:562px">  
-             <p>Displays the value defined for this environment:</p> 
+         <td><strong>Value</strong></td>
+         <td>  
+          <p>Displays the value defined for this environment:</p><ul> 
              <li>If this value is not updated, the Global inherits the original implementation value.</li> 
              <li>When the value is updated, it is displayed in a bold font.</li> 
     </ul></td></tr>
-	<tr><td style="width:109px"><strong>Comment</strong></td>
-        <td style="width:562px">Explaining why the value has been updated. </td></tr></tbody></table>
+	<tr><td><strong>Comment</strong></td>
+        <td>Explaining why the value has been updated. </td></tr></tbody></table>
+
+
 
 
 
 ![image](images/globals_table_with_change.png)
 
--  To edit the Global variable value, type in the new value. The new value becomes bold, also when this window is next accessed.
+-  To edit the Global variable value, type in the new value. The new value becomes **bold** and remains like this also when this window is accessed next time, to indicate that it has been overridden.
 
 -  To revert to the previous value, click the left gray area of the Global variable entry and then click **Reset To Original Values**. 
 
@@ -138,32 +140,33 @@ The Globals tab grid has the following columns:
      <tr>  
         <td ><strong>Logical Unit</strong></td>  
         <td >  
-            <p>(Read only). Indicates whether this is a Shared Object variable or associated to a specific unit / scope:</p><ul>
-            <li>LU, displays the LU name.</li>
-            <li>References, indicated by "k2_ref".</li>
-            <li>Shared Objects, this column is empty. </li>  </ul>  
-            <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>  </td> </tr>
+            <p>(Read only). Indicates whether this global variable is defined under either a specific Logical Unit or Shared Objects:</p><ul>
+            <li>When a Global with the same name but different value (or category) is defined under several LUs or both Shared Objects and an LU, it is displayed in several rows - each row with respective LU name.</li>  
+            <li>When a Global has identical definition under both Shared Objects and all LUs, or when it is defined under Shared Objects only, this field is empty.</li> </ul> </td> </tr>
      <tr>
-         <td style="width:109px"><strong>Category</strong></td>  
-         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+         <td><strong>Category</strong></td>  
+         <td>(Read only). Displays the original category.  </td></tr>
      <tr>  
-         <td style="width:109px"><strong>Name</strong></td>
-         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+         <td><strong>Name</strong></td>
+         <td>(Read only). Displays the name of the variable.</td></tr>
      <tr>  
-         <td style="width:109px"><strong>Value</strong></td>
-         <td style="width:562px">  
-             <p>Displays the value defined for this environment:</p> 
+         <td><strong>Value</strong></td>
+         <td>  
+             <p>Displays the value defined for this environment:</p><ul> 
              <li>If this value is not updated, the Global inherits the original implementation value and the Edit icon is displayed next to the value.</li> 
-             <li>When the value is updated, the Edit icon is replaced by to the Reset icon (as explained below).</li> 
+             <li>When the value is updated, the Edit icon is replaced by the Reset icon (as explained below).</li> 
     </ul></td></tr>
-	<tr><td style="width:109px"><strong>Comments</strong></td>
-        <td style="width:562px">Free text. </td></tr></tbody></table>
+	<tr><td><strong>Comments</strong></td>
+        <td>Comments, free text. </td></tr></tbody></table>
+
+
 
 <img src="images/globals_table_with_change_WEB.png" alt="image" style="zoom:80%;" />
 
-* Sort and filter can be applied on any of the grid's columns.
-* To edit the Global variable value, click the Edit <img src="images/edit_icon.png"  /> icon and type in the new value. The Edit icon becomes the Reset  <img src="images/reset_icon.png"  />icon, also when this window is next accessed.
-* To revert to the previous value, click the Reset  <img src="images/reset_icon.png"  />icon. Alternatively, select several rows and click the Reset  <img src="images/reset_button.png"  />button.
+* Sorting and filtering can be applied on any of the grid's columns.
+* To edit the Global variable's value, click the Edit <img src="images/edit_icon.png"  /> icon and update the value. The Edit icon then becomes the Reset  <img src="images/reset_icon.png"  />icon, so that the user can revert back to the original value. 
+* To revert several values simultaneously, the user can select the required rows and click the Reset  <img src="images/reset_button.png"  />button.
+* The icon remains as Reset <img src="images/reset_icon.png"  /> also when this window is accessed next time, to indicate that the value has been overridden.
 
 </web>
 
