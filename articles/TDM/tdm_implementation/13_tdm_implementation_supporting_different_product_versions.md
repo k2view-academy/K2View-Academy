@@ -27,7 +27,7 @@ Adding or removing LU tables to the LU Schema must be implemented manually.
 
 ### Adding New Columns to an LU Table 
 
-The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window ![image](/articles/03_logical_units/images/03_18_01_toolbar.png).
+The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window .
 
 ### Removing Columns From an LU table
 
@@ -72,7 +72,27 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 
     Add a PAYMENT_METHOD column to the PAYMENT table in the Development environment. This table did not exist in the Production environment. 
 
-    In this case, we create two table populations:
+    In this case, we create two table populations.
+
+    **Examples:**
+
+    
+
+    **LU Populations are based on Broadway flows:**
+
+    1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is PROD:
+
+       ![prod population](images/lu_population_prod_version.png)
+
+    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates in in the LU table. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
+
+       ![prod population](images/lu_population_dev_version.png)
+
+    
+
+    **LU Populations are based on Db Queries:**
+
+    
 
       1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty:
 
