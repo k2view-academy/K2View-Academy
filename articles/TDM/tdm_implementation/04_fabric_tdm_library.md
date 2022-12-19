@@ -5,8 +5,9 @@ The TDM Library has all the utilities required to implement a TDM project and to
 - [Shared Objects](#tdm-library---shared-objects)
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
+- [TDM_Reference](09_tdm_reference_implementation.md) 
 
-The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5.2_LIBRARY.k2export) .
+The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.5.3_LIBRARY.k2export) .
 
 ## TDM Library - Shared Objects
 
@@ -19,14 +20,22 @@ Since the TDM categories contain the product's Web Services, it is recommended t
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
--  **DB_CASSANDRA**: This is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
--  **CASSANDRA_LD**: a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
--  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. Note that if you work on a PostgreSQL with SSL connection, you must edit the custom connection string of the TDM interface as follows:
+- **DB_CASSANDRA**: This is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
+
+- **CASSANDRA_LD**: a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
+
+-  **POSTGRESQL_ADMIN**: This is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
+    
+-  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
+    
+    Note that if you work on a PostgreSQL with SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and TDM interfaces as follows:
+    
     - jdbc:postgresql://[ip address]:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=[full path of the .crt file]
     - Example:
       - jdbc:postgresql://localhost:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=C:\k2view\pgSSL\cert\k2v_CA.crt 
+    
+- **FabricRedis**: This is the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
 
--  **FabricRedis**: This is the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
 -  **TDM_APIDOC_JSON**: This is a local file system interface used to generate the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
     [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
     
@@ -162,19 +171,27 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 
 ### Set a TTL (Time to Leave) on the TDM LUIs
 
-TDM 7.4 enables setting a TTL (time to leave) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
+TDM enables setting a TTL (time to leave) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
 
 - **TDM_LU_RETENTION_PERIOD_TYPE**: by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks, or Years.
 - **TDM_LU_RETENTION_PERIOD_VALUE**: by default, it is populated by 10. **Populate this Global with zero or empty value to avoid setting a TTL on the TDM LUIs**.
 
 ### TDM Deploy Flow
 
-The **deploy.flow** has been added to TDM LU in TDM 7.3. This process runs the following activities upon the TDM LU deployment:
+The **deploy.flow** process runs the following activities upon the TDM LU deployment:
 
 - Verify that the Environment and the Web Services are deployed to Fabric. If these are not deployed to Fabric, give an error message to the user.
+
 - Create the k2masking keyspace in Cassandra if it does not already exist.
+
 - Check if Redis is up. If Redis is not up, give an error message to the user.
-  
+
+- TDM 7.5.3 added a creation of the TDM PostgreSQL DB:
+
+  - Creates the TDMDB database.
+  - Drops and creates the TDM DB tables, sequences, views and functions.
+
+  Note: **you must set the POSTGRESQL_ADMIN interface to be inactive to avoid the recreation of the TDM DB** by the TDM deploy flow.
 
 Edit the **deploy.flow** of the TDM LU before the TDM deployment:
 
@@ -349,6 +366,10 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
 </tbody>
 </table>
 
+
+## TDM_Reference LU
+
+TDM 7.5.3 stores the extracted Reference table in a new LU: TDM_Reference instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)

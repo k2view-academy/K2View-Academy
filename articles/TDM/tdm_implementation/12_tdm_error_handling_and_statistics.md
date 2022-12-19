@@ -66,8 +66,16 @@ TDM 7.5.3 adds the following customized TMX metrics to have a better monitoring 
   - BE name (beName)
   - Number of executions (RecCount)
 
-- **TotalTaskExecutions** - total number of task executions. Note that each task execution is accumulated as one execution even if the task contains multiple LUs.
+- **TaskExecutionPerBEAndStatus** - number of task executions per Business Entity (BE) and execution status. The following information is provided:
 
-- **TotalTaskExecutionsPerStatus** - total number of task executions per execution status. Note that each task execution is accumulated as one execution even if the task contains multiple LUs. 
+  - BE name and execution status, concatenated by '#'. For example: Customer#completed
+
+  - Number of executions (RecCount)
+
+- **TotalTaskExecutions** - total number of task executions. 
+
+- **TotalTaskExecutionsPerStatus** - total number of task executions per execution status.
+
+Note that each task execution is accumulated as one execution even if the task contains multiple LUs.
 
 [![Previous](/articles/images/Previous.png)](11_tdm_implementation_using_generic_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
