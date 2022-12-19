@@ -100,26 +100,27 @@ The Globals tab grid has the following columns:
      <tr>  
         <td ><strong>Logical Unit</strong></td>  
         <td >  
-            <p>(Read only). Indicates whether this global variable is defined under either a specific Logical Unit or Shared Objects:</p><ul>
+          <p>(Read only). Indicates whether this global variable is defined under either a specific Logical Unit or Shared Objects:</p><ul>
             <li>LU, displays the LU name.</li>
             <li>References, indicated by "k2_ref".</li>
             <li>Shared Objects, this column is empty. </li>  </ul>  
-            <p>When a Global with the same name is defined under both Shared Objects and LU, it is displayed twice, accordingly.</p>  </td> </tr>
+          <p>When a Global with the same name is defined under both Shared Objects and LU, it is displayed twice, accordingly.</p>  </td> </tr>
      <tr>
-         <td style="width:109px"><strong>Category</strong></td>  
-         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+         <td><strong>Category</strong></td>  
+         <td>(Read only). Displays the original category.  </td></tr>
      <tr>  
-         <td style="width:109px"><strong>Name</strong></td>
-         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+         <td><strong>Name</strong></td>
+         <td>(Read only). Displays the name of the variable.</td></tr>
      <tr>  
-         <td style="width:109px"><strong>Value</strong></td>
-         <td style="width:562px">  
-             <p>Displays the value defined for this environment:</p> 
+         <td><strong>Value</strong></td>
+         <td>  
+          <p>Displays the value defined for this environment:</p><ul> 
              <li>If this value is not updated, the Global inherits the original implementation value.</li> 
              <li>When the value is updated, it is displayed in a bold font.</li> 
     </ul></td></tr>
-	<tr><td style="width:109px"><strong>Comment</strong></td>
-        <td style="width:562px">Explaining why the value has been updated. </td></tr></tbody></table>
+	<tr><td><strong>Comment</strong></td>
+        <td>Explaining why the value has been updated. </td></tr></tbody></table>
+
 
 
 
@@ -140,25 +141,23 @@ The Globals tab grid has the following columns:
         <td ><strong>Logical Unit</strong></td>  
         <td >  
             <p>(Read only). Indicates whether this global variable is defined under either a specific Logical Unit or Shared Objects:</p><ul>
-            <li>LU, displays the LU name.</li>
-            <li>References, indicated by "k2_ref".</li>
-            <li>Shared Objects, this column is empty. </li>  </ul>  
-            <p>When a Global with the same name is defined under both Shared Objects and LU, it is displayed twice, accordingly.</p>  </td> </tr>
+            <li>When a Global with the same name but different value (or category) is defined under several LUs or both Shared Objects and an LU, it is displayed in several rows - each row with respective LU name.</li>  
+            <li>When a Global has identical definition under both Shared Objects and all LUs, or when it is defined under Shared Objects only, this field is empty.</li> </ul> </td> </tr>
      <tr>
-         <td style="width:109px"><strong>Category</strong></td>  
-         <td style="width:562px">(Read only). Displays the original category.  </td></tr>
+         <td><strong>Category</strong></td>  
+         <td>(Read only). Displays the original category.  </td></tr>
      <tr>  
-         <td style="width:109px"><strong>Name</strong></td>
-         <td style="width:562px">(Read only). Displays the name of the variable.</td></tr>
+         <td><strong>Name</strong></td>
+         <td>(Read only). Displays the name of the variable.</td></tr>
      <tr>  
-         <td style="width:109px"><strong>Value</strong></td>
-         <td style="width:562px">  
-             <p>Displays the value defined for this environment:</p> 
+         <td><strong>Value</strong></td>
+         <td>  
+             <p>Displays the value defined for this environment:</p><ul> 
              <li>If this value is not updated, the Global inherits the original implementation value and the Edit icon is displayed next to the value.</li> 
              <li>When the value is updated, the Edit icon is replaced by the Reset icon (as explained below).</li> 
     </ul></td></tr>
-	<tr><td style="width:109px"><strong>Comments</strong></td>
-        <td style="width:562px">Free text. </td></tr></tbody></table>
+	<tr><td><strong>Comments</strong></td>
+        <td>Comments, free text. </td></tr></tbody></table>
 
 
 
