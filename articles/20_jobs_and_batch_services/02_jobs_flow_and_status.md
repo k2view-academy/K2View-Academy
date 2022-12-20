@@ -146,7 +146,7 @@ When ANY is set to a value greater than zero, the number shows the maximum numbe
 
 
 
-<img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.png">
+<img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG.jpg">
 
 ### **Jobs Optimistic Locking Configuration**
 A configurable parameter **OPTIMISTIC_LOCKING** in the node's config.ini file can be set to support lightweight transactions between nodes to decide on a Job's allocation.
