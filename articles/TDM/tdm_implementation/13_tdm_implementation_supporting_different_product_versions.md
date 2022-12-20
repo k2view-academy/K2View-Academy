@@ -1,6 +1,6 @@
 # TDM Implementation - Supporting Different System Versions
 
-During a project's lifecycle, there might be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
+During a project's lifecycle, there may be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
 
 This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of System (product) Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
 
