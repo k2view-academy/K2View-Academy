@@ -2,7 +2,7 @@
 
 Starting with V7.1, Fabric includes a **Reports** application which enables building interactive pixel-perfect reports. The application supports data binding to a wide variety of JSON data sources by providing flexible connection configuration at design time and rich API for advanced use cases.
 
-Fabric Reports is implemented using *ActiveReportsJS* by GrapeCity, and is included in Fabric's license and installation package. No separate installation or configuration is required. Fabric Reports operates in a web-browser environment, embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.html).  
+Fabric Reports is implemented using *ActiveReportsJS* by GrapeCity, and is included in Fabric's license and installation package. No separate installation or configuration is required. Fabric Reports operates in a web-browser environment, embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md).  
 
 Fabric Reports application include the Designer and Viewer components:
 
