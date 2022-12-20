@@ -1,10 +1,13 @@
-# Report Creation And Data Binding
+# Create New Report
 
-### Overview
+Report creation includes the following steps:
 
-The report creation starts from adding a data source, data set(s) and the parameter(s). Then  you can define the data binding between the report elements and the data set's fields. Last but not the least, set the report's layout design (fonts, colors, etc.).
+1. Start from adding a data source and data set(s). 
+2. Validate the data set(s) and define the input parameter(s).
+3. Create the data binding between the report elements and the data set's fields. 
+4. Set the report's layout design (fonts, colors, etc.).
 
-This article provides a step-by-step guide of how to create a report and perform data binding. The next article explains how to define the report's properties.
+This article describes how to create a report and defines its data source and data set(s). Further articles of this guide explain the following steps of the report creation.
 
 ### New Report
 
@@ -22,11 +25,11 @@ To create a data source, click the ![](images/add_icon.png) icon in the **Data S
 
 - The **custom data source** is an empty template that allows defining any required endpoint, by setting the following properties:
 
-  - Endpoint - either a full or base URL of your REST API. Then the endpoint paths are appended by using data sets (they are described further).
+  - **Endpoint**, either a full or base URL of your REST API. Then the endpoint paths are appended by using data sets (they are described further).
 
-  - HTTP Headers - the collection of HTTP Header fields that are passed with the request. 
+  - **HTTP Headers**, the collection of HTTP Header fields that are passed with the request. 
 
-  - Query Parameters - the collection of (name, value) pairs that define the Query String of the URL.
+  - **Query Parameters**, the collection of (name, value) pairs that define the Query String of the URL.
 
 ### Data Set Configuration
 
@@ -39,11 +42,11 @@ To create a data set, click the ![](images/plus_icon.png) icon near the data sou
   * **luQuery**, defined by lu/Customer/{@iid} Fabric endpoint.
   * **commonTable**, defined by common/{table} Fabric endpoint.
   * **command_get**, defined by fabric-command Fabric endpoint.
-* The customer data set is an empty template that allows defining any required endpoint.
-
-
-
-
+* The customer data set is an empty template that allows defining any required endpoint, by setting the following properties:
+  * **Uri/path**, the value depends on the configuration of the parent data source. If the data source's endpoint is the full URL, the data set's Uri/path should be empty. If however the data source's endpoint is the base URL, then the data set's Uri/path should contain the full URL of the data endpoint.
+  * **Method**, specifies the request method. The supported methods are GET and POST.
+  * **Parameters** and **Headers**, the purpose of these properties is the same as one of **Query Parameters** and **HTTP Headers** properties of the data source. 
+  * **Json Path**, JSON data endpoints can retrieve the data of various shapes, and there is no standardized data structure. Hence, it is required to specify the structure using the [JSONPath expression](https://goessner.net/articles/JsonPath/). You can use `$.*` or `$[*]` JSONPath expression to specify the repeated data fragments.
 
 
 
