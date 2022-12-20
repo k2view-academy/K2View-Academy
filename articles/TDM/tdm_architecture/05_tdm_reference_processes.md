@@ -43,7 +43,7 @@ The reference_table LU table keeps the reference tata. The LU table has the foll
 - TABLE_NAME - populated with the reference table name. For example: CUSTOMER_TYPE.
 - TDM_TASK_EXECUTION_ID - populated - by default - by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - SOURCE_ENV_NAME - populated by the source environment.
-- TABLE_DATA - a text field, which contains a JSON with the selected source record.
+- TABLE_DATA - the table data is extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
 - RECORD_COUNT - number of records of the reference table.
 - TABLE_FIELDS - list of the reference table's fields.
 
@@ -131,12 +131,8 @@ The reference_table LU table keeps the reference tata. The LU table has the foll
   <tr class="md-end-block">
   <td style="width: 161.432px;"><span class="td-span"><span class="md-plain">ENV1</span></span></td>
   <td style="width: 172.591px;"><span class="td-span"><span class="md-plain">ALL</span></span></td>
-  <td style="width: 83.5114px;"><span class="td-span"><span class="md-plain">{"customer_type":"I","customer_sub_type":"P","description":"Private customer"}<br /></span></span></td>
-  </tr>
-  <tr class="md-end-block md-focus-container">
-  <td style="width: 161.432px;"><span class="td-span"><span class="md-plain">ENV1</span></span></td>
-  <td style="width: 172.591px;"><span class="td-span"><span class="md-plain">ALL</span></span></td>
-  <td style="width: 83.5114px;"><span class="td-span"><span class="md-plain">{"customer_type":"B","customer_sub_type":"S","description":"Small business"}</span></span></td>
+  <td style="width: 83.5114px;"><span class="td-span"><span class="md-plain">[{"customer_type":"I","customer_sub_type":"P","description":"Private customer"},
+      {"customer_type":"B","customer_sub_type":"S","description":"Small business"}]<br /></span></span></td>
   </tr>
   </tbody>
   </table>
@@ -159,18 +155,13 @@ The reference_table LU table keeps the reference tata. The LU table has the foll
   <tr class="md-end-block" style="height: 36px;">
   <td style="width: 161px; height: 36px;"><span class="td-span"><span class="md-plain">ENV1</span></span></td>
   <td style="width: 172px;"><span class="td-span"><span class="md-plain">1234</span></span></td>
-  <td style="width: 492px;"><span class="td-span"><span class="md-plain">{"customer_type":"I","customer_sub_type":"P","description":"Private customer"}</span></span></td>
-  </tr>
-  <tr class="md-end-block md-focus-container" style="height: 36px;">
-  <td style="width: 161px; height: 36px;"><span class="td-span"><span class="md-plain">ENV1</span></span></td>
-  <td style="width: 172px;"><span class="td-span"><span class="md-plain">1234</span></span></td>
-  <td style="width: 492px;"><span class="td-span"><span class="md-plain">{"customer_type":"B","customer_sub_type":"S","description":"Small business"}</span></span></td>
+  <td style="width: 492px;"><span class="td-span"><span class="md-plain">[{"customer_type":"I","customer_sub_type":"P","description":"Private customer"}, {"customer_type":"B","customer_sub_type":"S","description":"Small business"}]</span></span></td>
   </tr>
   </tbody>
   </table>
-
   
-
+  
+  
 - Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2. A new LUI is created: 
 
   The LUI is Customer|ENV2|ALL|CUSTOMER_TYPE.
@@ -187,30 +178,18 @@ The reference_table LU table keeps the reference tata. The LU table has the foll
   <tr style="height: 18px;">
   <td style="width: 161.432px; height: 18px;"><span class="td-span"><span class="md-plain">ENV2</span></span></td>
   <td style="width: 172.591px; height: 18px;"><span class="td-span"><span class="md-plain"> ALL</span></span></td>
-  <td style="width: 492.557px; height: 18px;"><span class="td-span"><span class="md-plain">{"customer_type":"I","customer_sub_type":"P","description":"Private customer"}<br /></span></span></td>
-  </tr>
-  <tr style="height: 18px;">
-  <td style="width: 161.432px; height: 18px;"><span class="td-span"><span class="md-plain"> ENV2</span></span></td>
-  <td style="width: 172.591px; height: 18px;"><span class="td-span"><span class="md-plain"> ALL</span></span></td>
-  <td style="width: 492.557px; height: 18px;"><span class="td-span"><span class="md-plain">{"customer_type":"B","customer_sub_type":"S","description":"Small business"}</span></span></td>
-  </tr>
-  <tr style="height: 18px;">
-  <td style="width: 161.432px; height: 18px;"><span class="td-span"><span class="md-plain"> ENV2</span></span></td>
-  <td style="width: 172.591px; height: 18px;"><span class="td-span"><span class="md-plain"> ALL</span></span></td>
-  <td style="width: 492.557px; height: 18px;"><span class="td-span"><span class="md-plain">{"customer_type":"B","customer_sub_type":"M","description":"Medium business"}<br /></span></span></td>
-  </tr>
-  <tr style="height: 18px;">
-  <td style="width: 161.432px; height: 18px;"><span class="td-span"><span class="md-plain"> ENV2</span></span></td>
-  <td style="width: 172.591px; height: 18px;"><span class="td-span"><span class="md-plain"> ALL</span></span></td>
-  <td style="width: 492.557px; height: 18px;"><span class="td-span"><span class="md-plain">{"customer_type":"B","customer_sub_type":"C","description":"Corporate customer"}</span></span></td>
+  <td style="width: 492.557px; height: 18px;"><span class="td-span"><span class="md-plain">[{"customer_type":"I","customer_sub_type":"P","description":"Private customer"}, {"customer_type":"B","customer_sub_type":"S","description":"Small business"},
+  {"customer_type":"B","customer_sub_type":"M","description":"Medium business"},
+  {"customer_type":"B","customer_sub_type":"C","description":"Corporate customer"}]<br /></span></span></td>
   </tr>
   </tbody>
   </table>
-
   
-
   
-
+  
+  
+  
+  
   
 
 

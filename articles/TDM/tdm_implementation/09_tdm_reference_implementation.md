@@ -51,12 +51,6 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
   
 
-### Step 2 - Create and Execute TDM Extract Tasks
-
-TDM extract tasks store the selected Reference data in the related Cassandra DB table.
-
-Click for more information on how the [TDM stores Reference tables in the Cassandra DB](/articles/TDM/tdm_architecture/05_tdm_reference_processes.md#reference-cassandra-table).
-
 ### Step 3 - Create and Execute TDM Tasks
 
 TDM 7.5.3 enables running extract and load tasks on reference tables, i.e. the task extracts the reference table into Fabric and loads it to the target environment. 
