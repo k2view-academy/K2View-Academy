@@ -30,8 +30,6 @@ Examples:
 
 
 
-Each record of the reference table is kept in a  text field, which contains a JSON with the record data. For example:  {"customer_type":"I","customer_sub_type":"P","description":"Private customer"}
-
 Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property to enable a recurring sync of the reference table from the source environment. 
 
 
@@ -159,7 +157,6 @@ The reference_table LU table keeps the reference tata. The LU table has the foll
   </tr>
   </tbody>
   </table>
-  
   
   
 - Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2. A new LUI is created: 
