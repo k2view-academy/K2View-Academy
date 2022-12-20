@@ -25,9 +25,9 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 - **CASSANDRA_LD**: a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
 
 -  **POSTGRESQL_ADMIN**: This is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
-    
+   
 -  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
-    
+   
     Note that if you work on a PostgreSQL with SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and TDM interfaces as follows:
     
     - jdbc:postgresql://[ip address]:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=[full path of the .crt file]
@@ -189,9 +189,9 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 - TDM 7.5.3 added a creation of the TDM PostgreSQL DB:
 
   - Creates the TDMDB database.
-  - Drops and creates the TDM DB tables, sequences, views and functions.
+  - Drops and recreates the TDM DB tables, sequences, views and functions.
 
-  Note: **you must set the POSTGRESQL_ADMIN interface to be inactive to avoid the recreation of the TDM DB** by the TDM deploy flow.
+  Note: **you must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the  TDM DB** by the TDM deploy flow.
 
 Edit the **deploy.flow** of the TDM LU before the TDM deployment:
 
