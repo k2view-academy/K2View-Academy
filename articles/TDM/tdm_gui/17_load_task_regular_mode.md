@@ -99,9 +99,13 @@ This is the **default option**. Populate the list of entities for the task with 
 
 ### Custom Logic
 
-Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
+Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task.
 
-TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
+TDM supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
+
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+
+See example:
 
 ![custom logic](images/load_task_requested_entities_custom_logic_2.png)
 
@@ -109,7 +113,7 @@ TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In t
 
 Note:
 
-- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
+- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or NY,LA. 
 
 ### Parameters 
 
@@ -136,6 +140,16 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
     Example:
 
     - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters. 
+
+#### Filter out Reserved Entities Checkbox
+
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
+
+For example:
+
+- There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's environments.
+- If the Filter out Reserved Entities is checked, the Entities Matched is 490.
+-   If the Filter out Reserved Entities is cleared, the Entities Matched is 500.
 
 #### How Do I Add a Condition? 
 
@@ -217,6 +231,10 @@ Testers may select this option only if they are permitted to clone an entity in 
 Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for another user are excluded from the selected entities. 
 
 Testers can select this option only if they are permitted to do so in the task's target environment.
+
+#### Filter out Reserved Entities Checkbox
+
+The **Filter out Reserved Entities** checkbox indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list. 
 
 
 

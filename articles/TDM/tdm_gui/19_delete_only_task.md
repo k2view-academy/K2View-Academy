@@ -53,9 +53,13 @@ This is the **default option**. Populate the list of entities for the task, sepa
 
 ### Custom Logic
 
-Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task:![custom logic](images/delete_task_requested_entities_custom_logic.png)
+Select a Broadway flow to get the entity list for the task and set the maximum number of entities for the task
 
-TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
+TDM supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
+
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and  indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+
+See example:
 
 ![custom logic](images/delete_task_requested_entities_custom_logic_2.png)
 
@@ -63,6 +67,6 @@ TDM 7.5 supports the creation of external input parameters on a Custom Logic Flo
 
 Note:
 
-- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
+- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or NY,LA. 
 
  [![Previous](/articles/images/Previous.png)](18_load_task_data_versioning_mode.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](20_reserve_only_task.md)
