@@ -3,6 +3,6 @@
 
 <ul>
 	<li><a href="/articles/38_reports/01_reports_overview.md">Reports Overview</a></li>
-	<li><a href="/articles/38_reports/02_create_new_report.md">Create New Report</a></li>
+	<li><a href="/articles/38_reports/02_create_new_report.md">Report Creation</a></li>
 	<li><a href="/articles/38_reports/03_data_set_validation.md">Data Set Validation</a></li>
 </ul>

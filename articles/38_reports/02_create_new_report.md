@@ -1,13 +1,13 @@
-# Create New Report
+# Report Creation
 
-Report creation includes the following steps:
+Report creation is comprised of the following steps:
 
-1. Start from adding a data source and data set(s). 
+1. Define a data source and data set(s) in an empty report canvas. 
 2. Validate the data set(s) and define the input parameter(s).
 3. Create the data binding between the report elements and the data set's fields. 
 4. Set the report's layout design (fonts, colors, etc.).
 
-This article describes how to create a report and defines its data source and data set(s). Further articles of this guide explain the following steps of the report creation.
+This article describes how to create a report and define its data source and data set(s). Further articles of this guide explain the following steps of the report creation.
 
 ### New Report
 
