@@ -43,7 +43,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **table_pk_list** - an optional setting. Populated by the list of target's PK fields in trnRefList. These fields can be later used to customized the load flow to run an Upsert on the target reference table.
 
-- **truncate** - by default the TDM runs a delete on the reference table in the target environment before loading it. If you have permissions to run a truncate on the target reference table and you need to use the target instead of the delete (for example, the target DB is Cassandra), set this indicator to true.
+- **truncate** - by default the TDM runs a delete on the reference table in the target environment before loading it. If you have permissions to run a truncate on the target reference table and you need to use the truncate instead of the delete (for example, the target DB is Cassandra), set this indicator to true.
 
 - **count_indicator** - sets to true by default to count the number of records in the source or target to monitor the task execution. Set the indicator to false to avoid counting the records in the target if needed.
 
