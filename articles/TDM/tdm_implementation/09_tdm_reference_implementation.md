@@ -45,7 +45,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **truncate** - by default the TDM runs a delete on the reference table in the target environment before loading it. If you have permissions to run a truncate on the target reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
-- **count_indicator** - sets to true by default to count the number of records in the source or target to monitor the task execution. Set the indicator to false to avoid counting the records in the target if needed.
+- **count_indicator** - sets to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
 - **count_bf** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target. 
 
