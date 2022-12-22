@@ -134,7 +134,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
          return decision;
          ```
 
-  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file, since the TDM Logic File already contains the TDM product functions.
+  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file because the TDM Logic File already contains the TDM product functions.
 
 ## Update Broadway Load Flows
 
