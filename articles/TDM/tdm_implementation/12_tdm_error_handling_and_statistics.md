@@ -11,7 +11,7 @@ The TDM library includes 2 utility flows that handle errors during the execution
 * PopulateTableErrorsWithFailed.flow
 * PopulateTableErrorsWithReject.flow
 
-Both utilities invoke the internal **PopulateTableErrors.flow** in order to populate data about errors into the **task_exe_error_detailed** table. The difference between the utilities is that PopulateTableErrorsWithFailed.flow sets on a session level:
+Both utilities invoke the internal **PopulateTableErrors.flow** in order to populate data about errors into the **task_exe_error_detailed** table. The difference between the utilities is that PopulateTableErrorsWithFailed.flow sets the entity_status on a session level:
 
 ~~~
 ENTITY_STATUS = failed 
@@ -48,7 +48,7 @@ See an example below:
 
 #### TDM Custom TMX Statistics
 
-Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. In addition Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for a better monitoring. 
+Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. Additionally, Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for a better monitoring. 
 
 TDM 7.5.3 adds the following customized JMX metrics to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
 
