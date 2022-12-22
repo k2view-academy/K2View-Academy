@@ -38,7 +38,7 @@ The [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#g
 The TDM library includes the **StatsLoader** Broadway actor that populates the statistics data into **task_exe_stats_detailed** TDM DB table. The generated load flows include the following Broadway actors:
 
 - **StatsReader** - gets the load statistics from the **DbLoad** actor that loads the data to the target DB. 
-- **StatsLoader** - gets the statistical information from the StatsReader and populates them in task_exe_stats_detailed TDM DB table. This table is extracted by the [task execution report API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/07_get_task_execution_reports_APIs.md#get-task-execution-summary-report) to generate the Statistics Report tab of the Task Execution Report. 
+- **StatsLoader** - gets the statistical information from the StatsReader and populates it in task_exe_stats_detailed TDM DB table. This table is extracted by the [task execution report API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/07_get_task_execution_reports_APIs.md#get-task-execution-summary-report) to generate the Statistics Report tab of the Task Execution Report. 
 
 See an example below:
 
