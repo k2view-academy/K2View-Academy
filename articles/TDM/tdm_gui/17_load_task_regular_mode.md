@@ -44,10 +44,10 @@ This setting enables the user to change the [default LUI sync mode](/articles/14
 - **Refresh all Data from Source** - extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
 Notes:
-- This setting is **only available when the Data Versioning checkbox is cleared (regular task)**.  A Load Data Versioning task gets the data version from the TDM warehouse (Fabric) and reloads it to the target environment.
+- This setting is **only available when the Data Versioning checkbox is cleared (regular task)**. A Load Data Versioning task gets the data version from the TDM warehouse (Fabric) and reloads it to the target environment.
 - The **Do Not Sync From Source Data** option is not displayed if the user selects a combination of Extract and Load task types.
 
-Click for more information on [how overriding the Sync mode and the Task Operation mode impact the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
+Click for more information on [how overriding the Sync mode and the Task Operation mode impacts the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
 ### Reservation Period
 
@@ -127,7 +127,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
 #### Use Parameters with Random Selection Checkbox
 
-  The Parameters selection has two modes: 
+  The Parameters selection has 2 modes: 
 
   - When checked (default), TDM randomly selects the entities from the list of all entities, those that match the selected parameters whereby each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**. 
 
@@ -149,7 +149,7 @@ For example:
 
 - There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's environments.
 - If the Filter out Reserved Entities is checked, the Entities Matched is 490.
--   If the Filter out Reserved Entities is cleared, the Entities Matched is 500.
+- If the Filter out Reserved Entities is cleared, the Entities Matched is 500.
 
 #### How Do I Add a Condition? 
 
