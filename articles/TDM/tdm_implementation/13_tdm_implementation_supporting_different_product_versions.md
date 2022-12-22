@@ -15,7 +15,7 @@ The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_pro
 
 - **TDM_TARGET_PRODUCT_VERSION**, populated by the system's version of the task's target environment.
 
-The TDM implementation can get the values of these Globals to check the source and target system version of each execution.
+The TDM implementation can get the values of these Globals in order to check the source and target system version of each execution.
 
 ## Update LU Schema
 
