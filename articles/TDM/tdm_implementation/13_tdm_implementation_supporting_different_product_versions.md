@@ -72,7 +72,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 
     Add a PAYMENT_METHOD column to the PAYMENT table in the Development environment. This table did not exist in the Production environment. 
 
-    In this case, we create two table populations.
+    In this case, we create 2 table populations.
 
     **Examples:**
 
