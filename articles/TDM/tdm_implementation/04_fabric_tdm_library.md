@@ -242,7 +242,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
 
 ### LU Tables
 
-- **FABRIC_TDM_ROOT**, the Root table of each LU. This table contains the following columns:
+- **FABRIC_TDM_ROOT** - the Root table of each LU. This table contains the following columns:
 
   - K2_TDM_EID - populated by the LU instance ID. 
   - IID - populated by the entity ID without the concatenation of the source environment, version name and version datetime.
@@ -307,11 +307,11 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
   </tr>
   </table>
 
-- **LU_PARAMS**, parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** - parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
-- **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID**, TDM relationship tables that map the parent to child IDs. Note that these tables are also created in the TDM DB.
+- **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** - TDM relationship tables that map the parent to child IDs. Note that these tables are also created in the TDM DB.
 
   Click for more information about [TDM Hierarchy implementation](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md).
 
