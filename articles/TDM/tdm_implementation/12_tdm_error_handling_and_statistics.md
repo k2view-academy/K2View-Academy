@@ -6,12 +6,12 @@ These generic flows gather errors and statistics during task execution and popul
 
 ### How Do I Perform Error Handling in TDM?
 
-The TDM library includes two utility flows that handle errors during the execution of TDM tasks:
+The TDM library includes 2 utility flows that handle errors during the execution of TDM tasks:
 
 * PopulateTableErrorsWithFailed.flow
 * PopulateTableErrorsWithReject.flow
 
-Both utilities invoke the internal **PopulateTableErrors.flow** to populate data about errors into the **task_exe_error_detailed** table. The difference between the utilities is that PopulateTableErrorsWithFailed.flow sets on a session level:
+Both utilities invoke the internal **PopulateTableErrors.flow** in order to populate data about errors into the **task_exe_error_detailed** table. The difference between the utilities is that PopulateTableErrorsWithFailed.flow sets on a session level:
 
 ~~~
 ENTITY_STATUS = failed 
