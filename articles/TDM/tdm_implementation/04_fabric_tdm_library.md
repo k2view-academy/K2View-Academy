@@ -49,7 +49,7 @@ Import the list of shared [global variables](/articles/08_globals/01_globals_ove
 
 TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 
-Import the TDM shared functions to your project. Note that since the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) to simplify upgrading the TDM version.
+Import the TDM shared functions to your project. Note that since the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
 
 ### Shared Translations
 
