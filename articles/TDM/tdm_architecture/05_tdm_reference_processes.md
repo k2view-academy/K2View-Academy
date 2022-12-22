@@ -8,9 +8,9 @@ Previous TDM versions stored the extracted reference tables in the Cassandra DB:
 
 ## Task Execution Job
 
-The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows to get the reference table into Fabric (TDM_Reference LU) and load it to the target for a load task. 
+The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows in order to get the reference table into Fabric (TDM_Reference LU) and load it to the target for a load task. 
 
-The  job updates the status of the processed reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
+The job updates the status of the processed reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
 - If the process succeeds, it sets the status to **completed**.
 - If the process fails, it sets the status to **failed** and populates the error_msg field with the error message.
@@ -30,13 +30,13 @@ Examples:
 
 
 
-Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property to enable a recurring sync of the reference table from the source environment. 
+Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
 
 
 
 ### TDM_Refrence LU - reference_table LU Table 
 
-The reference_table LU table keeps the reference tata. The LU table has the following fields:
+The reference_table LU table keeps the reference data. The LU table has the following fields:
 
 - TABLE_NAME - populated with the reference table name. For example: CUSTOMER_TYPE.
 - TDM_TASK_EXECUTION_ID - populated - by default - by **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
