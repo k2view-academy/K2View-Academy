@@ -199,7 +199,7 @@ Edit the **deploy.flow** of the TDM LU before the TDM deployment:
 
 ### TDM LU Deployment
 
-Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric to avoid a parallel execution of TDM jobs on the same TDM DB. 
+Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option, or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric in order to avoid a parallel execution of TDM jobs on the same TDM DB. 
 
 
 ## TDM_LIBRARY LU
