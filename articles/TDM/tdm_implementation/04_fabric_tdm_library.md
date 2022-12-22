@@ -144,7 +144,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p><h5>trnTDMCleanUp</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of the TDM DB tables to be cleaned by the <a href= "/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md">TDM clean-up process</a>. The translation defines the Delete statement on each table and a clean-up indicator indicating whether the table should be cleaned by the TDM clean-up process.</p>
+<p>Define the list of the TDM DB tables to be cleaned by the <a href= "/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md">TDM clean-up process</a>. The translation defines the Delete statement on each table and a clean-up indicator indicates whether the table should be cleaned by the TDM clean-up process.</p>
 </td>
 <td valign="top" width="400pxl">
   <p>Clear the <strong>cleanup_ind</strong> to remove a table from the clean-up process. TDM tables can be added and Delete statements can be edited. </p>
