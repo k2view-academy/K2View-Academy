@@ -27,7 +27,7 @@ Adding or removing LU tables to/from the LU Schema must be implemented manually.
 
 ### Adding New Columns to an LU Table 
 
-The new columns can be added manually or added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window .
+The new columns can be added either manually or by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window.
 
 ### Removing Columns From an LU table
 
@@ -35,11 +35,11 @@ Removing columns from an LU table must be implemented manually.
 
 ### Support of Multiple System Versions
 
-It could be that new columns or new tables have been added to a table by a more recent system version. 
+It is a possibility that new columns or new tables have been added to a table by a more recent system version. 
 
 Examples:
 
-- Adding a new table, PAYMENT_DETAILS, to the  Development environment. This table did not exist in the Production environment.
+- Adding a new table, PAYMENT_DETAILS, to the Development environment. This table did not exist in the Production environment.
 
 - Adding the PAYMENT_METHOD column to the PAYMENT table in the Development environment. This column did not exist in the PAYMENT table of the Production environment.
 
