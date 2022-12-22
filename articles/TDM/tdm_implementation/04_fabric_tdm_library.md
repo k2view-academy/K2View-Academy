@@ -369,7 +369,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
 
 ## TDM_Reference LU
 
-TDM 7.5.3 stores the extracted Reference table in a new LU: TDM_Reference instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
+TDM 7.5.3 stores the extracted Reference tables in a new LU - TDM_Reference - instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)
