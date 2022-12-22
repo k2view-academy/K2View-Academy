@@ -23,11 +23,11 @@ The data source of the LU schema may have been updated, and consequently require
 
 ### Adding or Removing LU Tables
 
-Adding or removing LU tables to the LU Schema must be implemented manually.
+Adding or removing LU tables to/from the LU Schema must be implemented manually.
 
 ### Adding New Columns to an LU Table 
 
-The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window .
+The new columns can be added manually or added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window .
 
 ### Removing Columns From an LU table
 
