@@ -102,7 +102,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p>This translation is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings. For example, sqlServer.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate two records for each database, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
+<p>Populate 2 records for each database, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
   <p><strong>Example 1:</strong> </p>
 <ul> <li>interface_type = sqlserver </li>
 <li>version_ind = true </li>
