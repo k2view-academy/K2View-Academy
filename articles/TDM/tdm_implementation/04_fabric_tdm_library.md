@@ -20,13 +20,13 @@ Since the TDM categories contain the product's Web Services, it is recommended t
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
-- **DB_CASSANDRA**: This is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
+- **DB_CASSANDRA** - this is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
 
-- **CASSANDRA_LD**: a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
+- **CASSANDRA_LD** - a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
 
--  **POSTGRESQL_ADMIN**: This is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
+-  **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
    
--  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
+-  **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
    
     Note that if you work on a PostgreSQL with SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and TDM interfaces as follows:
     
