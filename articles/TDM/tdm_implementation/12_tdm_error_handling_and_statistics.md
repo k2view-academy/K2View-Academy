@@ -59,7 +59,7 @@ TDM 7.5.3 adds the following customized JMX metrics in order to have a better mo
   - Flow name (flowName)
   - Number of records (RecCount)
 
-  Note that this metric has been added since the **broadwayFlow** JMX metric provides data about the number of flow's execution and not about the total number of records, loaded by each flow. 
+  Note that metrics are added as the **broadwayFlow** JMX metrics provide data about the number of flow executions and not about the total number of records, loaded by each flow. 
 
 - **TaskExecutionPerBE** - number of task executions per Business Entity (BE). The following information is provided:
 
