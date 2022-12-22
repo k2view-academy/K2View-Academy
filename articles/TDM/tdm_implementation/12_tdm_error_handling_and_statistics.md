@@ -25,7 +25,7 @@ By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress*
 
 ![image](images/12_tdm_err_stat_01.PNG)
 
- If a record needs to be rejected instead of failing an entire entity, replace the Inner flow name with **PopulateTableErrorsWithReject** and check the **Suppress** setting. 
+ If a record needs to be rejected - instead of failing an entire entity - replace the Inner flow name with **PopulateTableErrorsWithReject** and check the **Suppress** setting. 
 
 [Click to learn how to use the ErrorHandling Actor](/articles/19_Broadway/actors/06_error_handling_actors.md#how-do-i-use-the-errorhandler-actor).
 
