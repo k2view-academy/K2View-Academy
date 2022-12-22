@@ -84,7 +84,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 
        ![prod population](images/lu_population_prod_version.png)
 
-    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates in in the LU table. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
+    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates it in the LU table. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
 
        ![prod population](images/lu_population_dev_version.png)
 
