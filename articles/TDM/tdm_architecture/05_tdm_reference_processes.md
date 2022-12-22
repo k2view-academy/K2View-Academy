@@ -159,7 +159,7 @@ The reference_table LU table keeps the reference data. The LU table has the foll
   </table>
   
   
-- Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2. A new LUI is created: 
+- Creating an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2. A new LUI is created: 
 
   The LUI is Customer|ENV2|ALL|CUSTOMER_TYPE.
 
