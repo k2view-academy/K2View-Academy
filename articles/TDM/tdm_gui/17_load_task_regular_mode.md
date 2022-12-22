@@ -158,19 +158,19 @@ For example:
   - Click **Add Condition**. 
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
-The TDM GUI  displays the SQL query built based on the selected parameters.
+The TDM GUI displays the SQL query built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
 There are several types of parameters:
 
-- **Combo**, parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
+- **Combo** - parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
-- **Number**, the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** - the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
   
-- **Date**, populate the value using the following format: **YYYY-MM-DD**. 
+- **Date** - populate the value using the following format: **YYYY-MM-DD**. 
   
   - Notes: 
   
@@ -185,7 +185,7 @@ There are several types of parameters:
   
     - The date value is set without quotation marks.
   
-- **Text**, populate the value using free text.
+- **Text** - populate the value using a free text.
 #### How Do I Add a Group of Parameters?
 
 Click **Add Group**. 
