@@ -49,7 +49,7 @@ Adding new LU tables, and adding new columns to an LU table are described in mor
 
 Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
 
-  Here is one example of source code to implement this: 
+  Here is one example of a source code to implement this: 
 
 
 ```java
