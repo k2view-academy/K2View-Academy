@@ -204,7 +204,7 @@ Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/arti
 
 ## TDM_LIBRARY LU
 
-The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. These utilities are described below
+The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. These utilities are described below:
 
 ### Globals
 
