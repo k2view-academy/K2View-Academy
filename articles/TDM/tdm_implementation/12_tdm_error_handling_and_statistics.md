@@ -50,7 +50,7 @@ See an example below:
 
 Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. Additionally, Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for a better monitoring. 
 
-TDM 7.5.3 adds the following customized JMX metrics to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
+TDM 7.5.3 adds the following customized JMX metrics in order to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
 
 - **TotalLoadedRecordsPerLoadFlow** - number of records loaded to the target DB by per each load Broadway flow. The following information is provided:
 
