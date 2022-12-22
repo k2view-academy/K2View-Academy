@@ -52,7 +52,7 @@ Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to
 
 TDM 7.5.3 adds the following customized JMX metrics in order to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
 
-- **TotalLoadedRecordsPerLoadFlow** - number of records loaded to the target DB by per each load Broadway flow. The following information is provided:
+- **TotalLoadedRecordsPerLoadFlow** - number of records loaded to the target DB by each load Broadway flow. The following information is provided:
 
   - LU name (luName)
   - Table name (tableName)
