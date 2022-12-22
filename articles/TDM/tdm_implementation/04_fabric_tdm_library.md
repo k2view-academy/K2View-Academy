@@ -210,7 +210,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
 
 #### LU level [Globals](/articles/08_globals/01_globals_overview.md) 
 
-- Populate the **ROOT_TABLE_NAME** Global using the main source table or tables. You can populate several tables separated by a comma. 
+- Populate the **ROOT_TABLE_NAME** Global using the main source table/s. You can populate several tables, separated by a comma. 
 
   Examples: 
 
