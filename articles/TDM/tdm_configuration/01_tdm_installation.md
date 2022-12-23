@@ -101,7 +101,7 @@ The TDM APIDOC describes all the Web-Services in the Fabric project including th
 
 The below steps should be followed if a new APIDOC should be generated to include project custom APIs:
 
-1. Import from the updated TDM library the following objects:
+1. Import the following objects from the updated TDM library:
 
    - TDM_APIDOC_JSON interface (local file interface)- this interface contains the location of the TDM APIDOC Json file.
    - buildTdmApiJSON Broadway flow.
