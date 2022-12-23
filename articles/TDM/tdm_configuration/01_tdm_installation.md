@@ -186,16 +186,16 @@ II.
 
 ## Create K2masking Keyspace in Cassandra
 
-The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the  TDM LU to  Fabric. Alternatively, you can run  the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
+The **k2masking** keyspace is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
 
 Click for more information about [sequence handling](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
 
 ## Add Permission Groups Mapping to the TDM
 
-The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logins into the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) by their Fabric roles**.
+The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs in to the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) by their Fabric roles**.
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) TDM window and is kept in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-After installing the TDM, the admin user must [login the TDM GUI](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md), and define the Permission Group mapping of each user's group (= Fabric role) to enable the TDM users to work properly on the TDM GUI based on their Permission Groups.
+After installing the TDM, the admin user must [login the TDM GUI](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md), and define the Permission Group mapping of each user's group (= Fabric role) in order to enable the TDM users to work properly on the TDM GUI based on his/her Permission Groups.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdmdb_general_parameters.md)
