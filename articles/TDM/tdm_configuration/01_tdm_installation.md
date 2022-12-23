@@ -35,7 +35,7 @@ When opening the TDM package, the package also updates the following:
 
 ## Installation guidelines for TDM Package on the Fabric Server
 
-You can choose to install TDM natively onto an existing Fabric linux instance and then manually install the TDM package, or you can use a Docker instance that includes the TDM package pre-installe
+You can choose to install TDM natively onto an existing Fabric Linux instance and then manually install the TDM package, or you can use a Docker instance that includes the TDM package pre-installe
 
 To install a TDM package on a Fabric server do the following:
 
