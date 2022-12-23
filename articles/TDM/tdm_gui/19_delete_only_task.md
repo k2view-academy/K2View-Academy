@@ -57,7 +57,7 @@ Select a Broadway flow to get the entity list for the task and set the maximum n
 
 TDM supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
 
-The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and  indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and it indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
 
 See example:
 
