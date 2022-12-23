@@ -1,6 +1,6 @@
 # TDM Delete Task
 
-A Delete task only contains the **Delete** task type and deletes (cleans) the selected entities from the target environment. The delete task also releases the cleaned entities if the entity is reserved.
+A Delete task contains only the **Delete** task type and deletes (cleans) the selected entities from the target environment. The delete task also releases the cleaned entities if the entity is reserved.
 
 Note that the deleted flows must be implemented in the Fabric implementation. 
 
