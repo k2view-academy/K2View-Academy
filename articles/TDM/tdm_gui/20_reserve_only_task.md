@@ -1,6 +1,6 @@
 # TDM Reserve Task
 
-A Reserve task only contains the **Reserve** task type and [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
+A Reserve task contains only the **Reserve** task type and [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
 
 A Reserve task contains the following tabs:
 
