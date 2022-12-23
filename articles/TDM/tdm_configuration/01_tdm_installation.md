@@ -97,7 +97,7 @@ cd  $K2_HOME/
 
 The TDM APIDOC html file is located on the TDM node under **$K2_HOME/webserver/static/TDM/apidoc** directory.
 
-The TDM APIDOC describes all the Web-Services in the Fabric project including the TDM Web-Services imported from the TDM Library.
+The TDM APIDOC describes all the Web Services in the Fabric project including the TDM Web-Services imported from the TDM Library.
 
 The below steps should be followed if a new APIDOC should be generated to include project custom APIs:
 
