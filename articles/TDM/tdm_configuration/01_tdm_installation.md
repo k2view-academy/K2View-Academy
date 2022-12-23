@@ -97,7 +97,7 @@ cd  $K2_HOME/
 
 The TDM APIDOC html file is located on the TDM node under **$K2_HOME/webserver/static/TDM/apidoc** directory.
 
-The TDM APIDOC describes all the Web Services in the Fabric project including the TDM Web-Services imported from the TDM Library.
+The TDM APIDOC describes all the Web Services in the Fabric project including the TDM Web Services imported from the TDM Library.
 
 The below steps should be followed if a new APIDOC should be generated to include project custom APIs:
 
@@ -108,7 +108,7 @@ The below steps should be followed if a new APIDOC should be generated to includ
 
 2. Edit the **TDM_APIDOC_JSON** interface or define the TDM_APIDOC directory under C:\k2view\ local directory.
 
-3. Deploy Fabric project's Web-Services to the local debug server.
+3. Deploy Fabric project's Web Services to the local debug server.
 
 4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.5.1. This version is added to the generated APIDOC.
 
