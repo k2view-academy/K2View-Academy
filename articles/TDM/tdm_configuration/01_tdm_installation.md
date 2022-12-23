@@ -35,11 +35,11 @@ When opening the TDM package, the package also updates the following:
 
 ## Installation guidelines for TDM Package on the Fabric Server
 
-You can choose to install TDM natively onto an exist Fabric linux instance and then manually install the TDM package, or you can use the a Docker instance which include the TDM package pre-installe
+You can choose to install TDM natively onto an existing Fabric linux instance and then manually install the TDM package, or you can use a Docker instance that includes the TDM package pre-installe
 
 To install a TDM package on a Fabric server do the following:
 
-- Download the TDM package from the download page. Copy it under the  $K2_HOME directory and untar it using the following command:
+- Download the TDM package from the download page. Copy it under the $K2_HOME directory and untar it using the following command:
 
   ```
   tar -zxvf <TDM GUI tar file>
@@ -81,7 +81,7 @@ cd  $K2_HOME/
 
 #### Adding a Password to Redis (Optional)
 
-- It is possible to set a password on Redis. Do the following steps to add a password to Redis:
+- It is possible to set a password on Redis. Perform the following steps to add a password to Redis:
 
 - Run the following commands on the Fabric node:
 
