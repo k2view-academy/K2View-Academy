@@ -27,7 +27,7 @@ Check the **Entities** to reserve the requested entities in the target environme
 
 The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
 
-Note that when the Reservation Period is set to zero, the entities are reserved for unlimited period.  
+Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
 Only Admin and Environment owner users can reserve entities for unlimited period. Users that are attached to the target environment as testers  must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
