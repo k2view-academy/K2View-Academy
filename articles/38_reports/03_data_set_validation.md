@@ -12,12 +12,12 @@ Once you define a data source and set up the properties of the data set, the dat
 
 3. When Uri/path includes a parameter, you will be prompted for a parameter value:
 
-![](images/03_param_value_prompt.png)
+   ​ ![](images/03_param_value_prompt.png)
 
 4. Populate a valid value and click **Save & Run**.
 5. If validation is passed successfully, the fields are populated. You can click the ![](images/03_hamburger.png) icon to view the list of fields.
 
-![](images/03_validated_ds.png)
+   ​ ![](images/03_validated_ds.png)
 
 6. Click the **Save Changes** button to finalize the Data Set definition for the report.
 
