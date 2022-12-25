@@ -70,7 +70,7 @@ Note that the templates for Data Source and Data Set creation are available for 
 
 
 
-Follow this user guide to learn the next steps of the report creation.
+Proceed to the next step of this user guide to perform the data set validation.
 
 
 
