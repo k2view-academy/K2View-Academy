@@ -12,7 +12,7 @@ Fabric's **Reports** application includes the Designer and Viewer components:
   - Creating the report's layout design (fonts, colors, etc). 
 * **Viewer** - enables generating the report, including the following:
   - Generating the report's preview. 
-  - Searching the data within the preview file.
+  - Searching for data within the preview file.
   - Downloading the extract files. The supported formats are: PDF, HTML and CSV.
 
 Access to Designer is available via Fabric Studio as the reports' creation is performed during the project development stage. Access to Viewer is available via the Web Framework application's list.
