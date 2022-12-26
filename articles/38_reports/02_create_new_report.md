@@ -66,7 +66,7 @@ The **custom data set** allows defining any required endpoint, by setting the fo
 
 
 
-Note that the templates for Data Source and Data Set creation are available for new reports only. When adding a data source or a data set to an existing report, New Data Source and New Data Set windows will open, requiring a manual population of all details. 
+Note that templates for Data Source and Data Set creation are available for new reports only. When adding a data source or a data set to an existing report, New Data Source and New Data Set windows will open, requiring a manual population of all details. 
 
 
 
