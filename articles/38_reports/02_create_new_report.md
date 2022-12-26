@@ -61,7 +61,7 @@ It is recommended to update the default data set name to a meaningful name, for 
 The **custom data set** allows defining any required endpoint, by setting the following properties:
 * **Uri/path** - the value depends on the configuration of the parent data source. If the data source's endpoint is a full-path URL, the data set's Uri/path should be empty. If, however, the data source's endpoint is a base URL, then the data set's Uri/path should contain the full-path URL of the data endpoint.
 * **Method** - specifies the request method. The supported methods are GET and POST.
-* **Parameters** and **Headers** - the purpose of these properties is the same as one of **Query Parameters** and **HTTP Headers** properties of the data source. 
+* **Parameters** and **Headers** - name/value pairs that define the URL’s Query String and HTTP Header fields that are passed with the request (similar to the **Query Parameters** and **HTTP Headers** properties of the data source).
 * **Json Path** - JSON data endpoints can retrieve the data of various shapes, and there is no standardized data structure. Hence, it is required to specify the structure using the [JSONPath expression](https://goessner.net/articles/JsonPath/). You can use `$.*` or `$[*]` JSONPath expression to specify the repeated data fragments.
 
 
