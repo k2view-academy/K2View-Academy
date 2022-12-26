@@ -70,7 +70,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p><h5>trnMigrateList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the query and interface name, or the Broadway flow to generate the entity list when running the <strong>extract task</strong> on all entities of each LU. One record per LU.</p>
+<p>Define the query and interface name, or the Broadway flow to generate the entity list when running the <strong>extract task</strong> on all entities of each LU; one record per LU.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this translation for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
