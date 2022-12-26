@@ -11,13 +11,13 @@ This article describes how to create a new report and define its data source and
 
 ### New Report
 
-To initiate a new report creation, go to the Logical Unit in the project tree, right click on **Reports > New Report** and populate the report name. Click Enter to create and open an empty report canvas. 
+To initiate a new report creation, go to the Logical Unit in the project tree, right-click on **Reports > New Report** and populate the report name. Click Enter to create and open an empty report canvas. 
 
 ![](images/02_create_new_rep_01.png)
 
 ### Data Source Configuration
 
-Data binding establishes a connection between a report and the displayed data and it starts with adding a data source.
+Data binding establishes a connection between a report and the displayed data, starting with adding a data source.
 
 To create a data source, click the ![](images/add_icon.png) icon in the **Data Sources** area of the report's properties. It provides a choice of two templates:
 
