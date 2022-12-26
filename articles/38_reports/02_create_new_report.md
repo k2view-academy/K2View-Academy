@@ -7,7 +7,7 @@ The reports creation is comprised of the following steps:
 3. Create the data binding between the report elements and the data set's fields. 
 4. Set the report's layout design (fonts, colors, etc.).
 
-This article describes how to create a new report and define its data source and data set(s). Further articles of this guide explain about further steps of the report creation.
+This article describes how to create a new report and how to define its data source and data set(s). Further articles of this guide explain about further steps of the report creation.
 
 ### New Report
 
