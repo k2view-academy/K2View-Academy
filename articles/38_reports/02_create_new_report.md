@@ -29,7 +29,7 @@ To create a data source, click the ![](images/add_icon.png) icon in the **Data S
 
   - **HTTP Headers**, the collection of HTTP Header fields that are passed with the request. 
 
-  - **Query Parameters**, the collection of (name, value) pairs that define the Query String of the URL.
+  - **Query Parameters**, the collection of name/value pairs that define the Query String of the URL.
 
 ### Data Set Configuration
 
