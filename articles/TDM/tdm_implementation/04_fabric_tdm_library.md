@@ -99,7 +99,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <td valign="top" width="300pxl">
 <p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the trnMigrateList translation. Each LUI consists of a concatenation of the source environment, IID, version name and version datetime.</p>
 <p>Click to read more about <a href="01_tdm_set_instance_per_env_and_version.md">LUI structure for TDM implementation</a>.</p>
-<p>This translation is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings. For example, sqlServer.</p>
+<p>This translation is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings, e.g., sqlServer.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate 2 records for each database, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
