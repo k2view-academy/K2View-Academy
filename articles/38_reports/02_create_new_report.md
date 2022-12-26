@@ -17,7 +17,7 @@ To initiate a new report creation, go to the Logical Unit in the project tree, r
 
 ### Data Source Configuration
 
-Data binding establishes a connection between a report and the displayed data, starting with adding a data source.
+Data binding establishes a connection between a report and the displayed data, starting with the addition of a data source.
 
 To create a data source, click the ![](images/add_icon.png) icon in the **Data Sources** area of the report's properties. It provides a choice of two templates:
 
