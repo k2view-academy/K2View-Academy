@@ -25,7 +25,7 @@ To create a data source, click the ![](images/add_icon.png) icon in the **Data S
 
 - The **custom data source** is an empty template that allows to define any required endpoint, by setting the following properties:
 
-  - **Endpoint** - either a full or base URL of your REST API. Then the endpoint paths are appended by using data sets (described later on in this article).
+  - **Endpoint** - either a full-path or a base URL of your REST API. Then the endpoint paths are appended by using data sets (described later on in this article).
 
   - **HTTP Headers** - a collection of HTTP Header fields that are passed with the request. 
 
