@@ -21,9 +21,9 @@ Data binding establishes a connection between a report and the displayed data, s
 
 To create a data source, click the ![](images/add_icon.png) icon in the **Data Sources** area of the report's properties. It provides a choice of two templates:
 
-- The **fabric_api** data source is defined as the **/api/** Fabric endpoint which runs under your Fabric's host. This is a default data source to be used for any Fabric API (built-in or custom).
+- The **fabric_api** data source is defined as the **/api/** Fabric endpoint that runs under your Fabric's host. This is a default data source to be used for any Fabric API (built-in or custom).
 
-- The **custom data source** is an empty template that allows defining any required endpoint, by setting the following properties:
+- The **custom data source** is an empty template that allows to define any required endpoint, by setting the following properties:
 
   - **Endpoint**, either a full or base URL of your REST API. Then the endpoint paths are appended by using data sets (they are described further).
 
