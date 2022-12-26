@@ -58,7 +58,7 @@ The below steps should be followed if a new APIDOC should be generated to includ
 
 1. Import the following objects from the updated TDM library:
 
-   - TDM_APIDOC_JSON interface (local file interface)- this interface contains the location of the TDM APIDOC Json file.
+   - TDM_APIDOC_JSON interface (local file interface)- this interface contains the location of the TDM APIDOC JSON file.
    - buildTdmApiJSON Broadway flow.
 
 2. Edit the **TDM_APIDOC_JSON** interface or define the TDM_APIDOC directory under C:\k2view\ local directory.
