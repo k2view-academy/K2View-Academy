@@ -182,7 +182,7 @@ TDM enables setting a TTL (Time To Leave) on the TDM LUIs. The default TTL perio
 
 The **deploy.flow** process runs the following activities upon the TDM LU deployment:
 
-- Verifying that the Environment and the Web Services are deployed to Fabric. If these are not deployed to Fabric, an error message is given to the user.
+- Verifying that the Environment and the Web Services are deployed to Fabric. If these are not deployed to Fabric, an error message is returned to the user.
 
 - Creating the k2masking keyspace in Cassandra if it does not already exist.
 
