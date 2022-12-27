@@ -1,6 +1,6 @@
 # TDM - Reference Implementation
 
-<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract reference tables from several source environments. TDM 7.5.3 stores the Reference tables in a dedicated LU: TDM_Reference. Each Reference table is stored as a separate LUI.  The LUI contains the following:
+<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract reference tables from several source environments. TDM 7.6 stores the Reference tables in a dedicated LU: TDM_Reference. Each Reference table is stored as a separate LUI.  The LUI contains the following:
 
 [LU name]|[source environment name]|[version id]|[table name]
 
@@ -53,7 +53,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 ### Step 3 - Create and Execute TDM Tasks
 
-TDM 7.5.3 enables running extract and load tasks on reference tables, i.e. the task extracts the reference table into Fabric and loads it to the target environment. 
+TDM 7.6 enables running extract and load tasks on reference tables, i.e. the task extracts the reference table into Fabric and loads it to the target environment. 
 
 Note that on previous TDM versions, the extract from the source env was not executed by the load task. The load task copied the table from Cassandra. Therefore, there was a need to run an extract task on a given table before running the load task, in order to load the table to the target environment.
 

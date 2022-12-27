@@ -20,10 +20,10 @@ Create a K2V_TDM directory and download the following into it:
 3. Note that if the precise name of the specific image is different than shown, use the name that you downloaded. 
 
 ~~~bash
-docker load -i D_K2V_PG13_TDM7.5.3.tar.gz
+docker load -i D_K2V_PG13_TDM7.6.tar.gz
 docker load -i D_k2view_cassandra_3.11.12.tar.gz 
 docker load -i D_k2view_fabric_7.0.0_322.tar.gz 
-unzip compose_TDM_7.5.3.zip
+unzip compose_TDM_7.6.zip
 ~~~
 
 You can see the images names by using the command **docker images**. 
@@ -32,7 +32,7 @@ You can see the images names by using the command **docker images**.
 
 1. Navigate to the compose folder as shown: 
 ~~~bash
-    cd compose_TDM_7.5.3
+    cd compose_TDM_7.6
 ~~~
 Note that the TDM compose file has the following settings that are different than the regular Fabric docker compose file:
 
@@ -52,7 +52,7 @@ Note that the TDM compose file has the following settings that are different tha
 
 ### Import and Deploy the TDM Library 
 
-TDM 7.5.3 includes the TDM GUI in the TDM Library. Download the TDM Library and import it to your Fabric project.
+TDM 7.6 includes the TDM GUI in the TDM Library. Download the TDM Library and import it to your Fabric project.
 
 1. Define the TDM environments in Fabric studio and and deploy them to Fabric.
 2. Edit the Fabric project before deploying the TDM library to Fabric:
@@ -60,7 +60,8 @@ TDM 7.5.3 includes the TDM GUI in the TDM Library. Download the TDM Library and 
    - New TDM  installation: edit the project as follows to create the TDM DB on the PostgreSQL DB:
      - Set the **BUILD_TDMDB Global to true** (default is false).
      - Set the  **POSTGRESQL_ADMIN interface to be active**.
-3. Deploy the TDM library to Fabric. The deployment of the TDM LU also deploys the TDM GUI web application to Fabric.
+3. Note that the apps.json file in the TDM LU overrides the list of web applications. Edit the file to add additional web applications if needed before deploying the TDM LU. 
+4. Deploy the TDM library to Fabric. The deployment of the TDM LU also deploys the TDM GUI web application to Fabric.
 
 
 

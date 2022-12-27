@@ -103,7 +103,7 @@ Select a Broadway flow in order to get the entity list for the task and in order
 
 TDM supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
 
-The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
 
 See example:
 
@@ -143,7 +143,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
 #### Filter out Reserved Entities Checkbox
 
-The **Filter out Reserved Entities** checkbox has been added in TDM 7.5.3 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
 
 For example:
 
