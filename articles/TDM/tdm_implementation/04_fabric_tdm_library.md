@@ -314,7 +314,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. The
   </tr>
   </table>
 
-- **LU_PARAMS** - parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table only holds the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** - parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
