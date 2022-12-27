@@ -15,7 +15,7 @@ More detailed requirements for each are described below:
 
    - Modern Xeon Processor
    - 8 Physical Cores
-   - 16 GB RAM
+   - 16GB RAM
    - HDD, 200GB must be available
 
    **Note**: The minimum required amount of RAM for running 1x Fabric, 1x Cassandra is 10GB. Our recommendation is for a physical Docker host and not a virtual machine.
@@ -35,8 +35,8 @@ More detailed requirements for each are described below:
 #### Minimum hardware requirements for Docker Desktop
 
 1. Windows or Mac machine with an 8 core CPU.
-2. Windows or Mac machine with a minimum of 16G RAM.
-3. Windows or Mac machine with minimum 120G of hard disk space.
+2. Windows or Mac machine with a minimum of 16GB RAM.
+3. Windows or Mac machine with minimum 120GB of hard disk space.
 
 ### How Do I Set Up and Run Docker Environment?
 
