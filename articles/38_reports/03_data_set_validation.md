@@ -6,7 +6,7 @@ If you haven't yet created a data source and a data set, follow the steps descri
 
 ### How Do I Validate a Data Set?
 
-1. Click **Validate** button to validate the data set. Note that prior to validation, the number of fields is 0.
+1. Click **Validate** button to validate the data set. Note that prior to the validation, the number of fields is 0.
 
    ![](images/03_validate_data_set.png)
 
