@@ -86,7 +86,7 @@ More detailed requirements for each are described below:
    ```
 
    You can see the images names by using the command `docker image`
-4. untar the Config archives as follows:
+4. Untar the Config archives as follows:
 
    ```bash
    tar -zxvf compose_fabric_6.5.9_132.tar.gz
