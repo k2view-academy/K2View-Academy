@@ -1,6 +1,6 @@
 # Data Set Validation
 
-Once you create a data source and a data set, the next step is to validate the data set. The validation is done in order to check that everything is defined correctly and retrieve the fields list. 
+Once you create a data source and a data set, the next step is to validate the data set. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
 
 If you haven't yet created a data source and a data set, follow the steps described [in the previous article](02_create_new_report.md) to do so.
 
