@@ -186,7 +186,7 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 
 - Creating the k2masking keyspace in Cassandra if it does not already exist.
 
-- Checking if Redis is up. If Redis is not up, an error message is given to the user.
+- Checking if Redis is up. If Redis is not up, an error message is returned to the user.
 
 - TDM 7.6 added a creation of the TDM PostgreSQL DB:
 
