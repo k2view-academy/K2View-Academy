@@ -92,11 +92,11 @@ More detailed requirements for each are described below:
    tar -zxvf compose_fabric_6.5.9_132.tar.gz
    ```
 
-   !!! Note: open the “.env” file and update the names of the images as needed.
+   >**Note:** open the “.env” file and update the names of the images as needed.
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
 
-**Note:** this compose file doesn't have Kafka enabled by default. If you need it, you can open the docker-compose.yml and un-remark it.
+**Note:** this compose file doesn't have Kafka enabled by default. If you need it, you can open the docker-compose.yml and uncomment it.
 
 1. Run docker-compose as follows:
 
