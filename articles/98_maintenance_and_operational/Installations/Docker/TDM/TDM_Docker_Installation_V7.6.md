@@ -1,4 +1,4 @@
-## Docker Install Windows\\MacBook\\Linux
+## Docker Install Windows/MacBook/Linux
 
 ### Related Documents
 
