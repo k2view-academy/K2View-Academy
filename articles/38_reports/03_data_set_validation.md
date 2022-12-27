@@ -18,7 +18,7 @@ If you haven't yet created a data source and a data set, follow the steps descri
 
       ![](images/03_validated_ds.png)
 
-    * If the configuration is invalid, or there are other issues with a data connection, the dialog shows the error message at the top area of the Data Set window.
+    * If the configuration is invalid, or there are other issues with a data connection, the dialog shows an error message at the top area of the Data Set window.
 
       ![](images/03_invalid_ds.png)
 
