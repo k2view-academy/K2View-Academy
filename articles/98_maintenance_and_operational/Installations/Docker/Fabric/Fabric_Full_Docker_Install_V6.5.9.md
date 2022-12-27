@@ -96,7 +96,7 @@ More detailed requirements for each are described below:
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
 
-**Note:** this compose file doesn't have Kafka enabled by default. if you need it you can open the docker-compose.yml and un-remark it.
+**Note:** this compose file doesn't have Kafka enabled by default. If you need it, you can open the docker-compose.yml and un-remark it.
 
 1. Run docker-compose as follows:
 
