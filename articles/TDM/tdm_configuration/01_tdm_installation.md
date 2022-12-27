@@ -25,7 +25,7 @@ The Redis must run in one of the Fabric nodes. All Fabric nodes must work with t
 
 #### Start Redis on One of the Fabric Nodes
 
-- Open for edit the **redis.conf** file and verify that the **bind** parameter is commented to enable accessing the Redis outside the Fabric node.
+- Open for edit the **redis.conf** file and verify that the **bind** parameter is commented to enable accessing the Redis from outside the Fabric node.
 - Go to $K2_HOME/apps/redis/src and run:
 
 ```
