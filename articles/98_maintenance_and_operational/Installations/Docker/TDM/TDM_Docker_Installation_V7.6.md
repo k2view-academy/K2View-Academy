@@ -15,7 +15,7 @@ Create a K2V_TDM directory and download the following into it:
 
 ### Load the Images 
 
-1. Open a CLI and navigate to the K2V_TDM directory you created. 
+1. Open a CLI and navigate to the K2V_TDM directory you've created. 
 2. Uncompress the files as shown (that is, load the images). 
 3. Note that if the precise name of the specific image is different than shown, use the name that you downloaded. 
 
@@ -26,7 +26,7 @@ docker load -i D_k2view_fabric_7.0.0_322.tar.gz
 unzip compose_TDM_7.6.zip
 ~~~
 
-You can see the images names by using the command **docker images**. 
+You can see the image names by using the command **docker images**. 
 
 ### Run the Compose File 
 
@@ -39,12 +39,12 @@ Note that the TDM compose file has the following settings that are different tha
 - Includes the PG docker
 - Does not include the Kafka docker
 
-2. Run the compose file using docker as shown: 
+2. Run the docker compose file as shown: 
 
 ~~~bash
     docker-compose up -d
 ~~~
-3. Wait approximately 3 minutes, then check that all the containers are up using this command
+3. Wait for approximately 3 minutes, then check that all the containers are up using this command
 ~~~bash
     docker ps
 ~~~
