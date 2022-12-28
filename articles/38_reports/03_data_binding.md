@@ -18,9 +18,7 @@ To create a data source, click the ![](C:\K2View-Academy\articles\38_reports\ima
 
 ### Data Set Configuration
 
-Each data source may contain one or more data sets. 
-
-To create a data set, click the ![](C:\K2View-Academy\articles\38_reports\images\plus_icon.png) icon near the data source name in the **Data Sources** area of the report's properties. It provides a choice of several Fabric endpoint templates and a custom data set definition.
+Each data source may contain one or more data sets. To create a data set, click the ![](C:\K2View-Academy\articles\38_reports\images\plus_icon.png) icon near the data source name in the **Data Sources** area of the report's properties. It provides a choice of several Fabric endpoint templates and a custom data set definition. 
 
 **Data Set Based on Fabric Endpoints** 
 
@@ -51,6 +49,8 @@ The **custom data set** allows defining any required endpoint, by setting the fo
 * **Json Path** - JSON data endpoints can retrieve the data of various shapes, and there is no standardized data structure. Hence, it is required to specify the structure using the [JSONPath expression](https://goessner.net/articles/JsonPath/). You can use `$.*` or `$[*]` JSONPath expression to specify the repeated data fragments.
 
 **Note**: the templates for Data Source and Data Set creation are available for new reports only. When adding a data source or a data set to an existing report, New Data Source and New Data Set windows will open, requiring a manual population of all details. 
+
+Now the Data Set must be validated in order to complete its creation.
 
 ### How Do I Validate a Data Set?
 
