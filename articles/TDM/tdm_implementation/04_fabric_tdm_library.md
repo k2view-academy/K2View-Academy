@@ -191,7 +191,7 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 - TDM 7.6 added a creation of the TDM PostgreSQL DB:
 
   - Creates the TDMDB database.
-  - Drops and recreates the TDM DB tables, sequences, views and functions.
+  - Creates the TDM DB tables, sequences, views and functions.
 
   Note: **You must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active**, in order for the TDM deploy flow **to create the TDM DB**.
 

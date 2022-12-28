@@ -97,7 +97,7 @@ I.
 - TDM 7.6 added a creation of the TDM PostgreSQL DB by the TDM LU's deploy flow:
 
   - Creates the TDMDB database.
-  - Drops and recreates the TDM DB tables, sequences, views and functions.
+  - Creates the TDM DB tables, sequences, views and functions.
 
   Note: **you must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
 
