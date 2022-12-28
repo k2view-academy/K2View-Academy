@@ -16,5 +16,5 @@ In addition, you can define the parameter's valid values list and a default valu
 
 
 
-[![Previous](/articles/images/Previous.png)](03_data_set_validation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_binding.md)
+[![Previous](/articles/images/Previous.png)](03_data_binding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
 
