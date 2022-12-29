@@ -1,7 +1,7 @@
 # Fabric 6.xx Pre-Installation Steps
 ## Introduction 
 
-This article describes mandatory steps to be taken for a system setup prior to Fabric/TDM installation; such steps are:
+This article describes mandatory steps to be taken for a system setup, prior to Fabric/TDM installation; such steps are:
 
 * Hardware setup
 * Users creation
