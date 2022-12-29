@@ -26,7 +26,7 @@
 
 ### Setup Single Node Cassandra
 
-Run the commands as shown below.
+Run the commands as shown below:
 
 1.  Run the pre setup commands.
 
