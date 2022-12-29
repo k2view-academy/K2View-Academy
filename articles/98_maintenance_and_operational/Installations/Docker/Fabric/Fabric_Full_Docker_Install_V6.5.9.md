@@ -24,7 +24,7 @@ More detailed requirements for each are described below:
    **Note**: The /var/lib/docker should have at least 200GB of free memory.
 3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
 4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
-5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
+5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of free space as follows:
 
    ```bash
    ## update the k2view user home directory and password!! 
