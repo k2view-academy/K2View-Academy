@@ -85,7 +85,7 @@ More detailed requirements for each are described below:
     docker load -i D_k2view_fabric_6.5.9_132.tar.gz 
    ```
 
-   You can see the images names by using the command `docker image`
+   You can see the image names by using the `docker image` command.
 4. Untar the Config archives as follows:
 
    ```bash
