@@ -28,13 +28,13 @@
 
 Run the commands as shown below:
 
-1.  Run the pre setup commands.
+1.  Run the pre-setup commands.
 
 2.  Start Cassandra.
 
-3.  Run the post setup commands.
+3.  Run the post-setup commands.
 
-**Pre Setup Run**:
+**Pre-Setup Run**:
 
 Update the following parameters if needed:
 
@@ -67,9 +67,9 @@ chmod 400 ~/cassandra/conf/.jmxremote.password
 cassandra
 ~~~
 
-### Post Setup Run on One Node
+### Post-Setup Run on One Node
 
-Create new superuser for Cassandra, and change the **cassandra** default user's password:
+Create a new superuser for Cassandra and change the **cassandra** default user's password:
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
