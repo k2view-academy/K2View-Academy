@@ -92,7 +92,9 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ###  createFlowsFromTemplates Flow Logic
 
-The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D). These inner flows generate the load and delete flows. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names: 
+The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D). These inner flows generate the load and delete flows in the input LU. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names.
+
+Note that the **input LU must be deployed to Fabric debug before running the createFlowsFromTemplates.flow**.  
 
 **A. Create a LOAD flow per table**
 
@@ -315,7 +317,7 @@ See example:
 
 ![custom logic](images/custom_logic_table_example.png)
 
-Redeloy the Web-Services.
+Redeploy the Web-Services.
 
 [![Previous](/articles/images/Previous.png)](10_tdm_generic_broadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_tdm_error_handling_and_statistics.md)
 
