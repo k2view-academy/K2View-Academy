@@ -1,6 +1,6 @@
 # Fabric 6.xx and TDM 7.xx Setup Single Node
 
-## Setup Cassandra
+## Set up Cassandra
 
 ### Load The Package 
 
@@ -24,7 +24,7 @@
    ~~~
 
 
-### Setup Single Node Cassandra
+### Set up a Single Node Cassandra
 
 Run the commands as shown below:
 
@@ -84,7 +84,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
 sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 ~~~
 
-## Setup Kafka
+## Set up Kafka
 
 ### Load the Package 
 
@@ -98,7 +98,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    tar -zxvf k2view_Confluent_5.xxx.tar.gz && bash -l
    ~~~
 
-4. Pre setup:
+4. Pre-setup:
 
    ~~~bash
    export kserver1=$(hostname -I |awk {'print $1'})
@@ -145,7 +145,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    tar -zxvf [package name].tar.gz 
    ~~~
 
-3. Pre setup:
+3. Pre-setup:
 
    ~~~bash
    sed -i "s@K2_HOME=.*@K2_HOME=$(pwd)@" .bash_profile
