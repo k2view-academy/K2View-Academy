@@ -90,37 +90,12 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-2 Options:
-
-I.
-
 - TDM 7.6 added a creation of the TDM PostgreSQL DB by the TDM LU's deploy flow:
 
   - Creates the TDMDB database.
   - Creates the TDM DB tables, sequences, views and functions.
 
   Note: **you must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
-
-  
-
-II.
-
-- Go to **$K2_HOME/TDMGUI/createTDMDB** directory in Fabric.
-
-- Set the following environment variables:
-
-  ```shell
-  export DB=<postgreSQL DB name>
-  export PG_USER=<postgreSQL DB user name>
-  export PGPASSWORD=<postgreSQL DB pwd>
-  export PG_HOST=<postgreSQL DB host>
-  export PG_PORT=<postgreSQL DB port>
-
-  ```
-
-- Add execution permissions to **createk2TDMDB.sh**.
-
-- Run **createk2TDMDB.sh** script.
 
   
 

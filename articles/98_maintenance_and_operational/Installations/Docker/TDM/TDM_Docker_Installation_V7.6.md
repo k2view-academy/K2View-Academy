@@ -9,8 +9,9 @@
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.5.3/TDM_7.5.3_download_links.docx?d=w642e98ebbc554f57b4e124b818ba3343&csf=1&web=1&e=9EArtH">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.6/TDM_7.6_download_links.docx?d=wb10d26ee727340dd86239d6a9cca3df3&csf=1&web=1&e=U8gMfC">Download links</a></li>
 </ul>
+
 
 
 ### Load the Images 
@@ -20,7 +21,7 @@ Create a K2V_TDM directory and download the following into it:
 3. Note that if the precise name of the specific image is different than shown, use the name that you downloaded. 
 
 ~~~bash
-docker load -i D_K2V_PG13_TDM7.6.tar.gz
+docker load -i D_K2V_PG13_MD5.tar.gz
 docker load -i D_k2view_cassandra_3.11.12.tar.gz 
 docker load -i D_k2view_fabric_7.0.0_322.tar.gz 
 unzip compose_TDM_7.6.zip
