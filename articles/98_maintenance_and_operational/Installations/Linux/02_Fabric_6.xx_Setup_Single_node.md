@@ -76,7 +76,7 @@ echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassa
 echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -u k2admin -p Q1w2e3r4t5
 ~~~
 
-**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. We refer the the following SED lines:
+**Note**: if you select to change the password from the example above, you will need to update it later in point that you preconfigure the Fabric. We refer the the following SED lines:
 
 
 ~~~bash
@@ -90,7 +90,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 
 1.  Download the package from: [latest version](https://download.k2view.com/owncloud/index.php/s/kc3Zkc6RcaX48xE).
 
-2.  Connect to Linux as "kafka" user and copy the package to the home directory.
+2.  Connect to Linux as a 'kafka' user and copy the package to the home directory.
 
 3. Untar the package (the package name varies based on the version) as follows:
 
@@ -174,7 +174,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
    ~~~
 
-   - In case of using Kafka + iidFinder, run also the following commands:
+   - In case of using Kafka + iidFinder, run the following commands as well:
 
    ~~~bash
    sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
@@ -189,7 +189,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
 
-:notebook_with_decorative_cover: **Note** that the Fabric Admin user is defined now as **k2consoleadmin**.
+:notebook_with_decorative_cover: **Note** that the Fabric Admin user is now defined as **k2consoleadmin**.
 
 4. Start Fabric:
 
@@ -203,7 +203,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the Web Framework.
+   - Same user and password should be used for logging in to the Web Framework.
 
 ## PGSQL 
 
