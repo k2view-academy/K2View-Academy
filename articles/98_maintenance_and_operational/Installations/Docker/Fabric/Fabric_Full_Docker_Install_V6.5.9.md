@@ -113,7 +113,7 @@ More detailed requirements for each are described below:
 
 ## Stopping Services
 
-1. To stop the Docker-Compose, do the following:
+1. To stop the Docker Compose, do the following:
 
    ```bash
    cd compose_fabric_6.5.9_132
