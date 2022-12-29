@@ -6,7 +6,7 @@
 
 1.  Retrieve the latest Cassandra package (located at: [latest version](https://download.k2view.com/owncloud/index.php/s/kc3Zkc6RcaX48xE)).
 
-2.  Connect to the Linux execution server as "cassandra" user and copy the package to the home directory.
+2.  Connect to the Linux execution server as a 'cassandra' user and copy the package to the home directory.
 
 3. Untar the package (the package name varies based on the version) as follows:
 
