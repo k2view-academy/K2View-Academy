@@ -203,7 +203,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for logging in to the Web Framework.
+   - The same user and password should be used for logging in to the Web Framework.
 
 ## PGSQL 
 
