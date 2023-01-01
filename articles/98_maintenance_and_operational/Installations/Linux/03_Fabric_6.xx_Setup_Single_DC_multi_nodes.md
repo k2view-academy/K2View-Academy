@@ -139,7 +139,7 @@ cassandra
 
 
 
-## Set up Kafka Cluster
+## Set-up Kafka Cluster
 
 ### Load the Package 
 
@@ -155,7 +155,7 @@ cassandra
 
 4. Pre-setup:
 
-   - Updade the IP's of `kserver1` , `kserver2` , `kserver3` 
+   - Updade the IP's of `kserver1`, `kserver2`, `kserver3` 
 
    ~~~bash
    export kserver1=172.31.11.198
@@ -196,7 +196,7 @@ cassandra
    $K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties
    ~~~
 
-7. Verify the Kafka and Zookeeper are running:
+7. Verify that the Kafka and Zookeeper are running:
 
    ~~~bash
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
@@ -205,7 +205,7 @@ cassandra
 
 
 
-## Setup for Fabric & TDM 7
+## Set up for Fabric & TDM 7
 
 ### Load the Package 
 
@@ -217,7 +217,7 @@ cassandra
    tar -zxvf [package name].tar.gz 
    ~~~
 
-3. Pre setup:
+3. Pre-setup:
 
    ~~~bash
    sed -i "s@K2_HOME=.*@K2_HOME=$(pwd)@" .bash_profile
@@ -232,7 +232,7 @@ cassandra
    export cserver2=192.168.168.213
    export cserver3=192.168.168.214
    
-   ## update the fafka IP's 
+   ## update the Kafka IP's 
    export kserver1=172.31.11.198
    export kserver2=172.31.35.204
    export kserver3=172.31.31.69
@@ -285,7 +285,7 @@ cassandra
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - Same user and password should be used for login to the Web Framework.
+   - Same user and password should be used to log in to the Web Framework.
 
 
 
