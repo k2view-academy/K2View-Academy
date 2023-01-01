@@ -1,4 +1,4 @@
-# Fabric 6.xx and TDM 7.xx Setup Single Node
+# Fabric 6.xx and TDM 7.xx - Single Node Configuration
 
 ## Set up Cassandra
 
