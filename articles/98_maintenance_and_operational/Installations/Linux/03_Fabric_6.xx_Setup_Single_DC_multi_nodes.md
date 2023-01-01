@@ -1,4 +1,4 @@
-# Fabric 6.xx + TDM 7.xx Installation 1 DC  Multi Nodes
+# Fabric 6.xx + TDM 7.xx Installation of Multi Nodes with a single DC 
 
 ## Setup for Cassandra
 
@@ -94,7 +94,7 @@ Run **nodetool repair** command on all the 3 nodes:
 nodetool -u k2view -pw Q1w2e3r4t5 repair
 ~~~
 
-**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. We refer to the following SED lines:
+**Note**: if you select to change the password from the example above, you will need to update it later in point that you preconfigure the Fabric. We refer to the following SED lines:
 
 
 ~~~bash
