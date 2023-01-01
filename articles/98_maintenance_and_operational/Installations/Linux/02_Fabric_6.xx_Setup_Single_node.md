@@ -14,7 +14,7 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Updated the .bash_propile to use python 2.7:
+4. Update the .bash_profile to use python 2.7:
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
@@ -127,7 +127,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    $K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties
    ~~~
 
-6. Verify the Kafka and Zookeeper are running:
+6. Verify that the Kafka and Zookeeper are running:
 
    ~~~bash
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
