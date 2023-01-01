@@ -72,7 +72,7 @@ Start Cassandra on all 3 nodes:
 cassandra
 ~~~
 
-#### Post Setup Run on One Node
+#### Post-Setup Run on One Node
 
 Create new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
 
