@@ -74,7 +74,7 @@ cassandra
 
 #### Post-Setup Run on One Node
 
-Create a new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
+Create a new superuser for Cassandra, change the **cassandra** default user password and update the RF.
 
 Update the `DC1` to the DC name you've used above:
 
