@@ -2,11 +2,11 @@
 
 A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A load task can also delete entities from target environments before loading them and/or reserve the target entities in the TDM DB. Note that the Reserve task type is also checked by default when the Load task type is checked.
 
-An Load task contains the following tabs:
+A Load task contains the following tabs:
 
 - [General](14a_task_general_tab.md)
 - [Additional Execution Parameters](#additional-execution-parameters-tab)
-- [Requested Entities](#requested-entities-tab) - opened if the Data Type contains entities.
+- [Requested Entities](#requested-entities-tab) - opens if the Data Type contains entities.
 - [Task Scheduling](22_task_execution_timing_tab.md)
 
 When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
@@ -37,17 +37,17 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 ### Set Sync Policy
 
-This setting enables the user to change the [default LUI sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON). The following sync policy are available:
+This setting enables the user to change the [default LUI sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) (Sync ON). The following sync policies are available:
 
-- **Sync New Data**: this is the default option (Sync ON).
-- **Do Not Sync From Source Data**: get the LUI data from the TDM warehouse (Fabric).
-- **Refresh all Data from Source**: extract the LUI from the data source whenever the task is executed (Sync FORCE).
+- **Sync New Data** - this is the default option (Sync ON).
+- **Do Not Sync From Source Data** - get the LUI data from the TDM warehouse (Fabric).
+- **Refresh all Data from Source** - extract the LUI from the data source whenever the task is executed (Sync FORCE).
 
 Notes:
-- This setting is **only available when the Data Versioning checkbox is cleared (regular task)**.  A Load Data Versioning task gets the data version from the TDM warehouse (Fabric)  and reloads it to the target environment.
+- This setting is **only available when the Data Versioning checkbox is cleared (regular task)**. A Load Data Versioning task gets the data version from the TDM warehouse (Fabric) and reloads it to the target environment.
 - The **Do Not Sync From Source Data** option is not displayed if the user selects a combination of Extract and Load task types.
 
-Click for more information on [how overriding the Sync mode and the Task Operation mode impact the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
+Click for more information on [how overriding the Sync mode and the Task Operation mode impacts the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
 ### Reservation Period
 
@@ -99,9 +99,13 @@ This is the **default option**. Populate the list of entities for the task with 
 
 ### Custom Logic
 
-Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task:![custom logic](images/load_task_requested_entities_custom_logic.png)
+Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task.
 
-TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
+TDM supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
+
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+
+See example:
 
 ![custom logic](images/load_task_requested_entities_custom_logic_2.png)
 
@@ -109,7 +113,7 @@ TDM 7.5 supports creating external input parameters on a Custom Logic Flow. In t
 
 Note:
 
-- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
+- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or NY,LA. 
 
 ### Parameters 
 
@@ -123,7 +127,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
 #### Use Parameters with Random Selection Checkbox
 
-  The Parameters selection has two modes: 
+  The Parameters selection has 2 modes: 
 
   - When checked (default), TDM randomly selects the entities from the list of all entities, those that match the selected parameters whereby each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**. 
 
@@ -137,6 +141,16 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
     - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters. 
 
+#### Filter out Reserved Entities Checkbox
+
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
+
+For example:
+
+- There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's environments.
+- If the Filter out Reserved Entities is checked, the Entities Matched is 490.
+- If the Filter out Reserved Entities is cleared, the Entities Matched is 500.
+
 #### How Do I Add a Condition? 
 
   To add a parameter:
@@ -144,19 +158,19 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
   - Click **Add Condition**. 
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
-The TDM GUI  displays the SQL query built based on the selected parameters.
+The TDM GUI displays the SQL query built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
 There are several types of parameters:
 
-- **Combo**, parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
+- **Combo** - parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
-- **Number**, the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** - the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
   
-- **Date**, populate the value using the following format: **YYYY-MM-DD**. 
+- **Date** - populate the value using the following format: **YYYY-MM-DD**. 
   
   - Notes: 
   
@@ -171,7 +185,7 @@ There are several types of parameters:
   
     - The date value is set without quotation marks.
   
-- **Text**, populate the value using free text.
+- **Text** - populate the value using a free text.
 #### How Do I Add a Group of Parameters?
 
 Click **Add Group**. 
@@ -190,7 +204,7 @@ Note that nested groups of parameters can be added, for example, in order to def
 #### Getting the Number of Matching Entities
 
 Click Refresh next to the **Entities Matched** in order to calculate the number of entities that match the selected parameters.
-The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can both crosscheck the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
+The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can both cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
 
 - Click ![refesh](images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
@@ -217,6 +231,10 @@ Testers may select this option only if they are permitted to clone an entity in 
 Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for another user are excluded from the selected entities. 
 
 Testers can select this option only if they are permitted to do so in the task's target environment.
+
+#### Filter out Reserved Entities Checkbox
+
+The **Filter out Reserved Entities** checkbox indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list. 
 
 
 
