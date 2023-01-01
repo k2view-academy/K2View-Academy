@@ -210,7 +210,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 TDM 7.xx is certified with PGSQL 9.6 & 13. You can supply access to his PG if you have one.
 TDM requires a user and a password with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or he/she can find the below the installation instructions for the **K2View** **PGSQL**:
+The customer can provide the **PGSQL**, or he/she can find the below installation instructions for the **K2View** **PGSQL**:
 
 <ul>      
 <li>
