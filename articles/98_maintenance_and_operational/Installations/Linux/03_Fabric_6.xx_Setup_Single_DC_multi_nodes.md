@@ -14,7 +14,7 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Updated the .bash_propile to use python 2.7.
+4. Update the .bash_propile to use python 2.7.
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
@@ -24,7 +24,7 @@
    ~~~
 
 
-### Setup the first 3 Cassandra nodes
+### Set up the first 3 Cassandra nodes
 
 Run the commands as shown below for each node in turn. When doing so, update the parameters that are unique to your project. 
 
@@ -34,7 +34,7 @@ Run the commands as shown below for each node in turn. When doing so, update the
 
 3.  Run the post setup commands.
 
-**Pre setup run on the 3 node**, update the following as needed:
+**Pre-setup run on the 3 node**, update the following as needed:
 
 - `dc=`
 - `cluster_name=`
