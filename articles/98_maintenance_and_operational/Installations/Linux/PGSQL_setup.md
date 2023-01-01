@@ -3,7 +3,7 @@
 When using TDM, you need to have a Postres SQL database engine. This document explains how to install such an engine. 
 
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
-- You can supply access to a Postgres SQL database engine if you have one. If you do not, one is provided with the TDM application.  
+- You can provide access to a Postgres SQL database engine if you have one. If you do not, one is provided with the TDM application.  
 - TDM requires a username & password with full create, delete and update privileges. 
 - You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
 - The tarball provided by **K2View** is PGSQL 13.3 with the TLS mode enabled. 
