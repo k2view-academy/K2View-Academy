@@ -3,10 +3,10 @@
 When using TDM, you need to have a Postres SQL database engine. This document explains how to install such an engine. 
 
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
-- You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
+- You can supply access to a Postgres SQL database engine if you have one. If you do not, one is provided with the TDM application.  
 - TDM requires a username & password with full create, delete and update privileges. 
 - You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
-- The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
+- The tarball provided by **K2View** is PGSQL 13.3 with the TLS mode enabled. 
 - The user and password are **postgres**, port is the default port (5432).  
  
 Locations of important files are as follows:
@@ -36,7 +36,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ## Setup  ##
 
-- Connect as the  **pgsql** user on the console of the server.
+- Connect as the **pgsql** user on the console of the server.
 
 - Download or copy the tarball file from this link: [pg13.3_tls_enabled.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_enabled.tar.gz).
 
@@ -73,7 +73,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   echo "ALTER USER postgres WITH SUPERUSER;"| psql
   ~~~
 
-- Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` 
+- Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql` and `TDMGUI/createTDMDB/k2vtdm3.sql` 
 - Alternatively, you can copy the files to the pgsql console and run them with the **psql** command. 
   The files are located at ~/ k2vtdm2.sql ~/ k2vtdm3.sql
 
