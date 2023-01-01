@@ -293,7 +293,7 @@ cassandra
 
 TDM 7.xx is certified with pgsql 9.6 & 13. If you prefer to use a pre-existing postgres instance, you can provide its connection details. TDM requires user & password with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or find below the installation instructions for **K2view** **PGSQL**:
+The customer can provide the **PGSQL**, or he/she can find the below installation instructions for **K2View** **PGSQL**:
 
 <ul>      
 <li>
