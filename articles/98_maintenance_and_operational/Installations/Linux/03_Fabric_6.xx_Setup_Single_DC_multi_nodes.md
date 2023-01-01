@@ -28,11 +28,11 @@
 
 Run the commands as shown below for each node in turn. When doing so, update the parameters that are unique to your project. 
 
-1.  Run the pre setup commands.
+1.  Run the pre-setup commands.
 
 2.  Start Cassandra.
 
-3.  Run the post setup commands.
+3.  Run the post-setup commands.
 
 **Pre-setup run on the 3 node**, update the following as needed:
 
@@ -74,9 +74,9 @@ cassandra
 
 #### Post-Setup Run on One Node
 
-Create new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
+Create a new superuser for Cassandra, and change the **cassandra** default user password, update the RF.
 
-Update the `DC1` to the DC name you used above:
+Update the `DC1` to the DC name you've used above:
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
@@ -104,7 +104,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
 
 ### Setup Cassandra Nodes 4 and Above
 
-**Pre setup run on the 3 node**, update the following as needed:
+**Pre-setup run on the 3 node**, update the following as needed:
 
 - `dc=`
 - `cluster_name=`
@@ -139,13 +139,13 @@ cassandra
 
 
 
-## Setup Kafka Cluster
+## Set up Kafka Cluster
 
 ### Load the Package 
 
 1. Download the package from: [latest version](https://download.k2view.com/owncloud/index.php/s/kc3Zkc6RcaX48xE).
 
-2. Connect to Linux as "kafka" user and copy the package to the home directory.
+2. Connect to Linux as a 'kafka' user and copy the package to the home directory.
 
 3. Untar the package (the package name varies based on the version) as follows:
 
@@ -153,7 +153,7 @@ cassandra
    tar -zxvf k2view_Confluent_5.xxx.tar.gz && bash -l
    ~~~
 
-4. Pre setup:
+4. Pre-setup:
 
    - Updade the IP's of `kserver1` , `kserver2` , `kserver3` 
 
