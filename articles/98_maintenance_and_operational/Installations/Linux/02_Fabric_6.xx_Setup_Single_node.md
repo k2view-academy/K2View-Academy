@@ -76,7 +76,7 @@ echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassa
 echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -u k2admin -p Q1w2e3r4t5
 ~~~
 
-**Note**: if you select to change the password from the example above, you will need to update it later in point that you preconfigure the Fabric. We refer the the following SED lines:
+**Note**: if you select to change the password from the example above, you will need to update it later on when you preconfigure Fabric. We refer the the following SED lines:
 
 
 ~~~bash
