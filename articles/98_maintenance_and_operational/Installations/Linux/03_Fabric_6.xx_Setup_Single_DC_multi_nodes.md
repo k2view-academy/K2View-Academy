@@ -14,7 +14,7 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Update the .bash_propile to use python 2.7.
+4. Update the .bash_profile to use python 2.7.
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
