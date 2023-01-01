@@ -262,7 +262,7 @@ cassandra
 
 4. Start Fabric:
 
-   - On the first node of Fabric run the following (only after it is ready you can start other Fabric nodes):
+   - On the first node of Fabric, run the following (only after it is ready you can start other Fabric nodes):
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
