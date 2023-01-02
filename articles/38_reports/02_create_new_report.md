@@ -1,8 +1,8 @@
-# Report Creation
+# Report Designer
 
 ### Overview
 
-The reports creation is comprised of the following steps:
+The reports creation is performed using the **Designer** component which is embedded into the Fabric Studio. It is comprised of the following steps:
 
 1. Define a data source and data set(s) in an empty report canvas. 
 2. Validate the data set(s) and define the input parameter(s).

@@ -30,7 +30,13 @@ All the above activities are done on report items using the Properties panel loc
 
 You can also create grouping, summarize the data on a group or header/footer level, apply conditional formatting, interactive sorting, create bookmarks and jump to them, and more. 
 
-Here is the example of tabular report that demonstrates several features:
+Once the table is added to the report page and data binding is in place, you need to click Preview to see the report layout with the data.
+
+![](images/05_preview.png)
+
+### Example
+
+Below is an example of a tabular report that demonstrates several features:
 
 ![](images/05_tabular_report_example.gif)
 
@@ -38,5 +44,5 @@ Here is the example of tabular report that demonstrates several features:
 
 
 
- [![Previous](/articles/images/Previous.png)](04_parameters_creation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+ [![Previous](/articles/images/Previous.png)](04_parameters_creation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_report_viewer.md)
 

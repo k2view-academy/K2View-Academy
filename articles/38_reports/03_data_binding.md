@@ -50,7 +50,7 @@ The **custom data set** allows defining any required endpoint, by setting the fo
 
 **Note**: the templates for Data Source and Data Set creation are available for new reports only. When adding a data source or a data set to an existing report, New Data Source and New Data Set windows will open, requiring a manual population of all details. 
 
-### How Do I Validate a Data Set?
+### Data Set Validation
 
 The Data Set must be validated in order to complete its creation. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
 
@@ -75,6 +75,12 @@ The Data Set must be validated in order to complete its creation. The validation
     ![](images/03_calc_fields.png)
 
 5. Click the **Save Changes** button to finalize the Data Set definition.
+
+### Example
+
+Below is an example that demonstrates how to define a data source and a data set using Fabric endpoint templates:
+
+![](images/03_example.gif)
 
 
 
