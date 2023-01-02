@@ -50,21 +50,19 @@ The **custom data set** allows defining any required endpoint, by setting the fo
 
 **Note**: the templates for Data Source and Data Set creation are available for new reports only. When adding a data source or a data set to an existing report, New Data Source and New Data Set windows will open, requiring a manual population of all details. 
 
-Now the Data Set must be validated in order to complete its creation.
-
 ### How Do I Validate a Data Set?
 
-Once you create a data source and a data set, the next step is to validate the data set. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
+The Data Set must be validated in order to complete its creation. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
 
-1. Click **Validate** button to validate the data set. Note that prior to the validation, the number of fields is 0.
+1. Click **Validate** button at the bottom of New Data Set window to validate the data set. Note that prior to the validation, the number of fields is 0.
 
    ![](images/03_validate_data_set.png)
 
 2. When **Uri/path** includes a parameter, you will be prompted to insert the parameter value: ![](images/03_param_value_prompt.png)
 
-3. Populate a valid parameter value and click **Save & Run**. Then the validation is executed.
+3. Populate a valid parameter value and click **Save & Run** to run the validation.
 
-    * If the validation has passed successfully, the fields are populated. You can click the ![](images/03_hamburger.png) icon in the **Database Fields** section to expand the list of fields.
+    * If the validation succeeded, the fields are populated. You can click the ![](images/03_hamburger.png) icon in the **Database Fields** section to expand the list of fields.
 
       ![](images/03_validated_ds.png)
 

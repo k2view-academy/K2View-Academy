@@ -1,19 +1,21 @@
 # Report Creation
 
+### Overview
+
 The reports creation is comprised of the following steps:
 
 1. Define a data source and data set(s) in an empty report canvas. 
 2. Validate the data set(s) and define the input parameter(s).
-3. Create the data binding between the report elements and the data set's fields. 
-4. Set the report's layout design (fonts, colors, etc.).
+3. Create the report layout and bind the report elements to the data set's fields. 
+4. Design the report's layout: fonts, colors, borders, etc.
 
-This article describes how to start a new report creation. The next articles of this user guide explain about the additional steps.
+This article describes how to initiate a new report creation. The next articles of this user guide explain about the additional steps.
 
 ### New Report
 
 To initiate a new report creation, go to the Logical Unit in the project tree, right-click on **Reports > New Report** and populate the report name. Click Enter to create and open an empty report canvas. 
 
-Now, click anywhere on the gray area around the report layout to load the report properties in the **Properties Panel**. Here you can set various report level properties. For example, margins style.
+Now, click anywhere on the gray area around the report layout to load the report properties in the **Properties Panel**. Here you can set various report level properties. For example, margins style and size.
 
 ![](images/02_create_new_rep_01.png)
 

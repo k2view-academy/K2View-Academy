@@ -9,7 +9,7 @@ Fabric's **Reports** application includes the Designer and Viewer components:
 * **Designer** - enables creating the report template, including the following: 
   - Definition of data sources, data sets and parameters.
   - Binding the report's elements to the data set's fields.
-  - Creating the report's layout design (fonts, colors, etc). 
+  - Designing the report's layout (fonts, colors, borders, etc). 
 * **Viewer** - enables generating the report, including the following:
   - Generating the report's preview. 
   - Searching for data within the preview file.
