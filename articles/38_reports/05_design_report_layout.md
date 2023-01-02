@@ -14,11 +14,29 @@ Fabric's **Reports** application provides various controls to enable visualizing
 
 A tabular report is the most straightforward way to visualize your data, in a multicolumn, multirow fashion. A tabular report can group, sort, and filter the data based on pre-defined conditions or user input.
 
-Tabular report starts by either:
+There are two ways to creating a data binding in a tabular report's layout:
 
-* Selecting the data set fields and drag-and-drop them into a report page - like [this](images/05_create_table_1.gif).
-* Or, Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with respective data set fields - like [this](images/05_create_table_2.gif).
+1. Selecting the data set fields and drag-and-drop them into a report page - like this:
+
+   ![](images/05_create_table_1.gif)
+
+2. Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with respective data set fields - like this:
+
+   ![](images/05_create_table_2.gif)
+
+The next step should be the table formatting, which may include the formatting of the cells font size, color, alignment, for both the detail and the header rows.
+
+All the above activities are done on report items using the Properties panel located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
+
+You can also create grouping, summarize the data on a group or header/footer level, apply conditional formatting, interactive sorting, create bookmarks and jump to them, and more. 
+
+Here is the example of tabular report that demonstrates several features:
+
+![](images/05_tabular_report_example.gif)
+
+[Click for the full user guide of Tabular report creation.](https://www.grapecity.com/activereportsjs/docs/ReportAuthorGuide/QuickStart/get-started-with-/Tutorial-1-Tabular-Report)
 
 
 
- 
+ [![Previous](/articles/images/Previous.png)](04_parameters_creation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+
