@@ -159,8 +159,8 @@ The following table describe the valid combinations of task types on a TDM task:
 -  Admin users.
 -  Environment owners can create a TDM task for their environment.
 -  Testers who can create a TDM task for the environments they are attached to by a [TDM Environment Permission Set](10_environment_roles_tab.md):
-   - Source environment, testers must be attached to the source environment by a role with [Read](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
-   - Target environment, testers must be attached to the target environment by a role with [Write](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
+   - Source environment, testers must be attached to the source environment by a permission set with [Read](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
+   - Target environment, testers must be attached to the target environment by a permission set with [Write](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
 
 
 
