@@ -70,11 +70,13 @@ The Data Set must be validated in order to complete its creation. The validation
 
       ![](images/03_invalid_ds.png)
 
-4. You can define Calculated Fields to be added to the data set. For example, if there are FIRST_NAME and LAST_NAME fields in the list of Database Fields, they can be concatenated into a new calculated field - CUSTOMER_NAME.
+4. You can change the default names of the Database Fields and specify their data type. The latter is mostly useful for tagging Date fields because, in JSON data format, dates are usually represented by strings. Add **[Date]** tag to the Date fields to tag them and then set their format using the cell properties.
+
+5. You can define Calculated Fields to be added to the data set. For example, if there are FIRST_NAME and LAST_NAME fields in the list of Database Fields, they can be concatenated into a new calculated field - CUSTOMER_NAME.
 
     ![](images/03_calc_fields.png)
 
-5. Click the **Save Changes** button to finalize the Data Set definition.
+6. Click the **Save Changes** button to finalize the Data Set definition.
 
 ### Example
 
