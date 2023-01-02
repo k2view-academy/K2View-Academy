@@ -2,7 +2,7 @@
 
 The TDM GUI is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
-- TDM administrative activities - defines TDM Business Entities, environments, roles and permissions.
+- TDM administrative activities - defines TDM Business Entities, system, environments and permissions.
 - TDM copy activities - creates and executes TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
 
 TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM GUI, updates the TDM DB. 
