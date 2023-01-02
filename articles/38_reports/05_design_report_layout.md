@@ -16,10 +16,9 @@ A tabular report is the most straightforward way to visualize your data, in a mu
 
 Tabular report starts by either:
 
-* Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox.
+* Selecting the data set fields and drag-and-drop them into a report page - like [this](images/05_create_table_1.gif).
+* Or, Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with respective data set fields - like [this](images/05_create_table_2.gif).
 
-* Or, selecting the data set fields and drag-and-drop them into a report page - like [here](images/05_create_table_1.gif):
 
-  ![](images/05_create_table_1.gif)
 
-When the first method is used, you still need to connect the table with respective data set fields. This can be accomplished by either dragging individual data set fields to the cells 
+ 
