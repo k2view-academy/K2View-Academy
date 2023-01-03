@@ -32,6 +32,14 @@ Click ![](images/export_icon.png) to open the Export toolbox which allows export
 
 ![](images/06_open_report_export.png)
 
-
+<web>
 
  [![Previous](/articles/images/Previous.png)](05_design_report_layout.md)
+
+</web>
+
+<studio>
+
+ [![Previous](/articles/images/Previous.png)](01_reports_overview.md)
+
+</studio>

@@ -1,3 +1,5 @@
+<web>
+
 # Parameters Creation
 
 Frequently, parameters definition is required when creating data sources and data sets, especially those using Fabric endpoints. For example, if you configured your data set using the [```lu/{luName}/{@iid}/{table}``` Fabric endpoint](02_create_new_report.md#data-set-configuration) - an IID will have to be provided in order to generate the report. 
@@ -16,3 +18,4 @@ In addition, you can define the list of parameter's valid values and/or a defaul
 
 [![Previous](/articles/images/Previous.png)](03_data_binding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_design_report_layout.md)
 
+</web>

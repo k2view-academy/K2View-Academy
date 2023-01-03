@@ -1,3 +1,5 @@
+<web>
+
 # Data Binding
 
 Data binding establishes a connection between a report and the displayed data, starting with the addition of a data source and one or more data sets.
@@ -97,3 +99,4 @@ Proceed to the next step of this user guide to define the report's parameters.
 
 [![Previous](/articles/images/Previous.png)](02_create_new_report.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_parameters_creation.md)
 
+</web>

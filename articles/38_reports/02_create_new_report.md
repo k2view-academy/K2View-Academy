@@ -1,3 +1,5 @@
+<web>
+
 # Report Designer
 
 ### Overview
@@ -26,3 +28,5 @@ Note that you can control the Properties mode - Basic or Advanced - via the sett
 
 
 [![Previous](/articles/images/Previous.png)](01_reports_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_data_binding.md) 
+
+</web>

@@ -1,3 +1,5 @@
+<web>
+
 # Report Layout Design
 
 ### Overview
@@ -49,3 +51,4 @@ Below is an example of a tabular report that demonstrates several features:
 
  [![Previous](/articles/images/Previous.png)](04_parameters_creation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_report_viewer.md)
 
+</web>
