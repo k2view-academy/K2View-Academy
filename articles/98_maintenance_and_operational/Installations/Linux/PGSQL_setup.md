@@ -93,7 +93,7 @@ Connect via a pgadmin and set this up as shown in the example below:
 
 ### Check That the Connection is Secure
 
-- From the server side, run the following command from the console:
+- On the server end, run the following command from the console:
 
 ~~~sql
 echo "SELECT datname,usename, ssl, client_addr FROM pg_stat_ssl JOIN pg_stat_activity ON pg_stat_ssl.pid = pg_stat_activity.pid;" | psql
