@@ -8,11 +8,14 @@ Fabric's **Reports** application provides various controls to enable visualizing
 * **Lists** - a free-form layout for repeating data record.
 * **Input fields**, various types of **charts**, **pivot tables**, and many more. 
 
-[Click for more details about various ActiveReportsJS layout features.](https://www.grapecity.com/activereportsjs/demos/)
+The reports can be created using various types of layouts:
+
+* **Tabular report** is the most straightforward way to visualize your data, in a multicolumn, multirow fashion. A tabular report can group, sort, and filter the data based on pre-defined conditions or user input.
+* **Dashboard** is a dashboard-like report that allows combining several different controls, for example a chart and a summary table. The page orientation of such report can be defined as **Landscape**.
+* **Master-detail report** is a report that can visualize two related data sets.
+* And more... [Click for the list of demos describing various ActiveReportsJS layout features.](https://www.grapecity.com/activereportsjs/demos/)
 
 ### Tabular Reports
-
-A tabular report is the most straightforward way to visualize your data, in a multicolumn, multirow fashion. A tabular report can group, sort, and filter the data based on pre-defined conditions or user input.
 
 There are two ways to creating a data binding in a tabular report's layout:
 

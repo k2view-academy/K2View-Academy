@@ -77,7 +77,7 @@ The Data Set must be validated in order to complete its creation. The validation
 
     * In addition to Database Fields, you can define **Calculated Fields** to be added to the data set using an expression. 
 
-    ![](images/03_calc_fields.png)
+      ![](images/03_calc_fields.png)
 
 5. Click the **Save Changes** button to finalize the Data Set definition.
 
