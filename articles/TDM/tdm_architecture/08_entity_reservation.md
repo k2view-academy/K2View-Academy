@@ -1,6 +1,6 @@
 # Entity Reservation
 
-The entity reservation feature has been added in TDM 7.4. This feature is made to enable the user better control on the tested entities in their environments and **enables a user to reserve (lock) entities on the testing environment and avoid other users from re-provisioning these entities into the testing environment** till the user completes the functional tests and can release these entities.
+The entity reservation feature has been added in TDM 7.4. This feature is made to enable the user better control on the tested entities in their environments and **enables a user to reserve (lock) entities on the testing environment and avoid other users from re-provisioning or deleting these entities into/from the testing environment** till the user completes the functional tests and can release these entities.
 
 However, the **user can still load a replica of the reserved entity** using the [replace sequence](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#replace-sequence) option in the TDM task.
 
