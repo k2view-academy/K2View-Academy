@@ -21,7 +21,7 @@ Starts a task execution and return the execution's task_execution_id on success.
 - Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, stop the task execution and return an error message.
 - Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
 - Do not enable an execution if another execution with the same execution parameters is already running on the task.
-- Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
+- Validate the task's BE and LUs with the [TDM Systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
 
 ##### Data Versioning Validations
