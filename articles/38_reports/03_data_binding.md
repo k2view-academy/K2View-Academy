@@ -58,25 +58,28 @@ The Data Set must be validated in order to complete its creation. The validation
 
    ![](images/03_validate_data_set.png)
 
-2. When **Uri/path** includes a parameter, you will be prompted to insert the parameter value: ![](images/03_param_value_prompt.png)
+2. When **Uri/path** includes a parameter, you will be prompted to insert the parameter value: 
+
+    ![](images/03_param_value_prompt.png)
 
 3. Populate a valid parameter value and click **Save & Run** to run the validation.
 
     * If the validation succeeded, the fields are populated. You can click the ![](images/03_hamburger.png) icon in the **Database Fields** section to expand the list of fields.
 
-      ![](images/03_validated_ds.png)
-
     * If the configuration is invalid, or there are other issues with a data connection, the dialog shows an error message at the top area of the Data Set window.
 
       ![](images/03_invalid_ds.png)
 
-4. You can change the default names of the Database Fields and specify their data type. The latter is mostly useful for tagging Date fields because, in JSON data format, dates are usually represented by strings. Add **[Date]** tag to the Date fields to tag them and then set their format using the cell properties.
+4. The fields can be updated as follows:
 
-5. You can define Calculated Fields to be added to the data set. For example, if there are FIRST_NAME and LAST_NAME fields in the list of Database Fields, they can be concatenated into a new calculated field - CUSTOMER_NAME.
+    * The default names of the **Database Fields** can be updated.
+    * You can specify the field's data type which is mostly useful for tagging Date fields because, in JSON data format, dates are usually represented by strings. Add **[Date]** tag to the Date fields to tag a field and then set the format using the cell properties.
+
+    * In addition to Database Fields, you can define **Calculated Fields** to be added to the data set using an expression. 
 
     ![](images/03_calc_fields.png)
 
-6. Click the **Save Changes** button to finalize the Data Set definition.
+5. Click the **Save Changes** button to finalize the Data Set definition.
 
 ### Example
 
