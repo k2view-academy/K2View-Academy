@@ -98,7 +98,7 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 Run **nodetool repair** command on all the 3 nodes:
 
 ~~~bash
-nodetool -u k2view -pw Q1w2e3r4t5 repairPTswLot7a21eFET
+nodetool -u k2view -pw Q1w2e3r4t5 repair
 ~~~
 
 **Note**: If you decide to change the password in the above setting, you would be required to run the following commands, when setting up the Fabric server. We refer to the following SED lines:
