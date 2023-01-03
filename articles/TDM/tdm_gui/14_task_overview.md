@@ -166,7 +166,8 @@ The following table describe the valid combinations of task types on a TDM task:
 
 ## TDM Tasks List Window
 
-The TDM Task List displays the following:
+The TDM Task List displays by default the list of all Active tasks in the TDM. 
+It displays the following settings on each task. These settings can also be used to filter the displayed tasks:
 
 - Task ID.
 - Task Title: task name.
