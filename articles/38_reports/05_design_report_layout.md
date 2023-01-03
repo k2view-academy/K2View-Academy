@@ -6,7 +6,7 @@ Fabric's **Reports** application provides various controls to enable visualizing
 
 * **Tables** - a flexible control that allows grouping, headers and footers, aggregates, sorting, etc. Individual cells can host other controls such as image and more. This report displays tabular data in rows and columns.
 * **Lists** - a free-form layout for repeating data record.
-* Input fields, various types of charts, pivot tables, and many more. 
+* **Input fields**, various types of **charts**, **pivot tables**, and many more. 
 
 [Click for more details about various ActiveReportsJS layout features.](https://www.grapecity.com/activereportsjs/demos/)
 
