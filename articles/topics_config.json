@@ -19,11 +19,6 @@
 			"display name": "Fabric 6.4",
 			"branch name": "Academy_6.4",
 			"build": false
-		},
-		{
-			"display name": "Fabric 6.2",
-			"branch name": "Academy_6.2",
-			"build": false
 		}
 	],
 	"Views": [
