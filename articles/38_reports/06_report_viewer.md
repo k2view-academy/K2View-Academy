@@ -2,13 +2,13 @@
 
 ### Overview
 
-The Viewer component can be reached by opening **Reports** from the list of pre-integrated applications of the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and it enables the following options described further in this article:
+The Viewer component can be reached by opening **Reports** from the list of pre-integrated applications of the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and it enables the following options:
 
-* Open Reports
+* Open Report
 * Search
 * Export
 
-### Open Reports
+### Open Report
 
 The **Open Report** popup allows to select a report from a list of deployed reports. 
 
@@ -22,7 +22,7 @@ You can also share the link to the report by clicking the ![](images/copy_link.p
 
 ### Search
 
-Click ![](images/search_icon.png) to open the Search toolbox which allows searching the string within the open report:
+Click ![](images/search_icon.png) to open the Search toolbox which allows searching a string within the open report:
 
 ![](images/06_open_report_search.png)
 
