@@ -8,11 +8,11 @@ Fabric's **Reports** is a lightweight reporting solution, implemented using the 
 
 Fabric's **Reports** application includes a Designer and a Viewer components:
 
-* **Designer** - enables creating the report template, including the following: 
+* **Designer** - enables creating a report template, including the following: 
   - Definition of data sources, data sets and parameters.
   - Binding the report's elements to the data set's fields.
   - Designing the report's layout (fonts, colors, borders, etc). 
-* **Viewer** - enables generating the report, including the following:
+* **Viewer** - enables generating a report, including the following:
   - Generating the report's preview.
   - Searching for data within the preview file.
   - Downloading the extract files. The supported formats are: PDF, HTML and CSV.
