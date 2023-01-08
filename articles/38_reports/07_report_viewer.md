@@ -36,7 +36,7 @@ Click ![](images/export_icon.png) to open the Export toolbox which allows export
 
 
 
- [![Previous](/articles/images/Previous.png)](05_design_report_layout.md)
+ [![Previous](/articles/images/Previous.png)](06_design_report_layout.md)
 
 </web>
 
