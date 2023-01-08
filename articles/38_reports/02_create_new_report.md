@@ -11,7 +11,7 @@ The reports creation is performed using the **Designer** component, which is emb
 3. Create the report layout and bind the report elements to the data set's fields. 
 4. Design the report's layout: fonts, colors, borders, etc.
 
-This article describes how to initiate a new report creation. The next articles of this user guide explain about the additional steps.
+This article describes how to initiate a new report creation. The following articles in this user guide explain about the additional steps.
 
 ### New Report
 
