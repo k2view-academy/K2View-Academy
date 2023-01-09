@@ -21,7 +21,7 @@ Now, click anywhere on the gray area surrounding the report in order to load the
 
 ![](images/02_create_new_rep_01.png)
 
-Note that you can control the Properties mode - Basic or Advanced - via the setting at the bottom of the page:
+Note that you can control the Properties mode - Basic or Advanced - via the settings icon located at the bottom of the page:
 
 ![](images/02_properties_mode.png)
 
