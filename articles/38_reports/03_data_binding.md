@@ -2,7 +2,7 @@
 
 # Data Binding
 
-Data binding establishes a connection between a report and the displayed data, starting with the addition of a data source and one or more data sets.
+Data binding technique establishes a connection between a report and the displayed data, starting with the addition of a data source and one or more data sets.
 
 ### Data Source Configuration
 
