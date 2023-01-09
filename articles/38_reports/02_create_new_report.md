@@ -4,14 +4,14 @@
 
 ### Overview
 
-The reports creation is performed using the **Designer** component, which is embedded into the Fabric Studio. It is comprised of the following steps:
+The report creation is performed using the **Designer** component, which is embedded into the Fabric Studio. The report creation process comprises of the following steps:
 
 1. Define a data source and data set(s) in an empty report canvas. 
 2. Validate the data set(s) and define the input parameter(s).
 3. Create the report layout and bind the report elements to the data set's fields. 
 4. Design the report's layout: fonts, colors, borders, etc.
 
-This article describes how to initiate a new report creation. The following articles in this user guide explain about the additional steps.
+This article describes how to initiate a new report creation and the following articles in this user guide explain about the additional steps.
 
 ### New Report
 
