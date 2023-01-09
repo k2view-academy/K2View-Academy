@@ -15,7 +15,7 @@ This article describes how to initiate a new report creation and the following a
 
 ### New Report
 
-To initiate a new report creation, go to the Logical Unit in the project tree, right-click on **Reports > New Report** and populate the report name. Click Enter to create and open an empty report canvas. The report is created with a continuous page layout, which means that a data region (such as a table) would grow until there is no more space on the current page and then another page would be produced. 
+To initiate a new report creation, go to the Logical Unit in the project tree, right-click on **Reports > New Report** and populate the report name. Click **Enter** to create and open an empty report canvas. The report is created with a continuous page layout, which means that a data region (such as a table) would grow until there is no more space on the current page and then another page would be produced. 
 
 Now, click anywhere on the gray area around the report layout to load the report properties in the **Properties Panel**. Here you can set various report level properties. For example, margins style and size.
 
