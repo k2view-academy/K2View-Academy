@@ -6,7 +6,7 @@ Data binding establishes a connection between a report and the displayed data, s
 
 ### Data Source Configuration
 
-To create a data source, click the ![](C:\K2View-Academy\articles\38_reports\images\add_icon.png) icon in the **Data Sources** area of the report's properties. It provides a choice of two templates:
+To create a data source, click the![](C:\K2View-Academy\articles\38_reports\images\add_icon.png) icon in the **Data Sources** area of the report's properties. It provides a choice of two templates:
 
 - The **fabric_api** data source is defined as the **/api/** Fabric endpoint that runs under your Fabric's host. This is a default data source to be used for any Fabric API (built-in or custom).
 
