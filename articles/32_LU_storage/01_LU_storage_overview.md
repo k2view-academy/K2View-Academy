@@ -21,7 +21,7 @@ To display an LU's storage type, use the Fabric LIST command.
 
 [Click for more information about the LIST command](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server).
 
-Note that Fabric uses the Cassandra DB as application management database. So changing the LU Storage from Cassandra DB to one of the above storage type doesn't replace the Fabric need for other persistent storage. 
+Note that Fabric uses the Cassandra DB as application management database. Therefore, changing the LU Storage from Cassandra DB to one of the above storage types doesn't replace the Fabric need for other persistent storage. 
 
 [Click for more information about Cassandra keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
