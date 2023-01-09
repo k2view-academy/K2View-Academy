@@ -20,7 +20,7 @@ To create a data source, click the![](C:\K2View-Academy\articles\38_reports\imag
 
 ### Data Set Configuration
 
-Each data source may contain one or more data sets. To create a data set, click the ![](C:\K2View-Academy\articles\38_reports\images\plus_icon.png) icon near the data source name in the **Data Sources** area of the report's properties. It provides a choice of several Fabric endpoint templates and a custom data set definition. 
+Each data source may contain one or more data sets. To create a data set, click the![](C:\K2View-Academy\articles\38_reports\images\plus_icon.png) icon near the data source name in the **Data Sources** area of the report's properties. It provides a choice of several Fabric endpoint templates and a custom data set definition. 
 
 **Data Set Based on Fabric Endpoints** 
 
