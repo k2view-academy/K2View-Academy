@@ -31,7 +31,7 @@ The Fabric endpoints include the following templates:
 * **commonTable**, defined by ```common/{table}``` Fabric endpoint.
 * **command_get**, defined by ```fabric-command``` Fabric endpoint.
 
-Once one of the above templates is selected, the New Data Set window opens with a pre-defined **Uri/path** and **Parameters** that correspond to the selected template, as per the following logic:
+Once selecting one of the above templates, a New Data Set window opens with a pre-defined **Uri/path** and **Parameters** that correspond to the selected template, as per the following logic:
 
 * The ```{luName}``` of the Fabric endpoint is pre-populated with the name of Logical Unit under which the report is created. 
 * The ```{table}``` is pre-populated with the TABLE_NAME constant and should be updated to the required LU Table name. 
