@@ -35,7 +35,7 @@ Once one of the above templates is selected, the New Data Set window opens with 
 
 * The ```{luName}``` of the Fabric endpoint is pre-populated with the name of Logical Unit under which the report is created. 
 * The ```{table}``` is pre-populated with the TABLE_NAME constant and should be updated to the required LU Table name. 
-* The **Uri/path** of the Fabric Endpoint templates includes a parameter ```iid```, which hasn't yet been defined for this report. [Click to learn how to define the new parameter](04_parameters_creation.md) or follow the steps of this guide until you reach the step of parameters definition.
+* The **Uri/path** of the Fabric Endpoint templates includes a parameter ```iid```, which hasn't yet been defined for this report. [Click here to learn how to define a new parameter](04_parameters_creation.md) or follow the steps of this guide until you reach the step of parameters definition.
 
 It is recommended to update the default data set name to a meaningful name, for example:
 
