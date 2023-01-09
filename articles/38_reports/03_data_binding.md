@@ -45,7 +45,7 @@ There is a quick way to creation a data binding with Fabric built-in endpoints. 
 
 **Custom Data Set Definition**
 
-The **custom data set** allows defining any required endpoint, by setting the following properties:
+The **custom data set** allows to define any required endpoint, by setting the following properties:
 
 * **Uri/path** - the value depends on the configuration of the parent data source. If the data source's endpoint is a full-path URL, the data set's Uri/path should be empty. If, however, the data source's endpoint is a base URL, then the data set's Uri/path should contain the full-path URL of the data endpoint.
 * **Method** - specifies the request method. The supported methods are GET and POST.
