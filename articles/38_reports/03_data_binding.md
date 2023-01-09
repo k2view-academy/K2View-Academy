@@ -41,7 +41,7 @@ It is recommended to update the default data set name to a meaningful name, for 
 
 <img src="images/02_new_data_set.png"  />
 
-There is a quick way to creation a data binding with Fabric built-in endpoints. [Click to get more details how to do it.](05_quick_data_binding_with_Fabric.md)
+There is a quick way to creation a data binding with Fabric built-in endpoints. [Click here to get more details on how to do it.](05_quick_data_binding_with_Fabric.md)
 
 **Custom Data Set Definition**
 
