@@ -34,6 +34,6 @@ An MTable can be used when a flow or a project function needs to lookup the data
 
 Each MTable can be accessible by any LU, regardless of their location.
 
-[![Previous](/articles/images/Previous.png)](05_translations_code_examples.md)
+[![Previous](/articles/images/Previous.png)](01_translations_overview_and_use_cases.md)
 
 </web>
