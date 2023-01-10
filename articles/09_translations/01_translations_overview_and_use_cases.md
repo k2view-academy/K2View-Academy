@@ -2,10 +2,12 @@
 
 <web>
 
-A Translation is a Fabric Studio object used for transforming data in the Fabric .NET Studio. They don't exist in the Web Studio.
-In the Web Studio, the data transformation rules are defined using various Actors that can be added to a Broadway population flow.
+A Translation is a Fabric Studio object used for transforming data in the Fabric .NET Studio. Translation objects don't exist in the Web Studio.
+In the Web Studio, the data transformation rules can be defined using MTable or by various Actors that can be added to a Broadway population flow.
 
-[Click for more information about the built-in actors.](/articles/19_Broadway/04_built_in_actor_types.md)
+[Click for more information about MTable objects.](06_mtables_overview.md)
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_mtables_overview.md)
 
 </web>
 
@@ -52,37 +54,38 @@ The following icons are displayed at the top of the **Translation Schema tab**:
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_1.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table_1.png"></td>
 <td width="446">
 <p>Print translation definition.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_2.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table_2.png"></td>
 <td width="446">
 <p>Export translation definition as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_3.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table_3.png"></td>
 <td width="446">
 <p>Filter definition by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_4.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table_4.png"></td>
 <td width="446">
 <p>Toggle summaries.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_5.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table_5.png"></td>
 <td width="446">
 <p>Toggle groupings.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 ### Translation Options
@@ -262,7 +265,6 @@ The following icons are displayed next to each Translation setting:
 </tbody>
 </table>
 <p>&nbsp;</p>
-
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/09_translations/02_creating_a_new_translation_in_fabric.md)
 
