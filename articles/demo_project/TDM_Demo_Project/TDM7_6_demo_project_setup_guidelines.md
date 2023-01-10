@@ -93,6 +93,7 @@ Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM L
 5. Edit the SRC and TAR environments: 
    - If you use a Fabric docker and a **local PG DBs**, populate the **Server** setting of the PG interfaces with **host.docker.internal**.
    - If you use a **docker** for the PG and Cassandra DBs, populate the **Server** setting with the **docker's internal IP address** (run **hostname -I** command in the docker to get the internal IP address), or **host.docker.internal**.
+   - Note: if you run processes on the **local fabric debug** server and **docker DBs**, you need to populate the **Server** with **localhost**.
 6. Deploy the Environments to Fabric.
 7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
