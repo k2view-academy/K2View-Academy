@@ -245,19 +245,19 @@ The following icons are displayed next to each Translation setting:
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_01.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table2_01.png"></td>
 <td width="417">
 <p>Deletes the Translation row.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_02.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table2_02.png"></td>
 <td width="417">
 <p>Moves the Translation row up.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_03.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="images/table2_03.png"></td>
 <td width="417">
 <p>Moves the Translation row down.</p>
 </td>

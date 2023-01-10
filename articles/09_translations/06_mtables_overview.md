@@ -2,7 +2,7 @@
 
 ### What Is an MTable?
 
-MTable is a Fabric Studio object created by uploading a CSV file into the project tree. 
+MTable is a Fabric Studio object created by uploading a CSV file into the project tree. The purpose of an MTable object is to keep reference data as part of the Fabric project and enable data lookup or data transformation rules at run time. 
 
 <studio>
 
@@ -12,14 +12,16 @@ MTable objects are only available in the Fabric Web Studio, replacing the [Trans
 
 <web>
 
-The purpose of an MTable object is to keep reference data as part of the Fabric project. The MTable metadata is created as a schema in Fabric memory upon deploy, based on the CSV file structure. The data from CSV file is then loaded to this schema. 
-
-The data lookup can be performed by one or several keys of MTable. The index is created on-the-fly, based on the search keys. 
+### How Can I Create an MTable?
 
 There are two ways for creating an MTable object in the Fabric Studio:
 
-* Uploading a CSV file into the MTable folder in the project tree. Note that any other file type except CSV will be ignored. 
+* Uploading a CSV file into the MTable folder in the project tree under LU, Common or Web Services. 
 * Manually creating a CSV file under the MTable folder and populating its data.
+
+Upon the deploy, the MTable metadata is created / updated based on the CSV file structure. Any other file type except CSV is ignored. The MTable is created as a schema in Fabric memory. The data from CSV file is then loaded to this schema. 
+
+The data lookup can be performed by one or several keys of MTable. The index is created on-the-fly, based on the search keys. 
 
 ### How Can I Use an MTable?
 
