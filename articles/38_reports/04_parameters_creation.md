@@ -2,7 +2,7 @@
 
 # Parameters Creation
 
-Frequently, parameters definition is required when creating data sources and data sets, especially those using Fabric endpoints. For example, if you configured your data set using the [```lu/{luName}/{@iid}/{table}``` Fabric endpoint](02_create_new_report.md#data-set-configuration) - an IID will have to be provided in order to generate the report. 
+Defining parameters is often required, when creating data sources and data sets, especially those using Fabric endpoints. For example, if you configured your data set using the [```lu/{luName}/{@iid}/{table}``` Fabric endpoint](02_create_new_report.md#data-set-configuration) - an IID will have to be provided in order to generate the report. 
 
 ### How Do I Create Report Parameters?
 
