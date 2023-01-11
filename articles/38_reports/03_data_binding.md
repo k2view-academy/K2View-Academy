@@ -87,7 +87,7 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
 ### Example
 
-Below is an example that demonstrates how to define a data source and a data set using Fabric endpoint templates:
+The below example demonstrates how to define a data source and a data set using Fabric endpoint templates:
 
 ![](images/03_example.gif)
 
