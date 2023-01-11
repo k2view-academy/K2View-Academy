@@ -56,7 +56,7 @@ The **custom data set** allows to define any required endpoint, by setting the f
 
 ### Data Set Validation
 
-The Data Set must be validated in order to complete its creation. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
+For completion of its creation, a Data Set must be validated. The validation is done in order to check that everything is defined correctly and to retrieve the fields list. 
 
 1. Click **Validate** button at the bottom of New Data Set window to validate the data set. Note that prior to the validation, the number of fields is 0.
 
