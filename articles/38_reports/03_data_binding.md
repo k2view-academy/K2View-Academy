@@ -83,7 +83,7 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
       ![](images/03_calc_fields.png)
 
-5. Click the **Save Changes** button to finalize the Data Set definition.
+5. Click on the **Save Changes** button to finalize the Data Set definition.
 
 ### Example
 
