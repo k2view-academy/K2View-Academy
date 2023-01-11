@@ -62,7 +62,7 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
    ![](images/03_validate_data_set.png)
 
-2. When **Uri/path** includes a parameter, you will be prompted to insert the parameter value: 
+2. When the **Uri/path** includes a parameter, you will be prompted to insert the parameter value: 
 
     ![](images/03_param_value_prompt.png)
 
