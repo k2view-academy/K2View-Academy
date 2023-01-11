@@ -77,9 +77,9 @@ For completion of its creation, a Data Set must be validated. The validation is 
 4. The fields can be updated as follows:
 
     * The default names of the **Database Fields** can be updated.
-    * You can specify the field's data type which is mostly useful for tagging Date fields because, in JSON data format, dates are usually represented by strings. Add **[Date]** tag to the Date fields to tag a field and then set the format using the cell properties.
+    * You can specify the field's data type, which is useful mostly for tagging Date fields because, in JSON data format, dates are usually represented by strings. Add **[Date]** tag to the Date fields to tag a field and then set the format using the cell properties.
 
-    * In addition to Database Fields, you can define **Calculated Fields** to be added to the data set using an expression. 
+    * In addition to Database Fields, you can define **Calculated Fields** to be added to the data set by using an expression. 
 
       ![](images/03_calc_fields.png)
 
