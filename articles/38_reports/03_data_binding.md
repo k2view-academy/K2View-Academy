@@ -70,7 +70,7 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
     * If the validation succeeded, the fields are populated. You can click the ![](images/03_hamburger.png) icon in the **Database Fields** section to expand the list of fields.
 
-    * If the configuration is invalid, or there are other issues with a data connection, the dialog shows an error message at the top area of the Data Set window.
+    * If the configuration is invalid or if there are other issues with a data connection, the dialog box displays an error message at the top area of the Data Set window.
 
       ![](images/03_invalid_ds.png)
 
