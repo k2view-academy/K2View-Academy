@@ -2,7 +2,7 @@ The below metrics describe the various TDM versions, each with its compatible Fa
 
 | TDM  Version | Fabric  Version | Cassandra Version | ADI Version | Postgres  Version |
 | :----------- | --------------- | ----------------- | ----------- | ----------------- |
-| 7.6.0        | 7.0             | 3.11.12 or 4.0.3  | N/A         | 13                |
+| 7.6.0        | 7.0.0           | 3.11.12 or 4.0.3  | N/A         | 13                |
 | 7.5.2        | 6.5.9           | 3.11.12           | N/A         | 13                |
 | 7.5.1        | 6.5.8           | 3.11.12           | N/A         | 13                |
 | 7.5.0        | 6.5.7           | 3.11.12           | N/A         | 13                |
