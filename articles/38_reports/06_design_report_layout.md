@@ -8,7 +8,7 @@ Fabric's **Reports** application provides various controls to enable visualizing
 
 * **Tables** - a flexible control that allows grouping, headers and footers, aggregates, sorting, etc. Individual cells can host other controls such as image and more. This report displays tabular data in rows and columns.
 * **Lists** - a free-form layout for repeating data record.
-* Various types of **charts**, **pivot tables**, and many more. 
+* Various types of **charts**, **pivot tables** and many more tools. 
 
 The reports can be created using various types of layouts:
 
