@@ -35,7 +35,7 @@ All the above activities are done on report items using the Properties panel loc
 
 You can also create grouping, summarize the data on a group or header/footer level, apply conditional formatting, interactive sorting, create bookmarks and jump to them, and more. 
 
-Once the table is added to the report page and data binding is in place, you need to click Preview to see the report layout with the data.
+Once the table is added to the report page and data binding is in place, you need to click **Preview** to see the report layout with the data.
 
 ![](images/05_preview.png)
 
