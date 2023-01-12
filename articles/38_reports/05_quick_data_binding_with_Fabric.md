@@ -16,7 +16,7 @@ The article [Data Binding](03_data_binding.md) describes all the steps needed to
 
    ![](images/05_data_binding.png)
 
-5. Note that you should still validate the data set. Open the newly created data set and click Validate. [Click for more information regarding Data Set validation.](03_data_binding.md#data-set-validation)
+5. Note that you should still validate the data set. Open the newly created data set and click on **Validate**. [Click for more information regarding Data Set validation.](03_data_binding.md#data-set-validation)
 
 
 
