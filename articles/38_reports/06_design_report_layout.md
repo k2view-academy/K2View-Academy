@@ -10,7 +10,7 @@ Fabric's **Reports** application provides various controls to enable visualizing
 * **Lists** - a free-form layout for repeating data record.
 * Various types of **charts**, **pivot tables** and many more tools. 
 
-The reports can be created using various types of layouts:
+The reports can be created using numerous types of layouts:
 
 * **Tabular report** is the most straightforward way to visualize your data, in a multicolumn, multirow fashion. A tabular report can group, sort, and filter the data based on pre-defined conditions or user input.
 * **Dashboard** is a dashboard-like report that allows combining several different controls, for example a chart and a summary table. The page orientation of such report can be defined as **Landscape**.
