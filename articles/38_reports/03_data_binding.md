@@ -37,7 +37,7 @@ Once selecting one of the above templates, a New Data Set window opens with a pr
 * The ```{table}``` is pre-populated with the TABLE_NAME constant and should be updated to the required LU Table name. 
 * The **Uri/path** of the Fabric Endpoint templates includes a parameter ```iid```, which hasn't yet been defined for this report. [Click here to learn how to define a new parameter](04_parameters_creation.md) or follow the steps of this user guide until you reach the step of parameters definition.
 
-It is recommended to update the default data set name to a meaningful name, for example:
+It is recommended to update the default data set name to a meaningful and a suitable name, for example:
 
 <img src="images/02_new_data_set.png"  />
 
