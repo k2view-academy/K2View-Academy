@@ -10,7 +10,7 @@ To create a new parameter, click the ![](images/add_icon.png) icon in the **Para
 
 ![](images/04_new_param.png)
 
-Additionally, you can define the list of the parameter's valid values and/or a default value. Both can either come from a data set or use 'hardcoded' values.
+Additionally, you can define the list of the parameter's valid values and/or a default value. Both types of values can either come from a data set or use 'hardcoded' values.
 
 ![](images/04_new_param_values.png)
 
