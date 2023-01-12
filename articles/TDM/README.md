@@ -8,7 +8,7 @@
 <li><a href="tdm_configuration/README.md">TDM Configuration</a></li> 
 <li><a href="tdm_architecture/README.md">TDM Architecture</a></li>
 </li> 
-<li><a href="/TDM/versions.md">TDM Versions Metrics</a></li>
+<li><a href="versions.md">TDM Versions Metrics</a></li>
 </ul>
 
 
