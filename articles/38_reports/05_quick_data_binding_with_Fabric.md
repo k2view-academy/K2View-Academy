@@ -8,7 +8,7 @@ The article [Data Binding](03_data_binding.md) describes all the steps needed to
 
 2. Click on <img src="images/db_interface_icon.png" style="zoom:80%;" /> icon in the Studio Toolbox to switch to the DB Interface tree.
 
-3. Drill down to the required interface and table on which you'd like to create a report, do right click and select **Add Data Set**. 
+3. Drill down to the required interface and table on which you would like to create a report, do right click and select **Add Data Set**. 
 
    ![](images/05_add_data_set.png)
 
