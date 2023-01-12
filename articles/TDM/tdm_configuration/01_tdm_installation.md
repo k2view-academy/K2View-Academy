@@ -15,7 +15,7 @@ Click here to open the [TDM 7.6 Docker Installation document](/articles/98_maint
 
 Both  TDM layers - backend and frontend - are included in the TDM library from v7.6 onwards. 
 
-Import the updated TDM library to Fabric project and deploy it to Fabric. The deployment of the TDM LU also deploys the TDM GUI to Fabric and adds it to the web applications in your Fabric web framework.
+Import the updated TDM library to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM GUI code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM GUI to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
