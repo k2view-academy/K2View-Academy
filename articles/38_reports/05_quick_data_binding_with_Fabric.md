@@ -2,7 +2,7 @@
 
 # Quick Data Binding With Fabric
 
-The article [Data Binding](03_data_binding.md) describes all the steps needed to configure a data source and a data set in a report. Additionally, there is a quick way to configure the data binding with Fabric built-in endpoints. The following steps describe how to do it:
+The article [Data Binding](03_data_binding.md) describes all the steps needed to configure a data source and a data set in a report. Additionally, there is a quick way to set up data binding with Fabric built-in endpoints. The following steps describe how to do it:
 
 1. Right-click on **Reports > New Report** and populate the report name to create a new report.
 
