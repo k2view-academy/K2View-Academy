@@ -1,3 +1,5 @@
+The below metrics describe the various TDM versions, each with its compatible Fabric and certified 3rd parties versions. Please consult with us in regards to the Fabric version compatibility. However, concerning the Cassandra, ADI and Postgres versions, they may be upgraded in case a backward compatibility property exists. 
+
 | TDM  Version | Fabric  Version | Cassandra Version | ADI Version | Postgres  Version |
 | :----------- | --------------- | ----------------- | ----------- | ----------------- |
 | 7.6.0        | 7.0             | 3.11.12 or 4.0.3  | N/A         | 13                |
