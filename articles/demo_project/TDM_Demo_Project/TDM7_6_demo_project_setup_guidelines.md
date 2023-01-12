@@ -149,7 +149,7 @@ See instructions on how to work with the TDM GUI in the following [link](/articl
 
 II. 
 
-Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
+Open the TDM demo project and run the **PopulateTDMDBForTesters** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
 
 
 
