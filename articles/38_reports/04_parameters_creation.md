@@ -6,7 +6,7 @@ Defining parameters is required often, when creating data sources and data sets,
 
 ### How Do I Create Report Parameters?
 
-To create a new parameter, click the ![](images/add_icon.png) icon in the **Parameters** area of the report's properties. Edit Parameter window opens in the properties area and it allows to define a parameter by setting its **Name** and **Prompt**.
+To create a new parameter, click the ![](images/add_icon.png) icon in the **Parameters** area of the report's properties. EDIT PARAMETER window opens in the properties area and it allows to define a parameter by setting its **Name** and **Prompt**.
 
 ![](images/04_new_param.png)
 
