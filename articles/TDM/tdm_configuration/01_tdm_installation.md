@@ -90,7 +90,7 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-- TDM 7.6 added a creation of the TDM PostgreSQL DB by the TDM LU's deploy flow:
+- TDM 7.6 added a creation of the TDM DB objects by the TDM LU's deploy flow:
 
    - Creates the TDM DB tables, sequences, views and functions.
 
