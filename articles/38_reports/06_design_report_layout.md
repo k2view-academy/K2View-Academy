@@ -19,17 +19,17 @@ The reports can be created using numerous types of layouts:
 
 ### Tabular Reports
 
-There are 2 ways for creating data binding in a tabular report layout:
+There are 2 ways for implementing data binding in a tabular report layout:
 
 1. Selecting the data set fields and dragging-and-dropping them into a report page - as in the following display:
 
    ![](images/05_create_table_1.gif)
 
-2. Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with the respective data set fields - as in the following display:
+2. Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with its respective data set fields - as in the following display:
 
    ![](images/05_create_table_2.gif)
 
-The next step should be *table formatting*, which may include formatting of the cells' font size, color, alignment, for both detail and header rows.
+The next step should be *table formatting*, which may include formatting of the cells' font size, color and alignment, for both detail and header rows.
 
 All of the above activities are done on report items, using the Properties panel that is located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
 

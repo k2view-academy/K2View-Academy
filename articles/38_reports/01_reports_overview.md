@@ -2,7 +2,7 @@
 
 <web>
 
-Starting with V7.1, Fabric includes a **Reports** application, which enables building interactive pixel-perfect reports. This application supports data binding to a wide variety of JSON data sources, by providing a flexible connection configuration to a REST API endpoint.
+Starting with V7.1, Fabric includes a **Reports** application, which enables building interactive pixel-perfect reports. This application supports data binding to a wide range of JSON data sources, by providing a flexible connection configuration to a REST API endpoint.
 
 Fabric's **Reports** is a lightweight reporting solution, implemented using the 3rd party application - *ActiveReportsJS* - which is embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and Fabric Web Studio. The *ActiveReportsJS* license is included within Fabric license. No separate installation or configuration is required. 
 
@@ -17,7 +17,7 @@ Fabric's **Reports** application includes a Designer and a Viewer components:
   - Searching for data within the preview file.
   - Downloading the extract files. The supported formats are: PDF, HTML and CSV.
 
-Access to Designer is available via Fabric Web Studio only. Access to Viewer is available via the Web Framework application's list.
+Access to the Designer component is available via Fabric Web Studio only. Access to the Viewer component is available via the Web Framework application's list.
 
 Follow this user guide to learn more about each step of the reports setup, implementation and generation.
 
@@ -31,6 +31,6 @@ Follow this user guide to learn more about each step of the reports setup, imple
 
 <studio>
 
-The creations of the reports is only available via the Fabric Web Studio.
+The reports creation is possible only via the Fabric Web Studio.
 
 </studio>

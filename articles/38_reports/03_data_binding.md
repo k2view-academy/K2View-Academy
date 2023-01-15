@@ -12,7 +12,7 @@ To create a data source, click the![](C:\K2View-Academy\articles\38_reports\imag
 
 - The **custom data source** is an empty template that allows to define any required endpoint, by setting the following properties:
 
-  - **Endpoint** - either a full-path or a base URL of your REST API. Then the endpoint paths are appended by using data sets (described later on in this article).
+  - **Endpoint** - either a full-path or a base URL of your REST API to which the endpoint paths are appended by using data sets (described later on in this article).
 
   - **HTTP Headers** - a collection of HTTP Header fields that are passed with the request. 
 
@@ -35,9 +35,9 @@ Once selecting one of the above templates, a *New Data Set* window opens with a 
 
 * The ```{luName}``` of the Fabric endpoint is pre-populated with the name of Logical Unit under which the report is created. 
 * The ```{table}``` is pre-populated with the TABLE_NAME constant and should be updated to the required LU Table name. 
-* The **Uri/path** of the Fabric Endpoint templates includes a parameter ```iid```, which hasn't yet been defined for this report. [Click here to learn how to define a new parameter](04_parameters_creation.md) or follow the steps of this user guide until you reach the step of parameters definition.
+* The **Uri/path** of the Fabric Endpoint templates includes a parameter ```iid```, which hasn't yet been defined for this report. [Click here to learn how to define a new parameter](04_parameters_creation.md) or follow the steps of this user guide until you reach the Parameters Creation guidelines, where it elaborates about defining parameters.
 
-It is recommended to update the default data set name to a meaningful and a suitable name, for example:
+It is recommended to update the default data set **name** to a meaningful and a suitable name, for example below it is updated to **ACTIVITY**:
 
 <img src="images/02_new_data_set.png"  />
 
@@ -68,7 +68,7 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
 3. Populate a valid parameter value and click **Save & Run** to run the validation.
 
-    * If the validation succeeded, the fields are populated. You can click the ![](images/03_hamburger.png) icon in the **Database Fields** section to expand the list of fields.
+    * If the validation succeeded, the fields are populated in the **Database Field**s section. You can click the ![](images/03_hamburger.png) icon in the Database Fields section to expand the list of fields in order to view them.
 
     * If the configuration is invalid or if there are other issues relating to data connection, the dialog box displays an error message at the top area of the Data Set window.
 
