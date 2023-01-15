@@ -21,7 +21,7 @@ The reports can be created using numerous types of layouts:
 
 There are 2 ways for creating data binding in a tabular report layout:
 
-1. Selecting the data set fields and drag-and-drop them into a report page - like this:
+1. Selecting the data set fields and dragging-and-dropping them into a report page - as in the following display:
 
    ![](images/05_create_table_1.gif)
 
