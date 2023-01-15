@@ -41,7 +41,7 @@ Once the table is added to the report page and data binding is in place, you nee
 
 ### Example
 
-Below is an example of a tabular report that demonstrates several features:
+The below example demonstrates several features of a tabular report:
 
 ![](images/05_tabular_report_example.gif)
 
