@@ -58,9 +58,10 @@ TDM 7.6 includes the TDM GUI in the TDM Library. Download the TDM Library and im
 1. Define the TDM environments in Fabric studio and deploy them to Fabric.
 2. Edit the Fabric project before deploying the TDM library to Fabric:
    - Edit the TDM deploy flow: edit the FabricSet actor of the Set Env stage. Populate the value of the environment key by the environment name from which the deploy.flow needs to get the Cassandra and Redis connection details.
-   - New TDM  installation: edit the project as follows, to create the TDM DB on the PostgreSQL DB:
+   - New TDM  installation: edit the project as follows, to create the TDM tables on the PostgreSQL TDM DB:
      - Set the **BUILD_TDMDB Global to true** (default is false).
      - Set the  **POSTGRESQL_ADMIN interface to be active**.
+     - Note that the TDM DB and user must be created in advance in the PostgreSQL DB. For more information see [TDM Installation and Initial Configuration](/articles/TDM/tdm_configuration/01_tdm_installation.md).
 3. Note that the apps.json file in the TDM LU overrides the list of web applications. Edit the file in order to add additional web applications, if needed, before deploying the TDM LU. 
 4. Deploy the TDM library to Fabric. The deployment of the TDM LU also deploys the TDM GUI web application to Fabric.
 
