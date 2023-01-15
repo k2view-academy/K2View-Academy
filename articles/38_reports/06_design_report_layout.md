@@ -25,7 +25,7 @@ There are 2 ways for creating data binding in a tabular report layout:
 
    ![](images/05_create_table_1.gif)
 
-2. Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with the respective data set fields - like this:
+2. Dragging the Table control <img src="images/table_control.png"  /> from the report's toolbox. In this case, you still need to connect the table with the respective data set fields - as in the following display:
 
    ![](images/05_create_table_2.gif)
 
