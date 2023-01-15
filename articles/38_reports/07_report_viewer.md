@@ -24,7 +24,7 @@ You can also share the link to the report by clicking the ![](images/copy_link.p
 
 ### Search
 
-Click ![](images/search_icon.png) to open the Search toolbox which allows searching a string within the open report:
+Click ![](images/search_icon.png) to open the Search toolbox, which allows searching a string within the open report:
 
 ![](images/06_open_report_search.png)
 
