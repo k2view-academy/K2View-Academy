@@ -4,7 +4,7 @@
 
 ### Overview
 
-Fabric's **Reports** application provides various controls to enable representation of your data in many different ways. Examples for such controls are:
+Fabric's **Reports** application provides various controls that enable representation of your data in many different ways. Examples for such controls are:
 
 * **Tables** - a flexible control that allows grouping, headers and footers, aggregates, sorting, etc. Individual cells can host other controls such as image and more. This report displays tabular data in rows and columns.
 * **Lists** - a free-form layout for repeating data record.
