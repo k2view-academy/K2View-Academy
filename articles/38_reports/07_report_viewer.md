@@ -16,7 +16,7 @@ The **Open Report** popup allows to select a report from a list of deployed repo
 
 <img src="images/06_open_report.png" style="zoom:80%;" />
 
-Selecting the report name and clicking submit generates the report preview. If the report has a parameter, you will be prompted to provide the value:
+Selecting the report name and submitting it, generates the report preview. If the report has a parameter, you will be prompted to provide the value:
 
 ![](images/06_open_report_preview.png)
 
