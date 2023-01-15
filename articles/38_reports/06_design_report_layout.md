@@ -45,7 +45,7 @@ The below example demonstrates several features of a tabular report:
 
 ![](images/05_tabular_report_example.gif)
 
-[Click for the full user guide of Tabular report creation.](https://www.grapecity.com/activereportsjs/docs/ReportAuthorGuide/QuickStart/get-started-with-/Tutorial-1-Tabular-Report)
+[Click here for the full user guide of Tabular report creation.](https://www.grapecity.com/activereportsjs/docs/ReportAuthorGuide/QuickStart/get-started-with-/Tutorial-1-Tabular-Report)
 
 
 
