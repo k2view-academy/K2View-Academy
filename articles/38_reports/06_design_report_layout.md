@@ -31,7 +31,7 @@ There are 2 ways for creating data binding in a tabular report layout:
 
 The next step should be table formatting, which may include formatting of the cells' font size, color, alignment, for both detail and header rows.
 
-All the above activities are done on report items using the Properties panel located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
+All of the above activities are done on report items using the Properties panel located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
 
 You can also create grouping, summarize the data on a group or header/footer level, apply conditional formatting, interactive sorting, create bookmarks and jump to them, and more. 
 
