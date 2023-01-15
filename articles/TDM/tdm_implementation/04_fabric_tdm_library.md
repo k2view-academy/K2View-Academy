@@ -188,16 +188,13 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 
 - Checking if Redis is up. If Redis is not up, an error message is returned to the user.
 
-- TDM 7.6 added a creation of the TDM PostgreSQL DB:
+- TDM 7.6 added a creation of the TDM PostgreSQL DB: the TDM deploy flow Creates the TDM DB tables, sequences, views and functions.
 
-  - Creates the TDMDB database.
-  - Creates the TDM DB tables, sequences, views and functions.
+- Notes:
 
-  Note: **You must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active**, in order for the TDM deploy flow **to create the TDM DB**.
+  - You must **set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active** to create the TDM DB by the TDM deploy flow.
+  - You must **create the TDM database and user in advance**. The database and user names must be aligned with the TDM interface. You can run the TDMDBCreateRoleAndDB flow (located in the TDM LU) to create the TDMDB database and tdm user (role) in the postgreSQL DB.
 
-Edit the **deploy.flow** of the TDM LU before the TDM deployment:
-
-- Edit the FabricSet actor of the Set Env stage. Populate the value of the environment key by the environment name from which the deploy.flow needs to get the Cassandra and Redis connection details.
 
 ### TDM LU Deployment
 
