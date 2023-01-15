@@ -29,7 +29,7 @@ There are 2 ways for creating data binding in a tabular report layout:
 
    ![](images/05_create_table_2.gif)
 
-The next step should be the table formatting, which may include the formatting of the cells font size, color, alignment, for both the detail and the header rows.
+The next step should be table formatting, which may include formatting of the cells' font size, color, alignment, for both detail and header rows.
 
 All the above activities are done on report items using the Properties panel located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
 
