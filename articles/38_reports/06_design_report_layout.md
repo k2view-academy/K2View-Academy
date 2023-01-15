@@ -33,7 +33,7 @@ The next step should be *table formatting*, which may include formatting of the 
 
 All of the above activities are done on report items, using the Properties panel that is located on the right side of the report designer. Clicking on each report element (cell, column, detail row, header column, table) displays its properties. 
 
-You can also create *grouping*, summarize the data on a group or header/footer level, apply conditional formatting, apply interactive sorting, create bookmarks and jump to them, and more. 
+You can also create grouping, summarize the data on a group or header/footer level, apply conditional formatting, apply interactive sorting, create bookmarks and jump to them, and more. 
 
 Once the table is added to the report page and data binding is in place, you need to click on **Preview** to see the report layout with the data, following the design.
 
