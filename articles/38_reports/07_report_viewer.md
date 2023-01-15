@@ -24,13 +24,13 @@ You can also share the link to the report by clicking the ![](images/copy_link.p
 
 ### Search
 
-Click ![](images/search_icon.png) to open the Search toolbox, which allows searching a string within the open report:
+Click ![](images/search_icon.png) to open the SEARCH toolbox, which allows searching a string within the open report:
 
 ![](images/06_open_report_search.png)
 
 ### Export
 
-Click ![](images/export_icon.png) to open the Export toolbox, which allows exporting the generated report. The supported export formats are: PDF, HTML and CSV. Various settings can be set for the export file, based on the format. For example, a password protection can be set for PDF files. 
+Click ![](images/export_icon.png) to open the EXPORT toolbox, which allows exporting the generated report. The supported export formats are: PDF, HTML and CSV. Various settings can be set for the export file, based on the format. For example, a password protection can be set for PDF files. 
 
 ![](images/06_open_report_export.png)
 
