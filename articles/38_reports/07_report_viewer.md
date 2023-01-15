@@ -30,7 +30,7 @@ Click ![](images/search_icon.png) to open the Search toolbox, which allows searc
 
 ### Export
 
-Click ![](images/export_icon.png) to open the Export toolbox which allows exporting the generated report. The supported export formats are: PDF, HTML and CSV. Various settings can be set for the export file, based on the format. For example, the password protection can be set for PDF files. 
+Click ![](images/export_icon.png) to open the Export toolbox, which allows exporting the generated report. The supported export formats are: PDF, HTML and CSV. Various settings can be set for the export file, based on the format. For example, the password protection can be set for PDF files. 
 
 ![](images/06_open_report_export.png)
 
