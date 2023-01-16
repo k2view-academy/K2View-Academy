@@ -80,7 +80,11 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 II.
 
-Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
+Open the TDM demo project:
+
+- Set the POSTGRESQL_ADMIN interface to be active.
+- Open and redeploy environments to Fabric local debug server to include the  POSTGRESQL_ADMIN interface. Set the active environment in the local debug server to SRCLocalDebug.
+- Run the **createAndPopulateDbs** flow in the TDM LU in the demo project on Fabric local debug server. The flow creates and populates the demo DBs (CRM, Billing, Ordering and Collection). Set the **Debug** to **OFF** before running this flow. 
 
 
 
@@ -145,7 +149,7 @@ See instructions on how to work with the TDM GUI in the following [link](/articl
 
 II. 
 
-Open the TDM demo project and run the **createAndPopulateDbs** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
+Open the TDM demo project and run the **PopulateTDMDBForTesters** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
 
 
 

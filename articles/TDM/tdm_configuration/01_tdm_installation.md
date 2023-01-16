@@ -15,7 +15,7 @@ Click here to open the [TDM 7.6 Docker Installation document](/articles/98_maint
 
 Both  TDM layers - backend and frontend - are included in the TDM library from v7.6 onwards. 
 
-Import the updated TDM library to Fabric project and deploy it to Fabric. The deployment of the TDM LU also deploys the TDM GUI to Fabric and adds it to the web applications in your Fabric web framework.
+Import the updated TDM library to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM GUI code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM GUI to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
@@ -90,15 +90,15 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-- TDM 7.6 added a creation of the TDM PostgreSQL DB by the TDM LU's deploy flow:
+- TDM 7.6 added a creation of the TDM DB objects by the TDM LU's deploy flow:
 
-  - Creates the TDMDB database.
-  - Creates the TDM DB tables, sequences, views and functions.
+   - Creates the TDM DB tables, sequences, views and functions.
 
-  Note: **you must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
+  Notes: 
+  - **You must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
+  - You must create the TDM database and user in advance. The database and user names must be aligned with the TDM interface. You can run the **TDMDBCreateRoleAndDB** flow (located in the TDM LU) to create the **TDMDB** database and **tdm** user (role) in the postgreSQL DB.
 
   
-
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
 - Go to **$K2_HOME/TDMGUI/createTDMDB/updateTDMDB** directory in Fabric.
