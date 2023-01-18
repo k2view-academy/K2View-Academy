@@ -40,7 +40,7 @@ K2view enables users to create their own masking functions:
 - The **MaskingLuFunction** Broadway actor can be used to call a customized function (a shared function or an LU's function) to mask the required field.  
 - The **MaskingInnerFlow** Broadway actor can be used to call a customized Broadway flow to mask the required field.
 
-The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the usage of the K2view masking mechanism including **SHA-512** hashing and caching.  The user does not need to handle them by their customized function.
+The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching.  The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
