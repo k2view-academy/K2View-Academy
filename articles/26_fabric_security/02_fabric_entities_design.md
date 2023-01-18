@@ -19,7 +19,7 @@ This additional atomic-level encryption provides greater protection of sensitive
 
 ## Fabric Hashing Mechanism
 
-As part of managing data securely, Fabric hashes keys that point to the data. For this purpose, Fabric uses the SHA-512 or SHA-512/256 algorithms for hashing: when working [with FIPS mode](18_FIPS_implementation.md), Fabric uses SHA-512/256 algorithm for hashing. If the FIPS mode is not set, Fabric uses the SHA-512 algorithm for hashing. Additionally, Fabric uses a [dedicated master key](#fabric-master-key) to salt the original value.
+As part of managing data securely, Fabric hashes keys that point to the data. For this purpose, Fabric uses the SHA-512 or SHA-512/256 algorithms for hashing: when working [with FIPS mode](18_FIPS_implementation.md), Fabric uses SHA-512/256 algorithm for hashing. If the FIPS mode is not set, Fabric uses the SHA-512 algorithm for hashing. Additionally, Fabric uses a [dedicated master key](#fabric-master-key) to salt the original value before hashing it.
 
 Examples for hashing:
 
