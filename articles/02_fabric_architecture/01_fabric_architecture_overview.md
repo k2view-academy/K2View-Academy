@@ -57,22 +57,20 @@ A MicroDB provides several advantages:
 - Using SQLite, they offer standard SQL operations.
 - No business impact whereby providing continued availability of data during major structural modifications.  
 
+The MicroDB (LUI) are compressed as blob chunks and stored in the LU storage layer.
+
+[Click for more information about LU Storage Types](/articles/32_LU_storage/01_LU_storage_overview.md).
+
 #### 2.1.2 CommonDB
 The CommonDB is an additional SQLite database schema used for storing [reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their [synchronization](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) across nodes. 
 
 The CommonDB is always made available for queries in every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
 
 
-#### 2.1.3 Cassandra
-Fabric uses Cassandra (or Cassandra managed services such as AWS Keyspaces or Astra) for three main purposes:
+#### 2.1.3 Operational Database
+Fabric uses Cassandra or Cassandra managed services (such as AWS Keyspaces or Astra) as application management database.
 
-- Storage of all MicroDB (LUI) as compressed blob chunks.
-  - Note that additional storage types are supported as an LU storage layer. [Click for more information about LU Storage Types](/articles/32_LU_storage/01_LU_storage_overview.md).
-
-- Fabric application management database.
-- General data-store for any project need.
-
-[Click for more information about Cassandra Keyspaces for Fabric.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+[Click for more information about Fabric Operational Database.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
 ### 2.2 Fabric Business Logic
 

@@ -1,10 +1,10 @@
-# Cassandra Keyspaces for Fabric
+# Fabric Operational Database
 
-Fabric uses the Cassandra DB as a storage layer and also as a Fabric application management database. 
+Fabric uses the Cassandra DB as a default application management database. In addition, the Cassandra managed services (such as AWS Keyspaces or Astra) are supported.
 
-Fabric creates several keyspaces for its operation:
--  Each Fabric keyspace starts with the **k2** prefix.
--  Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. For example: **k2view_customer**.
+Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with the **k2** prefix.
+
+Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. For example: **k2view_customer**.
 
 **Notes:**
 
@@ -12,17 +12,19 @@ Fabric creates several keyspaces for its operation:
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
-## Login Cassandra DB
+### Login to Operational DB
 
-Use the following command to connect to the Cassandra DB from the Cassandra server:
+Use the following command to connect to the Operational DB from the server:
 
-**cqlsh -u `<username>` -p `<password>` <ip_address>**;
+~~~CQL
+cqlsh -u <username> -p <password> <ip_address>;
+~~~
 
-Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
+Note that if the ```ip_address``` is not populated, the login command connects to the local host of the Fabric server.
 
-### List of Cassandra Fabric-Related Keyspaces 
+### List of Fabric-Related Operational Keyspaces 
 
-The following table lists the Cassandra keyspaces created by Fabric:
+The following table lists the keyspaces created by Fabric:
 
 <table style="width: 900px;">
 <tbody>
@@ -42,7 +44,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 <td style="height: 46px;" valign="top">
 <p><strong>Table Name</strong></p>
 </td>
-<td style="height: 46px; width: 203.863px;" valign="top">
+<td style="height: 46px;" valign="top">
 <p><strong>Table Description</strong></p>
 </td>
 </tr>
@@ -170,7 +172,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 </tr>
 <tr style="height: 78px;">
 <td style="height: 78px; width: 208.925px;" valign="top">
-<p>batchprocess_node_info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>batchprocess_node_info</p>
 <p>&nbsp;</p>
 </td>
 <td style="height: 78px; width: 203.863px;" valign="top">
@@ -187,7 +189,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 </tr>
 <tr style="height: 118px;">
 <td style="height: 118px; width: 208.925px;" valign="top">
-<p>batchprocess_entities_errors&nbsp;</p>
+<p>batchprocess_entities_errors</p>
 </td>
 <td style="height: 118px; width: 203.863px;" valign="top">
 <p>Detailed information about failed entities per batch process command. This table simplifies the analysis of failed entities.</p>
@@ -289,10 +291,6 @@ The following table lists the Cassandra keyspaces created by Fabric:
 </tr>
 </tbody>
 </table>
-
-
-
-
 
 
 
