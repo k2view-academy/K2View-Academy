@@ -14,12 +14,14 @@ MTable objects are only available in the Fabric Web Studio, replacing the [Trans
 
 ### How Can I Create an MTable?
 
-There are two ways for creating an MTable object in the Fabric Studio:
+An MTable object can be created in the Fabric Studio using one of the following ways:
 
 * Uploading a CSV file into the MTable folder in the project tree under LU, Common or Web Services. 
 * Manually creating a CSV file under the MTable folder and populating its data.
 
 Upon the deploy, the MTable metadata is created / updated based on the CSV file structure. Any other file type except CSV is ignored. The MTable is created as a schema in Fabric memory. The data from CSV file is then loaded to this schema. 
+
+Another way of creating an MTable is at run time using a dedicated Actor. In this case, the MTable is created in memory and not under a specific LU.
 
 The data lookup can be performed by one or several keys of MTable. The index is created on-the-fly, based on the search keys. 
 

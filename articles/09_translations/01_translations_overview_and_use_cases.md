@@ -3,7 +3,7 @@
 <web>
 
 A Translation is a Fabric Studio object used for transforming data in the Fabric .NET Studio. Translation objects don't exist in the Web Studio.
-In the Web Studio, the data transformation rules can be defined using MTable or by various Actors that can be added to a Broadway population flow.
+In the Web Studio, the data transformation rules can be defined using MTable and several dedicated Actors that can be added to a Broadway flow.
 
 [Click for more information about MTable objects.](06_mtables_overview.md)
 
