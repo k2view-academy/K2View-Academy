@@ -34,7 +34,7 @@
 			"view name": "web",
 			"tooltip": "Web-Studio",
 			"default": false,
-			"enabled": false,
+			"enabled": true,
 			"icon on": "images/icon_web_on.png",
 			"icon off": "images/icon_web_off.png"
 		}
