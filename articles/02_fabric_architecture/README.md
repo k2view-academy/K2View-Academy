@@ -9,5 +9,6 @@
         <li><a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Fabric Operational Database</a></li>
         <li><a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md">Cassandra Basic Commands</a></li>
         <li><a href="/articles/02_fabric_architecture/08_kafka_basic_commands.md">Kafka Basic Commands</a></li>
+		<li><a href="/articles/02_fabric_architecture/09_AWS_keyspaces.md">AWS Keyspaces - Limitations and Troubleshooting</a></li>
 </ul>
 
