@@ -1,6 +1,6 @@
 # TDM Data Versioning Tasks
 
-The Data Versioning mode enables saving backup versions (snapshots) of data during Functional tests and to then reload the latest saved version to the target environment if it becomes corrupted. Once created, an extract task can be executed multiple times to create different data versions where each version is saved in Fabric.   
+The Data Versioning mode enables saving backup versions (snapshots) of data during Functional tests and to then reload the latest saved version to the target environment if needed. Once created, an extract task can be executed multiple times to create different data versions where each version is saved in Fabric.   
 
 This functionality is useful when running a complex testing calendar in a testing environment. Backing up data every X steps or every X times enables testers to reload the latest version to their environment and repair data without returning to the original state and losing their updates. 
 
