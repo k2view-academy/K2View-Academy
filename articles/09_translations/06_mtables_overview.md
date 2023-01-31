@@ -6,7 +6,7 @@ MTable is a Fabric Studio object created by uploading a CSV file into the projec
 
 <studio>
 
-MTable objects are only available in the Fabric Web Studio, replacing the [Translation](01_translations_overview_and_use_cases.md) objects of the Fabric .NET Studio.
+MTable objects are only available in the Fabric Web Studio.
 
 </studio>
 
