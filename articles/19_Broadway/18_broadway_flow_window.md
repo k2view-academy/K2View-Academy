@@ -16,7 +16,7 @@ The **Broadway flow** window includes the following elements described in this a
 - [Main menu](18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
+- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables viewing and editing the properties of a selected object.
 - [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
 - [Flow Validation Footer](18_broadway_flow_window.md#flow-validation-footer), which displays the error messages in the flow, if exist.
 
@@ -35,6 +35,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
 <li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
+<li><a href="33_flow_properties.md">Flow Properties</a>, view and edit flow's description and tags.</li>
 <li>Magnifier</a>, makes part of a flow bigger so you can see words and images better. Added in Fabric V6.5.8.</li>
 <li><a href="31_broadway_profiler.md">Profiler</a>, enable the Broadway Profiler when running a flow.</li>
 <li>Flip scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
@@ -92,6 +93,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 
 
 
