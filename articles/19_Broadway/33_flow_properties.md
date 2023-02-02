@@ -1,9 +1,6 @@
 # Flow Properties
 
-Flow Properties window enables viewing and editing flow's description and tags. 
-
-When opening the window, all existing tags are presented in the list and the flow's tags are marked. 
-
+Flow Properties window enables viewing and editing flow's description and tags. When opening the window, all existing tags are presented in the list and the flow's tags are marked. 
 * To add a new tag, right the tag name in the 'New Tag' area and click <img src="images/plus.png" style="zoom:80%;" />icon. 
 * To remove the existing tag, unmark it in the list. 
 
