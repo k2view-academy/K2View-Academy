@@ -423,7 +423,7 @@ TDM supports the override of the following parameters:
 
 
 Note:
-- The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+- The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM Portal. **Currently this option is not supported when executing the task using the TDM Portal.**
 
 
 ### Validate the Task Execution Parameters
