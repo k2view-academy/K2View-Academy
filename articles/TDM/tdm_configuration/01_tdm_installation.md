@@ -15,7 +15,7 @@ Click here to open the [TDM 7.6 Docker Installation document](/articles/98_maint
 
 Both  TDM layers - backend and frontend - are included in the TDM library from v7.6 onwards. 
 
-Import the updated TDM library to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM GUI code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM GUI to Fabric and adds it to the web applications in your Fabric web framework.
+Import the updated TDM library to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
@@ -84,7 +84,7 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 10. Extract the zip file and copy the generated HTML file under the `\TDM\web\TDM\apidoc` sub-directory.
 
-11. Open the TDM GUI and click the API Doc tab. Verify that the API doc is displayed properly.
+11. Open the TDM Portal and click the API Doc tab. Verify that the API doc is displayed properly.
 
 
 
@@ -101,19 +101,13 @@ The below steps should be followed if a new APIDOC is generated to include proje
   
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
-- Go to **$K2_HOME/TDMGUI/createTDMDB/updateTDMDB** directory in Fabric.
+- Soft deploy the TDM LU to Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
+- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 7.6. For
+example:
+  - CURRENT_TDM_VERSION = 7.4.
+  - TARGET_TDM_VERSION = 7.6.
 
-- Set the following environment variables:
-
-  ```shell
-  export PG_HOST=<postgreSQL DB host>
-  export PG_PORT=<postgreSQL DB port>
-  ```
-
-- Add execution permissions to **updatek2TDMDB.sh**.
-
-- Run **createk2TDMDB.sh** script.
-
+- Note that the **version’s list** is set in **TDMDBUpgradeScripts** actor (imported from the TDM Library).
 
 
 ## Create K2masking Keyspace in Cassandra
@@ -124,10 +118,10 @@ Click for more information about [sequence handling](/articles/TDM/tdm_implement
 
 ## Add Permission Groups Mapping to the TDM
 
-The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs in to the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) by their Fabric roles**.
+The TDM Portal application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs in to the Fabric Web Framework and **Fabric authenticates the user**. The TDM Portal gets the **user id** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) by their Fabric roles**.
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) TDM window and is kept in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-After installing the TDM, the admin user must [log in to the TDM GUI](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) and define the Permission Group mapping of each user's group (= Fabric role). This process is done in order to enable the TDM users to work properly on the TDM GUI, based on their Permission Groups.
+After installing the TDM, the admin user must [log in to the TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) and define the Permission Group mapping of each user's group (= Fabric role). This process is done in order to enable the TDM users to work properly on the TDM Portal, based on their Permission Groups.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdmdb_general_parameters.md)
