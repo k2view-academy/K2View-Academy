@@ -2,13 +2,13 @@
 
 The TDM DB  [tdm_general_parameters](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table holds the name of each parameter (param_name) and its value (param_value). The following categories of parameters are populated in this table:
 
-### [TDM Clean-Up](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md) Parameters
+### [TDM Clean-Up Parameters](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md) 
 
 The clean-up parameters are automatically created in **tdm_general_parameters** by TDM DB creation scripts:
 
 - The **cleanup_retention_period** defines the number of months of the retention period of Inactive records.  The clean-up process deletes inactive records that are older than the retention period.
 
-### [LUI Separator](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) Parameters
+### [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) 
 
 - To create different LUIs per environment and data version, the TDM concatenates additional identifiers to each IID: environment name (for all tasks), and version identifier for Data Versioning tasks.  By default, the LUI's parts are separated by an underscore. For example: ENV1_45773.  However, if the source entity ID contains an underscore, another separator must be set on the LUI. 
   
@@ -32,7 +32,7 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
 
   
 
-### [Reservation Period](/articles/TDM/tdm_architecture/08_entity_reservation.md) Parameter
+### [Reservation Period Parameter](/articles/TDM/tdm_architecture/08_entity_reservation.md) 
 
 An admin user of the environment's owner can reserve entities for an unlimited period. However, a tester user is limited and can only set a retention period that does not exceed the maximum retention period, defined in the TDM DB. 
 
