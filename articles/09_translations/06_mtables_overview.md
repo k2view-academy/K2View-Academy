@@ -30,7 +30,7 @@ The data lookup can be performed by one or several keys of MTable. The index is 
 An MTable can be used when a flow or a project function needs to lookup the data by given key(s). 
 
 * In a flow:
-  * Invoke an [MTable Actor](/articles/19_Broadway/actors/09_MTable_actors/md) providing it the MTable name and a map of keys and their values. Each key can receive one value. 
+  * Invoke an [MTable Actor](/articles/19_Broadway/actors/09_MTable_actors.md) providing it the MTable name and a map of keys and their values. Each key can receive one value. 
   * The Actor then will return an array of results.
 * In Java code, 2 APIs are exposed: 
   * To return the whole MTable by its name.
