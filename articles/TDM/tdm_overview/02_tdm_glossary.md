@@ -38,10 +38,10 @@
 </tr>
 <tr>
 <td valign="top" width="300pxl">
-<h4>TDM GUI</h4>
+<h4>TDM Portal</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>TDM product’s self-service web application. It is used in TDM setup and in TDM tasks’ creation, execution and monitoring.</p>
+<p>TDM self-service web application. It is used in TDM setup and in TDM tasks’ creation, execution and monitoring.</p>
 </td>
 </tr>
 <tr>
@@ -91,7 +91,7 @@
 </td>
 <td width="600pxl">
 <p>There are 3 main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner and Tester.&nbsp;</p>
-<p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM GUI - Permission Groups</a>.</p>
+<p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM Portal - Permission Groups</a>.</p>
 </td>
 </tr>
 <tr>
@@ -107,7 +107,7 @@
 <h4>Environment</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>An Environment is a logical definition of either a source or a target environment, e.g., Production, UAT1, UAT2, etc. An environment can contain multiple systems and data sources. The list of source and target environments available for TDM must be defined both in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
+<p>An Environment is a logical definition of either a source or a target environment, e.g., Production, UAT1, UAT2, etc. An environment can contain multiple systems and data sources. The list of source and target environments available for TDM must be defined both in the TDM Portal and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
 </td>
 </tr>
 <tr>
@@ -123,7 +123,7 @@
 <h4>Task</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM GUI. The following task types are supported by the TDM:</p>
+<p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The following task types are supported by the TDM:</p>
 <ul>
 <li>Extract tasks, the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
 <li>Load task, the batch process initiates a&nbsp;<a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;which&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>

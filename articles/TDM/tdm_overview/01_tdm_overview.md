@@ -35,7 +35,7 @@ Learn about the TDM platform's main modules:
 
 - [TDM Architecture](/articles/TDM/tdm_architecture/01_tdm_architecture.md).
 - [TDM Implementation and Setup](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md).
-- [TDM GUI (Self-Service) Activities](/articles/TDM/tdm_gui/01_tdm_gui_overview.md).
+- [TDM Portal (Self-Service) Activities](/articles/TDM/tdm_gui/01_tdm_gui_overview.md).
 
 
 
