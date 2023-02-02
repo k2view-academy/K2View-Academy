@@ -1,4 +1,5 @@
 <web>
+
 # MTable Actors
 
 Broadway has a group of Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
