@@ -19,7 +19,8 @@ To learn about more complex scenarios, such as creating or editing an Actor, ref
 
 To add an Actor to a Stage in a Broadway flow:
 1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right.
-2.  Click **SUBMIT** to finish the action and to add the Actor to the Stage.
+2.  Click **Submit** to finish the action and to add the Actor to the Stage.
+3.  If you switch the radio button selection from **Actor** to **Flow** and select a flow, an InnerFlow Actor is added to the flow and it includes the selected flow. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
 
 <img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
