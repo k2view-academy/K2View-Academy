@@ -18,7 +18,7 @@ Below are various AWS Keyspaces limitations, that can lead to re-implementation 
   INSTANCE_CHUNK_SIZE=990000
   ~~~
 
-* When a new table is created in AWS Keyspaces, it is created, by default, with an on-demand capacity mode. This means pay-per-request pricing for read and write requests, allowing you to pay only for what you've used. If, however, you would like to specify the numbers of reads and writes per second that are required for your application, you can do so by setting the AWS_TABLE_PROVISIONED parameter in the [default_session] section of the config.ini. This parameter can include a semicolon separated list of initial read and write provision values per table, using the following format:
+* When a new table is created in AWS Keyspaces, it is created, by default, with an on-demand capacity mode. This means pay-per-request pricing for read and write requests, allowing you to pay only for what you've used. If, however, you would like to define how many reads and writes per second are required for your application, you can do so by setting the AWS_TABLE_PROVISIONED parameter in the [default_session] section of the config.ini. This parameter can include a semicolon separated list of initial read and write provision values per table, using the following format:
 
   ~~~
   AWS_TABLE_PROVISIONED = keyspace1.table1=40,35,onDemand;keyspace2.table2=10,12
