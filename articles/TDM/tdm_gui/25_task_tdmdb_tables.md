@@ -6,7 +6,7 @@ TDM tasks update the following TDM DB tables:
 
 ## Tasks
 
-This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
+This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal.
 
 - A new record is created for each task.
 
@@ -28,7 +28,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   - **reserve_ind**  - indicates if the task reserved entities on the environment.
   - **reserve retention period fields** - define the reservation period on the task's entities.
 
-  ### Map the TDM GUI Task Types to Tasks TDM Table
+  ### Map the TDM Portal Task Types (actions) to Tasks TDM Table
 
   <table width="900pxl">
   <tbody>

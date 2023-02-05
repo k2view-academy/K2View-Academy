@@ -101,7 +101,7 @@ This is the **default option**. Populate the list of entities for the task with 
 
 Select a Broadway flow in order to get the entity list for the task and in order to set the maximum number of entities for the task.
 
-TDM supports creating external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. 
+TDM supports creating external input parameters on a Custom Logic Flow. In this case, the TDM Portal displays the input parameters in the task window, enabling the user to send values for these parameters. 
 
 The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
 
@@ -158,7 +158,7 @@ For example:
   - Click **Add Condition**. 
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
-The TDM GUI displays the SQL query built based on the selected parameters.
+The TDM Portal displays the SQL query built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
@@ -168,7 +168,7 @@ There are several types of parameters:
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
-- **Number** - the TDM GUI displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** - the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
   
 - **Date** - populate the value using the following format: **YYYY-MM-DD**. 
   

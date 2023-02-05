@@ -3,7 +3,7 @@
 The TDM can create tasks that are executed in TDM environments. Each environment must be defined in the following TDM components:
 
 - Fabric, set the [interfaces connection details and Globals values](/articles/25_environments/01_environments_overview.md) for each environment. 
-- TDM GUI, set the following for each environment:
+- TDM Portal, set the following for each environment:
 
   - [General information](08_environment_window_general_information.md) like environment name, contact person, environment type (source, target or both).
   - [Environment owners](08_environment_window_general_information.md#environment-owners), add environment owners to setup and maintain an environment.

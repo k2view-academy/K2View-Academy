@@ -62,7 +62,7 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 ## Requested Entities Tab
 
-This tab is opened when the task's Data Type includes entities. It displays a list of available data versions that can be selected and reloaded to the target environment. By default, the TDM GUI displays a list of the data versions created during the last month. To set a different period, edit the **From Date** and **To Date** settings:
+This tab is opened when the task's Data Type includes entities. It displays a list of available data versions that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From Date** and **To Date** settings:
 
 ![requested entities](images/load_task_requested_entities_dataflux.png)
 

@@ -4,7 +4,7 @@ During the execution of a TDM task, data is extracted from a selected source env
 
 TDM environments must be defined in Fabric. Make sure that you define the TDM environment source and target and connection details of each environment. 
 
-Note: You must also define the TDM environments in the TDM GUI. [Click here](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) for more information on doing this.  
+Note: You must also define the TDM environments in the TDM Portal. [Click here](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) for more information on doing this.  
 
 
 ### Defining TDM Environments in Fabric

@@ -53,7 +53,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 **Notes:**
 
 - The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
-- The COLUMN_NAME value is displayed in the TDM GUI when the user selects parameters for a task.
+- The COLUMN_NAME value is displayed in the TDM Portal when the user selects parameters for a task.
 - Do not include spaces or special characters in parameter names.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#random-selection).
 
