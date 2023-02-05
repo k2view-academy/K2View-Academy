@@ -6,7 +6,7 @@ Business Entity (BE) and System definitions **update the following TDM DB tables
 
 ### Business_Entities
 
-This tables holds all [BEs](04_tdm_gui_business_entity_window.md) defined in the TDM GUI. 
+This tables holds all [BEs](04_tdm_gui_business_entity_window.md) defined in the TDM Portal. 
 
 -  A new record is created for each BE. 
 -  Each BE is created in **Active** status and gets a unique **be_id** sequence which is the table's PK.
@@ -17,7 +17,7 @@ Note that to prevent creating several active BEs with the same name, the **be_na
 
 ### Products
 
-This table holds all [systems (products)](05_tdm_gui_product_window.md) defined in the TDM GUI.
+This table holds all [systems (products)](05_tdm_gui_product_window.md) defined in the TDM Portal.
 -  A new record is created for each system.  
 -  Each system (product) is created in **Active** status and gets a unique **product_id** sequence which is the table's PK. 
 -  **Deleted systems** have an **Inactive** status and are not physically deleted from this table.

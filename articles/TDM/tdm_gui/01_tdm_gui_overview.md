@@ -1,17 +1,17 @@
-# TDM GUI Overview
+# TDM Portal Overview
 
-The TDM GUI is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
+The TDM Portal is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
 - TDM administrative activities - defines TDM Business Entities, system, environments and permissions.
 - TDM copy activities - creates and executes TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
 
-TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM GUI, updates the TDM DB. 
+TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM Portal, updates the TDM DB. 
 
-The TDM GUI uses APIs to connect to the TDM DB in order to retrieve and update TDM settings and tasks.
+The TDM Portal uses APIs to connect to the TDM DB in order to retrieve and update TDM settings and tasks.
 
-## TDM GUI - Login
+## TDM Portal - Login
 
-The TDM GUI application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
+The TDM Portal application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
 
 Fabric works with several authentication providers. Each authenticator is responsible for user's authentication, and provides a user-ID and his roles. The following are authentication providers, supported by Fabric:
 
@@ -22,7 +22,7 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
-You can click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option in order to log into the TDM GUI.
+You can click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option in order to log into the TDM Portal.
 
 ![application list](images/fabric_web_applications_list.png)
 
@@ -30,7 +30,7 @@ You can click the Web Framework app menu ![web framework app menu](/articles/30_
 
  
 
-## TDM GUI Navigation - General
+## TDM Portal Navigation - General
 
 ### TDM Navigation Tabs
 
@@ -44,16 +44,16 @@ To move between sections, click the required tab.
 
 ## TDM Breadcrumbs 
 
-The TDM GUI uses breadcrumbs as a graphical control element to aid navigation across user interfaces whereby users can track their position in the TDM screens. For example, to display the details of a given task's execution: 
+The TDM Portal uses breadcrumbs as a graphical control element to aid navigation across user interfaces whereby users can track their position in the TDM screens. For example, to display the details of a given task's execution: 
 
 ![breadcrumbs](images/breadcrumbs_example.png)
 
 - Click **Task Execution Summary - lo111s** to display the executions list of **lo111** task. 
 - Click **Tasks** to display all TDM tasks.
 
-### TDM Soft Delete
+### TDM Delete
 
-A Delete activity generally changes the status of a selected object to **Inactive** and does not delete the object from the TDM DB. The object remains in the TDM DB and its history can be displayed in the TDM GUI.
+A Delete activity generally changes the status of a selected object to **Inactive** and does not delete the object from the TDM DB. The object remains in the TDM DB and its history can be displayed in the TDM Portal.
 
 Inactive objects cannot be repaired.
 

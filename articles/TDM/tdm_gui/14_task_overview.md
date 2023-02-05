@@ -2,7 +2,7 @@
 
 Data provisioning and entity reservation are implemented by creating and executing TDM tasks. 
 
-A TDM task is created in the TDM GUI. It holds a list of instructions and settings that define the type and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
+A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the type and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
 
 The actual data provisioning and/or entity reservation is performed by the task execution where each task can be executed multiple times.
 
@@ -198,7 +198,7 @@ The following screenshot shows an example of the TDM Task List.
 
 4. To find a field, populate the **Search** bar in order to filter the tasks by the searched value.
 
-The TDM GUI displays a list of icons next to each task record:
+The TDM Portal displays a list of icons next to each task record:
 
 - ![task icon](images/execute_task_icon.png)[Execute Task](26_task_execution.md). 
 - ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task on-hold temporarily.

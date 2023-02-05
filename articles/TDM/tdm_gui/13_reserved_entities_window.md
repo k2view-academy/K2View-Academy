@@ -16,7 +16,7 @@ The Reserved Entities window enables the user to view, update, or release the se
 
 ## Limit the Number of the Reserved Entities in the Window
 
-By default, the TDM GUI displays all the reserved entities on the user's environments. It is possible to limit the number of the entities in the window by populating a number in the  **GET_RESERVED_ENTITIES_LIMIT** shared Global imported from the TDM Library (by default, it is populated with zero). 
+By default, the TDM Portal displays all the reserved entities on the user's environments. It is possible to limit the number of the entities in the window by populating a number in the  **GET_RESERVED_ENTITIES_LIMIT** shared Global imported from the TDM Library (by default, it is populated with zero). 
 
 ## Selecting Entities for Update or Release
 

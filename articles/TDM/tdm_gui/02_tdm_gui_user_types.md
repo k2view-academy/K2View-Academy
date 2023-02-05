@@ -1,4 +1,4 @@
-# TDM GUI - Permission Groups (User Types)
+# TDM Portal - Permission Groups (User Types)
 
 There are three main types of TDM users, each with different permissions for different activities:
 - Admin
@@ -13,9 +13,9 @@ Below are more detailed descriptions of the Permission Groups:
 
 ## Admin 
 
-An Admin can execute all activities in the TDM GUI application. 
+An Admin can execute all activities in the TDM Portal application. 
 
-Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM GUI and are responsible for the following activities:
+Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM Portal and are responsible for the following activities:
 
 - Create, edit or delete [systems](05_tdm_gui_product_window.md).
 - Create, edit or delete [Business Entities](04_tdm_gui_business_entity_window.md) and attach Logical Units or post-execution processes to each Business Entity.
@@ -45,7 +45,7 @@ A Tester User can create and execute TDM tasks based on their TDM environment's 
 
 ### How Does TDM Identify the User Type (Permission Group)? 
 
-The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session. 
+The TDM Portal application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM Portal application gets the **user id** and the user's **Fabric roles** from the user's session. 
 
 The users are defined and each user can be attached to one or several user groups in the organization. 
 
@@ -57,7 +57,7 @@ Our assumption is a **one-to-one relation between a Fabric role and a user group
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](02a_permission_group_mapping_window.md) TDM window and is kept in the [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-The TDM GUI application **identifies the user type (Permission Group) by its Fabric roles**.
+The TDM Portal application **identifies the user type (Permission Group) by its Fabric roles**.
 
 The following diagram illustrates the mapping between Fabric roles and TDM permission groups:
 
@@ -103,7 +103,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
   </tr>
   </table>
 
-- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects to the TDM GUI application.
+- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects to the TDM Portal application.
 
 - The TDM gets the following attributes from the user session:
 

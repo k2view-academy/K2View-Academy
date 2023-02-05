@@ -1,10 +1,10 @@
 # Task Execution
 
-A task can be executed multiple times. A [Task Execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) can be initiated either from the TDM GUI by either clicking ![task execution icon](images/execute_task_icon.png), a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a TDM Scheduling process if the task's [Execution Timing](22_task_execution_timing_tab.md) is defined as **Scheduled Execution**.
+A task can be executed multiple times. A [Task Execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) can be initiated either from the TDM Portal by either clicking ![task execution icon](images/execute_task_icon.png), a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a TDM Scheduling process if the task's [Execution Timing](22_task_execution_timing_tab.md) is defined as **Scheduled Execution**.
 
 The TDM Scheduling process checks the **End Date** of the task's scheduling parameters. If the End Date is earlier than the current date, the process cleans the task's  **Scheduled Execution** parameters and skips the task execution. 
 
-## Who Can Execute a Task via the TDM GUI?
+## Who Can Execute a Task via the TDM Portal?
 
 The following users can execute a TDM task:
 
@@ -35,7 +35,7 @@ The execution of the related task components runs in the following order:
 
 ## Monitoring Task Execution
 
-The TDM GUI displays a list of the task's LUs and post execution processes and the status of the currently running processes.
+The TDM Portal displays a list of the task's LUs and post execution processes and the status of the currently running processes.
 
 
 **Example:**
@@ -90,7 +90,7 @@ Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
 - To execute a scheduled task on demand, click ![task execution icon](images/execute_task_icon.png). 
 
-- Both the TDM GUI and TDM Scheduling processes initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
+- Both the TDM Portal and TDM Scheduling processes initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
 
   Click for more information about the [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md).
 

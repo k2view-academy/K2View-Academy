@@ -84,7 +84,7 @@ The following selection methods are available on extract tasks:
 
 ![requested entities2](images/extract_task_requested_entities_tab_custom_logic.png)
 
-TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM GUI displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
+TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM Portal displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
 
 ![requested entities2](images/extract_task_requested_entities_tab_custom_logic_2.png)
 
