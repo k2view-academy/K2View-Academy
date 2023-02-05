@@ -24,8 +24,8 @@ Below are various AWS Keyspaces limitations, that can lead to re-implementation 
   AWS_TABLE_PROVISIONED = keyspace1.table1=40,35,onDemand;keyspace2.table2=10,12
   ~~~
 
-  * The first number here defines read capacity units (RCUs) and the second number defines write capacity units (WCUs).
-  * Setting the read and write units per table means that the table's throughput capacity mode is updated in AWS to *PROVISIONED*. If you wish to keep the table on the *PAY_PER_REQUEST* throughout capacity mode, add onDemand after the RCU and WCU definition, as described above.
+  * The first number above defines read capacity units (RCUs) and the second number defines write capacity units (WCUs).
+  * Setting the read and write units per table means that the table's throughput capacity mode is updated in AWS to *PROVISIONED*. If you wish to keep the table on the *PAY_PER_REQUEST* throughput capacity mode, add onDemand after the RCU and WCU definition, as described above.
   * [Click here for more information about read and write capacity mode in AWS Keyspaces.](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html)
 
 
