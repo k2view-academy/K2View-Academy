@@ -114,14 +114,36 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 - offset: total number of message retrieved during the synchronization.
 - offset duration: time to process all messages.
 - Transaction Id: current processed transaction id.
-
+      
 - Transaction Type:       
   
-      -   LONG_SNAPSHOT
-      -   SHORT_SNAPSHOT
-      -   SHORT_TRANSACTION
-      -   LONG_TRANSACTION
-      -   IDLE
+      -   LONG_SNAPSHOT – a transaction is considered a snapshot, when it starts with a delete table command, 
+          and it is considered long, when the number of insert queries is bigger than the configured bulk 
+          size in config.ini (TRANSACTION_BULK_SIZE). Consequently, all the insert commands are stored in Cassandra 
+          via a single message in Kafka that is the linkage to Cassandra. Bulks in a LONG_SNAPSHOT are processed 
+          one by one (one bulk at a time) while other updates are applied in between these bulks (into a different 
+          table in the same schema).
+ 
+      -   SHORT_SNAPSHOT – a transaction is considered a snapshot, when it starts with a delete table command, and it 
+          is considered short, when the number of insert queries is smaller than the configured bulk size in config.ini
+          (TRANSACTION_BULK_SIZE). In such case, one message in Kafka contains all the queries.
+ 
+      -   SHORT_TRANSACTION – update/insert/delete commands in one Fabric transaction (between begin and end commands) 
+          when the number of queries is smaller than the configured bulk size in config.ini (TRANSACTION_BULK_SIZE). 
+          In such case, one message in Kafka contains all the queries.
+ 
+      -   LONG_TRANSACTION - update/insert/delete commands in one Fabric transaction (between begin and end commands) 
+          when the number of queries is bigger than the configured bulk size in config.ini (TRANSACTION_BULK_SIZE). 
+          Consequently, all the insert commands are stored in Cassandra via a single message in Kafka that is the 
+          linkage to Cassandra. In a LONG_TRANSACTION, the process of applying all the rows (all bulks, i.e., a large 
+          update) has to be completed before applying updates to other tables in the same schema.
+ 
+          SNAPSHOT – save all data in a temp table; only when done, rename it back to the original table name.
+ 
+          TRANSACTION – done directly on the original table.
+ 
+      -   IDLE – no activity on this table since the last restart/start.
+      
       
 - Sub_status:
 
