@@ -37,7 +37,7 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
    - **SEQUENCE_REDIS_OR_DB** - indicates whether the next value is taken from Redis, memory, or from the target DB interface. Populate this setting using either of the following:
       - **FabricRedis** interface (imported from the TDM library).
       - **IN-MEMORY**, useful for testing only since it can be used only in a single node configuration. 
-      - **Target DB interface name**. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
+      - **Target DB interface name** in order to get the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
    - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is only relevant when getting the next value from **FabricRedis**. Otherwise, the next value is taken from the target system.
 
  Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the the sequence actor.
