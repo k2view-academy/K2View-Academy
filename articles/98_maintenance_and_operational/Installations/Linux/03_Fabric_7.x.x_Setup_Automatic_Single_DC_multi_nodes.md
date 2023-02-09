@@ -31,7 +31,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 ### Set up the first Cassandra nodes
 
 Number of seeds node should be as chosen replication factor number.
-The script should be run separately on each node in the order of designated node number, starting more then one node at the time, may cause configuration issues
+The script should be run separately on each node in the order of designated node number, starting more than one node at the time, may cause configuration issues
 Mandatory details needed:
 * Seeds nodes IP.
 * Cassandra admin user.
@@ -50,18 +50,18 @@ Optional details needed:
 >* seeds ip’s 10.0.0.1, 10.0.0.2, 10.0.0.3.
 
 
-1. 	Run the following command : (start with first node, then, one by one on the 2nd and 3rd:
+1. 	Run the following command: (start with 1st node, then, one by one on the 2nd and 3rd:
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
 
-2.  Once the all the seeds nodes are up and running run the same command on all the rest Cassandra nodes, (one by one).
+2.  Once all the seeds nodes are up and running, run the same command on all the rest of the Cassandra nodes, (one by one).
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
 
 
-## Set up Kafka Cluster
+## Set Up Kafka Cluster
 
 ### Load the Package 
 
