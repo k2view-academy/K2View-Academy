@@ -12,7 +12,7 @@ Broadway has a category of Actors that allow working with [MTables](/articles/09
 
 Each of the above MTable Actors receives an MTable name as an input parameter. An MTable name can be passed at run time, together with a map of keys & values, in order to perform the lookup. Alternatively, the MTable name, keys and the keys' valid values can be set during the flow design time, using dedicated editors:
 
-1. Start from defining the MTable name in the Actor's input, either manually or via the editor:
+1. Start by defining the MTable name in the Actor's input, either manually or via the editor:
 
 <img src="../images/99_actors_09_0.png" style="zoom:80%;" />
 
