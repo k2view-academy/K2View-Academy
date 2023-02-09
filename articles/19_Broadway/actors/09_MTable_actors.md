@@ -21,11 +21,11 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 <img src="../images/99_actors_09_1.png" style="zoom:80%;" />
 
-4. Once selected, the keys are added to the Actor as new input arguments. Switching the link type of the key from Link (default) to Const allows choosing a value from the list, rather than typing it manually. This list provides a distinct collection of this column's values in the selected MTable:
+4. Once selected, the keys are added to the Actor as new input arguments. Switching the link type of the key from Link (default) to Const, allows to choose a value from the list, rather than manually typing it in. This list provides a distinct collection of this column's values in the selected MTable:
 
 <img src="../images/99_actors_09_2.png" style="zoom:80%;" />
 
-5. The same ability of selecting from the list is available when a default value should be set for a key (with the link type External or Link).
+5. The same capaability of selecting from the list is available when a default value should be set for a key (with the link type External or Link).
 
 
 
