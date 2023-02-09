@@ -21,7 +21,7 @@ An MTable is an object created in the Fabric memory from a CSV file. The file ca
 
 Upon deployment, the MTable metadata is created based on the CSV file structure, and the MTable object is uploaded to Fabric memory. Other file types, apart from the CSV type, are ignored.
 
-Another technique of creating or updating an MTable is using a dedicated Actor at run time.
+Another technique of creating or updating an MTable is to use a dedicated Actor at run time.
 
 The data lookup can be performed by one or several MTable keys. The index is created on-the-fly during the first select, based on the search keys. 
 
