@@ -21,14 +21,14 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
    tar -zxvf k2v_cassandra-4.x.xxx.tar.gz && source ~/.bash_profile
    ~~~
 
-4. Verify python version 2.7 is being used
+4. Verify that Python version 2.7 is being used
 
    ~~~bash
    python --version
    ~~~
 
 
-### Set up the firsts Cassandra nodes
+### Set up the first Cassandra nodes
 
 Number of seeds node should be as chosen replication factor number.
 The script should be run separately on each node in the order of designated node number, starting more then one node at the time, may cause configuration issues
