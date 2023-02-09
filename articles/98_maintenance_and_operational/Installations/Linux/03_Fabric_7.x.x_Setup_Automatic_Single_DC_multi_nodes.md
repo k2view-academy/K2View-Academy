@@ -11,7 +11,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ### Load The Package 
 
-1. Retrieve the latest Cassandra package (located at: [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
+1. Retrieve the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
 2. Log in to the Linux server as the user "Cassandra" and copy the package to the home directory.
 
