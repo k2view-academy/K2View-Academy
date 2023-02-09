@@ -12,7 +12,7 @@ To view and edit the flow's description and tags, take the following steps:
 2. To add a new tag, assign the new tag name by typing it in the 'New Tag' box and click on the <img src="images/plus.png" style="zoom:65%;" /> icon. 
 3. To remove an existing tag, unmark it in the Tags list.
 4. To update the description, populate the Description area.
-5. Click **Submit**.
+5. Click on **Submit**.
 
 Note that the tags and the description are only saved upon the saving the flow.
 
