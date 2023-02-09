@@ -2,7 +2,7 @@
 
 The Flow Properties window enables viewing and editing the flow's description and tags. Each flow can have zero, one or multiple tags, as tagging a flow is optional. Setting the flow description is optional as well. 
 
-When the flow is created under a category (folder), the category name is set as a default tag.
+When the flow is created under a category (i.e., a folder), the category name is set as the default tag.
 
 To view and edit the flow's description and tags, take the following steps:
 
