@@ -4,7 +4,7 @@
 
 Broadway has a category of Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
 
-* **MTableLookup** Actor, to fetch data from an MTable by the given key(s). The search indices are created on-the-fly during the first search. If no key(s) are supplied, the entire MTable dataset is returned. This Actor returns an array of objects.
+* **MTableLookup** Actor, to fetch data from an MTable by the given key(s). The search indices are created on-the-fly during the first search. If no key/s is/are supplied, the entire MTable dataset is returned. This Actor returns an array of objects.
 * **MTableRandom** Actor, to fetch a random row from an MTable creating indices as needed. The random selection can be limited by providing input key(s). This Actor returns one object only.
 * **MTableLoad** Actor, to either create a new MTable dataset or replace an existing one in Fabric memory.
 
