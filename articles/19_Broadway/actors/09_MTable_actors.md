@@ -16,7 +16,7 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 <img src="../images/99_actors_09_0.png" style="zoom:80%;" />
 
-2. The MTable editor opens a popup which displays a list of all deployed MTables and their keys. 
+2. The MTable editor opens a popup that displays a list of all deployed MTables and their keys. 
 3. Select a name from the list and mark the key(s) to be used as input for the lookup:
 
 <img src="../images/99_actors_09_1.png" style="zoom:80%;" />
