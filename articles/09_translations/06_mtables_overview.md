@@ -38,7 +38,7 @@ An MTable can be used when a flow or a Web Service needs to look up data either 
 
 Each MTable can be accessible from any LU, regardless of its location in the Project.
 
-[Click for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
+[Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
 
 [![Previous](/articles/images/Previous.png)](01_translations_overview_and_use_cases.md)
 
