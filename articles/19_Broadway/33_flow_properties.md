@@ -1,6 +1,6 @@
 # Flow Properties
 
-The Flow Properties window enables viewing and editing the flow's description and tags. Each flow can have zero, one or multiple tags, as tagging a flow is optional. Setting the flow description is optional as well. 
+The Flow Properties window enables viewing and editing the flow's tags and description. Each flow can have zero, one or multiple tags, as tagging a flow is optional. Setting the flow description is optional as well. 
 
 When the flow is created under a category (i.e., a folder), the category name is set as the default tag.
 
