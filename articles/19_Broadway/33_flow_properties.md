@@ -4,7 +4,7 @@ The Flow Properties window enables viewing and editing the flow's description an
 
 When the flow is created under a category (folder), the category name is set as a default tag.
 
-To view and edit flow's description and tags, do the following:
+To view and edit the flow's description and tags, take the following steps:
 
 1. Click **Actions** > **Flow Properties** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar to open a Flow Properties window. 
     * All existing tags are presented in the Tags list. 
