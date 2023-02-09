@@ -14,7 +14,7 @@ To view and edit the flow's description and tags, take the following steps:
 4. To update the description, populate the Description area.
 5. Click on **Submit**.
 
-Note that the tags and the description are only saved upon the saving the flow.
+Note that both the tags and the description are saved only upon saving of the flow.
 
 <img src="images/99_33_flow_prop.png" style="zoom:80%;" /> 
 
