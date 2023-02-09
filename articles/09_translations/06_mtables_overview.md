@@ -27,11 +27,11 @@ The data lookup can be performed by one or several MTable keys. The index is cre
 
 ### How Can I Use an MTable?
 
-An MTable can be used when a flow or a Web Service needs to lookup the data, either by the given key(s) or without them, randomly. 
+An MTable can be used when a flow or a Web Service needs to look up the data, either by the given key(s) or without them, randomly. 
 
 * To use an MTable in a flow:
-  * Invoke an MTable Actor providing it the MTable name and a map of keys and their values. Each key can receive one value. 
-  * The Actor then will return an array of results matching the input parameters.
+  * Invoke an MTable Actor, providing it with the MTable name and a map of keys and their values. Each key can receive one value. 
+  * The Actor, then, will return an array of results matching the input parameters.
 * In Java code, 2 APIs are exposed: 
   * To return the whole MTable by its name.
   * To return the array of results by the map of keys & values.
