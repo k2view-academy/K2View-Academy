@@ -36,7 +36,7 @@ An MTable can be used when a flow or a Web Service needs to look up data either 
   * To return the whole MTable by its name.
   * To return the array of results by the map of keys & values.
 
-Each MTable can be accessible from any LU, regardless of their location in the Project.
+Each MTable can be accessible from any LU, regardless of its location in the Project.
 
 [Click for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
 
