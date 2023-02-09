@@ -2,7 +2,7 @@
 
 ### What Is an MTable?
 
-An MTable is a Fabric Studio objectת created by uploading a CSV file into the Project Tree. The purpose of an MTable object is to keep reference data as part of the Fabric project and enable data lookup or data transformation rules at run time. 
+An MTable is a Fabric Studio object, created by uploading a CSV file into the Project Tree. The purpose of an MTable object is to keep reference data as part of the Fabric project and enable data lookup or data transformation rules at run time. 
 
 <studio>
 
@@ -21,7 +21,7 @@ An MTable is an object created in the Fabric memory from a CSV file. The file ca
 
 Upon deployment, the MTable metadata is created based on the CSV file structure, and the MTable object is uploaded to the Fabric memory. Other file types, apart from the CSV type, are ignored.
 
-Another technique of creating or updating an MTable is to use a dedicated Actor at run time.
+In addition, an MTable can be created or updated by using a dedicated Actor at run time.
 
 The data lookup can be performed by one or several MTable keys. The index is created on-the-fly during the first select, based on the search keys. 
 
@@ -33,10 +33,10 @@ An MTable can be used when a flow or a Web Service needs to look up data either 
   * Invoke an MTable Actor, providing it with the MTable name and a map of keys and their values. Each key can receive one value. 
   * The Actor, then, will return an array of results that match the input parameters.
 * In a Java code, 2 APIs are exposed: 
-  * To return the whole MTable by its name.
-  * To return the array of results by the map of keys & values.
+  * API that returns the whole MTable by its name.
+  * API that returns the array of results by the map of keys & values.
 
-Each MTable can be accessible from any LU, regardless of its location in the Project.
+Each MTable can be accessible from any LU, regardless of the MTable location in the Project.
 
 [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
 

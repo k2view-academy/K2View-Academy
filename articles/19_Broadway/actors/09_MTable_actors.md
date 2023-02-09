@@ -2,11 +2,11 @@
 
 # MTable Actors
 
-Broadway has a category of Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
+Broadway has several Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
 
 * **MTableLookup** Actor - allows to fetch data from an MTable by the given key(s). The search indices are created on-the-fly during the first search. If no key(s) is(are) supplied, the entire MTable dataset is returned. This Actor returns an array of objects.
 * **MTableRandom** Actor - allows to fetch a random row from an MTable, creating indices as needed. The random selection can be limited by providing input key(s). This Actor returns one object only.
-* **MTableLoad** Actor - aloows to either create a new MTable dataset or replace an existing one in the Fabric memory.
+* **MTableLoad** Actor - allows to either create a new MTable dataset or replace an existing one in the Fabric memory.
 
 ### How Do I Use MTable Actors?
 
@@ -21,11 +21,11 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 <img src="../images/99_actors_09_1.png" style="zoom:80%;" />
 
-4. Once selected, the keys are added to the Actor as new input arguments. Switching the link type of the key from Link (default) to Const, allows to choose a value from the list, rather than manually typing it in. This list provides a distinct collection of this column's values in the selected MTable:
+4. Once selected, the keys are added to the Actor as new input arguments. When a key is set to the **Const** link type, it allows to choose a value from the list, rather than manually typing it in. This list includes a collection of this column's distinct values from the selected MTable:
 
 <img src="../images/99_actors_09_2.png" style="zoom:80%;" />
 
-5. The same capability of selecting from the list is available when a default value should be set for a key (with the link type External or Link).
+5. The same capability of selecting a valid value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
 
 
 
