@@ -6,7 +6,7 @@ An MTable is a Fabric Studio object created by uploading a CSV file into the Pro
 
 <studio>
 
-MTable objects are only available in the Fabric Web Studio.
+MTable objects are available only in the Fabric Web Studio.
 
 </studio>
 
