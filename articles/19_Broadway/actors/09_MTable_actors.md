@@ -25,7 +25,7 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 <img src="../images/99_actors_09_2.png" style="zoom:80%;" />
 
-5. The same capaability of selecting from the list is available when a default value should be set for a key (with the link type External or Link).
+5. The same capability of selecting from the list is available when a default value should be set for a key (with the link type External or Link).
 
 
 
