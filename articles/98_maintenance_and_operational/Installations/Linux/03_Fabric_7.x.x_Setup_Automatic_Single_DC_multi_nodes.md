@@ -138,7 +138,7 @@ The script should be run separately on each node, in the order of designated nod
 + Kafka nodes IP.
 + Memory in GB for fabric heap (or set automatic to ¼ of total ram).
 
-**Optioanl required details:**
+**Optional required details:**
 + Cassandra DC name
 
 Assuming you prepare to run the Fabric with the following:
