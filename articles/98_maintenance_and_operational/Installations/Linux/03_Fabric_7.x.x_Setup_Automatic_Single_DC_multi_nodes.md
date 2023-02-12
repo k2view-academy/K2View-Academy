@@ -55,7 +55,7 @@ Optional required details:
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
 
-2.  Once all the seeds nodes are up and running, run the same command on all the rest of the Cassandra nodes, (one by one).
+2.  Once all seeds nodes are up and running, run the same command on all the rest of the Cassandra nodes, (one by one).
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
