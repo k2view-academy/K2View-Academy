@@ -32,7 +32,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 Number of seeds node should be as chosen replication factor number.
 The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues
-Mandatory details needed:
+Mandatory required details:
 * Seeds nodes IP.
 * Cassandra admin user.
 * Cassandra admin password.
@@ -81,7 +81,7 @@ Number of cluster nodes should be either greater than or equal to the replicatio
 
 The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
-**Mandatory details needed:**
+**Mandatory required details:**
 + Nodes Ip.
 + Replication factor
 
