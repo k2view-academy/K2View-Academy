@@ -163,7 +163,7 @@ Run the following command: (start with 1st node, then, one by one until the last
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - The same login details should be used to log in to the Web Framework.
+   - The same login details should be used for logging in to the Web Framework.
 
 
 
