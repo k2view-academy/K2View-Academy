@@ -65,7 +65,7 @@ Optional required details:
 
 ### Load the Package 
 
-1. Download the package from: [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
+1. Download the package from [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
 
 2. Log in to the Linux as the user "Kafka" and copy the package to the home directory.
 
