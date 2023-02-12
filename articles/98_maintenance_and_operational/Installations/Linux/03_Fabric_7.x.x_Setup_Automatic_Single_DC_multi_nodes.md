@@ -128,9 +128,9 @@ Assuming you prepare to run the Kafka with:
    ~~~
 
 ### Set up the Fabric nodes
-The script should be run separately on each node in the order of designated node number, starting more then one node at the time, may cause configuration issues
+The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
-**Mandatory details needed:**
+**Mandatory required details:**
 + Cassandra seeds nodes IP.
 + Cassandra Replication factor.
 + Cassandra user & Password (if set different the default in cassandra setup).
