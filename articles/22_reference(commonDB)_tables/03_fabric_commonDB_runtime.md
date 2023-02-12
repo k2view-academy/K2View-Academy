@@ -212,7 +212,7 @@ A Reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_
 
 When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether common storage exists for this node. If it does not wxist, Fabric will search for the latest backup; otherwise it will ask for a new fresh snapshot.
 
-The following commands are available for backing up or downloading a backup to a local node:
+The following commands are available for backing up/downloading a backup to - a local node:
 
 <table width="900pxl">
 <tbody><tr>
