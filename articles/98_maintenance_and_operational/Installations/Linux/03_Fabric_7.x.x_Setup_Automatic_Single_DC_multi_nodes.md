@@ -31,7 +31,7 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 ### Set up the first Cassandra nodes
 
 The number of seed nodes should match the chosen replication factor number.
-The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues.
+The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
 
 **Mandatory required details:**
 * Seed node IPs
@@ -80,7 +80,7 @@ The script should be run separately on each node, in the order of designated nod
 
 The number of cluster nodes should be either greater than or equal to the replication factor number.
 
-The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
+The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
 
 **Mandatory required details:**
 + Node IPs
@@ -121,7 +121,7 @@ Assuming you prepare to run the Kafka with:
    tar -zxvf [package name].tar.gz && source ~/.bash_profile
    ~~~
 
-3. In case you are installing fabric on a folder different than /opt/apps/fabric, run:
+3. In case you are installing Fabric on a folder different than /opt/apps/fabric, run:
 
    ~~~bash
    sed -i "s@K2_HOME=.*@K2_HOME=$(pwd)@" .bash_profile
@@ -134,9 +134,9 @@ The script should be run separately on each node, in the order of designated nod
 **Mandatory required details:**
 + Cassandra seed node IPs
 + Cassandra Replication factor
-+ Cassandra user & Password (if set different the default in Cassandra setup).
++ Cassandra username & password (if set different the default in Cassandra setup).
 + Kafka node IPs
-+ Memory in GB for fabric heap (or set automatic to ¼ of total ram).
++ Memory in GB for Fabric heap (or set automatic to ¼ of total ram).
 
 **Optional required details:**
 + Cassandra DC name
@@ -145,9 +145,9 @@ Assuming you prepare to run the Fabric with the following:
 + Memory set to automatic
 *Cassandra cluster with:*
 + Replication factor 3 
-+ Seed IPs 10.0.0.1,10.0.0.2,10.0.0.3
++ Seed IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 + User ‘k2admin’
-+ Password ‘passwprd’
++ Password ‘password’
 *Kafka cluster with:*
 + 3 nodes
 + Node IPs 10.0.0.4, 10.0.0.5, 10.0.0.6
