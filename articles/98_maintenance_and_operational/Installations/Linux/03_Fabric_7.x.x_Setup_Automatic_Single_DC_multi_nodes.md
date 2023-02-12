@@ -93,7 +93,7 @@ Assuming you prepare to run the Kafka with:
 >* replication factor 3, 
 >* Nodes ip’s 10.0.0.1, 10.0.0.2, 10.0.0.3.
 
-1. 	Run the following command : (start with first node, then, one by one on the 2nd and 3rd:
+1. 	Run the following command: (start with 1st node, then, one by one on the 2nd and 3rd:
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
@@ -120,7 +120,7 @@ Assuming you prepare to run the Kafka with:
    tar -zxvf [package name].tar.gz && source ~/.bash_profile
    ~~~
 
-3. In case you are installing fabric on a folder different then /opt/apps/fabric, run:
+3. In case you are installing fabric on a folder different than /opt/apps/fabric, run:
 
    ~~~bash
    sed -i "s@K2_HOME=.*@K2_HOME=$(pwd)@" .bash_profile
