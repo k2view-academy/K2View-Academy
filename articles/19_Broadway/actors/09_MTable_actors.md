@@ -4,13 +4,13 @@
 
 Broadway has several Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
 
-* **MTableLookup** Actor - allows to fetch data from an MTable by the given key(s). The search indices are created on-the-fly during the first search. If no key(s) is(are) supplied, the entire MTable dataset is returned. This Actor returns an array of objects.
+* **MTableLookup** Actor - allows to fetch data from an MTable by the given key(s). The search indices are created on-the-fly during the first search. If no keys are supplied, the entire MTable dataset is returned. This Actor returns an array of objects.
 * **MTableRandom** Actor - allows to fetch a random row from an MTable, creating indices as needed. The random selection can be limited by providing input key(s). This Actor returns one object only.
 * **MTableLoad** Actor - allows to either create a new MTable dataset or replace an existing one in the Fabric memory.
 
 ### How Do I Use MTable Actors?
 
-Each of the above MTable Actors receives an MTable name as an input parameter. An MTable name can be passed at run time, together with a map of keys & values, in order to perform the lookup. Alternatively, the MTable name, keys and the keys' valid values can be set during the flow design time, using dedicated editors:
+Each of the above MTable Actors receives an MTable name as an input parameter. An MTable name can be passed at run time, together with a map of keys & values, in order to perform the lookup. Alternatively, the MTable name, keys and the keys' values can be set during the flow design time, using dedicated editors:
 
 1. Start by defining the MTable name in the Actor's input, either manually or via the editor:
 
