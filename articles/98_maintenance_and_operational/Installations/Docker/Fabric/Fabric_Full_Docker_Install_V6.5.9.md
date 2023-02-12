@@ -1,4 +1,4 @@
-## FABRIC v6.5.9_144-HF6 DOCKER INSTALLATION
+## FABRIC v6.5.9_148-HF7 DOCKER INSTALLATION
 
 ### Prerequisites
 
@@ -58,13 +58,13 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_144-HF6/D_k2view_fabric_6.5.9_144.tar.gz
-   <br>md5: 4b6f524ae006c41a3ac941a9ad5fc7a8</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_148-HF7/D_k2view_fabric_6.5.9_148.tar.gz
+   <br>md5: b76a6a0c18bfa08187c5a2f80d8897fe</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_144-HF6/compose_fabric_6.5.9_144.tar.gz
-   <br>md5: e26593aeacc39a09e5ad494982635e62</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_148-HF7/compose_fabric_6.5.9_148.tar.gz
+   <br>md5: ae09bd4dcd44222c3a677f65bc693750</br></td>
    </tr>
    </tbody>
    </table>
@@ -74,22 +74,22 @@ More detailed requirements for each are described below:
    cd ~/ 
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz
    wget https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz  
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_144-HF6/D_k2view_fabric_6.5.9_144.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_144-HF6/compose_fabric_6.5.9_144.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_148-HF7/D_k2view_fabric_6.5.9_148.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.9/Server/fabric-6.5.9_148-HF7/compose_fabric_6.5.9_148.tar.gz
    ```
 3. Load the Docker images as follows:
 
    ```bash
     docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_2.tar.gz
-    docker load -i D_k2view_fabric_6.5.9_144.tar.gz 
+    docker load -i D_k2view_fabric_6.5.9_148.tar.gz 
    ```
 
    You can see the image names by using the `docker image` command.
 4. Untar the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_6.5.9_144.tar.gz
+   tar -zxvf compose_fabric_6.5.9_148.tar.gz
    ```
 
    >**Note:** open the “.env” file and update the names of the images as needed.
@@ -101,7 +101,7 @@ More detailed requirements for each are described below:
 1. Run docker-compose as follows:
 
    ```bash
-   cd compose_fabric_6.5.9_144
+   cd compose_fabric_6.5.9_148
    # run:  
    docker-compose up -d 
 
@@ -116,7 +116,7 @@ More detailed requirements for each are described below:
 1. To stop the Docker Compose, do the following:
 
    ```bash
-   cd compose_fabric_6.5.9_144
+   cd compose_fabric_6.5.9_148
    #run: 
    docker-compose stop
    ```
