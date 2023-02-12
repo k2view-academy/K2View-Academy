@@ -77,7 +77,7 @@ Optional required details:
 
 ### Set up the Kafka nodes
 
-Number of cluster nodes should be grater or equal then replication factor number.
+Number of cluster nodes should be either greater than or equal to the replication factor number.
 
 The script should be run separately on each node in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
