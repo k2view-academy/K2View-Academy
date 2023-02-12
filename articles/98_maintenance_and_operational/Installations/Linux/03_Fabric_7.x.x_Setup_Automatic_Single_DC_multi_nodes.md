@@ -1,6 +1,6 @@
 # Fabric V7.x.x + TDM 7.xx Installation 1 DC  Multi Nodes
 
-Fabric V7.x.x requires JDK 17 (included in the Fabric installation package). However, the certified versions of Cassandra and Kafka require JDK 8.* package (the latest tested version included with each supplied package).
+Fabric V7.x.x requires JDK 17 (included in the Fabric installation package). However, the certified versions of Cassandra and Kafka require JDK 8.* package (the latest tested version is included with each supplied package).
 
 
 ## Pre-Installation Steps
