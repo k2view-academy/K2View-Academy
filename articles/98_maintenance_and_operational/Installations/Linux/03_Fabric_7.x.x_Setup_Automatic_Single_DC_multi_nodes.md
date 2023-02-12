@@ -30,12 +30,13 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 
 ### Set up the first Cassandra nodes
 
-Number of seeds node should be as chosen replication factor number.
-The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues
+The number of seed nodes should match the chosen replication factor number.
+The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues.
+
 Mandatory required details:
-* Seeds nodes IP.
-* Cassandra admin user.
-* Cassandra admin password.
+* Seeds nodes IP
+* Cassandra admin user
+* Cassandra admin password
 * Replication factor number
 
 Optional required details:
@@ -44,10 +45,10 @@ Optional required details:
 * Hardening and SSl configuration, TBD 
 
 >Assuming you prepare to run the Cassandra with:
->* replication factor 3, 
+>* replication factor 3 
 >* user ‘k2admin’ 
 >* password ‘password’ 
->* seeds ip’s 10.0.0.1, 10.0.0.2, 10.0.0.3.
+>* seeds IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 
 1. 	Run the following command: (start with 1st node, then, one by one on the 2nd and 3rd:
