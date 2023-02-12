@@ -206,7 +206,7 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 
 ## Reference Tables Backup and Restore
 
-Since release 7.1 it is possible to backup reference tables by schemas or 'ALL' so it  becomes much easier to restore a node if it's reference tables data gets our of sync or to sync the reference tables data to a new joined node. A new ref_backup command is introduced, it is recommanded to call this command from a broadway flow to secure a reference backup according to the frequency that is required to your implementation. 
+Since the 7.1 release, it is possible to back up reference tables by schemas or 'ALL' so it becomes much easier to restore a node if it's reference tables data gets our of sync or to sync the reference tables data to a new joined node. A new ref_backup command is introduced, it is recommanded to call this command from a broadway flow to secure a reference backup according to the frequency that is required to your implementation. 
 
 Reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_STORAGE_TYPE parameters in config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is setup in config.ini.
 
