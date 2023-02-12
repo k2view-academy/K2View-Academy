@@ -45,10 +45,10 @@ The script should be run separately on each node, in the order of designated nod
 * Hardening and SSl configuration, TBD 
 
 >Assuming you prepare to run the Cassandra with:
->* replication factor 3 
->* user ‘k2admin’ 
->* password ‘password’ 
->* seed IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
+>* Replication factor 3 
+>* User ‘k2admin’ 
+>* Password ‘password’ 
+>* Seed IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 
 1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
@@ -91,7 +91,7 @@ The script should be run separately on each node, in the order of designated nod
 
 
 Assuming you prepare to run the Kafka with:
->* replication factor 3 
+>* Replication factor 3 
 >* Node IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
