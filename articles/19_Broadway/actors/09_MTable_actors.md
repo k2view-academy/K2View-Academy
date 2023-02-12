@@ -16,16 +16,15 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 <img src="../images/99_actors_09_0.png" style="zoom:80%;" />
 
-2. The MTable editor opens a popup that displays a list of all deployed MTables and their keys. 
-3. Select a name from the list and mark the key(s) to be used as input for the lookup:
+2. The MTable editor opens a popup that displays a list of all deployed MTables and their keys. Select a name from the list and mark the key(s) to be used as input for the lookup:
 
 <img src="../images/99_actors_09_1.png" style="zoom:80%;" />
 
-4. Once selected, the keys are added to the Actor as new input arguments. When a key is set to the **Const** link type, it allows to choose a value from the list, rather than manually typing it in. This list includes a collection of this column's distinct values from the selected MTable:
+3. Once selected, the keys are added to the Actor as new input arguments. When a key's link type is set to **Const**, the input becomes a list of this column's distinct values. You can then choose a value, rather than manually type it in. 
 
 <img src="../images/99_actors_09_2.png" style="zoom:80%;" />
 
-5. The same capability of selecting a valid value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
+4. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
 
 
 

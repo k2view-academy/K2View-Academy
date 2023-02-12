@@ -21,13 +21,13 @@ An MTable is an object created in the Fabric memory from a CSV file. The file ca
 
 Upon deployment, the MTable metadata is created based on the CSV file structure, and the MTable object is uploaded to the Fabric memory. Other file types, apart from the CSV type, are ignored.
 
-In addition, an MTable can be created or updated by using a dedicated Actor at run time.
+In addition, an MTable can be created or updated in Fabric memory by using a MTableLoad Actor at run time.
 
 The data lookup can be performed by one or several MTable keys. The index is created on-the-fly during the first select, based on the search keys. 
 
 ### How Can I Use an MTable?
 
-An MTable can be used when a flow or a Web Service needs to look up data either by the given key/s or without it/them, randomly. 
+An MTable can be used when a flow or a Web Service needs to look up data either by the given key(s) or without them, randomly. 
 
 * To use an MTable in a flow:
   * Invoke an MTable Actor, providing it with the MTable name and a map of keys and their values. Each key can receive one value. 
