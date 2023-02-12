@@ -33,13 +33,13 @@ Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activ
 The number of seed nodes should match the chosen replication factor number.
 The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues.
 
-Mandatory required details:
+**Mandatory required details:**
 * Seeds nodes IP
 * Cassandra admin user
 * Cassandra admin password
 * Replication factor number
 
-Optional required details:
+**Optional required details:**
 * DataCenter name – unless defined, will be set as DC1
 * Cluster name – unless defined, will be set as Cassandra
 * Hardening and SSl configuration, TBD 
@@ -51,12 +51,12 @@ Optional required details:
 >* seeds IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 
-1. 	Run the following command: (start with 1st node, then, one by one on the 2nd and 3rd:
+1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
 
-2.  Once all seeds nodes are up and running, run the same command on all the rest of the Cassandra nodes, (one by one).
+2.  Once all seed nodes are up and running, run the same command on all the rest of the Cassandra nodes (one by one).
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
@@ -78,23 +78,23 @@ Optional required details:
 
 ### Set up the Kafka nodes
 
-Number of cluster nodes should be either greater than or equal to the replication factor number.
+The number of cluster nodes should be either greater than or equal to the replication factor number.
 
 The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
 **Mandatory required details:**
-+ Nodes Ip.
++ Node IPs
 + Replication factor
 
-*Optional Deatils*
+**Optional required deatils:**
 + Kafka Home directory (if not specified, current folder will be used).
 
 
 Assuming you prepare to run the Kafka with:
->* replication factor 3, 
->* Nodes ip’s 10.0.0.1, 10.0.0.2, 10.0.0.3.
+>* replication factor 3 
+>* Nodes IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
-1. 	Run the following command: (start with 1st node, then, one by one on the 2nd and 3rd:
+1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
 ~~~bash
 ./Cassandra_init -i 10.0.0.1,10.0.0.2,10.0.0.3 -u k2admin -p password -r 3
 ~~~
@@ -138,21 +138,21 @@ The script should be run separately on each node, in the order of designated nod
 + Kafka nodes IP.
 + Memory in GB for fabric heap (or set automatic to ¼ of total ram).
 
-*Optioanl Details*
+**Optioanl required details:**
 + Cassandra DC name
 
 Assuming you prepare to run the Fabric with the following:
 + Memory set to automatic
 *Cassandra cluster with:*
 + Replication factor 3 
-+ Seeds ips 10.0.0.1,10.0.0.2,10.0.0.3
++ Seed IPs 10.0.0.1,10.0.0.2,10.0.0.3
 + User ‘k2admin’
 + Password ‘passwprd’
 *Kafka cluster with:*
-+ 3 nodes.
-+ Nodes ip’s 10.0.0.4, 10.0.0.5, 10.0.0.6.
++ 3 nodes
++ Node IPs 10.0.0.4, 10.0.0.5, 10.0.0.6
 
-Run the following command: (start with 1st node, then, one by one until the last node)
+Run the following command: (start with the 1st node, then, one by one until the last node)
 ~~~bash
 ./fabric7_init -u k2admin -p password -c 10.0.0.1,10.0.0.2,10.0.0.3 -r 3 -k 10.0.0.4,10.0.0.5,10.0.0.6 -m auto
 ~~~
