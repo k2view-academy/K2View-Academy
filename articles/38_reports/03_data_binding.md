@@ -52,7 +52,7 @@ The **custom data set** allows to define any required endpoint, by setting the f
 * **Parameters** and **Headers** - name/value pairs that define the URL’s Query String and HTTP Header fields that are passed with the request (similar to the **Query Parameters** and **HTTP Headers** properties of the data source).
 * **Json Path** - JSON data endpoints can retrieve the data of various shapes, and there is no standardized data structure. Hence, it is required to specify the structure using the [JSONPath expression](https://goessner.net/articles/JsonPath/). You can use `$.*` or `$[*]` JSONPath expression to specify the repeated data fragments.
 
-**Note**: The templates for Data Source and Data Set creations are available for new reports only. When adding a data source or a data set to an existing report, *New Data Source* and *New Data Se*t windows will open, requiring a manual population of all details. 
+**Note**: The templates for data source and data set creation are available for new reports only. When adding a data source or a data set to an existing report, *New Data Source* and *New Data Se*t windows will open, requiring a manual population of all details. 
 
 ### Data Set Validation
 
