@@ -34,7 +34,7 @@ The number of seed nodes should match the chosen replication factor number.
 The script should be run separately on each node, in the order of designated node number, starting more than one node at the time, may cause configuration issues.
 
 **Mandatory required details:**
-* Seeds nodes IP
+* Seed node IPs
 * Cassandra admin user
 * Cassandra admin password
 * Replication factor number
