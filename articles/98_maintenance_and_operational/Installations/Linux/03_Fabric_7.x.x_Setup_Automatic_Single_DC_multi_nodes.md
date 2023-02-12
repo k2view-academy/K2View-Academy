@@ -87,7 +87,7 @@ The script should be run separately on each node, in the order of designated nod
 + Replication factor
 
 **Optional required deatils:**
-+ Kafka Home directory (if not specified, current folder will be used).
++ Kafka home directory (if not specified, current folder will be used).
 
 
 Assuming you prepare to run the Kafka with:
