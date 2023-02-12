@@ -38,7 +38,7 @@ Mandatory details needed:
 * Cassandra admin password.
 * Replication factor number
 
-Optional details needed:
+Optional required details:
 * DataCenter name – unless defined, will be set as DC1
 * Cluster name – unless defined, will be set as Cassandra
 * Hardening and SSl configuration, TBD 
