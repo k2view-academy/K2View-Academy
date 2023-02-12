@@ -208,11 +208,11 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 
 Since the 7.1 release, it is possible to back up reference tables by schemas or 'ALL' so it becomes much easier to restore a node if it's reference tables data gets our of sync or to sync the reference tables data to a new joined node. A new ref_backup command is introduced, it is recommanded to call this command from a broadway flow to secure a reference backup according to the frequency that is required to your implementation. 
 
-Reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_STORAGE_TYPE parameters in config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is setup in config.ini.
+A Reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_STORAGE_TYPE parameters in the config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is set up in the config.ini.
 
-When a new node is added to the Fabric cluster or when running a restart on an existing node, it checks if common storage exist for this node, if not, it will search for the latest backup, otherwise it will ask for a new freshed snapshot.
+When a new node is added to the Fabric cluster or when running a restart on an existing node, it checks whether common storage exists for this node, if not, it will search for the latest backup, otherwise it will ask for a new freshed snapshot.
 
-The following commands are available to backup or download a backup to the local node.
+The following commands are available for backing up or downloading a backup to the local node.
 
 <table width="900pxl">
 <tbody><tr>
