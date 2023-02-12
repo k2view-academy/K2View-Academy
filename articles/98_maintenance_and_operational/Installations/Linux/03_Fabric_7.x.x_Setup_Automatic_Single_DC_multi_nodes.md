@@ -134,7 +134,7 @@ The script should be run separately on each node, in the order of designated nod
 **Mandatory required details:**
 + Cassandra seed node IPs
 + Cassandra Replication factor
-+ Cassandra username & password (if set different the default in Cassandra setup).
++ Cassandra username & password (if set different than the default in the Cassandra setup)
 + Kafka node IPs
 + Memory in GB for Fabric heap (or set automatic to ¼ of total ram).
 
