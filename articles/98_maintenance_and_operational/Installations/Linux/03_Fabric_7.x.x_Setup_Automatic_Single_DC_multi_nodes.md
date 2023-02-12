@@ -151,7 +151,7 @@ Assuming you prepare to run the Fabric with the following:
 + 3 nodes.
 + Nodes ip’s 10.0.0.4, 10.0.0.5, 10.0.0.6.
 
-Run the following command: (start with first node, then, one by one until the last node)
+Run the following command: (start with 1st node, then, one by one until the last node)
 ~~~bash
 ./fabric7_init -u k2admin -p password -c 10.0.0.1,10.0.0.2,10.0.0.3 -r 3 -k 10.0.0.4,10.0.0.5,10.0.0.6 -m auto
 ~~~
