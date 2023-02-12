@@ -221,7 +221,7 @@ The following commands are available for backing up/downloading a backup to - a 
 <td valign="top" width="300pxl"><p><strong>Example</strong></p></td>
 </tr><tr>
 <td valign="top" width="300pxl"><h5>REF_BACKUP [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'];</h5></td>
-<td valign="top" width="400pxl"><p>Back up a snapshot of the specified common schema and place in the configured storage. </p></td>
+<td valign="top" width="400pxl"><p>Back up a snapshot of the specified common schema and place it in the configured storage. </p></td>
 <td valign="top" width="300pxl"><p>REF_BACKUP SCHEMAS=’ALL’;</p></td>
 </tr> <tr>
 <td valign="top" width="300pxl"><h5>REF_BACKUP_DELETE [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'];</h5></td>
