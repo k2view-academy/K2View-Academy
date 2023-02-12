@@ -132,10 +132,10 @@ Assuming you prepare to run the Kafka with:
 The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
 **Mandatory required details:**
-+ Cassandra seed nodes IPs
++ Cassandra seed node IPs
 + Cassandra Replication factor
 + Cassandra user & Password (if set different the default in Cassandra setup).
-+ Kafka nodes IPs
++ Kafka node IPs
 + Memory in GB for fabric heap (or set automatic to ¼ of total ram).
 
 **Optional required details:**
