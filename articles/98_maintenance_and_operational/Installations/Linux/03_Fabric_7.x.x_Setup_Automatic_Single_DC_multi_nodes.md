@@ -5,7 +5,7 @@ Fabric V7.x.x requires JDK 17 (included in the Fabric installation package). How
 
 ## Pre-Installation Steps
 
-Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities that should be performed prior to either Fabric or TDM installation. Note that this is mandatory and should be performed at least once per each server.
+Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities be performed prior to the installation of either Fabric or TDM. Note that this is mandatory and should be performed at least once per each server.
 
 ## Setup for Cassandra
 
