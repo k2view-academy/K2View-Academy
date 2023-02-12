@@ -48,7 +48,7 @@ The script should be run separately on each node, in the order of designated nod
 >* replication factor 3 
 >* user ‘k2admin’ 
 >* password ‘password’ 
->* seeds IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
+>* seed IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 
 1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
@@ -92,7 +92,7 @@ The script should be run separately on each node, in the order of designated nod
 
 Assuming you prepare to run the Kafka with:
 >* replication factor 3 
->* Nodes IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
+>* Node IPs 10.0.0.1, 10.0.0.2, 10.0.0.3
 
 1. 	Run the following command: (start with the 1st node, then, one by one on the 2nd and 3rd:
 ~~~bash
@@ -132,10 +132,10 @@ Assuming you prepare to run the Kafka with:
 The script should be run separately on each node, in the order of designated node number, starting more then one node at the time, may cause configuration issues
 
 **Mandatory required details:**
-+ Cassandra seeds nodes IP.
-+ Cassandra Replication factor.
++ Cassandra seed nodes IPs
++ Cassandra Replication factor
 + Cassandra user & Password (if set different the default in Cassandra setup).
-+ Kafka nodes IP.
++ Kafka nodes IPs
 + Memory in GB for fabric heap (or set automatic to ¼ of total ram).
 
 **Optional required details:**
