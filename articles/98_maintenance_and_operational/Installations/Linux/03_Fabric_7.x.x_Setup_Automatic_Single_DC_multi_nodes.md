@@ -173,7 +173,7 @@ Run the following command: (start with the 1st node, then, one by one until the 
 TDM 7.xx is certified with PGSQL 9.6 & 13. You can provide access to the existing PostgreSQL DB if you have one.
 TDM requires login details with full **create**, **delete** and **update** privileges. 
 
-The customer can provide the **PGSQL**, or find below the installation instructions for **K2View** **PGSQL**:
+The customer can provide the **PGSQL**, or find the below installation instructions for **K2View** **PGSQL**:
 
 <ul>      
 <li>
