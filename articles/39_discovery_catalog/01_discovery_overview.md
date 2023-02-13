@@ -10,7 +10,7 @@ Data Discovery is a process that can help companies to cope with the mentioned a
 * Provide a complete view of organization's metadata and the data.
 * Find and flag sensitive information, to be able to better protect it.
 
-Starting with V7.1, Fabric provides a Data Discovery solution enabling complete view of the Fabric interfaces, starting from RDBMS interface type. The solution capabilities are:
+Fabric provides a Data Discovery solution enabling complete view of the Fabric interfaces, starting from RDBMS interface type. The solution capabilities are:
 
 * Explore the data source's elements (schemas, objects, fields) and the links between them.
 * Profile the metadata and the data (e.g. PII identification).
@@ -25,7 +25,7 @@ The solution framework includes an infrastructure that executes various types of
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">]() 
 
 </web>
 
