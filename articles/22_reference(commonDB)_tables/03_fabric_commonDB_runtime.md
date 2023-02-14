@@ -210,7 +210,7 @@ Since the 7.1 release, it is possible to back up reference tables by schemas or 
 
 A reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_STORAGE_TYPE parameter in the config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is set up in the config.ini.
 
-When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether common backup exists for this node,  otherwise it asks for a new refreshed snapshot.
+When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether a local common file exists, if not, it proceeds with checking whether common backup exists for this node, otherwise it asks for a new refreshed snapshot.
 
 The following commands are available for backing up/downloading a backup to - a local node:
 
@@ -229,7 +229,7 @@ The following commands are available for backing up/downloading a backup to - a 
 <td valign="top" width="300pxl"><p>REF_BACKUP_DELETE SCHEMAS=’ALL’;</p></td>
 </tr> <tr>
 <td valign="top" width="300pxl"><h5>REF_BACKUP_DOWNLOAD [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'] DESTINATION='path name';</h5></td>
-<td valign="top" width="400pxl"><p>Download a snapshot of the specified common schema from the configured storage into the specified path. </p></td>
+<td valign="top" width="400pxl"><p>Download a snapshot of the specified common schema from the configured storage into the specified path. The downloaded file is used for a local check; it is not a file used by Fabric processes. </p></td>
 <td valign="top" width="300pxl"><p>REF_BACKUP_DOWNLOAD SCHEMAS=’ALL’;</p></td>
 </tr> </tbody>
 </table>
