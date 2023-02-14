@@ -6,7 +6,7 @@
 - K2view supports PostgreSQL version 9.6 & 13.
 - PostgreSQL requires 100G storage.
 - PostgreSQL can be deployed in one of these ways:
-  - On a VM (use latest CentOS/Redhat Operating System with latest patches), or 
+  - On Premise, as a virtual or physical machine with 4 Cpu cores and 16 GB Ram  (use latest CentOS/Redhat/Ubuntu OS with latest patches). 
   - As a service. 
 
  **For cloud deployments:**
