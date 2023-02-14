@@ -9,7 +9,7 @@ Therefore, to prevent Issues,
 2. Click [here](Cassandra_New_Setup.md) for instruction how to install Cassandra instance or cluster with our supplied package.
 3. Click [here](Kafka_New_Setup.md) for instruction how to install Kafka instance or cluster with our supplied package.
 
-## Setup for Fabric
+## Fabric Setup 
 
 ### Load the Package 
 
@@ -39,14 +39,15 @@ The script should be run separately on each node, in the order of designated nod
 **Optional required details:**
 + Cassandra DC name
 
-Assuming you prepare to run the Fabric with 3 cassandra seed nodes, 3 kafka node and set the heap memory to  ¼ of total server ram
+Assuming you prepare to run the Fabric with 3 cassandra seed nodes, 3 kafka node and set the heap memory to  ¼ of total server RAM.
+
 Run the following command: (start with the 1st node, then, one by one until the last node)
 ~~~bash
 ./fabric_setup.sh --cassandra_user k2admin ---cassandra_password password --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_replication_factor 3 --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
 ~~~
 
 
-5. login to the Fabric with your web browser with your server IP at port 3123:
+Login to the Fabric with your web browser with your server IP at port 3123:
 
    http://10.0.0.7:3123
    
