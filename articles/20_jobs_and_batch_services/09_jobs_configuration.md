@@ -77,8 +77,14 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 
 ```dc_name: DC1```
 
-Dc Name - By default, Fabric uses the same DC name that Cassandra is using. Fabric reads the DC from Cassandra and set it up automatically. 
+By default, Fabric uses the same DC name that Cassandra is using. Fabric reads the DC from Cassandra and set it up automatically. 
 You should only override it in case you need to use your own specific DC name.
+
+#### Effective Ip
+
+```effective_ip: 1.1.20.1```
+
+The effective IP is the IP that Fabric uses to contact Cassandra. Fabric reads it from Cassandra and set it up automatically. You should only override it in case you need to use your own specific IP.
 
 ## Cluster Configuration
 
