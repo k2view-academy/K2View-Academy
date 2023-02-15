@@ -73,6 +73,12 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
 3. If the *ANY* parameter is not added to the node.id file, by default, the node will be contributing to all jobs that have been defined without affinity.
 
+#### Effective Ip
+
+```effective_ip: 1.1.20.1```
+
+The effective IP is the IP that Fabric uses to contact Cassandra. Fabric reads it from Cassandra and set it up automatically. You should only override it in case you need to use your own specific IP.
+
 #### DC Identifier
 
 ```dc_name: DC1```
@@ -80,11 +86,6 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 By default, Fabric uses the same DC name that Cassandra is using. Fabric reads the DC from Cassandra and set it up automatically. 
 You should only override it in case you need to use your own specific DC name.
 
-#### Effective Ip
-
-```effective_ip: 1.1.20.1```
-
-The effective IP is the IP that Fabric uses to contact Cassandra. Fabric reads it from Cassandra and set it up automatically. You should only override it in case you need to use your own specific IP.
 
 ## Cluster Configuration
 
