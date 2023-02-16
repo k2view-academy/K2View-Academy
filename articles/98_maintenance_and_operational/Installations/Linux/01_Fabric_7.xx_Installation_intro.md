@@ -60,12 +60,20 @@ The following File Server volumes must be made available:
 
 Create mandatory system users via the following commands:
 
+On All servers
+
 ~~~bash
 mkdir -p /opt/apps
 chmod 755 /opt/apps
-useradd -m -d /opt/apps/fabric fabric
-useradd -m -d /opt/apps/cassandra cassandra
-useradd -m -d /opt/apps/kafka kafka
+~~~
+
+On each server, depends on the service you wish to install, run the approprient useradd command.
+(on single host setup, run all commands on the same server)
+
+~~~bash
+useradd -m -d /opt/apps/fabric  -s /bin/bash fabric
+useradd -m -d /opt/apps/cassandra  -s /bin/bash cassandra
+useradd -m -d /opt/apps/kafka  -s /bin/bash kafka
 ~~~
 
 
@@ -101,7 +109,7 @@ sysctl -p
 
 
 
-Add the following packages for RHEL/CentOs 8:
+On RHEL/CentOs 8 server **only** Add the following packages:
 
 ~~~bash
 dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
@@ -179,6 +187,3 @@ For a successful operation, the following ports should be open in the internal s
 </tr>
 </tbody>
 </table>
-
-
-

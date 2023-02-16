@@ -26,33 +26,27 @@ The sequence next value implementation method depends on the sequence definition
 Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is relevant for in-memory or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) only. In a DB sequence these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, for example 1000000.
-* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. See the figure below: 
+* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. See the figures below: 
 
-![image](../images/99_actors_08_ex_init.PNG)
+![image](../images/init_seq_flow_example.png)
+
+![image](../images/init_seq_flow_example_2.png)
 
 ### Sequence Mapping
 
 In Broadway, sequences can be mapped in a number of ways. The following use cases are supported:
 
-* Map the old value to the new value: 
+* Map the old value to the new value: send the old ID to the input value parameter of the sequence actor. 
 
-  ![image](../images/99_actors_08_ex_map.PNG)
-
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. See this example: 
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty and set the **onEmpty** parameter of the sequence actor to me MASK_NO_CACHE. The Actor generates a new sequence and returns it in its output. See an example: 
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
-* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor.md).
+* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [JavaScript actor](01_javascript_actor.md)  or the actors belong to the **strings** category.
 
-  ![image](../images/99_actors_08_ex_2.png) 
-
-* Set the sequence value based on a condition. For example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow, as shown. 
+* Set the sequence value based on a condition. For example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow. The example below replaces the customer ID with a new sequence if the customer ID equals to 1. Otherwise, it maps the original customer ID: 
 
   ![image](../images/99_actors_08_ex_5.png)
-
-* Replace the IID with a new sequence. This use case is the same as mapping the old value to the new one. See this example: 
-
-  ![image](../images/99_actors_08_ex_6.png)
 
 * When parent-child relationships exist across Logical Units, the same sequence can exist in both the parent and children. The updated flow can be executed on the parent LU to add a child sequence. For example, if the Customer LU is a parent while the Order LU is a child. After the population of both the Customer and Order LUs is completed, update the Customer LU with the sequence from the Order LU.
 
@@ -63,11 +57,6 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 #### Custom Sequence Mapping
 
 Create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors. Set the [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) to **enable_sequences** to use the actor for sequence (ID) replacement.
-
-**Example:** 
-* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution:
-
-  ![image](../images/99_actors_08_ex_3.png)
 
 Click for more information about the [custom masking actors](/articles/26_fabric_security/06_data_masking.md#customized-masking-logic).
 
