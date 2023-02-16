@@ -26,23 +26,23 @@ The sequence next value implementation method depends on the sequence definition
 Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is relevant for in-memory or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) only. In a DB sequence these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, for example 1000000.
-* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. See the figure below: 
+* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. See the figures below: 
 
-![image](../images/99_actors_08_ex_init.PNG)
+![image](../images/init_seq_flow_example.png)
+
+![image](../images/init_seq_flow_example_2.png)
 
 ### Sequence Mapping
 
 In Broadway, sequences can be mapped in a number of ways. The following use cases are supported:
 
-* Map the old value to the new value: 
+* Map the old value to the new value: send the old ID to the input value parameter of the sequence actor. 
 
-  ![image](../images/99_actors_08_ex_map.PNG)
-
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. See this example: 
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty and set the **onEmpty** parameter of the sequence actor to me MASK_NO_CACHE. The Actor generates a new sequence and returns it in its output. See an example: 
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
-* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor.md).
+* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [JavaScript actor](01_javascript_actor.md)  or the actors belong to the **strings** category.
 
   ![image](../images/99_actors_08_ex_2.png) 
 
