@@ -40,20 +40,17 @@ Assuming you prepare to run the Fabric with 3 cassandra seed nodes, 3 kafka node
 
 Run the following command: (start with the 1st node, then, one by one until the last node)
 ~~~bash
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin ---cassandra_password password --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
+/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password password --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
 ~~~
 
-> for more information on memory, replication factor and more, see:/opt/apps/fabric-setup.sh --help
+> for more information on memory, replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 to start fabric run:
 ~~~bash
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
 
-Login to the Fabric with your web browser with your server IP at port 3123:
-
-   http://10.0.0.7:3123
-   
-   user: admin
-
-   password: admin
+You should see: 
+~~~bash
+++++ Fabric IS Ready
+~~~
