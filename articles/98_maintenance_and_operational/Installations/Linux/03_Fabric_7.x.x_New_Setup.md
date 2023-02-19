@@ -1,7 +1,4 @@
-# Fabric V7.x.x  Setup Guide
-
-Fabric V7.x.x requires JDK 17 (included in the Fabric installation package). However, the certified versions of Cassandra and Kafka require JDK 8.* package (the latest tested version is included with each supplied package).
-Therefore, to prevent Issues, 
+# Fabric Setup Guide
 
 ##  Fabric Pre-Installation Steps
 
@@ -23,8 +20,7 @@ Therefore, to prevent Issues,
    tar -zxf [package name].tar.gz -C /opt/apps/fabric
    ~~~
 
-    > later in the script will add a sed command to add K2_HOME location to the .bash_profile
-
+   
     
 ### Setup the Fabric nodes
 The following script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
@@ -42,6 +38,7 @@ Run the following command, replacing the parameters with your own environment:
 ~~~
 
 > for more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
+
 
 to start fabric run:
 ~~~bash
