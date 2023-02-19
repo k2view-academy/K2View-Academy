@@ -28,13 +28,13 @@ The following script should be run separately on each node, in the order of desi
 **Mandatory required details:**
 + Cassandra seed node IPs
 + Cassandra username & password (if set different than the default in the Cassandra setup)
-+ Kafka node IPs
++ Kafka node IPs. If IP's are not supplied, the  PubSub will run 'in memeory'
 
 
 
 Run the following command, replacing the parameters with your own environment:
 ~~~bash
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
+/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
 ~~~
 
 > for more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
