@@ -11,13 +11,13 @@ Therefore, to prevent Issues,
 
 ## Fabric Setup 
 
-### Load the Package 
+### Install the Package 
 
-1. Log in to the User previously created that was designated to the fabric installation.
+1. Log in with the User previously created for the fabric installation.
 
 2. Download the package from the links that were provided to you.
 
-2. Untar the package in the user home folder (/opt/apps/fabric:
+2. Untar the package in the user home folder (/opt/apps/fabric):
 
    ~~~bash
    tar -zxf [package name].tar.gz -C /opt/apps/fabric
@@ -31,21 +31,24 @@ The script should be run separately on each node, in the order of designated nod
 
 **Mandatory required details:**
 + Cassandra seed node IPs
-+ Cassandra Replication factor
 + Cassandra username & password (if set different than the default in the Cassandra setup)
 + Kafka node IPs
 + Memory in GB for Fabric heap (or set automatic to ¼ of total ram).
 
-**Optional required details:**
-+ Cassandra DC name
 
 Assuming you prepare to run the Fabric with 3 cassandra seed nodes, 3 kafka node and set the heap memory to  ¼ of total server RAM.
 
 Run the following command: (start with the 1st node, then, one by one until the last node)
 ~~~bash
-./fabric_setup.sh --cassandra_user k2admin ---cassandra_password password --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_replication_factor 3 --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
+/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin ---cassandra_password password --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --memory auto
 ~~~
 
+> for more information on memory, replication factor and more, see:/opt/apps/fabric-setup.sh --help
+
+to start fabric run:
+~~~bash
+/opt/apps/fabric/fabric/bin/k2fabric start
+~~~
 
 Login to the Fabric with your web browser with your server IP at port 3123:
 
