@@ -1,5 +1,3 @@
-<web>
-
 # MTable Actors
 
 Broadway has several Actors that allow working with [MTables](/articles/09_translations/06_mtables_overview.md):
@@ -10,11 +8,27 @@ Broadway has several Actors that allow working with [MTables](/articles/09_trans
 
 ### How Do I Use MTable Actors?
 
-Each of the above MTable Actors receives an MTable name as an input parameter. An MTable name can be passed at run time, together with a map of keys & values, in order to perform the lookup. Alternatively, the MTable name, keys and the keys' values can be set during the flow design time, using dedicated editors:
+Each of the above MTable Actors receives an MTable name as an input parameter. An MTable name can be passed at run time, together with a map of keys & values, in order to perform the lookup. 
+
+<studio>
+
+Alternatively, the MTable name, keys and the keys' values can be set during the flow design time:
+
+1. Start by manually defining the MTable name in the Actor's input:
+
+   <img src="../images/99_actors_09_0_studio.png" style="zoom:80%;" />
+
+2. Next, click **Add Input** to add the required keys as input arguments. 
+
+</studio>
+
+<web>
+
+Alternatively, the MTable name, keys and the keys' values can be set during the flow design time, using dedicated editors:
 
 1. Start by defining the MTable name in the Actor's input, either manually or via the editor:
 
-​		<img src="../images/99_actors_09_0.png" style="zoom:80%;" />
+​		<img src="../images/99_actors_09_0_web.png" style="zoom:80%;" />
 
 2. The MTable editor opens a popup that displays a list of all deployed MTables and their keys. Select a name from the list and mark the key(s) to be used as input for the lookup:
 
@@ -26,6 +40,5 @@ Each of the above MTable Actors receives an MTable name as an input parameter. A
 
 4. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
 
-
-
 </web>
+

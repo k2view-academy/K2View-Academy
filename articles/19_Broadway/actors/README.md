@@ -9,7 +9,7 @@
 <li><a href="06_error_handling_actors.md">Error Handling Actors</a></li>
 <li><a href="07_masking_and_sequence_actors.md">Masking and Sequence Actors</a></li>
 <li><a href="08_sequence_implementation_guide.md">Sequence Implementation Guide</a></li>
-<web><li><a href="09_MTable_actors.md">MTable Actors</a></li></web>
+<li><a href="09_MTable_actors.md">MTable Actors</a></li>
 </ul>
 
 

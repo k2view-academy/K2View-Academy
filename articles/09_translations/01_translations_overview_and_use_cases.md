@@ -2,7 +2,7 @@
 
 <web>
 
-A **Translation** is a Fabric Studio object used for creating data transformation rules. The Translation editor exists in the Fabric .NET Studio only. In the Web Studio, the translations are presented as XML files and can be still used by the Fabric server, however there is no dedicated editor for them.
+A **Translation** is a Fabric Studio object used for creating data transformation rules. The Translation editor exists in the Fabric .NET Studio only. In the Web Studio, the translations are presented as XML files and can still be used by the Fabric server, without a dedicated editor for editing them in the Web Studio.
 
 The Web Studio introduces a new object - **MTable** - to be used for defining the data transformation rules via several dedicated Actors.
 
