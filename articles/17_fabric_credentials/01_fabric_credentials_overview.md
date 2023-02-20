@@ -8,7 +8,7 @@ Fabric includes an authentication and authorization mechanism that enables manag
 - Granting access on different levels, for example:
   - Access to LUIs can be defined on a user level.
   - Access to the methods that access LUIs can be defined on a role level.
-- Assigning security profiles to roles - starting from Fabric V6.5.8.
+- Assigning security profiles to roles.
 
 Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned as “administrators”. 
 
@@ -176,7 +176,7 @@ Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_A
 Create the users and define their credentials, as follows: 
 
 - [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
-- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role) - starting from Fabric V6.5.8.
+- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
 - [Assign a role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
 - [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
 - [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
