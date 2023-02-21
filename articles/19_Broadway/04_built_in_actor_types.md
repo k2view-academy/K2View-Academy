@@ -138,7 +138,7 @@ The following table presents a list of Actors categories with examples of each c
 <td style="vertical-align: top; height: 55px; width: 146.925px;">
 <h4><strong>jobs</strong></h4>
 </td>
-<td style="vertical-align: top; height: 55px; width: 292.913px;">Actors that creates Fabric jobs. These Actors are introduced in V6.5.3.</td>
+<td style="vertical-align: top; height: 55px; width: 292.913px;">Actors that creates Fabric jobs.</td>
 <td style="width: 439.763px; vertical-align: top; height: 55px;">
 <p><strong>BroadwayJob</strong>, Actor that creates a Broadway job</p>
 <p><strong>InterfaceListener</strong>, Actor that creates an Interface Listener job.</p>
