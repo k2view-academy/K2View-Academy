@@ -10,7 +10,7 @@
 
 ### Install the Package 
 
-1. Log in with the User previously created for the fabric installation.
+1. Log in with the user previously created for the Fabric installation.
 
 2. Download the package from the links that were provided to you.
 
@@ -22,14 +22,14 @@
 
    
     
-### Setup the Fabric nodes
-The following script should be run on the first node seperatly, once the setup is done and the node status will be 'READY'
-repeate the same command on th erest of the Fabric nodes.
+### Set up the Fabric nodes
+The following script should be run on the first node seperatly; once the setup is done and the node status is 'READY',
+repeate the same command on the rest of the Fabric nodes.
 
 **Mandatory required details:**
 + Cassandra seed node IPs
-+ Cassandra username & password (if set different than the default in the Cassandra setup)
-+ Kafka node IPs. If IP's are not supplied, the  PubSub will run 'in memeory'
++ Cassandra username & password (if set different from the default in the Cassandra setup)
++ Kafka node IPs. If IPs are not provided, the PubSub will run 'in memeory'
 
 
 
@@ -41,39 +41,39 @@ repeate the same command on th erest of the Fabric nodes.
 > For more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 
-2. To start fabric run:
+2. To start Fabric run:
 ~~~bash
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
 
-After a short while, You will see: 
+After a short while, you will see: 
 ~~~bash
 ++++ Fabric is READY
 ~~~
 
-3. Repeat the step 1 & 2  on the rest of the nodes
+3. Repeat steps 1 & 2 on the rest of the nodes
 
 
 ### Status, Shutdown and Starting Fabric server
 
-* To stop the Fabric , run the following command on each node.
+* To stop Fabric, run the following command on each node:
 
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric stop
     ~~~
 
-* To start the Fabric, run the following command on each node.
+* To start Fabric, run the following command on each node:
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric start
     ~~~~
 
-* To check node status, run the following command.
+* To check node status, run the following command:
 
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric status
     ~~~
 
-* To check cluster status, run the following command.
+* To check the cluster status, run the following command:
 
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric cluster-status
@@ -81,7 +81,7 @@ After a short while, You will see:
 
 
 
-### For more information about advanced features see here:
+### For more information about advanced features, see here:
 
 + Hardening procedure
 
