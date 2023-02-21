@@ -25,7 +25,7 @@ It is recommended to use MTables for small static lists of reference data.
 An MTable can be used when a flow, a Java function or a Web Service needs to look up data either by the given key(s) or without them, randomly. 
 
 * In a flow, you can use one of the provided Actors that enable looking up the MTable data either by keys or without them, or loading data to an MTable. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
-* In a Java code, various methods are exposed that enable using MTables in Web Services, LU functions, etc. More information can be found at the Fabric online Javadoc.
+* In a Java code, various methods are exposed that enable using MTables in Web Services, LU functions, etc. More information can be found at the Fabric online Javadoc under *Common Java Utilities > MTable*.
 
 Each MTable is accessible from any LU, regardless of its source CSV file location in the Project.
 
