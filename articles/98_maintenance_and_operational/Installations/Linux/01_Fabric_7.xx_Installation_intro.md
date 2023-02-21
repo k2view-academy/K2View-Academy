@@ -33,25 +33,25 @@ Minimum hardware for each Linux execution server is as follows:
 > **Note:** If you must use a SAN, it must be flash disc based and in RAID-0.
 > **NAS are not certified.**
 
-Operating System: Redhat/CentOS/"Amazon Linux" latest Operating System and above, with the latest patches.
+Operating System: Red Hat/CentOS/Amazon Linux latest operating system and above, with the latest patches.
 
 #### File System Requisites
 
 The following File Server volumes must be made available:
 
--   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (owned by the fabric user)
+-   Volume of 50G **/opt/apps/fabric/** will also be used as the home directory for a **fabric** user (owned by the Fabric user)
 
--   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the fabric user)
+-   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the Fabric user)
 
--   Volume of 50G **/opt/apps/cassandra/** (owned by the cassandra user)
+-   Volume of 50G **/opt/apps/cassandra/** (owned by the Cassandra user)
 
--   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by the cassandra user)
+-   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by the Cassandra user)
 
--   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by the cassandra user)
+-   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by the Cassandra user)
 
--   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by the cassandra user)
+-   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by the Cassandra user)
 
--   Volume of 100G\* **/opt/apps/kafka/** (owned by the kafka user)
+-   Volume of 100G\* **/opt/apps/kafka/** (owned by the Kafka user)
 
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
 > The number of servers should be increased based on project scope and data retention requirements.
@@ -67,8 +67,8 @@ mkdir -p /opt/apps
 chmod 755 /opt/apps
 ~~~
 
-On each server, depends on the service you wish to install, run the approprient useradd command.
-(on single host setup, run all commands on the same server)
+On each server, depends on the service you wish to install, run the appropriate useradd command.
+(on a single host setup, run all commands on the same server)
 
 ~~~bash
 useradd -m -d /opt/apps/fabric  -s /bin/bash fabric
@@ -109,7 +109,7 @@ sysctl -p
 
 
 
-On RHEL/CentOs 8 server **only** Add the following packages:
+On RHEL/CentOs 8 server **only** - add the following packages:
 
 ~~~bash
 dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
