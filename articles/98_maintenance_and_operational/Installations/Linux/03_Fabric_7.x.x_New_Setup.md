@@ -54,7 +54,7 @@ After a short while, the following message will be dispalyed:
 3. Repeat steps 1 & 2 on the rest of the nodes
 
 
-### Status, Shutdown and Starting Fabric server
+### Fabric server - Start, Shutdown and Status
 
 * To stop Fabric, run the following command on each node:
 
