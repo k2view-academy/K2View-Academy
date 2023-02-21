@@ -9,7 +9,7 @@ The script should be run separately on each node, in the order of designated nod
 
 ## Pre-Installation Steps
 
-1. make sure all Cassandra related activities were preformed, Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities.
+1. Make sure all Cassandra related activities were preformed; click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities.
 
 2. Verify that Python version 2.7 is being used
 
@@ -50,7 +50,7 @@ The number of seed nodes should match the chosen replication factor number.
 * Hardening and SSl configuration, TBD 
 
 
-#### Multi Node Setup
+#### Multi-Node Setup
 1. Run the following command on the seed nodes only: (start with the 1st node, then, one by one on the 2nd and 3rd:
 
     ~~~bash
@@ -73,18 +73,18 @@ The number of seed nodes should match the chosen replication factor number.
 
 ### Cassandra cluster - Start, Shutdown and Status 
 
-* To stop the cassandra cluster, run the following command on each node (seed nodes should be shutdown last).
+* To stop the Cassandra cluster, run the following command on each node (seed nodes should be shut down last).
 
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/stop-server
     ~~~
 
-* To start the cassandra cluster, run the following command on each node, one by one, (seed nodes should be started first)
+* To start the Cassandra cluster, run the following command on each node, one by one, (seed nodes should be started first)
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/cassandra
     ~~~~
 
-* To check all nodes status, run the nodetool command.
+* To check all nodes statuses, run the nodetool command.
 
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/nodetool -u k2admin -pw changeit status
