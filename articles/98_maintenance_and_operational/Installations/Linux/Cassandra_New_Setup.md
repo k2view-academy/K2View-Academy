@@ -2,7 +2,7 @@
 
 The provided Cassandra package and setup scripts were designed for either a single node or a multi-node environment.
 
-Follow the setup script configuration for the correct settings, depends on your environment.
+Follow the setup script configuration for the correct settings, depending on your environment.
 
 The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration and operation issues.
 
@@ -18,13 +18,13 @@ The script should be run separately on each node, in the order of designated nod
     ~~~
 
 
-### Load the Package on all nodes
+### Load the Package on all Nodes
 
-1. Log in to the user previously created that was designated to the Cassandra installation.
+1. Log in to the previously created user that was designated to the Cassandra installation.
 
 2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
-2. Log in to the Linux server as the user 'Cassandra' and copy the package to the home directory.
+2. Log in to the Linux server as the 'Cassandra' user and copy the package to the home directory.
 
 3. Untar the package (the package name varies according to the version) as follows:
 
@@ -44,8 +44,8 @@ The number of seed nodes should match the chosen replication factor number.
 
 
 **Optional details:**
-* DataCenter name – unless defined, default will be set as DC1
-* Cluster name – unless defined, default will be set as Cassandra
+* DataCenter name – unless defined otherwise, default will be set as DC1
+* Cluster name – unless defined otherwise, default will be set as Cassandra
 * Replication factor number
 * Hardening and SSl configuration, TBD 
 
@@ -57,7 +57,7 @@ The number of seed nodes should match the chosen replication factor number.
     /opt/apps/cassandra/cassandra_setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
     ~~~
 
-2. Once all seed nodes are up and running, run the same command on all the rest of the Cassandra nodes (one by one).
+2. Once all seed nodes are up and running, run the same command on all the rest of the Cassandra nodes (one by one):
 
     ~~~bash
     /opt/apps/cassandra/cassandra_setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
