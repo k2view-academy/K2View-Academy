@@ -18,20 +18,20 @@ The script should be run separately on each node, in the order of designated nod
     ~~~
 
 
-### Load The Package on all nodes
+### Load the Package on all nodes
 
-1. Log in to the User previously created that was designated to the cassandra installation.
+1. Log in to the user previously created that was designated to the Cassandra installation.
 
 2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
 
-2. Log in to the Linux server as the user "Cassandra" and copy the package to the home directory.
+2. Log in to the Linux server as the user 'Cassandra' and copy the package to the home directory.
 
 3. Untar the package (the package name varies according to the version) as follows:
 
     ~~~bash
     tar -zxvf k2v_cassandra-x.xx.xxx.tar.gz -C /opt/apps/cassandra
     ~~~
-> Note, the setup script will use the folder it run from
+> Note: The setup script will use the folder it runs from.
 
 ### Set up the Cassandra nodes
 
@@ -73,18 +73,18 @@ The number of seed nodes should match the chosen replication factor number.
 
 ### Cassandra cluster - Start, Shutdown and Status 
 
-* To stop the Cassandra cluster, run the following command on each node (seed nodes should be shut down last).
+* To stop the Cassandra cluster, run the following command on each node (seed nodes should be shut down last):
 
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/stop-server
     ~~~
 
-* To start the Cassandra cluster, run the following command on each node, one by one, (seed nodes should be started first)
+* To start the Cassandra cluster, run the following command on each node, one by one, (seed nodes should be started first):
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/cassandra
     ~~~~
 
-* To check all nodes statuses, run the nodetool command.
+* To check all nodes statuses, run the nodetool command:
 
     ~~~bash
     /opt/apps/cassandra/cassandra/bin/nodetool -u k2admin -pw changeit status
