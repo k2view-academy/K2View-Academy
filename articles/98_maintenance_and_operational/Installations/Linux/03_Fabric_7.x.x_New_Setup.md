@@ -23,7 +23,8 @@
    
     
 ### Setup the Fabric nodes
-The following script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
+The following script should be run on the first node seperatly, once the setup is done and the node status will be 'READY'
+repeate the same command on th erest of the Fabric nodes.
 
 **Mandatory required details:**
 + Cassandra seed node IPs
@@ -32,20 +33,60 @@ The following script should be run separately on each node, in the order of desi
 
 
 
-Run the following command, replacing the parameters with your own environment:
+1. Run the following command, replacing the parameters with your own environment:
 ~~~bash
 /opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
 ~~~
 
-> for more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
+> For more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 
-to start fabric run:
+2. To start fabric run:
 ~~~bash
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
 
-You should see: 
+After a short while, You will see: 
 ~~~bash
-++++ Fabric IS Ready
+++++ Fabric is READY
 ~~~
+
+3. Repeat the step 1 & 2  on the rest of the nodes
+
+
+### Status, Shutdown and Starting Fabric server
+
+* To stop the Fabric , run the following command on each node.
+
+    ~~~bash
+    /opt/apps/fabric/fabric/bin/k2fabric stop
+    ~~~
+
+* To start the Fabric, run the following command on each node.
+    ~~~bash
+    /opt/apps/fabric/fabric/bin/k2fabric start
+    ~~~~
+
+* To check node status, run the following command.
+
+    ~~~bash
+    /opt/apps/fabric/fabric/bin/k2fabric status
+    ~~~
+
+* To check cluster status, run the following command.
+
+    ~~~bash
+    /opt/apps/fabric/fabric/bin/k2fabric cluster-status
+    ~~~
+
+
+
+### For more information about advanced features see here:
+
++ Hardening procedure
+
++ nodeID
+
++ SAML
+
++ More
