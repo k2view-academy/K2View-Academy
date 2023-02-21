@@ -36,7 +36,7 @@ The following table presents a list of Actors categories with examples of each c
 <li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
 <li>Receive an external flow argument and transfer it to the next Actor.</li>
 </ul>
-<strong>Concat</strong> Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong> Actor, executes the JavaScript provided in the script parameter. The script returns the value of the last line.</td>
+<strong>Concat</strong> Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong> Actor, executes the JavaScript provided in the script parameter. The script returns the value of the last line. <a href="actors/01_javascript_actor.md">Click for more information about the JavaScript Actor.</a></td>
 </tr>
 <tr style="height: 247px;">
 <td style="vertical-align: top; height: 247px; width: 146.925px;">
@@ -104,6 +104,7 @@ The following table presents a list of Actors categories with examples of each c
 <li>The Actor supports named parameters with the parameter name inside ${}. Values are taken from the Actor's input parameters.</li>
 <li>In an INSERT command, the Actor also supports ordered parameters using the <strong>?</strong> as a replacement for the parameter.</li>
 </ul>
+<p><a href="actors/05_db_actors.md">Click for more information about DB Actors.</a></p>
 </td>
 </tr>
 <tr style="height: 165px;">
@@ -183,6 +184,16 @@ The following table presents a list of Actors categories with examples of each c
 <p><strong>MathDivMod</strong> Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
 </td>
 </tr>
+<tr>
+<td style="width: 146.925px; vertical-align: top;">
+<h4><strong>mtable</strong></h4>
+</td>
+<td style="width: 292.913px; vertical-align: top;">A group of Actors that enable looking up the MTable data either by keys or without them, or loading data to an MTable.</td>
+<td style="width: 439.763px;">
+<p><strong>MTableLookup</strong> Actor, fetches data from the mtable, creating indices as needed.</p>
+<p><a href="actors/09_MTable_actors.md">Click for more information about MTable Actors.</a></p>
+</td>
+</tr>
 <tr style="height: 100px;">
 <td style="height: 100px; width: 146.925px;">
 <h4><a id="user-content-parsers" class="anchor" href="04_built_in_actor_types.md#parsers" aria-hidden="true"></a><strong>parsers</strong></h4>
@@ -204,6 +215,7 @@ The following table presents a list of Actors categories with examples of each c
 <li>Topic to publish to.</li>
 <li>Message.&nbsp;</li>
 </ul>
+<p><a href="actors/04_queue_actors.md">Click for more information about Pub/Sub Actors.</a></p>
 </td>
 </tr>
 <tr style="height: 284px;">
@@ -274,18 +286,15 @@ The following table presents a list of Actors categories with examples of each c
 <td style="vertical-align: top; height: 229px; width: 146.925px;">
 <h4><strong>testing</strong></h4>
 </td>
-<td style="vertical-align: top; height: 229px; width: 292.913px;">Actors that check a condition and throw an assersion exception if the condition is not met. These Actors are introduced in V6.5.4.</td>
+<td style="vertical-align: top; height: 229px; width: 292.913px;">Actors that check a condition and throw an assersion exception if the condition is not met.</td>
 <td style="height: 229px; width: 439.763px;">
 <p><strong>assertNotNull</strong> Actor, throws an assertion error if supplied object is null.</p>
 <p><strong>assertContains</strong> Actor, throws an assertion error if substring cannot be found in string.</p>
 <p><strong>assertEquals, </strong>throws an assertion exceptions if actual does not equal expected.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 
 
