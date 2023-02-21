@@ -109,7 +109,7 @@ sysctl -p
 
 
 
-On RHEL/CentOs 8 server **only** Add the following packages:
+On RHEL/CentOs 8 server **only** - add the following packages:
 
 ~~~bash
 dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
