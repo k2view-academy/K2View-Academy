@@ -104,7 +104,7 @@ The following table presents a list of Actors categories with examples of each c
 <li>The Actor supports named parameters with the parameter name inside ${}. Values are taken from the Actor's input parameters.</li>
 <li>In an INSERT command, the Actor also supports ordered parameters using the <strong>?</strong> as a replacement for the parameter.</li>
 </ul>
-<p><a href="actors/05_db_actors.md">Click for more information about DB Actors.</a></p>
+<p><a href="actors/05_db_actors.md">Click for more information about DB Command Actors.</a></p>
 </td>
 </tr>
 <tr style="height: 165px;">
