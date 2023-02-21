@@ -68,7 +68,7 @@ chmod 755 /opt/apps
 ~~~
 
 On each server, depends on the service you wish to install, run the approprient useradd command.
-(on single host setup, run all commands on the same server)
+(on a single host setup, run all commands on the same server)
 
 ~~~bash
 useradd -m -d /opt/apps/fabric  -s /bin/bash fabric
