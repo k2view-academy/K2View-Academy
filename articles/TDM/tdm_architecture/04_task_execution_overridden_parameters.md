@@ -47,19 +47,19 @@ When executing a TDM task, set the Sync mode according to the following table:
 <table style="height: 1403px;" width="900pxl">
 <tbody>
 <tr style="height: 100px;">
-<td style="height: 100px; width: 97.7841px;" valign="top">
-<p><strong>Override Sync - Source Env Level</strong></p>
+<td style="height: 100px; width: 125px;" valign="top">
+<p><strong>Source Env Sync Policy</strong></p>
 </td>
-<td style="height: 100px; width: 189.815px;" valign="top">
-<p><strong>Set Sync Policy - Task Level</strong></p>
+<td style="height: 100px; width: 125px;" valign="top">
+<p><strong>Task Level Sync Policy</strong></p>
 </td>
-<td style="height: 100px; width: 96.8466px;" valign="top">
+<td style="height: 100px; width: 125px;" valign="top">
 <p><strong>Task Type</strong></p>
 </td>
-<td style="height: 100px; width: 98.4091px;" valign="top">
-<p><strong>Task Execution Sync Mode</strong></p>
+<td style="height: 100px; width: 125px;" valign="top">
+<p><strong>Execution Sync Mode</strong></p>
 </td>
-<td style="height: 100px; width: 384.361px;" valign="top">
+<td style="height: 100px; width: 400px;" valign="top">
 <p><strong>Results</strong></p>
 </td>
 </tr>
@@ -251,6 +251,7 @@ Get the data from Fabric.&nbsp;</ul>
 </tr>
 </tbody>
 </table>
+
 
 
 # Overriding Additional Task Execution Parameters
