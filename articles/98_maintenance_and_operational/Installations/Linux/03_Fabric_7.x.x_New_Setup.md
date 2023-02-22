@@ -41,7 +41,7 @@ run the same command on the rest of the Fabric nodes.
 > For more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 
-2. To start Fabric run:
+2. To start Fabric - run:
 ~~~bash
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
