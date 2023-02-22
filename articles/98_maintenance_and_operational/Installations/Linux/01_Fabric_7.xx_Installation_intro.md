@@ -39,7 +39,7 @@ Operating System: Red Hat/CentOS/Amazon Linux latest operating system and above,
 
 The following File Server volumes must be made available:
 
--   Volume of 50G **/opt/apps/fabric/** will also be used as the home directory for a **fabric** user (owned by the Fabric user)
+-   Volume of 50G **/opt/apps/fabric/** will also be used as the home directory for a **Fabric** user (owned by the Fabric user)
 
 -   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the Fabric user)
 
