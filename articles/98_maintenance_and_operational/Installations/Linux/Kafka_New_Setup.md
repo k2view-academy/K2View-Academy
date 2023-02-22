@@ -48,7 +48,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 	/opt/apps/kafka/kafka_setup.sh --start
 	~~~
 
-* To verify that the Kafka and Zookeeper are running properly on all nodes:
+* To verify that the Kafka and Zookeeper are running properly on all nodes, run the below command:
 
 	~~~bash
 	$CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
