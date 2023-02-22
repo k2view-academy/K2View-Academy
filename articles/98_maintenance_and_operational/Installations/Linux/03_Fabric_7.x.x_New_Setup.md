@@ -67,7 +67,7 @@ After a short while, the following message will be dispalyed:
     /opt/apps/fabric/fabric/bin/k2fabric start
     ~~~~
 
-* To check node status, run the following command:
+* To check the node status, run the following command:
 
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric status
