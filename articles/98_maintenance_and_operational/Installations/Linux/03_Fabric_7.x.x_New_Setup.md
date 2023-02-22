@@ -24,7 +24,7 @@
     
 ### Set up the Fabric Nodes
 The following script should be run on the first node seperatly; once the setup is done and the node status is 'READY',
-repeate the same command on the rest of the Fabric nodes.
+run the same command on the rest of the Fabric nodes.
 
 **Mandatory required details:**
 + Cassandra seed node IPs
