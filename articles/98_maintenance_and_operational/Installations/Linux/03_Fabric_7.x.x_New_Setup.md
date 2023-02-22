@@ -84,11 +84,10 @@ After a short while, the following message will be dispalyed:
 ### For more information about advanced features, read below:
 
 <ul>
-    <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
+   <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Fabric Security and Authentication Methods (LDAP, SAML.. )</a></li>
+   <li><a href="/articles/04_fabric_studio/README.md">Fabric Studio</a></li>
 </ul>
-+ [Hardening Procedure](..\..\..\99_fabric_infras\devops\03_fabric_api_and_ui_hardening.md)
 
-+ [SAML](..\..\..\26_fabric_security\09_user_IAM_SAML_fundamentals_and_terms.md)
-+ SAML
 
 + More
