@@ -73,15 +73,10 @@ After a short while, the following message will be dispalyed:
     /opt/apps/fabric/fabric/bin/k2fabric status
     ~~~
 
-* To check the cluster status, run the following command:
-
-    ~~~bash
-    /opt/apps/fabric/fabric/bin/k2fabric cluster-status
-    ~~~
 
 
 
-### For more information about advanced features, read below:
+### For more information about advanced setup, read below:
 
 <ul>
    <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
