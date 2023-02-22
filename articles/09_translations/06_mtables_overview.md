@@ -12,11 +12,11 @@ Upon deployment, the MTable object is created in the Fabric memory based on the 
 
 A CSV file can also be created manually in the Fabric Studio under the MTable folder. An additional way to create a new MTable or update the one that already exists in the Fabric memory is by using a MTableLoad Actor at run time. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
 
-By default, the MTables are created in the Fabric memory only. This default setting is defined in the [fabricdb] section of the config.ini: ```FABRICDB_MTABLE_LIMIT=-1```. It can be modified as follows:
+By default, the MTables are created in the Fabric memory only. When you are required to make a joint query between an MTable data and an LU's data, the MTables can be saved in a FabricDB schema. Another reason for saving the MTables in the FabricDB schema is their size. 
 
-* To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero: ```FABRICDB_MTABLE_LIMIT=0```
-
-* To save an MTable in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded to memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
+* The definition where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini and by default is set to -1 (memory only).
+* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded to memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
+* To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero.
 
 It is recommended to use MTables for small static lists of reference data.
 
