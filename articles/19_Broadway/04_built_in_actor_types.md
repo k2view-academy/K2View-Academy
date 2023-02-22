@@ -6,7 +6,7 @@ The following table presents a list of Actors categories with examples of each c
 
 [Click for more information about the most useful Actors and code examples](actors/README.md).
 
-<table style="height: 3830px;" width="900pxl">
+<table>
 <tbody>
 <tr style="height: 54px;">
 <td style="height: 54px; width: 146.925px;">
@@ -16,7 +16,7 @@ The following table presents a list of Actors categories with examples of each c
 <h3><a id="user-content-category-description" class="anchor" href="04_built_in_actor_types.md#category-description" aria-hidden="true"></a><strong>Category Description</strong></h3>
 </td>
 <td style="height: 54px; width: 439.763px;">
-<h3><a id="user-content-example-of-actors-per-category" class="anchor" href="04_built_in_actor_types.md#example-of-actors-per-category" aria-hidden="true"></a><strong>Example of Actors per Category</strong></h3>
+<h3><a id="user-content-example-of-actors-per-category" class="anchor" href="04_built_in_actor_types.md#example-of-actors-per-category" aria-hidden="true"></a><strong>Examples per Category</strong></h3>
 </td>
 </tr>
 <tr style="height: 242px;">
