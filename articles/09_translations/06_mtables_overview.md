@@ -2,7 +2,7 @@
 
 ### What Is an MTable?
 
-An MTable is an object created in the Fabric memory from a CSV file. The purpose of an MTable is to keep reference data as part of the Fabric project and enable **fast in-memory** data lookup at run time. 
+An MTable is an object created in the Fabric memory from a CSV file. The purpose of an MTable is to keep reference data as part of the Fabric project and enable **fast in-memory** data lookup at run time. It is recommended to use MTables for small static lists of reference data.
 
 ### How Can I Create an MTable?
 
@@ -11,14 +11,6 @@ To start an MTable creation, first upload a CSV file into the MTable folder in t
 Upon deployment, the MTable object is created in the Fabric memory based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored.
 
 A CSV file can also be created manually in the Fabric Studio under the MTable folder. An additional way to create a new MTable or update the one that already exists in the Fabric memory is by using a MTableLoad Actor at run time. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
-
-By default, the MTables are created in the Fabric memory only. When you are required to make a joint query between an MTable data and an LU's data, the MTables can be saved in a FabricDB schema. Another reason for saving the MTables in the FabricDB schema is their size. 
-
-* The definition where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini and by default is set to -1 (memory only).
-* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded to memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
-* To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero.
-
-It is recommended to use MTables for small static lists of reference data.
 
 ### How Can I Use an MTable?
 
@@ -30,6 +22,16 @@ An MTable can be used when a flow, a Java function or a Web Service needs to loo
 Each MTable is accessible from any LU, regardless of its source CSV file location in the Project.
 
 The data lookup can be performed by one or several MTable keys. The search index is created on-the-fly during the first select, based on the search keys. 
+
+### Recommendations For MTables Storage Settings
+
+By default, the MTables are created in the Fabric memory only, to enable a fast lookup of the required data. 
+
+When you are required to make a joint query between an MTable's and an LU's data, the MTables can be saved in a FabricDB schema. Another reason for saving the MTables in the FabricDB schema is the MTable size. 
+
+* The definition where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini and by default is set to -1 (memory only). It is recommended to keep the default setting when working with relatively small datasets.
+* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded to memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
+* To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero.
 
 
 
