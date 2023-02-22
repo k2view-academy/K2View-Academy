@@ -37,7 +37,7 @@ Operating System: Red Hat/CentOS/Amazon Linux latest operating system and above,
 
 #### File System Requisites
 
-The following File Server volumes must be made available:
+The following file server volumes must be made available:
 
 -   Volume of 50G **/opt/apps/fabric/** will also be used as the home directory for a **Fabric** user (owned by the Fabric user)
 
@@ -116,7 +116,7 @@ dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-lang
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 ~~~
 
-> **Note:** Running one of the following commands, would indicate your Linux flavour:
+> **Note:** Running one of the following commands would indicate your Linux flavour:
 ~~~bash
 rpm -E %{rhel}
 hostnamectl
