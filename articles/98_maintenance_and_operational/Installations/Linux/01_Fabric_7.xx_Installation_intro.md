@@ -67,7 +67,7 @@ mkdir -p /opt/apps
 chmod 755 /opt/apps
 ~~~
 
-On each server, depends on the service you wish to install, run the appropriate useradd command.
+On each server, depending on the service you wish to install, run the appropriate useradd command.
 (on a single host setup, run all commands on the same server)
 
 ~~~bash
