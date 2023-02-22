@@ -230,9 +230,7 @@ Main task's information:
 
 #### 2. Additional Execution Parameters
 
-Data type (Entities and/or Reference tables), Data Versioning, Reservation/Retention Period, Post Execution Processes, etc..
-
-The list additional execution parameters are set based on the selected task types and the user's permissions.
+This tab defines various execution parameters such as Data Type (Entities and/or Reference tables),  Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task type and the user's permissions.
 
 #### 3. Requested Entities
 
