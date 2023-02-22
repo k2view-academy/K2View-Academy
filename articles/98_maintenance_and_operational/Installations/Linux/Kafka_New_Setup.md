@@ -36,13 +36,13 @@ The number of cluster nodes should be either greater than or equal to the replic
 
 ### Kafka cluster - Start, Shutdown and Monitor
 
-* To shut down the Kafka server (Kafka and Zookeeper instance), run the setup script on each node with the following flag:
+* To shut down the Kafka server (Kafka and Zookeeper instances), run the setup script on each node with the following flag:
 
 	~~~bash
 	/opt/apps/kafka/kafka_setup.sh --stop
 	~~~
 
-* To start the Kafka server (Kafka and Zookeeper instance), run the setup script on each node with the following flag:
+* To start the Kafka server (Kafka and Zookeeper instances), run the setup script on each node with the following flag:
 
 	~~~bash
 	/opt/apps/kafka/kafka_setup.sh --start
