@@ -33,7 +33,7 @@ The script should be run separately on each node, in the order of designated nod
     ~~~
 > Note: The setup script will use the folder it runs from.
 
-### Set up the Cassandra nodes
+### Set up the Cassandra Nodes
 
 The number of seed nodes should match the chosen replication factor number.
 
@@ -51,7 +51,7 @@ The number of seed nodes should match the chosen replication factor number.
 
 
 #### Multi-Node Setup
-1. Run the following command on the seed nodes only: (start with the 1st node, then, one by one on the 2nd and 3rd:
+1. Run the following command on the seed nodes only (start with the 1st node, then run it one by one on the 2nd and 3rd):
 
     ~~~bash
     /opt/apps/cassandra/cassandra_setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
