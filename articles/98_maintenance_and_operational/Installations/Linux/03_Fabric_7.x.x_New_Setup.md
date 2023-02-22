@@ -2,7 +2,7 @@
 
 ##  Fabric Pre-Installation Steps
 
-1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of  Fabric Server. Note that this is mandatory and should be performed at least once per each server.
+1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric server. Note that this is mandatory and should be performed at least once per each server.
 2. Click [here](Cassandra_New_Setup.md) for instructions on how to install Cassandra instance or cluster with our supplied package.
 3. Click [here](Kafka_New_Setup.md) for instructions on how to install Kafka instance or cluster with our supplied package.
 
@@ -10,7 +10,7 @@
 
 ### Install the Package 
 
-1. Log in with the user previously created for the Fabric installation.
+1. Log in with the previously created user for the Fabric installation.
 
 2. Download the package from the links that were provided to you.
 
@@ -22,7 +22,7 @@
 
    
     
-### Set up the Fabric nodes
+### Set up the Fabric Nodes
 The following script should be run on the first node seperatly; once the setup is done and the node status is 'READY',
 repeate the same command on the rest of the Fabric nodes.
 
