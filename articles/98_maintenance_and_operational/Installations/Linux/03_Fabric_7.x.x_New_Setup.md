@@ -51,7 +51,7 @@ After a short while, the following message will be dispalyed:
 ++++ Fabric is READY
 ~~~
 
-3. Repeat steps 1 & 2 on the rest of the nodes
+3. Repeat and implement steps 1 & 2 on the rest of the nodes.
 
 
 ### Fabric server - Start, Shutdown and Status
