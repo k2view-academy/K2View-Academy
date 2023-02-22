@@ -2,7 +2,7 @@
 
 ### What Is an MTable?
 
-An MTable is an object created in the Fabric memory from a CSV file. The purpose of an MTable is to keep reference data as part of the Fabric project and enable data lookup at run time. 
+An MTable is an object created in the Fabric memory from a CSV file. The purpose of an MTable is to keep reference data as part of the Fabric project and enable **fast in-memory** data lookup at run time. 
 
 ### How Can I Create an MTable?
 
