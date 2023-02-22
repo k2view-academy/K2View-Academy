@@ -45,7 +45,7 @@ If an LU in a BE has no parent LU, it is named **Root LU** whereby its root enti
                                 
 
 -  The Customer LU is the **Root LU** of the Customer BE.
--  Each LU has its own LUs. 
+-  Each LU has its own LUIs. 
 
 When creating a TDM task to load Customer 1 from the PROD environment, the TDM task must also load the customer's related billing accounts and orders together with the related network elements and devices of the related orders. 
 
