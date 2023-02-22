@@ -84,5 +84,5 @@ After a short while, the following message will be dispalyed:
    <li><a href="/articles/04_fabric_studio/README.md">Working with Fabric Studio</a></li>
 </ul>
 
-
+* initial user
 + More
