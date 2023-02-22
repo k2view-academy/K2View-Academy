@@ -2,15 +2,15 @@
 
 ##  Fabric Pre-Installation Steps
 
-1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of  Fabric Server. Note that this is mandatory and should be performed at least once per each server.
-2. Click [here](Cassandra_New_Setup.md) for instructions on how to install Cassandra instance or cluster with our supplied package.
-3. Click [here](Kafka_New_Setup.md) for instructions on how to install Kafka instance or cluster with our supplied package.
+1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric server. Note that this is mandatory and should be performed at least once per each server.
+2. Click [here](Cassandra_New_Setup.md) for instructions on how to install a Cassandra instance or a cluster with our supplied package.
+3. Click [here](Kafka_New_Setup.md) for instructions on how to install a Kafka instance or a cluster with our supplied package.
 
 ## Fabric Setup 
 
 ### Install the Package 
 
-1. Log in with the user previously created for the Fabric installation.
+1. Log in with the previously created user for the Fabric installation.
 
 2. Download the package from the links that were provided to you.
 
@@ -22,9 +22,9 @@
 
    
     
-### Set up the Fabric nodes
+### Set up the Fabric Nodes
 The following script should be run on the first node seperatly; once the setup is done and the node status is 'READY',
-repeate the same command on the rest of the Fabric nodes.
+run the same command on the rest of the Fabric nodes.
 
 **Mandatory required details:**
 + Cassandra seed node IPs
@@ -41,7 +41,7 @@ repeate the same command on the rest of the Fabric nodes.
 > For more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 
-2. To start Fabric run:
+2. To start Fabric - run:
 ~~~bash
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
@@ -51,7 +51,7 @@ After a short while, the following message will be dispalyed:
 ++++ Fabric is READY
 ~~~
 
-3. Repeat steps 1 & 2 on the rest of the nodes
+3. Repeat and implement steps 1 & 2 on the rest of the nodes.
 
 
 ### Fabric server - Start, Shutdown and Status
@@ -67,7 +67,7 @@ After a short while, the following message will be dispalyed:
     /opt/apps/fabric/fabric/bin/k2fabric start
     ~~~~
 
-* To check node status, run the following command:
+* To check the node status, run the following command:
 
     ~~~bash
     /opt/apps/fabric/fabric/bin/k2fabric status
@@ -83,10 +83,11 @@ After a short while, the following message will be dispalyed:
 
 ### For more information about advanced features, read below:
 
-+ Hardening procedure
+<ul>
+   <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
+   <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Fabric Security and Authentication Methods (LDAP, SAML.. )</a></li>
+   <li><a href="/articles/04_fabric_studio/README.md">Working with Fabric Studio</a></li>
+</ul>
 
-+ nodeID
-
-+ SAML
 
 + More
