@@ -83,10 +83,9 @@ After a short while, the following message will be dispalyed:
 
 ### For more information about advanced features, read below:
 
-+ Hardening procedure
++ [Hardening Procedure](..\..\99_fabric_infras\devops\03_fabric_api_and_ui_hardening.md)
 
-+ nodeID
-
++ [SAML](..\..\26_fabric_security\09_user_IAM_SAML_fundamentals_and_terms.md)
 + SAML
 
 + More
