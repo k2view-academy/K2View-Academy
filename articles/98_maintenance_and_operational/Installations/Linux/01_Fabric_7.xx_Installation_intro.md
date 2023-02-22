@@ -60,7 +60,7 @@ The following file server volumes must be made available:
 
 Create mandatory system users via the following commands:
 
-On All servers
+On __all__ servers
 
 ~~~bash
 mkdir -p /opt/apps
