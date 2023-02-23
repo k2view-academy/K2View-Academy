@@ -54,22 +54,22 @@ The number of seed nodes should match the chosen replication factor number.
 1. Run the following command on the seed nodes only (start with the 1st node, then run it one by one on the 2nd and 3rd):
 
     ~~~bash
-    /opt/apps/cassandra/cassandra_setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
+    /opt/apps/cassandra/cassandra-setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
     ~~~
 
 2. Once all seed nodes are up and running, run the same command on all the rest of the Cassandra nodes (one by one):
 
     ~~~bash
-    /opt/apps/cassandra/cassandra_setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
+    /opt/apps/cassandra/cassandra-setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
     ~~~
 
 #### Single Node Setup
 
 1. Run the following command:
 
-	~~~bash
-	/opt/apps/cassandra/cassandra_setup.sh --listeners --cassandra_user k2admin --cassandra_password changeit
-	~~~
+    ~~~bash
+    /opt/apps/cassandra/cassandra-setup.sh --listeners --cassandra_user k2admin --cassandra_password changeit
+    ~~~
 
 ### Cassandra cluster - Start, Shutdown and Status 
 

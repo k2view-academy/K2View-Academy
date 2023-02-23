@@ -9,10 +9,10 @@ The following table presents a list of Actors categories with examples of each c
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td width="250pxl">
+<td width="300pxl">
 <h3><strong>Category Name &amp; Description</strong></h3>
 </td>
-<td width="550pxl">
+<td width="600pxl">
 <h3><strong>Examples per Category</strong></h3>
 </td>
 </tr>
@@ -212,8 +212,7 @@ The following table presents a list of Actors categories with examples of each c
 </td>
 <td style="width: 193.328px; vertical-align: top; height: 284px;">
 <p><strong>StatsWriter</strong> Actor, sets or increments statistics that can then be read by the StatsReader.</p>
-<p><strong>StatsReader</strong> Actor, reads statistics written by other Actors such as StatsWriter, DbCommand or ErrorHandler.</p>
-<p>The Actor has two outputs:</p>
+<p><strong>StatsReader</strong> Actor, reads statistics written by other Actors such as StatsWriter, DbCommand or ErrorHandler. The Actor has two outputs:</p>
 <ul>
 <li>Flow, returns the flow level statistics map.</li>
 <li>Global, returns the global/session level statistics map.</li>
