@@ -124,7 +124,7 @@ The following table presents a list of Actors categories with examples of each c
 <tr style="height: 55px;">
 <td style="vertical-align: top; height: 55px; width: 169.672px;">
 <p>Category Name: <strong>jobs</strong></p>
-<p>Description: Actors that creates Fabric jobs.&nbsp;</p>
+<p>Description: Actors that create Fabric jobs.&nbsp;</p>
 </td>
 <td style="width: 193.328px; vertical-align: top; height: 55px;">
 <p><strong>BroadwayJob</strong>, Actor that creates a Broadway job</p>
