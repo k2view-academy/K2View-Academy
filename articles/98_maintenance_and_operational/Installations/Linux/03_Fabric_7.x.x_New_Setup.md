@@ -29,7 +29,7 @@ run the same command on the rest of the Fabric nodes.
 **Mandatory required details:**
 + Cassandra seed node IPs
 + Cassandra username & password (if different from the default in the Cassandra setup)
-+ Kafka node IPs. If IPs are not provided, the PubSub will run 'in memeory'
++ Kafka node IPs. If kafka_ips is not provided, the PubSub will run 'in memory'
 
 
 
@@ -73,15 +73,10 @@ After a short while, the following message will be dispalyed:
     /opt/apps/fabric/fabric/bin/k2fabric status
     ~~~
 
-* To check the cluster status, run the following command:
-
-    ~~~bash
-    /opt/apps/fabric/fabric/bin/k2fabric cluster-status
-    ~~~
 
 
 
-### For more information about advanced features, read below:
+### For more information about advanced setup, read below:
 
 <ul>
    <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
@@ -89,5 +84,5 @@ After a short while, the following message will be dispalyed:
    <li><a href="/articles/04_fabric_studio/README.md">Working with Fabric Studio</a></li>
 </ul>
 
-
+* initial user
 + More
