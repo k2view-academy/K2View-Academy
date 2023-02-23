@@ -171,6 +171,7 @@ Fabric database credentials are validated each time a user attempts to access Fa
 
 Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is **false**.
 
+It is also possible to skip the sync process between Fabric user and Cassandra user by setting **SYNC_CASSANDRA_SYSTEM_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **false**. By default, this parameter is **true**.
 ## Setting Credentials
 
 Create the users and define their credentials, as follows: 
