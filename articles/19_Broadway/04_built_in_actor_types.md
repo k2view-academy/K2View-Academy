@@ -6,14 +6,14 @@ The following table presents a list of Actors categories with examples of each c
 
 [Click for more information about the most useful Actors and code examples](actors/README.md).
 
-<table style="width: 800px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td>
-<h3><a id="user-content-category-description" class="anchor" href="04_built_in_actor_types.md#category-description" aria-hidden="true"></a><strong>Category Name &amp; Description</strong></h3>
+<td width="250pxl">
+<h3><strong>Category Name &amp; Description</strong></h3>
 </td>
-<td>
-<h3><a id="user-content-example-of-actors-per-category" class="anchor" href="04_built_in_actor_types.md#example-of-actors-per-category" aria-hidden="true"></a><strong>Examples per Category</strong></h3>
+<td width="550pxl">
+<h3><strong>Examples per Category</strong></h3>
 </td>
 </tr>
 <tr style="height: 242px;">
