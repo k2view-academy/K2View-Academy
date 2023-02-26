@@ -10,9 +10,9 @@ Broadway has several Actors that allow working with [MTables](/articles/09_trans
 
 **Using MTableLookup and MTableRandom Actors**
 
-**MTableLookup** and **MTableRandom** Actors require an MTable name to perform the data lookup. In addition, a map of keys and their values can be passed at run time, to limit the selection dataset. This is optional. If no keys are supplied, the entire MTable dataset is returned.
+**MTableLookup** and **MTableRandom** Actors require an MTable name to perform the data lookup. In addition, a map of keys and their values can be passed at run-time, to limit the selection dataset. This is optional. If no keys are provided, the entire MTable dataset is returned.
 
-The MTable name, keys and the keys' values can be set during the flow design time as follows:
+The MTable name, keys and the keys' values can be set during the flow design-time as follows:
 
 <studio>
 
