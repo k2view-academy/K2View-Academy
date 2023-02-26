@@ -30,7 +30,7 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_0_web.png"  />
 
-2. The MTable editor pop-up opens and displays a list of all deployed MTables and the list of keys per each MTable. Select a name from the list and mark the key(s) to be used as a lookup key:
+2. The MTable editor pop-up opens and displays a list of all deployed MTables and the list of keys per each MTable. Select a name from the list and mark the key(s) to be used as a lookup key(s):
 
    <img src="../images/99_actors_09_1.png" style="zoom:90%;" />
 
