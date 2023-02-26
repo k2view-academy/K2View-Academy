@@ -27,10 +27,10 @@ The data lookup can be performed by one or several MTable keys. The search index
 
 By default, the MTables are created in the Fabric memory only, to enable a fast lookup of the required data. 
 
-When you are required to make a joint query between an MTable's and an LU's data, the MTables can be saved in a FabricDB schema. Another reason for saving the MTables in the FabricDB schema is the MTable size. 
+When you are required to make a joint query between an MTable's data and an LU's data, the MTables can be saved in a FabricDB schema. Another reason for saving the MTables in the FabricDB schema is the MTable size. 
 
-* The definition where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini and by default is set to -1 (memory only). It is recommended to keep the default setting when working with relatively small datasets.
-* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded to memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
+* The definition of where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini and by default is set to -1 (memory only). It is recommended to keep the default setting when working with relatively small datasets.
+* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded into the memory. An MTable which exceeds this number will be loaded to FabricDB schema only.
 * To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero.
 
 
