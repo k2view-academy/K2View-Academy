@@ -34,7 +34,7 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_1.png" style="zoom:90%;" />
 
-3. Once selected, the keys are added to the Actor as new input arguments. When a key's link type is set to **Const**, the input becomes a list containing this column's distinct values. You can then choose a value, rather than manually type it in. 
+3. Once selected, the keys are added to the Actor as new input arguments. When a key's link type is set to **Const**, the input becomes a list that contains this column's distinct values. You can then choose a value, rather than manually type it in. 
 
    <img src="../images/99_actors_09_2.png"  />
 
