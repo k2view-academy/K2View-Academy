@@ -16,10 +16,10 @@ A CSV file can also be manually created in the Fabric Studio, under the MTable f
 
 An MTable can be used when a flow, a Java function or a Web Service needs to look up data either by the given key(s) or without them, randomly. 
 
-* In a flow, you can use one of the provided Actors that enables the MTable data lookup either by keys or without them, or loading data to an MTable. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
-* In a Java code, various methods are exposed, enabling the use of MTables in Web Services, LU functions, etc. More information can be found at the Fabric online Javadoc, under *Common Java Utilities > MTable*.
+* In a flow, you can use one of the provided Actors that enables the lookup from the MTable data or loading data to an MTable. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
+* In a Java code, various methods are exposed, enabling the use of MTables in Web Services, LU functions, etc. More information can be found in Fabric's online Javadoc, under *Common Java Utilities > MTable*.
 
-Each MTable is accessible from any LU, regardless of its source CSV file location in the Project.
+Each MTable is accessible from any LU, regardless of its CSV source file location in the Project.
 
 The data lookup can be performed by one or several MTable keys. The search index is created on-the-fly during the first select, based on the search keys. 
 
