@@ -49,7 +49,7 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
 The purpose of an **MTableLoad** Actor is to dynamically create a new MTable or replace the data of an existing one in the Fabric memory. Note that the MTable is created on one node and must be distributed to other nodes. 
 
-The Actor is using the **data** input argument to create the MTable object. Optionally, a list of **columns** can be passed to the Actor, if, for example, only a sub-set of columns needs to be used from the given data set or if some columns don't have any data and should be created empty. 
+The Actor is using the **data** input argument to create the MTable object. Alternatively, a list of **columns** can be passed to the Actor, if, for example, only a sub-set of columns needs to be used from the given data set or if some columns don't have any data and should be created empty. 
 
 
 
