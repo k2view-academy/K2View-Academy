@@ -20,7 +20,7 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_0_studio.png"  />
 
-2. Next, if needed - click **Add Input** to add the required keys as input arguments. 
+2. Next, if needed, click **Add Input** to add the required keys as input arguments. 
 
 </studio>
 
