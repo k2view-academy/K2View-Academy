@@ -10,7 +10,7 @@ To create a new Amazon S3 Storage interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Amazon S3 Storage** from the **File System** section to open the **New Interface** window.
 
-   ![image](images/12_s3_1.PNG)
+   ![image](images/12_s3_1.png)
    
 2. Populate the connection's settings and click **Save**.
 </studio>
@@ -20,11 +20,11 @@ To create a new Amazon S3 Storage interface, do the following:
 
 2. Enter a suitable name for your new Amazon S3 Storage Interface, then click **Create**
   
-   ![image](images/12_s3_1WEB.PNG)
+   ![image](images/12_s3_1WEB.png)
 
 3. Populate the connection's settings and click **Save**.
 
-   ![image](images/12_s3_2WEB.PNG)
+   ![image](images/12_s3_2WEB.png)
 
 </web>
 
