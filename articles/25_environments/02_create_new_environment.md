@@ -21,7 +21,7 @@ The following steps are used for creating an environment in Fabric:
 
     - (Optional) In the **Comments** field, add a description of the environment.
 
-    - (Optional) In the **Fabric URL** field, select the server from the predefined list in the **Server Configuration** tab in the [**User Preferences**](/articles/04_fabric_studio/04_user_preferences.md) window. 
+    - (Optional) In the **Fabric URL** field, select the server from the predefined list in the **Server Configuration** tab in the [User Preferences](/articles/04_fabric_studio/04_user_preferences.md) window. 
 
        The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm. 
 
@@ -52,9 +52,9 @@ The following activities can be done on each environment:
 
   <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
 
-* Click the **Delete** <img src="images/delete_icon.png" style="zoom:80%;" />icon to delete the environment.
+* Click the **Delete** <img src="images/delete_icon.png" style="zoom:90%;" />icon to delete the environment.
 
-* Click the **Active**<img src="images/active_toggle.png" style="zoom:80%;" />icon to disable or enable the environment.
+* Click the **Active**<img src="images/active_toggle.png" style="zoom:90%;" />icon to disable or enable the environment.
 
 </web>
 
