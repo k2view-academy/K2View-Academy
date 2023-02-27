@@ -78,4 +78,4 @@ To create a new LDAP interface, do the following:
 
 
 [![Previous](/articles/images/Previous.png)](10_SSH_interface.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_s3_interface.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_S3_interface.md)
