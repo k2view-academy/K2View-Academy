@@ -6,19 +6,19 @@
 
 Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
 
-After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
+After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU. The example below shows how to check the value of the Global variable named CUSTOMER_CHECKS_ENABLED in the CRM LU, and to determine whether to perform or to skip specific business logic (validation checks):
 
 ~~~java
-if (getGlobal(CRM.CUSTOMER_CHECKS_ENABLED).equals("Y")) {
+if (UserCode.getGlobal("CUSTOMER_CHECKS_ENABLED", "CRM").equals("Y")) {
 	//do something
 }
 ~~~
 
-
-This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
-
 Notes: 
-- The **getGlobal** method has been added to Fabric by V6.5.1. It can get the Global name or a concatenation of the LU Name and the Global name to get the Global value on the input LU.
+
+- The getGlobal method has 2 versions:
+   - getGlobal(String globalName) - returns the global value for this session. In case of conflict values between LU's will throw an exception.
+   - getGlobal(String globalName, String lu) - returns LU global value for this session.
 - Invoking directly the Global by the user code returns the Global's value as defined in the Studio implementation and does not return the overridden value if exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
