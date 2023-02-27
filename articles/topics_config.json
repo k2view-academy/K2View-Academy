@@ -262,6 +262,10 @@
 				{
 					"display name": "Data Explorer",
 					"value": "36_data_editor"
+				},
+				{
+					"display name": "Reports",
+					"value": "38_reports"
 				}
 			]
 		},
