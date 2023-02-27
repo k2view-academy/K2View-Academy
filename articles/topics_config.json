@@ -256,8 +256,8 @@
 					"value": "30_web_framework"
 				},
 				{
-					"display name": "Data Catalog",
-					"value": "33_data_catalog"
+					"display name": "Data Discovery Catalog",
+					"value": "39_discovery_catalog"
 				},
 				{
 					"display name": "Data Explorer",
