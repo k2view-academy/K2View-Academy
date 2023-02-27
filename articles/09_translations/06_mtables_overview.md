@@ -27,11 +27,32 @@ The data lookup can be performed by one or several MTable keys. The search index
 
 By default, the MTables are created in the Fabric memory only, to enable a fast lookup of the required data. 
 
-When required to make a joint query between an MTable's data and an LU's data, it can be done via Fabric configuration, so they can be saved in the FabricDB schema. Another reason for saving the MTables in the FabricDB schema is the MTable size. 
+However, when required to make a joint query between an MTable's data and an LU's data, the MTables should be saved in the FabricDB schema. Another reason for saving the MTables in the FabricDB schema is an MTable's large size. 
 
-* The definition of where to save the MTables is controlled by the configuration parameter FABRICDB_MTABLE_LIMIT in the [fabricdb] section of the config.ini; this parameter is set by default to -1 (memory only). It is recommended to keep the default setting when working with relatively small datasets.
-* To save the MTables in both the Fabric memory and a FabricDB schema, set the parameter to a positive number that will indicate the number of MTable rows to be loaded into the memory. An MTable whose number of rows exceeds this set number, will be loaded only into the FabricDB schema.
-* To save an MTable in a FabricDB schema only, without Fabric memory usage, update the parameter to zero.
+The storage setting is controlled via Fabric configuration using the **FABRICDB_MTABLE_LIMIT** parameter in the **[fabricdb]** section of the config.ini. This parameter can have one of the following values:
+
+<table style="border-collapse: collapse; width: 100%; height: 126px;">
+<tbody>
+<tr>
+<td><strong><span class="md-plain">Parameter Value</span></strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>-1</td>
+<td>(Default) MTables are saved into the memory only. It is recommended to keep this default setting when working with relatively small datasets.</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 17.9337%; height: 36px;">&gt; 0</td>
+<td style="width: 48.7329%; height: 36px;">MTables are saved into the Fabric memory and a FabricDB schema. This value indicates the number of MTable rows to be loaded into the memory. An MTable whose number of rows exceeds this setting, will be loaded only into the FabricDB schema.</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 17.9337%; height: 36px;">0</td>
+<td style="width: 48.7329%; height: 36px;">MTables are saved into the FabricDB schema only, without Fabric memory usage.</td>
+</tr>
+</tbody>
+</table>
+
+
 
 
 
