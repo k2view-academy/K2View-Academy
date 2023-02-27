@@ -31,11 +31,11 @@ However, when required to make a joint query between an MTable's data and an LU'
 
 The storage setting is controlled via Fabric configuration using the **FABRICDB_MTABLE_LIMIT** parameter in the **[fabricdb]** section of the config.ini. This parameter can have one of the following values:
 
-<table style="border-collapse: collapse; width: 100%; height: 126px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td><strong><span class="md-plain">Parameter Value</span></strong></td>
-<td><strong>Description</strong></td>
+<td width="250pxl"><strong><span class="md-plain">Parameter Value</span></strong></td>
+<td width="650pxl"><strong>Description</strong></td>
 </tr>
 <tr>
 <td>-1</td>
