@@ -10,7 +10,7 @@ To create a new Azure Blob Storage interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Azure Blob Storage** from the **File System** section to open the **New Interface** window.
 
-   ![image](images/13_blob_1.PNG)
+   ![image](images/13_blob_1.png)
    
 2. Populate the connection's settings and click **Save**.
 </studio>
@@ -20,11 +20,11 @@ To create a new Azure Blob Storage interface, do the following:
 
 2. Enter a suitable name for your new Asuze Blob Storage Interface, then click **Create**
   
-   ![image](images/13_blob_WEB1.PNG)
+   ![image](images/13_blob_WEB1.png)
 
 3. Populate the connection's settings and click **Save**.
 
-   ![image](images/13_azure_WEB2.PNG)
+   ![image](images/13_azure_WEB2.png)
 
 </web>
 
@@ -113,5 +113,4 @@ Fill in the following parameters in the Actor's Properties tab:
 
 
 [![Previous](/articles/images/Previous.png)](12_s3_interface.md)
-
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_gcs_interface.md) 
