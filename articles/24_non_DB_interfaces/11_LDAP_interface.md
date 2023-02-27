@@ -5,7 +5,7 @@ The LDAP interface type defines the communication details with LDAP service prov
 To create a new LDAP interface, do the following:
 
 <studio>
-   
+
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **LDAP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/11_ldap_1.PNG)
@@ -16,7 +16,7 @@ To create a new LDAP interface, do the following:
 
 
 <web>
-   
+
 1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
    
 2. From the window that appears, select **LDAP**. Alternatively, you can scroll down to find this interface type. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
@@ -28,11 +28,11 @@ To create a new LDAP interface, do the following:
    ![image](images/11_ldap_1WEB.PNG)
 
 4. Populate the connection's settings and click **Save**.
-     
+   
    ![image](images/11_ldap_2WEB.PNG)
 
 </web>
-   
+
 ### Connection Settings
 
 <table>
@@ -77,6 +77,5 @@ To create a new LDAP interface, do the following:
 
 
 
-
 [![Previous](/articles/images/Previous.png)](10_SSH_interface.md)
-
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_S3_interface.md)

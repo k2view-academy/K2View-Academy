@@ -3,8 +3,14 @@
 The **Broadway flow** window is the main Broadway interface that enables the definition and the execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
-1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+1. Go to **Project Tree** > **Shared Objects** or any **LU**, right click **Broadway** > **New Flow** to open the Flow Name window.
 2. Populate the **flow name** and click **OK** to open an empty Flow area.
+
+<web>
+
+Note that you can first create a folder under Broadway, and then create a flow in this folder. In this case, the flow will be tagged by default with the folder's name. [Click to get more info about flow tagging](33_flow_properties.md).
+
+</web>
 
 <img src="images/99_18_01_main_flow_area.PNG" alt="image" style="zoom:80%;" />
 
@@ -16,7 +22,7 @@ The **Broadway flow** window includes the following elements described in this a
 - [Main menu](18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
+- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables viewing and editing the properties of a selected object.
 - [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
 - [Flow Validation Footer](18_broadway_flow_window.md#flow-validation-footer), which displays the error messages in the flow, if exist.
 
@@ -32,12 +38,13 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <td width="170pxl">Actions</td>
 <td width="630pxl">
 <ul>
-<li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
-<li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
-<li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Magnifier</a>, makes part of a flow bigger so you can see words and images better. Added in Fabric V6.5.8.</li>
-<li><a href="31_broadway_profiler.md">Profiler</a>, enable the Broadway Profiler when running a flow.</li>
-<li>Flip scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
+<li><a href="17_tutorial_and_flow_examples.md">Examples</a>, opens the tutorial or an example flow.</li>
+<li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, saves the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
+<li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, opens the popup window to define the flow's input (External) arguments for its execution in the Debug mode.</li>
+<li><a href="33_flow_properties.md">Flow Properties</a>, allows viewing and editing the flow's description and tags.</li>
+<li>Magnifier</a>, enlarges parts of a flow.</li>
+<li><a href="31_broadway_profiler.md">Profiler</a>, activates the Broadway Profiler when running a flow.</li>
+<li>Flip scroll-wheel, allow moving the mouse over the flow's scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
@@ -96,6 +103,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 
 
 
+
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
@@ -114,7 +122,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 18px;">Focus</td>
-<td style="height: 18px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch&rsquo;s Stages are collapsed too.</td>
+<td style="height: 18px;">Collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch&rsquo;s Stages are collapsed too.</td>
 </tr>
 <tr>
 <td style="height: 18px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>

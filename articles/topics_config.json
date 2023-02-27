@@ -1,6 +1,11 @@
 {
 	"Branches": [
 		{
+			"display name": "Fabric 7.1",
+			"branch name": "Academy_7.1",
+			"build": true
+		},
+		{
 			"display name": "Fabric 7.0",
 			"branch name": "Academy_7.0",
 			"build": true
@@ -13,11 +18,6 @@
 		{
 			"display name": "Fabric 6.4",
 			"branch name": "Academy_6.4",
-			"build": false
-		},
-		{
-			"display name": "Fabric 6.2",
-			"branch name": "Academy_6.2",
 			"build": false
 		}
 	],
@@ -81,7 +81,7 @@
 					"value": "08_globals"
 				},
 				{
-					"display name": "Translations",
+					"display name": "Translations and MTables",
 					"value": "09_translations"
 				},
 				{
@@ -262,6 +262,10 @@
 				{
 					"display name": "Data Explorer",
 					"value": "36_data_editor"
+				},
+				{
+					"display name": "Reports",
+					"value": "38_reports"
 				}
 			]
 		},
