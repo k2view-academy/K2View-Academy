@@ -10,7 +10,7 @@ To create a new Google Cloud Storage interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Google Cloud Storage** from the **File System** section to open the **New Interface** window.
 
-   ![image](images/14_gcs_1.PNG)
+   ![image](images/14_gcs_1.png)
    
 2. Populate the connection's settings and click **Save**.
 </studio>
@@ -20,11 +20,11 @@ To create a new Google Cloud Storage interface, do the following:
 
 2. Enter a suitable name for your new Google Cloud Storage Interface, then click **Create**
   
-   ![image](images/14_gcs_WEB1.PNG)
+   ![image](images/14_gcs_WEB1.png)
 
 3. Populate the connection's settings and click **Save**.
 
-   ![image](images/14_gcs_WEB2.PNG)
+   ![image](images/14_gcs_WEB2.png)
 
 </web>
 
