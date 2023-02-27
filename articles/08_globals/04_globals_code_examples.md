@@ -29,7 +29,7 @@ Click **Save**.
 
 </web>
 
-After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU. The example below shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks):
+After the Global is saved, its definitions are kept in the Globals.java file under the same LU, and its initial value = Y. This variable can be used by all functions under this LU. The example below shows how to check the value of the Global variable named CUSTOMER_CHECKS_ENABLED in the CRM LU, and to determine whether to perform or to skip specific business logic (validation checks):
 
 ~~~java
 if (UserCode.getGlobal("CUSTOMER_CHECKS_ENABLED", "CRM").equals("Y") {
