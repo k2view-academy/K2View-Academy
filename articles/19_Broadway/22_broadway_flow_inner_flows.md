@@ -12,7 +12,7 @@ An inner flow can be run using of the following [built-in Actor types](04_built_
 
 When running a flow with inner flows, they can also be debugged. You can either debug the inner flow by supplying the debug arguments or run the outer flow while opening an inner flow in a separate tab and setting its break points. The flow’s execution stops when it reaches the inner flow's break points.
 
-[Click for more information about debugging Broadway flows](25_broadway_flow_window_run_and_debug_flow.md).
+[Click here for more information about debugging Broadway flows](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Save As Actor
 
