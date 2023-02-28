@@ -6,7 +6,7 @@ A Broadway flow can be executed as part of another Broadway flow. This function 
 An inner flow can be run using of the following [built-in Actor types](04_built_in_actor_types.md):
 
 * **InnerFlow** Actor, executes a Broadway flow. Input and output arguments reflect the inputs and outputs of external arguments to and from the inner flow.
-* **InnerFlowDynamic** Actor, extends an **InnerFlow** Actor. The Actor can receive a flow name and a map of input arguments with their values **at run-time**. The output is a map of inner flow's output arguments and their respective values.
+* **InnerFlowDynamic** Actor, extends an **InnerFlow** Actor. The Actor can receive a flow name and a map of input arguments with their values **at run-time**. The output is a map of an inner flow's output arguments and their respective values.
 * **InnerFlowAsync** Actor, executes a Broadway flow asynchronously in a thread pool. When called, the **InnerFlowAsync** Actor returns immediately once a working thread becomes available. When the execution of the attached flow is completed, the **InnerFlowAsync** Actor waits for all threads to be completed. Then it returns non-empty results obtained from completed flows. Empty results are not saved.
 * **InnerFlowJoin** Actor, waits for all pending tasks of an **InnerFlowAsync** Actor to be completed. The **remaining** output argument (number of flows remaining to be completed) of the **InnerFlowAsync** Actor must be connected to the **remaining** input argument of the **InnerFlowJoin** Actor. The execution is completed once the number of remaining tasks is 0.
 
