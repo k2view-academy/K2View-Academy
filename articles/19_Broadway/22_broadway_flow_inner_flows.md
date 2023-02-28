@@ -45,7 +45,7 @@ When a flow has inner flows, they can each be opened from the main flow:
 
 ### Calling an Actor as Inner Flow
 
-Broadway supports an ability to invoke an Actor as an inner flow. This ability may be required in a use case such as masking, whereas a different Masking Actor should be invoked based on the flow conditions. 
+Broadway supports an ability to invoke an Actor as an inner flow. This ability may be required in a use case such as masking, whereas a different Masking Actor should be invoked, based on the flow conditions. 
 
 
 
