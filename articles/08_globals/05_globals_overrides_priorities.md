@@ -18,12 +18,10 @@ The override prioritization is based on **levels** as illustrated in the followi
 ##### <img src="images/08_05_globals_override_priority_perspct.png" alt="image" style="zoom:30%;" />
 
 
-
-* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globals.java files.
-* **Environment**, populated in the Environment Settings Globals table.  
-* **Cluster**, use SET_GLOBAL commands during Fabric runtime which persists in the DB and impact all cluster nodes and sessions.
 * **Session**, use SET commands during Fabric runtime, which only impacts the session where it is executed.
-
+* **Cluster**, use SET_GLOBAL commands during Fabric runtime which persists in the DB and impact all cluster nodes and sessions. The Global's value set by the set_global command is taken even if the LUs or the Environments are redeployed since it has a higher priority.
+* **Environment**, populated in the Environment Settings Globals table.  
+* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globals.java files.
 
 
 The priority is also managed by the **scope**. If a Global is defined in both Shared Objects and Logical Unit scopes, the Logical Unit definition is used in the Logical Unit scope. Other Logical Units use the Shared Objects definition.
