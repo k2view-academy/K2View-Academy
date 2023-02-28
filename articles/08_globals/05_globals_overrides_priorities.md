@@ -23,7 +23,6 @@ The override prioritization is based on **levels** as illustrated in the followi
 * **Environment**, populated in the Environment Settings Globals table.  
 * **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globals.java files.
 
-
 The priority is also managed by the **scope**. If a Global is defined in both Shared Objects and Logical Unit scopes, the Logical Unit definition is used in the Logical Unit scope. Other Logical Units use the Shared Objects definition.
 
 The following illustrates by-scope prioritization:  
@@ -223,7 +222,6 @@ When reseting the session values, the actual values are:
 </tr>
 </tbody>
 </table>
-
 
 
 
