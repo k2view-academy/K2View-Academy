@@ -34,7 +34,7 @@ Full example of a Broadway flow with inner flow Actors can be found in the Demo 
 
 ### Open an Inner Flow
 
-When a flow has inner flows, an inner flow can be opened from the main flow:
+When a flow has inner flows, they can each be opened from the main flow:
 
 1. Click the **InnerFlow** Actor to display the **Open** button in the Actor properties menu next to the inner flow's name.
 2. Click **Open** to open the inner flow.
