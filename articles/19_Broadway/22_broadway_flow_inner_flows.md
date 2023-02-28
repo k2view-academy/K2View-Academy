@@ -10,7 +10,7 @@ An inner flow can be run using of the following [built-in Actor types](04_built_
 * **InnerFlowAsync** Actor, executes a Broadway flow asynchronously in a thread pool. When called, the **InnerFlowAsync** Actor returns immediately once a working thread becomes available. When the execution of the attached flow is completed, the **InnerFlowAsync** Actor waits for all threads to be completed. It then returns non-empty results obtained from completed flows. Empty results are not saved.
 * **InnerFlowJoin** Actor, waits for all pending tasks of an **InnerFlowAsync** Actor to be completed. The **remaining** output argument (number of flows remaining to be completed) of the **InnerFlowAsync** Actor must be connected to the **remaining** input argument of the **InnerFlowJoin** Actor. The execution is completed once the number of remaining tasks is 0.
 
-When running a flow with inner flows, the inner flows can also be debugged. You can either debug the inner flow by supplying the debug arguments or run the outer flow while opening an inner flow in a separate tab and setting its break points. The flow’s execution stops when it reaches the inner flow's break points.
+When running a flow with inner flows, they can also be debugged. You can either debug the inner flow by supplying the debug arguments or run the outer flow while opening an inner flow in a separate tab and setting its break points. The flow’s execution stops when it reaches the inner flow's break points.
 
 [Click for more information about debugging Broadway flows](25_broadway_flow_window_run_and_debug_flow.md).
 
