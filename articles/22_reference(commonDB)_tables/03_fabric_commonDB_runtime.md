@@ -3,7 +3,7 @@
 
 ## Synchronization Overview
 
-This article discusses synchronization between any Fabric session and the external source from where the Reference table is populated. 
+This article discusses synchronization between any Fabric session and the external source from which the Reference table is populated. 
 For information about the cross-nodes Synchronization process within a Fabric Cluster, refer to this [article](04_fabric_commonDB_sync.md).   
 
 ## Use Cases
@@ -114,7 +114,7 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 - offset: total number of message retrieved during the synchronization.
 - offset duration: time to process all messages.
 - Transaction Id: current processed transaction id.
-
+  
 - Transaction Type:       
   
       -   LONG_SNAPSHOT – a transaction is considered a snapshot, when it starts with a delete table command, 
@@ -123,33 +123,32 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';
           via a single message in Kafka that is the linkage to Cassandra. Bulks in a LONG_SNAPSHOT are processed 
           one by one (one bulk at a time) while other updates are applied in between these bulks (into a different 
           table in the same schema).
- 
+       
       -   SHORT_SNAPSHOT – a transaction is considered a snapshot, when it starts with a delete table command, and it 
           is considered short, when the number of insert queries is smaller than the configured bulk size in config.ini
           (TRANSACTION_BULK_SIZE). In such case, one message in Kafka contains all the queries.
- 
+       
       -   SHORT_TRANSACTION – update/insert/delete commands in one Fabric transaction (between begin and end commands) 
           when the number of queries is smaller than the configured bulk size in config.ini (TRANSACTION_BULK_SIZE). 
           In such case, one message in Kafka contains all the queries.
- 
+       
       -   LONG_TRANSACTION - update/insert/delete commands in one Fabric transaction (between begin and end commands) 
           when the number of queries is bigger than the configured bulk size in config.ini (TRANSACTION_BULK_SIZE). 
           Consequently, all the insert commands are stored in Cassandra via a single message in Kafka that is the 
           linkage to Cassandra. In a LONG_TRANSACTION, the process of applying all the rows (all bulks, i.e., a large 
           update) has to be completed before applying updates to other tables in the same schema.
- 
+       
           SNAPSHOT – save all data in a temp table; only when done, rename it back to the original table name.
- 
+       
           TRANSACTION – done directly on the original table.
- 
+       
       -   IDLE – no activity on this table since the last restart/start.
-      
-      
+  
 - Sub_status:
 
 
      - In process
-
+    
      - Index rebuild
      - Done                                                                                                       
 
@@ -204,6 +203,37 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 |T1        |null              |                           |
 |T2        |null              |                           |
 ```
+
+## Reference Tables Backup and Restore
+
+Since the 7.1 release, it is possible to back up reference tables by schemas or 'ALL' (i.e., defining all schemas for a backup). This facilitates the act of either restoring a node if its reference tables data gets out of sync or syncing the reference tables data to a newly-joined node. Hence, a new ref_backup command is introduced; it is recommended to call this command from a Broadway flow to secure a reference backup according to the required frequency for the implementation. 
+
+A reference backup is stored in the same storage as defined on DEFAULT_LU_FILES_STORAGE_TYPE parameter in the config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is set up in the config.ini.
+
+When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether a local common file exists, if not, it proceeds with checking whether common backup exists for this node, otherwise it asks for a new refreshed snapshot.
+
+The following commands are available for backing up/downloading a backup to - a local node:
+
+<table width="900pxl">
+<tbody><tr>
+<td valign="top" width="300pxl"><p><strong>Command Name</strong></p></td>
+<td valign="top" width="400pxl"><p><strong>Description</strong></p></td>
+<td valign="top" width="300pxl"><p><strong>Example</strong></p></td>
+</tr><tr>
+<td valign="top" width="300pxl"><h5>REF_BACKUP [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'];</h5></td>
+<td valign="top" width="400pxl"><p>Back up a snapshot of the specified common schema and place it in the configured storage. </p></td>
+<td valign="top" width="300pxl"><p>REF_BACKUP SCHEMAS=’ALL’;</p></td>
+</tr> <tr>
+<td valign="top" width="300pxl"><h5>REF_BACKUP_DELETE [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'];</h5></td>
+<td valign="top" width="400pxl"><p>Delete a backup of the specified common schema from the configured storage. </p></td>
+<td valign="top" width="300pxl"><p>REF_BACKUP_DELETE SCHEMAS=’ALL’;</p></td>
+</tr> <tr>
+<td valign="top" width="300pxl"><h5>REF_BACKUP_DOWNLOAD [SCHEMAS='ALL' or '[schema 1, schema 2, etc...]'] DESTINATION='path name';</h5></td>
+<td valign="top" width="400pxl"><p>Download a snapshot of the specified common schema from the configured storage into the specified path. The downloaded file is used for a local check; it is not a file used by Fabric processes. </p></td>
+<td valign="top" width="300pxl"><p>REF_BACKUP_DOWNLOAD SCHEMAS=’ALL’;</p></td>
+</tr> </tbody>
+</table>
+
 
 
 ## Reference Table Data Manipulations

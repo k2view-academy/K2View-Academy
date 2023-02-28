@@ -226,4 +226,5 @@ When reseting the session values, the actual values are:
 
 
 
+
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/04_globals_code_examples.md)

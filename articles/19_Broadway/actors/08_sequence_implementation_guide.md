@@ -60,4 +60,4 @@ Create your own function or Broadway flow to generate a new ID using the **Maski
 
 Click for more information about the [custom masking actors](/articles/26_fabric_security/06_data_masking.md#customized-masking-logic).
 
-[![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)
+[![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_MTable_actors.md)
