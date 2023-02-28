@@ -1,7 +1,7 @@
 # Inner Flows
 
 ### Inner Flow Actor Types
-A Broadway flow can be executed as part of another Broadway flow. This function can be used when the same logic needs to be executed in several flows or several Stages of the same flow. 
+A Broadway flow can be executed as part of another Broadway flow. This function can be used when the same logic needs to be executed in several flows or in several Stages of the same flow. 
 
 An inner flow can be run using of the following [built-in Actor types](04_built_in_actor_types.md):
 
