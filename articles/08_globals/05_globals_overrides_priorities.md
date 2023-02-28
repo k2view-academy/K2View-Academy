@@ -155,25 +155,73 @@ The defined values for the SOURCE_ENV_NAME are:
 
 The actual values are:
 
-| Variable Key                  | Variable Value      |
-| ----------------------------- | ------------------- |
-| Global.A.SOURCE_ENV_NAME      | UAT12               |
-| Global.B.SOURCE_ENV_NAME      | UAT17               |
-| Global.C.SOURCE_ENV_NAME      | UAT2_ALPHA_EXPORT_5 |
-| Global.k2_ws.SOURCE_ENV_NAME  | UAT2_ALPHA_EXPORT_5 |
-| Global.k2_ref.SOURCE_ENV_NAME | UAT2_ALPHA_EXPORT_5 |
-| SOURCE_ENV_NAME               | UAT2_ALPHA_EXPORT_5 |
+<table>
+<thead>
+<tr>
+<th>Variable Key</th>
+<th>Variable Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global.A.SOURCE_ENV_NAME</td>
+<td>UAT12</td>
+</tr>
+<tr>
+<td>Global.B.SOURCE_ENV_NAME</td>
+<td>UAT17</td>
+</tr>
+<tr>
+<td>Global.C.SOURCE_ENV_NAME</td>
+<td>UAT2_ALPHA_EXPORT_5</td>
+</tr>
+<tr>
+<td>Global.k2_ws.SOURCE_ENV_NAME</td>
+<td>UAT2_ALPHA_EXPORT_5</td>
+</tr>
+<tr>
+<td>Global.k2_ref.SOURCE_ENV_NAME</td>
+<td>UAT2_ALPHA_EXPORT_5</td>
+</tr>
+<tr>
+<td>SOURCE_ENV_NAME</td>
+<td>UAT2_ALPHA_EXPORT_5</td>
+</tr>
+</tbody>
+</table>
 
 When reseting the session values, the actual values are:
 
-| Variable key                  | variable Value |
-| ----------------------------- | -------------- |
-| Global.A.SOURCE_ENV_NAME      | UAT2_ALPHA_123 |
-| Global.B.SOURCE_ENV_NAME      | UAT2_ALPHA     |
-| Global.C.SOURCE_ENV_NAME      | UAT2_ALPHA     |
-| Global.k2_ws.SOURCE_ENV_NAME  | UAT2_ALPHA     |
-| Global.k2_ref.SOURCE_ENV_NAME | UAT2_ALPHA     |
-
+<table style="width: 381px;">
+<thead>
+<tr>
+<th style="width: 250px;">Variable Key</th>
+<th style="width: 131px;">Variable Value</th>
+</tr>
+</thead>
+<tbody>
+<tr data-sourcepos="237:1-237:50">
+<td style="width: 250px;" data-sourcepos="237:2-237:32">Global.A.SOURCE_ENV_NAME</td>
+<td style="width: 131px;" data-sourcepos="237:34-237:49">UAT2_ALPHA_123</td>
+</tr>
+<tr data-sourcepos="238:1-238:50">
+<td style="width: 250px;" data-sourcepos="238:2-238:32">Global.B.SOURCE_ENV_NAME</td>
+<td style="width: 131px;" data-sourcepos="238:34-238:49">UAT2_ALPHA</td>
+</tr>
+<tr data-sourcepos="239:1-239:50">
+<td style="width: 250px;" data-sourcepos="239:2-239:32">Global.C.SOURCE_ENV_NAME</td>
+<td style="width: 131px;" data-sourcepos="239:34-239:49">UAT2_ALPHA</td>
+</tr>
+<tr data-sourcepos="240:1-240:50">
+<td style="width: 250px;" data-sourcepos="240:2-240:32">Global.k2_ws.SOURCE_ENV_NAME</td>
+<td style="width: 131px;" data-sourcepos="240:34-240:49">UAT2_ALPHA</td>
+</tr>
+<tr data-sourcepos="241:1-241:50">
+<td style="width: 250px;" data-sourcepos="241:2-241:32">Global.k2_ref.SOURCE_ENV_NAME</td>
+<td style="width: 131px;" data-sourcepos="241:34-241:49">UAT2_ALPHA</td>
+</tr>
+</tbody>
+</table>
 
 
 
