@@ -173,10 +173,10 @@ The following table presents a list of Actors categories with examples of each c
 </tr>
 <tr>
 <td style="width: 146.925px; vertical-align: top;">
-<h4><strong>mtable</strong></h4>
+<p>Category Name: <strong>mtable</strong></p>
+<p>Description: A group of Actors that enable looking up the MTable data either by keys or without them, or loading data to an MTable.</p>
 </td>
-<td style="width: 292.913px; vertical-align: top;">A group of Actors that enable looking up the MTable data either by keys or without them, or loading data to an MTable.</td>
-<td style="width: 439.763px;">
+<td style="width: 292.913px; vertical-align: top;">
 <p><strong>MTableLookup</strong> Actor, fetches data from the mtable, creating indices as needed.</p>
 <p><a href="actors/09_MTable_actors.md">Click for more information about MTable Actors.</a></p>
 </td>
