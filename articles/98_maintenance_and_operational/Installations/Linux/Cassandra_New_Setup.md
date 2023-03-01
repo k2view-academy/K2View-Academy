@@ -29,7 +29,7 @@ The script should be run separately on each node, in the order of designated nod
 3. Untar the package (the package name varies according to the version) as follows:
 
     ~~~bash
-    tar -zxvf k2v_cassandra-x.xx.xxx.tar.gz -C /opt/apps/cassandra
+    tar -zxvf k2v_cassandra-x.xx.xxx.tar.gz -C /opt/apps/cassandra && source /opt/apps/cassandra/.bash_profile
     ~~~
 > Note: The setup script will use the folder it runs from.
 

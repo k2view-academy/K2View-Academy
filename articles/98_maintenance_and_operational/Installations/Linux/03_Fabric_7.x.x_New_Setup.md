@@ -23,7 +23,7 @@
    
     
 ### Set up the Fabric Nodes
-The following script should be run on the first node seperatly; once the setup is done and the node status is 'READY',
+The following script should be run on the first node separately; once the setup is done and the Fabric node status is 'READY',
 run the same command on the rest of the Fabric nodes.
 
 **Mandatory required details:**
@@ -47,7 +47,7 @@ run the same command on the rest of the Fabric nodes.
 ~~~
 
 After a short while, the following message will be dispalyed: 
-~~~bash
+~~~
 ++++ Fabric is READY
 ~~~
 
