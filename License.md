@@ -1,4 +1,4 @@
-© 2020 K2view Ltd. 
+© 2023 K2view Ltd. 
 All rights reserved. This Knowledge Base, contains, inter alia, proprietary information of K2View Ltd. 
 and its subsidiaries and affiliates ("K2View") that is protected by applicable intellectual property and other international 
 and local laws and treaties. K2View will solely and exclusively own all intellectual property and other rights, title and interest 
