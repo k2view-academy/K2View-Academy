@@ -26,16 +26,15 @@ The following diagram describes the masking process of sensitive data **before l
 
 ### Broadway Masking Actors
 
-The masking process is executed by Broadway masking actors. The masking process contains the generation (manufacturing) of a random synthetic value to replace the real value, and the caching of the hashed original value and the masked value to keep the referential integrity of the data. 
+The masking process is executed by Broadway actors that enable to mask a sensitive data before it is loaded into a target database or even into Fabric. The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value to keep the referential integrity of the data. 
 Fabric 7.1 onwards separates data generation (manufacturing) from the hashing and caching capabilities. Broadway provides the following actors: 
-1. Various of data manufacturing actors under the **data_manufacturing** category to generate a ramdom synthetic value. For example: RandomString, RandomNumber, Sequence.
+
+1. Various of data manufacturing actors under the **data_manufacturing** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 2. **Masking** actor - this actor can wrap any data manufacturing actor and add the hashing and caching capabilities on the top of the data manufacturing actor.
-    
+
 Note that the Broadway still keeps the existing masking actors for compatibility reasons.
 
-The masking and data manufacturing actors enable to mask a sensitive data before it is loaded into a target Database or even into Fabric. 
-
-The masking actor uses the Fabric hashing utility to hash the original value, generates a masked value for the masked field, and saves the mapping of the hashed value and the masked value to the cache table.
+The masking actors use the Fabric hashing utility to hash the original value and save the mapping of the hashed value and the masked value to the cache table.
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway actors.
 
