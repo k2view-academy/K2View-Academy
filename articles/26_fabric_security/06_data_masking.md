@@ -26,7 +26,14 @@ The following diagram describes the masking process of sensitive data **before l
 
 ### Broadway Masking Actors
 
-The masking process is executed by Broadway masking actors. Broadway provides a variety of masking actors that can be used to mask sensitive fields like SSN, credit card numbers, email addresses, zip code or sequences, before they are loaded into a target Database or even into Fabric. 
+The masking process is executed by Broadway masking actors. The masking process contains the generation (manufacturing) of a random synthetic value to replace the real value, and the caching of the hashed original value and the masked value to keep the referential integrity of the data. 
+Fabric 7.1 onwards separates data generation (manufacturing) from the hashing and caching capabilities. Broadway provides the following actors: 
+1. Various of data manufacturing actors under the **data_manufacturing** category to generate a ramdom synthetic value. For example: RandomString, RandomNumber, Sequence.
+2. **Masking** actor - this actor can wrap any data manufacturing actor and add the hashing and caching capabilities on the top of the data manufacturing actor.
+    
+Note that the Broadway still keeps the existing masking actors for compatibility reasons.
+
+The masking and data manufacturing actors enable to mask a sensitive data before it is loaded into a target Database or even into Fabric. 
 
 The masking actor uses the Fabric hashing utility to hash the original value, generates a masked value for the masked field, and saves the mapping of the hashed value and the masked value to the cache table.
 
@@ -38,9 +45,10 @@ Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more
 
 K2view enables users to create their own masking functions:
 - The **MaskingLuFunction** Broadway actor can be used to call a customized function (a shared function or an LU's function) to mask the required field.  
-- The **MaskingInnerFlow** Broadway actor can be used to call a customized Broadway flow to mask the required field.
+- The **MaskingInnerFlow** Broadway actor can be used to call a customized Broadway flow or an actor to mask the required field.
+- Fabric 7.1 provides the general **Masking** actor that enables to run a customized inner flow or an actor to mask the required field.
 
-The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching.  The user does not need to handle them by their customized function.
+The use of **MaskingLuFunction**, **MaskingInnerFlow**, or **Masking** actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching.  The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
