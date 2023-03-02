@@ -192,5 +192,6 @@ By default, Fabric creates the **admin** user as the initial superuser when star
 - Change the **File Name** to **adminInitialCredentials**.
 - Edit the file and update the **User**/**Password** to the required values. Note that the username must only contain lowercase letters.
 - When Fabric starts for the first time the new user is created and the **adminInitialCredentials** file is deleted.
+- Since Fabric 7.0.1 HF2, there is no need to provide a password on adminInitialCredentials file when the users are maintained outside of Fabric (when the sync_cassandra_system_auth setting key is set to False).
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
