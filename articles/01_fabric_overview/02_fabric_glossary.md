@@ -160,7 +160,7 @@
 <p><strong>Instance ID</strong></p>
 </td>
 <td width="516">
-<p>An Instance ID is a unique Digital Entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit's Root table's PK column.</p>
+<p>An Instance ID is a unique identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit's Root table's PK column.</p>
 </td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@
 <p><strong>LU / Data Product</strong></p>
 </td>
 <td width="516">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a>&nbsp;or Logical Unit Type (LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Digital Entity.</p>
+<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a>&nbsp;or Logical Unit Type (LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
 </td>
 </tr>
 <tr>
@@ -192,7 +192,7 @@
 <p><strong><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Table</a></strong></p>
 </td>
 <td width="516">
-<p>The basic building block of a Logical Unit which defines a Digital Entity's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit which defines a Data Product's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -208,7 +208,7 @@
 <p><strong><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></strong></p>
 </td>
 <td width="516">
-<p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
+<p>Micro-database, a small SQL database used for the storage of an LU Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
 </td>
 </tr>
 <tr>
