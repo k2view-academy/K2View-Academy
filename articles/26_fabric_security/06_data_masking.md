@@ -31,8 +31,7 @@ Fabric 7.1 onwards separates data generation (manufacturing) from the hashing an
 
 1. Various of data manufacturing actors under the **data_manufacturing** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 2. **Masking** actor - this actor can wrap any data manufacturing actor and add the hashing and caching capabilities on the top of the data manufacturing actor.
-
-Note that the Broadway still keeps the existing masking actors for compatibility reasons.
+3. Broadway still keeps the existing masking actors for compatibility reasons.
 
 The masking actors use the Fabric hashing utility to hash the original value and save the mapping of the hashed value and the masked value to the cache table.
 
