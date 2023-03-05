@@ -12,6 +12,8 @@ Upon deployment, the MTable object is created in the Fabric memory, based on the
 
 A CSV file can also be manually created in the Fabric Studio, under the MTable folder. Another way to create a new MTable or to update one that already exists in the Fabric memory is by using a MTableLoad Actor at run-time. 
 
+Note that the MTable's name must be unique across the project. Thus, when an MTable is created with the same name as an existing MTable, the latter MTable will override the former one in the Fabric's memory.
+
 ### How Can I Use an MTable?
 
 An MTable can be used when a flow, a Java function or a Web Service needs to look up data either by the given key(s) or without them, randomly. 
@@ -25,7 +27,7 @@ The data lookup can be performed by one or several MTable keys. The search index
 
 ### Recommendations For MTables Storage Settings
 
-By default, the MTables are created in the Fabric memory only, to enable a fast lookup of the required data. 
+By default, the MTables are created in the Fabric's memory only, to enable a fast lookup of the required data. 
 
 However, when required to make a joint query between an MTable's data and an LU's data, the MTables should be saved in the FabricDB schema. Another reason for saving the MTables in the FabricDB schema is an MTable's large size. 
 
@@ -52,6 +54,8 @@ The storage setting is controlled via Fabric configuration using the **FABRICDB_
 </tbody>
 </table>
 
+
+When MTables are created in the FabricDB, they are created under a separate **mtable** schema and on one node only. 
 
 
 
