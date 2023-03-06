@@ -29,7 +29,7 @@ run the same command on the rest of the Fabric nodes.
 **Mandatory required details:**
 + Cassandra seed node IPs
 + Cassandra username & password (if different from the default in the Cassandra setup)
-+ Kafka node IPs. If kafka_ips is not provided, the PubSub will run 'in memory'
++ Kafka node IPs. (If kafka_ips is not provided, the PubSub will run 'in memory')
 
 
 
@@ -49,7 +49,7 @@ run the same command on the rest of the Fabric nodes.
 /opt/apps/fabric/fabric/bin/k2fabric start
 ~~~
 
-After a short while, the following message will be dispalyed: 
+After a short while, the following message will be displayed: 
 ~~~
 ++++ Fabric is READY
 ~~~
