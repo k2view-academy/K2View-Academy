@@ -2,12 +2,12 @@
 
 <web>
 
-Nowadays companies are required to combine and integrate data from multiple sources. Each day there are more data sources and new data formats. Many of these data sources are not well structured or don't have predefined relations. On top of that, data security's risk increases every day, becoming every company’s high priority. 
+Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, and more. Each day more diverse sources and new data formats are added. Many of these data sources are not well structured or don't have predefined relations. As a result, decision makers are drowning in data but starving for insights. On top of that, data security's risk increases, becoming every company’s high priority. 
 
 Data Discovery is a process that can help companies to cope with the mentioned above problems. Its purpose is to:
 
-* Keep up with the ongoing market changes and adapt quickly to them.
-* Provide a complete view of organization's metadata and the data.
+* Keep up with the ongoing changes and adapt quickly to them.
+* Uncover and investigate hidden but potentially useful insights in data.
 * Find and flag sensitive information, to be able to better protect it.
 
 Fabric provides a Data Discovery solution enabling a complete view of the Fabric interfaces, starting from RDBMS interface type. The solution capabilities are:
