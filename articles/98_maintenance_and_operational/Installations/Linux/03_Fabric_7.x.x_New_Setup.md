@@ -37,7 +37,10 @@ run the same command on the rest of the Fabric nodes.
 ~~~bash
 /opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
 ~~~
-
+* If the Cassanda & Kafka are Hardened with SSL, add the switch --ssl to import the certificate to Fabric Truststore
+~~~bash
+/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --ssl
+~~~
 > For more information on memory, Cassandra replication factor and more, see /opt/apps/fabric/scripts/fabric-setup.sh --help
 
 
