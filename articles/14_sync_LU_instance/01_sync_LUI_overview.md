@@ -12,7 +12,7 @@ The Sync mechanism synchronizes data between data sources and the Fabric databas
 
   A sync on an LUI (like Customer) executes extraction and transformation logic on the [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) and then populates them in the LUI. Both LU [population objects](/articles/07_table_population/01_table_population_overview.md) and enrichment functions are executed in a Sync process. 
 
-  Lazy sync can be initiated either by the explicit [GET command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) or by querying LUI without GET when [AUTO_MDB_SCOPE is set to True](articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) on a session level.
+  Lazy sync can be initiated either by the explicit [GET command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) or by querying LUI without GET when [AUTO_MDB_SCOPE is set to True](articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting-session-level) on a session level.
 
 
 
