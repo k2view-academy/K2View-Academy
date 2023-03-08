@@ -1,6 +1,6 @@
 # Business Tables
 
-Starting from Fabric V6.5.4, Fabric supports business tables. Business tables are stand-alone LU tables that have no connection (direct or via other LU tables) to the LU Root table. They may have one or more populations, or no populations at all. Several business tables can be connected one to another.
+Business tables are stand-alone LU tables that have no connection (direct or via other LU tables) to the LU Root table. They may have one or more populations, or no populations at all. Several business tables can be connected one to another.
 
 Business tables allow the user to compute, transform and store new data inside the LU MicroDB. 
 Such data could be statistics, LUI-based calculations or any other business logic.
