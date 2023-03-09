@@ -21,10 +21,6 @@ The solution framework includes an infrastructure that executes various types of
 
 
 
-![](images/DiscoveryE2E.png)
-
-
-
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">]() 
 
 </web>

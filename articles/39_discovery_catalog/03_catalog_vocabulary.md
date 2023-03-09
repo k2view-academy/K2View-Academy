@@ -1,0 +1,83 @@
+# Data Catalog Vocabulary
+
+The Data Discovery solution introduces a list of entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
+
+The below Data Catalog Vocabulary serves as a model for describing a catalog and helps to do a standardization across different interface types. 
+
+The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined set of properties which allow to normalize the discovery results. 
+
+In addition, due to the differences between the data source, some nodes' properties are generic, while other are relevant for specific interface types only.
+
+The following tables describe **node and relation types**, and how they are defined in each interface type:
+
+#### Node Types
+
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%;"><strong>Node Type</strong></td>
+<td style="width: 40%;"><strong>RDBMS</strong></td>
+<td style="width: 40%;"><strong>OpenAPI</strong></td>
+</tr>
+<tr>
+<td>DATA_PLATFORM</td>
+<td>DB Interface</td>
+<td>JSON or YAML of HTTP Interface.</td>
+</tr>
+<tr>
+<td>SCHEMA</td>
+<td>Schema of DB Interface</td>
+<td>Tags of JSON or YAML</td>
+</tr>
+<tr>
+<td>DATASET</td>
+<td>DB Table or View</td>
+<td>End point (path)</td>
+</tr>
+<tr>
+<td>CLASS</td>
+<td>DB Table or View (1:1 to DATASET)</td>
+<td>OpenAPI Object</td>
+</tr>
+<tr>
+<td>FIELD</td>
+<td>Columns of DB Table or View</td>
+<td>Property of OpenAPI Object</td>
+</tr>
+</tbody>
+</table>
+
+The FIELD data type can be:
+
+* PRIMITIVE - string, integer, blob, date, number, Boolean or any.
+* COLLECTION - an array of primitive values.
+
+#### Relation Types
+
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%;"><strong>Relation Type</strong></td>
+<td style="width: 80%;"><strong>Description</strong></td>
+</tr>
+<tr>
+<td style="width: 20%;">CONTAINS</td>
+<td style="width: 80%;">
+<p>DATA_PLATFORM contains SCHEMA</p>
+<p>SCHEMA contains DATASET</p>
+    <p>DATASET contains CLASS</p>
+<p>CLASS contains FIELD</p>
+</td>
+</tr>
+<tr>
+<td style="width: 20%;">REFERS TO</td>
+<td style="width: 80%;">
+<p>(FIELD in) CLASS refers to (FIELD in) CLASS</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Example of REFERS TO Relation**
+When CUSTOMER_ID is a PK in CUSTOMER and an FK in INVOICE, the Catalog definition will be: CUSTOMER *refers to* INVOICE. The properties of this relation will include the PK and FK tables and columns names.
+
