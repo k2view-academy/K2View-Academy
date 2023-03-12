@@ -56,9 +56,9 @@ Secondly, following the master key encryption, it is broken into bytes. Each byt
 
 > Note: This is done also when the Fabric master key is managed externally, when Fabric is integrated with external KMS.
 
-#### Securing the Protection Key
+#### Securing the Master Key
 
-To secure the protection key itself, along with the ability to control and rotate it, it is recommended to configure Fabric to store the key in a KeyStore system. 
+To secure the master key itself, along with the ability to control and rotate it, it is recommended to configure Fabric to store the key in a KeyStore system. 
 
 To use it:
 
