@@ -17,11 +17,11 @@ Fabric provides a Data Discovery solution enabling an insight into the Fabric in
 * Establish additional links between the data source elements - based on user-defined rules.
 * Display the data catalog as a tree and allow to navigate within this tree.
 
-The solution framework includes an infrastructure that executes various types of business rules, such as: establish the links between schema elements, profile the data, identify PII, and more. The baseline rules are included into the framework and additional rules definition is allowed.
+The solution framework includes an infrastructure that executes various types of business rules, such as: establish the links between schema elements, profile the data, identify PII, and more. The baseline rules are included into the framework; definition of additional rules is allowed.
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">]() 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
 
 </web>
 

@@ -2,9 +2,9 @@
 
 # Data Catalog Vocabulary
 
-The Data Discovery solution introduces a list of entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
+The Data Discovery solution introduces a vocabulary that describe the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
 
-The below Data Catalog Vocabulary serves as a model for describing a catalog and helps to do a standardization across different interface types. 
+The below Data Catalog vocabulary serves as a model for describing a catalog and helps to do a standardization across different interface types. 
 
 The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined set of properties which allow to normalize the discovery results. 
 
@@ -79,10 +79,11 @@ The FIELD data type can be:
 </tr>
 </tbody>
 </table>
-
 **Example of REFERS TO Relation**
 When CUSTOMER_ID is a PK in CUSTOMER and an FK in INVOICE, the Catalog definition will be: CUSTOMER *refers to* INVOICE. The properties of this relation will include the PK and FK tables and columns names.
 
 
+
+[![Previous](/articles/images/Previous.png)](01_discovery_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_discovery_process.md) 
 
 </web>
