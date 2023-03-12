@@ -80,7 +80,7 @@ The FIELD data type can be:
 </tbody>
 </table>
 
-**Example of REFERS TO Relation**
+**Example of *REFERS* TO Relation**
     
 When CUSTOMER_ID is a PK in CUSTOMER and an FK in INVOICE, the Catalog definition will be: CUSTOMER *refers to* INVOICE. The properties of this relation will include the PK and FK tables and columns names.
 
