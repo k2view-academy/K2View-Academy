@@ -97,7 +97,7 @@ sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME
 sed -i "s@key_password: cassandra@key_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@keystore: conf/.keystore*@keystore: $INSTALL_DIR/.cassandra_ssl/cassandra.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# truststore:@truststore:@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@truststore: conf/.truststore*@truststore: $INSLATT_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# protocol: TLS*@protocol: TLS@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@keystore_password: cassandra@keystore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -122,12 +122,12 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
     ```bash
-    mkdir ~/.cassandra
+    mkdir -p ~/.cassandra
     cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
     sed -i "s@\;\[ssl\]@\[ssl\]@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@; certfile = .*@certfile = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@; certfile = .*@certfile = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@;validate = true@validate = true@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "105iversion = SSLv23" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@;userkey = .*@userkey = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSTALL_DIR/.cassandra/cqlshrc
