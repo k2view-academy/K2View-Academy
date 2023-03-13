@@ -17,8 +17,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     ```
 
     ```bash
-    echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
-    echo "export INSTALL_DIR=$INSLATT_DIR" >> .bash_profile
+    echo "export K2_HOME=$INSTALL_DIR" >> .bash_profile
     source ~/.bash_profile
     cd ~/
     rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
@@ -78,14 +77,14 @@ Tar and copy them to all Cassandra and Fabric nodes in the cluster.
 See the example below: 
 
 ``` bash
-tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
+tar -czvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl .
 
 # copy to other nodes in case more than one node is used
 # 10.10.10.10 represents IP address of another node
 scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
 
 # login to every node searately and run the following command
-mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
+mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl
 ```
 
 ## Step 3 - Cassandra YAML
@@ -96,12 +95,12 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.c
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@key_password: cassandra@key_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@keystore: conf/.keystore*@keystore: $INSLATT_DIR/.cassandra_ssl/cassandra.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@keystore: conf/.keystore*@keystore: $INSTALL_DIR/.cassandra_ssl/cassandra.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# truststore:@truststore:@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@truststore: conf/.truststore*@truststore: $INSLATT_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# protocol: TLS*@protocol: TLS@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@keystore_password: cassandra@keystore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@# truststore: conf/.truststore*@truststore: $INSLATT_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@# truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# truststore_password: cassandra*@truststore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@truststore_password: cassandra*@truststore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# protocol: TLS*@protocol: TLS@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -123,18 +122,18 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
     ```bash
-    mkdir ~/.cassandra
+    mkdir -p ~/.cassandra
     cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
-    sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@; certfile = .*@certfile = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@;validate = true@validate = true@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "105iversion = SSLv23" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@;userkey = .*@userkey = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@;usercert = .*@usercert = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@port = .*@port = 9142@" $INSLATT_DIR/.cassandra/cqlshrc
-    sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_DIR/.cassandra/cqlshrc
+    sed -i "s@\;\[ssl\]@\[ssl\]@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@; certfile = .*@certfile = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@;validate = true@validate = true@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "105iversion = SSLv23" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@;userkey = .*@userkey = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@;usercert = .*@usercert = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
+    sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
 
 
