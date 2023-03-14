@@ -1,6 +1,6 @@
 <web>
 
-# Data Catalog Vocabulary
+# Catalog Vocabulary
 
 The Data Discovery solution introduces a vocabulary that describe the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
 
@@ -56,6 +56,8 @@ The FIELD data type can be:
 
 #### Relation Types
 
+The relation direction is many-to-one.
+
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
 <tr>
@@ -63,26 +65,26 @@ The FIELD data type can be:
 <td style="width: 80%;"><strong>Description</strong></td>
 </tr>
 <tr>
-<td style="width: 20%;">CONTAINS</td>
+<td style="width: 20%;">CONTAINED IN</td>
 <td style="width: 80%;">
-<p>DATA_PLATFORM contains SCHEMA</p>
-<p>SCHEMA contains DATASET</p>
-    <p>DATASET contains CLASS</p>
-<p>CLASS contains FIELD</p>
+<p>SCHEMA contained in DATA_PLATFORM</p>
+<p>DATASET contained in SCHEMA</p>
+<p>CLASS contained in DATASET</p>
+<p>FIELD contained in CLASS</p>
 </td>
 </tr>
 <tr>
 <td style="width: 20%;">REFERS TO</td>
 <td style="width: 80%;">
 <p>(FIELD in) CLASS refers to (FIELD in) CLASS</p>
+<p>For example: <em>INVOICE refers to CUSTOMER</em></p>
+<p>The PK / FK columns names are included in the relation's properties</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example of *REFERS* TO Relation**
-    
-When CUSTOMER_ID is a PK in CUSTOMER and an FK in INVOICE, the Catalog definition will be: CUSTOMER *refers to* INVOICE. The properties of this relation will include the PK and FK tables and columns names.
+
 
 
 
