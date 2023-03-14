@@ -9,7 +9,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 ## Step 1 - Keys Generation
 
 1. Connect as **cassandra** user
-2. Download and run the `secure_cassandra.sh` file that generate the keys. it can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+2. Run the `secure_cassandra.sh` file that generate the keys. It included with our supplied psackage or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
 3. Stop Cassandra services before running the script.
     ```bash
     ## run: 
@@ -21,14 +21,16 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     source ~/.bash_profile
     cd ~/
     rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
-
-    chmod +x secure_cassandra.sh
     ````
 
     **Note:** run on single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
 
 
-    e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}` 
+    ```bash
+    ./secure_cassandra.sh {Password} {Cluster_Name}
+    ```
+
+    for example: 
 
     ```bash
     ./secure_cassandra.sh Q1w2e3r4t5 k2tls
@@ -61,7 +63,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     MAC verified OK 
     ```
     
-    The following 7 files will appear under the `$INSTALL_DIR/. cassandra_ssl` directory:
+    The following 7 files will be created under the `$INSTALL_DIR/.cassandra_ssl` directory:
     - k2tls_CLIENT.key.pem
     - k2tls_CLIENT.cer.pem
     - cassandra.keystore
@@ -70,27 +72,31 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     - CLIENT_k2tls_PUBLIC.cer
     - CLUSTER_k2tls_PUBLIC.cer
 
+    And a cassandra_keys.tar.gz file containing all files,will be created, to be transfered to the other nodes
+
+    > Note the certificate and key file name contain the cluster name you have set.
+
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
-Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
+Copy the priveously created file  *cassandra_keys.tar.gz* to all cassandra noe in the cluster
 
 See the example below: 
 
 ``` bash
-tar -czvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl .
 
 # copy to other nodes in case more than one node is used
 # 10.10.10.10 represents IP address of another node
-scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
+scp  cassandra_keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
 
 # login to every node searately and run the following command
-mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl
+mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl
 ```
 
 ## Step 3 - Cassandra YAML
 
 1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all the Cassandra nodes. 
+2. Execute this as a Cassandra user on all the Cassandra nodes.
+   > Replace the password in the following command with the one you set before. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -119,8 +125,10 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 
 
 ## Step 4 - Cassandra CQLSHRC
-1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files.
+1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files created earlier.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
+> replace the key and certificate file name with the files created before.
+
     ```bash
     mkdir -p ~/.cassandra
     cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
@@ -135,7 +143,10 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
     sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
-
+3. You can check your configuratin by connecting to cassandra by the followiong command: (use the user & password yo udefined earlier)
+   ```bash
+   cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
+   ```
 
 ## Step 5 - Disable the default cassandra superuser
 

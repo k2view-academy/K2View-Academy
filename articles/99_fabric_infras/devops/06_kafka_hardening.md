@@ -2,7 +2,7 @@
 
 The following steps are used to harden the Kafka server in a Fabric cluster.
 
-## Step 1 - Shut Down Services	
+## Step 1 - Shut Down Services    
 
 Check that the following services are switched off:
 - Kafka
@@ -19,20 +19,13 @@ Check that the following services are switched off:
 
 ## Step 2. Keys Generation
 
-1. [Download](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
+1. Run the secure_kafka.sh script to generate self-signed keys and certificates, It included with our supplied psackage or can be downloaded from [here] (https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh)
 
-2. Run the following commands on a single Kafka node only:
+2. run the following commands on a single Kafka node only, Set the Password to your own choice:
+
 ```bash
-cd $K2_HOME
-chmod +x secure_kafka.sh
-# if openssl is not installed - login with root
-yum install openssl
-```
-3. Edit the secure_Kafka.sh script or execute it using password parameters: 
-
-```
 ./secure_kafka.sh Q1w2e3r4t5
-```
+
 
 The following output is generated:
 
@@ -85,10 +78,11 @@ Certificate was added to keystore
 
 ## Step 3 - Replicate to All Nodes
 
-The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
+The following 11 files are generated in the $K2_HOME/.kafka_ssl directory:
 
 - ca-crt.crt
 - ca-key.key
+- ca-crt.srl
 - kafka.client.csr
 - kafka.client.keystore.jks
 - kafka-client-signed.crt
@@ -98,16 +92,14 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 - kafka-server-signed.crt
 - kafka.server.truststore.jks
 
-Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
+and the file kafka_keys.tar.gz containing them will be created, ready to be copied to all nodes.
 
-create tarball file
-``` bash
-tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl .
-```
+Copy the file to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
+
 
 copy to other kafka nodes and fabric
 ``` bash
-scp Kafka_keyz.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
+scp Kafka_keys.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
 ```
 
 In case Docker installation use following commands to copy between running containers
@@ -118,7 +110,7 @@ docker cp Kafka_keyz.tar.gz fabric:/usr/local/k2view/
 
 on the Fabric and other Kafka nodes use the following to extract 
 ```bash
-mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
+mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf kafka_keys.tar.gz -C $K2_HOME/.kafka_ssl
 ```
 
 
@@ -146,9 +138,9 @@ user_kafka="kafka";
 };
 
 Client {
-	org.apache.zookeeper.server.auth.DigestLoginModule required
-	username="kafka"
-	password="kafka";
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username="kafka"
+    password="kafka";
 };' > $CONFLUENT_HOME/zookeeper_jaas.conf
 ```
 
@@ -173,7 +165,7 @@ Define the 2-way SSL authentication between the Kafka server and clients:
 sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
 sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
 sed -i "32i security.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
-sed -i "33i ssl.client.auth=required" $CONFLUENT_HOME/server.properties
+sed -i "33i ssl.client.auth=requested" $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.listeners/#&/' $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.host.name/#&/' $CONFLUENT_HOME/server.properties
 sed -i "60i ssl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
@@ -192,17 +184,17 @@ sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.prope
 ```bash
 echo \
 'KafkaServer {
-	org.apache.kafka.common.security.plain.PlainLoginModule required
-	username="kafka"
-	password="kafka"
-	user_kafkabroker="kafka"
-	user_client1="kafka";
+    org.apache.kafka.common.security.plain.PlainLoginModule required
+    username="kafka"
+    password="kafka"
+    user_kafkabroker="kafka"
+    user_client1="kafka";
 };
 
 Client {
-	org.apache.zookeeper.server.auth.DigestLoginModule required
-	username="kafka"
-	password="kafka";
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username="kafka"
+    password="kafka";
 };' > $CONFLUENT_HOME/kafka_server_jaas.conf
 ```
 ## Step 3 - Start the Kafka Server

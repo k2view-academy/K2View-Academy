@@ -3,8 +3,8 @@
 ##  Fabric Pre-Installation Steps
 
 1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric server. Note that this is mandatory and should be performed at least once per each server.
-2. Click [here](Cassandra_New_Setup.md) for instructions on how to install a Cassandra instance or a cluster with our supplied package.
-3. Click [here](Kafka_New_Setup.md) for instructions on how to install a Kafka instance or a cluster with our supplied package.
+2. Click [here](Cassandra_Setup.md) for instructions on how to install a Cassandra instance or a cluster with our supplied package.
+3. Click [here](Kafka_Setup.md) for instructions on how to install a Kafka instance or a cluster with our supplied package.
 
 ## Fabric Setup 
 
@@ -17,7 +17,7 @@
 2. Untar the package in the user home folder (/opt/apps/fabric):
 
    ~~~bash
-   tar -zxf [package name].tar.gz -C /opt/apps/fabric
+   tar -zxf [package name].tar.gz -C /opt/apps/fabric && source .bash_profile
    ~~~
 
    
@@ -84,10 +84,9 @@ After a short while, the following message will be displayed:
 
 <ul>
    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Replace the Fabric Default Admin Password</a></li>
-   <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/04_cassandra_hardening.md">Cassandra Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/06_kafka_hardening.md">Kafka Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md">Fabric UI Hardening Procedures</a></li>
    <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Fabric Security and Authentication Methods (LDAP, SAML.. )</a></li>
    <li><a href="/articles/04_fabric_studio/README.md">Working with Fabric Studio</a></li>
 </ul>
-
-* initial user
-+ More

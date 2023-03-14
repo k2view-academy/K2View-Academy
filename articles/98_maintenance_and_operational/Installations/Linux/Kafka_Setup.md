@@ -20,7 +20,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 4. Untar the package (the package name varies according to the version) as follows:
 
     ~~~bash
-    tar -zxf k2view_Confluent_7.xxx.tar.gz
+    tar -zxf k2view_Confluent_7.xxx.tar.gz && source .bash_profile
     ~~~
 
 ### Set up the Kafka Nodes
@@ -29,9 +29,14 @@ The number of cluster nodes should be either greater than or equal to the replic
 + Node IPs
 + Replication factor
 
- Run the following command: (start with the 1st node, then run it one by one on the 2nd, etc.):
+If you setup multi node enviroment, run the following command on the first node: (when configuring a cluster, the first zookeeper need to be up ):
 ~~~bash
-/opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3
+/opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3 --start_kafka_loop
+~~~
+
+On a single node configuration or from the 2nd node in a cluster, run the same command without the *--start_kafka_loop* switch
+~~~bash
+/opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3 
 ~~~
 
 ### Kafka cluster - Start, Shutdown and Monitor
