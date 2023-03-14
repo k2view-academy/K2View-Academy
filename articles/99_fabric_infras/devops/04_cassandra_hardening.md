@@ -70,6 +70,8 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
     And a cassandra_keys.tar.gz file containing all files,will be created, to be transfered to the other nodes
 
+    > Note the certificate and key file name contain the cluster name you have set.
+
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
 Copy the priveously created file  *cassandra_keys.tar.gz* to all cassandra noe in the cluster
@@ -89,7 +91,8 @@ mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INST
 ## Step 3 - Cassandra YAML
 
 1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all the Cassandra nodes. 
+2. Execute this as a Cassandra user on all the Cassandra nodes.
+   > Replace the password in the following command with the one you set before. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -120,6 +123,8 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 ## Step 4 - Cassandra CQLSHRC
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files created earlier.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
+> replace the key and certificate file name with the files created before.
+
     ```bash
     mkdir -p ~/.cassandra
     cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc

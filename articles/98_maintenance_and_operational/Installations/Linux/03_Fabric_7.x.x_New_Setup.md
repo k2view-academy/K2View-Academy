@@ -17,7 +17,7 @@
 2. Untar the package in the user home folder (/opt/apps/fabric):
 
    ~~~bash
-   tar -zxf [package name].tar.gz -C /opt/apps/fabric
+   tar -zxf [package name].tar.gz -C /opt/apps/fabric && source .bash_profile
    ~~~
 
    
