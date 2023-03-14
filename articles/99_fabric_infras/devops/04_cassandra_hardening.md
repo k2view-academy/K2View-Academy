@@ -26,7 +26,11 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     **Note:** run on single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
 
 
-    e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}` 
+    ```bash
+    ./secure_cassandra.sh {Password} {Cluster_Name}
+    ```
+
+    for example: 
 
     ```bash
     ./secure_cassandra.sh Q1w2e3r4t5 k2tls
