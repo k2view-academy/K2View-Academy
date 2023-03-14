@@ -84,10 +84,9 @@ After a short while, the following message will be displayed:
 
 <ul>
    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Replace the Fabric Default Admin Password</a></li>
-   <li><a href="/articles/99_fabric_infras/devops/README.md">Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/04_cassandra_hardening.md">Cassandra Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/06_kafka_hardening.md">Kafka Hardening Procedures</a></li>
+   <li><a href="/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md">Fabric UI Hardening Procedures</a></li>
    <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Fabric Security and Authentication Methods (LDAP, SAML.. )</a></li>
    <li><a href="/articles/04_fabric_studio/README.md">Working with Fabric Studio</a></li>
 </ul>
-
-* initial user
-+ More
