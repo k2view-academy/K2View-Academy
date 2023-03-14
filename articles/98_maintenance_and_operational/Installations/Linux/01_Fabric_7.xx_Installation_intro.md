@@ -108,6 +108,8 @@ sysctl -p
 ~~~
 
 
+If the system is planned to work over SSL/TLS and need to be hardend, 
+openssl is also required to be installed
 
 On RHEL/CentOs 8 server **only** - add the following packages:
 
