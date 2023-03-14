@@ -20,11 +20,11 @@ In case the Discovery process hasn't been executed on any project interface, the
 
 The following activities can be performed using the entity's context menu:
 
-* **Expand**<img src="images/expand.png" style="zoom:75%;" />or **collapse**<img src="images/collapse.png" style="zoom:85%;" /> the next level elements. 
+* **Expand**<img src="images/expand.png" style="zoom:75%;" />or **collapse**<img src="images/collapse.png" style="zoom:75%;" /> the next level elements. 
   * For example, clicking the <img src="images/expand.png" style="zoom:75%;" /> icon of the Schema element expands all Classes under this Schema. 
   * Double click on the selected entity can also expand or collapse it.
 * **Hide** <img src="images/hide.png" style="zoom:75%;" />the element from the Catalog window.
-* **Focus**<img src="images/focus.png" style="zoom:75%;" />- available on Data Platform and Schema elements. 
+* **Focus**<img src="images/focus.png" style="zoom:75%;" /> is available on Data Platform and Schema elements. 
   * Clicking Focus opens a new view which includes all the elements of the level below. 
   * For example, when Focus is clicked on the Schema element, the view will display all the Class elements under this Schema.
 
@@ -33,7 +33,7 @@ The following activities can be performed using the entity's context menu:
 The menu bar is a toolbar located at the top of the window. It has the following options:
 
 * **Expand**, **collapse** and **hide**, triggering the same activities as in the element's context menu. Multiple element selection is supported.  
-* **Layout selection** <img src="images/layout.png" style="zoom:85%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
+* **Layout selection** <img src="images/layout.png" style="zoom:75%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
 * **Hidden nodes**, a drop-down displaying the list of nodes that have been hidden from the Catalog window. Selecting a node from the list returns it back to the Catalog view.
 * **Zoom in / out**, adjusting the zoom of the Catalog view.
 * **Search**, providing the node search capability.
