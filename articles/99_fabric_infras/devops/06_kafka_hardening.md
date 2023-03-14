@@ -19,20 +19,13 @@ Check that the following services are switched off:
 
 ## Step 2. Keys Generation
 
-1. [Download](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
+1. Run the secure_kafka.sh script to generate self-signed keys and certificates, It included with our supplied psackage or can be downloaded from [here] (https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh)
 
-2. Run the following commands on a single Kafka node only:
+2. run the following commands on a single Kafka node only, Set the Password to your own choice:
+
 ```bash
-cd $K2_HOME
-chmod +x secure_kafka.sh
-# if openssl is not installed - login with root
-yum install openssl
-```
-3. Edit the secure_Kafka.sh script or execute it using password parameters: 
-
-```
 ./secure_kafka.sh Q1w2e3r4t5
-```
+
 
 The following output is generated:
 
@@ -172,7 +165,7 @@ Define the 2-way SSL authentication between the Kafka server and clients:
 sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
 sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
 sed -i "32i security.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
-sed -i "33i ssl.client.auth=required" $CONFLUENT_HOME/server.properties
+sed -i "33i ssl.client.auth=requested" $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.listeners/#&/' $CONFLUENT_HOME/server.properties
 sed -i 's/^advertised.host.name/#&/' $CONFLUENT_HOME/server.properties
 sed -i "60i ssl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
