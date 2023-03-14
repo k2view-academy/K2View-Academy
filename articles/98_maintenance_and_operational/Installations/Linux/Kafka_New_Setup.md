@@ -20,7 +20,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 4. Untar the package (the package name varies according to the version) as follows:
 
     ~~~bash
-    tar -zxf k2view_Confluent_7.xxx.tar.gz
+    tar -zxf k2view_Confluent_7.xxx.tar.gz && source .bash_profile
     ~~~
 
 ### Set up the Kafka Nodes
