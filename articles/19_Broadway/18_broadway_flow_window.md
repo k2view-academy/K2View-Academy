@@ -6,11 +6,19 @@ To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects** or any **LU**, right click **Broadway** > **New Flow** to open the Flow Name window.
 2. Populate the **flow name** and click **OK** to open an empty Flow area.
 
+<studio>
+
+Optionally a **folder** name can be populated - in order to create a flow under the specified folder. 
+
+</studio>
+
 <web>
 
-Note that you can first create a folder under Broadway, and then create a flow in this folder. In this case, the flow will be tagged by default with the folder's name. [Click to get more info about flow tagging](33_flow_properties.md).
+Note that you can first create a folder under Broadway, and then create a flow in this folder. 
 
 </web>
+
+In this case, the flow will be tagged by default with the folder's name. When a flow is created under the Broadway folder, it can be tagged later using the Flow Properties window. [Click to get more info about flow tagging](33_flow_properties.md).
 
 <img src="images/99_18_01_main_flow_area.PNG" alt="image" style="zoom:80%;" />
 
