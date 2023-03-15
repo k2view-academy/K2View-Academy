@@ -1,24 +1,32 @@
 # Broadway Flow Window
 
+### Overview
+
 The **Broadway flow** window is the main Broadway interface that enables the definition and the execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects** or any **LU**, right click **Broadway** > **New Flow** to open the Flow Name window.
 2. Populate the **flow name** and click **OK** to open an empty Flow area.
 
+### Folders Support
+
 <studio>
 
-Optionally a **folder** name can be populated - in order to create a flow under the specified folder. 
+Optionally a **folder** name can be populated during the flow creation, in order to create a flow under the specified folder. 
 
 </studio>
 
 <web>
 
-Note that you can first create a folder under Broadway, and then create a flow in this folder. 
+You can first create a folder under Broadway, and then create a flow in this folder. 
 
 </web>
 
-In this case, the flow will be tagged by default with the folder's name. When a flow is created under the Broadway folder, it can be tagged later using the Flow Properties window. [Click to get more info about flow tagging](33_flow_properties.md).
+In this case, the flow will be tagged by default with the folder's name. When a flow is not created under a folder, it can be tagged later using the [Flow Properties window](33_flow_properties.md). 
+
+Note that the flow name ambiguity within the same Logical Unit is not supported. A flow name must be unique, even when created under different folders. The creation and import of flows with identical names is not restricted by the Fabric Studio, to allow the implementor continue his work and update it later. However, if there is more than 1 flow with the same name under the same LU, the flow execution will fail.
+
+### Flow Window Elements
 
 <img src="images/99_18_01_main_flow_area.PNG" alt="image" style="zoom:80%;" />
 

@@ -57,8 +57,7 @@ The storage setting is controlled via Fabric configuration using the **FABRICDB_
 
 When MTables are created in the FabricDB, they are created under a separate **mtable** schema and on one node only. 
 
-
-
+<web>
 
 [![Previous](/articles/images/Previous.png)](01_translations_overview_and_use_cases.md)
 

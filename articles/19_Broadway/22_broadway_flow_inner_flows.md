@@ -32,7 +32,23 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
 Full example of a Broadway flow with inner flow Actors can be found in the Demo project.
 
-### Open an Inner Flow
+### Attaching an Inner Flow
+
+When you need to execute an inner flow, add an **InnerFlow** Actor to your flow and either write the flow name (with or without the **.flow** extension) or click to open the selection popup:
+
+<img src="images/99_22_04.PNG" alt="image" style="zoom:80%;" />
+
+<img src="images/99_22_05.PNG" alt="image" style="zoom:80%;" />
+
+Once the flow is selected, its inputs and outputs are automatically added to the Actor.
+
+### Attaching an Actor as Inner Flow
+
+Broadway supports an ability to invoke an Actor as an inner flow. This ability may be required in a use case such as masking, whereas a different Masking Actor should be invoked, based on the flow conditions. 
+
+To attach an Actor, add an **InnerFlow** Actor to your flow and either write the actor name (including the **.actor** extension) or click to open the selection popup. Note that you will need to choose Actor radio button to get the Actor's list.
+
+### Opening an Inner Flow
 
 When a flow has inner flows, they can each be opened from the main flow:
 
@@ -42,10 +58,6 @@ When a flow has inner flows, they can each be opened from the main flow:
 ![image](images/99_22_03.PNG)
 
 
-
-### Calling an Actor as Inner Flow
-
-Broadway supports an ability to invoke an Actor as an inner flow. This ability may be required in a use case such as masking, whereas a different Masking Actor should be invoked, based on the flow conditions. 
 
 
 
