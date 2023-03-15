@@ -6,8 +6,8 @@ Today, nearly all companies are required to combine and integrate data from mult
 
 Data Discovery is a process that can help companies to cope with the above-mentioned problems. Its purpose is to:
 
-* keep pace with the ongoing changes and adapt to them quickly.
-* uncover and investigate hidden yet potentially useful data insights.
+* Keep pace with the ongoing changes and adapt to them quickly.
+* Uncover and investigate hidden yet potentially useful data insights.
 * Find and flag sensitive information, enabling a better protection of it.
 
 Fabric provides a Data Discovery solution that provides an insight into the Fabric interfaces, starting with the RDBMS interface type. The solution's capabilities are:
