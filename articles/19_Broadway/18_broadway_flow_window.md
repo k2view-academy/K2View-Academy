@@ -12,7 +12,7 @@ To create a new Broadway flow:
 
 <studio>
 
-Optionally a **folder** name can be populated during the flow creation, in order to create a flow under the specified folder. 
+Optionally a **folder** name can be set during the flow creation, in order to create a flow under the specified folder. 
 
 </studio>
 
@@ -22,7 +22,7 @@ You can first create a folder under Broadway, and then create a flow in this fol
 
 </web>
 
-In this case, the flow will be tagged by default with the folder's name. When a flow is not created under a folder, it can be tagged later using the [Flow Properties window](33_flow_properties.md). 
+In this case, the flow will be tagged with the folder's name. When a flow is not created under a folder, it can be tagged later using the [Flow Properties window](33_flow_properties.md). 
 
 Note that the flow name ambiguity within the same Logical Unit is not supported. A flow name must be unique, even when created under different folders. The creation and import of flows with identical names is not restricted by the Fabric Studio, to allow the implementor continue his work and update it later. However, if there is more than 1 flow with the same name under the same LU, the flow execution will fail.
 
