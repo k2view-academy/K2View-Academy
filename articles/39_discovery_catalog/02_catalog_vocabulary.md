@@ -12,14 +12,14 @@ In addition, due to the differences between the data source, some nodes' propert
 
 The following tables describe **node and relation types**, and how they are defined in each interface type:
 
-#### Node Types
+### Node Types
 
-<table style="border-collapse: collapse; width: 100%;">
+<table style="width: 900px;">
 <tbody>
-<tr>
-<td style="width: 20%;"><strong>Node Type</strong></td>
-<td style="width: 40%;"><strong>RDBMS</strong></td>
-<td style="width: 40%;"><strong>OpenAPI</strong></td>
+<tr style="height: 35px;">
+<td width="200pxl"><strong>Node Type</strong></td>
+<td width="350pxl"><strong>RDBMS</strong></td>
+<td width="350pxl"><strong>OpenAPI</strong></td>
 </tr>
 <tr>
 <td>DATA_PLATFORM</td>
@@ -42,49 +42,69 @@ The following tables describe **node and relation types**, and how they are defi
 <td>OpenAPI Object</td>
 </tr>
 <tr>
-<td>FIELD</td>
+<td rowspan="2">FIELD</td>
 <td>Columns of DB Table or View</td>
 <td>Property of OpenAPI Object</td>
 </tr>
+<tr>
+<td colspan="2">
+<p>The FIELD data type can be:</p>
+<ul>
+<li>PRIMITIVE - string, integer, blob, date, number, Boolean or any.</li>
+<li>COLLECTION - an array of primitive values.</li>
+</ul>
+</td>
+</tr>
 </tbody>
 </table>
 
-The FIELD data type can be:
 
-* PRIMITIVE - string, integer, blob, date, number, Boolean or any.
-* COLLECTION - an array of primitive values.
 
-#### Relation Types
+### Relation Types
 
-The relation direction is many-to-one.
-
-<table style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 20%;"><strong>Relation Type</strong></td>
-<td style="width: 80%;"><strong>Description</strong></td>
+<table style="width: 700px;">
+<tbody> 
+<tr style="height: 35px;">
+<td width="200pxl"><strong>Relation Type</strong></td>
+<td width="500pxl"><strong>Description</strong></td>
 </tr>
-<tr>
-<td style="width: 20%;">CONTAINED IN</td>
-<td style="width: 80%;">
+<tr style="height: 46px;">
+<td style="width: 20%; height: 184px;" rowspan="4"><strong>CONTAINED IN</strong></td>
+<td style="width: 80%; height: 46px;">
 <p>SCHEMA contained in DATA_PLATFORM</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 80%; height: 46px;">
 <p>DATASET contained in SCHEMA</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 80%; height: 46px;">
 <p>CLASS contained in DATASET</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td style="width: 80%; height: 46px;">
 <p>FIELD contained in CLASS</p>
 </td>
 </tr>
-<tr>
-<td style="width: 20%;">REFERS TO</td>
-<td style="width: 80%;">
+<tr style="height: 46px;">
+<td style="width: 20%; height: 142px;" rowspan="2"><strong>REFERS TO</strong></td>
+<td style="width: 80%; height: 46px;">
 <p>(FIELD in) CLASS refers to (FIELD in) CLASS</p>
-<p>For example: <em>INVOICE refers to CUSTOMER</em></p>
-<p>The PK / FK columns names are included in the relation's properties</p>
+</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 80%; height: 96px;">
+<p>Example: <em>INVOICE refers to CUSTOMER</em></p>
+<p>The PK / FK column names are included in the relation's properties</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-
+The relation direction is many-to-one.
 
 
 
