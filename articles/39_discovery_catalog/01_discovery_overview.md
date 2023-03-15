@@ -2,7 +2,7 @@
 
 <web>
 
-Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are either not well structured or do not have predefined relations. As a result, decision makers are drowning in data but starving for insights. On top of that, data security's risk increases, becoming every company’s high priority. 
+Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are either not well structured or do not have predefined relations. As a result, decision makers are drowning in data but starving for insights. On top of that, the risks relating to data security increase, causing companies to set this issue with high priority. 
 
 Data Discovery is a process that can help companies to cope with the mentioned above problems. Its purpose is to:
 
