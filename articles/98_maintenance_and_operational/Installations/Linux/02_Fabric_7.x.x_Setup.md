@@ -1,4 +1,4 @@
-# Fabric Setup Guide
+# Fabric 7.x Setup Guide
 
 ##  Fabric Pre-Installation Steps
 
@@ -21,7 +21,7 @@
    ~~~
 
    
-    
+   
 ### Set up the Fabric Nodes
 The following script should be run on the first node separately; once the setup is done and the Fabric node status is 'READY',
 run the same command on the rest of the Fabric nodes.
