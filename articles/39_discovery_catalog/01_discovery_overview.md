@@ -17,7 +17,7 @@ Fabric provides a Data Discovery solution that provides an insight into the Fabr
 * Establishing additional links between the data source elements - based on user-defined rules.
 * Displaying the data catalog as a tree and enabling navigatation within this tree.
 
-The solution framework includes an infrastructure that executes various types of business rules. Among these rules are establishment of links between the schema elements, data profiling and PII identificationy. The baseline rules are included within the framework whereas defining additional rules is allowed.
+The solution framework includes an infrastructure that executes various types of business rules. Among these rules are establishment of links between the schema elements, data profiling and PII identification. The baseline rules are included within the framework whereas defining additional rules is allowed.
 
 
 
