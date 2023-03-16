@@ -16,7 +16,7 @@ The Data Catalog's main area enables navigation between the Catalog levels, by e
 
 The initial view displays the Data Platform elements - data source interfaces defined in the Fabric project, for which the Discovery process has been executed via the Web Studio.
 
-In case the Discovery process hasn't been executed on any project interface, the catalogue will be empty. 
+In case the Discovery process hasn't been executed on any project interface, the catalog would be empty. 
 
 The following activities can be performed using the entity's context menu:
 
