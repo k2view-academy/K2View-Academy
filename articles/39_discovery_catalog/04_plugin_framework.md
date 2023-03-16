@@ -18,7 +18,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 * The purpose of the Data Profiling is to classify the source fields based on their data. Among other goals, the profiling helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 * The plugin runs on a data snapshot, extracted by the Crawler from the data source, and executes the profiling rules. The rules are defined in a built-in **data_profiling** MTable. 
-* If the field's data matches a rule, a **Classification** property is added to the field's properties with the value such as **email**, **gender**, or **credit card**. If a match is found for more than one rule, only one property is created (the one with a higher score).
+* If the field's data match a rule, a **Classification** property is added to the field's properties with a value such as **email**, **gender**, or **credit card**. If a match is found for more than one rule, only one property is created (the one with the higher score).
 * If this classification type is defined as PII in the data_profiling MTable, PII properties is set to true in the field's properties. 
 
 **Matching by Field Name**
