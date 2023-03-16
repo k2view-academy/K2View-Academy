@@ -30,7 +30,7 @@ The following activities can be performed using the entity's context menu:
 
 ### Menu Bar
 
-The menu bar is a toolbar located at the top of the window. It has the following choices:
+The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * **Expand**, **collapse** and **hide**, triggering the same activities as in the element's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:75%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
