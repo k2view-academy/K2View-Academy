@@ -10,7 +10,7 @@ The Plugin Framework runs over the Discovery Schema, created by the Crawler, and
 
 The Data Discovery solution includes a constantly growing list of built-in plugins. The list of plugins and their execution order is defined by the Plugins Pipeline configuration file, which also determines a threshold per each plugin. The threshold is the minimum score required for adding the plugin results to the Catalog. For example, if the plugin found a match with a score of 0.3 while the plugin's threshold is set to 0.7, the plugin results will be dropped and will not be added to the Catalog. 
 
-The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, they need to be added to the Plugins Pipeline configuration file.
+The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, these custom plugins need to be added to the Plugins Pipeline configuration file.
 
 ### Built-In Plugins
 
