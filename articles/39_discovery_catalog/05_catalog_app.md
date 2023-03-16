@@ -24,9 +24,9 @@ The following activities can be performed using the entity's context menu:
   * For example, clicking the <img src="images/expand.png" style="zoom:75%;" /> icon of the Schema element expands all Classes under this Schema. 
   * A double-click on the selected entity can also expand or collapse it.
 * **Hide** <img src="images/hide.png" style="zoom:75%;" />the element from the Catalog window.
-* **Focus**<img src="images/focus.png" style="zoom:75%;" /> is available on Data Platform and Schema elements. 
-  * Clicking Focus opens a new view which includes all the elements of the level below. 
-  * For example, when Focus is clicked on the Schema element, the view will display all the Class elements under this Schema.
+* **Focus**<img src="images/focus.png" style="zoom:75%;" /> is available on the Data Platform and the Schema elements. 
+  * Clicking Focus opens a new view, which includes all the elements of the level below. 
+  * For example, when Focus is clicked on the Schema element, the view will display all Class elements under this Schema.
 
 ### Menu Bar
 
