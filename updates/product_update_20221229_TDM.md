@@ -2,7 +2,7 @@
 
 TDM 7.6  has just been released and it includes many exciting features:
 
-* **TDM 7.6 is based on Fabric 7**.
+* **TDM 7.6 is based on Fabric 7.0.**
 * **Installation Improvements** - the TDM installation no longer requires a separate package of Fabric with the TDM GUI code. The TDM GUI is added to the web applications by the TDM LU's deployment.
 * **Reference Fixes and Enhancements** - Reference tables are now stored in a dedicated Fabric LU instead of Cassandra.
 * The addition of **TDM Custom JMX Statistics** for a better monitoring of the TDM processes.
