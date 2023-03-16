@@ -22,7 +22,7 @@ The following activities can be performed using the entity's context menu:
 
 * **Expand**<img src="images/expand.png" style="zoom:75%;" />or **collapse**<img src="images/collapse.png" style="zoom:75%;" /> the next level elements. 
   * For example, clicking the <img src="images/expand.png" style="zoom:75%;" /> icon of the Schema element expands all Classes under this Schema. 
-  * Double click on the selected entity can also expand or collapse it.
+  * A double-click on the selected entity can also expand or collapse it.
 * **Hide** <img src="images/hide.png" style="zoom:75%;" />the element from the Catalog window.
 * **Focus**<img src="images/focus.png" style="zoom:75%;" /> is available on Data Platform and Schema elements. 
   * Clicking Focus opens a new view which includes all the elements of the level below. 
