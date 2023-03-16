@@ -2,7 +2,7 @@
 
 # Catalog Versioning
 
-The purpose of the Catalog versioning is to provide the tools to identify the changes in the data source. Any kind of changes are discoverable, for example, adding or removal of a field or a change in the property's value. 
+The purpose of the Catalog versioning is to provide the tools to identify changes in the data source. Any kind of change is discoverable, for example, field adding/removal or a change in the property's value. 
 
 Each time the Data Discovery process is executed, a new Catalog version is created in the *neo4j* Graph DB, only in case there are changes comparing to the previous version. Then, using the Data Catalog application the user can select a version to compare to the latest version. 
 
