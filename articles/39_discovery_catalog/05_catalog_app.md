@@ -6,9 +6,9 @@ The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_fr
 
 The Catalog window includes the following parts, described in this article:
 
-* The main area which displays the Catalog tree with its elements.
-* The application menu bar which allows performing various activities. 
-* The properties tab which displays more information about the selected Catalog element.
+* Main area, which displays the Catalog tree with its elements.
+* Application menu bar, which allows to perform various activities. 
+* Properties tab, which displays more information about a selected Catalog element.
 
 ### Main Area
 
