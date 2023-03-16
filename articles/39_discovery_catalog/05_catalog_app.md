@@ -42,7 +42,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 The Properties Tab displays more information about the selected Catalog element. The tab shows the element name, type (e.g. FIELD), origin (e.g. Crawler) and a list of properties specific per element type. 
 
-Some of the properties are created by the Crawler and some are created by plugins. Clicking on a property opens a Property Details popup providing more details on the selected property.
+Some of the properties are created by the Crawler and some are created by plugins. Clicking on a property opens a Property Details pop-up that provides more details on the selected property.
 
 
 
