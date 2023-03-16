@@ -10,7 +10,7 @@ The data entities are represented by **nodes** and the links between the **nodes
 
 Additionally, due to the differences between the data source, some nodes' properties are generic, while other are relevant for specific interface types only.
 
-The following tables describe **node and relation types**, and how they are defined in each interface type:
+The following 2 tables describe the **node and relation types**, and how they are defined in each interface type:
 
 ### Node Types
 
