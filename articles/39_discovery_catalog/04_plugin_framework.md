@@ -24,7 +24,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 **Matching by Field Name**
 
 * The purpose of this plugin is to identify possible links between the Discovery Schema nodes in order to create additional ***refers to*** relations. This plugin is especially useful when, for example, a data source has no PK-FK relations or when cross-schema relations need to be established. 
-* The matching algorithm works on comparing 2 field names of 2 different datasets each time. Prior to matching, formatting rules are applied in order to "normalize" the field names (e.g. remove underscore ‘_’, convert to lower-case). 
+* The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (e.g. remove underscore ‘_’, convert to lower-case). 
 * If a match is found, the plugin estimates the link direction: which field is a PK and which one is an FK.
 * Eventually, the relation is created with the score - the probability that the match is correct. 
 
