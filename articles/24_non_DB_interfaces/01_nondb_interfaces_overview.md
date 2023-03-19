@@ -20,8 +20,8 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * [Kafka Interface](03_kafka_interface.md)
   
 * [JMS Interface](04_JMS_interface.md)
-  
-  [HTTP Interface](05_HTTP_interface.md)
+
+* [HTTP Interface](05_HTTP_interface.md)
   
 * [Local File System Interface](06_local_file_sys.md)
 * [Custom Interface](07_custom_interface.md)
