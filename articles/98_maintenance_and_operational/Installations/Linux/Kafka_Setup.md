@@ -13,7 +13,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 
 1. Log in to the previously created user that was designated to the Kafka installation.
 
-2. Download the package from [here](https://download.k2view.com/index.php/s/tFnDRJEUyHiXPYL).
+2. Download the package from [here](https://download.k2view.com/index.php/s/imhwNdkXgSSGpCw).
 
 3. Log in to the Linux server as the 'Kafka' user and copy the package to the home directory.
 
