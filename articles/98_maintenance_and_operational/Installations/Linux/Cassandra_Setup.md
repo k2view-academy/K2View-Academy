@@ -22,7 +22,7 @@ The script should be run separately on each node, in the order of designated nod
 
 1. Log in to the previously created user that was designated to the Cassandra installation.
 
-2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
+2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/tkf2P1724iBogIj)).
 
 2. Log in to the Linux server as the 'Cassandra' user and copy the package to the home directory.
 
