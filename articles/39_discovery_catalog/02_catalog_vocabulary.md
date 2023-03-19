@@ -4,11 +4,11 @@
 
 The Data Discovery solution introduces a vocabulary that describes the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
 
-The below Data Catalog vocabulary serves as a model for describing a catalog and helps to do a standardization across different interface types. 
+The below Data Catalog vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
 
-The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined set of properties which allow to normalize the discovery results. 
+The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the discovery results. 
 
-Additionally, due to the differences between the data source, some nodes' properties are generic, while other are relevant for specific interface types only.
+Additionally, due to differences between the data sources, some nodes' properties are generic, while other are relevant for specific interface types only.
 
 The following 2 tables describe the **node and relation types**, and how they are defined in each interface type:
 
@@ -69,24 +69,24 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <td width="500pxl"><strong>Description</strong></td>
 </tr>
 <tr style="height: 46px;">
-<td style="width: 20%; height: 184px;" rowspan="4"><strong>CONTAINED IN</strong></td>
+<td style="width: 20%; height: 184px;" rowspan="4"><strong>CONTAINS</strong></td>
 <td style="width: 80%; height: 46px;">
-<p>SCHEMA contained in DATA_PLATFORM</p>
+<p>SCHEMA contains DATA_PLATFORM</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>DATASET contained in SCHEMA</p>
+<p>DATASET contains SCHEMA</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>CLASS contained in DATASET</p>
+<p>CLASS contains DATASET</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>FIELD contained in CLASS</p>
+<p>FIELD contains CLASS</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -103,8 +103,6 @@ The following 2 tables describe the **node and relation types**, and how they ar
 </tr>
 </tbody>
 </table>
-
-The relation direction is many-to-one.
 
 
 

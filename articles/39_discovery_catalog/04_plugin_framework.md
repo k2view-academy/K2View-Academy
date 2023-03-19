@@ -6,9 +6,9 @@
 
 The Plugin Framework is an internal platform for running the plugins. Each plugin is a piece of business logic that executes predefined rules in order to complement the Discovery Schema. 
 
-The Plugin Framework runs over the Discovery Schema, created by the Crawler, and executes the plugins. A result of the plugin execution can be the creation (or removal) of various Catalog elements or properties. Each plugin calculates a score - a probability that the outcome is correct. The score is calculated per each new element or property and is augmented to the Discovery Schema.
+The Plugin Framework runs over the Discovery Schema, created by the Crawler, and executes the plugins. A result of the plugin execution can be the creation (or removal) of various Catalog elements or properties. Each plugin calculates a score - a probability that the outcome is correct. The score is calculated per each new element or property and added to the Discovery Schema.
 
-The Data Discovery solution includes a constantly growing list of built-in plugins. The list of plugins and their execution order is defined by the Plugins Pipeline configuration file, which also determines a threshold per each plugin. The threshold is the minimum score required for adding the plugin results to the Catalog. For example, if the plugin found a match with a score of 0.3 while the plugin's threshold is set to 0.7, the plugin results will be dropped and will not be added to the Catalog. 
+The Data Discovery solution includes a constantly growing list of built-in plugins. The list of plugins and their execution order is defined by the Plugins Pipeline configuration file, which also sets a threshold per each plugin. The threshold is the minimum score required for adding the plugin results to the Catalog. For example, if the plugin found a match with a score of 0.3 while the plugin's threshold is set to 0.7, the plugin results will be dropped and will not be added to the Catalog. 
 
 The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, these custom plugins need to be added to the Plugins Pipeline configuration file.
 
@@ -19,7 +19,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 * The purpose of the Data Profiling is to classify the source fields based on their data. Among other goals, the profiling helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 * The plugin runs on a data snapshot, extracted by the Crawler from the data source, and executes the profiling rules. The rules are defined in a built-in **data_profiling** MTable. 
 * If the field's data match a rule, a **Classification** property is added to the field's properties with a value such as **email**, **gender**, or **credit card**. If a match is found for more than one rule, only one property is created (the one with the higher score).
-* If this classification type is defined as PII in the data_profiling MTable, PII properties is set to true in the field's properties. 
+* If this classification type is defined as PII in the data_profiling MTable, the PII property is set to true in the field's properties. 
 
 **Matching by Field Name**
 

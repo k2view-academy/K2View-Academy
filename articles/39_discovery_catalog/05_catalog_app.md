@@ -14,7 +14,7 @@ The Catalog window includes the following parts, described in this article:
 
 The Data Catalog's main area enables navigation between the Catalog levels, by expanding and collapsing various elements.
 
-The initial view displays the Data Platform elements - data source interfaces defined in the Fabric project, for which the Discovery process has been executed via the Web Studio.
+The initial view displays the Data Platform elements (data source interfaces defined in the Fabric project), for which the Discovery process has been executed via the Web Studio.
 
 In case the Discovery process hasn't been executed on any project interface, the catalog would be empty. 
 
@@ -40,9 +40,9 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 ### Properties Tab
 
-The Properties Tab displays more information about the selected Catalog element. The tab shows the element name, type (e.g. FIELD), origin (e.g. Crawler) and a list of properties specific per element type. 
+The Properties Tab displays more information about the selected Catalog element. The tab shows the element name, type (e.g. FIELD), origin (e.g. Crawler) and a list of properties generated per each element type. Some of the properties are created by the Crawler and some are created by plugins. 
 
-Some of the properties are created by the Crawler and some are created by plugins. Clicking on a property opens a Property Details pop-up that provides more details on the selected property.
+Clicking on a property opens a Property Details pop-up that provides more details on the selected property.
 
 
 
