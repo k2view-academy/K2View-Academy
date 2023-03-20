@@ -13,7 +13,7 @@ The differences between the versions are indicated using colors:
 * New elements or relations are colored in green.
 * Removed elements or relations are colored in red.
 * When a property's value is updated, it is displayed twice – the removed value in red and the new value in green.
-* In the versioning view, all the unchanged relations are colored in black (unlike the regular view where the links are colors in orange).
+* In the versioning view, all the unchanged relations are colored in black (unlike the regular view where the links are colored in orange).
 
 
 
