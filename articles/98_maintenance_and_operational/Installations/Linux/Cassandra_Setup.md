@@ -22,7 +22,7 @@ The script should be run separately on each node, in the order of designated nod
 
 1. Log in to the previously created user that was designated to the Cassandra installation.
 
-2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/dMH2PWuIErPFszK)).
+2. Download the latest Cassandra package (located [here](https://download.k2view.com/index.php/s/tkf2P1724iBogIj)).
 
 2. Log in to the Linux server as the 'Cassandra' user and copy the package to the home directory.
 
@@ -61,7 +61,7 @@ The number of seed nodes should match the chosen replication factor number.
     > In case you have no additional nodes, run the command on one of the existing seeds node to finalize configuration.
 
     ~~~bash
-    /opt/apps/cassandra/cassandra-setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --  cassandra_replication_factor 3
+    /opt/apps/cassandra/cassandra-setup.sh --cassandra_seeds 10.0.0.1,10.0.0.2,10.0.0.3 --cassandra_user k2admin --cassandra_password changeit --cassandra_replication_factor 3
     ~~~
 
 #### Single Node Setup
