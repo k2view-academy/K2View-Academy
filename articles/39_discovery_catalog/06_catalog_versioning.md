@@ -6,7 +6,7 @@ The purpose of the Catalog versioning is to provide the tools to identify change
 
 A new version is created in the *neo4j* Graph DB when the Discovery process is executed and changes from the previous version are found.
 
-Then, by using the Data Catalog application, the user can select a version to compare with the latest version. 
+Then, by using the Data Catalog application, the user can click the <img src="images/compare.png" style="zoom:80%;" /> icon to select a version to compare with the latest version. 
 
 The differences between the versions are indicated using colors:
 
