@@ -28,4 +28,5 @@ echo "COPY system_auth.roles FROM '$K2_HOME/system_auth.roles.csv' WITH HEADER =
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/02a_fabric_credentials_list_commands.md)](03_fabric_credentials_backup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_fields_level_authorization.md)
+[![Previous](/articles/images/Previous.png)](02a_fabric_credentials_list_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_fields_level_authorization.md)
+
