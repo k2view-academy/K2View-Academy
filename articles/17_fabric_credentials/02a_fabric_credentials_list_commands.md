@@ -93,4 +93,4 @@ The following table describes the methods to see the access control information 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/02_fabric_credentials_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/03_fabric_credentials_backup.md)
+[![Previous](/articles/images/Previous.png)](02_fabric_credentials_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_fabric_credentials_backup.md)
