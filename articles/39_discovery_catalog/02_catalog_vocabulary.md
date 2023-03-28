@@ -90,19 +90,17 @@ The following 2 tables describe the **node and relation types**, and how they ar
 </td>
 </tr>
 <tr style="height: 46px;">
-<td style="width: 20%; height: 142px;" rowspan="2"><strong>REFERS TO</strong></td>
-<td style="width: 80%; height: 46px;">
-<p>(FIELD in) CLASS refers to (FIELD in) CLASS</p>
-</td>
-</tr>
-<tr style="height: 96px;">
+<td style="width: 20%; height: 142px;"><strong>REFERS TO</strong></td>
 <td style="width: 80%; height: 96px;">
+<p>CLASS refers to CLASS</p>
 <p>Example: <em>INVOICE refers to CUSTOMER</em></p>
-<p>The PK / FK column names are included in the relation's properties</p>
+<p>The direction is Many To One. </p>
+<p>The PK / FK column names are included in the relation's properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
