@@ -1,6 +1,6 @@
 <!--block-->
 
-<img src="images/broadway_7_look.PNG" style="zoom:80%;" />
+<img src="images/broadway_7_look.png" style="zoom:80%;" />
 
 ### Fabric 7.0 Broadway Enhancements
 
@@ -8,7 +8,7 @@ Broadway UI has undergone a major facelift, introducing a new up-to-date colorin
 
 In addition, several new exciting features and actors have been added. 
 
-[Read more >](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.0.pdf.html)
+[Click to read more details in the Fabric_Release_Notes_V7.0.0]((https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.0.pdf.html)).
 
 <!--block-->
 
@@ -20,7 +20,7 @@ The purpose of a Sync On Demand mode is to reduce the time spent by Fabric perfo
 
 In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables. The sync follows the standard Sync mechanism rules that are based on a LU predefined sync method and sync mode.
 
-[Read more >](https://support.k2view.com/Academy/articles/14_sync_LU_instance/02_sync_modes.html)
+[Click to read more details.](https://support.k2view.com/Academy/articles/14_sync_LU_instance/02_sync_modes.html)
 
 <!--block-->
 
