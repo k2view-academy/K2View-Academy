@@ -6,5 +6,5 @@ Broadway UI has undergone a major facelift, introducing a new up-to-date colorin
 
 In addition, several new exciting features and actors have been added. 
 
-[Click to read more details in the Fabric_Release_Notes_V7.0.0]((https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.0.pdf.html)).
+[Click to read more details in the Fabric_Release_Notes_V7.0.0](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.0/Fabric_Release_Notes_V7.0.0.pdf.html).
 
