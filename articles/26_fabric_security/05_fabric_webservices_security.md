@@ -172,7 +172,7 @@ There are two options to generate an API key: either via the Web Framework Admin
 
   ```text
   create token 'Secured1' SECURED;
-
+  
   |Secretkey                           |
   +------------------------------------+
   |c55a86d1-9de6-4aaa-bf9e-cedf1391c95b|
@@ -197,5 +197,5 @@ Read this [article](/articles/17_fabric_credentials/01_fabric_credentials_overvi
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04_fabric_interfaces_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/06_data_masking.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04a_secret_manager.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/06_data_masking.md)
 
