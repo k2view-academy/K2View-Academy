@@ -56,7 +56,7 @@ After a short while, the following message will be displayed:
 
 3. Repeat and implement steps 1 & 2 on the rest of the nodes.
 
->Note, Default login details are **User**: admin and **Password**: admin, to change from the default, see [here]("/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md") - *Replace the Fabric Default Admin Password*.
+> **Note**: Default login details are **User**: admin and **Password**: admin, to change from the default, see [here]("/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md") - *Replace the Fabric Default Admin Password*.
 
 ### Fabric server - Start, Shutdown and Status
 
