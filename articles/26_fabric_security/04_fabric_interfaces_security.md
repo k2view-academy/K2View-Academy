@@ -15,7 +15,7 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 1. **Assigned Environment with a keystore** (Protection Key) - this is the most recommended and secured method, where:
 
    * encryption is done using Fabric's powerful [Key Management](/articles//26_fabric_security/02_fabric_entities_design.md#key-management) mechanism.
-   * encryption is done using each environment's master key. This means that on runtime, an environment, upon all its interface secrets, can be used only on Fabric that this environment is associated to. For example, Fabric in a UAT environment will not be able to access Production interfaces.
+   * encryption is done using each environment's master key. This means that at runtime, an environment, upon all its interface secrets, can be used only on Fabric that this environment is associated to. For example, Fabric in a UAT environment will not be able to access Production interfaces.
    * the master key itself is protected by a keystore.
 
    >  To use this option, you need to populate the "Fabric URL" field, as describe [here](/articles/25_environments/02_create_new_environment.md).
