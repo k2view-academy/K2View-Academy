@@ -8,11 +8,11 @@ JMX statistics is presented as a single web page that displays each of the relev
 
 To access the Admin panel, click the **Globe** icon on the top left corner of the **Fabric Studio**. 
 
-<img src="images/JMX-pic2.png">
+<img src="images/JMX-pic2.png" style="zoom:80%;" >
 
 Enter your Admin credentials in the Admin panel home page and then click **Statistics** in the left panel.
 
-<img src="images/JMX-pic1.PNG">
+<img src="images/JMX-pic1.PNG" style="zoom:80%;" >
 
 The following statistics sections can be viewed:
 

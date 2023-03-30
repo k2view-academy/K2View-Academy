@@ -8,7 +8,7 @@ When first opened, the Data Editor displays the list of **Schemas** in a table t
 
 The following is an example of a list of project's Schemas:
 
-###### <img src="images/30_dataeditor_01.png" alt="Data Explorer Catalog" style="zoom:67%;" />
+###### <img src="images/30_dataeditor_01.png" alt="Data Explorer Catalog"  />
 
 To refresh the table list, click <img src="images/30_dataeditor_refresh_icon.png" alt="refresh" style="zoom:80%;" /> **Refresh** in the top action bar.
 
