@@ -441,6 +441,24 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
   - Keyword field:
     - search lutype=CUSTOMER_ES tables=CUSTOMER '{"query": {"bool": {"should": [{"bool": {"must_not": {"exists": {"field": "CITY"}}}}, {"match": {"CITY": {"query": "JERUSALEM", "fuzziness": "2"}}}]}}}';
 
+### 19. Support Exclude Columns from the Result
+
+* #### Examples
+
+  This syntax is for excluding some of the columns from the search result set.
+
+* #### Search Index Type
+
+  N/A
+
+* #### Search Method
+
+  N/A
+
+* #### Search Examples
+
+​		search lutype=CUSTOMER_ES tables=CUSTOMER  ‘{“_source”:false, “fields”:[“A”,”B”], “query”:{}}’;
+
 
 
 
