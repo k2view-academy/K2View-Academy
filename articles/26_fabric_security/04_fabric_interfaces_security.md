@@ -2,7 +2,7 @@
 
 Fabric enables communication to external systems, such to source and target data, via [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that define connection definitions.
 
-The secrets, like passwords, that are part of the interfaces definitions, are stored securely, either in Fabric, where secrets are encrypted, or in an external secret manager service that Fabric integrates with.
+The secrets, like passwords, that are part of the interfaces definitions, are stored securely, either in Fabric, where secrets are encrypted, or in an external Secret Manager service that Fabric integrates with.
 
 <studio>
 
@@ -10,7 +10,7 @@ The secrets, like passwords, that are part of the interfaces definitions, are st
 
 Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the connection details of the interfaces.
 
-When environment secrets are stored at Fabric, it enables users to define and apply strong, stronger and strongest levels of encryption on environment interfaces.
+When environment secrets are stored in Fabric, it enables users to define and apply strong, stronger and strongest levels of encryption on environment interfaces.
 
 1. **Assigned Environment with keystore** (Protection Key) - This is the most recommended and secured method, where:
 
