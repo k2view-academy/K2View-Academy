@@ -10,7 +10,7 @@ The secrets, like passwords, that are a part of the interfaces definitions, are 
 
 Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the connection details of the interfaces.
 
-When environment secrets are stored in Fabric, it enables users to define and apply strong, stronger and strongest levels of encryption on environment interfaces.
+When environment secrets are stored in Fabric, it enables users to define and apply strong, stronger and strongest encryption levels on environment interfaces.
 
 1. **Assigned Environment with keystore** (Protection Key) - This is the most recommended and secured method, where:
 
