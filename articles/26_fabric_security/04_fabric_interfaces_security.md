@@ -1,6 +1,6 @@
 # **Fabric Environments & Interfaces Security** 
 
-Fabric enables communication to external systems, such to source and target data, via [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md"), which define connection definitions.
+Fabric enables communication to external systems, such to source and target data, via [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that define connection definitions.
 
 The secrets, like passwords, that are part of the interfaces definitions, are stored securely, either in Fabric, where secrets are encrypted, or in an external secret manager service that Fabric integrates with.
 
