@@ -45,7 +45,7 @@ Base interfaces, those that are not a part of the environments, are used either 
 
 <web>
 
-Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the connection details of the interfaces. Securing environment's interface secrets are done similar to base interfaces.
+Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the connection details of the interfaces. Securing an environment's interface secrets is done similar to base interfaces.
 
 </web>
 
