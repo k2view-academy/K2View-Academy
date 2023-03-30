@@ -39,7 +39,7 @@ When environment secrets are stored in Fabric, it enables users to define and ap
 
 ## Securing Interfaces Settings
 
-Base interfaces, those that are not a part of the environments, are used either for development environments or by customers that do not have multiple source environments. The secrets, like passwords, for this interface is encrypted and saved in the [XML file](/articles/25_environments/04_offline_deployment.md#xml-file-example) used to stage the project's deployment onto the server. 
+Base interfaces, those that are not a part of the environments, are used either for development environments or by customers that do not have multiple-source environments. The secrets, like passwords, for this interface is encrypted and saved in the [XML file](/articles/25_environments/04_offline_deployment.md#xml-file-example) used to stage the project's deployment onto the server. 
 
 </studio>
 
