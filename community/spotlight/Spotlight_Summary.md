@@ -8,9 +8,7 @@ Broadway UI has undergone a major facelift, introducing a new up-to-date colorin
 
 In addition, several new exciting features and actors have been added, such as:
 
-* Custom editors (plugins) for defining the actor’s input arguments. 
 * Search enhancement, to allow searching any object in a flow. 
-* Copy schema elements and paste it in another actor’s input or output schema.
 
 [Read more >](20230329_fabric_7_broadway.md)
 
@@ -20,7 +18,9 @@ In addition, several new exciting features and actors have been added, such as:
 
 ### Sync On Demand
 
-The purpose of a Sync On Demand mode is to reduce the time spent by Fabric performing the LUI sync by synchronizing only the relevant data. In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables. 
+The purpose of a Sync On Demand mode is to reduce the time spent by Fabric performing the LUI sync by synchronizing only the relevant data. 
+
+In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables. 
 
 [Read more >](20230329_sync_on_demand.md)
 
