@@ -54,6 +54,6 @@ Fabric enables you to define several source [environments](/articles/25_environm
 ## Securing File Systems Settings
 
 Fabric enables connection to SFTP servers hosting files.
-When an SFTP connection is needed to pull or push files, SSH keys exchange-based authentication can be used, in which case the password in the SFTP interface must be left blank.  
+When an SFTP connection is needed to pull or push files, SSH keys exchange-based authentication can be used, in which case the password in the SFTP interface should be left blank.  
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/04a_secret_manager.md)
