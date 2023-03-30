@@ -12,7 +12,7 @@ Fabric enables you to define several source [environments](/articles/25_environm
 
 When environment secrets are stored in Fabric, it enables users to define and apply strong, stronger and strongest encryption levels on environment interfaces.
 
-1. **Assigned Environment with keystore** (Protection Key) - This is the most recommended and secured method, where:
+1. **Assigned Environment with a keystore** (Protection Key) - This is the most recommended and secured method, where:
 
    * Encryption is done using Fabric's powerful [Key Management](/articles//26_fabric_security/02_fabric_entities_design.md#key-management) mechanism.
    * Encryption is done using each environment master key. This means that on runtime, an environment, with all its interfaces secrets, can be used only at the Fabric that this environment associated to. For example, Fabric at UAT will not able to access Production interfaces.
@@ -20,7 +20,7 @@ When environment secrets are stored in Fabric, it enables users to define and ap
 
    >  To use this option, you need to populate the "Fabric URL" field, as describe [here](/articles/25_environments/02_create_new_environment.md).
 
-2. **Assigned Environment without keystore** - This option is similar to the previous #1 method, where master key is set without keystore protection.
+2. **Assigned Environment without a keystore** - This option is similar to the previous #1 method, where master key is set without keystore protection.
 
 3. **Unassigned Environment** - This option does encrypt the interfaces secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
 
