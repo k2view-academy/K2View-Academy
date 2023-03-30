@@ -20,7 +20,7 @@ When environment secrets are stored in Fabric, it enables users to define and ap
 
    >  To use this option, you need to populate the "Fabric URL" field, as describe [here](/articles/25_environments/02_create_new_environment.md).
 
-2. **Assigned Environment without a keystore** - this option is similar to the previous #1 method, where master key is set without keystore protection.
+2. **Assigned Environment without a keystore** - this option is similar to the previous #1 method, where the master key is set without a keystore protection.
 
 3. **Unassigned Environment** - this option does encrypt the interfaces secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
 
