@@ -39,7 +39,7 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 
 ## Securing Interfaces Settings
 
-The base interfaces, that are not a part of environments, are used for development. Their secrets are encrypted by the base level of encryption.
+The base interfaces, that are not part of environments, are used for development. Their secrets are encrypted by the base level of encryption.
 
 </studio>
 
