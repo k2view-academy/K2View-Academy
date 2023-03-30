@@ -22,7 +22,7 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 
 2. **Assigned Environment without a keystore** - this option is similar to the previous #1 method, where the master key is set without a keystore protection.
 
-3. **Unassigned Environment** - this option does encrypt the interfaces secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
+3. **Unassigned Environment** - this option does not encrypt the interface secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
 
    The secrets encryption is done by using a code-based mechanism and thus can be used among all Fabric environments. 
 
@@ -30,7 +30,7 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 
 > Notes:
 >
-> * When changing the passwords of an interface in an environment, then on save Fabric re-encrypts the passwords.
+> * When changing the passwords of an interface in an environment, Fabric re-encrypts the passwords.
 > * When master key was rotated at an environment, you can use the "Re-Key" button, appears aside the environment. When activated, the passwords of all interfaces are re-encrypted using the most the latest master key. This is relevant to methods #1 and #2, where environment's Fabric master key is being used for encryption.
 
    <img src="images/06_fabric_envEncryption.PNG">
