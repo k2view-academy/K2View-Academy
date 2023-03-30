@@ -24,7 +24,7 @@ When environment secrets are stored in Fabric, it enables users to define and ap
 
 3. **Unassigned Environment** - this option does encrypt the interfaces secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
 
-   The secrets encryption is done by using a code based mechanism and thus can be used among all Fabric environments. 
+   The secrets encryption is done by using a code-based mechanism and thus can be used among all Fabric environments. 
 
 
 
