@@ -31,7 +31,7 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 > Notes:
 >
 > * When changing the passwords of an interface in an environment, Fabric re-encrypts the passwords.
-> * When master key was rotated at an environment, you can use the "Re-Key" button, appears aside the environment. When activated, the passwords of all interfaces are re-encrypted using the most the latest master key. This is relevant to methods #1 and #2, where environment's Fabric master key is being used for encryption.
+> * If the master key is rotated at an environment, you can use the "Re-Key" button. When activated, the passwords of all interfaces are re-encrypted by the latest master key. This is relevant to methods #1 and #2, where the environment's Fabric master key is being used for encryption.
 
    <img src="images/06_fabric_envEncryption.PNG">
 
