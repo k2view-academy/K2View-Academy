@@ -20,10 +20,31 @@ An MTable can be used when a flow, a Java function or a Web Service needs to loo
 
 * In a flow, you can use one of the provided Actors. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
 * In a Java code, various methods are exposed, enabling the use of MTables in Web Services, LU functions, etc. More information can be found in Fabric's online Javadoc, under *Common Java Utilities > MTable*.
+* In a Graphit file, you can use the same methods as those exposed in a Java code - via a *function* node.
 
 Each MTable is accessible from any LU, regardless of its CSV source file location in the Project.
 
 The data lookup can be performed by one or several MTable keys. The search index is created on-the-fly during the first select, based on the search keys. 
+
+**Example - Using an MTable from Graphit**
+
+Once an MTable is created or uploaded to the project, it can be invoked by Graphit via a function node and the methods exposed by Common Java Utilities. 
+
+For example, the below syntax returns the first matching MTable row:
+
+~~~javascript
+mtable('<mtable_name>').mapByKey({'<key>':'<value>'})
+~~~
+
+![](images/06_example_1.png)
+
+The below syntax returns the value of a specific MTable column:
+
+~~~javascript
+mtable('<mtable_name>').mapByKey({'<key>':'<value>'})['result']
+~~~
+
+![](images/06_example_2.png)
 
 ### Recommendations For MTables Storage Settings
 
