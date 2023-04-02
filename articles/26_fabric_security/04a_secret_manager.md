@@ -41,9 +41,9 @@ In order to use a Secrets Manager:
 
 ### Config.ini file
 
-Each of the supported secret managers has its own dedicated section at config.ini file, with all required access and permissions details.
+Each of the supported Secrets Managers has its own dedicated section at config.ini file, with all required access and permissions details.
 
-In addition of populating these details you shall turn it on by set `ENABLED` property to be `true`.
+In addition of populating these details, you shall turn it on by setting the 'ENABLED' property to be 'true'.
 
 ##### AWS Secret Manager
 
