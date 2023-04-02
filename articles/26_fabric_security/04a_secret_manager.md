@@ -1,6 +1,6 @@
 # **Secret Managers Integration** 
 
-Fabric supports integration with Secret Manager services, so that secrets - like passwords, used in [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that enabling communication to external systems - will not be stored on Fabric itself. (For information of how can secrets be securely stored on Fabric - read [here](/articles/26_fabric_security/04_fabric_interfaces_security.md))
+Fabric supports integration with Secret Manager services, so that secrets - like passwords, used in [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that enable communication to external systems - will not be stored on Fabric itself. (For information of how can secrets be securely stored on Fabric - read [here](/articles/26_fabric_security/04_fabric_interfaces_security.md))
 
 Secret Manager services are tools aimed for securely storing, managing, accessing and auditing sensitive information such as passwords, API keys, and other credentials, across the organization. Features of Secret Manager services include encryption, access controls, auditing, and automatic rotation of secrets.
 
