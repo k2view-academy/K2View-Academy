@@ -9,7 +9,7 @@ Such a service has several advantages:
 - Reducing the risk of secret leaks when providing the secret for each client application.
 - Having a single source of truth, which can be better controlled and changed or rotated, manually or automatically.
 - Managing access to secrets with fine-grained policies.
-- Detecting security breaches and attempted access to systems, via audit logs and alerts, providing detailed history of client interactions, which can be also used for guiding policy enforcement.
+- Detecting security breaches and attempted access to systems, via audit logs and alerts, providing detailed history of client interactions, which can also be used for guiding policy enforcement.
 
 Fabric supports integration with various external secret manager service providers, whereby in this case Fabric doesn't stores secrets but instead it stores only the secrets reference IDs. 
 
