@@ -82,13 +82,13 @@ section name: [encryption_azure_sm]
 - PASSWORD
 - RESOURCE_ID
 - USE_MANAGED_IDENTITY_AUTH
-- ENDPOINT_TEMPLATE - by default it is https://{key_vault_name}.vault.azure.net, so otherwise it is different, this property is optional and Fabric uses this default, according to thr key vault name.
+- ENDPOINT_TEMPLATE - by default it is https://{key_vault_name}.vault.azure.net, so otherwise it is different, this property is optional and Fabric uses this default, according to the key vault name.
 
 
 
 ### Interface Connection Details Settings
 
- To sign an interface connection details property to be taken from the secret manager, you shall use this pattern in its value:
+To sign an interface connection details property to be taken from the Secrets Manager, you shall use this pattern in its value:
 
 ${secretmanager:\<id-at-seceret-manager\>}
 For example: ${secretmanager:mysql.password}
