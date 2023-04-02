@@ -13,7 +13,7 @@ Such a service has several advantages:
 
 Fabric supports integration with various external Secret Manager service providers, whereby in this case Fabric doesn't store secrets but instead it stores only the secrets reference IDs. 
 
-Supported secret manager providers are: 
+Supported Secret Management providers are: 
 
 - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/)
 - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
