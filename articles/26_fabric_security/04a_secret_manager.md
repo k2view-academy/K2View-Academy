@@ -34,7 +34,7 @@ Supported Secret Management providers are:
 
 ## Using Secret Manager Service
 
-To enable a secret manager's usage the following  shall be done:
+To enable the use of a secret manager, the following should be done:
 
 1. Set the configuration at config.ini file with the selected secret manager access and permissions details
 2. Provision and sign the required interface connection details as those that shall be taken from the secret manager, as part of the project's implementation settings.
