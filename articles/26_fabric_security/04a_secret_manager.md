@@ -6,7 +6,7 @@ Secret Manager services are tools aimed for securely storing, managing, accessin
 
 Such a service has several advantages: 
 
-- Reducing the risk of secrets leaks when providing the secret for each client application.
+- Reducing the risk of secret leaks when providing the secret for each client application.
 - Having a single source of truth, which can be better controlled and changed or rotated, manually or automatically.
 - Managing access to secrets with fine-grained policies.
 - Detecting security breaches and attempted access to systems, via audit logs and alerts, providing detailed history of client interactions, which can be also used for guiding policy enforcement.
