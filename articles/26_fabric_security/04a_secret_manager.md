@@ -45,7 +45,7 @@ Each of the supported Secrets Managers has its own dedicated section at config.i
 
 In addition of populating these details, you shall turn it on by setting the 'ENABLED' property to be 'true'.
 
-##### AWS Secret Manager
+##### AWS Secrets Manager
 
 section name: [encryption_aws_sm]
 properties:
