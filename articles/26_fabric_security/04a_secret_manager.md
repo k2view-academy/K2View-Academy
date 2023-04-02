@@ -32,12 +32,12 @@ Supported Secret Management providers are:
 
 
 
-## Using Secret Manager Service
+## Using a Secret Manager Service
 
-In order to use a secret manager:
+In order to use a Secrets Manager:
 
-1. Set the configuration at config.ini file with the selected secret manager access and permissions details
-2. Provision and sign the required interface connection details as those that shall be taken from the secret manager, as part of the project's implementation settings.
+1. Set the configuration at config.ini file with the selected Secrets Manager access and permissions details.
+2. Provision and sign the required interface connection details as those that shall be taken from the Secrets Manager, as part of the project's implementation settings.
 
 ### Config.ini file
 
