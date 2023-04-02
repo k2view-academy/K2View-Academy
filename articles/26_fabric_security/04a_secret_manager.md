@@ -11,7 +11,7 @@ Such a service has several advantages:
 - Managing access to secrets with fine-grained policies.
 - Detecting security breaches and attempted access to systems, via audit logs and alerts, providing detailed history of client interactions, which can also be used for guiding policy enforcement.
 
-Fabric supports integration with various external secret manager service providers, whereby in this case Fabric doesn't stores secrets but instead it stores only the secrets reference IDs. 
+Fabric supports integration with various external Secret Manager service providers, whereby in this case Fabric doesn't store secrets but instead it stores only the secrets reference IDs. 
 
 Supported secret manager providers are: 
 
