@@ -6,9 +6,7 @@ Broadway has several Actors that allow working with [MTables](/articles/09_trans
 * **MTableRandom** Actor, for fetching a random row from an MTable. The random selection can be limited by providing an input key(s). This Actor returns one object only. The search indices are created on-the-fly during the first search.
 * **MTableLoad** Actor, for either creating a new MTable dataset or replacing an existing one in the Fabric memory. The MTable is then created on one node and must be distributed to other nodes.
 
-### How Do I Use MTable Actors?
-
-**Using MTableLookup and MTableRandom Actors**
+### How Do I Use MTableLookup and MTableRandom Actors?
 
 **MTableLookup** and **MTableRandom** Actors require an MTable name to perform the data lookup. In addition, a map of keys and their values can be passed at run-time, to limit the selection dataset. This is optional. If no keys are provided, the entire MTable dataset is returned.
 
@@ -30,11 +28,14 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_0_web.png"  />
 
-2. The MTable editor pop-up opens and displays a list of all deployed MTables and the list of keys per each MTable. Select a name from the list and mark the key(s) to be used as a lookup key(s):
+2. The MTable editor pop-up opens and displays a list of all deployed MTables and the list of keys per each MTable. Select a name from the list and mark the key(s) to be used as the lookup key(s). In addition, you can select the fields to be added to the Actor's output (on top of the **results** object).
 
-   <img src="../images/99_actors_09_1.png" style="zoom:90%;" />
+   <img src="../images/99_actors_09_1.png" style="zoom: 80%;" />
 
-3. Once selected, the keys are added to the Actor as new input arguments. When a key's link type is set to **Const**, the input becomes a list that contains this column's distinct values. You can then choose a value, rather than manually type it in. 
+3. Once selected, the keys are added to the Actor as new input arguments and the selected result fields are added to the Actor as output arguments. 
+
+   * When an Actor returns an array, the single result fields added as output arguments, will include the value of the first results array row.
+   * When a key's link type is set to **Const**, the input becomes a list that contains this column's distinct values. You can then choose a value, rather than manually type it in. 
 
    <img src="../images/99_actors_09_2.png"  />
 
@@ -44,8 +45,7 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
 </web>
 
-
-**Using MTableLoad Actor**
+### How Do I Use MTableLoad Actor?
 
 The purpose of an **MTableLoad** Actor is to dynamically create a new MTable or replace the data of an existing one in the Fabric memory. The MTable is created on one node and must be distributed to other nodes. 
 
