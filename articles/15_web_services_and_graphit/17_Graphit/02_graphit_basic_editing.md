@@ -26,6 +26,7 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 * You may use node properties to define some of the logic or the output form of a node. To learn more about *node properties* - read [here](04_graphit_node_properties.md).
 
 
+
 ## Top Toolbar Actions
 
 *  <img src="images/refraesh-icon.png"></img> Refreshing the opened testing results panel. It is enabled only when the result panel is opened.
@@ -34,6 +35,7 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 *  <img src="images/show-output-xml-icon.png"></img> Opening the XML result panel 
 *  <img src="images/show-output-csv-icon.png"></img> Opening the CSV result panel 
 *  <img src="images/profiler-icon.png"></img> Opening the Graphit Profile panel 
+*  <img src="images/search1.png"></img> Search panel
 
 
 
@@ -44,7 +46,7 @@ Use the following actions for managing nodes such as create, copy, paste, move, 
 - Click <img src="images/add_sibling.png"></img> on the left of a node, to create a new sibling node placed under the original node, on the same level. The icon appears when hovering over the node.
 - Click <img src="images/add-child.png"></img> on the left of a node, to create a new child node under the parent node. The icon appears when hovering over the node.
 - Click <img src="images/drag-icon.png" ></img> to drag a node to another location in the hierarchy. 
-- Click  <img src="images/drag-open-icon.png" > to expand a collapsed node.
+- Click  <img src="images/drag-open-icon.png" > to expand a collapsed node. When expanded, click it again to collapse node back. Using this capability lets you from one side, to have an overview of a Graphit file, if it is complex, avoid being over-helmed, and on the other side to deep dive and see the lower level nodes.
 - Click <img src="images/delete_node.png" ></img> to delete a node on the node level. The icon appears when hovering over the node.
 - Click <img src="images/copy.png" ></img> to copy a node so that it can be pasted into another location in this Graphit or to another Graphit file. The icon appears when hovering over the node.
 - Click <img src="images/cut.png"></img> to copy a node so that it can be moved into another location in this Graphit or to another Graphit file. Moving nodes within a Graphit file can be also done via drag and drop. The icon appears when hovering over the node.
@@ -58,6 +60,27 @@ Use the following actions for node editing:
 - Click <img src="images/plus-icon.png" > to add a property to the node
 - Click <img src="images/db-icon.png" > to open Query builder for a *sql* node type
 - Click <img src="images/selection.png" > to open Helper for a *get* and *Broadway* node types.
+
+
+
+## Search
+
+The Graphit editor offers a quick and efficient way to find a text within the currently opened file, including closed nodes. 
+
+To do so, you can type the keywords into the search box located at the top toolbar. Once entered, the search box expands into a search result widget, displaying all the occurrences of the searched text.
+
+* The expanded search result widget shows the entire content of the element containing the searched text, highlighted in orange color. 
+  * Showing the element allows you to understand the context of the found text, especially when the text appears multiple times within the file.
+  * In case the element containing the searched text is long, the search result widget displays ellipses before and/or after the text. 
+* Hovering over an entry in the search result widget triggers a tooltip indicating the location of the searched text in the nodes hierarchy. (for example: "CustomerDashboard > CustomerData > CustomerAddress")
+* Clicking on an entry takes you directly to its location in the file, expanding closed nodes if necessary, while highlighting the searched text. 
+  * Note that the auto-expanding feature does not mark the Graphit file as changed.
+  * Clicking and navigating to the found location will close the search result widget. If you click and focus again on the search box, the panel will reopen.
+* The search tool displays an appropriate message when no results are found for the searched text.
+
+ 	
+
+<img src="images/graphit-search.gif" >
 
 
 
