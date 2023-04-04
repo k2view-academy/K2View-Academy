@@ -9,7 +9,7 @@ In either one of the options you can transfer Graphit input parameters, while in
 
 You can easily execute and test your Graphit file by using the top toolbar actions.
 
-Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, upon executing, the result panel will inform you that they are missing.
+Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel, as explained [here](06_using_graphit_files_with_parameters.md). 
 
 Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
 
@@ -25,7 +25,7 @@ You can also examine the Graphit's performance at the **Profiler** panel, which 
 
 Graphit files that are located in the Web Service LU, can be exposed to external calls, as web service endpoint.
 
-Those files, located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
+Those files, when located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
 
 To change this settings:
 
@@ -35,7 +35,7 @@ To change this settings:
 
    <img src="images/ws_graphit_path.png"></img> 
 
-To learn more about how to externally invoke Graphit and how to transfer its input parameters - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
+To learn more about how to externally invoke Graphit, how to transfer its input parameters, and set other definitions - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
 You can use the Web services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, automatically pointing the Graphit file. To do so, at the project tree right-click the Graphit file and choose **Invoke Graphit Web Service**
 
