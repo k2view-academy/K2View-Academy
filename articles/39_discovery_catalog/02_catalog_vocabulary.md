@@ -4,7 +4,7 @@
 
 The Data Discovery solution introduces a vocabulary that describes the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
 
-The below Data Catalog vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
+The below vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
 
 The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the discovery results. 
 
