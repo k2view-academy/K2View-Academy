@@ -86,7 +86,7 @@ To do so, you can type the keywords into the search box located at the top toolb
 
 ## Testing Graphit
 
-You can easily execute and test your Graphit file by using the top tollbar actions, as explained [here](05_invoking_graphit_files.md).
+You can easily execute and test your Graphit file by using the top toolbar actions, as explained [here](05_invoking_graphit_files.md).
 
 
 
