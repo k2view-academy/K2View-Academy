@@ -69,7 +69,7 @@ The Graphit editor offers a quick and efficient way to find a text within the cu
 
 To do so, you can type the keywords into the search box located at the top toolbar. Once entered, the search box expands into a search result widget, displaying all the occurrences of the searched text.
 
-* The expanded search result widget shows the entire content of the element containing the searched text, highlighted in orange color. 
+* The expanded search result widget shows the entire content of elements containing the searched text, which is highlighted in orange. 
   * Showing the element allows you to understand the context of the found text, especially when the text appears multiple times within the file.
   * In case the element containing the searched text is long, the search result widget displays ellipses before and/or after the text. 
 * Hovering over an entry in the search result widget triggers a tooltip indicating the location of the searched text in the nodes hierarchy. (for example: "CustomerDashboard > CustomerData > CustomerAddress")
