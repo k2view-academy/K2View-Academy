@@ -19,7 +19,7 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 <img src="images\graphit_editor.png"/>
 
 * The editor manages Graphit files that are built from nodes that can be added as either a sibling or a child of any other existing node, in the main editing area.
-* Nodes can be moved or copied within a GraphIt file using Drag&Drop or Copy&Paste actions. A node can be copied and pasted between files.
+* Nodes can be moved or copied within a GraphIt file using drag-and-drop or copy-paste actions. A node can be copied and pasted between files.
 * Upon a node creation, you shall first select its node type and accordingly accomplish its logic and/or output form. The node type can be changed later during editing. To learn more about *node types* - read [here](03_graphit_node_types.md). Note:
   * Not all nodes have an output representation, as they define a logical functionality.
   * Any node that has an output representation shall be named.
