@@ -48,10 +48,10 @@ Use the following actions for managing nodes such as create, copy, paste, move, 
 - Click <img src="images/drag-icon.png" ></img> to drag a node to another location in the hierarchy. 
 - Click  <img src="images/drag-open-icon.png" > to expand a collapsed node. When expanded, click it again to collapse a node back. Using this capability lets you on the one hand, to get an overview of a Graphit file, avoiding overwhelmingness in case it is complex, and on the other hand to deep dive and view the lower-level nodes.
 - Click <img src="images/delete_node.png" ></img> to delete a node on the node level. The icon appears while hovering over the node.
-- Click <img src="images/copy.png" ></img> to copy a node so that it can be pasted into another location in this Graphit or to another Graphit file. The icon appears when hovering over the node.
-- Click <img src="images/cut.png"></img> to copy a node so that it can be moved into another location in this Graphit or to another Graphit file. Moving nodes within a Graphit file can be also done via drag and drop. The icon appears when hovering over the node.
-- Click <img src="images/paste_child.png" > to paste a previously copied/cut node as a child node. The icon appears when hovering over the node.
-- Click <img src="images/paste_sibling.png" > to paste a previously copied/cut node as a sibling node. The icon appears when hovering over the node.
+- Click <img src="images/copy.png" ></img> to copy a node so that it can be pasted into another location in this Graphit or to another Graphit file. The icon appears while hovering over the node.
+- Click <img src="images/cut.png"></img> to copy a node so that it can be moved into another location in this Graphit or to another Graphit file. Moving nodes within a Graphit file can also be done via drag and drop. The icon appears while hovering over the node.
+- Click <img src="images/paste_child.png" > to paste a previously copied/cut node as a child node. The icon appears while hovering over the node.
+- Click <img src="images/paste_sibling.png" > to paste a previously copied/cut node as a sibling node. The icon appears while hovering over the node.
 
 
 
