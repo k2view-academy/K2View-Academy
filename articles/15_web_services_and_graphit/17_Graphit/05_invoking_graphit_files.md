@@ -29,7 +29,7 @@ Those files, when located under 'Resources' folder in the project tree, are alwa
 
 To change this settings:
 
-1. Click on the <img src="images/url-icon.png"></img> icon in the top Graphit Editor toolbar.
+1. Click on the <img src="images/url-icon.png"></img> icon in the Graphit Editor's top toolbar.
 
 2. Check/uncheck the **Expose as Endpoint** checkbox. 
 
