@@ -43,8 +43,8 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 
 Use the following actions for managing nodes such as create, copy, paste, move, delete:
 
-- Click <img src="images/add_sibling.png"></img> on the left of a node, to create a new sibling node placed under the original node, on the same level. The icon appears when hovering over the node.
-- Click <img src="images/add-child.png"></img> on the left of a node, to create a new child node under the parent node. The icon appears when hovering over the node.
+- Click <img src="images/add_sibling.png"></img> on the left of a node, to create a new sibling node placed under the original node, on the same level. The icon appears while hovering over the node.
+- Click <img src="images/add-child.png"></img> on the left of a node, to create a new child node under the parent node. The icon appears while hovering over the node.
 - Click <img src="images/drag-icon.png" ></img> to drag a node to another location in the hierarchy. 
 - Click  <img src="images/drag-open-icon.png" > to expand a collapsed node. When expanded, click it again to collapse a node back. Using this capability lets you on the one hand, to get an overview of a Graphit file, avoiding overwhelmingness in case it is complex, and on the other hand to deep dive and view the lower-level nodes.
 - Click <img src="images/delete_node.png" ></img> to delete a node on the node level. The icon appears while hovering over the node.
