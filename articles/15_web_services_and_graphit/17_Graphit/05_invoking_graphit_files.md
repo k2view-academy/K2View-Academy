@@ -35,7 +35,7 @@ To change this settings:
 
    <img src="images/ws_graphit_path.png"></img> 
 
-To learn more about how to externally invoke Graphit, how to transfer its input parameters, and set other definitions - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
+To learn more about how to externally invoke Graphit, transfer its input parameters and set other definitions - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
 You can use the Web services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, automatically pointing the Graphit file. To do so, at the project tree right-click the Graphit file and choose **Invoke Graphit Web Service**
 
