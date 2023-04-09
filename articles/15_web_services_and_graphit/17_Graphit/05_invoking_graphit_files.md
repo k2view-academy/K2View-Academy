@@ -23,7 +23,7 @@ You can also examine the Graphit's performance at the **Profiler** panel, which 
 
 ## Invoke Graphit Externally
 
-Graphit files that are located in the Web Service LU, can be exposed to external calls, as web service endpoint.
+Graphit files that are located in the Web Services LU, can be exposed to external calls, as a web service endpoint.
 
 Those files, when located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
 
