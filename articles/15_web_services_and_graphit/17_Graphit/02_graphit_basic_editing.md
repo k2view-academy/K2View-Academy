@@ -35,7 +35,7 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 *  <img src="images/show-output-xml-icon.png"></img> Opening the XML result panel 
 *  <img src="images/show-output-csv-icon.png"></img> Opening the CSV result panel 
 *  <img src="images/profiler-icon.png"></img> Opening the Graphit Profile panel 
-*  <img src="images/search1.png"></img> Search panel
+*  <img src="images/search1.png"></img> Search box
 
 
 
