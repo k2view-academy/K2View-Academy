@@ -4,7 +4,7 @@ Graphit is a Fabric UI utility, which can be used to design [Project Custom-Buil
 
 A Graphit file is structured and shown in the Graphit Editor as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. While usually writing web services using code editor and developer can only imagine if the required nodes and structure are built well, Graphit Editor lets you to see and design it visually, in a well clear view.	
 
-Having the Graphit Editor as a powerful utility to build such documents, it can be used not only as a web service. For example, you can build Graphit files also at other LUs, not only at Web Services LU, and invoke them internally from other project implementation components like Java functions or Broadway. To learn more about invoking Graphit  - read [here](05_invoking_graphit_files.md).
+Having the Graphit Editor as a powerful utility to build such documents, it can be used not only as a web service. For example, you can build Graphit files in other LUs as well, not only in Web Services LU, and invoke them internally from other project implementation components like Java functions or Broadway. To learn more about invoking Graphit  - read [here](05_invoking_graphit_files.md).
 
 
 
