@@ -9,7 +9,7 @@ Having the Graphit Editor as a powerful utility to build such documents, it can 
 
 
 ## Main Features
-Using Graphit you can do the following:
+Using Graphit, you can do the following:
 - Create dynamic JSON, XML and CSV documents. 
 - Accept external input as variables. 
 - Use variables in queries.
