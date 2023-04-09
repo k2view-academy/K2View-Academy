@@ -72,7 +72,7 @@ To do so, you can type the keywords into the search box located at the top toolb
 * The expanded search result widget shows the entire content of elements containing the searched text, which is highlighted in orange. 
   * Showing the element allows you to understand the context of the found text, especially when the text appears multiple times within the file.
   * In case the element containing the searched text is long, the search result widget displays ellipses before and/or after the text. 
-* Hovering over an entry in the search result widget triggers a tooltip indicating the location of the searched text in the nodes hierarchy. (for example: "CustomerDashboard > CustomerData > CustomerAddress")
+* Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the nodes hierarchy. For example: "CustomerDashboard > CustomerData > CustomerAddress".
 * Clicking on an entry takes you directly to its location in the file, expanding closed nodes if necessary, while highlighting the searched text. 
   * Note that the auto-expanding feature does not mark the Graphit file as changed.
   * Clicking and navigating to the found location will close the search result widget. If you click and focus again on the search box, the panel will reopen.
