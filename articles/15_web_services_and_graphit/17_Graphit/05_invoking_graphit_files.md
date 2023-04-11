@@ -47,7 +47,7 @@ You can use the Web Services Testing App to easily invoke Graphit web service en
 
 
 
-> Graphit files, that are located in LUs other than the Web, are not exposed as web service and can be invoked only by Fabric implementation components.
+> Graphit files, that are located in LUs other than the Web, are not exposed as a web service and can only be invoked by Fabric implementation components.
 
 
 
