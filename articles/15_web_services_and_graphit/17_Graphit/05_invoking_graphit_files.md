@@ -11,7 +11,7 @@ You can easily execute and test your Graphit file by using the top toolbar actio
 
 Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel, as explained [here](06_using_graphit_files_with_parameters.md). 
 
-Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
+Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats, XML or CSV, by clicking their action icons in the top toolbar.
 
 You can leave this panel open and continue editing the file. Then, you can click on the refresh <img src="images/refraesh-icon.png"></img> icon at the top toolbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
 
