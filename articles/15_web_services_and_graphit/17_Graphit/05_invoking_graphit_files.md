@@ -61,7 +61,7 @@ When calling Graphit from a Java function, use the following Implementation User
 
 `graphit(<file name>, <Input parameters>)`
 
-The input parameters shall be populated by either a parameter name or by a map object. The Graphit function result is Object.
+The input parameters shall be populated by either a parameter name or a map object. The Graphit function result is Object.
 
 To learn more about how to transfer input parameters when calling Graphit from a function - read [here](06_using_graphit_files_with_parameters.md#invoking-from-a-java-function).
 
