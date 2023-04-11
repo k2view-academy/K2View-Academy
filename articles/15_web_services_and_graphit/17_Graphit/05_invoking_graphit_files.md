@@ -65,7 +65,7 @@ The input parameters shall be populated by either a parameter name or a map obje
 
 To learn more about how to transfer input parameters when calling Graphit from a function - read [here](06_using_graphit_files_with_parameters.md#invoking-from-a-java-function).
 
->  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default format, which is JSON.
+>  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default JSON format.
 
 ### Invoking From Broadway
 
