@@ -37,7 +37,7 @@ To change this settings:
 
 To learn more about how to externally invoke Graphit, transfer its input parameters and set other definitions - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
-You can use the Web Services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, automatically pointing the Graphit file. To do so, right-click the Graphit file in the project tree and choose **Invoke Graphit Web Service**.
+You can use the Web Services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, pointing automatically to the Graphit file. To do so, right-click the Graphit file in the project tree and choose **Invoke Graphit Web Service**.
 
 ![](images/47_invoking_graphit_files.png)
 
