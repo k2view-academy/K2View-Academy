@@ -29,12 +29,12 @@ Once you've created a Graphit file, you can start editing it. To learn how to cr
 
 ## Top Toolbar Actions
 
-*  <img src="images/refraesh-icon.png"></img> Refreshing the opened testing results panel. It is enabled only when the result panel is opened.
-*  <img src="images/url-icon.png"></img> Opening the URL Parameters & Properties panel. This panel shows different items by context.
-*  <img src="images/show-output-json-icon.png"></img> Opening the JSON result panel 
-*  <img src="images/show-output-xml-icon.png"></img> Opening the XML result panel 
-*  <img src="images/show-output-csv-icon.png"></img> Opening the CSV result panel 
-*  <img src="images/profiler-icon.png"></img> Opening the Graphit Profile panel 
+*  <img src="images/refraesh-icon.png"></img> Refreshes the opened testing results panel. It is enabled only when the result panel is opened.
+*  <img src="images/url-icon.png"></img> Opens the URL Parameters & Properties panel. This panel shows different items by context.
+*  <img src="images/show-output-json-icon.png"></img> Opens the JSON result panel 
+*  <img src="images/show-output-xml-icon.png"></img> Opens the XML result panel 
+*  <img src="images/show-output-csv-icon.png"></img> Opens the CSV result panel 
+*  <img src="images/profiler-icon.png"></img> Opens the Graphit Profiler panel 
 *  <img src="images/search1.png"></img> Search box
 
 
