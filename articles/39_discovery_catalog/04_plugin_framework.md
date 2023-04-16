@@ -31,7 +31,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 **Nullability Check By Field Data**
 
 * The purpose of this plugin is to check the % of null values per column, in the selected data snapshot.
-* As a result, the **Nullability Percentage** property is added to the field's properties. Its score indicates the % of null values in the column.
+* As a result, the **Nullability Percentage** property is added to the field's properties. Its value is the % of null values and the score indicates the confidence level (size of a sample).
 
 
 
