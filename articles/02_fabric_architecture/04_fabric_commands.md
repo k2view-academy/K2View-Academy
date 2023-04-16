@@ -446,7 +446,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 * **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
-  * Syntax: set db_proxy=[interface name].
+  * Syntax: ``` SET DB_PROXY [= <interface name>]```
   * Description: Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
 
   * If interface name is not specified, the command will show the current interface name.
@@ -454,16 +454,20 @@ The Fabric SET command enables updating Fabric settings on a session level.
   * To turn it off use: set db_proxy=off.
   * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
 * **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
-  * Syntax: set buffer_result_set = true.
+  * Syntax: ```SET BUFFER_RESULT_SET = true```
   * To inactivate it, set it back to false. 
   * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
+* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, to distribute the following command to the specified affinity. 
+  * Syntax: ``` SET CLUSTER_DISTRIBUTE_AFFINITY = <AFFINITY>```
+  * Use **ALL** to distribute the following command to all live nodes.
+
 
 
 #### Fabric Setting via JDBC Connection URL
 
 Fabric supports the ability to set the session variables via the Fabric Connection URL by concatenating them to the connection string using the following syntax:
 
-* jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]
+```jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]```
 
 For example:
 
