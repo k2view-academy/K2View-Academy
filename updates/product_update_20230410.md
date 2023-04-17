@@ -3,8 +3,8 @@
 Fabric 7.1 has just been released and it includes the following:
 
 * **MTable** - an object created in the Fabric memory upon the deployment, from a CSV file, to keep reference data as part of the Fabric project and to enable a **fast in-memory** data lookup at run-time.
-* **Broadway** now supports physical folders, the flows can be tagged and more. 
-* **Graphit** now has an extended search capabilities. 
+* **Broadway** now supports physical folders, the flows can be tagged and more. In addition, a whole new set of actors are provided to support the **Data Manufacturing** and **Masking**. 
+* **Graphit** now has an extended search capabilities, , including finding a text within closed nodes.
 * **Reference tables backup and restore** is now supported, per schema or ALL.
 * **Bug fixes**. 
 
