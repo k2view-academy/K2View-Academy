@@ -1,10 +1,10 @@
 <!--block-->
 
-<img src="images/devComm_300323.png" style="zoom: 70%;" />
+<img src="images/devComm_300323.png" style="zoom: 50%;" />
 
 ### K2View DevCom Meetup on March 30
 
-Join us in an interactive session to learn how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
+An interactive session how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
 
 [Read more >](webinar_20230330/20230330_Webinar_Agenda_And_Speakers.md)
 
