@@ -98,7 +98,7 @@ There are several options to develop the inner flow:
 
 **Example:**
 
-A customer has 2 activities. The data generation inner flow needs to generate 3 cases' records for each activity.
+A customer has 2 activities. The data generation inner flow needs to generate 3 case records for each activity.
 
 **Row by row** mode: the data generation inner flow is called 6 times (2*3) to generate the cases for the customer. It generates one case record on each call.
 
