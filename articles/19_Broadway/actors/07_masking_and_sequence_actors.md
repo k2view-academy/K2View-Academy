@@ -4,11 +4,11 @@ Data Management Systems like **TDM** often handle sensitive data. To be complian
 
 The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value to keep the referential integrity of the data. Starting from V7.1, Fabric separates data generation (manufacturing) of synthetic data from the hashing and caching capabilities. Broadway provides the following Actors:
 
-1. Various of data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+1. Various data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 2. **Masking**  - this Actor can wrap any data generation Actor and add the hashing and caching capabilities on the top of the data generation Actor.
 3. Broadway still keeps the existing masking Actors for backward compatibility reasons. For example, **MaskingSSN** and **MaskingCreditCard**. 
 
-Note that if data needs to be masked before it is loaded to Fabric, masking Actors can be used in Broadway population flows.
+Note that if data need to be masked before they are loaded to Fabric, masking Actors can be used in Broadway population flows.
 
 Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID: the **MaskingSequence**  and the **Sequence** Actors generate a unique sequence ID based on the provided input arguments.
 
