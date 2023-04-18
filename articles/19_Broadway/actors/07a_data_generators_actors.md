@@ -8,7 +8,7 @@ A data generator Actor can be executed by either the Broadway flow ('as is') for
 
 ### RandomRegexGenerator
 
-This Actor generates random string matching the input regular expression.
+This Actor generates a random string that matches the input regular expression.
 
 The **regex** input argument can get any regular expression.
 
@@ -20,7 +20,7 @@ The **regex** input argument can get any regular expression.
 
 ### RandomDistribution
 
-This Actor generates random values according to a given distribution. The supported distributions types are **normal**, **uniform**,  **weighted** and **constant** (return one value) .
+This Actor generates random values according to a given distribution. The supported distributions types are **normal**, **uniform**,  **weighted** and **constant** (return one value).
 
 The distribution parameters are set based on the selected distribution type:
 
