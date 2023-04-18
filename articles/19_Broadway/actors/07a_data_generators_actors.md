@@ -38,13 +38,13 @@ The distribution parameters are set based on the selected distribution type:
 
 ### RandomFromCollection
 
-This actor returns a random value from the input collection.
+This Actor returns a random value from the input collection.
 
 ### RandomCreditCard
 
 This Actor generates fake but valid credit card number based on the input **value** and **prefixLength** input arguments:
 
--  **value** - defines the credit card template. For example: 4580111122223333.  The length of this argument defines the generated credit card number length. Note that if this argument is empty, the generated credit card number has 16 digits.
+-  **value** - defines the credit card template. For example: 4580111122223333. The length of this argument defines the generated credit card number length. Note that if this argument is empty, the generated credit card number has 16 digits.
 - **prefixLength** - the length of the prefix in the input template.
 
 Example:
