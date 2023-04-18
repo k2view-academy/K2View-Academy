@@ -33,8 +33,8 @@ Common input arguments of masking Actors are:
   
    The masking Actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
   
-   - If the related session level key **is not set**, or is set to **true** - generate a new value.    
-   - Else, if the related session level key is set to **false** - return the original value.
+   - If the related session level key **is not set**, or is set to **true** - it generates a new value.    
+   - Else, if the related session level key is set to **false** - it returns the original value.
   
    Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. For example,  the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
   
