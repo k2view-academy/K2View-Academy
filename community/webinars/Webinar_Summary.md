@@ -1,8 +1,12 @@
 <!--block-->
 
-<img src="images/img13.jpg" style="zoom: 80%;" />
+<img src="images/devComm_300323.png" style="zoom: 70%;" />
 
-### Stay tuned for next Technical Meetup !
+### K2View DevCom Meetup on March 30
+
+Join us in an interactive session to learn how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
+
+[Read more >](webinar_20230330/20230330_Webinar_Agenda.md)
 
 
 <!--block-->
@@ -27,5 +31,4 @@ The third K2View Development Community Webinar took place on October 27th where 
 [Read more >](webinar_20211027/20211027_Webinar_Agenda_And_Speakers.md)
 
 <!--block-->
-
 
