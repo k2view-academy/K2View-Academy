@@ -80,7 +80,7 @@ This Actor is invoked by the **SourceDbQuery** Actor in the LU population flow. 
 - If the ROWS_GENERATOR is **false**, the SourcebQuery runs the SQL query that is set in this Actor to get the data from the source DB. 
 - If the ROWS_GENERATOR is **true**, the SourcebQuery runs the **RowsGenerator** Actor to activate the data generator flow and populate the LU table with generated synthetic data. The data generation inner flow is identified by its naming convention: [LU population flow name].generator. For example: the data generation flow of the score LU table is called score.population.generator.flow.
 
-For every parent row, the **RowsGenerator** Actor calls the data generation inner flow a random number of times according to the given distribution. 
+For every parent row, the **RowsGenerator** Actor calls the data generation inner flow a random number of times, according to the given distribution. 
 
 The following values passed to the inner flow:
 
