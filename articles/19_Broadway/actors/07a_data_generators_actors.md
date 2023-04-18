@@ -1,6 +1,6 @@
 # Data Generation Actors
 
-Fabric 7.1 onwards separates the data generation (manufacturing) from the hashing and caching capabilities. The data generation Actors can either used to generate synthetic entities or mask a sensitive data. Broadway provides various of data manufacturing Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+Starting from V7.1, Fabric separates the data generation (manufacturing) from the hashing and caching capabilities. The data generation Actors can either used to generate synthetic entities or mask a sensitive data. Broadway provides various of data manufacturing Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 
 A data generator Actor can be either executed by the Broadway flow "as is" to generate a new data, or be executed by the **Masking** Actor to cache the generated data. 
 
