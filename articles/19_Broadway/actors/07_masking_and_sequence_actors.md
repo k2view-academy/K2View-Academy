@@ -2,16 +2,17 @@
 
 Data Management Systems like **TDM** often handle sensitive data. To be compliant with Data Privacy laws, Fabric provides a **masking** category of Actors that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into the target DB.
 
-For example: 
+The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value to keep the referential integrity of the data. Fabric 7.1 onwards separates data generation (manufacturing) from the hashing and caching capabilities. Broadway provides the following Actors:
 
-* The **MaskingSSN** Actor masks the original SSN number with a valid fake SSN.
-* The **MaskingCreditCard** Actor generates a fake but valid credit card number similar to the original one.
+1. Various of data manufacturing Actors under the **data_manufacturing** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+2. **Masking**  - this Actor can wrap any data manufacturing Actor and add the hashing and caching capabilities on the top of the data manufacturing Actor.
+3. Broadway still keeps the existing masking Actors for backward compatibility reasons. For example, **MaskingSSN** and **MaskingCreditCard**. 
 
 Note that if data needs to be masked before it is loaded to Fabric, masking Actors can be used in Broadway population flows.
 
-Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID.
+Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID: the **MaskingSequence**  and the **Sequence** Actors generate a unique sequence ID based on the provided input arguments.
 
-The **MaskingSequence** Actor, which also belongs to the masking category, generates a unique sequence ID based on the provided input arguments.
+[Click for more information about the data generation Actors](07a_data_generators_actors.md).
 
 [Click for more information about TDM](/articles/TDM/tdm_overview/01_tdm_overview.md). 
 
@@ -19,21 +20,24 @@ The **MaskingSequence** Actor, which also belongs to the masking category, gener
 
 Common input arguments of masking Actors are:
 
-* **maskingId**, a unique masking identifier used to generate a target value. Populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
-* **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+* **maskingId**: a unique masking identifier used to generate a target value. Populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
+* **flowName**: the name of the flow or Actor to be execute to obtain the masked value. This parameter has been added to the **Masking** Actor to enable the execution of the data generation flow or Actor to generate the fake value.
+  
+* **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking Actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+  
   - **enable_sequences**: generate a new ID value
   - **enable_masking**: mask sensitive data
   - Any custom string value 
-
-   By default, the category is set to **enable_masking** on all masking actors except for the **MaskingSequence** actor where the category is set by default to **enable_sequences**.
-
-   The masking actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
-
+  
+   By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor where the category is set by default to **enable_sequences**.
+  
+   The masking Actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
+  
    - If the related session level key **is not set**, or is set to **true** - generate a new value.    
    - Else, if the related session level key is set to **false** - return the original value.
-
-   Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. For example,  the MaskingSequence actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
-
+  
+   Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. For example,  the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
+  
 * **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
 * **useExecutionId**, indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId**, indicates whether to use the Instance ID as part of the masking cache. 
@@ -52,11 +56,11 @@ Common input arguments of masking Actors are:
   * **MASK_NO_CACHE** - mask an empty value but don't cache it.
   * **MASK_AND_CACHE** - mask an empty value and cache it.
 
-
+ Note: the **MaskingSequence** has specific arguments. Click [here](08_sequence_implementation_guide.md#sequence-next-value) for more information.
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 
-* **sequenceInterface**, the interface where the sequence is defined with the name stored in the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
+* **sequenceInterface**, the interface where the sequence is defined with the name stored in the **sequenceId** input argument if set. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment**, define the initial value of the sequence and the value of the increment. 
 
 ### How Do I Mask Data using Masking Actors?
@@ -77,4 +81,4 @@ The following example shows how to use a **MaskingSequence** Actor to generate a
 
 
 
-[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)
+[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07a_data_generators_actors.md)
