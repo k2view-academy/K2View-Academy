@@ -98,11 +98,11 @@ There are several options to develop the inner flow:
 
 **Example:**
 
-A customer has 2 activities. The data generation inner flow needs to generate 3 case's records for each activity.
+A customer has 2 activities. The data generation inner flow needs to generate 3 cases' records for each activity.
 
-**Row by row** mode: the data generation inner flow is called 6 times (2*3) to generate the cases for the customer. It generates one case records on each call.
+**Row by row** mode: the data generation inner flow is called 6 times (2*3) to generate the cases for the customer. It generates one case record on each call.
 
-**Rows per parent** mode:  the data generation inner flow is called 2 times (there are 2 parent activities) - each call is set with a different parent activity ID and it generates 3 cases on each call.
+**Rows per parent** mode: the data generation inner flow is called 2 times (there are 2 parent activities) - each call is set with a different parent activity ID and it generates 3 cases on each call.
 
 **Handle all parents rows** mode: the data generation inner flow is called once for the customer and generates 6 case records (2*3) for the customer: 3 case records for each parent activity ID.
 
