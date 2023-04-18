@@ -6,7 +6,7 @@
 
 Join us in an interactive session to learn how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
 
-[Read more >](webinar_20230330/20230330_Webinar_Agenda.md)
+[Read more >](webinar_20230330/20230330_Webinar_Agenda_And_Speakers.md)
 
 
 <!--block-->
