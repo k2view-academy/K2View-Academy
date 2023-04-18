@@ -31,7 +31,7 @@ Common input arguments of masking Actors are:
   
    By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor where the category is set by default to **enable_sequences**.
   
-   The masking Actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
+   The masking Actor inspects the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
   
    - If the related session level key **is not set**, or is set to **true** - it generates a new value.    
    - Else, if the related session level key is set to **false** - it returns the original value.
