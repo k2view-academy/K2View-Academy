@@ -204,7 +204,7 @@ fabric>REF_SYNC_WAIT TABLES='ALL';
 |T2        |null              |                           |
 ```
 
-## Reference Tables Backup and Restore
+## Reference Tables - Backing up and Restoring
 
 Since the 7.1 release, it is possible to back up reference tables by schemas or 'ALL' (i.e., defining all schemas for a backup). This facilitates the act of either restoring a node if its reference tables data gets out of sync or syncing the reference tables data to a newly-joined node. Hence, a new ref_backup command is introduced; it is recommended to call this command from a Broadway flow to secure a reference backup according to the required frequency for the implementation. 
 
