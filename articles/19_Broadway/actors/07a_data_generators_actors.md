@@ -20,15 +20,15 @@ The **regex** input argument can get any regular expression.
 
 ### RandomDistribution
 
-This Actor generates random values according to a given distribution. The supported distribution types are **normal**, **uniform**, **weighted** and **constant** (return one value).
+This Actor generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted** and **constant** (return one value).
 
 The distribution parameters are set based on the selected distribution type:
 
-- **Normal** distribution (gaussian) works using **mean** and **stddev** (standard deviation), and can be bound by **minimum** and **maximum** values both inclusive.
+- **Normal** distribution (gaussian) works using **mean** and **stddev** (standard deviation), and can be bound by **minimum** and **maximum** values, both inclusive.
 
 - **Uniform** distribution returns a random value between the **minimum** and **maximum** values.
 
-- **Weighted** distribution returns a value from the list based on the value's weight. For example, generate 20% of the customers in Miami, 30% in LA and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry out of the total.
+- **Weighted** distribution returns a value from the list, based on the value's weight. For example, generate 20% of the customers in Miami, 30% in LA and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the total.
 
   See example:
 
