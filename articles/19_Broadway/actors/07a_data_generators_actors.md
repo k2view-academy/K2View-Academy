@@ -55,7 +55,7 @@ Example:
 
 ### RandomDecimal
 
-This Actor generates a random number in a given range. The precision of the number can be set in the **precision** input argument. Note that a random decimal can be also be generated using the RandomDistribution Actor.
+This Actor generates a random number in a given range. The precision of the number can be set in the **precision** input argument. Note that a random decimal can also be generated using the RandomDistribution Actor.
 
 ### RandomString
 
