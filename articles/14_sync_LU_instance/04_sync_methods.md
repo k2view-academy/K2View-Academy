@@ -205,7 +205,6 @@ This property is set on the [LU table population target properties](/articles/07
 Notes:
 
 - When the Truncate Before Sync is set to True on a given LU table population, it truncates the entire LU table before populating it. Such setting overrides the LU table's Delete Mode.
-- The delete activity is executed **only once** on the table even if multiple LU populations of the table are set with Truncate Before Sync = True. 
 - When the Truncate Before Sync is set to False, the delete mode it taken from the LU table. 
 
 #### 2.2. [Table Populations Based on Broadway Flows](/articles/07_table_population/14_table_population_based_Broadway.md)
