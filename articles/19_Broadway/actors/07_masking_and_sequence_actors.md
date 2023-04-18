@@ -79,6 +79,7 @@ The following example shows how to use a **MaskingSequence** Actor to generate a
 
 ![image](../images/99_actors_07_2.PNG)
 
+[Click for more information about the sequence Actors](08_sequence_implementation_guide.md).
 
 
 [![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07a_data_generators_actors.md)
