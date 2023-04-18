@@ -1,8 +1,12 @@
-<img src="../images/devComm_300323.png"  />
+<img src="../images/devComm_300323.png" style="zoom:50%;" />
 
 ## Webinar Recording 
 
-[Click to watch the Webinar.](https://www.youtube.com/watch?v=boay8b-0V9I&t=702s)
+[Click to watch the Webinar.](https://youtu.be/boay8b-0V9I)
+
+## Webinar Speaker
+
+**Hod Rotem**, Global head of innovation and sales engineering 
 
 ## Webinar Agenda
 
