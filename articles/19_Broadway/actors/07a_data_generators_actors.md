@@ -20,7 +20,7 @@ The **regex** input argument can get any regular expression.
 
 ### RandomDistribution
 
-This Actor generates random values according to a given distribution. The supported distributions types are **normal**, **uniform**,  **weighted** and **constant** (return one value).
+This Actor generates random values according to a given distribution. The supported distribution types are **normal**, **uniform**, **weighted** and **constant** (return one value).
 
 The distribution parameters are set based on the selected distribution type:
 
