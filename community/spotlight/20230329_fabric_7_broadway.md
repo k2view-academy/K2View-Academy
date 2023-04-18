@@ -8,7 +8,7 @@ In addition, several new exciting features and actors have been added, some are 
 
 #### Broadway command result structure
 
-The Broadway command now enables defining the format of the flow output by setting the new command parameter: RESULT_STRUCTURE=<ROW/COLUMN>. COLUMN is a default format. 
+The Broadway command now enables defining the format of the flow output by setting the new command parameter RESULT_STRUCTURE to either ROW or COLUMN (default). 
 
 Default is configurable via config.ini.
 
