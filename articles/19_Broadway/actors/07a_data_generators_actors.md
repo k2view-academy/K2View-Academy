@@ -92,7 +92,7 @@ The following values are passed to the inner flow:
 
 There are several options to develop the inner flow:
 
-- Row by row - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can either return multiple results that will serve as the row columns or a single result named **result** of type map. 
+- Row by row - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of type map. 
 - Rows per parent - if the inner flow returns a single result named **result** with a **collection of maps**, the actor will collect them and move to the next parent row.
 - Handle all parent rows - a flow can traverse the parent_rows and return a **collection of maps**. The actor will return these rows and will not call the inner flow again.
 
