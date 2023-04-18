@@ -82,7 +82,7 @@ This Actor is invoked by the **SourceDbQuery** Actor in the LU population flow. 
 
 For every parent row, the **RowsGenerator** Actor calls the data generation inner flow a random number of times, according to the given distribution. 
 
-The following values passed to the inner flow:
+The following values are passed to the inner flow:
 
 - total - the total number of rows for the current parent row.
 
