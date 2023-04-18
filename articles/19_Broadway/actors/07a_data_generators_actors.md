@@ -28,7 +28,7 @@ The distribution parameters are set based on the selected distribution type:
 
 - **Uniform** distribution returns a random value between the **minimum** and **maximum** values.
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. For example, generate 20% of the customers in Miami, 30% in LA and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the total.
+- **Weighted** distribution returns a value from the list, based on the value's weight. For example, generate 20% of the customers in Miami, 30% in LA and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole.
 
   See example:
 
