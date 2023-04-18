@@ -75,7 +75,7 @@ This Actor generates a random UUID.
 
 This Actor has been added to support a generation of synthetic data into the LU table and is a framework for generating random rows given a set of parent rows, a distribution and an inner flow. It relies on the inner flow to generate the actual rows data.
 
-This Actor is invoked by the **SourceDbQuery** Actor in the LU population flow. The **SourceDbQuery** checks the ROWS_GENERATOR key:  
+This Actor is invoked by the **SourceDbQuery** Actor in the LU population flow. The **SourceDbQuery** Actor checks the ROWS_GENERATOR key:  
 
 - If the ROWS_GENERATOR is **false**, the SourcebQuery runs the SQL query that is set in this Actor to get the data from the source DB. 
 - If the ROWS_GENERATOR is **true**, the SourcebQuery runs the **RowsGenerator** Actor to activate the data generator flow and populate the LU table with generated synthetic data. The data generation inner flow is identified by its naming convention: [LU population flow name].generator. For example: the data generation flow of the score LU table is called score.population.generator.flow.
