@@ -12,7 +12,7 @@ The following use cases of sequence caching are supported:
 
 * Using a sequence across several tables of the same LU. For example, Customer ID is a sequential field in the CUSTOMER LU and is populated in several LU tables such as CUSTOMER and SUBSCRIBER. 
 * Using a sequence across different LUIs within the same LU. For example, the same ADDRESS ID can be used for different customers during the same execution.
-* Using a sequence across different LU types. For example, the same CUSTOMER ID can be used in a CUSTOMER LU and a Billing LU during the same execution.
+* Using a sequence across different LU types. For example, the same CUSTOMER ID can be used in both a CUSTOMER LU and a Billing LU during the same execution.
 
 To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** or the **Masking** Actors everywhere the same sequence is used. Keep the **useEnvironment** as **true** and the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution in the same environment or set it to **false** to use the same masked value across different executions and environments.
 
