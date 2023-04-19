@@ -45,7 +45,7 @@ Common input arguments of masking Actors are:
 * **interface** - the interface to be used to cache the masked values. This interface may be either any SQL DB interface defined in Fabric or the Fabric server memory. 
   * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using either the **masking-create-cache-table.flow** example or the installation SQL script provided as part of the Masking library. 
-  * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
+  * IN-MEMORY interface is useful for testing as it can only be used in a single node configuration.
 * **verifyUnique** - determines whether different input values can be masked to the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment where the useEnvironment is set to true, and per execution id where the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique, as in a case of masking an SSN.
 
   Notes:
