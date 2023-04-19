@@ -66,9 +66,9 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 * **sequenceInterface** - the interface where the sequence is defined with the name stored in the **sequenceId** input argument, if set. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment** - define the initial value of the sequence and the value of the increment. 
 
-### How Do I Mask Data using Masking Actors?
+### How Do I Mask Data Using Masking Actors?
 
-The following example shows how to mask an Address description and ZIP Code using two masking Actors in the population flow. 
+The following example shows how to mask an Address description and a ZIP Code using 2 masking Actors in the population flow. 
 
 The same masking can be implemented in several flows of the same project. For example, if the ZIP Code is populated in several LU tables in Fabric, use the same Actor in the flows and specify the same Masking ID.
 
