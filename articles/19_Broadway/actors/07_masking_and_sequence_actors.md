@@ -20,10 +20,10 @@ Another important functionality for systems that need to frequently load data to
 
 Common input arguments of masking Actors are:
 
-* **maskingId**: a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
-* **flowName**: the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor for enabling the execution of the data generation flow or Actor for generating a fake value.
+* **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
+* **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor for enabling the execution of the data generation flow or Actor for generating a fake value.
   
-* **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking Actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+* **category** - this parameter has been added by Fabric 6.5.3 and indicates when the masking Actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
   
   - **enable_sequences**: generate a new ID value
   - **enable_masking**: mask sensitive data
@@ -38,22 +38,22 @@ Common input arguments of masking Actors are:
   
    Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to either **true** or **false** based on the TDM task's attributes. For example, the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
   
-* **useEnvironment**, indicates whether to separate the masked value per environment. When set to **true**, it generates a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
-* **useExecutionId**, indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, it generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
-* **useInstanceId**, indicates whether to use the Instance ID as part of the masking cache. 
-* **hashedInputValue**, indicates whether to store the original or the hashed input value. By default, the hashed value is stored. When set to **false**, it disables caching and stores the original value.
-* **interface**, the interface to be used to cache the masked values. This interface might be either any SQL DB interface defined in Fabric or the Fabric server memory. 
+* **useEnvironment** - indicates whether to separate the masked value per environment. When set to **true**, it generates a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
+* **useExecutionId** - indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, it generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
+* **useInstanceId** - indicates whether to use the Instance ID as part of the masking cache. 
+* **hashedInputValue** - indicates whether to store the original or the hashed input value. By default, the hashed value is stored. When set to **false**, it disables caching and stores the original value.
+* **interface** - the interface to be used to cache the masked values. This interface might be either any SQL DB interface defined in Fabric or the Fabric server memory. 
   * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
   * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
-* **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. In addition the uniqueness is checked per environment if the useEnvironment is set to true, and per execution id if the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
+* **verifyUnique** - determines whether different input values can be masked to the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. In addition the uniqueness is checked per environment if the useEnvironment is set to true, and per execution id if the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
 
   Notes:
     * Set the **useExecutionId** to **false**, **useEnvironment** to **true**, and the **verifyUnique** to **true** to get unique masked values on a given field per environment for all executions.
     * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
     * If interface is **NONE**, no uniqueness check is done.
 
-* **onEmpty**, determines what to do with the input value when it is either an empty string or NULL:
+* **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
   * **LEAVE_EMPTY** - return the input value as is.
   * **MASK_NO_CACHE** - mask an empty value but don't cache it.
@@ -63,7 +63,7 @@ Common input arguments of masking Actors are:
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 
-* **sequenceInterface**, the interface where the sequence is defined with the name stored in the **sequenceId** input argument if set. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
+* **sequenceInterface** - the interface where the sequence is defined with the name stored in the **sequenceId** input argument if set. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment**, define the initial value of the sequence and the value of the increment. 
 
 ### How Do I Mask Data using Masking Actors?
