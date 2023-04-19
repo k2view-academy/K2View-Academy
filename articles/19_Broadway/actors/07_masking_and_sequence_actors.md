@@ -25,8 +25,8 @@ Common input arguments of masking Actors are:
   
 * **category** - this parameter has been added by Fabric 6.5.3 and it indicates when the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
   
-  - **enable_sequences**: generate a new ID value
-  - **enable_masking**: mask sensitive data
+  - **enable_sequences**, which generates a new ID value
+  - **enable_masking**, which masks sensitive data
   - Any custom string value 
   
    By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor where the category is set by default to **enable_sequences**.
