@@ -96,9 +96,9 @@ The Actor's input argument type can be modified from the default type to other t
 
 To change the type, do the following:
 
-1. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor.
+1. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Set Editor** in the input field to open the editor.
 
-   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom:70%;" />
+   <img src="images/99_10_editor_5.PNG" alt="image" style="zoom: 80%;" />
 
 2. Modify the default to one of the following types as follows:
 
@@ -163,10 +163,8 @@ Broadway allows creating custom editors (plug-ins) for input argument types on a
 
    * The examples of the function implementation can be found in the **staticWeb** under any of the existing editors. 
 
-3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Advanced** in the input field to open the editor. Then modify the default to the name of your editor:
+3. In the Actor Editor, click **Add Input** to add a input argument and then click![dots](images/99_19_dots.PNG)> **Set Editor** in the input field to open the editor. Then modify the default to the name of your editor.
 
-   <img src="images/99_10_editor_6.png" alt="image" style="zoom: 70%;" />
-   
 4. If your editor receives additional inputs, add them to the definition map in the same way as for the existing editors (see the examples above). 
 
 Note that the ```Server/fabric/staticWeb/editors``` folder includes all the existing built-in editors. Thus even though you can modify the code of the built-in editor, it's not recommended to do so because your changes will be lost during the Fabric's version upgrade.  

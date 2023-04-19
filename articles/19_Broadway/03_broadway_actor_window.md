@@ -78,20 +78,13 @@ The population of the input parameter depends on the **Population Type**. The fo
 - **Const**, sets the value of the parameter. When **Const** is selected, a text area opens under the parameter to enable populating the parameter's value.
 - **External**, gets the input value as a parameter from the external process which executes the Broadway flow. When External is selected, the **External Name** field opens under the parameter.
 
-<table>
-<tbody>
-<tr>
-<td valign="top" ><img src="images/99_03_inputs_link.PNG" alt="Input Link" /></td>
-<td valign="top" ><img src="images/99_03_inputs_const.PNG" alt="Input Const" /></td>
-<td valign="top" ><img src="images/99_03_inputs_external.PNG" alt="Input External" /></td>
-</tr>
-</tbody>
-</table>
 
 The actions on the input parameters are:
 - Default value, set a default value for an input parameter (for **Link** and **External** population types). Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables inserting numbers into this parameter.
 
-- Edit Schema, click to open the popup window where you can update the parameter's type.
+- Set Schema, click to open the popup window where you can update the parameter's type.
+
+- Set [Editor](28_actor_editor.md#how-do-i-modify-the-input-argument-type), click to open the popup window where you can update Actor's input argument type (starting Fabric 7.1).
 
 - Description, click to check the parameter's description. The description cannot be updated.
 
