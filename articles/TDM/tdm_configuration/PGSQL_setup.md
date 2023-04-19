@@ -15,7 +15,7 @@ Important file locations are:
 
 ## Hardware and OS Requirements
 
-- RedHat/CentOs 8, AWS Linux 2
+- RedHat/CentOs 7 and up, AWS Linux 2
 - 2 vCPU
 - 8G RAM
 - 100G free disk space, ensure it is assigned to `/opt/apps/pgsql`
