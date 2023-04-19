@@ -70,7 +70,7 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 
 The following example shows how to mask an Address description and a ZIP Code using 2 masking Actors in the population flow. 
 
-The same masking can be implemented in several flows of the same project. For example, if the ZIP Code is populated in several LU tables in Fabric, use the same Actor in the flows and specify the same Masking ID.
+The same masking rule can be implemented in several flows of the same project. For example, if the ZIP Code is populated in several LU tables in Fabric, use the same Actor in the flows and specify the same Masking ID.
 
 ![image](../images/99_actors_07_1.PNG)
 
