@@ -46,9 +46,12 @@ Common input arguments of masking Actors are:
   * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
   * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
-* **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId**, environment and execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
-  * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
-  * If interface is **NONE**, no uniqueness check is done.
+* **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. In addition the uniqueness is checked per environment if the useEnvironment is set to true, and per execution id if the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
+
+  Notes:
+    * Set the **useExecutionId** to **false**, **useEnvironment** to **true**, and the **verifyUnique** to **true** to get unique masked values on a given field per environment for all executions.
+    * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
+    * If interface is **NONE**, no uniqueness check is done.
 
 * **onEmpty**, determines what to do with the input value when it is either an empty string or NULL:
 
