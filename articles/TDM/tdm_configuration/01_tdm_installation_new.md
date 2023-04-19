@@ -7,7 +7,7 @@ This document describes the installation guidelines and the initial configuratio
 The following components must be installed as a prerequisite:
 
 - **Fabric Server** -  Fabric 7.0 and above for TDM 7.6. see [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md)
-- **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. see [here](/PGSQL_setup.md)
+- **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. see [here](/articles/TDM/tdm_configuration/01_tdm_installation_new.md)
 
 Click here to open the [TDM 7.6 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.6.md).
 
