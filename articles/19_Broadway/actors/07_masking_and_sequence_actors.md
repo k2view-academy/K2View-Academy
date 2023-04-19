@@ -42,7 +42,7 @@ Common input arguments of masking Actors are:
 * **useExecutionId** - indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, it generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId** - indicates whether to use the Instance ID as part of the masking cache. 
 * **hashedInputValue** - indicates whether to store the original or the hashed input value. By default, the hashed value is stored. When set to **false**, it disables the caching and stores the original value.
-* **interface** - the interface to be used to cache the masked values. This interface might be either any SQL DB interface defined in Fabric or the Fabric server memory. 
+* **interface** - the interface to be used to cache the masked values. This interface may be either any SQL DB interface defined in Fabric or the Fabric server memory. 
   * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
   * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
