@@ -64,7 +64,7 @@ Common input arguments of masking Actors are:
 The below are specific input arguments for the **MaskingSequence** Actor:
 
 * **sequenceInterface** - the interface where the sequence is defined with the name stored in the **sequenceId** input argument, if set. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
-* **initialValue** and **increment**, define the initial value of the sequence and the value of the increment. 
+* **initialValue** and **increment** - define the initial value of the sequence and the value of the increment. 
 
 ### How Do I Mask Data using Masking Actors?
 
