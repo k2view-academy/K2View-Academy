@@ -59,7 +59,7 @@ Common input arguments of masking Actors are:
   * **MASK_NO_CACHE** - mask an empty value but don't cache it.
   * **MASK_AND_CACHE** - mask an empty value and cache it.
 
- Note: the **MaskingSequence** has specific arguments. Click [here](08_sequence_implementation_guide.md#sequence-next-value) for more information.
+ Note: The **MaskingSequence** has specific arguments. Click [here](08_sequence_implementation_guide.md#sequence-next-value) for more information.
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 
