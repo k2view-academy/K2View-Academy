@@ -29,7 +29,7 @@ Common input arguments of masking Actors are:
   - **enable_masking**, which masks sensitive data
   - Any custom string value 
   
-   By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor where the category is set by default to **enable_sequences**.
+   By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the category is set by default to **enable_sequences**.
   
    The masking Actor inspects the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
   
