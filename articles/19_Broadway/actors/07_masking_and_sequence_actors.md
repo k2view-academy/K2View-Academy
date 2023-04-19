@@ -20,7 +20,7 @@ Another important functionality for systems that need to frequently load data to
 
 Common input arguments of masking Actors are:
 
-* **maskingId**: a unique masking identifier used to generate a target value. Populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
+* **maskingId**: a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
 * **flowName**: the name of the flow or Actor to be execute to obtain the masked value. This parameter has been added to the **Masking** Actor to enable the execution of the data generation flow or Actor to generate the fake value.
   
 * **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking Actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
