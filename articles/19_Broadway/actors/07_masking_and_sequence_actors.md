@@ -36,7 +36,7 @@ Common input arguments of masking Actors are:
    - If the related session level key **is not set**, or is set to **true** - it generates a new value.    
    - Else, if the related session level key is set to **false** - it returns the original value.
   
-   Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to either **true** or **false** based on the TDM task's attributes. For example, the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
+   Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to either **true** or **false** based on the TDM task's attributes. For example, the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities, or else, the original ID is returned. 
   
 * **useEnvironment** - indicates whether to separate the masked value per environment. When set to **true**, it generates a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
 * **useExecutionId** - indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, it generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
