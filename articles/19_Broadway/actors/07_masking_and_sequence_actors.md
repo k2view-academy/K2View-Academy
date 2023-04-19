@@ -49,7 +49,7 @@ Common input arguments of masking Actors are:
 * **verifyUnique** - determines whether different input values can be masked to the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment where the useEnvironment is set to true, and per execution id where the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique, as in a case of masking an SSN.
 
   Notes:
-    * Set the **useExecutionId** to **false**, **useEnvironment** to **true**, and the **verifyUnique** to **true** to get unique masked values on a given field per environment for all executions.
+    * Set the **useExecutionId** to **false**, the **useEnvironment** to **true**, and the **verifyUnique** to **true** to get unique masked values on a given field per environment for all executions.
     * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
     * If interface is **NONE**, no uniqueness check is done.
 
