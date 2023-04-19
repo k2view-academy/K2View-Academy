@@ -1,4 +1,4 @@
-<strong>Data Discovery Catalog<strong>
+<strong>Fabric Catalog<strong>
 ​        
 
 <ul>
