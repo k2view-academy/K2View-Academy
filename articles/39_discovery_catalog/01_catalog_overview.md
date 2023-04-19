@@ -1,4 +1,4 @@
-# Data Discovery Overview
+# Fabric Catalog Overview
 
 <web>
 
@@ -10,12 +10,12 @@ Data Discovery is a process that can help companies to cope with the above-menti
 * Uncover and investigate hidden yet potentially useful data insights.
 * Find and flag sensitive information, enabling a better protection of it.
 
-Fabric provides a Data Discovery solution enabling an insight into the Fabric interfaces, starting with the RDBMS interface type. The solution's capabilities are:
+Fabric provides a Catalog solution enabling an insight into the Fabric interfaces, starting with the RDBMS interface type. The solution's capabilities are:
 
 * Exploring the data source's elements (schemas, objects, fields) and the links between them.
 * Profiling both the metadata and data (e.g. PII identification).
 * Establishing additional links between the data source elements - based on user-defined rules.
-* Displaying the data catalog as a tree and enabling navigatation within this tree.
+* Displaying the data catalog as a tree and enabling navigation within this tree.
 
 The solution framework includes an infrastructure that executes various types of business rules. Among these rules are establishment of links between the schema elements, data profiling and PII identification. The baseline rules are included within the framework whereas defining additional rules is allowed.
 
