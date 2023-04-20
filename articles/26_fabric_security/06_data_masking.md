@@ -77,7 +77,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 In some cases there is a business need to retrieve the original value of the masked LUI. For example, retrieve a mailing address in order to contact the customer. 
 
-There are two recommended approaches to support de-anonymization and retrieve the original value of the masked field: 
+There are 2 recommended approaches to support de-anonymization and retrieve the original value of the masked field: 
 
 - Keep the source Instance ID in Fabric and use it to retrieve the original data from the source system.
 
