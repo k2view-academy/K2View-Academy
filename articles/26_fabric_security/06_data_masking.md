@@ -54,9 +54,9 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 - The user can decide whether the masked value is unique per original value (hashed value) or if it can be used for more than one original value. For example, a masked SSN must be unique, but a masked Family Name can be the masked value of different original values. 
 
-#### Cache with Expiration date
+#### Cache with Expiration Date
 
-- Each cached link of hashed value to masked value can have a TTL (Time To Leave). This link will expire once the TTL is reached, and the original value will be masked again
+- Each cached link of hashed value to a masked value can have a TTL (Time To Leave). This link will expire once the TTL is reached, and the original value will be masked again.
 
 #### Caching Level Parameters
 
