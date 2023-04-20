@@ -44,7 +44,7 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
-* Set the sequence as part of the attributes list. An example for an attributes list can be a string that concatenates several pairs of keys and values, including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [JavaScript actor](01_javascript_actor.md) or the actors belong to the **strings** category.
+* Set the sequence as part of the attributes list. An example for an attributes list can be a string that concatenates several pairs of keys and values that include the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [JavaScript actor](01_javascript_actor.md) or the actors belong to the **strings** category.
 
 * Set the sequence value based on a condition. For example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow. The example below replaces the customer ID with a new sequence if the customer ID equals to 1. Otherwise, it maps the original customer ID: 
 
