@@ -10,7 +10,7 @@ This capability can be used to conduct tests, implement data transformations, or
 
 ## Masking Flow
 
- The masking of sensitive data can be done either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before it is saved into Fabric), or by using a Broadway flow to mask the LUI data before it is loaded to the target.
+The masking of sensitive data can be done either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before it is saved into Fabric), or by using a Broadway flow to mask the LUI data before it is loaded to the target.
 
 The following diagram describes the masking process of sensitive data using **LUI sync**:
 
