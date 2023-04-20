@@ -24,8 +24,8 @@ The sequence next value implementation method depends on the sequence definition
 * Redis or DB sequence. *Getting the next value from the DB sequence* is supported for Oracle, DB2 and PostgreSQL DBs. To implement the DB sequence, set the **sequenceId** input argument to hold the sequence name defined in the **sequenceInterface** DB. 
 
 Notes: 
-  - The **sequenceId** input is **mandatory** for the **Sequence** Actor and **optional** for the **MaskingSequence** Actor. The **MaskingSequence** Actor has both input arguments: **maskingId** and **sequenceId**.  If the input **sequenceId** is not set in the MaskingSequence Actor, the sequence name would be taken from the **maskingId** input argumenent. 
-  - In case the sequence interface is DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation).
+  - The **sequenceId** input is **mandatory** for the **Sequence** Actor and **optional** for the **MaskingSequence** Actor. The **MaskingSequence** Actor has both input arguments: **maskingId** and **sequenceId**. If the input **sequenceId** is not set in the MaskingSequence Actor, the sequence name would be taken from the **maskingId** input argumenent. 
+  - In case the sequence interface is a DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation).
 
 
 ### Sequence Initiation Method
