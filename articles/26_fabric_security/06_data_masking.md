@@ -35,7 +35,7 @@ Starting from V7.1, Fabric separates data generation (manufacturing) from the ha
 
 The masking Actors use the Fabric hashing utility to hash the original value and save the mapping of the hashed value and the masked value to the cache table.
 
-Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway Actors.
+Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use Fabric's masking Broadway Actors.
 
 Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about Fabric hashing mechanism.
 
