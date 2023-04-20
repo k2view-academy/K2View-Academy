@@ -52,7 +52,7 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 
 * When parent-child relationships exist across Logical Units, the same sequence can exist in both. The updated flow can be executed on the parent LU in order to add a child sequence. For example, if the Customer LU is a parent while the Order LU is a child. Following completion of both the Customer and Order LUs population, update the Customer LU with the sequence from the Order LU.
 
-* Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), for example for reporting purposes. 
+* Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), e.g., for reporting purposes. 
 
 * Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the [TDM7 implementation](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md). 
 
