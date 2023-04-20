@@ -29,7 +29,7 @@ The following diagram describes the masking process of sensitive data **before l
 The masking process is executed by Broadway actors that enable masking sensitive data before they are loaded into a target database or even into Fabric. The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value in order to keep the referential integrity of the data. 
 Starting from V7.1, Fabric separates data generation (manufacturing) from the hashing and caching capabilities. Broadway provides the following actors: 
 
-1. Various of data generation actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+1. Various data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 2. **Masking** actor - this actor can wrap any data generation Actor and add the hashing and caching capabilities on the top of the data generation Actor.
 3. Broadway still keeps the existing masking Actors for backward compatibility reasons.
 
