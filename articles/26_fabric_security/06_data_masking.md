@@ -56,7 +56,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 #### Cache with Expiration Date
 
-- Each cached link of hashed value to a masked value can have a TTL (Time To Leave). This link will expire once the TTL is reached, and the original value will be masked again.
+- Each cached link of hashed value to a masked value can have a TTL (Time To Leave). This link will expire once the TTL has been reached, and the original value will be masked again.
 
 #### Caching Level Parameters
 
