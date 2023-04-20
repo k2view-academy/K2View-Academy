@@ -46,7 +46,7 @@ K2view enables users to create their own masking functions:
 - The **MaskingInnerFlow** Broadway Actor can be used to call a customized Broadway flow or an Actor to mask the required field.
 - Fabric 7.1 provides the general **Masking** Actor that enables to run a customized inner flow or an Actor to mask a required field.
 
-The use of **MaskingLuFunction**, **MaskingInnerFlow**, or **Masking** actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching.  The user does not need to handle them by their customized function.
+The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching. The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
