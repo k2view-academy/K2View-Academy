@@ -598,33 +598,72 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed:
 
 ~~~
-broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN>
+broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN/CURSOR>
 ~~~
 
 Below are the types of execution parameters:
 
-* [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
+1. [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
 
-* Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Two modes exist:
-  
-  * **COLUMN** (default) –The outputs are returned as each output in a column.
-  
+2. Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Three modes exist:
+
+  * **COLUMN** (default) – The outputs are returned as each output in a column.
+
     ~~~
     |result |date         |                                                 
     |+-----+--------------+                                                 
     |15     |2022-07-19   |
     ~~~
-  
+
   * **ROW** – The Broadway flow outputs are returned as each output in a row.
-  
+
     ~~~
     |column |value       |                                                     
     |+-------+-----------+                                                   
     |result   |15        |                                                   
     |date     |2022-07-19|
     ~~~
-  
-* Recovery parameters:
+
+  * **CURSOR** – The first flow's output is treated as Iterable. Other outputs are dismissed.
+
+    Case 1: the following output:
+
+    ~~~
+    |column   |value     |
+    +---------+----------+
+    |result   |1,2,3     |
+    |date     |2022-07-19|
+    ~~~
+
+    will be transformed to:
+
+    ~~~
+    |result |
+    +-------+
+    |1      |
+    |2      |
+    |3      |
+    ~~~
+
+    Case 2: the following output:
+
+    ~~~
+    |column   |value                                                                 |
+    +---------+----------------------------------------------------------------------+
+    |result   | [{ val1: 1,val2: 2,val3: 3},{ val1: 4,val2: 5,val3: 6}               |
+    |date     | 2022-07-19                                                           |
+    ~~~
+
+    will be transformed to:
+
+    ~~~
+    |val1 |  val2  | val3
+    +-----+--------+-----
+    |1    |  2     |  3
+    |4    |  5     |  6
+    ~~~
+
+3. Recovery parameters:
 
   * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
 
@@ -634,23 +673,23 @@ Below are the types of execution parameters:
 
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
 
-* Profiler Telemetry:
+  * Example of running in a recovery mode:
+
+    ~~~
+    fabric>broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
+    ~~~
+
+4. Profiler Telemetry:
 
   * To invoke the Broadway profiler, set **profilerTelemetry** to true. This will add the profiler results to the command results, under the **profilerTelemetry** key.
 
     [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
-**Example of running in a recovery mode:**
+  * Example of running with a profiler:
 
-```
-fabric>broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
-```
-
-**Example of running with a profiler:**
-
-~~~
-fabric>broadway P2.getLUVariable luName='P2' variableName='TDM_TAR_ENV_NAME' profilerTelemetry=true;
-~~~
+    ~~~
+    fabric>broadway P2.getLUVariable luName='P2' variableName='TDM_TAR_ENV_NAME' profilerTelemetry=true;
+    ~~~
 
 ### Queries Helpers
 
