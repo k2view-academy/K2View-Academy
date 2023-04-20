@@ -69,7 +69,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 - Supports **cross instances consistency** based on the hashed values.
 - The original value is not used as an input for creating the random masked value, other than for formatting purposes.
-- **In memory** processing. The MicroDB is created with the masked values.
+- **IN-MEMORY** processing. The MicroDB is created with the masked values.
 - Uses the Fabric Masking mechanism (using **SHA-512/256** algorithm).
 - **Multiple masking options** enable maximal flexibility when masking the data.
 
