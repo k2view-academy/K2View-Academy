@@ -60,7 +60,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 #### Caching Level Parameters
 
-- The caching of the masked values can be saved on different levels based on the user’s input. Each one of the following parameters can be enabled or disabled from being part of the **Caching key**:
+- The caching of the masked values can be saved on different levels, based on the user’s input. Each one of the following parameters can be enabled or disabled from being a part of the **Caching key**:
   - Instance ID
   - Target Environment
   - Execution ID
