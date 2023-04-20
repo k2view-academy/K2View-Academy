@@ -81,7 +81,7 @@ There are 2 recommended approaches to support de-anonymization and retrieve the 
 
 - Keep the source Instance ID in Fabric and use it to retrieve the original data from the source system.
 
-- Keep the encrypted version (each Instance is encrypted separately) of the original values in *Fabric only*, in addition to the anonymized values. Limit the access to the anonymized data only. Only permitted users can access the original values.
+- Keep the encrypted version (each Instance is encrypted separately) of the original values in *Fabric only*, in addition to the anonymized values. Limit the access to the anonymized data. Only permitted users can access the original values.
 
 Click [here](/articles/26_fabric_security/03_fabric_LUI_encryption.md) for more information about the LUI encryption.
 
