@@ -65,7 +65,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
   - Target Environment
   - Execution ID
 
-## K2View Masking Advantages
+## K2view Masking Advantages
 
 - Supports **cross instances consistency** based on the hashed values.
 - The original value is not used as an input for creating the random masked value, other than for formatting purposes.
