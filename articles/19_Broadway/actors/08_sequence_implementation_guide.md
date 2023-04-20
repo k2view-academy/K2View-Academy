@@ -38,9 +38,9 @@ Sequence initiation can be performed using the **initialValue** and the **increm
 
 In Broadway, sequences can be mapped in a number of ways. The following use cases are supported:
 
-* Map the old value to the new value: send the old ID to the input value parameter of the sequence Actor. 
+* Map the old value to the new value: send the old ID to the input value parameter of the **Sequence Actor**. 
 
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty and set the **onEmpty** parameter of the sequence Actor to me MASK_NO_CACHE. The Actor generates a new sequence and returns it in its output. See an example: 
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty and set the **onEmpty** parameter of the **Sequence Actor** to me MASK_NO_CACHE. The Actor generates a new sequence and returns it in its output. See an example: 
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
