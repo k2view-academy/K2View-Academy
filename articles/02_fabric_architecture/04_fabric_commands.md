@@ -379,7 +379,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
+- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends. Fabric 7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI if exists. The TTL must be bigger than zero in order to clean the LUI from Fabric.  
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
