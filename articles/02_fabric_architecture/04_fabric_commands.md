@@ -502,7 +502,7 @@ The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logic
 
 Note that this command is used mainly in a Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
 
-##### Drop LU Syntax
+**Drop LU Syntax**
 
 ~~~
 DROP LUTYPE [LU Name];
