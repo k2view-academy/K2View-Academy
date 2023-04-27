@@ -143,6 +143,7 @@ trace ops;
 </tr>
 </tbody>
 </table>
+
 ### Create a New Trace 
 
 **Syntax:**
@@ -214,6 +215,7 @@ trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];.
 </tr>
 </tbody>
 </table>
+
 **Example**
 
 ~~~
