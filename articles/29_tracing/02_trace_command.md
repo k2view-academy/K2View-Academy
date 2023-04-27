@@ -57,7 +57,7 @@ trace ops;
 <td>info</td>
 </tr>
 <tr>
-<td>jobExecuter</td>
+<td>jobExecutor</td>
 <td>jobs</td>
 <td>info</td>
 </tr>
@@ -144,12 +144,13 @@ trace ops;
 </tbody>
 </table>
 
+
 ### Create a New Trace 
 
 **Syntax:**
 
 ```
-trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];...';
+trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[TRACE_VALUES]];...';
 ```
 
 
