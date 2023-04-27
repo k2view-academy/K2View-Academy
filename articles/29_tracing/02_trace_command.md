@@ -143,6 +143,7 @@ trace ops;
 </tr>
 </tbody>
 </table>
+
 ### Create a New Trace 
 
 **Syntax:**
