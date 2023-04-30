@@ -1,10 +1,10 @@
 <web>
 
-# E2E Data Discovery Process
+# E2E Discovery Process
 
-The K2View Data Discovery process is depicted in the below diagram and it includes the following major steps:
+The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
 
-* Define an interface for a given data source and initiate the Data Discovery job (Crawler) in the Web Studio.
+* Define an interface for a given data source and initiate the Discovery job (Crawler) in the Web Studio.
 * The Crawler scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Discovery Schema.
 * Next, a Plugin Framework is triggered automatically upon the Crawler completion. The Plugin Framework is a platform for executing predefined rules (plugins) and for enhancing the Discovery Schema accordingly. Examples of business rules are: 
   * Creating a link (relation) between 2 objects.
@@ -14,8 +14,8 @@ The K2View Data Discovery process is depicted in the below diagram and it includ
 
 * Upon the Plugin Framework execution completion, the Discovery Schema is saved into the *neo4j* Graph DB. 
 
-  * The Discovery Schema supports versioning. A new version is created when the Discovery process is executed and changes from the previous version are found.
-* Once the process is completed, the Logical Unit schema can be created based on the Data Discovery process results.
+  * The Discovery Schema supports versioning. A new version is created when the Discovery job is executed and changes from the previous version are found.
+* Once the process is completed, the Logical Unit schema can be created based on the process results.
 
 ![](images/DiscoveryE2E.png)
 
