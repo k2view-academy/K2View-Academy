@@ -22,7 +22,9 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
 1. Create a flow that encapsulates a specific business logic. For example, given two input numbers, divide a bigger number by a smaller number. 
 
+
    <img src="images/99_22_01.PNG" alt="image"  />
+
 
 2. Save the flow as a new Actor, providing a new Actor's name. For example, **CheckMaxAndDivide**.
 
