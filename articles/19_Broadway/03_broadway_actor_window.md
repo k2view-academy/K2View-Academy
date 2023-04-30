@@ -4,7 +4,7 @@
 
 The **Actor's Properties** window is displayed when adding a new Actor to a flow or when clicking an Actor object in the Flow window. The Actor window holds the following sections:
 
-<table style="width: 600px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
 <td style="width: 590.8px;" valign="top">
