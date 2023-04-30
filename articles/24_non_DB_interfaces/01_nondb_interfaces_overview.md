@@ -29,6 +29,9 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * [Redis Interface](09_redis_interface.md)
 * [SSH Interface](10_SSH_interface.md)
 * [LDAP Interface](11_LDAP_interface.md)
+* [Amazon S3 Storage Interface](12_S3_interface.md)
+* [Azure Blob Storage Interface](13_blob_interface.md)
+* [Google Cloud Storage Interface](14_gcs_interface.md)
 * Search Interface. This interface type supports cross-instance searches and is needed to enable Fabric to connect to the search engine when a Search is defined on LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
 * Data Catalog Interface. This interface type is required for enabling Fabric Data Catalog. [Click for more information about Data Catalog Interface](/articles/33_data_catalog/02a_data_catalog_interface.md).
 

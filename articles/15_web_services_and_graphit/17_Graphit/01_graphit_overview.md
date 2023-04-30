@@ -1,15 +1,15 @@
 # Graphit Overview
 
-Graphit is a Fabric UI utility, which can be used to design [Project Custom-Built Web Services](/articles/15_web_services_and_graphit/05_custom_ws.md) responses. Graphit provides a very user-friendly interface and requires minimal coding while enabling testing capabilities. 
+Graphit is a Fabric UI utility, which can be used to design [Project Custom-Built Web Services](/articles/15_web_services_and_graphit/05_custom_ws.md) responses. Graphit provides a very user-friendly interface and requires minimal coding. 
 
-A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
+A Graphit file is structured and shown in the Graphit Editor as a hierarchical representation of nodes, where each node defines an entry element in either a JSON, an XML or a CSV formatted document. While writing web services is usually done by using a code editor, where the developer can only imagine the output structure, Graphit Editor allows you to clearly view and visually design it.	
 
-Having the Graphit Editor as a powerful utility to build such documents, it has another use, other than web services. Thus, you can build Graphit files also at other LUs, not only at Web Services LU, and invoke them internally from other project implementation components like Java functions or Broadway. To learn more about invoking Graphit  - read [here](05_invoking_graphit_files.md).
+Having the Graphit Editor as a powerful utility to build such documents, it can be used not only as a web service. For example, you can build Graphit files in other LUs as well, not only in Web Services LU, and invoke them internally from other project implementation components like Java functions or Broadway. To learn more about invoking Graphit  - read [here](05_invoking_graphit_files.md).
 
 
 
 ## Main Features
-Using Graphit you can do the following:
+Using Graphit, you can do the following:
 - Create dynamic JSON, XML and CSV documents. 
 - Accept external input as variables. 
 - Use variables in queries.

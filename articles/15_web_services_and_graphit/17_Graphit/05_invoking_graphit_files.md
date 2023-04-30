@@ -9,11 +9,11 @@ In either one of the options you can transfer Graphit input parameters, while in
 
 You can easily execute and test your Graphit file by using the top toolbar actions.
 
-Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel. Otherwise, upon executing, the result panel will inform you that they are missing.
+Before testing, you shall populate the input parameters via the **Input Parameters & Properties** panel, as explained [here](06_using_graphit_files_with_parameters.md). 
 
-Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats - XML or CSV, by clicking their action icons in the top toolbar.
+Upon executing, for example clicking on the <img src="images/show-output-json-icon.png"></img> icon, a JSON **Result** panel would open, where you can see the outcome of the Graphit execution. Similarly and easily, you can examine the outcome of the file in other formats, XML or CSV, by clicking their action icons in the top toolbar.
 
-You can leave this panel open and continue editing the file. Then, you can click on the refresh <img src="images/refraesh-icon.png"></img> icon at the top toolbar to re-execute and refresh the outcome. This is very useful for debugging purposes.
+You can leave this panel open and continue editing the file. Then, you can click on the **refresh** <img src="images/refraesh-icon.png"></img> icon (top toolbar) to re-execute and refresh the outcome. This is very useful for debugging purposes.
 
 
 
@@ -23,21 +23,21 @@ You can also examine the Graphit's performance at the **Profiler** panel, which 
 
 ## Invoke Graphit Externally
 
-Graphit files that are located in the Web Service LU, can be exposed to external calls, as web service endpoint.
+Graphit files that are located in the Web Services LU, can be exposed to external calls, as a web service endpoint.
 
-Those files, located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
+Such files, when located under 'Resources' folder in the project tree, are always exposed as web services, whereas those located under 'Graphit' folder are controlled by you as to whether be exposed or not (the default is that they are exposed).
 
 To change this settings:
 
-1. Click on the <img src="images/url-icon.png"></img> icon in the top Graphit Editor toolbar.
+1. Click on the <img src="images/url-icon.png"></img> icon in the Graphit Editor's top toolbar.
 
 2. Check/uncheck the **Expose as Endpoint** checkbox. 
 
    <img src="images/ws_graphit_path.png"></img> 
 
-To learn more about how to externally invoke Graphit and how to transfer its input parameters - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
+To learn more about how to externally invoke Graphit, transfer its input parameters and set other definitions - read [here](/articles/15_web_services_and_graphit/05_custom_ws.md#invoking-custom-apis)
 
-You can use the Web services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>You can open the testing app directly from the Studio, automatically pointing the Graphit file. To do so, at the project tree right-click the Graphit file and choose **Invoke Graphit Web Service**
+You can use the Web Services Testing App to easily invoke Graphit web service endpoints, as explained [here](/articles/15_web_services_and_graphit/11_swagger.md). <studio>It is also possible to open the testing app directly from the Studio, where it points automatically to the Graphit file. To do so, right-click the Graphit file in the project tree and choose **Invoke Graphit Web Service**.
 
 ![](images/47_invoking_graphit_files.png)
 
@@ -47,7 +47,7 @@ You can use the Web services Testing App to easily invoke Graphit web service en
 
 
 
-> Graphit files, that are located in LUs other than the Web, are not exposed as web service and can be invoked only by Fabric implementation components.
+> Graphit files, that are located in LUs other than the Web, are not exposed as a web service and can only be invoked by Fabric implementation components.
 
 
 
@@ -61,11 +61,11 @@ When calling Graphit from a Java function, use the following Implementation User
 
 `graphit(<file name>, <Input parameters>)`
 
-The input parameters shall be populated by either a parameter name or by a map object. The Graphit function result is Object.
+The input parameters shall be populated by either a parameter name or a map object. The Graphit function result is an Object.
 
 To learn more about how to transfer input parameters when calling Graphit from a function - read [here](06_using_graphit_files_with_parameters.md#invoking-from-a-java-function).
 
->  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default format, which is JSON.
+>  Note: You can send "format" as one of the parameters, when you wish to get the result document in a specific format, other than the default JSON format.
 
 ### Invoking From Broadway
 
