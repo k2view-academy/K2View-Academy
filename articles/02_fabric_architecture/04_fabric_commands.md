@@ -624,7 +624,7 @@ Below are the types of execution parameters:
     |date     |2022-07-19|
     ~~~
 
-  * **CURSOR** – The first flow's output is treated as Iterable. Other outputs are dismissed.
+  * **CURSOR** – The first flow's output is transformed into a one-column table. Other outputs are being disregarded.
 
     Case 1: the following output:
 
