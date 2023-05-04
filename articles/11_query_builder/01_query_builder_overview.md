@@ -11,11 +11,11 @@ The Query Builder is an embedded visual query building component that allows you
 
 <studio>
 
-1.	[**Fabric Studio Toolbars Tab**](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) > <img src="/articles/11_query_builder/images/12_1_1%20icon.png"> **Query Builder**.
+1.	[**Fabric Studio Toolbars Tab**](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) > <img src="images/12_1_1%20icon.png"> **Query Builder**.
 2.	**Project Tree**, right-click on **DB Interface** > **Show Query Builder.**
 3.	**Fabric Studio Java Editor**, right-click on the **Editor** pane > **Open Query Builder** > **Schema**.
 
-![image](/articles/11_query_builder/images/12_1_2%20Schema.png)
+![image](images/12_1_2_ Schema.png)
 
 4.	[**Table Population**](/articles/07_table_population/01_table_population_overview.md) or **Parser Maps**, if the Source Object is a DB query, double-click on the **Source Object** or click on **Edit Query** in the [**Source Object Properties tab**](/articles/07_table_population/04_table_population_properties_tab.md#source-object---db-query-properties).
 5.	[**Logical Unit Schema window**](/articles/03_logical_units/03_LU_schema_window.md), right-click and select either **New Table from SQL Based DB Query** or **New Table From SQL Based Root Function** to [create a new LU table](/articles/06_LU_tables/02_create_an_LU_table.md) based on the SQL query. Both options open the Query Builder window to build the SQL query. The LU table and its population are automatically generated based on the SQL query defined in the Query Builder.
