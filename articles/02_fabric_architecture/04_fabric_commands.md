@@ -379,7 +379,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
+- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the set TTL ends. Fabric 7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
@@ -446,7 +446,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 * **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
-  * Syntax: set db_proxy=[interface name].
+  * Syntax: ``` SET DB_PROXY [= <interface name>]```
   * Description: Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
 
   * If interface name is not specified, the command will show the current interface name.
@@ -454,16 +454,20 @@ The Fabric SET command enables updating Fabric settings on a session level.
   * To turn it off use: set db_proxy=off.
   * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
 * **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
-  * Syntax: set buffer_result_set = true.
+  * Syntax: ```SET BUFFER_RESULT_SET = true```
   * To inactivate it, set it back to false. 
   * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
+* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, to distribute the following command to the specified affinity. 
+  * Syntax: ``` SET CLUSTER_DISTRIBUTE_AFFINITY = <AFFINITY>```
+  * Use **ALL** to distribute the following command to all live nodes.
+
 
 
 #### Fabric Setting via JDBC Connection URL
 
 Fabric supports the ability to set the session variables via the Fabric Connection URL by concatenating them to the connection string using the following syntax:
 
-* jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]
+```jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]```
 
 For example:
 
@@ -498,7 +502,7 @@ The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logic
 
 Note that this command is used mainly in a Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
 
-##### Drop LU Syntax
+**Drop LU Syntax**
 
 ~~~
 DROP LUTYPE [LU Name];
@@ -594,33 +598,72 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed:
 
 ~~~
-broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN>
+broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN/CURSOR>
 ~~~
 
 Below are the types of execution parameters:
 
-* [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
+1. [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
 
-* Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Two modes exist:
-  
-  * **COLUMN** (default) –The outputs are returned as each output in a column.
-  
+2. Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Three modes exist:
+
+  * **COLUMN** (default) – The outputs are returned as each output in a column.
+
     ~~~
     |result |date         |                                                 
     |+-----+--------------+                                                 
     |15     |2022-07-19   |
     ~~~
-  
+
   * **ROW** – The Broadway flow outputs are returned as each output in a row.
-  
+
     ~~~
     |column |value       |                                                     
     |+-------+-----------+                                                   
     |result   |15        |                                                   
     |date     |2022-07-19|
     ~~~
-  
-* Recovery parameters:
+
+  * **CURSOR** – The first flow's output is transformed into a one-column table. Other outputs are being disregarded.
+
+    Case 1: the following output:
+
+    ~~~
+    |column   |value     |
+    +---------+----------+
+    |result   |1,2,3     |
+    |date     |2022-07-19|
+    ~~~
+
+    will be transformed to:
+
+    ~~~
+    |result |
+    +-------+
+    |1      |
+    |2      |
+    |3      |
+    ~~~
+
+    Case 2: the following output:
+
+    ~~~
+    |column   |value                                                                 |
+    +---------+----------------------------------------------------------------------+
+    |result   | [{ val1: 1,val2: 2,val3: 3},{ val1: 4,val2: 5,val3: 6}               |
+    |date     | 2022-07-19                                                           |
+    ~~~
+
+    will be transformed to:
+
+    ~~~
+    |val1 |  val2  | val3
+    +-----+--------+-----
+    |1    |  2     |  3
+    |4    |  5     |  6
+    ~~~
+
+3. Recovery parameters:
 
   * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
 
@@ -630,23 +673,23 @@ Below are the types of execution parameters:
 
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
 
-* Profiler Telemetry:
+  * Example of running in a recovery mode:
+
+    ~~~
+    fabric>broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
+    ~~~
+
+4. Profiler Telemetry:
 
   * To invoke the Broadway profiler, set **profilerTelemetry** to true. This will add the profiler results to the command results, under the **profilerTelemetry** key.
 
     [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
-**Example of running in a recovery mode:**
+  * Example of running with a profiler:
 
-```
-fabric>broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
-```
-
-**Example of running with a profiler:**
-
-~~~
-fabric>broadway P2.getLUVariable luName='P2' variableName='TDM_TAR_ENV_NAME' profilerTelemetry=true;
-~~~
+    ~~~
+    fabric>broadway P2.getLUVariable luName='P2' variableName='TDM_TAR_ENV_NAME' profilerTelemetry=true;
+    ~~~
 
 ### Queries Helpers
 

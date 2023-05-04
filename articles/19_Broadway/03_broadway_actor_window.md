@@ -4,7 +4,7 @@
 
 The **Actor's Properties** window is displayed when adding a new Actor to a flow or when clicking an Actor object in the Flow window. The Actor window holds the following sections:
 
-<table style="width: 600px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
 <td style="width: 590.8px;" valign="top">
@@ -78,20 +78,13 @@ The population of the input parameter depends on the **Population Type**. The fo
 - **Const**, sets the value of the parameter. When **Const** is selected, a text area opens under the parameter to enable populating the parameter's value.
 - **External**, gets the input value as a parameter from the external process which executes the Broadway flow. When External is selected, the **External Name** field opens under the parameter.
 
-<table>
-<tbody>
-<tr>
-<td valign="top" ><img src="images/99_03_inputs_link.PNG" alt="Input Link" /></td>
-<td valign="top" ><img src="images/99_03_inputs_const.PNG" alt="Input Const" /></td>
-<td valign="top" ><img src="images/99_03_inputs_external.PNG" alt="Input External" /></td>
-</tr>
-</tbody>
-</table>
 
 The actions on the input parameters are:
 - Default value, set a default value for an input parameter (for **Link** and **External** population types). Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables inserting numbers into this parameter.
 
-- Edit Schema, click to open the popup window where you can update the parameter's type.
+- Set Schema, click to open the popup window where you can update the parameter's type.
+
+- Set [Editor](28_actor_editor.md#how-do-i-modify-the-input-argument-type), click to open the popup window where you can update Actor's input argument type (starting Fabric 7.1).
 
 - Description, click to check the parameter's description. The description cannot be updated.
 
@@ -120,7 +113,7 @@ fabric>list bf lu_name='Customer' flow='broadwayOverview';
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
-<img src="images/99_03_sql.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_03_sql.PNG" alt="image"  />
 
 ### Add Input Button
 
@@ -137,7 +130,7 @@ Note that the input parameters of the ancestor Actor cannot be deleted.
 
 ### Output Parameters Properties
 
-<img src="images/99_03_outputs.PNG" alt="Sql_input" style="zoom:80%;" />
+<img src="images/99_03_outputs.PNG" alt="Sql_input"  />
 
 The Actor's output parameters are displayed in the Actor's Properties window in the following format:
 
@@ -145,7 +138,7 @@ The Actor's output parameters are displayed in the Actor's Properties window in 
 
 The actions in the output parameters are:
 - Set External, click to expose the output parameter to the external process that executes the Broadway flow. When selected, the **External Name** field opens under the parameter.
-- Edit Schema, click to open the popup window where you can update the parameter's type.
+- Set Schema, click to open the popup window where you can update the parameter's type.
 - Description, click to check the parameter's description. The description cannot be updated.
 - Remark, click to add a remark. The remark can be modified.
 

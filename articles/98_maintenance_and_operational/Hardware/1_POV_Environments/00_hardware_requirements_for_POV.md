@@ -1,10 +1,10 @@
-# Fabric & TDM 7.xx Hardware Requirements for POC Installations
+# Fabric Hardware Requirements for POC Installations
 
 ### Introduction 
 
-This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM proof-of-concept installations.
-
-The installation is based on Docker containers.
+-  This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM proof-of-concept installations.
+-  The installation is based on Docker containers.
+-  TDM Installation is based over Fabric installations 
 
 ### Fabric Studio Windows Server  
 
@@ -41,17 +41,11 @@ Local administrator privileges are needed for the Fabric Studio installation.
 -   Intellij IDE (community edition): <https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac&code=IIC>
 
 ### POC Linux Execution Server Specifications
-
-Install several containers on this server:
-
--   Fabric server
--   Cassandra
--   Kafka
--   And any other app container that will be needed 
+The required Docker image list is listed on the guide for the designated enviroment to be installed (FABRIC/TDM)
 
 #### Minimum Hardware Configuration for Each Linux Server 
 
-Use the latest RedHat/CentOS Operating System, with **latest** **Docker Engine**, and **latest** **docker-compose** installed
+RedHat/CentOS 7 or Higher, Ubuntu 20 or higher Operating System, with **latest** **Docker Engine**, and **latest** **docker-compose** installed
 
 ##### Hardware Requirements:
 -   Modern Xeon Processor.
@@ -70,6 +64,8 @@ Use the latest RedHat/CentOS Operating System, with **latest** **Docker Engine**
 #### Linux Ports 
 
 Open the following ports on the LINUX server and make sure they are accessible from outside the machine:
+> depends on your setup, not all ports will be required.
+
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
@@ -92,6 +88,10 @@ Open the following ports on the LINUX server and make sure they are accessible f
 <tr>
 <td style="width: 50%; height: 18px;">3000, 9090</td>
 <td style="width: 50%; height: 18px;">Grafana stack</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">5432</td>
+<td style="width: 50%; height: 18px;">PostgreSQL</td>
 </tr>
 </tbody>
 </table>

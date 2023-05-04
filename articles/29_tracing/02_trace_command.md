@@ -6,7 +6,11 @@ Get a list of available operations for the Trace command in the related category
 
 For example:
 
+```
 trace ops;
+```
+
+
 
 <table class="unchanged rich-diff-level-one">
 <thead>
@@ -53,7 +57,7 @@ trace ops;
 <td>info</td>
 </tr>
 <tr>
-<td>jobExecuter</td>
+<td>jobExecutor</td>
 <td>jobs</td>
 <td>info</td>
 </tr>
@@ -140,9 +144,16 @@ trace ops;
 </tbody>
 </table>
 
+
 ### Create a New Trace 
 
-trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];...';
+**Syntax:**
+
+```
+trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[TRACE_VALUES]];...';
+```
+
+
 
 <table class="unchanged rich-diff-level-one">
 <thead>
@@ -205,6 +216,7 @@ trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];.
 </tr>
 </tbody>
 </table>
+
 **Example**
 
 ~~~

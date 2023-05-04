@@ -59,7 +59,7 @@ Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 - OS: latest CentOS/Redhat Operating System with latest patches
 - CPU: 8 Cores/16vCPUs (Modern Xeon Processor)
 - RAM: 64G 
-  For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64G RAM.   
+  For Fabric, Redis, Kafka servers that runs only Fabric and Redis - 32G RAM.   
 - Network: Minimum 1G between the nodes and source DB’s 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  
   When **SAN must be used,** it must be flash and in RAID-0. 
