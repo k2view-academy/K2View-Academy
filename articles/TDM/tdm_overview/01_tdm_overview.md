@@ -16,6 +16,7 @@ The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 - Request for subset of entities for data provisioning:
   - Provisioning predefined lists of Business Entities from a selected source environment to a selected target environment. All data related to the selected entities is extracted and copied to the relevant data systems.
   - Copying a subset of entities based on predefined parameters. For example, selecting from source some customers based in NY with small business packages and copying  this selection to the testing environment.
+- Rule-Based Synthetic Data Generation -  generating synthetic entities on demand. The synthetic entities can be generated and saved into Fabric to be loaded later into the testing environment or can be generated and loaded to the target environment in one task. The user can set values in a selected list of data generation parameters for the data generation flow. For example, generate customers where 30% live in NY and 70% live in TX.
 - Entity clone - cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
 - Entity reservation - enables the user to reserve entities in the testing environment to prevent other users from deleting or reloading these entities in the environment until the user completes their functional testing.
