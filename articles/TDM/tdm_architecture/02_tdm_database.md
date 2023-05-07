@@ -4,7 +4,6 @@ TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. The TDM APIs a
 
 The following table lists the TDM tables and their description.
 
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -126,6 +125,11 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
+<td valign="top" width="200pxl"><h4>tdm_generate_task_field_mappings</td>
+<td valign="top" width="400pxl">The data generation parameters of Generate tasks.</td> 
+<td valign="top" width="300pxl">Task</td>
+</tr>      
+<tr>
 <td valign="top" width="200pxl"><h4>task_exe_error_detailed</td>
 <td valign="top" width="400pxl">TDM Execution detailed error table.</td>
 <td valign="top" width="300pxl">Task Execution</td>
@@ -187,6 +191,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 
