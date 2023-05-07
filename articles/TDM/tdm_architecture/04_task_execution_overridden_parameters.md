@@ -262,7 +262,6 @@ This way, various users can **use a task as a template** and change (override) t
 
 TDM supports the override of the following parameters:
 
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -287,7 +286,7 @@ TDM supports the override of the following parameters:
 <p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can only contain one Business Entity ID when executing a task that clones a Business Entity.</p>
 </td>
 <td width="200pxl">
-<p>Load task</p>
+<p>All task types except a Generate task</p>
 </td>
 <td width="150pxl">
 <p>True/False</p>
@@ -421,6 +420,7 @@ TDM supports the override of the following parameters:
 </tr>
 </tbody>
 </table>
+
 
 
 Note:
