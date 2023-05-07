@@ -46,7 +46,7 @@ All of the Kafka connection settings are defined in the **[default_pubsub]** sec
 
 When different Kafka settings for CDC are required, define them in the **[cdc]** section. This section does not have to include all the parameters, but only those that should override the default section's settings. 
 
-To enable CDC without Kafka, set TYPE=MEMORY in the **[default_pubsub]** or **[cdc]** or **[search_loader_pubsub]** or section.
+To enable CDC without Kafka, set TYPE=MEMORY in the **[default_pubsub]** or **[cdc]** or **[search_loader_pubsub]** section.
 
 [Click for more information about PubSub Configuration](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
