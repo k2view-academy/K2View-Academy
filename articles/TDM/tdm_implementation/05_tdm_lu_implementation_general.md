@@ -20,27 +20,14 @@ Each LU in a TDM project has the following structure:
 
     Click for more information about [Fabric implementation and deleting entities from the target environment](08_tdm_implement_delete_of_entities.md).
 
-### Step 1 - Copy the Objects from the TDM_LIBRARY LU into Each LU
+### Step 1 - Duplicate the TDM_LIBRARY LU into the New LU
 
-Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and copy the LU level objects in the TDM_LIBRARY to your LU.
+Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right click -> Duplicate Logical Unit). Now you have a template of the new LU with the TDM tables including FABRIC_TDM_ROOT table as a root LU table.
 
-### Step 2 - Add the TDM Root Table and the Generic TDM Tables to the LU Schema
-
-1. Add the **FABRIC_TDM_ROOT** LU table to the LU Schema and set it as a [Root table](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md). 
-2. Set the **Instance PK** column to **k2_tdm_eid**.   
-3. Add the **LU_PARAMS** to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
-4. In Parent LUs, add the **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** relationship tables to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
+Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**. In this case, the LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
 
-
-![tdm lu example](images/tdm_lu_example1.png)
-
-​	Click for more information about supporting [hierarchy in the TDM implementation](06_tdm_implementation_support_hierarchy.md).
-
-5. Add the LU_PARAMS LU table to each LU Schema. Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**. In this case, the LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
-
-
-### Step 3 - Add the Source LU Tables to the LU Schema
+### Step 2 - Add the Source LU Tables to the LU Schema
 
 
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represent the main (root) tables in the data source. For example, the Customer table is the main source LU table of the Customer LU.
@@ -79,7 +66,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
    Click for more information about [Handling TDM Parameters](07_tdm_implementation_parameters_handling.md).
 
-### Step 4 - Add the Target LU Tables to the LU Schema
+### Step 3 - Add the Target LU Tables to the LU Schema
 
 1. Define the LU tables in order to extract the target keys from the target environment. These keys are used by the [delete flows](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) for deleting an entity from the target.
 
@@ -106,7 +93,7 @@ The LUI should include the source environment, which should be set as the [activ
 
 The Broadway flow of the main source LU table is generated based on the **populationRootTable.pop.flow** template. It deletes and re-populates the main source LU table under the following conditions:
 
-- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning checkbox is cleared).
+- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) ,  [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning checkbox is cleared), or [Generate task].
 
 - The **Set Sync Policy** task's setting is not set to **Do not Sync Source Data** to prevent synchronizing the entities from the source system. 
 
@@ -121,7 +108,7 @@ The source LU tables are not populated by the LUI sync in the following cases:
 
 The Broadway flow also validates whether the entity exists in the source table. If the entity is not found in the main source tables, an Exception is thrown and the entity is rejected.
 
-See example of a Broadway flow that populates Customer LU table:
+See example of a Broadway flow that populates a main source LU table:
 
 
 
