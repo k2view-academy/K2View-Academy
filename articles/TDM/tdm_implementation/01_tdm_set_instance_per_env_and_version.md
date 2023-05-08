@@ -24,9 +24,10 @@ When the  Data Versioning checkbox is not set, and a separate version of the ent
 <Source Env><separator><entity id>
 ```
 
- **Example**
+ **Example**s:
 
-Copy Customer 1 from the PROD source env. The LUI is PROD_1.
+- Copy Customer 1 from the PROD source env. The LUI is PROD_1.
+- Generate a synthetic customer. The LUI is Synthetic_12.
 
 #### Delete Only and Reserve Only Tasks
 
