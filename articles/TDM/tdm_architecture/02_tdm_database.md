@@ -71,7 +71,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>environments</td>
-<td valign="top" width="400pxl">TDM <a href="/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md">source and target environments</a>. Each record contains the environment name, environment type (source, target, or both), and the environment name in Fabric.</td>
+<td valign="top" width="400pxl">TDM <a href="/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md">source and target environments</a>. Each record contains the environment name, environment type (source, target or both), and the environment name in Fabric.</td>
 <td valign="top" width="300pxl">TDM Environments</td>
 </tr>
 <tr>
