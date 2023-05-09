@@ -15,7 +15,7 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="200pxl"><h4>permission_groups_mapping</td>
 <td valign="top" width="400pxl">
         <p>Mapping of <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role">Fabric roles</a> to TDM permission groups (admin, owner or tester).</p>
-        <p>The relation between Fabric roles and TDM permission groups is many-to-one.</p>
+        <p>The relationship between Fabric roles and TDM permission groups is many-to-one.</p>
         <p><a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">Click for more about the TDM permission groups.</a></p>
     </td>
 <td valign="top" width="300pxl">TDM Permission Groups (User Types)</td>
