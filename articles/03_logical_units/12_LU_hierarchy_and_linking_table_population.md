@@ -150,7 +150,8 @@ A link can be added in both directions:
 
 ## How Can I Delete Table Population Links?
 
-Either click on the link and press the **Delete** key<studio> or right-click and select **Delete**</studio>.
+<studio>Either click on the link and press the **Delete** key or right-click and select **Delete**</studio>.
+<web>Click on the link and press the **Delete** key</web>
 
 
 

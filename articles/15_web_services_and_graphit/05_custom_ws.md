@@ -28,7 +28,7 @@ In addition to helping implementors to easily craft web services logic and outpu
 
 The custom-built web services are exposed in a similar pattern to the built-in web services:
 
-`/api/[VERSION_NO]/<web-service name>[?<parameters>&format=<FORMAT>&graphitProfiler=true]`
+`/api/[VERSION_NO]/<web-service name>[?<parameters>][&format=<FORMAT>][&graphitProfiler=true]`
 
 Where:
 
@@ -38,7 +38,7 @@ Where:
 
 * **format** parameter can be either JSON, XML or CSV.
 
-* **graphitProfiler** parameter, when set to true, turn on the profiler for this web-service call. 
+* **graphitProfiler** parameter, when set to true, and when this web service is a [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) type, turns on the profiler for this web-service call. 
 
   To see the profiling information:
 

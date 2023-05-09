@@ -1,6 +1,6 @@
 # Tracing Overview
 
-Fabric has a powerful Tracing mechanism for writing internal operations performed by Fabric into trace files.
+Fabric has a Tracing mechanism for writing internal operations performed by Fabric into trace files.
 
 Tracing can be filtered by:
 -  Operations, for example; sqlCommand, fabricCommand or sync.
