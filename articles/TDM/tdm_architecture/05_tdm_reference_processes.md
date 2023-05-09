@@ -8,7 +8,7 @@ Previous TDM versions stored the extracted reference tables in the Cassandra DB:
 
 ## Task Execution Job
 
-The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows in order to get the reference table into Fabric (TDM_Reference LU) and load it to the target for a load task. 
+The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows in order to get the reference table into Fabric (TDM_Reference LU) and loads it into the target environment for a load task. 
 
 The job updates the status of the processed reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
