@@ -25,7 +25,7 @@ The first step is to match the field names of two datasets using either the exac
 
 If a match is found, a link between two datasets is created and given a score â€“ per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
 
-<table style="width: 900px;">
+<table style="width: 850px;">
 <tbody>
 <tr>
 <td width="150pxl">
@@ -40,7 +40,7 @@ If a match is found, a link between two datasets is created and given a score â€
 <td width="200pxl">
 <p><strong>Mark as FK</strong></p>
 </td>
-<td width="100pxl">
+<td width="50pxl">
 <p><strong>Score</strong></p>
 </td>
 </tr>
