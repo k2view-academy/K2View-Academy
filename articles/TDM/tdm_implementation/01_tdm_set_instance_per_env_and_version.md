@@ -43,7 +43,7 @@ When the Data Versioning checkbox is set, that is, to save a separate version of
 
 **Example**
 
-To extract a specific version of Customer 1 from the PROD source env, the LUI is PROD_1_copyCust_20201105090000. 
+To extract a specific version of Customer 1 from the PROD source environment, the LUI is PROD_1_copyCust_20201105090000. 
 
 ### TDM Separator
 
