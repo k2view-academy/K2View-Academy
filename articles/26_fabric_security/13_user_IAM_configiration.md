@@ -99,7 +99,7 @@ While running this command after running the above two keytool's *import* and *e
 `okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
 `k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
 
-For more information about keystore handling please see [here](/articles/99_fabric_infras/devops/04_cassandra_hardening.html).
+For more information about keystore handling please see [here](/articles/99_fabric_infras/devops/04_cassandra_hardening.html) and [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html).
 
 <br/>
 
@@ -109,7 +109,7 @@ For more information and guides as to where and how this information should be s
 
 ### Editing the config.ini file
 
-Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was acquired at the preparation step:
+Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was set and acquired at the preparation step:
 
 - **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
 - **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used too) . This property is also populated at the IDP side.
