@@ -83,7 +83,7 @@ The entity list of the root LUs is based on the task's selection method:
 <p><h4>Entity clone</p>
 </td>
 <td width="400pxl">
-<p>Create duplications on the target environment of the Entity ID, set in the task. Note that only one LUI is created on the entity ID.</p>
+<p>Create duplications on the target environment of the Entity ID set in the task. Note that only one LUI is created on the entity ID.</p>
 </td>
 <td width="200pxl">
 <p>Regular load tasks (Data Versioning is cleared)</p>
