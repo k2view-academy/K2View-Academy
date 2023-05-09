@@ -18,12 +18,14 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
 
-The first step is to match the field names of two datasets using either the exact match or the formatting rules (remove underscore ‘_’, convert to lower-case, If field's name is ‘ID’, add dataset name to it, without ‘.’). For example, the following field names can be matched:
+The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (e.g. remove underscore ‘_’, convert to lower-case). 
+
+For example, the following field names can be matched:
 
 * CUSTOMER_ID and CustomerID
 * CUSTOMER.ID and CustomerID
 
-If a match is found, a link between two datasets is created and given a score – per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
+If a match is found, the plugin estimates the link direction – per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
 
 <table style="width: 850px;">
 <tbody>
@@ -163,32 +165,37 @@ If a match is found, a link between two datasets is created and given a score �
 </tr>
 </tbody>
 </table>
-
-
-
-**Data Profiling**
-
-The purpose of the Data Profiling is to classify the source fields based on their **data**. Among other goals, the profiling helps to identify which Catalog entities store sensitive information and should therefore be masked. 
-
-The plugin runs on a data snapshot, extracted from the data source, and executes the profiling rules. 
-
-- If the field's data match a rule, a **Classification** property is added to the field's properties with a value such as **email**, **gender**, or **credit card**. If a match is found for more than one rule, only one property is created (the one with the higher score).
-
-- If this classification type is defined as PII in the data_profiling MTable, the PII property is set to true in the field's properties. 
-
-The profiling rules are defined in a built-in **data_profiling** MTable. The access to this MTable is available in the Web Studio using the MTableLookup Actor. If needed, you can modify the rules by creating a **data_profiling** MTable in your project, with the same structure as the built-in MTable.
-
-**Matching by Field Name**
-
-The purpose of this plugin is to identify possible links between the data source nodes in order to create additional ***refers to*** relations. This plugin is especially useful when, for example, a data source has no PK-FK relations or when cross-schema relations need to be established. 
-
-The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (e.g. remove underscore ‘_’, convert to lower-case). 
-
-If a match is found, the plugin estimates the link direction: which field is a PK and which one is an FK.
-
 Eventually, the relation is created with a score - a probability that the match is correct. 
 
-**Nullability Check By Field Data**
+**Data Regex Classifier**
+
+The purpose of *Data Regex Classifier* is to classify the source fields based on their **data**. Among other goals, this classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
+
+The plugin runs on a data snapshot, extracted from the source, and executes the regular expressions defined in a built-in **data_profiling** MTable. 
+
+If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **EMAIL**. If a match is found for more than one regex, only one property is created  - the one with higher score.
+
+The access to the **data_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **data_profiling** MTable in your project, with the same structure as the built-in MTable.
+
+**Metadata Regex Classifier**
+
+The purpose of *Data Regex Classifier* is to classify the source fields based on their **metadata**. 
+
+The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
+
+If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **NAME**. If a match is found for more than one regex, only one property is created  - the one with higher score.
+
+The access to the **metadata_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **metadata_profiling** MTable in your project, with the same structure as the built-in MTable.
+
+**Classification PII Marker**
+
+The purpose of *Classification PII Marker* is to go over all fields which have got the **Classification** property (by either one of the above plugins)  and to add the **PII** property. 
+
+The rules whether the classification type is defined as PII (true) or not (false) are defined in a built-in **pii_profiling** MTable. 
+
+The access to the **pii_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **pii_profiling** MTable in your project, with the same structure as the built-in MTable.
+
+**NULL Percentage**
 
 The purpose of this plugin is to check the % of null values per column, in the selected data snapshot.
 
