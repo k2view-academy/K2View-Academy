@@ -30,7 +30,7 @@ Examples:
 
 
 
-Note that **the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
+Note that **the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e., each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
 
 
 
