@@ -8,7 +8,7 @@ TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_gloss
 
 - Customer 1 exists in both the Production and UAT environments where different data is saved in each environment. TDM must create separate instances of Customer 1, one for Production and another for UAT.
 
-- [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a data version (snapshot) of Customer 1 in a testing environment and to run the task every couple of hours to backup the data. Each version of Customer 1 must create a separate LU instance (LUI).
+- [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a data version (snapshot) of Customer 1 in a testing environment and to run the task every couple of hours for backing up the data. Each version of Customer 1 must create a separate LU instance (LUI).
 
   
 
