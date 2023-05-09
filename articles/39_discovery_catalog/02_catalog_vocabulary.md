@@ -71,28 +71,28 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <tr style="height: 46px;">
 <td style="width: 20%; height: 184px;" rowspan="4"><strong>CONTAINS</strong></td>
 <td style="width: 80%; height: 46px;">
-<p>SCHEMA contains DATA_PLATFORM</p>
+<p>DATA_PLATFORM contains SCHEMA</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>DATASET contains SCHEMA</p>
+<p>SCHEMA contains DATASET</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>CLASS contains DATASET</p>
+<p>DATASET contains CLASS</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 80%; height: 46px;">
-<p>FIELD contains CLASS</p>
+<p>CLASS contains FIELD</p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="width: 20%; height: 142px;"><strong>REFERS TO</strong></td>
 <td style="width: 80%; height: 96px;">
-<p>CLASS refers to CLASS</p>
+<p>DATASET refers to DATASET</p>
 <p>Example: <em>INVOICE refers to CUSTOMER</em></p>
 <p>The direction is Many To One. </p>
 <p>The PK / FK column names are included in the relation's properties.</p>
@@ -100,6 +100,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 </tr>
 </tbody>
 </table>
+
 
 
 

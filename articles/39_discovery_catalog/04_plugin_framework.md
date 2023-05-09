@@ -14,6 +14,158 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 ### Built-In Plugins
 
+**Metadata Logical Reference**
+
+The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
+
+The first step is to match the field names of two datasets using either the exact match or the formatting rules (remove underscore ‘_’, convert to lower-case, If field's name is ‘ID’, add dataset name to it, without ‘.’). For example, the following field names can be matched:
+
+* CUSTOMER_ID and CustomerID
+* CUSTOMER.ID and CustomerID
+
+If a match is found, a link between two datasets is created and given a score – per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
+
+<table style="width: 900px;">
+<tbody>
+<tr>
+<td width="150pxl">
+<p><strong>Dataset 1</strong></p>
+</td>
+<td width="150pxl">
+<p><strong>Dataset 2</strong></p>
+</td>
+<td width="200pxl">
+<p><strong>Relation</strong></p>
+</td>
+<td width="200pxl">
+<p><strong>Mark as FK</strong></p>
+</td>
+<td width="100pxl">
+<p><strong>Score</strong></p>
+</td>
+</tr>
+<tr>
+<td width="175">
+<p>Field1&nbsp; PK</p>
+</td>
+<td width="167">
+<p>Field0&nbsp; PK</p>
+<p>Field1 (not PK)</p>
+</td>
+<td width="368">
+<p><em>DS2 refers to DS1</em></p>
+<p>PK table/columns: DS1 / Field1</p>
+<p>FK table/columns: DS2 / Field1</p>
+</td>
+<td width="171">
+<p>DS2 / Field1</p>
+</td>
+<td width="210">
+<p>High</p>
+</td>
+</tr>
+<tr>
+<td width="175">
+<p>Field1&nbsp; PK</p>
+</td>
+<td width="167">
+<p>Field1&nbsp; PK</p>
+<p>Field2&nbsp; PK</p>
+</td>
+<td width="368">
+<p><em>DS2 refers to DS1</em></p>
+<p>PK table/columns: DS1 / Field1</p>
+<p>FK table/columns: DS2 / Field1</p>
+</td>
+<td width="171">
+<p>DS2 / Field1</p>
+</td>
+<td width="210">
+<p>High</p>
+</td>
+</tr>
+<tr>
+<td width="175">
+<p>Field1&nbsp; PK</p>
+<p>Field2&nbsp; (not PK)</p>
+</td>
+<td width="167">
+<p>Field1&nbsp; PK</p>
+<p>Field2&nbsp; PK</p>
+</td>
+<td width="368">
+<p><em>DS2 refers to DS1</em></p>
+<p>PK table/columns: DS1 / Field1, Field2</p>
+<p>FK table/columns: DS2 / Field1, Field2</p>
+</td>
+<td width="171">
+<p>DS2 / Field1, Field2</p>
+</td>
+<td width="210">
+<p>High</p>
+</td>
+</tr>
+<tr>
+<td width="175">
+<p>Field1&nbsp; PK</p>
+<p>Field2&nbsp; PK</p>
+</td>
+<td width="167">
+<p>Field1&nbsp; PK</p>
+<p>Field2&nbsp; PK</p>
+<p>Field3&nbsp; PK</p>
+</td>
+<td width="368">
+<p><em>DS2 refers to DS1</em></p>
+<p>PK table/columns: DS1 / Field1, Field2</p>
+<p>FK table/columns: DS2 / Field1, Field2</p>
+</td>
+<td width="171">
+<p>DS2 / Field1, Field2</p>
+</td>
+<td width="210">
+<p>High</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Field1 is a single PK</p>
+</td>
+<td>
+<p>Field1 is a single PK</p>
+</td>
+<td>
+<p>Relation direction is random</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>Low</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Field1 is not a PK</p>
+</td>
+<td>
+<p>Field1 is not a PK</p>
+</td>
+<td>
+<p>Relation direction is random</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>Low</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
 **Data Profiling**
 
 The purpose of the Data Profiling is to classify the source fields based on their **data**. Among other goals, the profiling helps to identify which Catalog entities store sensitive information and should therefore be masked. 
