@@ -147,6 +147,59 @@ Click for an [execution of hierarchical BE](/articles/TDM/tdm_overview/03_busine
 
 The generated entity list is based on a JOIN of the [task_execution_entities](02_tdm_database.md#task_execution_entities) and the [TDM relationship tables](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm-relationship-tables):
 
+<p>&nbsp;</p>
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="300pxl">
+<p><strong>Task Actions</strong></p>
+</td>
+<td width="600pxl"><strong>SQL Query</strong></td>
+</tr>
+<tr>
+<td width="300pxl">
+<ul>
+<li style="text-align: left;">Extract</li>
+<li style="text-align: left;">Extract + Load</li>
+<li style="text-align: left;">Extract + Load + Reserve</li>
+<li style="text-align: left;">Load</li>
+<li style="text-align: left;">Load + Reserve</li>
+<li style="text-align: left;">Generate</li>
+<li style="text-align: left;">Generate + Load</li>
+<li style="text-align: left;">Generate + Load + Reserve</li>
+</ul>
+</td>
+<td width="600pxl">
+<p>SELECT rel.lu_type2_eid as child_entity_id <br />FROM task_execution_entities t, tdm_lu_type_relation_eid rel <br />where t.task_execution_id= &lt;task execution id&gt;<br />and t.execution_status = 'completed' <br />and t.lu_name = &lt;parent lu name&gt; <br />and t.source_env = rel.source_env <br />and t.lu_name = rel.lu_type_1 <br />and t.iid = rel. lu_type1_eid <br />and rel.lu_type_2= &lt;child lu name&gt; <br />and rel.version_name = &lt;empty string on a regular task <br />and the selected version name on a Data Versioning task&gt;;</p>
+</td>
+</tr>
+<tr>
+<td width="300pxl">
+<ul>
+<li style="text-align: left;">Extract + Load + Delete</li>
+<li style="text-align: left;">Extract + Load + Delete+ Reserve</li>
+<li style="text-align: left;">Load + Delete</li>
+<li style="text-align: left;">Load + Delete + Reserve</li>
+</ul>
+</td>
+<td width="600pxl">
+<p>SELECT rel.lu_type2_eid as child_entity_id<br />FROM task_execution_entities t, tdm_lu_type_relation_eid rel <br />where t.task_execution_id= &lt;task execution id&gt; <br />and t.execution_status = 'completed' <br />and t.lu_name = &lt;parent lu name&gt; <br />and t.source_env = rel.source_env <br />and t.lu_name = rel.lu_type_1 <br />and t.iid = rel. lu_type1_eid <br />and rel.lu_type_2= &lt;child lu name&gt; <br />and rel.version_name = &lt;empty string on a regular task <br />and the selected version name on a Data Versioning task&gt;<br />UNION<br />SELECT rel.lu_type2_eid as child_entity_id<br />FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel <br />where t.task_execution_id= &lt;task execution id&gt; <br />and t.execution_status = 'completed' <br />and t.lu_name = &lt;parent lu name&gt; <br />and rel.target_env = &lt;target environment name&gt; <br />and t.lu_name = rel.lu_type_1 <br />and t.iid = rel. lu_type1_eid <br />and rel.lu_type_2= &lt;child lu name&gt;;</p>
+</td>
+</tr>
+<tr>
+<td width="300pxl">
+<ul>
+<li style="text-align: left;">Delete only</li>
+</ul>
+</td>
+<td width="600pxl">
+<p>SELECT rel.lu_type2_eid as child_entity_id<br />FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel <br />where t.task_execution_id= &lt;task execution id&gt; <br />and t.execution_status = 'completed' <br />and t.lu_name = &lt;parent lu name&gt; <br />and rel.target_env = &lt;target environment name&gt; <br />and t.lu_name = rel.lu_type_1 <br />and t.iid = rel. lu_type1_eid <br />and rel.lu_type_2= &lt;child lu name&gt;;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
 ### Insert without Delete Load Task
 
 Select the children IDs from the task_execution_entities and [tdm_lu_type_relation_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid) tables:
