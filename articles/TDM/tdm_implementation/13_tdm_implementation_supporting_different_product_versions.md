@@ -17,6 +17,8 @@ The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_pro
 
 The TDM implementation can get the values of these Globals in order to check the source and target system version of each execution.
 
+Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data generation tasks].
+
 ## Update LU Schema
 
 The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
@@ -57,7 +59,7 @@ String luName = getLuType().luName;
 String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
 
 Boolean decision = false; 
-if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
+if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdmSourceProdVersion.equals("synthetic")
 {
 	decision = true;
 }
@@ -134,7 +136,13 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
          return decision;
          ```
 
-  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file because the TDM Logic File already contains the TDM product functions.
+  - Notes:
+
+    - It is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file because the TDM Logic File already contains the TDM product functions.
+
+    - It is recommended to populate the maximum number of LU tables and fields for the synthetic data generation (the TDM_SOURCE_PRODUCT_VERSION Global is populated with "synthetic"). Irrelevant tables or fields will be filtered out by the load flows based on the target environment's System version. 
+
+  - 
 
 ## Update Broadway Load Flows
 
