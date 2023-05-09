@@ -1,6 +1,6 @@
 # Task Execution - Overriding Parameters
 
-A task execution can override execution parameters, as follows:
+A task execution can override execution parameters by:
 
 - Setting the active environment based on the task's environments.
 - Setting key-value parameters on a session level.
