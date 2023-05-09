@@ -13,7 +13,7 @@ The K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 - Built-in self-service web application where testers can request data to be provisioned on-demand and in real-time. 
 - Central storage of provisioned entities in Fabric.
 - Copying data into live testing environments.
-- Request for subset of entities for data provisioning:
+- Request for a subset of entities for data provisioning:
   - Provisioning predefined lists of Business Entities from a selected source environment to a selected target environment. All data related to the selected entities is extracted and copied to the relevant data systems.
   - Copying a subset of entities based on predefined parameters. For example, selecting from source some customers based in NY with small business packages and copying  this selection to the testing environment.
 - Rule-Based Synthetic Data Generation -  generating synthetic entities on demand. The synthetic entities can be generated and saved into Fabric to be loaded later into the testing environment or can be generated and loaded to the target environment in one task. The user can set values in a selected list of data generation parameters for the data generation flow. For example, generate customers where 30% live in NY and 70% live in TX.
