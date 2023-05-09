@@ -28,7 +28,7 @@ The entity list of the root LUs is based on the task's selection method:
 <p><h4>Entity list</p>
 </td>
 <td width="400pxl">
-<p>Run the task on the list of entities, set in the task itself or in the task overridden execution parameters</p>
+<p>Run the task on the list of entities that are set in the task itself or in the task overridden execution parameters</p>
 </td>
 <td width="200pxl">
 <p>All task types</p>
