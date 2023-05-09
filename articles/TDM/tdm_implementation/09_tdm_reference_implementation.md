@@ -25,9 +25,9 @@ Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) 
 
 The list of Reference tables available for TDM tasks is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate trnRefList with the list of available Reference tables for each LU. The following settings should be populated for each record:
 
-- **lu_name** - populated by the LU name.
+- **lu_name** - populated by the LU name to enable a selection of the related Reference table in a TDM task based on the task's LUs.
 
-- **ID** - populated by a sequence.
+- **ID** - populated by an auto increment number.
 
 - **reference_table_name** - populated by the Reference table in the source env.
 
@@ -53,7 +53,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 ### Step 3 - Create and Execute TDM Tasks
 
-TDM 7.6 enables running extract and load tasks on reference tables, i.e. the task extracts the reference table into Fabric and loads it to the target environment. 
+From TDM 7.6 onwards the TDM supports running extract and load tasks on reference tables, i.e. the task extracts the reference table into Fabric and loads it to the target environment. 
 
 Note that on previous TDM versions, the extract from the source env was not executed by the load task. The load task copied the table from Cassandra. Therefore, there was a need to run an extract task on a given table before running the load task, in order to load the table to the target environment.
 
