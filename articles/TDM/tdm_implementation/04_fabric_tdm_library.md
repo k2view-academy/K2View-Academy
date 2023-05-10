@@ -178,7 +178,7 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 TDM enables setting a TTL (Time To Leave) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
 
 - **TDM_LU_RETENTION_PERIOD_TYPE** - by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
-- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with zero or empty value to avoid setting a TTL on the TDM LUIs**.
+- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with either a zero or an empty value to avoid setting a TTL on the TDM LUIs**.
 
 ### TDM Deploy Flow
 
