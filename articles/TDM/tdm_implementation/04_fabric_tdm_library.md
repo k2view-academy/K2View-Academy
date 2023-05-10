@@ -194,7 +194,7 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 
 ### TDM LU Deployment
 
-Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, the deployment of the TDM LU also deploys the TDM Portal into the TDM web applications**. 
+Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, the deployment of the TDM LU deploys the TDM Portal as well into the TDM web applications**. 
 
 Notes:
 
