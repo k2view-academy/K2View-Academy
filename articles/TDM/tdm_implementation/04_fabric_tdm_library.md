@@ -216,7 +216,7 @@ It is recommended to duplicate the TDM_Library LU as use it as a template when c
 
   Examples: 
 
-  - CUSTOMER. 
+  - CUSTOMER 
   - CUSTOMER, ACCOUNT 
 
 - Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column. These Globals are needed for setting the IS_INSTANCE_ID column correctly in [TDM_SEQ_MAPPING](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#sequence-mapping) TDM DB table. Note that the number and order of root column names must be aligned with the number and order of the tables, populated in **ROOT_TABLE_NAME**. 
