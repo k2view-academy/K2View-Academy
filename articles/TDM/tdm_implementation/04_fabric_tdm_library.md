@@ -36,7 +36,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
     
 - **FabricRedis** - this is the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. Note that from Fabric 7.1 onwards, the sequence Actors can get the next sequence value from a newly created DB sequence in the sequence interface (the sequence interface can be the TDM DB). The sequence is created by the Actor if not exists. Therefore it is recommended to get the next value from a DB sequence instead of using the Redis.
 
-    For more information see the [Sequence Implementation Guide](/articles/19_Broadway/actors/08_sequence_implementation_guide.md).  
+    For more information view the [Sequence Implementation Guide](/articles/19_Broadway/actors/08_sequence_implementation_guide.md).  
 
 -  **TDM_APIDOC_JSON** - this is a local file system interface, used for generating the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
     [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
