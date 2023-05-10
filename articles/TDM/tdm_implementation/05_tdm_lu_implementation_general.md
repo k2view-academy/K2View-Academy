@@ -22,7 +22,7 @@ Each LU in a TDM project has the following structure:
 
 ### Step 1 - Duplicate the TDM_LIBRARY LU into the New LU
 
-Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right click -> Duplicate Logical Unit). Now you have a template of the new LU with the TDM tables including FABRIC_TDM_ROOT table as a root LU table.
+Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right click -> Duplicate Logical Unit). Now you have a template of the new LU with the TDM tables, including FABRIC_TDM_ROOT table as a root LU table.
 
 Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**. In this case, the LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
