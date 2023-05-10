@@ -14,7 +14,7 @@ Each LU in a TDM project has the following structure:
 
 - 2 main branches that are linked to the root table:
 
-  - **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities to a target environment and therefore must extract the source data of these entities.
+  - **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities into a target environment and therefore must extract the source data of these entities.
 
   - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the target environment in order to enable deleting an entity from a target environment if required by the TDM task.
 
