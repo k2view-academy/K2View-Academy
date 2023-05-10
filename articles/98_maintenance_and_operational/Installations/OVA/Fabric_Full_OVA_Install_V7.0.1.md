@@ -1,22 +1,34 @@
-## FABRIC V7.0.1_104-HF2 DOCKER INSTALLATION
+## FABRIC V7.0.X OVA INSTALLATION
 
 ### Prerequisites
 
-These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use 1 of the following 2 environments:
+* Virtual Enviroment / hypervisor  supporting import OFA/OVF file.
+* the image was configured with the following specifications, verify the hypervisor contain enough resources:
+> * Compute: 8 vCPU
+> * Memory: 32 GB RAM
+> * Storage: 500 GB disk 
+* The VM is base on Ubuntu Server Version22.04.2 LTS (Jammy Jellyfish)
+* The OS is preconfigured with managment users
 
-- **Docker CE/EE** over **CentOs/RedHat 7.9, Ubuntu 18.04** (or higher) for a Linux environment
-- **Docker Desktop** for Windows/Mac environments
+	
+| Role       	| Username    | Password      | Notes 
+| ----------	 | ---------- | ---------- | ---------- | 
+|  Manament      | k2view    | Q1w2e3r4t5   | with sudo permissions and will be used to login the rest of the users |
+|  fabric    	 | fabric     |--   | to manage the fabric instance |
+|  cassandra 	 | cassandra  | --| to managed the cassandra instance |
+|  kafka     	 | kafka      | --| not needed in single node enviroment |
 
-More detailed requirements for each are described below:
+	
 
-#### Docker over CentOs/RedHat
+### Fabric Server initial configuration.
 
-1. CentOS/RedHat 7.9, Ubuntu 18.04 (or higher) Operating System with the latest patches, for each:
+#### 1. Load the server image.
+* To load the server image to the hypervisor, contact your Locsl IT / Infrustructure team for more information.
+* the system is configured to get the IP from the network DHCP server, IP can be set manually if needed.
+* Connect to the VM ( by console or SSH ) and login with the user 'k2view'
 
-   - Modern Xeon Processor
-   - 8 Physical Cores
-   - 16 GB RAM
-   - HDD, 200GB must be available
+### 2. 
+
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
 2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
