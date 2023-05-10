@@ -50,8 +50,8 @@ Common input arguments of masking Actors are:
 
   Notes:
     * Set the **useExecutionId** to **false**, the **useEnvironment** to **true**, and the **verifyUnique** to **true** in order to get unique masked values on a given field per environment for all executions.
-    * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across a DC or a Cluster.
-    * If interface is **NONE**, no uniqueness check is done.
+    * If an interface is **IN-MEMORY**, uniqueness is checked only on a single node and not across a DC or a Cluster.
+    * If an interface is **NONE**, no uniqueness check is performed.
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
