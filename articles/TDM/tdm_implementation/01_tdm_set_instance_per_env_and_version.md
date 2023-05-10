@@ -14,7 +14,7 @@ TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_gloss
 
 ## TDM - LUI Format
 
-To create different LUIs per environment and version, each LUI created by the TDM must have the following format: 
+To create different LUIs per environment and per version, each LUI created by the TDM must have the following format: 
 
 ### Regular Tasks
 
