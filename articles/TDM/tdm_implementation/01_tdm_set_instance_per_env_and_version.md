@@ -31,7 +31,7 @@ When the  Data Versioning checkbox is not set, and a separate version of the ent
 
 #### Delete Only and Reserve Only Tasks
 
-When the TDM task only delete the entity from the target environment, or reserves an entity in the target environment, the target environment is concatenated to the LUI, since the source environment is not set in these tasks.
+When the TDM task either **delete only** an entity from the target environment, or **reserve only** an entity in the target environment, the target environment is concatenated to the LUI, since the source environment is not set in these tasks.
 
 ### Data Versioning Tasks
 
