@@ -27,7 +27,14 @@
 * the system is configured to get the IP from the network DHCP server, IP can be set manually if needed.
 * Connect to the VM ( by console or SSH ) and login with the user 'k2view'
 
-### 2. 
+### 2. Setup Cassandra
+
+	a. log in to cassandra user
+
+``` bash
+sudo su - cassandra
+```
+
 
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
