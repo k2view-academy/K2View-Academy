@@ -112,7 +112,7 @@ Customer 1 has orders 10, 12 and 13 in the Production environment. The **LUI** o
 
 **Example 2:**
 
-Customer 1 has orders 10, 12 and 13 in the Production environment. The user creates and executes a TDM extract [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) to save a version of Customer 1 in Production. The execution date and time is 8-Jan-2021 at 14:15:30 PM. The **LUI** of Customer 1 is **Production_1_saveCust1_20210108141530**. The sync of the **Production_1_saveCust1_20210108141530** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
+Customer 1 has orders 10, 12 and 13 in the Production environment. The user creates and executes a TDM extract [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) to save a version of Customer 1 in Production. The execution date and time are 8-Jan-2021 and 14:15:30 PM. The **LUI** of Customer 1 is **Production_1_saveCust1_20210108141530**. The sync of the **Production_1_saveCust1_20210108141530** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
 
 <table width="900pxl">
 <tbody>
