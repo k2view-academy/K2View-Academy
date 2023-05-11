@@ -249,7 +249,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
   - K2_TDM_EID - populated by the LU instance ID. 
   - IID - populated by the entity ID without the concatenation of the source environment, version name and version datetime.
   - SOURCE_ENV - populated by the source environment name of the TDM task.
-  - TASK_NAME - version name, populated by a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task by the task name.
+  - TASK_NAME - version name, populated with a task name for a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task.
   - TIMESTAMP - version datetime, populated by a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task. 
 
   **Example:** 
