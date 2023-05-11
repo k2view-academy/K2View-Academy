@@ -78,7 +78,7 @@ The same masking rule can be implemented in several flows of the same project. F
 
 The purpose of the **MaskingSequence** Actor is to enable the implementation of a sequence's solution when creating Broadway flows that load data into a target DB.
 
-The following example shows how to use a **MaskingSequence** Actor to generate a new sequence for a Customer ID instead of the original one:
+The following example shows how to use a **MaskingSequence** Actor to generate a new sequence for a Customer ID instead of the original value:
 
 ![image](../images/99_actors_07_2.PNG)
 
