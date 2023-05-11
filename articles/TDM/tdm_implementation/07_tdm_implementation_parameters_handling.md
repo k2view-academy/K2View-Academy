@@ -3,23 +3,23 @@
 
 ## TDM Task - Selecting Entities Based on Parameters
 
-A TDM task enables you to select a subset of entities based on a predefined list of parameters. For example, copy ten business customers that belong to Billing Cycle 1 and that are located in NY.  
+A TDM task enables you to select a subset of entities based on a predefined list of parameters. For example, copy 10 business customers belonging to Billing Cycle 1 and located in NY.  
 The parameters that are available for the task are attached to the LUs of the task's [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md). Parameters are defined at an LU level. 
 
 ## TDM Parameter Tables
 
 When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
 
-Parameter tables are used for the following:
+Parameter tables are used for:
 
-- Getting the list of available parameters per task.
-- Getting the number of matching entities for the selected parameters of the task.
-- Creating the entity list for the task if the task's selection method is based on parameters.
-- Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
+- getting the list of available parameters per task.
+- getting the number of matching entities for the selected parameters of the task.
+- creating the entity list for the task if the task's selection method is based on parameters.
+- creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
 
 ## TDM Parameters - Implementation Guidelines
 
-1.  Import the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) into the Fabric project and copy the **LU_PARAMS** LU table from the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) to each LU in the project apart from the TDM LU. 
+1.  Import the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) into the Fabric project and copy the **LU_PARAMS** LU table from the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) to each LU in the project, apart from the TDM LU. 
 The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
     -  ENTITY_ID 
     -  SOURCE_ENVIRONMENT
