@@ -2,11 +2,11 @@
 
 A task execution can override execution parameters by:
 
-- Setting the active environment based on the task's environments.
-- Setting key-value parameters on a session level.
-- Overriding [Globals'](/articles/08_globals/01_globals_overview.md) values on a session level.
-- Overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
-- Overriding additional execution parameters without changing the task itself.
+- setting the active environment based on the task's environments.
+- setting key-value parameters on a session level.
+- overriding [Globals'](/articles/08_globals/01_globals_overview.md) values on a session level.
+- overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
+- overriding additional execution parameters without changing the task itself.
 
 ### Setting Active Environments
 
