@@ -171,7 +171,7 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 - [Task execution jobs](/articles/TDM/tdm_architecture/03_task_execution_processes.md) are included in the TDM LU.
 - The TDM cleanup job that cleans the TDM DB is defined under the TDM LU. 
 - **From TDM 7.6 onwards, the TDM Portal code is included in the TDM LU**: the TDM Portal code is kept under the web sub-folder in the TDM LU. Note that the web directory can only be viewed using the Fabric web studio. If you use the desktop, you can right-click the TDM LU > Open Folder and view the web folder in the windows File Explorer.
-- TDM 7.6 includes the TDM DB upgrade scripts and flow.
+- TDM 7.6 and onwards includes the TDM DB upgrade scripts and a flow.
 
 ### Set a TTL (Time To Leave) on the TDM LUIs
 
