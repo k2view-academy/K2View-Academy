@@ -18,8 +18,8 @@ The [task execution process](03_task_execution_processes.md#main-tdm-task-execut
 
 The [task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the [active environment](/articles/25_environments/05_set_and_list_commands.md) as follows:
 
-1. First it sets the task's source environment as the active environment and gets the LUI from Fabric.
-2. After the LUI sync it sets the task's target environment as the active environment and runs the delete and/or load flows on the target environment.
+1. It first sets the task's source environment as the active environment and gets the LUI from Fabric.
+2. After the LUI sync, it sets the task's target environment as the active environment and runs the delete and/or load flows on the target environment.
 
 ### Setting Key-Value Parameters
 
