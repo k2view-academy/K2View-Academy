@@ -12,7 +12,7 @@ TDM relationship tables hold the links between the parent ID and their children 
 
 ### TDM_LU_TYPE_RELATION_EID
 
-This table holds the link between the **parent-child source IDs**. The relationship is saved per source environment. Additionally, each [Data versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) extract task creates separate records in the TDM_LU_TYPE_RELATION_EID table with the version name, date and the time of the extracted version of entities.
+This table holds the link between the **parent-child source IDs**. The relationship is saved per source environment. Additionally, each [Data versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) extract task creates separate records in the TDM_LU_TYPE_RELATION_EID table with the version name, the date and the time of the extracted version of entities.
 
 This table is used for the following:
 - [building the list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing TDM tasks on a [BE with a hierarchical structure](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities). The TDM execution process gets the children entities of the parent entities that have been successfully processed by the executed task.
