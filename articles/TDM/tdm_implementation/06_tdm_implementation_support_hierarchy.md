@@ -6,7 +6,7 @@ To support LU hierarchy and extracting or copying selected business entities and
 
 For example, to copy Customer 1 from the Production environment, TDM must identify the Billing Accounts and the Orders of Customer 1. 
 
-TDM relationship tables hold the links between the parent ID and their children IDs. There are two TDM relationship tables in the TDM DB:
+TDM relationship tables hold the links between the parent ID and their children IDs. There are 2 TDM relationship tables in the TDM DB:
 - [TDM_LU_TYPE_RELATION_EID](#tdm_lu_type_relation_eid).
 - [TDM_LU_TYPE_REL_TAR_EID](#tdm_lu_type_rel_tar_eid).
 
