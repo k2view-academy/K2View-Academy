@@ -180,23 +180,23 @@ This table holds the link between the **parent-child target IDs**. The relations
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_1</td>
-<td valign="top" width="700pxl">Name of the parent LU. For example, Customer.</td>
+<td valign="top" width="700pxl">Name of the parent LU; e.g., Customer.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_2</td>
-<td valign="top" width="700pxl">Name of the child LU. For example, Order.</td>
+<td valign="top" width="700pxl">Name of the child LU; e.g., Order.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU. For example, 30.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU; e.g., 30.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU. For example, 101.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU; e.g., 101.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
-<td valign="top" width="700pxl">Creation date of the record.</td>
+<td valign="top" width="700pxl">The record's creation date.</td>
 </tr>
 </tbody>
 </table>
