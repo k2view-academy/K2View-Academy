@@ -447,7 +447,7 @@ This API validates the overridden parameters with the user's permissions on the 
   - For example, if a user is allowed to reserve up to 70 entities in ST1 and there are 50 entities already reserved for him in ST1, he can reserve up to an additional 20 entities in ST1.
 - Validate the retention period to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
-If at least one of the validation fails, the API does not start the task and returns validation errors. 
+If at least one of the validations fails, the API does not start the task and returns validation errors. 
 
 ### Task Execution Process
 
