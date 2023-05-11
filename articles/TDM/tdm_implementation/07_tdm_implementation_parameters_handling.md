@@ -24,7 +24,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
     -  ENTITY_ID 
     -  SOURCE_ENVIRONMENT
 
-    The **fnEnrichmentLuParams** [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) is attached to the LU_PARAMS table and populates the LU_PARAMS table and then creates a record for each LUI (Entity ID). 
+    The **fnEnrichmentLuParams** [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) is attached to the LU_PARAMS table, it populates the LU_PARAMS table and then creates a record for each LUI (Entity ID). 
 
 2. Add the LU_PARAMS to the LU Schema and link the ENTITY_ID to the FABRIC_TDM_ROOT.IID.
 
