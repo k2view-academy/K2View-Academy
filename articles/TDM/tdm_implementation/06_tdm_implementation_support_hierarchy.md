@@ -63,7 +63,7 @@ This table is used for the following:
 
 **Example 1:**
 
-Customer 1 has orders 10, 12, and 13 in the Production environment. The **LUI** of Customer 1 is **Production_1**. The Sync of the **Production_1** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
+Customer 1 has orders 10, 12 and 13 in the Production environment. The **LUI** of Customer 1 is **Production_1**. The Sync of the **Production_1** LUI of the Customer LU populates the TDM_LU_TYPE_RELATION_EID with the following records:
 
 <table width="900pxl">
 <tbody>
