@@ -19,7 +19,7 @@ Parameter tables are used for:
 
 ## TDM Parameters - Implementation Guidelines
 
-1.  Import the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) into the Fabric project and copy the **LU_PARAMS** LU table from the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) to each LU in the project apart from the TDM LU. 
+1.  Import the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) into the Fabric project and copy the **LU_PARAMS** LU table from the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) to each LU in the project, apart from the TDM LU. 
 The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
     -  ENTITY_ID 
     -  SOURCE_ENVIRONMENT
