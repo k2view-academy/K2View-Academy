@@ -28,7 +28,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
    
 -  **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
    
-    Note that if you work on a PostgreSQL with an SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and TDM interfaces as follows:
+    Note that if you work on a PostgreSQL with an SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and the TDM interfaces as follows:
     
     - jdbc:postgresql://[ip address]:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=[full path of the .crt file]
     - Example:
