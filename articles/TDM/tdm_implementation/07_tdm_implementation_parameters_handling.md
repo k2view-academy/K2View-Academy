@@ -8,7 +8,7 @@ The parameters that are available for the task are attached to the LUs of the ta
 
 ## TDM Parameter Tables
 
-When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
+When [synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
 
 Parameter tables are used for:
 
