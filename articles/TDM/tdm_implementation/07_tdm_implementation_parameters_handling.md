@@ -10,12 +10,12 @@ The parameters that are available for the task are attached to the LUs of the ta
 
 When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
 
-Parameter tables are used for the following:
+Parameter tables are used for:
 
-- Getting the list of available parameters per task.
-- Getting the number of matching entities for the selected parameters of the task.
-- Creating the entity list for the task if the task's selection method is based on parameters.
-- Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
+- getting the list of available parameters per task.
+- getting the number of matching entities for the selected parameters of the task.
+- creating the entity list for the task if the task's selection method is based on parameters.
+- creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
 
 ## TDM Parameters - Implementation Guidelines
 
