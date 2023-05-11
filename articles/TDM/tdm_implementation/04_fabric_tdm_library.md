@@ -206,7 +206,7 @@ Notes:
 
 The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs. These utilities are described below.
 
-It is recommended to duplicate the TDM_Library LU as use it as a template when creating a new LU in a TDM project.
+It is recommended to duplicate the TDM_Library LU and use it as a template when creating a new LU in a TDM project.
 
 ### Globals
 
