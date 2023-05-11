@@ -36,7 +36,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
 2. Copy the **trnLuParams** translation object from the TDM_LIBRARY LU to the LU. 
 
-3. Edit the **trnLuParams**. Populate the parameter name and the SQL query of each parameter. The SQL query runs on the LU and must return only one column that is populated into the Parameter column of the LU_PARAMS table. To validate an SQL query, click the SQL button on the record to open the [Query Builder](/articles/11_query_builder/02_query_builder_window.md) where you can populate the **Fabric** DB connection and select the LU. For example:
+3. Edit the **trnLuParams**. Populate the parameter name and the SQL query of each parameter. The SQL query runs on the LU and must return only one column that is populated into the Parameter column of the LU_PARAMS table. For an SQL query validation, click the SQL button on the record to open the [Query Builder](/articles/11_query_builder/02_query_builder_window.md) where you can populate the **Fabric** DB connection and select the LU. For example:
 
     ![trnLuParams](images/trnLuParams_example.png)
 
