@@ -3,7 +3,7 @@
 
 ## TDM Task - Selecting Entities Based on Parameters
 
-A TDM task enables you to select a subset of entities based on a predefined list of parameters. For example, copy 10 business customers that belong to Billing Cycle 1 and that are located in NY.  
+A TDM task enables you to select a subset of entities based on a predefined list of parameters. For example, copy 10 business customers belonging to Billing Cycle 1 and located in NY.  
 The parameters that are available for the task are attached to the LUs of the task's [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md). Parameters are defined at an LU level. 
 
 ## TDM Parameter Tables
