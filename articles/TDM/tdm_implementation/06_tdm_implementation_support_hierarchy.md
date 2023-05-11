@@ -48,7 +48,7 @@ This table is used for the following:
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
-<td valign="top" width="700pxl">the record's creation date.</td>
+<td valign="top" width="700pxl">The record's creation date.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">version_name</td>
