@@ -249,11 +249,15 @@ The Custom Logic Broadway flow always has **2 external input parameters** and it
 - LU_NAME
 - NUM_OF_ENTITIES - the maximum number of entities to be processed by the task execution. The number is set either in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
 
-TDM 7.5 supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name customer_status to the flow. The flow selects the customers for the task based on the input customer_status parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
+TDM supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name customer_status to the flow. The flow selects the customers for the task based on the input customer_status parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
 
 **Notes:** 
 
 - The input parameter name must **not contain spaces or double quotes**.
+
+- TDM 8.0 added an integration of **Broadway editors** into the TDM portal when populating either the data generation parameters or the Custom logic parameters in the task’s tabs. This integration enables the user to select a valid value from a list, set dates and to set distributed parameters. 
+
+  Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the TDM integration with the Broadway editors and the implementation instructions for them.
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 
