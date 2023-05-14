@@ -2,7 +2,7 @@
 
 Information in the Data Explorer is displayed in a table and can be edited, added, updated and deleted using the functions displayed in the top Actions bar.  
 
-<img src="images/30_dataeditor_04.png" alt="Table Data Editor" style="zoom:80%;" />
+<img src="images/30_dataeditor_04.png" alt="Table Data Editor"  />
 
 ### Actions Bar
 

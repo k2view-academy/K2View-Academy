@@ -10,7 +10,7 @@ The K2View Web Framework includes a list of [pre-integrated applications](02_pre
 
 The Web Framework can be opened using the following URL: **http://[Fabric IP address]:[Fabric port]** or using the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar. For example http://localhost:3213.
 
-<img src="images/30_01_toolbar.PNG" alt="image" style="zoom:80%;" />
+<img src="images/30_01_toolbar.PNG" alt="image"  />
 
 Login to the Web Framework using your username and password. This enables a Single Sign On (SSO) process with secure authentication to multiple applications using one set of credentials. Access to the various functions in the applications is restricted by a user's [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) and is handled in the same way as in the Fabric server.
 
@@ -38,7 +38,7 @@ In addition, create the **myApp** folder (the folder name must be the same as th
 
 For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2View Web Framework's menu.
 
-<img src="images/30_01_doc.PNG" alt="image" style="zoom:80%;" />
+<img src="images/30_01_doc.PNG" alt="image"  />
 
 ### Static Web Resources Within LU
 

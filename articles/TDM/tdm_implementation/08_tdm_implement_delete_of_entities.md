@@ -43,9 +43,7 @@ The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) 
 
 Do the following to populate the target LU tables based on the target environment:
 
-1.  Update the execution order of the target LU tables' populations to run **after the source LU tables**. For example:
-
-   ![lu example](images/lu_tar_tables_example.png)
+1.  Update the execution order of the target LU tables' populations to run **after the source LU tables**. 
 
 2. Create the population object of the **main target LU table** based on the **Broadway flow**. This population must set the **target environment** to be the active environment before selecting the data from the data source: 
 

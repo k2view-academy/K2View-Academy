@@ -19,16 +19,9 @@ Parameter tables are used for:
 
 ## TDM Parameters - Implementation Guidelines
 
-1.  Import the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) into the Fabric project and copy the **LU_PARAMS** LU table from the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) to each LU in the project, apart from the TDM LU. 
-The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
-    -  ENTITY_ID 
-    -  SOURCE_ENVIRONMENT
+1. Verify that the LU_PARAMS is attached to the LU Schema.
 
-    The **fnEnrichmentLuParams** [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) is attached to the LU_PARAMS table, it populates the LU_PARAMS table and then creates a record for each LUI (Entity ID). 
-
-2. Add the LU_PARAMS to the LU Schema and link the ENTITY_ID to the FABRIC_TDM_ROOT.IID.
-
-3. Edit the **COMBO_MAX_COUNT** shared Global imported from the TDM Library, if needed. By default, the Global is populated with 49 and is checked when creating a TDM task using a parameters selection method. If the number of possible values in the [TDM Parameters tables](#tdm-parameters-tables) is less than or equal to the COMBO_MAX_COUNT value, the parameter is handled as a **combo** parameter and a list of all possible values for this parameter is displayed. If a value is not selected from the list, the parameter has  more values than the threshold defined in COMBO_MAX_COUNT and you must enter the value in the parameter.
+2. Edit the **COMBO_MAX_COUNT** shared Global imported from the TDM Library, if needed. By default, the Global is populated with 49 and is checked when creating a TDM task using a parameters selection method. If the number of possible values in the [TDM Parameters tables](#tdm-parameters-tables) is less than or equal to the COMBO_MAX_COUNT value, the parameter is handled as a **combo** parameter and a list of all possible values for this parameter is displayed. If a value is not selected from the list, the parameter has  more values than the threshold defined in COMBO_MAX_COUNT and you must enter the value in the parameter.
 
   ### Add Parameters to the Logical Unit
 
@@ -36,7 +29,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
 2. Copy the **trnLuParams** translation object from the TDM_LIBRARY LU to the LU. 
 
-3. Edit the **trnLuParams**. Populate the parameter name and the SQL query of each parameter. The SQL query runs on the LU and must return only one column that is populated into the Parameter column of the LU_PARAMS table. For an SQL query validation, click the SQL button on the record to open the [Query Builder](/articles/11_query_builder/02_query_builder_window.md) where you can populate the **Fabric** DB connection and select the LU. For example:
+3. Edit the **trnLuParams** translation object (duplicated from the TDM_LIBRARY LU). Populate the parameter name and the SQL query of each parameter. The SQL query runs on the LU and must return only one column that is populated into the Parameter column of the LU_PARAMS table. To validate an SQL query, click the SQL button on the record to open the [Query Builder](/articles/11_query_builder/02_query_builder_window.md) where you can populate the **Fabric** DB connection and select the LU. For example:
 
     ![trnLuParams](images/trnLuParams_example.png)
 
@@ -44,14 +37,15 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
     ![Lu_Params](images/lu_params_example.png)
 
-5. The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populates each column in the LU_PARAMS with the results of its related SQL query. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+5. The LU population flow runs the **fnEnrichmentLuParams**  function. This function runs the SQL queries of the **trnLuParams** and populates each column in the LU_PARAMS with the results of its related SQL query. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
   ![lu params](images/populated_lu_params_example.png)
 
- 6. The **fnEnrichmentLuParams** enrichment function also creates and populates the `<LU Name>_params` table in the TDM DB.
+ 6. The **fnEnrichmentLuParams** function also creates and populates the `<LU Name>_params` table in the TDM DB.
 
 **Notes:**
 
+- The fnEnrichmentLuParams function runs the SQL queries to retrieve the LU tables' data. Therefore it has an execution order 999 to run after the remaining LU tables' population. 
 - The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
 - The COLUMN_NAME value is displayed in the TDM Portal when the user selects parameters for a task.
 - Do not include spaces or special characters in parameter names.

@@ -7,7 +7,7 @@ TDM environments must be defined in Fabric. Make sure that you define the TDM en
 Note: You must also define the TDM environments in the TDM Portal. [Click here](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) for more information on doing this.  
 
 
-### Defining TDM Environments in Fabric
+## Defining TDM Environments in Fabric
 
 Fabric environments are used to run TDM processes on various environments by switching between them according to the task's environments.  The connection details of each environment's data sources are taken from the Fabric environment's data.
 
@@ -26,10 +26,19 @@ Note that **you must not include an underscore ('_') in the environment name whe
 
 The TDM implementation must include the **creation and deployment** of all the TDM environments with their connection details to enable the execution of the TDM tasks. 
 
-Notes:
-- **Every change of a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
-- It is important to **set the TDM_APIDOC_JSON local file system interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory)
+### Defining the Synthetic Environment for the Generate Tasks
 
+TDM 8.0 added a support of a new task action (type): Generate - for generating synthetic entities.
+
+The [Generate task] is based on a dummy source environment named **Synthetic**. The **Synthetic** environment must be created and deployed in Fabric with the TDM and DB_CASSANDRA interfaces (these interfaces must be enabled), and must also be created in the TDM DB.
+
+
+
+### Notes:
+
+- **Every change of a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
+- It is important to **set the TDM_APIDOC_JSON local file system interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
+- The create/update TDM DB scripts add the Synthetic environment to the TDM DB. Still, there is a need to add the Systems to the Synthetic environment in the TDM portal.
 
 [Click here](/articles/25_environments/02_create_new_environment.md) for more information about Fabric environments.
 

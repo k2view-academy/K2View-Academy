@@ -1,12 +1,12 @@
 # Task Execution - Overriding Parameters
 
-A task execution can override execution parameters, as follows:
+A task execution can override execution parameters by:
 
-- Setting the active environment based on the task's environments.
-- Setting key-value parameters on a session level.
-- Overriding [Globals'](/articles/08_globals/01_globals_overview.md) values on a session level.
-- Overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
-- Overriding additional execution parameters without changing the task itself.
+- setting the active environment based on the task's environments.
+- setting key-value parameters on a session level.
+- overriding [Globals'](/articles/08_globals/01_globals_overview.md) values on a session level.
+- overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
+- overriding additional execution parameters without changing the task itself.
 
 ### Setting Active Environments
 
@@ -16,12 +16,10 @@ The [task execution process](03_task_execution_processes.md#main-tdm-task-execut
 
 #### Load Tasks
 
-The [task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the [active environment](/articles/25_environments/05_set_and_list_commands.md):
+The [task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) sets the [active environment](/articles/25_environments/05_set_and_list_commands.md) as follows:
 
-1. Sets the task's source environment as the active environment. 
-2. Gets the LUI from Fabric.
-3. Sets the task's target environment as the active environment. 
-4. Runs the delete and/or load flows on the target environment.
+1. It first sets the task's source environment as the active environment and gets the LUI from Fabric.
+2. After the LUI sync, it sets the task's target environment as the active environment and runs the delete and/or load flows on the target environment.
 
 ### Setting Key-Value Parameters
 
@@ -38,7 +36,7 @@ A project's Global can be overridden on either a [TDM environment](/articles/TDM
 
 The task execution process sets the values on the Globals on a [session level](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
-Note: Task level variables have a higher priority than TDM environment level variable. I.e. if a variable (Global) is set on both - the task and the related environment levels - the task's Global value gets the higher priority.
+Note: Task level variables have a higher priority than TDM environment level variable. That is, if a variable (Global) is set on both - the task and the related environment levels - the task's Global value gets the higher priority.
 
 ### Overriding the Sync Mode on the Task Execution 
 
@@ -262,7 +260,6 @@ This way, various users can **use a task as a template** and change (override) t
 
 TDM supports the override of the following parameters:
 
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -284,10 +281,10 @@ TDM supports the override of the following parameters:
 <p><a href="/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list">entitieslist</a></p>
 </td>
 <td width="225pxl">
-<p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can only contain one Business Entity ID when executing a task that clones a Business Entity.</p>
+<p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can contain only one Business Entity ID when executing a task that clones a Business Entity.</p>
 </td>
 <td width="200pxl">
-<p>Load task</p>
+<p>All task types except a Generate task</p>
 </td>
 <td width="150pxl">
 <p>True/False</p>
@@ -423,6 +420,7 @@ TDM supports the override of the following parameters:
 </table>
 
 
+
 Note:
 - The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM Portal. **Currently this option is not supported when executing the task using the TDM Portal.**
 
@@ -435,7 +433,7 @@ This API validates the overridden parameters with the user's permissions on the 
 
 - Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, the API returns an error message.
 - Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
-- Do not enable an execution if another execution with the same execution parameters is already running on the task.
+- Do not enable an execution when another execution, with the same execution parameters, is already running on the task.
 - Validate the task's BE and LUs with the [systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, a user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if he does not have permissions to run such a task on this environment.
 
@@ -449,7 +447,7 @@ This API validates the overridden parameters with the user's permissions on the 
   - For example, if a user is allowed to reserve up to 70 entities in ST1 and there are 50 entities already reserved for him in ST1, he can reserve up to an additional 20 entities in ST1.
 - Validate the retention period to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
-If at least one of the validation fails, the API does not start the task and returns validation errors. 
+If at least one of the validations fails, the API does not start the task and returns validation errors. 
 
 ### Task Execution Process
 

@@ -2,11 +2,11 @@
 
 The TDM library has sets of generic flows that allow you to create a standard TDM implementation in just a few minutes. Once a standard implementation has been created, its flows can be edited and tailored to your project's needs.
 
-## How Do I Create TDM Broadway Flows?
+## How Do I Create the TDM Broadway Flows?
 
 ## Step 1 - Define Tables to Filter Out
 
-Before beginning to create Broadway flows, define the tables that are filtered out by the Broadway template, which generates the DELETE and LOAD flows. The library includes settings for the following filtered auxiliary tables:
+Before beginning to create Broadway flows, define the tables that are filtered out by the Broadway template, which generates the **delete** and **load** flows. The library includes settings for the following filtered auxiliary tables:
 
 ![image](images/11_tdm_impl_actor_1.PNG)
 
@@ -37,10 +37,10 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
    - **SEQUENCE_REDIS_OR_DB** - indicates whether the next value is taken from Redis, memory, or from the target DB interface. Populate this setting using either of the following:
       - **FabricRedis** interface (imported from the TDM library).
       - **IN-MEMORY**, useful for testing only since it can be used only in a single node configuration. 
-      - **Target DB interface name** in order to get the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
-   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is only relevant when getting the next value from **FabricRedis**. Otherwise, the next value is taken from the target system.
+      - **Target DB interface name** in order to get the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. The sequence actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
+   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis or IN-MEMORY**. Otherwise, the next value is taken from the DB sequence.
 
- Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the the sequence actor.
+ Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the the sequence actors.
 
    An example of the **TDMSeqList** Actor:
 
@@ -50,9 +50,11 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
 
    ![image](images/CustomerIdInitFlow.png)
 
-   The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the Sequences' Actors. 
 
-   Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
+
+The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the Sequences' Actors. 
+
+Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
 B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has 2 [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in the **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
 
@@ -61,15 +63,26 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
 
 
-### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
+### Populate the Sequence Mapping Table
 
-The **TDMSeqSrc2TrgMapping** table has been added in TDM 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into multiple tables and LUs.
 
 See the below example:
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
-### Customize the Sequence Logic
+
+
+This table serves two purposes: 
+
+1.  It has been added in TDM 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
+
+2. TDM 8.0 uses this table to add the sequence actors to the data generation flow that generates a synthetic data for the LU table.
+
+     
+
+Click for more information about [the synthetic data generation implementation]
+
 Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
 This capability enables you to create your own function or Broadway flow in order to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. It works as follows: 
 
@@ -105,7 +118,6 @@ Note that the **input LU must be deployed to Fabric debug before running the cre
 
 The load flows are generated by the **createLoadTableFlows.flow**, that receives the following input parameters: Logical Unit name, target interface and target schema. It then retrieves the list of tables from the LU schema, and creates a separate Broadway flow on each table in order to load its data into the related target table in the target DB. The name of each newly created flow is **load_[Table Name].flow**, e.g. load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
-### Update the Load Flows with the Sequence Actors 
 The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
 Additionally, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityId_Actor** to the Load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_cases** flow and send the target case ID as an input parameter to the actor:  
@@ -180,9 +192,16 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   * When the TDM task clones an entity, masking is always enabled.
   * When the TDM task loads a data version, masking is always disabled.
-  * In all other scenarios, masking behavior depends on the MASK_FLAG settings.
+  * In all other scenarios, masking behavior depends on the masking Globals settings.
   
-* Note that from TDM 7.3 and onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and Load flows) in order to get different data in the masked fields on each clone.
+* Notes:
+
+  *  From TDM 7.3 and onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and Load flows) in order to get different data in the masked fields on each clone.
+
+  * TDM 8.0 added the **root_id** to the caching key, in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
+
+    For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs. It is recommended to set the **useInstanceId** input argument of the masking actors to **true** to keep the PII fields' referential integrity within the Business Entity LUs.
+
 
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
@@ -230,11 +249,15 @@ The Custom Logic Broadway flow always has **2 external input parameters** and it
 - LU_NAME
 - NUM_OF_ENTITIES - the maximum number of entities to be processed by the task execution. The number is set either in the task or in the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
 
-TDM 7.5 supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name customer_status to the flow. The flow selects the customers for the task based on the input customer_status parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
+TDM supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name customer_status to the flow. The flow selects the customers for the task based on the input customer_status parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
 
 **Notes:** 
 
 - The input parameter name must **not contain spaces or double quotes**.
+
+- TDM 8.0 added an integration of **Broadway editors** into the TDM portal when populating either the data generation parameters or the Custom logic parameters in the task’s tabs. This integration enables the user to select a valid value from a list, set dates and to set distributed parameters. 
+
+  Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the TDM integration with the Broadway editors and the implementation instructions for them.
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g. "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the Split actor in Broadway flow.
 

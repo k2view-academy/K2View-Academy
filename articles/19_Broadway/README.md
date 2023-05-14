@@ -30,5 +30,6 @@
 <li><a href="30_support_parallel_execution.md">Support Parallel Execution</a></li>
 <li><a href="31_broadway_profiler.md">Broadway Profiler</a></li>
 <li><a href="32_reset_actor_state.md">Reset Actor State</a></li>
+<li><a href="33_flow_properties.md">Flow Properties</a></li>
 </ul>
 

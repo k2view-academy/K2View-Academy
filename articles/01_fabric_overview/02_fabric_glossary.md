@@ -59,7 +59,7 @@
 <p><strong>Digital Entity</strong></p>
 </td>
 <td width="516">
-<p>A digital version of a person, place or a thing which is usually correlated to a business entity.</p>
+<p>A data product: digital version of a person, place or a thing which is usually correlated to a business entity.</p>
 </td>
 </tr>
 <tr>
@@ -291,7 +291,7 @@
 <p>Defines how the sync will be performed (sync policy):</p>
 <p><strong>NONE</strong>: Do not sync.</p>
 <p><strong>Time Interval</strong>: Sync is performed automatically at the predefined time. Format = D.HH:MM:SS. Default = 1 Day.</p>
-<p><strong>Inherited</strong>: Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT schema.</p>
+<p><strong>Inherited</strong>: Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LU schema.</p>
 <p><strong>Decision function</strong>: Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
 <p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
 </td>
@@ -355,6 +355,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 

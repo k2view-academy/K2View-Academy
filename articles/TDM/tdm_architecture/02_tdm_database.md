@@ -4,7 +4,6 @@ TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. The TDM APIs a
 
 The following table lists the TDM tables and their description.
 
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -15,8 +14,8 @@ The following table lists the TDM tables and their description.
 <tr>
 <td valign="top" width="200pxl"><h4>permission_groups_mapping</td>
 <td valign="top" width="400pxl">
-        <p>Mapping of <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role">Fabric roles</a> to TDM permission groups (admin, owner, or tester).</p>
-        <p>The relation between Fabric roles and TDM permission groups is many to one.</p>
+        <p>Mapping of <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role">Fabric roles</a> to TDM permission groups (admin, owner or tester).</p>
+        <p>The relationship between Fabric roles and TDM permission groups is many-to-one.</p>
         <p><a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">Click for more about the TDM permission groups.</a></p>
     </td>
 <td valign="top" width="300pxl">TDM Permission Groups (User Types)</td>
@@ -29,7 +28,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_lu_type_relation_eid</td>
-<td valign="top" width="400pxl"><p>TDM relationships table. This table maps the source parent Entity ID to its source children Entity IDs per source environment. For example Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</p>
+<td valign="top" width="400pxl"><p>TDM relationships table. This table maps the source parent Entity ID to its source children Entity IDs per source environment. For example, Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</p>
   <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid">Click for more information about tdm_lu_type_relation_eid table.</a></p>  
   </td>
 <td valign="top" width="300pxl">Business Entity</td>
@@ -43,7 +42,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>[LU_NAME]_params</td>
-<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and source environment has a specific record which holds the Entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customer Type. This table is created by a Fabric sync on each LU and is used to support random selection and select by parameters task selection methods.</p>
+<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and a source environment has a specific record that holds the Entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customer Type. This table is created by a Fabric sync on each LU and is used to support a random selection and to select by parameters task selection methods.</p>
  <p><a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">Click for more information about parameters handling.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
@@ -72,7 +71,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>environments</td>
-<td valign="top" width="400pxl">TDM <a href="/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md">source and target environments</a>. Each record contains the environment name, environment type (source, target, or both), and the environment name in Fabric.</td>
+<td valign="top" width="400pxl">TDM <a href="/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md">source and target environments</a>. Each record contains the environment name, environment type (source, target or both), and the environment name in Fabric.</td>
 <td valign="top" width="300pxl">TDM Environments</td>
 </tr>
 <tr>
@@ -126,6 +125,11 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
+<td valign="top" width="200pxl"><h4>tdm_generate_task_field_mappings</td>
+<td valign="top" width="400pxl">The data generation parameters of Generate tasks.</td> 
+<td valign="top" width="300pxl">Task</td>
+</tr>      
+<tr>
 <td valign="top" width="200pxl"><h4>task_exe_error_detailed</td>
 <td valign="top" width="400pxl">TDM Execution detailed error table.</td>
 <td valign="top" width="300pxl">Task Execution</td>
@@ -144,7 +148,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_execution_override_attrs</td>
-<td valign="top" width="400pxl">List of execution parameters like environments or Globals to be overridden on given task execution.</p>
+<td valign="top" width="400pxl">List of execution parameters - like environments or Globals - to be overridden on a given task execution.</p>
    <p>The list of the overridden parameters is concatenated into a JSON file and populated in the override_parameters column. </p>
    <p>For example: {"SOURCE_ENVIRONMENT_NAME":"ENV3","TARGET_ENVIRONMENT_NAME":"ENV3"}</td> 
 <td valign="top" width="300pxl">Task Execution</td>        
@@ -177,7 +181,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>activities</td>
-<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity specifying its date, time, user, type (create or update), impacted TDM component and description.  </td>
+<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity, specifying its date, time, user, type (create or update), impacted TDM component and description.  </td>
 <td valign="top" width="300pxl">TDM Activities</td>
 </tr>
 <tr>
@@ -187,6 +191,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 

@@ -22,4 +22,4 @@ The reset can be performed by one of the following options:
 
 
 
-[![Previous](/articles/images/Previous.png)](31_broadway_profiler.md)
+[![Previous](/articles/images/Previous.png)](31_broadway_profiler.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](33_flow_properties.md)

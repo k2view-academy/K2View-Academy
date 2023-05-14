@@ -1,14 +1,14 @@
 # TDM Reference Processes
 
-The list of Reference tables available for TDM tasks is populated in the [trnRefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnreflist) translation object.  TDM 7.6 stores the Reference tables in a dedicated LU: **TDM_Reference**. Each Reference table is stored as a separate LUI.  
+The list of Reference tables available for TDM tasks is populated in the [trnRefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnreflist) translation object.  TDM 7.6 onwards stores the Reference tables in a dedicated LU: **TDM_Reference**. Each Reference table is stored as a separate LUI.  
 
-Previous TDM versions stored the extracted reference tables in the Cassandra DB:  the TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target. 
+Previous TDM versions stored the extracted reference tables in the Cassandra DB:  the TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target environment. 
 
 
 
 ## Task Execution Job
 
-The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows in order to get the reference table into Fabric (TDM_Reference LU) and load it to the target for a load task. 
+The [main task execution process](03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) runs TDM Broadway flows in order to get the reference table into Fabric (TDM_Reference LU) and loads it into the target environment for a load task. 
 
 The job updates the status of the processed reference table in the [task_ref_exe_stats](02_tdm_database.md#task_ref_exe_stats) TDM DB table: 
 
@@ -30,7 +30,7 @@ Examples:
 
 
 
-Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
+Note that **the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e., each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
 
 
 
@@ -41,7 +41,7 @@ The reference_table LU table keeps the reference data. The LU table has the foll
 - TABLE_NAME - populated with the reference table name, e.g., CUSTOMER_TYPE.
 - TDM_TASK_EXECUTION_ID - populated, by default, with **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - SOURCE_ENV_NAME - populated by the source environment.
-- TABLE_DATA - the table data is extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
+- TABLE_DATA - the table data are extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
 - RECORD_COUNT - number of records of the reference table.
 - TABLE_FIELDS - list of the reference table's fields.
 
@@ -111,7 +111,7 @@ The reference_table LU table keeps the reference data. The LU table has the foll
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1.  The LUI is Customer|ENV1|ALL|CUSTOMER_TYPE.
+- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1.  A new LUI is created in TDM_Reference LU: Customer|ENV1|ALL|CUSTOMER_TYPE.
 
 - The LU table is populated as follows:
 

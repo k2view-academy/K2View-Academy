@@ -1,77 +1,59 @@
-# **Fabric Environments & Interfaces Encryption** 
+# **Fabric Environments & Interfaces Security** 
+
+Fabric enables communication to external systems, such as source and target data, via [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that define connection definitions.
+
+The secrets, like passwords, that are a part of the interfaces' definitions, are stored securely either in Fabric, where secrets are encrypted, or in an external Secret Manager service that Fabric integrates with.
+
+<studio>
+
+## Securing Environments
+
+Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the connection details of the interfaces.
+
+When using Fabric for storing environment secrets, there are 3 optional encryption levels that can be defined and applied - strong, stronger and strongest:
+
+1. **Assigned Environment with a keystore** (Protection Key) - this is the most recommended and secured method, where:
+
+   * encryption is done using Fabric's powerful [Key Management](/articles//26_fabric_security/02_fabric_entities_design.md#key-management) mechanism.
+   * encryption is done using each environment's master key. This means that at runtime, an environment - upon all its interface secrets - can be used only on the Fabric that it is associated to. For example, Fabric in a UAT environment will not be able to access Production interfaces.
+   * the master key itself is protected by a keystore.
+
+   >  To use this option, you need to populate the "Fabric URL" field, as describe [here](/articles/25_environments/02_create_new_environment.md).
+
+2. **Assigned Environment without a keystore** - this option is similar to the previous #1 method, where the master key is set without a keystore protection.
+
+3. **Unassigned Environment** - this option does not encrypt the interface secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
+
+   The secrets encryption is done by using a code-based mechanism and thus can be used among all Fabric environments. 
 
 
-## Environments
 
-Fabric enables you to define a number of source [environments](/articles/25_environments/01_environments_overview.md) and to switch between them during the same Fabric session. This way, you can change source connections without redeploying an LU.
+> Notes:
+>
+> * When changing the passwords of an interface in an environment, Fabric re-encrypts the passwords.
+> * If the master key is rotated at an environment, you can use the "Re-Key" button. When activated, the passwords of all interfaces are re-encrypted by the latest master key. This is relevant to methods #1 and #2, where the environment's Fabric master key is being used for encryption.
 
-For each environment, set the connection details of the interfaces and then deploy the environments to the Fabric cluster. Deployment of the environments is separate from the deployment of the LUs. The passwords of the interfaces are encrypted by the Fabric master key.
-
-Fabric encrypts the interface details of each environment using the same master key generated when Fabric starts (or regenerates it). This key is also used to encrypt LU instances. 
-
-To rekey the interfaces belonging to a given environment, do the following:
-1. Open the Environments window of the Fabric Studio.
-2. Set a Fabric node in the Fabric URL of each environment.
-3. Click Re-Key.
-
-When the connection details of the interfaces of the environment are updated and saved, the updated connection details are re-encrypted.
-Similar to entities, Fabric keeps the key description of the master key used for the encryption of each environment.
-
-Notes:
-
-- When changing and saving the passwords of an interface in an environment, Fabric encrypts the modified passwords using server logic to automatically rekey the master key.
-- A new Fabric URL field is added to define the Fabric node to be used to encrypt the passwords and run the test connection function. Note that when unchecked, the local test connection and previous encryption algorithm is used.
-- The **Re-Key** column has been added in order to use the most updated encryption mechanism and the latest master key to encrypt the passwords of all interfaces.
-
-<img src="images/06_fabric_envEncryption.PNG">
+   <img src="images/06_fabric_envEncryption.PNG">
 
 
-## Environments - Three Levels of Security 
 
-Fabric enables users to define and apply strong, stronger and strongest levels of encryption on environment interfaces.
+## Securing Interfaces Settings
 
+The base interfaces, that are not part of environments, are used for development. Their secrets are encrypted by the base level of encryption.
 
-### Level 1 - Unassigned Environment 
-Fabric cannot be reached via the URL and the following configuration parameters apply:
+</studio>
 
-- Master key is hardcoded in Fabric code.
-- The Encryption process is similar on all environments, for all projects and accounts deployed and setup.
+<web>
 
-This means that to get full access to all interfaces in any given project, the environment XML file is required and must be added to the **Projects\PROJECT_NAME\Implementation\SharedObjects\Environments** folder.
+Fabric enables you to define several source [environments](/articles/25_environments/01_environments_overview.md), where for each environment you can set the interfaces' connection details. Securing an environment's interface secrets is done in a similar manner as for the base interfaces’ secrets.
 
-
-### Level 2 - Assigned Environment Without Keystore
-
-The following mechanism is used:
-
-- The master key is generated and the encrypted master key is saved in Cassandra. 
-- Fabric uses the AES256 algorithm with GCM (Galois/Counter Mode) to encrypt the master key.
-- The interface password encryption is valid *only* on the defined Fabric cluster.
-- The interface password can be re-encrypted using the Re-Key button or by saving the password changes.
+</web>
 
 
-### Level 3 - Assigned Environment With Keystore (Protection Key)
-The protection key is used to encrypt the master key using a Java Keystore. To decrypt the password to the environment using this option, the following access is needed:
-- Environment's XML (like for the previous solution).
-- Master key stored in Cassandra (environment dependent), access to the entire Cassandra cluster is required.
-- Keystore.
-- Keystore password (config.ini) to get the protection key storing the encrypted master key.
 
-## Interfaces 
-
-When defining a new interface, the password for this interface is encrypted and saved in the [XML file](/articles/25_environments/04_offline_deployment.md#xml-file-example) used to stage the project's deployment onto the server. 
-
-``` 
-<dbScheme>postgres</dbScheme>
-<dbUser>postgres</dbUser>
-<dbPasswordEncrypted>dqmdIUWuyC+4KaNDEKDlBimtd2utoESMq2Oj4NhUzCY=:X8P+ihKPTG2WuwfX0xztOPSS3lDLrr7Y+UrkzjkHf/c=</dbPasswordEncrypted>
-```
-<img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.PNG">
-
-## File Systems
+## Securing File Systems Settings
 
 Fabric enables connection to SFTP servers hosting files.
-When an SFTP connection is needed to pull or push files, SSH keys exchange-based authentication can be used, in which case the password in the SFTP interface must be left blank.  
+When an SFTP connection is needed to pull or push files, SSH key-exchange-based authentication protocol can be used, in which case the password in the SFTP interface should be left blank.  
 
-
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/04a_secret_manager.md)

@@ -74,11 +74,12 @@ In a flow there may be a need to concatenate several strings into a single strin
 To create a **Link**, do either:
 
 - Click the **output parameter** of the source Actor and drag the **connection line** to the **input parameter** of the target Actor.
+
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
-- Click ![image](images/99_19_dots.PNG) in the source [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes. It is recommended to use this option when the Actors are far from each other in the flow.
+
+- Click ![image](images/99_19_dots.PNG) in the source [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Link Type** and then click <img src="images/V-icon.png" style="zoom:75%;" /> to save the changes. It is recommended to use this option when the Actors are far from each other in the flow.
 
    ![Adding link](images/99_20_add_link_1.PNG)
-   
 
 To delete a **Link**, click the link's connection line and press **Delete** on your keyboard.
 
