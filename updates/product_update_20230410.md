@@ -10,4 +10,4 @@ Fabric 7.1 has just been released and it includes the following:
 
 See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.1/Fabric_Release_Notes_V7.1.0.pdf.html) and [Upgrade Procedure to 7.1](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.1/Fabric_Upgrade_Procedure_To_V7.1.pdf.html) for the full list of features and fixes.
 
-<img src="images/img11.png" alt="image" style="zoom: 50%;" />
+<img src="images/img11.png" alt="image" style="zoom: 70%;" />
