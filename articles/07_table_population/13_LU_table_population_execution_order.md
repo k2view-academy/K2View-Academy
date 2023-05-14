@@ -13,8 +13,11 @@ To improve the sync time of an LUI, Fabric can support parallel syncs on several
 ### How Do I Set the Population Order?
 
 The LU schema's Root Table is always populated first. By default, its execution order is set to 1. Other tables in the LU schema are populated according to their hierarchy level in the LU schema in a parent plus one order.
+
 By default, all LU table populations on the same hierarchy level in an LU schema have the same execution order. The order can be modified and have different values if needed. For example, when tables T2 and T3 are added to a schema under table T1, the population execution order of tables T2 and T3 will be the same and will be higher than the execution order of table T1.
 An LU table may have more than one population. By default, all populations in the same LU table are set to the same population execution order, which can also be updated manually if needed. 
+
+A Root Table can have multiple populations like any other LU table. By default, their execution order is set to 1, which can be updated manually if needed. Note that if Root Table populations have been updated to have different execution order and the population with the minimum execution order doesn't return any IIDs, Fabric doesn't execute other Root Table's populations. 
 
 **Example**
 
