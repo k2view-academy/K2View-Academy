@@ -114,22 +114,26 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State.
+- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State. The editor of the parameter depends on the parameter type.
 
-•Add the City parameter on Address’ generation flow.
+  Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
 
-The query is generated dynamically according to the input parameters.
+##### Handle the Loop over the Number of Records
 
-Generated data:
+There are several options for the data generation inner flow:
 
-In case the fabric session has ROWS_GENERATOR set to true, the actor will generate data by using the rowsGeneratorDistribution
+- **Row by row** - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a map type. 
+- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the actor will collect them and move to the next parent row.
+- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The actor will return these rows and will not call the inner flow again.
 
-and a flow with the convention ${POPULATION}.population.generator
+The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to by executed in the **rows per parent** or **handle all parent rows** as explained above.
 
-Internally the RowsGenerator actor is used. For more information on how to use generated data, see the RowsGenerator actor documentation.
+For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
+
+Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information about the RowsGenerator Actor.
 
 
 
 
 
-Add a  new item about rule-based data generation implementation to describe all the  implementation parts:     1. Define the LU schema and BF populations.     2. Populate the tdmSeqList amf tdmSrc2Mapping.     3. Deploy the LU and generate data generation flows.     4. Edit data generation flows- replace the default generators with special  logic + set const for PII fields.     5. Edit the lu population flows - set the rowsGenerator to be external and  set the name of the external.     
+[![Previous](/articles/images/Previous.png)](14_tdm_implementation_supporting_non_jdbc_data_source.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
