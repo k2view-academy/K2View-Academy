@@ -4,10 +4,10 @@
 ### Prerequisites
 
 * Virtual Environment/hypervisor that supports the import of an OFA/OVF file.
-* The image was configured with the following specifications, verify the hypervisor contain enough resources:
-> * Compute: 8 vCPU.
-> * Memory: 32 GB RAM.
-> * Storage: 500 GB disk.
+* The image was configured with the following specifications; please verify that the hypervisor contains enough resources:
+> * Compute: 8 vCPU
+> * Memory: 32 GB RAM
+> * Storage: 500 GB disk
 * The VM is based on Ubuntu Server Version22.04.2 LTS (Jammy Jellyfish).
 * The OS is preconfigured with management users.
 
