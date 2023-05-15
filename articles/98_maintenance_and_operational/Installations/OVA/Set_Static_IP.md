@@ -43,4 +43,4 @@ To switch configuration to Static IP, follow the following instructions:
 	netplan apply
 	~~~
 
-4. Reconnect to the server with ithe assigned IP and continue with the setup proccess.
+4. Reconnect to the server with the assigned IP address and continue with the setup process.
