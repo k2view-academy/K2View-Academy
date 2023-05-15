@@ -10,7 +10,7 @@
 
 To switch configuration to Static IP, follow the following instructions:
 
-1. copy the template file.
+1. Copy the template file.
 
 	~~~bash
 	cp /etc/netplan/00-installer-config.yaml.static /etc/netplan/00-installer-config.yaml
