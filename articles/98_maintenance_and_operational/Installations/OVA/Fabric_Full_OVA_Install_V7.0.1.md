@@ -3,7 +3,7 @@
 
 ### Prerequisites
 
-* Virtual Environment/hypervisor that supports the import of an OFA/OVF file.
+* Virtual Environment/hypervisor that supports the import of an OVA/OVF file.
 * The image was configured with the following specifications; please verify that the hypervisor contains enough resources:
 > * Compute: 8 vCPU
 > * Memory: 32 GB RAM
