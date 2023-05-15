@@ -9,7 +9,7 @@
 > * Memory: 32 GB RAM.
 > * Storage: 500 GB disk.
 * The VM is based on Ubuntu Server Version22.04.2 LTS (Jammy Jellyfish).
-* The OS is preconfigured with managment users.
+* The OS is preconfigured with management users.
 
     
 | Role           | Username    | Password      | Notes 
