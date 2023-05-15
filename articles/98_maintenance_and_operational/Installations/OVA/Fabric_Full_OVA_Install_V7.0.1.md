@@ -14,7 +14,7 @@
     
 | Role           | Username    | Password      | Notes 
 | ----------     | ---------- | ---------- | ---------- | 
-|  Manament      | k2view    | Q1w2e3r4t5   | with sudo permissions and will be used to login the rest of the users |
+|  Management      | k2view    | Q1w2e3r4t5   | with sudo permissions and will be used to login the rest of the users |
 |  fabric         | fabric     |--   | to manage the fabric instance |
 |  cassandra      | cassandra  | --| to managed the cassandra instance |
 |  kafka          | kafka      | --| not needed in single node enviroment |
