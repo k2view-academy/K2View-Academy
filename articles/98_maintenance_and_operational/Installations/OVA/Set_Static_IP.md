@@ -2,13 +2,13 @@
 
 * The VM is pre-set to start with DHCP configuration 
 
-* the configuration templates for each mode are located under the folder /etc/netplan.
+* The configuration templates for each mode are located under the folder /etc/netplan.
 
-  * For DHCP configureation the file name is: 00-installer-config.yaml.dhcp
+  * For DHCP configureation, the file name is: 00-installer-config.yaml.dhcp
 
-  * For static configuration the file name is: 00-installer-config.yaml.static
+  * For static configuration, the file name is: 00-installer-config.yaml.static
 
-To switch configuration to Static IP use th efollowing instruction:
+To switch configuration to Static IP, follow the following instructions:
 
 1. copy the template file.
 
