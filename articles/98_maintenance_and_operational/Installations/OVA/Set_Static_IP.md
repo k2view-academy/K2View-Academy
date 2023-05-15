@@ -8,7 +8,7 @@
 
   * For static configuration, the file name is: 00-installer-config.yaml.static
 
-To switch configuration to Static IP, follow the below instructions:
+To switch configuration to a static IP address, follow the below instructions:
 
 1. Copy the template file.
 
