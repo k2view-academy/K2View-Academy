@@ -105,6 +105,7 @@ The source LU tables are not populated by the LUI sync in the following cases:
 - A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md).
 - A  [reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md).
 - A [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md): the selected data version is copied from Fabric. 
+- Load synthetic entities tasks (the source environmet in Synthetic). 
 
 The Broadway flow also validates whether the entity exists in the source table. If the entity is not found in the main source tables, an Exception is thrown and the entity is rejected.
 
