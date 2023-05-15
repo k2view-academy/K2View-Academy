@@ -57,7 +57,7 @@ e. Log Out from the Cassandra User.
 ```
 exit
 ```
-### 3. Setup Fabric
+### 3. Set up Fabric
 a. log in to fabric user
 ``` 
 sudo su - fabric
