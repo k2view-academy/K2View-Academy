@@ -60,7 +60,7 @@ sudo su - fabric
 ```
 b. Run the Fabric Configuration script/
 ```
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh -c 192.168.1.1 --cassandra_ssl -m 8
+/opt/apps/fabric/fabric/scripts/fabric-setup.sh -c 192.168.1.1 -cp 9142 --ssl -m 8
 ```
 c. Start Fabric server
 ```
