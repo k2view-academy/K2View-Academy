@@ -31,17 +31,17 @@
 
 ### 2. Set up Cassandra
 
-a. log in to cassandra user
+a. Log in to cassandra user
 ```
 sudo su - cassandra
 ```
 
-b. for hardened enviroment prepare a self signed certificate:
+b. for hardened environment prepare a self-signed certificate:
 ```bash
 ./secure_cassandra.sh changeit k2tls
 ```
 
-c. configure the cassandra instance with the pre assigned IP (for example - 192.168.1.1): 
+c. Configure the cassandra instance with the pre assigned IP (for example - 192.168.1.1): 
 ```
 ./cassandra-setup.sh -i 192.168.1.1 --ssl_default
 ``` 
@@ -49,7 +49,7 @@ c. configure the cassandra instance with the pre assigned IP (for example - 192.
 
 	
 	
-d. wait for the script to finish and verify the cassandra us up and running:
+d. Wait for the script to finish and verify that the cassandra is up and running:
 ```
 nodetool -u cassandra -pw cassandra status
 ```
