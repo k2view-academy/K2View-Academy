@@ -23,7 +23,7 @@
 
 ### Fabric Server initial configuration
 
-#### 1. Load the server image
+### 1. Load the server image
 * To load the server image to the hypervisor, contact your Local IT/Infrustructure team for further information.
 * The system is configured to get the IP address from the network DHCP server. The IP address can be set manually, if needed. (more information is found at the bottom of this doc.) 
 * Connect to the VM (by console or SSH) and log in with the user 'k2view'.
@@ -78,7 +78,7 @@ k2fabric start
 
 
 
-#### More Information:
+#### Additional Information:
 <ul>      
 <li>
 <a href="/articles/98_maintenance_and_operational/Installations/OVA/Set_Static_IP.md">Set Static IP</a></li>
