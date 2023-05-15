@@ -21,7 +21,7 @@
 
     
 
-### Fabric Server initial configuration.
+### Fabric Server initial configuration
 
 #### 1. Load the server image
 * To load the server image to the hypervisor, contact your Local IT/Infrustructure team for further information.
