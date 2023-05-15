@@ -8,7 +8,7 @@
 > * Compute: 8 vCPU.
 > * Memory: 32 GB RAM.
 > * Storage: 500 GB disk.
-* The VM is base on Ubuntu Server Version22.04.2 LTS (Jammy Jellyfish).
+* The VM is based on Ubuntu Server Version22.04.2 LTS (Jammy Jellyfish).
 * The OS is preconfigured with managment users.
 
     
