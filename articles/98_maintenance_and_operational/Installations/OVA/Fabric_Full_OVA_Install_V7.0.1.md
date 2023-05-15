@@ -53,7 +53,7 @@ d. Wait for the script to finish and verify that the Cassandra is up and running
 ```
 nodetool -u cassandra -pw cassandra status
 ```
-e. Log out from the Cassandra User.
+e. Log out from the Cassandra User:
 ```
 exit
 ```
