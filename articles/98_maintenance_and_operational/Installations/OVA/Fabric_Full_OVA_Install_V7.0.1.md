@@ -53,12 +53,12 @@ d. Wait for the script to finish and verify that the cassandra is up and running
 ```
 nodetool -u cassandra -pw cassandra status
 ```
-e. Log Out from the Cassandra User.
+e. Log out from the Cassandra User.
 ```
 exit
 ```
 ### 3. Set up Fabric
-a. log in to fabric user
+a. Log in to the fabric user
 ``` 
 sudo su - fabric
 ```
