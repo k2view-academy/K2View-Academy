@@ -38,12 +38,12 @@ sudo su - cassandra
 
 b. For hardened environment prepare a self-signed certificate:
 ```bash
-./secure_cassandra.sh changeit k2tls
+./secure_cassandra.sh Q1w2e3r4t5 k2tls
 ```
 
 c. Configure the cassandra instance with the pre-assigned IP address (for example - 192.168.1.1): 
 ```
-./cassandra-setup.sh -i 192.168.1.1 --ssl_default
+./cassandra-setup.sh -i 192.168.1.1 --ssl_default --ssl
 ``` 
       
 
