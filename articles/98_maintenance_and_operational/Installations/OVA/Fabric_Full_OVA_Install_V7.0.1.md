@@ -16,7 +16,7 @@
 | ----------     | ---------- | ---------- | ---------- | 
 |  Management      | k2view    | Q1w2e3r4t5   | with sudo permissions and will be used to log in the rest of the users |
 |  fabric         | fabric     |--   | to manage the fabric instance |
-|  cassandra      | cassandra  | --| to manage the cassandra instance |
+|  cassandra      | cassandra  | --| to manage the Cassandra instance |
 |  kafka          | kafka      | --| not needed in a single node environment |
 
     
@@ -31,7 +31,7 @@
 
 ### 2. Set up Cassandra
 
-a. Log in to cassandra user
+a. Log in to the Cassandra user
 ```
 sudo su - cassandra
 ```
@@ -41,7 +41,7 @@ b. For a hardened environment, prepare a self-signed certificate:
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
 ```
 
-c. Configure the cassandra instance with the pre-assigned IP address (for example - 192.168.1.1): 
+c. Configure the Cassandra instance with the pre-assigned IP address (for example - 192.168.1.1): 
 ```
 ./cassandra-setup.sh -i 192.168.1.1 --ssl_default --ssl
 ``` 
@@ -49,7 +49,7 @@ c. Configure the cassandra instance with the pre-assigned IP address (for exampl
 
 	
 	
-d. Wait for the script to finish and verify that the cassandra is up and running:
+d. Wait for the script to finish and verify that the Cassandra is up and running:
 ```
 nodetool -u cassandra -pw cassandra status
 ```
