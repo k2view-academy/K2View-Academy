@@ -3,7 +3,7 @@
 
 ### Prerequisites
 
-* Virtual Environment/hypervisor supporting import OFA/OVF file.
+* Virtual Environment/hypervisor that supports the import of an OFA/OVF file.
 * The image was configured with the following specifications, verify the hypervisor contain enough resources:
 > * Compute: 8 vCPU.
 > * Memory: 32 GB RAM.
@@ -23,13 +23,13 @@
 
 ### Fabric Server initial configuration.
 
-#### 1. Load the server image.
-* To load the server image to the hypervisor, contact your Locsl IT / Infrustructure team for more information.
-* the system is configured to get the IP from the network DHCP server, IP can be set manually if needed (See More information at the bottom. 
-* Connect to the VM ( by console or SSH ) and login with the user 'k2view'
+#### 1. Load the server image
+* To load the server image to the hypervisor, contact your Local IT/Infrustructure team for further information.
+* The system is configured to get the IP from the network DHCP server. The IP can be set manually, if needed (See More information at the bottom. 
+* Connect to the VM (by console or SSH) and login with the user 'k2view'
 * 
 
-### 2. Setup Cassandra
+### 2. Set up Cassandra
 
 a. log in to cassandra user
 ```
