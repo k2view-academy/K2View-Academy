@@ -3,8 +3,8 @@
 
 ### Prerequisites
 
-* Virtual Enviroment / hypervisor  supporting import OFA/OVF file.
-* the image was configured with the following specifications, verify the hypervisor contain enough resources:
+* Virtual Enviroment / hypervisor supporting import OFA/OVF file.
+* The image was configured with the following specifications, verify the hypervisor contain enough resources:
 > * Compute: 8 vCPU.
 > * Memory: 32 GB RAM.
 > * Storage: 500 GB disk.
