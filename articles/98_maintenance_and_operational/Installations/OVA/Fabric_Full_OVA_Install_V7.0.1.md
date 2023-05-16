@@ -47,8 +47,8 @@ c. Configure the Cassandra instance with the pre-assigned IP address (for exampl
 ``` 
       
 
-	
-	
+    
+    
 d. Wait for the script to finish and verify that the Cassandra is up and running:
 ```
 nodetool -u cassandra -pw cassandra status
@@ -69,6 +69,10 @@ b. Run the Fabric Configuration script/
 c. Start Fabric server
 ```
 k2fabric start
+```
+d. Check Fabric Status
+```
+k2fabric status
 ```
 
 
