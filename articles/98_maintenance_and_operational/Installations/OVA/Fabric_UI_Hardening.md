@@ -1,8 +1,8 @@
 ## Fabric API/WS Hardening
 
-To Enable access to Fabric over SSL follow these instruction
+To Enable access to Fabric over SSL, follow these instruction:
 
-for extended guide see [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html) 
+(for an extended guide, click [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html) 
 
 1. Log in to the Fabric user and stop the service:
 	```bash
