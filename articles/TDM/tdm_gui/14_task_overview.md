@@ -36,7 +36,7 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment into the TDM warehouse.</li>
+<li>Extracts the data from the source environment into the TDM warehouse.</li>
 </ul>
 </td>
 </tr>
@@ -46,7 +46,7 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Refresh all data from the source and provision(load) the data to the target environment.</li>
+<li>Refreshes all data from the source and provisions (loads) the data to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -56,8 +56,8 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Provision (load) the data to the target environment and mark the entities as reserved.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Provisions (loads) the data to the target environment and marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -67,8 +67,8 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Delete and reprovision (reload) the data to the target environment.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Deletes and reprovisions (reloads) the data to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -78,9 +78,9 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
-<li>Mark the entities as reserved.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
+<li>Marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -100,8 +100,8 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td>
 <ul>
-<li>Generate synthetic entities.</li>
-<li>Provision (load) the generated entities to the target environment.</li>
+<li>Generates synthetic entities.</li>
+<li>Provisions (loads) the generated entities to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -111,9 +111,9 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td>
 <ul>
-<li>Generate synthetic entities.</li>
-<li>Provision (load) the generated entities to the target environment.</li>
-<li>Mark the entities as reserved.</li>
+<li>Generates synthetic entities.</li>
+<li>Provisions (loads) the generated entities to the target environment.</li>
+<li>Marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -123,7 +123,7 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse and provision it to the target environment.</li>
+<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -133,8 +133,8 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse and provision it to the target environment.</li>
-<li>Mark the provisioned entities as reserved.</li>
+<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
+<li>Marks the provisioned entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -144,8 +144,8 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
+<li>Gets the data from the TDM warehouse.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -155,9 +155,9 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
-<li>Mark the entities as reserved.</li>
+<li>Gets the data from the TDM warehouse.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
+<li>Marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -167,7 +167,7 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Delete (clean) the entities from the target environment.</li>
+<li>Deletes (cleans) the entities from the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -177,7 +177,7 @@ The following table describes the valid combinations of task actions in a TDM ta
 </td>
 <td width="600pxl">
 <ul>
-<li>Reserve entities in the target environment.</li>
+<li>Reserves entities in the target environment.</li>
 </ul>
 </td>
 </tr>
