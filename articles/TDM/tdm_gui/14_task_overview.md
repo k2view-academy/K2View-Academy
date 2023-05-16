@@ -18,7 +18,7 @@ The following task actions are supported by TDM:
 
 A TDM task can have a combination of multiple task actions.
 
-The following table describes the valid combinations of task actions on a TDM task: 
+The following table describes the valid combinations of task actions in a TDM task: 
 
 <table width="900pxl">
 <tbody>
