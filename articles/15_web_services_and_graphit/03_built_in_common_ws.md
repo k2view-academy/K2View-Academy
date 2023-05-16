@@ -12,7 +12,7 @@ All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `
 
 Retrieves the Common DB schema, describing the structures of its tables.
 
-**GET** `/api/common[?format=json|xml]`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">GET</span> `/api/common[?format=json|xml]`
 
 <table width="900pxl">
 <tbody>
@@ -66,7 +66,7 @@ Retrieves the Common DB schema, describing the structures of its tables.
 
 ## Get Common Table Data
 
-**GET** `/api/common/<Common Table Name>[?fields=<list of fields separated by comma>[&where=<WHERE STATEMENT>][&format=json|xml]`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">GET</span> `/api/common/<Common Table Name>[?fields=<list of fields separated by comma>[&where=<WHERE STATEMENT>][&format=json|xml]`
 
 <table width="900pxl">
 <thead>
@@ -189,7 +189,7 @@ Retrieves the Common DB schema, describing the structures of its tables.
 
 ##  Create Common Table Data
 
-**POST** `/api/common/<Common Table Name>[?format=json|xml]`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">POST</span> `/api/common/<Common Table Name>[?format=json|xml]`
 
 
 
@@ -250,7 +250,7 @@ Retrieves the Common DB schema, describing the structures of its tables.
 
 ## Update Common Table Data
 
-**PUT** `/api/common/<Common Table Name>[?format=json|xml]`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">PUT</span> `/api/common/<Common Table Name>[?format=json|xml]`
 
 <table class="unchanged rich-diff-level-one">
 <thead>
@@ -318,7 +318,7 @@ The request body shall contain the row data to be updated along with an optional
 
 ##  Delete Data From a Common Table
 
-**DELETE** `/api/common/<COMMON TABLE NAME>?where=<WHERE CLAUSE>[&format=json|xml]`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">DELETE</span>`/api/common/<COMMON TABLE NAME>?where=<WHERE CLAUSE>[&format=json|xml]`
 
 <table class="unchanged rich-diff-level-one">
 <thead>
