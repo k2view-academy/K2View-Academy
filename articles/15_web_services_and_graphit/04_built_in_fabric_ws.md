@@ -8,7 +8,7 @@ All API accesses are over HTTPS, and are accessed from the Fabric URL endpoint `
 
 ##  Fabric Commands
 
-**POST** `/api/fabric-commands`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">POST</span>  `/api/fabric-commands`
 
 
 Run either a fabric command or a set of fabric commands. 
@@ -97,7 +97,7 @@ Run either a fabric command or a set of fabric commands.
 
 ##  Authenticate
 
-**POST** `/api/authenticate`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">POST</span>  `/api/authenticate`
 
 
 Generate a JWT digitally signed cookie for Web-Services calls on the same session. Consequently, future Fabric Web-services calls will not require a token as a parameter. 
@@ -131,7 +131,7 @@ The web service expects either an API Key to be sent in the request body or user
 
 Indicates whether Fabric is up and running. 
 
-**GET** `/api/isAlive`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">GET</span>  `/api/isAlive`
 
 
 

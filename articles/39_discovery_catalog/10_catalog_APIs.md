@@ -4,11 +4,11 @@ Fabric provides out-of-the-box Web Service APIs for querying a project's catalog
 
 Any web service call passes authentication and authorization validations before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
-All API are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
+All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
 
 
-## All Catalog Versions
+## Get Catalog Versions
 
 <span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog/all-versions`
 
