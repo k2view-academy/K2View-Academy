@@ -2,24 +2,23 @@
 
 Data provisioning and entity reservation are implemented by creating and executing TDM tasks. 
 
-A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the type and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
+A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the task action (type) and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
 
 The actual data provisioning and/or entity reservation is performed by the task execution where each task can be executed multiple times.
 
-## Task Types
+## Task Actions (types)
 
-The following task types are supported by TDM:
+The following task actions are supported by TDM:
 
-- **Extract**, extracts the selected entities and/or Reference tables from the selected source environment and saves this data in Fabric for later use.
-- **Load**,  provisions  the selected entities and/or Reference tables to the selected target environment.
-- **Delete**, deletes the selected entities from the target environment.
-- **Reserve**, reserves the selected entities in the target environment.
+- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for later use. use.
+- **Generate** - generates synthetic entities. The entities can be saved in Fabric for later use
+- **Load** - provisions  the selected entities and/or Reference tables to the selected target environment.
+- **Delete** - deletes the selected entities from the target environment.
+- **Reserve** - reserves the selected entities in the target environment.
 
-A TDM task can have a combination of multiple task types.
+A TDM task can have a combination of multiple task actions.
 
-The following table describe the valid combinations of task types on a TDM task: 
-
-
+The following table describes the valid combinations of task actions in a TDM task: 
 
 <table width="900pxl">
 <tbody>
@@ -37,7 +36,7 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment into the TDM warehouse.</li>
+<li>Extracts the data from the source environment into the TDM warehouse.</li>
 </ul>
 </td>
 </tr>
@@ -47,7 +46,7 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Refresh all data from the source and provision(load) the data to the target environment.</li>
+<li>Refreshes all data from the source and provisions (loads) the data to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -57,8 +56,8 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Provision (load) the data to the target environment and mark the entities as reserved.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Provisions (loads) the data to the target environment and marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -68,8 +67,8 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Delete and reprovision (reload) the data to the target environment.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Deletes and reprovisions (reloads) the data to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -79,9 +78,42 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Extract the data from the source environment.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
-<li>Mark the entities as reserved.</li>
+<li>Extracts the data from the source environment.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
+<li>Marks the entities as reserved.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Generate</p>
+</td>
+<td>
+<ul>
+<li>Generate synthetic entities</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Generate + Load</p>
+</td>
+<td>
+<ul>
+<li>Generates synthetic entities.</li>
+<li>Provisions (loads) the generated entities to the target environment.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>Generate + Load + Reserve</p>
+</td>
+<td>
+<ul>
+<li>Generates synthetic entities.</li>
+<li>Provisions (loads) the generated entities to the target environment.</li>
+<li>Marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -91,7 +123,7 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse and provision it to the target environment.</li>
+<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -101,8 +133,8 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse and provision it to the target environment.</li>
-<li>Mark the provisioned entities as reserved.</li>
+<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
+<li>Marks the provisioned entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -112,8 +144,8 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
+<li>Gets the data from the TDM warehouse.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -123,9 +155,9 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Get the data from the TDM warehouse.</li>
-<li>Delete and reprovision (reload) it to the target environment.</li>
-<li>Mark the entities as reserved.</li>
+<li>Gets the data from the TDM warehouse.</li>
+<li>Deletes and reprovisions (reloads) it to the target environment.</li>
+<li>Marks the entities as reserved.</li>
 </ul>
 </td>
 </tr>
@@ -135,7 +167,7 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Delete (clean) the entities from the target environment.</li>
+<li>Deletes (cleans) the entities from the target environment.</li>
 </ul>
 </td>
 </tr>
@@ -145,13 +177,12 @@ The following table describe the valid combinations of task types on a TDM task:
 </td>
 <td width="600pxl">
 <ul>
-<li>Reserve entities in the target environment.</li>
+<li>Reserves entities in the target environment.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-
 
 
 
@@ -173,10 +204,10 @@ It displays the following settings on each task. These settings can also be used
 - Task Title: task name.
 - Task's source and target environments.
 - BE name.
-- Task Type: Extract, Load, Delete, or Reserve.
-- Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity..
+- Task Action: Extract, Generate, Load, Delete, or Reserve.
+- Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity.
 - Reserve Ind: indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
-- [Data Versioning](15_data_flux_task.md), true / false.
+- [Data Versioning](15_data_flux_task.md): true / false.
 - Data Type: Entities and/or Reference 
 - Selection Method: selection criteria for entities.
 - Number of processed entities.

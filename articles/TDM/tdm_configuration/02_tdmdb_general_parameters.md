@@ -6,7 +6,7 @@ The TDM DB  [tdm_general_parameters](/articles/TDM/tdm_architecture/02_tdm_datab
 
 The clean-up parameters are automatically created in **tdm_general_parameters** by TDM DB creation scripts:
 
-- The **cleanup_retention_period** defines the number of months of the retention period of Inactive records.  The clean-up process deletes inactive records that are older than the retention period.
+- The **cleanup_retention_period** defines the number of months of the retention period of Inactive records.  The clean-up process deletes inactive records that are older than the retention period. The default period is set to 2 months.
 
 ### [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) 
 
@@ -44,11 +44,15 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 - The [TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of  the following parameters:
   
-  - **maxRetentionPeriod**: maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract tasks. Default value is 90 days.
-  - **defaultPeriod**: default retention period on extract tasks. Default value is 5 days ("unit":"Days","value":5).
-  - **permissionGroups**: list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
-  - **TDM Version**
+  - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. Default value is 90 days.
+  - **retentionDefaultPeriod** - default retention period on extract or extract and load tasks. The default value is **"Do Not Delete**.
+  - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. Default value is 5 days ("unit":"Days","value":5).
+  - **maxReservationPeriod** - maximum number of days for an entity reservation.  
+  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
+  - **enable_reserve_by_params** - indicates if the TDM portal enables the Parameters selection method on [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true** the TDM portal enables the Parameters selection method on reserve only tasks. The **default is false**.
   
+- **TDM_VERSION** - is populated with the TDM version displayed in the TDM portal.
+   
   
 
 [![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)

@@ -6,21 +6,14 @@ This is the first task tabs and defines the main information on the task. The fo
 
 1. **Task title (name)**. A free text. Note that the task title must 
 
-2. [Task Types](14_task_overview.md#task-types): 
+2. [Task Actions](14_task_overview.md#task-actions-types): Extract, Generate, Load, Delete, and Reserve. 
 
-   The following task types are supported by TDM:
-
-   - **Extract**, extracts the selected entities and/or Reference tables from the selected source environment and saves this data in Fabric for later use.
-   - **Load**, provisions the selected entities and/or Reference tables to the selected target environment.
-   - **Delete**, deletes the selected entities from the target environment.
-   - **Reserve**, reserves the selected entities in the target environment.
-
-   At least one task type must be set on the task.
+   At least one task action must be set on the task.
 
 
 3. **Business Entity**: the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the dropdown list of all the TDM BEs.
 
-4. **Environments**: the environments that need to be set depend on the selected task types:
+4. **Environments**: the environments that need to be set depend on the selected task actions:
 
    <table width="700pxl">
    <tbody>
@@ -34,15 +27,26 @@ This is the first task tabs and defines the main information on the task. The fo
    </tr>
    <tr>
    <td width="312">
-   <p>The task types include <strong>Load</strong> (provisioning)</p>
+   <p>The task actions include <strong>Load</strong> (provisioning)</p>
    </td>
    <td width="312">
    <ul>
    <li>Extract from Environment</li>
-   <li>Provision to Environment</li>
+   <li>Load to Environment</li>
    </ul>
    </td>
    </tr>
+   <tr>
+   <td width="312">
+   <p>The task actions include <strong>Generate</strong></p>
+   </td>
+   <td width="312">
+   <ul>
+   <li>Extract from Environment is not needed since the entities are synthetically generated.</li>
+   <li>Load to Environment is needed if the Load task action is checked with the Generate task action.</li>
+   </ul>
+   </td>
+   </tr>    
    <tr>
    <td width="312">
    <p><strong>Extract</strong> only</p>
@@ -75,6 +79,7 @@ This is the first task tabs and defines the main information on the task. The fo
    </tr>
    </tbody>
    </table>
+
 
    On each environment, the user needs to select one TDM environment from the dropdown list. The dropdown list displays the list of available environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   
 

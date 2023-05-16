@@ -58,7 +58,7 @@ The execution report displays the following information about the LU execution:
 
 To generate and download a Summary Execution Report on an LU, click the ![task execution summary report](images/task_execution_summary_report_icon.png) next to each LU.
 
-
+Note: the number of entities in the TDM execution report is limited to the number in the TDM_SUMMARY_REPORT_LIMIT Global (imported from the TDM library).
 
 ## Task Execution - Detailed Statistics
 
