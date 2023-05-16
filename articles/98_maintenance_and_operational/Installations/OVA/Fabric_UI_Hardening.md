@@ -12,12 +12,19 @@ To Enable access to Fabric over SSL, follow these instruction:
 2. Generate key
 
 	Run the Web server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the keystore.
+	
 	ALIAS - a name for the generated key
+	
 	CNAME - common name - hostname or host IP
+	
 	PASSWORD - the certificate passphrase
 	
 	```
 	certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]
+	```
+	for example
+	```
+	certificate.sh genkey fabriccert 192.168.1.1 changeme
 	```
 3. Configure Fabric
 
