@@ -1,6 +1,6 @@
 # TDM Environments Overview
 
-The TDM can create tasks that are executed in TDM environments. Each environment must be defined in the following TDM components:
+The TDM can create tasks that are executed in TDM environments. Each environment reflects a physical environment such as a production environment or testing environments. In addition the TDM has a **dummy environment** named **Synthetic** to support a generation of [synthetic entities] by TDM tasks. Each environment must be defined in the following TDM components:
 
 - Fabric, set the [interfaces connection details and Globals values](/articles/25_environments/01_environments_overview.md) for each environment. 
 - TDM Portal, set the following for each environment:
