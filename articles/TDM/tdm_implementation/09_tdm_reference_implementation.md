@@ -31,7 +31,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **reference_table_name** - populated by the Reference table in the source environment.
 
-- **schema_name** - populated by the source DB schema name that stores the Reference table.
+- **schema_name** - populated by the source DB schema's name that stores the Reference table.
 
 - **interface_name** - the Reference table's source interface.
 
