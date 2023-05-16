@@ -63,7 +63,7 @@ This integration enables the user to select a valid value from a list, set dates
 
 Note that the number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
 
-### Adding Parameters to the Task 
+### Adding Data Generation Parameters to the Task 
 
 Select a parameter from the data generation parameter's list. You can ass a search value to get the required parameter. The selected parameter is added to the window with the default values if set.
 
@@ -71,15 +71,15 @@ The selected parameters are marked by grey and get a blue Refresh icon next to t
 
 ![selected param](images/data_generation_params_list.png)
 
-### Removing Parameters from the Task 
+### Removing Data Generation Parameters from the Task 
 
 Click the blue Refresh icon next to the parameter's name in the data generation parameters list. The remove parameter returns back to its default value if set.
 
-### Reset the Parameter's Value
+### Reset the Data Generation Parameter's Value
 
 Click the black Refresh icon next to the parameter's editor to reset your updates and get back to the previous value if set. The previous value can be the default value or the previous value set by the user when opening and updating a Generate task.
 
-### Distribution Parameters
+### Data Generation - Distribution Parameters
 
 The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted** and **constant** (return one value).
 
