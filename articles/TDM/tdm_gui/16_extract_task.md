@@ -1,6 +1,6 @@
 # TDM Extract Task
 
-An Extract task extracts the selected entities and/or Reference tables from the selected source environment and saves this data in Fabric for later use.
+An Extract task extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric (TDM warehouse) for later use.
 
 An Extract task contains the following tabs:
 
@@ -38,25 +38,24 @@ Note that **this setting is only available when the Data Versioning checkbox is 
 
 ### Retention Period
 
-This is the retention period set on the extracted LUIs. When this period ends, the LUIs are **automatically deleted** from Fabric and are no longer available. 
+The retention period set on the extracted entities and/or Reference tables. When this period ends, the task's entities and/or Reference tables are **automatically deleted** from Fabric and are no longer available. 
 
-Note that when the Retention Period is set to zero, no retention period is set on the extracted LUIs.
+#### Retention Period Values
 
-**A retention period must be set on a Data Versioning extract task**, i.e. the retention period must be set to a value greater than zero when the Data Versioning is checked.
+- **Do not Delete** - do not delete from Fabric. 
 
-**The retention period is optional on a regular extract task.**
+- **Do not Retain** - avoid saving the task's entities and/or Reference tables in Fabric (instead of saving and deleting). This option can be used, for example, to run an Extract task on a large subset of entities in order to populate the TDM parameter’s tables on each entity without saving the entities into Fabric.
 
-The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**, depends on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+- Set unit of measure (Minutes, Hours, Days ...) and value. For example, save the data in Fabric for 2 days. After 2 days the data is automatically deleted from Fabric.
 
-**Example:** 
+  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**, depends on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
-The **defaultPeriod** parameter is set to **5 days** and the **maxRetentionPeriod** parameter is set to **90 days**.
+#### Default Retention Period
 
-The Retention Period window displays the following options:
+- Data versioning is cleared - Do not Delete.
+- Data versioning is checked - 5 days.  A retention period must be set on a Data Versioning Extract task, i.e. the retention period must be set to a value greater than zero when the Data Versioning is checked.
 
-- When Data Versioning is checked, the period is set by default to five days.
-- When Data Versioning is cleared, the period is set by default to zero, i.e. no retention period is set for the extracted data. 
-- As a result of the above, the retention period can be set in the task to a maximum period of 90 days or 12 weeks.  The Years option is not available since the maximum retention period is 90 days.
+
 
 ### Additional Execution Parameters
 
@@ -77,16 +76,20 @@ This tab opens when the task's Data Type includes entities. This tab defines the
 The following selection methods are available on extract tasks: 
 
 - **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.  This option is available only for the Admin and Environment owner users.
+
 - **Entity list**: this is the **default option**. Populate the list of entities for the task. The entities populated should be separated with a comma. 
-- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and to set the maximum number of entities for the task:
+
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and to set the maximum number of entities for the task.
+
+  Note that the TDM 8.0 added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs:
+
+  
 
 
 
 ![requested entities2](images/extract_task_requested_entities_tab_custom_logic.png)
 
-TDM 7.5 supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM Portal displays the input parameters in the task window, enabling the user to send values for these parameters. See example:
 
-![requested entities2](images/extract_task_requested_entities_tab_custom_logic_2.png)
 
 
 
@@ -94,10 +97,9 @@ Notes:
 
 - The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
 - The maximum number of entities in the task is limited to the number of entities returned from  the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic only returns 30 entities, the task will process 30 entities.
-- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or CA,NY. 
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
 
 
- [![Previous](/articles/images/Previous.png)](15_data_flux_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_load_task_regular_mode.md)
+ [![Previous](/articles/images/Previous.png)](15_data_flux_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16a_generate_task.md)
 
