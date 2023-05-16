@@ -1,6 +1,7 @@
 # TDM Environments Overview
 
-The TDM can create tasks that are executed in TDM environments. Each environment reflects a physical environment such as a production environment or testing environments. In addition the TDM has a **dummy environment** named **Synthetic** to support a generation of [synthetic entities] by TDM tasks. Each environment must be defined in the following TDM components:
+The TDM can create tasks that are executed in TDM environments. Each environment reflects a physical environment such as a production environment or testing environments. In addition the TDM has a **dummy environment** named **Synthetic** to support a generation of [synthetic entities] by TDM tasks. 
+Each environment must be defined in the following TDM components:
 
 - Fabric, set the [interfaces connection details and Globals values](/articles/25_environments/01_environments_overview.md) for each environment. 
 - TDM Portal, set the following for each environment:
@@ -11,6 +12,8 @@ The TDM can create tasks that are executed in TDM environments. Each environment
   - [Environment permissions](10_environment_roles_tab.md), define the permission sets with TDM permissions for environments and attach [users](02_tdm_gui_user_types.md) to an environment to enable them to create TDM tasks for it.
   - [Environment Variables](12_environment_globals_tab.md), override Fabric Globals' values in a TDM environment.
 
+The TDM environments created in the TDM portal are saved the the TDM DB. 
+Note that the Synthetic environment is automatically created in the TDM DB by the create/upgrade TDM DB scripts.  
 
 Click to read more about [TDM environment setup in Fabric](/articles/TDM/tdm_implementation/tdm_fabric_implementation_environments_setup.md).
 
