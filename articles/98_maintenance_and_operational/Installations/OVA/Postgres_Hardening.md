@@ -33,13 +33,13 @@ To switch configuration to a hardened configuration, follow the below instructio
 	
 * *Optional*:
 
-	* To change the standard postgres connection port from 5432, you will need to manually update the configuration file
+	* To change the standard Postgres connection port from 5432, you will need to manually update the configuration file
 	
 	* stop the Postgres service
 	
 	* open the postgresql.conf file
 
-	* look for the line 'port = 5432' and chnage the port number to the prefered one
+	* look for the line 'port = 5432' and change the port number to the preferred one
 
 	* restart the Postgres service
 
@@ -50,15 +50,15 @@ To switch configuration to a hardened configuration, follow the below instructio
 	~~~
 	
 
-* To check that the Postgres is upand running run the following:
+* To check that the Postgres is up and running, run the following:
 	~~~bash
 	psql
 	\l
 	~~~
 
-	and you will see a list of existing DB's
+	and you will be able see a list of existing DB's
 
-* To verify the remote connection is established trough the SSL, run the followoing query:
+* To verify that the remote connection is established through the SSL, run the followoing query:
 	~~~
 		SELECT datname,usename, ssl, client_addr 
 		FROM pg_stat_ssl
