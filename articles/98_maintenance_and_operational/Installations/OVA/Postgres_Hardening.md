@@ -13,9 +13,9 @@ To switch configuration to a hardened configuration, follow the below instructio
     ~~~
 
 2. Create new Self-Signed certificates:
-    the script requires 2 inputs, a hostname/DNS name and an IP address
+    The script requires 2 inputs, a hostname/DNS name and an IP address.
 
-    for example:
+    For example:
 
 	 DNS name: appliance.k2view.local 
 
@@ -58,7 +58,7 @@ To switch configuration to a hardened configuration, follow the below instructio
 
 	and a list of existing DBs will appear.
 
-* To verify that the remote connection is established through the SSL, run the followoing query:
+* To verify that the remote connection has been established via the SSL, run the followoing query:
 	~~~
 		SELECT datname,usename, ssl, client_addr 
 		FROM pg_stat_ssl
