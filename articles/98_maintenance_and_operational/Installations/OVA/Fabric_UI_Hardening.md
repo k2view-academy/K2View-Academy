@@ -22,7 +22,7 @@ To Enable access to Fabric over SSL, follow these instruction:
 	```
 	certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]
 	```
-	for example
+	for example:
 	```
 	certificate.sh genkey fabriccert 192.168.1.1 changeme
 	```
