@@ -24,13 +24,13 @@ The following users can create a Data Versioning task:
 
 
 
-## TDM Task Types and Modes - Summary Table
+## TDM Task Actions and Modes - Summary Table
 
 <table width="900pxl">
 <tbody>
 <tr>
 <td valign="top" width="150pxl">
-<p><strong>Task Type</strong></p>
+<p><strong>Task Actions</strong></p>
 </td>
 <td valign="top" width="150pxl">
 <p><strong>Data Versioning</strong></p>
@@ -93,6 +93,7 @@ The following users can create a Data Versioning task:
 </tr>
 </tbody>
 </table>
+
 
 
 
