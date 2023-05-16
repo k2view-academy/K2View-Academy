@@ -15,14 +15,6 @@ Job-related configuration variables can be set in this file that is saved in the
 
 **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
-**OPTIMISTIC_LOCKING**:
-
-If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1
-
-If set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
-
-If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
-   
 
 ### **Node.id** 
 
@@ -35,7 +27,7 @@ The node UUID is unique and if left undefined, Fabric generates a random node wh
 
 Example:
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
- 
+
 #### Affinity Allocation
 
 The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical name can be associated with the maximum number of threads.
