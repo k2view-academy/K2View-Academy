@@ -6,7 +6,7 @@ A Generate task can also include Load or Load + Reserve task actions and contain
 
 - [General](14a_task_general_tab.md)
 - [Additional Execution Parameters](#additional-execution-parameters-tab)
-- [Requested Entities](#requested-entities)
+- [Requested Entities](#requested-entities-tab)
 - [Task Scheduling](22_task_execution_timing_tab.md)
 
 When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
