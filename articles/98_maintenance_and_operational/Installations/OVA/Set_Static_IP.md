@@ -22,7 +22,7 @@ To switch configuration to a static IP address, follow the below instructions:
 	nano /etc/netplan/00-installer-config.yaml
 	~~~
 
-	(update the IP address and subnet, Default Gateway and DNS IP's)
+	(update the IP address and Subnet, Default Gateway and the DNS IPs)
 
 	~~~
 	network:
