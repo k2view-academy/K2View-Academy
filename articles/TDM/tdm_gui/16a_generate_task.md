@@ -5,7 +5,7 @@ A Generate task generates synthetic entities. The synthetic entities can either 
 A Generate task can also include Load or Load + Reserve task actions and contains the following tabs:
 
 - [General](14a_task_general_tab.md)
-- [Additional Execution Parameters](#additional-execution-parameters)
+- [Additional Execution Parameters](#additional-execution-parameters-tab)
 - [Requested Entities](#requested-entities)
 - [Task Scheduling](22_task_execution_timing_tab.md)
 
