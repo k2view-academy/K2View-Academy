@@ -1,12 +1,12 @@
-## PostgreSQL hardening
+## PostgreSQL Hardening
 
-* The Postgres server is pre-configured  to allow connecting  with SSL using a generic self signed certificate
+* The Postgres server is pre-configured in order to allow connection with an SSL, using a generic self-signed certificate.
 
-* Forcing connection with SSL does not require chaning the connection port from the default 5432
+* Forcing connection with SSL does not require changing the connection port from the default 5432.
 
-To switch configuration to hardened configuration, follow the below instructions:
+To switch configuration to a hardened configuration, follow the below instructions:
 
-1. log in to the postgres user
+1. Log in to the postgres user
 
     ~~~bash
     sudo su - postgres
