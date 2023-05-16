@@ -1,12 +1,12 @@
 # TDM - Reference Implementation
 
-<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract reference tables from several source environments. TDM 7.6 stores the Reference tables in a dedicated LU: TDM_Reference. Each Reference table is stored as a separate LUI.  The LUI contains the following:
+<a href="https://www.k2view.com/products/test-data-management/" target="_blank">TDM</a> enables users to extract Reference tables from several source environments. TDM 7.6 stores the Reference tables in a dedicated LU: TDM_Reference. Each Reference table is stored as a separate LUI. The LUI contains the following:
 
 [LU name]|[source environment name]|[version id]|[table name]
 
 For example:  Customer|SRCLocalDebug|ALL|DEVICESTABLE2017
 
-This enables saving different versions of a Reference table and source environment into Fabric. Lastly, TDM enables the creation and execution of TDM load tasks in order to get the reference data from Fabric and load them into the target environment. 
+This enables saving different versions of a Reference table and source environment into Fabric. Lastly, TDM enables the creation and execution of TDM load tasks in order to get the Reference data from Fabric and load them into the target environment. 
 
 Notes: 
 
@@ -19,7 +19,7 @@ A TDM implementation has the following steps:
 
 Import the TDM_Reference LU and load it to Fabric.
 
-Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the reference table from the source environment. 
+Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the Reference table from the source environment. 
 
 ### Step 2 - Populate trnRefList Translation
 
