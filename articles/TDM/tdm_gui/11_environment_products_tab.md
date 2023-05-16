@@ -15,7 +15,7 @@ The System Window holds the following settings:
 - **System Name**, select a system from the dropdown list.
 - **Data Center Name**, the Data Center where the system is physically located in the environment. For example, ENV1 may have CRM in NY and Billing in TX. Select a data center from the dropdown list.
 
-- **System Version**, the version of the installed system in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5.  Select a version from the dropdown list.
+- **System Version**, the version of the installed system in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5.  Select a version from the dropdown list. Note the the **synthetic** version is set on each System added to the **Synthetic environment**. 
 
   Click for more information about [supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 
