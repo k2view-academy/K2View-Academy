@@ -11,7 +11,7 @@ This pattern enables saving different versions of a Reference table and source e
 Notes: 
 
 - The TDM Reference solution is not based on [Fabric Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
-- Previous TDM versions saved the reference tables in Cassandra. 
+- Previous TDM versions saved the Reference tables in Cassandra. 
 
 A TDM implementation has the following steps:
 
