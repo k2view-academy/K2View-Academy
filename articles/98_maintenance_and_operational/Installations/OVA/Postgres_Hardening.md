@@ -33,7 +33,7 @@ To switch configuration to a hardened configuration, follow the below instructio
 	
 * *Optional*:
 
-	* To change the standard postgres connection port from 5432, you will need to manualy update the configuration file
+	* To change the standard postgres connection port from 5432, you will need to manually update the configuration file
 	
 	* stop the Postgres service
 	
