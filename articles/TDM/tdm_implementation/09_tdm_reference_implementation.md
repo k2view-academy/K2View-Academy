@@ -29,7 +29,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **ID** - populated by an auto increment number.
 
-- **reference_table_name** - populated by the Reference table in the source env.
+- **reference_table_name** - populated by the Reference table in the source environment.
 
 - **schema_name** - populated by the source DB schema name that stores the Reference table.
 
