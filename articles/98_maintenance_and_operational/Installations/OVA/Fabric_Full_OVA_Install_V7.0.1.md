@@ -24,7 +24,8 @@
 ### Fabric Server - Initial Configuration
 
 ### 1. Load the server image
-* To load the server image to the hypervisor, contact your Local IT/Infrustructure team for further information.
+* Download the zip file containing the .ova folder from [here](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/Fabric_Appliance/fabric7-appliance.zip).
+* To load the server image to the hypervisor, contact your Local IT/Infrustructure team for further information. (zip file need to be extracted efore load)
 * The system is configured to get the IP address from the network DHCP server. The IP address can be set manually, if needed; more information is found at the bottom of this doc. 
 * Connect to the VM (by console or SSH) and log in with the user 'k2view'.
 
