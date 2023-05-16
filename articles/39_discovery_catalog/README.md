@@ -8,4 +8,5 @@
 	<web><li><a href="/articles/39_discovery_catalog/04_plugin_framework.md">Plugin Framework</a></li></web>	
 	<web><li><a href="/articles/39_discovery_catalog/05_catalog_app.md">Catalog Application</a></li></web>		
 	<web><li><a href="/articles/39_discovery_catalog/06_catalog_versioning.md">Catalog Versioning</a></li></web>		
+	<web><li><a href="/articles/39_discovery_catalog/10_catalog_APIs.md">Catalog APIs</a></li></web>		
 </ul>
