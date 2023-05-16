@@ -37,7 +37,7 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **target_ref_table_name** - this is an optional parameter. It can be populated when the Reference table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
 
-- **target_schema_name** - populated by the target DB Schema's name that stores the Reference table.
+- **target_schema_name** - populated by the target DB schema's name that stores the Reference table.
 
 - **target_interface_name** - name of the Reference table's target interface. 
 
