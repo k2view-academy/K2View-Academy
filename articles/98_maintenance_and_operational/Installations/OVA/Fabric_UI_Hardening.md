@@ -1,0 +1,36 @@
+## Fabric API/WS Hardening
+
+To Enable access to Fabric over SSL follow these instruction
+
+1. Log in to the Fabric user:
+	```bash
+	sudo su - fabric
+	```
+2. Generate key
+
+	Run the Web server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the key store.
+	```
+	certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]
+	```
+3. Configure Fabric
+
+	Edit the config.ini file
+	```
+	nano /opt/apps/fabric/config/config.ini
+	```
+	Uncomment the following in the config.ini file:
+	```
+	#WEB_SERVICE_SECURE_PORT=8443
+	```
+	Note that the password of the certification file should be defined here:
+	```
+	#WEB_SERVICE_CERT_PASSPHRASE=
+	```
+4. Start and check access to Fabric Web UI via HTTPS
+
+	* Start the Fabric Instance
+	```
+	k2fabric start	
+	```
+	* Use the following access points to check that the https access has been properly granted:
+		https://192.168.1.1:8443
