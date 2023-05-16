@@ -6,14 +6,14 @@
 
 To switch configuration to a hardened configuration, follow the below instructions:
 
-1. Log in to the postgres user
+1. Log in to the Postgres user
 
     ~~~bash
     sudo su - postgres
     ~~~
 
 2. Create new Self-Signed certificates:
-    the script require 2 inputs, hostname/DNS name and IP address
+    the script requires 2 inputs, a hostname/DNS name and an IP address
 
     for example:
 
@@ -33,7 +33,7 @@ To switch configuration to a hardened configuration, follow the below instructio
 	
 * *Optional*:
 
-	* To chnage the standard postgres connection port from 5432, you will need to manualy update the configuration file
+	* To change the standard postgres connection port from 5432, you will need to manualy update the configuration file
 	
 	* stop the Postgres service
 	
