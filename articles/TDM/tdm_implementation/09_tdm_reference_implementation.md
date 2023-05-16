@@ -19,7 +19,7 @@ A TDM implementation has the following steps:
 
 Import the TDM_Reference LU and load it to Fabric.
 
-Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the Reference table from the source environment. 
+Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (Reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the Reference table from the source environment. 
 
 ### Step 2 - Populate trnRefList Translation
 
