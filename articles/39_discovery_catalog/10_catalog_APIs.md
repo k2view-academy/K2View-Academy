@@ -48,14 +48,13 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
-
-**Examples of *view* mode:**
+**Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest
 
 https://localhost:3213/api/catalog/1
 
-**Examples of *compare* mode:**
+**Examples of an API call in *compare* mode:**
 
 https://localhost:3213/api/catalog/2...5
 
@@ -102,14 +101,13 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
-
-**Examples of *view* mode:**
+**Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest/CRM_DB
 
 https://localhost:3213/api/catalog/1/CRM_DB
 
-**Examples of *compare* mode:**
+**Examples of an API call in *compare* mode:**
 
 https://localhost:3213/api/catalog/1...5/CRM_DB
 
@@ -163,14 +161,13 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
-
-**Examples of *view* mode:**
+**Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest/CRM_DB/main
 
 https://localhost:3213/api/catalog/1/CRM_DB/main
 
-**Examples of *compare* mode:**
+**Examples of an API call in *compare* mode:**
 
 https://localhost:3213/api/catalog/1...5/CRM_DB/main
 
