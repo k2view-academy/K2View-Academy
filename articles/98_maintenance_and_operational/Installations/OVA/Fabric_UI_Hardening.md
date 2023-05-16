@@ -2,9 +2,10 @@
 
 To Enable access to Fabric over SSL follow these instruction
 
-1. Log in to the Fabric user:
+1. Log in to the Fabric user and stop the service:
 	```bash
 	sudo su - fabric
+	k2fabric stop
 	```
 2. Generate key
 
@@ -32,5 +33,5 @@ To Enable access to Fabric over SSL follow these instruction
 	```
 	k2fabric start	
 	```
-	* Use the following access points to check that the https access has been properly granted:
+	* Use the following access points to check that the https access has been properly granted for example 192.168.1.1:
 		https://192.168.1.1:8443
