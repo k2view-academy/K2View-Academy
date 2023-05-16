@@ -37,7 +37,7 @@ a. Log in to the Cassandra user
 sudo su - cassandra
 ```
 
-b. For a hardened environment, prepare a self-signed certificate:
+b. For a hardened environment, prepare a Self-Signed certificate:
 ```bash
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
 ```
