@@ -1,4 +1,4 @@
-## Fabric OVA Switch Network IP configuration
+## Fabric OVA - Switch Network IP Configuration
 
 * The VM is pre-set to start with DHCP configuration 
 
