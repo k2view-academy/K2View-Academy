@@ -6,7 +6,7 @@
 
 For example:  Customer|SRCLocalDebug|ALL|DEVICESTABLE2017
 
-This enables saving different versions of a Reference table and source environment into Fabric. Lastly, TDM enables the creation and execution of TDM load tasks in order to get the Reference data from Fabric and load them into the target environment. 
+This pattern enables saving different versions of a Reference table and source environment into Fabric. Lastly, TDM enables the creation and execution of TDM load tasks in order to get the Reference data from Fabric and load them into the target environment. 
 
 Notes: 
 
