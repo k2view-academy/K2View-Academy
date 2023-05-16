@@ -23,7 +23,7 @@ Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) 
 
 ### Step 2 - Populate trnRefList Translation
 
-The list of Reference tables available for TDM tasks is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate trnRefList with the list of available Reference tables for each LU. The following settings should be populated for each record:
+The list of Reference tables available for TDM tasks is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate the **trnRefList** with the list of available Reference tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** - populated by the LU name to enable a selection of the related Reference table in a TDM task based on the task's LUs.
 
