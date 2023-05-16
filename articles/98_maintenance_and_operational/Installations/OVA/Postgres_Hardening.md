@@ -2,7 +2,7 @@
 
 * The Postgres server is pre-configured in order to allow connection with an SSL, using a generic Self-Signed certificate.
 
-* Forcing connection with SSL does not require changing the connection port from the default 5432.
+* Forcing a connection with an SSL does not require changing the connection port from the default 5432.
 
 To switch configuration to a hardened configuration, follow the below instructions:
 
@@ -39,7 +39,7 @@ To switch configuration to a hardened configuration, follow the below instructio
 	
 	* open the postgresql.conf file
 
-	* look for the line 'port = 5432' and change the port number to the preferred one
+	* look for the line 'port = 5432' and change the port's number to the preferred one
 
 	* restart the Postgres service
 
@@ -50,13 +50,13 @@ To switch configuration to a hardened configuration, follow the below instructio
 	~~~
 	
 
-* To check that the Postgres is up and running, run the following:
+* To check that the Postgres is up and running, run the following
 	~~~bash
 	psql
 	\l
 	~~~
 
-	and you will be able see a list of existing DB's
+	and a list of existing DBs will appear.
 
 * To verify that the remote connection is established through the SSL, run the followoing query:
 	~~~
