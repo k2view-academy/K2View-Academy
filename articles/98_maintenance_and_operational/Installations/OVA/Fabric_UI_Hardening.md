@@ -39,5 +39,5 @@ To Enable access to Fabric over SSL, follow these instruction:
 	```
 	k2fabric start	
 	```
-	* Use the following access points to check that the https access has been properly granted for example 192.168.1.1:
+	* Use the following access points to verify that the https access has been properly granted, for example: 192.168.1.1:
 		https://192.168.1.1:8443
