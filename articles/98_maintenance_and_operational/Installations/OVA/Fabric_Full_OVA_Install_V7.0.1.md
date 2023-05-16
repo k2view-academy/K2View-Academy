@@ -84,7 +84,9 @@ k2fabric status
 
 #### Additional Information:
 <ul>      
-<li>
-<a href="/articles/98_maintenance_and_operational/Installations/OVA/Set_Static_IP.md">Set Static IP</a></li>
-<a href="/articles/98_maintenance_and_operational/Installations/OVA/Postgres_Hardening.md">Postgres Hardening Procedure</a></li>
-<a href="/articles/98_maintenance_and_operational/Installations/OVA/Fabric_UI_Hardening.md">Fabric UI Hardening</a></li>
+
+<li><a href="/articles/98_maintenance_and_operational/Installations/OVA/Set_Static_IP.md">Set Static IP</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/OVA/Postgres_Hardening.md">Postgres Hardening Procedure</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/OVA/Fabric_UI_Hardening.md">Fabric UI Hardening</a></li>
+
+</ul>
