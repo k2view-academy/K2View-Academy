@@ -320,7 +320,7 @@ Below are examples of a Custom Logic flow:
 
 
 
-**Example 2 - get an input String of States, separated by a comma. Split the input string into and array and send it to the SQL query**:
+**Example 2 - get an input String of States, separated by a comma. Split the input String into and array and send it to the SQL query**:
 
 Example of the input US states: 
 
