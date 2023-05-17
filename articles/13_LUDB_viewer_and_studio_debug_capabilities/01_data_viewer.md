@@ -331,6 +331,3 @@ Similar to the Table Data Viewer:
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_studio_log_files.md)
 
 
-
-
-
