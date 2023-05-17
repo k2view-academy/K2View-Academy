@@ -30,7 +30,7 @@ TDM task initialization is performed using the **InitiateTDMLoad** flow, which i
 * Getting the LUI from Fabric.
 * Setting the target environment as a preparation step for Delete and Load.
 
-The **InitiateTDMLoad.flow** is performed as the first step of the **TDMOrchestrator** task's flow.
+The **InitiateTDMLoad.flow** is performed as the 1st step of the **TDMOrchestrator** task's flow.
 
 ### Reference
 
