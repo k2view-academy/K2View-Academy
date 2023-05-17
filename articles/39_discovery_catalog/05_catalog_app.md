@@ -42,9 +42,9 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 ### Properties Tab
 
-The Properties Tab displays the properties of the selected element. Some of the properties are created by the Crawler and some are created by plugins. Clicking the property name or the <img src="images/info.png" style="zoom:85%;" />icon next to the element name opens the More Info popup window, providing more details about the clicked property. 
+The Properties Tab displays the properties of the selected element. Some of the properties are created by the Crawler and some are created by plugins. Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the clicked property. 
 
-Clicking on a property opens a Property Details pop-up that provides more details on the selected property.
+Clicking on a property opens the More Info popup window that provides more details on the selected property.
 
 
 
