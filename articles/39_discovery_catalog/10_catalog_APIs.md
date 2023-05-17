@@ -27,9 +27,9 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 <table style="width: 800px;">
 <thead>
 <tr>
-<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
 <th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
-<th style="text-align: left;" width="650pxl"><strong>Description</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -48,6 +48,7 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
+
 **Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest
@@ -73,9 +74,9 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 <table style="width: 800px;">
 <thead>
 <tr>
-<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
 <th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
-<th style="text-align: left;" width="650pxl"><strong>Description</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -101,6 +102,7 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
+
 **Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest/CRM_DB
@@ -126,9 +128,9 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 <table style="width: 800px;">
 <thead>
 <tr>
-<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
 <th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
-<th style="text-align: left;" width="650pxl"><strong>Description</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -161,6 +163,7 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
+
 **Examples of an API call in *view* mode:**
 
 https://localhost:3213/api/catalog/latest/CRM_DB/main
