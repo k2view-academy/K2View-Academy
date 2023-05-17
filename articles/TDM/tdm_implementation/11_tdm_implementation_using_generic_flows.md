@@ -236,7 +236,7 @@ Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more 
 
 ##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build 1 or multiple Broadway flows in order to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process in order to building the entity list for the task. The project Broadway flow needs to select the entity list and call the TDM library Actors in order to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build 1 or multiple Broadway flows for get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process in order to building the entity list for the task. The project Broadway flow needs to select the entity list and to call the TDM library Actors in order to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
@@ -261,11 +261,11 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - Sending multiple values in 1 single parameter - you can define a string input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g., "CA,NY". The Broadway flow can split this string by the delimiter. The values must be delimited by the delimiter, which is set in the split Actor in Broadway flow.
 
-- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the select statement. 
+- You can get an input SELECT statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the SELECT statement. 
 
-  **Examples of input Select query**:
+  **Examples of input SELECT query**:
 
-  1. An example of a Select query and its parameters:
+  1. An example of a SELECT query and its parameters:
 
      - **SQLQuery**: 
 
@@ -275,7 +275,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
   
        Open,Billing Issue
   
-  2. An example of a Select query with concatenated parameters: 
+  2. An example of a SELECT query with concatenated parameters: 
   
      - **SQLQuery:**
   
@@ -287,7 +287,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - **Stage 1**: 
 
-  - Add a logic, requiring the entities - e.g. a DbCommand Actor that runs a select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
+  - Add a logic, requiring the entities - e.g. a DbCommand Actor that runs a SELECT statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM Library).
   - Notes: 
       - If the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
@@ -309,12 +309,12 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
      **Example**:
 
-     The task needs to get 5 entities. The select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the Cassandra table; then the entities' loop stops.
+     The task needs to get 5 entities. The SELECT statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the Cassandra table; then the entities' loop stops.
 
 
 Below are examples of a Custom Logic flow:
 
-**Example 1 - get a the Contract status as an input parameter and build the Select statement accordingly:** 
+**Example 1 - get a the Contract status as an input parameter and build the SELECT statement accordingly:** 
 
 ![custom logic](images/custom_logic_example.png)
 
@@ -322,7 +322,7 @@ Below are examples of a Custom Logic flow:
 
 **Example 2 - get an input String of States, separated by a comma. Split the input string into and array and send it to the SQL query**:
 
-Example of the input States: 
+Example of the input US states: 
 
 - NY,CA
 
@@ -330,7 +330,7 @@ Example of the input States:
 
 
 
-**Example 3 - get an input Select Statement with parameters for the Select Statement:**
+**Example 3 - get an input SELECT statement with parameters for the SELECT statement:**
 
 ![custom logic](images/custom_logic_example_3.png)
 
