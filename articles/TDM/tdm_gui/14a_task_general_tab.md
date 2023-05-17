@@ -31,8 +31,8 @@ This is the first task tabs and defines the main information on the task. The fo
    </td>
    <td width="312">
    <ul>
-   <li>Extract from Environment</li>
-   <li>Load to Environment</li>
+   <li>Extract from Environment. The user can select a source environment such as the production environment, or the Synthetic environment to get previously generated synthetic entities from the TDM warehouse (Fabric) and load them to the selected Load to Environment.</li>
+   <li>Load to Environment.</li>
    </ul>
    </td>
    </tr>
@@ -53,7 +53,7 @@ This is the first task tabs and defines the main information on the task. The fo
    </td>
    <td width="312">
    <ul>
-   <li>Extract from Environment</li>
+   <li>Extract from Environment.</li>
    </ul>
    </td>
    </tr>
@@ -63,7 +63,7 @@ This is the first task tabs and defines the main information on the task. The fo
    </td>
    <td width="312">
    <ul>
-   <li>Delete from Environment</li>
+   <li>Delete from Environment.</li>
    </ul>
    </td>
    </tr>
@@ -73,7 +73,7 @@ This is the first task tabs and defines the main information on the task. The fo
    </td>
    <td width="312">
    <ul>
-   <li>Reserve in Environment</li>
+   <li>Reserve in Environment.</li>
    </ul>
    </td>
    </tr>
