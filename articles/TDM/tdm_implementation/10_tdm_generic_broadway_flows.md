@@ -17,7 +17,7 @@ The TDM orchestration flows manage the execution on each task's entity. The foll
 
 - [**TDMOrchestrator**](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---tdm-orchestration-flows) - this flow runs on every LU of a [load and/or delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types)  execution. It encapsulates all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as initiation activities, running the delete and/or load flows, managing the TDM execution process as one transaction, error handling and statistics gathering.
 
-  [Click here to learn how to create the TDMOrchestrator](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#create-the-tdmorchestratorflow-from-the-template).
+  [Click here to learn how to create the TDMOrchestrator flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#create-the-tdmorchestratorflow-from-the-template).
 
 - **TDMReserveOrchestrator** - this flow runs on [a Reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md) execution. Unlike the TDMOrchestrator flow that runs on each LU, this process is only executed once by each task execution, and it marks the root entities as a [Reserved Entity](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the TDM DB.
 
