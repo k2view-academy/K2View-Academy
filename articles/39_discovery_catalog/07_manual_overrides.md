@@ -35,7 +35,7 @@ The links can be modified as follows:
   * Dataset1 will be PK Table Name in Properties tab.
   * Dataset2 will be FK Table Name in Properties tab.
   * Open the More Info popup to populate PK and FK column names and notes.
-* To **delete** a link, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" />icon.
+* To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon.
 * To **edit** a link, modify the link's properties PK and FK column names via the More Info popup.
 
 ### Saving Manual Overrides
