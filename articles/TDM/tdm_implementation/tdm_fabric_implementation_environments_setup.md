@@ -1,6 +1,6 @@
 # TDM Fabric Implementation - Environments Setup
 
-During the execution of a TDM task, data is extracted from a selected source environment and loaded into the selected target environment.
+During the execution of a TDM task, data are extracted from a selected source environment and loaded into the selected target environment.
 
 TDM environments must be defined in Fabric. Make sure that you define the TDM environment source and target and connection details of each environment. 
 
