@@ -42,7 +42,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 ### TDM Portal General Parameters
 
-- The [TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of  the following parameters:
+- The [TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
   
   - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. Default value is 90 days.
   
@@ -52,7 +52,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   
   - **maxReservationPeriod** - maximum number of days for an entity reservation.  
   
-  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
+  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
   - **enable_reserve_by_params** - indicates if the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true** the TDM portal enables the Parameters selection method on reserve only tasks. The **default is false**.
   
