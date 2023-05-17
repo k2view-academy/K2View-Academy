@@ -23,7 +23,7 @@ The TDM orchestration flows manage the execution on each task's entity. The foll
 
 ### Initialization
 
-TDM task initialization is performed using the **InitiateTDMLoad** flow which includes several steps like:
+TDM task initialization is performed using the **InitiateTDMLoad** flow, which includes several steps such as:
 
 * Setting the values of global variables on a session level and setting sync mode.
 * Setting the source environment based on the task's source before getting the LUI.
