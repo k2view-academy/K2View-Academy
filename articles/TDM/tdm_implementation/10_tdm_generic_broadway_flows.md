@@ -25,7 +25,7 @@ The TDM orchestration flows manage the execution on each task's entity. The foll
 
 TDM task initialization is performed using the **InitiateTDMLoad** flow, which includes several steps such as:
 
-* Setting the values of global variables on a session level and setting sync mode.
+* Setting the values of global variables on a session level and setting a sync mode.
 * Setting the source environment based on the task's source before getting the LUI.
 * Getting the LUI from Fabric.
 * Setting the target environment as a preparation step for Delete and Load.
