@@ -40,7 +40,7 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
       - **Target DB interface name** in order to get the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. The sequence actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
    - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis or IN-MEMORY**. Otherwise, the next value is taken from the DB sequence.
 
- Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the the sequence actors.
+ Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence actors.
 
    An example of the **TDMSeqList** Actor:
 
