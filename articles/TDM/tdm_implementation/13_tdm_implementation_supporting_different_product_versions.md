@@ -21,7 +21,7 @@ Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data genera
 
 ## Update LU Schema
 
-The data source of the LU schema might have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
+The data source of the LU Schema might have been updated, and consequently requires editing of the LU Schema. When doing so, the following notes and caveats must be taken into account: 
 
 ### Adding or Removing LU Tables
 
