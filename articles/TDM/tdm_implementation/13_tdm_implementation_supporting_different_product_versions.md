@@ -21,7 +21,7 @@ Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data genera
 
 ## Update LU Schema
 
-The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
+The data source of the LU schema might have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
 
 ### Adding or Removing LU Tables
 
@@ -45,7 +45,7 @@ Examples:
 
 - Adding the PAYMENT_METHOD column to the PAYMENT table in the Development environment. This column did not exist in the PAYMENT table of the Production environment.
 
-Adding new LU tables, and adding new columns to an LU table are described in more detail below:  
+The addition of both new LU tables and new columns to an LU table is described in more detail below:  
 
   #### Adding a New LU Table
 
