@@ -33,144 +33,124 @@ For example, the following field names can be matched:
 
 If a match is found, the plugin estimates the link direction – per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
 
-<table style="width: 850px;">
+<table style="width: 800px;">
 <tbody>
 <tr>
-<td width="150pxl">
+<td style="width: 125px;">
 <p><strong>Dataset 1</strong></p>
 </td>
-<td width="150pxl">
+<td style="width: 125px;">
 <p><strong>Dataset 2</strong></p>
 </td>
-<td width="200pxl">
+<td style="width: 500px;">
 <p><strong>Relation</strong></p>
 </td>
-<td width="200pxl">
-<p><strong>Mark as FK</strong></p>
-</td>
-<td width="50pxl">
+<td style="width: 50px;">
 <p><strong>Score</strong></p>
 </td>
 </tr>
 <tr>
-<td width="175">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 </td>
-<td width="167">
+<td style="width: 141.016px;">
 <p>Field0&nbsp; PK</p>
 <p>Field1 (not PK)</p>
 </td>
-<td width="368">
+<td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
 <p>PK table/columns: DS1 / Field1</p>
 <p>FK table/columns: DS2 / Field1</p>
 </td>
-<td width="171">
-<p>DS2 / Field1</p>
-</td>
-<td width="210">
+<td style="width: 49.4375px;">
 <p>High</p>
 </td>
 </tr>
 <tr>
-<td width="175">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 </td>
-<td width="167">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 <p>Field2&nbsp; PK</p>
 </td>
-<td width="368">
+<td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
 <p>PK table/columns: DS1 / Field1</p>
 <p>FK table/columns: DS2 / Field1</p>
 </td>
-<td width="171">
-<p>DS2 / Field1</p>
-</td>
-<td width="210">
+<td style="width: 49.4375px;">
 <p>High</p>
 </td>
 </tr>
 <tr>
-<td width="175">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 <p>Field2&nbsp; (not PK)</p>
 </td>
-<td width="167">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 <p>Field2&nbsp; PK</p>
 </td>
-<td width="368">
+<td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
 <p>PK table/columns: DS1 / Field1, Field2</p>
 <p>FK table/columns: DS2 / Field1, Field2</p>
 </td>
-<td width="171">
-<p>DS2 / Field1, Field2</p>
-</td>
-<td width="210">
+<td style="width: 49.4375px;">
 <p>High</p>
 </td>
 </tr>
 <tr>
-<td width="175">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 <p>Field2&nbsp; PK</p>
 </td>
-<td width="167">
+<td style="width: 141.016px;">
 <p>Field1&nbsp; PK</p>
 <p>Field2&nbsp; PK</p>
 <p>Field3&nbsp; PK</p>
 </td>
-<td width="368">
+<td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
 <p>PK table/columns: DS1 / Field1, Field2</p>
 <p>FK table/columns: DS2 / Field1, Field2</p>
 </td>
-<td width="171">
-<p>DS2 / Field1, Field2</p>
-</td>
-<td width="210">
+<td style="width: 49.4375px;">
 <p>High</p>
 </td>
 </tr>
 <tr>
-<td>
+<td style="width: 141.016px;">
 <p>Field1 is a single PK</p>
 </td>
-<td>
+<td style="width: 141.016px;">
 <p>Field1 is a single PK</p>
 </td>
-<td>
+<td style="width: 190.531px;">
 <p>Relation direction is random</p>
 </td>
-<td>
-<p>&nbsp;</p>
-</td>
-<td>
+<td style="width: 49.4375px;">
 <p>Low</p>
 </td>
 </tr>
 <tr>
-<td>
+<td style="width: 141.016px;">
 <p>Field1 is not a PK</p>
 </td>
-<td>
+<td style="width: 141.016px;">
 <p>Field1 is not a PK</p>
 </td>
-<td>
+<td style="width: 190.531px;">
 <p>Relation direction is random</p>
 </td>
-<td>
-<p>&nbsp;</p>
-</td>
-<td>
+<td style="width: 49.4375px;">
 <p>Low</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 Eventually, the relation is created with a score - a probability that the match is correct. 
 
 **Data Regex Classifier**

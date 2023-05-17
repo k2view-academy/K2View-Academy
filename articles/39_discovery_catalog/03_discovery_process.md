@@ -8,14 +8,14 @@ The K2View Discovery process is depicted in the below diagram and it includes th
 * The Crawler scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Discovery Schema.
 * Next, a Plugin Framework is triggered automatically upon the Crawler completion. The Plugin Framework is a platform for executing predefined rules (plugins) and for enhancing the Discovery Schema accordingly. Examples of business rules are: 
   * Creating a link (relation) between 2 objects.
-  * Profiling the field's data and categorizing it (e.g. email, phone, gender).
+  * Categorizing the fields based on their data or metadata as email, phone, etc.
   * Determining whether a field should be considered a PII.
 
 
 * Upon the Plugin Framework execution completion, the Discovery Schema is saved into the *neo4j* Graph DB. 
 
-  * The Discovery Schema supports versioning. A new version is created when the Discovery job is executed and changes from the previous version are found.
-* Once the process is completed, the Logical Unit schema can be created based on the process results.
+  * The Discovery Schema supports versioning. A new version is created when the Crawler is executed and changes from the previous version are found.
+* Once the process is completed, the Logical Unit schema can be created based on Discovery schema.
 
 ![](images/DiscoveryE2E.png)
 
