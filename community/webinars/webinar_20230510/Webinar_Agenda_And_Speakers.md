@@ -1,4 +1,4 @@
-<img src="../images/devComm_100523.png" style="zoom:30%;" />
+<img src="../images/devComm_100523.png" style="zoom:40%;" />
 
 ## Webinar Recording 
 

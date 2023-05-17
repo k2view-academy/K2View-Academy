@@ -1,6 +1,6 @@
 <!--block-->
 
-<img src="images/devComm_100523.png" style="zoom: 30%;" />
+<img src="images/devComm_100523.png" style="zoom: 40%;" />
 
 ### DevCom Meetup on May 10
 
@@ -28,17 +28,4 @@ An interactive session how to build, configure, and expose RESTful data services
 The 4th K2View Development Meetup took place on February 23rd - addressing Fabric's Roadmap, BI solution and Web Framework.
 
 [Read more >](webinar_20220223/20220223_Webinar_Agenda_And_Speakers.md)
-
-
-<!--block-->
-
-<img src="images/img7.png" style="zoom:80%;" />
-
-### K2View DevCom Webinar on October 27th
-
-The third K2View Development Community Webinar took place on October 27th where we introduced Fabric 7 and our latest TDM tool.
-
-[Read more >](webinar_20211027/20211027_Webinar_Agenda_And_Speakers.md)
-
-<!--block-->
 
