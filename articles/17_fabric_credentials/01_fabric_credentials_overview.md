@@ -58,10 +58,11 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>BATCH</strong></p>
+<p><strong>BATCH and BATCH_READ</strong></p>
 </td>
 <td width="600pxl">
-<p>Used to enable user to run batch processes</p>
+<p>BATCH permission enables the user to run and view batch processes.</p>
+<p>BATCH_READ permission enables the user to view batch processes.</p>  
 </td>
 </tr>
 <tr>
