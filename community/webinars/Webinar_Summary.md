@@ -1,6 +1,6 @@
 <!--block-->
 
-<img src="images/devComm_100523.png" style="zoom: 40%;" />
+<img src="images/devComm_100523.png" style="zoom: 50%;" />
 
 ### DevCom Meetup on May 10
 
@@ -10,14 +10,13 @@ Deep-dive into Fabric’s Triggers, Events, CDC and Elasticsearch integration fu
 
 <!--block-->
 
-<img src="images/devComm_300323.png" style="zoom: 40%;" />
+<img src="images/devComm_300323.png" style="zoom: 50%;" />
 
 ### DevCom Meetup on March 30
 
 An interactive session how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
 
 [Read more >](webinar_20230330/Webinar_Agenda_And_Speakers.md)
-
 
 <!--block-->
 
@@ -29,3 +28,4 @@ The 4th K2View Development Meetup took place on February 23rd - addressing Fabri
 
 [Read more >](webinar_20220223/20220223_Webinar_Agenda_And_Speakers.md)
 
+<!--block-->
