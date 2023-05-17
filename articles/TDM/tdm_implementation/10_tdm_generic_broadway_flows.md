@@ -5,7 +5,7 @@ The Fabric TDM library has built-in generic Broadway flows that can be easily ad
 
 ## Broadway Flows and Templates
 
-The **TDM** folder in the Broadway Shared Objects folder includes generic flows that can be used to execute TDM tasks in several Logical Units. These flows do not require manual updates and handle activities like setting global variables and sync mode, loading reference tables, handling errors, populating execution statistics.
+The **TDM** folder in the Broadway Shared Objects folder includes generic flows. These flows are TDM flows that handle the task execution activities such as setting global variables and sync mode, error handling, Reference loading, and task execution statistics population. These flows run 'as is' and do not require a manual update by the implementor. 
 
 The **Templates** folder holds the flows used for creating delete, load, and data generation flows. Since the flows receive the Logical Unit name as an input parameter, they can be run several times for each LU.
 
