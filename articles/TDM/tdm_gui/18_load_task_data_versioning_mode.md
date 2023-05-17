@@ -60,6 +60,10 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 
 
+Note:
+
+- The **Set Sync Policy**,  **Retention Period** , and  **Replace Sequence** settings are not displayed when the Data Versioning is checked since the task gets the selected data version from the TDM warehouse (Fabric) and reloads it to the target 'as is'.
+
 ## Requested Entities Tab
 
 This tab is opened when the task's Data Type includes entities. It displays a list of available data versions that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From Date** and **To Date** settings:
@@ -88,7 +92,7 @@ Each update on the entities list may change the list of available versions for t
 
 
 
-Select a version and click **Next**. The TDM revalidates the entities list and checks whether each entity and the related child IDs have been successfully synchronized into Fabric in the selected data version. 
+Select a data version and click **Next**. The TDM revalidates the entities list and checks whether each entity and the related child IDs have been successfully synchronized into Fabric in the selected data version. 
 
 #### Notes:
 

@@ -45,14 +45,33 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 - The [TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of  the following parameters:
   
   - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. Default value is 90 days.
+  
   - **retentionDefaultPeriod** - default retention period on extract or extract and load tasks. The default value is **"Do Not Delete**.
+  
   - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. Default value is 5 days ("unit":"Days","value":5).
+  
   - **maxReservationPeriod** - maximum number of days for an entity reservation.  
+  
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
-  - **enable_reserve_by_params** - indicates if the TDM portal enables the Parameters selection method on [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true** the TDM portal enables the Parameters selection method on reserve only tasks. The **default is false**.
+  
+  - **enable_reserve_by_params** - indicates if the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true** the TDM portal enables the Parameters selection method on reserve only tasks. The **default is false**.
+  
+    Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks:
+  
+    ```
+    UPDATE 
+       tdm_general_parameters
+    SET 
+       param_value = REPLACE(param_value,'"enable_reserve_by_params":False','"enable_reserve_by_params":true') 
+    where param_name = 'tdm_gui_params'; 
+    ```
+  
+    Note that it is needed to run an Extract task on a large subset of entities and populate the Extract from Environment with the Reserve task's testing environment. The Extract task needs to run prior to the Reserve task creation in order to populate the Parameters tables in the TDM DB for the testing environment.
+  
+    Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about the Parameters' TDM DB tables. 
   
 - **TDM_VERSION** - is populated with the TDM version displayed in the TDM portal.
-   
+  
   
 
 [![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
