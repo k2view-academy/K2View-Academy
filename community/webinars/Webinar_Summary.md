@@ -1,8 +1,18 @@
 <!--block-->
 
-<img src="images/devComm_300323.png" style="zoom: 50%;" />
+<img src="images/devComm_100523.png" style="zoom: 30%;" />
 
-### K2View DevCom Meetup on March 30
+### DevCom Meetup on May 10
+
+Deep-dive into Fabric’s Triggers, Events, CDC and Elasticsearch integration functionality.
+
+[Read more >](webinar_20230510/20230510_Webinar_Agenda_And_Speakers.md)
+
+<!--block-->
+
+<img src="images/devComm_300323.png" style="zoom: 40%;" />
+
+### DevCom Meetup on March 30
 
 An interactive session how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
 
