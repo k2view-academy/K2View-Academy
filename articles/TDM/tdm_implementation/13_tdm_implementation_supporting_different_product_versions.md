@@ -82,7 +82,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
     **LU Populations are based on Broadway flows:**
 
-    1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is PROD:
+    1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty. The 1st stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is PROD:
 
        ![prod population](images/lu_population_prod_version.png)
 
