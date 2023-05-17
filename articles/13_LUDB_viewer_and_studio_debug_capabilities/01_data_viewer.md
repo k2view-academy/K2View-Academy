@@ -324,7 +324,7 @@ Similar to the Table Data Viewer:
 > * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed, before popup is opened.
 > * When changing the sync mode or cleaning the Instance ID field - the main results area is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
 
-* </web>
+</web>
 
 
 
