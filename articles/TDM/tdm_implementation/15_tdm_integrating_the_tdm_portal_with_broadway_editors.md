@@ -24,7 +24,7 @@ Click [here](/articles/19_Broadway/actors/09_MTable_actors.md) for more informat
 
  
 
-- Set the **editor** of the key input arguments to {"id": "com.k2view.mTableKey"}. For example, the **city** is an input key field of the Address MTable: 
+- When working on the desktop (.Net) Studio - set the **editor** of the key input arguments to {"id": "com.k2view.mTableKey"}. For example, the **city** is an input key field of the Address MTable: 
 
   ![mtable editor](images/mtable_set_editor_key.png) 
 
