@@ -14,8 +14,9 @@ Fabric provides a Catalog solution enabling an insight into the Fabric interface
 
 * Exploring the data source's elements (schemas, objects, fields) and the links between them.
 * Profiling both the metadata and data (e.g. PII identification).
-* Establishing additional links between the data source elements - based on user-defined rules.
-* Displaying the data catalog as a tree and enabling navigation within this tree.
+* Establishing links between the data source elements.
+* Keeping multiple Catalog versions and analizing the difference between the versions.
+* Enabling manual overrides - based on pre-defined rules.
 
 The solution framework includes an infrastructure that executes various types of business rules. Among these rules are establishment of links between the schema elements, data profiling and PII identification. The baseline rules are included within the framework whereas defining additional rules is allowed.
 
