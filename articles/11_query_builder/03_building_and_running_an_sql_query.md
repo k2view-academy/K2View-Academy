@@ -1,4 +1,4 @@
-# Using the Query Builder - Building and Running an SQL Query
+# Building and Running an SQL Query
 
 <studio>
 ​    
@@ -57,7 +57,7 @@ To remove columns from a DB object, do either:
 * Uncheck the selected columns. 
 * Right-click on the **DB object** > **Uncheck All** to remove all the table’s columns from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
 
-  ​
+  
 
 
 ## Main Window - Advanced SQL Setting

@@ -296,24 +296,28 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/auto-layout.svg" alt="" /></td>
 <td width="630pxl">
+
 <p>Schema auto-layout.</p>
 </td>
 </tr>
 <tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/view-data-off.svg" alt="" /></td>
+<td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.png" alt="" /></td>
 <td width="630pxl">
+
 <p>Open the Data Viewer popup in order to run queries on IID of the current LU.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/data-viewer.svg" alt="" /></td>
 <td width="630pxl">
+
 <p>Open the Table Data Viewer bottom panel. The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/mini-map-off.svg" alt="" /></td>
 <td width="630pxl">
+
 <p>Open the schema's mini-map and navigation panel.</p>
 </td>
 </tr>

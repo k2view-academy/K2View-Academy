@@ -36,7 +36,7 @@ When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_da
 
 When Opened from Schema Editor, Graphit or Broadway, the Query Builder opens as a popup window
 
-![QB popup](/articles/03_logical_units/images/web/01_QB_WEB_popup3.png)
+![QB popup](../03_logical_units/images/web/01_QB_WEB_popup3.png)
 
 
 

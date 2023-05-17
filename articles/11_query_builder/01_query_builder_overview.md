@@ -1,6 +1,6 @@
 # Query Builder Overview
 
-The Query Builder is an embedded visual query building component that allows you to build complex SQL queries on a selected [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) (an external data source) as well as on Fabric, using an intuitive interface. 
+The Query Builder is an embedded query building tool that allows you to build complex SQL queries on a selected [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) (an external data source) as well as on Fabric, using an intuitive interface. 
 
 > Note: 
 > The Query Builder is affected by the Schema filtering, which is defined in the [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
@@ -23,7 +23,7 @@ The Query Builder is an embedded visual query building component that allows you
 
 ![image](images/12_1_3%20query%20builder.png)
 
-7.  [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md), right-click and select **Open Query Builder** > **Schema**.
+7.  [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), right-click and select **Open Query Builder** > **Schema**.
 8.  [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md) click <img src="images/12_1_1%20icon.png"> **Query Builder** in the **SQL** or **SQL non-prepared** node type.
 9.  [Broadway](/articles/19_Broadway/01_broadway_overview.md), click on the **QB button** in the **DbCommand actor** in order to open the **Query Builder**.   
 
@@ -40,6 +40,12 @@ The Query Builder is an embedded visual query building component that allows you
 3. [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), Click Query Builder icon in the **SQL** or **SQL non-prepared** node type.  A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the Graphit node.
 
 4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), Click the QB icon in the **DbCommand actor**. A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the actor.
+
+5. [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can write and test queries either manually or be assisted by the DB Interface Explorer.
+
+6. [Views](/articles/06_LU_tables/06_LU_views.md), where you can write and test queries either manually or be assisted by the DB Interface Explorer.
+
+
 
 You can select the Query Builder, where Fabric is the data source.
 

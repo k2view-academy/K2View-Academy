@@ -1,15 +1,8 @@
 # Data Viewer
 
-The Data Viewer enables you to view a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) database (LUDB), add debugging capabilities and improve testing and defect resolution times. 
+The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logical_units/01_LU_overview.md) database (MicroDB) tables' content, which is useful for testing and defect resolutions. Having LUI associated to an LU, viewing its data is accessible from the LU context within the Studio.
 
-Since an LUDB is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis. 
-Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\\[project name]\\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
-
-[Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
-
-Note that the Data Viewer runs on the Fabric local server. Therefore you must deploy the LU to the Fabric local server before running the Data Viewer on this LU.
-
-[Click for more information about deploying LU to the Fabric debug server](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md). 
+<studio>
 
 ## How Do I View Data in a Logical Unit?
 
@@ -256,6 +249,82 @@ The latest Data Viewer file can be used in the following components:
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
+
+
+
+</studio>
+
+<web>
+
+## How Do I View Data in a Logical Unit?
+
+The Data Viewer is accessible via the LU schema:
+
+1. Go to **Project Tree** > right-click **Logical Units / Data Products** 
+2. Expand the relevant LU and open its **schema**.
+
+
+
+Studio provides two methods to view an LUI data:
+
+1. **Table Data Viewer**, Lets you an easy and quick way to look at each table's content data, by navigate between the LU tables which are shown at the schema diagram.
+2. **Data Viewer**, Lets you building queries and execute them. This can be useful in case you wish to create cross tables queries.
+
+
+
+### Table Data Viewer
+
+To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) which appears at the schema's top bar. Once clicked, a panel is opened at the bottom of the schema window.
+
+![](images/web/01_table_data_viewer1.png)
+
+The panel is divided to 3 main areas
+
+* Top bar, showing at at left side the selected table name (by default it will be the root table, unless you selected one ahead). In the middle there are 3 action elements - the sync mode for bringing the LUI, the Instance ID field and the Execute button, which brings the LUI, according to the schema definitions. clicking on the Execute button activate a Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands) (which behaves according to the selected sync method).
+
+  When LUI is brought and table content is shown in the main aera, additional action elements appear at the right side - filter columns and export table content to CSV. This is the same capability as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
+
+* The main area, where table's data is shown. This area and its capabilities like filtering, sorting or grouping are the same as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
+
+* Bottom information bar, shows the execution status and if succeeded - of how many entries/rows are shown for the selected table (up to 1000 rows).
+
+![](images/web/01_table_data_viewer3.png)
+
+To see another table's content data of this LUI, just click on it at the schema. 
+
+To close the click on the X close button at the right side of the panel.
+
+You can change the panel's height, according to your needs, by moving your mouse to the top panel area. You will see then the 3-dots ellipsis sign and the cursor will turn into *resize* mode.
+
+![](images/web/01_table_data_viewer2.png)
+
+> NOTES:
+>
+> * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed.
+> * If you made changes in the schema you shall click on the Execute button over again, in order to see how they affect on the LUI content.
+> * When changing the sync mode or cleaning the Instance ID field - the panel is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
+
+
+
+### Data Viewer
+
+To open the Table Data Viewer, click on <img src="../03_logical_units/images/web/schema_data_viewer.png" style="zoom:80%;" /> which appears at the schema's top bar. Once clicked, a Query Builder popup window will appear.
+
+This is similar to other Query Builder popup windows, where here the interface - fabric - and the schema - the current LU - are preselected and are read-only. The LU's tables list is already expanded at the left explorer side. In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and instance ID field appear at the right side of the window's top bar.
+
+ ![](images/web/01_table_data_viewer4.png)
+
+Similar to the Table Data Viewer:
+
+* The main area, where table's data is shown, has same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
+* Bottom information bar, shows the execution status and if succeeded - of how many entries/rows are shown for the selected table (up to 1000 rows).
+
+> NOTES:
+>
+> * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed, before popup is opened.
+> * When changing the sync mode or cleaning the Instance ID field - the main results area is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
+
+* </web>
 
 
 
