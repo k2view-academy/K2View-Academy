@@ -6,7 +6,7 @@
 
 Deep-dive into Fabric’s Triggers, Events, CDC and Elasticsearch integration functionality.
 
-[Read more >](webinar_20230510/20230510_Webinar_Agenda_And_Speakers.md)
+[Read more >](webinar_20230510/Webinar_Agenda_And_Speakers.md)
 
 <!--block-->
 
@@ -16,7 +16,7 @@ Deep-dive into Fabric’s Triggers, Events, CDC and Elasticsearch integration fu
 
 An interactive session how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
 
-[Read more >](webinar_20230330/20230330_Webinar_Agenda_And_Speakers.md)
+[Read more >](webinar_20230330/Webinar_Agenda_And_Speakers.md)
 
 
 <!--block-->
