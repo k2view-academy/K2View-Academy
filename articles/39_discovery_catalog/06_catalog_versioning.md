@@ -16,7 +16,7 @@ The Catalog application allows the user to view each catalog version as well as 
   * The user can switch between various catalog versions. 
 * Compare two versions to analyze the changes. 
   * To do so, click the compare <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list.
-  * The earlie version is compared to the later version. 
+  * The earlier version is compared to the later version. 
   * The Catalog displays all nodes and relations, indicating the delta of a later version comparing to an earlier versions using the colors, as follows:
     * New elements are green, removed elements are red, updated elements are blue.
     * When a property is updated, it is displayed twice –  the new value is green, the removed one is red.
