@@ -13,6 +13,12 @@ Of course each Fabric role can get different set of permissions. For example, a 
 
 
 
+### Add a BATCH or BATCH_READ Permissions
+
+The BATCH permission enables the user to run and view batch processes and the BATCH_READ permission enables the user to view batch processes.
+
+It is recommended to add BATCH_READ permission to the Fabric roles attached to the TDM users to enable them to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) windows on executed tasks for a better tracking and additional information about the task execution. The access to the Batch Monitor window requires a BATCH or a BATCH_READ permission grant to the user’s Fabric role.  
+
 ### Access TDM APIs Outside the TDM Portal
 
 Do the following to access TDM APIs outside the TDM Portal:

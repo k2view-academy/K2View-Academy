@@ -41,19 +41,24 @@ The TDM Portal displays a list of the task's LUs and post execution processes an
 **Example:**
 
 - Execute and extract the task with the following LUs:
-  - Customer, the root LU.
-  - Billing and Orders, the children LUs of the Customer LU.
+  - CRM, the root LU.
+  - Billing is children LU of the CRM LU.
 
-- The Customer LU is executed before the Billing and Orders LUs:
+- The CRM LU is executed before the Billing LU:
 
   ![monitor execution](images/extract_task_execution_monitor.png)
 
-- The Billing and Orders LUs are executed after the execution of the Customer LU has ended:
+- The Billing LU is executed after the execution of the CRMLU has ended:
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
 
 - The **Logical Units Execution Summary** window displays the summary execution details of each LU or post execution process.
 
+
+
+###  Open the Batch Monitoring Window
+
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get an additional information and have a better tracking about the task execution. 
 
 ## Stop and Resume a Task Execution
 
