@@ -40,7 +40,7 @@ The TDM library includes a set of flows that handle Reference data.
 
 ### Load and Delete Generic Flows
 
-The TDM library holds templates and generic flows that can used to create a TDM implementation based on a project's data model. The templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality which enables creating different project objects based on a predefined structure. 
+The TDM library holds templates and generic flows that can be used to create a TDM implementation based on a project's data model. The templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality which enables creating different project objects based on a predefined structure. 
 
 [Click to learn how to create a TDM Implementation using generic Broadway flows.](11_tdm_implementation_using_generic_flows.md)
 
