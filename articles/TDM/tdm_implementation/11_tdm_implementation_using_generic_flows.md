@@ -65,7 +65,7 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
 ### Populate the Sequence Mapping Table
 
-The **TDMSeqSrc2TrgMapping** table maps between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into multiple tables and LUs.
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target tables' columns. A sequence actor can be mapped into multiple tables and LUs.
 
 See the below example:
 
