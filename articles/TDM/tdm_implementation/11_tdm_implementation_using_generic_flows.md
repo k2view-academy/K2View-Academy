@@ -110,7 +110,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ###  createFlowsFromTemplates Flow Logic
 
-The **createFlowsFromTemplates.flow** executes the inner flows listed below (A-D). These inner flows generate the load and delete flows in the input LU. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names.
+The **createFlowsFromTemplates.flow** executes the inner flows that are listed below (A-D). These inner flows generate the load and delete flows in the input LU. The LU source table names must be identical to the table names in the target environment in order to generate the load and delete flows with the correct table names.
 
 Note that the **input LU must be deployed to Fabric debug before running the createFlowsFromTemplates.flow**.  
 
