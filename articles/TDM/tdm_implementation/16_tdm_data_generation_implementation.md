@@ -4,7 +4,7 @@ The TDM data generation creates synthetic entities. The synthetic data is popula
 
 ## LU Populations Implementation
 
-The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key. If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the  **rowsGeneratorDistribution** input actor.
+The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the  **rowsGeneratorDistribution** input actor.
 
 ### LU Population Flows - Implementation Steps
 
@@ -28,7 +28,7 @@ The LU population must be based on Broadway flow (instead of a DB Query or a roo
 
 ## Data Generation Flows Implementation
 
-The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key is **true**. The data generation inner flow must have the following naming convention:
+The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
 
 ```
 ${population name}.population.generator
@@ -65,9 +65,9 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 
 #### 2. Generate the data generation flows for the LU table
-
+- Deploy the LU for which you need to generate the data generation flows and the TDM LU to Fabric debug server.
 - Open the **createGenerateDataTableFlows** flow imported from the TDM library.
-- Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters.
+- Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters. 
 - Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out). The data generation flows are automatically created in the **GeneratorFlows** sub directory under the Broadway directory of the LU.
 
 The data generation flows are created with the following logic:
@@ -126,7 +126,7 @@ There are several options for the data generation inner flow:
 - **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the actor will collect them and move to the next parent row.
 - **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The actor will return these rows and will not call the inner flow again.
 
-The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to by executed in the **rows per parent** or **handle all parent rows** as explained above.
+The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to be executed in the **rows per parent** or **handle all parent rows** as explained above.
 
 For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
 
