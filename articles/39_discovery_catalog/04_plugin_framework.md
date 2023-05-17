@@ -33,7 +33,7 @@ For example, the following field names can be matched:
 
 If a match is found, the plugin estimates the link direction – per the matching rule. The matching rules determine the link direction and the foreign key fields. Some examples of the matching rules are:
 
-<table style="width: 800px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
 <td style="width: 125px;">
@@ -42,7 +42,7 @@ If a match is found, the plugin estimates the link direction – per the matchin
 <td style="width: 125px;">
 <p><strong>Dataset 2</strong></p>
 </td>
-<td style="width: 500px;">
+<td style="width: 600px;">
 <p><strong>Relation</strong></p>
 </td>
 <td style="width: 50px;">
