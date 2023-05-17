@@ -34,7 +34,7 @@ The **InitiateTDMLoad.flow** is performed as the 1st step of the **TDMOrchestrat
 
 ### Reference
 
-The TDM library includes a set of flows that handle reference data.
+The TDM library includes a set of flows that handle Reference data.
 
 [Click here to learn more about TDM Reference Implementation](09_tdm_reference_implementation.md).
 
