@@ -34,20 +34,17 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </thead>
 <tbody>
 <tr>
-<td style="width: 141.047px;" rowspan="2">version</td>
-<td style="width: 83.7969px;" rowspan="2">Y</td>
-<td style="width: 400.156px;">
-    <p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
+<td>version</td>
+<td>Y</td>
+<td>
+<p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
+<p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
+<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>.</p>
 </td>
-</tr>
-<tr>
-<td style="width: 400.156px;">
-    <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-    <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>. 
-    </p></td>
 </tr>
 </tbody>
 </table>
+
 
 **Examples of an API call in *view* mode:**
 
@@ -81,22 +78,18 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </thead>
 <tbody>
 <tr>
-<td style="width: 141.047px;" rowspan="2">version</td>
-<td style="width: 83.7969px;" rowspan="2">Y</td>
-<td style="width: 400.156px;">
+<td>version</td>
+<td>Y</td>
+<td>
 <p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 400.156px;">
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
 <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 141.047px;">dataPlatform</td>
-<td style="width: 83.7969px;">Y</td>
-<td style="width: 400.156px;">
+<td>dataPlatform</td>
+<td>Y</td>
+<td>
 <p>The data platform name.</p>
 </td>
 </tr>
@@ -135,29 +128,25 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </thead>
 <tbody>
 <tr>
-<td style="width: 141.047px;" rowspan="2">version</td>
-<td style="width: 83.7969px;" rowspan="2">Y</td>
-<td style="width: 400.156px;">
+<td>version</td>
+<td>Y</td>
+<td>
 <p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 400.156px;">
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
 <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 141.047px;">dataPlatform</td>
-<td style="width: 83.7969px;">Y</td>
-<td style="width: 400.156px;">
+<td>dataPlatform</td>
+<td>Y</td>
+<td>
 <p>The data platform name.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 141.047px;">schema</td>
-<td style="width: 83.7969px;">Y</td>
-<td style="width: 400.156px;">
+<td>schema</td>
+<td>Y</td>
+<td>
 <p>The schema name.</p>
 </td>
 </tr>
