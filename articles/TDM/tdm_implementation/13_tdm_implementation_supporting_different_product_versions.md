@@ -11,9 +11,9 @@ A  [TDM System](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a
 
 The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The system versions are based on the system's version of the task's environments: 
 
-- **TDM_SOURCE_PRODUCT_VERSION**, populated by the system's version of the task's source environment. 
+- **TDM_SOURCE_PRODUCT_VERSION** - populated by the system's version of the task's source environment. 
 
-- **TDM_TARGET_PRODUCT_VERSION**, populated by the system's version of the task's target environment.
+- **TDM_TARGET_PRODUCT_VERSION** - populated by the system's version of the task's target environment.
 
 The TDM implementation can get the values of these Globals in order to check the source and target system version of each execution.
 
