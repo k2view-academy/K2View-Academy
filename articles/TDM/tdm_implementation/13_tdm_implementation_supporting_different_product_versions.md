@@ -86,13 +86,13 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
        ![prod population](images/lu_population_prod_version.png)
 
-    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates it in the LU table. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
+    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates it in the LU table. The 1st stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
 
        ![prod population](images/lu_population_dev_version.png)
 
     
 
-    **LU Populations are based on Db Queries:**
+    **LU Populations are based on DB Queries:**
 
     
 
@@ -117,7 +117,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
          
 
-      2. Development  table population, which runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates the PAYMENT_METHOD column of the LU table:
+      2. Development table population, which runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates the PAYMENT_METHOD column of the LU table:
 
          ![dev population](images/multi_versions_lu_population_2.png)
 
@@ -140,7 +140,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
     - It is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file because the TDM Logic File already contains the TDM product functions.
 
-    - It is recommended to populate the maximum number of LU tables and fields for the synthetic data generation (the TDM_SOURCE_PRODUCT_VERSION Global is populated with "synthetic"). Irrelevant tables or fields will be filtered out by the load flows based on the target environment's System version. 
+    - It is recommended to populate the maximum number of LU tables and fields for the synthetic data generation (the TDM_SOURCE_PRODUCT_VERSION Global is populated with "synthetic"). Irrelevant tables or fields will be filtered out by the load flows, based on the target environment's System version. 
 
   - 
 
