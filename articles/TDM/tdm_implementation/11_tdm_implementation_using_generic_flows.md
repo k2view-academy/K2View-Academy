@@ -67,17 +67,17 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
 The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into multiple tables and LUs.
 
-See the below example:
+View the below example:
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
 
 
-This table serves two purposes: 
+This table serves 2 purposes: 
 
-1.  It has been added in TDM 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into a different table and a different LU.
+1.  It has been added in TDM 7.3 to automatically add the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
 
-2. TDM 8.0 uses this table to add the sequence actors to the data generation flow that generates a synthetic data for the LU table.
+2. TDM 8.0 uses this table to add the sequence Actors to the data generation flow that generates synthetic data for the LU table.
 
      
 
