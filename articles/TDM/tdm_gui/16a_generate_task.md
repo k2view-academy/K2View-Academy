@@ -33,9 +33,9 @@ This is the retention period set for the generated entities. When this period en
 
 - **Do not Retain** - avoid saving the entities in Fabric (instead of saving and deleting). This option can be used, for example, to generate and load synthetic entities without saving the entities into Fabric.
 
-- Set unit of measure (Minutes, Hours, Days ...) and value. For example, save the data in Fabric for 2 days. After 2 days the data is automatically deleted from Fabric.
+- Set unit of measure (Minutes, Hours, Days ...) and value. For example, save the data in Fabric for 2 days. After 2 days the data are automatically deleted from Fabric.
 
-  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**, depends on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks** or **years**, depending on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 ### Additional Execution Parameters
 
@@ -55,7 +55,7 @@ This tab defines the number of generated entities. The user can also set data ge
 
 TDM 8.0 added an integration of Broadway editors into the TDM portal when populating either the data generation parameters in the Requested Entities task’s tab.
 
-This integration enables the user to select a valid value from a list, set dates and to set distributed parameters:
+This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters:
 
 ![data generation params](images/generate_task_data_generation_params.png)
 
@@ -65,19 +65,19 @@ Note that the number of entities populated by the tester user is [limited by the
 
 ### Adding Data Generation Parameters to the Task 
 
-Select a parameter from the data generation parameter's list. You can ass a search value to get the required parameter. The selected parameter is added to the window with the default values if set.
+Select a parameter from the data generation parameter's list. You can add a search value to get the required parameter. The selected parameter is added to the window with the default values, if set.
 
-The selected parameters are marked by grey and get a blue Refresh icon next to the selected parameter's name:
+The selected parameters are marked in grey and they get a blue Refresh icon next to the selected parameter's name:
 
 ![selected param](images/data_generation_params_list.png)
 
 ### Removing Data Generation Parameters from the Task 
 
-Click the blue Refresh icon next to the parameter's name in the data generation parameters list. The remove parameter returns back to its default value if set.
+Click the blue Refresh icon next to the parameter's name in the data generation parameters list. The removed parameter returns back to its default value if set.
 
 ### Reset the Data Generation Parameter's Value
 
-Click the black Refresh icon next to the parameter's editor to reset your updates and get back to the previous value if set. The previous value can be the default value or the previous value set by the user when opening and updating a Generate task.
+Click the black Refresh icon next to the parameter's editor to reset your updates and get back to the previous value, if set. The previous value can be the default value or the previous value set by the user when opening and updating a Generate task.
 
 ### Data Generation - Distribution Parameters
 
@@ -91,7 +91,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/normal_dist_example.png)
 
-  In the example above the generated customers will get a score between 10-90. Most of the generated customers will get a score around 80 with a standard deviation of 5.
+  In the above example, the generated customers will get a score between 10-90. Most of the generated customers will get a score around 80 with a standard deviation of 5.
 
    
 
@@ -103,15 +103,15 @@ The user can edit the distribution type and the related distribution parameters.
 
  
 
-​		In the example above the generated customers will have 1-3 cases for each generated activity.
+​		In the above example, the generated customers will have 1-3 cases for each generated activity.
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole. Both, the distributed values and the weights need to be populated manually.
+- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole. Both, the distributed values and the weights, need to be populated manually.
 
   Example:
 
   ![weighted dist example](images/weighted_dist_example.png)
 
-  In the example above 42% (50/120) of the generated customers will be attached to a station in New York, 25% (30/120) will be attached to a station in Los Angeles and 33% (40/120) will be attached to a station in Miami.
+  In the above example, 42% (50/120) of the generated customers will be attached to a station in New York, 25% (30/120) will be attached to a station in Los Angeles and 33% (40/120) will be attached to a station in Miami.
 
   
 
@@ -121,7 +121,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![const](images/const_dist_example.png)
 
-​	In the example above the generated customers have only one address.
+​	In the above example, the generated customers have only one address.
 
 
 
