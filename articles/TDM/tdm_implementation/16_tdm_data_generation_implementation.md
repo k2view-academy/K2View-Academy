@@ -126,7 +126,7 @@ There are several options for the data generation inner flow:
 - **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the Actor will collect them and move to the next parent row.
 - **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The Actor will return these rows and will not call the inner flow again.
 
-The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to be executed in the **rows per parent** or **handle all parent rows** as explained above.
+The data generation flow returns multiple results that will serve as the row columns and it is executed in the **row by row**. You can edit the data generation flow to be executed in the **rows per parent** or **handle all parent rows** as explained above.
 
 For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
 
