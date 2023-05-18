@@ -48,15 +48,15 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 **Examples of an API call in *view* mode:**
 
-https://localhost:3213/api/catalog/latest
+​	https://localhost:3213/api/catalog/latest
 
-https://localhost:3213/api/catalog/1
+​	https://localhost:3213/api/catalog/1
 
 **Examples of an API call in *compare* mode:**
 
-https://localhost:3213/api/catalog/2...5
+​	https://localhost:3213/api/catalog/2...5
 
-https://localhost:3213/api/catalog/1...latest
+​	https://localhost:3213/api/catalog/1...latest
 
 
 
@@ -98,15 +98,15 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 **Examples of an API call in *view* mode:**
 
-https://localhost:3213/api/catalog/latest/CRM_DB
+​	https://localhost:3213/api/catalog/latest/CRM_DB
 
-https://localhost:3213/api/catalog/1/CRM_DB
+​	https://localhost:3213/api/catalog/1/CRM_DB
 
 **Examples of an API call in *compare* mode:**
 
-https://localhost:3213/api/catalog/1...5/CRM_DB
+​	https://localhost:3213/api/catalog/1...5/CRM_DB
 
-https://localhost:3213/api/catalog/1...latest/CRM_DB
+​	https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 
 
@@ -155,12 +155,12 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 **Examples of an API call in *view* mode:**
 
-https://localhost:3213/api/catalog/latest/CRM_DB/main
+​	https://localhost:3213/api/catalog/latest/CRM_DB/main
 
-https://localhost:3213/api/catalog/1/CRM_DB/main
+​	https://localhost:3213/api/catalog/1/CRM_DB/main
 
 **Examples of an API call in *compare* mode:**
 
-https://localhost:3213/api/catalog/1...5/CRM_DB/main
+​	https://localhost:3213/api/catalog/1...5/CRM_DB/main
 
-https://localhost:3213/api/catalog/1...latest/CRM_DB/main
+​	https://localhost:3213/api/catalog/1...latest/CRM_DB/main
