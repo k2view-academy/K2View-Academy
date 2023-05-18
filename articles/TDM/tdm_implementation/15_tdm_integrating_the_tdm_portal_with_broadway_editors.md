@@ -53,7 +53,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 ### Distribution - TDM Implementation Instructions
 
 - Use the **RandomDistribution** Actor to return a value based on the distribution parameters. Set the default distribution parameters.
-- Set the distribution's input as **external** in order to display them parameters in the TDM portal task's window and enable the user to override the default distribution values in the TDM task.
+- Set the distribution's input as **external** in order to display the parameters in the TDM portal task's window and enable the user to override the default distribution values in the TDM task.
 
 - **Examples:**
 
@@ -67,7 +67,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 
 
-- The **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the  TDM task.
+- The **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the TDM task.
 
   Click [here] fore more information about the data generation implementation.
 
