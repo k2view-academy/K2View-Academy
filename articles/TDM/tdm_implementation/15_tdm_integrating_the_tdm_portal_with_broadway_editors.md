@@ -2,7 +2,7 @@
 
 TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters] or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
 
-This integration enables the user to select a valid value from a list, set dates and to set distributed parameters. 
+This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
 
 The following web editors have been added to Fabric 7.1 and are also available in the TDM portal:
 
