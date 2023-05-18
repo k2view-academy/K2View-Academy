@@ -37,7 +37,7 @@ The [Generate task] is based on a dummy source environment named **Synthetic**. 
 ### Notes:
 
 - **Every change of either a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
-- It is important to **set the TDM_APIDOC_JSON local file system interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
+- It is important to **set the TDM_APIDOC_JSON Local File System interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
 - The create/update TDM DB scripts add the Synthetic environment to the TDM DB. Still, there is a need to add the Systems to the Synthetic environment in the TDM portal.
 
 [Click here](/articles/25_environments/02_create_new_environment.md) for more information about Fabric environments.
