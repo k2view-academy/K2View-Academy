@@ -96,7 +96,7 @@ The data generation flows are created with the following logic:
 
   Example: 
 
-  The first_name is populated with the concatenation of the field name the 'count' external parameter:
+  The first_name is populated with the concatenation of the field name and the 'count' external parameter:
 
   
 
