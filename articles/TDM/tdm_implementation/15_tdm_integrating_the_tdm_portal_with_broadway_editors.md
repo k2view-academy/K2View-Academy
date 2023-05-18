@@ -16,7 +16,7 @@ Click [here](/articles/19_Broadway/actors/09_MTable_actors.md) for more informat
 
 ### MTables - TDM Implementation Instructions
 
-- Define multiple keys in a single MTable to set a dependency between their values. For example include the City and State in the Address MTable.
+- Define multiple keys in a single MTable to set a dependency between their values. For example, include the City and State in the Address MTable.
 
 - Use the **MTableRandom**  Actor in the Broadway flow to return values based on MTable. See an example below:
 
