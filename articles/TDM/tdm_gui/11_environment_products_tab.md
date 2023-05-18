@@ -1,6 +1,6 @@
 # Environment Systems Tab
 
-A [TDM System](05_tdm_gui_product_window.md) (product) represents a system or application installed in a source or target environment. Each Testing environment must have at least one system which can be added, edited or deleted from the environment by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  
+A [TDM System](05_tdm_gui_product_window.md) (product) represents a system or application installed in a source or target environment. Each Testing environment must have at least one system, which can be added, edited or deleted from the environment by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  
 
 An environment's systems are displayed in the Environment window's **Systems tab**:
 
