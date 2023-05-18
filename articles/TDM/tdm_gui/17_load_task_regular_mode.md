@@ -160,7 +160,7 @@ The list of parameters should be [defined for each LU in the task BE](/articles/
 
 #### Filter out Reserved Entities Checkbox
 
-The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
+The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and it indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Entities Matched** setting. 
 
 For example:
 
