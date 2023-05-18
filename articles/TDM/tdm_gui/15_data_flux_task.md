@@ -47,8 +47,8 @@ The following users can create a Data Versioning task:
 <p>true</p>
 </td>
 <td valign="top" width="600pxl">
-<p>Extract the data of the selected entities from the source environment and save it as a separate version in Fabric.</p>
-<p>The extracted data gets the execution datetime. Each entity gets the following Instance ID in Fabric:</p>
+<p>Extract the data of the selected entities from the source environment and save them as a separate version in Fabric.</p>
+<p>The extracted data get the execution datetime. Each entity gets the following Instance ID in Fabric:</p>
 <p>&lt;Source env name&gt;_&lt;entity id&gt;_&lt;task title&gt;_&lt;datetime&gt;</p>
 <p>For example, ENV1_100_extractTest3_20210218082453</p>
 <p>Since the execution datetime is concatenated to the LUI, each task execution creates a different set of LUIs.&nbsp;</p>
@@ -62,7 +62,7 @@ The following users can create a Data Versioning task:
 <p>false</p>
 </td>
 <td valign="top" width="600pxl">
-<p>Extract the data of the selected entities from the source environment and save it in Fabric.</p>
+<p>Extract the data of the selected entities from the source environment and save them in Fabric.</p>
 <p>Each entity is saved in Fabric with the following instance ID:</p>
 <p>&lt;Source env name&gt;_&lt;entity id&gt;</p>
 <p>For example, ENV1_100.</p>
