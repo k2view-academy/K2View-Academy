@@ -207,7 +207,7 @@ It displays the following settings on each task. These settings can also be used
 - Task Action - Extract, Generate, Load, Delete or Reserve.
 - Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity.
 - Reserve Ind - indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
-- [Data Versioning](15_data_flux_task.md) - true / false.
+- [Data Versioning](15_data_flux_task.md) - true/false.
 - Data Type - Entities and/or Reference 
 - Selection Method - selection criteria for entities.
 - Number of processed entities.
