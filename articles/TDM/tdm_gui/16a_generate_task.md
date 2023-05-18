@@ -25,7 +25,7 @@ The [Reservation Period](17_load_task_regular_mode.md#reservation-period) and [R
 
 ### Retention Period
 
-This is the retention period set on the generated entities. When this period ends, the entities are **automatically deleted** from Fabric and are no longer available. 
+This is the retention period set for the generated entities. When this period ends, the entities are **automatically deleted** from Fabric and are no longer available. 
 
 #### Retention Period Values
 
