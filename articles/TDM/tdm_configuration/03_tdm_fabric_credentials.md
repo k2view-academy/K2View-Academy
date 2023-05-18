@@ -17,14 +17,14 @@ Of course each Fabric role can get a different set of permissions. For example, 
 
 The BATCH permission enables the user to run and view batch processes and the BATCH_READ permission enables the user to view batch processes.
 
-It is recommended to add BATCH_READ permission to the Fabric roles attached to the TDM users to enable them to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) windows on executed tasks for a better tracking and additional information about the task execution. The access to the Batch Monitor window requires a BATCH or a BATCH_READ permission grant to the user’s Fabric role.  
+It is recommended to add BATCH_READ permission to the Fabric roles attached to the TDM users to enable them to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) windows on executed tasks for better tracking and additional information about the task execution. The access to the Batch Monitor window requires a BATCH or a BATCH_READ permission grant to the user’s Fabric role.  
 
 ### Access TDM APIs Outside the TDM Portal
 
 Do the following to access TDM APIs outside the TDM Portal:
 
 1. Create a secured API key in Fabric.
-2. Attach a Fabric role with AUTH_CLAIMS permission to the secured API key. This permission is needed to add the user id and the groups to the JWT claim.
+2. Attach a Fabric role with AUTH_CLAIMS permission to the secured API key. This permission is needed in order to add the user id and the groups to the JWT claim.
 3. The external system generates a JWT token signed by the secret key of the secured API. This JWT can be sent as a Bearer token to Fabric APIs including the TDM APIs.
 4. The TDM API can get the user and their Fabric roles (=user groups) from the Fabric user session.
 
