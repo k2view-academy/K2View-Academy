@@ -1,6 +1,6 @@
 # Task - General Tab
 
-This is the first task tabs and defines the main information on the task. The following information is populated in the General tab:
+This is the first task's tab and it defines the main information about the task. The following information is populated in the General tab:
 
 ![general tab](images/load_task_general_tab.png)
 
