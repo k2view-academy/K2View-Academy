@@ -66,7 +66,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
     where param_name = 'tdm_gui_params'; 
     ```
   
-    Note that it is needed to run an Extract task on a large subset of entities and populate the Extract from Environment with the Reserve task's testing environment. The Extract task needs to run prior to the Reserve task creation in order to populate the Parameters tables in the TDM DB for the testing environment.
+    Note that it is required to run an Extract task on a large subset of entities and to populate the Extract from Environment with the Reserve task's testing environment. The Extract task needs to run prior to the Reserve task creation in order to populate the Parameters tables in the TDM DB for the testing environment.
   
     Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about the Parameters' TDM DB tables. 
   
