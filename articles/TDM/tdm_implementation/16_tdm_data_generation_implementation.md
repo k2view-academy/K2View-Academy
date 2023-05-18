@@ -68,17 +68,17 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 - Deploy the LU, for which you need to generate the data generation flows, and the TDM LU to Fabric debug server.
 - Open the **createGenerateDataTableFlows** flow imported from the TDM library.
 - Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters. 
-- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out). The data generation flows are automatically created in the **GeneratorFlows** sub directory under the Broadway directory of the LU.
+- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out). The data generation flows are automatically created in the **GeneratorFlows** subdirectory under the Broadway directory of the LU.
 
 The data generation flows are created with the following logic:
 
 - Parent keys are populated into the LU tables based on the parent-child LU schema definition. For example: the address LU table is linked to the customer LU table by the customer_id field. The customer_id generated for the customer LU table is sent to the address' population in the parent row and is mapped to address.customer_id.
 
-- Sequence actors are set for IDs fields mapped in **TDMSeqSrc2TrgMapping**.
+- Sequence Actors are set for IDs fields mapped in **TDMSeqSrc2TrgMapping**.
 
-- Other fields are populated with default data generation Actors based on the fields' data type. Note the the default  data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Object. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
+- Other fields are populated with default data generation Actors based on the fields' data type. Note the the default data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Object. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
 
--  The data generation flow returns multiple results that serve as the row columns.  It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of rows per each parent it.
+-  The data generation flow returns multiple results that serve as the row columns. It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of rows per each parent it.
 
   
 
