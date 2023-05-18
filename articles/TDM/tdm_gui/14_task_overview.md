@@ -197,21 +197,21 @@ The following table describes the valid combinations of task actions in a TDM ta
 
 ## TDM Tasks List Window
 
-The TDM Task List displays by default the list of all Active tasks in the TDM. 
+The TDM Task List displays, by default, the list of all Active tasks in the TDM. 
 It displays the following settings on each task. These settings can also be used to filter the displayed tasks:
 
 - Task ID.
-- Task Title: task name.
+- Task Title - task name.
 - Task's source and target environments.
 - BE name.
-- Task Action: Extract, Generate, Load, Delete or Reserve.
+- Task Action - Extract, Generate, Load, Delete or Reserve.
 - Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity.
-- Reserve Ind: indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
-- [Data Versioning](15_data_flux_task.md): true / false.
-- Data Type: Entities and/or Reference 
-- Selection Method: selection criteria for entities.
+- Reserve Ind - indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
+- [Data Versioning](15_data_flux_task.md) - true / false.
+- Data Type - Entities and/or Reference 
+- Selection Method - selection criteria for entities.
 - Number of processed entities.
-- General parameters like created by user and update date. 
+- General parameters such as created by user and update date. 
 
 The following screenshot shows an example of the TDM Task List. 
 
