@@ -136,7 +136,7 @@ Notes:
 
 Select entities from a predefined list of parameters. You should set the **parameters and their values** and the **maximum number of entities** for the task.
 
-Note that entities reserved for another user in the environment are excluded from the task. You can select one or several parameters. In addition, you can add the same parameter multiple times with different values:
+Note that entities reserved for another user in the environment are excluded from the task. You can select one or several parameters. Additionally, you can add the same parameter multiple times with different values:
 
 ![parameters](images/load_task_requested_entities_parameters.png)
 
