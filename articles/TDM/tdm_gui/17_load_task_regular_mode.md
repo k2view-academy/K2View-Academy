@@ -43,7 +43,7 @@ This setting enables the user to change the [default LUI sync mode](/articles/14
 
 - **Sync New Data** - this is the default option (Sync ON).
 - **Do Not Sync From Source Data** - get the data from the TDM warehouse (Fabric) and do not sync it from the data source (Sync OFF).
-- **Refresh all Data from Source** - extract the the data source whenever the task is executed (Sync FORCE).
+- **Refresh all Data from Source** - extract the data source whenever the task is executed (Sync FORCE).
 
 Notes:
 
