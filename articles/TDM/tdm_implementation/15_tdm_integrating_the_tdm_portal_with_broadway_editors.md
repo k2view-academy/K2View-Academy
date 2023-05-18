@@ -67,7 +67,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 
 
-- The **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the TDM task.
+- Adjust the **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the TDM task.
 
   Click [here] fore more information about the data generation implementation.
 
