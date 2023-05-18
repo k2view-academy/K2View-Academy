@@ -69,7 +69,7 @@ The Task Execution - Detailed Statistics window displays the following:
 -  A sample list of copied and failed entities and Reference tables. 
 -  Search option used for searching an entity.
 
-To display the Task Execution - Detailed Statistics window, click ![entities list](images/entities_list_icon.png) in the right corner of the **Logical Units Execution Summary** window.
+To display the Task Execution - Detailed Statistics window (shown below), click ![entities list](images/entities_list_icon.png) in the right corner of the **Logical Units Execution Summary** window.
 
 ![entities list](images/task_execution_entities_list.png)
 
