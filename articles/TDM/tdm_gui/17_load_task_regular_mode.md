@@ -173,15 +173,15 @@ For example:
   To add a parameter:
 
   - Click **Add Condition**. 
-  - Select the parameter and the operator from the dropdown lists and populate their values.
+  - Select the parameter and the operator from the drop-down lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
-The TDM Portal displays the SQL query built based on the selected parameters.
+The TDM Portal displays the SQL query, which is built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
 There are several types of parameters:
 
-- **Combo** - parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
+- **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values. Select a value from the drop-down list.
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
@@ -235,7 +235,7 @@ Create X clones of the selected entity in the target environment. When selecting
 
 
 
-For example, if the **Number of Clones** setting is populated with 10 and the **Entity ID** is set to 645 the task creates 10 clones (replicas) of Entity ID 645 in the target environment. 
+For example, if the **Number of Clones** setting is populated with 10 and the **Entity ID** is set to 645, the task creates 10 clones (replicas) of Entity ID 645 in the target environment. 
 
 The task replaces the sequences of each replica in order to avoid duplicated sequences in the target environment. 
 
@@ -245,7 +245,7 @@ Testers may select this option only if they are permitted to clone an entity in 
 
 ### **Random Selection** 
 
-Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for another user are excluded from the selected entities. 
+Get a random list of entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for other users are excluded from the selected entities. 
 
 Testers can select this option only if they are permitted to do so in the task's target environment.
 
