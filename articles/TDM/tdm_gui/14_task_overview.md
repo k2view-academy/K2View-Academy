@@ -219,7 +219,7 @@ The following screenshot shows an example of the TDM Task List.
 
   
 
-1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. 
+1. Click **Show/Hide Columns** to open a popup window, which displays the list of available fields for each task. 
 
 2. To display additional fields, click the fields.
 
@@ -244,7 +244,7 @@ The TDM Portal displays a list of icons next to each task record:
 2. To open a selected task, click the **Task Title** (task name) of the task.
 3. Click the **Back** of **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
-Once the task has been edited a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
+Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
 
 ## Task Tabs 
 
@@ -261,11 +261,11 @@ Main task's information:
 
 #### 2. Additional Execution Parameters
 
-This tab defines various execution parameters such as Data Type (Entities and/or Reference tables),  Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task type and the user's permissions.
+This tab defines various execution parameters such as Data Type (Entities and/or Reference tables), Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task type and the user's permissions.
 
 #### 3. Requested Entities
 
-Entities' selection method.The Requested Entities tab is opened if the task processes entities.
+Entities' selection method. The Requested Entities tab is opened if the task processes entities.
 
 #### 4. [Task Scheduling](22_task_execution_timing_tab.md) 
 
