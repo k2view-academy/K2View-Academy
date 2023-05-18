@@ -30,7 +30,8 @@ The following execution parameters are set on **Load Data Versioning tasks**:
 
 Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting .
 
-Note that you must check the Entities Data Type if the [Reserve](/articles/TDM/tdm_architecture/08_entity_reservation.md) Task Action is also checked in the task. 
+Note that you must check the Entities Data Type if the [Reserve](/articles/TDM/tdm_architecture/08_entity_reservation.md) Task Action is also checked in the task.
+
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
 ### Reservation Period
