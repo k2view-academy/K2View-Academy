@@ -8,7 +8,7 @@ The LU population must be based on Broadway flow (instead of a DB Query or a roo
 
 ### LU Population Flows - Implementation Steps
 
-1. Generate the LU population Broadway flows on the LU tables. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables generate thew default population flow.
+1. Generate the LU population Broadway flows on the LU tables. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
    #### LU Population - Optional Step:
 
