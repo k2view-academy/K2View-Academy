@@ -78,7 +78,7 @@ The data generation flows are created with the following logic:
 
 - Other fields are populated with default data generation Actors based on the fields' data type. Note the the default data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Objects. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
 
--  The data generation flow returns multiple results that serve as the row columns. It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of rows per each parent it.
+-  The data generation flow returns multiple results that serve as the row columns. It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of table's records each parent will get.
 
   
 
