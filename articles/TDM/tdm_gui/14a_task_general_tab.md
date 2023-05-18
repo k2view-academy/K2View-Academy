@@ -91,7 +91,7 @@ This is the first task's tab and it defines the main information about the task.
 
 The popup window displays the list of systems that are attached to the task's environments and that have the task's BE. You can clear the checkbox next to a system to remove all its LUs from the task, or click the expand icon next to the system to view its LUs and clear the LUs that need to be removed from the task. 
 
-Note that if the **Advanced Business Entity Options** is not edited, then the task includes all the LUs that are related to the environments' systems with the task's BE.
+Note that if the **Advanced Business Entity Options** is not edited, the task includes all the LUs that are related to the environments' systems with the task's BE.
 
 
 
