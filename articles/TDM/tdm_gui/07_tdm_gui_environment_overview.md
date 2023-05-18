@@ -33,11 +33,11 @@ The **Environments** window displays a list of all environments defined in the T
 
 The Environment window has the following sections:
 
-- [General Information](08_environment_window_general_information.md).
+- [General Information](08_environment_window_general_information.md)
 
-- [Environment Summary](09_environment_window_summary_section.md).
+- [Environment Summary](09_environment_window_summary_section.md)
 
-- Environment tabs, [Permission Sets](10_environment_roles_tab.md), [Systems](11_environment_products_tab.md) and [Environment Variables](12_environment_globals_tab.md).
+- Environment tabs, [Permission Sets](10_environment_roles_tab.md), [Systems](11_environment_products_tab.md) and [Environment Variables](12_environment_globals_tab.md)
 
  The following is an example of an Environment window:
 
