@@ -48,7 +48,7 @@ The TDM Portal displays a list of the task's LUs and post execution processes an
 
   ![monitor execution](images/extract_task_execution_monitor.png)
 
-- The Billing LU is executed after the execution of the CRMLU has ended:
+- The Billing LU is executed after the execution of the CRM LU has ended:
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
 
@@ -62,9 +62,9 @@ Click the information icon next to each LU to open the [Batch Monitor](/articles
 
 ## Stop and Resume a Task Execution
 
-A task can be stopped if the processed entities fail due to an error and can be resumed from the same point once the error has been fixed.  
+A task can be stopped if the processed entities fail due to an error, and can be resumed from the same point once the error has been fixed.  
 
-- Click ![stop](images/stop_execution_icon.png)in the right corner of the **Running Execution** window to stop the execution of the running or pending task's LUs or post execution processes and to set the status of the task to **stopped**.
+- Click ![stop](images/stop_execution_icon.png)in the right corner of the **Running Execution** window to stop the execution of the running or pending task's LUs or post execution processes, and to set the status of the task to **stopped**.
 
 - Click ![resume](images/resume_execution_icon.png) next to a record in **stopped** execution status in the **Logical Unit Summary** to resume the execution of **all** stopped task LUs and post execution processes:
 
@@ -72,7 +72,7 @@ A task can be stopped if the processed entities fail due to an error and can be 
 
 ## Holding Task Execution
 
-Occasionally you may need to temporarily set a task to on-hold. For example, if the testing environment is temporarily down, to hold all task executions on an environment until the testing environment is up again and to then reactivate the tasks for this environment.
+Occasionally you may need to temporarily set a task to On Hold. For example, if the testing environment is temporarily down, to hold all task executions on an environment until the testing environment is up again and to then reactivate the tasks for this environment.
 
 Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to Inactive), its task execution status cannot be modified.
 
@@ -80,7 +80,7 @@ Tasks with an **on-Hold** task execution status cannot be executed.
 
 Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
-- To set the task to on-hold (pause), click ![hold task](images/hold_task_icon.png).
+- To set the task to On Hold (pause), click ![hold task](images/hold_task_icon.png).
 - To activate a task execution status, click ![activate task icon](images/activate_onhold_task_icon.png).
 
 ### Who Can Hold or Activate a Task?
@@ -103,7 +103,7 @@ Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
 - The TDM Scheduling process skips running tasks.
 
-- The TDM Scheduling process skips on-hold tasks.
+- The TDM Scheduling process skips On Hold tasks.
 
 
 
