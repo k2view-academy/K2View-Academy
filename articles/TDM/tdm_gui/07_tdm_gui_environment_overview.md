@@ -21,7 +21,7 @@ Click to read more about [TDM environment setup in Fabric](/articles/TDM/tdm_imp
 
 ## Environments List Window
 
-The **Environments** window displays a list of all environments defined in the TDM. Only **Admin users** can create, add or remove environment owners or delete an environment. Environment owners can edit their environment. Other users can open environments for view only purposes.
+The **Environments** window displays a list of all environments defined in the TDM. Only **Admin users** can create, add or remove environment owners or delete an environment. Environment owners can edit their environment. Other users can open environments for view-only purposes.
 
 -   To create a new environment, click **New Environment**.
 -   To open a selected environment, click the environment's **Name**.
