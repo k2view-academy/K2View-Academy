@@ -2,14 +2,14 @@
 
 ### Add Fabric Roles on each User's Group
 
-The TDM Portal application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).  The user logins into the Fabric Web Framework and **Fabric authenticates the user**.   The TDM Portal gets the **user id** and the user's **Fabric roles** from the user's session. 
+The TDM Portal application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).  The user log in to the Fabric Web Framework and **Fabric authenticates the user**.   The TDM Portal gets the **user id** and the user's **Fabric roles** from the user's session. 
 
 **The user groups are defined in the organization's SP and must be defined in advance in Fabric as [Fabric roles](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)**. 
 Each Fabric role must get **ALL_WS** permission to enable the role's users to open and view the TDM windows.
 
 Assuming a **one-to-one relation between a user group and a Fabric role**.
 
-Of course each Fabric role can get different set of permissions. For example, a tester role should not have access to the API that creates or edits TDM [Business Entities (BEs)](/articles/TDM/tdm_overview/03_business_entity_overview.md), since only TDM admin users can create or edit Business Entities.
+Of course each Fabric role can get a different set of permissions. For example, a tester role should not have access to the API that creates or edits TDM [Business Entities (BEs)](/articles/TDM/tdm_overview/03_business_entity_overview.md), since only TDM admin users can create or edit Business Entities.
 
 
 
