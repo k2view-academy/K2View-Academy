@@ -1,6 +1,6 @@
 # TDM Extract Task
 
-An Extract task extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric (TDM warehouse) for later use.
+An Extract task extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric (TDM warehouse) for a later use.
 
 An Extract task contains the following tabs:
 
