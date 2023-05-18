@@ -120,7 +120,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 
 ## K2Auth Tables
 
-Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in the following four tables:  
+Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in the following 4 tables:  
 
 <table>
 <tbody>
