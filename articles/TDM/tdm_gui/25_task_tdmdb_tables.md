@@ -15,11 +15,11 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   ### Task General Information
 
   - **task_title**  - the task name. To prevent creating several active tasks with the same name, the **task_title** column has a **unique index** when the status is **Active**.
-  - **task_type** - **Extract** , **Load**, or **Reserve**.
+  - **task_type** - **Extract** , **Load** or **Reserve**.
   - **be_id** - the task's BE. The be_id can be linked to the **product_logical_units** TDM DB table. 
   - **number_of_entities** - populated by the number of entities in the task.
   - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
-  - **delete_before_load**- populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
+  - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
   - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task.
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
 
