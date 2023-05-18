@@ -2,7 +2,7 @@
 
 A Generate task generates synthetic entities. The synthetic entities can either be generated and saved in Fabric in order to be loaded later into the testing environment, or be generated and loaded into the target environment in one single task if the Load task action is checked with the Generate task action.
 
-A Generate task can also include Load or Load + Reserve task actions and contains the following tabs:
+A Generate task can also include Load or Load + Reserve task actions and it contains the following tabs:
 
 - [General](14a_task_general_tab.md)
 - [Additional Execution Parameters](#additional-execution-parameters-tab)
