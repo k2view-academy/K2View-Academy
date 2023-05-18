@@ -10,7 +10,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
 - A new record is created for each task.
 
-- Each task record gets a unique **task_id** sequence which is the table's PK.
+- Each task record gets a unique **task_id** sequence, which is the table's PK.
 
   ### Task General Information
 
