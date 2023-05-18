@@ -2,7 +2,7 @@
 
 A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A [Data Versioning Load task](15_data_flux_task.md) gets the selected entities or Reference tables from the selected data version created on the source environment, deletes the current data from the target environment,  and reloads the selected data version  to the selected target environment.
 
-An Load task contains the following tabs:
+A Load task contains the following tabs:
 
 - [General](14a_task_general_tab.md)
 - [Additional Execution Parameters](#additional-execution-parameters-tab)
