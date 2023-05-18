@@ -78,7 +78,7 @@ Check to open the Task Variables tab and [set the variable value on a task level
 
 ##### Replace Sequence
 
-When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required to avoid key duplications if the testing environment is not empty and contains entities.
+When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required for avoiding key duplications if the testing environment is not empty and contains entities.
 
 Notes:
 
