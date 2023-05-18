@@ -10,8 +10,8 @@ The actual data provisioning and/or entity reservation is performed by the task 
 
 The following task actions are supported by TDM:
 
-- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for later use. use.
-- **Generate** - generates synthetic entities. The entities can be saved in Fabric for later use
+- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for a later use.
+- **Generate** - generates synthetic entities. The entities can be saved in Fabric for a later use.
 - **Load** - provisions  the selected entities and/or Reference tables to the selected target environment.
 - **Delete** - deletes the selected entities from the target environment.
 - **Reserve** - reserves the selected entities in the target environment.
@@ -204,7 +204,7 @@ It displays the following settings on each task. These settings can also be used
 - Task Title: task name.
 - Task's source and target environments.
 - BE name.
-- Task Action: Extract, Generate, Load, Delete, or Reserve.
+- Task Action: Extract, Generate, Load, Delete or Reserve.
 - Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity.
 - Reserve Ind: indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
 - [Data Versioning](15_data_flux_task.md): true / false.
