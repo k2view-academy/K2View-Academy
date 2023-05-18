@@ -38,11 +38,11 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
 
-Note that when the Reservation Period is set to zero, the entities are reserved for unlimited period.  
+Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
-Only Admin and Environment owner users can reserve entities for unlimited period. Users that are attached to the target environment as testers  must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
+Only Admin and Environment owner users can reserve entities for an unlimited period. Users that are attached to the target environment as testers must set a reservation period. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
-The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days**, or **weeks**.
+The start date of the reservation period is the task's execution time. The **reservation period** can be set in **minutes**, **hours**, **days** or **weeks**.
 
 ### Reservation Note
 
@@ -62,7 +62,7 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 Note:
 
-- The **Set Sync Policy**,  **Retention Period** , and  **Replace Sequence** settings are not displayed when the Data Versioning is checked since the task gets the selected data version from the TDM warehouse (Fabric) and reloads it to the target 'as is'.
+- The **Set Sync Policy**, **Retention Period** and **Replace Sequence** settings are not displayed when the Data Versioning is checked as the task gets the selected data version from the TDM warehouse (Fabric) and reloads it to the target 'as is'.
 
 ## Requested Entities Tab
 
@@ -78,7 +78,7 @@ The following selection methods are available on load tasks:
 
 Reload all the entities in the selected data version into the target environment. The window displays all available versions created in the source environment for the task's LUs. 
 
-This option is **only available for Admin users the the task's target environment owners**. 
+This option is **only available for Admin users and the task's target environment owners**. 
 
 ### Entity list 
 
@@ -99,7 +99,7 @@ Select a data version and click **Next**. The TDM revalidates the entities list 
 - Only one data version can be selected for a load task.
 - The **Version Name** is the **Task Title** of the extract task that created the version.
 - The **Date Time** is the execution date of the task. An extract task can be executed multiple times. Each execution creates a separate version and has its own date and time.
-- The  **Version Type** setting indicates whether the extract task has been created for all entities, or for a selected list of entities.
+- The **Version Type** setting indicates whether the extract task has been created for all entities, or for a selected list of entities.
 - The table holding the available versions can be sorted or filtered.
 - To update the list of available versions, click **Refresh**.
 
