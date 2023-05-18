@@ -24,7 +24,7 @@ The LU population must be based on Broadway flow (instead of a DB Query or a roo
 
    
 
-2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
+2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
 
 ## Data Generation Flows Implementation
 
@@ -34,7 +34,7 @@ The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GE
 ${population name}.population.generator
 ```
 
-For example:  activity.population.generator
+For example: activity.population.generator
 
 ### Data Generation Flows - Implementation Steps
 
