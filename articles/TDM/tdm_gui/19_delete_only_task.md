@@ -45,7 +45,7 @@ This is the **default option**. Populate the list of entities for the task, sepa
 
 ### Custom Logic
 
-select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and to set the maximum number of entities for the task.
+select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and set the maximum number of entities for the task.
 
 Notes:
 
