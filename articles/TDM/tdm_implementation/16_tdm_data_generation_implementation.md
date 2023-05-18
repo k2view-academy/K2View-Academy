@@ -123,8 +123,8 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 There are several options for the data generation inner flow:
 
 - **Row by row** - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a map type. 
-- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the actor will collect them and move to the next parent row.
-- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The actor will return these rows and will not call the inner flow again.
+- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the Actor will collect them and move to the next parent row.
+- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The Actor will return these rows and will not call the inner flow again.
 
 The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to be executed in the **rows per parent** or **handle all parent rows** as explained above.
 
