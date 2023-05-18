@@ -30,7 +30,7 @@ Click [here](/articles/19_Broadway/actors/09_MTable_actors.md) for more informat
 
 
 
-- Set the input keys as **external parameters** in order to display them parameters in the TDM portal task's window and enable the user to set a valid value for them in the TDM task.
+- Set the input keys as **external parameters** in order to display the parameters in the TDM portal task's window and enable the user to set a valid value for them in the TDM task.
 
 
 
