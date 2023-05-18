@@ -68,7 +68,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 - Deploy the LU, for which you need to generate the data generation flows, and the TDM LU to Fabric debug server.
 - Open the **createGenerateDataTableFlows** flow imported from the TDM library.
 - Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters. 
-- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out) whose **generator_filterout** is checked (true) . The data generation flows are automatically created in the **GeneratorFlows** subdirectory under the Broadway directory of the LU.
+- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out) whose **generator_filterout** is checked (true). The data generation flows are automatically created in the **GeneratorFlows** subdirectory under the Broadway directory of the LU.
 
 The data generation flows are created with the following logic:
 
