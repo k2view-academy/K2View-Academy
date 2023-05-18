@@ -17,7 +17,7 @@ The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_pro
 
 The TDM implementation can get the values of these Globals in order to check the source and target system version of each execution.
 
-Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data generation tasks].
+Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data generation tasks](/articles/TDM/tdm_gui/16a_generate_task.md).
 
 ## Update LU Schema
 
