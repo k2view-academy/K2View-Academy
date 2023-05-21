@@ -29,17 +29,15 @@ To Enable access to Fabric over SSL, follow these instruction:
 3. Configure Fabric
 
 	Edit the config.ini file
+	* Set the Webservice port to secure port (8443)
+	```bash
+	sed -i s/"#WEB_SERVICE_SECURE_PORT=.*"/"WEB_SERVICE_SECURE_PORT=8443"/g $K2_HOME/config/config.ini
 	```
-	nano /opt/apps/fabric/config/config.ini
+	* Update the Certificate Passprase (replace [PASSWORD] with the password set in previous step )
+	```bash
+	sed -i s/"#WEB_SERVICE_CERT_PASSPHRASE=.*"/"WEB_SERVICE_CERT_PASSPHRASE=[PASSWORD]"/g $K2_HOME/config/config.ini
 	```
-	Uncomment the following in the config.ini file:
-	```
-	#WEB_SERVICE_SECURE_PORT=8443
-	```
-	Note that the password of the certification file should be defined here:
-	```
-	#WEB_SERVICE_CERT_PASSPHRASE=
-	```
+	
 4. Start and check access to Fabric Web UI via HTTPS
 
 	* Start the Fabric Instance
