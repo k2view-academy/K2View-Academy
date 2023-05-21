@@ -11,8 +11,11 @@ To switch configuration to a hardened configuration, follow the below instructio
     ~~~bash
     sudo su - postgres
     ~~~
-
-2. Create new Self-Signed certificates:
+2. Stop the Postgres service
+   ~~~bash
+   ./stop_pg13.sh
+   ~~~bash
+3. Create new Self-Signed certificates:
     The script requires 2 inputs, a hostname/DNS name and an IP address.
 
     For example:
@@ -25,7 +28,7 @@ To switch configuration to a hardened configuration, follow the below instructio
     cd create_k2v_cer/
     ./create_cer.sh appliance.k2view.local 192.168.1.1
     ~~~
-3. Apply configuration and restart the Postgres server:
+4. Apply configuration and restart the Postgres server:
    
    ~~~bash
    ./secure_pg13.sh
