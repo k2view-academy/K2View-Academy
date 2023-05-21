@@ -12,13 +12,42 @@
 * The OS is preconfigured with management users.
 
     
-| Role           | Username    | Password      | Notes 
-| ----------     | ---------- | ---------- | ---------- | 
-|  Management      | k2view    | Q1w2e3r4t5   | with sudo permissions and will be used to log in the rest of the users |
-|  Fabric         | fabric     |--   | to manage the Fabric instance |
-|  Cassandra      | cassandra  | --| to manage the Cassandra instance |
-|  kafka          | kafka      | --| not needed in a single node environment |
-
+<table style="border-style: solid; height: 108px;">
+<thead>
+<tr style="height: 18px;">
+<th style="height: 18px; width: 101px; text-align: center;">Role</th>
+<th style="height: 18px; width: 91px; text-align: center;">Username</th>
+<th style="height: 18px; width: 96px; text-align: center;">Password</th>
+<th style="height: 18px; width: 386px;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 101px; text-align: center;">Management</td>
+<td style="height: 36px; width: 91px; text-align: center;">k2view</td>
+<td style="height: 36px; width: 96px; text-align: center;">Q1w2e3r4t5</td>
+<td style="height: 36px; width: 386px;">with sudo permissions and will be used to log in the rest of the users</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 101px; text-align: center;">Fabric</td>
+<td style="height: 18px; width: 91px; text-align: center;">fabric</td>
+<td style="height: 18px; width: 96px; text-align: center;">--</td>
+<td style="height: 18px; width: 386px;">to manage the Fabric instance</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 101px; text-align: center;">Cassandra</td>
+<td style="height: 18px; width: 91px; text-align: center;">cassandra</td>
+<td style="height: 18px; width: 96px; text-align: center;">--</td>
+<td style="height: 18px; width: 386px;">to manage the Cassandra instance</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 101px; text-align: center;">kafka</td>
+<td style="height: 18px; width: 91px; text-align: center;">kafka</td>
+<td style="height: 18px; width: 96px; text-align: center;">--</td>
+<td style="height: 18px; width: 386px;">not needed in a single node environment</td>
+</tr>
+</tbody>
+</table>
     
 
 ### Fabric Server - Initial Configuration
