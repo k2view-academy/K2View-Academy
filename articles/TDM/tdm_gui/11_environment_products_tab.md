@@ -1,6 +1,6 @@
 # Environment Systems Tab
 
-A [TDM System](05_tdm_gui_product_window.md) (product) represents a system or application installed in a source or target environment. Each Testing environment must have at least one system which can be added, edited or deleted from the environment by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  
+A [TDM System](05_tdm_gui_product_window.md) (product) represents a system or application installed in a source or target environment. Each Testing environment must have at least one system, which can be added, edited or deleted from the environment by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  
 
 An environment's systems are displayed in the Environment window's **Systems tab**:
 
@@ -12,10 +12,10 @@ An environment's systems are displayed in the Environment window's **Systems tab
 
 The System Window holds the following settings:
 
-- **System Name**, select a system from the dropdown list.
-- **Data Center Name**, the Data Center where the system is physically located in the environment. For example, ENV1 may have CRM in NY and Billing in TX. Select a data center from the dropdown list.
+- **System Name**, select a system from the drop-down list.
+- **Data Center Name**, the Data Center where the system is physically located in the environment. For example, ENV1 may have CRM in NY and Billing in TX. Select a Data Center from the drop-down list.
 
-- **System Version**, the version of the installed system in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5.  Select a version from the dropdown list. Note the the **synthetic** version is set on each System added to the **Synthetic environment**. 
+- **System Version**, the version of the installed system in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5. Select a version from the drop-down list. Note the the **synthetic** version is set on each system that is added to the **Synthetic environment**. 
 
   Click for more information about [supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 

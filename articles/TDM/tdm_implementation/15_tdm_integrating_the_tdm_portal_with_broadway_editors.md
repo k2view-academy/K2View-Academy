@@ -2,7 +2,7 @@
 
 TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters] or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
 
-This integration enables the user to select a valid value from a list, set dates and to set distributed parameters. 
+This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
 
 The following web editors have been added to Fabric 7.1 and are also available in the TDM portal:
 
@@ -16,7 +16,7 @@ Click [here](/articles/19_Broadway/actors/09_MTable_actors.md) for more informat
 
 ### MTables - TDM Implementation Instructions
 
-- Define multiple keys in a single MTable to set a dependency between their values. For example include the City and State in the Address MTable.
+- Define multiple keys in a single MTable to set a dependency between their values. For example, include the City and State in the Address MTable.
 
 - Use the **MTableRandom**  Actor in the Broadway flow to return values based on MTable. See an example below:
 
@@ -24,13 +24,13 @@ Click [here](/articles/19_Broadway/actors/09_MTable_actors.md) for more informat
 
  
 
-- Set the **editor** of the key input arguments to {"id": "com.k2view.mTableKey"}. For example, the **city** is an input key field of the Address MTable: 
+- When working on the desktop (.Net) Studio - set the **editor** of the key input arguments to {"id": "com.k2view.mTableKey"}. For example, the **city** is an input key field of the Address MTable: 
 
   ![mtable editor](images/mtable_set_editor_key.png) 
 
 
 
-- Set the input keys as **external parameters** in order to display them parameters in the TDM portal task's window and enable the user to set a valid value for them in the TDM task.
+- Set the input keys as **external parameters** in order to display the parameters in the TDM portal task's window and enable the user to set a valid value for them in the TDM task.
 
 
 
@@ -53,7 +53,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 ### Distribution - TDM Implementation Instructions
 
 - Use the **RandomDistribution** Actor to return a value based on the distribution parameters. Set the default distribution parameters.
-- Set the distribution's input as **external** in order to display them parameters in the TDM portal task's window and enable the user to override the default distribution values in the TDM task.
+- Set the distribution's input as **external** in order to display the parameters in the TDM portal task's window and enable the user to override the default distribution values in the TDM task.
 
 - **Examples:**
 
@@ -67,7 +67,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 
 
-- The **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the  TDM task.
+- Adjust the **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the TDM task.
 
   Click [here] fore more information about the data generation implementation.
 
@@ -75,4 +75,4 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 
 
-[![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_tdm_data_generation_implementation.md)
+[![Previous](/articles/images/Previous.png)](14_tdm_implementation_supporting_non_jdbc_data_source.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_tdm_data_generation_implementation.md)

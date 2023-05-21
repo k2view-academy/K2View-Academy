@@ -1,14 +1,14 @@
 # Data Generation Implementation
 
-The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables: an LU table can be populated either with a source data or a generated synthetic data.  
+The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables: an LU table can be populated with either with source data or generated synthetic data.  
 
 ## LU Populations Implementation
 
-The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key. If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the  **rowsGeneratorDistribution** input actor.
+The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the  **rowsGeneratorDistribution** input Actor.
 
 ### LU Population Flows - Implementation Steps
 
-1. Generate the LU population Broadway flows on the LU tables. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables generate thew default population flow.
+1. Generate the LU population Broadway flows on the LU tables. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
    #### LU Population - Optional Step:
 
@@ -24,17 +24,17 @@ The LU population must be based on Broadway flow (instead of a DB Query or a roo
 
    
 
-2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
+2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
 
 ## Data Generation Flows Implementation
 
-The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key is **true**. The data generation inner flow must have the following naming convention:
+The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
 
 ```
 ${population name}.population.generator
 ```
 
-For example:  activity.population.generator
+For example: activity.population.generator
 
 ### Data Generation Flows - Implementation Steps
 
@@ -44,7 +44,7 @@ Populate the **tdmSeqList** and **TDMSeqSrc2TrgMapping**  tables before generati
 
 Click [here](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for more information about the sequence implementation.
 
-This step is needed in order to add a sequence generation in the data generation flow for fields that are set in the **TDMSeqSrc2TrgMapping**  table. The generated flow creates a DB sequence in the TDM DB for the generated ID.  The created DB sequence has the following naming convention:
+This step is needed in order to add a sequence generation in the data generation flow for fields that are set in the **TDMSeqSrc2TrgMapping**  table. The generated flow creates a DB sequence in the TDM DB for the generated ID. The created DB sequence has the following naming convention:
 
 ```
 [gen]_[the sequence name in TDMSeqSrc2TrgMapping]
@@ -65,20 +65,20 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 
 #### 2. Generate the data generation flows for the LU table
-
+- Deploy the LU, for which you need to generate the data generation flows, and the TDM LU to Fabric debug server.
 - Open the **createGenerateDataTableFlows** flow imported from the TDM library.
-- Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters.
-- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out). The data generation flows are automatically created in the **GeneratorFlows** sub directory under the Broadway directory of the LU.
+- Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters. 
+- Run the flow to create the data generation flows for the LU's tables except the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out) whose **generator_filterout** is checked (true). The data generation flows are automatically created in the **GeneratorFlows** subdirectory under the Broadway directory of the LU.
 
 The data generation flows are created with the following logic:
 
 - Parent keys are populated into the LU tables based on the parent-child LU schema definition. For example: the address LU table is linked to the customer LU table by the customer_id field. The customer_id generated for the customer LU table is sent to the address' population in the parent row and is mapped to address.customer_id.
 
-- Sequence actors are set for IDs fields mapped in **TDMSeqSrc2TrgMapping**.
+- Sequence Actors are set for IDs fields mapped in **TDMSeqSrc2TrgMapping**.
 
-- Other fields are populated with default data generation Actors based on the fields' data type. Note the the default  data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Object. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
+- Other fields are populated with default data generation Actors based on the fields' data type. Note the the default data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Objects. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
 
--  The data generation flow returns multiple results that serve as the row columns.  It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of rows per each parent it.
+-  The data generation flow returns multiple results that serve as the row columns. It means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows and number of table's records that each parent will get.
 
   
 
@@ -88,15 +88,15 @@ The data generation flows are created with the following logic:
 
 ##### Data Generators
 
-- Replacement of the default data generation actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows.
+- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows.
 
 ##### PII Fields
 
-- Populate them with an initial value of the field name + records no. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking actors in the LU population flow. Using the masking actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
+- Populate them with an initial value of the field name + records no. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
 
   Example: 
 
-  The first_name is populated with with the concatenation of the filed name the the count external parameter:
+  The first_name is populated with the concatenation of the field name and the 'count' external parameter:
 
   
 
@@ -123,10 +123,10 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 There are several options for the data generation inner flow:
 
 - **Row by row** - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a map type. 
-- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the actor will collect them and move to the next parent row.
-- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The actor will return these rows and will not call the inner flow again.
+- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the Actor will collect them and move to the next parent row.
+- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The Actor will return these rows and will not call the inner flow again.
 
-The data generation flow returns multiple results that will serve as the row columns and is executed in the **row by row**. You can edit the data generation flow to by executed in the **rows per parent** or **handle all parent rows** as explained above.
+The data generation flow returns multiple results that will serve as the row columns and it is executed in the **row by row**. You can edit the data generation flow to be executed in the **rows per parent** or **handle all parent rows** as explained above.
 
 For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
 
@@ -136,4 +136,4 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgene
 
 
 
-[![Previous](/articles/images/Previous.png)](14_tdm_implementation_supporting_non_jdbc_data_source.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
+[![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)

@@ -4,14 +4,14 @@ Data provisioning and entity reservation are implemented by creating and executi
 
 A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the task action (type) and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
 
-The actual data provisioning and/or entity reservation is performed by the task execution where each task can be executed multiple times.
+The actual data provisioning and/or entity reservation is performed by the task execution, where each task can be executed multiple times.
 
 ## Task Actions (types)
 
 The following task actions are supported by TDM:
 
-- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for later use. use.
-- **Generate** - generates synthetic entities. The entities can be saved in Fabric for later use
+- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for a later use.
+- **Generate** - generates synthetic entities. The entities can be saved in Fabric for a later use.
 - **Load** - provisions  the selected entities and/or Reference tables to the selected target environment.
 - **Delete** - deletes the selected entities from the target environment.
 - **Reserve** - reserves the selected entities in the target environment.
@@ -197,21 +197,21 @@ The following table describes the valid combinations of task actions in a TDM ta
 
 ## TDM Tasks List Window
 
-The TDM Task List displays by default the list of all Active tasks in the TDM. 
+The TDM Task List displays, by default, the list of all Active tasks in the TDM. 
 It displays the following settings on each task. These settings can also be used to filter the displayed tasks:
 
-- Task ID.
-- Task Title: task name.
-- Task's source and target environments.
-- BE name.
-- Task Action: Extract, Generate, Load, Delete, or Reserve.
+- Task ID
+- Task Title - task name
+- Task's source and target environments
+- BE name
+- Task Action - Extract, Generate, Load, Delete or Reserve
 - Task's Operation mode. An additional information about the task when multiple task types are set in the task. For example: Delete and load entity.
-- Reserve Ind: indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
-- [Data Versioning](15_data_flux_task.md): true / false.
-- Data Type: Entities and/or Reference 
-- Selection Method: selection criteria for entities.
-- Number of processed entities.
-- General parameters like created by user and update date. 
+- Reserve Ind - indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
+- [Data Versioning](15_data_flux_task.md) - true/false
+- Data Type - Entities and/or Reference 
+- Selection Method - selection criteria for entities
+- Number of processed entities
+- General parameters such as created by user and update date. 
 
 The following screenshot shows an example of the TDM Task List. 
 
@@ -219,7 +219,7 @@ The following screenshot shows an example of the TDM Task List.
 
   
 
-1. Click **Show/Hide Columns** to open a popup window displaying the list of available fields for each task. 
+1. Click **Show/Hide Columns** to open a popup window, which displays the list of available fields for each task. 
 
 2. To display additional fields, click the fields.
 
@@ -232,7 +232,7 @@ The following screenshot shows an example of the TDM Task List.
 The TDM Portal displays a list of icons next to each task record:
 
 - ![task icon](images/execute_task_icon.png)[Execute Task](26_task_execution.md). 
-- ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task on-hold temporarily.
+- ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task temporarily to On Hold.
 - ![task icon](images/save_as_icon.png) Save As, copy the task into a new task.
 - ![task icon](images/task_execution_history_icon.png)[Task Execution History](27_task_execution_history.md), display the execution history of the selected task.
 
@@ -244,7 +244,7 @@ The TDM Portal displays a list of icons next to each task record:
 2. To open a selected task, click the **Task Title** (task name) of the task.
 3. Click the **Back** of **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
-Once the task has been edited a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
+Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
 
 ## Task Tabs 
 
@@ -261,11 +261,11 @@ Main task's information:
 
 #### 2. Additional Execution Parameters
 
-This tab defines various execution parameters such as Data Type (Entities and/or Reference tables),  Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task type and the user's permissions.
+This tab defines various execution parameters such as Data Type (Entities and/or Reference tables), Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task type and the user's permissions.
 
 #### 3. Requested Entities
 
-Entities' selection method.The Requested Entities tab is opened if the task processes entities.
+Entities' selection method. The Requested Entities tab is opened if the task processes entities.
 
 #### 4. [Task Scheduling](22_task_execution_timing_tab.md) 
 

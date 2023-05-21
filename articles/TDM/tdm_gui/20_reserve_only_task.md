@@ -1,6 +1,6 @@
 # TDM Reserve Task
 
-A Reserve task contains only the **Reserve** task type and [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
+A Reserve task contains only the **Reserve** task type and it [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
 
 A Reserve task contains the following tabs:
 
@@ -14,10 +14,6 @@ When checking the **Set Task Variables** setting, a new [Task Variables](23_task
 ## Additional Execution Parameters Tab
 
 The following execution parameters are set on **Reserve tasks**:
-
-![additional exe params](images/reserve_task_additional_exe_params.png)
-
-
 
 ### Data Type
 
@@ -63,19 +59,18 @@ This is the **default option**. Populate the list of entities for the task, sepa
 
 ### Custom Logic
 
-Select a Broadway flow in order to both get the entity list for the task and to set the number of entities for the task.
+select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and set the maximum number of entities for the task.
 
-TDM supports the creation of external input parameters on a Custom Logic Flow. In this case, the TDM Portal displays the input parameters in the task window, enabling the user to send values for these parameters. 
+Notes:
 
-The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and it indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list.
+-  TDM 8.0 added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs.
+-  The **Filter out Reserved Entities** checkbox indicates if entities that are reserved for other users must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list. 
 
-See example:
+### Parameters
 
-![custom logic](images/reserve_task_requested_entities_custom_logic_2.png)
+TDM 8.0 added the [Parameters selection method](17_load_task_regular_mode.md#parameters)  to the Reserve tasks. Note that this feature depends on the [TDM configuration](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#tdm-portal-general-parameters). By default, the Parameters selection method is hidden for Reserve tasks. 
 
-Note:
 
-- It is possible to set an array value in a Custom Logic's parameter. The values are populated as a String with the delimiter, which is set in the Custom Logic Broadway flow. For example: 1,2,3 or NY,LA.  
 
 
  [![Previous](/articles/images/Previous.png)](19_delete_only_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_task_tdmdb_tables.md)

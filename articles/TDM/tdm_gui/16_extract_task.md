@@ -1,6 +1,6 @@
 # TDM Extract Task
 
-An Extract task extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric (TDM warehouse) for later use.
+An Extract task extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric (TDM warehouse) for a later use.
 
 An Extract task contains the following tabs:
 
@@ -46,9 +46,9 @@ The retention period set on the extracted entities and/or Reference tables. When
 
 - **Do not Retain** - avoid saving the task's entities and/or Reference tables in Fabric (instead of saving and deleting). This option can be used, for example, to run an Extract task on a large subset of entities in order to populate the TDM parameter’s tables on each entity without saving the entities into Fabric.
 
-- Set unit of measure (Minutes, Hours, Days ...) and value. For example, save the data in Fabric for 2 days. After 2 days the data is automatically deleted from Fabric.
+- Set unit of measure (Minutes, Hours, Days ...) and value. For example, save the data in Fabric for 2 days. After 2 days the data are automatically deleted from Fabric.
 
-  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**, depends on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks** or **years**, depending on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 #### Default Retention Period
 
@@ -79,7 +79,7 @@ The following selection methods are available on extract tasks:
 
 - **Entity list**: this is the **default option**. Populate the list of entities for the task. The entities populated should be separated with a comma. 
 
-- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and to set the maximum number of entities for the task.
+- **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and set the maximum number of entities for the task.
 
   Note that the TDM 8.0 added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs:
 
@@ -96,8 +96,8 @@ The following selection methods are available on extract tasks:
 Notes:
 
 - The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
-- The maximum number of entities in the task is limited to the number of entities returned from  the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic only returns 30 entities, the task will process 30 entities.
-- Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
+- The maximum number of entities in the task is limited to the number of entities returned from the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic only returns 30 entities, the task will process 30 entities.
+- Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
 
 

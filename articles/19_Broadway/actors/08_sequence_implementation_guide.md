@@ -25,12 +25,12 @@ The sequence next value implementation method depends on the sequence definition
 
 Notes: 
   - The **sequenceId** input is **mandatory** for the **Sequence** Actor and **optional** for the **MaskingSequence** Actor. The **MaskingSequence** Actor has both input arguments: **maskingId** and **sequenceId**. If the input **sequenceId** is not set in the MaskingSequence Actor, the sequence name would be taken from the **maskingId** input argumenent. 
-  - In case the sequence interface is a DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation).
+  - In case the sequence interface is a DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation). The initial is set vased on the **initialValue** setting if populated. 
 
 
 ### Sequence Initiation Method
 
-Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is only relevant for IN-MEMORY or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md). In a DB sequence, these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
+Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is only relevant for IN-MEMORY or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md). The **initialValue** is also relevant for a newly created DB sequence to set its initial value upon the sequence creation. In an existing DB sequence, these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, e.g., 1000000.
 * Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable, named **initialValue**. View the figures below: 

@@ -1,6 +1,6 @@
 # TDM Implementation - Supporting Different System Versions
 
-During a project's lifecycle, there may be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems, each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
+During a project's lifecycle, there may be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems, each having several different versions of the data source structures. For example, a development environment may have new tables and fields, as opposed to the production environment. These changes require updates of the TDM implementation.
 
 This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of System (product) Versions, updates of LU Schemas and updates of Broadway Load Flows. 
 
@@ -11,17 +11,17 @@ A  [TDM System](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a
 
 The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The system versions are based on the system's version of the task's environments: 
 
-- **TDM_SOURCE_PRODUCT_VERSION**, populated by the system's version of the task's source environment. 
+- **TDM_SOURCE_PRODUCT_VERSION** - populated by the system's version of the task's source environment. 
 
-- **TDM_TARGET_PRODUCT_VERSION**, populated by the system's version of the task's target environment.
+- **TDM_TARGET_PRODUCT_VERSION** - populated by the system's version of the task's target environment.
 
 The TDM implementation can get the values of these Globals in order to check the source and target system version of each execution.
 
-Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data generation tasks].
+Note that the TDM_SOURCE_PRODUCT_VERSION is set to **synthetic** on [data generation tasks](/articles/TDM/tdm_gui/16a_generate_task.md).
 
 ## Update LU Schema
 
-The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, the following notes and caveats must be taken into account: 
+The data source of the LU Schema might have been updated, and consequently requires editing of the LU Schema. When doing so, the following notes and caveats must be taken into account: 
 
 ### Adding or Removing LU Tables
 
@@ -45,13 +45,13 @@ Examples:
 
 - Adding the PAYMENT_METHOD column to the PAYMENT table in the Development environment. This column did not exist in the PAYMENT table of the Production environment.
 
-Adding new LU tables, and adding new columns to an LU table are described in more detail below:  
+The addition of both new LU tables and new columns to an LU table is described in more detail below:  
 
   #### Adding a New LU Table
 
 Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
 
-  Here is one example of a source code to implement this: 
+  The following is one example of a source code to implement this: 
 
 
 ```java
@@ -82,17 +82,17 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
     **LU Populations are based on Broadway flows:**
 
-    1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is PROD:
+    1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty. The 1st stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is PROD:
 
        ![prod population](images/lu_population_prod_version.png)
 
-    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates it in the LU table. The first stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
+    2. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates it in the LU table. The 1st stages of the flow check the TDM_SOURCE_PRODUCT_VERSION and run the next stages only if the TDM_SOURCE_PRODUCT_VERSION Global is DEV:
 
        ![prod population](images/lu_population_dev_version.png)
 
     
 
-    **LU Populations are based on Db Queries:**
+    **LU Populations are based on DB Queries:**
 
     
 
@@ -117,7 +117,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
          
 
-      2. Development  table population, which runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates the PAYMENT_METHOD column of the LU table:
+      2. Development table population, which runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates the PAYMENT_METHOD column of the LU table:
 
          ![dev population](images/multi_versions_lu_population_2.png)
 
@@ -140,7 +140,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2") || tdm
 
     - It is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and to avoid adding them to the TDM Logic file because the TDM Logic File already contains the TDM product functions.
 
-    - It is recommended to populate the maximum number of LU tables and fields for the synthetic data generation (the TDM_SOURCE_PRODUCT_VERSION Global is populated with "synthetic"). Irrelevant tables or fields will be filtered out by the load flows based on the target environment's System version. 
+    - It is recommended to populate the maximum number of LU tables and fields for the synthetic data generation (the TDM_SOURCE_PRODUCT_VERSION Global is populated with "synthetic"). Irrelevant tables or fields will be filtered out by the load flows, based on the target environment's System version. 
 
   - 
 

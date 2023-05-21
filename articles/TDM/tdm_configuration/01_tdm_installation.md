@@ -8,12 +8,12 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** - Fabric 7.0.0 and above. see [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md)
-- **PostgreSQL DB** - The TDM DB tables are created on a PostgreSQL DB. PostgreSQL v9.6 or v13 versions are certified. For more details, see [here](/articles/TDM/tdm_configuration/PGSQL_setup.md)
+- **Fabric Server** - Fabric 7.1 and above. see [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
+- **PostgreSQL DB** - The TDM DB tables are created on a PostgreSQL DB. PostgreSQL v9.6 or v13 versions are certified. For more details, see [here](/articles/TDM/tdm_configuration/PGSQL_setup.md).
 
 ### Docker Installation 
 
-Click here to open the [TDM 7.6 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V7.6.md).
+Click here to open the [TDM 8.0 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V8.0.md).
 
 ## TDM Web Application
 
@@ -22,35 +22,6 @@ Both  TDM layers - backend and frontend - are included in the TDM library from v
 Import the updated TDM library to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
-
-### Redis
-
-The Redis must run in one of the Fabric nodes. All Fabric nodes must work with the same Redis.
-
-#### Start Redis on One of the Fabric Nodes
-
-- Open for edit the **redis.conf** file and verify that the **bind** parameter is commented to enable accessing the Redis from outside the Fabric node.
-- Go to $K2_HOME/apps/redis/src and run:
-
-```
-cd  $K2_HOME/apps/redis/src
-nohup ./redis-server $K2_HOME/apps/redis/redis.conf &
-cd  $K2_HOME/
-```
-
-#### Adding a Password to Redis (Optional)
-
-- It is possible to set a password on Redis. Perform the following steps to add a password to Redis:
-
-- Run the following commands on the Fabric node:
-
-  ```
-  ./redis-cli
-  CONFIG SET requirepass <password>
-  AUTH <password>
-  ```
-
-- The IP address and the Redis password must also be populated in the Redis interface in Fabric project.
 
 ## Update the TDM APIDOC (Optional)
 
@@ -73,7 +44,7 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 4. Edit the buildTdmApiJSON flow: edit the port in the path input parameter of the HttpJson actor.
 
-5. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.6. This version is added to the generated APIDOC.
+5. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 8.0. This version is added to the generated APIDOC.
 
 6. Open the Swagger editor using the following URL: https://editor.swagger.io/.
 
@@ -94,22 +65,22 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-- TDM 7.6 added a creation of the TDM DB objects by the TDM LU's deploy flow:
+- From TDM 7.6 onwards TDM creates of the TDM DB objects by the TDM LU's deploy flow:
 
    - Creates the TDM DB tables, sequences, views and functions.
 
   Notes: 
-  - **You must set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
+  - **You must set the BUILD_TDMDB Global to true and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
   - You must create the TDM database and user in advance. The database and user names must be aligned with the TDM interface. You can run the **TDMDBCreateRoleAndDB** flow (located in the TDM LU) to create the **TDMDB** database and **tdm** user (role) in the postgreSQL DB.
 
   
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
 - Soft deploy the TDM LU to Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
-- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 7.6. For
+- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 8.0. For
 example:
-  - CURRENT_TDM_VERSION = 7.4.
-  - TARGET_TDM_VERSION = 7.6.
+  - CURRENT_TDM_VERSION = 7.6.
+  - TARGET_TDM_VERSION = 8.0.
 
 - Note that the **version’s list** is set in **TDMDBUpgradeScripts** actor (imported from the TDM Library).
 

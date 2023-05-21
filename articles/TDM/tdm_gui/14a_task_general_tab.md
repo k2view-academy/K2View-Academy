@@ -1,17 +1,17 @@
 # Task - General Tab
 
-This is the first task tabs and defines the main information on the task. The following information is populated in the General tab:
+This is the first task's tab and it defines the main information about the task. The following information is populated in the General tab:
 
 ![general tab](images/load_task_general_tab.png)
 
-1. **Task title (name)**. A free text. Note that the task title must 
+1. **Task title (name)**. A free text. Note that the task title is a must .
 
-2. [Task Actions](14_task_overview.md#task-actions-types): Extract, Generate, Load, Delete, and Reserve. 
+2. [Task Actions](14_task_overview.md#task-actions-types): Extract, Generate, Load, Delete and Reserve. 
 
    At least one task action must be set on the task.
 
 
-3. **Business Entity**: the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the dropdown list of all the TDM BEs.
+3. **Business Entity**: the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs.
 
 4. **Environments**: the environments that need to be set depend on the selected task actions:
 
@@ -81,7 +81,7 @@ This is the first task tabs and defines the main information on the task. The fo
    </table>
 
 
-   On each environment, the user needs to select one TDM environment from the dropdown list. The dropdown list displays the list of available environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   
+   On each environment, the user needs to select one TDM environment from the drop-down list. The drop-down list displays the list of available environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   
 
 5. **Advanced Business Entity Options**, this is an **optional** setting that enables a partial selection of the systems or LUs in the task. The following popup window is opened when clicking this setting:
 
@@ -89,9 +89,9 @@ This is the first task tabs and defines the main information on the task. The fo
 
    
 
-The popup window displays the list of systems that are attached to the task's environments and have the task's BE. You can clear the checkbox next to a system to remove all its LUs from the task, or click the expand icon next to the system to view it LUs and clear the LUs that need to be removed from the task. 
+The popup window displays the list of systems that are attached to the task's environments and that have the task's BE. You can clear the checkbox next to a system to remove all its LUs from the task, or click the expand icon next to the system to view its LUs and clear the LUs that need to be removed from the task. 
 
-Note that is the **Advanced Business Entity Options** is not edited, then the task includes all the LUs that are related to the environments' systems with the task's BE.
+Note that if the **Advanced Business Entity Options** is not edited, the task includes all the LUs that are related to the environments' systems with the task's BE.
 
 
 

@@ -10,7 +10,7 @@ Fabric includes an authentication and authorization mechanism that enables manag
   - Access to the methods that access LUIs can be defined on a role level.
 - Assigning security profiles to roles.
 
-Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned as “administrators”. 
+Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users might be assigned as “administrators”. 
 
 User access control management can be performed using either:
 
@@ -58,10 +58,11 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>BATCH</strong></p>
+<p><strong>BATCH and BATCH_READ</strong></p>
 </td>
 <td width="600pxl">
-<p>Used to enable user to run batch processes</p>
+<p>BATCH permission enables the user to run and view batch processes.</p>
+<p>BATCH_READ permission enables the user to view batch processes.</p>  
 </td>
 </tr>
 <tr>
@@ -119,7 +120,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 
 ## K2Auth Tables
 
-Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in the following four tables:  
+Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in the following 4 tables:  
 
 <table>
 <tbody>
@@ -169,9 +170,9 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 
 Fabric database credentials are validated each time a user attempts to access Fabric via the console, [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) or other interfaces. Permissions can be set on an [LU](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) level or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
-Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is **false**.
+Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
-It is also possible to skip the sync process between Fabric user and Cassandra user by setting **SYNC_CASSANDRA_SYSTEM_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **false**. By default, this parameter is **true**.
+It is also possible to skip the sync process between Fabric user and Cassandra user by setting **SYNC_CASSANDRA_SYSTEM_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **false**. By default, this parameter is set to **true**.
 ## Setting Credentials
 
 Create the users and define their credentials, as follows: 
@@ -191,7 +192,7 @@ By default, Fabric creates the **admin** user as the initial superuser when star
 - Copy the **adminInitialCredentials.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Change the **File Name** to **adminInitialCredentials**.
 - Edit the file and update the **User**/**Password** to the required values. Note that the username must only contain lowercase letters.
-- When Fabric starts for the first time the new user is created and the **adminInitialCredentials** file is deleted.
+- When Fabric starts for the first time, the new user is created and the **adminInitialCredentials** file is deleted.
 - Since Fabric 7.0.1 HF2, there is no need to provide a password on adminInitialCredentials file when the users are maintained outside of Fabric (when the sync_cassandra_system_auth setting key is set to False).
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)

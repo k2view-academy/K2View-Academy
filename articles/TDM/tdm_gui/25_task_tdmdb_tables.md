@@ -4,22 +4,22 @@ TDM settings are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture
 
 TDM tasks update the following TDM DB tables:
 
-## Tasks
+## TASKS
 
 This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal.
 
 - A new record is created for each task.
 
-- Each task record gets a unique **task_id** sequence which is the table's PK.
+- Each task record gets a unique **task_id** sequence, which is the table's PK.
 
   ### Task General Information
 
   - **task_title**  - the task name. To prevent creating several active tasks with the same name, the **task_title** column has a **unique index** when the status is **Active**.
-  - **task_type** - **Extract** , **Load**, or **Reserve**.
+  - **task_type** - **Extract** , **Load** or **Reserve**.
   - **be_id** - the task's BE. The be_id can be linked to the **product_logical_units** TDM DB table. 
   - **number_of_entities** - populated by the number of entities in the task.
   - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
-  - **delete_before_load**- populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
+  - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
   - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task.
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
 
@@ -48,8 +48,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Extract</li>
   <li>load_entity = false</li>
-  <li>delete_before_load=false</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -61,8 +61,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=false</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -74,8 +74,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=false</li>
-  <li>reserve_ind =true</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = true</li>
   </ul>
   </td>
   </tr>
@@ -87,8 +87,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -100,8 +100,50 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =true</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = true</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <p>Generate</p>
+  </td>
+  <td>
+  <ul>
+  <li>task_type = Generate</li>
+  <li>load_entity = false</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = false</li>
+  <li>selection_method = Generate</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <p>Generate + Load</p>
+  </td>
+  <td>
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = false</li>
+  <li>selection_method = Generate</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <p>Generate + Load + Reserve</p>
+  </td>
+  <td>
+  <ul>
+  <li>task_type = Load</li>
+  <li>load_entity = true</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = true</li>
+  <li>selection_method = Generate</li>
   </ul>
   </td>
   </tr>
@@ -113,8 +155,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=false</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -126,8 +168,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=false</li>
-  <li>reserve_ind =true</li>
+  <li>delete_before_load = false</li>
+  <li>reserve_ind = true</li>
   </ul>
   </td>
   </tr>
@@ -139,8 +181,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -152,8 +194,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = true</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =true</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = true</li>
   </ul>
   </td>
   </tr>
@@ -165,8 +207,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Load</li>
   <li>load_entity = false</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
@@ -178,20 +220,23 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   <ul>
   <li>task_type = Reserve</li>
   <li>load_entity = false</li>
-  <li>delete_before_load=true</li>
-  <li>reserve_ind =false</li>
+  <li>delete_before_load = true</li>
+  <li>reserve_ind = false</li>
   </ul>
   </td>
   </tr>
   </tbody>
   </table>
 
+  
+
+
   ### Task Status
 
   - **task_status**: each task is created in **Active** task_status. Deleted tasks have an **Inactive** task_status and are not physically deleted from this table.
   - **task_execution_status**: 
     - **Active** - the task can be executed.
-    - **onHold** - [pause the task](/articles/TDM/tdm_gui/26_task_execution.md#holding-task-execution) and set it on-hold.
+    - **onHold** - [pause the task](/articles/TDM/tdm_gui/26_task_execution.md#holding-task-execution) and set it to On Hold.
     - **Inactive** - deleted task.
 
   ### Requested Entities Columns
@@ -199,12 +244,13 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   - **selection method**: populated based on the selection method in the [Requested Entities tab](14_task_overview.md#3-requested-entities). This column can be populated by either:
     - **L** - [Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list) 
     - **R** - [Random Selection](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#random-selection)
-    - **S** - [Entity Clone (Synthetic)](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
+    - **CLONE** - [Entity Clone](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
     - **PR** - [Parameters with a random selection checkbox](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
     - **P** - [Parameters when a random selection checkbox is cleared](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
     - **ALL** - [Select All entities of the Selected Version](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-all-entities-of-the-selected-version) on [load Data Versioning tasks](18_load_task_data_versioning_mode.md), or [Select a Predefined Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-a-predefined-entity-list) on [Extract](16_extract_task.md) tasks.
     - **REF** - create a [Reference Only](24_task_reference_tab.md) task.
     - **C** - [Custom Logic](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic).
+    - **GENERATE** - [Generate synthetic entities](16a_generate_task.md).
   - **selection_param_value**: populated when the task selection method is either Entity List, Parameters, Custom Logic or Entity Clone:
 
   <table width="900pxl">
@@ -253,10 +299,10 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   </tr>
   <tr>
   <td width="300pxl">
-  <p>Entity Clone (Synthetic)</p>
+  <p>Entity Clone</p>
   </td>
   <td width="200pxl">
-  <p>S</p>
+  <p>CLONE</p>
   </td>
   <td width="400pxl">
   <p>Populated with the cloned entity ID.</p>
@@ -276,9 +322,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   </tbody>
   </table>
 
-  This column is used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task.
 
-   
+  This column is used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task. 
 
   ### Data Versioning Parameters
 
@@ -310,8 +355,6 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 #### Extract Tasks - [Retention Period](16_extract_task.md#retention-period)
 
 - **retention_period_type** and **retention_period_value**.
-- Example:
-  - Set the retention_period_type by **Days** and the retention_period_value by **5** to set a retention period of five days.
 
 #### Load Tasks - [Request Parameters](19_load_task_request_parameters_regular_mode.md)
 
@@ -325,11 +368,11 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
  
 
-## Tasks_Logical_Units
+## TASKS_LOGICAL_UNITS
 
 This table holds the LUs list of each task. A separate record is created for each LU.
 
-## Tasks_Post_Exe_Process
+## TASKS_POST_EXE_PROCESS
 
 -------------------------
 
@@ -337,15 +380,21 @@ This table holds a task's [post execution processes](04_tdm_gui_business_entity_
 
 This table holds the following columns:
 
--  **task_id** - a unique identifier of the task which links to the **Tasks** TDM DB table.
--  **process_id** - a unique identifier of the process which links [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table.
--  **execution_order** - the  execution_order of the post execution process as defined in the [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table. 
+-  **task_id** - a unique identifier of the task, which links to the **Tasks** TDM DB table.
+-  **process_id** - a unique identifier of the process, which links [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table.
+-  **execution_order** - the execution_order of the post execution process as defined in the [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table. 
 
-## Task_Globals
+## TASK_GLOBALS
 
 This table holds all [variables that are overridden by the task](23_task_globals_tab.md). A separate record is created for each variable.
 
-## Task_Ref_Tables
+
+
+## TDM_GENERATE_TASK_FIELD_MAPPINGS
+
+This table is populated with [data generation parameters](16a_generate_task.md#adding-data-generation-parameters-to-the-task) for Generate tasks.
+
+## TASK_REF_TABLES
 
 This table holds a list of the task's [Reference tables](24_task_reference_tab.md). A separate record is created for each Reference table.
 
