@@ -25,7 +25,7 @@ The sequence next value implementation method depends on the sequence definition
 
 Notes: 
   - The **sequenceId** input is **mandatory** for the **Sequence** Actor and **optional** for the **MaskingSequence** Actor. The **MaskingSequence** Actor has both input arguments: **maskingId** and **sequenceId**. If the input **sequenceId** is not set in the MaskingSequence Actor, the sequence name would be taken from the **maskingId** input argumenent. 
-  - In case the sequence interface is a DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation). The initial is set based on the **initialValue** setting if populated. 
+  - In case the sequence interface is a DB, the Actor creates the sequence in the DB if it does not exist (lazy initiation). The initial is set based on the **initialValue** setting, if populated. 
 
 
 ### Sequence Initiation Method
