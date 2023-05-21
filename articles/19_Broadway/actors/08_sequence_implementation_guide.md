@@ -59,7 +59,7 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 
 * Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), e.g., for reporting purposes. 
 
-* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the [TDM7 implementation](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md). 
+* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the [TDM implementation](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md). 
 
 #### Custom Sequence Mapping
 
