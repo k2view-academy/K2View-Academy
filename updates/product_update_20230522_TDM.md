@@ -3,7 +3,7 @@
 TDM 8.0  has just been released and it includes many exciting features:
 
 * **Rule-Based Synthetic Data Generation** .
-* **Integrating the TDM Portal with Broadway Web Editors**.
+* **Integration of the TDM Portal with Broadway Web Editors**.
 * **TDM portal:  Task creation/update enhancements**.
 * **Task execution enhancements**: adding a link to the Batch Monitor window for additional information and a better tracking. 
 * **Masking improvements**, **bug fixes**.
