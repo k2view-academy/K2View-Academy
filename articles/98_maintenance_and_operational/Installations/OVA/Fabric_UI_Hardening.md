@@ -20,11 +20,11 @@ To Enable access to Fabric over SSL, follow these instruction:
 	PASSWORD - the certificate passphrase
 	
 	```
-	certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]
+	/opt/apps/fabric/fabric/scripts/certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]
 	```
 	for example:
 	```
-	certificate.sh genkey fabriccert 192.168.1.1 changeme
+	/opt/apps/fabric/fabric/scripts/certificates.sh genkey fabriccert 192.168.1.1 changeme
 	```
 3. Configure Fabric
 
