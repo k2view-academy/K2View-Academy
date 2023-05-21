@@ -40,9 +40,11 @@ A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequence
       - **FabricRedis** interface (imported from the TDM library).
       - **IN-MEMORY**, useful for testing only, as it can only be used in a single node configuration. 
       - **Target DB interface name** in order to get the next value from the DB sequence, which is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
-   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis or IN-MEMORY**. Otherwise, the next value is taken from the DB sequence.
+   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis, IN-MEMORY, or for a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
    
-   Note: if the target DB does not have a sequence, or the target DB is not Oracle, DB2 and PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
+   Note: if the target DB does not have a sequence, or the target DB is not Oracle, DB2 and PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB. Define an init flow to set the initial value for the newly created sequence.  It is recommended to use the "IF NULL" functions (for example COALCASE in PG and NVL in Oracle) when getting the initial value for the newly created sequence. For example:
+Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
+
    
 
  Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence Actors.
