@@ -60,7 +60,7 @@ More detailed requirements for each are described below:
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_216-HF1/D_k2view_fabric_7.1.0_216.tar.gz
-   <br>md5: 9ac7d0140b734758072e22c97ffd97b2</br></td>
+   <br>md5: 9b4f9340dc962bad4b486863eb13698d</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
