@@ -114,7 +114,7 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State. The editor of the parameter depends on the parameter type.
+- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State. The editor of the parameter depends on the parameter type. Special characters, except an underscore, must not be included in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
 

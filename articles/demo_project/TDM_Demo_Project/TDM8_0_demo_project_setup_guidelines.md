@@ -139,18 +139,14 @@ I.
      - Set  **TDM Environment Name** setting to **TAR**.
      - Add the systems (products) to this environment.
      - Set the version of the BILLING system to DEV.
-   - Synthetic environment for the data generation - 
-     - The **Synthetic** environment is automatically created by the TDM DB scripts.  Attach all Systems to this env and set the System versions to **synthetic.
-
-
+ 
 ​    See instructions on how to work with the TDM GUI in the following [link](/articles/TDM/tdm_gui/README.md).
-
-
 
 II. 
 
 Open the TDM demo project and run the **PopulateTDMDBForTesters** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
 
+Note: the **Synthetic** environment is automatically created by the TDM DB scripts. Attach all Systems to this environment and set the Systems version  to **synthetic**.
 
 
 Now you are ready to create and execute TDM tasks based on the TDM Demo implementation.
