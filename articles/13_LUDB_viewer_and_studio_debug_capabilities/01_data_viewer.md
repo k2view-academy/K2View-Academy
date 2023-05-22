@@ -292,7 +292,7 @@ The panel is divided to 3 main areas
 
 To see another table's content data of this LUI, just click on it at the schema. 
 
-To close the click on the X close button at the right side of the panel.
+
 
 You can change the panel's height, according to your needs, by moving your mouse to the top panel area. You will see then the 3-dots ellipsis sign and the cursor will turn into *resize* mode.
 
@@ -303,6 +303,10 @@ You can change the panel's height, according to your needs, by moving your mouse
 > * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed.
 > * If you made changes in the schema you shall click on the Execute button over again, in order to see how they affect on the LUI content.
 > * When changing the sync mode or cleaning the Instance ID field - the panel is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
+
+
+
+To close the panel click on the X close button at the right side of the panel.
 
 
 
@@ -324,10 +328,19 @@ Similar to the Table Data Viewer:
 > * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed, before popup is opened.
 > * When changing the sync mode or cleaning the Instance ID field - the main results area is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
 
+
+
+### Get & Sync Modes
+
+To get information about an instance ID, you shall specify the retrieval *mode*.
+
+You can choose one of the [Fabric sync modes](/articles/14_sync_LU_instance/02_sync_modes.md) or "New". When selecting "New", the LU instance is first deleted and then instance is brought from scrat. (This is the same option appears in Broadway Debug Population *Mode*).
+
+
+
 </web>
 
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_studio_log_files.md)
-
 
