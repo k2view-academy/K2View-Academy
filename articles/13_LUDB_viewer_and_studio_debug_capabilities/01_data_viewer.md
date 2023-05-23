@@ -314,13 +314,22 @@ To close the panel click on the X close button at the right side of the panel.
 
 To open the Table Data Viewer, click on <img src="../03_logical_units/images/web/schema_data_viewer.png" style="zoom:80%;" /> which appears at the schema's top bar. Once clicked, a Query Builder popup window will appear.
 
-This is similar to other Query Builder popup windows, where here the interface - fabric - and the schema - the current LU - are preselected and are read-only. The LU's tables list is already expanded at the left explorer side. In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and instance ID field appear at the right side of the window's top bar.
+This is similar to other Query Builder popup windows, where here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
+
+The LU's tables list is already expanded within the DB explorer at the left side. 
+
+> The table's list includes also several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables), which contain information about the specific LUI. For example: 
+>
+> * **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
+> * **k2_objects_info**, holds information for each of the objects (=tables) in the selected instance. For example, what populations used for each table, how much time took to populate each table, how many records brought for each table, and how much time took to load data into Fabric.
+
+In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and instance ID field appear at the right side of the window's top bar.
 
  ![](images/web/01_table_data_viewer4.png)
 
 Similar to the Table Data Viewer:
 
-* The main area, where table's data is shown, has same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
+* The data results area, has same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
 * Bottom information bar, shows the execution status and if succeeded - of how many entries/rows are shown for the selected table (up to 1000 rows).
 
 > NOTES:
@@ -334,7 +343,9 @@ Similar to the Table Data Viewer:
 
 To get information about an instance ID, you shall specify the retrieval *mode*.
 
-You can choose one of the [Fabric sync modes](/articles/14_sync_LU_instance/02_sync_modes.md) or "New". When selecting "New", the LU instance is first deleted and then instance is brought from scrat. (This is the same option appears in Broadway Debug Population *Mode*).
+Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the execution of the Data Viewer. The options are **On**, **Off**, and **Force**. The default mode is **On**.
+
+In addition, Data Viewer provides another mode, named "New", that when selected the LU instance is first deleted and then instance is brought from scratch. (Such option appears also in Broadway Debug Population *Mode*).
 
 
 
