@@ -45,7 +45,7 @@ Each of the supported Secrets Managers has its own dedicated section at config.i
 
 In addition of populating these details, you shall turn it on by setting the 'ENABLED' property to be 'true'.
 
-##### AWS Secrets Manager
+#### AWS Secrets Manager
 
 section name: [encryption_aws_sm]
 properties:
@@ -54,14 +54,14 @@ properties:
 * SECRET_ACCESS_KEY
 * REGION
 
-##### HashiCorp Vault
+#### HashiCorp Vault
 
 section name: [encryption_hashicorp_sm]
 
 * AUTH_TOKEN
 * URL
 
-##### Azure Key Vault
+#### Azure Key Vault
 
 Fabric supports one of the following authentication methods for Azure Key Vault:
 
