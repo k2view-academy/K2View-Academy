@@ -318,7 +318,7 @@ This is similar to other Query Builder popup windows, where here the interface -
 
 The LU's tables list is already expanded within the DB explorer at the left side. 
 
-> The table's list includes also several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables), which contain information about the specific LUI. For example: 
+> The table's list includes also several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables), which contain statistical information about the specific LUI. These tables are not displayed in the LU Schema. For example: 
 >
 > * **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
 > * **k2_objects_info**, holds information for each of the objects (=tables) in the selected instance. For example, what populations used for each table, how much time took to populate each table, how many records brought for each table, and how much time took to load data into Fabric.
