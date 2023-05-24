@@ -14,6 +14,13 @@ The below table displays the various TDM versions, each with its compatible Fabr
     </thead>
     <tbody>
         <tr>
+            <td align="left">8.0</td>
+            <td>7.1.0</td>
+            <td>3.11.12 or 4.0.3</td>
+            <td>N/A</td>
+            <td>13</td>
+        </tr>
+        <tr>
             <td align="left">7.6.0</td>
             <td>7.0</td>
             <td>3.11.12 or 4.0.3</td>
