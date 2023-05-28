@@ -11,7 +11,7 @@ The Query Builder window has 2 parts:
 ### Query Tab
 
 The Query tab enables you to build and run an SQL query on selected DB Tables and is divided into the following working areas:
-1. DB Tree (top left) - enables selecting a Project’s [DB Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) from the DB Interfaces dropdown list and displays a tree of DB objects (Tables, Views, and Synonyms) and their columns of the selected DB interface.
+1. DB Tree (top left) - enables selecting a Project’s [DB Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) from the DB Interfaces drop-down list and displays a tree of DB objects (Tables, Views, and Synonyms) and their columns of the selected DB interface.
 2. Main Window (top right) - displays a graphical map of the selected tables and columns for the SQL query. 
 3. Selected Columns Table (bottom right) - displays the same information as the Main Window in a tabular format and enables editing the SQL query. 
 4. Query Settings toolbar.
