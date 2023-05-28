@@ -112,7 +112,7 @@ This table is displayed on the bottom right of the main window and it enables ed
 
 3.	Populate the **Column Name** column to add an **alias** to the selected DB object column.
 4.	Populate the **Sort Type** and **Sort Order** columns to add an **Order by** to the SQL query.
-5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This updates the Grouping column and is reflected as a 'Group by' statement in the SQL query.
+5.	Populate the **Aggregate** column to add an **aggregation function** like Min, Max, Avg to the selected DB object column. This act updates the Grouping column and is reflected as a 'Group by' statement in the SQL query.
 6.	Populate the **Criteria** and **Or** columns in order to add the DB object column to the WHERE statement of the SQL query.
 
 ## Query Settings Toolbar
