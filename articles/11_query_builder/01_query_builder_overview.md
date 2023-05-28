@@ -24,7 +24,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 ![image](images/12_1_3%20query%20builder.png)
 
 7.  [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), right-click and select **Open Query Builder** > **Schema**.
-8.  [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click <img src="images/12_1_1%20icon.png"> **Query Builder** in the **SQL** or **SQL non-prepared** node type.
+8.  [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click <img src="images/12_1_1%20icon.png"> **Query Builder** in either the **SQL** or the **SQL non-prepared** node type.
 9.  [Broadway](/articles/19_Broadway/01_broadway_overview.md), click on the **QB button** in the **DbCommand actor** in order to open the **Query Builder**.   
 
  </studio>
