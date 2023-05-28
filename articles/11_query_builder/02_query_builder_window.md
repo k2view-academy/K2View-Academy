@@ -28,13 +28,13 @@ Displays the data received from the executed query. Click on **Export to Excel**
 
 <web>
 
-When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder opens in the main panel, on the right
+When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder opens in the main panel, on the right:
 
 ![image](images/web/01_QB1.png)
 
 
 
-When Opened from Schema Editor, Graphit or Broadway, the Query Builder opens as a popup window
+When opened from either the Schema Editor, Graphit or Broadway, the Query Builder opens as a popup window:
 
 ![QB popup](../03_logical_units/images/web/01_QB_WEB_popup3.png)
 
