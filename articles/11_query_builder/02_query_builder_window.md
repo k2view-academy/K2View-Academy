@@ -40,13 +40,13 @@ When opened from either the Schema Editor, Graphit or Broadway - the Query Build
 
 
 
-You can open Query Builder where Fabric is the data source. In such case, several fields will be shown in the top bar of the Query Editor window : Sync mode, Select LU, Instance ID. Fill in and set their values and the query will be executed accordingly.
+You can open Query Builder where Fabric is the data source. In such case, several fields will be shown in the top bar of the Query Editor window: Sync mode, Select LU, Instance ID. Fill in and set their values and the query will be executed accordingly.
 
 ![fabric top](images/web/01_fabric_interface_top_bar.png)
 
 
 
-> You can control the sizes of the Query Editor and the Results windows: Hover your mouse cursor over the horizontal separating line, which appears between these parts, and you will see the ellipsis indication; your cursor type will turn to be a cursor-resize ![cursor-resize](images/web/cursor-resize.png). Use it to resize the windows heights.
+> You can control the sizes of the Query Editor and the Results windows: Hover your mouse cursor over the horizontal separating line, which appears between these parts, and you will see the ellipsis indication; your cursor type will turn to be a cursor-resize ![cursor-resize](images/web/cursor-resize.png). Use it to resize the windows' heights.
 
 
 
