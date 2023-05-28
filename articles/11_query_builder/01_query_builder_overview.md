@@ -33,7 +33,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 1. [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), as explained [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder). 
 
-   > Note: You can query several data sources interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
+   > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
 
 2. Data Product Schema Editor > [Add Table](/articles/03_logical_units/09_add_table_to_a_schema.md ) > Create New > from source with SQL query. 
 
