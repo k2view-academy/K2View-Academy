@@ -33,7 +33,7 @@ You can see the image names by using the command **docker images**.
 
 1. Navigate to the compose folder as shown: 
 ~~~bash
-    cd compose_TDM_7.6
+    cd compose_TDM_8.0
 ~~~
 Note that the TDM compose file has the following settings that are different than the regular Fabric docker compose file:
 
