@@ -158,7 +158,7 @@ To use the Query Builder:
     * Duration took to execute the query. Note that the duration is not the time until result table is rendered and displayed as a table in the results window.
     * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it shows zero.
   * Actions part contains:
-    * Columns to show - allows you to adjust the Results table display. When clicked, a popup opens where you can set up the Result tables columns that will be shown.
+    * Columns to show - allows you to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
     * CSV - allows you to download the results.
 
 * The Results table enables some manipulations that let you adjust the display according to your needs, in addition to the *Columns to show* option:
