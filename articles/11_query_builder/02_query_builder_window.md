@@ -28,7 +28,7 @@ Displays the data received from the executed query. Click on **Export to Excel**
 
 <web>
 
-When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder opens in the main panel on the right
+When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder opens in the main panel, on the right
 
 ![image](images/web/01_QB1.png)
 
