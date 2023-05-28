@@ -30,7 +30,7 @@ The TDM implementation must include the **creation and deployment** of all the T
 
 TDM 8.0 added a support of a new task action (type): Generate - for generating synthetic entities.
 
-The [Generate task] is based on a dummy source environment named **Synthetic**. The **Synthetic** environment must be created and deployed in Fabric with the TDM and DB_CASSANDRA interfaces (these interfaces must be enabled), and must also be created in the TDM DB.
+The [Generate task](/articles/TDM/tdm_gui/16a_generate_task.md) is based on a dummy source environment named **Synthetic**. The **Synthetic** environment must be created and deployed in Fabric with the TDM and DB_CASSANDRA interfaces (these interfaces must be enabled), and must also be created in the TDM DB.
 
 
 
