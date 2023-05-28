@@ -41,9 +41,9 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the actor.
 
-5. [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can write and test queries either manually or be assisted by the DB Interface Explorer.
+5. [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can write and test queries either manually or assisted by the DB Interface Explorer.
 
-6. [Views](/articles/06_LU_tables/06_LU_views.md), where you can write and test queries either manually or be assisted by the DB Interface Explorer.
+6. [Views](/articles/06_LU_tables/06_LU_views.md), where you can write and test queries either manually or assisted by the DB Interface Explorer.
 
 
 
