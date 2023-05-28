@@ -37,7 +37,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 2. Data Product Schema Editor > [Add Table](/articles/03_logical_units/09_add_table_to_a_schema.md ) > Create New > from source with SQL query. 
 
-3. [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the Graphit node.
+3. [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A popup opens, where you can build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
 
 4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A popup opens, where you can build the query and test it. Upon closing, the SQL is populated into the actor.
 
