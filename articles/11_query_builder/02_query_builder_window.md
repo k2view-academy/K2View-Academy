@@ -1,7 +1,7 @@
 # Query Builder Window
 
 
-The Query Builder window has two parts: 
+The Query Builder window has 2 parts: 
 
 * [Query](/articles/11_query_builder/02_query_builder_window.md#query-tab) -  where you can build and run an SQL query on selected DB Tables, Views or Synonyms. 
 * [Results](/articles/11_query_builder/02_query_builder_window.md#result-tab) - displays the results of the executed SQL query. 
