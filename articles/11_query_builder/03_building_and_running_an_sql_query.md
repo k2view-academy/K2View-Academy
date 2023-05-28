@@ -21,7 +21,7 @@ Note: The Insert, Update and Delete statements (performed by the DB query) may c
 <web>
 
 ## Viewing the List of DB Objects
-Expand or collapse the DB objects tree. The below image shows how it looks like when opened via the DB Interface Explorer, where a similar tree appears at Query Builder popup (when opened in Schema Editor, Graphit and Broadway)
+Expand or collapse the DB objects tree. The below image shows how it looks like when opened via the DB Interface Explorer, where a similar tree appears at Query Builder pop-up (when opened in Schema Editor, Graphit and Broadway)
 
 ![image](images/02_querytab_WEB.PNG)  
 
