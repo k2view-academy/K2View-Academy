@@ -40,7 +40,7 @@ When opened from either the Schema Editor, Graphit or Broadway, the Query Builde
 
 
 
-You can open Query Builder where Fabric is the data source. In this case, several fields will be shown at the Query Editor window top bar: Sync mode, Select LU, Instance ID. Fill in and set their values and the query will be executed accordingly.
+You can open Query Builder where Fabric is the data source. In such case, several fields will be shown in the top bar of the Query Editor window : Sync mode, Select LU, Instance ID. Fill in and set their values and the query will be executed accordingly.
 
 ![fabric top](images/web/01_fabric_interface_top_bar.png)
 
