@@ -341,7 +341,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 For Cloud based VM, NVMe storage type is preferred for a high performance.
 
-See more details here:
+Further details are found here:
 
 [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html)
 
