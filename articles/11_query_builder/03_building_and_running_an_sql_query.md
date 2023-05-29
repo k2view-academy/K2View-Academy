@@ -99,7 +99,7 @@ Each SQL statement that is combined by the UNION operator has a **Q** icon in th
     b. Right-click the **Main** window, select **Union > Remove**. 
 
 ## Table of Selected Columns - Edit the SQL Query
-This table is displayed on the bottom right of the main window and it enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
+This table is displayed at the bottom-right of the Main window and it enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
 
 ### Adding an SQL Function to a DB object Column 
 1.	Click on the **3 dots** in the **Expression** column for opening the **Expression Editor** window. 
@@ -141,22 +141,22 @@ To use the Query Builder:
 ### Query Editor Window
 
  * You can clear the whole Query Editor window by clicking on the Clear button.
- * The Query Editor window can hold and execute several queries. When clicking on the Execute button all of them will be execute one by one, where the Results window will show the results of the last query.
- * If Query Editor window contains several queries and you wish to run part of them, you do not need to delete the other. To execute specific commands, select them and then click on Execute.
+ * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be execute one by one, where the Results window will show the results of the last query.
+ * If Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
  * You can add Fabric commands to the Query Editor and they will be executed too. 
- * When Fabric is the selected data source interface, set the top bar fields before execute the query.
+ * When Fabric is the selected data source interface, set the top bar fields before executing the query.
 
 ### Results Window
 
 * The Results window shows up to 1000 entries.
 
-* The Results window's top bar is divided to information part (on the right side) and actions (on the left side):
+* The Results window's top bar is divided into 2 parts: information (on the right side) and actions (on the left side):
 
-  * Information part contains 
-    * Number of displayed rows (as explained, up to 1000 rows)
+  * Information part contains: 
+    * Number of displayed rows (as previously explained, up to 1000 rows)
     * Query status - success/failure. In case of a failure, a failure reason will be shown in the results area, instead of the results table.
-    * Duration took to execute the query. Note that the duration is not the time until result table is rendered and displayed as a table in the results window.
-    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it shows zero.
+    * Duration taken to execute the query. Note that the duration is not the time until the results table is rendered and displayed as a table in the results window.
+    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it would show zero.
   * Actions part contains:
     * Columns to show - allows you to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
     * CSV - allows you to download the results.
