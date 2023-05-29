@@ -12,7 +12,7 @@
 * The OS is preconfigured with management users.
 
     
-<table style="border-style: solid; height: 108px;">
+<table style="border-style: solid; width: 900px;">
 <thead>
 <tr style="height: 18px;">
 <th style="height: 18px; width: 101px; text-align: center;">Role</th>
