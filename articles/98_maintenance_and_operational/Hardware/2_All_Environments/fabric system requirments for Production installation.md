@@ -19,7 +19,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
-For docker installation, the latest **Docker Engine** and  **Docker Compose** installations are recommended.
+For docker installation, the latest **Docker Engine** and **Docker Compose** installations are recommended.
 
 ### Hardware Requirements:
 
