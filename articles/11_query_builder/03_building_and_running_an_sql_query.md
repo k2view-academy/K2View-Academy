@@ -37,7 +37,7 @@ Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do ei
 * Select the **DB objects** and click on **Add Selected**.
   The selected DB objects are added onto the Main window and their SQL statement is displayed in the [Query window](/articles/11_query_builder/02_query_builder_window.md#query-tab).
 
-### 2. Removing a DB object from the Main Window
+### 2. Removing a DB Object from the Main Window
 Either click the **DB object** and press **Delete** on your keyboard or right-click the **DB object** > **Remove**. 
 Note: The removal of a DB object automatically updates the SQL query in the **Query Builder** window.
 
