@@ -31,7 +31,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Octa-core or equivalent.</p>
-<p>For high-load or complex scenarios: 16 cores are&nbsp; recommended.</p>
+<p>For high-load or complex scenarios: 16 cores are&nbsp;recommended.</p>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Network</strong></p>
 </td>
 <td style="width: 446px;">
-<p>1 Gbps network speed between the Fabric nodes,Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
+<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
 </td>
 </tr>
 </tbody>
