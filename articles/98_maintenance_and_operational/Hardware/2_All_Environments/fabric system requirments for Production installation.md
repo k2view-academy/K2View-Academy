@@ -2,7 +2,7 @@
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
-* TDM Installation is based on Fabric installations.
+* TDM installation is based on Fabric installations.
 
 ## Fabric Execution Servers - Node Specifications 
 
