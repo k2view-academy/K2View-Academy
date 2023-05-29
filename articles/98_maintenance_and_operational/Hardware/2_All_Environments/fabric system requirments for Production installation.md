@@ -363,7 +363,7 @@ Further details are found below:
 
 ## PostgreSQL Server Node Specifications 
 
-* PostgreSQL is generally required for TDM projects only.
+* PostgreSQL is required for TDM projects only.
 * PostgreSQL can be deployed in one of the following two ways:
 	* On premise as a virtual or physical machine. 
 	* As a cloud service (SAAS)
