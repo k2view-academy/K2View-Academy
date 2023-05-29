@@ -6,7 +6,7 @@
 
 ## Fabric Execution Servers - Node Specifications 
 
-The Fabric server installation is a Linux-based Solution.
+The Fabric server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 
