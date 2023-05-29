@@ -69,7 +69,7 @@ To add a JOIN to the SQL query, do the following:
 
 ![image](images/12_3_4%20DB%20object%20column.png)
 
-* Right-click the **link’s line** and select one or both **Select all rows from** … options to edit the link and update the JOIN to LEFT OUTER JOIN, RIGHT OUTER JOIN or FULL OUTER JOIN.
+* Right-click the **link’s line** and select one or both **Select all rows from** … option/s to edit the link and update the JOIN to LEFT OUTER JOIN, RIGHT OUTER JOIN or FULL OUTER JOIN.
 
 ![image](images/12_3_5%20Select%20all%20rows%20from.png)
 
