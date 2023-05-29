@@ -127,7 +127,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ## Kafka Server Node Specifications 
 
-The Kafka server installation is a Linux based Solution.
+The Kafka server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for each Fabric node Server
@@ -237,7 +237,7 @@ Volume of 150G /opt/apps/kafka/ - will be used also as the home directory for a 
 
 ## Cassandra Server Node Specifications 
 
-The Cassandraserver installation is a Linux based Solution.
+The Cassandraserver installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for each Cassandra node Server
