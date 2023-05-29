@@ -1,4 +1,4 @@
-# Fabric System Requirements for Production Installations
+# Fabric System Requirements for Development and QA Installations
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
@@ -19,7 +19,6 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
-For docker installation, the latest **Docker Engine** and  **Docker Compose** installations are recommended.
 
 ### Hardware Requirements:
 
@@ -30,8 +29,8 @@ For docker installation, the latest **Docker Engine** and  **Docker Compose** in
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For simple scenarios: Intel Xeon Octa-core or equivalent.</p>
-<p>For high-load or complex scenarios: 16 cores are&nbsp; recommended.</p>
+<p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
 </td>
 </tr>
 <tr>
@@ -39,7 +38,7 @@ For docker installation, the latest **Docker Engine** and  **Docker Compose** in
 <p><strong>Physical Memory </strong><strong>(RAM)</strong></p>
 </td>
 <td style="width: 446px;">
-<p> 32 GB RAM</p>
+<p> 16 GB RAM</p>
 </td>
 </tr>
 <tr>
@@ -58,7 +57,6 @@ For docker installation, the latest **Docker Engine** and  **Docker Compose** in
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 150 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
 </td>
 </tr>
 <tr>
@@ -117,12 +115,7 @@ For docker installation, the latest **Docker Engine** and  **Docker Compose** in
 
 ### For all installations, the FS configuration must be as follows:
 
-* Volume of 50G /opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
-* Volume of 100G* /opt/apps/fabric/storage
-
-### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node. 
-* The above volume values should be modified in accordance with the project scope and data retention requirements.
+* Volume of 150G /opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
 
 
 ## Kafka Server Node Specifications 
@@ -146,8 +139,8 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For simple scenarios: Intel Xeon Octa-core or equivalent.</p>
-<p>For high-load or complex scenarios: 16 cores are&nbsp; recommended.</p>
+<p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
 </td>
 </tr>
 <tr>
@@ -155,7 +148,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Physical Memory </strong><strong>(RAM)</strong></p>
 </td>
 <td style="width: 446px;">
-<p> 32 GB RAM</p>
+<p> 16 GB RAM</p>
 </td>
 </tr>
 <tr>
@@ -173,8 +166,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Disk Space</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For application data, at least 150 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>For application data, at least 50 GB free disk space is recommended.</p>
 </td>
 </tr>
 <tr>
@@ -205,7 +197,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -213,7 +205,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>D16d v2</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -228,11 +220,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </table>
 
 ### For all installations, the FS configuration must be as follows:
-Volume of 150G /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
-
-### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node.
-* The above volume values should be modified in accordance with the project scope and data retention requirements.
+Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
 
 
 ## Cassandra Server Node Specifications 
@@ -258,7 +246,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For simple scenarios: Intel Xeon CPU or equivalent with 16 cores.</p>
+<p>For most scenarios: Intel Xeon Octa-core CPU or equivalent .</p>
 </td>
 </tr>
 <tr>
@@ -266,7 +254,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Physical Memory </strong><strong>(RAM)</strong></p>
 </td>
 <td style="width: 446px;">
-<p> 32 GB RAM</p>
+<p> 16 GB RAM</p>
 </td>
 </tr>
 <tr>
@@ -284,8 +272,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Disk Space</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For application data, at least 500 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>For application data, at least 200 GB free disk space is recommended.</p>
 </td>
 </tr>
 <tr>
@@ -316,7 +303,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -324,7 +311,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>D16d v2</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -339,34 +326,17 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </table>
 
 
-For Cloud based VM, NVMe storage type is preferred for a high performance.
-
-See more details here:
-
-[AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html)
-
-[Azure](https://learn.microsoft.com/en-us/azure/architecture/best-practices/cassandra)
-
-[GCP](https://cloud.google.com/compute/docs/disks/performance)
-
-
 ### For all installations, the FS configuration should be as follows:
-* Volume of 50G /opt/apps/cassandra/
-* Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
-* Volume of 2T* /opt/apps/cassandra/storage/data
-* Volume of [10% of the data] /opt/apps/cassandra/storage/hints
+* Volume of 200G /opt/apps/cassandra/
 
-
-### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node.
-* The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is generally required for TDM projects only.
+* K2view supports PostgreSQL version 9.6 & 13.x .
 * PostgreSQL can be deployed in one of these ways:
-	* On premise as a virtual or physical machine. 
-	* As a cloud service (SAAS)
+    * On premise as a virtual or physical machine. 
+    * As a cloud service (SAAS)
 
 ### Suggested System Configuration for PostgreSQL server
 
@@ -442,7 +412,7 @@ See more details here:
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.xlarge, a1.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -450,7 +420,7 @@ See more details here:
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p> e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -458,7 +428,7 @@ See more details here:
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 </tbody>
