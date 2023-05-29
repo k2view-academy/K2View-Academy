@@ -92,7 +92,7 @@ The data generation flows are created with the following logic:
 
 ##### PII Fields
 
-- Populate them with an initial value of the field name + records no. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
+- In general, it is recommended to populate them with an initial value of the field name + records no. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
 
   Example: 
 
@@ -108,13 +108,13 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 
 ![mask](images/mask_first_name_example.png)
 
-
+- However, if a PII field should not be masked by a data generation task whether it is defined as an [exterenal business parameter](#external-business-parameters) to be populated by the user in the TDM task, or it requires a specific logic, the LU population flow must not mask such a field for data generation tasks. In order to avoid a masking of a given PII filed, it is recommended to set the **category** input argument of the Masking Actor for this field with a **custom value**. For example: mask_generated_field. The custom key must by set to **false** by the data generation flow to avoid the field's masking in the data generation task.
 
 ​	Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) for more information about the masking Actors.
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State. The editor of the parameter depends on the parameter type. Special characters, except an underscore, must not be included in the External Name setting. 
+- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task. parameters. For example: City, State. The editor of the parameter depends on the parameter type. Spaces and special characters, except an underscore, must not be included in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
 
