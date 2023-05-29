@@ -364,7 +364,7 @@ Further details are found below:
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is generally required for TDM projects only.
-* PostgreSQL can be deployed in one of these ways:
+* PostgreSQL can be deployed in one of the following two ways:
 	* On premise as a virtual or physical machine. 
 	* As a cloud service (SAAS)
 
@@ -373,7 +373,7 @@ Further details are found below:
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
@@ -411,7 +411,7 @@ Further details are found below:
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Depends on the project scope and retention requirements. Disk space canbe increased.</p>
+<p>Depends on the project scope and retention requirements. Disk space can be increased.</p>
 </td>
 </tr>
 <tr>
