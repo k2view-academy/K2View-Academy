@@ -13,7 +13,7 @@ Note: The Insert, Update and Delete statements (performed by the DB query) may c
 ## Query Tab - Viewing the List of DB Objects
 * Click the **+** or **–** icons to expand or collapse the list in the DB objects.
 * Click **Refresh** to refresh the DB objects list. 
-* Click **Options** and check/uncheck the **Include Synonyms** options to include or exclude the DB Synonyms from the DB objects list.
+* Click **Options** and check/uncheck the **Include Synonyms** option to include or exclude the DB Synonyms from the DB objects list.
 
 ![image](images/01_querytab.PNG)
 
