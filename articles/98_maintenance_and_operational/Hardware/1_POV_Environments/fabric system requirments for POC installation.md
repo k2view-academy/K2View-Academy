@@ -1,4 +1,4 @@
-# Fabric System Requirements for POC Installations
+# Fabric System Requirements for POV Installations
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric and TDM proof-of-concept installations.

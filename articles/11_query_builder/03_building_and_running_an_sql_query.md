@@ -13,7 +13,7 @@ Note: The Insert, Update and Delete statements (performed by the DB query) may c
 ## Query Tab - Viewing the List of DB Objects
 * Click the **+** or **–** icons to expand or collapse the list in the DB objects.
 * Click **Refresh** to refresh the DB objects list. 
-* Click **Options** and check/uncheck the **Include Synonyms** options to include or exclude the DB Synonyms from the DB objects list.
+* Click **Options** and check/uncheck the **Include Synonyms** option to include or exclude the DB Synonyms from the DB objects list.
 
 ![image](images/01_querytab.PNG)
 
@@ -37,7 +37,7 @@ Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do ei
 * Select the **DB objects** and click on **Add Selected**.
   The selected DB objects are added onto the Main window and their SQL statement is displayed in the [Query window](/articles/11_query_builder/02_query_builder_window.md#query-tab).
 
-### 2. Removing a DB object from the Main Window
+### 2. Removing a DB Object from the Main Window
 Either click the **DB object** and press **Delete** on your keyboard or right-click the **DB object** > **Remove**. 
 Note: The removal of a DB object automatically updates the SQL query in the **Query Builder** window.
 
@@ -69,7 +69,7 @@ To add a JOIN to the SQL query, do the following:
 
 ![image](images/12_3_4%20DB%20object%20column.png)
 
-* Right-click the **link’s line** and select one or both **Select all rows from** … options to edit the link and update the JOIN to LEFT OUTER JOIN, RIGHT OUTER JOIN or FULL OUTER JOIN.
+* Right-click the **link’s line** and select one or both **Select all rows from** … option/s to edit the link and update the JOIN to LEFT OUTER JOIN, RIGHT OUTER JOIN or FULL OUTER JOIN.
 
 ![image](images/12_3_5%20Select%20all%20rows%20from.png)
 
@@ -84,7 +84,7 @@ To add a JOIN to the SQL query, do the following:
 
 ![image](images/06_01.PNG)
 
-Each SQL statement that is combined by the UNION operator has a **Q** icon in the **Main Window**. Clicking the **Q** icon of each SQL statement opens its Main window, where you can add DB objects and link them to each other to edit the SQL statement in the Union query. 
+Each SQL statement that is combined by the UNION operator has a **Q** icon in the **Main Window**. Clicking the **Q** icon of each SQL statement opens its Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the Union query. 
 
 2. To modify the **Union query** do either:
 
@@ -99,7 +99,7 @@ Each SQL statement that is combined by the UNION operator has a **Q** icon in th
     b. Right-click the **Main** window, select **Union > Remove**. 
 
 ## Table of Selected Columns - Edit the SQL Query
-This table is displayed on the bottom right of the main window and it enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
+This table is displayed at the bottom-right of the Main window and it enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
 
 ### Adding an SQL Function to a DB object Column 
 1.	Click on the **3 dots** in the **Expression** column for opening the **Expression Editor** window. 
@@ -141,22 +141,22 @@ To use the Query Builder:
 ### Query Editor Window
 
  * You can clear the whole Query Editor window by clicking on the Clear button.
- * The Query Editor window can hold and execute several queries. When clicking on the Execute button all of them will be execute one by one, where the Results window will show the results of the last query.
- * If Query Editor window contains several queries and you wish to run part of them, you do not need to delete the other. To execute specific commands, select them and then click on Execute.
+ * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be execute one by one, where the Results window will show the results of the last query.
+ * If Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
  * You can add Fabric commands to the Query Editor and they will be executed too. 
- * When Fabric is the selected data source interface, set the top bar fields before execute the query.
+ * When Fabric is the selected data source interface, set the top bar fields before executing the query.
 
 ### Results Window
 
 * The Results window shows up to 1000 entries.
 
-* The Results window's top bar is divided to information part (on the right side) and actions (on the left side):
+* The Results window's top bar is divided into 2 parts: information (on the right side) and actions (on the left side):
 
-  * Information part contains 
-    * Number of displayed rows (as explained, up to 1000 rows)
+  * Information part contains: 
+    * Number of displayed rows (as previously explained, up to 1000 rows)
     * Query status - success/failure. In case of a failure, a failure reason will be shown in the results area, instead of the results table.
-    * Duration took to execute the query. Note that the duration is not the time until result table is rendered and displayed as a table in the results window.
-    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it shows zero.
+    * Duration taken to execute the query. Note that the duration is not the time until the results table is rendered and displayed as a table in the results window.
+    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it would show zero.
   * Actions part contains:
     * Columns to show - allows you to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
     * CSV - allows you to download the results.
