@@ -64,7 +64,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Network</strong></p>
 </td>
 <td style="width: 446px;">
-<p>1 Gbps network speed between the Fabric nodes,Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
+<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
 </td>
 </tr>
 </tbody>
