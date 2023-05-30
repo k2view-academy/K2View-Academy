@@ -6,7 +6,7 @@
 
 ## Fabric Execution Servers - Node Specifications 
 
-The Fabric server installation is a Linux-based Solution.
+The Fabric server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined . 
 
 
@@ -120,7 +120,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ## Kafka Server Node Specifications 
 
-The Kafka server installation is a Linux based Solution.
+The Kafka server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for each Fabric node Server
@@ -225,7 +225,7 @@ Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a K
 
 ## Cassandra Server Node Specifications 
 
-The Cassandraserver installation is a Linux based Solution.
+The Cassandraserver installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for each Cassandra node Server
@@ -234,7 +234,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 > **Note** Until Cassandra version 4.0.x - Python version 2.7 is required; newer versions of Cassandra are not yet certified.
 
