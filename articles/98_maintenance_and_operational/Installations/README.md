@@ -7,5 +7,5 @@
 
 <strong>TDM Installation Documents<strong>
 <ul>      
-<li><a href="/articles/98_maintenance_and_operational/Installations/Linux/01_tdm_installation.md">TDM Installation and Initial Configuration/a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Linux/01_tdm_installation.md">TDM Installation and Initial Configuration</a></li>
 </ul>
