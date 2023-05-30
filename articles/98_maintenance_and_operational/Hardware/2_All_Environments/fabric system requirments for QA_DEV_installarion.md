@@ -336,7 +336,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * K2view supports PostgreSQL version 9.6 & 13.x .
 * PostgreSQL can be deployed in one of the following two ways:
     * On-premise as a virtual or physical machine. 
-    * As a cloud service (SAAS)
+    * As a cloud service (SaaS)
 
 ### Suggested System Configuration for PostgreSQL server
 
