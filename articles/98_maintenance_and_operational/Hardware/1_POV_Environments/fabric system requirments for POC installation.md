@@ -73,7 +73,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 
 
-### Running on Cloud environment - Recommendations
+### Running on Cloud Environment - Recommendations
 
 
 
