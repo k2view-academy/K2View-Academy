@@ -2,7 +2,7 @@
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric and TDM proof-of-concept installations.
-* TDM Installation is based on Fabric installations.
+* TDM installation is based on Fabric with the additions of TDM library and PostGres installation.
 
 ## Execution Server Specifications 
 
