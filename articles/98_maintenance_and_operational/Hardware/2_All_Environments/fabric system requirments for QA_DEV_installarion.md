@@ -1,4 +1,4 @@
-# Fabric System Requirements for Development and QA Installations
+# Fabric Minimum System Requirements for Development and QA Installations
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
