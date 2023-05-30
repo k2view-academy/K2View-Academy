@@ -2,7 +2,7 @@
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric and TDM proof-of-concept installations.
-* TDM installation is based on Fabric with the additions of TDM library and PostGres installation.
+* TDM installation is based on Fabric with the additions of TDM library and PostgreSQL installation.
 
 ## Execution Server Specifications 
 
@@ -18,7 +18,7 @@ We Provide installation guide for both native Linux and Docker Environment (base
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
-For docker installation, the latest **Docker Engine** and  **Docker Compose** installations are recommended.
+For docker installation, the latest **Docker Engine** and **Docker Compose** installations are recommended.
 
 ### Hardware Requirements:
 
