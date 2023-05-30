@@ -1,4 +1,4 @@
-# Fabric System Requirements for Production Installations
+# Fabric Minimum  System Requirements for Production Installations
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
