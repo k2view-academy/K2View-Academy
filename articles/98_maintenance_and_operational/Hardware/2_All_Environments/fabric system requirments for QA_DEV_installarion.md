@@ -381,7 +381,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Depends on the project scope and retention requirements. Disk space canbe increased.</p>
+<p>Depends on the project scope and retention requirements. Disk space can be increased.</p>
 </td>
 </tr>
 <tr>
