@@ -365,8 +365,8 @@ Further details are found below:
 
 * PostgreSQL is required for TDM projects only.
 * PostgreSQL can be deployed in one of the following two ways:
-	* On premise as a virtual or physical machine. 
-	* As a cloud service (SAAS)
+	* On-premise as a virtual or physical machine. 
+	* As a cloud service (SaaS)
 
 ### Suggested System Configuration for PostgreSQL server
 
