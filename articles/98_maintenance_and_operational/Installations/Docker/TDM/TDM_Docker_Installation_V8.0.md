@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V7.1.0_218-HF1 DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.1.0.md).
+[FABRIC V7.1.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.1.0.md).
 
 ### Download Container Images 
 
@@ -71,4 +71,3 @@ TDM 7.6 includes the TDM GUI in the TDM Library. Download the TDM Library and im
 
 - You can now access TDM/Fabric from your browser using the containers host IP 
   http://localhost:3213
-
