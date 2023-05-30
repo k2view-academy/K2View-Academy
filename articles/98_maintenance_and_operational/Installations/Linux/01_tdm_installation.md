@@ -102,4 +102,4 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 11. Open the TDM Portal and click the API Doc tab. Verify that the API doc is displayed properly.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdmdb_general_parameters.md)
+
