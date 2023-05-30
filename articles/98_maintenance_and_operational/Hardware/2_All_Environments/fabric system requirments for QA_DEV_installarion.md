@@ -225,7 +225,7 @@ Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a K
 
 ## Cassandra Server Node Specifications 
 
-The Cassandraserver installation is a Linux-based solution.
+The Cassandra server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for each Cassandra node Server
