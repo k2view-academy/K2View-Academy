@@ -332,10 +332,10 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ## PostgreSQL Server Node Specifications 
 
-* PostgreSQL is generally required for TDM projects only.
+* PostgreSQL is required for TDM projects only.
 * K2view supports PostgreSQL version 9.6 & 13.x .
-* PostgreSQL can be deployed in one of these ways:
-    * On premise as a virtual or physical machine. 
+* PostgreSQL can be deployed in one of the following two ways:
+    * On-premise as a virtual or physical machine. 
     * As a cloud service (SAAS)
 
 ### Suggested System Configuration for PostgreSQL server
@@ -343,7 +343,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
