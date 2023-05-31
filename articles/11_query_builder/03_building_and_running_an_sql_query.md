@@ -130,7 +130,7 @@ The **Max rows** setting is used to set the maximum number of rows returned by t
 To use the Query Builder:
 
 * Edit the SQL commands in the top Query Editor window. 
-* Execute the query. The results are shown in a table view at the bottom Results window.
+* Execute the query. The results are presented in a table view in the Results window (bottom part).
 
 
 
