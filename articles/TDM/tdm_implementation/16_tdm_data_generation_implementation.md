@@ -92,7 +92,7 @@ The data generation flows are created with the following logic:
 
 ##### PII Fields
 
-- In general, it is recommended to populate them with an initial value of the field name + records no. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
+- In general, it is recommended to populate them with an initial value of the field name + the record number. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
 
   Example: 
 
