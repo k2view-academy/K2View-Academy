@@ -80,7 +80,7 @@ To add a JOIN to the SQL query, do the following:
 ### 6. Union SQL Queries  
 1. Do either:
 * Right-click in the **Main window > Union > New Union Sub-query/Copy Union Sub-Query**.
-* Click the **+** next to the **Q** of the query to add a UNION operator, which combines the result-set of two or more SELECT statements. 
+* Click the **+** next to the **Q** of the query to add a UNION operator, which combines the result-set of 2 or more SELECT statements. 
 
 ![image](images/06_01.PNG)
 
