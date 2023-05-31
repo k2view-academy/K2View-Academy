@@ -121,7 +121,7 @@ Note that when running the Query Builder on a Fabric interface, you should run t
 
 ![image](images/06_04.png)
 
-The **Max rows** setting is used to set the maximum number of rows returned by the SQL query. The default value is 10,000 rows. You can set a different number of rows to be returned by the SQL query
+The **Max rows** setting is used for setting the maximum number of rows returned by the SQL query. The default value is 10,000 rows. It is possible to set a different number of rows to be returned by the SQL query.
 
 </studio> 
 
@@ -153,13 +153,13 @@ To use the Query Builder:
 * The Results window's top bar is divided into 2 parts: information (on the right side) and actions (on the left side):
 
   * Information part contains: 
-    * Number of displayed rows (as previously explained, up to 1000 rows)
+    * Number of displayed rows (as previously explained, up to 1000 rows).
     * Query status - success/failure. In case of a failure, a failure reason will be shown in the results area, instead of the results table.
     * Duration taken to execute the query. Note that the duration is not the time until the results table is rendered and displayed as a table in the results window.
     * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it would show zero.
   * Actions part contains:
-    * Columns to show - allows you to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
-    * CSV - allows you to download the results.
+    * Columns to show - allows to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
+    * CSV - allows to download the results.
 
 * The Results table enables some manipulations that let you adjust the display according to your needs, in addition to the *Columns to show* option:
 
@@ -171,7 +171,7 @@ To use the Query Builder:
 
     * Grouping by a column will show it as the left most column, change its color to gray and flip the arrow direction.
     * Click on a table row arrow to expand and collapse its grouped rows.
-    * You can group by several columns
+    * You can group by several columns.
     * To ungroup, click again on the column header arrow.
 
     ![grouping](images/web/01_results_grouping.png)
