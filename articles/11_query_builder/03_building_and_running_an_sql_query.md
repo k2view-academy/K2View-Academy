@@ -65,7 +65,7 @@ To remove columns from a DB object, do either:
 ### 5. Joining the Selected Tables 
 
 To add a JOIN to the SQL query, do the following:
-* Click on the **DB object column** and drag it to the linked **DB object** and column to add an INNER JOIN to the SQL query.
+* Click on the **DB object column** (in the below example, it is the CUSTOMER_ID, in the CUSTOMER table) and drag a line to link it to a column in another **DB object** (CUSTOMER_ID, in the CONTRACT table). This would add an INNER JOIN to the SQL query.
 
 ![image](images/12_3_4%20DB%20object%20column.png)
 
