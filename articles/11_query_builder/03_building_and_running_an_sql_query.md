@@ -73,7 +73,7 @@ To add a JOIN to the SQL query, do the following:
 
 ![image](images/12_3_5%20Select%20all%20rows%20from.png)
 
-* Right-click on the **link’s line** > **Properties** to edit the Join properties.
+* Right-click on the **link’s line** > **Properties** to edit the JOIN's properties.
 
 ![image](images/12_3_6%20link%E2%80%99s%20line%20%20Properties.png)
 
