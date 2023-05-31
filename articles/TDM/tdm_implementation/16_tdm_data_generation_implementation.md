@@ -108,7 +108,7 @@ The first_name is masked in the LU population flow before it is loaded to the LU
 
 ![mask](images/mask_first_name_example.png)
 
-- However, if a PII field should not be masked by a data generation task whether it is defined as an [exterenal business parameter](#external-business-parameters) to be populated by the user in the TDM task, or it requires a specific logic, the LU population flow must not mask such a field for data generation tasks. In order to avoid a masking of a given PII filed, it is recommended to set the **category** input argument of the Masking Actor for this field with a **custom value**. For example: mask_generated_field. The custom key must by set to **false** by the data generation flow to avoid the field's masking in the data generation task.
+- However, if a PII field should not be masked by a data generation task whether it is defined as an [external business parameter](#external-business-parameters) to be populated by the user in the TDM task, or it requires a specific logic, the LU population flow must not mask such a field for data generation tasks. In order to avoid a masking of a given PII filed, it is recommended to set the **category** input argument of the Masking Actor for this field with a **custom value**. For example: mask_generated_field. The custom key must by set to **false** by the data generation flow to avoid the field's masking in the data generation task.
 
 ​	Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) for more information about the masking Actors.
 
