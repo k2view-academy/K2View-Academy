@@ -141,9 +141,9 @@ To use the Query Builder:
 ### Query Editor Window
 
  * You can clear the whole Query Editor window by clicking on the Clear button.
- * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be execute one by one, where the Results window will show the results of the last query.
- * If Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
- * You can add Fabric commands to the Query Editor and they will be executed too. 
+ * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
+ * If the Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
+ * You can add Fabric commands to the Query Editor and they will also be executed. 
  * When Fabric is the selected data source interface, set the top bar fields before executing the query.
 
 ### Results Window
@@ -172,7 +172,7 @@ To use the Query Builder:
     * Grouping by a column will show it as the left most column, change its color to gray and flip the arrow direction.
     * Click on a table row arrow to expand and collapse its grouped rows.
     * You can group by several columns
-    * To ungroup click again on the column header arrow.
+    * To ungroup, click again on the column header arrow.
 
     ![grouping](images/web/01_results_grouping.png)
 
