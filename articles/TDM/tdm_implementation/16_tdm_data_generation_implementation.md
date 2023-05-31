@@ -104,7 +104,7 @@ The data generation flows are created with the following logic:
 
 
 
-The first_name is masked in the LU population flow before it is loaded to the LU table. The **useInstanceId** is set to **true** to have a different masked value on each generated customer.  Note that the TDM 8.0 added the **root_id** to the caching key, in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
+The first_name is masked in the LU population flow before it is loaded to the LU table. The **useInstanceId** is set to **true** to have a different masked value on each generated customer. Note that the TDM 8.0 has added the **root_id** to the caching key, in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
 
 ![mask](images/mask_first_name_example.png)
 
