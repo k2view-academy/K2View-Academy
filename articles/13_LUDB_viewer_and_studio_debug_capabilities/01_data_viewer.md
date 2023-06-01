@@ -20,7 +20,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 4. In the **Instance ID** field (top central pane) - enter an Instance ID (an integer). 
 
 5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
-    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the Instances Tree. 
+    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of an LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the Instances Tree. 
 
   	Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
   	
