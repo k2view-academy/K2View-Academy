@@ -11,7 +11,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon, deploy it  to the debug server before running the Data Viewer on it. Do either:
 
    - Right-click the **LU** > **Deploy To debug**.
-   - Click the **Deploy** icon in the top of the [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
+   - Click the **Deploy** icon, located at the top of [Fabric's Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
 
