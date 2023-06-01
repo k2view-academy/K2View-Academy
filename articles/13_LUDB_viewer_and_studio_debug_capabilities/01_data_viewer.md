@@ -34,7 +34,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 
 <img src="images/13_01_04_Instance_DB_tree.jpg" alt="drawing" width="225"/>
 
-8. Double-click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
+8. Double-click a **table** to display its data and then right-click the **table** to open a context menu with the following options: 
 
    a. **Show Data**, displays the table’s data.
    
