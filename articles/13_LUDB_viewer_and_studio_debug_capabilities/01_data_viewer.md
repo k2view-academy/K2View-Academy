@@ -103,7 +103,7 @@ The Instance Tree area (top left) displays a tree of available data files in the
 
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
 * **k2_delta_errors**, holds information on errors, including when each error occured.
-* **k2_main_info**, holds basic information about the LU, like LU Name and Instance ID.
+* **k2_main_info**, holds basic information about the LU, like the LU Name and its Instance ID.
 * **k2_objects_info**, holds information for each of the objects in the selected instance.
 * **k2_transactions_info**, holds basic information about each transaction (ID and timestamp).
 
@@ -235,7 +235,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file (LUDB format). 
 3. **Save** your changes. 
 
-### Additional (Right Click) DB File Options
+### Additional (Right-Click) DB File Options
 * **Open DB** opens the **Instance DB Tree** of the selected DB files. 
 * **Delete Selected DB Files**, deletes the selected **Instance DB files** from the **project folder**:
    Fabric\\[project name]\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
@@ -244,10 +244,10 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 
 The latest Data Viewer file can be used in the following components:
 
-* New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
+* New functions / Web Services, the latest Data Viewer is displayed in the Databases drop-down list whereby the LU table can be invoked on the code. 
 [Click for more information on How to Create a New Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
-* Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
+* Population object / DB query, to display the latest Data Viewer file in the Database drop-down list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
 
 
@@ -265,7 +265,7 @@ The Data Viewer is accessible via the LU schema:
 
 
 
-Studio provides two methods to view an LUI data:
+Studio provides 2 methods to view an LUI data:
 
 1. **Table Data Viewer**, Lets you an easy and quick way to look at each table's content data, by navigate between the LU tables which are shown at the schema diagram.
 2. **Data Viewer**, Lets you building queries and execute them. This can be useful in case you wish to create cross tables queries.
@@ -294,7 +294,7 @@ To see another table's content data of this LUI, just click on it at the schema.
 
 
 
-You can change the panel's height, according to your needs, by moving your mouse to the top panel area. You will see then the 3-dots ellipsis sign and the cursor will turn into *resize* mode.
+You can change the panel's height, according to your needs, by moving your mouse to the top panel area. You will then see the 3-dots ellipsis sign and the cursor will turn into *resize* mode.
 
 ![](images/web/01_table_data_viewer2.png)
 
