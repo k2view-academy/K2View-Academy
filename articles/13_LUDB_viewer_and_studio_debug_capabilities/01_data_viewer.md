@@ -61,7 +61,7 @@ This area has the following components:
 
 #### Import DB File ![image](images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)
 
-When clicked, allows you to browse to an external Data Viewer file and load it. 
+When clicked, it allows you to browse to an external Data Viewer file and load it. 
 
 #### Sync Mode
 
