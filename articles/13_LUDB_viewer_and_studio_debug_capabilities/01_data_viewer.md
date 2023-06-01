@@ -26,7 +26,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
   	
   	 *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
 
-6. Double-click the **Instance ID** to open the **Instances Tree** dropdown list.
+6. Double-click the **Instance ID** to open the **Instances Tree** drop-down list.
 
 <img src="images/13_01_03_Instances_tree.jpg" alt="drawing" width="225"/>
 
