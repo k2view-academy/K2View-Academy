@@ -22,11 +22,11 @@ In case the Discovery process hasn't been executed on any project interface, the
 
 The following activities can be performed using the entity's context menu:
 
-* **Expand**<img src="images/expand.png" style="zoom:80%;" />or **collapse**<img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
+* **Expand** <img src="images/expand.png" style="zoom:80%;" />or **collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Schema element expands all Data Sets under this Schema. 
   * A double-click on the selected entity can also expand or collapse it.
-* **Hide** <img src="images/hide.png" style="zoom:80%;" />the element from the window.
-* **Focus**<img src="images/focus.png" style="zoom:80%;" /> is available on the Data Platform and the Schema nodes. 
+* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
+* **Focus** <img src="images/focus.png" style="zoom:80%;" /> is available on the Data Platform and the Schema nodes. 
   * Clicking Focus opens a new view, which includes all the elements of the level below. 
   * For example, when Focus is clicked on the Schema element, the view will display all Class elements under this Schema.
 
