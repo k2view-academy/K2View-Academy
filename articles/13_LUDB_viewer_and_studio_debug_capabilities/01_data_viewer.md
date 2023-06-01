@@ -121,36 +121,36 @@ To display the values of a table in the tree, right-click the table and select e
 <tr>
 	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></p></td>
 <td width="274">
-<p>Print results.</p>
+<p>Print results</p>
 </td>
 </tr>
 <tr>
 	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></p></td>
 <td width="274">
-<p>Export results as an Excel file.</p>
+<p>Export results as an Excel file</p>
 </td>
 </tr>
 <tr>
 	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></p></td>
 <td width="274">
-<p>Filter results by one or more columns.</p>
+<p>Filter results by one or more columns</p>
 </td>
 </tr>
 <tr>
 	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></p></td>
 <td width="274">
-<p>Toggle groupings.</p>
+<p>Toggle groupings</p>
 </td>
 </tr>
 <tr>
 	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></p></td>
 <td width="274">
-<p>Toggle summaries.</p>
+<p>Toggle summaries</p>
 </td>
 </tr>
         <td width="60"><p><img src="images/13_01_08 PANE AND TOOLBAR icon 6.png" alt="" /></p></td>
 <td width="274">
-<p>Refresh view.</p>
+<p>Refresh view</p>
 </td>
 </tr>	
 </tbody>
