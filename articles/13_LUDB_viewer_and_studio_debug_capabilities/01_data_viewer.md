@@ -71,8 +71,8 @@ Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET
 
 To complete this field, do either:
 * Enter a specific Instance ID value.
-* Select a previously stored Instance ID from the dropdown list.
-* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID . Note that this function must return a string as an output. Once you have created such a function, use the function name in the Instance ID field (that is, do not enter the code that comprises the function). 
+* Select a previously stored Instance ID from the drop-down list.
+* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID. Note that this function must return a string as an output. Once you have created such function, use the function name in the Instance ID field (that is, do not enter the code that comprises the function). 
 
 
   For example:
@@ -86,7 +86,7 @@ To complete this field, do either:
    }
   return "0";
   ```
-  More complicated functions can be written, of course, such as generating a random instance ID, or an instance ID that complies with other criteria (such as certain values). 
+  More complicated functions can be written, of course, such as generating a random instance ID or an instance ID that complies with other criteria (such as certain values). 
 
 
 #### Play
