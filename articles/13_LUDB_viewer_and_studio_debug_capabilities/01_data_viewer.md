@@ -47,11 +47,11 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 ## What Are the Data Viewer Components?
 
 The Logical Unit Data Viewer has the following areas:
-* Sync Mode and Instance ID.
-* Instances Tree.
-* Instance DB Tree.
-* Scripting Area.
-* Results Pane and Toolbar.
+* Sync Mode and Instance ID
+* Instances Tree
+* Instance DB Tree
+* Scripting Area
+* Results Pane and Toolbar
 
 ![image](images/data_viewer_window.png)
 
@@ -95,9 +95,9 @@ When ![image](images/13_01_07%20play%20icon.jpg) icon is clicked, the data file 
 	
 ### Instances Tree
 The Instance Tree area (top left) displays a tree of available data files in the following order: 
-* LU.
-* Instance. 
-* Dated file name.
+* LU
+* Instance 
+* Dated file name
 
 ### Instance DB Tree
 
