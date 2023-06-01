@@ -103,13 +103,13 @@ The Instance Tree area (top left) displays a tree of available data files in the
 
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
 * **k2_delta_errors**, holds information on errors, including when each error occured.
-* **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
+* **k2_main_info**, holds basic information about the LU, like LU Name and Instance ID.
 * **k2_objects_info**, holds information for each of the objects in the selected instance.
 * **k2_transactions_info**, holds basic information about each transaction (ID and timestamp).
 
 * **Reference tables under k2_Ref**. These are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
 
-To display the values of a table in the tree, right click the table and select either:
+To display the values of a table in the tree, right-click the table and select either:
 * **Show Data**, to display the table or view it in the Results pane.
 * **Show Schema**, to display the table structure in the Results pane.
 * **Show Indexes**, to display the table indexes in the Results pane.
@@ -159,7 +159,7 @@ To display the values of a table in the tree, right click the table and select e
 
 
 ### Scripting Area
-The SQL scripting area is used to write and run SQL statements on a selected LUDB (upper right pane).
+The SQL scripting area is used for writing and running SQL statements on a selected LUDB (upper-right pane).
 
 ![image](images/data_viewer_scripting_area.png)
 
@@ -189,7 +189,7 @@ The following options are supported:
 </tr>
 <tr>
 <td width="236" valign="top">
-<p><strong>Dropdown menu of special Run options</strong></p>
+<p><strong>Drop-down menu of special Run options</strong></p>
 </td>
 <td width="368" valign="top">
 <ul>
@@ -198,7 +198,7 @@ The following options are supported:
 <li>On selected DB files: The SQL is executed on the selected instance's files. Click and press <strong>CTRL </strong>to select the required files.</li>
 <li>On all existing DB files: The SQL is executed on all files in the Instances tree.</li>
 </ul>
-<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit dropdown list opens where you can define the number of results displayed.</p>
+<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit drop-down list opens where you can define the number of results displayed.</p>
 </td>
 </tr>
 <tr>
