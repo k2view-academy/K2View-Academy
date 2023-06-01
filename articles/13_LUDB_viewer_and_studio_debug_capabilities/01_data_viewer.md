@@ -198,7 +198,7 @@ The following options are supported:
 <li>On selected DB files: The SQL is executed on the selected instance's files. Click and press <strong>CTRL </strong>to select the required files.</li>
 <li>On all existing DB files: The SQL is executed on all files in the Instances tree.</li>
 </ul>
-<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit drop-down list opens where you can define the number of results displayed.</p>
+<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit drop-down list opens, where you can define the number of results displayed.</p>
 </td>
 </tr>
 <tr>
