@@ -1,6 +1,6 @@
 # TDM Parameters Handling
 
-The TDM enables the user to select entities based on [predefined parameters] when creating a [load task]. The list of available parameters is displayed on the task's BE (Business Entity). A BE can have flat or hierarchical structure and each LU can have its own parameters list and its own [LU PARAMS table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables). 
+The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a load task or a [reserve task](/articles/TDM/tdm_gui/20_reserve_only_task.md#parameters). The list of available parameters is displayed on the task's BE (Business Entity). A BE can have flat or hierarchical structure and each LU can have its own parameters list and its own [LU PARAMS table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables). 
 
 The entities selection on a TDM task selects a subset of **root entities**, but the parameters for selection  can be based on the child LU's parameters as well. Therefore, it is highly important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters.
 
