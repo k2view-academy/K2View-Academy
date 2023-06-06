@@ -18,7 +18,7 @@ The *FABRIC_COMMAND* parameter must be set using the Broadway command syntax as 
 
 **Example 2**
 
-```BATCH CUSTOMER from fabric USING ('BROADWAY CUSTOMER.flow1) fabric_command='sync_instance CUSTOMER.?';```
+```BATCH CUSTOMER from fabric USING ('BROADWAY CUSTOMER.flow1') fabric_command='sync_instance CUSTOMER.?';```
 
 Migrate the list of entities created using a Broadway flow “flow1”. Note that “flow1” output should return a list of instance IDs. The BROADWAY command, executed within the ‘USING’ clause, will run as if the RESULT_STRUCTURE=CURSOR.
 
