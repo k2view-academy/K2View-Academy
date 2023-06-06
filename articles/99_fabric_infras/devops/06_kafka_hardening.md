@@ -25,7 +25,7 @@ Check that the following services are switched off:
 
 ```bash
 ./secure_kafka.sh Q1w2e3r4t5
-
+```
 
 The following output is generated:
 
