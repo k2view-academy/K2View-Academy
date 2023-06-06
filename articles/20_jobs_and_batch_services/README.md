@@ -11,7 +11,7 @@
 	<li><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md">Jobs Configuration</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md">Fabric Affinity Concept</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/11_batch_process_overview.md">Batch Processes</a></li>
-	<li><a href="/articles/20_jobs_and_batch_services/12_batch_sync_commands.md">Batch Synchronization</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/12_batch_sync_commands.md">Batch Commands</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/13_migrate_commands.md">Migrate Command</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/14_instances_groups.md">Instance Groups</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md">Broadway Flows & Batches</a></li>
