@@ -40,7 +40,7 @@ When you need to execute an inner flow, add an **InnerFlow** Actor to your flow 
 
 <img src="images/99_22_04.PNG" alt="image"  />
 
-<img src="images/99_22_05.PNG" alt="image" style="zoom:70%;" />
+<img src="images/99_22_05.png" alt="image" style="zoom:70%;" />
 
 Once the flow is attached, its inputs and outputs are automatically added to the Actor as new ports.
 
