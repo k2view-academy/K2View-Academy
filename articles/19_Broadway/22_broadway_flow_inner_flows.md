@@ -48,7 +48,7 @@ Once the flow is attached, its inputs and outputs are automatically added to the
 
 Broadway supports an ability to invoke an Actor as an inner flow. This ability may be required in a use case such as masking, whereas a different Masking Actor should be invoked, based on the flow conditions. 
 
-To attach an Actor, add an **InnerFlow** Actor to your flow. Then either write the Actor's name (including the **.actor** extension) or click to open the selection popup. Note that you will need to choose the Actor radio button to get the list of Actors.
+To attach an Actor, start from an Actor which supports an inner flow invocation, for example a **Masking** Actor or an **InnerFlow** Actor or your custom Actor. Then either write the Actor's name (including the **.actor** extension) in the **flowName** input argument or click <img src="images/99_22_06.png" style="zoom:80%;" /> to open the selection popup. Note that you will need to choose the Actor radio button to see the list of Actors.
 
 ### Opening an Inner Flow
 
