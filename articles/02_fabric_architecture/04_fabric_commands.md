@@ -593,9 +593,9 @@ For example: search all customers called “John Doe” that live in “New-York
 
 Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In addition, the Fabric **CDC_REPUBLISH_INSTANCE** command can be used to republish CDC data on LUI.
 
-### Fabric Broadway
+### Broadway Command
 
-The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed:
+The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. The command syntax is:
 
 ~~~
 broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...] RESULT_STRUCTURE=<ROW/COLUMN/CURSOR>
@@ -624,7 +624,7 @@ Below are the types of execution parameters:
     |date     |2022-07-19|
     ~~~
 
-  * **CURSOR** – The first flow's output is transformed into a one-column table. Other outputs are being disregarded.
+  * **CURSOR** – The first flow's output is transformed into a table. Other outputs are being disregarded.
 
     Case 1: the following output:
 
