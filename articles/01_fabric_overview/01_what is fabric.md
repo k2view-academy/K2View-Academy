@@ -1,16 +1,18 @@
 # What is Fabric?
 
-<a href="https://www.k2view.com/products/data-fabric/" target="_blank">Data Fabric</a> is a data management platform that provides access to data where and when you need it. 
+<a href="https://www.k2view.com/products/data-fabric/" target="_blank">Data Fabric</a> is a data product management platform that provides access to data where and when you need it. 
 Fabric solves real-time operational needs for data that is stored and handled in different systems, technologies or geo-locations. 
 
-Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity centric approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle.
+Acting as a data layer above existing data sources, Fabric controls data using a patented Micro DB, approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle.
 
 
 ![image](/articles/01_fabric_overview/images/Fabric_Overview.png)
 
 
-### What is a Digital Entity?
-A Digital Entity is a digital version of a person, place or thing and is usually correlated to a business entity like a customer, order, patient, product or household. Once implemented, Fabric creates a micro data lake physical database for each Digital Entity instance.
+### What is a Micro DB?
+K2view uniquely manages all the data hold for a business entity (a specific customer, device, order, etc.) in its own high-performance, compressed, and encrypted Micro-Database – one for each instance of a business entity. Each entity is synced, processed and stored separately, on demand. The Micro-Database is then instantly accessible by any authorized data consumer, in any way: via SQL, API, CDC, messaging, or streaming. 
+
+By adopting this revolutionary approach to operational data management, Fabric avoids from the standard pains like: querying massive, siloed DBs and then unifying, processing, and delivering the data via rigid and complex batch processes that are costly to build, run and maintain.
 
 ### Key Fabric Features
 * Modern and distributed architecture that **provides linear scalability and proven fault-tolerance** on commodity hardware and cloud infrastructures.

@@ -31,7 +31,7 @@ Fabric solves the following high-level requirements:
 - Data that is as close as possible to the data consumers.
 - Always secured data.
 
-Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what%20is%20fabric.md) and the [Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
+Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what%20is%20fabric.md) and the [Logical Unit / Data Product Overview](/articles/03_logical_units/01_LU_overview.md). 
 
 
 ## 2. Fabric Server Main Components
@@ -47,7 +47,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 Fabric uses three types of storage engines:
 
 #### 2.1.1 MicroDB
-At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/01_LU_overview.md)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
+At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit Instance](/articles/03_logical_units/01_LU_overview.md#what-is-a-logical-unit-instance-lui)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
 A MicroDB provides several advantages:
 
@@ -95,7 +95,7 @@ Fabric Studio is a development tool for building Fabric projects, designed to en
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations per the required business flow design and to expose the data to 3rd party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Data Product Micro DBs, to allow any type of data transformations per the required business flow design and to expose the data to 3rd party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
 
 ![](images/fabDataFlow.png)
 
@@ -181,10 +181,10 @@ Different projects have different data processing needs, for which Fabric offers
 Data can be processed in six different modules:
 
 - Synchronization process: 
-As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) uses LU schemas defined in the Fabric Studio to create or update the MicroDBs (LUIs). When synchronizing multiple Digital Entities, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
+As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) uses LU schemas defined in the Fabric Studio to create or update a MicroDB (LUI). When synchronizing multiple LUIs, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
 
 - IIDFinder:
-Since Fabric creates Digital Entities by extracting data from multiple sources and then by populating and transforming the data into [LUI tables](/articles/06_LU_tables/01_LU_tables_overview.md), changes occurring at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
+Since Fabric creates LUIs by extracting data from multiple sources and then by populating and transforming the data into [LUI tables](/articles/06_LU_tables/01_LU_tables_overview.md), changes occurring at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
 In environments where source data constantly changes, Fabric enables a lazy mode, whereby the iiDFinder retrieves the delta updates upon explicit demand from the user.
 
 - Data Enrichment:
@@ -208,12 +208,12 @@ Since data is spread across multiple MicroDB, Fabric provides an indexing proces
 
 ### 4.2 Elastic Search
 
-Via its CDC module, Fabric can use E-S to store its indices and provide a distributed, [multi-tenant](https://en.wikipedia.org/wiki/Multitenancy) capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search) engine for near real-time results across its huge number of LU MicroDB instances.
+Via its CDC module, Fabric can use Elastic Search to store its indices and provide a distributed, [multi-tenant](https://en.wikipedia.org/wiki/Multitenancy) capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search) engine for near real-time results across its huge number of LUIs.
 
 
 ## 5. Security
 
-Since Digital Entity data encapsulation architecture provides a very strong case for data protection (each LUI lives as a separate entity), Fabric is basically secured by-design. Yet Fabric adds to its arsenal a wide range of security tools, layers and practices to ensure the protection of your data.
+Since LUI data encapsulation architecture provides a very strong case for data protection (each LUI lives as a separate entity), Fabric is basically secured by-design. Yet Fabric adds to its arsenal a wide range of security tools, layers and practices to ensure the protection of your data.
 
 
 ### 5.1 Authentication &amp; Authorization Engine
@@ -239,7 +239,7 @@ Fabric provides user identification and access management (IAM) for web, console
 To read more about Fabric's Identity Management architecture, flows and systems' configuration (e.g. using Fabric internals, SAML or LDAP protocols), click [here](/articles/26_fabric_security/07_user_IAM_overview.md).
 
 
-### 5.2 MicroDBs (LUI) Encryption
+### 5.2 MicroDB (LUI) Encryption
 
 Fabric secures the schemas and instances generated whenever a new LU is created. The encryption process relies on a combination of the LU type, LUI and the master key generated for each LU.
 
@@ -247,10 +247,14 @@ The master key (AES-256) generated by Fabric is split into multiple bytes. Each 
 Fabric encrypts each LUI using the AES-256 in an OFB mode encryption algorithm and a combination of the LU name, LUI ID and master key. As a result, Fabric creates a different key for each Instance ID, since each Instance ID has a different value. Therefore, in the improbable event where an LUI is breached, other entities remain safe as they have, each, been encrypted with their own secret key.
 To reduce load and improve compression, specific fields of an LUI can be encrypted rather than the entire instance.
 
+Fabric also supports integration with external key management systems. 
 
-### 5.3 Environment Encryption
+
+### 5.3 Environment Interfaces Encryption
 
 Users can define a number of environments for source connectivity according to their specific needs and switch between the environments within the same Fabric session. By default, Fabric encrypts the interfaces details of each environment using the same master key used to encrypt LUI. If necessary, users can re-key all interfaces that belong to a given environment. If the connection details of any interface in an environment are modified, the updated connection details are re-encrypted. Fabric also encrypts the interfaces details of each environment using the same master key used to encrypt LUI. Once the data is store in Fabric it is used for connectivity and is not available for querying by external APIs.
+
+Fabric supports integration with external secret manager services to store the interfaces details.
 
 
 ### 5.4 Masking Algorithm

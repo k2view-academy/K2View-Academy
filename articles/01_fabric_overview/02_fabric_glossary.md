@@ -30,10 +30,10 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong>Database Types</strong></p>
+<p><strong><a href="https://support.k2view.com/Academy/articles/05_DB_interfaces/10_database_types.md">Database Types</a></strong></p>
 </td>
 <td width="516">
-<p>New database types can be defined without additional enhancement to the product, depending on their specifications and whether they have a &nbsp;JDBC driver. Database types that are part of the Product package can be edited or overridden but may require customization.</p>
+<p>New and customized database types can be defined without additional enhancement to the product, depending on their specifications and whether they have a &nbsp;JDBC driver. Database types that are part of the Product package can be edited or overridden but may require customization.</p>
 </td>
 </tr>
 <tr>
@@ -52,14 +52,6 @@
 <td width="516">
 <p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
 <p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rule changes in Functions, Globals and Translations.</p>
-</td>
-</tr>
-<tr>
-<td width="125">
-<p><strong>Digital Entity</strong></p>
-</td>
-<td width="516">
-<p>A data product: digital version of a person, place or a thing which is usually correlated to a business entity.</p>
 </td>
 </tr>
 <tr>
@@ -149,7 +141,7 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong>Instance Group</strong></p>
+<p><strong><a href="/articles/20_jobs_and_batch_services/14_instances_groups.md">Instance Group</a></strong></p>
 </td>
 <td width="516">
 <p>A list of Instance IDs (LUIs) used as part of a batch data extraction and transformation into Fabric. Usually constructed by an SQL query.</p>
@@ -172,19 +164,18 @@
 </td>
 </tr>
 <tr>
+<td width="125"><p><strong><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit / Data Product</a></strong></p>
+</td>
+<td width="516">
+<p>A Logical Unit (LU, or Logical Unit Type - LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
+</td>
+</tr>
+<tr>
 <td width="125">
 <p><strong><a href="/articles/07_table_population/11_lookup_tables.md">Lookup</a></strong></p>
 </td>
 <td width="516">
 <p>A Lookup is an object that is added to a Table Population to get information from a source DB, LU table or Reference table.</p>
-</td>
-</tr>
-<tr>
-<td width="125">
-<p><strong>LU / Data Product</strong></p>
-</td>
-<td width="516">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a>&nbsp;or Logical Unit Type (LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
 </td>
 </tr>
 <tr>
@@ -197,7 +188,7 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong>LUI</strong></p>
+<p><strong><a href="/articles/03_logical_units/01_LU_overview.md#what-is-a-logical-unit-instance-lui">LUI</a></strong></p>
 </td>
 <td width="516">
 <p>A Logical Unit Instance (LUI) is a specific instance of a Logical Unit. For example, the data for a specific Customer ID.</p>
@@ -208,10 +199,19 @@
 <p><strong><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></strong></p>
 </td>
 <td width="516">
-<p>Micro-database, a small SQL database used for the storage of an LU Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
+<p>Micro-database, a small SQL database used for the storage of an LU Instance (LUI) data. An MDB is stored as an SQLite file, depending on the stored property definition on the LU schema.</p>
 </td>
 </tr>
 <tr>
+<tr>
+<td width="125">
+<p><strong><a href="/articles/09_translations/06_mtables_overview.md" >MTable</a></strong></p>
+</td>
+<td width="516">
+<p>An object created in the Fabric memory from a CSV file, enabling a <b>fast in-memory</b> data lookup at run-time.</p>
+</td>
+</tr>
+<tr>    
 <td width="125">
 <p><strong>Parsers</strong></p>
 </td>
@@ -245,12 +245,20 @@
 </tr>
 <tr>
 <td width="125">
-<h4><a href="/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md"><strong>SAML</strong></a></h4>
+<a href="/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md"><strong>SAML</strong></a>
 </td>
 <td width="516">
 <p>Security Assertion Markup Language: This is a standard protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP).</p>
 </td>
 </tr>
+<tr>
+<td width="125">
+<a href="/articles/17_fabric_credentials/05_security_profiles.md"><strong>Security Profile</strong></a>
+</td>
+<td width="516">
+<p>Security definition for restricting Fabric from exposing sensitive data to unauthorized users, based on their predefined roles. This is part of Fabric's [Declarative Field Level Authorization](/articles/17_fabric_credentials/04_fields_level_authorization.md) mechanism</p>
+</td>
+</tr>    
 <tr>
 <td width="125">
 <p><strong><a href="/articles/07_table_population/02_source_object_types.md">Source Object</a></strong></p>
@@ -261,7 +269,7 @@
 </tr>
 <tr>
 <td width="125">
-<h4><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">SP</a></strong></h4>
+<strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">SP</a></strong>
 </td>
 <td width="516">
 <p>Service Provider: This is an actor in modern authentication and authorization platforms. The SP is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. Fabric acts as an SP when using external authenticators.</p>
@@ -269,7 +277,7 @@
 </tr>
 <tr>
 <td width="125">
-<h4><a href="/articles/26_fabric_security/08_user_IAM_SSO_overview.md"><strong>SSO</strong></a></h4>
+<a href="/articles/26_fabric_security/08_user_IAM_SSO_overview.md"><strong>SSO</strong></a>
 </td>
 <td width="516">
 <p>Single Sign On: &nbsp; This is a user authentication service that permits an organization's members (users) to use one set of login credentials to access multiple applications and services. Fabric has the capability to work as a service within the organization's SSO.</p>
@@ -318,7 +326,7 @@
 <p>To connect to Swagger:</p>
 <p>Go to the following URL and specify the IP address of your Fabric Server: http://&lt;Fabric Server&gt;:3213/api</p>
 <p>Or,</p>
-<p>Set the Web Service invoke path template in your User preferences - Server configuration to: static/swaggerUI/dist/index.html#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
+<p>Set the Web Service invoke path template in your User preferences - Server configuration to: static/swaggerUI/dist/index.md#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
 </td>
 </tr>
 <tr>
@@ -339,7 +347,7 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong>User Jobs</strong></p>
+<p><strong><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">User Jobs</a></strong></p>
 </td>
 <td width="516">
 <p>A Fabric mechanism that executes a light-weight function either manually or automatically using a predefined Scheduler. For example, time interval.</p>
@@ -355,6 +363,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 

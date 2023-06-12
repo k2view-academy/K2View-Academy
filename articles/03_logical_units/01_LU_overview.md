@@ -1,18 +1,18 @@
-# Logical Unit (LU) Overview
+# Logical Unit / Data Product Overview
 
-### What Is a Logical Unit (LU) or Logical Unit Type (LUT)?
-A Logical Unit (LU or LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [(LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
+### What Is a Logical Unit?
+A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset, for a specific business purpose. It holds a set of definitions and instructions used to integrates data from source systems, processes the data and store it. The LU is the prototype from which LU Instances [(LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
 An LU is defined and configured in the Fabric Studio. These definitions are comprised of three main objects:
 
-1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of a Digital Entity table upon its columns, PKs, indexes and triggers.
+1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of an LU table upon its columns, PKs, indexes and triggers.
 
 2. [**LU Table Population**](/articles/07_table_population/01_table_population_overview.md): 
     * Feed data into LU tables from a variety of data sources and keep it up to date.
     * Ability to manipulate the fed data i.e. performance of enrichment, cleansing, masking, transforming, etc. 
-3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table. The Root Table holds the Digital Entity’s unique key.
+3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table. The Root Table holds the LU’s unique key.
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
-* Digital Entity: Customer.
+* LU / Data Product: Customer.
 * Data sources: CRM, <studio>Ordering, Billing and Collection.</studio><web>Billing and Assets.</web>
 * LU tables: The tables that will hold the data you want to keep about a customer from the four data sources.
 * LU Table Populations: The set of definitions that will be used to extract, transform, clean, aggregate, validate (etc.) the data from the four data sources into the LU tables.

@@ -1,24 +1,38 @@
 # Deploying a Fabric Project
 
 ### What Is Fabric Deployment?
-The implementation of a Fabric project can be divided into two steps:
-- **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio in order to implement the business requirements.
-- **Deployment** of the project into the Fabric server so that the first deployment of the new project or all recent changes since its last deployment are compiled and become effective on the server side. 
+The implementation of a Fabric project can be divided into two on-going steps:
+- **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
+- **Deployment** of the project into the Fabric server so that all recent changes since its last deployment are compiled and become effective on the server side. 
 
-A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) <studio>and [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio> and is required whenever these objects are created or modified. 
 
-Deployment is needed for any change operated in any of these objects, excluding the migration of source data into the Fabric server. 
+
+A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md)  and [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) and is required whenever these objects are created or modified. 
+
+
 The deployment of a Fabric project is performed on the following levels:
-- **Deployment of Logical Units**, each LU should be deployed separately. 
+
+- **Deployment of Logical Units**, each LU is deployed separately. 
+  
   - When needed, a deployment can be performed on a specific LU if only that LU has been modified.
+  
 - **Deployment of Broadway flows** as part of the LU to which they belong.
+
 - **Deployment of References objects**, when they exist in a project. All Reference (common) tables are deployed together.
-- **Deployment of Web Services**, when they exist in the project. The following deployment options are available: 
+
+- **Deployment of Web Services**, when they exist in the project. <studio> The following deployment options are available: 
+  
   - Deployment of all Web Services. 
+  
   - Deployment of selected Web Services category files.  
   - Deployment of selected Web Services.
-- **Deployment of Graphit**, when it exists in the project. The following deployment options are available: 
-  - Each Graphit object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. 
+  
+  </studio>
+  
+- **Deployment of Graphit**, when it exists in the project. <studio> The following deployment options are available: 
+  
+  - Each Graphit object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. </studio>
+  
 - **Deployment of Environments**. 
 
 <studio>
@@ -46,6 +60,8 @@ You can use the Soft Deploy option to deploy changes without triggering automati
 * User jobs
 * Parsers
 * Interface listener
+
+In addition, when soft deploy is used the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
 
 To activate Soft Deploy when doing a deployment from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
 
