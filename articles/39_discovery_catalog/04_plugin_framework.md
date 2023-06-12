@@ -1,5 +1,3 @@
-<web>
-
 # Plugin Framework
 
 ### Overview
@@ -191,4 +189,3 @@ As a result, the **Nullability Percentage** property is added to the field's pro
 
 [![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_catalog_app.md) 
 
-</web>

@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Versioning
 
 The Fabric's Catalog supports **versioning** which allows to identify changes in the data source by comparing between the versions. Any kind of change is discoverable, for example, addition of a field or change in a field's property value.
@@ -23,7 +21,7 @@ Select a version from the list to get the full version view.
 Compare two versions to analyze the changes. 
 
 * To do so, click the compare <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. 
-* The earlier version is compared to the later version and the versions differences are indicated using the colors, as follows:
+* The earlier version is compared to the later version and the differences are indicated using the colors, as follows:
   * New elements are green, removed elements are red, updated elements are blue.
   * When a property is updated, it is displayed twice –  the new value is green, the removed one is red.
   * All unchanged entities and relations are grey.
@@ -36,4 +34,3 @@ Compare two versions to analyze the changes.
 
 [![Previous](/articles/images/Previous.png)](05_catalog_app.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_manual_overrides.md) 
 
-</web>

@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Application
 
 ### Overview
@@ -38,7 +36,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
 * **Hidden nodes**, a drop-down list displaying the nodes that have been temporary hidden from the Catalog main area. Selecting a node from this list returns it back to the view.
 * **Zoom in / out**, adjusting the zoom of the view.
-* **Search**, providing a node search capability.
+* **Search**, providing a node search capability. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
 
 ### Properties Tab
 
@@ -54,4 +52,3 @@ Clicking on a property opens the More Info popup window that provides more detai
 
 [![Previous](/articles/images/Previous.png)](04_plugin_framework.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_catalog_versioning.md) 
 
-</web>

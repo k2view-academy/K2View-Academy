@@ -1,5 +1,3 @@
-<web>
-
 # E2E Discovery Process
 
 The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
@@ -23,4 +21,3 @@ The K2View Discovery process is depicted in the below diagram and it includes th
 
 [![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_plugin_framework.md) 
 
-</web>

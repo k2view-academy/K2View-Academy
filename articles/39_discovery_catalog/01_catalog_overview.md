@@ -1,7 +1,5 @@
 # Fabric Catalog Overview
 
-<web>
-
 Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are either not well structured or do not have predefined relations. As a result, decision makers are drowning in data and yet seeking for insights. On top of that, the risks relating to data security increase, causing companies to set this issue with high priority. 
 
 Data Discovery is a process that can help companies to cope with the above-mentioned issues. Its purpose is to:
@@ -24,10 +22,3 @@ The solution framework includes an infrastructure that executes various types of
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
 
-</web>
-
-<studio>
-
-The Data Discovery process is only available via the Fabric Web Studio.
-
-</studio>
