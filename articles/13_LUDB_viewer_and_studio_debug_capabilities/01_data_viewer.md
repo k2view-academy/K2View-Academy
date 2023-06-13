@@ -1,6 +1,6 @@
 # Data Viewer
 
-The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logical_units/01_LU_overview.md) database (MicroDB) tables' content, which is useful for testing and defect resolutions. Having LUI associated to an LU, viewing its data is accessible from the LU context within the Studio.
+The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logical_units/01_LU_overview.md) database (MicroDB) tables' content, which is useful for testing and defect resolutions. Having the LUI associated to an LU, the viewing of its data is accessible from the LU context within the Studio.
 
 <studio>
 
