@@ -236,8 +236,8 @@ Run and execute the SQL statement from the Scripting Area on the selected DB fil
 3. **Save** your changes. 
 
 ### Additional (Right-Click) DB File Options
-* **Open DB** opens the **Instance DB Tree** of the selected DB files. 
-* **Delete Selected DB Files**, deletes the selected **Instance DB files** from the **project folder**:
+* **Open DB** - opens the **Instance DB Tree** of the selected DB files. 
+* **Delete Selected DB Files** - deletes the selected **Instance DB files** from the **project folder**:
    Fabric\\[project name]\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
 
 **Notes**
