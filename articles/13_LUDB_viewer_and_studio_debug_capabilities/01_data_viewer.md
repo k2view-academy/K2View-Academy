@@ -284,7 +284,7 @@ The panel is divided into 3 main areas:
 
   When LUI is brought and table content is shown in the main aera, additional action elements appear at the right side - filter columns and export table content to CSV. This is the same capability as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
-* The main area, where table's data is shown. This area and its capabilities like filtering, sorting or grouping are the same as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
+* The main area - where the table's data are shown. This area and its capabilities - like filtering, sorting or grouping - are the same as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
 * Bottom information bar, shows the execution status and if succeeded - of how many entries/rows are shown for the selected table (up to 1000 rows).
 
