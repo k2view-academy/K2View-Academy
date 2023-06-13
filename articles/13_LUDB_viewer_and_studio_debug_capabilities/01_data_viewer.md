@@ -280,9 +280,9 @@ To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-
 
 The panel is divided into 3 main areas:
 
-* Top bar - displays the selected table's name on the left side (the root table is displayed by default, but any table can be selected). In the middle, there are 3 action elements - the Sync Mode determines when syncing occures, the Instance ID field is for entering the unique LUI identifier, and the Execute button triggeres the retrieval of the specified LUI based on the selected table, including any transformation logic, if applicable. Clicking the Execute button activates the Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands), which follows the behaviour of the defined Sync method.
+* Top bar - displays the selected table's name on the left side (the root table is displayed by default, but any table can be selected). In the middle, there are 3 action elements - the Sync Mode determines when syncing occures, the Instance ID field is for entering the unique LUI identifier, and the Execute button triggeres the retrieval of the specified LUI based on the selected table, including any transformation logic, if applicable. Clicking the Execute button activates the Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands), which follows the behavior of the defined Sync method.
 
-  When LUI is brought and table content is shown in the main aera, additional action elements appear at the right side - filter columns and export table content to CSV. This is the same capability as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
+  When LUI is brought and the table content is shown in the main area, additional action elements appear on the right side - filter columns and export table content to CSV. These capabilities are similar to those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
 * The main area - where the table's data are shown. This area and its capabilities - like filtering, sorting or grouping - are the same as those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
@@ -294,7 +294,7 @@ To see another table's content data of this LUI, just click on it in the schema.
 
 
 
-The panel's height can be adjusted according to your preferences and needs, by moving the mouse to the top panel area. You will then see the 3-dots ellipsis symbol and the cursor will turn into *resize* mode.
+The panel's height can be adjusted according to user's preferences and needs, by moving the mouse to the top panel area. You will then see the 3-dots ellipsis symbol and the cursor will turn into *resize* mode.
 
 ![](images/web/01_table_data_viewer2.png)
 
