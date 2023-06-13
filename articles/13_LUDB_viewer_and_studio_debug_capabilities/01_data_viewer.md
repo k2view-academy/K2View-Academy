@@ -274,7 +274,7 @@ Studio provides 2 methods to view an LUI data:
 
 ### Table Data Viewer
 
-To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) , which appears at the schema's top bar. Once clicked, a panel is opened at the bottom of the schema's window.
+To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) , which appears at the schema's top bar. Once clicked, a panel opens at the bottom of the schema's window.
 
 ![](images/web/01_table_data_viewer1.png)
 
