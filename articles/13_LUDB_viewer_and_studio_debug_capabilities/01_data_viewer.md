@@ -159,7 +159,7 @@ To display the values of a table in the tree, right-click the table and select e
 
 
 ### Scripting Area
-The SQL scripting area is used for writing and running SQL statements on a selected LUDB (upper-right pane).
+The SQL Scripting Area (upper-right pane) is used for writing and running SQL statements on a selected LUDB.
 
 ![image](images/data_viewer_scripting_area.png)
 
