@@ -107,7 +107,7 @@ The Instance DB Tree area (bottom left) displays the Table Tree, which includes:
 * **k2_objects_info** - holds information for each of the objects in the selected instance.
 * **k2_transactions_info** - holds basic information about each transaction (ID and timestamp).
 
-* **Reference tables under k2_Ref**. These are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
+* **Reference tables under k2_Ref** - these are displayed only as part of the Instance DB Tree, when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
 
 To display the values of a table in the tree, right-click the table and select either:
 * **Show Data**, to display the table or view it in the Results pane.
