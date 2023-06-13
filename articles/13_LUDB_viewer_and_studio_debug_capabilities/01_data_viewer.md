@@ -46,7 +46,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 
 ## What Are the Data Viewer Components?
 
-The Logical Unit Data Viewer has the following areas:
+The Logical Unit Data Viewer contains the following areas and components:
 * Sync Mode and Instance ID
 * Instances Tree
 * Instance DB Tree
@@ -244,10 +244,10 @@ Run and execute the SQL statement from the Scripting Area on the selected DB fil
 
 The latest Data Viewer file can be used in the following components:
 
-* New functions / Web Services - the latest Data Viewer is displayed in the Databases drop-down list, whereby the LU table can be invoked on the code. 
+* New functions / Web Services - the latest Data Viewer is displayed in the Database's drop-down list, whereby the LU table can be invoked on the code. 
 [Click for more information on How to Create a New Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 * LU Schema - create a new table, based on SQL Options, to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
-* Population object / DB query - to display the latest Data Viewer file in the Database drop-down list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
+* Population object / DB query - to display the latest Data Viewer file in the Database's drop-down list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
 
 
