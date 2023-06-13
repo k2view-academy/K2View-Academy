@@ -274,11 +274,11 @@ Studio provides 2 methods to view an LUI data:
 
 ### Table Data Viewer
 
-To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) which appears at the schema's top bar. Once clicked, a panel is opened at the bottom of the schema window.
+To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) , which appears at the schema's top bar. Once clicked, a panel is opened at the bottom of the schema's window.
 
 ![](images/web/01_table_data_viewer1.png)
 
-The panel is divided to 3 main areas
+The panel is divided into 3 main areas:
 
 * Top bar, showing at at left side the selected table name (by default it will be the root table, unless you selected one ahead). In the middle there are 3 action elements - the sync mode for bringing the LUI, the Instance ID field and the Execute button, which brings the LUI, according to the schema definitions. Clicking on the Execute button activates a Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands) (which behaves according to the selected sync method).
 
