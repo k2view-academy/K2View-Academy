@@ -15,7 +15,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 
 2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
 
-3. Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) in the top left pane; the default sync mode is ON.
+3. Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) in the top left pane; the default Sync Mode is **ON**.
 
 4. In the **Instance ID** field (top central pane) - enter an Instance ID (an integer). 
 
