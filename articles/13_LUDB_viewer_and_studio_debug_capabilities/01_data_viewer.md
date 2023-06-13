@@ -72,13 +72,13 @@ Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET
 To complete this field, do either:
 * Enter a specific Instance ID value.
 * Select a previously stored Instance ID from the drop-down list.
-* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID. Note that this function must return a string as an output. Once you have created such function, use the function name in the Instance ID field (that is, do not enter the code that comprises the function). 
+* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID. Note that this function must return a string as an output. Once you have created such function, use the function name in the Instance ID field (that is, do not enter the code that contains the function). 
 
 
   For example:
 
 
-  Create an instance ID by using the function: **fnCreateInstID**. This function takes an input value and adds 10:
+  Create an Instance ID by using the function: **fnCreateInstID**. This function takes an input value and adds 10:
 
   ```java
   if (i_id!=null && !i_id.isEmpty()){
