@@ -194,11 +194,11 @@ The following options are supported:
 <td width="368" valign="top">
 <ul>
 <li>On current DB file: The SQL is executed on the currently selected instance file.</li>
-<li>On newest DB file for each instance: The SQL is executed on the newest instance file of each instance in the Instances tree.</li>
+<li>On newest DB file for each instance: The SQL is executed on the newest instance file of each instance in the Instances Tree.</li>
 <li>On selected DB files: The SQL is executed on the selected instance's files. Click and press <strong>CTRL </strong>to select the required files.</li>
-<li>On all existing DB files: The SQL is executed on all files in the Instances tree.</li>
+<li>On all existing DB files: The SQL is executed on all files in the Instances Tree.</li>
 </ul>
-<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit drop-down list opens, where you can define the number of results displayed.</p>
+<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit drop-down list opens, where you can define the number of results to be displayed.</p>
 </td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ The following options are supported:
 <p><strong>Load SQL from File</strong></p>
 </td>
 <td width="368" valign="top">
-<p>Retrieves an SQL statement from a file previously created in the Scripting area.</p>
+<p>Retrieves an SQL statement from a file previously created in the Scripting Area.</p>
 </td>
 </tr>
 </tbody>
@@ -222,16 +222,16 @@ The following options are supported:
 
 ### How Do I Run an SQL Statement in the Data Viewer? 
 
-Run and execute the SQL statement from the scripting area on the selected DB file:
-1. Enter the **SQL statement** using **SQLite syntax** into the Scripting area. 
-2. Select the **DB file** to be used to run the statement from the dropdown list. 
+Run and execute the SQL statement from the Scripting Area on the selected DB file:
+1. Enter the **SQL statement** using **SQLite syntax** into the Scripting Area. 
+2. Select the **DB file** to be used to run the statement from the drop-down list. 
 3. Do the following:\
-    a. Click **Run** or **Run on New Tab** under the **Scripting area**.\
+    a. Click **Run** or **Run on New Tab** under the **Scripting Area**.\
     b. Press **F5** or **Ctrl + Enter**. Separate multiple queries with ‘;’.
 4. View results in the **Results pane**.
 
 ### How Do I Export a Logical Unit Data File?
-1. Go to the **Instances Tree** and right click the **DB File**. 
+1. Go to the **Instances Tree** and right-click the **DB File**. 
 2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file (LUDB format). 
 3. **Save** your changes. 
 
