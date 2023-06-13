@@ -206,7 +206,7 @@ The following options are supported:
 <p><strong>Save SQL to File</strong></p>
 </td>
 <td width="368" valign="top">
-<p>Saves the current SQL statements to a file.</p>
+<p>Saves the current SQL statement to a file.</p>
 </td>
 </tr>
 <tr>
