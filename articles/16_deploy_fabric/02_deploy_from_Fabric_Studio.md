@@ -57,7 +57,9 @@ You can activate deployment and see deployment status in several places at the F
 
 A deployed LU has a green circle next to its name at the project tree. Otherwise, for example while making changes at its content, it becomes to be gray circle.
 
-In addition, you can look at the "Deployment Status" in the bottom status bar to see if all LUs are deployed.
+In addition, you can look at the "Deployment Status" in the bottom status bar to see if all LUs are deployed. When hoovering on it with the mouse , a tooltip appears, hinting you which LUs are not deployed.
+
+In the illustration below you can see the project tree, where except "Web Services" all other LUs appear with the green circle, meaning that they are deployed. Similar indication exists in the bottom status bar. 
 
 ![](images/16_2_web_deploy_status_bar.png)
 
@@ -65,15 +67,13 @@ In addition, you can look at the "Deployment Status" in the bottom status bar to
 
 Deployment can be done either for all updated LUs, those which are not already deployed, or for a specific LU.
 
-
-
 To deploy all updated LUs, make either of the following:
 
 * At top menu bar, click Fabric and then "Deploy All Updated Logical Units".
 * At the bottom status bar, hoover with the mouse on the "Deployment Status", too see a tooltip, hinting you which LUs are not deployed. Click on the "Deployment Status" will trigger the deployments on those LUs.
 * Open the command pallet (you can use the CTRL+SHIST+P shortcut), look for "Deploy All Updated Logical Units" and click on it.
 
-> Note: the "deploy all" action activates soft deploy, unless this is the first time an LU is being deployed. This definition can be changed at the Preferences page, which accessible via the left bottom gear icon.
+> Note: the "Deploy All" action activates a soft deploy, unless this is the first time an LU is being deployed. This definition can be changed at the Preferences page, which accessible via the left bottom gear icon.
 
 
 
