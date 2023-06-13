@@ -91,7 +91,7 @@ To complete this field, do either:
 
 #### Play
 
-When ![image](images/13_01_07%20play%20icon.jpg) icon is clicked, the data file of the Instance ID is retrieved and saved for debugging.
+When the ![image](images/13_01_07%20play%20icon.jpg) icon is clicked, the data file of the Instance ID is retrieved and saved for debugging.
 	
 ### Instances Tree
 The Instance Tree area (top left) displays a tree of available data files in the following order: 
