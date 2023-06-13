@@ -280,7 +280,7 @@ To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-
 
 The panel is divided into 3 main areas:
 
-* Top bar - shows the selected table's name on the left side (it will show the root table's name by default, but any table can be selected). In the middle, there are 3 action elements - the Sync Mode for bringing the LUI, the Instance ID field and the Execute button, which brings the LUI, according to the schema's definitions. Clicking on the Execute button activates a Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands) (which behaves according to the selected Sync method).
+* Top bar - displays the selected table's name on the left side (the root table is displayed by default, but any table can be selected). In the middle, there are 3 action elements - the Sync Mode determines when syncing occures, the Instance ID field is for entering the unique LUI identifier, and the Execute button triggeres the retrieval of the specified LUI based on the selected table, including any transformation logic, if applicable. Clicking the Execute button activates the Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands), which follows the behaviour of the defined Sync method.
 
   When LUI is brought and table content is shown in the main aera, additional action elements appear at the right side - filter columns and export table content to CSV. This is the same capability as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
