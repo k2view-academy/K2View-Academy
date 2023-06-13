@@ -30,7 +30,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 
 <img src="images/13_01_03_Instances_tree.jpg" alt="drawing" width="225"/>
 
-7. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
+7. Click the **Instance DB file** to display its **tables** under the **Instance DB Tree**.
 
 <img src="images/13_01_04_Instance_DB_tree.jpg" alt="drawing" width="225"/>
 
