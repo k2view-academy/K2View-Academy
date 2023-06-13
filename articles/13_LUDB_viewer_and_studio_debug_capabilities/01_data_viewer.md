@@ -86,7 +86,7 @@ To complete this field, do either:
    }
   return "0";
   ```
-  More complicated functions can be written, of course, such as generating a random instance ID or an instance ID that complies with other criteria (such as certain values). 
+  More complicated functions can be written, of course, such as generating a random Instance ID or an Instance ID that complies with other criteria (such as certain values). 
 
 
 #### Play
