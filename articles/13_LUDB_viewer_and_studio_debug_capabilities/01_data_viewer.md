@@ -300,13 +300,13 @@ The panel's height can be adjusted according to user's preferences and needs, by
 
 > NOTES:
 >
-> * Clicking on the Execute button will first save the schema and deploy the LU, in case it was changed.
-> * If you have made changes in the schema, you should click on the Execute button again, in order to view how they affected the LUI content.
+> * Clicking on the Execute button will first save the Schema and deploy the LU, in case it was changed.
+> * If you have made changes in the Schema, you should click on the Execute button again, in order to view how they affected the LUI content.
 > * When changing the Sync Mode or cleaning the Instance ID field - the window is reset and the displayed content is cleared. This is done in order to avoid confusion of what is currently being displayed.
 
 
 
-To close the Table Data Viewer window, click on the X at its upper-right corner.
+To close the Table Data Viewer panel, click on the X at its upper-right corner.
 
 
 
@@ -314,7 +314,7 @@ To close the Table Data Viewer window, click on the X at its upper-right corner.
 
 To open the Data Viewer, click on <img src="../03_logical_units/images/web/schema_data_viewer.png" style="zoom:80%;" />, which appears at the Schema Editor's Toolbar. Once clicked, a Query Builder popup window appears.
 
-This is similar to other Query Builder popup windows, where here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
+This is similar to other Query Builder popup windows, whereas here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
 
 The LU's tables list is already expanded within the DB explorer on the left side. 
 
@@ -323,7 +323,7 @@ The LU's tables list is already expanded within the DB explorer on the left side
 > * **k2_main_info** - holds basic information about the LU, like LU Name and Instance ID.
 > * **k2_objects_info** - holds information for each of the objects (=tables) in the selected instance. For example, what populations are used for each table, how much time it has taken to populate each table, how many records have been retrieved for each table, and how much time it has taken to load the data into Fabric.
 
-In addition, similar to any Query Builder which is opened for fabric-type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
+In addition, similar to any Query Builder that opens for a fabric-type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
 
  ![](images/web/01_table_data_viewer4.png)
 
