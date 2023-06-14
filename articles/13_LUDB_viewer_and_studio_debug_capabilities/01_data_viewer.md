@@ -318,12 +318,12 @@ This is similar to other Query Builder popup windows, where here the interface -
 
 The LU's tables list is already expanded within the DB explorer on the left side. 
 
-> The table's list includes also several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables), which contain statistical information about the specific LUI. These tables are not displayed in the LU Schema. For example: 
+> The table's list also includes several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables) that contain statistical information about the specific LUI. These tables are not displayed in the LU Schema. For example: 
 >
-> * **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
-> * **k2_objects_info**, holds information for each of the objects (=tables) in the selected instance. For example, what populations used for each table, how much time took to populate each table, how many records brought for each table, and how much time took to load data into Fabric.
+> * **k2_main_info** - holds basic information about the LU, like LU Name and Instance ID.
+> * **k2_objects_info** - holds information for each of the objects (=tables) in the selected instance. For example, what populations are used for each table, how much time it has taken to populate each table, how many records have been retrieved for each table, and how much time it has taken to load the data into Fabric.
 
-In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and Instance ID field appear at the right side of the window's top bar.
+In addition, similar to any Query Builder which is opened for fabric type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
 
  ![](images/web/01_table_data_viewer4.png)
 
