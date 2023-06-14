@@ -14,47 +14,14 @@ Follow the below instructions to prepare Linux environment for Fabric/TDM instal
 
 ## Hardware Requisites 
 
-Minimum hardware for each Linux execution server is as follows:
-
--   Modern Xeon Processor
-
--   16 Physical Cores
-
--   RAM:
-
-    -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM.
-
-    -   For servers that run a single component (preferred method) - 32GB RAM.
-
--   Network: Minimum 1G per sec between the nodes and source databases.
-
--   Storage: The preferred storage is an attached local SSD's in a non-RAID configuration.
-
-> **Note:** If you must use a SAN, it must be flash disc based and in RAID-0.
-> **NAS are not certified.**
-
-Operating System: Red Hat/CentOS/Amazon Linux latest operating system and above, with the latest patches.
-
-#### File System Requisites
-
-The following file server volumes must be made available:
-
--   Volume of 50G **/opt/apps/fabric/** will also be used as the home directory for a **Fabric** user (owned by the Fabric user)
-
--   Volume of 100G\* **/opt/apps/fabric/storage** (owned by the Fabric user)
-
--   Volume of 50G **/opt/apps/cassandra/** (owned by the Cassandra user)
-
--   Volume of 2T\* **/opt/apps/cassandra/storage/data** (owned by the Cassandra user)
-
--   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (owned by the Cassandra user)
-
--   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (owned by the Cassandra user)
-
--   Volume of 100G\* **/opt/apps/kafka/** (owned by the Kafka user)
-
-> **Note:** The file server must provide IOPS of at least 30K read & 10K write.
-> The number of servers should be increased based on project scope and data retention requirements.
+for detailed hardware requirment, please see below:
+<ul>      
+<li>
+<a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">Fabric and TDM 7.x Hardware Requirements for POV Environments</a></li>
+<li>
+<a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">Fabric and TDM 7.x Hardware Requirements for ALL Environments</a></li>
+	  
+</ul>
 
 ## OS Preparation
 
@@ -108,9 +75,7 @@ sysctl -p
 ~~~
 
 
-If the system is planned to work over SSL/TLS and need to be hardend,
-
-OPENSSL is also required to be installed
+If the system is planned to work over SSL/TLS and need to be hardend,OPENSSL is also required to be installed
 
 On RHEL/CentOs 8 server **only** - add the following packages:
 
@@ -126,67 +91,5 @@ hostnamectl
 cat /etc/os-release
 ~~~
 
-## Firewall Ports 
 
-For a successful operation, the following ports should be open in the internal server firewall, and if required, also in the external firewall: 
 
-<table style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 50%; height: 18px;">22</td>
-<td style="width: 50%; height: 18px;">SSH, SCP</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">7000</td>
-<td style="width: 50%; height: 18px;">Cassandra</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">7001</td>
-<td style="width: 50%; height: 18px;">Cassandra</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">7199</td>
-<td style="width: 50%; height: 18px;">Cassandra</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">9042</td>
-<td style="width: 50%; height: 18px;">Cassandra</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">9160</td>
-<td style="width: 50%; height: 18px;">Cassandra</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 11px;">3213 </td>
-<td style="width: 50%; height: 11px;">K2View Fabric</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 11px;">9443 </td>
-<td style="width: 50%; height: 11px;">K2View Fabric (SSL)</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">6379</td>
-<td style="width: 50%; height: 18px;">Redis</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">2181, 2888, 3888</td>
-<td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">9093, 9091 </td>
-<td style="width: 50%; height: 18px;">Kafka</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">9081</td>
-<td style="width: 50%; height: 18px;">Kafka JMX</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">5124</td>
-<td style="width: 50%; height: 18px;">K2View Fabric</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 18px;">5432</td>
-<td style="width: 50%; height: 18px;">pgsql</td>
-</tr>
-</tbody>
-</table>
