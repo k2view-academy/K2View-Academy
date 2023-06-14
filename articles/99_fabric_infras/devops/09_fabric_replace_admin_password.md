@@ -43,7 +43,7 @@ Check the connection:
 cqlsh -uadmin2 -pQ7xp8GPNmjZp --ssl
 ```
 
-Access points examples:
+Connect to the Web UI to verify the new login details:
 
 * Fabric WS will be available at:
 ``` https://10.10.10.10:9443/deploy ```
