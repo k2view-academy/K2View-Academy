@@ -8,7 +8,7 @@ This environment should contain:
 - Windows for installing and running the Fabric Studio.
 - SVN / GIT for version control.
 
-Note that to avoid uncontrolled access to external sources or to confidential information in another project, access to this server and to SVN / GIT should be limited to the relevant developers.
+Access to this server and to SVN / GIT should be limited to the relevant developers.
 
 <img src="/articles/99_fabric_infras/devops/images/01_devop-devEnv.png">
 
@@ -16,7 +16,7 @@ Note that to avoid uncontrolled access to external sources or to confidential in
 
 This environment should be isolated from the Development environment and contain the following components:
 
-- Fabric servers cluster, **minimum 3 for check ......**
+- Fabric servers cluster, **minimum 3 for Testing**
 - Windows terminal server, for installing and running the Fabric Studio.
 - Access to Fabric WS (API) via the load balancer (LB).
 - Access to SVN / GIT for version control, limited to the relevant users. 
@@ -30,7 +30,7 @@ All access to servers described above should be limited to the QA team only.
 ## Pre-Production Environment
 This environment should be isolated from the Development and QA environments and be identical to the Production environment:
 
-- Fabric servers cluster, identical as possible to the Production environment ***(minimum 3 on each DC).....***
+- Fabric servers cluster, identical as possible to the Production environment ***(minimum 3 on each DC)***
 - Windows terminal server for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
 - Access to the Fabric WS (API) via the load balancer (LB).
 - Access to SVN / GIT for version control, limited to the relevant users.
