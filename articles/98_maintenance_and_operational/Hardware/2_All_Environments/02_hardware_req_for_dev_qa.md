@@ -14,13 +14,13 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Software Requirements:
 
-### Operating system: 
+#### Operating system: 
 
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
 
-### Hardware Requirements:
+#### Hardware Requirements:
 
 <table style="width: 900px; border-style: solid; float: left;" border="1">
 <tbody>
@@ -126,12 +126,12 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 ### Minimum System Configuration for each Fabric node Server
 
 ### Software Requirements:
-### Operating system: 
+#### Operating system: 
 
 * RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
-### Hardware Requirements:
+#### Hardware Requirements:
 <table style="width: 900px; border-style: solid; float: left;" border="1">
 <tbody>
 <tr>
@@ -230,13 +230,14 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Minimum System Configuration for each Cassandra node Server
 
-### Software Requirements:
+#### Software Requirements:
 
-### Operating system: 
+#### Operating system: 
 
 * RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
-> **Note** Until Cassandra version 4.0.x - Python version 2.7 is required; newer versions of Cassandra are not yet certified.
+* Python version 2.7 (This is a cassandra limit, Until Cassandra version 4.0.x - Python version 2.7 is th elatest supported, ; newer versions of Cassandra are not yet certified by K2view for Fabric)
+
 
 ### Hardware Requirements:
 <table style="width: 900px; border-style: solid; float: left;" border="1">
