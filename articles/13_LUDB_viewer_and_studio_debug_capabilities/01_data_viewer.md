@@ -312,7 +312,7 @@ To close the panel click on the X close button at the right side of the panel.
 
 ### Data Viewer
 
-To open the Data Viewer, click on <img src="../03_logical_units/images/web/schema_data_viewer.png" style="zoom:80%;" />, which appears at the Schema Editor's Toolbar. Once clicked, a Query Builder popup window will appear.
+To open the Data Viewer, click on <img src="../03_logical_units/images/web/schema_data_viewer.png" style="zoom:80%;" />, which appears at the Schema Editor's Toolbar. Once clicked, a Query Builder popup window appears.
 
 This is similar to other Query Builder popup windows, where here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
 
