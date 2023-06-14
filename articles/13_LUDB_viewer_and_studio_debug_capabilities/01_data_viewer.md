@@ -294,7 +294,7 @@ To view another table's content data of this LUI, simply click on it in the sche
 
 
 
-The panel's height can be adjusted according to user's preferences and needs, by moving the mouse to the top panel area. You will then see the 3-dots ellipsis symbol and the cursor will turn into *resize* mode.
+The panel's height can be adjusted according to user's preferences and needs, by moving the mouse to the horizontal line that separates the Schema's window. You will then see the 4-dots symbol and the cursor will turn into a *resize* mode.
 
 ![](images/web/01_table_data_viewer2.png)
 
