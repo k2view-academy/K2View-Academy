@@ -282,7 +282,7 @@ The panel is divided into 3 main areas:
 
 * Top bar - displays the selected table's name on the left side (the root table is displayed by default, but any table can be selected). In the middle, there are 3 action elements - the Sync Mode determines when syncing occures, the Instance ID field is for entering the unique LUI identifier, and the Execute button triggers the retrieval of the specified LUI based on the selected table, including any transformation logic, if applicable. Clicking the Execute button activates the Fabric ["get" command](/articles/02_fabric_architecture/04_fabric_commands.md#get-commands), which follows the behavior of the defined Sync method.
 
-  When LUI is brought and the table content is shown in the main area, additional action elements appear on the right side - filter columns and export table content to CSV. These capabilities are similar to those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
+  When the LUI is retrieved and all of its the table content is shown in the main area, additional action elements appear on the right side - filter columns and export table content to CSV. These capabilities are similar to those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
 * The main area - where the table's data are shown. This area and its capabilities - like filtering, sorting or grouping - are the same as those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
