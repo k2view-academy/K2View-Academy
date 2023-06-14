@@ -267,7 +267,7 @@ The Data Viewer is accessible via the LU schema:
 
 Studio provides 2 methods to view an LUI data:
 
-1. **Table Data Viewer** - gives an insight into each table's content data, easily and quickly, by navigating between the LU tables that are shown in the schema diagram.
+1. **Table Data Viewer** - provides an insight into each table's content data, easily and quickly, by navigating between the LU tables that are shown in the schema diagram.
 2. **Data Viewer** - allows to build queries and execute them. This can be useful in case of cross-table queries creation.
 
 
