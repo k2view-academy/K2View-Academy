@@ -323,7 +323,7 @@ The LU's tables list is already expanded within the DB explorer on the left side
 > * **k2_main_info** - holds basic information about the LU, like LU Name and Instance ID.
 > * **k2_objects_info** - holds information for each of the objects (=tables) in the selected instance. For example, what populations are used for each table, how much time it has taken to populate each table, how many records have been retrieved for each table, and how much time it has taken to load the data into Fabric.
 
-In addition, similar to any Query Builder which is opened for fabric type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
+In addition, similar to any Query Builder which is opened for fabric-type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
 
  ![](images/web/01_table_data_viewer4.png)
 
@@ -334,8 +334,8 @@ Similar to the Table Data Viewer:
 
 > NOTES:
 >
-> * Clicking on the Execute button will first save the schema and deploy the LU, if it was changed, before popup is opened.
-> * When changing the sync mode or cleaning the Instance ID field - the main results area is reset and the shown content is cleared. This is done in order to avoid confusion about what is currently shown.
+> * Clicking on the Execute button will first save the Schema and deploy the LU, if it was changed, before a popup is opened.
+> * When changing the Sync Mode or cleaning the Instance ID field - the main results area is reset and the displayed content is cleared. This is done in order to avoid confusion of what is currently shown.
 
 
 
