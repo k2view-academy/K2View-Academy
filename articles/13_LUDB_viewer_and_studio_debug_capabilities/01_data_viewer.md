@@ -13,7 +13,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
    - Right-click the **LU** > **Deploy To debug**.
    - Click the **Deploy** icon, located at the top of [Fabric's Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
-2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
+2. Click on <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
 
 3. Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) in the top left pane; the default Sync Mode is **ON**.
 
