@@ -323,7 +323,7 @@ The LU's tables list is already expanded within the DB explorer at the left side
 > * **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
 > * **k2_objects_info**, holds information for each of the objects (=tables) in the selected instance. For example, what populations used for each table, how much time took to populate each table, how many records brought for each table, and how much time took to load data into Fabric.
 
-In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and instance ID field appear at the right side of the window's top bar.
+In addition, similar to any Query Builder which is opened for fabric type interface, Sync mode select list and Instance ID field appear at the right side of the window's top bar.
 
  ![](images/web/01_table_data_viewer4.png)
 
