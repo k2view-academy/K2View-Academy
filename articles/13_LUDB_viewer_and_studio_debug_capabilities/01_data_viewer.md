@@ -258,14 +258,14 @@ The latest Data Viewer file can be used in the following components:
 
 ## How Do I View Data in a Logical Unit?
 
-The Data Viewer is accessible via the LU schema:
+The Data Viewer is accessible via the LU Schema:
 
 1. Go to **Project Tree** > right-click **Logical Units / Data Products** 
 2. Expand the relevant LU and open its **schema**.
 
 
 
-Studio provides 2 methods to view an LUI data:
+Studio provides 2 methods to view an LUI's data:
 
 1. **Table Data Viewer** - provides an insight into each table's content data, easily and quickly, by navigating between the LU tables that are shown in the schema diagram.
 2. **Data Viewer** - allows to build queries and execute them. This can be useful in case of cross-table queries creation.
@@ -274,7 +274,7 @@ Studio provides 2 methods to view an LUI data:
 
 ### Table Data Viewer
 
-To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) , which appears at the Schema Editor's Toolbar. Once clicked, a panel opens at the bottom of the schema's window.
+To open the Table Data Viewer, click on ![](../03_logical_units/images/web/data-viewer.svg) , which appears at the Schema Editor's Toolbar. Once clicked, a panel opens at the bottom of the Schema's window.
 
 ![](images/web/01_table_data_viewer1.png)
 
