@@ -8,7 +8,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 
 ![image](images/Logical_Units_Tree.png)
 
-1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon, deploy it  to the debug server before running the Data Viewer on it. Do either:
+1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon, deploy it to the debug server before running the Data Viewer on it. Do either:
 
    - Right-click the **LU** > **Deploy To debug**.
    - Click the **Deploy** icon, located at the top of [Fabric's Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
@@ -20,7 +20,7 @@ The Data Viewer enables you to view a [Logical Unit Instance](/articles/03_logic
 4. In the **Instance ID** field (top central pane) - enter an Instance ID (IID). 
 
 5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
-    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of an LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the Instances Tree. 
+    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of an LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU Instance is displayed in the Instances Tree. 
 
   	Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
   	
