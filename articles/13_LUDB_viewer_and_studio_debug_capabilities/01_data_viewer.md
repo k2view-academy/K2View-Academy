@@ -301,7 +301,7 @@ The panel's height can be adjusted according to user's preferences and needs, by
 > NOTES:
 >
 > * Clicking on the Execute button will first save the schema and deploy the LU, in case it was changed.
-> * If you've made changes in the schema, you should click the Execute button again, in order to see how they affected the LUI content.
+> * If you have made changes in the schema, you should click on the Execute button again, in order to view how they affected the LUI content.
 > * When changing the Sync Mode or cleaning the Instance ID field - the panel is reset and the displayed content is cleared. This is done in order to avoid confusion of what is currently being displayed.
 
 
