@@ -4,7 +4,7 @@
 
 ## On a Fresh New Cluster  
 
-On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
+On the first Fabric node use the `adminInitialCredentials` file for setting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
 
 bellow is example:
 
@@ -20,10 +20,6 @@ Now you can start Fabric, and use the following user and password example:
 `password: KW4RVG98RR9xcrTv` 
 
 ## On Running Cluster 
-
-### Via the Web Admin UI
-
-
 
 ### Via Console
 
