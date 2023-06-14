@@ -290,7 +290,7 @@ The panel is divided into 3 main areas:
 
 ![](images/web/01_table_data_viewer3.png)
 
-To view another table's content data of this LUI, just click on it in the schema. 
+To view another table's content data of this LUI, simply click on it in the schema. 
 
 
 
