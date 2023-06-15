@@ -22,7 +22,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### Hardware Requirements:
 
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -124,7 +124,7 @@ The application can be installed locally on either a workstation or a server wit
 
 ### Minimum System Configuration
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 255.078px;">
@@ -174,7 +174,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 ### Recommended Software
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 179.391px;">
@@ -252,7 +252,7 @@ Open the following ports on the Linux server and make sure they are accessible f
 
 Depending on your setup, not all ports are required:
 
-<table style="width: 427px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 161.109px;">
