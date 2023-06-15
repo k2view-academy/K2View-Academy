@@ -369,7 +369,7 @@ Further details are found below:
 	* On-premise as a virtual or physical machine. 
 	* As a cloud service (SaaS)
 
-### Suggested System Configuration for PostgreSQL server
+### Suggested System Configuration for PostgreSQL Server
 
 ### Software Requirements:
 ### Operating system: 
