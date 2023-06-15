@@ -13,7 +13,7 @@ cp config/adminInitialCredentials.template config/adminInitialCredentials
 sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
 ~~~
 
-Now you can start Fabric, and use the following user and password example:
+You can now start Fabric, and use the following user and password example:
 
 `user: k2consoleadmin` 
 
