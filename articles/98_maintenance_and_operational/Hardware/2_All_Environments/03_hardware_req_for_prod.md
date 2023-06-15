@@ -248,7 +248,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 * RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
-* Python version 2.7 (this is a cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
+* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
 
 
 ### Hardware Requirements:
