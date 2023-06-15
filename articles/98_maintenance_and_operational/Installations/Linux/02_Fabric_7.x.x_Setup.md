@@ -46,7 +46,7 @@ run the same command on the rest of the Fabric nodes.
 ~~~bash
 /opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --ssl
 ~~~
-> The Above are Examples standard and simple Fabric installations, For more information on memory, Cassandra replication factor and more, run 
+> The above are examples for standard and simple Fabric installations. For more information about memory, Cassandra replication factor and additional configuration options, run: 
 ~~~bash
 /opt/apps/fabric/scripts/fabric-setup.sh --help
 ~~~
