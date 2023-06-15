@@ -67,7 +67,7 @@ Open the following ports on the LINUX server and make sure they are accessible f
 > depends on your setup, not all ports will be required.
 
 
-<table style="border-collapse: collapse; width: 100%;">
+<table>
 <tbody>
 <tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
