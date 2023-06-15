@@ -1,20 +1,24 @@
 # Catalog Search
 
+### Overview
+
 The Catalog provides two types of search: regular and advanced. The search scope is **nodes**, on any level of the catalog hierarchy: from data platform to fields. The **links** are not included in the search scope. 
 
-The search by input text is done using the ‘includes’ statement and the input values are case insensitive. The search is always performed in the displayed catalog version.
+The search area in the menu bar allows to search a node name. The search is performed on the  catalog nodes of all hierarchy levels, in the version currently displayed in the Catalog application, even if the node is collapsed and doesn't appear on the screen.
 
-### Regular Search
-
-The regular search allows to search by a node name. It can be done using the search area in the menu bar. The search is performed using the *search-as-you-type* field type. 
+The search is done using the ‘includes’ statement and the input values are case insensitive. 
 
 ### Advanced Search
 
-The advanced search provides an ability to search by PII and Classification properties. It also allows to narrow the search to a specific node type, for example - FIELDS only. 
+The advanced search allows to narrow the search to a specific node type, for example - FIELDS only. In addition, it provides an ability to search by PII and Classification properties. So, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
 
 ### Search Results
 
-The search results are presented in a table, enabling users to either add an entity to the displayed Catalog tree. The search results can be expanded to full screen and exported to a CSV file.
+The search results are presented in a list, enabling the users to either view the entity in the Catalog tree by clicking the link or to export them into a CSV file.
+
+The search results can be expanded to full screen.
+
+
 
 
 

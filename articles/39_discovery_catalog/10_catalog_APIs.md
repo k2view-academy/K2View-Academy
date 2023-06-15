@@ -10,7 +10,7 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 ## Get Catalog Versions
 
-<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog/all-versions`
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog`
 
 The API retrieves a list of catalog's versions and their creation timestamp.
 
