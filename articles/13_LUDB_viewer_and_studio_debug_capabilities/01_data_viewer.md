@@ -261,14 +261,14 @@ The latest Data Viewer file can be used in the following components:
 The Data Viewer is accessible via the LU Schema:
 
 1. Go to **Project Tree** > right-click **Logical Units / Data Products** 
-2. Expand the relevant LU and open its **schema**.
+2. Expand the relevant LU and open its **Schema**.
 
 
 
 Studio provides 2 methods to view an LUI's data:
 
 1. **Table Data Viewer** - provides an insight into each table's content data, easily and quickly, by navigating between the LU tables that are shown in the schema diagram.
-2. **Data Viewer** - allows to build queries and execute them. This can be useful in case of cross-table queries creation.
+2. **Data Viewer** - allows to build queries and execute them. This can be useful in case of a cross-table queries creation.
 
 
 
