@@ -11,7 +11,7 @@ Follow the below steps, depending on the environment that you plan to use:
 3. Click [here](Kafka_Setup.md) for instructions on how to install a Kafka instance or a cluster with K2view's supplied package.
 
 ## Fabric Setup 
-Fabric Server installation package will be supplied to you by K2view
+Fabric Server Installation package will be supplied to you by K2view.
 
 ### Install the Package 
 
