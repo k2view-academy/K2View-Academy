@@ -22,13 +22,13 @@ This environment should be isolated from the Development environment and should 
 - Access to SVN / GIT for version control, limited to the relevant users. 
 - Source databases, including data that should have the same structure as in the Production environment.
 
-Note that all connection methods and protocols must be the same type as those defined in the Production environment. 
-All access to servers described above should be limited to the QA team only.
+Note that all connection methods and protocols must be of the same type as those defined in the Production environment. 
+All accesses to the above described servers should be limited to the QA team members only.
 
 <img src="/articles/99_fabric_infras/devops/images/02_devop-QAEnv.png">
 
 ## Pre-Production Environment
-This environment should be isolated from the Development and QA environments and be identical to the Production environment:
+This environment should be isolated from the Development and QA environments and should be identical to the Production environment:
 
 - Fabric servers cluster, identical as possible to the Production environment ***(minimum 3 on each DC)***
 - Windows terminal server for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
