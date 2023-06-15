@@ -22,7 +22,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 #### Hardware Requirements:
 
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -75,7 +75,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -132,7 +132,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 #### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -182,7 +182,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -240,7 +240,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 
 ### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -289,7 +289,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -348,7 +348,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -398,7 +398,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -448,7 +448,7 @@ The application can be installed locally on either a workstation or a server wit
 
 ### Minimum System Configuration
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 255.078px;">
@@ -498,7 +498,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 ### Recommended Software
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 179.391px;">
@@ -576,7 +576,7 @@ Open the following ports on the Linux server and make sure they are accessible f
 
 Depending on your setup, not all ports are required:
 
-<table style="width: 427px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 161.109px;">
