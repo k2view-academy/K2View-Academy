@@ -39,13 +39,13 @@ This environment should be isolated from the Development and QA environments and
 Note that:
 - All connection methods and protocols must be identical to those defined in the Production environment. 
 - All access to servers described above should be limited to the QA team members only.
-- The connection method and protocol must be the same as those in Production. 
+- The connection method and protocol must be the same as those in the Production environment. 
 - This environment should be sufficiently strong to be able to run load testing. 
 
 <img src="/articles/99_fabric_infras/devops/images/03_devop-preProdEnv.png">
 
 ## Production Environment
-This environment should be isolated from the Development and QA environments and be identical to the Pre-Production environment:
+This environment should be isolated from the Development and QA environments and should be identical to the Pre-Production environment:
 
 - Fabric servers cluster, according to the production sizing definitions.
 - Windows terminal server, for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
