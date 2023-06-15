@@ -6,7 +6,7 @@ For a proper operation, Fabric relies on a few system settings and 3rd party sol
 Cassandra or equivilant, is needed for all installation types, and Kafaka is required only for multi-nodes fabric environment.
 Follow the below steps, depending on your planned environment:
 
-1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric Enviroment. Note that this is mandatory and should be performed each server in the enviroment.
+1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric Environment. Note that this is mandatory and should be performed each server in the enviroment.
 2. Click [here](Cassandra_Setup.md) for instructions on how to install a Cassandra instance or a cluster with our supplied package.
 3. Click [here](Kafka_Setup.md) for instructions on how to install a Kafka instance or a cluster with our supplied package.
 
