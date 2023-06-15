@@ -6,18 +6,14 @@
 
 On the first Fabric node use the `adminInitialCredentials` file for setting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
 
-Below is an example:
+As an example, to set the user and passoword to be k2consoleadmin and KW4RVG98RR9xcrTv, run the following commands:
 
 ~~~bash
 cp config/adminInitialCredentials.template config/adminInitialCredentials
 sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
 ~~~
 
-You can now start Fabric, and use the following user and password example:
-
-`user: k2consoleadmin` 
-
-`password: KW4RVG98RR9xcrTv` 
+You can now start Fabric, and use the above stated user and password.
 
 ## On Running Cluster 
 
