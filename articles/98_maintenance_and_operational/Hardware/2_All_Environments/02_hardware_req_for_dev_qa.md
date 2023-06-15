@@ -7,8 +7,7 @@
 ## Fabric Execution Servers - Node Specifications 
 
 The Fabric server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined . 
-
+A dedicated servers for Fabric instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined . 
 
 ## Minimum System Configuration for Each Fabric Node Server
 
@@ -121,7 +120,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 ## Kafka Server Node Specifications 
 
 The Kafka server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+A dedicated servers for Kafka instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for Each Fabric Node Server
 
@@ -226,11 +225,11 @@ Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a K
 ## Cassandra Server Node Specifications 
 
 The Cassandra server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+A dedicated servers for Cassandra instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for Each Cassandra Node Server
 
-#### Software Requirements:
+### Software Requirements:
 
 #### Operating system: 
 
@@ -421,7 +420,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p> e2-standard-4</p>
+<p> D16d v2</p>
 </td>
 </tr>
 <tr style="height: 46px;">
