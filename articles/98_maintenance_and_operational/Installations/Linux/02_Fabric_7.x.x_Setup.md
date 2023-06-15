@@ -3,7 +3,7 @@
 ##  Fabric Pre-Installation Steps
 For a proper operation, Fabric relies on a few system settings and 3rd party solutions.
 
-Cassandra or equivilant, is needed for all installation types, and Kafaka is required only for multi-nodes Fabric environment.
+Cassandra or equivalent, is needed for all installation types, and Kafka is required only for multi-nodes Fabric environment.
 Follow the below steps, depending on the environment that you plan to use:
 
 1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric Environment. Note that this is mandatory and should be performed on each server in the environment.
