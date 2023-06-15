@@ -240,15 +240,15 @@ Volume of 150G /opt/apps/kafka/ - will be used also as the home directory for a 
 The Cassandra server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for each Cassandra node Server
+### Minimum System Configuration for Each Cassandra Node Server
 
 ### Software Requirements:
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
-* Python version 2.7 (This is a cassandra limit, Until Cassandra version 4.0.x - Python version 2.7 is th elatest supported, ; newer versions of Cassandra are not yet certified by K2view for Fabric)
+* Python version 2.7 (this is a cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
 
 
 ### Hardware Requirements:
@@ -277,7 +277,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 500 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>Disk space should be increased according to the project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
