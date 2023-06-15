@@ -330,7 +330,7 @@ In addition, similar to any Query Builder that opens for a fabric-type interface
 Similar to the Table Data Viewer:
 
 * The data results area, has same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
-* Bottom information bar, shows the execution status and if succeeded - of how many entries/rows are shown for the selected table (up to 1000 rows).
+* Bottom information bar, presents the execution status and whether succeeded, and the number of entries/rows that are shown for the selected table (up to 1000 rows).
 
 > NOTES:
 >
