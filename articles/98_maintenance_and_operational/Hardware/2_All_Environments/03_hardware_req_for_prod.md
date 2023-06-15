@@ -58,7 +58,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 150 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>Disk space should be increased according to the project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
