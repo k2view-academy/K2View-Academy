@@ -374,7 +374,7 @@ Further details are found below:
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
@@ -403,7 +403,7 @@ Further details are found below:
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -412,7 +412,7 @@ Further details are found below:
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Depends on the project scope and retention requirements. Disk space can be increased.</p>
+<p>Disk space can be increased according to the project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
