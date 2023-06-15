@@ -14,7 +14,7 @@ Follow the below instructions to prepare Linux environment for Fabric/TDM instal
 
 ## Hardware Requisites 
 
-for detailed hardware requirment, please see below:
+for detailed hardware requirement, please see below:
 <ul>      
 <li>
 <a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">Fabric and TDM 7.x Hardware Requirements for POV Environments</a></li>
@@ -75,7 +75,7 @@ sysctl -p
 ~~~
 
 
-If the system is planned to work over SSL/TLS and need to be hardend,OPENSSL is also required to be installed
+If the system is planned to work over SSL/TLS and need to be hardend, OPENSSL is also required to be installed
 
 On RHEL/CentOs 8 server **only** - add the following packages:
 
