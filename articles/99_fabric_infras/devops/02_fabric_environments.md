@@ -38,7 +38,7 @@ This environment should be isolated from the Development and QA environments and
 
 Note that:
 - All connection methods and protocols must be identical to those defined in the Production environment. 
-- All access to servers described above should be limited to the QA team only.
+- All access to servers described above should be limited to the QA team members only.
 - The connection method and protocol must be the same as those in Production. 
 - This environment should be sufficiently strong to be able to run load testing. 
 
