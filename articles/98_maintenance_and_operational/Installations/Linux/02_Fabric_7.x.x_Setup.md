@@ -33,7 +33,7 @@ run the same command on the rest of the Fabric nodes.
 
 **Mandatory required details:**
 + Cassandra seed node IPs
-+ Cassandra username & password (if different from the default in the Cassandra setup)
++ Cassandra user & password (if different from the default in the Cassandra setup)
 + Kafka node IPs (if kafka_ips is not provided, the [PubSub](/articles/24_non_DB_interfaces/02a_pubsub_config.md) will run 'in memory')
 
 
