@@ -14,7 +14,7 @@ Access to this server and to SVN / GIT should be limited to the relevant develop
 
 ## QA Environment
 
-This environment should be isolated from the Development environment and contain the following components:
+This environment should be isolated from the Development environment and should contain the following components:
 
 - Fabric servers cluster, **minimum 3 for Testing**
 - Windows terminal server, for installing and running the Fabric Studio.
