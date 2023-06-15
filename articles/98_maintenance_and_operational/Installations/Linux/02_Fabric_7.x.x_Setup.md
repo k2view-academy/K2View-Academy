@@ -2,6 +2,7 @@
 
 ##  Fabric Pre-Installation Steps
 For a proper operation, Fabric relies on a few system settings and 3rd party solutions.
+K2view provide optional packages for Cassandra and Kafka to assist with installation, however the vendor installtion packages can be used.
 
 Cassandra or equivalent, is needed for all installation types, and Kafka is required only for multi-nodes Fabric environment.
 Follow the below steps, depending on the environment that you plan to use:
