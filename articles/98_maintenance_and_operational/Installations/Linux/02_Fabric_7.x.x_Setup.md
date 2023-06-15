@@ -87,7 +87,7 @@ After a short while, the following message will be displayed:
 
 
 
-### For more information about advanced setup, read below:
+### For more information about an advanced setup, read below:
 
 <ul>
    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Replace the Fabric Default Admin Password</a></li>
