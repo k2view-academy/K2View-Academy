@@ -130,12 +130,12 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 The Kafka server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for each Fabric node Server
+### Minimum System Configuration for Each Fabric Node Server
 
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
