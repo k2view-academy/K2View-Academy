@@ -10,13 +10,13 @@ The Fabric server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined . 
 
 
-## Minimum System Configuration for each Fabric Node Server
+## Minimum System Configuration for Each Fabric Node Server
 
 ### Software Requirements:
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
 
@@ -48,7 +48,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -123,12 +123,12 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 The Kafka server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for each Fabric node Server
+### Minimum System Configuration for Each Fabric Node Server
 
 ### Software Requirements:
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 #### Hardware Requirements:
@@ -158,7 +158,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -228,15 +228,15 @@ Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a K
 The Cassandra server installation is a Linux-based solution.
 Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for each Cassandra node Server
+### Minimum System Configuration for Each Cassandra Node Server
 
 #### Software Requirements:
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
-* Python version 2.7 (This is a cassandra limit, Until Cassandra version 4.0.x - Python version 2.7 is th elatest supported, ; newer versions of Cassandra are not yet certified by K2view for Fabric)
+* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
 
 
 ### Hardware Requirements:
@@ -247,7 +247,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For most scenarios: Intel Xeon Octa-core CPU or equivalent .</p>
+<p>For most scenarios: Intel Xeon Octa-core CPU or equivalent.</p>
 </td>
 </tr>
 <tr>
@@ -265,7 +265,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -339,12 +339,12 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
     * On-premise as a virtual or physical machine. 
     * As a cloud service (SaaS)
 
-### Suggested System Configuration for PostgreSQL server
+### Suggested System Configuration for PostgreSQL Server
 
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle, Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
@@ -373,7 +373,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -382,7 +382,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Depends on the project scope and retention requirements. Disk space can be increased.</p>
+<p>Disk space can be increased according to the project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
@@ -436,9 +436,9 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </table>
 
 ### Example of Cloud Supported SaaS 
-* AWS RDS PostgreSQL - See more [Here](https://aws.amazon.com/free/database/?trk=492c57d3-8cdc-4660-b6ac-d2008bd51b40&sc_channel=ps&ef_id=Cj0KCQjwmtGjBhDhARIsAEqfDEcolBtzTdv_q0Ob8_Xda3524RZfaxKgGOzqoi1IVjieHyRiSYgUEr0aAk12EALw_wcB:G:s&s_kwcid=AL!4422!3!645125273471!e!!g!!aws%20postgre%20sql!19574556899!145779849512)
-* GCP Cloud SQL PostgreSQL - See more [Here](https://cloud.google.com/sql/docs/postgres/introduction)
-* Azure Database for PostgreSQL - See more [Here](https://azure.microsoft.com/en-us/products/postgresql/?ef_id=_k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&OCID=AIDcmm81syc84i_SEM__k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&gclid=Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB)
+* AWS RDS PostgreSQL - read more [here](https://aws.amazon.com/free/database/?trk=492c57d3-8cdc-4660-b6ac-d2008bd51b40&sc_channel=ps&ef_id=Cj0KCQjwmtGjBhDhARIsAEqfDEcolBtzTdv_q0Ob8_Xda3524RZfaxKgGOzqoi1IVjieHyRiSYgUEr0aAk12EALw_wcB:G:s&s_kwcid=AL!4422!3!645125273471!e!!g!!aws%20postgre%20sql!19574556899!145779849512)
+* GCP Cloud SQL PostgreSQL - read more [here](https://cloud.google.com/sql/docs/postgres/introduction)
+* Azure Database for PostgreSQL - read more [here](https://azure.microsoft.com/en-us/products/postgresql/?ef_id=_k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&OCID=AIDcmm81syc84i_SEM__k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&gclid=Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB)
 
 
 ## Fabric Studio Requirements:
@@ -641,5 +641,5 @@ Depending on your setup, not all ports are required:
 
 ### Connectivity
 
-Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all source & target systems.
+Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources & destinations.
 Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
