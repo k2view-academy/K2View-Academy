@@ -286,7 +286,7 @@ The panel is divided into 3 main areas:
 
 * The main area - where the table's data are shown. This area and its capabilities - like filtering, sorting or grouping - are the same as those enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window).
 
-* Bottom information bar - presents the execution status, and if succeeded, of the number of entries/rows that are shown for the selected table (up to 1000 rows).
+* Bottom information bar - presents the execution status, and whether succeeded, and the number of entries/rows that are shown for the selected table (up to 1000 rows).
 
 ![](images/web/01_table_data_viewer3.png)
 
