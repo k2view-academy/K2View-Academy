@@ -117,8 +117,8 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### For all installations, the FS configuration must be as follows:
 
-* Volume of 50Gb /opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
-* Volume of 100Gb /opt/apps/fabric/storage
+* Volume of 50GB/opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
+* Volume of 100GB /opt/apps/fabric/storage
 
 ### Note:
 * The FS must provide IOPS of at least 30K read & 10K write on each node. 
@@ -228,7 +228,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 </table>
 
 ### For all installations, the FS configuration must be as follows:
-Volume of 150Gb /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
+Volume of 150GB /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
 
 ### Note:
 * The FS must provide IOPS of at least 30K read & 10K write on each node.
@@ -352,8 +352,8 @@ Further details are found below:
 
 
 ### For all installations, the FS configuration should be as follows:
-* Volume of 50Gb /opt/apps/cassandra/
-* Volume of 2Tb* /opt/apps/cassandra/storage
+* Volume of 50GB /opt/apps/cassandra/
+* Volume of 450GB /opt/apps/cassandra/storage
 
 
 ### Note:
