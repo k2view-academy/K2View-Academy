@@ -7,7 +7,7 @@
 ## Fabric Execution Servers - Node Specifications 
 
 The Fabric server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+Use dedicated servers for Fabric instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 
 ## Minimum System Configuration for Each Fabric Node Server
@@ -23,7 +23,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### Hardware Requirements:
 
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -77,7 +77,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -117,8 +117,8 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### For all installations, the FS configuration must be as follows:
 
-* Volume of 50G /opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
-* Volume of 100G* /opt/apps/fabric/storage
+* Volume of 50Gb /opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
+* Volume of 100Gb /opt/apps/fabric/storage
 
 ### Note:
 * The FS must provide IOPS of at least 30K read & 10K write on each node. 
@@ -128,7 +128,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 ## Kafka Server Node Specifications 
 
 The Kafka server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+Use dedicated servers for Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for Each Fabric Node Server
 
@@ -139,7 +139,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -190,7 +190,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -228,7 +228,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </table>
 
 ### For all installations, the FS configuration must be as follows:
-Volume of 150G /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
+Volume of 150Gb /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
 
 ### Note:
 * The FS must provide IOPS of at least 30K read & 10K write on each node.
@@ -238,7 +238,7 @@ Volume of 150G /opt/apps/kafka/ - will be used also as the home directory for a 
 ## Cassandra Server Node Specifications 
 
 The Cassandra server installation is a Linux-based solution.
-Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+Use dedicated servers for Cassandra instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for Each Cassandra Node Server
 
@@ -252,7 +252,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 
 ### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -302,7 +302,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -352,10 +352,8 @@ Further details are found below:
 
 
 ### For all installations, the FS configuration should be as follows:
-* Volume of 50G /opt/apps/cassandra/
-* Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
-* Volume of 2T* /opt/apps/cassandra/storage/data
-* Volume of [10% of the data] /opt/apps/cassandra/storage/hints
+* Volume of 50Gb /opt/apps/cassandra/
+* Volume of 2Tb* /opt/apps/cassandra/storage
 
 
 ### Note:
@@ -378,7 +376,7 @@ Further details are found below:
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
-<table style="width: 900px; border-style: solid; float: left;" border="1">
+<table>
 <tbody>
 <tr>
 <td style="width: 224px;">
@@ -428,7 +426,7 @@ Further details are found below:
 
 ### Example of Cloud Supported Instance Types:
 
-<table style="width: 900px; border-style: solid;" border="1">
+<table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
@@ -478,7 +476,7 @@ The application can be installed locally on either a workstation or a server wit
 
 ### Minimum System Configuration
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 255.078px;">
@@ -528,7 +526,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 ### Recommended Software
 
-<table style="width: 900px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 179.391px;">
@@ -606,7 +604,7 @@ Open the following ports on the Linux server and make sure they are accessible f
 
 Depending on your setup, not all ports are required:
 
-<table style="width: 427px; border-style: solid;">
+<table>
 <tbody>
 <tr>
 <td style="width: 161.109px;">
