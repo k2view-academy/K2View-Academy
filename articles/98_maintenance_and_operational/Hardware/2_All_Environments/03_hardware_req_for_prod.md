@@ -49,7 +49,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
