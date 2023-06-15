@@ -165,7 +165,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified</strong>
+<p><strong>NAS is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -174,7 +174,7 @@ Use dedicated servers for Fabric/Cassandra/Kafka instances. Following a sizing p
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 150 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>Disk space should be increased according to the project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
