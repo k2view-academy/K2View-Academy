@@ -260,7 +260,7 @@ The latest Data Viewer file can be used in the following components:
 
 The Data Viewer is accessible via the LU Schema:
 
-1. Go to **Project Tree** > right-click **Logical Units / Data Products** 
+1. Go to **Project Tree** > click on **Logical Units / Data Products** 
 2. Expand the relevant LU and open its **Schema**.
 
 
