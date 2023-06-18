@@ -316,11 +316,11 @@ To open the Data Viewer, click on <img src="../03_logical_units/images/web/schem
 
 This is similar to other Query Builder popup windows, whereas here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
 
-The LU's tables list is already expanded within the DB explorer on the left side. 
+The list of LU tables is already expanded within the DB explorer on the left side. 
 
-> The table's list also includes several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables) that contain statistical information about the specific LUI. These tables are not displayed in the LU Schema. For example: 
+> The LU tables' list also includes several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables) that contain statistical information about the specific LUI. These built-in tables are not displayed in the LU Schema. For example: 
 >
-> * **k2_main_info** - holds basic information about the LU, like LU Name and Instance ID.
+> * **k2_main_info** - holds basic information about the LU, like an LU Name and an Instance ID.
 > * **k2_objects_info** - holds information for each of the objects (=tables) in the selected instance. For example, what populations are used for each table, how much time it has taken to populate each table, how many records have been retrieved for each table, and how much time it has taken to load the data into Fabric.
 
 In addition, similar to any Query Builder that opens for a fabric-type interface, a Sync Mode select list and an Instance ID field appear at the right side of the window's top bar.
@@ -329,7 +329,7 @@ In addition, similar to any Query Builder that opens for a fabric-type interface
 
 Similar to the Table Data Viewer:
 
-* The data results area, has same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
+* The data results area, has the same capabilities as enabled in the [Query Builder results window](/articles/11_query_builder/03_building_and_running_an_sql_query.md#results-window), like filtering, sorting and grouping. 
 * Bottom information bar, presents the execution status and whether succeeded, and the number of entries/rows that are shown for the selected table (up to 1000 rows).
 
 > NOTES:
