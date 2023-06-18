@@ -343,7 +343,7 @@ Similar to the Table Data Viewer:
 
 To get information about an Instance ID, you shall specify the retrieval *mode*.
 
-Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the execution of the Data Viewer. The options are **On**, **Off**, and **Force**. The default mode is **On**.
+Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the execution of the Data Viewer. The options are **On**, **Off** and **Force**. The default mode is **On**.
 
 In addition, Data Viewer provides another mode, named "New", that when selected the LU instance is first deleted and then instance is brought from scratch. (Such option appears also in Broadway Debug Population *Mode*).
 
