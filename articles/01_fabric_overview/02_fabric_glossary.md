@@ -41,7 +41,7 @@
 <p><strong><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></strong></p>
 </td>
 <td width="516">
-<p>A Fabric Studio capability which allows you to view the Logical Unit Instance stored in memory as a database file.</p>
+<p>A Fabric Studio capability, which allows you to view the Logical Unit Instance stored in memory as a database file.</p>
 <p>The Data Viewer is also used to debug LUs to improve testing and defect resolution phases.</p>
 </td>
 </tr>
