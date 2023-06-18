@@ -256,7 +256,7 @@
 <a href="/articles/17_fabric_credentials/05_security_profiles.md"><strong>Security Profile</strong></a>
 </td>
 <td width="516">
-<p>Security definition for restricting Fabric from exposing sensitive data to unauthorized users, based on their predefined roles. This is part of Fabric's [Declarative Field Level Authorization](/articles/17_fabric_credentials/04_fields_level_authorization.md) mechanism</p>
+<p>Security definition for restricting Fabric from exposing sensitive data to unauthorized users, based on their predefined roles. This is part of Fabric's [Declarative Field Level Authorization](/articles/17_fabric_credentials/04_fields_level_authorization.md) mechanism.</p>
 </td>
 </tr>    
 <tr>
