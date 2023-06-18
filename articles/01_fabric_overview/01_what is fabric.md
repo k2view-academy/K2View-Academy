@@ -22,7 +22,7 @@ By adopting this revolutionary approach to operational data management, Fabric a
 * Unique near-data-logic architecture that **enables millisecond performance and throughput for APIs**. 
 * Built-in integrated drag-and-drop data management capabilities to enable a **time-to-market that is measured in days to weeks and not weeks to months**.  
 
-To summarize, Fabric architecture yields significant savings in computing, power and storage which makes it a perfect data platform for mission-critical, operational and real-time use cases. 
+To summarize, Fabric architecture yields significant savings in computing, power and storage, a fact that makes it a perfect data platform for mission-critical, operational and real-time use cases. 
 
 ### Fabric Use Cases
 Fabric is a compelling solution for:
