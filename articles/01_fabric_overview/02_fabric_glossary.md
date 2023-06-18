@@ -180,6 +180,15 @@
 </tr>
 <tr>
 <td width="125">
+<p><strong><a href="/articles/06_LU_tables/06_LU_views.md">LU View</a></strong></p>
+</td>
+<td width="516">
+<p>An object which holds a pre-defined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
+</p>
+</td>
+</tr>    
+<tr>
+<td width="125">
 <p><strong><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Table</a></strong></p>
 </td>
 <td width="516">
@@ -363,6 +372,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 
