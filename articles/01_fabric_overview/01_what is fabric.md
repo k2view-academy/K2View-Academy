@@ -36,10 +36,10 @@ Fabric is a compelling solution for:
 
 ### Getting Started
 **Learn about Main Fabric Platform Modules:**
-* [Fabric Architecture.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)  
-* [Logical Units.](/articles/03_logical_units/01_LU_overview.md)
-* [Interfaces.](/articles/05_DB_interfaces/01_interfaces_overview.md)
-* [Web Services.](/articles/15_web_services_and_graphit/01_web_services_overview.md)
-* [CommonDB and Reference Tables.](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
+* [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)  
+* [Logical Units](/articles/03_logical_units/01_LU_overview.md)
+* [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
+* [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)
+* [CommonDB and Reference Tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/01_fabric_overview/02_fabric_glossary.md)
