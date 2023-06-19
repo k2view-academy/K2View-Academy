@@ -316,7 +316,7 @@ To open the Data Viewer, click on <img src="../03_logical_units/images/web/schem
 
 This is similar to other Query Builder popup windows, whereas here the interface - fabric - and the schema - the current LU - are preselected and are read-only. 
 
-The list of LU tables is already expanded within the DB explorer on the left side. 
+The list of LU tables is already expanded within the DB Explorer on the left side. 
 
 > The LU tables' list also includes several [built-in LU tables](/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables/articles/06_LU_tables/01_LU_tables_overview.md#built-in-platform-lu-tables) that contain statistical information about the specific LUI. These built-in tables are not displayed in the LU Schema. For example: 
 >
