@@ -306,7 +306,7 @@ The panel's height can be adjusted according to user's preferences and needs, by
 
 
 
-To close the Table Data Viewer panel, click on the X at its upper-right corner.
+To close the Table Data Viewer panel, click on the X in its upper-right corner.
 
 
 
