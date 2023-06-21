@@ -34,7 +34,7 @@ The distribution parameters are set based on the selected distribution type:
 
   ![weighted dist example](/articles/19_Broadway/images/weighted_dist_example.png)
 
-- **costant** distribution returns the populated value. For example: set the number of generated addresses to 1 address per customer.
+- **Costant** distribution returns the populated constant value. For example: set the number of generated addresses to 1 address per customer.
 
 ### RandomFromCollection
 
