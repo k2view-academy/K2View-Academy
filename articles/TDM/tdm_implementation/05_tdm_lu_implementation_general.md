@@ -38,6 +38,8 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
    Generate a Broadway flow for the LU table population based on [populationRootTable.pop.flow](#populating-the-main-source-lu-table---logic) template (imported from the TDM Library): 
 
+  <studio>
+    
    - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window opens.
 
    - Populate the popup window's settings as follows:
@@ -52,7 +54,16 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
      ![template](images/create_main_source_lu_flow_by_template.png)
 
-   
+  </studio>
+
+  <web>
+  
+   - Right-click the table name > **New Population** . A popup window opens. Set the new population name and click Enter. Then select the **populationRootTable.pop.flow** template and populate its parameters:
+      - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name should be identical to the data source table name.
+      - **KEY** - populate the key to delete the LU table before populating it.
+      - **SOURCE_INTERFACE** - the interface name for the source DB query.
+  
+  </web>  
 
 4. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, as the Broadway flow deletes the LU table before populating it.
 
