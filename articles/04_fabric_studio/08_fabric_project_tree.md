@@ -172,7 +172,7 @@ Note that when using the above prefix conventions, it is also recommended to use
 
 <web>
 
-[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_fabric_studio_exporting_and_importing%20a_fabric_project.md.md)
+[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 
 </web>
 

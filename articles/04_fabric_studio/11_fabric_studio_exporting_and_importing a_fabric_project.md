@@ -131,5 +131,9 @@ The files and folders are then downloaded into your PC/Mac.
 
 Note: when selecting folders or multiple files, the download outcome is a compressed "tar" file.
 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
+
 </web>
 
