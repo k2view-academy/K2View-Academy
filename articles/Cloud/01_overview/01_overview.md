@@ -1,8 +1,6 @@
 # What is K2view Cloud?
 
-K2view Cloud is a platform that lets you with a click to create, control and monitor any Fabric runtime environments like Training, Dev, QA, CICD, Staging, and Production, having it anywhere - as fully managed cloud service, self-hosted or hybrid. 
-
-
+K2view Cloud is a comprehensive orchestration platform that empowers users to effortlessly, with a click, generate, manage, and observe various Fabric runtime environments, including Training, Development with Web studio IDE, QA, CICD, Staging, and Production. The platform offers the flexibility to choose between a fully managed cloud service, a self-hosted environment, or a hybrid setup, enabling seamless accessibility from any location.
 
 ## Key principles and Benefits
 
