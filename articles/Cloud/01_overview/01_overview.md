@@ -6,7 +6,7 @@ K2view Cloud is a platform that lets you with a click to create, control and mon
 
 ## Key principles and Benefits
 
-K2view's Cloud Platform brings big benefits for various teams and with several perspectives:
+The cloud platform offered by K2view presents many advantages for a variety of teams, for different roles and from several points of view.
 
 * **Improve Productivity**, focus on the business logic implementation.
   * Spin up with a click the right Fabric runtime environment you need.
