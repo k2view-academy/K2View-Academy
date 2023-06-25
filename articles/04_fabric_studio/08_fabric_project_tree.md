@@ -77,7 +77,7 @@ Each project has the following main components (under Project > Implementation):
 
 * **Logical Units / Data Products** - a collection of all [Logical Units / Data Products](/articles/03_logical_units/01_LU_overview.md) defined in the project. Of this collection, two *system* logical units - that exist by default in any project - are **References** and **Web Services**:
   * **References** - reference information that can be used throughout the logical units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
-  * **[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)** - a collection of functions that can be exposed through Fabric’s Web Service layer. Web Services may include [Java WS](), [Graphit WS]() and supportive [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows.
+  * **[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)** - a collection of functions that can be exposed through Fabric’s Web Service layer. Web Services may include Java WS, Graphit WS and supportive [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows.
 
 * **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - are used by all Logical Units and project references and may include the following sub-branches:
   * Broadway
