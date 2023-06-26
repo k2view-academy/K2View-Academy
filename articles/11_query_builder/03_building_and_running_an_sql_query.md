@@ -18,6 +18,7 @@ Note: The Insert, Update and Delete statements (performed by the DB query) may c
 ![image](images/01_querytab.PNG)
 
 </studio> 
+
 <web>
 
 ## Viewing the List of DB Objects
@@ -26,6 +27,7 @@ Expand or collapse the DB objects tree. When opened via the DB Interface Explore
 ![image](images/02_querytab_WEB.PNG)  
 
 </web>
+
 <studio>    
 
 ## Main Window - Editing an SQL Query  
