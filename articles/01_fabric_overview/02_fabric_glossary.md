@@ -124,7 +124,7 @@
 <p><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">IDP</a></strong></p>
 </td>
 <td width="516">
-<p>Identity Provider: Authenticates principals, and issues tokens (or assertions). The IDP is also an actor in modern authentication and authorization platforms, along with a  principal and Relying Party (RP) or Service Provider (SP)</p>
+<p>Identity Provider: Authenticates principals and issues tokens (or assertions). The IDP is also an actor in modern authentication and authorization platforms, along with a principal and Relying Party (RP) or Service Provider (SP)</p>
 </td>
 </tr>
 <tr>
@@ -167,7 +167,7 @@
 <td width="125"><p><strong><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit / Data Product</a></strong></p>
 </td>
 <td width="516">
-<p>A Logical Unit (LU, or Logical Unit Type - LUT), also known as a Data Product, is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
+<p>A Logical Unit (LU, or Logical Unit Type - LUT), also known as a Data Product, is a blueprint that holds a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
 </td>
 </tr>
 <tr>
@@ -183,7 +183,7 @@
 <p><strong><a href="/articles/06_LU_tables/06_LU_views.md">LU View</a></strong></p>
 </td>
 <td width="516">
-<p>An object which holds a pre-defined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
+<p>An object that holds a pre-defined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
 </p>
 </td>
 </tr>    
