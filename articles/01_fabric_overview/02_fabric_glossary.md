@@ -183,7 +183,7 @@
 <p><strong><a href="/articles/06_LU_tables/06_LU_views.md">LU View</a></strong></p>
 </td>
 <td width="516">
-<p>An object that holds a pre-defined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
+<p>An object that holds a predefined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
 </p>
 </td>
 </tr>    
@@ -192,7 +192,7 @@
 <p><strong><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Table</a></strong></p>
 </td>
 <td width="516">
-<p>The basic building block of a Logical Unit which defines a Data Product's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit that defines a Data Product's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -249,7 +249,7 @@
 <p><strong><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a></strong></p>
 </td>
 <td width="516">
-<p>The main table in the Logical Unit. Each LU schema must have one Root Table. The Root Table holds the Instance ID ( Column) and is the root of the LU hierarchy.</p>
+<p>The main table in the Logical Unit. Each LU schema must have one Root Table. The Root Table holds the Instance ID (Column) and is the root of the LU hierarchy.</p>
 </td>
 </tr>
 <tr>
