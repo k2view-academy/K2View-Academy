@@ -18,9 +18,9 @@ In addition, it is possible to search by an object's score. For example, when th
 
 ### Search Results
 
-The search results are presented in a list. The users can either view the entity in the Catalog tree by clicking the link or export the search results into a CSV file.
+The search results are presented in a list, limited to 1000 rows. The search results can be expanded to full screen. You can either view the entity in the Catalog tree by clicking the link or export the search results into a CSV file.
 
-The search results can be expanded to full screen.
+
 
 
 
