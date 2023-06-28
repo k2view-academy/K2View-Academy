@@ -235,8 +235,8 @@ For additional security, Fabric can accept JWT (JSON Web Token) signed externall
 
 ### 5.1.3 Identification, Authentication and Authorization Management 
 
-Fabric provides user identification and access management (IAM) for web, console and web-services access, either using Fabric local repository or by using your organization's Identify Provider.
-To read more about Fabric's Identity Management architecture, flows and systems' configuration (e.g. using Fabric internals, SAML or LDAP protocols), click [here](/articles/26_fabric_security/07_user_IAM_overview.md).
+Fabric provides user identification and access management (IAM) for web, console and web-services access by using either Fabric local repository or your organization's Identify Provider.
+For more information about Fabric's Identity Management architecture, flows and systems' configuration (e.g. using Fabric internals, SAML or LDAP protocols), click [here](/articles/26_fabric_security/07_user_IAM_overview.md).
 
 
 ### 5.2 MicroDB (LUI) Encryption
