@@ -174,11 +174,11 @@ Different projects have different data processing needs, for which Fabric offers
 
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, which is especially useful for enforcing GDPR or CCPA compliancy.
 
-- Data reconciliation, comparing and matching: Fabric analyzes the collected data to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs.
+- Data reconciliation, comparing and matching: Fabric analyzes the collected data to decide which data to keep and which to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs.
 
 **3.3.2.2 Data Processing Modules:**
 
-Data can be processed in six different modules:
+Data can be processed in 6 different modules:
 
 - Synchronization process: 
 As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) uses LU schemas defined in the Fabric Studio to create or update a MicroDB (LUI). When synchronizing multiple LUIs, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
