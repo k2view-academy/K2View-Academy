@@ -198,7 +198,7 @@ Fabric&#39;s data and business flow management system ([Broadway](/articles/19_B
 Broadway enables you to graphically render your business and data flows and modify them with a set of visual and draggable elements, each acting as a function, source or target.
 
 - Graphit&#39;s APIs Generator:
-[Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of [Fabric Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) customized responses whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
+[Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of [Fabric Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) customized responses, whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
 
 ## 4. Search
 
