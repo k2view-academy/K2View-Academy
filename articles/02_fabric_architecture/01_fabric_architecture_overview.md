@@ -102,7 +102,7 @@ Data flows in and out of Fabric via multiple types of interfaces and data format
 
 ### 3.2 Fabric Data Access Layer
 
-The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used so that Fabric data can be published or accessed by 3rd party systems.
+The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used in a way that Fabric data can be published or accessed by 3rd party systems.
 
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
