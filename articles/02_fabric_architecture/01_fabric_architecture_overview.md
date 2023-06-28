@@ -160,7 +160,7 @@ APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 By default, Fabric supports any [connection to any database](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
 
 #### 3.3.2 Data-processing & Business Logic
-This section discusses the types of transformations used by the business rules and flows created by users depending upon project requirements.
+This section discusses the types of transformations used by the business rules and flows created by users, depending upon project requirements.
 
 **3.3.2.1 Data Pre-processing:**
 
