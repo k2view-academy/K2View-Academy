@@ -204,7 +204,7 @@ Broadway enables you to graphically render your business and data flows and modi
 
 ### 4.1 Search Engine
 
-Since data is spread across multiple MicroDB, Fabric provides an indexing process that is run during data synchronization phases. This enables users to execute queries on indexed fields across any number of LUIs.
+Since data is spread across multiple MicroDBs, Fabric provides an indexing process that is run during data synchronization phases. This enables users to execute queries on indexed fields across any number of LUIs.
 
 ### 4.2 Elastic Search
 
