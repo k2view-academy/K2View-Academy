@@ -259,7 +259,7 @@ Fabric supports integration with external secret manager services to store the i
 
 ### 5.4 Masking Algorithm
 
-To protect your company&#39;s data, Fabric's masking service creates a structurally similar but  unauthentic version of your data that can be used for development, integration or testing purposes.
+To protect your company&#39;s data, Fabric's masking service creates a structurally similar but  unauthentic version of your data, which can be used for development, integration or testing purposes.
 
 
 ## 6. Resiliency
