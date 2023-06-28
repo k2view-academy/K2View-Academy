@@ -170,7 +170,7 @@ Different projects have different data processing needs, for which Fabric offers
 
 - Data cleansing: Fabric can be set up to retrieve (from external sources) only the data necessary to populate LUI while disregarding any data that is not relevant to a project's implementation.
 
-- Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or JavaScript.
+- Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by either combining existing functions or adding functions using Java or JavaScript.
 
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful for enforcing GDPR or CCPA compliancy.
 
