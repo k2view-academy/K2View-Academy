@@ -252,9 +252,9 @@ Fabric also supports integration with external key management systems.
 
 ### 5.3 Environment Interfaces Encryption
 
-Users can define a number of environments for source connectivity according to their specific needs and switch between the environments within the same Fabric session. By default, Fabric encrypts the interfaces details of each environment using the same master key used to encrypt LUI. If necessary, users can re-key all interfaces that belong to a given environment. If the connection details of any interface in an environment are modified, the updated connection details are re-encrypted. Fabric also encrypts the interfaces details of each environment using the same master key used to encrypt LUI. Once the data is store in Fabric it is used for connectivity and is not available for querying by external APIs.
+Users can define a number of environments for source connectivity according to their specific needs and switch between the environments within the same Fabric session. By default, Fabric encrypts the interfaces' details of each environment using the same master key used to encrypt LUI. If necessary, users can re-key all interfaces that belong to a given environment. If the connection details of any interface in an environment are modified, the updated connection details are re-encrypted. Fabric also encrypts the interfaces' details of each environment using the same master key used to encrypt LUI. Once the data is stored in Fabric, it is used for connectivity and is not available for querying by external APIs.
 
-Fabric supports integration with external secret manager services to store the interfaces details.
+Fabric supports integration with external secret manager services to store the interfaces' details.
 
 
 ### 5.4 Masking Algorithm
