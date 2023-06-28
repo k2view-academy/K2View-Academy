@@ -195,7 +195,7 @@ Where all async recurring or scheduled actions happen, enabling users to run Fab
 
 - Broadway:
 Fabric&#39;s data and business flow management system ([Broadway](/articles/19_Broadway/01_broadway_overview.md)) enables implementors to define, orchestrate and run complete flows of data manipulation and tasks. It provides a work environment that unifies data and execution flows under the same framework. 
-Broadway enables you to graphically render your business and data flows and modify them with a set of visual and draggable elements each acting as a function, source or target.
+Broadway enables you to graphically render your business and data flows and modify them with a set of visual and draggable elements, each acting as a function, source or target.
 
 - Graphit&#39;s APIs Generator:
 [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of [Fabric Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) customized responses whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
