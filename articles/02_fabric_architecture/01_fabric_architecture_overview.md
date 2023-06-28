@@ -164,7 +164,7 @@ This section discusses the types of transformations used by the business rules a
 
 **3.3.2.1 Data Pre-processing:**
 
-Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
+Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries that can be invoked either individually or collectively:
 
 - Data anonymization: Fabric provides a [masking process](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security) that can be used to anonymize data for R&amp;D or QA purposes.
 
