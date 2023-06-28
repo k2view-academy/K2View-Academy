@@ -172,7 +172,7 @@ Different projects have different data processing needs, for which Fabric offers
 
 - Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by either combining existing functions or adding functions using Java or JavaScript.
 
-- PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful for enforcing GDPR or CCPA compliancy.
+- PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, which is especially useful for enforcing GDPR or CCPA compliancy.
 
 - Data reconciliation, comparing and matching: Fabric analyzes the collected data to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs.
 
