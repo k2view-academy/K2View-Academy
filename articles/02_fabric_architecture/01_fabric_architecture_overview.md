@@ -184,7 +184,7 @@ Data can be processed in 6 different modules:
 As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) uses LU schemas defined in the Fabric Studio to create or update a MicroDB (LUI). When synchronizing multiple LUIs, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
 
 - IIDFinder:
-Since Fabric creates LUIs by extracting data from multiple sources and then by populating and transforming the data into [LUI tables](/articles/06_LU_tables/01_LU_tables_overview.md), changes occurring at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
+Since Fabric creates LUIs by extracting data from multiple sources and then by populating and transforming the data into [LUI tables](/articles/06_LU_tables/01_LU_tables_overview.md), changes that occur at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
 In environments where source data constantly changes, Fabric enables a lazy mode, whereby the iiDFinder retrieves the delta updates upon explicit demand from the user.
 
 - Data Enrichment:
