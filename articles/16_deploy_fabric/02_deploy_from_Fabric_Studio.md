@@ -51,9 +51,9 @@ To deploy the Fabric implementation to the Fabric debug server, do either:
 
 ## Deploying Fabric project  
 
-You can activate deployment and see deployment status in several places at the Fabric Studio.
+You can activate a deployment and see the Deployment Status in several places within the Fabric Studio.
 
-### Deployment status
+### Deployment Status
 
 A deployed LU has a green circle next to its name at the project tree. Otherwise, for example while making changes at its content, it becomes to be gray circle.
 
