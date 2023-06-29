@@ -2,7 +2,7 @@
 
 The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
 
-* Define an interface for a given data source and initiate the Discovery job (Crawler) in the Web Studio.
+* Define an interface for a given data source and initiate the Discovery job (Crawler).
 * The Crawler scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Discovery Schema.
 * Next, a Plugin Framework is triggered automatically upon the Crawler completion. The Plugin Framework is a platform for executing predefined rules (plugins) and for enhancing the Discovery Schema accordingly. Examples of business rules are: 
   * Creating a link (relation) between 2 objects.
