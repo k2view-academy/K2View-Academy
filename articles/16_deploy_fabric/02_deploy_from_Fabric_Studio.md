@@ -65,19 +65,19 @@ The below illustration shows the project tree, where all LUs - except "Web Servi
 
 ### Activate Deploy
 
-Deployment can be done either for all updated LUs, those which are not already deployed, or for a specific LU.
+Deployment can be done for either all updated LUs, those that are not yet deployed, or a specific LU.
 
 To deploy all updated LUs, make either of the following:
 
-* At top menu bar, click Fabric and then "Deploy All Updated Logical Units".
-* At the bottom status bar, hover with the mouse over "Deployment Status", to see a tooltip implying which LUs are not deployed. Clicking on "Deployment Status" will trigger the deployments on those LUs.
+* In top menu bar, click Fabric and then "Deploy All Updated Logical Units".
+* In the bottom status bar, hover with the mouse over "Deployment Status", to display a tooltip that implies which LUs are not deployed. Clicking on "Deployment Status" will trigger the deployment on these LUs.
 * Open the command pallet (you can use the CTRL+SHIST+P shortcut), look for "Deploy All Updated Logical Units" and click on it.
 
 > Note: The "Deploy All" action activates a Soft Deploy, unless this is the first time an LU is being deployed. This definition can be changed at the Preferences page, which is accessible via the bottom-left gear icon.
 
 
 
-To deploy a specific LU, right-click on its name in the project tree. At the context menu you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+To deploy a specific LU, right-click on its name in the project tree. In the context menu you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 </web>
 
