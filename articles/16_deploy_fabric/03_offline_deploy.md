@@ -9,7 +9,7 @@ An **Offline Deploy** is implemented by running the **Deploy** command on the Fa
 ### When Should I Use an Offline Deploy?
 When a Fabric project is developed by a group of programmers, it is important that the environment is always up-to-date. This can be challenging. Fabric provides a solution that enables combining the code changes that have been implemented and committed by several programmers and deploying them to a specific environment. To do so, the Development team should prepare an automated Jenkins process that takes the project's latest sources from the Git or SVN repository and copies them to the server. The process then runs the script that creates the artifacts based on this code and deploys them on a server. This process can run on the Fabric Server without any dependency on the Fabric Studio. 
 
-[Click for more information about Best Practices for working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
+[Click here for more information about Best Practices for working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
 ### How Do I Perform an Offline Deployment?
 
