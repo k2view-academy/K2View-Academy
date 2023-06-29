@@ -13,20 +13,20 @@ When a Fabric project is developed by a group of programmers, it is important th
 
 ### How Do I Perform an Offline Deployment?
 
-There are two ways to perform an Offline Deployment:
-- Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the  [buildArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then do the deployment by running the **Deploy** command on the server.
+There are 2 ways to perform an Offline Deployment:
+- Build and deploy in 2 steps. First, build the artifacts either from the Fabric Studio or from the server using the  [buildArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then, do the deployment by running the **Deploy** command on the server.
 
-- Build and deploy in one step. Build and deploy from the server using the  [buildAndDeployArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
+- Build and deploy in one step. Build and deploy from the server using the  [buildAndDeployArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. It is also possible to deploy without the build, whereby the script only runs a **Deploy** command, without creating and deleting artifacts.
 
 #### Build and Deploy in Two Steps
 
 1. To build the artifacts **from the Fabric Studio**:
 
-   a. Right click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
+   a. Right-click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
 
    <img src="images/16_03_offline_deploy1.png" alt="16_03_offline_deploy1" style="zoom: 80%;" />
 
-   b. Right click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
+   b. Right-click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
