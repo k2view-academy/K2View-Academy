@@ -13,8 +13,8 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
 * LU / Data Product: Customer.
-* Data sources: CRM, <studio>Ordering, Billing and Collection.</studio><web>Billing and Assets.</web>
-* LU tables: The tables that will hold the data you want to keep about a customer from the four data sources.
+* Data sources: CRM, <studio>Ordering, Billing and Collection, </studio><web>Billing and Assets.</web>
+* LU tables: The tables that will hold the data you want to keep about a customer from the 4 data sources.
 * LU Table Populations: The set of definitions that will be used to extract, transform, clean, aggregate, validate (etc.) the data from the four data sources into the LU tables.
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
