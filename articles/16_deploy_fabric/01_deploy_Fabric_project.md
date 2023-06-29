@@ -39,7 +39,7 @@ The deployment of a Fabric project is performed on the following levels:
 
 Deployment can be performed either:
 
-- [From the Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio) using **Deploy to Server**.
+- [From the Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio), using **Deploy to Server**.
 - [Offline Deploy](03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
