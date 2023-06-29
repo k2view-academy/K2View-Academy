@@ -51,7 +51,7 @@ Note that Shared Objects are not independent objects in a project and therefore 
 
 ### Soft Deploy
 
-**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementors working in a development environment and frequently changing their code, such as Broadway flows or Java functions.
+**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementors that work in a development environment and that frequently change their code, such as Broadway flows or Java functions.
 
 <studio>
 
