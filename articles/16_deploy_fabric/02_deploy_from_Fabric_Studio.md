@@ -67,7 +67,7 @@ The below illustration shows the project tree, where all LUs - except "Web Servi
 
 Deployment can be done for either all updated LUs, those that are not yet deployed, or a specific LU.
 
-To deploy all updated LUs, make either of the following:
+To deploy all updated LUs, perform either one of the following actions:
 
 * In top menu bar, click Fabric and then "Deploy All Updated Logical Units".
 * In the bottom status bar, hover with the mouse over "Deployment Status", to display a tooltip that implies which LUs are not deployed. Clicking on "Deployment Status" will trigger the deployment on these LUs.
