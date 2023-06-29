@@ -36,7 +36,7 @@ The following steps must be performed in the Fabric Studio for each deployed obj
   - Click [**Server Name**].
   - Click **Add/Edit** to open the **User Preferences** window if the required server configuration is missing. 
 
-## Deploying Fabric Objects to the local Fabric Debug Server
+## Deploying Fabric Objects to the Local Fabric Debug Server
 
 To debug an LU it must first be deployed to the local Fabric debug server. A deployed LU has a green circle next to its name.
 
