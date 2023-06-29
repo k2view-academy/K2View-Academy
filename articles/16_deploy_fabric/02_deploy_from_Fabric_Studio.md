@@ -55,9 +55,9 @@ You can activate a deployment and see the Deployment Status in several places wi
 
 ### Deployment Status
 
-A deployed LU has a green circle next to its name at the project tree. Otherwise, for example while making changes at its content, it becomes to be gray circle.
+A deployed LU has a green circle next to its name at the project tree. Otherwise, for example while making changes at its content, the circle turns gray.
 
-In addition, you can look at the "Deployment Status" in the bottom status bar to see if all LUs are deployed. When hoovering on it with the mouse , a tooltip appears, hinting you which LUs are not deployed.
+In addition, you can look at the "Deployment Status" in the bottom status bar to see if all LUs are deployed. When hovering over it with the mouse, a tooltip appears, hinting you which LUs are not deployed.
 
 In the illustration below you can see the project tree, where except "Web Services" all other LUs appear with the green circle, meaning that they are deployed. Similar indication exists in the bottom status bar. 
 
