@@ -210,4 +210,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 
 
-## 
+[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]() 
+
+
+
