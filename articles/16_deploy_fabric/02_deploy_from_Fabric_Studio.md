@@ -1,6 +1,6 @@
 # Deploy from Fabric Studio
 
-New or already existing Fabric project implementations must be deployed to the server side so that all recent code changes are compiled and are ready to be used.
+New or already existing Fabric project implementations must be deployed to the server side in a way that all recent code changes are compiled and are ready to be used.
 
 <studio>
 
