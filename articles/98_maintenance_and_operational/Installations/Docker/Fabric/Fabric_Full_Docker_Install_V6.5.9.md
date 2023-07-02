@@ -92,7 +92,7 @@ More detailed requirements for each are described below:
    tar -zxvf compose_fabric_6.5.9_176.tar.gz
    ```
 
-   >**Note:** open the “.env” file and update the names of the images as needed.
+   **Note:** open the “.env” file and update the names of the images as needed.
 
 ### RUN SINGLE FABRIC, CASSANDRA INSTANCES:
 
