@@ -10,15 +10,19 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 ## Get Catalog Versions
 
-<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog`
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
 
 The API retrieves a list of catalog's versions and their creation timestamp.
 
+**Example of an API call:**
+
+https://localhost:3213/api/catalog
 
 
-## Get Catalog's Version
 
-<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog/{version}`
+## Get Catalog's Specified Version
+
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
 The API retrieves a list of data platforms that belong to the given catalog version. Each data platform is retrieved with the CONTAINS relations to its respective schema nodes. 
 
@@ -62,9 +66,9 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 ## Get Catalog's Data Platforms
 
-<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
-The API retrieves a list of schemas that belong to the given catalog version and data platform. Each schema is retrieved with the CONTAINS relations to its respective dataset nodes. 
+The API retrieves a list of schemas that belong to the specified catalog version and data platform. Each schema is retrieved with the CONTAINS relations to its respective dataset nodes. 
 
 The API has two modes - *view* and *compare* - which are alternatively invoked based on the **version** input parameter, as explained below:
 
@@ -112,9 +116,9 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 ## Get Catalog's Schemas
 
-<span style="border-radius: 2em; background-color: #0969da; padding: 0 8px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/schema`
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/schema`
 
-The API retrieves all elements that belong to the given catalog version, data platform and schema. The elements include the datasets, the REFERS_TO relations between the dataset nodes, fields and properties. 
+The API retrieves all elements that belong to the specified catalog version, data platform and schema. The elements include the datasets, the REFERS_TO relations between the dataset nodes, fields and properties. 
 
 The API has two modes - *view* and *compare* - which are alternatively invoked based on the **version** input parameter, as explained below:
 
@@ -152,7 +156,6 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
-
 **Examples of an API call in *view* mode:**
 
 ​	https://localhost:3213/api/catalog/latest/CRM_DB/main
@@ -164,3 +167,47 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 ​	https://localhost:3213/api/catalog/1...5/CRM_DB/main
 
 ​	https://localhost:3213/api/catalog/1...latest/CRM_DB/main
+
+
+
+## Search Catalog
+
+<span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/search-graph`
+
+The API retrieves all elements that belong to the specified catalog version, based on the search criteria defined in the request body. The example of the request body is:
+
+~~~json
+{
+    "input": [
+        "customer"
+    ],
+    "type": [
+        "schema",
+        "field"
+    ],
+    "advanced": {
+        "pii": "true",
+        "classification": "EMAIL"
+    }
+}
+~~~
+
+The syntax of the request body definition is as follows:
+
+* **input** is an array of keywords 
+* **type** defines which object types will be searched, whereas the valid values are:
+  * data_platform, schema, dataset, field, relation
+* **advanced** includes a list of additional search parameters, such as:
+  * **pii** is a PII property with either **true** or false **value**
+  * **classification** is a Classification property with one of its valid values
+  * **score** is a maximum score of the searched object types (nodes or relations)
+
+At least one of the search parameters must be provided in the request body. 
+
+**Example of an API call:**
+
+https://localhost:3213/api/catalog/4/search-graph
+
+
+
+## 
