@@ -11,7 +11,7 @@ An LU table can also act as the Master of Data that holds the data generated in 
 
 <web>LU tables can be created either manually or based on data source tables, using the Query builder.</web>
 
-When building a table manually, first define the table's properties, columns and indexes and then create the Table Population map which holds the transformation and mapping rules.
+When building a table manually, first define the table's properties, columns and indexes and then create the Table Population map, which holds the transformation and mapping rules.
 
 Creating a population for an LU table is optional. When a table acts as the Master of Data, it does not get feeds from source systems and the [Table Population](/articles/07_table_population/01_table_population_overview.md) is redundant.  
 
