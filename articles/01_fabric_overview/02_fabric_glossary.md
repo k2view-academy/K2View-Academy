@@ -333,7 +333,7 @@
 <td width="516">
 <p>Fabric Studio supports invocation and testing of Web Services using Swagger (Open Source under Apache License 2.0), a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.</p>
 <p>To connect to Swagger:</p>
-<p>Go to the following URL and specify the IP address of your Fabric Server: http://&lt;Fabric Server&gt;:3213/api</p>
+<p>Go to the following URL and specify the IP address of your Fabric server: http://&lt;Fabric Server&gt;:3213/api</p>
 <p>Or,</p>
 <p>Set the Web Service invoke path template in your User preferences - Server configuration to: static/swaggerUI/dist/index.md#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
 </td>
