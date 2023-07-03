@@ -50,7 +50,7 @@
 <p><strong><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deployment</a></strong></p>
 </td>
 <td width="516">
-<p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
+<p>The action of applying the Fabric Studio component into the Fabric server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric server.</p>
 <p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rule changes in Functions, Globals and Translations.</p>
 </td>
 </tr>
