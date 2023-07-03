@@ -112,7 +112,7 @@ You can check which objects are deployed in the Fabric server by using the Fabri
 - **list ENVIRONMENTS/ENVS**, provides a list of environments deployed to the Fabric server.
 - **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server:
   - If LU_NAME is supplied, the command lists only Broadway flows belonging to the LU.
-  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify LU_NAME to assure a single flow is found.
+  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify the LU_NAME to ensure that a single flow is found.
 
 - **list INSTANCE_GROUPS/IGS**, lists all instance groups of all LU Types deployed to the server.
 - **list DB_SOURCES**, lists all the DB interfaces.
