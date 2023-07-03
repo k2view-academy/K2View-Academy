@@ -10,7 +10,7 @@ Acting as a data layer above existing data sources, Fabric controls data using a
 
 
 ### What is a Micro DB?
-K2view uniquely manages all the data hold for a business entity (a specific customer, device, order, etc.) in its own high-performance, compressed, and encrypted Micro-Database – one for each instance of a business entity. Each entity is synced, processed and stored separately, on demand. The Micro-Database is then instantly accessible by any authorized data consumer, in any way: via SQL, API, CDC, messaging, or streaming. 
+K2view uniquely manages all the data hold for a business entity (a specific customer, device, order, etc.) in its own high-performance, compressed, and encrypted Micro-Database – one for each instance of a business entity. Each entity is synced, processed and stored separately, on demand. The Micro-Database is then instantly accessible by any authorized data consumer via SQL, API, CDC, messaging or streaming. 
 
 By adopting this revolutionary approach to operational data management, Fabric avoids the standard pains like: querying massive, siloed DBs and then unifying, processing, and delivering the data via rigid and complex batch processes that are costly to build, run and maintain.
 
