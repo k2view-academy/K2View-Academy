@@ -82,7 +82,7 @@ This module is responsible for all transformations and data manipulations and is
 Fabric Studio is a development tool for building Fabric projects, designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
-- Design LU and Schemas and create their associated instances.
+- Design LUs and Schemas and create their associated instances.
 - Create resources of all types to be used across a project (such as functions, tables, variables).
 - Execute data manipulations using the SQL builder or the integrated Java development environments.
 - Create REST APIs to access your data model.
