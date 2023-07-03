@@ -30,7 +30,7 @@ There are two ways to perform an Offline Deployment:
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
-2. To build the artifacts **from the Fabric Server**, run the  [buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
+2. To build the artifacts **from the Fabric server**, run the  [buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 3. To do the deployment, run the **Deploy** command using the following syntax:
 
@@ -41,7 +41,7 @@ DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>]
 
 
 
-Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
+Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric server.
 
 **Example**:
 
