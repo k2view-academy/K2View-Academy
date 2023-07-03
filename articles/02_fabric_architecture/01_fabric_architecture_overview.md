@@ -191,7 +191,7 @@ In environments where source data constantly changes, Fabric enables a lazy mode
 Users can enrich data by either using [built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) or adding their own code, which is designed to transform data according to business requirements.
 
 - Jobs:
-Where all async recurring or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric  creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DB or any files (HTTP), streams, message queues.
+Where all async recurring or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DBs, files, streams and message queues.
 
 - Broadway:
 Fabric&#39;s data and business flow management system ([Broadway](/articles/19_Broadway/01_broadway_overview.md)) enables implementors to define, orchestrate and run complete flows of data manipulation and tasks. It provides a work environment that unifies data and execution flows under the same framework. 
