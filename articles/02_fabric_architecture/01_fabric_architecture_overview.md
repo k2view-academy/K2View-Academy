@@ -52,9 +52,9 @@ At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical 
 A MicroDB provides several advantages:
 
 - Encapsulation of ALL data of a single business entity (like a customer) in one place, in a way that consumers can ask any question about data that usually resides in many different data sources.
-- Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
+- Holding the data of only one business entity, MicroDBs are very small and can be stored in RAM and provide unparalleled query performance.
 - Individual encryption at MicroDB or field levels.
-- Using SQLite, they offer standard SQL operations.
+- Using SQLite, MicroDBs offer standard SQL operations.
 - No business impact whereby providing continued availability of data during major structural modifications.  
 
 The MicroDBs (LUIs) are compressed as blob chunks and are stored in the LU storage layer.
