@@ -102,7 +102,7 @@ The following table describes the syntax and the mandatory/optional parameters f
    
 
 #### Deploy Command Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
+The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric server.
 
 <table width="900px">
 <tbody>
