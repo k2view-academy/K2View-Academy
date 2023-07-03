@@ -157,7 +157,7 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 
 ### How Do I Get the Deployed Implementation?
 
-After the project is deployed to the server, there may be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
+After the project is deployed to the server, there may be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. For this purpose, Fabric supports the creation of a zip file for a selected LU name, enabling the implementor to download the code deployed in the environment and to check it.
 
 ###### Syntax:
 <pre><code>
