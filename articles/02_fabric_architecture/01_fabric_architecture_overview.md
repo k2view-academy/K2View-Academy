@@ -188,7 +188,7 @@ Since Fabric creates LUIs by extracting data from multiple sources and then by p
 In environments where source data constantly changes, Fabric enables a lazy mode, whereby the iiDFinder retrieves the delta updates upon explicit demand from the user.
 
 - Data Enrichment:
-Users can enrich data using [built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) or adding to them using Java / JavaScript code designed to transform data according to business requirements.
+Users can enrich data by either using [built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) or adding their own code, which is designed to transform data according to business requirements.
 
 - Jobs:
 Where all async recurring or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric  creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DB or any files (HTTP), streams, message queues.
