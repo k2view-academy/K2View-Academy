@@ -116,7 +116,7 @@
 </td>
 <td width="516">
 <p>Identification and Access Management: The mechanism for user identification via an authentication process, and for access management via authorization mechanisms.</p>
-<p>Fabric provides IAM for web, console, and web-services access, either using Fabric's local repository or by using the organization&rsquo;s identify provider (IDP) which is integrated with Fabric as a Service Provider (SP).</p>
+<p>Fabric provides IAM for web, console, and web-services access, by using either Fabric's local repository or the organization&rsquo;s identify provider (IDP) which is integrated with Fabric as a Service Provider (SP).</p>
 </td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
 <p>When multiple data sources are used by a Logical Unit, additional interfaces can be defined.</p>
 <p>The interface types are:</p>
-<p><strong>DB Interface</strong>: Enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
+<p><strong>DB Interface</strong>: Enables the connections of the Fabric server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
 <p><strong>Non-DB Interface</strong>: Used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
 </td>
 </tr>
