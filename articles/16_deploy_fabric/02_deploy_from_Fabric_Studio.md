@@ -1,10 +1,10 @@
 # Deploy from Fabric Studio
 
-New or already existing Fabric project implementations must be deployed to the server side so that all recent code changes are compiled and are ready to be used.
+New or already existing Fabric project implementations must be deployed to the server side in a way that all recent code changes are compiled and are ready to be used.
 
 <studio>
 
-A deployment can be performed either from the Fabric Studio or from the Fabric Server (also known as an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md)).
+A deployment can be performed from either the Fabric Studio or the Fabric Server (using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md)).
 
 Before starting the Deployment process on a project, check that the target Fabric Server is configured. To do so, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window and configure the required Fabric Server, or use the  **"debug"** server entry, that is already configured to localhost, i.e. to the Fabric server that the Studio works with by default.
 
