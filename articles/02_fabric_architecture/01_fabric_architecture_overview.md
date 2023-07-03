@@ -51,7 +51,7 @@ At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical 
 
 A MicroDB provides several advantages:
 
-- Encapsulation of ALL data of a single business entity (like a customer) in one place so that consumers can ask any question about data that usually resides in many different data sources.
+- Encapsulation of ALL data of a single business entity (like a customer) in one place, in a way that consumers can ask any question about data that usually resides in many different data sources.
 - Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
 - Individual encryption at MicroDB or field levels.
 - Using SQLite, they offer standard SQL operations.
