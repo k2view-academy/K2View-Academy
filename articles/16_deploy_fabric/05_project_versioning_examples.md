@@ -74,3 +74,5 @@ This example illustrate a case that hotfix is required, where one of the develop
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/04_project_versioning.md)
 
+
+

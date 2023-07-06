@@ -140,6 +140,4 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/04_project_versioning.md)
 
-
-
 </studio>

@@ -83,5 +83,3 @@ To deploy a specific LU, right-click on its name in the project tree. In the con
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)<studio>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)</studio><web>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/04_project_versioning.md)</web>
 
-
-

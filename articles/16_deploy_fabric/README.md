@@ -9,4 +9,3 @@
 	<li><a href="/articles/16_deploy_fabric/04_project_versioning.md">Project Versioning</a></li>    
    	<li><a href="/articles/16_deploy_fabric/05_project_versioning_examples.md">Project Versioning Examples</a></li>    
 </ul>
-
