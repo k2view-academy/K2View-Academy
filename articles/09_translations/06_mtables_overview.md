@@ -18,9 +18,9 @@ Upon deployment, the MTable object is created in the Fabric memory, based on the
 
 Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory on the next deploy. 
 
-**Create an MTable at run-time**
+**Creating an MTable at run-time**
 
-Another way to create a new MTable is by using a MTableLoad Actor at run-time. In this case, the new MTable is only available on one node. In order to distribute the MTable's data to all nodes, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to the MTableLoad Actor. 
+Another way to create a new MTable is by using a MTableLoad Actor at run-time. In this case, the new MTable is only available on one node. If the MTable should be distributed to all nodes, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to running the MTableLoad Actor. 
 
 Note that if the MTable is updated or created dynamically at run-time, its data is removed during the Fabric restart.
 
