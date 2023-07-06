@@ -8,11 +8,13 @@ An MTable is an object created in the Fabric memory from a CSV file. The purpose
 
 To start creating an MTable, you should first upload a CSV file into the MTable folder, located in the Project Tree, under either an LU or References. 
 
-Upon deployment, the MTable object is created in the Fabric memory, based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored.
-
 A CSV file can also be manually created in the Fabric Studio, under the MTable folder. Another way to create a new MTable or to update one that already exists in the Fabric memory is by using a MTableLoad Actor at run-time. 
 
 Note that the MTable's name must be unique across the project. Thus, when an MTable is created with the same name as an existing MTable, the latter MTable will override the former one in the Fabric's memory.
+
+Upon deployment, the MTable object is created in the Fabric memory, based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored. 
+
+Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in the memory again on the next deploy. Note that if the MTable is updated or created dynamically at run-time, its data is removed during the Fabric restart.
 
 ### How Can I Use an MTable?
 

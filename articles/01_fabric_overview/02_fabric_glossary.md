@@ -50,7 +50,7 @@
 <p><strong><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deployment</a></strong></p>
 </td>
 <td width="516">
-<p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
+<p>The action of applying the Fabric Studio component into the Fabric server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric server.</p>
 <p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rule changes in Functions, Globals and Translations.</p>
 </td>
 </tr>
@@ -116,7 +116,7 @@
 </td>
 <td width="516">
 <p>Identification and Access Management: The mechanism for user identification via an authentication process, and for access management via authorization mechanisms.</p>
-<p>Fabric provides IAM for web, console, and web-services access, either using Fabric's local repository or by using the organization&rsquo;s identify provider (IDP) which is integrated with Fabric as a Service Provider (SP).</p>
+<p>Fabric provides IAM for web, console, and web-services access, by using either Fabric's local repository or the organization&rsquo;s identify provider (IDP) which is integrated with Fabric as a Service Provider (SP).</p>
 </td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
 <p>When multiple data sources are used by a Logical Unit, additional interfaces can be defined.</p>
 <p>The interface types are:</p>
-<p><strong>DB Interface</strong>: Enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
+<p><strong>DB Interface</strong>: Enables the connections of the Fabric server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
 <p><strong>Non-DB Interface</strong>: Used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
 </td>
 </tr>
@@ -333,7 +333,7 @@
 <td width="516">
 <p>Fabric Studio supports invocation and testing of Web Services using Swagger (Open Source under Apache License 2.0), a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.</p>
 <p>To connect to Swagger:</p>
-<p>Go to the following URL and specify the IP address of your Fabric Server: http://&lt;Fabric Server&gt;:3213/api</p>
+<p>Go to the following URL and specify the IP address of your Fabric server: http://&lt;Fabric Server&gt;:3213/api</p>
 <p>Or,</p>
 <p>Set the Web Service invoke path template in your User preferences - Server configuration to: static/swaggerUI/dist/index.md#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
 </td>
