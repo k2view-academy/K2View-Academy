@@ -1,6 +1,6 @@
 # Project Versioning
 
-Fabric offers project version tagging so that on the deployed server you can see the deployed version tag. This capability provides you a better control on your project’s versions, as well as visibility of what project’s version is currently deployed at a Fabric server.
+The implementation of a Fabric project is an ongoing process that evolves in response to changing business needs. It is essential to manage the project implementation code in a source control system, such as GIT. Additionally, Fabric provides a valuable feature of project version tagging, enabling visibility of the deployed version tag on the server. This capability grants you greater control over your project's versions and allows you to easily identify the currently deployed version on a Fabric server.
 
 
 
@@ -85,9 +85,9 @@ Following is a development workflow:
 
 ### Project Version Format
 
-it is recommended to follow the **Semantic Versioning Structure**, where version number shall be built as MAJOR.MINOR.PATCH,  as defined [here](https://semver.org/). Accordingly, Studio enforces the format where it must be 
+it is recommended to follow the **Semantic Versioning Structure**, where version number shall be built as MAJOR.MINOR.PATCH,  as defined [here](https://semver.org/). Accordingly, Studio enforces the format, where it must be X.Y
 
-
+* You can use letters to 
 
 ## Deploying Tagged Objects 
 
@@ -160,6 +160,8 @@ Fabric enable visibility on the version of the currently deployed objects at ser
   |test2|test    |1.0    |2023-07-03 18:27:49.738|1.0.3          |
   ```
 
+  > 
+
   `list lut` command result example: 
 
   ```
@@ -194,11 +196,7 @@ In Studio, You can see the current deployed version also at the bottom status ba
 
 
 
-See [here]() examples and illustration diagrams for several use cases of the project code lifecycle.
+<studio>[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/03_offline_deploy.md)</studio><web>[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)</web>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/05_project_versioning_examples.md)
 
 
-
-
-
-[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/03_offline_deploy.md)
 
