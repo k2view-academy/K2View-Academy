@@ -457,7 +457,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
   * Syntax: ```SET BUFFER_RESULT_SET = true```
   * To inactivate it, set it back to false. 
   * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
-* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, to distribute the following command to the specified affinity. 
+* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, to distribute the subsequent command to the specified affinity. 
   * Syntax: ``` SET CLUSTER_DISTRIBUTE_AFFINITY = <AFFINITY>```
   * Use **ALL** to distribute the following command to all live nodes.
 
