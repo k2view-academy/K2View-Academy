@@ -85,9 +85,11 @@ Following is a development workflow:
 
 ### Project Version Format
 
-it is recommended to follow the **Semantic Versioning Structure**, where version number shall be built as MAJOR.MINOR.PATCH,  as defined [here](https://semver.org/). Accordingly, Studio enforces the format, where it must be X.Y
+it is recommended to follow the semantic versioning structure, where version number shall be built as MAJOR.MINOR.PATCH,  as defined [here](https://semver.org/). Nevertheless, for simplicity Studio enforces the format of X.Y, that is starting with 2 digits and then let you decide how else it will looks like.
 
-* You can use letters to 
+> On next time that Tag Version action is initiated, Studio analyzes the current version and "clean" it from non-digits characters, preserving the convention that used so far. For example, the next suggested version after "10.2.3-DEV-SNAPSHOT" will be "10.2.4" and the next proposed version for "1.0-HF2" it will be "1.1".
+
+
 
 ## Deploying Tagged Objects 
 
@@ -160,7 +162,7 @@ Fabric enable visibility on the version of the currently deployed objects at ser
   |test2|test    |1.0    |2023-07-03 18:27:49.738|1.0.3          |
   ```
 
-  > 
+  
 
   `list lut` command result example: 
 
