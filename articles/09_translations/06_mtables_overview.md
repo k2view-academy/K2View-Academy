@@ -6,15 +6,23 @@ An MTable is an object created in the Fabric memory from a CSV file. The purpose
 
 ### How Can I Create an MTable?
 
-To start creating an MTable, you should first upload a CSV file into the MTable folder, located in the Project Tree, under either an LU or References. 
+**Creating an MTable from CSV file**
 
-A CSV file can also be manually created in the Fabric Studio, under the MTable folder. Another way to create a new MTable or to update one that already exists in the Fabric memory is by using a MTableLoad Actor at run-time. 
+To initiate an MTable creation, you should first upload a CSV file into the MTable folder, located in the Project Tree, under either an LU or References and then deploy an LU.
+
+A CSV file can also be manually created in the Fabric Studio, under the MTable folder. 
 
 Note that the MTable's name must be unique across the project. Thus, when an MTable is created with the same name as an existing MTable, the latter MTable will override the former one in the Fabric's memory.
 
 Upon deployment, the MTable object is created in the Fabric memory, based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored. 
 
-Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in the memory again on the next deploy. Note that if the MTable is updated or created dynamically at run-time, its data is removed during the Fabric restart.
+Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory on the next deploy. 
+
+**Creating an MTable at run-time**
+
+Another way to create a new MTable is by using a MTableLoad Actor at run-time. In this case, the new MTable is only available on one node. If the MTable should be distributed to all nodes, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to running the MTableLoad Actor. 
+
+Note that if the MTable is updated or created dynamically at run-time, its data is removed during the Fabric restart.
 
 ### How Can I Use an MTable?
 
@@ -78,7 +86,9 @@ The storage setting is controlled via Fabric configuration using the **FABRICDB_
 </table>
 
 
-When MTables are created in the FabricDB, they are created under a separate **mtable** schema and on one node only. 
+When MTables are created in the FabricDB, they are created under a separate schema called **mtable**.
+
+The MTable is created only on a node where the **FABRICDB_MTABLE_LIMIT** parameter has been updated. In order to distribute the MTable's data to all nodes, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command.
 
 <web>
 
