@@ -153,21 +153,39 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
-<studio>
 
-### How Do I Get the Deployed Implementation?
+## Project Versioning
 
-After the project is deployed to the server, there may be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. For this purpose, Fabric supports the creation of a zip file for a selected LU name, enabling the implementor to download the code deployed in the environment and to check it.
+After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. 
+
+Fabric offers project version tagging so that on the deployed server you can see the deployed version tag.
+
+The tag version creation is done with accompany of GIT tagging capability, so that project version is preserved both as a property at the project definition file (k2proj.xml) and as a GIT annotated tag.  
+
+While Fabric provides the mechanism and technology for project versioning, the project owner and developers shall follow the related project lifecycle procedures, when tagging a version and while deploying the project.  
+
+For more information of project Versioning, read [here]()
+
+### Download the deployed code
+
+In addition to the project versioning that allows you to compare between the deployed version and the matched tag at GIT, Fabric supports the creation of a zip file for a selected LU name, so that the implementer can download the code deployed in the environment and check it.
+
 
 ###### Syntax:
-<pre><code>
-	http://[host]:3213/lut?lutName=[luname]&token=[token]
-	http://[host]:3213/lut?lutName=k2_ws&token=[token]
-	http://[host]:3213/lut?lutName=k2_ref&token=[token]
-</code></pre>
+
+```
+http://[host]:3213/lut?lutName=[luname]&token=[token]
+```
+
+For example:
+
+```
+http://[host]:3213/lut?lutName=k2_ws&token=[token]
+```
+
+
 
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
 
-</studio>
