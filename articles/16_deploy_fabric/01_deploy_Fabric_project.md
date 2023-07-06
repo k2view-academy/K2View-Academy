@@ -40,7 +40,7 @@ The deployment of a Fabric project is performed on the following levels:
 Deployment can be performed from either one of the below two locations:
 
 - [The Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio), using **Deploy to Server**.
-- [Offline Deploy](03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
+- The Fabric server, using an [Offline Deploy](03_offline_deploy.md), an act that refers to deploying the artifacts that were created in the Fabric Studio, by choosing **Build Deploy Artifacts**. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
 A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
@@ -112,7 +112,7 @@ You can check which objects are deployed in the Fabric server by using the Fabri
 - **list ENVIRONMENTS/ENVS**, provides a list of environments deployed to the Fabric server.
 - **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server:
   - If LU_NAME is supplied, the command lists only Broadway flows belonging to the LU.
-  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify LU_NAME to assure a single flow is found.
+  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify the LU_NAME to ensure that a single flow is found.
 
 - **list INSTANCE_GROUPS/IGS**, lists all instance groups of all LU Types deployed to the server.
 - **list DB_SOURCES**, lists all the DB interfaces.
@@ -154,7 +154,6 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
 
-
 ## Project Versioning
 
 Having that project implementation is an on-going process, there is a need to clarify which code has been deployed at the server. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. 
@@ -170,6 +169,7 @@ For more information of project Versioning, read [here]()
 ### Download the deployed code
 
 In addition to the project versioning that allows you to compare between the deployed version and the matched tag at GIT, Fabric supports the creation of a zip file for a selected LU name, so that the implementer can download the code deployed in the environment and check it.
+
 
 ###### Syntax:
 

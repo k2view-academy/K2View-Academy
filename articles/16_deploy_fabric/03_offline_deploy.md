@@ -2,12 +2,12 @@
 
 # Offline Deploy
 
-New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server (also known as an Offline Deploy).
+New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed from either the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric server (an act also known as an Offline Deploy).
 
-An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric Server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
+An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
 
 ### When Should I Use an Offline Deploy?
-When a Fabric project is developed by a group of programmers, it is important that the environment is always up-to-date. This can be challenging. Fabric provides a solution that enables combining the code changes that have been implemented and committed by several programmers and deploying them to a specific environment. To do so, the Development team should prepare an automated Jenkins process that takes the project's latest sources from the Git or SVN repository and copies them to the server. The process then runs the script that creates the artifacts based on this code and deploys them on a server. This process can run on the Fabric Server without any dependency on the Fabric Studio. 
+When a Fabric project is developed by a group of programmers, it is important that the environment is always up-to-date. This can be challenging. Fabric provides a solution that enables combining the code changes that have been implemented and committed by several programmers and deploying them to a specific environment. To do so, the Development team should prepare an automated Jenkins process that takes the project's latest sources from the Git or SVN repository and copies them to the server. The process then runs the script that creates the artifacts based on this code and deploys them on a server. This process can run on the Fabric server without any dependency on the Fabric Studio. 
 
 [Click here for more information about Best Practices for working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
@@ -30,7 +30,7 @@ There are two ways to perform an Offline Deployment:
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
-2. To build the artifacts **from the Fabric Server**, run the  [buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
+2. To build the artifacts **from the Fabric server**, run the  [buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 3. To do the deployment, run the **Deploy** command using the following syntax:
 
@@ -41,7 +41,7 @@ DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>]
 
 
 
-Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
+Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric server.
 
 **Example**:
 
@@ -56,7 +56,7 @@ DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementati
 To build the artifacts and the deployment together in one step from the server, run the  [buildAndDeployArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 #### Deployment Scripts Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$K2_HOME/fabric/scripts** in the Fabric Server.
+The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$K2_HOME/fabric/scripts** in the Fabric server.
 
    <table style="width: 900px;">
 <tbody>
@@ -102,7 +102,7 @@ The following table describes the syntax and the mandatory/optional parameters f
    
 
 #### Deploy Command Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
+The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric server.
 
 <table width="900px">
 <tbody>
