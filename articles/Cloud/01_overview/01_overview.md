@@ -27,7 +27,7 @@ The cloud platform offered by K2view presents many advantages for a variety of t
 
     
 
-## Fabric Anywhere
+## Fabric Cloud Anywhere
 
 K2view lets you managing any type of deployment by the Cloud Platform.
 
