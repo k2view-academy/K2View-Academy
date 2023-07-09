@@ -84,7 +84,7 @@ The storage setting is controlled via Fabric configuration using the **FABRICDB_
 </table>
 
 
-The MTables are created in the FabricDB when the **FABRICDB_MTABLE_LIMIT** parameter is updated to 0 or greater than 0. They are created under a separate schema called **mtable** on one node only, after the node's restart. Also in this case, if the MTable is created (or updated) dynamically at run-time by using a MTableLoad Actor, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command to distribute the MTable's data to all nodes.
+The MTables are created in the FabricDB when the **FABRICDB_MTABLE_LIMIT** parameter is updated to 0 or greater than 0. They are created under a separate schema called **mtable** on one node only, after the node's restart. If the MTable is created (or updated) dynamically at run-time by using an MTableLoad Actor, execute the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to the actor, in order to distribute the MTable's data to all nodes.
 
 <web>
 
