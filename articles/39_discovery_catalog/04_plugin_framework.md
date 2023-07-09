@@ -4,15 +4,23 @@
 
 The Plugin Framework is an internal platform for running the plugins. Each plugin is a piece of business logic that executes predefined rules in order to complement the Discovery Schema. 
 
-The Plugin Framework runs over the Discovery Schema, created by the Crawler, and executes the plugins. A result of the plugin execution can be the creation (or removal) of various Catalog elements or properties. Each plugin calculates a score - a probability that the outcome is correct. The score is calculated per each new element or property and added to the Discovery Schema.
+The Plugin Framework is executed by the Crawler. It runs over the Discovery Schema and executes the plugins. A result of the plugin execution can be the creation (or removal) of various Catalog elements or properties. Each plugin calculates a score - a confidence level that the outcome is correct. The score is calculated per each data source element.
 
 The Data Discovery solution includes a constantly growing list of built-in plugins. The list of active plugins and their execution order is set using the **plugins.discovery**, as described further in this article.
 
-### Plugins Pipeline Configuration
+### Plugins Pipeline
 
-The plugin's execution order is defined by the Plugins Pipeline configuration file called **plugins.discovery**. This file is located in the Web Studio under the **Implementation/SharedObjects/Interfaces/Discovery/** folder and can be updated per your project's needs. 
+**Configuration**
 
-Each plugin's definition includes a threshold - the minimum score required for adding the plugin results to the Catalog. For example, if the plugin found a match with a score of 0.3 while the plugin's threshold is set to 0.7, the plugin results are dropped and will not be added to the Catalog. 
+The plugin's execution order is defined by the Plugins Pipeline configuration file called **plugins.discovery**. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder and can be updated per your project's needs: a plugin can be set to inactive, the plugin's threshold can be updated or a custom plugin can be added to the **plugins.discovery**. Once any change is performed to the file, you need to rerun the Crawler to see the changes in the Catalog.
+
+**Plugin's Threshold**
+
+Each plugin's definition in the **plugins.discovery** includes a *threshold* - the score above which the plugin result impact the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. 
+
+The threshold can be updated to either higher or lower value, depending on what results you expect to see in the Catalog. 
+
+**Custom Plugins**
 
 The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, these custom plugins need to be added to the Plugins Pipeline configuration file.
 
