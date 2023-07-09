@@ -20,7 +20,7 @@ To initiate the K2View Discovery process:
 
 ### Open In Catalog
 
-To find a data source element in the Catalog tree, do the following:
+To view a data source element in the Catalog application, do the following:
 
 * Open the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio and select the required element. It can be an interface, schema, table or field.
 
