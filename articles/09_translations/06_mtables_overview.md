@@ -14,7 +14,7 @@ A CSV file can also be manually created in the Fabric Studio, under the MTable f
 
 Upon deployment, the MTable object is created in the Fabric memory, based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored. Note that the MTable's name must be unique across the project. Thus, when an MTable is created with the same name as an existing MTable, the latter MTable will override the former one in the Fabric's memory.
 
-Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory on the next deploy. 
+Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory. 
 
 It is possible to store the MTables in FabricDB schema either instead or in addition to Fabric memory. More details about the MTables storage settings are described further in this article.
 
