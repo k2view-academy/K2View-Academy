@@ -24,5 +24,5 @@ The returned result set is limited to 1,000 rows. The search results are present
 
 
 
-[![Previous](/articles/images/Previous.png)](07_manual_overrides.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_APIs.md) 
+[![Previous](/articles/images/Previous.png)](07_manual_overrides.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_build_artifacts.md) 
 
