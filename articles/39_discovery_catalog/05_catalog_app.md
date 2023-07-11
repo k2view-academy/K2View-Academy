@@ -44,6 +44,8 @@ The Properties Tab displays the properties of the selected element. Some of the 
 
 Clicking on a property opens the More Info popup window that provides more details on the selected property.
 
+### Classifier Configuration Window
+
 
 
 
