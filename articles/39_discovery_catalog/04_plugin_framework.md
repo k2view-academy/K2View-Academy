@@ -168,7 +168,7 @@ The plugin runs on a data snapshot, extracted from the source, and executes the 
 
 If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **EMAIL**. If a match is found for more than one regex, only one property is created  - the one with higher score.
 
-To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app#classifier-configuration-window).
+To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **Metadata Regex Classifier**
 
@@ -178,7 +178,7 @@ The matching rules are defined using regular expressions in a built-in **metadat
 
 If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **NAME**. If a match is found for more than one regex, only one property is created  - the one with higher score.
 
-To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app#classifier-configuration-window).
+To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **Classification PII Marker**
 
@@ -186,7 +186,7 @@ The purpose of *Classification PII Marker* is to go over all fields which have g
 
 The rules whether the classification type is defined as PII (true) or not (false) are defined in a built-in **pii_profiling** MTable. 
 
-To update the PII profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app#classifier-configuration-window).
+To update the PII profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **NULL Percentage**
 
