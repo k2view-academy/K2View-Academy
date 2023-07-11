@@ -16,9 +16,9 @@ The Catalog's main area enables navigation between the hierarchy levels, by expa
 
 The initial view displays the Data Platform elements (data source interfaces defined in the Fabric project), for which the Discovery process has been performed.
 
-In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
+<img src="images/catalog_app.png" style="zoom:75%;" />
 
-The following activities can be performed using the entity's context menu:
+The following activities can be performed using the context menu of the Catalog nodes:
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />or **collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Schema element expands all Data Sets under this Schema. 
@@ -28,15 +28,20 @@ The following activities can be performed using the entity's context menu:
   * Clicking Focus opens a new view, which includes all the elements of the level below. 
   * For example, when Focus is clicked on the Schema element, the view will display all Class elements under this Schema.
 
+In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
+
 ### Menu Bar
 
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
+* The **Actions** menu allows to:
+  * **Edit** the catalog manually. Click [here](07_manual_overrides.md) for more details regarding the Manual Overrides.
+  * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described further in this article. 
+  * Unhide the hidden nodes. Selecting a node from this list returns it back to the view.
+* **Search** the catalog. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
 * **Expand**, **collapse** and **hide**, triggering the same activities as in the element's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
-* **Hidden nodes**, a drop-down list displaying the nodes that have been temporary hidden from the Catalog main area. Selecting a node from this list returns it back to the view.
 * **Zoom in / out**, adjusting the zoom of the view.
-* **Search**, providing a node search capability. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
 
 ### Properties Tab
 
@@ -46,7 +51,16 @@ Clicking on a property opens the More Info popup window that provides more detai
 
 ### Classifier Configuration Window
 
+The Classifier Configuration window allows to view and update the profiling rules invoked by the Catalog built-in plugins which are described [here](04_plugin_framework.md#built-in-plugins).
 
+<img src="images/classifier.png" style="zoom:75%;" />
+
+The following restrictions should be considered when updating the data via this window:
+
+* The combination of Classification & Type must be unique.
+  * For example, you can define Classification = EMAIL twice: with Type = Data and with Type = Metadata, but you cannot define it twice with the same type.
+* The PII must be aligned for two entries with the same Classification.
+  * For example, when defining two entries for Classification = EMAIL, the PII indicator of both of them should be either true or false.
 
 
 

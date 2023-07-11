@@ -16,11 +16,13 @@ The advanced search allows to narrow the search results by specifying one of the
 
 * Search by an object's score. For example, when the user enters 0.5,  the results list will return all catalog objects with score lower than 0.5.
 
+<img src="images/advanced_search.png" style="zoom:75%;" />
+
 ### Search Results
 
 The returned result set is limited to 1,000 rows. The search results are presented in a list which can be exported into a CSV file. You can view the selected entity in the Catalog tree by clicking the link in the Name column.
 
-
+<img src="images/search_results.png" style="zoom:75%;" />
 
 
 
