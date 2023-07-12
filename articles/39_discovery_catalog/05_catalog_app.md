@@ -40,7 +40,7 @@ Clicking on any Data Platform or Schema node opens the context menu which allows
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on the selected node can also expand or collapse it.
   
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
+* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window. The hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the catalog.
 
 * **Focus** <img src="images/focus.png" style="zoom:80%;" /> opens a view, which includes only the elements of the level below the selected node.
   
