@@ -33,36 +33,36 @@ Click [here](06_catalog_versioning.md) for more details regarding the Catalog Ve
 
 **Data Platform and Schema's Context Menu**
 
-Clicking on any Data Platform or Schema node opens the context menu which allows to perform the following:
+Clicking on any Data Platform or Schema node opens the context menu which allows performing the following actions:
 
-* **Expand** <img src="images/expand.png" style="zoom:80%;" />or **collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
+* **Expand** <img src="images/expand.png" style="zoom:80%;" />or **Collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
   
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on the selected node can also expand or collapse it.
   
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window. The hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the catalog.
 
-* **Focus** <img src="images/focus.png" style="zoom:80%;" /> opens a view, which includes only the elements of the level below the selected node.
+* **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes.
   
-  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the view will display all Dataset nodes under this Schema.
+  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will display only the Dataset nodes under the selected Schema. 
   
-  * In the Focus view, the breadcrumbs are displayed in the left upper corner of the main area to indicate your path within the Catalog tree. The breadcrumbs are clickable and allow you navigating up the tree.  
+  * In the Focus view, the breadcrumbs are displayed in the left upper corner of the main area to indicate your path within the Catalog tree. The breadcrumbs are clickable, thus you can navigate up the tree.  
   
-    <img src="images/breadcrumbs.png" style="zoom: 67%;" />
+    ​	<img src="images/breadcrumbs.png" style="zoom: 67%;" />
 
 **Dataset Context Menu**
 
-Clicking on any Dataset node opens the context menu which allows to perform the following:
+Clicking on any Dataset node opens the its context menu which includes only the following two actions:
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
 
-  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields, so the Dataset changes:
+  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields, so the Dataset changes from a circle to a rectangle node. Fields properties such as PK, FK and PII are also displayed where applicable. 
 
-    <img src="images/dataset_collapsed_expanded.png" style="zoom:75%;" />
+    ​	<img src="images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
   * To expand all Datasets on the screen at once, click the <img src="images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's legend:
 
-    <img src="images/legend.png" style="zoom:75%;" />
+    ​	<img src="images/legend.png" style="zoom: 67%;" />
 
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
 
@@ -83,7 +83,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 The Properties Tab displays the selected element's name, the icon of the type and the element's  properties.
 
-<img src="images/properties.png" style="zoom: 67%;" />
+​	<img src="images/properties.png" style="zoom: 67%;" />
 
 Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the property. For example, the property Origin, which can be the crawler, one of the plugins or manual.
 
@@ -91,7 +91,7 @@ Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/>
 
 The Classifier Configuration window allows to view and update the profiling rules invoked by the Catalog built-in plugins which are described [here](04_plugin_framework.md#built-in-plugins).
 
-<img src="images/classifier.png" style="zoom: 67%;" />
+​	<img src="images/classifier.png" style="zoom: 67%;" />
 
 The following restrictions should be considered when updating the data via this window:
 
