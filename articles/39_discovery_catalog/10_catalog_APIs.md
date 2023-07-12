@@ -16,7 +16,9 @@ The API retrieves a list of catalog's versions and their creation timestamp.
 
 **Example of an API call:**
 
+```
 https://localhost:3213/api/catalog
+```
 
 
 
@@ -52,15 +54,23 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 
 **Examples of an API call in *view* mode:**
 
-​	https://localhost:3213/api/catalog/latest
+```
+https://localhost:3213/api/catalog/latest
+```
 
-​	https://localhost:3213/api/catalog/1
+```
+https://localhost:3213/api/catalog/latest
+```
 
 **Examples of an API call in *compare* mode:**
 
-​	https://localhost:3213/api/catalog/2...5
+```	
+https://localhost:3213/api/catalog/2...5
+```
 
-​	https://localhost:3213/api/catalog/1...latest
+```
+https://localhost:3213/api/catalog/1...latest
+```
 
 
 
@@ -99,18 +109,25 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
+**Examples of an API call in the *view* mode:**
 
-**Examples of an API call in *view* mode:**
+```
+https://localhost:3213/api/catalog/latest/CRM_DB
+```
 
-​	https://localhost:3213/api/catalog/latest/CRM_DB
+```
+https://localhost:3213/api/catalog/1/CRM_DB
+```
 
-​	https://localhost:3213/api/catalog/1/CRM_DB
+**Examples of an API call in the *compare* mode:**
 
-**Examples of an API call in *compare* mode:**
+```
+https://localhost:3213/api/catalog/1...5/CRM_DB
+```
 
-​	https://localhost:3213/api/catalog/1...5/CRM_DB
-
-​	https://localhost:3213/api/catalog/1...latest/CRM_DB
+```
+https://localhost:3213/api/catalog/1...latest/CRM_DB
+```
 
 
 
@@ -156,17 +173,25 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
-**Examples of an API call in *view* mode:**
+**Examples of an API call in the *view* mode:**
 
-​	https://localhost:3213/api/catalog/latest/CRM_DB/main
+```
+https://localhost:3213/api/catalog/latest/CRM_DB/main
+```
 
-​	https://localhost:3213/api/catalog/1/CRM_DB/main
+```
+https://localhost:3213/api/catalog/1/CRM_DB/main
+```
 
-**Examples of an API call in *compare* mode:**
+**Examples of an API call in the *compare* mode:**
 
-​	https://localhost:3213/api/catalog/1...5/CRM_DB/main
+```
+https://localhost:3213/api/catalog/1...5/CRM_DB/main
+```
 
-​	https://localhost:3213/api/catalog/1...latest/CRM_DB/main
+```
+https://localhost:3213/api/catalog/1...latest/CRM_DB/main
+```
 
 
 
@@ -193,9 +218,11 @@ At least one of the search parameters must be provided in the request body.
 
 **Example of an API call:**
 
+```
 https://localhost:3213/api/catalog/4/search-graph
+```
 
-**Examples of request body:**
+**Examples of the request body:**
 
 Example 1: when searching for *schema* and *field* nodes that include a *customer* keyword in their node name and have *PII = true* and *Classification = EMAIL* properties, the request body is:
 
@@ -229,7 +256,5 @@ Example 2: when searching for *any* nodes with *PII = true* property, the reques
 
 
 
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]() 
-
-
+[![Previous](/articles/images/Previous.png)](08_search_catalog.md)
 

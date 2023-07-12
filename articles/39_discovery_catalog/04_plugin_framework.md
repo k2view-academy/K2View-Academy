@@ -16,7 +16,7 @@ The plugin's execution order is defined by the Plugins Pipeline configuration fi
 
 **Plugin's Threshold**
 
-Each plugin's definition in the **plugins.discovery** includes a *threshold* - the score above which the plugin result impact the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. 
+Each plugin's definition in the **plugins.discovery** includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. 
 
 The threshold can be updated to either higher or lower value, depending on what results you expect to see in the Catalog. 
 
@@ -30,7 +30,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
 
-The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (e.g. remove underscore ‘_’, convert to lower-case). 
+The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (remove the underscore ‘_’, convert to lower-case and consider the table name). 
 
 For example, the following field names can be matched:
 
@@ -157,17 +157,18 @@ If a match is found, the plugin estimates the link direction – per the matchin
 </tbody>
 </table>
 
+
 Eventually, the relation is created with a score - a probability that the match is correct. 
 
 **Data Regex Classifier**
 
-The purpose of *Data Regex Classifier* is to classify the source fields based on their **data**. Among other goals, this classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
+The purpose of *Data Regex Classifier* is to classify the source fields based on their **data**. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 
 The plugin runs on a data snapshot, extracted from the source, and executes the regular expressions defined in a built-in **data_profiling** MTable. 
 
 If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **EMAIL**. If a match is found for more than one regex, only one property is created  - the one with higher score.
 
-The access to the **data_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **data_profiling** MTable in your project, with the same structure as the built-in MTable.
+To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **Metadata Regex Classifier**
 
@@ -177,7 +178,7 @@ The matching rules are defined using regular expressions in a built-in **metadat
 
 If the field's data match a regex, a **Classification** property is added to the field's properties with a value such as **NAME**. If a match is found for more than one regex, only one property is created  - the one with higher score.
 
-The access to the **metadata_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **metadata_profiling** MTable in your project, with the same structure as the built-in MTable.
+To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **Classification PII Marker**
 
@@ -185,13 +186,13 @@ The purpose of *Classification PII Marker* is to go over all fields which have g
 
 The rules whether the classification type is defined as PII (true) or not (false) are defined in a built-in **pii_profiling** MTable. 
 
-The access to the **pii_profiling** MTable is available in the Web Studio using the [MTableLookup Actor](/articles/19_Broadway/actors/09_MTable_actors.md). If needed, you can modify the regular expressions by creating a **pii_profiling** MTable in your project, with the same structure as the built-in MTable.
+To update the PII profiling rules, go to Actions > Classifier Configuration in the Catalog application. [Click for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **NULL Percentage**
 
-The purpose of this plugin is to check the % of null values per column, in the selected data snapshot.
+The purpose of this plugin is to check the % of null values per column, using the data snapshot. The nullability percentage is calculated on each column of non-empty tables. 
 
-As a result, the **Nullability Percentage** property is added to the field's properties. Its value is the % of null values and the score indicates the confidence level (size of a sample).
+As a result, the **NULLABILITY_PERCENTAGE ** property is added to the field's properties list when its value is above the threshold. For example, when 30% of the values in a certain column are null, the NULLABILITY_PERCENTAGE will be equal to 0.3. 
 
 
 

@@ -12,10 +12,14 @@ The K2View Discovery process is depicted in the below diagram and it includes th
 
 * Upon the Plugin Framework execution completion, the Discovery Schema is saved into the *neo4j* Graph DB. 
 
-  * The Discovery Schema supports versioning. A new version is created when the Crawler is executed and changes from the previous version are found.
+* The Catalog supports versioning. A new version is created when the Crawler is executed and changes from the previous version are found.
+* The Catalog supports manual overrides. Edit Catalog function is available for updating the properties and the relations created by the Crawler.
+* The Catalog artifacts (including the identified classifications and PII indications) can be built and saved into the project tree, in order to be used by the masking mechanism. 
 * Once the process is completed, the Logical Unit schema can be created based on Discovery schema.
 
 ![](images/DiscoveryE2E.png)
+
+Further articles in this section provide more details about each of the above steps.
 
 
 

@@ -14,7 +14,7 @@ A CSV file can also be manually created in the Fabric Studio, under the MTable f
 
 Upon deployment, the MTable object is created in the Fabric memory, based on the CSV file's structure and the data. Other file types, apart from the CSV type, are ignored. Note that the MTable's name must be unique across the project. Thus, when an MTable is created with the same name as an existing MTable, the latter MTable will override the former one in the Fabric's memory.
 
-Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory on the next deploy. 
+Once the MTable is uploaded to the Fabric memory, it is available on all Fabric nodes. In case of Fabric restart, the memory is released and the MTable is re-created in memory. 
 
 It is possible to store the MTables in FabricDB schema either instead or in addition to Fabric memory. More details about the MTables storage settings are described further in this article.
 
@@ -84,7 +84,7 @@ The storage setting is controlled via Fabric configuration using the **FABRICDB_
 </table>
 
 
-The MTables are created in the FabricDB when the **FABRICDB_MTABLE_LIMIT** parameter is updated to 0 or greater than 0. They are created under a separate schema called **mtable** on one node only, after the node's restart. Also in this case, if the MTable is created (or updated) dynamically at run-time by using a MTableLoad Actor, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command to distribute the MTable's data to all nodes.
+The MTables are created in the FabricDB when the **FABRICDB_MTABLE_LIMIT** parameter is updated to 0 or greater than 0. They are created under a separate schema called **mtable** on one node only, after the node's restart. If the MTable is created (or updated) dynamically at run-time by using an MTableLoad Actor, execute the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to the actor, in order to distribute the MTable's data to all nodes.
 
 <web>
 

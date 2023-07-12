@@ -34,7 +34,7 @@ To view a data source element in the Catalog application, do the following:
 
 ### Fabric Settings for Discovery
 
-* ENABLE_DATA_DISCOVERY is a configuration parameter in config.ini that defines whether the Discovery should be enabled in the system. The default setting is true. 
+* ENABLE_DATA_DISCOVERY is a configuration parameter in config.ini that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). The default setting is true. Note that If the Fabric space doesn’t include neo4j, ENABLE_DATA_DISCOVERY should be set to false (by the system administrator).
 * 'Show Catalog Commands' is a Web Studio setting to either show or hide the Catalog related commands (Run discovery job, Open in catalog) in the UI. It can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
 
 
