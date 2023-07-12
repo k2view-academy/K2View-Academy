@@ -1,34 +1,29 @@
 # Catalog Versioning
 
-The Fabric's Catalog supports **versioning** which allows to identify and analyze changes in the data source by comparing between the versions. Any kind of change is discoverable, for example, addition of a field or a change in a field's properties as a result of new profiling rules.
+The Catalog supports **versioning** - ability to create a new Catalog version in the  *neo4j* Graph DB every time when the Discovery process runs and finds differences comparing to the previous version.
 
-A new version is created in the *neo4j* Graph DB when the Discovery process runs and finds differences comparing to the last version. If the Discovery process doesn't identify any changes comparing to the previous catalog version, a new version is not created.
+Then, using the Catalog application a user can view each catalog version as well as analyze the differences between the versions, as described below.
 
-The Catalog application allows a user to view each catalog version as well as to analyze the differences between the versions, as described below.
+Note that if the Discovery process doesn't identify any changes in the data source comparing to the previous catalog, a new version is not created.
 
 ### Version View
 
-Select a version from the list to get the full version view. 
+By default, the Catalog displays the latest version. To view one of the old versions, select a version number from the list: 
 
 <img src="images/versions.png" style="zoom:75%;" />
 
-* By default, the Catalog displays the latest version.
-
-* The coloring scheme of the standard view is blue.
-
-* The user can switch between various catalog versions by selecting from the list. 
+The coloring scheme of the standard view is blue. 
 
 ### Version Comparison
 
-Compare two versions to analyze the changes. 
+To compare two versions, click the comparison <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. 
 
-* To do so, click the compare <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. 
-* The later version is compared to the earlier version and the differences are indicated using the colors, as follows:
-  * New elements are green, removed elements are red, updated elements are blue.
-  * When a property is updated, it is displayed twice –  the new value is green, the removed one is red.
-  * All unchanged entities and relations are grey.
+The differences between the two versions are indicated using the colors, as follows:
+* The new elements are green, the removed elements are red, and the updated elements are blue.
+* When a property is updated, it is displayed twice –  the new value is highlighted by green, the removed one is red.
+* All unchanged entities and relations are grey.
 
-* To return to the regular view mode, select a version from the list.
+To return to the regular view mode, select a version from the list.
 
 
 
