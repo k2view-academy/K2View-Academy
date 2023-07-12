@@ -11,5 +11,6 @@
 	<li><a href="/articles/39_discovery_catalog/07_manual_overrides.md">Manual Overrides</a></li>	
 	<li><a href="/articles/39_discovery_catalog/08_search_catalog.md">Search Catalog</a></li>
 	<li><a href="/articles/39_discovery_catalog/09_build_artifacts.md">Build Artifacts</a></li>	
-	<li><a href="/articles/39_discovery_catalog/10_catalog_APIs.md">Catalog APIs</a></li>		
+	<li><a href="/articles/39_discovery_catalog/10_catalog_APIs.md">Catalog APIs</a></li>	
+	<li><a href="/articles/39_discovery_catalog/11_settings_for_discovery.md">Catalog Settings</a></li>	
 </ul>
