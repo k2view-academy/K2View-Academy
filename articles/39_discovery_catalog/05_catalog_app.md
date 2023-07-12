@@ -38,16 +38,18 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * **Edit** the catalog manually. Click [here](07_manual_overrides.md) for more details regarding the Manual Overrides.
   * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described further in this article. 
   * Unhide the hidden nodes. Selecting a node from this list returns it back to the view.
-* **Search** the catalog. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
+* **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
 * **Expand**, **collapse** and **hide**, triggering the same activities as in the element's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
 * **Zoom in / out**, adjusting the zoom of the view.
 
 ### Properties Tab
 
-The Properties Tab displays the properties of the selected element. Some of the properties are created by the Crawler and some are created by plugins. Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the clicked property. 
+The Properties Tab displays the selected element's name, the icon of the type and the element's  properties.
 
-Clicking on a property opens the More Info popup window that provides more details on the selected property.
+<img src="images/properties.png" style="zoom:75%;" />
+
+Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the property. For example, the property Origin, which can be the crawler, one of the plugins or manual.
 
 ### Classifier Configuration Window
 
