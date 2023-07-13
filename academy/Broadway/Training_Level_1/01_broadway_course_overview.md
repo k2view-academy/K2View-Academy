@@ -20,9 +20,9 @@ Please go to the [Level 1 Broadway Training Syllabus](02_broadway_training_sylla
 
 To fully understand this course, you should be familiar with the following principles, development languages and tools:
 
-* K2view Fabric.
-* Basic knowledge of relational databases like Oracle, MySQL and SQLite.
-* Basic knowledge of JavaScript and SQL.
+* K2view Fabric
+* Basic knowledge of relational databases like Oracle, MySQL and SQLite
+* Basic knowledge of JavaScript and SQL
 
 ### Course Environment
 
