@@ -29,11 +29,13 @@ When the catalog application opens, the latest **catalog version** is displayed 
 * Select another version from the list in order to view it.
 * Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform the versions comparison analysis.  
 
-Click [here](06_catalog_versioning.md) for more details regarding the Catalog Versioning.
+[Click for more information regarding the Catalog Versioning](06_catalog_versioning.md).
 
 **Data Platform and Schema's Context Menu**
 
 Clicking on any Data Platform or Schema node opens the context menu which allows performing the following actions:
+
+<img src="images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />or **Collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
   
@@ -42,9 +44,9 @@ Clicking on any Data Platform or Schema node opens the context menu which allows
   
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window. The hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the catalog.
 
-* **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes.
+* **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes from the screen.
   
-  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will display only the Dataset nodes under the selected Schema. 
+  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
   
   * In the Focus view, the breadcrumbs are displayed in the left upper corner of the main area to indicate your path within the Catalog tree. The breadcrumbs are clickable, thus you can navigate up the tree.  
   
@@ -52,7 +54,7 @@ Clicking on any Data Platform or Schema node opens the context menu which allows
 
 **Dataset Context Menu**
 
-Clicking on any Dataset node opens the its context menu which includes only the following two actions:
+Clicking on any Dataset node opens its context menu which includes only the following actions:
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
 
@@ -64,6 +66,8 @@ Clicking on any Dataset node opens the its context menu which includes only the 
 
     ​	<img src="images/legend.png" style="zoom: 67%;" />
 
+  * To collapse the expanded Dataset, click the three dots in the corner or do it from the legend for all Dataset nodes.
+
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
 
 ### Menu Bar
@@ -71,10 +75,10 @@ Clicking on any Dataset node opens the its context menu which includes only the 
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * The **Actions** menu allows to:
-  * **Edit** the catalog manually. Click [here](07_manual_overrides.md) for more details regarding the Manual Overrides.
-  * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration-window). 
+  * **Edit** the catalog manually. [Click for more information regarding the Manual Overrides](07_manual_overrides.md).
+  * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
   * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
-* **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. Click [here](08_search_catalog.md) for more details regarding the Catalog Search. 
+* **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click for more information regarding the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, triggering the same activities as using the node's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, enabling the Catalog layout. Horizontal (default), vertical or centered layout are supported.
 * **Zoom in / out**, adjusting the zoom of the view.
@@ -85,9 +89,21 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the property. For example, the property Origin, which can be the crawler, one of the plugins or manual.
+Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
-### Classifier Configuration Window
+### Deep Linking
+
+The Catalog application supports deep linking from the data platform to the field level. When navigating the Catalog tree and clicking the nodes, the path to the node is added to the application URL using the following format:
+
+~~~
+/app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
+~~~
+
+The version should be either the word **latest** or **V** with the version number (e.g. V13).
+
+This link can be shared as it sends another user straight to specific in-app location, saving the time and energy locating a particular node.
+
+### Classifier Configuration
 
 The Classifier Configuration window allows to view and update the profiling rules invoked by the Catalog built-in plugins which are described [here](04_plugin_framework.md#built-in-plugins).
 
