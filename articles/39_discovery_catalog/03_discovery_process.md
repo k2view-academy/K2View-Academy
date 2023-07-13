@@ -2,24 +2,27 @@
 
 The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
 
-* Define an interface for a given data source and initiate the Discovery job (Crawler).
-* The Crawler scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Discovery Schema.
+* Define a Fabric interface for a given data source and initiate the Discovery job.
+* The first step of the Discovery job is a Crawler. It scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Discovery Schema.
 * Next, a Plugin Framework is triggered automatically upon the Crawler completion. The Plugin Framework is a platform for executing predefined rules (plugins) and for enhancing the Discovery Schema accordingly. Examples of business rules are: 
   * Creating a link (relation) between 2 objects.
-  * Categorizing the fields based on their data or metadata as email, phone, etc.
-  * Determining whether a field should be considered a PII.
+  * Classification of the fields based on their data or metadata as EMAIL, PHONE, etc.
+  * Determining whether a field should be marked as PII.
 
 
 * Upon the Plugin Framework execution completion, the Discovery Schema is saved into the *neo4j* Graph DB. 
 
-* The Catalog supports versioning. A new version is created when the Crawler is executed and changes from the previous version are found.
-* The Catalog supports manual overrides. Edit Catalog function is available for updating the properties and the relations created by the Crawler.
+The Catalog support the following actions:
+
+
+* Versioning - a new version is created when the Discovery job is executed again and the changes from the previous version are found.
+* Manual overrides - Edit Catalog function is available for updating the properties and the relations created by the Discovery job.
 * The Catalog artifacts (including the identified classifications and PII indications) can be built and saved into the project tree, in order to be used by the masking mechanism. 
-* Once the process is completed, the Logical Unit schema can be created based on Discovery schema.
+* Once the process is completed, the Logical Unit schema can be created based on the Catalog's version.
 
 ![](images/DiscoveryE2E.png)
 
-Further articles in this section provide more details about each of the above steps.
+Further articles in this section provide more details about each of the above steps and activities.
 
 
 

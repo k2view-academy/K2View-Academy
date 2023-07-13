@@ -1,22 +1,20 @@
 # Catalog Integration with Fabric
 
-### Discovery Initiation
+### Run Discovery
 
-To initiate the K2View Discovery process:
+To initiate the Discovery process:
 
 * Start from defining an interface for your data source in the Fabric Studio. 
 
-* Then, trigger the Discovery job (Crawler) on this interface by running the following command from the Fabric terminal:
+* Then, trigger the Discovery job (Crawler) on this interface. To do so, open the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right click on the interface and click **Run Discovery Job** to trigger the job.
+
+  <img src="images/run_discovery_job.png" style="zoom:75%;" />
+  
+* Alternatively, runn the following command from the Fabric terminal:
 
   ~~~bash
   startjob DISCOVERY_CRAWLER name='<interface name>';
   ~~~
-
-* Alternatively, open the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right click on the interface and click **Run Discovery Job** to trigger the job.
-
-  <img src="images/run_discovery_job.png" style="zoom:75%;" />
-
-
 
 ### Open In Catalog
 
@@ -31,8 +29,6 @@ To view a data source element in the Catalog application, do the following:
 * The Catalog application opens and the selected element is displayed in the Catalog tree.
 
 [Click for more information about the Catalog Application.](05_catalog_app.md)
-
-
 
 
 
