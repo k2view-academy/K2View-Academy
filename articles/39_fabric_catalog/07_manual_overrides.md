@@ -32,7 +32,7 @@ The update is performed as follows:
 
 The relations can be modified as follows:
 
-* To **add** a new link, click on the source Dataset and click **Add Link** in its context menu.  Then draw an arrow from the source (Dataset1) to the target (Dataset2).
+* To **add** a new relation, click on the source Dataset and click **Add Relation** in its context menu.  Then draw an arrow from the source (Dataset1) to the target (Dataset2).
   * The name of the new link will be: *Dataset2 refers to Dataset1*. 
   * Dataset1 will be the PK Table Name in Properties tab.
   * Dataset2 will be the FK Table Name in Properties tab.
