@@ -178,7 +178,7 @@ To update the PII indicator of the profiling rules, go to Actions > Classifier C
 
 The purpose of this plugin is to check the % of null values per column, using the data snapshot. The nullability percentage is calculated on each column of non-empty tables. 
 
-As a result, the **Nullability Percentage ** property is added to the field's properties when its value is above the threshold. 
+As a result, the **Nullability Percentage** property is added to the field's properties when its value is above the threshold. 
 
 For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. But when it's 20% or less, this property will not be added.
 
