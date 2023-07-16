@@ -32,6 +32,8 @@ The purpose of the *Metadata Logical Reference* plugin is to identify possible f
 
 The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (remove the underscore ‘_’, convert to lower-case and consider the table name). 
 
+The plugin includes a blacklist of field names (e.g. 'username' or 'age') and a blacklist of field types (e.g. date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as input parameters to the plugin and can be updated on project level.
+
 For example, the following field names can be matched by the plugin:
 
 * CUSTOMER_ID and CustomerID

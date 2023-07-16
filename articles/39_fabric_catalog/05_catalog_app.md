@@ -109,12 +109,7 @@ The Classifier Configuration window allows to view and update the profiling rule
 
 ​	<img src="images/classifier.png" style="zoom: 67%;" />
 
-The following restrictions should be considered when updating the data via this window:
 
-* The combination of Classification & Type must be unique.
-  * For example, you can define Classification = EMAIL twice: with Type = Data and with Type = Metadata, but you cannot define it twice with the same type.
-* The PII must be aligned for two entries with the same Classification.
-  * For example, when defining two entries for Classification = EMAIL, the PII indicator of both of them should be either true or false.
 
 
 
