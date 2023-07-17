@@ -41,7 +41,7 @@ The list of Reference tables available for TDM tasks is populated in the [RefLis
 
 - **target_interface_name** - the name of the Reference table's target interface. 
 
-- **table_pk_list** - an optional setting. Populated by the list of target's PK fields in trnRefList. These fields can be later used to customize the load flow to run an Upsert on the target Reference table.
+- **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be later used to customize the load flow to run an Upsert on the target Reference table.
 
 - **truncate** - by default, the TDM runs a delete on the Reference table in the target environment before loading it. If you have permission to run a truncate on the target Reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
