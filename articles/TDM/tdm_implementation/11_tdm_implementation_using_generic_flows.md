@@ -225,12 +225,12 @@ Create a Broadway flow under the related root LU or the Shared Objects. It is re
    - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have 1 commit on all iterations.  
 
 
-Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
+Populate the Broadway flow in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist).
 
 Redeploy the related LUs and the TDM LU.
 
 ### Debugging the Broadway Flow
-1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the input **luName** patameter to create the Cassandra table, if needed.
+1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the input **luName** parameter to create the Cassandra table, if needed.
 2. Populate the input parameters and run the customized Broadway flow. 
 
 ### How does the Broadway Flow Generate an Entity List for the Task Execution? 
@@ -290,7 +290,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
   
      
 
-### Custom Logic High Level Structure
+### Custom Logic High-Level Structure
 
 - **Stage 1**: 
 
