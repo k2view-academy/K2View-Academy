@@ -3,6 +3,7 @@
 The TDM Library has all the utilities required for implementing a TDM project and for running TDM execution processes. It holds the following:
 
 - [Shared Objects](#tdm-library---shared-objects)
+- [TDM MTables](#tdm-library---MTables)
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
 - [TDM_Reference](09_tdm_reference_implementation.md) 
@@ -53,7 +54,11 @@ TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_s
 
 Import the TDM shared functions to your project. Note that since the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
 
-### Shared Translations
+## TDM Library - MTables
+
+TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support a development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
+
+The following MTables have been added to the **References** in the TDM library:
 
 <table width="900pxl">
 <tbody>
@@ -69,39 +74,39 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </td>
 </tr>
 <td valign="top" width="200pxl">
-<p><h5>trnMigrateList</p>
+<p><h5>MigrateList</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the query and interface name, or the Broadway flow to generate the entity list when running the <strong>extract task</strong> on all entities of each LU; one record per LU.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate this translation for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
+<p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
 <p>If there is a need to define a query per source environment, populate the source environment name and create a separate record for each Logical Unit and source_env_name combination. Otherwise, leave the source environment empty.</p>
-        <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information on how to implement a Broadway flow to get the entities (populated in EXTERNAL_TABLE_FLOW trnMigrateList field).</p>   
+        <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information on how to implement a Broadway flow to get the entities (populated in external_table_flow field of MigrateList table).</p>   
   <p><strong>Example 1:</strong></p>
-  <ul><li>LU_NAME= ORDER</li>
-    <li>SOURCE_ENV_NAME = ENV1</li>
-    <li>INTERFACE_NAME = TDM</li>
-<li>IG_SQL = Select lu_type2_eid from tdm_lu_type_relation_eid where lu_type_2 = &lsquo;ORDER&rsquo; and source_env = 'ENV1';</li></ul>
+  <ul><li>lu_name= ORDER</li>
+    <li>source_env_name = ENV1</li>
+    <li>interface_name = TDM</li>
+<li>ig_sql = Select lu_type2_eid from tdm_lu_type_relation_eid where lu_type_2 = &lsquo;ORDER&rsquo; and source_env = 'ENV1';</li></ul>
   <p><strong>Example 2:</strong></p>
-  <ul><li>LU_NAME= CUSTOMER</li>
-    <li>SOURCE_ENV_NAME is empty</li>
-    <li>INTERFACE_NAME = CRM_DB</li>
-    <li>IG_SQL = Select customer_id from customer limit 1000;</li></ul>
+  <ul><li>lu_name= CUSTOMER</li>
+    <li>source_env_name is empty</li>
+    <li>interface_name = CRM_DB</li>
+    <li>ig_sql = Select customer_id from customer limit 1000;</li></ul>
     <p><strong>Example 3:</strong></p>
-  	<ul><li>LU_NAME= CUSTOMER</li>
-    <li>SOURCE_ENV_NAME is empty</li>
-    <li>EXTERNAL_TABLE_FLOW = getEntityListFlow</li>   
+  	<ul><li>lu_name= CUSTOMER</li>
+    <li>source_env_name is empty</li>
+    <li>external_table_flow = getEntityListFlow</li>   
 </td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnMigrateListQueryFormats</p>
+<p><h5>MigrateListQueryFormats</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the trnMigrateList translation. Each LUI consists of a concatenation of the source environment, IID, version name and version datetime.</p>
+<p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the MigrateList table. Each LUI consists of a concatenation of the source environment, IID, version name and version datetime.</p>
 <p>Click to read more about <a href="01_tdm_set_instance_per_env_and_version.md">LUI structure for TDM implementation</a>.</p>
-<p>This translation is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings, e.g., sqlServer.</p>
+<p>This table is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings, e.g., sqlServer.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate 2 records for each database, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
@@ -119,41 +124,64 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnRefList</p>
+<p><h5>RefList</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of available reference tables for <strong>TDM tasks</strong>.</p>
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Reference implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
-<p>Populate this translation for each reference table. A separate record must be created for each reference table. Set the LU name on each record.</p>
+<p>Populate this table for each reference table. A separate record must be created for each reference table. Set the LU name on each record.</p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnPostProcessList</p>
+<p><h5>PostProcessList</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of post-processes to run at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends.</p>
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows and the LU of the Broadway flow. The LU can be empty if the post processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out post execution processes. Redeploy the LUs populated in the translation object, the TDM LU, and the Web-Services.  </p>
+<p>Populate the list of Broadway flows and the LU of the Broadway flow. The LU can be empty if the post processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnTDMCleanUp</p>
+<p><h5>ChildLink</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of the TDM DB tables to be cleaned by the <a href= "/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md">TDM clean-up process</a>. The translation defines the Delete statement on each table and a clean-up indicator indicates whether the table should be cleaned by the TDM clean-up process.</p>
+<p>Mapping parent and child IDs.&nbsp;</p>
+<p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM business entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
 </td>
 <td valign="top" width="400pxl">
-  <p>Clear the <strong>cleanup_ind</strong> to remove a table from the clean-up process. TDM tables can be added and Delete statements can be edited. </p>
+<p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent lu and child_lu field must be populated with the name of the child LU.</p>
+<p>Both SQLs populated in child_lu_eid_sql and child_lu_tar_eid_Sql fields must run on the parent LU and get the source and target child IDs for each parent ID.</p>
+<p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />trnChildLink of the Customer LU must be populated as follows:</p>
+<ul>
+<li><strong>parent_lu = </strong>CRM</li>    
+<li><strong>child_lu = </strong>Orders</li>
+<li><strong>child_lu_eid_sql = </strong>select order_id from subscriber</li>
+<li><strong>child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
+</ul>
+<p>The parameters: tables, subscriber and tar_subscriber, must all be defined in the CRM LU schema.</p>  
 </td>
 </tr>
+<tr>
+<td valign="top" width="200pxl">
+<p><h5>LuParams</p>
+</td>
+<td valign="top" width="300pxl">
+<p>Translation for the population of the LU_PARAMS table.&nbsp;</p>
+</td>
+<td valign="top" width="400pxl">
+<p>The COLUMN_NAME is populated by the name of the parameter and the SQL is populated by the SQL query that gets the values for the defined parameter.</p>
+<p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
+</td>
+</tr>    
 </tbody>
 </table>
+
 
 
 
@@ -179,6 +207,37 @@ TDM enables setting a TTL (Time To Leave) on the TDM LUIs. The default TTL perio
 
 - **TDM_LU_RETENTION_PERIOD_TYPE** - by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
 - **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with either a zero or an empty value to avoid setting a TTL on the TDM LUIs**.
+
+### TDM Cleanup Process
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="200pxl">
+<p><strong>Item&nbsp;</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Description&nbsp;</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Instructions&nbsp;</strong></p>
+</td>
+</tr>
+    <tr>
+<td valign="top" width="200pxl">
+    <p><h5>TDMCleanUp</p>
+        </td>
+<td valign="top" width="300pxl">
+    Define the list of the TDM DB tables to be cleaned by the TDM clean-up process. This table defines the Delete statement on each table and a clean-up indicator indicates whether the table should be cleaned by the TDM clean-up process.
+        </td>
+  <td valign="top" width="400pxl">
+      Clear the cleanup_ind to remove a table from the clean-up process. TDM tables can be added and Delete statements can be edited.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+​    
 
 ### TDM Deploy Flow
 
@@ -317,56 +376,6 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
   Click for more information about [TDM Hierarchy implementation](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md).
 
-
-### LU Level Translations
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td valign="top" width="200pxl">
-<p><strong>Item</strong></p>
-</td>
-<td valign="top" width="300pxl">
-<p><strong>Description&nbsp;</strong></p>
-</td>
-<td valign="top" width="400pxl">
-<p><strong>Instructions&nbsp;</strong></p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="200pxl">
-<p><h4>trnChildLink</p>
-</td>
-<td valign="top" width="300pxl">
-<p>Translation for mapping parent and child IDs.&nbsp;</p>
-<p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM business entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
-</td>
-<td valign="top" width="400pxl">
-<p>This translation must be added and populated on each <strong>parent LU</strong> and is used to populate TDM relationship tables. The child_lu field must be populated by the name of the child LU.</p>
-<p>Both SQLs populated in child_lu_eid_sql and child_lu_tar_eid_Sql fields must run on the parent LU and get the source and target child IDs for each parent ID.</p>
-<p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />trnChildLink of the Customer LU must be populated as follows:</p>
-<ul>
-<li><strong>Child_lu = </strong>Orders</li>
-<li><strong>Child_lu_eid_sql = </strong>select order_id from subscriber</li>
-<li><strong>Child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
-</ul>
-<p>The parameters: tables, subscriber and tar_subscriber, must all be defined in the Customer LU schema.</p>  
-</td>
-</tr>
-<tr>
-<td valign="top" width="200pxl">
-<p><h4>trnLuParams</p>
-</td>
-<td valign="top" width="300pxl">
-<p>Translation for the population of the LU_PARAMS table.&nbsp;</p>
-</td>
-<td valign="top" width="400pxl">
-<p>The COLUMN_NAME is populated by the name of the parameter and the SQL is populated by the SQL query that gets the values for the defined parameter.</p>
-<p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
-</td>
-</tr>
-</tbody>
-</table>
 
 
 ## TDM_Reference LU
