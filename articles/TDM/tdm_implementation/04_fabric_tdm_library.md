@@ -157,7 +157,7 @@ The following MTables have been added to the **References** in the TDM library:
 <td valign="top" width="400pxl">
 <p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent lu and child_lu field must be populated with the name of the child LU.</p>
 <p>Both SQLs populated in child_lu_eid_sql and child_lu_tar_eid_Sql fields must run on the parent LU and get the source and target child IDs for each parent ID.</p>
-<p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />trnChildLink of the Customer LU must be populated as follows:</p>
+<p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />ChildLink of the Customer LU must be populated as follows:</p>
 <ul>
 <li><strong>parent_lu = </strong>CRM</li>    
 <li><strong>child_lu = </strong>Orders</li>
