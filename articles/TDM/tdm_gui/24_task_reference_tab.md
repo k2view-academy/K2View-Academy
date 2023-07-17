@@ -2,9 +2,7 @@
 
 The Reference tab is opened when checking the **Reference** Data Type setting in the **Additional Execution Parameters** tab.
 
-Extract tasks extract **Reference tables** from a source environment and store them in the **Cassandra DB**.  Load tasks select data in Reference tables from the Cassandra DB and load them to the target environment.
-
-Unlike LUIs, a Load task does not activate an extraction from the source environment. Therefore, Reference tables must be loaded into Cassandra by the Extract task before loading them to the target.
+Extract tasks extract **Reference tables** from a source environment and store them in Fabric. Load tasks sync the Reference tables into Fabric if needed and load them to the target environment.
 
 Click for more information about [Reference tables implementation](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md).
 
@@ -20,7 +18,7 @@ The Extract task extracts the selected Reference tables and [saves them into Fab
 
 ### Regular Mode
 
-Display a list of all Reference tables [extracted into Cassandra for the task's LU and source environment](/articles/TDM/tdm_architecture/05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job). Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name**, and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
+Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name**, and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
 
 ### Data Versioning Mode
 
