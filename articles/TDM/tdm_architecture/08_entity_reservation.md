@@ -24,12 +24,12 @@ Note that entities can only be reserved by load or reserve tasks. A “reservati
 - Admin
 - Environment Owner
 - Tester: 
-  - The maximum number of reserved entities by a tester is set per a TDM environment on the TDM environment [permission set]. 
+  - The maximum number of reserved entities by a tester is set per a TDM environment on the TDM environment [permission set](/articles/TDM/tdm_gui/10_environment_roles_tab.md). 
   - A tester must set a retention period on the reserved entity. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
 ## Task Execution - Entity Reservation Validations
 
-- **Validate the number of reserved entities:**  Accumulate the number of reserved entities that are allowed for the user in the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
+- **Validate the number of reserved entities:**  Accumulate the number of reserved entities that are allowed for the user in the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserve up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
 
 - **Validate the retention period** to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
