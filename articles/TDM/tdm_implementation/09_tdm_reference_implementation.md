@@ -21,13 +21,13 @@ Import the TDM_Reference LU and load it to Fabric.
 
 Note **that the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) LU property is set by default to None**, i.e. each LUI (Reference table) is synced only once. You need to edit this property in order to enable a recurring sync of the Reference table from the source environment. 
 
-### Step 2 - Populate trnRefList Translation
+### Step 2 - Populate RefList MTable Object
 
-The list of Reference tables available for TDM tasks is populated in the [trnRefList](04_fabric_tdm_library.md#trnreflist) translation object. Populate the **trnRefList** with the list of available Reference tables for each LU. The following settings should be populated for each record:
+The list of Reference tables available for TDM tasks is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available Reference tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** - populated by the LU name to enable a selection of the related Reference table in a TDM task based on the task's LUs.
 
-- **ID** - populated by an auto increment number.
+- **ID** - populated by an auto-increment number.
 
 - **reference_table_name** - populated by the Reference table in the source environment.
 
@@ -35,21 +35,21 @@ The list of Reference tables available for TDM tasks is populated in the [trnRef
 
 - **interface_name** - the Reference table's source interface.
 
-- **target_ref_table_name** - this is an optional parameter. It can be populated when the Reference table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
+- **target_ref_table_name** - This is an optional parameter. It can be populated when the Reference table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
 
 - **target_schema_name** - populated by the target DB schema's name that stores the Reference table.
 
-- **target_interface_name** - name of the Reference table's target interface. 
+- **target_interface_name** - the name of the Reference table's target interface. 
 
-- **table_pk_list** - an optional setting. Populated by the list of target's PK fields in trnRefList. These fields can be later used to customized the load flow to run an Upsert on the target Reference table.
+- **table_pk_list** - an optional setting. Populated by the list of target's PK fields in trnRefList. These fields can be later used to customize the load flow to run an Upsert on the target Reference table.
 
-- **truncate** - by default, the TDM runs a delete on the Reference table in the target environment before loading it. If you have permissions to run a truncate on the target Reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
+- **truncate** - by default, the TDM runs a delete on the Reference table in the target environment before loading it. If you have permission to run a truncate on the target Reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
 - **count_bf** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target. 
 
-  
+ Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
 ### Step 3 - Create and Execute TDM Tasks
 
