@@ -1,10 +1,10 @@
 # Catalog Vocabulary
 
-The Data Discovery solution introduces a vocabulary that describes the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
+The Fabric Catalog introduces a vocabulary that describes the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
 
 The below vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
 
-The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the discovery results. 
+The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the Catalog schema. 
 
 Additionally, due to differences between the data sources, some nodes' properties are generic, while other are relevant for specific interface types only.
 
@@ -92,12 +92,12 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <td style="width: 80%; height: 96px;">
 <p>DATASET refers to DATASET</p>
 <p>Example: <em>INVOICE refers to CUSTOMER</em></p>
-<p>The direction is Many To One. </p>
-<p>The PK / FK column names are included in the relation's properties.</p>
+<p>The direction is Many To One. The PK / FK column names are included in the relation's properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
