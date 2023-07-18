@@ -75,7 +75,7 @@ It creates a situation that does not enable at least one substantial feature of 
 
 **3\.1.** For **Non-Production Environments** (QA and Development), the following SLA table shall apply:
 
-<table style="width: 900px;" >
+<table>
 <tbody>
 <tr>
 <td><strong>ENVIRONMENT</strong></td>
@@ -146,14 +146,14 @@ It creates a situation that does not enable at least one substantial feature of 
 
 **3\.2.** For **Production Environments**, the following SLA table shall apply:
 
-<table style="width: 900px;" >
+<table>
 <tbody>
-<tr style="height: 18px;">
-<td style="height: 18px; width: 165.672px;"><strong>SEVERITY</strong></td>
-<td style="height: 18px; width: 190.609px;"><strong>TYPE</strong></td>
-<td style="height: 18px; width: 184.359px;"><strong>STANDARD</strong></td>
-<td style="height: 18px; width: 145.656px;"><strong>SILVER</strong></td>
-<td style="height: 18px; width: 145.703px;"><strong>GOLD</strong></td>
+<tr>
+<td ><strong>SEVERITY</strong></td>
+<td ><strong>TYPE</strong></td>
+<td ><strong>STANDARD</strong></td>
+<td ><strong>SILVER</strong></td>
+<td ><strong>GOLD</strong></td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 165.672px; height: 54px;" rowspan="3">Critical</td>
