@@ -17,13 +17,30 @@ Each LU has two main branches that are linked to the **FABRIC_TDM_ROOT** root ta
 
 The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
-Note that a given target LU table can be used to delete multiple target tables.
+TDM 8.1 added an automatic generation of the target tables and their population flow:
 
-**Example:**
+### Target Tables Generation
 
-The Customer_ID key can be used to delete Customer, Contract, and Address target tables. Define the TAR_CUSTOMER table to hold the target Customer_ID and use the TAR_CUSTOMER to delete the target tables.
+1. Open the Shared Globals and verify that **TDM_DELETE_TABLES_PREFIX** Global is defined (the default is  TAR_). This is the prefix of the target LU tables.
 
-### Adding a Decision Function to the Target LU Tables
+2. Verify that the **ROOT_TABLE_NAME** LU's Global is set. 
+
+3. Complete the adding of all source LU tables to the LU schema and deploy the LU to the debug server.
+
+4. Open the **createDeleteTablesAndPopulations** flow (imported from the TDM library) and set the input parameters:
+
+   - **LU name**
+   - **Override Existing Flows** - when set to **true**, the flow deletes and recreates existing population flows for the target tables. When set to **false**, the flow skips existing flows and creates new flows only, if needed. The **default** value is **false**.
+   - **Target Interface**
+   - **Target Schema**
+
+   Run the flow.  The flow creates the target tables, their population flows, and add them to the LU schema. 
+
+5. Open LU’s schema, right click > Automatic Layout to view the added target tables.
+
+   
+
+#### Adding a Decision Function to the Target LU Tables
 
 The target LU tables must be populated when running a TDM task that deletes the entities from the target environment. The target keys must be extracted from the target environment to enable deleting entities and their related data.
 
@@ -31,9 +48,9 @@ If the task does not delete the entities from the target environment, the target
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** if the task must **delete the entities** from the target. Otherwise, this Global is set to **false**.   
 
-Add the **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) imported to the Shared Objects from the [TDM Library](04_fabric_tdm_library.md) to **all target tables**. 
+The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md) ) is **automatically added to all target tables** by the target tables generation flow. 
 
-### Populating Target Tables with the Target Environment
+#### Populating Target Tables with the Target Environment
 
 The LUI sync can populate the branches, source and target when running a load task that requires both delete and load entity operations. 
 
@@ -41,21 +58,15 @@ The **source LU tables** must extract the data from the **source environment**, 
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the active environment to the source environment before synching the LUI into Fabric.
 
-Do the following to populate the target LU tables based on the target environment:
+The **setTargetEnv_Actor** is **automatically added to the generated population flow of the main target LU table **by the target tables generation flow.  This actor sets the active environment based on the **TDM_TARGET_ENV_NAME** key (set by the **InitiateTDMLoad** flow with on the task's target environment).
 
-1.  Update the execution order of the target LU tables' populations to run **after the source LU tables**. 
+For example:
 
-2. Create the population object of the **main target LU table** based on the **Broadway flow**. This population must set the **target environment** to be the active environment before selecting the data from the data source: 
+ ![Broadway population](images/broadway_tar_table_population_example.png)
 
-   - Edit the population of the Broadway flow and set the active environment based on the **TDM_TARGET_ENV_NAME** key which is set by the **InitiateTDMLoad** flow based on the task's target environment. Add the following actor before the Query actor: **setTargetEnv_Actor**. 
+ Click for more information about [Broadway as a population and Fabric command actors](/articles/19_Broadway/09_broadway_integration_with_Fabric.md).
 
-     For example:
-
-      ![Broadway population](images/broadway_tar_table_population_example.png)
-
-      Click for more information about [Broadway as a population and Fabric command actors](/articles/19_Broadway/09_broadway_integration_with_Fabric.md).
-
-4. Note that the populations of the target tables are based on **the same interfaces as the source LU tables**, but the connection details change to the target environment, since the population of the main target LU table sets the target environment to be the active environment.
+Note that the populations of the target tables can be based on **the same interfaces as the source LU tables**, but the connection details change to the target environment, since the population of the main target LU table sets the target environment to be the active environment.
 
 ## Adding Broadway Flows to Delete the Entities
 

@@ -57,12 +57,12 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
   </studio>
 
   <web>
-  
+
    - Right-click the table name > **New Population** . A popup window opens. Set the new population name and click Enter. Then select the **populationRootTable.pop.flow** template and populate its parameters:
       - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name should be identical to the data source table name.
       - **KEY** - populate the key to delete the LU table before populating it.
       - **SOURCE_INTERFACE** - the interface name for the source DB query.
-  
+
   </web>  
 
 4. Set the [Truncate Before Sync](/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync) property of the main source LU table to False, as the Broadway flow deletes the LU table before populating it.
@@ -79,15 +79,7 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
 ### Step 3 - Add the Target LU Tables to the LU Schema
 
-1. Define the LU tables in order to extract the target keys from the target environment. These keys are used by the [delete flows](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) for deleting an entity from the target.
-
-2. Link the main target LU table to the FABRIC_TDM_ROOT table.
-
-3. Add the **fnDecisionDeleteFromTarget** Decision function to all target LU tables. Note that this Decision function is under Shared Objects and is imported from the [TDM Library](04_fabric_tdm_library.md).
-
-4. Create the population of the main target LU table based on a Broadway flow. The Broadway flow should set the task's target environment to be the **active environment**, enabling the selection of target IDs from the target environment. 
-
-5. Link the remaining target LU tables to the main target LU table.
+1. Run the createDeleteTablesAndPopulations flow to add the TAR_  tables to the LU. 
 
 Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
@@ -116,7 +108,7 @@ The source LU tables are not populated by the LUI sync in the following cases:
 - A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md).
 - A  [reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md).
 - A [Data Versioning load task](/articles/TDM/tdm_gui/15_data_flux_task.md): the selected data version is copied from Fabric. 
-- Load synthetic entities tasks (the source environmet in Synthetic). 
+- Load synthetic entities tasks (the source environment is Synthetic). 
 
 The Broadway flow also validates whether the entity exists in the source table. If the entity is not found in the main source tables, an Exception is thrown and the entity is rejected.
 
