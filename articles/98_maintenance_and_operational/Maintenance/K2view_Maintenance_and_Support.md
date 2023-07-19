@@ -8,6 +8,7 @@ Software Maintenance & Support shall consist of:
 (i) Error Corrections - as detailed in Section 1.1 below,
 
 (ii) Version Releases and Documentation updates - as detailed in Section 1.2 below, and
+
 (iii) Maintenance & Support for supported Version Release - as detailed in Section 1.3 below, and which are generally made available at no additional cost by K2view to its customers.
 
 
