@@ -3,7 +3,7 @@
 
 
 ### 1. **SOFTWARE MAINTENANCE & SUPPORT** 
-Maintenance & Support <u>for FABRIC installation</u> shall consist of:
+Software Maintenance & Support shall consist of:
 
 - Error Corrections - as detailed in Section 1.1 below,
 
