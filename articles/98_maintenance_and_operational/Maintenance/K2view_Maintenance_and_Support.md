@@ -14,10 +14,11 @@ Software Maintenance & Support shall consist of:
 
 **1\.1.** Error Corrections - K2view shall correct, as soon as is practicable and at least within the time periods    stated in Section 3, any Error in the K2view Software that is reported to K2view by Customer. A failure of the K2view Software to function properly due to any of the following reasons DOES NOT constitute an Error: 
 
-- Changes made by Customer in or to the K2view Software, or
+(i) Changes made by Customer in or to the K2view Software, or
 
-- The failure of Customer’s procedures, or computer environment or application products in which the K2view Software is used by Customer, to conform with the procedures or computer environment specified in the Documentation, or
-- Any of the circumstances set forth in Section 7 (Warranties and Disclaimer) of the Software License Agreement.
+(ii) The failure of Customer’s procedures, or computer environment or application products in which the K2view Software is used by Customer, to conform with the procedures or computer environment specified in the Documentation, or
+
+(iii) Any of the circumstances set forth in Section 7 (Warranties and Disclaimer) of the Software License Agreement.
 
 If Customer wishes to have such failure corrected, Customer shall pay K2view, at K2view’s customary billing rates, for time and expenses incurred in performing such correction.
 
