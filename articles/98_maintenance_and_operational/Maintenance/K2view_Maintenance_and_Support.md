@@ -5,10 +5,10 @@
 ### 1. **SOFTWARE MAINTENANCE & SUPPORT** 
 Software Maintenance & Support shall consist of:
 
-- Error Corrections - as detailed in Section 1.1 below,
+(i) Error Corrections - as detailed in Section 1.1 below,
 
-- Version Releases and Documentation updates - as detailed in Section 1.2 below, and
-- Maintenance & Support for supported Version Release - as detailed in Section 1.3 below, and which are generally made available at no additional cost by K2view to its customers.
+(ii) Version Releases and Documentation updates - as detailed in Section 1.2 below, and
+(iii) Maintenance & Support for supported Version Release - as detailed in Section 1.3 below, and which are generally made available at no additional cost by K2view to its customers.
 
 
 **1\.1.** Error Corrections - K2view shall correct, as soon as is practicable and at least within the time periods    stated in Section 3, any Error in the K2view Software that is reported to K2view by Customer. A failure of the K2view Software to function properly due to any of the following reasons DOES NOT constitute an Error: 
