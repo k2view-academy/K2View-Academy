@@ -1,3 +1,9 @@
+<web>
+
+Offline Deploy is irrelevant for Cloud deployment.
+
+</web>
+
 <studio>
 
 # Offline Deploy
