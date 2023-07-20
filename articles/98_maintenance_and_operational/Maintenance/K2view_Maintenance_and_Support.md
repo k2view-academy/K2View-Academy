@@ -1,3 +1,5 @@
+![image](https://github.com/k2view-academy/K2View-Academy/assets/104299047/4bae6090-46ad-4c4a-a73f-1169d22d7ac8)
+
 # SOFTWARE MAINTENANCE & SUPPORT
 
 
