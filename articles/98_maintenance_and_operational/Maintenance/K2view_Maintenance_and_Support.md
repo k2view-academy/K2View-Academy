@@ -1,39 +1,44 @@
+![image](https://github.com/k2view-academy/K2View-Academy/assets/104299047/4bae6090-46ad-4c4a-a73f-1169d22d7ac8)
+
 # SOFTWARE MAINTENANCE & SUPPORT
 
 
 
 ### 1. **SOFTWARE MAINTENANCE & SUPPORT** 
-Maintenance & Support <u>for FABRIC installation</u> shall consist of:
+Software Maintenance & Support shall consist of:
 
-- Error Corrections - as detailed in Section 1.1 below,
+​	(i) Error Corrections - as detailed in Section 1.1 below,
 
-- Version Releases and Documentation updates - as detailed in Section 1.2 below, and
-- Maintenance & Support for supported Version Release - as detailed in Section 1.3 below, and which are generally made available at no additional cost by K2view to its customers.
+​	(ii) Version Releases and Documentation updates - as detailed in Section 1.2 below, and
+
+​	(iii) Maintenance & Support for supported Version Release - as detailed in Section 1.3 below, and which 	are generally made available at no additional cost by K2view to its customers.
 
 
 **1\.1.** Error Corrections - K2view shall correct, as soon as is practicable and at least within the time periods    stated in Section 3, any Error in the K2view Software that is reported to K2view by Customer. A failure of the K2view Software to function properly due to any of the following reasons DOES NOT constitute an Error: 
 
-- Changes made by Customer in or to the K2view Software, or
+​	(i) changes made by Customer in or to the K2view Software, or
 
-- The failure of Customer’s procedures, or computer environment or application products in which the K2view Software is used by Customer, to conform with the procedures or computer environment specified in the Documentation, or
-- Any of the circumstances set forth in Section 7 (Warranties and Disclaimer) of the Software License Agreement.
+​	(ii) the failure of Customer’s procedures, or computer environment or application products in which the K2view Software is used by Customer, to conform with the procedures or computer environment specified in the Documentation, or
+
+​	(iii) any of the circumstances set forth in Section 7 (Warranties and Disclaimer) of the Software License Agreement.
 
 If Customer wishes to have such failure corrected, Customer shall pay K2view, at K2view’s customary billing rates, for time and expenses incurred in performing such correction.
 
 
-**1.2.** Version Releases and Documentation Updates - K2view shall notify Customer, via the K2view Support website at [https://support.k2view.com]() (the “K2view Support Site”) under “Release Notes And Upgrade” in the “Knowledge Base” section, of Version Releases and Documentation updates from time to time during the applicable term of the Maintenance & Support, as defined in the applicable Order Form, if and when K2view makes them generally available. Customer is requested to subscribe to the K2view Support Site to be notified as aforementioned, and to have access to other services provided via the K2view Support Site, like Q&A’s about K2view Software and its use. It is Customer’s responsibility to verify that the new update or release conforms with the implementation or application using the K2view Software. Upon Customer’s request and K2view’s written agreement, K2view may assist in the verification effort or provide other on-site assistance subject to availability, at K2view’s then current rates.
+**1.2.** Version Releases and Documentation Updates - K2view shall notify Customer, via the K2view Support website at https://support.k2view.com (the “K2view Support Site”) under “Release Notes And Upgrade” in the “Knowledge Base” section, of Version Releases and Documentation updates from time to time during the applicable term of the Maintenance & Support, as defined in the applicable Order Form, if and when K2view makes them generally available. Customer is requested to subscribe to the K2view Support Site to be notified as aforementioned, and to have access to other services provided via the K2view Support Site, like Q&A’s about K2view Software and its use. It is Customer’s responsibility to verify that the new update or release conforms with the implementation or application using the K2view Software. Upon Customer’s request and K2view’s written agreement, K2view may assist in the verification effort or provide other on-site assistance subject to availability, at K2view’s then current rates.
 
 
-**1.3.** Maintenance for Supported Versions - K2view shall provide Maintenance & Support for Version Releases for at least two years (commencing on the Major Version release date, for the Major Version used by the Customer, “Major Version X”) and at least while the Major Version lasts, subject to having a Software License Agreement in term.
+**1.3.** Maintenance for Supported Versions - K2view shall provide Maintenance & Support for Version Releases for the longer of: (1) A period of two years, commencing on the Major Version release date, for the Major Version used by the Customer (“Major Version X”); or (2) until K2view releases Major Version (X + 3), subject to having a license agreement in term. 
 
 
-**1.4.** K2view’s Maintenance & Support only include support services for K2view Software to the extent that the Customer System meets the requirements and specifications defined by K2view.
+**1.4.** K2view’s Maintenance & Support only include support services for K2view Software to the extent that the Customer System meets the requirements and specifications defined by K2view [here](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md) and an effective monitoring system.
 
 
 **1.5.** K2view’s Maintenance & Support do not include services such as assistance in program and architectural design or consultation services or training or performance tuning, including consultation regarding configuration and implementation issues in development and production.
 
-
 **1.6.** K2view’s Maintenance & Support do not include on-site or remote installation of the K2view Software Version Releases or any other on-site or remote assistance. Customer shall install the Version Releases provided by K2view, using the K2view Software and accept full responsibility for such installations.
+
+
 
 
 ### 2. **PROBLEM REPORTING SYSTEMS** 
@@ -65,10 +70,11 @@ It creates a situation that does not enable at least one substantial feature of 
 
 - **Low Error** is, other than any Critical Error or High Error, any minor flaw in the K2view Software.
 
-
 **2\.5.** Customer shall: (a) before forwarding an Error to K2view, check that it is not a duplicate; (b) provide K2view with the standard Error issue content information as defined in Section 3.3 as well as other information and/or test data, so that K2view is able to reproduce the problem at K2view’s facilities. If K2view is unable to reproduce the problem, or the solution involves modifying internal K2view Software’s configuration parameters, K2view may request permission for a support staff member or K2view developer to enter a WebEx or similar connection, so that K2view personnel view the user’s computer screen. A request for a remote connection will come only after other options are explored.
 
-**2\.6.** K2view will provide a response to Errors according to time frames as a function of the severity level, type of environment (production, development, test, certification/UAT) and, according to the level of service ordered as per the applicable schedule (Standard, Silver, Gold), as further detailed in the tables below. Unless otherwise agreed to in writing by the parties hereto, if an Error arrives outside of K2view’s normal business hours, the response time frame will begin at the start of the next business day, except Critical Errors, which will be handled continuously in any given day. A response time frame begins when an Error with reproducible results has been acknowledged by K2view. If insufficient information to reproduce the results is received, K2view will notify Customer, and the status of the Error will be shown as “waiting for customer” until additional information is received. Tickets opened for non-product issues may be re-allocated as Concierge Consulting tickets when relevant.
+**2\.6.** K2view will provide a response to Errors according to time windows as a function of the severity level, type of environment (production, development, test, certification/UAT) and, according to the level of service ordered as per the applicable schedule (Standard, Silver, Gold), as further detailed in the tables below. Unless otherwise agreed to in writing by the parties hereto, if an Error arrives outside of K2view’s normal business hours, the response time window will begin at the start of the next business day, except Critical Errors, which will be handled continuously in any given day. A response time window begins when an Error with reproducible results has been acknowledged by K2view. If insufficient information to reproduce the results is received, K2view will notify Customer, and the status of the Error will be shown as “waiting for customer” until additional information is received. Tickets opened for non-product issues may be re-allocated as Concierge Consulting tickets when relevant.
+
+
 
 ### 3. **RESPONSE TIME** 
 
@@ -215,6 +221,8 @@ It creates a situation that does not enable at least one substantial feature of 
 </table>
 
 * All days/hours refer to K2view business days at Customer’s location.
+
+
 
 ### 4. **DEFINITIONS** 
 
