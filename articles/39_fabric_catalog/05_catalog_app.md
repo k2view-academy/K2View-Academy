@@ -10,6 +10,8 @@ The Catalog application includes the following parts, described in this article:
 * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 * [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
 
+In addition, the article includes the description of the Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism and the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+
 ### Main Area
 
 **General Navigation**
