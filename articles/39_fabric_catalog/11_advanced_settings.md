@@ -32,3 +32,4 @@ ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether t
 
 If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
+[![Previous](/articles/images/Previous.png)](10_catalog_APIs.md)
