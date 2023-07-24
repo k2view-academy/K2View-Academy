@@ -16,9 +16,7 @@ The plugin's execution order is defined by the Plugins Pipeline configuration fi
 
 **Plugin's Threshold**
 
-Each plugin's definition in the **plugins.discovery** includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. 
-
-The threshold can be updated if needed. 
+Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. The threshold can be updated if needed. 
 
 **Custom Plugins**
 
@@ -156,7 +154,7 @@ To update the data profiling rules, go to Actions > Classifier Configuration in 
 
 **Metadata Regex Classifier**
 
-The purpose of *Data Regex Classifier* is to classify the source fields based on their **metadata**. 
+The purpose of *Metadata Regex Classifier* is to classify the source fields based on their **metadata**. 
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 

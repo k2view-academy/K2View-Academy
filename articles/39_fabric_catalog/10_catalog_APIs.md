@@ -224,7 +224,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: when searching for *schema* and *field* nodes that include a *customer* keyword in their node name and have *PII = true* and *Classification = EMAIL* properties, the request body is:
+Example 1: when searching for *dataset* and *field* nodes whose name include a *customer* keyword, the request body is:
 
 ~~~json
 {
@@ -232,9 +232,20 @@ Example 1: when searching for *schema* and *field* nodes that include a *custome
         "customer"
     ],
     "type": [
-        "schema",
+        "dataset",
         "field"
     ],
+    "advanced": {
+    }
+}
+~~~
+
+Example 2: when searching for *any* nodes with *PII = true* and *Classification = EMAIL* properties, the request body is:
+
+~~~json
+{
+    "input": [],
+    "type": [],
     "advanced": {
         "pii": "true",
         "classification": "EMAIL"
@@ -242,19 +253,9 @@ Example 1: when searching for *schema* and *field* nodes that include a *custome
 }
 ~~~
 
-Example 2: when searching for *any* nodes with *PII = true* property, the request body is:
-
-~~~json
-{
-    "input": [],
-    "type": [],
-    "advanced": {
-        "pii": "true"
-    }
-}
-~~~
 
 
+[![Previous](/articles/images/Previous.png)](09_build_artifacts.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_advanced_settings.md) 
 
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)
+
 

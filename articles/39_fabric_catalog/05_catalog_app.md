@@ -10,6 +10,8 @@ The Catalog application includes the following parts, described in this article:
 * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 * [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
 
+In addition, the article includes the description of the Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism and the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+
 ### Main Area
 
 **General Navigation**
@@ -105,7 +107,9 @@ This link can be shared as it sends another user straight to specific in-app loc
 
 ### Classifier Configuration
 
-The Classifier Configuration window allows to view and update the profiling rules invoked by the Catalog built-in plugins which are described [here](04_plugin_framework.md#built-in-plugins).
+The Classifier Configuration popup screen allows to view and update the profiling rules which are used by the Catalog Classification built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins).
+
+The rules are saved in the Discovery/MTable folder in the project tree.
 
 ​	<img src="images/classifier.png" style="zoom: 67%;" />
 
