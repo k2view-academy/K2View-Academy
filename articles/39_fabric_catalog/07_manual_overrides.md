@@ -4,13 +4,11 @@
 
 The Catalog supports the ability to perform manual overrides. 
 
-To start the manual overrides, a user needs to click **Actions > Edit Catalog** in the menu bar. To end it, the user should either save the changes or discard them. Upon save, a new catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual which enables keeping them part of the Catalog after running the Crawler again.
+To start the manual overrides, click **Actions > Edit Catalog** in the menu bar. To end it, either save the changes or discard them. Upon save, a new catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual which enables keeping them part of the Catalog after running the Crawler again.
 
 The graph's coloring scheme changes in the Edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. Meaning that all entities and relations become grey and then every change is indicated by green, red or blue color.
 
-The overrides are only allowed to the latest catalog version. 
-
-See below which manual overrides are allowed to be performed in the Catalog.
+Only the latest catalog version can be edited. See below which manual overrides are available in the Catalog.
 
 ### Edit Properties
 
@@ -43,10 +41,9 @@ Only *refers_to* relations can be added and deleted.
 
 ### Saving Manual Overrides
 
-While the Catalog is in the Edit mode, the editing activities described in previous sections are  aggregated in the client side only. Once the user completes the required changes, one of the following should be performed:
+While the Catalog is in the Edit mode, all updates are aggregated in the client side only. Once the manual changes are completed, the **Save** button should be clicked in the menu bar. It will trigger saving all of the changes together as a new version and exiting the Edit mode.
 
-* Clicking the **Save** button in the menu bar will save all the changes together as a new version and exit the Edit mode.
-* Alternatively, clicking the **Discard** button in the menu bar will exit the Edit mode without saving the pending changes.
+Alternatively, it is possible to exit the Edit mode without saving any changes by clicking the **Discard** button.
 
 Save and Discard buttons are only visible when the Catalog application is in the Edit mode.
 

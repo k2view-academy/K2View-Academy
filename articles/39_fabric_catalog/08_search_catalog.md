@@ -8,23 +8,25 @@ To start the search, click the![](images/search.png) icon in the menu bar. It op
 
 ### Advanced Search
 
+<img src="images/advanced_search.png" style="zoom:75%;" />
+
 The advanced search allows to narrow the search results by specifying one of the following parameters:
 
-* Search within the selected object type(s) only, for example - Fields and Relations only. 
+* Search the selected object type(s) only, for example - fields. 
 
-* Search by PII and Classification properties. So, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
+* Search by PII and Classification properties. For example, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
 
-* Search by an object's score. For example, when the user enters 0.5,  the results list will return all catalog objects with score lower than 0.5.
-
-<img src="images/advanced_search.png" style="zoom:75%;" />
+* Search by an object's score. For example, when the user enters 0.8,  the results list will return all catalog objects with score lower than 0.5.
 
 ### Search Results
 
-The returned result set is limited to 1,000 rows. The search results are presented in a list which can be exported into a CSV file. 
-
-To view the selected entity in the Catalog tree, click the link in the Name column.
-
 <img src="images/search_results.png" style="zoom:75%;" />
+
+The search results are presented in a list which can be exported into a CSV file. To navigate to an entity in the Catalog tree, click the ![](images/link.png)icon in the Name column.
+
+The returned result set is limited to 1,000 rows. 
+
+
 
 
 
