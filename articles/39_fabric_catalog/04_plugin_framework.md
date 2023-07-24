@@ -156,7 +156,7 @@ To update the data profiling rules, go to Actions > Classifier Configuration in 
 
 **Metadata Regex Classifier**
 
-The purpose of *Data Regex Classifier* is to classify the source fields based on their **metadata**. 
+The purpose of *Metadata Regex Classifier* is to classify the source fields based on their **metadata**. 
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 
