@@ -18,7 +18,7 @@ The deployment of a Fabric project is performed on the following levels:
   
 - **Deployment of Broadway flows** as part of the LU to which they belong.
 
-- **Deployment of References objects**, when they exist in a project. All Reference (common) tables are deployed together.
+- **Deployment of Reference objects**, when they exist in a project. All Reference (common) tables are deployed together.
 
 - **Deployment of Web Services**, when they exist in the project. <studio> The following deployment options are available: 
   
