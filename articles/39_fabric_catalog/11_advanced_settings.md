@@ -20,16 +20,16 @@
 
 ### Catalog Application Configuration
 
-* The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of the node's properties in the Catalog application. 
-  * This JSON file defines the order of the properties display on the Properties tab, which properties are editable (for the purpose of [Manual override](07_manual_overrides.md)), which properties are searchable (for the [advanced search](08_search_catalog.md#advanced-search)) and more.
-  * The file is located in fabric/staticWeb folder and can be updated on the project level.
+The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines:
+* Which properties are editable and deletable (via [manual override](07_manual_overrides.md)) in the Properties tab;
+* Which properties are searchable and which valid values to present in the [Advanced search](08_search_catalog.md#advanced-search) screen.
+
+The file is located in ```fabric/staticWeb``` folder and can be updated on the project level.
 
 ### General
 
-The [data_discovery] section of config.ini defines the Catalog system configurations, such as the connection details to the neo4j GraphDB.
+The [data_discovery] section of config.ini defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
 
-ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. 
-
-If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
+ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
 [![Previous](/articles/images/Previous.png)](10_catalog_APIs.md)
