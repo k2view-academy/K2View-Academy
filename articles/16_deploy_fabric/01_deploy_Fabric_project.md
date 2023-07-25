@@ -168,7 +168,7 @@ For more information about project Versioning, read [here.]()
 
 ### Download the deployed code
 
-In addition to the project versioning that allows you to compare between the deployed version and the matched tag in GIT, Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
+In addition to project versioning that allows you to compare between the deployed version and the matched tag in GIT, Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
 
 
 ###### Syntax:
