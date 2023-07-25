@@ -164,7 +164,7 @@ The tag version creation is done with accompany of GIT tagging capability, so th
 
 While Fabric provides the mechanism and technology for project versioning, the project owner and developers shall follow the related project lifecycle procedures, when tagging a version and while deploying the project.  
 
-For more information of project Versioning, read [here]()
+For more information about project Versioning, read [here]()
 
 ### Download the deployed code
 
