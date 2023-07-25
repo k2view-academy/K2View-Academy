@@ -71,7 +71,7 @@ To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), 
 
 <web>
 
-To activate Soft Deploy, right-click on a Logical Unit name, and select Soft Deploy. 
+To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft Deploy. 
 
 </web>
 
