@@ -35,13 +35,13 @@ Following is the recommended workflow:
 
 3. Once a working phase is done, set a version for your work:
 
-   - From the project tree root, right click and choose "Version Tag".
+   - From the project tree root, right-click and choose "Version Tag".
 
-   - A popup appears with the information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous but can be changed, as described below.
+   - A popup appears with the information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous one but can be changed, as described below.
 
       ![version tag popup](images/04_01_versiontag.png)
 
-   - Leave the project new version value as proposed or change it, when needed.
+   - Leave the value of the new project's version, as proposed, or change it when needed.
    
    - Click OK to proceed.
    
