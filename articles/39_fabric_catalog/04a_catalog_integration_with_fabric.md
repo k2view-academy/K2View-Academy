@@ -1,3 +1,5 @@
+<web>
+
 # Catalog Integration with Fabric
 
 ### Run Discovery
@@ -13,6 +15,8 @@ To initiate the Discovery process:
   ~~~bash
   startjob DISCOVERY_CRAWLER name='<interface name>';
   ~~~
+
+Note that when the Crawler job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job which is subscribed to the Pubsub topic dedicated to the Discovery process.
 
 ### Open In Catalog
 
@@ -40,3 +44,4 @@ Note that **Run Discovery Job** and **Open in Catalog** commands might be hidden
 
 [![Previous](/articles/images/Previous.png)](04_plugin_framework.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_catalog_app.md) 
 
+</web>

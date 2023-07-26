@@ -1,3 +1,5 @@
+<web>
+
 # Plugin Framework
 
 ### Overview
@@ -186,3 +188,4 @@ For example, when 30% of the values in a certain field are null, the Nullability
 
 [![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
 
+</web>

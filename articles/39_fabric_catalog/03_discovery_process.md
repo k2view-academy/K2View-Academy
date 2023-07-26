@@ -1,3 +1,5 @@
+<web>
+
 # Discovery Process
 
 The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
@@ -28,3 +30,4 @@ Further articles in this section provide more details about each of the above st
 
 [![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_plugin_framework.md) 
 
+</web>

@@ -1,3 +1,5 @@
+<web>
+
 # Catalog Advanced Settings
 
 ### Web Studio
@@ -32,4 +34,8 @@ The [data_discovery] section of config.ini defines the Discovery process configu
 
 ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
+
+
 [![Previous](/articles/images/Previous.png)](10_catalog_APIs.md)
+
+</web>

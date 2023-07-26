@@ -1,3 +1,5 @@
+<web>
+
 # Catalog Artifacts and Masking
 
 ### Overview
@@ -43,7 +45,7 @@ For such fields the user should manually add Auto-mask = false property in the C
 
 [![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_APIs.md) 
 
-
+</web>
 
 
 
