@@ -12,5 +12,5 @@
 	<li><a href="/articles/39_fabric_catalog/08_search_catalog.md">Search Catalog</a></li>
 	<li><a href="/articles/39_fabric_catalog/09_build_artifacts.md">Catalog Artifacts and Masking</a></li>	
 	<li><a href="/articles/39_fabric_catalog/10_catalog_APIs.md">Catalog APIs</a></li>	
-	<li><a href="/articles/39_fabric_catalog/11_settings_for_discovery.md">Catalog Settings</a></li>	
+	<li><a href="/articles/39_fabric_catalog/11_advanced_settings.md">Catalog Advanced Settings</a></li>	
 </ul>
