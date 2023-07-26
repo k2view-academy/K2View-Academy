@@ -21,67 +21,67 @@ For example:
 <table>
 <tbody>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><strong>Command Group</strong></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p><strong>Group Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="#get-commands">Get LUI</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
-<p><a href=/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command>Delete LUI</a></p>
+<td valign="top" width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command">Delete LUI</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Delete an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from Fabric.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
 </td>
-<td width="550pxl" valign="top">
-<p> Detach the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
+<td valign="top" width="550pxl">
+<p>Detach the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>View Fabric configurations and settings.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-settings">Fabric Settings</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Session and cluster levels settings.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-security-and-credentials">Fabric Security and Credentials</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Set the Master Key for an LUI or the encryption details of an interface.</p>
 <p>Set users, roles and permissions.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-deployment--deploy-and-drop-commands">Fabric Deployment and Drop</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Deploy and drop Fabric implementation commands.</p>
 </td>
 </tr>
@@ -89,36 +89,36 @@ For example:
 <td width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Deploy environments and test connections on an active environment.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Run CQL queries on Cassandra.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#jobs-commands">Jobs</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Fabric jobs execution and monitoring commands.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#batch-process-commands">Batch Process</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Batch processing execution and monitoring commands.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#process-control">Process Control</a></p>
 </td>
 <td width="550pxl">
@@ -126,55 +126,64 @@ For example:
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#execution-monitoring">Execution Monitoring</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Trace Fabric operations and write the results to trace files.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Reference Tables</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Commands for handling Reference tables.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Support transactions to update LUI or Reference table data (Fabric as the System of Record).</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#cdc-and-search">CDC and Search</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Support Change Data Capture (CDC) across all LUI search functionalities.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Run Broadway flow.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl" valign="top">
+<td valign="top" width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
 </td>
-<td width="550pxl" valign="top">
+<td valign="top" width="550pxl">
 <p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="04_fabric_commands.md#mdb-export-import">MDB Export / Import</a></p>
+</td>
+<td>
+<p>Commands for exporting or importing the MicroDB data from SQLite to another DB type.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 ### Get Commands
@@ -700,5 +709,29 @@ An SQL statement can be preceded by the **EXPLAIN** keyword or by the **EXPLAIN 
 Example:
 
 ![Query Helpers](images/04_fabric_command_query_helpers.png)
+
+
+
+### MDB Export / Import
+
+Fabric supports exporting or importing the MicroDB data from SQLite to another DB type (PostgreSQL). This solution allows performing the Fabric data backup, share it with others or import data from external data sources into Fabric.
+
+The following Fabric commands have been introduced for this purpose:
+
+* **MDB_EXPORT <u>without</u> IID**
+  * In this mode, the schema of the specified Logical Unit (LU) is dropped (if exists) and created again.
+  * All pre-defined constraints (such as PKs, FKs, and indexes), are included in the exported schema.
+  * The command returns the number of exported tables. 
+
+* **MDB_EXPORT <u>with</u> IID**
+  * In this mode, data is retrieved from the Fabric MDB and written to the external storage using the driver provided by the specified interface.
+  * The command returns the number of exported rows.
+* **MDB_IMPORT with IID**
+  * The command enables the data import from external storage into the Fabric MDB, replacing the existing MDB data.
+  * Using this import command assumes that the data has been exported via corresponding MDB_EXPORT command.
+
+Both import and export commands can optionally receive a list of tables to be excluded from the import or export process.
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)

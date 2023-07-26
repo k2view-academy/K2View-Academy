@@ -12,6 +12,8 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
+Starting from V7.2, SQLite, or PostgreSQL are supported as operational DB. The settings are done via the new [internal_db] section of config.ini. 
+
 ### Login to Operational DB
 
 Use the following command to connect to the Operational DB from the server:
