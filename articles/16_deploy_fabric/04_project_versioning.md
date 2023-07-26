@@ -37,11 +37,11 @@ The following is the recommended workflow:
 
    - From the project tree root, right-click and choose "Version Tag".
 
-   - The Version Tag pop-up window appears, dsiplaying the information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous one but can be changed, as described below.
+   - The Version Tag pop-up window appears, displaying the information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous version but can be changed, as described below.
 
       ![version tag popup](images/04_01_versiontag.png)
 
-   - Leave the value of the new project's version, as proposed, or change it when needed.
+   - Leave the value of the new project version, as proposed, or change it if needed.
    
    - Click OK to proceed.
    
