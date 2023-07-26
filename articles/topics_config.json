@@ -261,8 +261,8 @@
 					"value": "30_web_framework"
 				},
 				{
-					"display name": "Data Catalog",
-					"value": "33_data_catalog"
+					"display name": "Fabric Catalog",
+					"value": "39_fabric_catalog"
 				},
 				{
 					"display name": "Data Explorer",
