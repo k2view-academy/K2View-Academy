@@ -25,11 +25,11 @@ Studio helps you to tag a version appropriately by:
 
 ### Tag Version Work Flow
 
-Following is the recommended workflow:
+The following is the recommended workflow:
 
 <studio>
 
-1. Pull project from GIT.
+1. Pull the project from GIT.
 
 2. Develop and implement your code on the project.
 
