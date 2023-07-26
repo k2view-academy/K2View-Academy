@@ -101,7 +101,7 @@ set;
 ~~~
 
 
-This command displays the currently **deployed project name**, as well as the values of various project parameters. 
+This command displays the currently deployed project's name. 
 
 [Click for more information about Fabric Basic Commands](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands). 
 
