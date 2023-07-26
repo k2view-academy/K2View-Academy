@@ -12,7 +12,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
-Starting from V7.2, SQLite, or PostgreSQL are supported as operational DB. The settings are done via the new [internal_db] section of config.ini. 
+Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini. [Click to learn how to switch to SQLite or PostgreSQL as operational DB](06_cassandra_keyspaces_for_fabric#how-to-switch-to-sqlite-or-postgresql).
 
 ### Login to Operational DB
 
@@ -295,8 +295,26 @@ The following table lists the keyspaces created by Fabric:
 </table>
 
 
-
 [Click for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
+
+### How to Switch to SQLite or PostgreSQL
+
+Starting from V7.2, the  [internal_db] section has been added to the config.ini and it holds the operational DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
+
+* For SQLite, set:
+
+~~~bash
+INTERNAL_DB_TYPE=SQLITE
+INTERNAL_DB_HOST=/home/k2view/sqlite
+~~~
+
+* For PostgreSQL, set the POSTGRESQL type and all the relevant connection details.
+
+The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. Meaning that by default the Fabric storage type is the same as the Fabric Operational DB. You can either update only the [internal_db] settings, impacting both the Storage and operational DB types together, or you can define each of them to have a different DB type.
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
 
