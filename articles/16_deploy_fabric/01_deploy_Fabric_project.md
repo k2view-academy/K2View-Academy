@@ -82,8 +82,7 @@ Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabri
 
 <studio>
 	
-To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console
-(click this icon from next to **Fabric** in the Debug Panel to open the console):   <img width="20" height="19" src="/articles/04_fabric_studio/images/open_debug_server_or_cassandra.png">
+To check a project’s deployment in the Fabric server, use the **SET** command from the Fabric console.
 
 </studio>
 
