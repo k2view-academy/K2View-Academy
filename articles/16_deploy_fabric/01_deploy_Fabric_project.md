@@ -38,7 +38,7 @@ The deployment of a Fabric project is performed on the following levels:
 
 <studio>
 Deployment can be performed from either one of the below 2 locations:
-
+	
 - [The Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio), using **Deploy to Server**. 
 
 - The Fabric server, using an [Offline Deploy](03_offline_deploy.md), an act that refers to deploying the artifacts that were created in the Fabric Studio, by 		choosing **Build Deploy Artifacts**. 
