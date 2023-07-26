@@ -62,7 +62,7 @@ You can use the Soft Deploy option to deploy changes without triggering automati
 * Parsers
 * Interface listener
 
-Moreover, when the Soft Deploy is used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
+Moreover, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
 
 To activate the Soft Deploy when deploying from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
 
