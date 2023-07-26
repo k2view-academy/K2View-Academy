@@ -78,7 +78,7 @@ To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft
 
 ### How Do I Check Which Project Is Deployed to Fabric? 
 
-Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
+Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message is displayed. 
 
 <studio>
 	
