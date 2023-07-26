@@ -156,7 +156,7 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 
 ## Project Versioning
 
-Having that project implementation is an on-going process, there is a need to clarify which code has been deployed at the server. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. 
+As the project implementation is an on-going process, where many changes are done over time, there is a need to clarify which code or configuration has been deployed to the server.
 
 Fabric offers project version tagging so that on the deployed server you can see the deployed version tag.
 
