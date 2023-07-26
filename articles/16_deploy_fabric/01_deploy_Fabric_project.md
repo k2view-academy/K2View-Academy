@@ -48,7 +48,7 @@ A folder is created under **/storage/lu** for each object’s first deployment. 
 
 </studio>
 
-Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric server. For example, when an interface is updated, all LU using this interface should be re-deployed to make this change effective.
+Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the LUs that use these objects in order to bring the changes into effect. For example, when an interface is updated, all LUs that use this interface should be re-deployed.
 
 ### Soft Deploy
 
