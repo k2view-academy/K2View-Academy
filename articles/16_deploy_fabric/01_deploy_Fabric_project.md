@@ -24,7 +24,7 @@ The deployment of a Fabric project is performed on the following levels:
   
   - Deployment of all Web Services. 
   
-  - Deployment of selected Web Services category files.  
+  - Deployment of selected Web Services within a category.  
   - Deployment of selected Web Services.
   
   </studio>
