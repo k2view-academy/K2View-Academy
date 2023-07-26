@@ -175,7 +175,7 @@ For example:
 </tr>
 <tr>
 <td>
-<p><a href="04_fabric_commands.md#mdb-export-import">MDB Export / Import</a></p>
+<p><a href="04_fabric_commands.md#mdb-export--import">MDB Export / Import</a></p>
 </td>
 <td>
 <p>Commands for exporting or importing the MicroDB data from SQLite to another DB type.</p>
