@@ -117,19 +117,17 @@ Parameter tables are used for the following:
     </tbody>
     </table>
 
-4. Edit the **LU_PARAMS** LU table. Each parameter defined for the **LuParams** must be added to the LU table as a separate column. Set the type of all columns to **Text**. 
+    
 
-5. The LU population flow runs the **fnEnrichmentLuParams**  function. This function runs the LU's SQL queries in the **LuParams** and populates each column in the LU_PARAMS with the results of its related SQL query. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams**  function. This function runs the LU's SQL queries in the **LuParams**, creates the LU parameters table in the TDM DB if needed, and populates the LU parameters table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
-  ![lu params](images/populated_lu_params_example.png)
+    - Line number = {"(722) 404-4222","+1 (372) 682-2450,"+1 (799) 979-1233","883-486-7523","1394031132"}
 
- 6. The **fnEnrichmentLuParams** function also creates and populates the `<LU Name>_params` table in the TDM DB.
+      
 
 **Notes:**
 
-- The fnEnrichmentLuParams function runs the SQL queries to retrieve the LU tables' data. Therefore it has an execution order 999 to run after the remaining LU tables' population. 
-- The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
-- The COLUMN_NAME value is displayed in the TDM Portal when the user selects parameters for a task.
+- The LU_PARAMS' population runs the SQL queries to retrieve the LU tables' data. Therefore it has an execution order 999 to run after the remaining LU tables' population. 
 - Do not include spaces or special characters in parameter names.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#random-selection).
 

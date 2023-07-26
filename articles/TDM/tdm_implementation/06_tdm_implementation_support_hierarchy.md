@@ -204,7 +204,7 @@ This table holds the link between the **parent-child target IDs**. The relations
 
 ### Which Process Populates the TDM Relation Tables?
 
-The TDM relation tables are populated by carrying out a sync on the parent LUI. The TDM_LU_TYPE_RELATION_EID table's population flow runs the **fnEnrichmentChildLink** function to populate **both relation tables**: TDM_LU_TYPE_RELATION_EID and TDM_LU_TYPE_REL_TAR_EID. The fnEnrichmentChildLink function populates these tables based on LU tables' data: it runs the SQL queries populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of the task's child LUs. The SQL queries retrieve the LU tables' data. Therefore, the table's population has an execution order 999 to run after the remaining LU tables' population. The table holds the related child IDs on each parent LUI.  
+The TDM relation tables are populated by carrying out a sync on the parent LUI. The TDM_LU_TYPE_RELATION_EID table's population flow runs the **fnEnrichmentChildLink** function to populate **both relation tables**: TDM_LU_TYPE_RELATION_EID and TDM_LU_TYPE_REL_TAR_EID. The fnEnrichmentChildLink function populates these tables based on LU tables' data: it runs the SQL queries populated in the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable to get the child IDs of the task's child LUs. The SQL queries retrieve the LU tables' data. Therefore, the table's population has an execution order 999 to run after the remaining LU tables' population. The table holds the related child IDs on each parent LUI.  
 
 The TDM_LU_TYPE_RELATION_EID table is populated for all TDM tasks except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md) or [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md), where no data are extracted from the data sources. 
 
@@ -214,7 +214,7 @@ The TDM_LU_TYPE_REL_TAR_EID table is populated only if the TDM task deletes enti
 
 Although Business Entities are defined in the TDM Portal, the following guidelines must be implemented to support parent-child LU hierarchy:
 
-- Populate the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
+- Populate the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
 
   
 
