@@ -6,11 +6,11 @@ The implementation of a Fabric project is an ongoing process that evolves in res
 
 The project versioning solution is built from 3 steps along the project lifecycle, helping you to control, verify and have visibility of the project's version:
 
-1. Tag a version, an action available at the Studio.
+1. Tag a version, an action available in the Studio.
 
 2. Deploy Fabric objects, that were tagged with a version, into the server.
 
-3. Check the project objects version/s in Fabric console / terminal to understand what is deployed.
+3. Check the project objects version/s in Fabric console/terminal to understand what has been deployed.
 
    
 
