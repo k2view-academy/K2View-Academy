@@ -18,8 +18,8 @@ The project versioning solution is built from 3 steps along the project lifecycl
 
 Studio helps you to tag a version appropriately by:
 
-1. Proposing you the next version, according to current version and based on semantic versioning format.
-2. Alerting you when you have any local changes which are not pushed to GIT.
+1. Proposing you the next version, according to the current version and based on semantic versioning format.
+2. Alerting you when there are any local changes that haven't yet been pushed to GIT.
 3. Alerting you when your changes are not aligned with other changes on your working GIT's branch.
 4. Updating the project version both at project definitions and into GIT, as an annotated tag.  
 
