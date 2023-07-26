@@ -1,10 +1,10 @@
 # TDM Parameters Handling
 
-The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a load task or a [reserve task](/articles/TDM/tdm_gui/20_reserve_only_task.md#parameters). The list of available parameters is displayed on the task's BE (Business Entity). A BE can have flat or hierarchical structure and each LU can have its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables). 
+The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a load task or a [reserve task](/articles/TDM/tdm_gui/20_reserve_only_task.md#parameters). The list of available parameters is displayed on the task's BE (Business Entity). A BE can have a flat or hierarchical structure and each LU can have its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables). 
 
-The entities selection on a TDM task selects a subset of **root entities**, but the parameters for selection  can be based on the child LU's parameters as well. Therefore, it is highly important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters.
+The entity selection on a TDM task selects a subset of **root entities**, but the parameters for selection  can be based on the child LU's parameters. Therefore, it is important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters.
 
-Previous TDM versions created a **MATERIALIZED VIEW** in the TDM DB on each combination of **BE and source environment** to have the  linkage between the root entity and the children entities. From TDM 8.1 onwards, each LU parameters contains the following fields to connect the entity id to its root entity:
+**Previous TDM versions** created a **MATERIALIZED VIEW** in the TDM DB on each combination of **BE and source environment** to have the  linkage between the root entity and the children entities. From TDM 8.1 onwards, each LU parameters table contains the following fields to connect the entity id to its root entity:
 
 - root_lu_name
 - root_iid
@@ -19,7 +19,7 @@ Previous TDM versions created a **MATERIALIZED VIEW** in the TDM DB on each comb
 
 - Even LU of the BE has its own LU parameters table in the TDM DB.
 
-- Customer #65 has the following children IDs in Production environment:
+- Customer #65 has the following children IDs in the Production environment:
 
   - **Billing LU**: #169, #170, #171, #172, and #173.
   - **Order LU**: #279, #280, #281, #282, #283, #284, and #285.
