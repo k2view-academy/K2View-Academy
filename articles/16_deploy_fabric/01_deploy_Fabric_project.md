@@ -64,7 +64,7 @@ You can use the Soft Deploy option to deploy changes without triggering automati
 
 Moreover, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
 
-To activate the Soft Deploy when deploying from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
+To activate the Soft Deploy when deploying from the Fabric Studio, turn on the Soft Deploy option in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
 
 To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
