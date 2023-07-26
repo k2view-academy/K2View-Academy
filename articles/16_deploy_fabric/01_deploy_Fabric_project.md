@@ -166,9 +166,9 @@ While Fabric provides the mechanism and technology for project versioning, the p
 
 For more information about Project Versioning, read [here.](/articles/16_deploy_fabric/04_project_versioning.md)
 
-### Download the Deployed Code
+### Downloading the Deployed Code
 
-In addition to project versioning, which allows you to compare between the deployed version and the matched tag in GIT, Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
+In addition to project versioning, which allows you to compare between the deployed version and the matched tag in GIT, Fabric supports the creation of a zip file for any selected LU name, enabling the implementor to download the code that is deployed in the environment and to check it.
 
 
 ###### Syntax:
