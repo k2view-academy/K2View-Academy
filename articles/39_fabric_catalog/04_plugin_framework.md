@@ -73,7 +73,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>Foreign Key: field_1</p>
+<p>FK: DS2 (field_1)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -89,7 +89,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>Foreign Key: field_1</p>
+<p>FK: DS2 (field_1)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -106,7 +106,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>Foreign Key: field_1, field_2</p>
+<p>FK: DS2 (field_1, field_2)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
