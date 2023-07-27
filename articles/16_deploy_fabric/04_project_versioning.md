@@ -89,7 +89,7 @@ The following is the recommended workflow:
 
 ### Project Versioning Format
 
-It is recommended to follow a semantic versioning structure, where a version number shall be built as MAJOR.MINOR.PATCH, as defined [here](https://semver.org/). Nevertheless, for simplicity, Studio enforces the format of X.Y, which starts with 2 digits and then allows you decide how else it will look like.
+It is recommended to follow a semantic versioning structure, where a version number shall be built as MAJOR.MINOR.PATCH, as defined [here](https://semver.org/). Nevertheless, for simplicity, Studio enforces the format of X.Y, which starts with 2 digits and then allows you to decide how else it will look like.
 
 On next time that Tag Version action is initiated, Studio analyzes the current version and "clean" it from non-digits characters, preserving the convention that used so far. For example, the next suggested version after "10.2.3-DEV-SNAPSHOT" will be "10.2.4" and the next proposed version for "1.0-HF2" it will be "1.1".
 
