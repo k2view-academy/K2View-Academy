@@ -91,7 +91,7 @@ The following is the recommended workflow:
 
 It is recommended to follow a semantic versioning structure, where a version number shall be built as MAJOR.MINOR.PATCH, as defined [here](https://semver.org/). Nevertheless, for simplicity, Studio enforces the format of X.Y, which starts with 2 digits and then allows you to decide how else it will look like.
 
-The next time when the Tag Version action is initiated, Studio analyzes the current version and 'cleans' it from non-digit characters, preserving the convention that used so far. For example, the next suggested version after "10.2.3-DEV-SNAPSHOT" will be "10.2.4" and the next proposed version for "1.0-HF2" it will be "1.1".
+The next time when the Tag Version action is initiated, Studio analyzes the current version and 'cleans' it from non-digit characters, preserving the convention used so far. For example, the next suggested version after "10.2.3-DEV-SNAPSHOT" will be "10.2.4" and the next proposed version for "1.0-HF2" it will be "1.1".
 
 
 
