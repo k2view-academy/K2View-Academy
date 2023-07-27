@@ -92,23 +92,88 @@ The data generation flows are created with the following logic:
 
 ##### PII Fields
 
-- In general, it is recommended to populate them with an initial value of the field name + the record number. For example: first_name_1. The record number is sent to the data generation flow by the [RowsGenerator](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) Actor in the **count** parameter. These fields will get their value from the PII masking Actors in the LU population flow. Using the masking Actors on the PII fields ensures the referential integrity of the data, in case this field is set in multiple LU tables or multiple LUs. 
+- In general **it is recommended to populate the PII fields in the data generation flow** and avoid overriding them by the Masking actors in the LU population flow in order to enable exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks.
+- In order to avoid the enablement of the Masking Actors on data generation tasks, verify that the [Masking Sensitive Date](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox in cleared for the **Synthetic** environment in the TDM Portal.
+- TDM 8.1 added a new Actor: **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value: **generate_consistent**. Using this Actor in the data generation flow enables the following:
+  - The TDM execution process sets the  **generate_consistent** to **true** and the **enable_masking** to **false** on data generation tasks. This ensures that the data generation flow generates synthetic values on PII fields and the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
+  - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities. 
 
-  Example: 
+- PII fields can vary in their incidence and the need for referential integrity. Each scenario requires a different implementation approach. For example: the First Name and Last Name are located in both LUs: CRM and Billing. Each LU represents a different system. If a customer must have the same name in both systems, it is required to keep the referential integrity in these 2 LUs. The following table describes the implementation recommendations for each scenario: 
 
-  The first_name is populated with the concatenation of the field name and the 'count' external parameter:
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="250pxl">
+<p><strong>PII field incidence</strong></p>
+</td>
+<td width="150pxl">
+<p><strong>Referential integrity</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Implementation Recommendation</strong></p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>The PII field exists only in one LU table</p>
+</td>
+<td width="150pxl">
+<p>N/A</p>
+</td>
+<td width="500pxl">
+<p>Use a data generator Actor to generate a random synthetic value</p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>The PII field exists in multiple tables in the LU</p>
+</td>
+<td width="150pxl">
+<p>N</p>
+</td>
+<td width="500pxl">
+<p>Use a data generator Actor to generate a random synthetic value</p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>The PII field exists in multiple tables in the LU</p>
+</td>
+<td width="150pxl">
+<p>Y</p>
+</td>
+<td width="500pxl">
+<p>2 alternatives:</p>
+<p>1. Use a data generator actor for one of the field's instances and then select the generated value and populate it into the remaining instances.</p>
+<p>2. Use the new TDM 8.1 Actor: <strong>GenerateConsistent&nbsp;</strong>for all the field's instances to keep the referential integrity of the instances.</p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>The PII field exists in multiple LUs</p>
+</td>
+<td width="150pxl">
+<p>N</p>
+</td>
+<td width="500pxl">
+<p>Use a data generator Actor to generate a random synthetic value</p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>The PII field exists in multiple LUs</p>
+</td>
+<td width="150pxl">
+<p>Y</p>
+</td>
+<td width="500pxl">
+<p>Use the new TDM 8.1 Actor: <strong>GenerateConsistent&nbsp;</strong>for all the field's instances to keep the referential integrity of the instances.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-  
 
-  ![pii example](images/data_generation_pii_example_1.png)
-
-
-
-The first_name is masked in the LU population flow before it is loaded to the LU table. The **useInstanceId** is set to **true** to have a different masked value on each generated customer. Note that the TDM 8.0 has added the **root_id** to the caching key, in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
-
-![mask](images/mask_first_name_example.png)
-
-- However, if a PII field would not be masked by a data generation task - whether it is defined as an [external business parameter](#external-business-parameters) to be populated by the user in the TDM task, or whether it requires a specific logic - the LU population flow should not mask it for data generation tasks. In order to avoid masking of a given PII filed, it is recommended to set the **category** input argument of the masking Actor for this field with a **custom value**; for example: mask_generated_field. The custom key must be set to **false** by the data generation flow to prevent the field's masking in the data generation task.
 
 ​	Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) for more information about the masking Actors.
 
