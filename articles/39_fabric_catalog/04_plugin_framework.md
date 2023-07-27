@@ -30,28 +30,37 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
 
-The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (remove the underscore ‘_’, convert to lower-case and consider the table name). 
-
-The plugin includes a blacklist of field names (e.g. 'username' or 'age') and a blacklist of field types (e.g. date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as input parameters to the plugin and can be updated on project level.
+The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, the field names are "normalized" using the following formatting rules: remove the underscore ‘_’, convert to lower-case and add the table name if the field name is ID. 
 
 For example, the following field names can be matched by the plugin:
 
 * CUSTOMER_ID and CustomerID
 * CUSTOMER.ID and CustomerID
 
-If a match is found, the plugin estimates the relation direction and the foreign key fields using the matching rule. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
+The plugin includes a blacklist of field names (e.g. 'username' or 'age') and a blacklist of field types (e.g. date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and can be updated on project level.
+
+If a match is found, the plugin estimates the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
 
 <table style="width: 900px;">
 <tbody>
 <tr>
+<td style="width: 125px;" colspan="2"><strong>Input: a pair of datasets</strong></td>
+<td style="width: 600px;">
+<p><strong>Output: relation created by plugin</strong></p>
+</td>
+<td style="width: 50px;">
+<p><strong>&nbsp;</strong></p>
+</td>
+</tr>
+<tr>
 <td style="width: 125px;">
-<p><strong>Dataset 1</strong></p>
+<p><strong>DS1</strong></p>
 </td>
 <td style="width: 125px;">
-<p><strong>Dataset 2</strong></p>
+<p><strong>DS2</strong></p>
 </td>
 <td style="width: 600px;">
-<p><strong>Relation Created by Plugin</strong></p>
+<p><strong><em>refers to</em> relation</strong></p>
 </td>
 <td style="width: 50px;">
 <p><strong>Score</strong></p>
@@ -59,16 +68,15 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
+<p>field_1&nbsp; PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field0&nbsp; PK</p>
-<p>Field1 (not PK)</p>
+<p>field_0&nbsp; PK</p>
+<p>field_1 (not PK)</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1</p>
-<p>FK table/columns: DS2 / Field1</p>
+<p>Foreign Key: field_1</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -76,16 +84,15 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
+<p>field_1 PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; PK</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; PK</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1</p>
-<p>FK table/columns: DS2 / Field1</p>
+<p>Foreign Key: field_1</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -93,17 +100,16 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; (not PK)</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; (not PK)</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; PK</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; PK</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1, Field2</p>
-<p>FK table/columns: DS2 / Field1, Field2</p>
+<p>Foreign Key: field_1, field_2</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -111,10 +117,10 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1 is a single PK</p>
+<p>field_1 is a single PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1 is a single PK</p>
+<p>field_1 is a single PK</p>
 </td>
 <td style="width: 190.531px;">
 <p>Relation direction is random</p>
@@ -125,10 +131,10 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1 is not a PK</p>
+<p>field_1 is not a PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1 is not a PK</p>
+<p>field_1 is not a PK</p>
 </td>
 <td style="width: 190.531px;">
 <p>Relation direction is random</p>
@@ -180,7 +186,7 @@ To update the PII indicator of the profiling rules, go to Actions > Classifier C
 
 The purpose of this plugin is to check the % of null values per column, using the data snapshot. The nullability percentage is calculated on each column of non-empty tables. 
 
-As a result, the **Nullability Percentage** property is added to the field's properties when its value is above the threshold. 
+As a result, the **Nullability Percentage** property is added to the field's properties when the its calculated value is above the threshold. 
 
 For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. But when it's 20% or less, this property will not be added.
 
