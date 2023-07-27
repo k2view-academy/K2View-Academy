@@ -45,11 +45,8 @@ If a match is found, the plugin estimates the relation direction and the foreign
 <tbody>
 <tr>
 <td style="width: 125px;" colspan="2"><strong>Input: a pair of datasets</strong></td>
-<td style="width: 600px;">
+<td style="width: 650px;" colspan="2">
 <p><strong>Output: relation created by plugin</strong></p>
-</td>
-<td style="width: 50px;">
-<p><strong>&nbsp;</strong></p>
 </td>
 </tr>
 <tr>
@@ -60,7 +57,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 <p><strong>DS2</strong></p>
 </td>
 <td style="width: 600px;">
-<p><strong><em>refers to</em> relation</strong></p>
+<p><strong>Relation Direction and FK</strong></p>
 </td>
 <td style="width: 50px;">
 <p><strong>Score</strong></p>
