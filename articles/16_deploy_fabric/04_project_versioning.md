@@ -33,7 +33,7 @@ The following is the recommended workflow:
 
 2. Develop and implement your code on the project.
 
-3. Once a working phase is done, set a version for your work:
+3. Once the working phase is done, set a version for your work:
 
    - From the project tree root, right-click and choose "Version Tag".
 
