@@ -74,7 +74,7 @@ The following is the recommended workflow:
    
      If you decide creating a version despite the warn, a version will be created, containing only the pushed to GIT files. 
    
-   - It Checks weather your changes are aligned with other changes on this GIT's branch and warns you if not. 
+   - It checks whether your changes are aligned with other changes on this GIT's branch and warns you in case they are not. 
    
      Note that this case is valid: sometimes two or more developers are working on same branch in parallel, on different capabilities, aimed to different phases. Thus, a version tag might contain specific development made on that on that branch. 
 
