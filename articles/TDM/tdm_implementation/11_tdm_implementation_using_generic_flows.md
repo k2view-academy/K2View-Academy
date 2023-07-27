@@ -185,20 +185,100 @@ The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_g
 
 TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables masking sensitive fields such as SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target database.
 
-* In order to mask a sensitive field - prior to loading it into Fabric - create a Broadway population flow for the table that contains this field and add one or more **Masking** Actors. 
+* **LU population flows** - In order to mask a sensitive field - prior to loading it into Fabric - add the masking logic to the LU population flow using **Masking** Actors. 
 
   ![image](images/11_tdm_impl_05.PNG)
 
   If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
-  
-* To mask a sensitive field as part of a load to the Target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement or disablement based on the settings of the global variables. 
 
-  There are 3 possible scenarios for handling masking:
-
-  * When the TDM task clones an entity, masking is always enabled.
-  * When the TDM task loads a data version, masking is always disabled.
-  * In all other scenarios, the masking behavior depends on the masking Globals settings.
   
+
+* **Load flows **- To mask a sensitive field as part of a load to the Target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement or disablement based on the settings of the global variables. 
+
+  ### TDM - Masking Categories
+
+  One of the masking Actors' input parameters is named **category**. This parameter indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+
+  - **enable_sequences**, which generates a new ID value
+  - **enable_masking**, which masks sensitive data
+  - Any custom string value
+
+  A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
+
+  By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, e.g. SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
+
+  #### Setting the Mask Categories by the TDM Task Execution Processes
+
+  The TDM execution processes sets the masking categories to true/false based on the TDM task execution settings:
+
+  
+
+  <table width="900pxl">
+  <tbody>
+  <tr>
+  <td width="250pxl">
+  <p><strong>Category</strong></p>
+  </td>
+  <td width="300pxl">
+  <p><strong>LU Population (extract part)</strong></p>
+  </td>
+  <td width="350pxl">
+  <p><strong>Load Process</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="250pxl">
+  <p>enable_masking</p>
+  </td>
+  <td width="300pxl">
+  <p>Set by the task&rsquo;s attribute: <a href="/articles/TDM/tdm_gui/16_extract_task.md#mask-sensitive-data">Mask Sensitive data</a>.</p>
+      <p>Note that this attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. The user can add masking to the task even if the source environment is not defined as a sensitive data source.</p>
+  </td>
+  <td width="350pxl">
+  <p>Will be set to true for the following tasks:</p>    
+  <ul>
+  <li>The task's selection method = Entity clone</li>
+  </ul>
+  <p>&nbsp;</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="250pxl">
+  <p>enable_sequences</p>
+  </td>
+  <td width="300pxl">
+  <p>N/A</p>
+  </td>
+  <td width="350pxl">
+  <p>Will be set to true for the following tasks:</p>    
+  <ul>
+  <li>The task's selection method = Entity clone.</li>
+  <li>The task replaces the entities' sequences (IDs).</li>
+  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
+  </ul>
+  </td>
+  </tr>
+  <tr>
+  <td width="250pxl">
+  <p>enable_masking_uniqueness</p>
+  </td>
+  <td width="300pxl">
+      <p>Set by the task&rsquo;s attribute: <a href="/articles/TDM/tdm_gui/16_extract_task.md#mask-sensitive-data">Mask Sensitive data</a> (set to true if the enable_masking or enable_sequences are true).</p>
+  </td>
+  <td width="350pxl">
+  <p>Will be set to true for the following tasks:</p>    
+  <ul>
+  <li>The task's selection method = Entity clone.</li>
+  <li>The task replaces the entities' sequences (IDs).</li>
+  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
+  </ul>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+  
+
 * Notes:
 
   *  From TDM 7.3 and onwards, the task that clones an entity creates only **1 LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone.
