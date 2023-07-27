@@ -41,7 +41,7 @@ The following is the recommended workflow:
 
       ![version tag popup](images/04_01_versiontag.png)
 
-   - Leave the value of the new project version, as proposed, or change it if needed.
+   - Leave the new project version value, as proposed, or change it if needed.
    
    - Click OK to proceed.
    
@@ -62,7 +62,7 @@ The following is the recommended workflow:
 
       ![version tag popup](images/04_04_web_version_versiontag.png)
    
-   - Leave the project new version value as proposed or change it, when needed.
+   - Leave the new project version value, as proposed, or change it if needed.
    
    - Press 'Enter' to proceed.
 
