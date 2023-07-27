@@ -14,7 +14,22 @@ The Data Discovery solution includes a constantly growing list of built-in plugi
 
 **Configuration**
 
-The plugin's execution order is defined by the Plugins Pipeline configuration file called **plugins.discovery**. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder and can be updated per your project's needs: a plugin can be set to inactive, the plugin's threshold can be updated or a custom plugin can be added to the **plugins.discovery**. Once any change is performed to the file, the Discovery job should be rerun in order to apply the changes on the Catalog.
+The **plugins.discovery** is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+
+The plugins.discovery defines a list of plugins and their execution order. It also defines the data sample size. The file can be updated per your project's requirements, for example: 
+
+* Any plugin can be set to inactive.
+* The sample size settings or the plugin's threshold can be updated.
+* A custom plugin can be added to the **plugins.discovery**. 
+
+Once file is updated, the Discovery job should be rerun in order to apply the changes on the Catalog.
+
+**Sample Size Settings**
+
+The data sample is taken from the data source during the Discovery job run. This sample is used by the Classification plugins. The sample size is configured in the plugins.discovery as follows:
+
+* The default sample size is 10% of the dataset rows.
+* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
 
 **Plugin's Threshold**
 
