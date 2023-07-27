@@ -83,7 +83,7 @@ The following is the recommended workflow:
 
    
 
-> **Note**: Studio is not responsible about the permissions a developer has to create a tag, neither from which branch it is allowed. Project's owner shall defines it at GIT itself as well as define the procedures, for example from which branch (e.g., any or specific "main"), version tag shall be produced.
+> **Note**: Studio is not responsible about the permissions a developer has to create a tag, neither from which branch it is allowed. Project owner shall defines it at GIT itself as well as define the procedures, for example from which branch (e.g., any or specific "main"), version tag shall be produced.
 
 
 
