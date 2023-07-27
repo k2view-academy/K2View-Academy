@@ -1,3 +1,5 @@
+<web>
+
 # Plugin Framework
 
 ### Overview
@@ -12,7 +14,22 @@ The Data Discovery solution includes a constantly growing list of built-in plugi
 
 **Configuration**
 
-The plugin's execution order is defined by the Plugins Pipeline configuration file called **plugins.discovery**. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder and can be updated per your project's needs: a plugin can be set to inactive, the plugin's threshold can be updated or a custom plugin can be added to the **plugins.discovery**. Once any change is performed to the file, the Discovery job should be rerun in order to apply the changes on the Catalog.
+The **plugins.discovery** is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+
+The plugins.discovery defines a list of plugins and their execution order. It also defines the data sample size. The file can be updated per your project's requirements, for example: 
+
+* Any plugin can be set to inactive.
+* The sample size settings or the plugin's threshold can be updated.
+* A custom plugin can be added to the **plugins.discovery**. 
+
+Once file is updated, the Discovery job should be rerun in order to apply the changes on the Catalog.
+
+**Sample Size Settings**
+
+The data sample is taken from the data source during the Discovery job run. This sample is used by the Classification plugins. The sample size is configured in the plugins.discovery as follows:
+
+* The default sample size is 10% of the dataset rows.
+* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
 
 **Plugin's Threshold**
 
@@ -28,28 +45,34 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
 
-The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, formatting rules are applied in order to "normalize" the field names (remove the underscore ‘_’, convert to lower-case and consider the table name). 
-
-The plugin includes a blacklist of field names (e.g. 'username' or 'age') and a blacklist of field types (e.g. date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as input parameters to the plugin and can be updated on project level.
+The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, the field names are "normalized" using the following formatting rules: remove the underscore ‘_’, convert to lower-case and add the table name if the field name is ID. 
 
 For example, the following field names can be matched by the plugin:
 
 * CUSTOMER_ID and CustomerID
 * CUSTOMER.ID and CustomerID
 
-If a match is found, the plugin estimates the relation direction and the foreign key fields using the matching rule. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
+The plugin includes a blacklist of field names (e.g. 'username' or 'age') and a blacklist of field types (e.g. date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and can be updated on project level.
+
+If a match is found, the plugin estimates the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
 
 <table style="width: 900px;">
 <tbody>
 <tr>
+<td style="width: 125px;" colspan="2"><strong>Input: a pair of datasets</strong></td>
+<td style="width: 650px;" colspan="2">
+<p><strong>Output: relation created by plugin</strong></p>
+</td>
+</tr>
+<tr>
 <td style="width: 125px;">
-<p><strong>Dataset 1</strong></p>
+<p><strong>DS1</strong></p>
 </td>
 <td style="width: 125px;">
-<p><strong>Dataset 2</strong></p>
+<p><strong>DS2</strong></p>
 </td>
 <td style="width: 600px;">
-<p><strong>Relation Created by Plugin</strong></p>
+<p><strong>Relation Direction and FK</strong></p>
 </td>
 <td style="width: 50px;">
 <p><strong>Score</strong></p>
@@ -57,16 +80,15 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
+<p>field_1&nbsp; PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field0&nbsp; PK</p>
-<p>Field1 (not PK)</p>
+<p>field_0&nbsp; PK</p>
+<p>field_1 (not PK)</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1</p>
-<p>FK table/columns: DS2 / Field1</p>
+<p>FK: DS2 (field_1)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -74,16 +96,15 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
+<p>field_1 PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; PK</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; PK</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1</p>
-<p>FK table/columns: DS2 / Field1</p>
+<p>FK: DS2 (field_1)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -91,17 +112,16 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; (not PK)</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; (not PK)</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1&nbsp; PK</p>
-<p>Field2&nbsp; PK</p>
+<p>field_1 PK</p>
+<p>field_2&nbsp; PK</p>
 </td>
 <td style="width: 190.531px;">
 <p><em>DS2 refers to DS1</em></p>
-<p>PK table/columns: DS1 / Field1, Field2</p>
-<p>FK table/columns: DS2 / Field1, Field2</p>
+<p>FK: DS2 (field_1, field_2)</p>
 </td>
 <td style="width: 49.4375px;">
 <p>High</p>
@@ -109,10 +129,10 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1 is a single PK</p>
+<p>field_1 is a single PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1 is a single PK</p>
+<p>field_1 is a single PK</p>
 </td>
 <td style="width: 190.531px;">
 <p>Relation direction is random</p>
@@ -123,10 +143,10 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 <tr>
 <td style="width: 141.016px;">
-<p>Field1 is not a PK</p>
+<p>field_1 is not a PK</p>
 </td>
 <td style="width: 141.016px;">
-<p>Field1 is not a PK</p>
+<p>field_1 is not a PK</p>
 </td>
 <td style="width: 190.531px;">
 <p>Relation direction is random</p>
@@ -178,7 +198,7 @@ To update the PII indicator of the profiling rules, go to Actions > Classifier C
 
 The purpose of this plugin is to check the % of null values per column, using the data snapshot. The nullability percentage is calculated on each column of non-empty tables. 
 
-As a result, the **Nullability Percentage** property is added to the field's properties when its value is above the threshold. 
+As a result, the **Nullability Percentage** property is added to the field's properties when the its calculated value is above the threshold. 
 
 For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. But when it's 20% or less, this property will not be added.
 
@@ -186,3 +206,4 @@ For example, when 30% of the values in a certain field are null, the Nullability
 
 [![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
 
+</web>

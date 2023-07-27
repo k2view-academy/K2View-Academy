@@ -1,3 +1,5 @@
+<web>
+
 # Catalog APIs
 
 Fabric provides out-of-the-box Web Service APIs for querying a project's catalog.
@@ -259,3 +261,4 @@ Example 2: when searching for *any* nodes with *PII = true* and *Classification 
 
 
 
+</web>
