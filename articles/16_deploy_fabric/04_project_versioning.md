@@ -87,7 +87,7 @@ The following is the recommended workflow:
 
 
 
-### Project Version Format
+### Project Versioning Format
 
 It is recommended to follow a semantic versioning structure, where a version number shall be built as MAJOR.MINOR.PATCH, as defined [here](https://semver.org/). Nevertheless, for simplicity, Studio enforces the format of X.Y, that is starting with 2 digits and then let you decide how else it will looks like.
 
