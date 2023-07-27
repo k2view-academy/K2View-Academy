@@ -59,7 +59,7 @@ Clicking on any Data Platform or Schema node opens the context menu which allows
 
 **Dataset Context Menu**
 
-Clicking on any Dataset node opens its context menu which includes only the following actions:
+Clicking on any Dataset node opens its context menu which includes the following actions:
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
 
