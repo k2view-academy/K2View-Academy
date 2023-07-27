@@ -24,8 +24,6 @@ The Catalog support the following actions:
 
 ![](images/DiscoveryE2E.png)
 
-Further articles in this section provide more details about each of the above steps and activities.
-
 
 
 [![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_plugin_framework.md) 

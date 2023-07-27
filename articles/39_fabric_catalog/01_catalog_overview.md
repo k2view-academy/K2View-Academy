@@ -10,15 +10,23 @@ Data Discovery is a process that can help companies to cope with the above-menti
 * Uncover and investigate hidden yet potentially useful data insights.
 * Find and flag sensitive information, enabling a better protection of it.
 
-Fabric's Catalog solution provides an insight into the Fabric interfaces, starting with the RDBMS interface type. The solution's capabilities are:
+Fabric's Discovery and Catalog solution provides an insight into the Fabric interfaces, starting with the RDBMS interface type. The Discovery process includes the following steps:
 
-* Exploring the data source's elements (schemas, objects, fields) and the links between them.
-* Profiling both the metadata and data (e.g. PII identification).
-* Establishing relations between the data source elements.
-* Supporting the multiple versions of a Catalog and the versions comparison.
-* Enabling manual overrides of various Catalog elements.
+- Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the *neo4j* GraphDB. 
+- Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
+- Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify sensitive information (e.g. PII marking) and classify it based on pre-defined categories. The auto-profiling process is using the set of pre-defined rules which can be modified on the project level.
 
+The Discovery results are presented in a new Catalog application which allows to:
 
+- Display the Catalog data model as a tree and navigate through its elements.
+- View the Catalog’s elements properties and manually edit them, if needed.
+- Support multiple Catalog versions and the versions comparison.
+- Search any node by keywords or additional advanced search parameters.
+- View and modify the profiling rules.
+
+The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling results.
+
+Further articles in this section provide more details about the Discovery process, the Catalog application and the required system settings. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
 
