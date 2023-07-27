@@ -76,6 +76,9 @@ TDM 7.6 adds the following customized JMX metrics in order to have a better moni
 
 - **TotalTaskExecutionsPerStatus** - total number of task executions per execution status.
 
-Note that each task execution is accumulated as one execution even if the task contains multiple LUs.
+Notes:
+
+- Each task execution is accumulated as one execution even if the task contains multiple LUs.
+- TDM 8.0 required adding the fnTDMJMXStats enrichment function to the TDM LU (TASK_EXECUTION LU table) to enable the TDM customized JMX metrics. TDM 8.1 does not require this manual edit of the TDM LU schema. Instead, you need to set the **POPULATE_JMX_STATS** Global to **true**. 
 
 [![Previous](/articles/images/Previous.png)](11_tdm_implementation_using_generic_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
