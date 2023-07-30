@@ -14,9 +14,9 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 
 Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini as explained below.
 
-When defining operational DB type different then Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
+When defining operational DB type different than Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
 
-It is important to note that currently iidFinder solution doesn't support operational DB type different then Cassandra.
+It is important to note that currently iidFinder solution doesn't support operational DB type different than Cassandra.
 
 ### Login to Operational DB
 
@@ -314,7 +314,7 @@ INTERNAL_DB_HOST=/home/k2view/sqlite
 
 * For PostgreSQL, set the POSTGRESQL type and all the relevant connection details.
 
-In order to authenticet users on operional DB different then Cassandra, use the seprate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
+In order to authenticet users on operional DB different than Cassandra, use the seprate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
 
 The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. Meaning that by default the Fabric storage type is the same as the Fabric Operational DB. You can either update only the [internal_db] settings, impacting both the Storage and operational DB types together, or you can define each of them to have a different DB type.
 
