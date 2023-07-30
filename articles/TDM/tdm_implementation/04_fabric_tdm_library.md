@@ -201,12 +201,12 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 - **From TDM 7.6 onwards, the TDM Portal code is included in the TDM LU**: the TDM Portal code is kept under the web sub-folder in the TDM LU. Note that the web directory can only be viewed using the Fabric web studio. If you use the desktop, you can right-click the TDM LU > Open Folder and view the web folder in the windows File Explorer.
 - TDM 7.6 and onwards includes the TDM DB upgrade scripts and a flow.
 
-### Set a TTL (Time To Live) on the TDM LUIs
+### Set TTL (Time To Live) on the TDM LUIs
 
-TDM enables setting a TTL (Time To Live) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
+TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
 
 - **TDM_LU_RETENTION_PERIOD_TYPE** - by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
-- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with either a zero or an empty value to avoid setting a TTL on the TDM LUIs**.
+- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with either a zero or an empty value to avoid setting TTL on the TDM LUIs**.
 
 ### TDM Cleanup Process
 
