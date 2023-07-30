@@ -248,7 +248,7 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 - TDM 7.6 added a creation of the TDM PostgreSQL DB: the TDM deploy flow Creates the TDM DB tables, sequences, views and functions.
 - Notes:
   - You must **set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active** in order to create the TDM DB by the TDM deploy flow.
-  - TDM 8.0 added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is **true**. By **default** this Global is **false**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
+  - TDM 8.0 added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is **true**. This Global is **false**, by **default**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
 
 
 ### TDM LU Deployment
