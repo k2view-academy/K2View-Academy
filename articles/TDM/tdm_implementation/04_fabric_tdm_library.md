@@ -244,7 +244,7 @@ TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period i
 The **deploy.flow** process runs the following activities upon the TDM LU deployment:
 
 - Deployment of the project's environments to Fabric.
-- Creating the k2masking keyspace in Cassandra if it does not already exist.
+- Creating the k2masking keyspace in Cassandra, if it does not already exist.
 - TDM 7.6 added a creation of the TDM PostgreSQL DB: the TDM deploy flow Creates the TDM DB tables, sequences, views and functions.
 - Notes:
   - You must **set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active** in order to create the TDM DB by the TDM deploy flow.
