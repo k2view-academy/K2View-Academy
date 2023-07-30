@@ -58,7 +58,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 
 TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support a development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
 
-The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after the updating the MTables:
+The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
 <table width="900pxl">
 <tbody>
