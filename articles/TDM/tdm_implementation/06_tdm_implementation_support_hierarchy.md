@@ -32,19 +32,19 @@ This table is used for:
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_1</td>
-<td valign="top" width="700pxl">Name of the parent LU; e.g., Customer.</td>
+<td valign="top" width="700pxl">Name of the parent LU (such as Customer).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_2</td>
-<td valign="top" width="700pxl">Name of the child LU; e.g., Order.</td>
+<td valign="top" width="700pxl">Name of the child LU (such as Order).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Entity ID (EID) of the parent LU; e.g., 1.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the parent LU (such as 1).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Entity ID (EID) of the child LU; e.g., 12.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the child LU (such as 12).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
@@ -180,19 +180,19 @@ This table holds the link between the **parent-child target IDs**. The relations
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_1</td>
-<td valign="top" width="700pxl">Name of the parent LU; e.g., Customer.</td>
+<td valign="top" width="700pxl">Name of the parent LU (such as Customer).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_2</td>
-<td valign="top" width="700pxl">Name of the child LU; e.g., Order.</td>
+<td valign="top" width="700pxl">Name of the child LU (such as Order).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU; e.g., 30.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU (such as 30).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU; e.g., 101.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU (such as 101).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
