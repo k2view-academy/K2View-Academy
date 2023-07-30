@@ -2,18 +2,18 @@
 
 Every LU must include the ability to Delete Entities from a target environment to support the following tasks:
 
-- [Load and Delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types), the entities are deleted and reloaded to the target environment.
-- [Delete task](/articles/TDM/tdm_gui/19_delete_only_task.md), the entities are deleted (cleaned) from the task's environment.
-- [Data Versioning](/articles/TDM/tdm_gui/15_data_flux_task.md/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) load task, the entities are deleted and reloaded to the target environment.
+- [Load and Delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types) - the entities are deleted and reloaded to the target environment.
+- [Delete task](/articles/TDM/tdm_gui/19_delete_only_task.md) - the entities are deleted (cleaned) from the task's environment.
+- [Data Versioning](/articles/TDM/tdm_gui/15_data_flux_task.md/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) load task - the entities are deleted and reloaded to the target environment.
 
 Note that if there is no need to support a delete of entities or Data Versioning load tasks, the target tables do not need to be added to the LUs.
 
 ## LU Structure - Target Tables
 
-Each LU has two main branches that are linked to the **FABRIC_TDM_ROOT** root table:
+Each LU has 2 main branches that are linked to the **FABRIC_TDM_ROOT** root table:
 
-- **Source branch**, LU tables that extract an entity's source data. Source LU tables are populated except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md) where no data is extracted from the data sources.
-- **Target branch**, LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** when the task needs to delete the entities from the target environment.
+- **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md), where no data is extracted from the data sources.
+- **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** when the task needs to delete the entities from the target environment.
 
 The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
