@@ -57,12 +57,12 @@ Parameter tables are used for the following:
     <tr>
     <td width="150pxl">CRM</td>
     <td width="150pxl">line_number</td>
-    <td width="600pxl">Select contract.associated_line as line_number From contract</td>
+    <td width="600pxl">Select contract.associated_line As line_number From contract</td>
     </tr>
     <tr>
     <td width="150pxl">CRM</td>
     <td width="150pxl">num_of_open_cases</td>
-    <td width="600pxl">Select count(*) As num_of_open_cases<br />From cases<br />Where Upper(cases.status) != 'CLOSED'</td>
+    <td width="600pxl">Select Count(*) As num_of_open_cases<br />From cases<br />Where Upper(cases.status) != 'CLOSED'</td>
     </tr>
     <tr>
     <td width="150pxl">CRM</td>
@@ -72,12 +72,12 @@ Parameter tables are used for the following:
     <tr>
     <td width="150pxl">CRM</td>
     <td width="150pxl">num_of_subscribers</td>
-    <td width="600pxl">Select count(*) as num_of_subscribers From contract</td>
+    <td width="600pxl">Select Count(*) As num_of_subscribers From contract</td>
     </tr>
     <tr>
     <td width="150pxl">CRM</td>
     <td width="150pxl">state</td>
-    <td width="600pxl">Select state from address</td>
+    <td width="600pxl">Select state From address</td>
     </tr>
     <tr>
     <td width="150pxl">Billing</td>
@@ -87,7 +87,7 @@ Parameter tables are used for the following:
     <tr>
     <td width="150pxl">Billing</td>
     <td width="150pxl">num_of_open_invoices</td>
-    <td width="600pxl">Select count(*) As num_of_open_invoices<br />From Billing.invoice<br />Where Upper(Billing.invoice.status) = 'OPEN'</td>
+    <td width="600pxl">Select Count(*) As num_of_open_invoices<br />From Billing.invoice<br />Where Upper(Billing.invoice.status) = 'OPEN'</td>
     </tr>
     <tr>
     <td width="150pxl">Billing</td>
@@ -97,29 +97,29 @@ Parameter tables are used for the following:
     <tr>
     <td width="150pxl">Billing</td>
     <td width="150pxl">vip_status</td>
-    <td width="600pxl">Select distinct vip_status <br />From Billing.subscriber</td>
+    <td width="600pxl">Select Distinct vip_status <br />From Billing.subscriber</td>
     </tr>
     <tr>
     <td width="150pxl">Billing</td>
     <td width="150pxl">subscriber_type</td>
-    <td width="600pxl">Select distinct subscriber_type From Billing.subscriber</td>
+    <td width="600pxl">Select Distinct subscriber_type From Billing.subscriber</td>
     </tr>
     <tr>
     <td width="150pxl">Asset</td>
     <td width="150pxl">transaction_duartion</td>
-    <td width="600pxl">Select distinct duration from Asset.asset_transaction</td>
+    <td width="600pxl">Select Distinct duration From Asset.asset_transaction</td>
     </tr>
     <tr>
     <td width="150pxl">Asset</td>
     <td width="150pxl">transaction_city</td>
-    <td width="600pxl">Select distinct transactioncity from Asset.asset_transaction</td>
+    <td width="600pxl">Select Distinct transactioncity From Asset.asset_transaction</td>
     </tr>
     </tbody>
     </table>
 
     
 
-4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams**  function. This function runs the LU's SQL queries in the **LuParams**, creates the LU parameters table in the TDM DB if needed, and populates the LU parameters table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams** function. This function runs the LU's SQL queries in the **LuParams**, creates the LU parameters table in the TDM DB if needed, and populates the LU parameters table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
     - Line number = {"(722) 404-4222","+1 (372) 682-2450,"+1 (799) 979-1233","883-486-7523","1394031132"}
 
@@ -127,7 +127,7 @@ Parameter tables are used for the following:
 
 **Notes:**
 
-- The LU_PARAMS' population runs the SQL queries to retrieve the LU tables' data. Therefore it has an execution order 999 to run after the remaining LU tables' population. 
+- The LU_PARAMS' population runs the SQL queries to retrieve the LU tables' data. Therefore, it has an execution order 999 to run after the remaining LU tables' population. 
 - Do not include spaces or special characters in parameter names.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#random-selection).
 
