@@ -112,7 +112,7 @@ The source LU tables are not populated by the LUI sync in the following cases:
 
 The Broadway flow also validates whether the entity exists in the source table. If the entity is not found in the main source tables, an Exception is thrown and the entity is rejected.
 
-The below image is an example is of a Broadway flow that populates a main source LU table:
+The below image is an example of a Broadway flow that populates a main source LU table:
 
 
 
