@@ -40,9 +40,9 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
   <studio>
     
-   - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window opens.
+   - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A pop-up window opens.
 
-   - Populate the popup window's settings as follows:
+   - Populate the pop-up window's settings as follows:
 
      - **File Name** - populate the file name by [LU Table Name].[flow name]
      - **Parameters** -
