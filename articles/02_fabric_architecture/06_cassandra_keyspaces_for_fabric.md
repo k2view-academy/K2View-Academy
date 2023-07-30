@@ -12,7 +12,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
-Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini. [Click to learn how to switch to SQLite or PostgreSQL as operational DB](06_cassandra_keyspaces_for_fabric#how-to-switch-to-sqlite-or-postgresql).
+Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini. [Click to learn how to switch to SQLite or PostgreSQL as operational DB](06_cassandra_keyspaces_for_fabric#How-to-Switch-to-SQLite-or-PostgreSQL).
 
 When defining operational DB type different then Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
 
