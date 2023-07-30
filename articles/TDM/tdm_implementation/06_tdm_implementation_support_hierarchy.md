@@ -2,7 +2,7 @@
 
 ## TDM Relationship Tables
 
-To support LU hierarchy and extracting or copying selected business entities and their related data, TDM must identify which child entities are related to each parent entity. 
+To support LU hierarchy and extracting or copying of selected business entities and their related data, TDM must identify which child entities are related to each parent entity. 
 
 For example, to copy Customer 1 from the Production environment, TDM must identify the Billing Accounts and the Orders of Customer 1. 
 
