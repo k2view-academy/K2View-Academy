@@ -36,7 +36,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
    Run the flow. The flow creates the target tables, their population flows, and adds them to the LU schema. 
 
-5. Open LU’s schema, right-click > Automatic Layout to view the added target tables.
+5. Open the LUs schema, right-click > Automatic Layout to view the added target tables.
 
    
 
