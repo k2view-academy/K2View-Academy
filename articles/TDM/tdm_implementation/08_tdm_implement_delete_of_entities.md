@@ -6,7 +6,7 @@ Every LU must include the ability to Delete Entities from a target environment t
 - [Delete task](/articles/TDM/tdm_gui/19_delete_only_task.md) - the entities are deleted (cleaned) from the task's environment.
 - [Data Versioning](/articles/TDM/tdm_gui/15_data_flux_task.md/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md) load task - the entities are deleted and reloaded to the target environment.
 
-Note that if there is no need to support a delete of entities or Data Versioning load tasks, the target tables do not need to be added to the LUs.
+Note that if there is no need to support a deletion of entities or Data Versioning load tasks, the target tables do not need to be added to the LUs.
 
 ## LU Structure - Target Tables
 
