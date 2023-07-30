@@ -58,7 +58,7 @@ The **source LU tables** must extract the data from the **source environment**, 
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the active environment to the source environment before syncing the LUI into Fabric.
 
-The **setTargetEnv_Actor** is **automatically added to the generated population flow of the main target LU table **by the target tables generation flow. This Actor sets the active environment based on the **TDM_TARGET_ENV_NAME** key (set by the **InitiateTDMLoad** flow with on the task's target environment).
+The **setTargetEnv_Actor** is **automatically added to the generated population flow of the main target LU table** by the target tables generation flow. This Actor sets the active environment based on the **TDM_TARGET_ENV_NAME** key (set by the **InitiateTDMLoad** flow with on the task's target environment).
 
 For example:
 
