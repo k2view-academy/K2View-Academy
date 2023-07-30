@@ -380,7 +380,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 ## TDM_Reference LU
 
-From TDM 7.6 onwards thwe stores the extracted Reference tables in a new LU - TDM_Reference - instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
+TDM 7.6 onwards stores the extracted Reference tables in a new LU - TDM_Reference - instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)
