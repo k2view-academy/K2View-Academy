@@ -2,7 +2,7 @@
 
 ## **Overview**  
 
-The batch monitoring window has been added to Fabric version 6.5.3. 
+The batch monitoring window has been added to Fabric V6.5.3. 
 
 It has been designed to enable the user to monitor the execution and get a detailed information of a given batch process. In addition it enable the user to edit the maximum number of workers and stop a running batch process or resume a paused batch execution. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
 
@@ -11,7 +11,7 @@ This window displays the list of batch processes in Fabric based on the filter c
 
 ![image](images/26_jobs_and_batch_services_batchMonitor2.PNG)
 
-Go to the batch list winfow: navigate to **Admin > Processes > Batch** to open the batch process.
+To open the batch list window, navigate to **Admin > Processes > Batch** to open the batch process.
 
 Note that if the batch status is **GENERATE_IID_LIST**, i.e. the batch process is still generating the entity list,  the Completion column displays a spinner, since the total number of entities is unknown at this stage and the completion percentage cannot be calculated till the the entity list is generated:
 
