@@ -14,6 +14,10 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 
 Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini. [Click to learn how to switch to SQLite or PostgreSQL as operational DB](06_cassandra_keyspaces_for_fabric#how-to-switch-to-sqlite-or-postgresql).
 
+When defining operational DB type different then Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
+
+It is important to note that currently iidFinder solution doesn't support operational DB type different then Cassandra.
+
 ### Login to Operational DB
 
 Use the following command to connect to the Operational DB from the server:
