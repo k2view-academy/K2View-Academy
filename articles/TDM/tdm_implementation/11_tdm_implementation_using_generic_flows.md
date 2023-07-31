@@ -205,7 +205,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
 
-  By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, e.g. SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
+  By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, such as SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
 
   #### Setting the Mask Categories by the TDM Task Execution Processes
 
