@@ -6,13 +6,13 @@
 
 The Catalog provides an ability to build the artifacts and save them into the Project tree. The artifact is a file created in CSV format that includes the list of fields of all Catalog's datasets, with their Classification, PII and Auto-Mask properties, for the given catalog version. 
 
-While Classification and PII are the properties added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually when needed.  
+While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually when needed.  Learn about the purpose of the Auto-Mask property further in this article.
 
 ### Build Artifacts
 
 Building the catalog's artifact is triggered by clicking **Actions > Build Artifacts** in the menu bar.  
 
-The artifact called **catalog_info** is created for the Catalog version displayed in the application and it is saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree.  
+The artifact called **catalog_info** is created for the Catalog version displayed in the application and it is saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and uploaded to the Fabric memory.
 
 Below is an illustration of the catalog_info.csv file:
 
@@ -28,10 +28,10 @@ The Catalog Masking Actor uses the catalog_info MTable in order to identify at r
 
 The Catalog Masking algorithm is as follows:
 
-* Go over the entries in the catalog_info MTable (using the of combination of data_platform, schema, dataset, class and field columns), and check:
+* Go over the fields of an input row received from the DbQuery or DbCommand Actor (which precedes the Catalog Masking Actor in the population flow).
+* Search each field in the **catalog_info** MTable (using the of combination of data_platform, schema, dataset, class and field columns). If a field name is found, check:
   * If PII is true and Auto-mask is true or empty, the field's value should be masked. 
-
-* Find the specific Masking Actor using the Classification value via the masking_setup MTable and apply it.
+* To find which Masking Actor should be used, get the Classification value from the catalog_info and retrieve the Masking Actor name & parameters from the masking_setup MTable. 
 
 ### Auto-Mask Property
 
