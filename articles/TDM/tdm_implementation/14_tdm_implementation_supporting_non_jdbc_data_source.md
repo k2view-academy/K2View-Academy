@@ -34,13 +34,13 @@ Create Broadway flows to populate the other LU tables.
 
 ### Step 1 - Build Load and Delete Flows
 
-The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getDbTables** function to get the target JDBC structure and therefore cannot be used for a non JDBC target.  Therefore the load and delete flows need to be created manually:
+The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getDbTables** function to get the target JDBC structure and therefore cannot be used for a non-JDBC target. Therefore, the load and delete flows need to be created manually:
 
 - A separate load flow for each target object. The data is taken from the related LU table. Add [sequence](11_tdm_implementation_using_generic_flows.md#update-the-load-flows-with-the-sequence-actors) and [masking](tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data) handling if needed.
 
 - A separate delete flow of each target object. The target keys are taken from the [**TAR_** LU tables](08_tdm_implement_delete_of_entities.md).
 
-- **LoadAllTables** flow:  this flow executes the inner load flows on each target object in the correct order. 
+- **LoadAllTables** flow: this flow executes the inner load flows on each target object in the correct order. 
 
   See an example below:
 
