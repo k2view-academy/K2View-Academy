@@ -300,7 +300,7 @@ Create a Broadway flow under the related root LU or the Shared Objects. It is re
 - Stage 1: Get the list of entities.
 - Stage 2: Call the **insertToLuExternalEntityList** Actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list table created in the Cassandra DB:
    - Set the input LU_NAME to be external and get its value from the task execution process.  
-   - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have 1 commit on all iterations.  
+   - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit on all iterations.  
 
 
 Populate the Broadway flow in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist).
