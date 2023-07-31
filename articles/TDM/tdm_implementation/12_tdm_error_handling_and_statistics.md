@@ -21,7 +21,7 @@ PopulateTableErrorsWithFailed.flow also sets the error category as *Entity Faile
 
 The error handling utility is invoked from each Load flow's **Load Data To Target** Stage. An error can be suppressed in order to continue a task execution and to reach the statistics gathering step.
 
-By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress** setting is unchecked, i.e. the entity is rejected due to the error:
+By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress** setting is unchecked, that is, the entity is rejected due to the error:
 
 ![image](images/12_tdm_err_stat_01.PNG)
 
