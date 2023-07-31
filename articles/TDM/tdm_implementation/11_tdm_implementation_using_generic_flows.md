@@ -100,7 +100,7 @@ This capability enables you to create your own function or Broadway flow in orde
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
 
-## Step 3 - Create, Load, and Delete Flows
+## Step 3 - Create, Load and Delete Flows
 
 - In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder in order to create the delete and load flows under the LU. The flow gets the following input parameters:
 
