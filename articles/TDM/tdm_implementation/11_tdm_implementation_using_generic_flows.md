@@ -315,7 +315,7 @@ Redeploy the related LUs and the TDM LU.
 
 The TDM library provides a list of Broadway Actors and flows to support generating an entity list by a project Broadway flow. The project Broadway flow gets the entity list and calls the TDM library Actors to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and it has the following naming convention: [LU_NAME]_entity_list. 
 
-The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that are a part of current task execution, having the current task execution id.
+The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the Cassandra table that are a part of the current task execution, having the current task execution id.
 
 Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more information about TDM implementation on non JDBC Data Source.
 
