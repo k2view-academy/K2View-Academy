@@ -16,7 +16,7 @@ For more information on how to build Custom Logic flows, read [Step 7 - Optional
 
 ## Building the LU Tables Populations
 
-### Step 1- Main Source LU Table
+### Step 1 - Main Source LU Table
 
 The population of the main source LU table must be generated based on [populationRootTable.pop.flow template](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#step-3---add-the-source-lu-tables-to-the-lu-schema) imported from the TDM Library:
 
@@ -32,7 +32,7 @@ Create Broadway flows to populate the other LU tables.
 
 ## Building the Broadway TDM Flows
 
-### Step 1- Build Load and Delete Flows
+### Step 1 - Build Load and Delete Flows
 
 The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getDbTables** function to get the target JDBC structure and therefore cannot be used for a non JDBC target.  Therefore the load and delete flows need to be created manually:
 
