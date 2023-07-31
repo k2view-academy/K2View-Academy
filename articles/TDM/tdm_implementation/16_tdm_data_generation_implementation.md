@@ -144,7 +144,7 @@ The data generation flows are created with the following logic:
 </td>
 <td width="500pxl">
 <p>2 alternatives:</p>
-<p>1. Use a data generator actor for one of the field's instances and then select the generated value and populate it into the remaining instances.</p>
+<p>1. Use a data generator Actor for one of the field's instances and then select the generated value and populate it into the remaining instances.</p>
 <p>2. Use the new TDM 8.1 Actor: <strong>GenerateConsistent&nbsp;</strong>for all the field's instances to keep the referential integrity of the instances.</p>
 </td>
 </tr>
