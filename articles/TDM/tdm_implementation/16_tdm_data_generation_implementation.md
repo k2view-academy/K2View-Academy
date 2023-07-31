@@ -1,10 +1,10 @@
 # Data Generation Implementation
 
-The TDM data generation creates synthetic entities. The synthetic data are populated into the LU tables: an LU table can be populated with either with source data or generated synthetic data.  
+The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables: an LU table can be populated with either source data or generated synthetic data.  
 
 ## LU Populations Implementation
 
-The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the  **rowsGeneratorDistribution** input Actor.
+The LU population must be based on Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB select from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the **rowsGeneratorDistribution** input Actor.
 
 ### LU Population Flows - Implementation Steps
 
@@ -40,11 +40,11 @@ For example: activity.population.generator
 
 #### 1. Sequence handling 
 
-Populate the **tdmSeqList** and **TDMSeqSrc2TrgMapping**  tables before generating the data generation flows. 
+Populate the **tdmSeqList** and **TDMSeqSrc2TrgMapping** tables before generating the data generation flows. 
 
 Click [here](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for more information about the sequence implementation.
 
-This step is needed in order to add a sequence generation in the data generation flow for fields that are set in the **TDMSeqSrc2TrgMapping**  table. The generated flow creates a DB sequence in the TDM DB for the generated ID. The created DB sequence has the following naming convention:
+This step is needed in order to add a sequence generation in the data generation flow for fields that are set in the **TDMSeqSrc2TrgMapping** table. The generated flow creates a DB sequence in the TDM DB for the generated ID. The created DB sequence has the following naming convention:
 
 ```
 [gen]_[the sequence name in TDMSeqSrc2TrgMapping]
