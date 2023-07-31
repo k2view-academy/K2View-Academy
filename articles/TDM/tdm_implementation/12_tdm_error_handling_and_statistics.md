@@ -2,7 +2,7 @@
 
 The TDM library includes a set of generic flows for error handling and statistics gathering that are based on Broadway capabilities and are tailored for TDM business requirements. 
 
-These generic flows gather errors and statistics during task execution and populate them into dedicated tables. This data is used for monitoring  TDM tasks and creating TDM execution reports.
+These generic flows gather errors and statistics during task executions and populate them into dedicated tables. This data is used for both monitoring TDM tasks and creating TDM execution reports.
 
 ### How Do I Perform Error Handling in TDM?
 
