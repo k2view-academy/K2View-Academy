@@ -159,7 +159,7 @@ The main delete flow is created by the **createDeleteAllTablesFlow.flow** that r
 
 ### Debug the Load Flows
 
-You can run each one of the load flows in debug mode. Normally, when running a task, the **InitiateTDMLoad_Actor** gets the task's attributes and sets the execution parameters accordingly. When running a load flow in a debug mode without executing a TDM task, the **InitiateTDMLoad_Actor** sets the execution's parameters based on the TDM Globals. 
+You can run each one of the load flows in a debug mode. Normally, when running a task, the **InitiateTDMLoad_Actor** gets the task's attributes and sets the execution parameters accordingly. When running a load flow in a debug mode without executing a TDM task, the **InitiateTDMLoad_Actor** sets the execution's parameters based on the TDM Globals. 
 
 ## Step 4 - TDM Orchestration Flows
 
