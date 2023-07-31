@@ -12,7 +12,7 @@ To start the search, click the![](images/search.png) icon in the menu bar. It op
 
 <img src="images/advanced_search.png" style="zoom:75%;" />
 
-The advanced search allows to narrow the search results by specifying one of the following parameters:
+The advanced search allows to narrow the search results by specifying one (or more) of the following parameters:
 
 * Search the selected object type(s) only, for example - fields and datasets. 
 
