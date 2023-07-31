@@ -42,7 +42,7 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 - **LoadAllTables** flow: This flow executes the inner load flows on each target object in the correct order. 
 
-  See an example below:
+  View the below example:
 
   ![load All](images/loadAllTablesFlow_Example.png)
 
@@ -52,11 +52,11 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 ​		
 
-​	The **Get Entity Status** Actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
+The **Get Entity Status** Actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
 
 - **DeleteAllTables** flow: This flow executes the inner delete flows on each target object in the correct order. 
 
-  See an example below:
+  View the below example:
 
 ![delete All](images/deleteAllTablesFlow_Example.png)
 
