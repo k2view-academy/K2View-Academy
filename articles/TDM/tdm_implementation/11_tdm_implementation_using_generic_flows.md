@@ -185,7 +185,7 @@ The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_g
 
 TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables masking sensitive fields such as SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target database.
 
-* **LU population flows** - In order to mask a sensitive field, prior to loading it into Fabric, add the masking logic to the LU population flow using **Masking** Actors. 
+* **LU population flows** - in order to mask a sensitive field, prior to loading it into Fabric, add the masking logic to the LU population flow using **Masking** Actors. 
 
   ![image](images/11_tdm_impl_05.PNG)
 
@@ -193,7 +193,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   
 
-* **Load flows** - To mask a sensitive field as part of a load to the Target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
+* **Load flows** - to mask a sensitive field as part of a load to the Target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
 
   ### TDM - Masking Categories
 
