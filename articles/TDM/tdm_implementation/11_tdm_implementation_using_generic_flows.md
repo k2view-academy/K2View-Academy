@@ -91,7 +91,7 @@ This table serves 2 purposes:
 Click [here](16_tdm_data_generation_implementation.md) for more information about the synthetic data generation implementation.
 
 Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking Actors.
-This capability enables you to create your own function or Broadway flow in order to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** Actors in the sequence Actor. It works as follows: 
+This capability enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **MaskingInnerFlow** Actor in the sequence Actor. It works as follows: 
 
 - Set the category to **enable_sequences** in order to use the Actor for sequence (ID) replacement. 
 - The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to either **true** or **false**, based on the TDM task attributes. 
