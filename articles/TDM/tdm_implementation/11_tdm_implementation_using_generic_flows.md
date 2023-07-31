@@ -378,7 +378,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
       - If the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
       - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way the query returns a limited size of records.
 
-- **Stages 2-4**: **Loop on the selected entities** - set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have 1 commit for all iterations: 
+- **Stages 2-4**: **Loop on the selected entities** - set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
   1. Stage 2: Set the selected entity ID - returned by the Actor of Stage 1 - to a String using the **ToString** Actor.
 
