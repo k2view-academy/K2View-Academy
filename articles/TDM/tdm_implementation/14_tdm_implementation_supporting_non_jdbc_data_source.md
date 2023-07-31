@@ -20,8 +20,8 @@ For more information on how to build Custom Logic flows, read [Step 7 - Optional
 
 The population of the main source LU table must be generated based on [populationRootTable.pop.flow template](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#step-3---add-the-source-lu-tables-to-the-lu-schema) imported from the TDM Library:
 
-- Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
-- Populate the popup window's settings as follows:
+- Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A pop-up window opens.
+- Populate the pop-up window's settings as follows:
   - **File Name**: populate the file name by [LU Table Name].[flow name]
 - Do not populate the **TABLE_NAME** , **KEY**, and the **SOURCE_INTERFACE** parameters when populating the main source LU table based on a non JDBC data source.
 - The generated flow is created with an empty source query in the **Source** stage. Replace the empty **sourceDbQuery** in the **Source** stage by the updated actor to extract the data from the data source and link it to the main source LU table in the **LU Table** stage.
