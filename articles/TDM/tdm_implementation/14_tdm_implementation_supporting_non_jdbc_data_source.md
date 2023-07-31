@@ -40,7 +40,7 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 - A separate delete flow of each target object. The target keys are taken from the [**TAR_** LU tables](08_tdm_implement_delete_of_entities.md).
 
-- **LoadAllTables** flow: this flow executes the inner load flows on each target object in the correct order. 
+- **LoadAllTables** flow: This flow executes the inner load flows on each target object in the correct order. 
 
   See an example below:
 
@@ -52,9 +52,9 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 ​		
 
-​		The **Get Entity Status** actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
+​	The **Get Entity Status** Actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
 
-- **DeleteAllTables** flow:  this flow executes the inner delete flows on each target object in the correct order. 
+- **DeleteAllTables** flow: This flow executes the inner delete flows on each target object in the correct order. 
 
   See an example below:
 
