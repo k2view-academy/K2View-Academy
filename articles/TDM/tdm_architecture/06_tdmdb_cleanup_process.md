@@ -6,7 +6,7 @@ The list of TDM tables to be cleaned up and deleted are taken from [TDMCleanup](
 
 The following cleanup parameters are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
 
-- **cleanup_retention_period**, the number of months of the retention period of Inactive records. The cleanup process deletes inactive records that are older than the retention period. By default, this value is set to 2, i.e., all inactive records updated more than two months ago are deleted from the TDM DB by the cleanup process. 
+- **cleanup_retention_period**, the number of months of the retention period of inactive records. The cleanup process deletes inactive records that are older than the retention period. By default, this value is set to 2, i.e., all inactive records updated more than two months ago are deleted from the TDM DB by the cleanup process. 
 
 Update this parameter to set a different retention period.
 
