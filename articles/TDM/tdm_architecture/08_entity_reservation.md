@@ -15,7 +15,7 @@ A [TDM Task](/articles/TDM/tdm_gui/14_task_overview.md) can reserve entities in 
 
 In both cases, the **task execution** marks the **root target entity IDs** as reserved. On load and reserve tasks, the task execution reserves each root entity ID before loading it to the target environment. If the *reserve* fails due to any reason, the entity is marked as failed and it is not loaded to the target environment.
 
-If the load of the root entity fails, the [TDM orchestration process](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestratorflow-from-the-template) deletes the failed entity from the TDM DB **tdm_reserved_entities**  table.
+If the loading of the root entity fails, the [TDM orchestration process](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestratorflow-from-the-template) deletes the failed entity from the TDM DB **tdm_reserved_entities** table.
 
 Note that entities can only be reserved by load or reserve tasks. A “reservation” of entities by extract task is implemented by the Data Versioning functionality.
 
