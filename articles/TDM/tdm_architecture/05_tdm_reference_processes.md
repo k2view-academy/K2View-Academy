@@ -2,7 +2,7 @@
 
 The list of Reference tables available for TDM tasks is populated in the [RefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#reflist) MTable.  TDM 7.6 onwards stores the Reference tables in a dedicated LU: **TDM_Reference**. Each Reference table is stored as a separate LUI.  
 
-Previous TDM versions stored the extracted reference tables in the Cassandra DB:  the TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target environment. 
+Previous TDM versions stored the extracted reference tables in the Cassandra DB: The TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target environment. 
 
 
 
