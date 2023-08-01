@@ -22,7 +22,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   - **Billing LU**: #169, #170, #171, #172, and #173.
   - **Order LU**: #279, #280, #281, #282, #283, #284, and #285.
 
-- Synching Customer ID #1 inserts the following record into **CUSTOMER_PARAMS** TDM DB table:
+- Syncing Customer ID #1 inserts the following record into **CUSTOMER_PARAMS** TDM DB table:
 
   <table width="900pxl">
   <tbody>
@@ -55,7 +55,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   
   
   
-- Synching Collection ID #1 inserts the following records into **COLLECTION_PARAMS** TDM DB table:
+- Syncing Collection ID #1 inserts the following records into **COLLECTION_PARAMS** TDM DB table:
 
   <table width="900pxl">
   <tbody>
@@ -78,7 +78,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   
   
   
-- Synching Billing IDs #169, #170, #171, #172, and #173 inserts the following records into **BILLING_PARAMS** TDM DB table:
+- Syncing Billing IDs #169, #170, #171, #172, and #173 inserts the following records into **BILLING_PARAMS** TDM DB table:
 
   <table width="900pxl">
   <tbody>
@@ -145,7 +145,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   </tbody>
   </table>
 
-- Synching Order IDs #279, #280, #281, #282, and #283. #284, and #285 inserts the following records into **ORDER_PARAMS** TDM DB table:
+- Syncing Order IDs #279, #280, #281, #282, and #283. #284, and #285 inserts the following records into **ORDER_PARAMS** TDM DB table:
 
   <table width="900pxl">
   <tr>
@@ -218,7 +218,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
 
   - NO_OF_OPEN_CASES > 0  AND VIP_STATUS = "Gold" AND ORDER_TYPE = "New"
 
-- The following select runs on the TDM DB to get the available entities:
+- The following SELECT statement runs on the TDM DB to get the available entities:
 
      `SELECT ROOT_IID FROM crm_params WHERE source_environment = 'Production' AND root_lu_name = ANY('Customer', 'Collection') AND 0 < ANY("CRM.NUM_OF_OPEN_CASES"::numeric[] )   
   INTERSECT` 
