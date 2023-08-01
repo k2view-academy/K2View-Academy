@@ -70,7 +70,7 @@ The table contains the following information:
 
 The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) enables the TDM users to run the following activities on the reserved entities:
 
-- **View**: each user can view the list of entities, reserved on their environment, to avoid running functional tests on entities reserved by other users.
+- **View**: Each user can view the list of entities, reserved on their environment, in order to avoid running functional tests on entities reserved by other users.
 
 - **Release** reserved entities:
   - Release your entities
@@ -83,9 +83,9 @@ The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.
 
 ## Releasing Reserved Entities
 
-**Explicit release**: release entities via the **new Reserved Entities window**. The entities are deleted from the reserved entities TDM table.
+**Explicit release**: Release entities via the **new Reserved Entities window**. The entities are deleted from the reserved entities TDM table.
 
-**Implicit release**: a reserved entity can be released by either one of the following scenarios:
+**Implicit release**: A reserved entity can be released by either one of the following scenarios:
 - The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case, the record is not deleted automatically from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the new reservation period dates.
 
 - A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md) releases the deleted entities and deletes them from the reserved entities TDM table.
