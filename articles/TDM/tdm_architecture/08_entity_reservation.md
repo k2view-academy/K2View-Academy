@@ -46,7 +46,7 @@ Note that entities can only be reserved by load or reserve tasks. A 'reservation
 
 The reserved entities are kept in a dedicated TDM DB table: **tdm_reserved_entities**. Each entity has its own record.
 
-The key of each reserve entity consists of the combination of the following fields:
+The key of each reserved entity consists of the combination of the following fields:
 
 - **entity_id** - populated with the **target entity ID**.
 - **be_id** - populated with the unique identifier of the task's Business Entity (BE).
