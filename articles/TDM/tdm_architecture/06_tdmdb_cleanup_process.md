@@ -1,16 +1,16 @@
-# TDM Clean-Up Process
+# TDM Cleanup Process
 
-The **TDMDB_CleanUp** job is defined in the **TDM LU**. Its purpose is to clean old inactive records from the [TDM DB](02_tdm_database.md). 
+The **TDMDB_CleanUp** job is defined in the **TDM LU**. Its purpose is to clean up old inactive records from the [TDM DB](02_tdm_database.md). 
 
-The list of TDM tables to be cleaned-up and deleted are taken from [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdmcleanup) shared translation. The clean-up process gets all translation records whose **cleanup_ind** setting is checked and it runs the Delete statement on each table. 
+The list of TDM tables to be cleaned-up and deleted are taken from [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdmcleanup) shared translation. The cleanup process gets all translation records whose **cleanup_ind** setting is checked and it runs the Delete statement on each table. 
 
-The following clean-up parameters are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
+The following cleanup parameters are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
 
-- **cleanup_retention_period**, the number of months of the retention period of Inactive records. The clean-up process deletes inactive records that are older than the retention period. By default, this value is set to 2, i.e., all inactive records updated more than two months ago are deleted from the TDM DB by the cleanup process. 
+- **cleanup_retention_period**, the number of months of the retention period of Inactive records. The cleanup process deletes inactive records that are older than the retention period. By default, this value is set to 2, i.e., all inactive records updated more than two months ago are deleted from the TDM DB by the cleanup process. 
 
 Update this parameter to set a different retention period.
 
-### How do I Run the TDM Clean-Up Process?
+### How do I Run the TDM Cleanup Process?
 
 By default, the **TDMDB_CleanUp** job is scheduled to run automatically every 7 days in the TDM Job's table. You can set it to run manually or set a different time interval for an automatic execution.
 
