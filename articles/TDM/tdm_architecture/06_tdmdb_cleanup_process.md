@@ -2,7 +2,7 @@
 
 The **TDMDB_CleanUp** job is defined in the **TDM LU**. Its purpose is to clean up old inactive records from the [TDM DB](02_tdm_database.md). 
 
-The list of TDM tables to be cleaned-up and deleted are taken from [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdmcleanup) shared translation. The cleanup process gets all translation records whose **cleanup_ind** setting is checked and it runs the Delete statement on each table. 
+The list of TDM tables to be cleaned up and deleted are taken from [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdmcleanup) shared translation. The cleanup process gets all translation records whose **cleanup_ind** setting is checked and it runs the Delete statement on each table. 
 
 The following cleanup parameters are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
 
