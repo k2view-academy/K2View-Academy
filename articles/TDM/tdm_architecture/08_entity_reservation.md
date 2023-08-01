@@ -35,7 +35,7 @@ Note that entities can only be reserved by load or reserve tasks. A 'reservation
 
 - **Validate the task's entities**:
 
-  - Filter out entities that are reserved by another user when running a task with **Custom Logic**, **Random**, or **Parameters** section methods.
+  - Filter out entities that are reserved by another user when running a task with **Custom Logic**, **Random** or **Parameters** section methods.
   - If the task is executed on an entity list, verify that the **entities are not reserved for other users**. If an entity is reserved by another user, the entity fails.
 
   Click here for more information about the [available task's selection methods](03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus).
