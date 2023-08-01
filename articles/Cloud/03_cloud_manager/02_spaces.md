@@ -52,32 +52,51 @@ Each space card built from top bar, mini dashboard metrics and in a glance infor
 
     > Available only for non Studio spaces. For a Studio space you shall redeploy it via Studio, to avoid misunderstanding.
 
-  * Settings
+  * **Settings**
 
-  * Refresh Status, trigger a refresh status action manually, either the auto-refresh is turned on, at spaces page top bar, or not.
+  * **Refresh Status**, trigger a refresh status action manually, either the auto-refresh is turned on, at spaces page top bar, or not.
 
-  * Restart, restart the space, for example when a configuration which requires Fabric restart is needed.
+  * **Restart**, restart the space, for example when a configuration which requires Fabric restart is needed.
 
     > Available only for Studio spaces, to avoid  
 
-  * Pause/Resume, either of these appear according the current status (Pause when space is running and vice versa). By pausing your space you can save budget as its resource are going down. 
+  * **Pause/Resume**, either of these appear according the current status (Pause when space is running and vice versa). By pausing your space you can save budget as its resource are going down. 
 
     > * Available only for Studio spaces, to avoid
     > * When pausing your space you do **not** loose the changes that you might made in your project, even if not pushed to GIT. On resuming the space you will have it.
 
-  * Delete, delete the space, after getting your approval in the opened dialog box. 
+  * **Delete**, delete the space, after getting your approval in the opened dialog box. 
 
     > Available only for Studio spaces, to avoid
 
-  * Support
+  * **Support**
 
 ### Mini Dashboard
 
+The mini-dashboard provides a quick view of space's performance and operation. It contains two graphs, showing the data for the last 5 minutes. Wider and detailed information can be inspected at the Monitor app.
 
+* **Reads and Writes**, to the Fabric storage. This is an important information for both performance and for financial aspects. In cluster mode, where there is a lot of data, the data (LUIs) are stored at cloud providers' storages, which charge by read and write transactions.
+
+  The graph is divided into 2 Y-Axes, one for read and the other for writes.
+
+*  **API Calls**, which shows information about the calls which are done into Fabric by your platforms. The right y-axis is the Count - the number of calls, where the left y-axis shows the average response time. This gives you an in a glance indication if things are functional as expcted.
 
 ### Card Information
+
+The card information area is divided into 3 sections. The upper describes base info of what and where - the project, the profile and the site. The middle shows which modules are deployed and served on that space. The third section contains teh information about who created the space and when, as well as change date, for example in case it was paused or resumed.
 
 
 
 ## Create a Space
 
+To create a new space 
+
+1. Click on the last empty card, labeled as "Create Space" or on the top bar "Create Space" button. 
+2. Define the what and where: The name of the space, the project, the profile and where it shall be created - the site. According to your deployment, each of the select list might contain one or more options.
+3. Click on "Create" button.
+
+The card it then appears at the top left of the space list, as the list is ordered by creation date, from newer to older. In addition, as long as you do not left the spaces page it is visually emphasized with a gray border.
+
+The space creation process has 3 states - Create, Start and Ready/Error. A progress bar indicates in which state the card is currently exists. Note that even if you leave the page and get back, you will still see the state and the progress bar, for any action you make.
+
+> space creation process might vary between project and profiles. For non Studio spaces, the space creation contains also the step of build and deploy execution, which might takes time in case the deployment also responsible to make some further automatic processes execution, defined in [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) or as user jobs. 
