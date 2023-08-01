@@ -54,15 +54,15 @@ The key of each reserved entity consists of the combination of the following fie
 
 The table contains the following information:
 
-- **Key fields**: entity_id, be_id and env_id.
+- **Key fields** - entity_id, be_id and env_id.
 
-- **Task identifiers**: task_id and task_execution_id. Identify the task execution that reserved the entities.
+- **Task identifiers** - task_id and task_execution_id. Identify the task execution that reserved the entities.
 
-- **Reservation period**: start_datetime and end_datetime. Note that admin and environment owner users can reserve entities for an unlimited period. In this case, the end_datetime will be empty.
+- **Reservation period** - start_datetime and end_datetime. Note that admin and environment owner users can reserve entities for an unlimited period. In this case, the end_datetime will be empty.
 
-- **reservation_owner**: the user ID that reserved the entities. 
+- **reservation_owner** - the user ID that reserved the entities. 
 
-- **reserve_notes**: a free text concerning the reserved entity.
+- **reserve_notes** - a free text concerning the reserved entity.
 
   
 
