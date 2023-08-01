@@ -34,14 +34,14 @@ Note that **the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) 
 
 
 
-### TDM_Refrence LU - reference_table LU Table 
+### TDM_Reference LU - reference_table LU Table 
 
 The reference_table LU table keeps the reference data. The LU table has the following fields:
 
 - TABLE_NAME - populated with the reference table name, e.g., CUSTOMER_TYPE.
 - TDM_TASK_EXECUTION_ID - populated, by default, with **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - SOURCE_ENV_NAME - populated by the source environment.
-- TABLE_DATA - the table data are extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
+- TABLE_DATA - the table data is extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
 - RECORD_COUNT - number of records of the reference table.
 - TABLE_FIELDS - list of the reference table's fields.
 
