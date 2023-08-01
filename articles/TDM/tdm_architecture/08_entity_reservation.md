@@ -48,9 +48,9 @@ The reserved entities are kept in a dedicated TDM DB table: **tdm_reserved_entit
 
 The key of each reserve entity consists of the combination of the following fields:
 
-- **entity_id**, populated with the **target entity ID**.
-- **be_id**, populated with the unique identifier of the task's Business Entity (BE).
-- **env_id**, populated with the unique identifier of the task's target environment.
+- **entity_id** - populated with the **target entity ID**.
+- **be_id** - populated with the unique identifier of the task's Business Entity (BE).
+- **env_id** - populated with the unique identifier of the task's target environment.
 
 The table contains the following information:
 
@@ -60,7 +60,7 @@ The table contains the following information:
 
 - **Reservation period**: start_datetime and end_datetime. Note that admin and environment owner users can reserve entities for an unlimited period. In this case, the end_datetime will be empty.
 
-- **reservation_owner**: the user ID which reserved the entities. 
+- **reservation_owner**: the user ID that reserved the entities. 
 
 - **reserve_notes**: a free text concerning the reserved entity.
 
