@@ -54,7 +54,7 @@ The key of each reserved entity consists of the combination of the following fie
 
 The table contains the following information:
 
-- **Key fields**: entity_id, be_id, and env_id.
+- **Key fields**: entity_id, be_id and env_id.
 
 - **Task identifiers**: task_id and task_execution_id. Identify the task execution that reserved the entities.
 
