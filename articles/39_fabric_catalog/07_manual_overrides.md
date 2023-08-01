@@ -14,15 +14,17 @@ Only the latest catalog version can be edited. See below which manual overrides 
 
 ### Edit Properties
 
-As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g. PK or source data type) and some are created by the plugins (e.g. PII or Classification). The Catalog allows to update only the properties which are pre-defined as editable in the properties configuration file. This definition can be updated on the project level. The default setting defines the following three editable properties: PII, Classification and Nullability.
+As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g. PK or source data type) and some are created by the plugins (e.g. PII or Classification). The Catalog allows updating only those properties which are pre-defined as editable in the ```properties-info.JSON``` configuration file. This definition can be updated on the project level. [Click for more information about the configuration file](11_advanced_settings.md#catalog-application-configuration).
 
-The update is performed as follows:  
+<img src="images/edit_prop_1.png" style="zoom:75%;" />
 
-* To **edit** an existing property, open the More Info popup window of the selected property and update the **Value** and **Notes** fields. 
+* To **edit** an existing property:
 
-  * On clicking Submit – the change is aggregated in the client side and not sent to the server yet. The change is indicated by the colors.
+  * Click the property in the Properties Tab to open the More Info popup window and update the **Value** and **Notes** fields. 
 
-  * On clicking Cancel – the change in More Info is discarded.
+  * On clicking Submit on More Info popup – the change is aggregated in the client side and not sent to the server yet. The tab indicates the change: the row with new value is marked in green, the row with old value is marked in red.
+
+  * On clicking Cancel – the change performed in More Info popup is discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
 * To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate Name, Value and Notes via the More Info popup. ID will be generated according to the property's path, Origin will be set to Manual, and the Score to 1. 
   * When adding a new property, you can either select the property name from the pre-defined list or create a completely new property.

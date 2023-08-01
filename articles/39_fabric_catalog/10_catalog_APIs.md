@@ -10,11 +10,11 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 
 
-## Get Catalog Versions
+## Get Catalog
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
 
-The API retrieves a list of catalog's versions and their creation timestamp.
+The API retrieves a list of the catalog's versions and their creation timestamp.
 
 **Example of an API call:**
 
@@ -24,7 +24,7 @@ https://localhost:3213/api/catalog
 
 
 
-## Get Catalog's Specified Version
+## Get Catalog Version Details
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
@@ -76,7 +76,7 @@ https://localhost:3213/api/catalog/1...latest
 
 
 
-## Get Catalog's Data Platforms
+## Get Catalog's Data Platform Details
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
@@ -133,7 +133,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 
 
-## Get Catalog's Schemas
+## Get Catalog's Schema Details
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/schema`
 
