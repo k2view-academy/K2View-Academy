@@ -400,7 +400,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 Below are examples of a Custom Logic flow:
 
-**Example 1 - get a the Contract status as an input parameter and build the SELECT statement accordingly:** 
+**Example 1 - get the Contract Status as an input parameter and build the SELECT statement accordingly:** 
 
 ![custom logic](images/custom_logic_example.png)
 
