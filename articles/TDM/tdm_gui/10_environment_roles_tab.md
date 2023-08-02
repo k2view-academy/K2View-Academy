@@ -2,7 +2,7 @@
 
 TDM Environment permission sets are set on an environment level and are assigned to testers. Each permission set defines a list of permissions related to the creation and execution of TDM tasks in an environment. Testers can only create and execute a TDM task if they are assigned to one of the environment's permission sets. 
 
-A TDM Environment permission set is an **optional setting** in an environment and can be created, edited or deleted by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  An environment without a permission set or without testers attached to a permission set, can only be used by Admin users or by  Environment Owners.
+A TDM Environment permission set is an **optional setting** in an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set or without testers attached to a permission set, can only be used by Admin users or by Environment Owners.
 
 An environment's permission sets are displayed in the **Permission Sets tab** in the Environment window:
 
@@ -28,11 +28,11 @@ A description of the TDM Environment permission set. (Optional).
 
 ### Read and Write and Number of Entities
 
-- Read access can be granted on a source environment, i.e. the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
+- Read access can be granted on a source environment, i.e., the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
 
-- Write access can be granted on a target environment, i.e. the environment type is **Target** or **Both**.
+- Write access can be granted on a target environment, i.e., the environment type is **Target** or **Both**.
 
-When an Environment Type is Both it can have both read and write access to both the source and target. The TDM Environment permission sets in these environments can have both read and write access or read or write only access.
+When an Environment Type is Both, it can have both read and write access to both the source and target. The TDM Environment permission sets in these environments can have both read and write access or read or write only access.
 
   **Example:**
 
@@ -41,7 +41,7 @@ When an Environment Type is Both it can have both read and write access to both 
     - Set2, enables Write only access. Testers with this permission set can only select this environment as a target environment in a TDM task.
     - Set3, enables both Read and Write access. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
 
-- The **Number of Entities** indicates the maximum number of entities processed by a task and must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types.  A different number of entities can be set for each access type. 
+- The **Number of Entities** indicates the maximum number of entities processed by a task and must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type. 
 
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
@@ -63,7 +63,7 @@ Note that although an environment's permission set without testers is not usable
 
 The **All** option is used to enable the permission set for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. A popup window is displayed:
+Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. A pop-up window is displayed:
 
 ![user setting](images/env_permission set_user_settings.png)
 
@@ -72,17 +72,17 @@ Check the **All Users** checkbox.
 #### Adding Selected TDM Users to the TDM Environment Permission Set
 
 1. Click **Testers** and select one of the displayed user IDs.
-2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** popup window. Select or type manually the user id. 
+2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select or type manually the user id. 
 3. Click the ADD button.
-4. Click **Testers** again and select another user, or type manually a user name,  if needed.
+4. Click **Testers** again and select another user, or type a user name manually, if needed.
 
 
 
 #### Adding Selected TDM User Groups to the TDM Environment Permission Set
 
-1. Click the ![plus icon](images/plus_icon_prod_version.png) icon and to open the **User Settings** popup window. Select a user group from the list.
+1. Click the ![plus icon](images/plus_icon_prod_version.png) icon and to open the **User Settings** pop-up window. Select a user group from the list.
 2. Click the ADD button.
-3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the  **Testers** and select another user group if needed.
+3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** and select another user group if needed.
 
 #### TDM Environment Permission Set Assignments Priorities
 
@@ -94,7 +94,7 @@ Check the **All Users** checkbox.
 
 - A tester can be attached to only one TDM Environment permission set per environment and cannot be attached to different TDM Environment permission sets in the same environment.
 
-- An owner user or group can be attached either to the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as an owner or as a tester.
+- An owner user or group can be attached either to the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as either an owner or a tester.
 
   
 
@@ -104,7 +104,7 @@ A list of permissions that can be assigned to a permission set. Check to grant o
 
 ##### **Ignore Test Connection**  
 
-TDM tests the connections of the source and target environments at the beginning of the task's execution.  If the connection  fails, the user is asked whether to ignore the failure and continue the execution or to stop the execution.  When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and continue the execution.
+TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
 
 ##### **Delete Entity from Target** 
 
