@@ -6,7 +6,7 @@ Each environment must be defined in the following TDM components:
 - Fabric - set the [interfaces connection details and Globals values](/articles/25_environments/01_environments_overview.md) for each environment. 
 - TDM Portal - set the following for each environment:
 
-  - [General information](08_environment_window_general_information.md) like environment name, contact person, environment type (source, target or both).
+  - [General information](08_environment_window_general_information.md) such as environment name, contact person, environment type (source, target or both).
   - [Environment owners](08_environment_window_general_information.md#environment-owners), add environment owners to set up and maintain an environment.
   - [Environment systems](11_environment_products_tab.md), attach [TDM systems (products)](05_tdm_gui_product_window.md) to each environment.
   - [Environment permissions](10_environment_roles_tab.md), define the permission sets with TDM permissions for environments and attach [users](02_tdm_gui_user_types.md) to an environment, enabling them to create TDM tasks for it.
