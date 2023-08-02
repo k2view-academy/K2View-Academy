@@ -24,16 +24,18 @@ The plugins.discovery defines a list of plugins and their execution order. It al
 
 Once file is updated, the Discovery job should be rerun in order to apply the changes on the Catalog.
 
-**Sample Size Settings**
+**Data Sample Settings**
 
-The data sample is taken from the data source during the Discovery job run. This sample is used by the Classification plugins. The sample size is configured in the plugins.discovery as follows:
+The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and used by the various plugins during the job run. Once the plugins execution is completed, the data sample is deleted.
+
+The sample size is configured in the plugins.discovery as follows:
 
 * The default sample size is 10% of the dataset rows.
 * Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
 
 **Plugin's Threshold**
 
-Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. The threshold can be updated if needed. 
+Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. The threshold can be updated in the plugins.discovery if you need to show more or less results in the Catalog. 
 
 **Custom Plugins**
 
@@ -59,9 +61,9 @@ If a match is found, the plugin estimates the relation direction and the foreign
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 125px;" colspan="2"><strong>Input: a pair of datasets</strong></td>
+<td style="width: 125px;" colspan="2"><strong>Input: 2 Datasets</strong></td>
 <td style="width: 650px;" colspan="2">
-<p><strong>Output: relation created by plugin</strong></p>
+<p><strong>Output: Relation created by plugin</strong></p>
 </td>
 </tr>
 <tr>
@@ -72,7 +74,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 <p><strong>DS2</strong></p>
 </td>
 <td style="width: 600px;">
-<p><strong>Relation Direction and FK</strong></p>
+<p><strong>Relation direction and FK</strong></p>
 </td>
 <td style="width: 50px;">
 <p><strong>Score</strong></p>
@@ -157,6 +159,7 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </tr>
 </tbody>
 </table>
+
 
 
 
