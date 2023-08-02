@@ -80,11 +80,11 @@ Note that the post-execution processes must be populated in [PostProcessList](/a
 
 ![be_Example](images/be_post_execution_processes_window.png)
 
-2. Click the **Process Name** and select a post-execution process from the dropdown list holding all post-execution processes deployed to Fabric.
-3. Populate the **Execution Order** setting with a numeric value to set the execution order. Processes with Execution Order 1 run first followed by processes with Execution Order 2 etc. Note that an execution order can be set for several post-execution processes that are executed simultaneously.
+2. Click the **Process Name** and select a post-execution process from the drop-down list that holds all post-execution processes deployed to Fabric.
+3. Populate the **Execution Order** setting with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several post-execution processes that are executed simultaneously.
 4. Populate the **Description** (optional).
 5. Click **Add Post Execution Process** to add the post-execution process to the BE.
-6. Repeat steps 1-5 to attach additional post-execution processes if needed.
+6. Repeat steps 1-5 to attach additional post-execution processes, if needed.
 
   
 
