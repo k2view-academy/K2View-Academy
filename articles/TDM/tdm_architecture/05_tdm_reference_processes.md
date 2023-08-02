@@ -111,7 +111,7 @@ The reference_table LU table keeps the reference data. The LU table has the foll
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1.  A new LUI is created in TDM_Reference LU: Customer|ENV1|ALL|CUSTOMER_TYPE.
+- Creating and executing an Extract task with a regular mode (Data Versioning checkbox is unchecked) to extract CUSTOMER_TYPE Reference table from ENV1. A new LUI is created in TDM_Reference LU: Customer|ENV1|ALL|CUSTOMER_TYPE.
 
 - The LU table is populated as follows:
 
