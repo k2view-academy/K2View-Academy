@@ -40,7 +40,7 @@ To use a BE in a TDM task, it must have one or more LUs assigned.
 
 2. Do either: 
    * Check **All Logical Units** to attach all LUs that are deployed to Fabric and that are not attached to the BE. The LUs are attached to the BE in a flat structure whereby the Parent LU is empty. When needed, the LUs can be edited to populate the Parent LU and the Data Center settings.
-   * Check **Select** and select an LU from the **Logical Unit** dropdown list:
+   * Check **Select** and select an LU from the **Logical Unit** drop-down list:
 
      - Click <img src="images/plus_icon.png" alt="be_plus" style="zoom:80%;" /> or <img src="images/delete_icon.png" alt="be_delete" style="zoom:80%;" /> to add or remove LUs to / from the BE. 
      - Populate the following optional settings for each selected LU:
