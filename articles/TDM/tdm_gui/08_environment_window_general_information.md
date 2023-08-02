@@ -8,7 +8,7 @@ Mandatory settings.
 
 Populate the following settings:
 
-- **TDM Environment Name**, select the environments deployed to Fabric from the dropdown list. 
+- **TDM Environment Name** - select the environments deployed to Fabric from the drop-down list. 
 
 ## Environment Additional Information
 
