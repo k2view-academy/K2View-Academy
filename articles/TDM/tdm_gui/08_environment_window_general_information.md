@@ -10,7 +10,7 @@ Populate the following settings:
 
 - **TDM Environment Name** - select the environments deployed to Fabric from the drop-down list. 
 
-## Environment Additional Information
+## Environment - Additional Information
 
 Optional settings:
 
