@@ -376,7 +376,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
   - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a SELECT statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM Library).
   - Notes: 
-      - If the flow needs to get an array of parameters, it is recommended to define the input external parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
+      - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
       - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way the query returns a limited size of records.
 
 - **Stages 2-4**: **Loop on the selected entities** - set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
@@ -387,7 +387,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the counter of the number of entities, loaded into the Cassandra table.
-     - This flow executes the following activities on each selected entity ID: 
+     - This flow executes the following activities on each selected entity ID:
    - Checks whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
    - Loads the available entities into the **[LU_NAME]_entity_list Cassandra** table in **k2view_tdm** keyspace (this table is also populated by the Extract All Broadway flow), and updates the counter of the number of entities.
 
