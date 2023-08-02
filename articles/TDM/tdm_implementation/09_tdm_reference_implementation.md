@@ -53,9 +53,9 @@ The list of Reference tables available for TDM tasks is populated in the [RefLis
 
 ### Step 3 - Create and Execute TDM Tasks
 
-From TDM 7.6 onwards, TDM supports running extract and load tasks on Reference tables, i.e., the task extracts from the source environment into Fabric and loads it into the target environment. 
+From TDM 7.6 onwards, TDM supports running a **single** task - comprised of extract and load acts - on Reference tables, i.e., the task extracts data from the source environment into Fabric and loads it into the target environment.
 
-Note that in previous TDM versions, the extract from the source environment was not executed by the load task. The load task copied the table from Cassandra. Therefore, there was a need to run an extract task on a given table before running the load task in order to load the table into the target environment.
+Note that in previous TDM versions, the extract from the source environment was not executed by the load task. The load task copied the table from Cassandra. Therefore, there was a need to run an extract task on a given table before running the load task in order to load the table into the target environment (i.e., 2 separate tasks).
 
 [![Previous](/articles/images/Previous.png)](08_tdm_implement_delete_of_entities.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_tdm_generic_broadway_flows.md)
 
