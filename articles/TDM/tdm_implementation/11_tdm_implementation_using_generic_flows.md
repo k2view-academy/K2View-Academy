@@ -119,7 +119,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
   - If the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** Actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
 
-  - From Fabric 7.1 onwards, physical folders are supported in the Studio. Therefore, the created flows are created under dedicated directories. If your LUs already have load and delete flows, you need to move your existing flows and locate them in the following folders, in order to enable an overriding them:
+  - From Fabric 7.1 onwards, physical folders are supported in the Studio. Therefore, the created flows are created under dedicated directories. If your LUs already have load and delete flows, you need to move your existing flows and locate them in the following folders, in order to enable overriding them:
 
   - - Load flows: LoadFlows
     - Delete flows: DeleteFlows
