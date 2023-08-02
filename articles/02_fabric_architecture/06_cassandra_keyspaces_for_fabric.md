@@ -1,4 +1,4 @@
-# Fabric Operational Database
+# Fabric System Database
 
 Fabric uses the Cassandra DB as a default application management database. In addition, the Cassandra managed services (such as AWS Keyspaces or Astra) are supported.
 
@@ -12,15 +12,15 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
-Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB. The settings are done via the new [internal_db] section of config.ini as explained below.
+Starting from V7.2, SQLite and PostgreSQL are also supported as System DB. The settings are done via the new [internal_db] section of config.ini as explained below.
 
-When defining operational DB type different than Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
+When defining System DB type different than Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
 
-It is important to note that currently iidFinder solution doesn't support operational DB type different than Cassandra.
+It is important to note that currently iidFinder solution doesn't support System DB type different than Cassandra.
 
-### Login to Operational DB
+### Login to System DB
 
-Use the following command to connect to the Operational DB from the server:
+Use the following command to connect to the System DB from the server:
 
 ~~~CQL
 cqlsh -u <username> -p <password> <ip_address>;
@@ -303,7 +303,7 @@ The following table lists the keyspaces created by Fabric:
 
 ### How to Switch to SQLite or PostgreSQL
 
-Starting from V7.2, the  [internal_db] section has been added to the config.ini and it holds the operational DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
+Starting from V7.2, the  [internal_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
 
 * For SQLite, set:
 
@@ -316,11 +316,8 @@ INTERNAL_DB_HOST=/home/k2view/sqlite
 
 In order to authenticet users on operional DB different than Cassandra, use the seprate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
 
-The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. Meaning that by default the Fabric storage type is the same as the Fabric Operational DB. You can either update only the [internal_db] settings, impacting both the Storage and operational DB types together, or you can define each of them to have a different DB type.
+The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. Meaning that by default the Fabric storage type is the same as the Fabric System DB. You can either update only the [internal_db] settings, impacting both the Storage and System DB types together, or you can define each of them to have a different DB type.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
 
-<!-- Add links- drop 1- WS, Fabric architecture, Fabric credentials-->
-
-<!-- Add links- next drops- Jobs, Batch processes, audit, LU storage, security hardening, IIDFinder-->

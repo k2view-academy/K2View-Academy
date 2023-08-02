@@ -67,10 +67,10 @@ The CommonDB is an additional SQLite database schema used for storing [reference
 The CommonDB is always made available for queries in every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB by using only one SQL query.
 
 
-#### 2.1.3 Operational Database
-Fabric uses Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. Starting from V7.2, SQLite and PostgreSQL are also supported as operational DB.
+#### 2.1.3 System Database
+Fabric uses Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. Starting from V7.2, SQLite and PostgreSQL are also supported as Fabric System DB.
 
-[Click for more information about Fabric Operational Database.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+[Click for more information about Fabric System Database.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
 ### 2.2 Fabric Business Logic
 
