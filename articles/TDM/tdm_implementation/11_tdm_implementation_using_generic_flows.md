@@ -152,7 +152,7 @@ The delete flow is created by the **createDeleteTableFlows.flow** that receives 
 
 Note:
 
-- From TDM 8.1 onwards, the generated delete flows do not require a manual update if the Get Table Data SQL query and the Delete key.
+- From TDM 8.1 onwards, the generated delete flows do not require a manual update of the Get Table Data SQL query and the Delete key.
 
 **D. Create the main DELETE flow**
 
