@@ -185,7 +185,7 @@ The data generation flows are created with the following logic:
 
 ##### Handle the Loop over the Number of Records
 
-There are several options for the data generation inner flow:
+There are several optional modes for the data generation inner flow:
 
 - **Row by row** - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a map type. 
 - **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the Actor will collect them and move to the next parent row.
