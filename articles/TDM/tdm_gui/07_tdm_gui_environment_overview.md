@@ -39,7 +39,7 @@ The Environment window has the following sections:
 
 - Environment tabs, [Permission Sets](10_environment_roles_tab.md), [Systems](11_environment_products_tab.md) and [Environment Variables](12_environment_globals_tab.md)
 
- The following is an example of an Environment window:
+ The following image is an example of an Environment window:
 
   ![environment](images/tdm_environment_window.png)
 
