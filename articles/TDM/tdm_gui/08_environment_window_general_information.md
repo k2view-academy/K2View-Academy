@@ -59,7 +59,7 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 ## Environment Owners
 
-- Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to or from an environment.  An environment owner user or group can be added to several environments.
+- Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to/from an environment. An environment owner user or group can be added to several environments.
 - Adding a user group to the environment enables the users that belong to the group to be the owners of the environment.
 - An environment owner user or group can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and attached to ENV2 as a tester.
 - The environment owner can edit an environment except for adding or removing environment owner users. Only Admin users can add or remove environment owners.
@@ -69,7 +69,7 @@ Click for more information about [environment permissions](10_environment_roles_
 
 Click for more information about the [Owner TDM Permission Group](02_tdm_gui_user_types.md#owner).
 
-### How Do I Add or Remove Environment Owners to or from an Environment? 
+### How Do I Add or Remove Environment Owners to/from an Environment? 
 
 #### Adding Environment Owners
 
@@ -79,7 +79,7 @@ Click for more information about the [Owner TDM Permission Group](02_tdm_gui_use
 
   ![env owner](images/environment_owners.png)
 
-- A popup window is opened:
+- A pop-up window opens:
 
 ![owner setting](images/env_owners_user_settings.png)
 
