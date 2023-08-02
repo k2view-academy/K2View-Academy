@@ -52,7 +52,7 @@ Notes:
  - Both Parent and Child LUs must be attached to the same BE.
  -  An LU can have 0-1 parents.
  -  An LU can have 0-N children.
-  - Several levels of parent-child hierarchies can be defined in a BE. For examples, see the [Business Entity Overview](/articles/TDM/tdm_overview/03_business_entity_overview.md).
+  - Several levels of parent-child hierarchies can be defined in a BE. For examples, view the [Business Entity Overview](/articles/TDM/tdm_overview/03_business_entity_overview.md).
 
 #### Editing LU Settings
 
