@@ -14,9 +14,9 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 
 Starting from V7.2, SQLite and PostgreSQL are also supported as System DB. The settings are done via the new [internal_db] section of config.ini as explained below.
 
-When defining System DB type different than Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
+When defining System DB type other than Cassandra, a product job is running in order to scan the tables to be cleaned by using TTL concept. The definition of each table TTL policy is tracked on k2_table_level_ttl table.
 
-It is important to note that currently iidFinder solution doesn't support System DB type different than Cassandra.
+It is important to note that currently iidFinder solution doesn't support System DB type other than Cassandra.
 
 ### Login to System DB
 
