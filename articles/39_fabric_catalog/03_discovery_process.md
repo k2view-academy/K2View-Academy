@@ -2,7 +2,7 @@
 
 # Discovery Process
 
-The K2View Discovery process is depicted in the below diagram and it includes the following major steps:
+The K2view Discovery process is depicted in the below diagram and it includes the following major steps:
 
 * Define a Fabric interface for a given data source and initiate the Discovery job (job type = ```DISCOVERY_CRAWLER```).
 * The first step of the Discovery job is a Crawler. It scans the data source, while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
