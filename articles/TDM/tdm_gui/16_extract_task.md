@@ -6,7 +6,7 @@ An Extract task contains the following tabs:
 
 - [General](14a_task_general_tab.md)
 - [Additional Execution Parameters](#additional-execution-parameters-tab)
-- [Requested Entities](#requested-entities-tab) - opened if the Data Type contains entities.
+- [Requested Entities](#requested-entities-tab) - opens if the Data Type contains entities.
 - [Task Scheduling](22_task_execution_timing_tab.md)
 
 When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
