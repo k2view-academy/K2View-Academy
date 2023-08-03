@@ -9,7 +9,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 **Notes:**
 
 -  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace name. For example: if the cluster_id is set to crm1, the keyspace k2view_customer_crm1 is created.
-- When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
+- When a Fabric project is open in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
 Starting from V7.2, SQLite and PostgreSQL are also supported as System DB. The settings are done via the new [internal_db] section of config.ini as explained below.
