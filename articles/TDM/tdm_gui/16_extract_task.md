@@ -75,13 +75,13 @@ This tab opens when the task's Data Type includes entities. This tab defines the
 
 The following selection methods are available on extract tasks: 
 
-- **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) translation object for the LU.  This option is available only for Admin and Environment owner users.
+- **Select a predefined entity list**: run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) translation object for the LU. This option is available only for Admin and Environment owner users.
 
-- **Entity list**: this is the **default option**. Populate the list of entities for the task. The entities populated should be separated with a comma. 
+- **Entity list**: this is the **default option**. Populate the list of entities for the task. The populated entities should be separated with a comma. 
 
 - **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and set the maximum number of entities for the task.
 
-  Note that the TDM 8.0 added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs:
+  Note that TDM 8.0 has added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs:
 
   
 
@@ -96,7 +96,7 @@ The following selection methods are available on extract tasks:
 Notes:
 
 - The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
-- The maximum number of entities in the task is limited to the number of entities returned from the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic only returns 30 entities, the task will process 30 entities.
+- The maximum number of entities in the task is limited to the number of entities returned from the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic returns 30 entities only, the task will process 30 entities.
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
 
