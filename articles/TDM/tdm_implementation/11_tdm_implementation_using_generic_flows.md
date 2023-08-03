@@ -27,7 +27,13 @@ When populating a target database, sequences are required. Therefore, setting an
 
 If the **k2masking** keyspace does not exist in the DB interface, which is defined for caching the masked values, create it using either the **masking-create-cache-table.flow** from the Broadway examples library or the **create_masking_cache_table.sql** from the TDM Library.  
 
-Note: The k2masking keyspace can also be created by the deploy.flow of the TDM LU.
+Notes: 
+
+- The k2masking keyspace can also be created by the deploy.flow of the TDM LU.
+
+- Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. 
+
+  
 
 Take the following steps in order to create the sequences for your TDM implementation:
 
@@ -35,18 +41,30 @@ Take the following steps in order to create the sequences for your TDM implement
 
 **A.** The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's **table** object with the relevant information for your TDM implementation as follows:
    - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
-   - **CACHE_DB_NAME** - populate this setting using **DB_CASSANDRA**, where the Sequence Cache tables are stored.
+
+   - **CACHE_DB_NAME** - populate this setting using **DB_CASSANDRA** or **TDM** interfaces, where the Sequence Cache tables are stored.
+
    - **SEQUENCE_REDIS_OR_DB** - indicates whether the next value is taken from Redis, memory, or from the target DB interface. Populate this setting using either one of the following:
+      
       - **FabricRedis** interface (imported from the TDM library).
+      
       - **IN-MEMORY** - useful for testing only, as it can only be used in a single node configuration. 
+      
       - **DB interface name** - can be populated by either the target DB interface in order to get the next value from the DB sequence, or **TDM** in order to create a new DB sequence in the TDM DB. The DB interface name is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
+      
+        ***Note:*** If the target DB does not have a sequence, or it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
+      
+        
+      
    - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis, IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
 
-***Note:*** If the target DB does not have a sequence, or it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
-   -    Define an init flow to set the initial value for the newly created sequence based on the maximum value in the environment to avoid a collision.
-   -    Use the "IF NULL" function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
-   
-   
+      Notes:
+
+      - Define an init flow to set the initial value for the newly created sequence based on the maximum value in the environment to avoid a collision.
+      - Use the "IF NULL" function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
+
+
+​		   
 
  Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence Actors.
 
@@ -100,6 +118,14 @@ This capability enables you to create your own function or Broadway flow in orde
   - If the task does not require a sequence replacement, the original value is returned by the masking Actors.
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
+
+
+
+### Set the Sequence Report Global
+
+A new Global has been added to the Shared Globals in TDM 8.1: **TDM_SEQ_REPORT**. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and generates the **Replace Sequence Summary Report** tab in the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report). 
+
+Set the  **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report** for a better performance. 
 
 ## Step 3 - Create, Load and Delete Flows
 
@@ -164,9 +190,9 @@ You can run each one of the load flows in a debug mode. Normally, when running a
 
 ## Step 4 - TDM Orchestration Flows
 
-### Create the TDMOrchestrator.flow from the Template
+### TDMOrchestrator Flow
 
-Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as:
+The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as:
 
 * Initiate the TDM load.
 * Delete the target data, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode).
@@ -174,9 +200,7 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 * Manage the TDM process as **one** transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder; it is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as shown below:
-
-![image](images/11_tdm_impl_02.PNG)
+TDM 8.1 added the **TDMOrchestrator.flow**  to the Shared Objects to save the need of generating this flow on each LU separately. 
 
 ### TDMReserveOrchestrator Flow
 
@@ -277,9 +301,8 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   </tr>
   </tbody>
   </table>
-
   
-
+  
 * Notes:
 
   *  From TDM 7.3 and onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone.
@@ -322,9 +345,47 @@ Click [here](14_tdm_implementation_supporting_non_jdbc_data_source.md) for more 
 
 ##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flows for get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process, building the entity list for the task. The project Broadway flow needs to select the entity list and to call the TDM library Actors in order to insert them into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+You can build one or multiple Broadway flows for get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process, building the entity list for the task. Previous TDM versions populated the entities into a dedicated Cassandra table in **k2view_tdm** keyspace. A separate Cassandra entity table was created on each LU and has the following naming convention: [LU_NAME]_entity_list.  The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) used to run the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
 
-The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
+### Custom Logic - TDM 8.1 Improvements
+
+TDM 8.1 enables 2 execution modes for the Custom Logic flows:
+
+1. **Direct call** - a new mode has been added: a direct call. The batch process calls directly the Custom Logic flow to get the entity list without a pre-population of the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e. runs one Select query to get the required entities. 
+
+   The direct call mode has a better performances: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
+
+2. **Indirect call** - the indirect call creates and populates a dedicated table in the TDM DB. The table is created per execution with the following naming convention: entity_list_<task exe_id>. The task execution's batch process runs a select from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
+
+#### CustomLogicSql Flow
+
+A new generic Custom Logic flow has been added to the TDM library in TDM 8.1: **CustomLogicSql**. This flow gets from the user who creates the task the following parameters: 
+
+- **sql** - a select query.
+- **sqlParams** - optional parameter to set parameters for the Select query. 
+- **interface** - a DB interface.
+
+The customLogicSql flow can run in a direct call mode. 
+
+**Examples of input SELECT query**:
+
+1. Populating both - the **sql** and the **sqlParams** parameters: 
+
+   - **sql**: 
+
+     select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
+
+   - **SqlParams:**
+
+     Open,Billing Issue
+
+2. Populate only the **sql** parameter: 
+
+   - **sql:**
+
+     Select Distinct act.customer_id From activity act,   cases ca Where act.activity_id = ca.activity_id And ca.status <> 'Closed' And ca.case_type  in  ('Device Issue', 'Billing Issue');
+
+
 
 ### Step 7.1 - Create the Custom Logic Flow
 
@@ -347,33 +408,35 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g., "CA,NY". The Broadway flow can split this String by the delimiter. The values must be delimited by the delimiter, which is set in the split Actor in Broadway flow.
 
-- You can get an input SELECT statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the SELECT statement. 
+- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the Select statement.  See the CustomLogicSql flow's examples above.
 
-  **Examples of input SELECT query**:
-
-  1. An example of a SELECT query and its parameters:
-
-     - **SQLQuery**: 
-
-       select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
-
-     - **SQLParams:**
   
-       Open,Billing Issue
-  
-  2. An example of a SELECT query with concatenated parameters: 
-  
-     - **SQLQuery:**
-  
-       Select Distinct act.customer_id From activity act,   cases ca Where act.activity_id = ca.activity_id And ca.status <> 'Closed' And   ca.case_type  in  ('Device Issue', 'Billing Issue');
-  
-     
 
 ### Custom Logic High-Level Structure
 
+#### Direct Call Flow
+
+The Custom Logic flow must have the following structure:
+
+![direct call structure](images/direct_call_custom_logic_structure.png)
+
+1. **DbCommand** - defines the Select statement to select the task's entities. The select must return only the entity IDs. 
+
+2. **Filter** - calls the **CheckIfReserved** inner flow to filter out reserved entities if needed:
+
+   ![custom logic filter](images/custom_logic_filter.png)
+
+3. **Mapper** - calls the **buildTDMEidForCustomLogic** inner flow to format the entity IDs for the task execution:
+
+   ![custom logic mapper](images/custom_logic_mapper.png)
+
+
+
+#### Indirect Call Flow
+
 - **Stage 1**: 
 
-  - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a SELECT statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
+  - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a Select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM Library).
   - Notes: 
       - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
@@ -432,6 +495,10 @@ Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTabl
 See example:
 
 ![custom logic](images/custom_logic_table_example.png)
+
+
+
+Check the **DIRECT_FLOW** checkbox to enable a direct call of the Custom Logic flow.
 
 Redeploy the Web-Services.
 
