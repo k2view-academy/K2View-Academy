@@ -24,7 +24,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <tr>
 <td>DATA_PLATFORM</td>
 <td>DB Interface</td>
-<td>JSON or YAML of HTTP Interface.</td>
+<td>JSON or YAML of HTTP Interface</td>
 </tr>
 <tr>
 <td>SCHEMA</td>
