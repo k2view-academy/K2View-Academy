@@ -7,7 +7,7 @@ The K2view Discovery process is depicted in the below diagram and it includes th
 * Define a Fabric interface for a given data source and initiate the Discovery job (job type = ```DISCOVERY_CRAWLER```).
 * The first step of the Discovery job is a Crawler. It scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 * Next, a Plugin Framework is triggered automatically upon completion of the Crawler's process. The Plugin Framework is a platform for executing predefined rules (plugins) to run on the Catalog schema and to enhance it accordingly. Examples of plugins are: 
-  * Creating a relation between 2 objects, based on matching the field names.
+  * Creating a relation between 2 objects, based on field names matching.
   * Classification of the fields based on their data or metadata such as Email, Phone, etc.
   * Determining whether a field holds sensitive data and thus should be marked as PII.
 
