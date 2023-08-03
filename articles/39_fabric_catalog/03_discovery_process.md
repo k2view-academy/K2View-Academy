@@ -17,7 +17,7 @@ The K2view Discovery process is depicted in the below diagram and it includes th
 The Catalog supports the following actions:
 
 
-* Versioning - a new version is created when the Discovery job is executed and it identified the changes comparing to the previous Catalog version. By default, the Catalog application displays the latest version.
+* Versioning - a new version is created when the Discovery job is executed and it identified changes when comparing to the previous Catalog version. By default, the Catalog application displays the latest version.
 * Manual overrides - editing of the Catalog is available in the Catalog application, and it includes updating the properties of the Catalog nodes and the editing relations between the nodes.
 * The Catalog artifacts (including the identified classifications and PII indications) can be built and saved into the project tree, in order to be used by the masking mechanism. 
 * Once the process is completed, the Logical Unit schema can be created based on the Catalog's version.
