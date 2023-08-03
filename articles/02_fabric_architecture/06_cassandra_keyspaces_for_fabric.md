@@ -316,7 +316,7 @@ INTERNAL_DB_HOST=/home/k2view/sqlite
 
 In order to authenticate users on operional DBs other than Cassandra, use the seprate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
 
-The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. This means that by default the Fabric storage type is the same as the Fabric System DB. You can either update only the [internal_db] settings, impacting both the Storage and System DB types together, or you can define each of them to have a different DB type.
+The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. This means that by default the Fabric storage type is the same as the Fabric System DB. You can either update the [internal_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
