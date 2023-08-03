@@ -36,6 +36,6 @@ Further articles provide more details about the Discovery process, the Catalog a
 
 <studio>
 
-The Fabric Discovery and Catalog solution is only available in the Web Studio.
+The Fabric Discovery and Catalog solution is available only in the Web Studio.
 
 </studio>
