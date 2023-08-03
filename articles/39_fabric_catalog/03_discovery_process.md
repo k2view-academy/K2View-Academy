@@ -9,7 +9,7 @@ The K2view Discovery process is depicted in the below diagram and it includes th
 * Next, a Plugin Framework is triggered automatically upon completion of the Crawler's process. The Plugin Framework is a platform for executing predefined rules (plugins) to run on the Catalog schema and to enhance it accordingly. Examples of plugins are: 
   * Creating a relation between 2 objects, based on field names matching.
   * Classification of fields based on their data and/or metadata such as Email, Phone, etc.
-  * Determining whether a field holds sensitive data and thus should be marked as PII.
+  * Determining whether a field holds sensitive data, in which case it should be marked as PII.
 
 
 * Upon completion of the Plugin Framework execution, the Catalog schema is saved into the *neo4j* Graph DB and it can be viewed via the Catalog application.
