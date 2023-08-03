@@ -21,7 +21,7 @@ The Discovery results are presented in a new Catalog application, which allows t
 - Display the Catalog data model as a tree and navigate through its elements.
 - View the Catalog’s elements properties and edit them manually, if needed.
 - Support multiple Catalog versions and their comparison.
-- Search any node by keywords or additional advanced search parameters.
+- Search any node by either keywords or any additional advanced search parameters.
 - View and modify the profiling rules.
 
 The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling results.
