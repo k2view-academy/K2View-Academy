@@ -8,7 +8,7 @@ The below vocabulary serves as a model for describing a catalog and assists with
 
 The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the Catalog schema. 
 
-Additionally, due to differences between the data sources, some nodes' properties are generic, while other are relevant for specific interface types only.
+Additionally, due to differences between the data sources, some nodes' properties are generic, while others are relevant for specific interface types only.
 
 The following 2 tables describe the **node and relation types**, and how they are defined in each interface type:
 
