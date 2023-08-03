@@ -14,9 +14,9 @@ Fabric's Discovery and Catalog solution provides an insight into the Fabric inte
 
 - Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the *neo4j* GraphDB. 
 - Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
-- Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules which can be modified on the project level.
+- Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules, which can be modified on the project level.
 
-The Discovery results are presented in a new Catalog application which allows to:
+The Discovery results are presented in a new Catalog application, which allows to:
 
 - Display the Catalog data model as a tree and navigate through its elements.
 - View the Catalog’s elements properties and manually edit them, if needed.
