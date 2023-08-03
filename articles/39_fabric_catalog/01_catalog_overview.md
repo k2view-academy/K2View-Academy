@@ -19,8 +19,8 @@ Fabric's Discovery and Catalog solution provides an insight into the Fabric inte
 The Discovery results are presented in a new Catalog application, which allows to:
 
 - Display the Catalog data model as a tree and navigate through its elements.
-- View the Catalog’s elements properties and manually edit them, if needed.
-- Support multiple Catalog versions and the versions comparison.
+- View the Catalog’s elements properties and edit them manually, if needed.
+- Support multiple Catalog versions and their comparison.
 - Search any node by keywords or additional advanced search parameters.
 - View and modify the profiling rules.
 
