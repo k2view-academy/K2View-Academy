@@ -65,7 +65,7 @@ Check to open the Task Variables tab and [set the variable value on a task level
 
 ### Post Execution Processes
 
-Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
+Select all, partial or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
 
 ## Requested Entities Tab
 
