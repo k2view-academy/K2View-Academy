@@ -26,7 +26,7 @@ The Discovery results are presented in a new Catalog application, which allows t
 
 The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling results.
 
-The Catalog information, including the data model, properties and classifications, is exposed via the Fabric REST APIs.
+The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
 Further articles provide more details about the Discovery process, the Catalog application and the exposed APIs. 
 
