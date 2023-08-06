@@ -191,7 +191,7 @@ To update the metadata profiling rules, go to Actions > Classifier Configuration
 
 The purpose of *Classification PII Marker* plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
 
-The rules whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
+The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
 To update the PII indicator of the profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
@@ -203,7 +203,7 @@ The purpose of this plugin is to check the % of null values per column, using th
 
 As a result, the **Nullability Percentage** property is added to the field's properties when the its calculated value is above the threshold. 
 
-For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. But when it's 20% or less, this property will not be added.
+For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. However, when 20% or less of the values in a certain field are null, then this property will not be added.
 
 
 
