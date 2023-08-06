@@ -185,7 +185,7 @@ If the regex matches the field's data, a **Classification** property is added to
 
 To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
-[Click for here more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **Classification PII Marker**
 
@@ -195,7 +195,7 @@ The rules whether the classification type is considered a PII are defined in a b
 
 To update the PII indicator of the profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
-[Click for more here details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
 
 **NULL Percentage**
 
