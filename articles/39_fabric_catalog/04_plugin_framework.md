@@ -203,7 +203,7 @@ The purpose of this plugin is to check the % of null values per column, using th
 
 As a result, the **Nullability Percentage** property is added to the field's properties when the its calculated value is above the threshold. 
 
-For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. However, when 20% or less of the values in a certain field are null, then this property will not be added.
+For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
 
 
