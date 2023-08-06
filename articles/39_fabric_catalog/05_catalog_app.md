@@ -71,7 +71,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
     ​	<img src="images/legend.png" style="zoom: 67%;" />
 
-  * To collapse the expanded Dataset, click the three dots in the corner or do it from the legend for all Dataset nodes.
+  * To collapse an expanded Dataset, click the three dots in the corner or do it from the legend for all Dataset nodes.
 
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
 
