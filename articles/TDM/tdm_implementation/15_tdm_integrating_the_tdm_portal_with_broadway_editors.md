@@ -1,6 +1,6 @@
 # Integrating the TDM Portal with Broadway Web Editors
 
-TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters] or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
+TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters](16_tdm_data_generation_implementation.md#external-business-parameters) or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
 
 This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
 
@@ -69,7 +69,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 - Adjust the **RowsGenerator** Actor as a **distribution** input argument to set the number of generated synthetic records in the LU table. The distribution input object can be set as external in order to enable the user to set the number of records per table in the TDM task.
 
-  Click [here] fore more information about the data generation implementation.
+  Click [here](16_tdm_data_generation_implementation.md) for more information about the data generation implementation.
 
 
 

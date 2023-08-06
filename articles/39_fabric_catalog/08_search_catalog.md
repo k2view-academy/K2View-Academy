@@ -6,7 +6,7 @@
 
 The Catalog application provides a search of the catalog objects (data platforms, schemas, datasets, fields and relations) within the currently displayed version. 
 
-To start the search, click the ![](images/search.png) icon in the menu bar. It opens the text area where you can type a name of the object that you want to search. To search by additional parameters, open the advanced search by clicking the ![](images/advanced.png) icon. To exit the search, click the ![](images/close.png) icon.
+To start the search, click the ![](images/search.png) icon in the menu bar. It opens the text area where you can type one or more keywords - the names of the objects that you want to search. To search by additional parameters, open the advanced search by clicking the ![](images/advanced.png) icon. To exit the search, click the ![](images/close.png) icon.
 
 ### Advanced Search
 
@@ -19,6 +19,14 @@ The advanced search allows to narrow the search results by specifying one (or mo
 * Search by PII and Classification properties. For example, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
 
 * Search by score. For example, when the user enters 0.8,  the results list will return all catalog objects with score 0.8 and below.
+
+Note that once the advanced search opens, the selected search criteria is written in the search area using pre-defined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
+
+~~~
+phone pii:true type:field
+~~~
+
+Thus, you can define your search criteria using this syntax. [Click for more details about the syntax](10_catalog_APIs.md#search-catalog).
 
 ### Search Results
 

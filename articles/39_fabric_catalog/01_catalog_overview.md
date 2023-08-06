@@ -2,7 +2,7 @@
 
 <web>
 
-Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are either not well structured or do not have predefined relations. As a result, decision makers are drowning in data and yet seeking for insights. On top of that, the risks relating to data security increase, causing companies to set this issue with high priority. 
+Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are neither well structured nor have predefined relations. As a result, decision makers are drowning in data and yet seeking for insights. On top of that, the ever-growing data security risks cause companies to give this issue a higher priority.
 
 Data Discovery is a process that can help companies cope with the above-mentioned issues. Its purpose is to:
 
@@ -14,19 +14,19 @@ Fabric's Discovery and Catalog solution provides an insight into the Fabric inte
 
 - Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the *neo4j* GraphDB. 
 - Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
-- Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules which can be modified on the project level.
+- Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules, which can be modified on the project level.
 
-The Discovery results are presented in a new Catalog application which allows to:
+The Discovery results are presented in a new Catalog application, which allows to:
 
 - Display the Catalog data model as a tree and navigate through its elements.
-- View the Catalog’s elements properties and manually edit them, if needed.
-- Support multiple Catalog versions and the versions comparison.
-- Search any node by keywords or additional advanced search parameters.
+- View the Catalog’s elements properties and edit them manually, if needed.
+- Support multiple Catalog versions and their comparison.
+- Search any node by either keywords or any additional advanced search parameters.
 - View and modify the profiling rules.
 
 The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling results.
 
-The Catalog information, including the data model, properties and classifications, is exposed via the Fabric REST APIs.
+The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
 Further articles provide more details about the Discovery process, the Catalog application and the exposed APIs. 
 
@@ -36,6 +36,6 @@ Further articles provide more details about the Discovery process, the Catalog a
 
 <studio>
 
-The Fabric Discovery and Catalog solution is only available in the Web Studio.
+The Fabric Discovery and Catalog solution is available only in the Web Studio.
 
 </studio>

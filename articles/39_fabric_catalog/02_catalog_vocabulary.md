@@ -6,9 +6,9 @@ The Fabric Catalog introduces a vocabulary that describes the catalog entities a
 
 The below vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
 
-The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that allow to enrich the Catalog schema. 
+The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that enrich the Catalog schema. 
 
-Additionally, due to differences between the data sources, some nodes' properties are generic, while other are relevant for specific interface types only.
+Additionally, due to differences between the data sources, some nodes' properties are generic, while others are relevant only for specific interface types.
 
 The following 2 tables describe the **node and relation types**, and how they are defined in each interface type:
 
@@ -24,7 +24,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <tr>
 <td>DATA_PLATFORM</td>
 <td>DB Interface</td>
-<td>JSON or YAML of HTTP Interface.</td>
+<td>JSON or YAML of HTTP Interface</td>
 </tr>
 <tr>
 <td>SCHEMA</td>
