@@ -37,7 +37,7 @@ When the catalog application opens, the latest **catalog version** is displayed 
 
 **Data Platform and Schema's Context Menu**
 
-Clicking on any Data Platform or Schema node opens the context menu which allows performing the following actions:
+Clicking on any Data Platform or Schema node opens the context menu, which allows performing the following actions:
 
 <img src="images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
