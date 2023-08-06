@@ -167,9 +167,9 @@ If a match is found, the plugin estimates the relation direction and the foreign
 
 The purpose of *Data Regex Classifier* plugin is to classify the source fields based on their **data**. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 
-This plugin runs on a data snapshot, extracted from the source, and executes the regular expressions defined in a built-in **data_profiling** MTable. 
+This plugin runs on a data snapshot that is extracted from the source, and it executes the regular expressions defined in a built-in **data_profiling** MTable.
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding the matched regex (e.g. **EMAIL**). If a match is found for more than one regex, only one property is created  - the one with higher score.
+If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g. **EMAIL**). If a match is found for more than one regex, only one property is created - the one with higher score.
 
 To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
