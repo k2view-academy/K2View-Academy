@@ -19,9 +19,9 @@ The **[default_pubsub]** section is also used by CDC and Common DB processes for
 The main configuration setting of the **[default_pubsub]** section of config.ini are:
 
 * **TYPE** - the PubSub type that can have one of the following values:
-  * **KAFKA** (default) - execute the message handling via Apache Kafka.
+  * **MEMORY** (default) - execute the message handling via an internal queue that runs on localhost. This type can only be used for debug purpose. 
+  * **KAFKA** - execute the message handling via Apache Kafka.
   * **JMS** - execute the message handling via JMS.
-  * **MEMORY** - execute the message handling via an internal queue that runs on localhost. This type can only be used for debug purpose. The Fabric Studio automatically sets TYPE=MEMORY in the project's config.ini.
   * **NO_OP** - do not send or receive the messages. This type can only be used for debug purpose.
   * **ERROR** - simulate throwing an Unsupported Operation exception. This type can only be used for debug purpose.
   
