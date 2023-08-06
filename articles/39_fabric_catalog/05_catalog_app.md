@@ -22,7 +22,7 @@ The Catalog's main area enables navigation between the hierarchy levels, by expa
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process has been performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
-The Legend presents three types of nodes with their respective icon. 
+The Legend presents 3 types of nodes with their respective icons. 
 
 <img src="images/catalog_app.png" style="zoom:75%;" />
 
