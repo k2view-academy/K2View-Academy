@@ -177,11 +177,11 @@ To update the data profiling rules, go to Actions > Classifier Configuration in 
 
 **Metadata Regex Classifier**
 
-The purpose of *Metadata Regex Classifier* is to classify the source fields based on their **metadata**. 
+The purpose of *Metadata Regex Classifier* plugin is to classify the source fields based on their **metadata**. 
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding the matched regex (e.g. **NAME**). If a match is found for more than one regex, only one property is created  - the one with higher score.
+If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g., **NAME**). If a match is found for more than one regex, only one property is created - the one with higher score.
 
 To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
