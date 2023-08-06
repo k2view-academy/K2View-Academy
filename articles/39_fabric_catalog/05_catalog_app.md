@@ -52,14 +52,14 @@ Clicking on any Data Platform or Schema node opens the context menu, which allow
   
   * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
   
-  * In the Focus view, the breadcrumbs are displayed in the left upper corner of the main area to indicate your path within the Catalog tree. The breadcrumbs are clickable, thus you can navigate up the tree.  
+  * In the Focus view, the breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, allowing to navigate up the tree.  
   
 
 <img src="images/breadcrumbs.png" style="zoom: 67%;" />
 
 **Dataset Context Menu**
 
-Clicking on any Dataset node opens its context menu which includes the following actions:
+Clicking on any Dataset node opens its context menu, which includes the following actions:
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
 
