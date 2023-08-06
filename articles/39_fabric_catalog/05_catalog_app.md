@@ -95,7 +95,7 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
 ### Deep Linking
 
