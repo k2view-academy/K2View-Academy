@@ -81,7 +81,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 * The **Actions** menu allows to:
   * **Edit** the catalog manually. [Click here for more information regarding the Manual Overrides](07_manual_overrides.md).
-  * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
+  * Open the **Classifier Configuration** screen, in order to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
   * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
 * **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click for more information regarding the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, triggering the same activities as using the node's context menu. Multiple element selection is supported.  
