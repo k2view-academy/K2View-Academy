@@ -67,7 +67,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
     ​	<img src="images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
-  * To expand all Datasets on the screen at once, click the <img src="images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's legend:
+  * To simultaneously expand all Datasets on the screen, click the <img src="images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's legend:
 
     ​	<img src="images/legend.png" style="zoom: 67%;" />
 
