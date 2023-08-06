@@ -189,7 +189,7 @@ To update the metadata profiling rules, go to Actions > Classifier Configuration
 
 **Classification PII Marker**
 
-The purpose of *Classification PII Marker* is to go over all fields which have got the **Classification** property (by either one of the above plugins)  and to add the **PII** property. 
+The purpose of *Classification PII Marker* plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
 
 The rules whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
