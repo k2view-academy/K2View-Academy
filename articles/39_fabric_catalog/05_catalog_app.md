@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and allows navigation from one level to another through a data model’s graph, expanding and collapsing various elements (nodes), viewing node's properties, searching the node, and more.
+The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and allows navigation from one level to another through a data model’s graph, expanding and collapsing various elements (nodes), viewing node's properties, searching the node, and more.
 
 The Catalog application includes the following parts, described in this article:
 
@@ -12,7 +12,7 @@ The Catalog application includes the following parts, described in this article:
 * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 * [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
 
-In addition, the article includes the description of the Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism and the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+Additionally, this article includes the description of the Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism and the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
 ### Main Area
 
