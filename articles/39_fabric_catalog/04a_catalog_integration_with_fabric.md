@@ -8,7 +8,7 @@ To initiate the Discovery process:
 
 * Start from defining an interface for your data source in the Fabric Studio. 
 
-* Then, trigger the Discovery job (Crawler) on this interface. To do so, open the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right click on the interface and click **Run Discovery Job** to trigger the job.
+* Next, trigger the Discovery job (Crawler) on this interface. This is done by opening the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right-clicking on the interface and selecting **Run Discovery Job**.
 
 * Alternatively, run the following command from the Fabric terminal:
 
@@ -16,7 +16,7 @@ To initiate the Discovery process:
   startjob DISCOVERY_CRAWLER name='<interface name>';
   ~~~
 
-Note that when the Crawler job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job which is subscribed to the Pubsub topic dedicated to the Discovery process.
+Note that when the Crawler job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job, which is subscribed to the Pubsub topic dedicated to the Discovery process.
 
 ### Open In Catalog
 
