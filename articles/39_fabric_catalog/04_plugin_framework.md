@@ -26,7 +26,7 @@ Once file is updated, the Discovery job should be rerun in order to apply the ch
 
 **Data Sample Settings**
 
-The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and used by the various plugins during the job run. Once the plugins execution is completed, the data sample is deleted.
+The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
 
 The sample size is configured in the plugins.discovery as follows:
 
