@@ -28,12 +28,12 @@ The Legend presents 3 types of nodes with their respective icons.
 
 **Catalog's Version**
 
-When the catalog application opens, the latest **catalog version** is displayed by default. The version number is displayed in the upper left corner of the main area. By clicking it, you can either: 
+When the catalog application opens, the latest **catalog version** is displayed by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
 * Select another version from the list in order to view it.
-* Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform the versions comparison analysis.  
+* Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform a versions comparison analysis.  
 
-[Click for more information regarding the Catalog Versioning](06_catalog_versioning.md).
+[Click here for more information regarding the Catalog Versioning](06_catalog_versioning.md).
 
 **Data Platform and Schema's Context Menu**
 
