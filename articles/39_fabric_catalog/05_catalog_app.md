@@ -80,7 +80,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * The **Actions** menu allows to:
-  * **Edit** the catalog manually. [Click for more information regarding the Manual Overrides](07_manual_overrides.md).
+  * **Edit** the catalog manually. [Click here for more information regarding the Manual Overrides](07_manual_overrides.md).
   * Open the **Classifier Configuration** screen, to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
   * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
 * **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click for more information regarding the Catalog Search](08_search_catalog.md). 
@@ -91,11 +91,11 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 ### Properties Tab
 
-The Properties Tab displays the selected element's name, the icon of the type and the element's  properties.
+The Properties Tab displays the selected element's name, the icon of the type and the element's properties.
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info popup window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
 ### Deep Linking
 
@@ -107,7 +107,7 @@ The Catalog application supports deep linking from the data platform to the fiel
 
 The version should be either the word **latest** or **V** with the version number (e.g. V13).
 
-This link can be shared as it sends another user straight to specific in-app location, saving the time and energy locating a particular node.
+This link can be shared as it sends another user straight to a specific in-app location, saving time and energy while trying to locate a particular node.
 
 ### Classifier Configuration
 
