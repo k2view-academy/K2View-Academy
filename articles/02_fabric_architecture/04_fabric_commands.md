@@ -95,7 +95,7 @@ For example:
 </tr>
 <tr>
 <td valign="top" width="350pxl">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-system-db">Run Queries on System DB</a></p>
 </td>
 <td valign="top" width="550pxl">
 <p>Run CQL queries on Cassandra.</p>
@@ -183,6 +183,7 @@ For example:
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -529,11 +530,11 @@ Fabric enables the deployment of Fabric environments and setting active environm
 
 The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and none DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
-### Run Queries on Cassandra
+### Run Queries on System DB
 
-CQL queries can be run on Cassandra in the Fabric server using the **CQL** command only for the selected statement.
+CQL queries can be run on System DB in the Fabric server using the **CQL** command only for the selected statement.
 
-**Example:**
+**Example of CQL command on Cassandra:**
 
 ~~~
 fabric>cql select * from k2view_customer.entity;

@@ -15,10 +15,10 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
 
 - MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE, holds the storage type:
   
-  - The default and most commonly used value is **Cassandra**. 
+  - The default value is **System DB**. Meaning that by default it is the same as the Fabric System DB setting.
   
     ~~~
-    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=CASSANDRA
+    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=SYSTEM_DB
     ~~~
   
   - When the storage type in the config.ini is set to **NONE**, the instance is not saved to Fabric storage.
