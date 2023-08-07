@@ -28,7 +28,7 @@ Once the plugins.discovery configuration file is updated, the Discovery job shou
 
 The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
 
-The sample size is configured in the plugins.discovery as follows:
+The sample size is configured in the plugins.discovery file as follows:
 
 * The default sample size is 10% of the dataset rows.
 * Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
