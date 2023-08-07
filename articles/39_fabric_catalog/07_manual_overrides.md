@@ -26,7 +26,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
   * When clicking Cancel – the change performed in the More Info pop-up window is discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
-* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate Name, Value and Notes via the More Info pop-up window. ID will be generated according to the property's path, Origin will be set to Manual, and the Score to 1. 
+* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. ID will be generated according to the property's path, Origin will be set to Manual, and the Score to 1. 
   * When adding a new property, you can either select the property name from the pre-defined list or create a completely new property.
 
 
@@ -34,7 +34,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
 The relations can be modified as follows:
 
-* To **add** a new relation, click on the source Dataset and click **Add Relation** in its context menu.  Then draw an arrow from the source (Dataset1) to the target (Dataset2).
+* To **add** a new relation, click on the source Dataset and click **Add Relation** in its context menu. Then draw an arrow from the source (Dataset1) to the target (Dataset2).
   * The name of the new link will be: *Dataset2 refers to Dataset1*. 
   * Dataset1 will be the PK Table Name in Properties tab.
   * Dataset2 will be the FK Table Name in Properties tab.
