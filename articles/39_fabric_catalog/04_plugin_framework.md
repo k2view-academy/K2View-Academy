@@ -39,7 +39,7 @@ Each plugin's definition in the plugins.discovery includes a *threshold* - the s
 
 **Custom Plugins**
 
-The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, these custom plugins need to be added to the Plugins Pipeline configuration file.
+The Plugin Framework supports execution of custom plugins. In order to incorporate a custom plugin into the process, it needs to be added to the Plugins Pipeline configuration file.
 
 ### Built-In Plugins
 
