@@ -35,7 +35,7 @@ The sample size is configured in the plugins.discovery file as follows:
 
 **Plugin's Threshold**
 
-Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. The threshold can be updated in the plugins.discovery if you need to show more or less results in the Catalog. 
+Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog and its display. When the plugin's threshold is set to 0.4, the plugin-calculated results of 0.4 or below are dropped and are not added to the Catalog. To enable the Catalog to show more results, update the threshold to a number lower than 0.4, and vice versa, to show less results, update the threshold to a higher number.
 
 **Custom Plugins**
 
