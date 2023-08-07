@@ -32,7 +32,7 @@ Thus, you can define your search criteria using this syntax. [Click for more det
 
 <img src="images/search_results.png" style="zoom:75%;" />
 
-The search results are presented in a list which can be exported into a CSV file. The returned result set is limited to 1,000 rows. 
+The search results are presented in a list which can be exported into a CSV file. The result set returned to the client is limited to 750 nodes and 750 relations. In one search you can get to a total of 1500 results.
 
 To navigate from the Search Results to a node in the Catalog tree, click the ![](images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refers_to* relation.
 
