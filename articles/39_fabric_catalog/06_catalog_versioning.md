@@ -27,7 +27,7 @@ The differences between the 2 versions are indicated using colors, as follows:
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed one is in red.
 * All unchanged entities and relations are grey.
 
-To return to the regular view mode, select a version from the list.
+To return to a regular view mode, select a version from the list.
 
 
 
