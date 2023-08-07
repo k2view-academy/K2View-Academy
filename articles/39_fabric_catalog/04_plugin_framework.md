@@ -45,7 +45,7 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 **Metadata Logical Reference**
 
-The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
+The purpose of a *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
 
 The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, the field names are "normalized" using the following formatting rules: remove the underscore ‘_’, convert to lower-case and add the table name if the field name is ID. 
 
