@@ -20,11 +20,11 @@ The coloring scheme of the standard view is blue.
 
 ### Version Comparison
 
-To compare two versions, click the comparison <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. 
+To compare 2 versions, click the comparison <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. 
 
-The differences between the two versions are indicated using the colors, as follows:
+The differences between the 2 versions are indicated using the colors, as follows:
 * The new elements are green, the removed elements are red, and the updated elements are blue.
-* When a property is updated, it is displayed twice –  the new value is highlighted by green, the removed one is red.
+* When a property is updated, it is displayed twice – the new value is highlighted in green, the removed one is red.
 * All unchanged entities and relations are grey.
 
 To return to the regular view mode, select a version from the list.
