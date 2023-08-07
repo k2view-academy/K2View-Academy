@@ -14,7 +14,7 @@ Only the latest Catalog version can be edited. See below which manual overrides 
 
 ### Edit Properties
 
-As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g. PK or source data type) and some are created by the plugins (e.g. PII or Classification). The Catalog allows updating only those properties which are pre-defined as editable in the ```properties-info.JSON``` configuration file. This definition can be updated on the project level. [Click for more information about the configuration file](11_advanced_settings.md#catalog-application-configuration).
+As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g., PK or source data type) and some are created by the plugins (e.g., PII or Classification). The Catalog allows updating only those properties which are pre-defined as editable in the ```properties-info.JSON``` configuration file. This definition can be updated on the project level. [Click here for more information about the configuration file](11_advanced_settings.md#catalog-application-configuration).
 
 <img src="images/edit_prop_1.png" style="zoom:75%;" />
 
