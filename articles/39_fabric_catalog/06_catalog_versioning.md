@@ -24,7 +24,7 @@ To compare 2 versions, click the comparison <img src="images/compare.png" style=
 
 The differences between the 2 versions are indicated using the colors, as follows:
 * The new elements are green, the removed elements are red, and the updated elements are blue.
-* When a property is updated, it is displayed twice – the new value is highlighted in green, the removed one is red.
+* When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed one is in red.
 * All unchanged entities and relations are grey.
 
 To return to the regular view mode, select a version from the list.
