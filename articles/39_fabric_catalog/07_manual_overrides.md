@@ -34,11 +34,11 @@ As part of the Discovery process, properties are created for each node. Some pro
 
 The relations can be modified as follows:
 
-* To **add** a new relation, click on the source Dataset and click **Add Relation** in its context menu. Then draw an arrow from the source (Dataset1) to the target (Dataset2).
+* To **add** a new relation, click on the source Dataset and click **Add Relation** in its context menu. Then, draw an arrow from the source (Dataset1) to the target (Dataset2).
   * The name of the new link will be: *Dataset2 refers to Dataset1*. 
   * Dataset1 will be the PK Table Name in Properties tab.
   * Dataset2 will be the FK Table Name in Properties tab.
-  * Populate PK and FK column names and notes and save the link.
+  * Populate the PK and FK column names and notes, and save the link.
 * To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
 
 Only *refers_to* relations can be added and deleted. 
