@@ -169,7 +169,7 @@ The purpose of *Data Regex Classifier* plugin is to classify the source fields b
 
 This plugin runs on a data snapshot that is extracted from the source, and it executes the regular expressions defined in a built-in **data_profiling** MTable.
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g., **EMAIL**). If a match is found for more than one regex, only one property is created - the one with higher score.
+If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., EMAIL). If a match is found for more than one expression, the property is created with the Classification that has a higher score. 
 
 To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
@@ -181,7 +181,7 @@ The purpose of *Metadata Regex Classifier* plugin is to classify the source fiel
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g., **NAME**). If a match is found for more than one regex, only one property is created - the one with higher score.
+If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., NAME). If a match is found for more than one expression, the property is created with the Classification that has a higher score.
 
 To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
 
