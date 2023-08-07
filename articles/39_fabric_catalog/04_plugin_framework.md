@@ -49,7 +49,7 @@ The purpose of a *Metadata Logical Reference* plugin is to identify possible for
 
 Matching algorithm works by comparing 2 field names of 2 different datasets at a time. Prior to the matching, the field names are *normalized* using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is *ID*.
 
-For example, the following field names can be matched by the plugin:
+For example, the following field names will be matched:
 
 * CUSTOMER_ID and CustomerID
 * CUSTOMER.ID and CustomerID
