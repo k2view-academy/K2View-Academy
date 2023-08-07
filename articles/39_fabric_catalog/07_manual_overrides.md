@@ -45,7 +45,7 @@ Only *refers_to* relations can be added and deleted.
 
 ### Saving Manual Overrides
 
-While the Catalog is in the Edit mode, all updates are aggregated on the client side only. Once the manual changes are completed, the **Save** button should be clicked in the menu bar. It will trigger saving all of the changes together as a new version and exiting the Edit mode.
+While the Catalog is in the Edit mode, all updates are aggregated on the client side only. Once the manual changes have been completed, the **Save** button should be clicked in the menu bar. It will trigger saving all of the changes together as a new version and exiting the Edit mode.
 
 Alternatively, it is possible to exit the Edit mode without saving any changes by clicking the **Discard** button.
 
