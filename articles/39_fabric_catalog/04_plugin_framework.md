@@ -31,7 +31,7 @@ The data sample is retrieved from the data source during the Discovery job run. 
 The sample size is configured in the plugins.discovery file as follows:
 
 * The default sample size is 10% of the dataset rows.
-* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
+* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows).
 
 **Plugin's Threshold**
 
