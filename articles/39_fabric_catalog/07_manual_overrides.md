@@ -49,7 +49,7 @@ While the Catalog is in the Edit mode, all updates are aggregated on the client 
 
 Alternatively, it is possible to exit the Edit mode without saving any changes by clicking the **Discard** button.
 
-Save and Discard buttons are only visible when the Catalog application is in the Edit mode.
+The Save and Discard buttons are only visible when the Catalog application is in an Edit mode.
 
 <img src="images/manual_override.png" style="zoom:75%;" />
 
