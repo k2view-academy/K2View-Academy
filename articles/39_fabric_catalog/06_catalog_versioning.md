@@ -4,11 +4,11 @@
 
 The Catalog supports **versioning** - ability to create a new Catalog version in the  *neo4j* Graph DB every time the Discovery process runs and finds differences when comparing to the previous version.
 
-Then, using the Catalog application a user can view each version separately or check the differences between two selected versions, as described below.
+Then, using the Catalog application, a user can view each version separately or check the differences between 2 selected versions, as described below.
 
 Note that if the Discovery process doesn't identify any changes in the data source or in the plugins settings, a new version is not created.
 
-Additional trigger for version creation is editing of the catalog manually. [Click for more information about the manual overrides](07_manual_overrides.md).
+Additional trigger for a version creation is editing of the catalog manually. [Click here for more information about the manual overrides](07_manual_overrides.md).
 
 ### Version View
 
