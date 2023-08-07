@@ -31,7 +31,7 @@ The data sample is retrieved from the data source during the Discovery job run. 
 The sample size is configured in the plugins.discovery file as follows:
 
 * The default sample size is 10% of the dataset rows.
-* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows).
+* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows) per each dataset.
 
 **Plugin's Threshold**
 
@@ -161,8 +161,6 @@ If a match is found, the plugin evaluates both the relation direction and the fo
 </table>
 
 
-
-
 **Data Regex Classifier**
 
 The purpose of *Data Regex Classifier* plugin is to classify the source fields based on their **data**. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
@@ -171,9 +169,7 @@ This plugin runs on a data snapshot that is extracted from the source, and it ex
 
 If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., EMAIL). If a match is found for more than one expression, the property is created with the Classification that has a higher score. 
 
-To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the data profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **Metadata Regex Classifier**
 
@@ -183,9 +179,7 @@ The matching rules are defined using regular expressions in a built-in **metadat
 
 If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., NAME). If a match is found for more than one expression, the property is created with the Classification that has a higher score.
 
-To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the metadata profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **Classification PII Marker**
 
@@ -193,9 +187,7 @@ The purpose of *Classification PII Marker* plugin is to go over all the fields t
 
 The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
-To update the PII indicator of the profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the PII indicator of the profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **NULL Percentage**
 
