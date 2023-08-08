@@ -26,7 +26,7 @@ Note that once the advanced search opens, the selected search criteria appears i
 phone pii:true type:field
 ~~~
 
-Thus, you can define your search criteria using this syntax. [Click for more details about the syntax](10_catalog_APIs.md#search-catalog).
+Thus, you can define your search criteria using this syntax. [Click here for more details about the syntax](10_catalog_APIs.md#search-catalog).
 
 ### Search Results
 
