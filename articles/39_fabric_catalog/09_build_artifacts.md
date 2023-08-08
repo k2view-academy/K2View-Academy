@@ -10,9 +10,9 @@ While Classification and PII properties are added to the Catalog nodes by the Cl
 
 ### Build Artifacts
 
-Building the catalog's artifact is triggered by clicking **Actions > Build Artifacts** in the menu bar.  
+Building the Catalog's artifact is triggered by clicking **Actions > Build Artifacts** in the menu bar.  
 
-The artifact called **catalog_info** is created for the Catalog version displayed in the application and it is saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and uploaded to the Fabric memory.
+The artifact called **catalog_info** is created for the Catalog version displayed in the application and it is saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory.
 
 Below is an illustration of the catalog_info.csv file:
 
