@@ -6,7 +6,7 @@
 
 The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file, created in a CSV format, that includes the list of fields of all Catalog's datasets, with their Classification, PII and Auto-Mask properties, for a given Catalog version.
 
-While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually when needed.  Learn about the purpose of the Auto-Mask property further in this article.
+While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually, when needed. Learn about the purpose of the Auto-Mask property further in this article.
 
 ### Build Artifacts
 
