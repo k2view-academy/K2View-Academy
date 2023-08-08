@@ -11,10 +11,10 @@
 
   ​	<img src="images/show_catalog_commands.png" style="zoom:75%;" />
 
-* The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process related configuration files. 
+* The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files. 
 
   * The **plugins.discovery** is a configuration file that defines the plugin's list and their execution order. 
-  * The **MTables** sub-folder holds the MTables used by the Catalog various processes.
+  * The **MTables** subfolder holds the MTables used by the Catalog's various processes.
 
   <img src="images/discovery_folder.png" style="zoom:75%;" />
 
