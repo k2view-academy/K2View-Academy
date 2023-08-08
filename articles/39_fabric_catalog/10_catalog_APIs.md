@@ -28,9 +28,9 @@ https://localhost:3213/api/catalog
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
-The API retrieves a list of data platforms that belong to the given catalog version. Each data platform is retrieved with the CONTAINS relations to its respective schema nodes. 
+The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the CONTAINS relations to its respective schema nodes. 
 
-The API has two modes - *view* and *compare* - which are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
