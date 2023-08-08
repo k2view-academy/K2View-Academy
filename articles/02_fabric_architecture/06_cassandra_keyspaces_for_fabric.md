@@ -12,7 +12,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. 
 - When a Fabric project is open in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
-Starting from V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db] section of config.ini as explained below.
+Starting from V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [system_db] section of config.ini as explained below.
 
 When defining a System DB type other than Cassandra, a product job runs in order to scan the tables to be cleaned by using TTL concept. The definition of each table's TTL policy is tracked on k2_table_level_ttl table.
 
@@ -303,20 +303,20 @@ The following table lists the keyspaces created by Fabric:
 
 ### How to Switch to SQLite or PostgreSQL
 
-Starting from V7.2, the  [internal_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
+Starting from V7.2, the  [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
 
 * For SQLite, set:
 
 ~~~bash
-INTERNAL_DB_TYPE=SQLITE
-INTERNAL_DB_HOST=/home/k2view/sqlite
+SYSTEM_DB_TYPE=SQLITE
+SYSTEM_DB_HOST=/home/k2view/sqlite
 ~~~
 
 * For PostgreSQL, set the POSTGRESQL type and all the relevant connection details.
 
 In order to authenticate users on System DBs other than Cassandra, use the separate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
 
-The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to INTERNAL_DB. This means that by default the Fabric storage type is the same as the Fabric System DB. You can either update the [internal_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
+The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to SYSTEM_DB. This means that by default the Fabric storage type is the same as the Fabric System DB. You can either update the [system_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
