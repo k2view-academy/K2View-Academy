@@ -29,7 +29,7 @@ The Catalog Masking Actor uses the catalog_info MTable in order to identify, at 
 The Catalog Masking algorithm is as follows:
 
 * Go over the fields of an input row received from the DbQuery or DbCommand Actor (which precedes the Catalog Masking Actor in the population flow).
-* Search each field in the **catalog_info** MTable (using the of combination of data_platform, schema, dataset, class and field columns). If a field name is found, check:
+* Search each field in the **catalog_info** MTable (using the combination of data_platform, schema, dataset, class and field columns). If a field name is found, check:
   * If PII is true and Auto-mask is true or empty, the field's value should be masked. 
 * To find which Masking Actor should be used, get the Classification value from the catalog_info and retrieve the Masking Actor name & parameters from the masking_setup MTable. 
 
