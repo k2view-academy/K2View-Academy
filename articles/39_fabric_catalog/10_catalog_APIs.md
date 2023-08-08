@@ -82,7 +82,7 @@ https://localhost:3213/api/catalog/1...latest
 
 The API retrieves a list of schemas that belong to the specified catalog version and data platform. Each schema is retrieved with the CONTAINS relations to its respective dataset nodes. 
 
-The API has two modes - *view* and *compare* - which are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -99,7 +99,7 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 <td>
 <p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>.</p>
+<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
