@@ -24,13 +24,13 @@
 
 The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines:
 * Which properties are editable and deletable (via [manual override](07_manual_overrides.md)) in the Properties tab;
-* Which properties are searchable and which valid values to present in the [Advanced search](08_search_catalog.md#advanced-search) screen.
+* Which properties are searchable via the [Advanced Search](08_search_catalog.md#advanced-search) screen.
 
 The file is located in ```fabric/staticWeb``` folder and can be updated on the project level.
 
 ### General
 
-The [data_discovery] section of config.ini defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
+The [data_discovery] section of config.ini file defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
 
 ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 

@@ -16,11 +16,7 @@ The Data Discovery solution includes a constantly growing list of built-in plugi
 
 The **plugins.discovery** is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
-The plugins.discovery configuration file defines a list of active plugins and their execution order. It also defines the data sample size. This file can be updated per your project's requirements, for example: 
-
-* Any plugin can be set to inactive.
-* The sample size settings or the plugin's threshold can be updated.
-* A custom plugin can be added to the plugins.discovery. 
+The plugins.discovery configuration file defines a list of active plugins and their execution order. It also defines the data sample size. This file can be updated per your project's requirement. 
 
 Once the plugins.discovery configuration file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
 
