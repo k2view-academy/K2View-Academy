@@ -18,7 +18,7 @@
 
   <img src="images/discovery_folder.png" style="zoom:75%;" />
 
-  Click [here](04_plugin_framework#plugins-pipeline) for more details about these files. 
+  Click [here](/articles/39_fabric_catalog/04_plugin_framework.md) for more details about these files.
 
 ### Catalog Application Configuration
 
