@@ -6,7 +6,7 @@
 
 The Catalog application provides a search of the Catalog objects (data platforms, schemas, datasets, fields and relations) within the currently displayed version. 
 
-To start the search, click the ![](images/search.png) icon in the menu bar. It opens a text area where you can type one or more keywords - the names of the objects that you want to search. To search by additional parameters, open the advanced search by clicking the ![](images/advanced.png) icon. To exit the search, click the ![](images/close.png) icon.
+To start the search, click the ![](images/search.png) icon in the menu bar. It opens a text area where you can type one or more keywords - the names of the objects to be searched. To search by additional parameters, open the advanced search by clicking the ![](images/advanced.png) icon. To exit the search, click the ![](images/close.png) icon.
 
 ### Advanced Search
 
