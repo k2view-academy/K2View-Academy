@@ -140,7 +140,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 The API retrieves all elements that belong to the specified catalog version, data platform and schema. The elements include the datasets, the REFERS_TO relations between the dataset nodes, fields and properties. 
 
-The API has two modes - *view* and *compare* - which are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
