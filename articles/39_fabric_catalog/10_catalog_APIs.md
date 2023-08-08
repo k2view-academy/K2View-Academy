@@ -203,7 +203,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 <span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/search-graph`
 
-The API retrieves all elements that belong to the specified catalog version, based on the search criteria defined in the request body. 
+The API retrieves all elements that belong to the specified Catalog version, based on the search criteria defined in the request body. 
 
 The syntax of the request body definition is as follows:
 
@@ -228,7 +228,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: when searching for *dataset* and *field* nodes whose name include a *customer* keyword, the request body is:
+Example 1: when searching for *dataset* and *field* nodes whose name includes a *customer* keyword, the request body is:
 
 ~~~json
 {
