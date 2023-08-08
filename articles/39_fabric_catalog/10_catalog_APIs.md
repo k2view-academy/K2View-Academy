@@ -14,7 +14,7 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
 
-The API retrieves a list of the Catalog's versions and their creation timestamp.
+The API retrieves a list of the Catalog's versions and their creations' timestamp.
 
 **Example of an API call:**
 
