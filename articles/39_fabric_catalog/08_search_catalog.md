@@ -18,7 +18,7 @@ The advanced search allows to narrow the search results by specifying one (or mo
 
 * Search by PII and Classification properties. For example, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
 
-* Search by score. For example, when the user enters 0.8,  the results list will return all catalog objects with score 0.8 and below.
+* Search by score. For example, when the user enters 0.8,  the results list will return all Catalog objects with score 0.8 and below.
 
 Note that once the advanced search opens, the selected search criteria is written in the search area using pre-defined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
 
