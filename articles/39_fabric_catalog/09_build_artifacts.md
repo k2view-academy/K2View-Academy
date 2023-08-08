@@ -24,7 +24,7 @@ Note that an artifact can be created for any Catalog version. Each new artifact 
 
 ### Catalog Masking
 
-The Catalog Masking Actor uses the catalog_info MTable in order to identify at run-time which fields are supposed to be masked. 
+The Catalog Masking Actor uses the catalog_info MTable in order to identify, at run-time, which fields are supposed to be masked. 
 
 The Catalog Masking algorithm is as follows:
 
