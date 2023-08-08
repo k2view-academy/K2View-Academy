@@ -35,7 +35,7 @@ The Catalog Masking algorithm is as follows:
 
 ### Auto-Mask Property
 
-The purpose of the Auto-Mask property is to mark which Catalog fields, that were identified as PII, should not be masked using the Masking Actor defined for their Classification. 
+The purpose of the Auto-Mask property is to mark which Catalog fields - identified as PII - should not be masked using the Masking Actor defined for their Classification. 
 
 For such fields the user should manually add Auto-Mask = false property in the Catalog application and then attach the relevant masking logic in the population flow.
 
