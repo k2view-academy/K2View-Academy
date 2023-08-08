@@ -228,7 +228,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: when searching for *dataset* and *field* nodes whose name includes a *customer* keyword, the request body is:
+Example 1: When searching for *dataset* and *field* nodes, whose name includes a *customer* keyword, the request body is:
 
 ~~~json
 {
@@ -244,7 +244,7 @@ Example 1: when searching for *dataset* and *field* nodes whose name includes a 
 }
 ~~~
 
-Example 2: when searching for *any* nodes with *PII = true* and *Classification = EMAIL* properties, the request body is:
+Example 2: When searching for *any* nodes with *PII = true* and *Classification = EMAIL* properties, the request body is:
 
 ~~~json
 {
