@@ -12,7 +12,7 @@ To start the search, click the ![](images/search.png) icon in the menu bar. It o
 
 <img src="images/advanced_search.png" style="zoom:75%;" />
 
-The advanced search allows to narrow the search results by specifying one (or more) of the following parameters:
+Advanced Search allows to narrow the search results by specifying one (or more) of the following parameters:
 
 * Search the selected object type(s) only, for example - fields and datasets. 
 
@@ -22,11 +22,13 @@ The advanced search allows to narrow the search results by specifying one (or mo
 
 Note that once the advanced search opens, the selected search criteria appears in the search area using predefined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
 
-~~~
+~~~json
 phone pii:true type:field
 ~~~
 
-Thus, you can define your search criteria using this syntax. [Click here for more details about the syntax](10_catalog_APIs.md#search-catalog).
+And vice versa, you can define your search criteria using syntax only in the text box, which will automatically feed back the search criteria fields. 
+
+[Click here for more details about the syntax](10_catalog_APIs.md#search-catalog).
 
 ### Search Results
 
