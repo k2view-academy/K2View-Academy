@@ -2,7 +2,7 @@
 
 # Catalog APIs
 
-Fabric provides out-of-the-box Web Service APIs for querying a project's catalog.
+Fabric provides out-of-the-box Web Service APIs for querying a project's Catalog.
 
 Any web service call passes authentication and authorization validations before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
@@ -14,7 +14,7 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
 
-The API retrieves a list of the catalog's versions and their creation timestamp.
+The API retrieves a list of the Catalog's versions and their creation timestamp.
 
 **Example of an API call:**
 
