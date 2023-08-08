@@ -4,7 +4,7 @@
 
 ### Web Studio
 
-* *Show Catalog Commands* is a Web Studio setting to either show or hide the Catalog related commands in the Web Studio. 
+* *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands in the Web Studio. 
 
   * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
   * Once *Show Catalog Commands* is enabled, **Run Discovery Job** and **Open in Catalog** commands can be executed by right-clicking on the interface name.  
