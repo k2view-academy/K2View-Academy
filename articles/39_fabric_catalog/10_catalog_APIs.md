@@ -111,6 +111,7 @@ The API has 2 modes - *view* and *compare* - that are alternatively invoked base
 </tr>
 </tbody>
 </table>
+
 **Examples of an API call in the *view* mode:**
 
 ```
@@ -175,6 +176,7 @@ The API has two modes - *view* and *compare* - which are alternatively invoked b
 </tr>
 </tbody>
 </table>
+
 **Examples of an API call in the *view* mode:**
 
 ```
