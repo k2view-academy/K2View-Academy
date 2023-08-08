@@ -157,7 +157,7 @@ The API has 2 modes - *view* and *compare* - that are alternatively invoked base
 <td>
 <p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or the word <strong>latest</strong>.</p>
+<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
