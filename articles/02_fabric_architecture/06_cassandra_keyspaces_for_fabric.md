@@ -1,6 +1,6 @@
 # Fabric System Database
 
-Fabric uses the Cassandra DB as a default application management database. In addition, the Cassandra managed services (such as AWS Keyspaces or Astra) are supported.
+Fabric uses the Cassandra DB as a default system management database, it is used to monitor, control, configure and operate the application. In addition, the Cassandra managed services (such as AWS Keyspaces or Astra) are supported.
 
 Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with the **k2** prefix.
 
