@@ -40,13 +40,13 @@ Both jobs must be executed in parallel.
 
 **Example:**
 
-1. Execute a task with **Customer** and **Billing LUs** and with a post execution process that sends a mail when the task execution ends. The Customer is the parent LU of Billing. 
+1. Execute a task with **Customer** and **Billing LUs** and with a post-execution process that sends a mail when the task execution ends. The Customer is the parent LU of Billing. 
 2. Three records are created in the task_execution_list on this task. All have the same task_execution_id.
 3. The **tdmExecuteTask** job executes the Batch process on the **Customer LU**. 
 4. The **checkMigrateAndUpdateTDMDB** job updates the status of **Customer LU** when the execution is completed.
 5. The **tdmExecuteTask** job starts executing **Billing LU** since **Customer**, its parent LU, is marked as completed.
 6. The **checkMigrateAndUpdateTDMDB** job updates the status of **Billing LU** when the execution is completed.
-7. The **tdmExecuteTask** job can start executing the **post execution process** after the execution of all the task's LUs.
+7. The **tdmExecuteTask** job can start executing the **post-execution process** after the execution of all the task's LUs.
 
 
 
@@ -62,12 +62,14 @@ The execution status is checked  as follows:
 When the process is completed, the following TDM DB tables are updated:
 
 - **task_execution_list**, update the execution_status and additional data.
-- [task_execution_entities](02_tdm_database.md#task_execution_entities), populate each entity or Reference table and its status. Set the **id_type** to **ENTITY** or **REFERENCE** according the entity or Reference table data type.
+- [task_execution_entities](02_tdm_database.md#task_execution_entities), populate each entity or Reference table and its status. Set the **id_type** to **ENTITY** or **REFERENCE** according to the entity or Reference table data type.
 - [task_exe_error_detailed](02_tdm_database.md#task_exe_error_detailed), populate the execution errors in Extract tasks. Note that the execution errors of Load tasks are reported to this table by the **PopulateTableErrors** Actor.
+
+A new Global has been added in the TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables to limit the number of entities to be populated into the TDM execution tables per task execution. From Fabric 7.2 onwards, it is possible to populate the **LIMIT** parameter of the [batch_details command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_details-batch_id-statusstatus-entitiesentity-1entity-2-affinityaffinity-limitlimit-sort_by_process_timetruefalse) with -1 to get all batch's entities without a limit. Therefore the TDM_BATCH_LIMIT Global is set by -1 by default, in order to get all the batch's entities and populated them into the TDM DB during the task execution.
 
 ### Handling Completed Task Executions
 
-A task execution is complete when it does not have pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles completed task executions as follows:
+The task execution is complete when it does not have pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles completed task executions as follows:
 
 1. Updates the execution summary in the TDM DB tables.
 2. Synchronizes the task execution details to Fabric. 
