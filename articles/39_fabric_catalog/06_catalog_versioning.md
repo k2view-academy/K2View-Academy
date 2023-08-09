@@ -8,7 +8,7 @@ Then, using the Catalog application, a user can view each version separately or 
 
 Note that if the Discovery process doesn't identify any changes in the data source or in the plugins settings, a new version is not created.
 
-Additional trigger for a version creation is a manual editing of the Catalog . [Click here for more information about the manual overrides](07_manual_overrides.md).
+Additional trigger for a version creation is a manual editing of the Catalog. [Click here for more information about the manual overrides](07_manual_overrides.md).
 
 ### Version View
 
