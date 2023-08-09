@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file, created in a CSV format, that includes the list of fields of all Catalog's datasets, with their Classification, PII and Auto-Mask properties, for a given Catalog version.
+The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file created in a CSV format. It includes the details of all Catalog nodes with their properties, such as Classification, PII and Auto-Mask, for a currently displayed Catalog version.
 
 While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually, when needed. Learn about the purpose of the Auto-Mask property further in this article.
 
@@ -14,7 +14,7 @@ Building the Catalog's artifact is triggered by clicking **Actions > Build Artif
 
 The artifact called **catalog_info** is created for the Catalog version displayed in the application, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory.
 
-Below is an illustration of the catalog_info.csv file:
+The below is an illustration of the catalog_info.csv file:
 
 <img src="images/catalog_info_mtable.png" style="zoom:75%;" />
 
