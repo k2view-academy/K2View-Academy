@@ -95,7 +95,13 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type identified by the Crawler, and PII and Classification identified by the plugins.
+
+Clicking the property name or the <img src="C:\K2View-Academy\articles\39_fabric_catalog\images\info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+
+When the selected element is a relation (link) between two objects in the Catalog tree, the relation properties are displayed. Note that in case of more than one *refers_to* relations between two datasets, the Catalog tree displays one link only. However the Properties Tab displays the details of all relations as shown below:
+
+<img src="images/properties_two_links.png" style="zoom: 75%;" />
 
 ### Deep Linking
 
