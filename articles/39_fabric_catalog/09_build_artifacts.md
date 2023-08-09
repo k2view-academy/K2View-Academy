@@ -24,14 +24,14 @@ Note that an artifact can be created for any Catalog version. Each new artifact 
 
 ### Catalog Masking
 
-The Catalog Masking Actor uses the catalog_info MTable in order to identify, at run-time, which fields are supposed to be masked. 
+The Catalog Masking Actor uses the **catalog_info** MTable in order to identify, at run-time, which fields are supposed to be masked. 
 
 The Catalog Masking algorithm is as follows:
 
 * Go over the fields of an input row received from the DbQuery Actor (which precedes the Catalog Masking Actor in the population flow).
 * Search each field in the **catalog_info** MTable (using the combination of data_platform, schema, dataset, class and field columns). If a field name is found, check:
   * If PII is true and Auto-Mask is true or empty, the field's value should be masked. 
-* To find which Masking Actor should be used, get the Classification value from the catalog_info and retrieve the Masking Actor name & parameters from the masking_setup MTable. 
+* To decide which Masking Actor should be used, get the Classification value from the **catalog_info** MTable and retrieve the Masking Actor name & parameters from the masking_setup MTable. 
 
 ### Auto-Mask Property
 
