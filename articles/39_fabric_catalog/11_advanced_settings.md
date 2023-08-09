@@ -4,33 +4,33 @@
 
 ### Web Studio
 
-* *Show Catalog Commands* is a Web Studio setting to either show or hide the Catalog related commands in the Web Studio. 
+* *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands in the Web Studio. 
 
   * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
-  * Once *Show Catalog Commands* is enabled, **Run Discovery Job** and **Open in Catalog** commands can be executed by doing the right click on the interface name.  
+  * Once *Show Catalog Commands* is enabled, **Run Discovery Job** and **Open in Catalog** commands can be executed by right-clicking on the interface name.  
 
   ​	<img src="images/show_catalog_commands.png" style="zoom:75%;" />
 
-* The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process related configuration files. 
+* The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files. 
 
-  * The **plugins.discovery** is a configuration file that defines the plugin's list and their execution order. 
-  * The **MTables** sub-folder holds the MTables used by the Catalog various processes.
+  * The **plugins.discovery** is a configuration file that defines a list of plugins and their execution order. 
+  * The **MTables** subfolder holds the MTables used by the Catalog's various processes.
 
   <img src="images/discovery_folder.png" style="zoom:75%;" />
 
-  Click [here](04_plugin_framework#plugins-pipeline) for more details about these files. 
+  Click [here](/articles/39_fabric_catalog/04_plugin_framework.md) for more details about these files.
 
 ### Catalog Application Configuration
 
 The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines:
 * Which properties are editable and deletable (via [manual override](07_manual_overrides.md)) in the Properties tab;
-* Which properties are searchable and which valid values to present in the [Advanced search](08_search_catalog.md#advanced-search) screen.
+* Which properties are searchable via the [Advanced Search](08_search_catalog.md#advanced-search) screen.
 
 The file is located in ```fabric/staticWeb``` folder and can be updated on the project level.
 
 ### General
 
-The [data_discovery] section of config.ini defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
+The [data_discovery] section of config.ini file defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
 
 ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 

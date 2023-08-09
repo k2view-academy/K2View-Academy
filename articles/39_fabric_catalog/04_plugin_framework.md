@@ -16,47 +16,43 @@ The Data Discovery solution includes a constantly growing list of built-in plugi
 
 The **plugins.discovery** is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
-The **plugins.discovery** configuration file defines a list of active plugins and their execution order. It also defines the data sample size. This file can be updated per your project's requirements, for example: 
+The plugins.discovery configuration file defines a list of active plugins and their execution order. It also defines the data sample size. This file can be updated per your project's requirement. 
 
-* Any plugin can be set to inactive.
-* The sample size settings or the plugin's threshold can be updated.
-* A custom plugin can be added to the **plugins.discovery**. 
-
-Once file is updated, the Discovery job should be rerun in order to apply the changes on the Catalog.
+Once the plugins.discovery configuration file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
 
 **Data Sample Settings**
 
 The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
 
-The sample size is configured in the plugins.discovery as follows:
+The sample size is configured in the plugins.discovery file as follows:
 
 * The default sample size is 10% of the dataset rows.
-* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. Meaning that the sample size can’t be smaller than MIN (100 rows) or bigger than MAX (10000 rows).
+* Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows) per each dataset.
 
 **Plugin's Threshold**
 
-Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. For example, when the plugin's threshold is set to 0.4, the plugin calculated results of 0.4 or below are dropped and will not be added to the Catalog. The threshold can be updated in the plugins.discovery if you need to show more or less results in the Catalog. 
+Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog and its display. When the plugin's threshold is set to 0.4, the plugin-calculated results of 0.4 or below are dropped and are not added to the Catalog. To enable the Catalog to show more results, update the threshold to a number lower than 0.4, and vice versa, to show less results, update the threshold to a higher number.
 
 **Custom Plugins**
 
-The Plugin Framework supports execution of custom plugins. In order to incorporate them into the process, these custom plugins need to be added to the Plugins Pipeline configuration file.
+The Plugin Framework supports execution of custom plugins. In order to incorporate a custom plugin into the process, it needs to be added to the Plugins Pipeline configuration file.
 
 ### Built-In Plugins
 
 **Metadata Logical Reference**
 
-The purpose of the *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. It is useful when for example a source doesn't have predefined foreign key relations. 
+The purpose of a *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
 
-The matching algorithm works, each time, on comparing 2 field names of 2 different datasets. Prior to matching, the field names are "normalized" using the following formatting rules: remove the underscore ‘_’, convert to lower-case and add the table name if the field name is ID. 
+Matching algorithm works by comparing 2 field names of 2 different datasets at a time. Prior to the matching, the field names are *normalized* using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is *ID*.
 
-For example, the following field names can be matched by the plugin:
+For example, the following field names will be matched:
 
 * CUSTOMER_ID and CustomerID
 * CUSTOMER.ID and CustomerID
 
 This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and they can be updated on a project level.
 
-If a match is found, the plugin estimates the relation direction and the foreign key fields using the matching rule. The *refers to* a relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
+If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* a relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
 
 <table style="width: 900px;">
 <tbody>
@@ -161,19 +157,15 @@ If a match is found, the plugin estimates the relation direction and the foreign
 </table>
 
 
-
-
 **Data Regex Classifier**
 
 The purpose of *Data Regex Classifier* plugin is to classify the source fields based on their **data**. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 
 This plugin runs on a data snapshot that is extracted from the source, and it executes the regular expressions defined in a built-in **data_profiling** MTable.
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g., **EMAIL**). If a match is found for more than one regex, only one property is created - the one with higher score.
+If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., EMAIL). If a match is found for more than one expression, the property is created with the Classification that has a higher score. 
 
-To update the data profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the data profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **Metadata Regex Classifier**
 
@@ -181,11 +173,9 @@ The purpose of *Metadata Regex Classifier* plugin is to classify the source fiel
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 
-If the regex matches the field's data, a **Classification** property is added to the field's properties with a value corresponding to the matched regex (e.g., **NAME**). If a match is found for more than one regex, only one property is created - the one with higher score.
+If a regular expression (aka regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., NAME). If a match is found for more than one expression, the property is created with the Classification that has a higher score.
 
-To update the metadata profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the metadata profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **Classification PII Marker**
 
@@ -193,17 +183,15 @@ The purpose of *Classification PII Marker* plugin is to go over all the fields t
 
 The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
-To update the PII indicator of the profiling rules, go to Actions > Classifier Configuration in the Catalog application. 
-
-[Click here for more details about the Classifier Configuration window](05_catalog_app.md#classifier-configuration-window).
+To update the PII indicator of the profiling rules, go to Actions > [Classifier Configuration](05_catalog_app.md#classifier-configuration-window) in the Catalog application. 
 
 **NULL Percentage**
 
 The purpose of this plugin is to check the % of null values per column, using the data snapshot. The nullability percentage is calculated on each column of non-empty tables. 
 
-As a result, the **Nullability Percentage** property is added to the field's properties when the its calculated value is above the threshold. 
+As a result, the **Null Percentage** property is added to the field's properties when the calculated value is above the threshold. 
 
-For example, when 30% of the values in a certain field are null, the Nullability Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
+For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
 
 
