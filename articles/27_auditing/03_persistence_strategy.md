@@ -4,10 +4,10 @@
 
 The persistence of the data published by the Auditing mechanism can be controlled. Product provides two persistence strategies:
 
-* **com.k2view.fabric.auditing.persistence.CassandraBeanPersistence** - Cassandra persistence strategy (default). The audit data is written to the Cassandra cluster used by Fabric (**k2audit.k2_auditing** table). 
+* **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) - The data is written to **k2_auditing** table in the metadata keyspace (k2audit by default). 
 * **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** - Kafka persistence strategy. The audit data is written to **k2audit** default topic.
 
-Persistence strategy is defined in the **config.ini** using the AUDIT_PERSISTENCE_STRATEGY parameter, which by default, is set to **com.k2view.fabric.auditing.persistence.CassandraBeanPersistence**.
+Persistence strategy is defined in the **config.ini** using the AUDIT_PERSISTENCE_STRATEGY parameter, which by default, is set to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
 
 In addition to the above product strategies, a new strategy can be defined by creating your own class. The steps on how to do it are explained further on in this article.
 
@@ -33,7 +33,7 @@ In order to switch the persistence strategy to Kafka, do the following:
 
 #### Example - Logging Audit to PostgreSQL via Kafka
 
-When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from Cassandra to Kafka. 
+When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from the System DB to Kafka. 
 
 For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** and restart the Fabric node as explained above.
 

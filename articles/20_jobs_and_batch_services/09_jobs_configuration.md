@@ -69,13 +69,20 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 
 ```effective_ip: 1.1.20.1```
 
-The effective IP is the IP that Fabric uses to contact Cassandra. Fabric reads it from Cassandra and set it up automatically. You should only override it in case you need to use your own specific IP.
+The effective IP is the IP that Fabric uses to contact the [System DB](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#213-operational-database) when it is either Cassandra or PostgreSQL. It is read from Cassandra/PostgreSQL and set up automatically. 
+
+You should only override it in case you need to use your own specific IP.
+
+When the System DB is SQLite, the default will be set to 127.0.0.1.
 
 #### DC Identifier
 
 ```dc_name: DC1```
 
-By default, Fabric uses the same DC name that Cassandra is using. Fabric reads the DC from Cassandra and set it up automatically. 
+When the [System DB](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#213-operational-database) is Cassandra, Fabric uses the same DC name that Cassandra is using. It is read from Cassandra and set up automatically. 
+
+When the System DB is either SQLite or PostgreSQL, the default ```dc_name``` will be set to LOCAL_DC.
+
 You should only override it in case you need to use your own specific DC name.
 
 

@@ -68,7 +68,9 @@ The CommonDB is always made available for queries in every Fabric session. This 
 
 
 #### 2.1.3 System Database
-Fabric uses Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. Starting from V7.2, SQLite and PostgreSQL are also supported as Fabric System DB.
+Fabric uses Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. 
+
+Starting from V7.2, SQLite and PostgreSQL are also supported as Fabric System DB.
 
 [Click for more information about Fabric System Database.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
