@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and allows navigation from one level to another through a data model’s graph, expanding and collapsing various elements (nodes), viewing node's properties, searching the node, and more.
+The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various elements (nodes), searching for nodes, viewing their properties, and more.
 
 The Catalog application includes the following parts, described in this article:
 
@@ -18,7 +18,7 @@ Additionally, this article includes the description of the Catalog's [deep linki
 
 **General Navigation**
 
-The Catalog's main area enables navigation between the hierarchy levels, by expanding and collapsing various elements.
+The Catalog's main area enables navigation between different hierarchy levels, by expanding and collapsing various elements.
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
@@ -30,7 +30,7 @@ The Legend presents 3 types of nodes with their respective icons.
 
 When the catalog application opens, the latest **catalog version** is displayed by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
-* Select another version from the list in order to view it.
+* Select another version from the drop-down list for viewing.
 * Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform a versions comparison analysis.  
 
 [Click here for more information regarding the Catalog Versioning](06_catalog_versioning.md).
@@ -44,9 +44,9 @@ Clicking on any Data Platform or Schema node opens the context menu, which allow
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />or **Collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
   
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
-  * A double-click on the selected node can also expand or collapse it.
+  * A double-click on a selected node can either expand or collapse it.
   
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window. The hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the catalog.
+* **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
 * **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes from the screen.
   
@@ -61,9 +61,9 @@ Clicking on any Data Platform or Schema node opens the context menu, which allow
 
 Clicking on any Dataset node opens its context menu, which includes the following actions:
 
-* **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
+* **Expand** <img src="images/expand.png" style="zoom:80%;" /> Dataset fields:
 
-  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields, so the Dataset changes from a circle to a rectangle node. Fields properties such as PK, FK and PII are also displayed where applicable. 
+  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII where applicable.
 
     ​	<img src="images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
@@ -73,7 +73,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
   * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's legend.
 
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
+* **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window.
 
 ### Menu Bar
 
@@ -95,7 +95,13 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Clicking the property name or the <img src="images/info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type identified by the Crawler, and PII and Classification identified by the plugins.
+
+Clicking the property name or the <img src="C:\K2View-Academy\articles\39_fabric_catalog\images\info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+
+When the selected element is a relation (link) between two objects in the Catalog tree, the relation properties are displayed. Note that in case of more than one *refers_to* relations between two datasets, the Catalog tree displays one link only. However the Properties Tab displays the details of all relations as shown below:
+
+<img src="images/properties_two_links.png" style="zoom: 75%;" />
 
 ### Deep Linking
 

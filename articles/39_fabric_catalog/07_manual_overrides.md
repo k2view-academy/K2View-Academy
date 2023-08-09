@@ -6,11 +6,11 @@
 
 The Catalog supports the ability to perform manual overrides. 
 
-To start the manual overrides, click **Actions > Edit Catalog** in the menu bar. To end it, either save the changes or discard them. Upon saving, a new Catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual which enables keeping them part of the Catalog after running the Crawler again.
+To start the manual overrides, click **Actions > Edit Catalog** in the menu bar. To end it, either save the changes or discard them. Upon saving, a new Catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual, which enables keeping them as a part of the Catalog after running the Crawler again.
 
-The graph's coloring scheme changes in the Edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. This means that all entities and relations become grey and then every change is indicated by green, red or blue color.
+The graph's coloring scheme changes in the edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. This means that all entities and relations become grey and then every change is indicated by green, red or blue color.
 
-Only the latest Catalog version can be edited. See below which manual overrides are available in the Catalog.
+Only the latest Catalog version can be edited. This article includes the description of available manual overrides.
 
 ### Edit Properties
 
@@ -26,7 +26,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
   * When clicking Cancel – the change performed in the More Info pop-up window is discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
-* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. ID will be generated according to the property's path, Origin will be set to Manual, and the Score to 1. 
+* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. **ID** will be generated according to the property's path, **Origin** will be set to Manual, and the **Score** to 1.
   * When adding a new property, you can either select the property name from the pre-defined list or create a completely new property.
 
 
@@ -45,11 +45,11 @@ Only *refers_to* relations can be added and deleted.
 
 ### Saving Manual Overrides
 
-While the Catalog is in the Edit mode, all updates are aggregated on the client side only. Once the manual changes have been completed, the **Save** button should be clicked in the menu bar. It will trigger the saving of all the changes together as a new version and exiting the Edit mode.
+While the Catalog is in the edit mode, all updates are aggregated on the client side only. Once the manual changes have been made, the **Save** button should be clicked in the menu bar. It will trigger saving of all the changes together and would create a new version. The Catalog will then exit the edit mode.
 
-Alternatively, it is possible to exit the Edit mode without saving any changes by clicking the **Discard** button.
+Alternatively, it is possible to exit the edit mode without saving any changes, by clicking the **Discard** button.
 
-The Save and Discard buttons are only visible when the Catalog application is in an Edit mode.
+The Save and Discard buttons are only visible when the Catalog application is in an edit mode.
 
 <img src="images/manual_override.png" style="zoom:75%;" />
 

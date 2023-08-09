@@ -4,7 +4,7 @@
 
 Fabric provides out-of-the-box Web Service APIs for querying a project's Catalog.
 
-Any web service call passes authentication and authorization validations before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
+Any web service call passes authentication and authorization processes before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
 All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
@@ -30,7 +30,7 @@ https://localhost:3213/api/catalog
 
 The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the CONTAINS relations to its respective schema nodes. 
 
-The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -82,7 +82,7 @@ https://localhost:3213/api/catalog/1...latest
 
 The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved with the CONTAINS relations to its respective dataset nodes. 
 
-The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -140,7 +140,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include the datasets, the REFERS_TO relations between the dataset nodes, fields and properties. 
 
-The API has 2 modes - *view* and *compare* - that are alternatively invoked based on the **version** input parameter, as explained below:
+The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
