@@ -61,7 +61,7 @@ Clicking on any Data Platform or Schema node opens the context menu, which allow
 
 Clicking on any Dataset node opens its context menu, which includes the following actions:
 
-* **Expand** <img src="images/expand.png" style="zoom:80%;" />the Dataset fields:
+* **Expand** <img src="images/expand.png" style="zoom:80%;" /> Dataset fields:
 
   * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII where applicable.
 
@@ -73,7 +73,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
   * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's legend.
 
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> the element from the window.
+* **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window.
 
 ### Menu Bar
 
