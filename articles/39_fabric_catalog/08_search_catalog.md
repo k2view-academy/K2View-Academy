@@ -20,7 +20,7 @@ Advanced Search allows to narrow the search results by specifying one (or more) 
 
 * Search by score. For example, when the user enters 0.8,  the results list will return all Catalog objects with score 0.8 and below.
 
-Note that once the advanced search opens, the selected search criteria appears in the search area using predefined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
+Note that once Advanced Search opens, each selection of the search criteria feeds the search text box at the top, using predefined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
 
 ~~~json
 phone pii:true type:field
