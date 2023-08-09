@@ -10,7 +10,7 @@ To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.
 
 The graph's coloring scheme changes in the edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. This means that all entities and relations become grey and then every change is indicated by green, red or blue color.
 
-Only the latest Catalog version can be edited. See below which manual overrides are available in the Catalog.
+Only the latest Catalog version can be edited. This article includes the description of available manual overrides.
 
 ### Edit Properties
 
