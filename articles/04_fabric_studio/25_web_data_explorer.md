@@ -40,15 +40,19 @@ To open the Query Builder you can also click the DB icon <img src="../04_fabric_
 
 
 
+## Add SQL Statements to the Query Builder
+
+When Query Builder is opened and is in focus, you can right click to open the context menu and add a code snippet of the SQL statement for the selected table into the Query Builder Editor window.
+
  <img src="images/web/25_2_open_QB.jpg" alt="open QB" style="zoom:80%;" />
 
 
 
 ## Add SQL Statements to Fabric Functions
 
-When a Java file editor is opened and is in focus, you can right click to open the context menu and add a code snippet of the SQL statement for the selected table. This is done using Fabric *fetch* helpers.
+When a Java file editor is opened and is in focus, you can right click to open the context menu and add a code snippet of the SQL statement for the selected table.
 
-In the following illustrated example, specific columns from the CASES table are selected in the DB Explorer. Then, using the right click context menu, the appropriate Java select statement code is added:
+In the following example, specific columns from the CASES table are selected in the DB Explorer. Then, using the right click context menu, a Fabric *fetch* function Java code is added, with the appropriate select statement:
 
 ```java
     String sql = "select ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS"

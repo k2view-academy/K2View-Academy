@@ -305,18 +305,15 @@ The following table lists the keyspaces created by Fabric:
 
 Starting from V7.2, the  [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
 
-* For SQLite, set:
+When switching to a non-Cassandra system DB, the `SERVER_AUTHENTICATOR` config parameter's value shall be changed too, to be "fabric" (its default value is "cassandra"). 
 
-~~~bash
-SYSTEM_DB_TYPE=SQLITE
-SYSTEM_DB_HOST=/home/k2view/sqlite
-~~~
+> Note: You can use "fabric" as authenticator also when using Cassandra as the system DB. 
 
-* For PostgreSQL, set the POSTGRESQL type and all the relevant connection details.
 
-In order to authenticate users on System DBs other than Cassandra, use the separate section with the required details accordingly, [sqlite_auth] or [postgresql_auth].
 
 The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to SYSTEM_DB. This means that by default the Fabric storage type is the same as the Fabric System DB. You can either update the [system_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)

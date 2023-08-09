@@ -1,16 +1,30 @@
-# Building and Running an SQL Query
+# Building an SQL Query
 
-<studio>
-​    
+To use the Query Builder:
+
+<web>
+
+1. Open the DB Explorer objects tree.
+2. Edit the SQL commands in the top Query Editor window. You can either create the SQL query manually or use the DB Explorer objects tree menu.
+3. Click to execute the query. 
+4. The results are presented in a table view in the Results window.
+
+</web>
+
+<studio>​    
 
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
-2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
+2.	Create and edit the SQL query. You can either create the SQL query manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click on **Execute Query**.
 4.	Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
 
-Note: The Insert, Update and Delete statements (performed by the DB query) may cause an auto-commit to the DB (based on the DB driver’s definition). 
+</studio>  
 
-## Query Tab - Viewing the List of DB Objects
+> Note: The Insert, Update and Delete statements (performed by the DB query) may cause an auto-commit to the DB (based on the DB driver’s definition). 
+
+<studio>
+
+## Viewing the List of DB Objects
 * Click the **+** or **–** icons to expand or collapse the list in the DB objects.
 * Click **Refresh** to refresh the DB objects list. 
 * Click **Options** and check/uncheck the **Include Synonyms** option to include or exclude the DB Synonyms from the DB objects list.
@@ -22,15 +36,21 @@ Note: The Insert, Update and Delete statements (performed by the DB query) may c
 <web>
 
 ## Viewing the List of DB Objects
-Expand or collapse the DB objects tree. When opened via the DB Interface Explorer, the DB objects tree looks as shown in the below image. A similar tree appears inside the Query Builder pop-up window, when the Query Builder is opened via Schema Editor, Graphit and Broadway.
+Expand or collapse the DB objects tree. When opened via the DB Interface Explorer, the DB objects tree looks as shown in the below image.
 
 ![image](images/02_querytab_WEB.PNG)  
 
+ A similar tree appears inside the Query Builder pop-up window, when the Query Builder is opened via Schema Editor, Graphit and Broadway. Select the relevant Interface and then expand or collapse the DB objects tree, as needed.
+
+![image](images/web/explorer_popup.png)
+
 </web>
 
-<studio>    
 
-## Main Window - Editing an SQL Query  
+
+## Editing an SQL Query  
+
+<studio> 
 
 ### 1. Adding a DB Object to the Main Window
 Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do either:
@@ -62,7 +82,7 @@ To remove columns from a DB object, do either:
   
 
 
-## Main Window - Advanced SQL Setting
+## Advanced SQL Setting
 
 ### 5. Joining the Selected Tables 
 
@@ -129,56 +149,39 @@ The **Max rows** setting is used for setting the maximum number of rows returned
 
 <web>
 
-To use the Query Builder:
+You can either create the SQL query manually or use the DB objects tree menu.
 
-* Edit the SQL commands in the top Query Editor window. 
-* Execute the query. The results are presented in a table view in the Results window (bottom part).
+### Adding a query using the DB Object Tree
 
+Adding a query to the Query Editor panel using the DB Object Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as popup at Schema Editor, Graphit and Broadway.
 
+At DB Interface Explorer, choose the required SQL statement by using the context menu (right click) on the relevant tree entry. The available statements are: *select* statement, *insert* statement, *update* statement, *delete* statement.
 
-![image](images/web/01_QB2.png)
+You can choose either a table or specific table's fields so that the query will contain only those fields.
 
+![](images/web/db_interface_explorer_select.gif)
 
+At Query Builder popup, you can click on the right arrow, which appear on hoovering a table in the tree. Once clicked, a "select *" statement from that table is added to the Query Editor editing board.
 
-### Query Editor Window
+![](images/web/query_editor_popup.png)
 
- * You can clear the whole Query Editor window by clicking on the Clear button.
- * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
- * If the Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
- * You can add Fabric commands to the Query Editor and they will also be executed. 
- * When Fabric is the selected data source interface, set the top bar fields before executing the query.
+### Query Editor Assistant 
 
-### Results Window
+While editing the SQL statements manually, you can be assisted by the Editor Assistant, which suggest you code completion. The completion suggestion is for schemas, tables, columns names of the current interface, as well as set of base SQL clauses.
 
-* The Results window shows up to 1000 entries.
-
-* The Results window's top bar is divided into 2 parts: information (on the right side) and actions (on the left side):
-
-  * Information part contains: 
-    * Number of displayed rows (as previously explained, up to 1000 rows).
-    * Query status - success/failure. In case of a failure, a failure reason will be shown in the results area, instead of the results table.
-    * Duration taken to execute the query. Note that the duration is not the time until the results table is rendered and displayed as a table in the results window.
-    * How many rows were affected during the query execution. In case of a select statement, no rows are affected, so it would show zero.
-  * Actions part contains:
-    * Columns to show - allows to adjust the Results table display. When clicked, a pop-up opens where you can set up the Result tables columns that will be shown.
-    * CSV - allows to download the results.
-
-* The Results table enables some manipulations that let you adjust the display according to your needs, in addition to the *Columns to show* option:
-
-  * Sort Order - click on the column's header sort icon ![sort](images/web/order_icon.png) to reorder the table (Ascending/Descending).
-
-  * Filter - click on the column's header filter icon ![sort](images/web/filter_icon.png)to filter table's display accordingly.
-
-  * Group - click on the column's header left arrow to group the table rows by this column. 
-
-    * Grouping by a column will show it as the left most column, change its color to gray and flip the arrow direction.
-    * Click on a table row arrow to expand and collapse its grouped rows.
-    * You can group by several columns.
-    * To ungroup, click again on the column header arrow.
-
-    ![grouping](images/web/01_results_grouping.png)
+The Assistant code completion is done while typing and on hitting CTRL+SPACE, as used while code programming.
 
 
+
+
+
+> **Notes**
+>
+>  * You can clear the whole Query Editor window by clicking on the Clear button.
+>  * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
+>  * If the Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
+>  * You can add Fabric commands to the Query Editor and they will also be executed. 
+>  * When Fabric is the selected data source interface, set the top bar fields before executing the query.
 
 
 

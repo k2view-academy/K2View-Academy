@@ -30,13 +30,15 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 Following are the supported authentication providers:
 
-- **Fabric**, for console, WS and web access, using its repository. This is Fabric's default authentication method. For more information about managing credentials and permissions at Fabric see [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md).
+- **Cassandra**, for console, WS and web access. This is Fabric's default authentication method, following Fabric default System DB which is Cassandra. When another System DB is being used then it shall be changed to "Fabric".
+
+- **Fabric**, for console, WS and web access. For more information about managing credentials and permissions at Fabric see [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md).
 
 - **LDAP** server, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
 - **ADLDAP** (Active Directory) server, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
-- **SAML** server, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md).
+- **SAML** server, for web access, done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md).
 
   Using SAML is actually adopting the SSO methodology. This brings additional benefits, in addition to admin operation perspectives: first, it improves the user experience. Users do not need to type their credentials repeatedly on different services among the organization. Second, in terms of security, the authentication credentials are not handled or even known by Fabric. See [here](/articles/26_fabric_security/08_user_IAM_SSO_overview.md) more about SSO.
 
