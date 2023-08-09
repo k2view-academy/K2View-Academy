@@ -4,7 +4,7 @@
 
 Fabric provides out-of-the-box Web Service APIs for querying a project's Catalog.
 
-Any web service call passes authentication and authorization validations before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
+Any web service call passes authentication and authorization processes before being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
 All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
