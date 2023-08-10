@@ -1,50 +1,68 @@
 # Fabric System Database
 
-Fabric uses the Cassandra DB as a default application management database. In addition, the Cassandra managed services (such as AWS Keyspaces or Astra) are supported.
+Fabric System Database is used by Fabric internal processes to monitor, secure, control, configure, audit and operate the application.
 
-Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with the **k2** prefix.
+Fabric supports several types of Databases as System Database storage:
 
-Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. For example: **k2view_customer**.
+* NoSQL distributed database, such as, Cassandra DB
+  * Pros
+    * Scalable
+    * Distributed
+    * Built-in TTL mechanism on row level
+    * If Cassandra is used as MicroDB storage there is no need to introduce additional DB
+    * Managed services (such as AWS Keyspaces or Astra) are supported
+    * Supported by iidFinder solution
+  * Cons
+    * Consistancy
+    * Not easy to operate and maintain
+* Rational database, such as, PostgreSQL
+  * Pros
+    * Consistance
+    * In case of TDM solution, PostgreSQL is already introduced
+    * Compliance with services such as Cloud Spanner, AlloyDB
+    * Easy to maintain 
+  * Cons
+    * Single point of failure
+    * Not supported by iidFinder solution
+* Sqlite
+  * Pros
+    * Best option for debug and single node environments
+
+Fabric uses the Cassandra DB as a default system management database. 
+
+Note that new System DB type, such as Oracle, MySql, etc. can be easly introduced to the product within a small development effort based on the customers needs.
+
+Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, each one starts with the **k2** prefix.
+
+Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema. For example: **k2view_customer**.
 
 **Notes:**
 
--  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace name. For example: if the cluster_id is set to crm1, the keyspace k2view_customer_crm1 is created.
-- When a Fabric project is open in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
-- A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
+-  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace or schema name. For example: if the cluster_id is set to crm1, the keyspace or schema k2view_customer_crm1 is created.
+- When a Fabric project is open in the Fabric Studio, it concatenates the project name to the schema name.
+- A <strong>k2view_k2_ws</strong> keyspace or schema is created for deployed WS.
 
-Starting from V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [system_db] section of config.ini as explained below.
+
 
 When defining a System DB type other than Cassandra, a product job runs in order to scan the tables to be cleaned by using TTL concept. The definition of each table's TTL policy is tracked on k2_table_level_ttl table.
 
-It is important to note that currently the iidFinder solution doesn't support any System DB type other than Cassandra.
+### List of Fabric-Related System Keyspaces or Schemas 
 
-### Login to System DB
-
-Use the following command to connect to the System DB from the server:
-
-~~~CQL
-cqlsh -u <username> -p <password> <ip_address>;
-~~~
-
-Note that if the ```ip_address``` is not populated, the login command connects to the local host of the Fabric server.
-
-### List of Fabric-Related Operational Keyspaces 
-
-The following table lists the keyspaces created by Fabric:
+The following table lists the keyspaces or schemas created by Fabric:
 
 <table style="width: 900px;">
 <tbody>
 <tr style="height: 46px;">
 <td style="height: 46px; width: 300px;">
-<p><strong>Keyspace Name and Description</strong></p>
+<p><strong>Keyspace/Schema Name and Description</strong></p>
 </td>
 <td style="height: 46px; width: 600px;" colspan="2">
-<p><strong>Keyspace Tables</strong></p>
+<p><strong>Keyspace/Schema Tables</strong></p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="height: 538px;" rowspan="6" valign="top">
-<p><strong>k2system</strong> - Fabric main system keyspace.</p>
+<p><strong>k2system</strong> - Fabric main system keyspace/schema.</p>
 <p>&nbsp;</p>
 </td>
 <td style="height: 46px;" valign="top">
@@ -299,9 +317,8 @@ The following table lists the keyspaces created by Fabric:
 </table>
 
 
-[Click for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
 
-### How to Switch to SQLite or PostgreSQL
+[Click for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
 
 Starting from V7.2, the  [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
 
