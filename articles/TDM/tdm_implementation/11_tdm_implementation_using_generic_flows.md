@@ -19,7 +19,7 @@ The **generator_filterout** needs to be checked (true) if a [data generation flo
 
 These tables should be added to the **TDMFilterOutTargetTables** Actor as it would prevent the load/delete flows creation for the tables; these tables are already loaded/deleted by the child LUs. 
 
-Following the Actor's update completion, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU. 
+Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU. 
 
 ## Step 2 - Create Sequences
 
