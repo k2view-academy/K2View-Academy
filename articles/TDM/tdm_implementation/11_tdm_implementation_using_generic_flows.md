@@ -462,7 +462,7 @@ The Custom Logic flow must have the following structure:
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the counter of the number of entities, loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
-   - Checks whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
+   - Checks whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
    - Loads the available entities into the entity table in the TDM DB and updates the counter of the number of entities.
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM Library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
