@@ -220,7 +220,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   
 
-* **Load flows** - to mask a sensitive field as part of a load to the Target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
+* **Load flows** - to mask a sensitive field as part of a load to the target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
 
   ### TDM - Masking Categories
 
