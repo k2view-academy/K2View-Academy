@@ -184,7 +184,7 @@ Note:
 
 **D. Create the main DELETE flow**
 
-The main delete flow is created by the **createDeleteAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **DeleteAllTables.flow** Broadway flow. The purpose of this flow is to invoke all DELETE flows in the opposite order of the population order, considering the target DB's foreign keys. 
+The main delete flow is created by the **createDeleteAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope-like **DeleteAllTables.flow** Broadway flow. The purpose of this flow is to invoke all DELETE flows in the opposite order of the population order, considering the target DB's foreign keys. 
 
 ### Debug the Load Flows
 
