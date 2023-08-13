@@ -6,7 +6,7 @@ The TDM library has sets of generic flows that allow you to create a standard TD
 
 ## Step 1 - Define Tables to be Filtered Out
 
-Before starting to create Broadway flows, define the tables that are filtered out by the Broadway template, which generates the **delete** and **load** flows. The library includes settings for the following filtered auxiliary tables:
+Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway template, which generates the **delete** and **load** flows. The library includes settings for the following filtered auxiliary tables:
 
 ![image](images/11_tdm_impl_actor_1.PNG)
 
