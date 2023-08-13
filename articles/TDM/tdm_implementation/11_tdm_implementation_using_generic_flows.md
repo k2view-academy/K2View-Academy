@@ -360,7 +360,7 @@ You can build one or multiple Broadway flows to get a list of entities for a tas
 
 TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
-1. **Direct call** - a new mode has been added: a direct call. The batch process calls directly the Custom Logic flow to get the entity list without a pre-population of the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e. runs one Select query to get the required entities. 
+1. **Direct call** - a new added mode, where the batch process calls the Custom Logic flow directly, getting the entity list without pre-populating the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e., runs one Select query to get the required entities.
 
    The direct call mode has a better performances: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
 
