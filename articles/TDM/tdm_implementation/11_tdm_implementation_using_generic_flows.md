@@ -460,10 +460,10 @@ The Custom Logic flow must have the following structure:
   2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library):
 
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
-     - **Output** - **recordLoaded**. This is the counter of the number of entities, loaded into the entity table.
+     - **Output** - **recordLoaded**. This is the entities number counter, loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
    - Checking of whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
-   - Loading of the available entities into the entity table in the TDM DB and updating the counter of the number of entities.
+   - Loading of the available entities into the entity table in the TDM DB and updating the entities number counter.
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM Library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
 
@@ -482,7 +482,7 @@ Below are examples of a Custom Logic flow:
 
 **Example 2 - get an input String of States, separated by a comma. Split the input String into an array and send it to the SQL query**:
 
-Example of the input US states: 
+Example of US states input: 
 
 - NY,CA
 
