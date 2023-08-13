@@ -462,25 +462,25 @@ The Custom Logic flow must have the following structure:
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the counter of the number of entities, loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
-   - Checks whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task or a reserve task. If the entity is reserved for another user, skips it, as it is unavailable.
-   - Loads the available entities into the entity table in the TDM DB and updates the counter of the number of entities.
+   - Checking of whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
+   - Loading of the available entities into the entity table in the TDM DB and updating the counter of the number of entities.
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM Library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
-     The task needs to get 5 entities. The SELECT statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the entity table; then the entities' loop stops.
+     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the entity table; then the entities' loop stops.
 
 
 Below are examples of a Custom Logic flow:
 
-**Example 1 - get the Contract Status as an input parameter and build the SELECT statement accordingly:** 
+**Example 1 - get the Contract Status as an input parameter and build the Select statement accordingly:** 
 
 ![custom logic](images/custom_logic_example.png)
 
 
 
-**Example 2 - get an input String of States, separated by a comma. Split the input String into and array and send it to the SQL query**:
+**Example 2 - get an input String of States, separated by a comma. Split the input String into an array and send it to the SQL query**:
 
 Example of the input US states: 
 
@@ -490,7 +490,7 @@ Example of the input US states:
 
 
 
-**Example 3 - get an input SELECT statement with parameters for the SELECT statement:**
+**Example 3 - get an input Select statement with parameters for the Select statement:**
 
 ![custom logic](images/custom_logic_example_3.png)
 
