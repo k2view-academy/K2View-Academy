@@ -4,10 +4,12 @@
 
 ### Web Studio
 
-* *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands **Run Discovery Job** and **Open in Catalog** in the Web Studio. 
+* *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands in the Web Studio. 
 
-  * By default, *Show Catalog Commands* is enabled. 
   * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
+  * Once *Show Catalog Commands* is enabled, **Run Discovery Job** and **Open in Catalog** commands can be executed by right-clicking on the interface name.  
+
+  ​	<img src="images/show_catalog_commands.png" style="zoom:75%;" />
 
 * The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files. 
 
@@ -20,8 +22,8 @@
 
 ### Catalog Application Configuration
 
-The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines for example:
-* Which properties are editable (via [manual override](07_manual_overrides.md)) in the Properties tab;
+The ```properties-info.JSON``` is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines:
+* Which properties are editable and deletable (via [manual override](07_manual_overrides.md)) in the Properties tab;
 * Which properties are searchable via the [Advanced Search](08_search_catalog.md#advanced-search) screen.
 
 The file is located in ```fabric/staticWeb``` folder and can be updated on the project level.
