@@ -37,23 +37,24 @@ When the catalog application opens, the latest **catalog version** is displayed 
 
 **Data Platform and Schema's Context Menu**
 
-Clicking on any Data Platform or Schema node opens the context menu, which allows performing the following actions:
+Clicking once on any Data Platform or Schema node opens the context menu: 
 
 <img src="images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
+The context menu allows performing the following actions:
+
 * **Expand** <img src="images/expand.png" style="zoom:80%;" />or **Collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
-  
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on a selected node can either expand or collapse it.
-  
+
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
 * **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes from the screen.
-  
+
   * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
-  
+
   * In the Focus view, the breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, which allows navigating up the tree.
-  
+
 
 <img src="images/breadcrumbs.png" style="zoom: 67%;" />
 

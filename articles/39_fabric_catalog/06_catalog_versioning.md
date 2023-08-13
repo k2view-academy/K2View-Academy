@@ -28,9 +28,11 @@ To compare 2 versions, click the comparison <img src="images/compare.png" style=
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed one is in red.
 * All unchanged entities and relations are grey.
 
+When a Schema has too many Datasets, it might be hard to identify the differences. To view updated Datasets only, click the comparison icon in the Catalog's legend:
+
+<img src="images/view_diff_only.png" style="zoom:67%;" />
+
 To return to a regular view mode, open the version's drop-down list again and click a version number.
-
-
 
 
 
