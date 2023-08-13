@@ -354,7 +354,7 @@ Note that previous TDM versions populated the entities into a dedicated Cassandr
 
 ##  Step 7 - Optional - Build Broadway Flows for the [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Selection Method
 
-You can build one or multiple Broadway flows for get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process, building the entity list for the task. 
+You can build one or multiple Broadway flows to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process, building the entity list for the task. 
 
 ### Custom Logic - TDM 8.1 Improvements
 
