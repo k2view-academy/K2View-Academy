@@ -202,7 +202,7 @@ The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows
 * Manage the TDM process as **one** transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-TDM 8.1 added the **TDMOrchestrator.flow**  to the Shared Objects to save the need of generating this flow on each LU separately. 
+TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding the need of generating this flow on each LU separately. 
 
 ### TDMReserveOrchestrator Flow
 
