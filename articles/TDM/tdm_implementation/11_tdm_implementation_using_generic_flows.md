@@ -364,7 +364,7 @@ TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
    The direct call mode has a better performances: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
 
-2. **Indirect call** - the indirect call creates and populates a dedicated table in the TDM DB. The table is created per execution with the following naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a select from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
+2. **Indirect call** - the indirect call creates and populates a dedicated table in the TDM DB. The table is created per execution with the following naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a Select query from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
 
    Note that previous TDM versions populated the entities into a dedicated Cassandra table in **k2view_tdm** keyspace. From TDM 8.1 onwards, the entity table is created in the TDM DB.
 
