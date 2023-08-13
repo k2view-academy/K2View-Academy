@@ -12,7 +12,7 @@ Before starting to create Broadway flows, define the tables that are filtered ou
 
 This setting is implemented using the **TDMFilterOutTargetTables** Actor. To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
-* ALL_LUS - when a filtered table is relevant for all TDM LUs.
+* ALL_LUS - when a filtered-out table is relevant for all TDM LUs.
 * [LU name] - when a table belongs to a specific LU. In some cases you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer's orders.
 
 The **generator_filterout** needs to be checked (true) if a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table.  
