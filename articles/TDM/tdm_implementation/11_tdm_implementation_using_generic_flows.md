@@ -307,7 +307,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   
 * Notes:
 
-  *  From TDM 7.3 and onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone.
+  *  From TDM 7.3 onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone.
 
   * TDM 8.0 added the **root_iid** to the caching key, in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
 
