@@ -370,7 +370,7 @@ TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
 #### CustomLogicSql Flow
 
-A new generic Custom Logic flow has been added to the TDM library in TDM 8.1: **CustomLogicSql**. This flow gets from the user who creates the task the following parameters: 
+A new generic Custom Logic flow has been added to the TDM library in TDM 8.1: **CustomLogicSql**. This flow gets the following parameters from the user who creates the task:
 
 - **sql** - a select query.
 - **sqlParams** - optional parameter to set parameters for the Select query. 
