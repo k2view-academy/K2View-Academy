@@ -127,7 +127,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 A new Global has been added to the Shared Globals in TDM 8.1: **TDM_SEQ_REPORT**. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and generates the **Replace Sequence Summary Report** tab in the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report). 
 
-Set the  **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report** for a better performance. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT as **false**.
+Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report** for a better performance. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT as **false**.
 
 ## Step 3 - Create, Load and Delete Flows
 
@@ -145,9 +145,9 @@ Set the  **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_S
 - Notes: 
 
 
-  - If the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** Actor (imported from the TDM Library) and redeploy the LU to the debug server before running the **createFlowsFromTemplates** flow.
+  - If the target table name is not identical to the related LU table name, you must populate the mapping of the LU table name to the target table name in **TDMTargetTablesNames** Actor (imported from the TDM Library) and redeploy the LU to the Fabric debug server before running the **createFlowsFromTemplates** flow.
 
-  - From Fabric 7.1 onwards, physical folders are supported in the Studio. Therefore, the created flows are created under dedicated directories. If your LUs already have load and delete flows, you need to move your existing flows and locate them in the following folders, in order to enable overriding them:
+  - From Fabric 7.1 onwards, physical folders are supported in the Studio. Therefore, the flows are created under dedicated directories. If your LUs already have load and delete flows, you need to move your existing flows and locate them in the following folders, in order to enable overriding them:
 
   - - Load flows: LoadFlows
     - Delete flows: DeleteFlows
