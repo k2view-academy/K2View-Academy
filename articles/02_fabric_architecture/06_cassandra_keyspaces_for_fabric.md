@@ -250,7 +250,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 <tr style="height: 46px;">
 <td style="height: 260px; width: 313.812px;" rowspan="3" valign="top">
 <p><strong>K2view_&lt;LU Name&gt;</strong> - A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
-<p>Note that when deploying the LU to Fabric debug server, Fabric also concatenates the Fabric version and the project name to the keyspace of each LU. For example: k2view_test_cust_6_2_kb_fabric_project.</p>
+<p>Note that when deploying the LU to the Fabric debug server, Fabric also concatenates the Fabric version and the project name to the keyspace of each LU. For example: k2view_test_cust_6_2_kb_fabric_project.</p>
 </td>
 <td style="height: 46px; width: 208.925px;" valign="top">
 <p><strong>Table Name</strong></p>
@@ -272,7 +272,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 <p>entity_chunks</p>
 </td>
 <td style="height: 150px; width: 203.863px;" valign="top">
-<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb">MicroDB </a> of a Large LUI is divided into chunks and stored in entity_chunks.</p>
+<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb">MicroDB </a> of a Large LUI is divided into chunks and is stored in entity_chunks.</p>
 <p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">Click for more information about Fabric storage.</a></p>
 </td>
 </tr>
