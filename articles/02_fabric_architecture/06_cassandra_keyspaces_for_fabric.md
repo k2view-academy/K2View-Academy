@@ -34,7 +34,7 @@ Note that new System DB type, such as Oracle, MySql, etc. can be easly introduce
 
 Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
-Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema. For example: **k2view_customer**.
+Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema, such as **k2view_customer**.
 
 **Notes:**
 
