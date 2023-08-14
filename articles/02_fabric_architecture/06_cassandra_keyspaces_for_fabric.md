@@ -40,7 +40,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema, 
 
 -  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace or schema name. For example, if the cluster_id is set to crm1, the created keyspace or schema is k2view_customer_crm1.
 - When a Fabric project is open in the Fabric Studio, it concatenates the project name to the schema name.
-- A <strong>k2view_k2_ws</strong> keyspace or schema is created for deployed WS.
+- A <strong>k2view_k2_ws</strong> keyspace or schema is created for the deployed WS.
 
 
 
