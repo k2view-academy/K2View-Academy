@@ -324,7 +324,7 @@ Starting from V7.2, the [system_db] section has been added to the config.ini and
 
 When switching to a non-Cassandra System DB, the `SERVER_AUTHENTICATOR` config parameter's value shall also be changed from its default value 'cassandra' to 'fabric'. For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration).
 
-> Note: You can use 'fabric' as authenticator also when using Cassandra as the System DB. 
+> Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator (besides other authenticators such as LDAP and OCTA).
 
 
 
