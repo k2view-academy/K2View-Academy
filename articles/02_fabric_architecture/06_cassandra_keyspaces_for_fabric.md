@@ -28,7 +28,7 @@ Fabric supports several types of Databases as System Database storage:
   * Pros
     * Best option for debug and single-node environments
 
-Fabric uses the Cassandra DB as a default system management database. 
+Fabric uses the Cassandra DB as its default system management database. 
 
 Note that new System DB type, such as Oracle, MySql, etc. can be easly introduced to the product within a small development effort based on the customers needs.
 
