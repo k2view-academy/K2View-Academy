@@ -322,7 +322,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 
 Starting from V7.2, the [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When it is required to switch to either SQLite or PostgreSQL, the default settings of this section should be updated.
 
-When switching to a non-Cassandra System DB, the `SERVER_AUTHENTICATOR` config parameter's value shall be changed as well, to be 'fabric' (its default value is 'cassandra'). For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration).
+When switching to a non-Cassandra System DB, the `SERVER_AUTHENTICATOR` config parameter's value shall also be changed from its default value 'cassandra' to 'fabric'. For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration).
 
 > Note: You can use 'fabric' as authenticator also when using Cassandra as the System DB. 
 
