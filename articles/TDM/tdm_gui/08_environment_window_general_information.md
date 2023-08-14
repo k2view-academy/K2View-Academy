@@ -57,6 +57,10 @@ Always sync the entities from the source when running a TDM task with the enviro
 
 Click for more information on [how overriding the sync mode impacts the task execution](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) process.
 
+## Mask Sensitive Data
+
+TDM 8.1 added this checkbox. This checkbox is displayed on any environment that can be used as a source environment (the environment type is Source or Both) and indicates if the environment contains sensitive data that must be masked before it is saved into Fabric. This checkbox was added to the Task window as well and is populated based on the task's source environment. The user can add masking on the task (check a cleared checkbox) even if the task's source environment is not defined with sensitive data. However,  the user is not allowed to remove the masking if the task's source environment has sensitive data (the environment's Mask Sensitive Data is checked).
+
 ## Environment Owners
 
 - Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to/from an environment. An environment owner user or group can be added to several environments.
