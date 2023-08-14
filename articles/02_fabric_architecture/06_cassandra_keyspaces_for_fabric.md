@@ -30,7 +30,7 @@ Fabric supports several types of Databases as System Database storage:
 
 Fabric uses the Cassandra DB as its default system management database. 
 
-Note that new System DB type, such as Oracle, MySql, etc. can be easly introduced to the product, with a small development effort, based on the Customer's needs.
+Note that new System DB type, such as Oracle, MySql, etc. can be easily introduced to the product, with a small development effort, based on the Customer's needs.
 
 Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
@@ -113,7 +113,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </td>
 <td style="height: 64px; width: 203.863px;">
 <p>Holds information on Broadway flows with recovery points.</p>
-<p><a href="/articles/19_Broadway/29_recovery_point.md">Click for more information about Broadway Recovery.</a></p>
+<p><a href="/articles/19_Broadway/29_recovery_point.md">Click here for more information about Broadway Recovery.</a></p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -164,7 +164,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 <p>stripe_key_storage</p>
 </td>
 <td style="height: 208px; width: 203.863px;" valign="top">
-<p>Holds encrypted information about the master key. This table contains the key description, index, and value fields. The Master Key is broken into bytes, where each byte is stored in a separate record. Click for more information about Fabric Security Hardening.</p>
+<p>Holds encrypted information about the master key. This table contains the key description, index, and value fields. The Master Key is broken into bytes, where each byte is stored in a separate record. Click here for more information about Fabric Security Hardening.</p>
 </td>
 </tr>
 <tr style="height: 64px;">
