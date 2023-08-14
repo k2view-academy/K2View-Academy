@@ -4,7 +4,7 @@ Fabric System Database is used by Fabric internal processes to monitor, secure, 
 
 Fabric supports several types of Databases as System Database storage:
 
-* NoSQL distributed database, such as, Cassandra DB
+* NoSQL distributed database, such as Cassandra DB
   * Pros
     * Scalable
     * Distributed
