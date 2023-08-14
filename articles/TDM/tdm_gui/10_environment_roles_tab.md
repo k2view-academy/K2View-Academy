@@ -65,7 +65,7 @@ The **All** option is used to enable the permission set for all TDM users. To do
 
 Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. A pop-up window is displayed:
 
-![user setting](images/env_permission set_user_settings.png)
+![user setting](images/env_role_user_settings.png)
 
 Check the **All Users** checkbox.
 
@@ -138,9 +138,245 @@ Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to au
 
 Create [Data Versioning](15_data_flux_task.md) tasks.
 
-##### Max Number of Reserved Entities on Env
+#### Max Number of Reserved Entities on Env
 
-The maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md).
+The maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). From TDM 8.1 onwards, it is possible to add a **Reserve only permission** to the user, i.e. the number of entities in the Write or Read is zero, but the Max Number of Reserved Entities on Env is bigger then zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
+
+
+
+## Environment Permissions Summary Table
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td style="width: 103px;" width="100"><strong>Environment type</strong></td>
+<td style="width: 121px;" width="121"><strong>Write permission</strong></td>
+<td style="width: 163px;" width="169"><strong>Write - number of entities</strong></td>
+<td style="width: 138px;" width="139"><strong>Read permission</strong></td>
+<td style="width: 180px;" width="187"><strong>Read -&nbsp; number of entities</strong></td>
+<td style="width: 182px;" width="189"><strong>Number of reserved entities&nbsp;</strong></td>
+<td style="width: 249px;" width="250"><strong>Permitted activities</strong></td>
+</tr>
+<tr>
+<td style="width: 103px;">Target</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">N/A</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Target</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0&nbsp;</td>
+<td style="width: 138px;">N/A</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Target</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">0</td>
+<td style="width: 138px;">N/A</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">N</td>
+<td style="width: 163px;">N/A</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">0</td>
+<td style="width: 138px;">N</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">N</td>
+<td style="width: 163px;">N/A</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">N</td>
+<td style="width: 163px;">N/A</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+<li>Load</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">&gt; 0</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Extract</li>
+<li>Load</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">N</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">N</td>
+<td style="width: 180px;">N/A</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">0</td>
+<td style="width: 182px;">&gt; 0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+<li>Reserve</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 103px;">Both</td>
+<td style="width: 121px;">Y</td>
+<td style="width: 163px;">&gt; 0</td>
+<td style="width: 138px;">Y</td>
+<td style="width: 180px;">0</td>
+<td style="width: 182px;">0</td>
+<td style="width: 249px;">
+<ul>
+<li>Load</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+
 
 
 
