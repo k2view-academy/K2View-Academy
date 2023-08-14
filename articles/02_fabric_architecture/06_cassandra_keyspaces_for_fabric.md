@@ -13,12 +13,12 @@ Fabric supports several types of Databases as System Database storage:
     * Managed services (such as AWS Keyspaces or Astra) are supported
     * Supported by iidFinder solution
   * Cons
-    * Consistancy
+    * Consistency
     * Not easy to operate and maintain
 * Rational database, such as PostgreSQL
   * Pros
-    * Consistance
-    * In case of TDM solution, PostgreSQL is already introduced
+    * Consistency
+    * In case of the TDM solution, PostgreSQL is already introduced
     * Compliance with services such as Cloud Spanner, AlloyDB
     * Easy to maintain 
   * Cons
