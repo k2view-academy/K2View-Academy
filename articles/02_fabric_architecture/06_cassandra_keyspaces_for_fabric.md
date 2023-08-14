@@ -44,7 +44,7 @@ Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema, 
 
 
 
-When defining a System DB type - other than Cassandra - a product job runs in order to scan the tables to be cleaned by using TTL concept. The definition of each table's TTL policy is tracked on k2_table_level_ttl table.
+When Fabric is configured to run a System DB type - other than Cassandra - an internal product job runs, scans the tables to be cleaned and cleans them, using TTL concept. The definition of each table's TTL value is tracked in the k2_table_level_ttl table.
 
 ### List of Fabric-Related System Keyspaces or Schemas 
 
