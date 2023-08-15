@@ -240,7 +240,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 <tr style="height: 164px;">
 <td style="height: 164px; width: 313.812px;" valign="top">
-<p><strong>k2staging</strong> - Staging tables for IIDFinder mechanism:&nbsp;</p>
+<p><strong>k2staging</strong> - Staging tables for the IIDFinder mechanism:&nbsp;</p>
 <p><span data-contrast="auto">A different set of caching, delta, solo and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
 <p>&nbsp;</p>
 </td>
