@@ -272,14 +272,14 @@ The following table lists the keyspaces or schemas created by Fabric:
 </td>
 <td style="height: 150px; width: 203.863px;" valign="top">
 <p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb">MicroDB </a> of a Large LUI is divided into chunks and is stored in entity_chunks.</p>
-<p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">Click for more information about Fabric storage.</a></p>
+<p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">Click here for more information about Fabric storage.</a></p>
 </td>
 </tr>
 <tr style="height: 46px;">
 <td style="height: 184px; width: 313.812px;" rowspan="4" valign="top">
 <p><strong>k2masking</strong> - Tables that support Broadway masking mechanism.</p>
 <p>The <strong>k2masking</strong> keyspace can be created using the installation SQL script provided as part of the Masking library.</p>
-<p><a href="/articles/19_Broadway/actors/07_masking_and_sequence_actors.md">Click for more information about Broadway Masking.</a></p>
+<p><a href="/articles/19_Broadway/actors/07_masking_and_sequence_actors.md">Click here for more information about Broadway Masking.</a></p>
 </td>
 <td style="height: 46px; width: 208.925px;" valign="top">
 <p><strong>Table Name</strong></p>
@@ -317,7 +317,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 
 
 
-[Click for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
+[Click here for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
 
 Starting from V7.2, the [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When a switch to either SQLite or PostgreSQL is required, the default settings of this section should be updated.
 
