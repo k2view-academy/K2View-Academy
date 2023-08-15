@@ -59,7 +59,7 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 ## Mask Sensitive Data
 
-TDM 8.1 added this checkbox. This checkbox is displayed on any environment that can be used as a source environment (the environment type is Source or Both) and that indicates whether the environment contains sensitive data that must be masked before it is saved into Fabric. This checkbox has been added to the Task window as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined with sensitive data. However,  the user is not allowed to remove the masking if the task's source environment has sensitive data (the environment's Mask Sensitive Data is checked).
+TDM 8.1 added this checkbox. This checkbox is displayed on any environment that can be used as a source environment (the environment type is Source or Both) and that indicates whether the environment contains sensitive data that must be masked before it is saved into Fabric. This checkbox has been added to the Task window as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined with sensitive data. However,  the user is not allowed to remove the masking if the task's source environment has sensitive data (the environment's *Mask Sensitive Data* checkbox is checked).
 
 ## Environment Owners
 
