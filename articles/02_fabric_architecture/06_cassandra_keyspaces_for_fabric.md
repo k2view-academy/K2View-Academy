@@ -30,7 +30,7 @@ Fabric supports several types of Databases as System Database storage:
 
 Fabric uses the Cassandra DB as its default system management database. 
 
-Note that new System DB type, such as Oracle, MySql, etc. can be easily introduced to the product, with a small development effort, based on the Customer's needs.
+Note that a new System DB type, such as Oracle, MySql, etc. can be easily introduced to the product, with a small development effort, based on the Customer's needs.
 
 Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
