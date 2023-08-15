@@ -8,7 +8,7 @@ The **Business Entities** window displays a list of all BEs defined in the TDM. 
 
 -   To create a new BE, click the **New Business Entity** icon. 
 -   To open a selected BE, click the **Name** value of the BE.
--   To delete a BE, click the<img src="images/delete_icon.png" alt="be_Example" style="zoom:80%;" /> icon in the right corner of the Business Entity window.
+-   To delete a BE, click the<img src="images/delete_icon.png" alt="be_Example" style="zoom:80%;" /> icon, located at the upper-right corner of the Business Entity window.
 
 ## Business Entity Window    
 
