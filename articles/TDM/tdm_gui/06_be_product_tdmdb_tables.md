@@ -6,10 +6,10 @@ Business Entity (BE) and System definitions **update the following TDM DB tables
 
 ### Business_Entities
 
-This tables holds all [BEs](04_tdm_gui_business_entity_window.md) defined in the TDM Portal. 
+This table holds all [BEs](04_tdm_gui_business_entity_window.md) defined in the TDM Portal. 
 
 -  A new record is created for each BE. 
--  Each BE is created in **Active** status and gets a unique **be_id** sequence which is the table's PK.
+-  Each BE is created in **Active** status and gets a unique **be_id** sequence, which is the table's PK.
 
 - Deleted BEs have an **Inactive** status and are not physically deleted from this table.
 
