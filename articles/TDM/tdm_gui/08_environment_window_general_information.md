@@ -4,7 +4,7 @@ The General Information section in the Environment Window holds the following in
 
 ## Environment Name
 
-Mandatory settings.
+Mandatory setting.
 
 Populate the following settings:
 
@@ -14,8 +14,8 @@ Populate the following settings:
 
 Optional settings:
 
-- Description.
-- Contact person settings.
+- Description
+- Contact person setting
 
 ## Environment Type
 
