@@ -45,7 +45,7 @@ To use a BE in a TDM task, it must have one or more LUs assigned.
      - Click <img src="images/plus_icon.png" alt="be_plus" style="zoom:80%;" /> or <img src="images/delete_icon.png" alt="be_delete" style="zoom:80%;" /> to add or remove LUs to / from the BE. 
      - Populate the following optional settings for each selected LU:
        - **Logical Unit Description**.
-       - **Parent Logical Unit**, set a parent LU to build a [hierarchy in the BE](/articles/TDM/tdm_overview/03_business_entity_overview.md). 
+       - **Parent Logical Unit** - set a parent LU to build a [hierarchy in the BE](/articles/TDM/tdm_overview/03_business_entity_overview.md). 
 3. Click **Add Logical Units** to add the selected LUs to the BE.
 
 Notes:
