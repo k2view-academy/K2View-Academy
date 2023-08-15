@@ -26,7 +26,7 @@ The following is an example of a Customer Business Entity window:
 
 ### General Information Section 
 
-The General Information section consists of the BE **Name** and **Description**. The Name setting is mandatory. Note that only one active BE can have a specific Name. An error is displayed when an attempt is made to create several BEs with the same name.
+The General Information section consists of the BE **Name** and **Description**. The Name setting is mandatory. Note that each active BE should have a specified Name. An error is displayed when an attempt is made to create several BEs with the same name.
 
 ### Logical Units Tab 
 
