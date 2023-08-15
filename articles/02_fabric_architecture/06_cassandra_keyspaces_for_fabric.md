@@ -11,7 +11,7 @@ Fabric supports several types of Databases as System Database storage:
     * Built-in TTL mechanism on row level
     * If Cassandra is used as a MicroDB storage, there is no need to introduce additional DBs
     * Managed services (such as AWS Keyspaces or Astra) are supported
-    * Supported by iidFinder solution
+    * Supported by the iidFinder solution
   * Cons
     * Consistency
     * Not easy to operate and maintain
@@ -23,7 +23,7 @@ Fabric supports several types of Databases as System Database storage:
     * Easy to maintain 
   * Cons
     * Single point of failure
-    * Not supported by iidFinder solution
+    * Not supported by the iidFinder solution
 * Sqlite
   * Pros
     * Best option for debug and single-node environments
