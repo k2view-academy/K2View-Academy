@@ -56,7 +56,7 @@ Notes:
 
 #### Editing LU Settings
 
-Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to edit or delete the LU from the BE. Note that the LU is deleted from the BE in the TDB DB. 
+Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to edit or delete the LU from the BE. Note that the LU is deleted from the BE in the TDM DB. 
 
 Click for more information about [TDM DB tables that hold the BE and LU relationship](06_be_product_tdmdb_tables.md).
 
