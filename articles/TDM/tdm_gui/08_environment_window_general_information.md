@@ -59,13 +59,13 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 ## Mask Sensitive Data
 
-TDM 8.1 added this checkbox. This checkbox is displayed on any environment that can be used as a source environment (the environment type is Source or Both) and that indicates whether the environment contains sensitive data that must be masked before it is saved into Fabric. This checkbox has been added to the Task window as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined with sensitive data. However,  the user is not allowed to remove the masking if the task's source environment has sensitive data (the environment's *Mask Sensitive Data* checkbox is checked).
+TDM 8.1 added this checkbox. This checkbox is displayed on any environment that can be used as a source environment (the environment type is Source or Both) and that indicates whether the environment contains sensitive data that must be masked before it is saved into Fabric. This checkbox has been added to the Task window as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined with sensitive data. However, the user is not allowed to remove the masking if the task's source environment has sensitive data (the environment's *Mask Sensitive Data* checkbox is checked).
 
 ## Environment Owners
 
 - Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to/from an environment. An environment owner user or group can be added to several environments.
 - Adding a user group to the environment enables the users that belong to the group to be the owners of the environment.
-- An environment owner user or group can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and attached to ENV2 as a tester.
+- An environment owner user or group can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and is attached to ENV2 as a tester.
 - The environment owner can edit an environment except for adding or removing environment owner users. Only Admin users can add or remove environment owners.
 - The environment owner can create and execute TDM tasks on their environment without limitations, unlike tester users who can define a task on an environment based on their permissions.
 
