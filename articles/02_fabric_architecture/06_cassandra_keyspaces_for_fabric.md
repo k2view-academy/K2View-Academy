@@ -26,11 +26,9 @@ Fabric supports several types of Databases as System Database storage:
     * Not supported by the iidFinder solution
 * Sqlite
   * Pros
-    * Best option for debug and single-node environments
+    * Development and single-node environments
 
 Fabric uses the Cassandra DB as its default system management database. 
-
-Note that a new System DB type, such as Oracle, MySql, etc. can be easily introduced to the product, with a small development effort, based on the Customer's needs.
 
 Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
