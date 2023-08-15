@@ -162,7 +162,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 <p>stripe_key_storage</p>
 </td>
 <td style="height: 208px; width: 203.863px;" valign="top">
-<p>Holds encrypted information about the master key. This table contains the key description, index, and value fields. The Master Key is broken into bytes, where each byte is stored in a separate record. Click here for more information about Fabric Security Hardening.</p>
+<p>Holds encrypted information about the master key. This table contains the key description, index, and value fields. The Master Key is broken into bytes, where each byte is stored in a separate record. Click here for more information about Fabric Security.</p>
 </td>
 </tr>
 <tr style="height: 64px;">
