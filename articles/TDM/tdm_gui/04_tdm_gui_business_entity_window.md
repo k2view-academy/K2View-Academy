@@ -14,7 +14,7 @@ The **Business Entities** window displays a list of all BEs defined in the TDM. 
 
 The Business Entity window displays information about a selected BE. It has 3 main sections:
 
-- General Information, holding the BE Name and Description fields.
+- General Information, which includes the BE Name and Description fields.
 - Logical Units tab.
 - Post Execution Processes tab.
 
