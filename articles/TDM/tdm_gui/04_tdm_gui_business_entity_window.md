@@ -66,7 +66,7 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 This tab enables adding post-execution processes that must run at the end of the task's execution, after all the related LUs have been executed. For example, sending an email to the tester to notify that the execution of a task has ended. 
 
-Post-execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a post-execution process and a BE is many to many. That is, a BE can have several post-execution processes, and a post-execution process can be attached to multiple BEs. 
+Post-execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a post-execution process and a BE is many-to-many. That is, a BE can have several post-execution processes, and a post-execution process can be attached to multiple BEs. 
 
 The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each post-execution process attached to the task's BE. The execution order is set according to the execution order defined in the BE.
 
