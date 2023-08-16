@@ -63,7 +63,7 @@ Note that although an environment's permission set without testers is not usable
 
 The **All** option is used to enable the permission set for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. A pop-up window is displayed:
+Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. The following pop-up window displays:
 
 ![user setting](images/env_role_user_settings.png)
 
