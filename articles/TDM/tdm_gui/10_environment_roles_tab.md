@@ -94,7 +94,7 @@ Check the **All Users** checkbox.
 
 - A tester can be attached to only one TDM Environment permission set per environment and cannot be attached to different TDM Environment permission sets in the same environment.
 
-- An owner user or group can be attached either to the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as either an owner or a tester.
+- An owner user or group can be attached to either the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as either an owner or a tester.
 
   
 
