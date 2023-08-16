@@ -36,10 +36,10 @@ When an Environment Type is Both, it can have both read and write access to both
 
   **Example:**
 
-  - ENV1 can be a source or target environment. The environment has two permission sets: 
-    - Set1, enables Read only access. Testers with this permission set can only select this environment as a source environment in a TDM task.
-    - Set2, enables Write only access. Testers with this permission set can only select this environment as a target environment in a TDM task.
-    - Set3, enables both Read and Write access. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
+  - ENV1 can be a source or target environment. The environment has 2 permission sets: 
+    - Set1, enables Read-only access. Testers with this permission set can select this environment only as a source environment in a TDM task.
+    - Set2, enables Write-only access. Testers with this permission set can select this environment only as a target environment in a TDM task.
+    - Set3, enables both Read access and Write access. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
 
 - The **Number of Entities** indicates the maximum number of entities processed by a task and must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type. 
 
