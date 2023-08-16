@@ -57,7 +57,7 @@ When an Environment Type is Both, it can have both read and write access to both
 
 - A TDM Environment's permission set can be attached to selected testers, selected user group (Fabric roles), or to all TDM users.
 
-Note that although an environment's permission set without testers is not usable, the **Testers** setting is optional and enables creating permission sets and then adding them to testers at a later stage.
+Note that although an environment's permission set without testers is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
 
 #### Adding all TDM Users to the TDM Environment Permission Set
 
