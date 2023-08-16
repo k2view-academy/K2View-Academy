@@ -24,7 +24,7 @@ The name of the TDM Environment permission set (mandatory). Note that a specific
 
 ### **Description**
 
-A description of the TDM Environment permission set. (Optional). 
+A description of the TDM Environment permission set (optional).
 
 ### Read and Write and Number of Entities
 
