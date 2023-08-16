@@ -36,7 +36,7 @@ The target DBs are empty and the source DBs are populated with customers.
 
 ### Creating the Demo DBs in the Local PostgreSQL DB
 
-2 Options:
+There are two options:
 
 I.
 
