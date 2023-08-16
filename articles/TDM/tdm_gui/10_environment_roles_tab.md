@@ -72,9 +72,9 @@ Check the **All Users** checkbox.
 #### Adding Selected TDM Users to the TDM Environment Permission Set
 
 1. Click **Testers** and select one of the displayed user IDs.
-2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select or type manually the user id. 
+2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a user ID or manually type it. 
 3. Click the ADD button.
-4. Click **Testers** again and select another user, or type a user name manually, if needed.
+4. Click **Testers** again and select another user, or manually type a user name, if needed.
 
 
 
