@@ -100,7 +100,7 @@ Open the TDM demo project:
    - If you use a **docker** for the PG and Cassandra DBs, populate the **Server** setting with the **docker's internal IP address** (run **hostname -I** command in the docker to get the internal IP address), or **host.docker.internal**.
    - Note: If you run processes on the **local fabric debug** server and **docker DBs**, you need to populate the **Server** with **localhost**.
 6. Deploy the Environments to Fabric.
-7. Deploy the LUs and Web Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs since the main Target LU table sets the target ("TAR") environment to be the active environment.
+7. Deploy the LUs and Web Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs since the main Target LU table sets the target ('TAR') environment to be the active environment.
 
 ##  TDM GUI Definitions
 
