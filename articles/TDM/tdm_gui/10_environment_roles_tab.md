@@ -12,7 +12,7 @@ An environment's permission sets are displayed in the **Permission Sets tab** in
 
 ## Permission Set Window 
 
-The Permission Set window defines the TDM Environment permissions and the list of testers assigned to it as displayed in the following example:
+The Permission Set window defines the TDM Environment permissions, and the list of testers assigned to it is displayed in the following example:
 
 ![permission set window](images/env_role_window.png)
 
