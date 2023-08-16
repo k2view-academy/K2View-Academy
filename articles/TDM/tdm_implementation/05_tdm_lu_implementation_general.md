@@ -24,7 +24,7 @@ Each LU in a TDM project has the following structure:
 
 Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right click -> Duplicate Logical Unit). Now you have a template of the new LU with the TDM tables, including FABRIC_TDM_ROOT table as a root LU table.
 
-Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**. In this case, the LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**.
 
 
 ### Step 2 - Add the Source LU Tables to the LU Schema
@@ -73,7 +73,7 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
    
-7. Edit **trnLuParams** and **LU_PARAMS** in order to enable a subset of entities from selected parameters for this LU. 
+7. Edit **LuParams** MTable in order to enable a subset of entities from selected parameters for this LU. 
 
    Click for more information about [Handling TDM Parameters](07_tdm_implementation_parameters_handling.md).
 
