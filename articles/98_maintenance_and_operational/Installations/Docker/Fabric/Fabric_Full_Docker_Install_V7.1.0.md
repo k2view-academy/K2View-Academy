@@ -42,20 +42,22 @@ More detailed requirements for each are described below:
 
 #### Load Container Images
 
-1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
+1. Download the latest versions of Fabric, Cassandra and Docker Compose using 1 the below 4 links:
+     > Kafka is no longer required for a single node setup, if needed, please download the relevant container and uncommnet the Kafka section in the docker-compose.yml file
 
   <table style="border-collapse: collapse; width: 100%;">
 
    <tbody>
-   <tr>
-   <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz 
-   <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
-   </tr>
+   
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    <br>md5: 5d038a563723838d891ea6d09935e9dd</br></td>
+   </tr>
+   <tr>
+   <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz 
+   <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
@@ -69,20 +71,20 @@ More detailed requirements for each are described below:
    </tr>
    </tbody>
    </table>
-2. Copy all files to the k2view directory as follows:
+2. Copy all files to the k2view directory as follows: (skip Kafka if not needed)
 
    ```bash
    cd ~/ 
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz 
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/D_k2view_fabric_7.1.0_235.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/compose_fabric_7.1.0_235.tar.gz
    ```
-3. Load the Docker images as follows:
+3. Load the Docker images as follows: (skip Kafka if not needed)
 
    ```bash
-    docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_3.tar.gz
+    docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_fabric_7.1.0_235.tar.gz 
    ```
 
