@@ -82,7 +82,7 @@ Check the **All Users** checkbox.
 
 1. Click the ![plus icon](images/plus_icon_prod_version.png) icon and to open the **User Settings** pop-up window. Select a user group from the list.
 2. Click the ADD button.
-3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** and select another user group if needed.
+3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** and select another user group, if needed.
 
 #### TDM Environment Permission Set Assignments Priorities
 
