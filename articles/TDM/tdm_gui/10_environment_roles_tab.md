@@ -126,7 +126,7 @@ Ask to sync the entities from the source when executing [extract](16_extract_tas
 
 Create TDM tasks to extract or load [Reference tables](24_task_reference_tab.md).
 
-#####  Task scheduling 
+#####  Task Scheduling 
 
 Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to automatically execute it based on the scheduling parameters.
 
