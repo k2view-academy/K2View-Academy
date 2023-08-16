@@ -8,7 +8,7 @@ An environment's permission sets are displayed in the **Permission Sets tab** in
 
 - To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
-- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon located at the upper-right corner of the window.
+- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located at the upper-right corner of the window.
 
 ## Permission Set Window 
 
@@ -20,7 +20,7 @@ The Permission Set window has the following settings:
 
 ### Name
 
-The name of the TDM Environment permission set (mandatory). Note that a specific name can be assigned to only one active permission set. An error is displayed when an attempt is made to create several permission sets with the same name. 
+The name of the TDM Environment permission set (mandatory). Note that a specified name can be assigned to only one active permission set. An error is displayed when an attempt is made to create several permission sets with the same name. 
 
 ### **Description**
 
