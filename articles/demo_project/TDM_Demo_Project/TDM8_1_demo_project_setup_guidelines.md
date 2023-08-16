@@ -47,7 +47,7 @@ I.
    **Windows PostgreSQL Installation**
 
    - Go to the script's directory and open a **powershell** window. 
-   - Then run the following command to run the script and create the CRM, Billing, Orders, and Collection DB users and schemas on the PostgreSQL DB:
+   - Then run the following command to run the script and create the CRM, Billing, Orders and Collection DB users and schemas on the PostgreSQL DB:
 
      & "[PostgreSQL DB exe file full path]" -Upostgres --host [PG ip address] --port [DB port] -f "create_resources.sql"
 
