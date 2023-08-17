@@ -5,7 +5,7 @@ This article describes the task execution's steps and the TDM processes of each 
 The Task Execution process consists of the following steps:
 
 1. Creating a task execution request.
-2. Initiating a Batch process on each task's LU and implementing post execution processes in an asynchronous mode.
+2. Initiating a Batch process on each task's LU and implementing post-execution processes in an asynchronous mode.
 3. Updating the status of the completed processes.
 
 A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM Portal, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
@@ -28,7 +28,7 @@ The task execution order of the related task's components is as follows:
 
 1. Run the LUs (from parent to child). Process all related entities on each LU before moving to its child LU. Click for more information about the [execution order of the hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
-2. Run the post-execution processes after the execution of the LUs ends. Post execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
+2. Run the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
 
 The following diagram describes the main TDM Task Execution process:
 
