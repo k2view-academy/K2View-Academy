@@ -10,7 +10,7 @@ The Task Execution process consists of the following steps:
 
 A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM Portal, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
 
-A task can include Entities and/or Reference tables, both of which can have post-execution processes. For example, sending a mail to a user after a task has been executed. 
+A task can include Entities and/or Reference tables, both of which can have post-execution processes. For example, sending an email to a user after a task has been executed.
 
 The following diagram displays the task execution process:
 
