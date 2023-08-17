@@ -106,7 +106,7 @@ This command displays the currently deployed project's name.
 [Click for more information about Fabric Basic Commands](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands). 
 
 ### How Are Deployed Objects Reflected in the Fabric Server?
-You can check what objects are deployed in the Fabric server by using the Fabric **LIST** command.
+You can check which objects are deployed in the Fabric server by using the Fabric **LIST** command.
 - **list LU_TYPES/LUT** - provides a list of LU Types deployed to the Fabric server and can display an LU's [storage type](/articles/32_LU_storage/01_LU_storage_overview.md). This command can be invoked for either all deployed LU Types or a specific one.
 - **list WS** - provides a list of all Web Service methods deployed to the Fabric server. 
 - **list ENVIRONMENTS/ENVS** - provides a list of environments deployed to the Fabric server.
