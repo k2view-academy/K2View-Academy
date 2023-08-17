@@ -22,7 +22,7 @@ The following diagram displays the task execution process:
 
 This job runs every 10 seconds and scans the [task_execution_list](02_tdm_database.md#task_execution_list) in the TDM DB table to get pending task execution requests.
 
-Each task execution gets a unique **task_execution_id** identifier. A task execution may include several LUs and post execution processes, each with a separate record in the task_execution_list. All records related to a given task execution have the same **task_execution_id**. 
+Each task execution gets a unique **task_execution_id** identifier. A task execution may include several LUs and post-execution processes, each with a separate record in the task_execution_list. All records related to a given task execution have the same **task_execution_id**. 
 
 The task execution order of the related task's components is as follows:
 
