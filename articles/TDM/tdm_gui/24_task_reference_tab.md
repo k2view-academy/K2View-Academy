@@ -2,7 +2,7 @@
 
 The Reference tab is opened when checking the **Reference** Data Type setting in the **Additional Execution Parameters** tab.
 
-Extract tasks extract **Reference tables** from a source environment and store them in Fabric. Load tasks sync the Reference tables into Fabric if needed and load them to the target environment.
+Extract tasks extract **Reference tables** from a source environment and store them in Fabric. Load tasks sync the Reference tables into Fabric if needed, and load them to the target environment.
 
 Click for more information about [Reference tables implementation](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md).
 
