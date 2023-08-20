@@ -1,6 +1,6 @@
 # Project Versioning
 
-The implementation of a Fabric project is an ongoing process that evolves in response to changing business needs. It is essential to manage the project implementation code in a source control system, such as GIT. Additionally, Fabric provides a valuable feature of project version tagging, enabling visibility of the deployed version tag on the server. This capability grants you a greater control over your project's versions and allows you to easily identify the currently deployed version on a Fabric server.
+The implementation of a Fabric project is an ongoing process that evolves in response to changing business needs. It is essential to manage the project implementation code in a source control system, such as GIT. Additionally, Fabric provides a valuable feature of project version tagging, enabling visibility of the deployed version tag on the server. This capability grants a greater control over your project's versions and allows for an easy identification of the currently deployed version on a Fabric server.
 
 
 
