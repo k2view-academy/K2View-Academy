@@ -84,7 +84,7 @@ Note that the post-execution processes must be populated in [PostProcessList](/a
 3. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several post-execution processes that are executed simultaneously.
 4. Populate the **Description** field (optional).
 5. Click **ADD POST EXECUTION PROCESS** to add the post-execution process to the BE.
-6. Repeat steps 1-5 to attach additional post-execution processes, if needed.
+6. Repeat steps 1-5 to add additional post-execution processes, if needed.
 
   
 
