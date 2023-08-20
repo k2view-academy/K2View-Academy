@@ -44,7 +44,7 @@ Both jobs must be executed in parallel.
 2. Three records are created in the task_execution_list on this task; all have the same task_execution_id.
 3. The **tdmExecuteTask** job executes the Batch process on the **Customer LU**. 
 4. The **checkMigrateAndUpdateTDMDB** job updates the status of **Customer LU** when the execution is completed.
-5. The **tdmExecuteTask** job starts executing **Billing LU** since **Customer**, its parent LU, is marked as completed.
+5. The **tdmExecuteTask** job starts executing **Billing LU** after the **Customer LU** (Billing's parent LU) is marked as completed.
 6. The **checkMigrateAndUpdateTDMDB** job updates the status of **Billing LU** when the execution is completed.
 7. The **tdmExecuteTask** job can start executing the **post-execution process** after the execution of all the task's LUs.
 
