@@ -58,7 +58,7 @@ The following is the recommended workflow:
 
    - From the top Fabric menu item choose 'Version Tag'.
 
-   - A pop-up appears with information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous version, but can be changed, as described below.
+   - A pop-up window appears with information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous version, but can be changed, as described below.
 
       ![version tag popup](images/04_04_web_version_versiontag.png)
    
