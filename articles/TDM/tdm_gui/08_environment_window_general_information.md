@@ -90,7 +90,7 @@ Click for more information about the [Owner TDM Permission Group](02_tdm_gui_use
 
 #### Deleting Environment Owners
 
-Click the X on an environment owner/s username to remove that username from the environment:
+Click the X on an environment owner username(s) to remove it from the environment.
 
 Note: Always click **Save Changes** after editing the General Information section in the Environment window.
 
