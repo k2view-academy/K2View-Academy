@@ -108,7 +108,7 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### **Delete Entity from Target** 
 
-[Delete an entity](19_load_task_request_parameters_regular_mode.md#operation-mode) from the target's testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.
+Enables the user to check the [Delete](14_task_overview.md#task-actions-types) task actions on the task. This permission applies only when the permission set has **Write** access.
 
 ##### Entity Clone 
 
