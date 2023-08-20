@@ -16,7 +16,7 @@ The project versioning solution is built from 3 steps along the project lifecycl
 
 ## Tag a Version
 
-Studio helps you to tag a version appropriately by:
+Studio helps you to appropriately tag a version by:
 
 1. Proposing you the next version, according to the current version and based on semantic versioning format.
 2. Alerting you when there are any local changes that haven't yet been pushed to GIT.
