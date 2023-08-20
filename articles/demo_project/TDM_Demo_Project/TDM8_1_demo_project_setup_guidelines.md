@@ -121,7 +121,7 @@ I.
 2. Create the following Systems (products):  
 
    - **CRM**. Attach the Customer LU to this system. You can populate the version by any String.
-   - **BILLING**. Attach the Billing LU to this system. Note that the PAYMENT table of **TAR_BILLING_DB** has an additional column: PAYMENT_METHOD. The load flow of the PAYMENT table supports 2 system versions - PROD and DEV - and populates a default value in PAYMENT_METHOD when the system version is 'DEV'. Add 2 versions to the BILLING system - PROD and DEV - to test this implementation.
+   - **BILLING**. Attach the Billing LU to this system. Note that the PAYMENT table of **TAR_BILLING_DB** has an additional column: PAYMENT_METHOD. The load flow of the PAYMENT table supports 2 system versions - PROD and DEV - and populates a default value in PAYMENT_METHOD when the system version is 'DEV'. Add the 2 system versions to the BILLING system - PROD and DEV - to test this implementation.
    - **ORDERS**. Attach the Orders LU to this system. You can populate the version by any String.
    - **COLLECTION**. Attach the Collection LU to this system. You can populate the version by any String.
 
