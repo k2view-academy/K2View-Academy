@@ -108,7 +108,7 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### **Delete Entity from Target** 
 
-Enables the user to check the [Delete](14_task_overview.md#task-actions-types) task actions on the task. This permission applies only when the permission set has **Write** access.
+Enables the user to check the Delete [task action](14_task_overview.md#task-actions-types) on the task. This permission applies only when the permission set has **Write** access.
 
 ##### Entity Clone 
 
