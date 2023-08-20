@@ -94,7 +94,7 @@ Open the TDM demo project:
 1. Open the Fabric Studio and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
 3. The TDM Demo project's interfaces may need some modification; edit them if required (you might be working locally or remotely, for example). Note that the **Server** setting must be populated by **localhost** when using local DBs or dockers for the DBs.
-4. Open shared Globals and check the SEQ_CACHE_INTERFACE Global. Check the interface in the Global, and check if the **k2masking** keyspace exits. If it does not exist, it can be created by the TDM LU deployment (deploy.flow). 
+4. Open the shared Globals and check the SEQ_CACHE_INTERFACE Global. Check the interface in the Global, and check if the **k2masking** keyspace exits. If it does not exist, it can be created by the TDM LU deployment (deploy.flow). 
 5. Edit the SRC and TAR environments: 
    - If you use a Fabric docker and a **local PG DBs**, populate the **Server** setting of the PG interfaces with **host.docker.internal**.
    - If you use a **docker** for the PG and Cassandra DBs, populate the **Server** setting with the **docker's internal IP address** (run **hostname -I** command in the docker to get the internal IP address), or **host.docker.internal**.
