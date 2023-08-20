@@ -102,7 +102,7 @@ Open the TDM demo project:
 6. Deploy the Environments to Fabric.
 7. Deploy the LUs and Web Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs since the main Target LU table sets the target ('TAR') environment to be the active environment.
 
-##  TDM GUI Definitions
+##  TDM Portal Definitions
 
 There are two options:
 
