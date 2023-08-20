@@ -54,7 +54,7 @@ Both jobs must be executed in parallel.
 
 This job runs every 10 seconds and checks the execution status of the running process. It selects records from the **task_execution_list** in the TDM DB table where the execution_status is **running**.
 
-The execution status is checked as follows:
+The execution status is being checked as follows:
 
 1. Checks the execution status or all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
 2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
