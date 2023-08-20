@@ -32,7 +32,7 @@ A description of the TDM Environment permission set (optional).
 
 - Write access can be granted on a target environment, i.e., the environment type is **Target** or **Both**.
 
-When an Environment Type is Both, it can have both read and write access to both the source and target. The TDM Environment permission sets in these environments can have both read and write access or read or write only access.
+When an Environment Type is Both, it can have both accesses: read and write. Therefore, the TDM Environment permission sets in these environments can have one or both accesses.
 
   **Example:**
 
