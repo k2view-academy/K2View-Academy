@@ -59,7 +59,7 @@ The execution status is being checked as follows:
 1. Checks the execution status or all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
 2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
-When the process is completed, the following TDM DB tables are updated by this job:
+When the process has been completed, the following TDM DB tables are updated by this job:
 
 - **task_execution_list**, updates the execution_status and additional data.
 - [task_execution_entities](02_tdm_database.md#task_execution_entities), populates each entity or Reference table and its status. Set the **id_type** to **ENTITY** or **REFERENCE** according to the entity or Reference table data type.
