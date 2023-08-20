@@ -70,7 +70,7 @@ Post-execution processes are Broadway flows defined in Fabric by the TDM impleme
 
 The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each post-execution process attached to the task's BE. The execution order is set according to the execution order defined in the BE.
 
-Unlike for LUs, post-execution processes are optional. A BE can be defined without any post-execution processes.
+The post-execution processes are optional: a BE can be defined without any post-execution processes.
 
 Note that the post-execution processes must be populated in [PostProcessList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postprocesslist) MTable object to be displayed by the BE window.
 
