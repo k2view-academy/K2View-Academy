@@ -52,13 +52,13 @@ The following is the recommended workflow:
 
 1. Create a space based on a project from GIT.
 
-2. Develop and implement your  code on the project.
+2. Develop and implement your code on the project.
 
 3. Once the working phase is done, set a version for your work:
 
-   - From the top Fabric menu item choose "Version Tag".
+   - From the top Fabric menu item choose 'Version Tag'.
 
-   - A popup appears with information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous but can be changed, as described below.
+   - A pop-up appears with information of the remote GIT branch, the proposed tag version and an optional tag message. The proposed version is based on the previous version, but can be changed, as described below.
 
       ![version tag popup](images/04_04_web_version_versiontag.png)
    
