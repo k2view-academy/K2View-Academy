@@ -21,7 +21,7 @@ Studio helps you to appropriately tag a version by:
 1. Proposing you the next version, according to the current version and based on semantic versioning format.
 2. Alerting you when there are any local changes that haven't yet been pushed to GIT.
 3. Alerting you when your changes are not aligned with other changes on your working GIT's branch.
-4. Updating the project version both in the project definitions and in GIT, as an annotated tag.  
+4. Updating the project version in both the project definitions and GIT, as an annotated tag.
 
 ### Tag Version Workflow
 
