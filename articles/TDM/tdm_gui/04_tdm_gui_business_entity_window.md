@@ -30,7 +30,7 @@ The General Information section consists of the BE **Name** and **Description**.
 
 ### Logical Units Tab 
 
-To use a BE in a TDM task, it must have one or more LUs assigned.
+To use a BE in a TDM task, it must have one or more LUs assigned to it.
 
 #### How Do I Add an LU to a BE? 
 
