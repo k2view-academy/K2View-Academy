@@ -26,21 +26,21 @@ Each task execution gets a unique **task_execution_id** identifier. A task execu
 
 The task execution order of the related task's components is as follows:
 
-1. Run the LUs (from parent to child). Process all related entities on each LU before moving to its child LU. Click for more information about the [execution order of the hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
+1. Runs the LUs (from parent to child). It processes all related entities on each LU before moving to the child LU's execution. Click for more information about the [execution order of the hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
-2. Run the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
+2. Runs the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
 
 The following diagram describes the main TDM Task Execution process:
 
 ![task execution job](images/tdmExcuteTask_job_flow.png)
 
-The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each LU or post-execution process and a separate **checkMigrateAndUpdateTDMDB** job checks and updates the execution status of each process.
+The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each LU or post-execution process and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
 
 Both jobs must be executed in parallel. 
 
 **Example:**
 
-1. Execute a task with **Customer** and **Billing LUs** and with a post-execution process that sends an email when the task execution ends. The Customer is the parent LU of Billing. 
+1. Execution of a task with **Customer** and **Billing LUs** and with a post-execution process that sends an email when the task execution ends. The Customer is the parent LU of Billing. 
 2. Three records are created in the task_execution_list on this task; all have the same task_execution_id.
 3. The **tdmExecuteTask** job executes the Batch process on the **Customer LU**. 
 4. The **checkMigrateAndUpdateTDMDB** job updates the status of **Customer LU** when the execution is completed.
@@ -56,8 +56,8 @@ This job runs every 10 seconds and checks the execution status of the running pr
 
 The execution status is checked as follows:
 
-1. Check the execution status or all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
-2. Check the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
+1. Checks the execution status or all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
+2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
 When the process is completed, the following TDM DB tables are updated:
 
@@ -69,7 +69,7 @@ A new Global has been added in TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables
 
 ### Handling Completed Task Executions
 
-The task execution is complete when it does not have pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles completed task executions as follows:
+The task execution is completed when it does not have pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles completed task executions as follows:
 
 1. It updates the execution summary in the TDM DB tables.
 2. It synchronizes the task execution details to Fabric. 
@@ -84,7 +84,7 @@ Updates the following TDM DB table:
 
 The TDM LU holds the execution details of each task execution. The TDM's **instance ID** is the **task_execution_id** generated for each task execution.
 
-A completed task execution is synchronized into the TDM LU. The execution information and the TDM execution reports are extracted from the TDM LUI data.
+The completed task execution is synchronized into the TDM LU. The execution information and the TDM execution reports are extracted from the TDM LUI data.
 
 
 
