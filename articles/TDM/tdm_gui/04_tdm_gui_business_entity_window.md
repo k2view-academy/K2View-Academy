@@ -88,8 +88,7 @@ Note that the post-execution processes must be populated in [PostProcessList](/a
 
   
 
-Click for more information about [BE TDM DB tables and the hold BE and post-execution processes relationship](06_be_product_tdmdb_tables.md).
-
+Click [here](06_be_product_tdmdb_tables.md) for more information about the BE TDM DB tables and the BE and the BE and post-execution processes relationship.
  
 
   [![Previous](/articles/images/Previous.png)](03_tdm_gui_data_centers_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_gui_product_window.md)
