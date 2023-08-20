@@ -41,7 +41,7 @@ When an Environment Type is Both, it can have both accesses: read and write. The
     - Set2, enables write-only access. Testers with this permission set can select this environment only as a target environment in a TDM task.
     - Set3, enables read and write accesses. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
 
-- The **Max Number of Entities** indicates the maximum number of entities processed by a task and must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type. 
+- The **Max Number of Entities** field indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
 
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
