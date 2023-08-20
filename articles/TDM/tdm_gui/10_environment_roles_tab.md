@@ -20,7 +20,7 @@ The Permission Set window has the following settings:
 
 ### Name
 
-The name of the TDM Environment permission set (mandatory). Note that a specified name can be assigned to only one active permission set. An error is displayed when an attempt is made to create several permission sets with the same name. 
+The name of the TDM Environment permission set (mandatory). Note that each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create several permission sets with the same name.
 
 ### **Description**
 
