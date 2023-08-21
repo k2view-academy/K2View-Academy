@@ -80,7 +80,7 @@ Updates the following TDM DB table:
 
 - [task_execution_summary](02_tdm_database.md#task_execution_summary)
 
-#### Sync the Task Execution ID to TDM LU
+#### Syncing the Task Execution ID to TDM LU
 
 The TDM LU holds the execution details of each task execution. The TDM's **instance ID** is the **task_execution_id** generated for each task execution.
 
