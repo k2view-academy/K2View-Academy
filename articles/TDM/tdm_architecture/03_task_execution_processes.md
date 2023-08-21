@@ -62,7 +62,7 @@ The execution status is being checked as follows:
 When the process has been completed, the following TDM DB tables are updated by this job:
 
 - **task_execution_list**, updates the execution_status and additional data.
-- [task_execution_entities](02_tdm_database.md#task_execution_entities), populates each entity or Reference table and its status. Set the **id_type** to **ENTITY** or **REFERENCE** according to the entity or Reference table data type.
+- [task_execution_entities](02_tdm_database.md#task_execution_entities), populates each entity or Reference table and its status. Sets the **id_type** to **ENTITY** or **REFERENCE** according to the entity or Reference table data type.
 - [task_exe_error_detailed](02_tdm_database.md#task_exe_error_detailed), populates the execution errors in Extract tasks. Note that the execution errors of Load tasks are reported to this table by the **PopulateTableErrors** Actor.
 
 A new Global has been added in TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables to limit the number of entities to be populated into the TDM execution tables per task execution. From Fabric 7.2 onwards, it is possible to populate the **LIMIT** parameter of the [batch_details command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_details-batch_id-statusstatus-entitiesentity-1entity-2-affinityaffinity-limitlimit-sort_by_process_timetruefalse) with -1 to get all batch's entities without a limit. Therefore, the TDM_BATCH_LIMIT Global is set by -1 by default, allowing to get all the batch's entities and populate them into the TDM DB during the task execution.
