@@ -141,13 +141,13 @@ I.
      - Add the systems (products) to this environment.
      - Set the version of the BILLING system to DEV.
 
-​    See instructions on how to work with the TDM GUI in the following [link](/articles/TDM/tdm_gui/README.md).
+​    See instructions on how to work with the TDM Portal in the following [link](/articles/TDM/tdm_gui/README.md).
 
 II. 
 
-Open the TDM demo project and run the **PopulateTDMDBForTesters** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM GUI definitions.
+Open the TDM demo project and run the **PopulateTDMDBForTesters** flow in the TDM LU in the demo project. The flow creates and populates the demo DBs and inserts records in the TDM DB to create the TDM Portal definitions.
 
-Note: The **Synthetic** environment is automatically created by the TDM DB scripts. Attach all Systems to this environment and set the Systems version  to **synthetic**.
+Note: The **Synthetic** environment is automatically created by the TDM DB scripts. Attach all Systems to this environment and set the Systems version to **synthetic**.
 
 
 You are now ready to create and execute TDM tasks based on the TDM Demo implementation.
