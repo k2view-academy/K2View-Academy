@@ -28,7 +28,7 @@ The task execution order of the related task's components is as follows:
 
 1. Running of the LUs (from parent to child). Processing of all related entities on each LU before moving to the child LU's execution. Click for more information about the [execution order of the hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
-2. Running of the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
+2. Running of the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE.
 
 The following diagram describes the main TDM Task Execution process:
 
