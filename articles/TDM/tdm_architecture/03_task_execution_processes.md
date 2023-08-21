@@ -67,9 +67,9 @@ When the process has been completed, the following TDM DB tables are updated by 
 
 A new Global has been added in TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables to limit the number of entities to be populated into the TDM execution tables per task execution. From Fabric 7.2 onwards, it is possible to populate the **LIMIT** parameter of the [batch_details command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_details-batch_id-statusstatus-entitiesentity-1entity-2-affinityaffinity-limitlimit-sort_by_process_timetruefalse) with -1 to get all batch's entities without a limit. Therefore, the TDM_BATCH_LIMIT Global is set by -1 by default, allowing to get all the batch's entities and populate them into the TDM DB during the task execution.
 
-### Handling Completed Task Executions
+### Handling Task Executions that have been Completed
 
-The task execution is completed when it does not have pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles completed task executions as follows:
+A task execution is considered *complete* when it no longer has pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles task executions that have been completed as follows:
 
 1. It updates the execution summary in the TDM DB tables.
 2. It synchronizes the task execution details to Fabric: each task execution is stored as an LUI in the TDM LU. 
