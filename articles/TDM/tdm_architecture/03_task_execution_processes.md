@@ -56,7 +56,7 @@ This job runs every 10 seconds and checks the execution status of the running pr
 
 The execution status is being checked as follows:
 
-1. Checks the execution status or all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
+1. Checks the execution status of all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
 2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
 When the process has been completed, the following TDM DB tables are updated by this job:
