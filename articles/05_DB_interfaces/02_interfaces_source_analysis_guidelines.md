@@ -16,7 +16,7 @@ Do the following:
 3. Check the following for the database (DB) data source: 
     * DB type of the system: E.g. Oracle, MySql or PostgreSQL.
     * DB version of the system: E.g. Oracle 11g.
-    * Check whether the DB has a built-in connector in Fabric. If it does not, obtain a JDBC driver, in order to be located at the project's lib. 
+    * Check whether the DB has a built-in connector in Fabric. If it does not, obtain a JDBC driver, in order to be located later at the project's lib. 
     * Check the connection details to the DB.
 4. Check the following for a non-database (DB) data source (depending on the data source’s technology): 
     * Server connection details.
