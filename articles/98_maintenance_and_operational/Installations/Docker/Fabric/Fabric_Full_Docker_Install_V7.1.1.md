@@ -19,11 +19,11 @@ More detailed requirements for each are described below:
    - HDD, 200GB must be available
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
-2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
+2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ ).
 
    **Note**: The /var/lib/docker should have at least 200GB of free memory.
-3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
-4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
+3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).
+4. Enable NTP/chronyc (see more details  [here](https://didyoubounceit.wordpress.com/2018/10/19/red-hat-centos-ntp-is-now-chrony/)).
 5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
 
    ```bash
