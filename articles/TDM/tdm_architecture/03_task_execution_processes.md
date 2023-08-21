@@ -69,7 +69,7 @@ A new Global has been added in TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables
 
 ### Handling Task Executions that have been Completed
 
-A task execution is considered *complete* when it no longer has pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles task executions that have been completed as follows:
+A task execution is considered *complete* when it no longer has pending or running executions. The **checkMigrateAndUpdateTDMDB** job handles task executions that have been completed - as follows:
 
 1. It updates the execution summary in the TDM DB tables.
 2. It synchronizes the task execution details to Fabric: each task execution is stored as an LUI in the TDM LU. 
