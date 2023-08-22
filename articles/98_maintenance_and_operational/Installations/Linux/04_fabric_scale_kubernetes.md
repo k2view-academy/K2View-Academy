@@ -13,9 +13,9 @@ This article deals with K8S auto-scaling concepts with regards to Fabric aspects
 2. Metrics Server: Deploy the Metrics Server in the cluster, HPA utilizes it in order to gather resource metrics from pods and nodes.
 
 ## Scaling Strategies for Fabric Pods
-To effectively harness the scalability of Fabric pods, the approach varies based on the use case:
+To effectively harness the scalability of Fabric pods, the approach varies based on each use case, for example:
 * For loads stemming from a high number of Web Services (WS's) calls, it is advisable to employ a Load Balancer (LB) that directs traffic to all Fabric pods.
-* When the load is due to the quantity of Fabric jobs, jobs are redistributed as new nodes are integrated into the cluster.
+* When the load is due to the quantity of Fabric jobs, jobs are being redistributed as new nodes are integrated into the cluster.
 
 ### Example
 
