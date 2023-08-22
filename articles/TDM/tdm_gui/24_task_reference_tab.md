@@ -8,7 +8,7 @@ Click for more information about [Reference tables implementation](/articles/TDM
 
 ## Reference Tab - Extract Task
 
-The Reference tab displays a list of all Reference tables defined in [RefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#reflist) object for the task's LUs. On each table it also displays its **LU Name** and **Source Interfacee**. You can either **Select All**, **Unselect All** or check a selected list of Reference tables.
+The Reference tab displays a list of all Reference tables defined in [RefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#reflist) object for the task's LUs. On each table it also displays its **LU Name** and **Source Interface**. You can either **Select All**, **Unselect All** or check a selected list of Reference tables.
 
 The Extract task extracts the selected Reference tables and [saves them into Fabric](/articles/TDM/tdm_architecture/05_tdm_reference_processes.md). 
 
