@@ -1,6 +1,6 @@
 # Task Window - Reference Tab
 
-The Reference tab opens when checking the **Reference** Data Type setting in the **Additional Execution Parameters** tab.
+The Reference tab opens when the **Reference** Data Type checkbox is checked in the **Additional Execution Parameters** tab.
 
 Extract tasks extract **Reference tables** from a source environment and store them in Fabric. Load tasks sync the Reference tables into Fabric if needed, and load them to the target environment.
 
