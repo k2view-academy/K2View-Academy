@@ -22,7 +22,12 @@ Similar to the Extract Task window, a Reference tab displays the **Source Interf
 
 ### Data Versioning Mode
 
-Displays the list of available versions created on Reference tables and a source environment, and a load task's LU. The versions created during the last month are displayed. To select another period, edit the **From Date** and **To Date** settings.
+Data versioning mode displays the following:
+- a list of available versions created on Reference tables
+- a source environment
+- a load task's LU
+The display is of versions created during the last month. To select another period, edit the **From Date** and **To Date** settings.
+
 
 
 
