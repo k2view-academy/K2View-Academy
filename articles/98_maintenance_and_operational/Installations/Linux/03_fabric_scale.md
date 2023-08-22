@@ -3,7 +3,7 @@ Fabric cluster, during its lifecycle, may experience a higher load, and based on
 
 By design, Fabric is built to enable a horizontal scaling out by adding more fabric nodes. Each starting-up node knows to autonomously add itself to the cluster; for example:
 
-* Register itself to the node list, for start getting load and jobs.
+* Register itself to join the cluster's node list, for start getting the cluster's workload like jobs handling.
 * Obtain the project deployment code.
 * Obtain the master key for data encryption.
 
