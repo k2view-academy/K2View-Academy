@@ -53,7 +53,7 @@ When setting up a node, you shall either configure it from scratch or duplicate 
 
 
 ### Certificates
-Ensure all necessary certificates are imported into the key and trust store as needed, according to your deployment, including:
+Ensure all necessary certificates are imported into the keystore and truststore as needed, according to your deployment, including:
 * Cassandra SSL certificate
 * Kafka SSL certificate
 * SAML certificate
