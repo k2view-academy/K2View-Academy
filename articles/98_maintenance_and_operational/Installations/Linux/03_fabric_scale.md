@@ -79,9 +79,9 @@ After a short while, the following message will be displayed:
 
 ## Scale In
 
-When Fabric cluster experiences reduction in load, you might consider to scaled it in, by remove or stop working Fabric cluster nodes.
+When Fabric cluster experiences a reduction in load, you may consider to scale it in, by removing or stopping the working Fabric cluster nodes.
 
-You can just stop the relevant node, even while it processes jobs, as Fabric knows to reconcile, where other nodes will process that jobs.
+You can just stop the relevant node, even while it processes jobs, as Fabric knows to reconcile, where other nodes will process these jobs.
 
 
 
