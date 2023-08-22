@@ -8,11 +8,11 @@ desiredReplicas = [currentReplicas * ( currentMetricValue / desiredMetricValue )
 
 This article deals with K8S auto scaling concepts with regards to Fabric aspects, and does not refer to a specific or custom K8S autoscaler.
 
-### Prerequisites
+## Prerequisites
 1. Kubernetes Version: Ensure deployment on Kubernetes version 1.18 or later. Verify version compatibility from official Kubernetes documentation.
 2. Metrics Server: Deploy the Metrics Server in the cluster, HPA utilizes it to gather resource metrics from pods and nodes.
 
-### Scaling Strategies for Fabric Pods
+## Scaling Strategies for Fabric Pods
 To effectively harness the scalability of Fabric pods, the approach varies based on the use case:
 * For loads stemming from a high number of Web Services (WS's) calls, it's advisable to employ a Load Balancer (LB) that directs traffic to all Fabric pods.
 * When the load is due to the quantity of Fabric jobs, jobs are redistributed as new nodes are integrated into the cluster.
@@ -38,7 +38,9 @@ spec:
     targetCPUUtilizationPercentage: 80
 ```
 
-### For more information about an advanced setup, read below:
+
+
+For more information about an advanced setup, read below:
 
 <ul>
     <li><a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">horizontal pod autoscale (HPA)</a></li>
