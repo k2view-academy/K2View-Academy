@@ -42,7 +42,7 @@ Run the following command to set up the base configuration. Replace the paramete
 /opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
 ~~~
 
-> If the Cassanda & Kafka are Hardened with SSL, add  `--ssl` to the command.
+> If the Cassandra & Kafka are Hardened with SSL, add  `--ssl` to the command.
 
 ### Additional configuration
 
