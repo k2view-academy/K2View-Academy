@@ -85,7 +85,7 @@ Open the TDM demo project:
 - Set the POSTGRESQL_ADMIN interface to be active.
 - Open and redeploy environments to Fabric local debug server to include the **POSTGRESQL_ADMIN** interface. Set the active environment in the local debug server to the **SRC** environment.  
 - Run the **createPGDBS** flow in the TDM LU in the TDM LU on Fabric local debug server. The flow creates the demo DB and Users in the PG DB. Set the **is_first_deploy** input variable to **true**.
-- Run the **createAndPopulateDbs** flow in the TDM LU on Fabric local debug server. The flow creates and populates the demo DBs (CRM, Billing, Ordering and Collection). Set the **Debug** to **OFF** before running this flow. 
+- Run the **createAndPopulateDbs** flow in the TDM LU on Fabric local debug server. The flow creates and populates the demo tables in demo DBs (CRM, Billing, Ordering, and Collection). Set the **Debug** to **OFF** before running this flow. 
 
 
 
