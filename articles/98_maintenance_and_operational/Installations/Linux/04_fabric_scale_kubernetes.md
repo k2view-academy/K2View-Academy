@@ -14,7 +14,7 @@ This article deals with K8S auto-scaling concepts with regards to Fabric aspects
 
 ## Scaling Strategies for Fabric Pods
 To effectively harness the scalability of Fabric pods, the approach varies based on the use case:
-* For loads stemming from a high number of Web Services (WS's) calls, it's advisable to employ a Load Balancer (LB) that directs traffic to all Fabric pods.
+* For loads stemming from a high number of Web Services (WS's) calls, it is advisable to employ a Load Balancer (LB) that directs traffic to all Fabric pods.
 * When the load is due to the quantity of Fabric jobs, jobs are redistributed as new nodes are integrated into the cluster.
 
 ### Example
