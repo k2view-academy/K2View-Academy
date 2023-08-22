@@ -33,7 +33,7 @@ The following steps are similar to the standard Fabric server [installation inst
     ~~~
 
 ## Configuration
-Configure the new fabric node in the same way you configurated the other nodes.
+Configure the new fabric node the same way you have configurated the other nodes.
 
 ### Basic configurations
 Run the following command to set up the base configuration. Replace the parameters with your own environment, where IPs must be the same as used for other existing nodes. 
