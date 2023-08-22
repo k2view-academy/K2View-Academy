@@ -1,7 +1,7 @@
 # Fabric scale
 During Fabric cluster lifecycle it might experience higher load and based on metrics like CPU usage, available memory or storage you shall consider to scale the cluster. 
 
-Fabric is built by design to enable scale out, horizontally, by adding more fabric nodes. Each node that is starting up knows autonomy to add itself to the cluster, for example:
+Fabric is built by design to enable scale out, horizontally, by adding more fabric nodes. Each node that is starting up knows autonomy to add itself to the cluster; for example:
 
 * Register itself to the node list, for start getting load and jobs.
 * Obtain the project deployment code.
@@ -9,7 +9,7 @@ Fabric is built by design to enable scale out, horizontally, by adding more fabr
 
 This article describes how to scale Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here]() about scaling methodology for Kubernetes deployment.
 
-> Note: Scaling guidelines for Fabric's accompany components like Cassandra is out of this article scope and shall be done according to their methodologies.
+> Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included in this article scope and shall be applied according to their methodologies.
 
 
 
@@ -17,8 +17,8 @@ This article describes how to scale Fabric cluster on-prem, within bare-metal or
 
 ### Prerequisite
 
-* Deploy the Fabric server on a VM with network connectivity to the other servers within the cluster.
-* Fabric server Installation package is the same as used for other existing nodes.
+* Deploy the Fabric server on a VM with a network connectivity to the other servers within the cluster.
+* Fabric server Installation package is the same as the one used for other existing nodes.
 
 ### Install the Package 
 
