@@ -1,7 +1,7 @@
 # Fabric scale
 During Fabric cluster lifecycle it might experience higher load and based on metrics like CPU usage, available memory or storage you shall consider to scale the cluster. 
 
-Fabric is built by design to enable scale out, horizontally, by adding more fabric nodes. Each node that is starting up knows autonomy to add itself to the cluster, for example:
+Fabric is built by design to enable scale out, horizontally, by adding more fabric nodes. Each node that is starting up knows autonomy to add itself to the cluster; for example:
 
 * Register itself to the node list, for start getting load and jobs.
 * Obtain the project deployment code.
