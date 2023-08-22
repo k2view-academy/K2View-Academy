@@ -17,8 +17,8 @@ This article describes how to scale Fabric cluster on-prem, within bare-metal or
 
 ### Prerequisite
 
-* Deploy the Fabric server on a VM with network connectivity to the other servers within the cluster.
-* Fabric server Installation package is the same as used for other existing nodes.
+* Deploy the Fabric server on a VM with a network connectivity to the other servers within the cluster.
+* Fabric server Installation package is the same as the one used for other existing nodes.
 
 ### Install the Package 
 
