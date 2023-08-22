@@ -9,7 +9,7 @@ By design, Fabric is built to enable a horizontal scaling out by adding more fab
 
 This article describes how to scale Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here]() about scaling methodology for Kubernetes deployment.
 
-> Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included in this article scope and shall be applied according to their methodologies.
+> Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included in this article scope. These components' scaling guidelines shall be applied according to their methodologies.
 
 
 
