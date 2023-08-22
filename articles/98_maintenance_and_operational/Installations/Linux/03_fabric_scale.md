@@ -1,5 +1,5 @@
 # Fabric scale
-During Fabric cluster lifecycle it might experience higher load and based on metrics like CPU usage, available memory or storage you shall consider to scale the cluster. 
+Fabric cluster, during its lifecycle, may experience a higher load, and based on metrics like CPU usage, available memory or storage you should consider to scale the cluster. 
 
 Fabric is built by design to enable scale out, horizontally, by adding more Fabric nodes. Each node that is starting up knows autonomy to add itself to the cluster; for example:
 
