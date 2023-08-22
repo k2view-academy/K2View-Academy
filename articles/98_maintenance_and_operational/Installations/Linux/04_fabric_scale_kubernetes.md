@@ -10,7 +10,7 @@ This article deals with K8S auto-scaling concepts with regards to Fabric aspects
 
 ## Prerequisites
 1. Kubernetes Version: Ensure deployment on Kubernetes version 1.18 or later. Verify version compatibility from official Kubernetes documentation.
-2. Metrics Server: Deploy the Metrics Server in the cluster, HPA utilizes it to gather resource metrics from pods and nodes.
+2. Metrics Server: Deploy the Metrics Server in the cluster, HPA utilizes it in order to gather resource metrics from pods and nodes.
 
 ## Scaling Strategies for Fabric Pods
 To effectively harness the scalability of Fabric pods, the approach varies based on the use case:
