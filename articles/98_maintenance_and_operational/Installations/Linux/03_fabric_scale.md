@@ -61,7 +61,7 @@ Ensure all necessary certificates are imported into the keystore and truststore 
 
 ## Project Files
 
-As mentioned above, Fabric nodes obtain the project deployment from the system DB when they start up. Nevertheless, if you are using additional files in your project, such as JAR libraries, copy them to the node's Fabric Home folder (e.g. $K2_HOME/ExternalJars).
+As mentioned above, Fabric nodes obtain the project deployment from the system DB when they start up. Nevertheless, if you are using additional files in your project, such as JAR libraries, copy them to the node's Fabric home folder (e.g. $K2_HOME/ExternalJars).
 
 ## Start Fabric
 
@@ -81,7 +81,7 @@ After a short while, the following message will be displayed:
 
 When Fabric cluster experiences a reduction in load, you may consider to scale it in, by removing or stopping the working Fabric cluster nodes.
 
-You can just stop the relevant node, even while it processes jobs, as Fabric knows to reconcile, where other nodes will process these jobs.
+You can just stop the relevant node, although it is in the midst of processing jobs, as Fabric knows to reconcile, where other nodes will process these jobs.
 
 
 
