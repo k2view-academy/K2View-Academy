@@ -25,7 +25,7 @@ This article describes how to scale Fabric cluster on-prem, within bare-metal or
 The following steps are similar to the standard Fabric server [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
 
 1. Log in with the previously created user for the Fabric installation.
-2. Download the package from the links that were provided to you.
+2. Download the package from the provided links.
 3. Untar the package in the user home folder (/opt/apps/fabric):
 
     ~~~bash
