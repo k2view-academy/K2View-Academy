@@ -18,7 +18,7 @@ The Extract task extracts the selected Reference tables and [saves them into Fab
 
 ### Regular Mode
 
-Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name**, and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
+Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name** and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
 
 ### Data Versioning Mode
 
