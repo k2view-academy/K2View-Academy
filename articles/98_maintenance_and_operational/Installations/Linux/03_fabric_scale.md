@@ -26,7 +26,7 @@ The following steps are similar to the standard Fabric server [installation inst
 
 1. Log in with the previously created user for the Fabric installation.
 2. Download the package from the provided links.
-3. Untar the package in the user home folder (/opt/apps/fabric):
+3. Untar the package in the user's home folder (/opt/apps/fabric):
 
     ~~~bash
     tar -zxf [package name].tar.gz -C /opt/apps/fabric && source .bash_profile
