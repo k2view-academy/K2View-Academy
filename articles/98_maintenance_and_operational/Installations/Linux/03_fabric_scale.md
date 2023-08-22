@@ -48,8 +48,8 @@ Run the following command to set up the base configuration. Replace the paramete
 
 When setting up a node, you shall either configure it from scratch or duplicate the configuration files from another node. When copying the configuration files from an existing node, please consider the following:
 * config.ini and iifConfig.ini: Ensure accurate passwords are inserted. Post the initial Fabric execution, passwords are encrypted, making them indecipherable to other nodes.
-* jvm.options and jvm.iid_finder.options: Validate that both the keystore and truststore are present, and their respective paths and passwords are accurate.
-* node.id: If the node.id is configured, verify that the UUID is distinct or comment it out to avoid conflicts.
+* jvm.options and jvm.iid_finder.options: Verify that both the keystore and truststore are present, and that their respective paths and passwords are accurate.
+* node.id: If the node.id is configured, verify that the UUID is distinct or comment it out to prevent conflicts.
 
 
 ### Certificates
