@@ -36,7 +36,7 @@ The following steps are similar to the standard Fabric server [installation inst
 Configure the new fabric node the same way you have configurated the other nodes.
 
 ### Basic configurations
-Run the following command to set up the base configuration. Replace the parameters with your own environment, where IPs must be the same as used for other existing nodes. 
+Run the following command to set up the base configuration. Replace the parameters with your own environment, where IPs must be the same as the ones used for other existing nodes.
 
 ~~~bash
 /opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
