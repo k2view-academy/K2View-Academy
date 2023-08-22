@@ -6,7 +6,7 @@ Kubernetes is designed to automatically scale the number of pods in a deployment
 The HorizontalPodAutoscaler (HPA) controller calculates desired replicas based on the ratio of the current metric value to the desired value: 
 desiredReplicas = [currentReplicas * ( currentMetricValue / desiredMetricValue )].
 
-This article deals with K8S auto scaling concepts with regards to Fabric aspects, and does not refer to a specific or custom K8S autoscaler.
+This article deals with K8S auto-scaling concepts with regards to Fabric aspects and does not refer to a specific or custom K8S autoscaler.
 
 ## Prerequisites
 1. Kubernetes Version: Ensure deployment on Kubernetes version 1.18 or later. Verify version compatibility from official Kubernetes documentation.
