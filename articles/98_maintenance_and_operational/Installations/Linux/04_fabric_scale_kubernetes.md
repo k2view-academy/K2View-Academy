@@ -46,3 +46,7 @@ For more information about an advanced setup, read below:
     <li><a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">horizontal pod autoscale (HPA)</a></li>
     <li><a href="https://github.com/kubernetes-sigs/metrics-server#deployment">Metrics server</a></li>
 </ul>
+
+Read [here](/articles/98_maintenance_and_operational/Installations/Linux/03_fabric_scale.md) about scaling Fabric on-prem, within bare-metal or virtual machine environments.
+
+
