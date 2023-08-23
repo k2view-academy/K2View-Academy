@@ -76,7 +76,7 @@ The following is the recommended workflow:
    
    - It checks whether your changes are aligned with other changes on this GIT's branch and warns you in case they are not. 
    
-     Note that this case is valid: sometimes two or more developers are working on same branch in parallel, on different capabilities, aimed to different phases. Thus, a version tag might contain specific development made on that on that branch. 
+     Note that this case is valid: sometimes two or more developers are working on the same branch in parallel, on different capabilities, aimed at different phases. Thus, a version tag might contain specific development made on that branch. 
 
 
 5. In case you click to continue, after examining warns, if appear, the version tag is created at both project metadata file (k2proj.xml) and also as an annotated tag in GIT, where tag message, if populated, is set at GIT. Both changes are committed and pushed into GIT.
