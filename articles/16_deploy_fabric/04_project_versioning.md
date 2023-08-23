@@ -107,9 +107,9 @@ In the Studio's User Preferences screen, you can choose, per remote server, in t
 
 Upon deployment to remote server, either the whole project or only specific objects, Studio performs the following according to the chosen preferences:
 
-* When **NoValidation** is chosen (default), Studio skips all tag checks. This is the less recommended option because if any local changes were done, they would not be reflected, via the version command, at the remote server. This option has been made available for customers that do not use the project versioning capability, and thus, as well as for backward compatability it is set as default.
+* When **NoValidation** is chosen (default), Studio skips all tag checks. This is the less recommended option because if any local changes were done, they would not be reflected, via the version command, in the remote server. This option has been made available for customers that do not use the project versioning capability, and thus, as well as for backward compatability it is set as default.
 
-* When **WarnOnTagDiff** is chosen, then Studio checks that the candidates to be deployed are aligned with the version tag. It compares the files that are going to be deployed against the files at GIT, by the current project version tag. If they are not equal - Studio warns you. You can choose to continue anyway.
+* When **WarnOnTagDiff** is chosen, Studio checks whether the candidates to be deployed are aligned with the version tag. This option compares the files that are due for deployment against the files in GIT, by the current project version tag. If they are not equal - Studio warns you, but you can choose to continue anyway.
 
   In such case, where you decide to continue with the deployment, despite the warns, a star will be added to the project's version at the built artifacts (e.g. "1.0.2*****"). This will be used later on the remote server to indicate, at the `version` command results, to hint the user about. By doing this, Studio empowering the version visibility at the remote target server, about what is deployed.
 
