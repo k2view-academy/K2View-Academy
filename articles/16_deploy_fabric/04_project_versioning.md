@@ -101,7 +101,7 @@ The next time when the Tag Version action is initiated, Studio analyzes the curr
 
 Fabric Studio allows to deploy a project's objects into remote servers. As part of the project versioning capability, Studio offers you to decide, per remote server, whether activating the version tag validation, as a pre-deploy step, ensuring by doing it that you will have the most exact visibility on what is deployed at the target remote Fabric server. 
 
-At the Studio User Preferences screen, you can choose, per remote server, at the **Pre Deploy Tag Validation** field, either to skip on it, to warn when validation failed or block the deployment when validation failed.
+In the Studio's User Preferences screen, you can choose, per remote server, at the **Pre Deploy Tag Validation** field, either to skip on it, to warn when validation failed or block the deployment when validation failed.
 
 ![user preferences window with pre deploy tag validation](images/04_02_deploy_userpref.png)
 
