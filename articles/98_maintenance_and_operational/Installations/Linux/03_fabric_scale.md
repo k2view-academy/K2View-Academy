@@ -7,7 +7,7 @@ By design, Fabric is built to enable a horizontal scaling out by adding more fab
 * Obtain the project deployment code.
 * Obtain the master key for data encryption.
 
-This article describes how to scale Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here]() about scaling methodology for Kubernetes deployment.
+This article describes how to scale Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here](/articles/98_maintenance_and_operational/Installations/Linux/04_fabric_scale_kubernetes.md) about scaling methodology for Kubernetes deployment.
 
 > Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included in this article scope. These components' scaling guidelines shall be applied according to their methodologies.
 
