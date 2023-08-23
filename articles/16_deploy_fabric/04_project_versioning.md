@@ -105,7 +105,7 @@ In the Studio's User Preferences screen, you can choose, per remote server, in t
 
 ![user preferences window with pre deploy tag validation](images/04_02_deploy_userpref.png)
 
-On deploying to remote server, either the whole project or only specific objects, Studio performs the following according to the chosen preferences:
+Upon deployment to remote server, either the whole project or only specific objects, Studio performs the following according to the chosen preferences:
 
 * When **NoValidation** is chosen (default), then Studio skips on all tag checks. This is the less recommended option because local changes, if were done, will not be reflected, via the version command, at the remote server. It is available for customers that do not use project versioning capability, and thus as well as for backward compatability it is set as default.
 
