@@ -107,7 +107,7 @@ In the Studio's User Preferences screen, you can choose, per remote server, in t
 
 Upon deployment to remote server, either the whole project or only specific objects, Studio performs the following according to the chosen preferences:
 
-* When **NoValidation** is chosen (default), then Studio skips on all tag checks. This is the less recommended option because local changes, if were done, will not be reflected, via the version command, at the remote server. It is available for customers that do not use project versioning capability, and thus as well as for backward compatability it is set as default.
+* When **NoValidation** is chosen (default), Studio skips all tag checks. This is the less recommended option because if any local changes were done, they would not be reflected, via the version command, at the remote server. This option has been made available for customers that do not use the project versioning capability, and thus, as well as for backward compatability it is set as default.
 
 * When **WarnOnTagDiff** is chosen, then Studio checks that the candidates to be deployed are aligned with the version tag. It compares the files that are going to be deployed against the files at GIT, by the current project version tag. If they are not equal - Studio warns you. You can choose to continue anyway.
 
