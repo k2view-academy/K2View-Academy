@@ -121,7 +121,7 @@ When running **Build Deploy Artifacts** action, Studio behaves similarly, but wi
 
 
 
-> Note: User Preferences is saved at developer's local machine Studio and thus it is his responsibility to set properly the pre deploy validation, according to the project's procedures. 
+> Note: User Preferences is saved on the developer's local machine's Studio and thus it is his responsibility to set properly the pre deploy validation, according to the project's procedures. 
 
 
 
