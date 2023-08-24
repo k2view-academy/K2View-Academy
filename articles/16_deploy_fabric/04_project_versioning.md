@@ -129,7 +129,7 @@ When running **Build Deploy Artifacts** action, Studio behaves similarly, but wi
 
 <web>
 
-To use a specific version tag in a space, you shall set in either in project level - at branch/tag field or on a specific project space profile level. 
+To use a specific version tag in a space, you shall set it on either a project level, in a branch/tag field, or a specific project space profile level.
 
 </web>
 
