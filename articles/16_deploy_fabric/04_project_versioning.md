@@ -184,7 +184,7 @@ Fabric enables visibility on the version of the currently deployed objects in th
 
 <web>
 
-In Studio, you can see the current deployed version also at the bottom status bar
+In Studio, you can see the current deployed version also at the bottom status bar:
 
 ![status bar web studio](images/04_03_web_version_statusbar.png)
 
