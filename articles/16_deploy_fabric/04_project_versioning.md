@@ -117,7 +117,7 @@ Upon deployment to remote server, either the whole project or only specific obje
 
 
 
-When running **Build Deploy Artifacts** action, Studio behaves similarly, but without alerting the user, because no deployment is done but building artifacts. Yet, when not skipping the validation checks, the built artifacts are sign with the star indication, when not aligned with tag. This means that later on, when these artifacts will be taken and deployed at another server, using the [offline deploy](/articles/16_deploy_fabric/03_offline_deploy.md), the same indication will appear on the `version` command results, hinting users about.
+When running **Build Deploy Artifacts** action, Studio behaves similarly, but without alerting the user as no deployment is done but building artifacts. Yet, when not skipping the validation checks, the built artifacts are sign with the star indication, when not aligned with tag. This means that later on, when these artifacts will be taken and deployed at another server, using the [offline deploy](/articles/16_deploy_fabric/03_offline_deploy.md), the same indication will appear on the `version` command results, hinting users about.
 
 
 
