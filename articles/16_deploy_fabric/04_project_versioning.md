@@ -192,7 +192,7 @@ In Studio, you can see the current deployed version also at the bottom status ba
 
 ## Notes
 
-* Using the project version capability is optional and as long as not used, project metadata will not contain it. Thus, version command will not show LUs entries. 
+* Using the project versioning capability is optional and as long as not used, project metadata will not contain it. Thus, version command will not show LUs entries. 
 
 * When project's source code is not controlled at GIT, the related project versioning elements and actions will not be shown or act.
 
