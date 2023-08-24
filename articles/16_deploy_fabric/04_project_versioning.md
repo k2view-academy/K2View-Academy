@@ -139,7 +139,7 @@ To use a specific version tag in a space, you shall set it on either a project l
 
 Fabric enables visibility on the version of the currently deployed objects in the server. By knowing the project version, you can examine - in GIT - the exact content of that object and accordingly better understand its functionality and behavior, especially if something doesn't work as expected.
 
-* The ```version``` command shows, in addition to the product version, the project version for each LU, in a separated entry. Because each LU can be deployed separately, their versions might be different.  For Example:
+* The ```version``` command shows, in addition to the product version, the project version for each LU, in a separate entry. Because each LU can be deployed separately, their versions may be different. For Example:
 
   ```
   |Resource        |Result                                  |
