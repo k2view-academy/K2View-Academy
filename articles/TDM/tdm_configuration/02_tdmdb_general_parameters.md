@@ -54,7 +54,8 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
-  - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve only tasks. The **default is false**.
+  - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
+  - **availableRetentionOptions** and **availableReservationOptions** - available options for the retention and reservation period.
   
     Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks:
   
