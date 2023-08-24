@@ -153,9 +153,9 @@ Fabric enables visibility on the version of the currently deployed objects in th
   |Billing         |1.0.3                                   |
   ```
 
-* Project version will not be shown as long as project versioning acts were not activated. Additionally, it will not be shown for LUs that haven't been deployed. This can happen also during the phase of starting using this capability, where some LUs are being deployed after using it will appear with version and other will not. 
+* Project version will not be shown as long as project versioning acts were not activated. Additionally, it will not be shown for LUs that haven't been deployed. This can happen also during the phase of starting using this capability, where some LUs are being deployed after using it will appear with version and others will not. 
 
-* ```list ws```  and ```list lut``` are also reflecting the project versioning, shown in the *Project Version* column in the commands result. 
+* ```list ws```  and ```list lut``` are also reflecting the project versioning, shown in the *Project Version* column in the command result.
 
   `list ws` command result example: 
 
