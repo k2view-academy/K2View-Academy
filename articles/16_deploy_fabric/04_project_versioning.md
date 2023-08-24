@@ -196,7 +196,7 @@ In Studio, you can see the current deployed version also at the bottom status ba
 
 * When project's source code is not controlled in GIT, the related project versioning elements and actions will not be shown or act.
 
-  If still needed, project version can be added manually to the k2proj.xml (at `<ProjectVersion>` element), so that it will be reflected later at the version command result on the deployed server. As Studio validations cannot be run in such case, there is no guarantee that the version which is shown in the version command's result really represent the version, that was added and saved manually. 
+  If still needed, project version can be manually added to the k2proj.xml (at `<ProjectVersion>` element), so that it will be reflected later in the version command result on the deployed server. As Studio validations cannot be run in such case, there is no guarantee that the version shown in the version command's result does really represent the version, that was manually added and saved. 
 
   Manual update shall not be done when working with GIT and with the project version mechanism.
 
