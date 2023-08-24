@@ -111,7 +111,7 @@ Upon deployment to remote server, either the whole project or only specific obje
 
 * When **WarnOnTagDiff** is chosen, Studio checks whether the candidates to be deployed are aligned with the version tag. This option compares the files that are due for deployment against the files in GIT, by the current project version tag. If they are not equal - Studio warns you, but you can choose to continue anyway.
 
-  In such case you decide to continue with the deployment, despite the warnings, a star will be added to the project's version at the built artifacts (e.g. "1.0.2*****"). This will be used later on the remote server to indicate, at the `version` command results, to hint the user about. By doing this, Studio empowering the version visibility at the remote target server, about what is deployed.
+  In such case you decide to continue with the deployment, despite the warnings, a star will be added to the project's version at the built artifacts (e.g. "1.0.2*****"). This will be used later on the remote server to indicate, at the `version` command results, to hint the user about. By doing so, Studio empowers the version visibility in the remote target server, about what is deployed.
 
 * When **ErrorOnTagDiff** is chosen, then Studio behaves similar to the **WarnOnTagDiff** option but in this case it blocks the action and deployment cannot be done.
 
