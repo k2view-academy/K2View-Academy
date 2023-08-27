@@ -12,6 +12,7 @@ Fabric supports several types of Databases as System Database storage:
     * If Cassandra is used as a MicroDB storage, there is no need to introduce additional DBs
     * Managed services (such as AWS Keyspaces or Astra) are supported
     * Supported by the iidFinder solution
+    * Built-in mechanism for managing parallel threads during bulk instance loading.
   * Cons
     * Consistency
     * Not easy to operate and maintain
@@ -319,16 +320,17 @@ The following table lists the keyspaces or schemas created by Fabric:
 
 [Click here for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
 
-Starting from V7.2, the [system_db] section has been added to the config.ini and it holds the System DB settings. By default, it is set to Cassandra. When a switch to either SQLite or PostgreSQL is required, the default settings of this section should be updated.
+By default, the system DB it is set to Cassandra. 
 
-When switching to a non-Cassandra System DB, the `SERVER_AUTHENTICATOR` config parameter's value shall also be changed from its default value 'cassandra' to 'fabric'. For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration).
+When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the follows shall be set at config.ini:
 
-> Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator (besides other authenticators such as LDAP and OCTA).
+* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as system DB, then you can ignore this section.
 
+* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator.
 
+   
 
 The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to SYSTEM_DB. This means that by default, the Fabric storage type is the same as the Fabric System DB. You can either update the [system_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
-
 
 
 
