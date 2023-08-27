@@ -12,7 +12,7 @@ This example shows a few cases of a developer workflow.
 
 * Create a tag, where there are local changes that are not pushed to GIT.
 
-  > While this case is little risky, it is valid, when developer already continued working on next features, before it was decided to set a version. In our example, the developer pushs the leftovers. and activate tag version again, this time without getting warnings.
+  > While this case is a little risky, it is valid, when developer already continued working on next features, before it was decided to set a version. In our example, the developer pushes the leftovers. and activate tag version again, this time without getting any warnings.
 
 <studio> 
 
