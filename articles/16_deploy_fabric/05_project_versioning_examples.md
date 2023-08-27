@@ -42,7 +42,7 @@ This example shows a few cases of a developer workflow.
 
 ## Example #2: Studio Flow - Several Developers
 
-This example illustrate the case of several developers who work on the same project. This example starts when version 1.0.4 is created and two developers start working based on it (it is assumed that branch is fully aligned with tag. You can see in example 1 that it is not necessarily the case).
+This example illustrate the case of several developers who work on the same project. This example starts when version 1.0.4 is created and two developers start working based on it (it is assumed that the branch is fully aligned with the tag. You can see in example 1 that it is not necessarily the case).
 
 * DEV 1 initiates the tag version action. She is warned because DEV 2 made pushes his changes after her, meaning that her code is not fully aligned with branch. In our example - she proceeds with the process.
 
