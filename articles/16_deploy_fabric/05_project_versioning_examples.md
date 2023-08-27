@@ -48,7 +48,7 @@ This example illustrate the case of several developers who work on the same proj
 
   >  This is a legitimate case, where another developer continues with implementation that aimed for a later version. Accordingly, DEV 2 might verify, before proceeding, that DEV 2 changes shall not be part of the version content.
 
-* DEV 2 initiates the tag version act. He will be rejected because the candidate version is the same as DEV1 (1.0.5), who already created it. This will happen as long as he did not pull DEV1 changes from GIT, also with the updated tag version, and as long as he did not change the auto proposed version.
+* DEV 2 initiates the tag version act. He will be rejected because the candidate version is the same as DEV 1 (1.0.5), who already created it. This will happen as long as he did not pull DEV 1 changes from GIT, also with the updated tag version, and as long as he did not change the auto proposed version.
 
 
 
@@ -60,8 +60,8 @@ This example illustrate the case of several developers who work on the same proj
 
 This example illustrates a case that hotfix is required, where one of the developers handles it, while another continues to work on the main branch, without collisions.
 
-* DEV2 assigned to make hotfix and switch to work based on tag (by doing it he detached from tag and need to make his changes on a some branch).
-* When DEV2 initiates the Tag Version action, Studio suggests him as next version - 1.0.1, which comes after current version - 1.0.0.  DEV 2 overrides this value with HF version ("1.0.0-HF1").
+* DEV 2 assigned to make hotfix and switch to work based on tag (by doing it he detached from tag and need to make his changes on a some branch).
+* When DEV 2 initiates the Tag Version action, Studio suggests him as next version - 1.0.1, which comes after current version - 1.0.0.  DEV 2 overrides this value with HF version ("1.0.0-HF1").
 * DEV1 works on the on going branch and thus no conflicts will appear when pushing her stuff into GIT, as well when initiating tag version, which suggested to be, as expected, 1.0.1.
 
 
