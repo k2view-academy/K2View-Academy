@@ -42,40 +42,84 @@ None.
 
 ```json
 {
-  "result": {
-    "maxRetentionPeriodForReserve": {
-      "units": "Days",
-      "value": "10"
+    "result": {
+        "reservationDefaultPeriod": {
+            "unit": "Days",
+            "value": 5
+        },
+        "retentionDefaultPeriod": {
+            "unit": "Do Not Delete",
+            "value": -1
+        },
+        "maxRetentionPeriod": {
+            "units": "Days",
+            "value": 90
+        },
+        "retentionPeriodTypes": [
+            {
+                "name": "Minutes",
+                "units": 6.9444444E-4
+            },
+            {
+                "name": "Hours",
+                "units": 0.04166666666
+            },
+            {
+                "name": "Days",
+                "units": 1
+            },
+            {
+                "name": "Weeks",
+                "units": 7
+            },
+            {
+                "name": "Years",
+                "units": 365
+            }
+        ],
+		"reservationPeriodTypes": [
+            {
+                "name": "Minutes",
+                "units": 6.9444444E-4
+            },
+            {
+                "name": "Hours",
+                "units": 0.04166666666
+            },
+            {
+                "name": "Days",
+                "units": 1
+            },
+            {
+                "name": "Weeks",
+                "units": 7
+            },
+            {
+                "name": "Years",
+                "units": 365
+            }
+        ],
+        "versioningRetentionPeriod": {
+            "unit": "Days",
+            "value": 5,
+            "allow_doNotDelete": true
+        },
+        "maxReservationPeriod": {
+            "units": "Days",
+            "value": 90
+        },
+        "retentionPeriodForTesters": {
+            "unit": "Days",
+            "value": 5,
+            "allow_doNotDelete": false
+        },
+        "maxReservationPeriodForTesters": {
+            "units": "Days",
+            "value": 10
+        }
     },
-    "retentionPeriodTypes": [
-      {
-        "name": "Minutes",
-        "units": 0.00069444444
-      },
-      {
-        "name": "Hours",
-        "units": 0.04166666666
-      },
-      {
-        "name": "Days",
-        "units": 1
-      },
-      {
-        "name": "Weeks",
-        "units": 7
-      },
-      {
-        "name": "Years",
-        "units": 365
-      }
-    ],
-    "maxRetentionPeriodForExtract": {
-      "units": "Days",
-      "value": 90
-    }
-  },
-  "errorCode": "SUCCESS",
-  "message": ""
+    "errorCode": "SUCCESS",
+    "message": ""
 }
 ```
 
