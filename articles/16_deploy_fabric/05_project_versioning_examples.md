@@ -30,7 +30,7 @@ This example shows a few cases of a developer workflow.
 
 <web>
 
-* Create a space that is based on tag (e.g., use a project space profile that based on that tag). In this case, the project content is cloned to the space according to the tag. When running `version` command at the server, and see as a result the project's version, you have confidence that it is aligned with tag artifacts at GIT.
+* Create a space that is based on tag (e.g., use a project space profile that based on that tag). In this case, the project content is cloned to the space according to the tag. When running `version` command on the server, and see as a result the project's version, you have confidence that it is aligned with tag artifacts at GIT.
 
   
 
