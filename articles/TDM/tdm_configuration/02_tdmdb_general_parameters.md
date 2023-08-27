@@ -56,7 +56,17 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   
   - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
   - **availableRetentionOptions** and **availableReservationOptions** - available options for the retention and reservation period.
-  
+ 
+    Run the following UPDATE statement in the TDM DB if you use a Fabric storage that does not support a TTL on LUIs (for example, PG DB):
+
+     ```
+    UPDATE 
+       tdm_general_parameters
+    SET 
+       param_value = REPLACE(param_value,'"availableRetentionOptions":[{"name":"Minutes","units":0.00069444444},{"name":"Hours","units":0.04166666666},{"name":"Days","units":1},{"name":"Weeks","units":7},{"name":"Years","units":365}]', '"availableRetentionOptions":[]')  
+    where param_name = 'tdm_gui_params'; 
+    ```
+     
     Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks:
   
     ```
