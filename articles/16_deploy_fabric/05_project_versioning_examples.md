@@ -6,7 +6,7 @@ Below are several examples for project versioning use cases, accompanied by diag
 
 ## Example #1: Studio flow - Single Developer 
 
-This example shows few cases of a developer workflow.
+This example shows a few cases of a developer workflow.
 
 * Create a tag, where all changes are committed and pushed and aligned with GIT.
 
