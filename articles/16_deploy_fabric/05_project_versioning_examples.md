@@ -1,6 +1,6 @@
 # Project Versioning Examples
 
-Below are several examples for project versioning use cases, accompany with diagrams that illustrate them, as and end to end work flows.
+Below are several examples for project versioning use cases, accompanied by diagrams that illustrate them, as an end-to-end workflows.
 
 
 
