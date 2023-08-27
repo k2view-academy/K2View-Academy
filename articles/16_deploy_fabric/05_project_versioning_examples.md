@@ -44,9 +44,9 @@ This example shows a few cases of a developer workflow.
 
 This example illustrate the case of several developers who work on the same project. This example starts when version 1.0.4 is created and two developers start working based on it (it is assumed that the branch is fully aligned with the tag. You can see in example 1 that it is not necessarily the case).
 
-* DEV 1 initiates the tag version action. She is warned because DEV 2 made pushes his changes after her, meaning that her code is not fully aligned with branch. In our example - she proceeds with the process.
+* DEV 1 initiates the tag version action. She is warned because DEV 2 made pushes his changes after her, meaning, her code is not fully aligned with the branch. In our example - she proceeds with the process.
 
-  >  This is a valid case, that another developer continues with implementation that aimed for a later version. Accordingly, DEV 2 might verify, before proceeding, that DEV 2 changes shall not be part of the version content.
+  >  This is a legitimate case, that another developer continues with implementation that aimed for a later version. Accordingly, DEV 2 might verify, before proceeding, that DEV 2 changes shall not be part of the version content.
 
 * DEV 2 initiates the tag version action. He will be rejected because the candidate version is the same as DEV1 (1.0.5), who already created it. This will happen as long as he did not pull DEV1 changes from GIT, also with the updated tag version, and as long as he did not change the auto proposed version.
 
