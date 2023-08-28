@@ -1,6 +1,6 @@
 # Fabric Monitoring
 
-Monitoring and dashboards are essential components of managing and maintaining production systems like Fabric. Ensuring these systems' stability, performance and availability is of utmost importance in order to support your business processes.
+Monitoring and dashboards are essential components of managing and maintaining production systems, like Fabric. Ensuring these systems' stability, performance and availability is of utmost importance in order to support your business processes.
 
 Monitoring the system can help in varies aspects like early detection of Issues, proactive problem resolution, performance optimization, resource management and allocation optimization, as well as availability and reliability, to avoid financial and reputational implications.
 
