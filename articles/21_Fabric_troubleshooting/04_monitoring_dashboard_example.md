@@ -2,7 +2,7 @@
 
 Below is a base example of Grafana dashboard, which can be used as a reference. In addition to changes of these metrics, it is highly recommended to add dedicated metrics that can assist your project and business.
 
-The example refers to case where Fabric/Cassandra/Kafka are running on bare metal or virtual machines. Cloud/Kubernetes deployment is different in part of the metrics. 
+The example refers to a case where Fabric/Cassandra/Kafka run on bare metal or virtual machines. Cloud/Kubernetes deployment is different in part of the metrics. 
 
 Learn [here](/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.md) how the dashboard example is set up.
 
