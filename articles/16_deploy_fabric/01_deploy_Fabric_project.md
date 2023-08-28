@@ -158,7 +158,7 @@ Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architect
 
 As the project implementation is an on-going process, where many changes are done over time, there is a need to clarify which code or configuration has been deployed to the server.
 
-Fabric offers project version tagging so that on the deployed server you can see the deployed version tag.
+Fabric offers project version tagging that shows the deployed version tag on the deployed server.
 
 The tag version creation is done along with GIT tagging capability, allowing for a project version to be preserved both as a property in the project definitions file (k2proj.xml) and as a GIT annotated tag.
 
