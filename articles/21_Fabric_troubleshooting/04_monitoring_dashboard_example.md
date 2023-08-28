@@ -8,7 +8,7 @@ Learn [here](/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example
 
 [Here](/articles/21_Fabric_troubleshooting/resources/grafana_fabric_all_base_reference.json) you can find the dashboard's JSON file, that can be imported into Grafana. Each panel (the basic visualization building block in Grafana) contains, in addition to its data source and query, also its description (which is also shown at Grafana panels' tooltips). 
 
-The dashboard is divided into several parts, with several panels, which show data of the last 5 minutes (which you can edit):
+The dashboard is divided into several parts, with several panels, that show data of the last 5 minutes (which you can edit):
 
 * **Fabric Health**: Nodes Up, Average CPU Usage, Average Memory Usage, Average Heap Usage
 * **Fabric Performance**: Reads Count, Writes Count, Average Read Time, Total mDB Size, Average mDB Size, Writes Count by LU, Total API Calls Count, API Calls Distribution, Failed API Calls Count, API Calls, API Calls Avg. Response Time, API Calls Failures
