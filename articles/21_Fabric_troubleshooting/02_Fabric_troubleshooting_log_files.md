@@ -9,7 +9,7 @@ Logs are configured in the **logback.xml** file which is located on the Fabric s
 ~~~
     $K2_HOME/config/logback.xml
 ~~~
- 
+
 Settings like the [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) and the [log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level) can be updated in the **logback.xml** file.  
 
 For additional information, refer to http://logback.qos.ch/manual/configuration.html.
@@ -56,7 +56,7 @@ While log files convey useful information, they grow bigger over time, and event
 The above configuration defines the **k2fabric.log** log file located in the Fabric server under the **$K2_HOME/logs** directory. The rolling policy of the above appender is based on a combination of size and date/time. A new file is created every day. The maximum size of a log file is 20 MB and the total size of the files is 3 GB. History is saved for 10 days. 
 
 Note that to define the maxHistory in hours rather than in days, edit the fileNamePattern tag to include the following pattern: {yyyy-MM-dd-hh}.
- 
+
 When required, a new log file can be created by configuring a new **appender** in the **logback.xml** file. To do so, go to the **logback.xml** file, add the new appender and define its filename, rolling policy and other settings.
 
 **Example:**
@@ -124,7 +124,7 @@ The table below describes each field:
 <td width="400">INFO 2021-08-18 06:22:59,057</td>
 </tr>
 
-	
+
 <tr>
 <td width="200">Time Entry</td>
 <td width="400">
@@ -219,11 +219,10 @@ Due to disk space limitations, logs are automatically deleted after several days
 K2View recommends the following for managing logs and cleanup:
 
 - Check the default settings in the **logback.xml** file related to saving history and validate they fit your business needs:
-rollingPolicy, maxFileSize, maxHistory and totalSizeCap. 
+	rollingPolicy, maxFileSize, maxHistory and totalSizeCap. 
 	
 - Define the Crontab expression to delete ***.err** and ***.** **out** log files since they are not configured via the **logback.xml** file. 
 
 - To keep the log files history for a longer period, for example due to regulations, integrate Fabric with a central syslog system like ELK Stack (Elasticsearch, Logstash and Kibana), Splunk, or other. 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/03_monitoring.md)

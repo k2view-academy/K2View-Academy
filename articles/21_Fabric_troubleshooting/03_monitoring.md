@@ -15,3 +15,6 @@ Having that k2view's customers follow their operational, DevOps and IT teams sta
 [Here](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md) you can find a Fabric Monitoring Dashboard base example, which demonstrate how to use the monitoring enabler tools. 
 
 
+
+[![Previous](/articles/images/Previous.png)](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md)
+
