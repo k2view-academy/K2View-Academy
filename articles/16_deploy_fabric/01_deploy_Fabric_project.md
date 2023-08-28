@@ -7,7 +7,7 @@ The implementation of a Fabric project can be divided into 2 on-going stages:
 
 
 
-A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md)  and [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) and it is required whenever these objects are created or modified. 
+A deployment includes the newly created or modified Fabric objects such as [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flows](/articles/19_Broadway/02a_broadway_flow_overview.md)  and [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md).
 
 
 The deployment of a Fabric project is performed on the following levels:
