@@ -13,7 +13,7 @@ The dashboard is divided into several parts, with several panels, that show data
 * **Fabric Health**: Nodes Up, Average CPU Usage, Average Memory Usage, Average Heap Usage
 * **Fabric Performance**: Reads Count, Writes Count, Average Read Time, Total mDB Size, Average mDB Size, Writes Count by LU, Total API Calls Count, API Calls Distribution, Failed API Calls Count, API Calls, API Calls Avg. Response Time, API Calls Failures
 * **Fabric Logs**
-* **Cassandra Health** (In this example the system DB is Cassandra): Nodes Up, Average CPU Usage, Average Memory Usage, Average Heap Usage
+* **Cassandra Health** (in this example the system DB is Cassandra): Nodes Up, Average CPU Usage, Average Memory Usage, Average Heap Usage
 * **Cassandra Performance**: Disk usage, Pending Top 5 Compactions
 * **Cassandra Logs**
 * **Kafka Health**: Nodes Up, Average CPU Usage, Average Memory Usage, Average Heap Usage
