@@ -2,7 +2,7 @@
 
 Monitoring and dashboards are essential components of managing and maintaining production systems, like Fabric. Ensuring these systems' stability, performance and availability is of utmost importance in order to support your business processes.
 
-Monitoring the system can help in varies aspects like early detection of Issues, proactive problem resolution, performance optimization, resource management and allocation optimization, as well as availability and reliability, to avoid financial and reputational implications.
+Monitoring a system can help in various aspects - like early detection of issues, proactive problem resolution, performance optimization, resource management and allocation optimization, as well as availability and reliability - to avoid financial and reputational implications.
 
 Thus, K2view's recommendation to its customers is to have dashboards that provide real-time insights via a visual representation of Fabric health, making it easy to track uptime and performance metrics. 
 
