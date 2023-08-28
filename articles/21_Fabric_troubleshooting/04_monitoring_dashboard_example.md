@@ -30,7 +30,7 @@ Below is an illustration of the Fabric parts (names may vary a little than in th
 
 At the top of the dashboard resides a variables' panel, which is useful when you wish to change values dynamically. Some are mandatory and prepopulated with some default values and some are optional, and can be used for filtering. For example, in the Environment field  you can mention which environment you wish to track (e.g., pre-production, production, other) and switch between them, on the same dashboard. This is available only if your collected metrics data contains such information, that can be used for filtering metrics. 
 
-You can edit the dashboard content to hide variables (set them as constant/environment variable). This can be done via Grafana UI (Settings > Variables) or in JSON ("templating" section).
+You can edit the dashboard content to hide variables (set them as constant/environment variable). This can be done via Grafana UI (Settings > Variables) or in JSON ('templating' section).
 
 
 
