@@ -82,13 +82,13 @@ Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabri
 
 <studio>
 	
-To check a project’s deployment in the Fabric server, use the **SET** command from the Fabric console.
+To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric console.
 
 </studio>
 
 <web>
 	
-To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric terminal
+To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal
 (Choose **Fabric -> Open Fabric Terminal**)
 
 </web>
