@@ -1,6 +1,6 @@
 # Monitoring Dashboard Example
 
-Below is a base example of Grafana dashboard, that can be used as reference. In addition to changes of these metrics, it is very recommended to add dedicated metrics that assist your project and business.   
+Below is a base example of Grafana dashboard, which can be used as a reference. In addition to changes of these metrics, it is highly recommended to add dedicated metrics that can assist your project and business.
 
 The example refers to case where Fabric/Cassandra/Kafka are running on bare metal or virtual machines. Cloud/Kubernetes deployment is different in part of the metrics. 
 
