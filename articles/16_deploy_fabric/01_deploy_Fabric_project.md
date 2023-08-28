@@ -1,7 +1,7 @@
 # Deploying a Fabric Project
 
 ### What is Fabric Deployment?
-The implementation of a Fabric project can be divided into 2 on-going steps:
+The implementation of a Fabric project can be divided into 2 on-going stages:
 - **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
 - **Deployment** of the project into the Fabric server in a way that all recent changes, done after its last deployment, are compiled and functioning on the server side. 
 
