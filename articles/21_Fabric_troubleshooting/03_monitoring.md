@@ -4,7 +4,7 @@ Monitoring and dashboards are essential components of managing and maintaining p
 
 Monitoring the system can help in varies aspects like early detection of Issues, proactive problem resolution, performance optimization, resource management and allocation optimization, as well as availability and reliability, to avoid financial and reputational implications.
 
-Thus, k2view recommends its customer to have dashboards which provide real-time insights via a visual representation of Fabric health, making it easy to track uptime and performance metrics. 
+Thus, K2view recommends to its customers to have dashboards that provide real-time insights via a visual representation of Fabric health, making it easy to track uptime and performance metrics. 
 
 In addition to scaling out or up actions, that are taken based on CPU, memory or storage load, shown at monitoring dashboards, reads and writes numbers might affect on your financial agreements with storage providers, and web services response time metrics might point on a problematic query,which avoid proper service to end users.  
 
