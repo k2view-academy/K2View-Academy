@@ -137,7 +137,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
   2. Creates and adds the [data generation flows](16_tdm_data_generation_implementation.md) to the LU tables if needed.
 
-  3. Creates the delete and load flows based on the updated LU. 
+  3. Creates the delete and load flows based on the updated LU.  
 
 - The flow gets the following input parameters:
 
