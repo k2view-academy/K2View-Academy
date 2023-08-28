@@ -19,7 +19,7 @@ The supportive monitoring tools used for the dashboard example are: [Grafana](ht
   - Promtail instances should send to Loki the log files of the application to be monitored.
 - Promtheus and Loki should be added as data sources in Grafana.
 - Loki should be already running when you start running Promtail.
-- The Dashboard example assume that Fabric logs files are located at the fabric cluster nodes at "/opt/apps/k2view/logs/k2fabric.log". In case at your deployment it is located at another location, change the Fabric Log metric's query.  Similar change might needed at the Promtail config file.
+- The Dashboard example assume that the Fabric logs files are located on the fabric cluster nodes at "/opt/apps/k2view/logs/k2fabric.log". In case at your deployment it is located at another location, change the Fabric Log metric's query. A similar change may be needed in the Promtail config file.
 
 ## Configure the Monitor Log Files Tools
 
