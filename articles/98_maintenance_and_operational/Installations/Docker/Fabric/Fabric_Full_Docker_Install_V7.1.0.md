@@ -1,4 +1,4 @@
-## FABRIC V7.1.0_229-HF3 DOCKER INSTALLATION
+## FABRIC V7.1.0_235-HF4 DOCKER INSTALLATION
 
 ### Prerequisites
 
@@ -19,11 +19,11 @@ More detailed requirements for each are described below:
    - HDD, 200GB must be available
 
    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
-2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/).
+2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ ).
 
    **Note**: The /var/lib/docker should have at least 200GB of free memory.
-3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/).
-4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony).
+3. Docker Compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).
+4. Enable NTP/chronyc (see more details  [here](https://didyoubounceit.wordpress.com/2018/10/19/red-hat-centos-ntp-is-now-chrony/).)
 5. Create the **k2view** user, and set the home directory on a drive with at least 50GB of space as follows:
 
    ```bash
@@ -42,55 +42,57 @@ More detailed requirements for each are described below:
 
 #### Load Container Images
 
-1. Download the latest versions of Fabric, Cassandra, Kafka and Docker Compose using 1 the below 4 links:
+1. Download the latest versions of Fabric, Cassandra and Docker Compose using 1 the below 4 links:
+     > Kafka is no longer required for a single node setup, if needed, please download the relevant container and uncommnet the Kafka section in the docker-compose.yml file
 
   <table style="border-collapse: collapse; width: 100%;">
 
    <tbody>
-   <tr>
-   <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz 
-   <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
-   </tr>
+   
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    <br>md5: 5d038a563723838d891ea6d09935e9dd</br></td>
    </tr>
    <tr>
+   <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz 
+   <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
+   </tr>
+   <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_229-HF3/D_k2view_fabric_7.1.0_229.tar.gz
-   <br>md5: 635b4d891b447a211679203ccedb64d8</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/D_k2view_fabric_7.1.0_235.tar.gz
+   <br>md5: 0ca6720a24491dd543e003bd088e1915</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_229-HF3/compose_fabric_7.1.0_229.tar.gz
-   <br>md5: 60fa3000edcb3682597a74c4c4b4b4a6</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/compose_fabric_7.1.0_235.tar.gz
+   <br>md5: ca6a5b974b7d6d8cbd39b6faa7405008</br></td>
    </tr>
    </tbody>
    </table>
-2. Copy all files to the k2view directory as follows:
+2. Copy all files to the k2view directory as follows: (skip Kafka if not needed)
 
    ```bash
    cd ~/ 
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz 
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_229-HF3/D_k2view_fabric_7.1.0_229.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_229-HF3/compose_fabric_7.1.0_229.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/D_k2view_fabric_7.1.0_235.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/Server/fabric-7.1.0_235-HF4/compose_fabric_7.1.0_235.tar.gz
    ```
-3. Load the Docker images as follows:
+3. Load the Docker images as follows: (skip Kafka if not needed)
 
    ```bash
-    docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_3.tar.gz
-    docker load -i D_k2view_fabric_7.1.0_229.tar.gz 
+    docker load -i D_k2view_cassandra_3.11.12.tar.gz 
+    docker load -i D_k2view_fabric_7.1.0_235.tar.gz 
    ```
 
    You can see the names of the images by using the command `docker images`
 4. Extract the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_7.1.0_229.tar.gz 
+   tar -zxvf compose_fabric_7.1.0_235.tar.gz 
    ```
 
 #### Run Single Fabric, Cassandra and Kafka Instances
@@ -98,7 +100,7 @@ More detailed requirements for each are described below:
 Run Docker Compose as follows:
 
 ```bash
-cd compose_fabric_7.1.0_229
+cd compose_fabric_7.1.0_235
 # run:  
 docker-compose up -d 
 
@@ -113,7 +115,7 @@ Cassandra and Fabric will start automatically.
 1. To stop the Docker Compose, do the following:
 
    ```bash
-   cd compose_fabric_7.1.0_229
+   cd compose_fabric_7.1.0_235
    #run: 
    docker-compose stop
    ```
