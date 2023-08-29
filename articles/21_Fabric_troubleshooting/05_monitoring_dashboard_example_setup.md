@@ -27,7 +27,7 @@ For illustration, below are links to configuration samples for Loki and Promtail
 
 ### Loki 
 
-[Here](/articles/21_Fabric_troubleshooting/resources/loki-local-config-example.yaml) you can find Loki config example yaml.
+[Here](/articles/21_Fabric_troubleshooting/resources/loki-local-config-example.yaml) you can find a Loki config example.
 
 After making the changes and adjustments, per your deployment, locate it in the Loki installation directory and rename it to "loki-local-config.yaml".
 
