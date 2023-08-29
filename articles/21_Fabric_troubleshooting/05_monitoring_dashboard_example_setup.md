@@ -1,6 +1,6 @@
 # Monitoring Dashboard Example Setup
 
-Below are the guidelines for setting up Fabric components and monitoring tools, supporting the [Monitoring dashboard example](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md), referring for each of the Fabric workload nodes and for the monitoring machine.  
+Below are the guidelines for setting up Fabric components and monitoring tools, that support the [Monitoring dashboard example](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md), by referring to each of the Fabric workload nodes and to the monitoring machine.
 
 The supportive monitoring tools used for the dashboard example are: [Grafana](https://grafana.com/) (the example dashboard is being tested on several Grafana versions - 8.3.4 and up), [Prometheus](https://prometheus.io/), [JMX Exporter](https://github.com/prometheus/jmx_exporter), [Prometheus Node Exporter](https://prometheus.io/docs/guides/node-exporter/) , [Promtail](https://grafana.com/docs/loki/latest/clients/promtail), [Loki](https://grafana.com/docs/loki/).
 
