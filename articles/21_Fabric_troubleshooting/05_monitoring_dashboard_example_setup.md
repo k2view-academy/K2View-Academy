@@ -7,7 +7,7 @@ The supportive monitoring tools used for the dashboard example are: [Grafana](ht
 ## Installation and Execution Guidelines
 
 - JMX Exporter should be running on all instances. The default configurations should be sufficient.
-- Node Exporter should be installed and running on all machines that have the Fabric/Cassandra/ Kafka app running and send data to Grafana.
+- Node Exporter should be installed and should run on all machines that have the Fabric/Cassandra/Kafka app running.
 - Grafana should be installed on the monitoring machine.
   - Import the [dashboard example](/articles/21_Fabric_troubleshooting/resources/grafana_fabric_all_base_reference.json) and choose data sources as required.
 
