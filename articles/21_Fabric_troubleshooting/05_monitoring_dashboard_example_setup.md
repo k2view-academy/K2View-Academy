@@ -11,7 +11,7 @@ The supportive monitoring tools used for the dashboard example are: [Grafana](ht
 - Grafana should be installed on the monitoring machine.
   - Import the [dashboard example](/articles/21_Fabric_troubleshooting/resources/grafana_fabric_all_base_reference.json) and choose data sources as required.
 
-- Prometheus should be installed on the monitoring machine and listen to Node Exporter and JMX.
+- Prometheus should be installed on the monitoring machine, and it should listen to Node Exporter and JMX.
 - Log metrics 
 
   - Promtail should be installed and running on all machines.
