@@ -23,7 +23,7 @@ The supportive monitoring tools used for the dashboard example are: [Grafana](ht
 
 ## Configure the Monitor Log Files Tools
 
-For illustration, below are links to configuration samples for Loki and Promtail. These configurations allow a safe Loki execution, without collecting too much chunk data. 
+For illustration, below are links to configuration samples for Loki and Promtail. These configurations allow a safe Loki execution, without collecting too much data.
 
 ### Loki 
 
