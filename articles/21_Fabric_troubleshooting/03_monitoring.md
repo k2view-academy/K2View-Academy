@@ -12,7 +12,7 @@ K2view's customers usually follow their operational, DevOps and IT standards - b
 
 
 
-[Here](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md) you can find a Fabric Monitoring Dashboard base example, which demonstrates how to use the monitoring enabler tools. 
+[Here](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md) you can find a basic example of Fabric Monitoring Dashboard, which demonstrates how to use the monitoring enabler tools.
 
 
 
