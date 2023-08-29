@@ -33,7 +33,7 @@ After making the changes and adjustments, per your deployment, locate it in the 
 
 ### Promtail 
 
-To illustrate Fabric cluster with 2 nodes, [here](/articles/21_Fabric_troubleshooting/resources/promtail-config-example-fabric1.yaml) you can find Promtail config example yaml for node 1 and [here](/articles/21_Fabric_troubleshooting/resources/promtail-config-example-fabric1.yaml) for node 2.
+To illustrate a Fabric cluster with 2 nodes, you can find Promtail config example files [here](/articles/21_Fabric_troubleshooting/resources/promtail-config-example-fabric1.yaml) for node 1 and [here](/articles/21_Fabric_troubleshooting/resources/promtail-config-example-fabric1.yaml) for node 2.
 
 After making the changes and adjustments, per your deployment, locate the Promtail config file, in the Promtail installation directory, and rename it to "promtail-fabric-config.yaml".
 
