@@ -8,7 +8,7 @@ Thus, K2view's recommendation to its customers is to have dashboards that provid
 
 In addition to scaling out or scaling up acts, that take place based on CPU, memory or storage load data - shown on monitoring dashboards - reads and writes numbers may affect your financial agreements with storage providers, and web services response time metrics may point at an inaccurate query, which leads to an improper service to end users.
 
-Having K2view's customers follow their operational, DevOps and IT teams standards in using monitoring tools, like for other systems in the organization, Fabric provides the enablers as input data for such tools like [JMX metrics and Statistics](/articles/34_JMX_statistics/README.md), [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and [tracing files](/articles/29_tracing/README.md). 
+K2view's customers usually follow their operational, DevOps and IT standards - by using monitoring tools as they do across their organization. Fabric provides these tools with input data via enablers such as [JMX metrics and Statistics](/articles/34_JMX_statistics/README.md), [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and [tracing files](/articles/29_tracing/README.md).
 
 
 
