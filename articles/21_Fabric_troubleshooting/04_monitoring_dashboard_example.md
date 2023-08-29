@@ -22,7 +22,7 @@ The dashboard is divided into several parts, with several panels, that show data
 
 
 
-Below is an illustration of the Fabric parts (names may vary a little than in the export file):
+Below is an illustration of the Fabric parts (names may slightly vary from those stated in the export file):
 
 ![](images/grafana_fabric_dahbaord_example.png)
 
