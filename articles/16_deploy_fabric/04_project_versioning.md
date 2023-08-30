@@ -23,7 +23,7 @@ Studio helps you to appropriately tag a version by:
 3. Alerting you when your changes are not aligned with other changes on your working GIT's branch.
 4. Updating the project version in both the project definitions and GIT, as an annotated tag.
 
-### Tag Version Workflow
+### Version Tagging Workflow
 
 The following is the recommended workflow:
 
