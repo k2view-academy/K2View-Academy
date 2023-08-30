@@ -58,7 +58,7 @@ This example illustrates the case of several developers who work on the same pro
 
 ## Example #3: Hotfix
 
-This example illustrates a case that hotfix is required, where one of the developers handles it, while another continues to work on the main branch, without collisions.
+This example illustrates a required-hotfix case, where one of the developers handles the hotfix implementation, while another continues to work on the main branch, without any collisions.
 
 * DEV 2 assigned to make a hotfix and switch to work based on tag (by doing it he detached from tag and needs to make his changes on a some branch).
 * When DEV 2 initiates the Tag Version action, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current version - 1.0.0. DEV 2 overrides this value with HF version ("1.0.0-HF1").
