@@ -160,7 +160,7 @@ As the project implementation is an on-going process, where many changes are don
 
 Fabric offers project version tagging that shows the deployed version tag on the deployed server.
 
-The tag version creation is done along with GIT tagging capability, allowing for a project version to be preserved both as a property in the project definitions file (k2proj.xml) and as a GIT annotated tag.
+The version tag creation is done along with GIT tagging capability, allowing for a project version to be preserved both as a property in the project definitions file (k2proj.xml) and as a GIT annotated tag.
 
 While Fabric provides the mechanism and technology for project versioning, the project owner and developers shall follow the related project lifecycle procedures, when tagging a version and while deploying the project.  
 
