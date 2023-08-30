@@ -16,7 +16,7 @@ This example shows a few cases of a developer workflow.
 
 <studio> 
 
-* Deploy to remote server where no changes were done after creating the tag. In this case, the deployed artifacts are fully aligned with the tag, so that when running the `version` command in the remote server, you can be assured that the version is aligned with tag artifacts.
+* Deploy to remote server where no changes were done after creating the tag. In this case, the deployed artifacts are fully aligned with the tag, in a way that when running the `version` command in the remote server, you can be assured that the version is aligned with tag artifacts.
 
 * Deploy to remote server where changes were done locally after creating the tag. In case where Warn-on-Tag-Diff is chosen in User Preferences for this remote server, Studio warns the user. If the user chooses to proceed anyway, then the built artifacts are marked with a star (*). This way, when running the `version` command in the target remote server, the user is hinted that the deployed artifacts are not fully aligned with the tagged version.
 
