@@ -12,7 +12,7 @@ This example shows a few cases of a developer workflow.
 
 * Create a tag, where there are local changes that are not pushed to GIT. Studio then alerts about their presence.
 
-  > While this case is a little risky, it is valid, when developer already continued working on next features, before it was decided to set a version. In our example, the developer pushes the leftovers. and activate tag version again, this time without getting any warnings.
+  However, the developer can also choose to ignore the alert and to continue with the version tagging. This is a slightly risky, yet a valid case, as the version that is about to be released should not include the features he is currently working on. In our example (depicted in the below diagram), the developer pushes his changes and re-activates the version tagging, this time without getting any alerts.
 
 <studio> 
 
