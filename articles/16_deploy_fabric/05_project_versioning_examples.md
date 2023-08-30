@@ -48,7 +48,7 @@ This example illustrates the case of several developers who work on the same pro
 
   >  This is a legitimate case, where another developer continues with an implementation that is aimed for a later version. Accordingly, DEV 1 should verify, before proceeding, that DEV 2's changes shall not be part of the current version's content.
 
-* DEV 2 initiates the tag version act. He will be rejected because the candidate version is the same as DEV 1 (1.0.5), who already created it. This will happen as long as he did not pull DEV 1 changes from GIT, also with the updated tag version, and as long as he did not change the auto proposed version.
+* DEV 2 initiates the tag version act. He will be rejected because the prospective version tag is the same as DEV 1's (1.0.5), who has already created it. This will happen as long as DEV 2 did not pull DEV 1's changes from GIT, with the updated version tag, and as long as he did not change the auto proposed version.
 
 
 
