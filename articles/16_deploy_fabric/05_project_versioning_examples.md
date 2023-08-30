@@ -64,7 +64,7 @@ This example illustrates a required-hotfix case, where one of the developers han
 
   > When he starts developing, the GIT would detach the developer from the tag, where he would need to push his changes to a new branch.
  
-* When DEV 2 initiates the Tag Version act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with a HF version ("1.0.0-HF1").
+* When DEV 2 initiates the tag version act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with a HF version ("1.0.0-HF1").
 * DEV 1 works on the ongoing branch and thus no conflicts will occur when pushing her commits into GIT. Similarly, no conflicts will occur when initiating the version tagging act, which would generate and offer, as expected, the tag 1.0.1.
 
 
