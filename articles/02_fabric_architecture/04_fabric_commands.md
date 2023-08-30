@@ -294,27 +294,31 @@ The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE pa
 
 The following table lists the  DELETE commands:
 
-<table style="width: 650px;" width="900pxl">
+<table width="900pxl">
 <tbody>
 <tr>
-<td style="width: 300px;" valign="top">
+<td style="width: 350px;" valign="top">
 <p><strong>Name and Description</strong></p>
 </td>
-<td style="width: 300px;" valign="top">
+<td style="width: 350px;" valign="top">
 <p><strong>Syntax</strong></p>
 </td>
-<td style="width: 300px;" valign="top">
+<td style="width: 200px;" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
 <td style="width: 456.55px;" valign="top">
-<p><strong>DELETE INSTANCE</strong> - Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
+<p><strong>DELETE INSTANCE</strong> - Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric:</p>
+<ul style="list-style-type: disc;">
+<li>mdbFinder = true (default) - delete from iid_info table&nbsp;</li>
+<li>mdbFinder = false - skip the delete from iid_info table</li>
+</ul>
 <p>&nbsp;</p>
 </td>
 <td style="width: 289.35px;" valign="top">
 <p>Delete one instance:</p>
-<p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
+<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;' [mdbFinder=&lt;false/true&gt;];&nbsp;</p>
 <p>Delete multiple instances:</p>
 <p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
@@ -341,6 +345,7 @@ The following table lists the  DELETE commands:
 </tr>
 </tbody>
 </table>
+
 
 ### Release LU
 

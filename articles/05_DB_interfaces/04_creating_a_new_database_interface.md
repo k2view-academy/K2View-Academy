@@ -23,18 +23,21 @@ The following screenshot displays a list of available Interface Types.
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
-    
+
     * To check if the connection settings are correct, click the **Test Connection String**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
-    
+
 5. Optional: Edit the **Pool Properties**.
 
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
+
     
-    
+
+In V7.2  the **jdbc-tester.sh** utility has been added to test the use of a JDBC driver and its compliance with Fabric used APIs.
+
 </studio>
 
 <web>
@@ -64,7 +67,7 @@ The following screenshots display a list of available Interface Types.
 
 ![image](images/05_04_01_WEB3_interface_types.PNG)
 
-    
+
 5. Optional: Edit the **Connection Pool Settings**.
 
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
