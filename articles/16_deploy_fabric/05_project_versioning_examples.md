@@ -46,7 +46,7 @@ This example illustrates the case of several developers who work on the same pro
 
 * DEV 1 initiates the tag version act. She is being alerted because DEV 2 has pushed his changes after she did, meaning, her code is not fully aligned with the branch. In our example - she proceeds with the process.
 
-  >  This is a legitimate case, where another developer continues with implementation that aimed for a later version. Accordingly, DEV 2 might verify, before proceeding, that DEV 2 changes shall not be part of the version content.
+  >  This is a legitimate case, where another developer continues with an implementation that is aimed for a later version. Accordingly, DEV 1 should verify, before proceeding, that DEV 2's changes shall not be part of the current version content.
 
 * DEV 2 initiates the tag version act. He will be rejected because the candidate version is the same as DEV 1 (1.0.5), who already created it. This will happen as long as he did not pull DEV 1 changes from GIT, also with the updated tag version, and as long as he did not change the auto proposed version.
 
