@@ -44,11 +44,11 @@ This example shows a few cases of a developer workflow.
 
 This example illustrates the case of several developers who work on the same project. This example starts when version 1.0.4 is created and two developers start working based on it (it is assumed that the branch is fully aligned with the tag. You can see in example 1 that it is not necessarily the case).
 
-* DEV 1 initiates the tag version act. She is being alerted because DEV 2 has pushed his changes after she did, meaning, her code is not fully aligned with the branch. In our example - she proceeds with the process.
+* DEV 1 initiates the version tagging act. She is being alerted because DEV 2 has pushed his changes after she did, meaning, her code is not fully aligned with the branch. In our example - she proceeds with the process.
 
   >  This is a legitimate case, where another developer continues with an implementation that is aimed for a later version. Accordingly, DEV 1 should verify, before proceeding, that DEV 2's changes shall not be part of the current version's content.
 
-* DEV 2 initiates the tag version act. He will be rejected because the prospective version tag is the same as DEV 1's (1.0.5), who has already created it. This will happen as long as DEV 2 did not pull DEV 1's changes from GIT, with the updated version tag, and as long as he did not change the auto proposed version.
+* DEV 2 initiates the version tagging act. He will be rejected because the prospective version tag is the same as DEV 1's (1.0.5), who has already created it. This will happen as long as DEV 2 did not pull DEV 1's changes from GIT, with the updated version tag, and as long as he did not change the auto proposed version.
 
 
 
@@ -64,7 +64,7 @@ This example illustrates a required-hotfix case, where one of the developers han
 
   > When he starts developing, the GIT would detach the developer from the tag, where he would need to push his changes to a new branch.
  
-* When DEV 2 initiates the tag version act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with a HF version ("1.0.0-HF1").
+* When DEV 2 initiates the version tagging act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with a HF version ("1.0.0-HF1").
 * DEV 1 works on the ongoing branch and thus no conflicts will occur when pushing her commits into GIT. Similarly, no conflicts will occur when initiating the version tagging act, which would generate and offer, as expected, the tag 1.0.1.
 
 
