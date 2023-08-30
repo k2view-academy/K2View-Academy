@@ -61,6 +61,9 @@ This example illustrates the case of several developers who work on the same pro
 This example illustrates a required-hotfix case, where one of the developers handles the hotfix implementation, while another continues to work on the main branch, without any collisions.
 
 * DEV 2 is assigned to implement the hotfix and he switches to work on a version that is based on a tag (by doing it he detached from tag and needs to make his changes on a some branch).
+
+  > When he starts developing, the GIT would detach the developer from the tag, where he would need to push is changes to a new branch.
+ 
 * When DEV 2 initiates the Tag Version action, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current version - 1.0.0. DEV 2 overrides this value with HF version ("1.0.0-HF1").
 * DEV 1 works on the ongoing branch and thus no conflicts will appear when pushing her stuff into GIT, as well when initiating tag version, which suggested to be, as expected, 1.0.1.
 
