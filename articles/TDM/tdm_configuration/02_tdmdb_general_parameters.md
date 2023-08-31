@@ -42,9 +42,9 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 ### TDM Portal General Parameters
 
-- The [TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
+- The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
   
-  - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. Default value is 90 days.
+  - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. The default value is 90 days.
   
   - **retentionDefaultPeriod** - default retention period on extract or extract-and-load tasks. The default value is **Do Not Delete**.
   
