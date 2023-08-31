@@ -55,7 +55,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
   - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
-  - **availableRetentionOptions** and **availableReservationOptions** - available options for the retention and reservation period.
+  - **availableRetentionOptions** and **availableReservationOptions** - available options for the retention and reservation periods.
  
     Run the following UPDATE statement in the TDM DB if you use a Fabric storage that does not support a TTL on LUIs (for example, PG DB):
 
@@ -81,7 +81,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   
     Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about the Parameters' TDM DB tables. 
   
-- **TDM_VERSION** - is populated with the TDM version displayed in the TDM portal.
+- **TDM_VERSION** - populated with the TDM version that is displayed in the TDM portal.
   
   
 
