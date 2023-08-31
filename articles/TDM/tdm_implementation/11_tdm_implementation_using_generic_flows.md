@@ -171,7 +171,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
 ###  Load and Delete Flows
 
-The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition it creates a load all flow to run all table level load flows in the right order, and a delete all flow to run all table level delete flows in the right order.
+The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition, it creates a *load all flow* to run all table level load flows in the right order, and a *delete all flow* to run all table level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
