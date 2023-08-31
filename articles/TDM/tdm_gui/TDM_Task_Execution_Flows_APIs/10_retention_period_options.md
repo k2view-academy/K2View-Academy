@@ -31,8 +31,8 @@ The retention period options contain the supported units and their default value
 
 The API also returns the maximum number of days that can be set for the following activities:
 
-- Set a retention period of an extracted data version: get the **maxRetentionPeriodForExtract** output attribute.
-- Set a reservation period of entities: get the **maxRetentionPeriodForReserve** output attribute.
+- Setting of a retention period of an extracted data version: get the **maxRetentionPeriodForExtract** output attribute.
+- Setting of entities' reservation period: get the **maxRetentionPeriodForReserve** output attribute.
 
 ### API Input
 
