@@ -133,9 +133,9 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
 - In this step you will run the **createAllFromTemplates** from the Shared Objects Broadway folder. This flow creates the following:
 
-  1. Creates and adds the [delete entity's target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) to the LU if needed.
+  1. Creates and adds the [delete entity's target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) to the LU, if needed.
 
-  2. Creates and adds the [data generation flows](16_tdm_data_generation_implementation.md) to the LU tables if needed.
+  2. Creates and adds the [data generation flows](16_tdm_data_generation_implementation.md) to the LU tables, if needed.
 
   3. Creates the delete and load flows based on the updated LU.  
 
