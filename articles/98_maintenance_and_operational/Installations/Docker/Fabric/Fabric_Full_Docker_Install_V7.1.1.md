@@ -1,4 +1,4 @@
-## FABRIC V7.1.1_57-HF2 DOCKER INSTALLATION
+## FABRIC V7.1.1_65-HF3 DOCKER INSTALLATION
 
 ### Prerequisites
 
@@ -60,13 +60,13 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_57-HF2/D_k2view_fabric_7.1.1_57.tar.gz
-   <br>md5: 17f36f34a7691680ac8c0383a66b9bb6</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_65-HF3/D_k2view_fabric_7.1.1_65.tar.gz
+   <br>md5: da11a1e9c6b3d1b225ecbf2fa1d52ef3</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_57-HF2/compose_fabric_7.1.1_57.tar.gz
-   <br>md5: 3b4033d26dade5573849b2d3b0dd9eb0</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_65-HF3/compose_fabric_7.1.1_65.tar.gz
+   <br>md5: 673be55db209b9f2cee27089471ff4bb</br></td>
    </tr>
    </tbody>
    </table>
@@ -76,22 +76,22 @@ More detailed requirements for each are described below:
    cd ~/ 
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz 
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_57-HF2/D_k2view_fabric_7.1.1_57.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_57-HF2/compose_fabric_7.1.1_57.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_65-HF3/D_k2view_fabric_7.1.1_65.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_65-HF3/compose_fabric_7.1.1_65.tar.gz
    ```
 3. Load the Docker images as follows:
 
    ```bash
     docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_3.tar.gz
-    docker load -i D_k2view_fabric_7.1.1_57.tar.gz 
+    docker load -i D_k2view_fabric_7.1.1_65.tar.gz 
    ```
 
    You can see the names of the images by using the command `docker images`
 4. Extract the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_7.1.1_57.tar.gz 
+   tar -zxvf compose_fabric_7.1.1_65.tar.gz 
    ```
 
 #### Run Single Fabric, Cassandra and Kafka Instances
@@ -99,7 +99,7 @@ More detailed requirements for each are described below:
 Run Docker Compose as follows:
 
 ```bash
-cd compose_fabric_7.1.1_57
+cd compose_fabric_7.1.1_65
 # run:  
 docker-compose up -d 
 
@@ -114,7 +114,7 @@ Cassandra and Fabric will start automatically.
 1. To stop the Docker Compose, do the following:
 
    ```bash
-   cd compose_fabric_7.1.1_57
+   cd compose_fabric_7.1.1_65cd
    #run: 
    docker-compose stop
    ```

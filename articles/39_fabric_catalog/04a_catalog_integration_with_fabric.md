@@ -20,9 +20,11 @@ Note that when the Crawler job is invoked, it automatically triggers the DATA_DI
 
 ### Open In Catalog
 
+Once the Discovery job execution on a data source is completed, the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio presents the discovery schema from neo4j rather than the data source schema.
+
 To view a data source element in the Catalog application, do the following:
 
-* Open the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
+* Open the DB Interface explorer tab in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
 
 * Right-click the element and click **Open in Catalog**. 
 
