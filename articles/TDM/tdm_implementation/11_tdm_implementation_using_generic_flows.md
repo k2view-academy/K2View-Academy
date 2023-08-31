@@ -494,7 +494,7 @@ Example of US states input:
 
 Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM Library).
 
-See example:
+View the below example:
 
 ![custom logic](images/custom_logic_table_example.png)
 
