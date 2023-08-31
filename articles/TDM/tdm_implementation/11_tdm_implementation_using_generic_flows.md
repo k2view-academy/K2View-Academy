@@ -149,7 +149,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
   - **TARGET_INTERFACE**
 
-  - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow: (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
+  - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
 
   - **TARGET_ENVIRONMENT**
 
