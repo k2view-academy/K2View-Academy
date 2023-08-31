@@ -2,7 +2,7 @@
 
 ## Get the Retention Period Options
 
-This API can be used to get the retention period options for both of these activities:
+This API can be used to get the retention period options for the following 2 activities:
 
 - Creating a data versioning extract task.
 
