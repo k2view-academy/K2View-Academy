@@ -143,17 +143,17 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
   - **CREATE_DELETE_TABLES** - valid values: true/false. When true, the flow creates and adds the LU the target tables to support the delete entity. The default value is false.
 
-  - **LU_NAME** -   the input LU must be deployed to Fabric debug server before running the createAllFromTemplates flow.
+  - **LU_NAME** - the input LU must be deployed to Fabric debug server before running the createAllFromTemplates flow.
 
   - **TARGET_SCHEMA**
 
   - **TARGET_INTERFACE**
 
-  - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false.  When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow: (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
+  - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow: (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
 
   - **TARGET_ENVIRONMENT**
 
-  - **CREATE_GENERATE_FLOWS** - valid values: true/false. When true, the flow creates and adds data generation flows to the LU.. The default value is false.
+  - **CREATE_GENERATE_FLOWS** - valid values: true/false. When true, the flow creates and adds data generation flows to the LU. The default value is false.
 
     
 
