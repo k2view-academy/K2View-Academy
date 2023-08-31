@@ -46,7 +46,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
   
   - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. Default value is 90 days.
   
-  - **retentionDefaultPeriod** - default retention period on extract or extract and load tasks. The default value is **Do Not Delete**.
+  - **retentionDefaultPeriod** - default retention period on extract or extract-and-load tasks. The default value is **Do Not Delete**.
   
   - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. Default value is 5 days ("unit":"Days","value":5).
   
