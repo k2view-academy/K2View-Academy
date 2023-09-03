@@ -1,6 +1,6 @@
 # TDM - Deleting Entities
 
-Every LU must include the ability to Delete Entities from a target environment to support the following tasks:
+Every LU must include the ability to Delete Entities from a target environment in order to support the following tasks:
 
 - [Load and Delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types) - the entities are deleted and reloaded to the target environment.
 - [Delete task](/articles/TDM/tdm_gui/19_delete_only_task.md) - the entities are deleted (cleaned) from the task's environment.
