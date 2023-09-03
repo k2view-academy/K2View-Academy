@@ -50,4 +50,4 @@ When a Web Service has several input arguments, all of them need to be listed as
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/16_rest_api_additions.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/14_rest_api_additions.md)
