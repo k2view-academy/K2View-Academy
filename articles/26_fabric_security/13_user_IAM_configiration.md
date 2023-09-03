@@ -109,7 +109,9 @@ For more information and guides as to where and how this information should be s
 
 ### Editing the config.ini file
 
-Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was set and acquired at the preparation step:
+Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was set and acquired at the preparation step.
+
+At the `[saml]` section edit these properties:
 
 - **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
 - **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used too) . This property is also populated at the IDP side.
@@ -119,6 +121,11 @@ Following are the configuration actions that should be applied in the Fabric **c
 - **SP_CERT_ALIAS**, alias to the certification that is uploaded to the IDP,which is the public key to sign and encrypt the SAML response 
 - **IDP_CERT_ALIAS**, alias to the certification supplied by the IDP, which is the public key to to sign and encrypt the SAML request.
 - **GROUPS_KEY_MAPPING** (optional), name of the groups list, as retrieved from IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
+- **SP_SECURE** (optional, default is true), indicates if expecting SAML response to be secured (encrypted). Set it to *false* when IDP does not want to upload the certificate file, provided by k2view. Having that IDP does not have the public key, it cannot encrypt the response.
+
+
+
+In addition, `WEB_AUTHENTICATION_PROTOCOL` property's value shall set to "SAML".
 
 
 

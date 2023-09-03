@@ -43,7 +43,9 @@ In order to use a Secrets Manager:
 
 Each of the supported Secrets Managers has its own dedicated section at config.ini file, with all required access and permissions details.
 
-In addition of populating these details, you shall turn it on by setting the 'ENABLED' property to be 'true'.
+In addition of populating these details, you shall turn it on, by setting the 'ENABLED' property to be 'true', in the section of the chosen secret manager.
+
+Following are the config attributes required for each secret manger:
 
 #### AWS Secrets Manager
 
@@ -54,12 +56,35 @@ properties:
 * SECRET_ACCESS_KEY
 * REGION
 
+
+
 #### HashiCorp Vault
 
 section name: [encryption_hashicorp_sm]
 
-* AUTH_TOKEN
-* URL
+The authentication within HashiCorp Vault is done by tokens that can be used directly or by using one of their other [auth methods](https://developer.hashicorp.com/vault/docs/concepts/auth), in which case the token is dynamically generated.
+
+Fabric supports 2 authentication methods:
+
+* Directly, where AUTH_TOKEN shall be set.
+
+  When using this method, Fabric accesses the Vault URL with the token as the auth credentials, in order to get the secret.
+
+* [AppRole](https://developer.hashicorp.com/vault/docs/auth/approle), which is based on the role that Fabric is associated to at the Vault.
+
+  When using this method, Fabric first accesses the *approle* URL to dynamically get a token, and then uses this token as the auth credentials, in order to get the secret. For this method you shall specify the following attributes:
+
+  * ROLE_ID, the role that Fabric is associated to in Vault.
+  * SECRET_ID, the secret that is used to get the token.
+  * APPROLE_URL, optional, when AppRole endpoint is not the default setting (default setting ends with "/approle").
+
+  
+
+In addition, this shall be set:
+
+* URL - the Vault API endpoint to get the secrets.
+
+
 
 #### Azure Key Vault
 
