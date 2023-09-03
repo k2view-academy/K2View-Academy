@@ -39,7 +39,7 @@ Take the following steps in order to create the sequences for your TDM implement
 
 ### Generate the Sequence Actors
 
-**A.** The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's **table** object with the relevant information for your TDM implementation as follows:
+**A.** The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Open this Actor and populate it with the relevant information for your TDM implementation as follows:
    - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
 
    - **CACHE_DB_NAME** - populate this setting using **DB_CASSANDRA** or **TDM** interfaces, where the Sequence Cache tables are stored.
