@@ -26,7 +26,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
 2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
 
-## Data Generation Flows Implementation
+## Implementation of Data Generation Flows 
 
 The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
 
