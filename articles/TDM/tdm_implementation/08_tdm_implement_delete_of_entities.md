@@ -69,7 +69,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
 #### Adding a Decision Function to the Target LU Tables
 
-The target LU tables must be populated when running a TDM task that deletes the entities from the target environment. The target keys must be extracted from the target environment to enable deleting entities and their related data.
+The target LU tables must be populated when running a TDM task that deletes the entities from the target environment. The target keys must be extracted from the target environment in order to enable deleting entities and their related data.
 
 If the task does not delete the entities from the target environment, the target keys do not need to be extracted from the target environment.
 
