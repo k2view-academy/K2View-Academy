@@ -75,7 +75,7 @@ If the task does not delete the entities from the target environment, the target
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** if the task must **delete the entities** from the target. Otherwise, this Global is set to **false**.   
 
-The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md) ) is **automatically added to all target tables** by the target tables generation flow. 
+The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the target tables generation flow. 
 
 #### Populating Target Tables with the Target Environment
 
