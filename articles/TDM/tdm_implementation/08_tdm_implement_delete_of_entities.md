@@ -93,7 +93,7 @@ For example:
 
  Click for more information about [Broadway as a population and Fabric command Actors](/articles/19_Broadway/09_broadway_integration_with_Fabric.md).
 
-Note that the populations of the target tables can be based on **the same interfaces as the source LU tables**. It is not necessary to define separate target interfaces as the population of the main target LU table sets the target environment to be the active environment. As a result, the population of the target tables use the target connection details. 
+Note that the population of the target tables can be based on **the same interfaces as the source LU tables**. It is not necessary to define separate target interfaces for the reason that the population of the main target LU table sets the target environment to be the active environment. As a result, the population of the target tables use the target connection details. 
 
 ## Adding Broadway Flows to Delete the Entities
 
