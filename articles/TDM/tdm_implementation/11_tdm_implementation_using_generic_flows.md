@@ -6,7 +6,7 @@ The TDM library contains sets of generic flows that allow you to create a standa
 
 ## Step 1 - Define Tables to be Filtered Out
 
-Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway flow, which generates the **delete** and **load** flows. The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, is it populated by both the TDM tables and the [target LU tables](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) added to the LU to enable a delete of entity:
+Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway flow, which generates the **delete** and **load** flows. The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, is it populated by both the TDM tables and the [target LU tables](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) added to the LU to enable a delete of the entity:
 
 ![image](images/11_tdm_impl_actor_1.PNG)
 
