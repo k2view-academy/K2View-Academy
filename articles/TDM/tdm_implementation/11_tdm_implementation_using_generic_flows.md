@@ -1,6 +1,6 @@
 # Broadway Flows Implementation
 
-The TDM library has sets of generic flows that allow you to create a standard TDM implementation in just a few minutes. Once such implementation has been created, its flows can be edited and tailored to your project's needs.
+The TDM library contains sets of generic flows that allow you to create a standard TDM implementation in just a few minutes. Once such implementation has been created, its flows can be edited and tailored to your project's needs.
 
 ## How Do I Create the TDM Broadway Flows?
 
