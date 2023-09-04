@@ -41,7 +41,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
       - **TARGET_INTERFACE**
 
-        This flow creates the target tables, their population flows, and adds them to the LU schema. 
+        This flow creates the target tables with their population flows, and adds them to the LU schema.
 
         
 
