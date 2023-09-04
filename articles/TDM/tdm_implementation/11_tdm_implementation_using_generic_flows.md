@@ -141,7 +141,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
 - The flow gets the following input parameters:
 
-  - **CREATE_DELETE_TABLES** - valid values: true/false. When true, the flow creates and adds the LU the target tables to support the delete entity. The default value is false.
+  - **CREATE_DELETE_TABLES** - valid values: true/false. When true, the flow creates and adds the target tables to the LU in order to support the delete entity. The default value is false.
 
   - **LU_NAME** - the input LU must be deployed to Fabric debug server before running the createAllFromTemplates flow.
 
