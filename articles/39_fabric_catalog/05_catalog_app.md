@@ -6,13 +6,13 @@
 
 The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various elements (nodes), searching for nodes, viewing their properties, and more.
 
-The Catalog application includes the following parts, described in this article:
+The article includes the following sub-sections:
 
-* [Main area](05_catalog_app.md#main-area), which displays the Catalog tree.
-* [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
-* [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
-
-Additionally, this article includes the description of the Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism and the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+* Catalog application [Main area](05_catalog_app.md#main-area), which displays the Catalog tree.
+* Catalog application [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
+* Catalog application [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
+* Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
+* Catalog application's [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
 ### Main Area
 
@@ -118,7 +118,12 @@ This link can be shared as it sends another user straight to a specific in-app l
 
 ### Classifier Configuration
 
-The Classifier Configuration pop-up screen allows to view and update the profiling rules that are used by the Catalog Classification built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins).
+The Classifier Configuration screen provides the following configuration capabilities:
+
+* The **Regex Setup** tab allows to view and update the profiling rules that are used by the Catalog Classification built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins). 
+  * Each classification can have several definitions in this tab.
+* The **PII & Masking Setup** tab allows to view and update of the PII and masking settings of each classification.
+  * Each classification can appear only once in this tab.
 
 The rules are saved in the Discovery/MTable folder in the project tree.
 
