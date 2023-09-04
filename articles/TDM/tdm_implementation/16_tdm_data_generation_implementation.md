@@ -4,7 +4,7 @@ The TDM data generation creates synthetic entities. The synthetic data is popula
 
 ## Implementation of LU Populations 
 
-The LU population must be based on a Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support both population modes: a DB Select query from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the **rowsGeneratorDistribution** input Actor.
+The LU population must be based on a Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support either population modes: a DB Select query from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the **rowsGeneratorDistribution** input Actor.
 
 ### LU Population Flows - Implementation Steps
 
