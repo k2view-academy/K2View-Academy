@@ -64,63 +64,63 @@ If a match is found, the plugin evaluates both the relation direction and the fo
   * The relation dataset2 refers to dataset1 is created and its score is 0.8.
   * Some examples of the matching rules are:
 
-<table style="width: 900px;">
-<tbody>
-<tr>
-<td style="width: 125px;" colspan="2"><strong>Input: 2 Datasets</strong></td>
-<td style="width: 650px;" colspan="2">
-<p><strong>Output: Relation created by plugin</strong></p>
-</td>
-</tr>
-<tr>
-<td style="width: 125px;">
-<p><strong>DS1</strong></p>
-</td>
-<td style="width: 125px;">
-<p><strong>DS2</strong></p>
-</td>
-<td style="width: 600px;">
-<p><strong>Relation direction and FK</strong></p>
-</td>
-<td style="width: 50px;">
-<p><strong>Score</strong></p>
-</td>
-</tr>
-<tr>
-<td style="width: 141.016px;">
-<p>field_1 PK</p>
-</td>
-<td style="width: 141.016px;">
-<p>field_1 PK</p>
-<p>field_2&nbsp; PK</p>
-</td>
-<td style="width: 190.531px;">
-<p><em>DS2 refers to DS1</em></p>
-<p>FK: DS2 (field_1)</p>
-</td>
-<td style="width: 49.4375px;">
-<p>High</p>
-</td>
-</tr>
-<tr>
-<td style="width: 141.016px;">
-<p>field_1 PK</p>
-<p>field_2&nbsp; (not PK)</p>
-</td>
-<td style="width: 141.016px;">
-<p>field_1 PK</p>
-<p>field_2&nbsp; PK</p>
-</td>
-<td style="width: 190.531px;">
-<p><em>DS2 refers to DS1</em></p>
-<p>FK: DS2 (field_1, field_2)</p>
-</td>
-<td style="width: 49.4375px;">
-<p>High</p>
-</td>
-</tr>
-</tbody>
-</table>
+    <table style="width: 900px;">
+    <tbody>
+    <tr>
+    <td style="width: 125px;" colspan="2"><strong>Input: 2 Datasets</strong></td>
+    <td style="width: 650px;" colspan="2">
+    <p><strong>Output: Relation created by plugin</strong></p>
+    </td>
+    </tr>
+    <tr>
+    <td style="width: 125px;">
+    <p><strong>DS1</strong></p>
+    </td>
+    <td style="width: 125px;">
+    <p><strong>DS2</strong></p>
+    </td>
+    <td style="width: 600px;">
+    <p><strong>Relation direction and FK</strong></p>
+    </td>
+    <td style="width: 50px;">
+    <p><strong>Score</strong></p>
+    </td>
+    </tr>
+    <tr>
+    <td style="width: 141.016px;">
+    <p>field_1 PK</p>
+    </td>
+    <td style="width: 141.016px;">
+    <p>field_1 PK</p>
+    <p>field_2&nbsp; PK</p>
+    </td>
+    <td style="width: 190.531px;">
+    <p><em>DS2 refers to DS1</em></p>
+    <p>FK: DS2 (field_1)</p>
+    </td>
+    <td style="width: 49.4375px;">
+    <p>High</p>
+    </td>
+    </tr>
+    <tr>
+    <td style="width: 141.016px;">
+    <p>field_1 PK</p>
+    <p>field_2&nbsp; (not PK)</p>
+    </td>
+    <td style="width: 141.016px;">
+    <p>field_1 PK</p>
+    <p>field_2&nbsp; PK</p>
+    </td>
+    <td style="width: 190.531px;">
+    <p><em>DS2 refers to DS1</em></p>
+    <p>FK: DS2 (field_1, field_2)</p>
+    </td>
+    <td style="width: 49.4375px;">
+    <p>High</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
 
 * **same_field_names_pk** - Common fields, a part of PK in both datasets, and both datasets have identical number of PKs.
   * The relation is created and its direction is random. The score is 0.4.
