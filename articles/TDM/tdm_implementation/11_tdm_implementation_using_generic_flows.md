@@ -112,7 +112,7 @@ This table serves 2 purposes:
 Click [here](16_tdm_data_generation_implementation.md) for more information about the synthetic data generation implementation.
 
 Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking Actors.
-This capability enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **MaskingInnerFlow** Actor in the sequence Actor. It works as follows: 
+This capability enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor in the sequence Actor. It works as follows: 
 
 - Set the category to **enable_sequences** in order to use the Actor for sequence (ID) replacement. 
 - The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to either **true** or **false**, based on the TDM task attributes. 
@@ -171,7 +171,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to avoid the population of TDM_SE
 
 ###  Load and Delete Flows
 
-The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition, it creates a *load all flow* to run all table level load flows in the right order, and a *delete all flow* to run all table level delete flows in the right order.
+The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition, it creates a *load all flow* to run all table level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
@@ -179,7 +179,7 @@ Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_A
 
 ### Debug the Load and Delete Flows
 
-You can run each one of the load flows in a debug mode. Normally, when running a task, the **InitiateTDMLoad_Actor** gets the task's attributes and sets the execution parameters accordingly. When running a load flow in a debug mode without executing a TDM task, the **InitiateTDMLoad_Actor** sets the execution's parameters based on the TDM Globals. 
+You can run each one of the load flows in debug mode. Normally, when running a task, the **InitiateTDMLoad_Actor** gets the task's attributes and sets the execution parameters accordingly. When running a load flow in a debug mode without executing a TDM task, the **InitiateTDMLoad_Actor** sets the execution's parameters based on the TDM Globals. 
 
 ## Step 4 - TDM Orchestration Flows
 
@@ -209,7 +209,21 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
 
   If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
 
+   <web>
   
+  ### Catalog Masking Integration
+  
+  Fabric 7.2 introduced the [Fabric's Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)) which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields. 
+  
+  TDM 8.1 adds new templates to integrate with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the catalog based masking on the identified PII fields before loading them into the LU table. 
+  
+  Do the following to use the new TDM templates for the catalog masking:
+  
+  - Run the **OverrideTemplatesWithCatalogTemplates** flow to remove the .catalog suffix from the new templates and override the existing templates that create the LU table's population flows. 
+  - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
+  - Optional: edit the population flows to override some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+  
+  </web> 
 
 * **Load flows** - to mask a sensitive field as part of a load to the target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
 
