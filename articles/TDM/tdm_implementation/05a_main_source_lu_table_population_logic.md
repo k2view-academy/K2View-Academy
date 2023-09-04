@@ -22,5 +22,5 @@ The below image is an example of a Broadway flow that populates a main source LU
 
 
 
-![root example](images\pop_root_lu_table_flow_example.png)
+![root example](images/pop_root_lu_table_flow_example.png)
 
