@@ -79,7 +79,7 @@ The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_inst
 
 #### Populating Target Tables with the Target Environment
 
-The LUI sync can populate the branches, source and target when running a load task that requires both delete and load entity operations. 
+The LUI sync can populate the branches, source environment and target environment when running a load task that requires both delete and load entity operations. 
 
 The **source LU tables** must extract the data from the **source environment**, where the **target LU tables** must extract the data from the **target environment**.
 
