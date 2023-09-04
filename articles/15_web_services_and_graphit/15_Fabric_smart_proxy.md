@@ -7,23 +7,24 @@ Fabric Smart Proxy mechanism allows to redirect the Web Service calls between mu
 One of the most common reasons for using this mechanism is the need to optimize the LUI retrieval process, in order to reduce the Web Service response time. 
 When LUI data is retrieved by the Web Service, Fabric uses the cache mechanism to load an instance into the memory. As the Fabric MDB cache files are stored on a server, it is more difficult to utilize the cache in a multi-node environment. This is due to the fact that each Web Service call might be redirected to a different node and consequently the cache will be stored on different servers. As a result, when the same Web Service is invoked again for the same instance ID, the cache is most likely not going to be reused. The Smart Proxy mechanism can solve this issue by redirecting the call to the same node when the same input is received and thus reduce the Web Service response time.
 
-The Smart Proxy mechanism is off by default. It can be applied by setting the web server filters via the config.ini file as explained further in this article.
-
-Note that the Smart Proxy mechanism is applicable for GET requests only.
+The Smart Proxy mechanism is off by default. It can be applied by the setting the Web Service annotations  as explained further in this article.
 
 ## How Do I Set Up Web Server Filters?
 
-The Web Server filters in the config.ini are empty. To set up the filter, uncomment the default setting:
+Start from adding the ```smartProxy=true``` parameter on the WS input:
 
-~~~
-#WEBSERVER_FILTERS=
+~~~java
+@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON}, elevatedPermission = false)
+public static Boolean ws1(@param(smartProxy=true) String in) throws Exception {
+	UserCode.log.info("here" +in);
+	fabric().execute("broadway k2_ws.pub value="+in);
+	return true;
+}
 ~~~
 
-and populate it as follows:
 
-~~~json
-WEBSERVER_FILTERS=[{"class":"com.k2view.cdbms.ws.ProxyAPI", "params":{"fabric_redirect":"SERVER", "fabric_retry":"1", "fabric_tokens":"token1, token2", "fabric_affinity":"", "read_timeout_sec":"60", "connect_timeout_sec":"60"}}]
-~~~
+
+
 
 The web server filter parameters are defined as follows:
 
