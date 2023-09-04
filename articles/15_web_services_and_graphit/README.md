@@ -15,7 +15,7 @@
     <li><a href="/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md">Custom Java Web Service Examples</a></li>
     <li><a href="/articles/15_web_services_and_graphit/13_custom_ws_java_annotations.md">Web Service Annotations</a></li>
     <li><a href="/articles/15_web_services_and_graphit/14_rest_api_additions.md">REST API Additions</a></li>
-    <li><a href="/articles/15_web_services_and_graphit/17_Fabric_smart_proxy.md">Fabric Smart Proxy</a></li>
+    <li><a href="/articles/15_web_services_and_graphit/15_Fabric_smart_proxy.md">Fabric Smart Proxy</a></li>
 </ul>
 
 
