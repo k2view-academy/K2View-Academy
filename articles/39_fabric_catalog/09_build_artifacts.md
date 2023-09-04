@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file that includes the details of all Catalog nodes with their properties, such as Classification, PII and Auto-Mask, for a currently displayed Catalog version. 
+The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file that includes the details of all Catalog nodes with their properties, such as Classification and PII, for a currently displayed Catalog version. 
 
 ### Build Artifacts
 
@@ -31,26 +31,30 @@ The purpose of the Catalog Masking mechanism is to perform the masking based on 
 The algorithm applied by the **CatalogMaskingField** is described below:
 
 * Search an input field in the **catalog_info** MTable created by the Build Artifacts action. If a field name is found, do the following:
-  * Check if PII is true and Auto-Mask is true or empty. If so, the field's value should be masked. 
+  * Check if PII is true and Masking is not OFF. If so, the field's value should be masked. 
   * Retrieve the field's Classification to proceed.
-* Search the field's Classification in the **masking_setup** MTable to find out which generator should be used for masking.
-* Once the generator is found, invoke the **Masking** Actor with this generator and its parameters defined in the **masking_setup** MTable.
+* Search the field's Classification in the **catalog_classification_generators** MTable to find out which generator should be used for masking.
+* Once the generator is found, invoke the **Masking** Actor with this generator and its parameters defined in the **catalog_classification_generators** MTable.
 
-Click for more details about setting up the masking_setup MTable using the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+Click for more details about setting up the catalog_classification_generators MTable using the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
 To apply the Catalog Masking mechanism, start from running the Discovery job, validating the results and building the Catalog's artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, you can add either the **CatalogMaskingRecord** or **CatalogMaskingField** Actors, to apply the masking on a single record or a single field. 
 
 Using the **CatalogMaskingMapper** in the LU population makes the masking process generic since the implementor doesn't need to know in advanced which of the population fields should be masked. 
 
-### Auto-Mask Property
+### Controlling Field Masking
 
-While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Auto-Mask property should be added manually, when needed. 
+While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Masking property can be added manually when it is required to control the masking mechanism of specific fields. 
 
-The purpose of the Auto-Mask property is to mark which Catalog fields - identified as PII - should not be masked using the Masking Actor defined for their Classification. 
+The purpose of adding the Masking property is to mark the fields, which have been identified as PII, that require special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values, as described below: 
 
-For such fields, the user should manually add Auto-Mask = false property in the Catalog application and then attach the relevant masking logic to the population flow.
+* **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (meaning the same input will always return the same masked value).
+* **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
+* **Consistent & Unique** - the Catalog Masking Actors should produce a consistent and a unique value across the Catalog.
+* **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
+* **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor responsibility to add the custom masking logic to the relevant LU population.
 
-
+Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique values, it overrides the same definition on the Classification level (performed via the Classifier Configuration pop-up).
 
 
 

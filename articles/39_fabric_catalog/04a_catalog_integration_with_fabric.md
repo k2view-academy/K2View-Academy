@@ -13,7 +13,7 @@ To initiate the Discovery process:
 * Alternatively, run the following command from the Fabric terminal:
 
   ~~~bash
-  startjob DISCOVERY_CRAWLER name='<interface name>';
+  startjob DISCOVERY_CRAWLER name='<interface name>' uid='<interface name>';
   ~~~
 
 Note that when the Crawler job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job, which is subscribed to the Pubsub topic dedicated to the Discovery process.

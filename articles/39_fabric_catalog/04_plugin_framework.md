@@ -43,16 +43,26 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 The purpose of a *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
 
-Matching algorithm works by comparing 2 field names of 2 different datasets at a time. Prior to the matching, the field names are *normalized* using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is *ID*.
+Matching algorithm works by comparing 2 field names of 2 different datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is ID.
 
-For example, the following field names will be matched:
-
-* CUSTOMER_ID and CustomerID
-* CUSTOMER.ID and CustomerID
+For example, the following field names will be matched: customer.ID, CUSTOMER_ID and CustomerID.
 
 This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and they can be updated on a project level.
 
-If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* a relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. Some examples of the matching rules are:
+If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* a relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
+
+* **field_name_is_id_and_pk** - Dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
+  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * Example: *customer.ID (PK) and* *activity.customer_id*
+* **field_name_is_id_and_not_pk** - Dataset1 has a non-PK field **id** and dataset2 has a field **dataset1id** (normalized).
+  * The relation dataset2 refers to dataset1 is created and its score is 0.6.
+  * Example: *customer.ID (non-PK) and* *activity.customer_id*
+* **single_field_pk_and_not_pk** - Dataset1 has a PK field **id** and dataset2 has a field with the same name (normalized), non-PK.
+  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * Example: *customer.customer_id (PK) and* *activity.customer_id* 
+* **common_fields_in_both_pk** - Common fields which a part of PK in both datasets, but dataset1 has less PKs than dataset2.
+  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * Some examples of the matching rules are:
 
 <table style="width: 900px;">
 <tbody>
@@ -74,22 +84,6 @@ If a match is found, the plugin evaluates both the relation direction and the fo
 </td>
 <td style="width: 50px;">
 <p><strong>Score</strong></p>
-</td>
-</tr>
-<tr>
-<td style="width: 141.016px;">
-<p>field_1&nbsp; PK</p>
-</td>
-<td style="width: 141.016px;">
-<p>field_0&nbsp; PK</p>
-<p>field_1 (not PK)</p>
-</td>
-<td style="width: 190.531px;">
-<p><em>DS2 refers to DS1</em></p>
-<p>FK: DS2 (field_1)</p>
-</td>
-<td style="width: 49.4375px;">
-<p>High</p>
 </td>
 </tr>
 <tr>
@@ -125,37 +119,13 @@ If a match is found, the plugin evaluates both the relation direction and the fo
 <p>High</p>
 </td>
 </tr>
-<tr>
-<td style="width: 141.016px;">
-<p>field_1 is a single PK</p>
-</td>
-<td style="width: 141.016px;">
-<p>field_1 is a single PK</p>
-</td>
-<td style="width: 190.531px;">
-<p>Relation direction is random</p>
-</td>
-<td style="width: 49.4375px;">
-<p>Low</p>
-</td>
-</tr>
-<tr>
-<td style="width: 141.016px;">
-<p>field_1 is not a PK</p>
-</td>
-<td style="width: 141.016px;">
-<p>field_1 is not a PK</p>
-</td>
-<td style="width: 190.531px;">
-<p>Relation direction is random</p>
-</td>
-<td style="width: 49.4375px;">
-<p>Low</p>
-</td>
-</tr>
 </tbody>
 </table>
 
+* **same_field_names_pk** - Common fields, a part of PK in both datasets, and both datasets have identical number of PKs.
+  * The relation is created and its direction is random. The score is 0.4.
+* **same_field_names_not_pk** - Both datasets have fields with the same names (normalized, not in *field_name_blk*), both are non-PK.
+  * The relation is created and its direction is random. The score is 0.2.
 
 **Data Regex Classifier**
 
