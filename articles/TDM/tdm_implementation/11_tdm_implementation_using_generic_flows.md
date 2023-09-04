@@ -6,14 +6,14 @@ The TDM library contains sets of generic flows that allow you to create a standa
 
 ## Step 1 - Define Tables to be Filtered Out
 
-Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway template, which generates the **delete** and **load** flows. The library includes settings for the following filtered auxiliary tables:
+Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway template, which generates the **delete** and **load** flows. The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, is it populated by the TDM tables and the [target LU tables](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) added to the LU to enable a delete of entity:
 
 ![image](images/11_tdm_impl_actor_1.PNG)
 
-This setting is implemented using the **TDMFilterOutTargetTables** Actor. To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
+To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
 * ALL_LUS - when a filtered-out table is relevant for all TDM LUs.
-* [LU name] - when a table belongs to a specific LU. In some cases you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer's orders.
+* [LU name] - when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer's orders.
 
  If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column box needs to be checked (true).
 
