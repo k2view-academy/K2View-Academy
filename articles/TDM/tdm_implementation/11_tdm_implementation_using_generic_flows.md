@@ -215,11 +215,11 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   
   Fabric 7.2 introduced the [Fabric's Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)) which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields. 
   
-  TDM 8.1 adds new templates to integrate with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the catalog based masking on the identified PII fields before loading them into the LU table. 
+  TDM 8.1 adds new templates to integrate with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the catalog-based masking on the identified PII fields before loading them into the LU table. 
   
   Do the following to use the new TDM templates for the catalog masking:
   
-  - Run the **OverrideTemplatesWithCatalogTemplates** flow to remove the .catalog suffix from the new templates and override the existing templates that create the LU table's population flows. 
+  - Run the **OverrideTemplatesWithCatalogTemplates** flow to remove the .cat suffix from the new templates and override the existing templates that create the LU table's population flows. 
   - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
   - Optional: edit the population flows to override some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   
