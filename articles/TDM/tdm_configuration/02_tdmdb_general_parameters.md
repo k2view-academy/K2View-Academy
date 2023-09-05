@@ -32,30 +32,31 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
 
   
 
-### [Reservation Period Parameter](/articles/TDM/tdm_architecture/08_entity_reservation.md) 
+### Maximum [Reservation Period](/articles/TDM/tdm_architecture/08_entity_reservation.md) for Testers
 
 An admin user of the environment's owner can reserve entities for an unlimited period. However, a tester user is limited and can only set a retention period that does not exceed the maximum retention period, defined in the TDM DB. 
 
-The maximum number of days for the entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter. 
+The maximum number of days for the entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter. The default value is 90 (90 days).
 
+### Maximum [Retention Period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) for Testers
+
+The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter. The default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**. 
 
 
 ### TDM Portal General Parameters
 
 - The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
-  
+
   - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. The default value is 90 days.
   
-  - **retentionDefaultPeriod** - default retention period on extract or extract-and-load tasks. The default value is **Do Not Delete**.
-  
+  - **retentionDefaultPeriod** - default retention period of the LUIs on extract or extract-and-load tasks. The default value is **Do Not Delete**.
+  - **reservationDefaultPeriod** - default reservation period for an entity reservation.
   - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. Default value is 5 days ("unit":"Days","value":5).
   
-  - **maxReservationPeriod** - maximum number of days for an entity reservation.  
-  
-  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
+  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
   
   - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
-  - **availableRetentionOptions** and **availableReservationOptions** - available options for the retention and reservation periods.
+  - **retentionPeriodTypes** and **reservationPeriodTypes** - available options for the retention and reservation periods.
  
     Run the following UPDATE statement in the TDM DB if you use a Fabric storage that does not support a TTL on LUIs (for example, PG DB):
 
