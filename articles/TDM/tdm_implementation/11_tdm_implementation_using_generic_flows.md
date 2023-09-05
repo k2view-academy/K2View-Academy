@@ -25,7 +25,9 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when implementing TDM. 
 
-If the **k2masking** keyspace does not exist in the DB interface, which is defined for caching the masked values, create it using either the **masking-create-cache-table.flow** from the Broadway examples library or the **create_masking_cache_table.sql** from the TDM Library.  
+Deploy the TDM LU to Fabric. The TDM deploy.flow creates the k2masking keyspace.
+
+Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
 
 Notes: 
 
@@ -51,7 +53,6 @@ Take the following steps in order to create the sequences for your TDM implement
       - **DB interface name** - can be populated by either the target DB interface in order to get the next value from the DB sequence, or **TDM** in order to create a new DB sequence in the TDM DB. The DB interface name is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
       
         ***Note:*** If the target DB does not have a sequence, or it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
-       
       
    - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis, IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
 
@@ -79,11 +80,17 @@ The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that g
 
 Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
-**B.** Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has 2 [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in the **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
+**B.** Run either of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor: 
+
+I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
+
+II. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs  and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding existing sequence Actor. 
+
+Each generated sequence Actor includes a flow that invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
 
 Notes:  
 
-- This flow should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
+- The sequence creation should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
 - The sequences' flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
 
 
@@ -102,23 +109,23 @@ This table serves 2 purposes:
 
 1.  It has been added in TDM 7.3 to automatically add the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
 
-2. TDM 8.0 uses this table to add the sequence Actors to the data generation flow that generates synthetic data for the LU table.
+2. From TDM 8.0 onwards, this table is used to add the sequence Actors to the data generation flow that generates synthetic data for the LU table.
 
      
 
 Click [here](16_tdm_data_generation_implementation.md) for more information about the synthetic data generation implementation.
 
-Fabric supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking Actors.
-This capability enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor in the sequence Actor. It works as follows: 
+### Custom Sequence Logic
 
-- Set the category to **enable_sequences** in order to use the Actor for sequence (ID) replacement. 
-- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to either **true** or **false**, based on the TDM task attributes. 
-  - If the task requires a sequence replacement, the masking Actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
-  - If the task does not require a sequence replacement, the original value is returned by the masking Actors.
+By default, the generated sequence Actors and flows use the [MaskingSequece](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
+
+Do the following to set a custom logic for a given sequence:
+
+- Open the generated sequence flow and replace the MaskingSequence Actor with **MaskingLuFunction** Actor or **Masking** Actor. 
+- Set the **category** input parameter of the Masking or MaskingLuFunction to to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
+- Save the updated sequence flow as Actor.
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
-
-
 
 ### Set the Sequence Report Global
 
