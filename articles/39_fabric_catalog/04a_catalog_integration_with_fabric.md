@@ -16,11 +16,11 @@ To initiate the Discovery process:
   startjob DISCOVERY_CRAWLER name='<interface name>' uid='<interface name>';
   ~~~
 
-When the Discovery job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job. The DATA_DISCOVERY_JOB is subscribed to the Pubsub topic dedicated to the Discovery process. Its purpose is to create a new Catalog version in the neo4j GraphDB.
+When the Discovery job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job. The DATA_DISCOVERY_JOB is subscribed to the Pubsub topic dedicated to the Discovery process. Its purpose is to create a new Catalog version in the *neo4j* GraphDB.
 
 ### Open In Catalog
 
-Once the Discovery job execution on a data source is completed, the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the discovery schema from the neo4j GraphDB rather than from the data source.
+Once the Discovery job execution on a data source is completed, the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the discovery schema from the *neo4j* rather than from the data source.
 
 To view a data source element in the Catalog application, do the following:
 
