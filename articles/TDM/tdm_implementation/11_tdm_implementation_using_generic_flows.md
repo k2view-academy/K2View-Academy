@@ -193,7 +193,7 @@ The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows
 * Manage the TDM process as **one** transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding the need of generating this flow on each LU separately. 
+TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding the need to generate this flow on each LU separately. 
 
 ### TDMReserveOrchestrator Flow
 
@@ -221,7 +221,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   
   - Run the **OverrideTemplatesWithCatalogTemplates** flow to remove the .cat suffix from the new templates and override the existing templates that create the LU table's population flows. 
   - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
-  - Optional: edit the population flows to override some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+  - Optional: edit the population flows to override the catalog’s masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   
   </web> 
 
