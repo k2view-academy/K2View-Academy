@@ -2,9 +2,9 @@
 
 ## Get the Retention Period Options
 
-This API can be used to get the retention period options for the following 2 activities:
+This API can be used to get the period options for the following 2 activities:
 
-- Creating a data versioning extract task.
+- Retention period for the extracted LUIs.
 
 - Reserving entities in the target environment.   
 
@@ -31,8 +31,8 @@ The retention period options contain the supported units and their default value
 
 The API also returns the maximum number of days that can be set for the following activities:
 
-- Setting of a retention period of an extracted data version: get the **maxRetentionPeriodForExtract** output attribute.
-- Setting of entities' reservation period: get the **maxRetentionPeriodForReserve** output attribute.
+- **maxRetentionPeriodForTesters** - the maximum retention period of the extracted LUIs if the tester does not select the 'Do not Delete' option.
+- **maxReservationPeriodForTesters** - the maximum reservation period for which a tester can reserve entities on the testing environment.
 
 ### API Input
 
@@ -43,17 +43,13 @@ None.
 ```json
 {
     "result": {
-        "reservationDefaultPeriod": {
+       "reservationDefaultPeriod": {
             "unit": "Days",
             "value": 5
         },
-        "retentionDefaultPeriod": {
+       "retentionDefaultPeriod": {
             "unit": "Do Not Delete",
             "value": -1
-        },
-        "maxRetentionPeriod": {
-            "units": "Days",
-            "value": 90
         },
         "retentionPeriodTypes": [
             {
@@ -77,7 +73,7 @@ None.
                 "units": 365
             }
         ],
-		"reservationPeriodTypes": [
+      "reservationPeriodTypes": [
             {
                 "name": "Minutes",
                 "units": 6.9444444E-4
@@ -99,21 +95,24 @@ None.
                 "units": 365
             }
         ],
-        "versioningRetentionPeriod": {
+
+      "versioningRetentionPeriod": {
             "unit": "Days",
             "value": 5,
-            "allow_doNotDelete": true
+           "allow_doNotDelete": true
         },
-        "maxReservationPeriod": {
+       "versioningRetentionPeriodForTesters": {
+            "unit": "Days",
+            "value": 5,
+           "allow_doNotDelete": false
+        },
+
+      "maxRetentionPeriodForTesters": {
             "units": "Days",
             "value": 90
         },
-        "retentionPeriodForTesters": {
-            "unit": "Days",
-            "value": 5,
-            "allow_doNotDelete": false
-        },
-        "maxReservationPeriodForTesters": {
+
+      "maxReservationPeriodForTesters": {
             "units": "Days",
             "value": 10
         }
@@ -121,5 +120,6 @@ None.
     "errorCode": "SUCCESS",
     "message": ""
 }
+
 ```
 
