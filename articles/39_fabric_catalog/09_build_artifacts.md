@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact is a file that includes the details of all Catalog nodes with their properties, such as Classification and PII, for a currently displayed Catalog version. 
+The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact includes the details of all Catalog fields with their properties, such as Classification and PII, for a currently displayed Catalog version. 
 
 ### Build Artifacts
 

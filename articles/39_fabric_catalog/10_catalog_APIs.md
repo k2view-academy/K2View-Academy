@@ -10,6 +10,20 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 
 
+## Start Crawler Job
+
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/start-crawler-job`
+
+The API invokes the DISCOVERY_CRAWLER job for a given interface.
+
+**Example of an API call:**
+
+~~~
+https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB
+~~~
+
+
+
 ## Get Catalog
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
@@ -195,6 +209,20 @@ https://localhost:3213/api/catalog/1...5/CRM_DB/main
 
 ```
 https://localhost:3213/api/catalog/1...latest/CRM_DB/main
+```
+
+
+
+## Build Catalog Artifacts
+
+<span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/build-catalog-artifacts`
+
+The API builds the Catalog artifacts, based on a given version. An artifact includes the details of all Catalog fields with their properties, such as Classification and PII. The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+
+**Example of an API call:**
+
+```
+https://localhost:3213/api/catalog/4/build-catalog-artifacts
 ```
 
 
