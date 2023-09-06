@@ -59,7 +59,7 @@ Take the following steps in order to create the sequences for your TDM implement
       Notes:
 
       - Define an init flow to set the initial value for the newly created sequence based on the maximum value in the environment to avoid a collision.
-      - Use the "IF NULL" function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
+      - Use the 'IF NULL' function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
 
 
 ​		   
