@@ -109,7 +109,7 @@ This table serves 2 purposes:
 
 1.  It has been added in TDM 7.3 to automatically add the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
 
-2. From TDM 8.0 onwards, this table is used to add the sequence Actors to the data generation flow that generates synthetic data for the LU table.
+2. From TDM 8.0 onwards, this table is used for adding the sequence Actors to the data generation flow that generates synthetic data for the LU table.
 
      
 
