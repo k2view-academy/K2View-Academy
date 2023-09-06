@@ -225,7 +225,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   
   - Run the **OverrideTemplatesWithCatalogTemplates** flow to remove the .cat suffix from the new templates and override the existing templates that create the LU table's population flows. 
   - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
-  - Optional: edit the population flows to override the catalog’s masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+  - Optional: Edit the population flows to override the catalog’s masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   
   </web> 
 
