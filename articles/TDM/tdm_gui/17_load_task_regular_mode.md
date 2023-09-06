@@ -86,6 +86,10 @@ Notes:
 - The Replace Sequence setting is disabled if the tester user does not have permissions to replace the sequence in the **Write** [TDM Environment permission setting](10_environment_roles_tab.md#role-permissions) on the task's target environment.
 - The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestrator.flow-from-the-template).
 
+##### Mask Sensitive Data
+
+TDM 8.1 added this checkbox. This checkbox indicates if the source data needs to be masked before it is saved into Fabric. This checkbox has been added to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined as containing sensitive data. However, the user is not allowed to remove the masking if the task's source environment contains sensitive data.
+
 #### Post Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
@@ -118,6 +122,10 @@ This tab opens when the task's Data Type includes entities. This tab defines the
 ![requested entities](images/load_task_requested_entities.png)
 
 The following selection methods are available on load tasks: 
+
+### Select a Predefined Entity List
+
+Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) translation object for the LU. This option is available only for Admin and Environment owner users.
 
 ### Entity list 
 
