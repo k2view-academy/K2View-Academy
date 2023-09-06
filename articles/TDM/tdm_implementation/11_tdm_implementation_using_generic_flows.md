@@ -91,7 +91,7 @@ Each generated sequence Actor includes a flow that invokes the [MaskingSequence 
 Notes:  
 
 - The sequence creation should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
-- The sequences' flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
+- The sequences flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
 
 
 
