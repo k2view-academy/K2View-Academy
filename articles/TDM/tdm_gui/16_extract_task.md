@@ -63,6 +63,10 @@ The retention period set on the extracted entities and/or Reference tables. When
 
 Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
 
+#### Mask Sensitive Data
+
+TDM 8.1 added this checkbox. This checkbox indicates if the source data needs to be masked before it is saved into Fabric. This checkbox has been added to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) as well and is populated based on the task's source environment. The user can add masking on the task (by checking the clear checkbox) even if the task's source environment is not defined as containing sensitive data. However, the user is not allowed to remove the masking if the task's source environment contains sensitive data.
+
 ### Post Execution Processes
 
 Select all, partial or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
