@@ -122,8 +122,8 @@ By default, the generated sequence Actors and flows use the [MaskingSequece](/ar
 Do the following to set a custom logic for a given sequence:
 
 - Open the generated sequence flow and replace the MaskingSequence Actor with **MaskingLuFunction** Actor or **Masking** Actor. 
-- Set the **category** input parameter of the Masking or MaskingLuFunction to to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
-- Save the updated sequence flow as Actor.
+- Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
+- Save the updated sequence flow as an Actor.
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
 
