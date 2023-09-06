@@ -80,7 +80,7 @@ The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that g
 
 Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project Tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
-**B.** Run either of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor: 
+**B.** Run either one of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor:
 
 I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
 
