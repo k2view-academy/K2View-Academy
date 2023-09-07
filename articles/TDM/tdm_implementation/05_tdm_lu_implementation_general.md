@@ -28,7 +28,7 @@ Use either one of the following methods to add the TDM LU tables to the new LU:
 
 This method adds the TDM tables to the LU schema **in advance, before adding the source LU tables** to the LU.
 
-Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right click -> Duplicate Logical Unit). Now you have **a template of the new LU** with the TDM tables, including FABRIC_TDM_ROOT table as a root LU table.
+Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right-click -> Duplicate Logical Unit). Now you have **a template of the new LU** with the TDM tables, including FABRIC_TDM_ROOT table as a root LU table.
 
 Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**.
 
