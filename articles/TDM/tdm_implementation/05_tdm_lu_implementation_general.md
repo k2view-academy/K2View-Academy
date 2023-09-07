@@ -8,7 +8,7 @@ Each LU in a TDM project should have additional components in order to support T
 
 Each LU in a TDM project has the following structure:
 
-- Dummy root table, FABRIC_TDM_ROOT. 
+- Dummy root table - FABRIC_TDM_ROOT. 
 
 - Generic TDM LU tables that are linked to the root table. 
 
