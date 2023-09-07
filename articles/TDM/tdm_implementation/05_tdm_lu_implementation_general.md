@@ -55,7 +55,7 @@ The LU table's population needs to be based on a Broadway flow.
 
 Fabric 7.2 introduced the [Fabric's Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields. 
 
-TDM 8.1 adds new templates to integrate with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the catalog-based masking on the identified PII fields before loading them into the LU table. 
+TDM 8.1 adds new templates for integration with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the catalog-based masking on the identified PII fields before loading them into the LU table. 
 
 Do the following to use the new TDM templates for the catalog masking:
 
