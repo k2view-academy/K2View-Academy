@@ -25,8 +25,8 @@ TDM_utils
 Get the retention period options as set in the [tdm_general_parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) TDM DB table:
 
 - The retention period and reservation period options are populated in the **tdm_gui_params** parameter.
-- The maximum number of days for the entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
-- The maximum number of days for the retention period is set in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter.
+- The maximum number of days for an entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
+- The maximum number of days for a retention period is set in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter.
 
 The retention period and reservation period options contain the supported units and their default values. For example, "Days" and "5" represent 5 days. This is the default number of days.
 
