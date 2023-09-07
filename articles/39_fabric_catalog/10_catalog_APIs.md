@@ -239,12 +239,12 @@ The syntax of the request body definition is as follows:
   * Keyword is a string included in the node (or relation) name
 
 * **type** defines which object types will be searched
-  * The valid values are: data_platform, schema, dataset, field, relation
+  * The valid values are: DATA_PLATFORM, SCHEMA, DATASET, FIELD, RELATION
   * Send an empty array in case of no limitation on object type
 * **advanced** includes a list of additional search parameters, such as:
-  * **pii** is a PII property with either **true** or false **value**
-  * **classification** is a Classification property with one of its valid values
-  * **score** is a maximum score of the searched object types (nodes or relations)
+  * **PII** is a PII property with either **true** or false **value**
+  * **CLASSIFICATION** is a Classification property with one of its valid values
+  * **SCORE** is a maximum score of the searched object types (nodes or relations)
 
 At least one of the search parameters must be provided in the request body. 
 
@@ -264,8 +264,8 @@ Example 1: When searching for *dataset* and *field* nodes, whose name includes a
         "customer"
     ],
     "type": [
-        "dataset",
-        "field"
+        "DATASET",
+        "FIELD"
     ],
     "advanced": {
     }
@@ -279,8 +279,8 @@ Example 2: When searching for *any* nodes with *PII = true* and *Classification 
     "input": [],
     "type": [],
     "advanced": {
-        "pii": "true",
-        "classification": "EMAIL"
+        "PII": "true",
+        "CLASSIFICATION": "EMAIL"
     }
 }
 ~~~
