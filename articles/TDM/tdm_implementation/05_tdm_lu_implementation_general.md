@@ -22,7 +22,7 @@ Each LU in a TDM project has the following structure:
 
 ## Add the TDM LU Tables to the New LU
 
-Use either of the following methods to add the TDM LU tables to the new LU:
+Use either one of the following methods to add the TDM LU tables to the new LU:
 
 ### I. Duplicate the TDM_LIBRARY LU into the New LU
 
