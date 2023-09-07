@@ -122,7 +122,7 @@ Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/
 
 ## Add the Target LU Tables to the LU Schema
 
-Run the **createDeleteTablesAndPopulations** flow to add the TAR_  tables to the LU, or run the **createAllFromTemplates** flow to  add the TAR_  tables, data generation flows, and load and delete flows to the LU. 
+Run the **createDeleteTablesAndPopulations** flow to add the TAR_  tables to the LU, or run the **createAllFromTemplates** flow to add the TAR_  tables, data generation flows, and the load and delete flows to the LU. 
 
 Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
