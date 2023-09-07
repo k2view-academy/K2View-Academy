@@ -47,7 +47,7 @@ Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input paramete
 
 ### Create the Source LU Tables' Populations
 
-The LU table's population needs to be based on a Broadway flow.
+The population of the LU table needs to be based on a Broadway flow.
 
 <web>
 
