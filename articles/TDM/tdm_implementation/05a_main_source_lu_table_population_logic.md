@@ -2,9 +2,9 @@
 
 The Broadway flow of the main source LU table is generated based on the **populationRootTable.pop.flow** template. It deletes and repopulates the main source LU table under the following conditions:
 
-- Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md), [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning checkbox is clear) or [Generate task](/articles/TDM/tdm_gui/16a_generate_task.md).
+- When running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md), [regular Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) (the Data Versioning checkbox is clear) or [Generate task](/articles/TDM/tdm_gui/16a_generate_task.md).
 
-- The **Set Sync Policy** task's setting is not set to **Do not Sync From Source Data** in order to prevent synchronizing the entities from the source system. 
+- If the **Set Sync Policy** task's setting is not set to **Do not Sync From Source Data**, a state that prevents synchronizing the entities from the source system. 
 
   Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
