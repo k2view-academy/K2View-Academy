@@ -32,7 +32,7 @@ The retention period and reservation period options contain the supported units 
 
 The API also returns the maximum number of days that can be set for the following activities:
 
-- **maxRetentionPeriodForTesters** - the maximum retention period of the extracted LUIs if the tester does not select the 'Do not Delete' option.
+- **maxRetentionPeriodForTesters** - the maximum retention period of the extracted LUIs in case a tester does not select the 'Do not Delete' option.
 - **maxReservationPeriodForTesters** - the maximum reservation period for which a tester can reserve entities on the testing environment.
 
 ### API Input
