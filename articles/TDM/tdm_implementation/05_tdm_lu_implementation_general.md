@@ -34,7 +34,7 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
 ### II. Run the createAllFromTemplates Flow
 
-This method adds the TDM tables to an existing LU schema and can be done **after adding the source LU tables** to the LU schema.
+This method can add the TDM tables to an existing LU schema either on an empty schema or **after adding the source LU tables** to the LU schema.
 
 Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with the LU name and set the **CREATE_TDM_TABLES** input parameter to **true**.
 
