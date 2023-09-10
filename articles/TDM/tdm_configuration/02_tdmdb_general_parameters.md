@@ -53,7 +53,7 @@ The maximum number of days that a tester can set to a retention period in the ta
   
   - **reservationDefaultPeriod** - default reservation period for an entity reservation.
   
-  - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. The default value is 5 days ("unit":"Days","value":5).
+  - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on *extract with data versioning* tasks; the default value is 5 days ("unit":"Days","value":5).
   
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
