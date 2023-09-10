@@ -4,7 +4,7 @@
 
 This API can be used to get the period options for the following 2 activities:
 
-- Retention period for the extracted LUIs.
+- Retaining a period for the extracted LUIs.
 
 - Reserving entities in the target environment.   
 
