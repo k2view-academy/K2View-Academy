@@ -1,8 +1,8 @@
 # TDM DB - General Parameters
 
-The TDM DB  tdm_general_parameters table holds the name of each parameter (param_name) and its value (param_value). The following categories of parameters are populated in this table:
+The TDM DB **tdm_general_parameters** table holds the name of each parameter (param_name) and its value (param_value). The following categories of parameters are populated in this table:
 
-### [TDM Clean-Up Parameters](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md) 
+### [TDM Clean-Up Parameters](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md)
 
 The clean-up parameters are automatically created in **tdm_general_parameters** by TDM DB creation scripts:
 
