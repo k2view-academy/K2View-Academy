@@ -16,7 +16,7 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
 
 - To create different LUIs per environment and data version, the TDM concatenates additional identifiers to each IID: environment name (for all tasks) and version identifier for Data Versioning tasks. By default, the LUI parts are separated by an underscore, e.g., ENV1_45773. However, if the source entity ID already contains an underscore, another separator must be set on the LUI.
   
-  - For example, to enable the TDM process to parse the LUI correctly and get the correct Customer ID, if the source Customer ID is 123_4, the LUI separator must not be an underscore.
+  - For example, if the source Customer ID is 123_4 and the environment is ENV1, the LUI can be set as **ENV1@123_4**. This way the TDM process can parse the LUI correctly and get the correct Customer ID.
 
 - The **param_name** of the LUI separator is **iid_separator**.  
 
@@ -32,8 +32,7 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
   insert into tdm_general_parameters (param_name, param_value) values ('iid_separator', '@');
   ```
 
-  The LUI of Customer 123_4 and environment ENV1 is **ENV1@123_4**.
-
+  
   
 
 ## Maximum [Reservation Period](/articles/TDM/tdm_architecture/08_entity_reservation.md) for Testers
