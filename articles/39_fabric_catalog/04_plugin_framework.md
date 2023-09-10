@@ -49,19 +49,19 @@ For example, the following field names will be matched: customer.ID, CUSTOMER_ID
 
 This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and they can be updated on a project level.
 
-If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* a relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
+If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
 
 * **field_name_is_id_and_pk** - Dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
-  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Example: *customer.ID (PK) and* *activity.customer_id*
 * **field_name_is_id_and_not_pk** - Dataset1 has a non-PK field **id** and dataset2 has a field **dataset1id** (normalized).
-  * The relation dataset2 refers to dataset1 is created and its score is 0.6.
+  * The relation *dataset2 refers to dataset1* is created and its score is 0.6.
   * Example: *customer.ID (non-PK) and* *activity.customer_id*
 * **single_field_pk_and_not_pk** - Dataset1 has a PK field **id** and dataset2 has a field with the same name (normalized), non-PK.
-  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Example: *customer.customer_id (PK) and* *activity.customer_id* 
 * **common_fields_in_both_pk** - Common fields which a part of PK in both datasets, but dataset1 has less PKs than dataset2.
-  * The relation dataset2 refers to dataset1 is created and its score is 0.8.
+  * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Some examples of the matching rules are:
 
     <table style="width: 900px;">
