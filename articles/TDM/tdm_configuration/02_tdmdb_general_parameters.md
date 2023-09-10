@@ -93,7 +93,7 @@ The maximum number of days that a tester can set to a retention period in the ta
     
     ### Update the TDM_GENERAL_PARAMETERS to Support a Reserve Task with Parameters 
     
-    Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks:
+    Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks: 
     
     ```
     UPDATE 
