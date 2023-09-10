@@ -43,7 +43,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 ## Maximum [Retention Period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) for Testers
 
-The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter. The default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**. 
+The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter; the default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**.
 
 ## TDM Portal General Parameters
 
