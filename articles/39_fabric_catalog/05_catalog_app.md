@@ -122,16 +122,19 @@ The Classifier Configuration screen provides the following configuration capabil
 
 * The **Regex Setup** tab allows to view and update the profiling rules that are used by the Catalog Classification built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins). 
   * Each classification can have several definitions in this tab.
+  
+    <img src="images/classifier.png" style="zoom: 67%;" />
+  
 * The **PII & Masking Setup** tab allows to view and update of the PII and masking settings of each classification.
   * Each classification can appear only once in this tab.
+  
+    <img src="images/classifier_pii_masking.png" style="zoom: 67%;" />
+  
+  * Click <img src="images/edit_masking.png" style="zoom: 80%;" /> to edit the generator and its parameters.
+  
+    <img src="images/classifier_pii_masking_edit.png" style="zoom: 67%;" />
 
 The rules are saved in the Discovery/MTable folder in the project tree.
-
-​	<img src="images/classifier.png" style="zoom: 67%;" />
-
-
-
-
 
 
 
