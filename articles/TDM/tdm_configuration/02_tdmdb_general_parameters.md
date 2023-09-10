@@ -66,7 +66,7 @@ The maximum number of days that a tester can set to a retention period in the ta
   
     ### Update the TDM_GENERAL_PARAMETERS to Support Fabric Storage without a TTL
   
-    TDM enables setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) (TTL) on the TDM tasks in order save the task's entities in Fabric only for a limited period. However, if the Fabric storage does not support a TTL for the LU instances (for example, PG DB), the TDM needs to limit the TDM task’s retention period options to **Do not Delete** or **Do not Retain**.
+    TDM enables setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) (TTL) on the TDM tasks in order save the task's entities in Fabric only for a limited period. However, if the [Fabric storage](/articles/32_LU_storage/01_LU_storage_overview.md) does not support a TTL for the LU instances (for example, PG DB), the TDM needs to limit the TDM task’s retention period options to **Do not Delete** or **Do not Retain**.
     
     Run the following UPDATE statements in the TDM DB to update the **availableRetentionOptions**,  **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** attributes to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
     
