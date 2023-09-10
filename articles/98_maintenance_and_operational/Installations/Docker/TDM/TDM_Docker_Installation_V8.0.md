@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V7.1.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.1.0.md).
+[FABRIC V7.2.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.2.0.md).
 
 ### Download Container Images 
 
@@ -61,13 +61,13 @@ TDM 7.6 includes the TDM GUI in the TDM Library. Download the TDM Library and im
    - New TDM  installation: edit the project as follows, to create the TDM tables on the PostgreSQL TDM DB:
      - Set the **BUILD_TDMDB Global to true** (default is false).
      - Set the  **POSTGRESQL_ADMIN interface to be active**.
-     - Note that the TDM DB and user must be created in advance in the PostgreSQL DB. For more information see [TDM Installation and Initial Configuration](/articles/TDM/tdm_configuration/01_tdm_installation.md).
+     - Note that the TDM DB and user must be created in advance in the PostgreSQL DB. For more information see [TDM Installation and Initial Configuration](/articles/98_maintenance_and_operational/Installations/Linux/01_tdm_installation.md).
 3. Note that the apps.json file in the TDM LU overrides the list of web applications. Edit the file in order to add additional web applications, if needed, before deploying the TDM LU. 
 4. Deploy the TDM library to Fabric. The deployment of the TDM LU also deploys the TDM GUI web application to Fabric.
 
 
 
-### Access the TDM GUI 
+### Access the TDM Portal 
 
-- You can now access TDM/Fabric from your browser using the containers host IP 
+- You can now access TDM/Fabric from your browser using the host IP 
   http://localhost:3213
