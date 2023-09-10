@@ -49,13 +49,13 @@ The maximum number of days that a tester can set to a retention period in the ta
 
 - The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
   
-  - **retentionDefaultPeriod** - default retention period of the LUIs on extract or extract-and-load tasks. The default value is **Do Not Delete**.
+  - **retentionDefaultPeriod** - default retention period of the LUIs on *extract* or *extract and load* tasks; the default value is **Do Not Delete**.
   
   - **reservationDefaultPeriod** - default reservation period for an entity reservation.
   
   - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. The default value is 5 days ("unit":"Days","value":5).
   
-  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
+  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
   - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
   
