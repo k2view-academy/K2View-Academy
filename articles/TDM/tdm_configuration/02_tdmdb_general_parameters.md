@@ -57,7 +57,7 @@ The maximum number of days that a tester can set to a retention period in the ta
   
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
   
-  - **enable_reserve_by_params** - indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). If it is **true**, the TDM portal enables the Parameters selection method on reserve-only tasks. The **default is false**.
+  - **enable_reserve_by_params** - this parameter indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). When set to **true**, it is enabled; the **default is false**.
   
   - **retentionPeriodTypes** and **reservationPeriodTypes** - available options for the retention and reservation periods.
   
