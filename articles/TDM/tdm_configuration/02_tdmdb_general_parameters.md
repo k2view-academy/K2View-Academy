@@ -49,14 +49,12 @@ The maximum number of days that a tester can set to a retention period in the ta
 ## TDM Portal General Parameters
 
 - The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
-
-  - **maxRetentionPeriod** - maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract with data versioning tasks. The default value is 90 days.
   
   - **retentionDefaultPeriod** - default retention period of the LUIs on extract or extract-and-load tasks. The default value is **Do Not Delete**.
   
   - **reservationDefaultPeriod** - default reservation period for an entity reservation.
   
-  - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. Default value is 5 days ("unit":"Days","value":5).
+  - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on extract data versioning tasks. The default value is 5 days ("unit":"Days","value":5).
   
   - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
   
@@ -68,13 +66,13 @@ The maximum number of days that a tester can set to a retention period in the ta
   
     TDM enables setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) (TTL) on the TDM tasks in order to save the task's entities in Fabric only for a limited period. However, if the [Fabric storage](/articles/32_LU_storage/01_LU_storage_overview.md) does not support a TTL for the LU instances (for example, PG DB), the TDM needs to limit the TDM task’s retention period options to **Do not Delete** or **Do not Retain**.
     
-    Run the following UPDATE statements in the TDM DB to update the **availableRetentionOptions**,  **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** attributes to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
+    Run the following UPDATE statements in the TDM DB to update the **retentionPeriodTypes**,  **versioningRetentionPeriod**, and **versioningRetentionPeriodForTesters** attributes to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
     
      ```
     UPDATE 
        tdm_general_parameters
     SET 
-       param_value = REPLACE(param_value,'"availableRetentionOptions":[{"name":"Minutes","units":0.00069444444},{"name":"Hours","units":0.04166666666},{"name":"Days","units":1},{"name":"Weeks","units":7},{"name":"Years","units":365}]', '"availableRetentionOptions":[]')  
+       param_value = REPLACE(param_value,'"retentionPeriodTypes":[{"name":"Minutes","units":0.00069444444},{"name":"Hours","units":0.04166666666},{"name":"Days","units":1},{"name":"Weeks","units":7},{"name":"Years","units":365}]', '"retentionPeriodTypes":[]')  
     where param_name = 'tdm_gui_params'; 
     
     UPDATE 
