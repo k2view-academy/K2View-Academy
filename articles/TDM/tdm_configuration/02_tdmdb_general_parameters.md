@@ -67,7 +67,7 @@ The maximum number of days that a tester can set to a retention period in the ta
     
     Run the following UPDATE statements in the TDM DB to update the **retentionPeriodTypes**, **versioningRetentionPeriod**, and **versioningRetentionPeriodForTesters** attributes. This is needed to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
     
-     ```
+    ```
     UPDATE 
        tdm_general_parameters
     SET 
@@ -79,14 +79,13 @@ The maximum number of days that a tester can set to a retention period in the ta
     SET 
        param_value = REPLACE(param_value, '"versioningRetentionPeriod":{"units":"Days","value":5,"allow_doNotDelete":True}',  '"versioningRetentionPeriod":{"units":"Do Not Delete","value":-1,"allow_doNotDelete":True}')
       where param_name = 'tdm_gui_params'; 
-      
+    
      UPDATE 
        tdm_general_parameters
     SET 
        param_value = REPLACE(param_value, '"versioningRetentionPeriodForTesters":"versioningRetentionPeriodForTesters":{"units":"Days","value":5,"allow_doNotDelete":False}',  '"versioningRetentionPeriodForTesters":{"units":"Do Not Delete","value":-1,"allow_doNotDelete":True}')
       where param_name = 'tdm_gui_params'; 
-    
-     ```
+    ```
     
     
     
