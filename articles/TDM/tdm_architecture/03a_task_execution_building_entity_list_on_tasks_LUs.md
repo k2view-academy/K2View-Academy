@@ -8,7 +8,7 @@ The task execution process builds an entity list for each LU, as described below
 
 ## Root LUs
 
-The entity list of the root LUs is based on the task's selection method:
+The entity list of the root LUs is based on the task's entity selection method:
 
 <table width="900pxl">
 <tbody>
