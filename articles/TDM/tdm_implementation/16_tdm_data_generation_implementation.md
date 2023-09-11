@@ -11,7 +11,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 1. Verify that the LU tables' populations are based on a Broadway flow to support the synthetic data generation.  Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
    
-   Note that the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor is automatically generated as an external parameter with the following naming convention: 
+   Note that the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor in the LU population (named Query Actor) is automatically generated as an external parameter with the following naming convention: 
 
    ```
    [lu name]_[lu table name]_number_of_records
