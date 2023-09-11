@@ -26,7 +26,7 @@ The following execution parameters are set on **Extract tasks**:
 
 ### Data Type
 
-Check **Entities** to extract the selected entities and/or **Reference** to extract the selected reference tables into the TDM warehouse (Fabric).
+Check the **Entities** checkbox to extract the selected entities and/or the **Reference** checkbox to extract the selected reference tables into the TDM warehouse (Fabric).
 
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
