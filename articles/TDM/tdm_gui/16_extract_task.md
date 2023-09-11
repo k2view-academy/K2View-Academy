@@ -85,7 +85,7 @@ The following selection methods are available on extract tasks:
 
 - **Custom logic**: select a [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to both get the entity list for the task and set the maximum number of entities for the task.
 
-  Note that TDM 8.0 has added integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal when populating the Custom logic parameters in the task’s tabs:
+  Note that when populating the Custom logic parameters in the task’s tabs, it includes an integration of [Broadway editors](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) into the TDM portal, which has been added by TDM 8.0:
 
   
 
