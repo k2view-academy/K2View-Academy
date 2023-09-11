@@ -31,7 +31,11 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
 ## Implementation of Data Generation Flows 
 
-The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
+The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs an inner data generation flow to generate synthetic records.
+The data generation flows must be created on each source LU table to support synthetic data generation.  
+Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true** which triggers the execution of the data generation inner flow on each LU table. 
+
+The data generation flow must have the following naming convention:
 
 ```
 ${population name}.population.generator
@@ -39,25 +43,22 @@ ${population name}.population.generator
 
 For example: activity.population.generator
 
+
 ### Data Generation Flows - Implementation Steps
 
 #### 1. Sequence handling 
 
-Populate the **tdmSeqList** and **TDMSeqSrc2TrgMapping** tables before generating the data generation flows. 
+The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
-Click [here](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for more information about the sequence implementation.
-
-This step is needed in order to add a sequence generation in the data generation flow for fields that are set in the **TDMSeqSrc2TrgMapping** table. The generated flow creates a DB sequence in the TDM DB for the generated ID. The created DB sequence has the following naming convention:
+This is needed in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument and is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
-[gen]_[the sequence name in TDMSeqSrc2TrgMapping]
+Gen_[the sequence name in TDMSeqSrc2TrgMapping]
 ```
-
-
 
 **Example:**
 
-Customer, contract and address CRM LU's tables have the following sequence mapping:      
+Customer, contract, and address CRM LU's tables have the following sequence mapping:      
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example_2.png)
 
