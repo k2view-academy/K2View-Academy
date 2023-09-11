@@ -108,7 +108,7 @@ The entity list of the root LUs is based on the task's selection method:
     <p>Create a list of dummy entities for generating synthetic entities tasks.</p>
 </td>
 <td width="200pxl">
-<p>Generate tasks (Generate task action is checked).</p>    
+<p>Generate tasks (Generate task action is selected).</p>    
 </td>    
 </tr>    
 </tbody>
