@@ -25,7 +25,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    [lu name]_[lu table name]_number_of_records
    ```
 
-   For example: crm_activity_number_of_records. 
+   For example: crm_address_number_of_records. 
 
    This enables the user to override the range for the number of records generated for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
 
