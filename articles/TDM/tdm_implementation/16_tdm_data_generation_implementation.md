@@ -77,13 +77,15 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 The data generation flows are created with the following logic:
 
-- Parent keys are populated into the LU tables based on the parent-child LU schema definition. For example: the address LU table is linked to the customer LU table by the customer_id field. The customer_id generated for the customer LU table is sent to the address' population in the parent row and is mapped to address.customer_id.
+- IDs:
+  - The data generation flow sends the parent IDs to the child table's population based on the parent-child LU schema definition.
+  For example: the Address LU table is the Customer's LU table child. It is linked to the Customer LU table by the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as input and maps the parent customer_id in the Address record.
 
-- Sequence Actors are set for IDs fields mapped in **TDMSeqSrc2TrgMapping**.
+  - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in **TDMSeqSrc2TrgMapping**.
 
-- Other fields are populated with default data generation Actors based on the fields' data type. Note the the default data generation Actors are set in **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library) in the Shared Objects. This table can be edited to change the default Actors mapped to the LU table fields by the createGenerateDataTableFlows flow.
+- Other fields: are populated with synthetic data. By default, this process utilizes the data generation Actors based on the fields' data type. Note that these default data generation Actors are selected based on the mapping defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors mapping and should be edited before the data generation flows' creation.
 
--  The data generation flow returns multiple results that serve as the row columns. This means that the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles the loop on parent rows as well as the number of table's records that each parent will get.
+The data generation flow output contains a list of fields that are sent to the related LU population flow and are loaded to the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator). 
 
   
 
