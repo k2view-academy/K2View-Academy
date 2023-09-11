@@ -72,7 +72,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p><h4>Parameters</p>
 </td>
 <td width="400pxl">
-<p>Select the entities based on the task's parameters from the <a href="07_tdm_parameters_handling.md">LU parameters tables </a> which are created in the TDM DB for each BE and source environment combination.</p>
+<p>Select the entities based on the task's parameters from the <a href="07_tdm_parameters_handling.md">LU parameters tables </a> that are created in the TDM DB for each BE and source environment combination.</p>
 </td>
 <td width="200pxl">
 <p>Regular load tasks (Data Versioning is cleared)</p>
