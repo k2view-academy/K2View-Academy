@@ -99,7 +99,7 @@ The following selection methods are available on extract tasks:
 
 Notes:
 
-- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities of the task. 
+- The maximum number of entities populated by the tester user is [limited by their environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities). This is the maximum number of entities in the task. 
 - The maximum number of entities in the task is limited to the number of entities returned from the Custom Logic flow or by the Max Number of Entities task parameter. For example: if the maximum number of entities in the task is 50, but the custom logic returns 30 entities only, the task will process 30 entities.
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 in order to extract Customers 1 and 2. The TDM execution process [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to each Entity ID when building its LUI.
 
