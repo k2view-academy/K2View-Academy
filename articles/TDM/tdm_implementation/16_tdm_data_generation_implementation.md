@@ -9,9 +9,17 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 ### LU Population Flows - Implementation Steps
 
 1. Verify that the LU tables' populations are based on a Broadway flow to support the synthetic data generation.  Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
+  
 
-   
-   Note that the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor in the LU population (named Query Actor) is automatically generated as an external parameter with the following naming convention: 
+2. Edit the default number of generated synthetic records: the data generation process needs to "know" how many records need to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
+  
+   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named Query) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables.
+
+   Edit this argument to set a different range (minimum and maximum number) of generated records if needed. The data generation randomly generates a number of records within this range.
+
+   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution editor. 
+
+   Note that the **rowsGeneratorDistribution** input argument is automatically generated as an [external parameter](#external-business-parameters) with the following naming convention: 
 
    ```
    [lu name]_[lu table name]_number_of_records
@@ -19,14 +27,11 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
    For example: crm_activity_number_of_records. 
 
-   This enables the user to edit the number of generated records per LU table in the TDM task. 
-   
-
-2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
+   This enables the user to override the range for the number of records generated for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
 
 ## Implementation of Data Generation Flows 
 
-The **sourceDbQuery** Actor (automatically added to the LU population flow) runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
+The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
 
 ```
 ${population name}.population.generator
