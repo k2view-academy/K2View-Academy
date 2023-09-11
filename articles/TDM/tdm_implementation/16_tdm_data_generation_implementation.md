@@ -8,11 +8,10 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
 ### LU Population Flows - Implementation Steps
 
-1. Generate the LU population Broadway flows on the LU tables. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
+1. Verify that the LU tables' populations are based on a Broadway flow to support the synthetic data generation.  Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
-   #### LU Population - Optional Step:
-
-   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor is automatically generated as an external parameter with the following naming convention: 
+   
+   Note that the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor is automatically generated as an external parameter with the following naming convention: 
 
    ```
    [lu name]_[lu table name]_number_of_records
@@ -21,14 +20,13 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    For example: crm_activity_number_of_records. 
 
    This enables the user to edit the number of generated records per LU table in the TDM task. 
-
    
 
 2. Edit the default number of generated synthetic records: edit the default values of the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables.
 
 ## Implementation of Data Generation Flows 
 
-The **sourceDbQuery** Actor runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
+The **sourceDbQuery** Actor (automatically added to the LU population flow) runs the inner data generation flow if the **ROWS_GENERATOR** key (session variable) is **true**. The data generation inner flow must have the following naming convention:
 
 ```
 ${population name}.population.generator
