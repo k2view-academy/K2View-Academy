@@ -22,16 +22,16 @@ Note that an artifact can be created for any Catalog version. Each new artifact 
 
 The purpose of the Catalog Masking mechanism is to perform the masking based on the Catalog's artifacts rather than based on the logic defined in each LU population. Three new actors have been introduced for that: **CatalogMaskingMapper, CatalogMaskingRecord** and **CatalogMaskingField**.
 
-* The **CatalogMaskingMapper** Actor receives a data set, which maps the data on the fly, and does not load the entire data set to memory. The actor internally iterates on each entry and invokes the **CatalogMaskingRecord** Actor. The actor returns a data set with the same structure as it received it.
+* The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory. The actor internally iterates on each entry and invokes the **CatalogMaskingRecord** Actor. The actor returns a dataset with the same structure as it received it.
 
-* The **CatalogMaskingRecord** Actor receives a record, internally splits it into the pairs of key and value and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure as it received it. 
+* The **CatalogMaskingRecord** Actor receives a record, internally splits it into the pairs of key and value and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure as received. 
 
-* The **CatalogMaskingField** Actor checks if the field should be masked – based on classification set by the Fabric Catalog. If yes, it masks the input value using the Masking Actor and the generator (based on prior configuration).
+* The **CatalogMaskingField** Actor checks if the field should be masked – based on classification and the PII indication set by the Fabric Catalog. If yes, it masks the input value using the Masking Actor and the generator which is configured via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration). 
 
 The algorithm applied by the **CatalogMaskingField** is described below:
 
 * Search an input field in the **catalog_info** MTable created by the Build Artifacts action. If a field name is found, do the following:
-  * Check if PII is true and Masking is not OFF. If so, the field's value should be masked. 
+  * Check if PII is true and the Masking property is not OFF (see below more details about the Masking property). If so, the field's value should be masked. 
   * Retrieve the field's Classification to proceed.
 * Search the field's Classification in the **catalog_classification_generators** MTable to find out which generator should be used for masking.
 * Once the generator is found, invoke the **Masking** Actor with this generator and its parameters defined in the **catalog_classification_generators** MTable.
@@ -40,11 +40,13 @@ Click for more details about setting up the catalog_classification_generators MT
 
 To apply the Catalog Masking mechanism, start from running the Discovery job, validating the results and building the Catalog's artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, you can add either the **CatalogMaskingRecord** or **CatalogMaskingField** Actors, to apply the masking on a single record or a single field. 
 
-Using the **CatalogMaskingMapper** in the LU population makes the masking process generic since the implementor doesn't need to know in advanced which of the population fields should be masked. 
+Using the **CatalogMaskingMapper** in the LU population makes the masking process generic since the implementor doesn't need to know in advance which of the population fields should be masked. 
 
-### Controlling Field Masking
+### The Masking Property
 
-While Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Masking property can be added manually when it is required to control the masking mechanism of specific fields. 
+While the Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the Masking property can be added manually when it is required to control the masking mechanism of specific fields. 
+
+<img src="images/masking_prop.png" style="zoom:80%;" />
 
 The purpose of adding the Masking property is to mark the fields, which have been identified as PII, that require special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values, as described below: 
 
@@ -54,7 +56,7 @@ The purpose of adding the Masking property is to mark the fields, which have bee
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
 * **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor responsibility to add the custom masking logic to the relevant LU population.
 
-Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique values, it overrides the same definition on the Classification level (performed via the Classifier Configuration pop-up).
+Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique values, it overrides the same definition on the Classification level (performed via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration)).
 
 
 
