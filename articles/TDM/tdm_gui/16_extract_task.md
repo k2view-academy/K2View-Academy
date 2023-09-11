@@ -38,7 +38,7 @@ Note that **this setting is only available when the Data Versioning checkbox is 
 
 ### Retention Period
 
-The retention period set on the extracted entities and/or Reference tables. When this period ends, the task's entities and/or Reference tables are **automatically deleted** from Fabric and are no longer available. 
+The retention period is set on the extracted entities and/or Reference tables. When this period ends, the task's entities and/or Reference tables are **automatically deleted** from Fabric and are no longer available. 
 
 #### Retention Period Values
 
