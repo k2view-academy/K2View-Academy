@@ -52,8 +52,8 @@ The retention period is set on the extracted entities and/or Reference tables. W
 
 #### Default Retention Period
 
-- Data versioning is cleared - do not Delete.
-- Data versioning is checked - 5 days. A retention period must be set on a Data Versioning Extract task, i.e., the retention period must be set to a value greater than zero when the Data Versioning is checked.
+- Data versioning checkbox is clear - do not Delete.
+- Data versioning checkbox is checked - 5 days. A retention period must be set on a Data Versioning Extract task, i.e., the retention period must be set to a value greater than zero when the Data Versioning checkbox is checked.
 
 
 
