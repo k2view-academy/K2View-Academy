@@ -15,9 +15,9 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
   
    The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named Query) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables.
 
-   Edit this argument to set a different range (minimum and maximum number) of generated records if needed. The data generation randomly generates a number of records within this range.
+   Edit this argument to set a different range (minimum and maximum number) or a distribution type (the default is **Uniform distribution**) of generated records if needed. The data generation randomly generates a number of records within this range.
 
-   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution editor. 
+   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
 
    Note that the **rowsGeneratorDistribution** input argument is automatically generated as an [external parameter](#external-business-parameters) with the following naming convention: 
 
