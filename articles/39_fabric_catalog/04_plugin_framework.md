@@ -122,7 +122,7 @@ If a match is found, the plugin evaluates both the relation direction and the fo
     </tbody>
     </table>
 
-* **same_field_names_pk** - Common fields, a part of PK in both datasets, and both datasets have identical number of PKs.
+* **same_field_names_pk** - Common fields that are part of the PK in both datasets, and where both datasets have identical number of PKs.
   * The relation is created and its direction is random. The score is 0.4.
 * **same_field_names_not_pk** - Both datasets have fields with the same names (normalized, not in *field_name_blk*), both are non-PK.
   * The relation is created and its direction is random. The score is 0.2.
