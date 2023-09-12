@@ -49,7 +49,7 @@ For example, the following field names will be matched: customer.ID, CUSTOMER_ID
 
 This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters, and they can be updated on a project level.
 
-If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
+If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability of the match's correctness. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
 
 * **field_name_is_id_and_pk** - Dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
   * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
