@@ -117,7 +117,7 @@ Click [here](16_tdm_data_generation_implementation.md) for more information abou
 
 ### Custom Sequence Logic
 
-By default, the generated sequence Actors and flows use the [MaskingSequece](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
+By default, the generated sequence Actors and flows use the [MaskingSequence](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
 
 Do the following to set a custom logic for a given sequence:
 
