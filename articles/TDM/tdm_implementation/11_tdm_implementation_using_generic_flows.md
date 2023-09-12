@@ -193,7 +193,7 @@ The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows
 
 * Initiate the TDM load.
 * Delete the target data, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode).
-* Load the new data into the target, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode). 
+* Load the new data into the target, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md). 
 * Manage the TDM process as **one** transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
