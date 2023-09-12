@@ -6,7 +6,7 @@
 
 The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various elements (nodes), searching for nodes, viewing their properties, and more.
 
-The article includes the following sub-sections:
+This article includes the following sub-sections:
 
 * Catalog application [Main area](05_catalog_app.md#main-area), which displays the Catalog tree.
 * Catalog application [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
