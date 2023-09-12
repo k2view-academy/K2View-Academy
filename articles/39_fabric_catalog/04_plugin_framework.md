@@ -47,7 +47,7 @@ The matching algorithm works by comparing 2 field names of 2 different datasets 
 
 For example, the following field names will be matched: customer.ID, CUSTOMER_ID and CustomerID.
 
-This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters and they can be updated on a project level.
+This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters, and they can be updated on a project level.
 
 If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability that the match is correct. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
 
