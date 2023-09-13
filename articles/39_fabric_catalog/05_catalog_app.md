@@ -96,7 +96,7 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type identified by the Crawler, and PII and Classification identified by the plugins.
+Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type - identified by the Crawler, and PII and Classification - identified by the plugins.
 
 Clicking the property name or the <img src="C:\K2View-Academy\articles\39_fabric_catalog\images\info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window, providing more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
