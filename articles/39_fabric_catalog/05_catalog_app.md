@@ -124,7 +124,7 @@ The Classifier Configuration screen provides the following configuration capabil
   
   <img src="images/classifier.png" style="zoom: 67%;" />
   
-* The **PII & Masking Setup** tab allows to view and update of the PII and masking settings of each classification. Each classification can appear only once in this tab.
+* The **PII & Masking Setup** tab allows to view and update the PII and masking settings of each classification. Each classification can appear only once in this tab.
   
   <img src="images/classifier_pii_masking.png" style="zoom: 67%;" />
   
