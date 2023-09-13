@@ -37,7 +37,7 @@ When the Catalog application opens, it displays the latest version by default. T
 
 **Data Platform and Schema's Context Menu**
 
-Clicking once on any Data Platform or Schema node opens the context menu: 
+A single click on any Data Platform or Schema node opens the context menu: 
 
 <img src="images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
