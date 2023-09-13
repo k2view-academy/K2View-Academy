@@ -86,9 +86,9 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
 * **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click here for more information regarding the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
-* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, selecting the Catalog layout. Centered (default), vertical or horizontal layouts are supported.
+* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
 * **Navigation map** <img src="images/navigation.png" style="zoom:80%;" />, opening the Catalog's mini-map and navigation panel. 
-* **Zoom in / out**, adjusting the zoom of the view.
+* **Zoom in / out**, for adjusting the zoom of the view.
 
 ### Properties Tab
 
