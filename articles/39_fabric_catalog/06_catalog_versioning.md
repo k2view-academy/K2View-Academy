@@ -18,7 +18,7 @@ By default, the Catalog displays the latest version. To view any version, open t
 
 <img src="images/versions.png" style="zoom:75%;" />
 
-The Catalog tree is then displayed using the standard coloring scheme where all the nodes are blue and the relations are orange. 
+The Catalog tree is then displayed using the standard coloring scheme, where all the nodes are blue and the relations are orange. 
 
 ### Version Comparison
 
