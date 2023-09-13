@@ -22,7 +22,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
   * Click the property in the Properties Tab to open the More Info pop-up window and update the **Value** and **Notes** fields. 
 
-  * When clicking Submit in the More Info pop-up window – the change is being aggregated on the client side and is not yet sent to the server. The tab indicates the change: the row with new value is marked in green, the row with old value is marked in red.
+  * When clicking Submit in the More Info pop-up window – the change is being aggregated on the client side and is not yet sent to the server. The tab indicates the change: the row with the new value is marked in green, the row with the old value is marked in red.
 
   * When clicking Cancel – the change performed in the More Info pop-up window is discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
