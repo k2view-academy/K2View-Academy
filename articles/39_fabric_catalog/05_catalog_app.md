@@ -112,7 +112,7 @@ The Catalog application supports deep linking from the data platform to the fiel
 /app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
 ~~~
 
-The version should be either the word **latest** or **V** with the version number (e.g. V13).
+The version should be either the word **latest** or **V** with the version number (e.g., V13).
 
 This link can be shared as it sends another user straight to a specific in-app location, saving time and energy while trying to locate a particular node.
 
