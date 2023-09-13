@@ -40,7 +40,7 @@ The relations can be modified as follows:
   * FK Table Name is Dataset2.
   * Populate the FK Columns and notes, and save the link.
 * An alternative way to **add** a new relation is to click **Add Relation To**.
-  * The Add Relation pop-up window will open where you need to first select the Dataset2 and then to populate the FK Columns.
+  * The Add Relation pop-up window will open where you need to first select the Dataset2 and then populate the FK Columns.
 
 * To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
 
