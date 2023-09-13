@@ -10,7 +10,7 @@ Note that if the Discovery process doesn't identify any changes in the data sour
 
 Additional trigger for a version creation is a manual edit of the Catalog. 
 
-[Click here for more information about the manual overrides](07_manual_overrides.md).
+[Click here for more information about manual overrides](07_manual_overrides.md).
 
 ### Version View
 
