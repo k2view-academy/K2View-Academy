@@ -38,7 +38,7 @@ To view a data source element in the Catalog application, do the following:
 
 Note that **Run Discovery Job** and **Open in Catalog** commands may be hidden in the Web Studio. 
 
-[Click here for more information about how to update this setting](11_advanced_settings.md#web-studio).
+[Click here for more information about how to update this show/hide setting](11_advanced_settings.md#web-studio).
 
 
 
