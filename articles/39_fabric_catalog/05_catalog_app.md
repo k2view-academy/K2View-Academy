@@ -80,7 +80,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
-* The **Actions** menu allows to:
+* An **Actions** menu that allows to:
   * **Edit** the catalog manually. [Click here for more information regarding the Manual Overrides](07_manual_overrides.md).
   * Open the **Classifier Configuration** screen in order to update the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
   * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
