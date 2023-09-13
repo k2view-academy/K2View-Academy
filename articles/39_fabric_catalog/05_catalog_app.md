@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various elements (nodes), searching for nodes, viewing their properties, and more.
+The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various nodes, searching for nodes, viewing their properties, and more.
 
 This article includes the following sub-sections:
 
@@ -18,7 +18,7 @@ This article includes the following sub-sections:
 
 **General Navigation**
 
-The Catalog's main area enables navigation between different hierarchy levels, by expanding and collapsing various elements.
+The Catalog's main area enables navigation between different hierarchy levels, by expanding and collapsing various nodes.
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
