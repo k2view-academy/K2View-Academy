@@ -24,7 +24,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
   * When clicking Submit in the More Info pop-up window – the change is being aggregated on the client side and is not yet sent to the server. The tab indicates the change: the row with the new value is marked in green and the row with the old value is marked in red.
 
-  * When clicking Cancel – the change performed in the More Info pop-up window is discarded.
+  * When clicking Cancel – the change performed in the More Info pop-up window is being discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
 * To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. **ID** will be generated according to the property's path, **Origin** will be set to Manual, and the **Score** to 1.
   * When adding a new property, you can either select the property name from the pre-defined list or create a completely new property.
