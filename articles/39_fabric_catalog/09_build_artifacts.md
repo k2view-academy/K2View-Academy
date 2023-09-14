@@ -26,7 +26,7 @@ The purpose of the Catalog Masking mechanism is to perform masking based on the 
 
 * The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the **CatalogMaskingField** Actor for each pair. The Actor returns an object with the same structure it was received.
 
-* The **CatalogMaskingField** Actor checks if the field should be masked – based on classification and the PII indication set by the Fabric Catalog. If yes, it masks the input value using the Masking Actor and the generator which is configured via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration). 
+* The **CatalogMaskingField** Actor checks whether the field should be masked – based on classification and the PII indication set by the Fabric Catalog. If yes, it masks the input value using the Masking Actor and the generator which is configured via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration). 
 
 The algorithm applied by the **CatalogMaskingField** is described below:
 
