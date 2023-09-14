@@ -22,9 +22,9 @@ Note that an artifact can be created for any Catalog version. Each new artifact 
 
 The purpose of the Catalog Masking mechanism is to perform masking based on the Catalog's artifacts rather than based on the logic defined in each LU population. 3 new Actors have been introduced for this purpose: **CatalogMaskingMapper, CatalogMaskingRecord** and **CatalogMaskingField**.
 
-* The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory. The actor internally iterates on each entry and invokes the **CatalogMaskingRecord** Actor. The actor returns a dataset with the same structure as it received it.
+* The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory. The Actor iterates internally on each entry and invokes the **CatalogMaskingRecord** Actor. The Sctor returns a dataset with the same structure as it received it.
 
-* The **CatalogMaskingRecord** Actor receives a record, internally splits it into the pairs of key and value and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure as received. 
+* The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the **CatalogMaskingField** Actor for each pair. The Actor returns an object with the same structure as received. 
 
 * The **CatalogMaskingField** Actor checks if the field should be masked – based on classification and the PII indication set by the Fabric Catalog. If yes, it masks the input value using the Masking Actor and the generator which is configured via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration). 
 
