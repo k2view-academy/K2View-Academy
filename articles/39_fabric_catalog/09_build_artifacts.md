@@ -38,7 +38,7 @@ The algorithm applied by the **CatalogMaskingField** is described below:
 
 Click for more details about setting up the catalog_classification_generators MTable using the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
-To apply the Catalog Masking mechanism, start from running the Discovery job, validating the results and building the Catalog's artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, you can add either the **CatalogMaskingRecord** or **CatalogMaskingField** Actors, to apply the masking on a single record or a single field. 
+To apply the Catalog Masking mechanism, start with running the Discovery job, validating the results and building the Catalog's artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, you can add either the **CatalogMaskingRecord** or **CatalogMaskingField** Actors, to apply the masking on a single record or a single field. 
 
 Using the **CatalogMaskingMapper** in the LU population makes the masking process generic since the implementor doesn't need to know in advance which of the population fields should be masked. 
 
