@@ -8,7 +8,7 @@ The Catalog provides an ability to build artifacts and save them into the Projec
 
 ### Build Artifacts
 
-Building the Catalog's artifact is triggered by clicking **Actions > Build Artifacts** in the the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
+Building the Catalog's artifact is triggered by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
 
 The below is an illustration of the catalog_info.csv file:
 
