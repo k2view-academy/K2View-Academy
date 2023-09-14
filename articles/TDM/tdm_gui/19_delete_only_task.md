@@ -41,7 +41,7 @@ The following selection methods are available on load tasks:
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities for the task, separating them with a comma.  Note that a warning is given if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task, and separate the entities with a comma. Note that a warning is given if the entity list has entities that are reserved for another user.
 
 ### Custom Logic
 
