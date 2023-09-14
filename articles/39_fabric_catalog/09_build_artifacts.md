@@ -30,7 +30,7 @@ The purpose of the Catalog Masking mechanism is to perform masking based on the 
 
 The algorithm applied by the **CatalogMaskingField** is described below:
 
-* Search an input field in the **catalog_info** MTable created by the Build Artifacts action. If a field name is found, do the following:
+* Search an input field in the **catalog_info** MTable created by the Build Artifacts act. If a field name is found, perform the following:
   * Check if PII is true and the Masking property is not OFF (see below more details about the Masking property). If so, the field's value should be masked. 
   * Retrieve the field's Classification to proceed.
 * Search the field's Classification in the **catalog_classification_generators** MTable to find out which generator should be used for masking.
