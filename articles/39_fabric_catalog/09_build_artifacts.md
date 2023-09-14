@@ -54,7 +54,7 @@ The purpose of adding the Masking property is to mark the fields identified as P
 * **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
 * **Consistent & Unique** - the Catalog Masking Actors should produce a consistent and a unique value across the Catalog.
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
-* **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor responsibility to add the custom masking logic to the relevant LU population.
+* **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor's responsibility to add the custom masking logic to the relevant LU population.
 
 Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique values, it overrides the same definition on the Classification level (performed via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration)).
 
