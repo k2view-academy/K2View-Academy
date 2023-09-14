@@ -14,7 +14,7 @@ The below is an illustration of the catalog_info.csv file:
 
 <img src="images/catalog_info_mtable.png" style="zoom:75%;" />
 
-The artifact is created for the Catalog version displayed in the application. The last column's name holds the version number, such as *V4* in this case. This column always remains empty. 
+The artifact is created for the Catalog version that is displayed in the application. The last column's name holds the version number, such as *V4* in this case. This column always remains empty. 
 
 Note that an artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
 
