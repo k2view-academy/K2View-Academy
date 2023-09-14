@@ -48,7 +48,7 @@ While the Classification and PII properties are added to the Catalog nodes by th
 
 <img src="images/masking_prop.png" style="zoom:80%;" />
 
-The purpose of adding the Masking property is to mark the fields identified as PII, that require special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values, as described below: 
+The purpose of adding the Masking property is to mark the fields identified as PII, that require special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values described below: 
 
 * **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (meaning the same input will always return the same masked value).
 * **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
