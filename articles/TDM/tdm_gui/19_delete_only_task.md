@@ -25,7 +25,7 @@ Check the **Entities** checkbox in order to delete the selected entities from th
 
 #### Set Task Variables Checkbox
 
-When checked, the Task Variables tab opens and there you should [set the variable value on a task level](23_task_globals_tab.md).
+When checked, the Task Variables tab opens in which you should [set the variable value on a task level](23_task_globals_tab.md).
 
 ### Post Execution Processes
 
