@@ -19,7 +19,7 @@ When checking the **Set Task Variables** setting, a new [Task Variables](23_task
 
 ### Data Type
 
-Check the **Entities** to delete the requested entities from the target environment.
+Check the **Entities** checkbox in order to delete the selected entities from the target environment.
 
 ### Additional Execution Parameters
 
