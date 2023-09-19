@@ -25,7 +25,14 @@ Fabric allows users to use server's RAM to distribute messages (in a single-node
 MESSAGES_BROKER_TYPE=MEMORY
 ```
 
+Internal distribution of long snapshot / transaction:
+
+~~~
+MESSAGES_INTERNAL_BROKER_TYPE=PUB_SUB
+~~~
+
 ### Message Access Retry
+
 When a message is not processed properly, Fabric allows for a configurable number of retrials to be executed.
 ```
 # Max retry for a poisoned message
@@ -100,9 +107,9 @@ When it is required to have different Kafka settings for Common DB, it can be do
 
 [Click for more information about PubSub Configuration](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
-## Cassandra Snapshots Settings
+## System DB Snapshots Settings
 
-### SNAPSHOTS NAME
+### Long snapshot / transactions table name
 ```
 COMMONS_SNAP_TABLE=snapshots
 ```
