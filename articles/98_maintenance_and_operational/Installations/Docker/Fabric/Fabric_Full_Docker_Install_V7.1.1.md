@@ -1,4 +1,4 @@
-## FABRIC V7.1.1_69-HF3 DOCKER INSTALLATION
+## FABRIC V7.1.1_73-HF4 DOCKER INSTALLATION
 
 ### Prerequisites
 
@@ -60,13 +60,13 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_69-HF3/D_k2view_fabric_7.1.1_69.tar.gz
-   <br>md5: f5b7c6a5780b4668fd05611930e9b724</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_73-HF4/D_k2view_fabric_7.1.1_73.tar.gz
+   <br>md5: 490d3098624d8d7412e2bd14711ae720</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_69-HF3/compose_fabric_7.1.1_69.tar.gz
-   <br>md5: 43e597a01983f65dd945c926ddcf628d</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_73-HF4/compose_fabric_7.1.1_73.tar.gz
+   <br>md5: f023bc40f1f47da58a94d7bd26c53ce6</br></td>
    </tr>
    </tbody>
    </table>
@@ -84,14 +84,14 @@ More detailed requirements for each are described below:
    ```bash
     docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_3.tar.gz
-    docker load -i D_k2view_fabric_7.1.1_69.tar.gz 
+    docker load -i D_k2view_fabric_7.1.1_73.tar.gz 
    ```
 
    You can see the names of the images by using the command `docker images`
 4. Extract the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_7.1.1_69.tar.gz 
+   tar -zxvf compose_fabric_7.1.1_73.tar.gz 
    ```
 
 #### Run Single Fabric, Cassandra and Kafka Instances
@@ -99,7 +99,7 @@ More detailed requirements for each are described below:
 Run Docker Compose as follows:
 
 ```bash
-cd compose_fabric_7.1.1_69
+cd compose_fabric_7.1.1_73
 # run:  
 docker-compose up -d 
 
@@ -114,7 +114,7 @@ Cassandra and Fabric will start automatically.
 1. To stop the Docker Compose, do the following:
 
    ```bash
-   cd compose_fabric_7.1.1_69
+   cd compose_fabric_7.1.1_73
    #run: 
    docker-compose stop
    ```
