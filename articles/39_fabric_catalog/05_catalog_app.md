@@ -53,7 +53,7 @@ The context menu allows performing the following actions:
 
   * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
 
-  * In the Focus view, the breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, which allows navigating up the tree.
+  * In the Focus view, breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, and they allow to navigate up the tree.
 
 
 <img src="images/breadcrumbs.png" style="zoom: 67%;" />
@@ -83,7 +83,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 * An **Actions** menu that allows to:
   * **Edit** the catalog manually. [Click here for more information regarding the Manual Overrides](07_manual_overrides.md).
   * Open the **Classifier Configuration** screen for updating the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
-  * View and unhide the **hidden nodes**. Selecting a node from this list returns it back to the Catalog tree.
+  * View the list of **hidden nodes**. Clicking a node in this list returns it unhidden back to the Catalog tree.
 * **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click here for more information regarding the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
@@ -98,9 +98,11 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type - identified by the Crawler, and PII and Classification - identified by the plugins.
 
-Clicking the property name or the <img src="C:\K2View-Academy\articles\39_fabric_catalog\images\info.png" style="zoom:80%;"/> icon next to the element's name opens the More Info pop-up window that provides more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
+Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name opens the More Info pop-up window that provides more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
-When the selected element is a relation (link) between two objects in the Catalog tree, the relation properties are displayed. Note that in case of more than one *refers_to* relations between two datasets, the Catalog tree displays one link only. However the Properties Tab displays the details of all relations as shown below:
+When the selected element is a relation (a link) between two objects in the Catalog tree, the relation's properties are displayed. 
+
+Note that in case of more than one *refers_to* relations between two Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the example below, there are two *refers_to* relations between the **movie** and **language** Datasets:
 
 <img src="images/properties_two_links.png" style="zoom: 75%;" />
 
