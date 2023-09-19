@@ -26,7 +26,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
   * When clicking Cancel – the change performed in the More Info pop-up window is being discarded.
 * To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
-* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. **ID** will be generated according to the property's path, **Origin** will be set to Manual and the **Score** to 1.
+* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. An **ID** will be generated according to the property's path, the **Origin** will be set to Manual and the **Score** to 1.
   * When adding a new property, you can either select the property name from a predefined list or create a completely new property.
 
 
@@ -34,19 +34,19 @@ As part of the Discovery process, properties are created for each node. Some pro
 
 The relations can be modified as follows:
 
-* To **add** a new relation, click on the source (Dataset1) and click **Add Relation** in its context menu. Then, click the target (Dataset2). The Add Relation pop-up window will open with the following:
+* To **add** a new relation, click on the Dataset1 and select **Add Relation** from its context menu. Then, click the Dataset2. The Add Relation pop-up window will open with the following:
   * The name of the new link: *Dataset2 refers to Dataset1*. 
   * PK Table Name is Dataset1 and PK Columns are the primary key columns of the Dataset1.
   * FK Table Name is Dataset2.
   * Populate the FK Columns and notes, and save the link.
-* An alternative way to **add** a new relation is to click **Add Relation To**.
+* An alternative way to **add** a new relation is to select **Add Relation To**.
   * The Add Relation pop-up window will open where you need to first select the Dataset2 and then populate the FK Columns.
+
+<img src="images/add_relation.png" style="zoom:75%;" />
 
 * To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
 
 Only *refers_to* relations can be edited. 
-
-<img src="images/add_relation.png" style="zoom:75%;" />
 
 ### Saving Manual Overrides
 

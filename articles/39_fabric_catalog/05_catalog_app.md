@@ -108,7 +108,7 @@ Note that in case of more than one *refers_to* relations between two Datasets, t
 
 ### Deep Linking
 
-The Catalog application supports deep linking from the data platform to the field level. When navigating the Catalog tree and clicking the nodes, the path to the node is added to the application URL using the following format:
+The Catalog application supports deep linking from the Data Platform to the field level. When navigating the Catalog tree and clicking a node, the node's path is added to the application URL using the following format:
 
 ~~~
 /app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
@@ -116,7 +116,7 @@ The Catalog application supports deep linking from the data platform to the fiel
 
 The version should be either the word **latest** or **V** with the version number (e.g., V13).
 
-This link can be shared as it sends another user straight to a specific in-app location, saving time and energy while trying to locate a particular node.
+This link can be shared as it directs other users to a specific in-app location, saving them the time and energy of trying to locate a particular node.
 
 ### Classifier Configuration
 
@@ -134,7 +134,7 @@ The Classifier Configuration screen provides the following configuration capabil
   
     <img src="images/classifier_pii_masking_edit.png" style="zoom: 67%;" />
 
-The Save button commits all the changes performed in both tabs into the Fabric memory. The rules are also saved in the Discovery/MTable folder in the project tree.
+The **Save** button commits all the changes performed in both tabs into the Fabric memory. The profiling rules are also saved in the Discovery/MTable folder in the Project tree.
 
 
 

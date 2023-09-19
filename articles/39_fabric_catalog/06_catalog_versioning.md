@@ -6,7 +6,7 @@ The Catalog supports **versioning**, which is the ability to create a new Catalo
 
 Then, using the Catalog application, a user can view each version separately or check the differences between 2 selected versions, as described below.
 
-Note that if the Discovery process doesn't identify any changes in the data source or in the plugins settings, a new version is not created.
+Note that if the Discovery process doesn't identify any changes in the data source or in the plugins' settings, it doesn't create a new Catalog version.
 
 Additional trigger for a version creation is a manual edit of the Catalog. 
 
@@ -14,7 +14,7 @@ Additional trigger for a version creation is a manual edit of the Catalog.
 
 ### Version View
 
-By default, the Catalog displays the latest version. To view any version, open the version's drop-down list and click a version number: 
+By default, the Catalog displays the latest available version. To view any version, open the version's drop-down list and click a version number: 
 
 <img src="images/versions.png" style="zoom:75%;" />
 
@@ -28,7 +28,9 @@ To compare 2 versions, click the comparison <img src="images/compare.png" style=
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed value is in red.
 * All unchanged entities and relations are grey.
 
-When a Schema has too many Datasets, it might be hard to identify the differences. To view updated Datasets only, first expand the Datasets and then click the comparison icon in the Catalog's legend:
+​	<img src="images/compare_versions.png" style="zoom:67%;" />
+
+When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the comparison icon in the Catalog's legend:
 
 <img src="images/view_diff_only.png" style="zoom:67%;" />
 
