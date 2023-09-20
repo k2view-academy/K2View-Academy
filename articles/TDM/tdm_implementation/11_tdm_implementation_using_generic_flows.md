@@ -440,7 +440,7 @@ The Custom Logic flow must have the following structure:
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. Init - call the **InitRecordCount** and the **TDMSetSessionGlobals** Actors to run the initial setting for the custom logic flow execution.
+1. Init - call the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution.
 
 2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
