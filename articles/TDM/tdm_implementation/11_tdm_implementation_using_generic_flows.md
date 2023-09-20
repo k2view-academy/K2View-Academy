@@ -440,16 +440,11 @@ The Custom Logic flow must have the following structure:
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
+1. Init - call the **InitRecordCount** and the **TDMSetSessionGlobals** Actors to run the initial setting for the custom logic flow execution.
 
-2. **Filter** - calls the **CheckIfReserved** inner flow to filter out reserved entities, if needed:
+2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
-   ![custom logic filter](images/custom_logic_filter.png)
-
-3. **Mapper** - calls the **buildTDMEidForCustomLogic** inner flow to format the entity IDs for the task execution:
-
-   ![custom logic mapper](images/custom_logic_mapper.png)
-
+3. **customLogicDirectFlowUtil** - filters out the reserved entities if needed,  and formats the entity IDs for the task execution.
 
 
 #### Indirect Call Flow
