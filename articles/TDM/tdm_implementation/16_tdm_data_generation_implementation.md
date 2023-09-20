@@ -9,31 +9,44 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 ### LU Population Flows - Implementation Steps
 
 1. Verify that the LU tables' populations are based on a Broadway flow to support the synthetic data generation.  Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
-  
 
-2. Edit the default number of generated synthetic records: the data generation process needs to "know" how many records need to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
+
+2. **Optional** - **edit the default number of generated synthetic records**: the data generation process needs to "know" how many records need to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
   
    The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named Query) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables.
 
-   Edit this argument to set a different range (minimum and maximum number) or a distribution type (the default is **Uniform distribution**) of generated records if needed. The data generation randomly generates a number of records within this range.
+   Edit this argument to set a different range (minimum and maximum number) or a distribution type (the default is **Uniform distribution**) of generated records if needed. The data generation randomly generates a number of records within this range:
 
+   - Set the type of the distributed value to **integer**:
+
+     ![rows dist 1](images/rowsGeneratorDistribution_setting_1.png)
+
+   
+   
+   - Then edit the distribution type and/or the minimum and maximum values. See example below:
+
+     ![rows dist 1](images/rowsGeneratorDistribution_setting_2.png)
+
+     
+   
    Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
-
+   
+   
+   
    Note that the **rowsGeneratorDistribution** input argument is automatically generated as an [external parameter](#external-business-parameters) with the following naming convention: 
-
+   
    ```
    [lu name]_[lu table name]_number_of_records
    ```
-
+   
    For example: crm_address_number_of_records. 
-
-   This enables the user to override the range for the number of records generated for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
+   
+   This **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
 
 ## Implementation of Data Generation Flows 
 
-The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs an inner data generation flow to generate synthetic records.
-The data generation flows must be created on each source LU table to support synthetic data generation.  
-Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true** which triggers the execution of the data generation inner flow on each LU table. 
+The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs an inner data generation flow to generate synthetic records for data generation tasks.
+The data generation flows must be created on each source LU table to support synthetic data generation. 
 
 The data generation flow must have the following naming convention:
 
@@ -42,6 +55,8 @@ ${population name}.population.generator
 ```
 
 For example: activity.population.generator
+
+Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true** which triggers the execution of the data generation inner flow on each LU table. 
 
 
 ### Data Generation Flows - Implementation Steps
