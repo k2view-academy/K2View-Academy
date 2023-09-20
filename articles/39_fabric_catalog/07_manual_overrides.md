@@ -34,7 +34,7 @@ As part of the Discovery process, properties are created for each node. Some pro
 
 The relations can be modified as follows:
 
-* To **add** a new relation, click on the Dataset1 and select **Add Relation** from its context menu. Then, click the Dataset2. The Add Relation pop-up window will open with the following:
+* To **add** a new relation, click on the Dataset1 (the parent table) and select **Add Relation** from its context menu. Then, click the Dataset2 (the child table). The Add Relation pop-up window will open with the following:
   * The name of the new link: *Dataset2 refers to Dataset1*. 
   * PK Table Name is Dataset1 and PK Columns are the primary key columns of the Dataset1.
   * FK Table Name is Dataset2.
