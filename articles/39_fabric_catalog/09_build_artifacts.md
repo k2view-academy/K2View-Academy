@@ -31,14 +31,14 @@ The purpose of the Catalog Masking mechanism is to perform masking based on the 
 The algorithm applied by the **CatalogMaskingField** is described below:
 
 * Search an input field in the **catalog_info** MTable created by the Build Artifacts act. If a field name is found, perform the following:
-  * Check if PII is true and the Masking property is not OFF (see below more details about the Masking property). If so, the field's value should be masked. 
+  * Check if both PII is true and the Masking property is not OFF (see below more details about the Masking property). If they are, the field's value should be masked. 
   * Retrieve the field's Classification in order to proceed.
-* Search the field's Classification in the **catalog_classification_generators** MTable to find out which generator should be used for masking.
-* Once the generator is found, invoke the **Masking** Actor with this generator and its parameters defined in the **catalog_classification_generators** MTable.
+* Search the field's Classification in the **catalog_classification_generators** MTable to find out which Generator should be used for masking.
+* Once a Generator is found, invoke the **Masking** Actor with this generator and its parameters that are defined in the **catalog_classification_generators** MTable.
 
 Click for more details about setting up the catalog_classification_generators MTable using the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
-To apply the Catalog Masking mechanism, start with running the Discovery job, validating the results and building the Catalog's artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, you can add either the **CatalogMaskingRecord** or the **CatalogMaskingField** Actors, to apply the masking on a single record or a single field. 
+To apply the Catalog Masking mechanism, start with running the Discovery job, validating the results and building the Catalog artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, for applying the masking on a record or a single field, you can add the **CatalogMaskingRecord** or the **CatalogMaskingField** Actors respectively. 
 
 Using the **CatalogMaskingMapper** in the LU population makes the masking process generic since the implementor doesn't need to know in advance which of the population fields should be masked. 
 
@@ -52,7 +52,7 @@ The purpose of adding the Masking property is to mark the fields identified as P
 
 * **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (meaning the same input will always return the same masked value).
 * **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
-* **Consistent & Unique** - the Catalog Masking Actors should produce a consistent and a unique value across the Catalog.
+* **Consistent & Unique** - the Catalog Masking Actors should produce a consistent yet unique value across the Catalog.
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
 * **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor's responsibility to add the custom masking logic to the relevant LU population.
 

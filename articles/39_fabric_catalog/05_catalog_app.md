@@ -130,8 +130,11 @@ The Classifier Configuration screen provides the following configuration capabil
   
   <img src="images/classifier_pii_masking.png" style="zoom: 67%;" />
   
-  * To edit the generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
+  * To edit the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
   
+    * The Generator can be either an actor (built-in or custom) or a flow that can perform the masking logic for a given Classification type.
+    * For example, for masking the fields classifier as Social Security Number, you can either use the built-in RandomSSN.actor or create your own flow.
+    
     <img src="images/classifier_pii_masking_edit.png" style="zoom: 67%;" />
 
 The **Save** button commits all the changes performed in both tabs into the Fabric memory. The profiling rules are also saved in the Discovery/MTable folder in the Project tree.
