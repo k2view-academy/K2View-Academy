@@ -122,7 +122,7 @@ The data generation flows are created with the following logic:
 
 - PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
 
-  Example: the First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the first and last names in both LUs for a given customer.
+  Example: The First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the first and last names in both LUs for a given customer.
 
   The following table describes the implementation recommendations for each scenario: 
 
