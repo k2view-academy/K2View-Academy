@@ -13,9 +13,9 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
 
 **Example:**
 
-- Customer BE has four LUs:
-  - Two **root LUs**: **Customer** and **Collection**.
-  - **Customer** LU has two children LUs:
+- Customer BE has 4 LUs:
+  - 2 **root LUs**: **Customer** and **Collection**.
+  - **Customer** LU has 2 children LUs:
     - **Billing**
     - **Order**
 
