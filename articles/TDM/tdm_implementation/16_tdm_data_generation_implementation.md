@@ -65,7 +65,7 @@ Note that a synthetic data generation task execution sets the **ROWS_GENERATOR**
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
-This is required in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument and is created in the TDM DB for the generated ID with the following naming convention:
+This is required in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
 Gen_[the sequence name in TDMSeqSrc2TrgMapping]
