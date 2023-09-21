@@ -2,7 +2,9 @@
 
 The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a load task. It is also possible to [configure the TDM](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#tdm-portal-general-parameters) to enable the Parameters selection method for a [reserve task](/articles/TDM/tdm_gui/20_reserve_only_task.md#parameters). 
 
-The list of available parameters is displayed on the task's BE (Business Entity). A BE can have either a flat or hierarchical structure and each LU has its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) in the TDM DB. The LU parameters table is created and populated in the TDM DB by the LUI sync. The naming convention of the parameters tables is `<LU Name>_params`. 
+The list of available parameters is displayed on the task's BE (Business Entity). The list of parameters for each LU and the parameters' information -  the valid values of [combo parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#how-do-i-populate-a-parameters-value),  number of values, parameter type, and minimum and maximum values for numeric parameters - are kept in the **tdm_params_distinct_values** TDM DB table.
+
+A BE can have either a flat or hierarchical structure and each LU has its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) in the TDM DB. The LU parameters table is created and populated in the TDM DB by the LUI sync. The naming convention of the parameters tables is `<LU Name>_params`. 
 
 The entity selection on a TDM task selects a subset of **root entities**, but the parameters for selection can be based on the child LU's parameters. Therefore, it is important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters. **Previous TDM versions** created a **MATERIALIZED VIEW** in the TDM DB on each combination of **BE and source environment** to have the linkage between the root entity and the children entities. From TDM 8.1 onwards, each LU parameters table contains the following fields to connect the entity id to its root entity:
 
@@ -54,7 +56,6 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   </table>
   
   
-  
 - Syncing Collection ID #1 inserts the following records into **COLLECTION_PARAMS** TDM DB table:
 
   <table width="900pxl">
@@ -75,7 +76,6 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   </tr>
   </tbody>
   </table>
-  
   
   
 - Syncing Billing IDs #169, #170, #171, #172, and #173 inserts the following records into **BILLING_PARAMS** TDM DB table:

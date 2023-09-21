@@ -48,6 +48,13 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Business Entity</td>
 </tr>
 <tr>
+<td valign="top" width="200pxl"><h4>tdm_params_distinct_values</td>
+<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all parameters, their values and types.</p>
+ <p><a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">Click for more information about parameters handling.</a></p>
+</td>
+<td valign="top" width="300pxl">Business Entity</td>
+</tr>    
+<tr>
 <td valign="top" width="200pxl"><h4>tdm_be_post_exe_process</td>
 <td valign="top" width="400pxl">List of <a href = "/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab">post-execution processes</a> attached to each Business Entity. A post-execution process is executed at the end of the task execution process. For example, sending a mail to a user.</td>
 <td valign="top" width="300pxl">Business Entity</td>
@@ -191,6 +198,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 
