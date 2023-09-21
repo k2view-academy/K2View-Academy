@@ -218,7 +218,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
 
   - NO_OF_OPEN_CASES > 0  AND VIP_STATUS = "Gold" AND ORDER_TYPE = "New"
 
-- The following SELECT statement runs on the TDM DB to get the available entities:
+- The following Select statement runs on the TDM DB to get the available entities:
 
      `SELECT ROOT_IID FROM crm_params WHERE source_environment = 'Production' AND root_lu_name = ANY('Customer', 'Collection') AND 0 < ANY("CRM.NUM_OF_OPEN_CASES"::numeric[] )   
   INTERSECT` 
