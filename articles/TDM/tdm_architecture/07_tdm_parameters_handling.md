@@ -145,7 +145,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   </tbody>
   </table>
 
-- Syncing Order IDs #279, #280, #281, #282, and #283. #284, and #285 inserts the following records into **ORDER_PARAMS** TDM DB table:
+- Syncing Order IDs #279, #280, #281, #282, #283, #284, and #285 inserts the following records into **ORDER_PARAMS** TDM DB table:
 
   <table width="900pxl">
   <tr>
