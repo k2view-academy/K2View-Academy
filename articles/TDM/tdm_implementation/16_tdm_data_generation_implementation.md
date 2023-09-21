@@ -4,7 +4,7 @@ The TDM data generation creates synthetic entities. The synthetic data is popula
 
 ## Implementation of LU Populations 
 
-The LU population must be based on a Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation: the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support either one of the following two population modes: a DB Select query from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the sourceDbQuery runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the **rowsGeneratorDistribution** input Actor.
+The LU population must be based on a Broadway flow (instead of a DB Query or a root function) to support a synthetic data generation. Thus, the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support either one of the following two population modes: a DB Select query from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). If it is set to **true**, the **sourceDbQuery** Actor runs the data generation inner flow to generate the synthetic records. The number of synthetic records per each parent key is set based on the **rowsGeneratorDistribution** input Actor.
 
 ### LU Population Flows - Implementation Steps
 
@@ -65,7 +65,7 @@ Note that a synthetic data generation task execution sets the **ROWS_GENERATOR**
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
-This is needed in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument and is created in the TDM DB for the generated ID with the following naming convention:
+This is required in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument and is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
 Gen_[the sequence name in TDMSeqSrc2TrgMapping]
