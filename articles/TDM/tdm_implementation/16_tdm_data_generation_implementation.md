@@ -23,7 +23,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
    
    
-   - Then edit the distribution type and/or the minimum and maximum values. See example below:
+   - Then, edit the distribution type and/or the minimum and maximum values, as seen in the below example:
 
      ![rows dist 1](images/rowsGeneratorDistribution_setting_2.png)
 
