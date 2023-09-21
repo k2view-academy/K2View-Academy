@@ -205,7 +205,7 @@ The data generation flows are created with the following logic:
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow to enable the user to set the values for these parameters in the TDM task's parameters, such as City, State. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting. 
+- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting.
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
 
