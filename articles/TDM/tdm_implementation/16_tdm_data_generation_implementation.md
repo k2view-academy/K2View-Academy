@@ -11,9 +11,9 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 1. Verify that the LU tables' populations are based on a Broadway flow to support the synthetic data generation.  Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
 
-2. **Optional** - **edit the default number of generated synthetic records**: the data generation process needs to "know" how many records need to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
+2. **Optional** - **edit the default number of generated synthetic records**: the data generation process needs to 'know' how many records need to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
   
-   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named Query) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables.
+   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables.
 
    Edit this argument to set a different range (minimum and maximum number) or a distribution type (the default is **Uniform distribution**) of generated records if needed. The data generation randomly generates a number of records within this range:
 
