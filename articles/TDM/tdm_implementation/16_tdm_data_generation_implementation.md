@@ -120,9 +120,9 @@ The data generation flows are created with the following logic:
   - The TDM execution process sets the **generate_consistent** to **true** and the **enable_masking** to **false** on data generation tasks. This ensures that the data generation flow generates synthetic values on PII fields and the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
   - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities. 
 
-- PII fields can vary in their incidence and their need for referential integrity (consistency). Each scenario requires a different implementation approach.
+- PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
 
-  Example: the First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is needed to keep the same combination of the first and last names in both LUs for a given customer.
+  Example: the First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the first and last names in both LUs for a given customer.
 
   The following table describes the implementation recommendations for each scenario: 
 
