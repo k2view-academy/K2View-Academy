@@ -56,7 +56,7 @@ ${population name}.population.generator
 
 For example: activity.population.generator
 
-Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true** which triggers the execution of the data generation inner flow on each LU table. 
+Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
 
 ### Data Generation Flows - Implementation Steps
