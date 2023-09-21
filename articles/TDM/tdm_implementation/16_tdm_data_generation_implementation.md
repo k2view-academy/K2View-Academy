@@ -45,8 +45,8 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
 
 ## Implementation of Data Generation Flows 
 
-The **sourceDbQuery** Actor (automatically added to the LU population flow and named Query) runs an inner data generation flow to generate synthetic records for data generation tasks.
-The data generation flows must be created on each source LU table to support synthetic data generation. 
+The **sourceDbQuery** Actor (automatically added to the LU population flow and named *Query*) runs an inner data generation flow to generate synthetic records for data generation tasks.
+The data generation flows must be created on each source LU table to support synthetic data generation.
 
 The data generation flow must have the following naming convention:
 
