@@ -144,7 +144,7 @@ The following table lists the TDM tables and their description.
 <tr>
 <td valign="top" width="200pxl"><h4>task_execution_entities</td>
   <td valign="top" width="400pxl"><p>Detailed list of entities and the execution status of each task's execution.</p>
-    <p>This table is used to generate the <a href="03a_task_execution_building_entity_list_on_tasks_LUs.md">entity list of the children LU of a task execution</a>.</p>
+    <p>This table is used for generating the <a href="03a_task_execution_building_entity_list_on_tasks_LUs.md">entity list of the children LU of a task execution</a>.</p>
     <p>This table is also copied and stored in the <a href="/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm-lu">TDM LU</a> to display the <a href="/articles/TDM/tdm_gui/27_task_execution_history.md#task-execution---detailed-statistics">list of copied and failed entities and Reference tables </a> of the task execution.</p></td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
