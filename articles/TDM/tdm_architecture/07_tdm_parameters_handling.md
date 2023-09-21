@@ -6,7 +6,7 @@ The list of available parameters is displayed on the task's BE (Business Entity)
 
 A BE can have either a flat or a hierarchical structure and each LU has its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) in the TDM DB. The LU parameters table is created and populated in the TDM DB by the LUI sync. The naming convention of the parameters tables is `<LU Name>_params`.
 
-The entity selection on a TDM task selects a subset of **root entities**, but the parameters for selection can be based on the child LU's parameters. Therefore, it is important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters. **Previous TDM versions** created a **MATERIALIZED VIEW** in the TDM DB on each combination of **BE and source environment** to have the linkage between the root entity and the children entities. From TDM 8.1 onwards, each LU parameters table contains the following fields to connect the entity id to its root entity:
+The entity selection on a TDM task selects a subset of **root entities**, but the parameters for selection can be based on the child LU's parameters. Therefore, it is important to have the **linkage between the root entity and the children entities** when selecting entities based on parameters. **Previous TDM versions** created a **MATERIALIZED VIEW** in the TDM DB on each combination of **BE and source environment** to have the linkage between the root entity and the children entities. From TDM 8.1 onwards, each LU parameters table contains the following fields for connecting the entity id to its root entity:
 
 - root_lu_name
 - root_iid
