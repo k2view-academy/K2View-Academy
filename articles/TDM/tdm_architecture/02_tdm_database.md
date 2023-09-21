@@ -28,21 +28,21 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_lu_type_relation_eid</td>
-<td valign="top" width="400pxl"><p>TDM relationships table. This table maps the source parent Entity ID to its source children Entity IDs per source environment. For example, Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</p>
+<td valign="top" width="400pxl"><p>TDM relationships table. This table maps the source parent Entity ID to its source children Entity IDs per source environment. For example, Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used for building the entities list of the children LUs during Load (copy) tasks.</p>
   <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid">Click for more information about tdm_lu_type_relation_eid table.</a></p>  
   </td>
 <td valign="top" width="300pxl">Business Entity</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_lu_type_rel_tar_eid</td>
-<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment and is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
+<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment and is populated by a sync of the parent LU. The table is used for building the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
   <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid">Click for more information about tdm_lu_type_rel_tar_eid.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>[LU_NAME]_params</td>
-<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and a source environment has a specific record that holds the Entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customer Type. This table is created by a Fabric sync on each LU and is used to support a random selection and to select by parameters task selection methods.</p>
+<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and a source environment has a specific record that holds the Entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customer Type. This table is created by a Fabric sync on each LU and is used for supporting a random selection and to select by parameters task selection methods.</p>
  <p><a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">Click for more information about parameters handling.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
