@@ -11,7 +11,7 @@ An Extract task contains the following tabs:
 
 When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
 
-When setting the **Data Type** by checking the **Reference** setting, a [Reference tab](24_task_reference_tab.md) opens.
+When setting the **Data Type** by checking the **Reference** checkbox, a [Reference tab](24_task_reference_tab.md) opens.
 
 ## Additional Execution Parameters Tab
 
