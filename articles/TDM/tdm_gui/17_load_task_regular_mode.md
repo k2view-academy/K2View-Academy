@@ -109,9 +109,9 @@ The following execution parameters are set on **Load tasks** when the **Extract 
 The following settings are not displayed in the task when loading synthetic entities:
 
 - The **Data Versioning** is not displayed. There is no [Data Versioning](15_data_flux_task.md) on generated synthetic entities.
-- The **Data Type** is **Entities** since the task loads generated synthetic entities. The **Reference** value is **not displayed**.
+- The **Data Type** is **Entities** as the task loads generated synthetic entities. The **Reference** value is **not displayed**.
 
-- The **Set Sync Policy** and **Retention Period** settings are not displayed since the task gets the synthetic entities from the TDM warehouse (Fabric). 
+- The **Set Sync Policy** and **Retention Period** settings are not displayed as the task gets the synthetic entities from the TDM warehouse (Fabric). 
 
 
 
