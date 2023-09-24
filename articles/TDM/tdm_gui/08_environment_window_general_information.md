@@ -23,11 +23,11 @@ Mandatory setting.
 
 Set the environment type to one of the following:
 
-- **Source** - this can only be defined as a source environment in a TDM task. For example, in a Production environment a TDM task can extract entities but cannot insert entities.
+- **Source** - this can only be defined as a source environment in a TDM task. For example, in a Production environment - a TDM task can extract entities but cannot insert entities.
 
 - **Target** - this environment can only be used as a target environment in a TDM task.
 
-- **Both** - this environment can be used as both a source and a target environment in the TDM task. This mode is useful for [Data Versioning tasks](15_data_flux_task.md). 
+- **Both** - this environment can be used as both the source environment and the target environment in a TDM task. This mode is useful for [Data Versioning tasks](15_data_flux_task.md). 
 
 Example:
 
