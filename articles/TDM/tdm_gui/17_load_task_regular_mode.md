@@ -26,8 +26,8 @@ The following execution parameters are set on **Load tasks**:
 
 #### Data Versioning
 
-- Check to set the task mode to [Data Versioning](15_data_flux_task.md). 
-- Leave the Data Versioning unchecked to create a regular mode task.
+- Check the checkbox to set the task mode to [Data Versioning](15_data_flux_task.md). 
+- Leave the Data Versioning checkbox unchecked to create a regular mode task.
 
 #### Data Type
 
