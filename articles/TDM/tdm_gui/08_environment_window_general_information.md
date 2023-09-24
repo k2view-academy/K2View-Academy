@@ -44,7 +44,7 @@ The following values can be set in Override Sync Mode settings:
 
 ### Do not Sync 
 
-Do not sync the entities from the source when running a TDM task with the environment as a source; instead, get the entities from Fabric. Note that if the entities do not exist in Fabric, the task's execution will return an error. This mode is needed when access to the source environment has been limited by the organization.
+Do not sync the entities from the source when running a TDM task with the environment as a source; instead, get the entities from Fabric. Note that if the entities do not exist in Fabric, the task's execution will return an error. This mode is required when access to the source environment has been limited by the organization.
 
 Example:
 
