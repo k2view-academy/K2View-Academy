@@ -64,7 +64,7 @@ This checkbox, added by TDM 8.1, is displayed on any environment that can be use
 ## Environment Owners
 
 - Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to/from an environment. An environment owner user or group can be added to several environments.
-- Adding a user group to the environment enables the users that belong to the group to be the owners of the environment.
+- Adding a user group to an environment enables the users that belong to the group to be the owners of the environment.
 - An environment owner user or group can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and is attached to ENV2 as a tester.
 - The environment owner can edit an environment except for adding or removing environment owner users. Only Admin users can add or remove environment owners.
 - The environment owner can create and execute TDM tasks on their environment without limitations, unlike tester users who can define a task on an environment based on their permissions.
