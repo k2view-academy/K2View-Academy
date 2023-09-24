@@ -1,6 +1,6 @@
 # Environment Window - General Information
 
-The General Information section in the Environment Window holds the following information:  
+The General Information section in the Environment window holds the following information:  
 
 ## Environment Name
 
