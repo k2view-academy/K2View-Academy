@@ -65,7 +65,7 @@ Check to open the Task Variables tab and [set the variable value on a task level
 
 #### Mask Sensitive Data
 
-TDM 8.1 added a checkbox to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) to indicate if the environment has a sensitive data that must be stored in Fabric with masked values on PII fields. If the task's source value is defined as containing sensitive data, the TDM task window display the PII icon to indicate the user that the source sensitive data is masked. 
+TDM 8.1 added a checkbox to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) to indicate if the environment has a sensitive data that must be stored in Fabric with masked values on PII fields. If the task's source value is defined as containing sensitive data, the TDM task window display the PII icon to indicate to the user that the source sensitive data is masked. 
 
 ### Post Execution Processes
 
