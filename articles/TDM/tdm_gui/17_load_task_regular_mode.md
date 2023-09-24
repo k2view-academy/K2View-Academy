@@ -58,7 +58,7 @@ The [Retention Period](16_extract_task.md#retention-period) setting is displayed
 
 #### Reservation Period
 
-The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
+The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type checkbox is checked together with the Load task type checkbox).
 
 Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
