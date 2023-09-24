@@ -88,7 +88,7 @@ Notes:
 
 ##### Mask Sensitive Data
 
-TDM 8.1 added a checkbox to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) to indicate if the source data needs to be masked before it is saved into Fabric. If the task's source value is defined as containing sensitive data, the TDM task window display the PII icon to indicate the user that the source sensitive data is masked. 
+TDM 8.1 added a checkbox to the [Environment window](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) to indicate if the source data needs to be masked before it is saved into Fabric. If the task's source value is defined as containing sensitive data, the TDM task window display the PII icon to indicate to the user that the source sensitive data is masked. 
 
 #### Post Execution Processes
 
