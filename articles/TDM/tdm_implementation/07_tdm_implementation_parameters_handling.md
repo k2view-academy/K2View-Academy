@@ -131,7 +131,7 @@ Parameter tables are used for the following:
 - Do not include spaces or special characters in parameter names.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#random-selection).
 - The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values to enable the debugging of a given entity.
-- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more infomration about the parameters handling. 
+- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about parameters handling.
 
 
 
