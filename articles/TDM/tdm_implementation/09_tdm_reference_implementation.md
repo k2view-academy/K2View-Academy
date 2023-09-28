@@ -27,7 +27,7 @@ The list of Reference tables available for TDM tasks is populated in the [RefLis
 
 - **lu_name** - populated by the LU name to enable a selection of the related Reference table in a TDM task based on the task's LUs.
 
-- **ID** - populated by an auto-increment number.
+- **ID** - populated by an increment number.
 
 - **reference_table_name** - populated by the Reference table in the source environment.
 

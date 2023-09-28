@@ -117,13 +117,13 @@ The data generation flows are created with the following logic:
 - In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks without overriding their values (as set by the user) by the Masking Actors in the LU population.
 - Verify that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid the masking of PII fields in the LU population flows for data generation tasks.
 - TDM 8.1 added a new Actor: **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value: **generate_consistent**. Using this Actor in the data generation flow enables the following:
-  - The TDM execution process sets the **generate_consistent** to **true** and the **enable_masking** to **false** on data generation tasks. This ensures that the data generation flow generates synthetic values on PII fields and the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
+  - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. The **enable_masking** key is set to **false** if the It is recommended to leave the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) checkbox of the **Synthetic** environment is clear. The setting of the **generate_consistent** to **true** and **enable_masking** to **false** on data generation tasks is needed in order to ensure that the data generation flow generates synthetic values on PII fields and the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
   - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
   - The **GenerateConsistent** Actor does not have an input value. Therefore, if you have a PII field that exists across LUs and is set in multiple records in the LUI, you need to use a **Masking** Actor instead of the **GenerateConsistent** Actor.  For example: a customer can have multiple contracts and each contract needs to have a different name. The contracts exist in both LUs: CRM and Billing. Populate the Masking Actor's input parameters in the data generation flow as follows:
     - **value**: populate it with an initial value of the field name + the record number. For example: first_name_1, first_name_2, etc.. . The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter. See example below:
       ![pii example](images/data_generation_pii_example_1.png)
     - **category**: populate it with **generate_consistent** value.
-    
+  
 - PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
 
   Example: The First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
@@ -209,7 +209,7 @@ The data generation flows are created with the following logic:
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting.
+- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
 
@@ -225,7 +225,7 @@ The data generation flow returns multiple results that will serve as the row col
 
 For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
 
-Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information about the RowsGenerator Actor.
+Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples about the RowsGenerator Actor.
 
 
 
