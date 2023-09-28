@@ -114,12 +114,16 @@ The data generation flows are created with the following logic:
 
 ##### PII Fields
 
-- In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks.
+- In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks without overriding their values (as set by the user) by the Masking Actors in the LU population.
 - Verify that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid the masking of PII fields in the LU population flows for data generation tasks.
 - TDM 8.1 added a new Actor: **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value: **generate_consistent**. Using this Actor in the data generation flow enables the following:
   - The TDM execution process sets the **generate_consistent** to **true** and the **enable_masking** to **false** on data generation tasks. This ensures that the data generation flow generates synthetic values on PII fields and the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
-  - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities. 
-
+  - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
+  - The **GenerateConsistent** Actor does not have an input value. Therefore, if you have a PII field that exists across LUs and is set in multiple records in the LUI, you need to use a **Masking** Actor instead of the **GenerateConsistent** Actor.  For example: a customer can have multiple contracts and each contract needs to have a different name. The contracts exist in both LUs: CRM and Billing. Populate the Masking Actor's input parameters in the data generation flow as follows:
+    - **value**: populate it with an initial value of the field name + the record number. For example: first_name_1, first_name_2, etc.. . The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter. See example below:
+      ![pii example](images/data_generation_pii_example_1.png)
+    - **category**: populate it with **generate_consistent** value.
+    
 - PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
 
   Example: The First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
