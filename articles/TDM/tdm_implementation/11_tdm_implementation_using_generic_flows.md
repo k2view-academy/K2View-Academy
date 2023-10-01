@@ -84,7 +84,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
 
-II. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs  and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding existing sequence Actor. 
+II. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs  and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
 
 Each generated sequence Actor includes a flow that invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
 
@@ -175,7 +175,7 @@ Set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_
 
 ###  Load and Delete Flows
 
-The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition, it creates a *load all flow* to run all table level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
+The createAllFromTemplates creates a separate flow per table on each type - load and delete. In addition, it creates a *load all flow* to run all table-level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
@@ -463,16 +463,16 @@ The Custom Logic flow must have the following structure:
   2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library):
 
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
-     - **Output** - **recordLoaded**. This is the entities number counter, loaded into the entity table.
+     - **Output** - **recordLoaded**. This is the entity number counter, loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
-   - Checking of whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
-   - Loading of the available entities into the entity table in the TDM DB and updating the entities number counter.
+   - Checking whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
+   - Loading the available entities into the entity table in the TDM DB and updating the entities number counter.
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM Library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
-     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th and 7th entities are available and are populated in the entity table; then the entities' loop stops.
+     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; then the entities' loop stops.
 
 
 Below are examples of a Custom Logic flow:
@@ -496,6 +496,8 @@ Example of US states input:
 **Example 3 - get an input Select statement with parameters for the Select statement:**
 
 ![custom logic](images/custom_logic_example_3.png)
+
+Note: verify that the SQL statement runs on a read-only DB connection when exposing the SQL statement as an external parameter for the user to prevent a DB update.
 
 ### Debugging the Customized Flow
 
