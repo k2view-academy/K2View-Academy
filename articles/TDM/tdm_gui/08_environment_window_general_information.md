@@ -32,7 +32,7 @@ Set the environment type to one of the following:
 Example:
 
 - A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Versioning task](16_extract_task.md#data-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task, data is saved in the TDM Fabric repository.
-- During functional tests, the data in the testing environment becomes corrupt and needs to be replaced with the last backed-up version created in the testing environment. The tester creates a [Load Data Versioning task](18_load_task_data_versioning_mode.md) and sets the testing environment to be both source and target. 
+- During functional tests, the data in the testing environment becomes corrupt and needs to be replaced with the most recent backed-up version created in the testing environment. The tester creates a [Load Data Versioning task](18_load_task_data_versioning_mode.md) and sets the testing environment to be both source and target. 
 
 ## Override Sync Mode
 
