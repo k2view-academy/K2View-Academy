@@ -40,7 +40,7 @@ Optional setting.
 
 The Override mode can be set if the **Environment Type** is either **Source** or **Both**. This setting overrides the default Fabric [Sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) when extracting the selected entities from the source environment and sets another Sync mode that can be overridden on both the environment and the task levels.
 
-The following values can be set in Override Sync Mode settings:
+The following values can be set in the Override Sync Mode:
 
 ### Do not Sync 
 
