@@ -15,33 +15,35 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
   
    The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record  for the main LU table and 1-3 records for the remaining LU tables. The values of 1 and 3 are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
 
-   Edit options:
+   *Edit options:*
 
+   The following methods can be used to override the range for the number of generated records in the TDM implementation:
+   
    i. Edit the default range for the number of generated records (set to 1-3 by default): update the
    **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables except the main source LU table.
-
+   
    Example:
    Run the following Update statements to set the number of generated records to 2-4:
-
-    ```
-    UPDATE tdm_general_parameters set param_value = '2' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MIN';
-
-    UPDATE tdm_general_parameters set param_value = '4' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MAX';
-    ``` 
-  
    
-   ii. Edit this argument to set a different range (minimum and maximum numbers) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. The data generation randomly generates a number of records within this range:
+    ```sql
+    UPDATE tdm_general_parameters set param_value = '2' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MIN';
+   
+   UPDATE tdm_general_parameters set param_value = '4' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MAX';
+    ```
+   
+
+   ii. Edit the **rowsGeneratorDistribution** input argument argument in the LU population flow to set a different range (minimum and maximum numbers) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. For example: generate customers with 3-6 contracts. The data generation randomly generates a number of records within this range:
 
    - Set the type of the distributed value to **integer**:
 
      ![rows dist 1](images/rowsGeneratorDistribution_setting_1.png)
+   
+   
 
-   
-   
    - Then, edit the distribution type and/or the minimum and maximum values, as seen in the below example:
 
      ![rows dist 1](images/rowsGeneratorDistribution_setting_2.png)
-
+   
      
    
    Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
@@ -50,7 +52,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    
    ```
    [lu name]_[lu table name]_number_of_records
-   ``` 
+   ```
    
    Note that if the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
@@ -60,7 +62,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    
    For example: crm_address_number_of_records. 
    
-   This **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
+   The external parameter **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
 
 ## Implementation of Data Generation Flows 
 
