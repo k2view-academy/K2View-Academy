@@ -45,6 +45,13 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter; the default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**.
 
+## Data Generation Parameters
+
+- The **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters set the default range for the number of generated records, populated in the LU table for each parent ID by a [data generation task](/articles/TDM/tdm_gui/16a_generate_task.md). By default these parameters are populated with 1 and 3, i.e. the data generation task generates 1-3 records for the LU tables except the main source LU table for which the data generation created one record only.
+- Edit these parameters if needed to set a different range of number of records for synthetically generated entities.
+
+  Click [here](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) for more information about the data generation implementation.
+
 ## TDM Portal General Parameters
 
 - The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
