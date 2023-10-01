@@ -6,7 +6,7 @@ The General Information section in the Environment window holds the following in
 
 Mandatory setting.
 
-Populate the following settings:
+Populate the following setting:
 
 - **TDM Environment Name** - select the environments deployed to Fabric from the drop-down list. 
 
