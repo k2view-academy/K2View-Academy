@@ -74,7 +74,7 @@ The maximum number of days that a tester can set to a retention period in the ta
     
     Run the following UPDATE statements in the TDM DB to update the **retentionPeriodTypes**, **versioningRetentionPeriod**, and **versioningRetentionPeriodForTesters** attributes. This is needed to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
     
-    ```
+    ```sql
     UPDATE 
        tdm_general_parameters
     SET 
@@ -100,7 +100,7 @@ The maximum number of days that a tester can set to a retention period in the ta
     
     Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks: 
     
-    ```
+    ```sql
     UPDATE 
        tdm_general_parameters
     SET 
