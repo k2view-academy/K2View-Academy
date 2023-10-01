@@ -12,7 +12,7 @@ Populate the following settings:
 
 ## Environment - Additional Information
 
-Optional setting:
+Optional settings:
 
 - Description
 - Contact person setting
