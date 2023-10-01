@@ -2,11 +2,11 @@
 
 # Catalog Vocabulary
 
-The Fabric Catalog introduces a vocabulary that describes the catalog entities and the relationships between them. The relationships indicate the connections between the data entities and determine their hierarchy.
+The Fabric Catalog introduces a vocabulary that describes the catalog entities and the relations between them. The relations indicate the connections between the data entities and determine their hierarchy.
 
-The below vocabulary serves as a model for describing a catalog and assists with processes standardization across different interface types. 
+The below vocabulary serves as a model for describing a Catalog and assists with processes standardization across different interface types. 
 
-The data entities are represented by **nodes** and the links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that enrich the Catalog schema. 
+The data entities are represented by **nodes** and the referential links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that enrich the Catalog schema. 
 
 Additionally, due to differences between the data sources, some nodes' properties are generic, while others are relevant only for specific interface types.
 
@@ -14,40 +14,34 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 ### Node Types
 
-<table style="width: 900px;">
+<table style="width: 700px;">
 <tbody>
 <tr style="height: 35px;">
-<td width="200pxl"><strong>Node Type</strong></td>
-<td width="350pxl"><strong>RDBMS</strong></td>
-<td width="350pxl"><strong>OpenAPI</strong></td>
+<td style="width: 200px;"><strong>Node Type</strong></td>
+<td style="width: 500px;"><strong>RDBMS</strong></td>
 </tr>
 <tr>
-<td>DATA_PLATFORM</td>
-<td>DB Interface</td>
-<td>JSON or YAML of HTTP Interface</td>
+<td style="width: 189.703px;"><strong>DATA_PLATFORM</strong></td>
+<td style="width: 321.297px;">DB Interface</td>
 </tr>
 <tr>
-<td>SCHEMA</td>
-<td>Schema of DB Interface</td>
-<td>Tags of JSON or YAML</td>
+<td style="width: 189.703px;"><strong>SCHEMA</strong></td>
+<td style="width: 321.297px;">Schema of DB Interface</td>
 </tr>
 <tr>
-<td>DATASET</td>
-<td>DB Table or View</td>
-<td>End point (path)</td>
+<td style="width: 189.703px;"><strong>DATASET</strong></td>
+<td style="width: 321.297px;">DB Table or View</td>
 </tr>
 <tr>
-<td>CLASS</td>
-<td>DB Table or View (1:1 to DATASET)</td>
-<td>OpenAPI Object</td>
+<td style="width: 189.703px;"><strong>CLASS</strong></td>
+<td style="width: 321.297px;">DB Table or View (1:1 to DATASET)</td>
 </tr>
 <tr>
-<td rowspan="2">FIELD</td>
-<td>Columns of DB Table or View</td>
-<td>Property of OpenAPI Object</td>
+<td style="width: 189.703px;" rowspan="2"><strong>FIELD</strong></td>
+<td style="width: 321.297px;">Columns of DB Table or View</td>
 </tr>
 <tr>
-<td colspan="2">
+<td style="width: 321.297px;">
 <p>The FIELD data type can be:</p>
 <ul>
 <li>PRIMITIVE - string, integer, blob, date, number, Boolean or any.</li>
@@ -57,6 +51,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 </tr>
 </tbody>
 </table>
+
 
 
 

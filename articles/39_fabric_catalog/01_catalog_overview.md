@@ -24,7 +24,7 @@ The Discovery results are presented in a new Catalog application, which allows t
 - Search any node by either keywords or any additional advanced search parameters.
 - View and modify the profiling rules.
 
-The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling results.
+The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling and classification.
 
 The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
