@@ -369,9 +369,9 @@ You can build one or multiple Broadway flows to get a list of entities for a tas
 
 TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
-1. **Direct call** - a new added mode, where the batch process calls the Custom Logic flow directly, getting the entity list without pre-populating the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e., runs one Select query to get the required entities.
+1. **Direct call** - a newly added mode, where the batch process calls the Custom Logic flow directly, getting the entity list without pre-populating the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e., runs one Select query to get the required entities.
 
-   The direct call mode has a better performances: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
+   The direct call mode has a better performance: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
 
 2. **Indirect call** - the indirect call creates and populates a dedicated table in the TDM DB. The table is created per execution with the following naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a Select query from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
 
@@ -379,11 +379,10 @@ TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
 #### CustomLogicSql Flow
 
-A new generic Custom Logic flow has been added to the TDM library in TDM 8.1: **CustomLogicSql**. This flow gets the following parameters from the user who creates the task:
+A new generic Custom Logic flow has been added to the TDM library in TDM 8.1: **CustomLogicSql**. This flow gets and SQL query to run on the TDM DB. The following parameters can be set by the user who creates the task:
 
-- **sql** - a Select query.
-- **sqlParams** - optional parameter to set parameters for the Select query. 
-- **interface** - a DB interface.
+- **sql** - mandatory parameter to define the Select query to run on the TDM DB and get the task's entity list.
+- **sqlParams** - optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
 
 The customLogicSql flow runs in a direct call mode. 
 
@@ -414,7 +413,7 @@ The Custom Logic Broadway flow can be created in either the **Shared Objects** o
 The Custom Logic Broadway flow always has **2 external input parameters** and it gets their values from the task execution process:
 
 - LU_NAME
-- NUM_OF_ENTITIES - the maximum number of entities to be processed by the task execution. The number is set in either the task or the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters) .
+- NUM_OF_ENTITIES - the maximum number of entities to be processed by the task execution. The number is set in either the task or the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters).
 
 TDM supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name - customer_status - to the flow. The flow selects the customers for the task based on the customer_status input parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
 
