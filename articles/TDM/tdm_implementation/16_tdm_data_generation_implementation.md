@@ -32,7 +32,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
     ```
    
 
-   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set a different range (minimum and maximum numbers) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. For example: generate customers with 3-6 contracts. The data generation randomly generates a number of records within this range:
+   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set a different range (minimum and maximum values) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. For example: generate customers with 3-6 contracts. The data generation randomly generates a number of records within this range:
 
    - Set the type of the distributed value to **integer**:
 
