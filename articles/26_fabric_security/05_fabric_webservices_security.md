@@ -111,6 +111,10 @@ Using the OAuth requires the following preparations:
   1. Create roles for the scopes - each scope should be mapped to a Fabric role.
   2. Grant permission to each role, per requirements.
 
+  > By default, it is expected that scopes claim name is "scope". If other is sent - add this parameter ACCESS_TOKEN_SCOPE_PROPERTY_NAME to the config.ini and set its value (for example: ACCESS_TOKEN_SCOPE_PROPERTY_NAME="scp" ).
+
+
+
 Fabric extends the standard OAuth authorization capabilities, beyond the provided scopes:
 The access token (JWT) can be sent with an extra optional payload parameter, representing the client ID.
 This ID should be mapped to APIKEY in Fabric and it should be granted permissions upon demand.
