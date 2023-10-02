@@ -386,7 +386,7 @@ A new generic Custom Logic flow has been added to the TDM library in TDM 8.1 - *
 
 The customLogicSql flow runs in a direct call mode. 
 
-**Examples of input SELECT query**:
+**Examples of an input SELECT query**:
 
 1. Populating both - the **sql** and the **sqlParams** parameters: 
 
