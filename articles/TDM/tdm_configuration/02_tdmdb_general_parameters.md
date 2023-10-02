@@ -48,7 +48,7 @@ The maximum number of days that a tester can set to a retention period in the ta
 ## Data Generation Parameters
 
 - The **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters set the default range for the number of generated records, populated in the LU table for each parent ID by a [data generation task](/articles/TDM/tdm_gui/16a_generate_task.md). By default, these parameters are populated with 1 and 3, i.e., the data generation task generates 1-3 records for the LU tables except for the main source LU table that is created with only one record by the data generation task.
-- Edit these parameters if needed to set a different range of number of records for synthetically generated entities.
+- Edit these parameters, if needed, in order to set a different range of number of records for synthetically generated entities.
 
   Click [here](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) for more information about the data generation implementation.
 
