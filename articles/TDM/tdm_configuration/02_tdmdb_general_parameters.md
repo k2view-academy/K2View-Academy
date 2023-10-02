@@ -62,7 +62,7 @@ The maximum number of days that a tester can set to a retention period in the ta
   
   - **versioningRetentionPeriod** and **versioningRetentionPeriodForTesters** - default retention period on *extract with data versioning* tasks; the default value is 5 days ("unit":"Days","value":5).
   
-  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner** and **tester**.   
+  - **permissionGroups** - list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**, **owner** and **tester**.
   
   - **enable_reserve_by_params** - this parameter indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). When set to **true**, it is enabled; the **default is false**.
   
