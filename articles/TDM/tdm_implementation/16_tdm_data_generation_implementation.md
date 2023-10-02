@@ -121,7 +121,7 @@ The data generation flows are created with the following logic:
 
 - Other fields are populated with synthetic data. By default, this process utilizes the data generation Actors based on the fields' data type. Note that these default data generation Actors are selected based on the mapping defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors mapping and should be edited before the creation of the data generation flows.
 
-- The data generation flow output contains a list of fields that are sent to the related LU population flow and are loaded to the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator). 
+- The data generation flow output contains a list of fields that are sent to the related LU population flow and that are loaded to the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
 
   
 
