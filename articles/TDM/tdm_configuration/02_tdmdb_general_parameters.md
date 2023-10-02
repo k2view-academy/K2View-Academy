@@ -66,7 +66,7 @@ The maximum number of days that a tester can set to a retention period in the ta
   
   - **enable_reserve_by_params** - this parameter indicates whether the TDM portal enables the Parameters selection method on [Reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). When set to **true**, it is enabled; the **default is false**.
   
-  - **retentionPeriodTypes** and **reservationPeriodTypes** - available options for the retention and reservation periods.
+  - **retentionPeriodTypes** and **reservationPeriodTypes** - these are the available options for the retention and reservation periods.
   
     ### Update the TDM_GENERAL_PARAMETERS to Support Fabric Storage without a TTL
   
