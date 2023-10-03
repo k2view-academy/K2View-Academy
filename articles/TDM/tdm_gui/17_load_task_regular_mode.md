@@ -235,7 +235,7 @@ Click for more information about the [TDM parameters tables and View](/articles/
 
 ### Entity Clone
 
-Create X clones of the selected entity in the target environment. When selecting this method, you can either populate a real entity ID to be cloned or parameters. If you select the parameters option, the first entity, select based on the task's parameters, is cloned (replicated) in the target environment. 
+Create X clones of the selected entity in the target environment. When selecting this method, you can either populate a real entity ID to be cloned or [parameters](#parameters). If you select the parameters option, the first entity, selected based on the task's parameters, is cloned (replicated) in the target environment. 
 
 ![entity clone](images/requested_entities_entity_clone.png)
 
