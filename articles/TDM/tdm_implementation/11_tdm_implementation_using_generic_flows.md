@@ -381,7 +381,7 @@ TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
 A new generic Custom Logic flow has been added to the TDM library in TDM 8.1 - **CustomLogicSql**. This flow gets an SQL query to run on the TDM DB. The following parameters can be set by the user who creates the task:
 
-- **sql** - mandatory parameter to define the Select query to run on the TDM DB and get the task's entity list.
+- **sql** - mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
 - **sqlParams** - optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
 
 The customLogicSql flow runs in a direct call mode. 
