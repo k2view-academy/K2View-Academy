@@ -6,13 +6,13 @@ The TDM DB **tdm_general_parameters** table holds the name of each parameter (pa
 
 The **TDM_VERSION** parameter is populated with the TDM version that is displayed in the TDM portal.
 
-## [TDM Clean-Up Parameters](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md)
+## [TDM Clean-Up Parameters](/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md) 
 
 The clean-up parameters are automatically created in **tdm_general_parameters** by TDM DB creation scripts:
 
 - The **cleanup_retention_period** defines the number of months of the retention period for inactive records. The clean-up process deletes inactive records that are older than the retention period; the default period is set to 2 months.
 
-## [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) 
+## [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md)  
 
 - To create different LUIs per environment and data version, the TDM concatenates additional identifiers to each IID: environment name (for all tasks) and version identifier for Data Versioning tasks. By default, the LUI parts are separated by an underscore, e.g., ENV1_45773.
 - However, if the source entity ID already contains an underscore, another separator must be set on the LUI. Insert a **new record** to the tdm_general_parameters table in order to set an LUI separator that is different from the default underscore value.
