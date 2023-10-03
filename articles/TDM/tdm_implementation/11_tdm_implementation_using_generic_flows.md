@@ -497,7 +497,7 @@ Example of US states input:
 
 ![custom logic](images/custom_logic_example_3.png)
 
-Note: Verify that the SQL statement runs on a read-only DB connection when exposing the SQL statement as an external parameter for the user to prevent a DB update.
+Note: When exposing the SQL statement as an external parameter for the user, verify that it runs on a read-only DB connection; this would prevent a DB update.
 
 ### Debugging the Customized Flow
 
