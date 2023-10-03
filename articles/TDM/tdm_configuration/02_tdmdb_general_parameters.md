@@ -10,7 +10,7 @@ The **TDM_VERSION** parameter is populated with the TDM version that is displaye
 
 The clean-up parameters are automatically created in **tdm_general_parameters** by TDM DB creation scripts:
 
-- The **cleanup_retention_period** defines the number of months of the retention period for inactive records. The clean-up process deletes inactive records that are older than the retention period; the default period is set to 2 months.
+- The **cleanup_retention_period** defines the number of months of the retention period for inactive records. The clean-up process deletes inactive records that are older than the retention period; the default period is set to 1 week (0.25 months).
 
 ## [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md)  
 
