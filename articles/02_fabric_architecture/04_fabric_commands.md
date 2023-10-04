@@ -738,6 +738,22 @@ The following Fabric commands have been introduced for this purpose:
 
 Both import and export commands can optionally receive a list of tables to be excluded from the import or export process.
 
+Fabric provides the **MDB_SIZE** command to return the size of one or several MDB. The syntax is:
+
+* Return the size of the specified instance:
+
+~~~
+MDB_SIZE <LUT_NAME>.'<INSTANCE_ID>'
+~~~
+
+* Return the size of the listed instances:
+
+~~~
+MDB_SIZE <LUT_NAME>.(<instance 1,instance 2,etc...>)
+~~~
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)
