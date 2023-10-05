@@ -315,24 +315,28 @@
 			"KB display name": "Release Notes and Upgrade",
 			"KB display text": "The release notes including the latest release features & fixes, and the upgrade procedure documents.",
 			"KB icon": "images/icon-release.png",
+			"link":"https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Upgrade_Procedure_To_V7.2.pdf.html"
 			"visible": true
 		},
 		{
 			"KB display name": "Demo Projects",
 			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM including the setup guidelines.",
 			"KB icon": "images/icon-demo.png",
+			"link":"https://support.k2view.com/Academy/articles/demo_project/README.html"
 			"visible": true
 		},
 		{
 			"KB display name": "Maintenance & Operational",
 			"KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
 			"KB icon": "images/icon-maintenance.png",
+			"link":"https://support.k2view.com/Academy/articles/98_maintenance_and_operational/README.html"
 			"visible": true
 		},
 		{
 			"KB display name": "Best Practices",
 			"KB display text": "Recommended tools, best practices and implementation examples. Tips & tricks for working with Fabric.",
 			"KB icon": "images/icon-best.png",
+			"link":"https://support.k2view.com/Academy/articles/COE/README.html"
 			"visible": true
 		}
 	],
