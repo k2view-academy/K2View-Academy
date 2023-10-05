@@ -11,6 +11,7 @@
 	<web><li><a href="/articles/39_fabric_catalog/07_manual_overrides.md">Manual Overrides</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/08_search_catalog.md">Search Catalog</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/09_build_artifacts.md">Catalog Artifacts and Masking</a></li></web>
-	<web><li><a href="/articles/39_fabric_catalog/10_catalog_APIs.md">Catalog APIs</a></li></web>
-	<web><li><a href="/articles/39_fabric_catalog/11_advanced_settings.md">Catalog Advanced Settings</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/10_classifier_configuration.md">Classifier Configuration</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Catalog Advanced Settings</a></li></web>
 </ul>

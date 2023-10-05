@@ -34,6 +34,6 @@ ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether t
 
 
 
-[![Previous](/articles/images/Previous.png)](10_catalog_APIs.md)
+[![Previous](/articles/images/Previous.png)](20_catalog_APIs.md)
 
 </web>

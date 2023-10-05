@@ -8,7 +8,7 @@ The Catalog provides an ability to build artifacts and save them into the Projec
 
 ### Build Artifacts
 
-Building a Catalog artifact is triggered by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). A Catalog artifact is a file called **catalog_info.csv**. It is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder in the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
+Building a Catalog artifact is triggered by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). A Catalog artifact is a file called **catalog_field_info.csv**. It is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder in the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
 
 The below image is an example of a Catalog artifact:
 
@@ -36,7 +36,7 @@ The algorithm applied by the **CatalogMaskingField** is described below:
 * Search the field's Classification in the **catalog_classification_generators** MTable to find out which Generator should be used for masking.
 * Once a Generator is found, invoke the **Masking** Actor with this generator and its parameters that are defined in the **catalog_classification_generators** MTable.
 
-Click for more details about setting up the catalog_classification_generators MTable using the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
+Click for more details about setting up the catalog_classification_generators MTable using the [Classifier Configuration screen](10_classifier_configuration.md).
 
 To apply the Catalog Masking mechanism, start with running the Discovery job, validating the results and building the Catalog artifacts. Then, add the **CatalogMaskingMapper** Actor to LU populations. Alternatively, for applying the masking on a record or a single field, you can add the **CatalogMaskingRecord** or the **CatalogMaskingField** Actors respectively. 
 
@@ -56,11 +56,11 @@ The purpose of adding the Masking property is to mark the fields identified as P
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
 * **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor's responsibility to add the custom masking logic to the relevant LU population.
 
-Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique value, it overrides the same definition on the Classification level (performed via the [Classifier Configuration screen](05_catalog_app.md#classifier-configuration)).
+Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique value, it overrides the same definition on the Classification level (performed via the [Classifier Configuration screen](10_classifier_configuration.md).
 
 
 
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_APIs.md) 
+[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_classifier_configuration.md) 
 
 </web>
 

@@ -287,7 +287,7 @@ Example 2: When searching for *any* nodes with *PII = true* and *Classification 
 
 
 
-[![Previous](/articles/images/Previous.png)](09_build_artifacts.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_advanced_settings.md) 
+[![Previous](/articles/images/Previous.png)](10_classifier_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
 
 
 

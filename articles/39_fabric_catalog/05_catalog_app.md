@@ -12,7 +12,6 @@ This article includes the following sub-sections:
 * Catalog application [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 * Catalog application [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
 * Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
-* Catalog application's [Classifier Configuration screen](05_catalog_app.md#classifier-configuration).
 
 ### Main Area
 
@@ -33,7 +32,7 @@ When the Catalog application opens, it displays the latest version by default. T
 * Select another version for viewing via the drop-down list.
 * Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform a versions comparison analysis.  
 
-[Click here for more information regarding the Catalog Versioning](06_catalog_versioning.md).
+[Click here for more information about the Catalog Versioning](06_catalog_versioning.md).
 
 **Data Platform and Schema's Context Menu**
 
@@ -81,10 +80,10 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
-  * **Edit** the catalog manually. [Click here for more information regarding the Manual Overrides](07_manual_overrides.md).
-  * Open the **Classifier Configuration** screen for updating the profiling rules. This screen is described [further in this article](05_catalog_app.md#classifier-configuration). 
-  * View the list of **hidden nodes**. Clicking a node in this list returns it unhidden back to the Catalog tree.
-* **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click here for more information regarding the Catalog Search](08_search_catalog.md). 
+  * **Edit** the catalog manually. [Click here for more information about the Manual Overrides](07_manual_overrides.md).
+  * View the list of **hidden nodes**. Clicking a node in this list unhides it and the node returns to the Catalog tree.
+  * Build the Catalog **artifacts**. [Click here for more information about the Catalog artifacts](09_build_artifacts.md).
+* **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
 * **Navigation map** <img src="images/navigation.png" style="zoom:80%;" />, for opening the Catalog's mini-map and navigation panel. 
@@ -117,27 +116,6 @@ The Catalog application supports deep linking from the Data Platform to the fiel
 The version should be either the word **latest** or **V** with the version number (e.g., V13).
 
 This link can be shared as it directs other users to a specific in-app location, saving them the time and energy of trying to locate a particular node.
-
-### Classifier Configuration
-
-The Classifier Configuration screen provides the following configuration capabilities:
-
-* The **Regex Setup** tab allows to view and update the profiling rules that are used by the Catalog Classification built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins). Each classification can have several definitions in this tab.
-  
-  <img src="images/classifier.png" style="zoom: 67%;" />
-  
-* The **PII & Masking Setup** tab allows to view and update the PII and masking settings of each classification. Each classification can appear only once in this tab.
-  
-  <img src="images/classifier_pii_masking.png" style="zoom: 67%;" />
-  
-  * To edit the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
-  
-    * The Generator can be either an actor (built-in or custom) or a flow that can perform the masking logic for a given Classification type.
-    * For example, for masking the fields classifier as Social Security Number, you can either use the built-in RandomSSN.actor or create your own flow.
-    
-    <img src="images/classifier_pii_masking_edit.png" style="zoom: 67%;" />
-
-The **Save** button commits all the changes performed in both tabs into the Fabric memory. The profiling rules are also saved in the Discovery/MTable folder in the Project tree.
 
 
 
