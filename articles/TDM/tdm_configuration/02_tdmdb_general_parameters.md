@@ -19,13 +19,13 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
       
 - The **param_name** of the LUI separator is **iid_separator**.  
 
-- The **param_value** must be populated by the String set as a separator.  
+- The **param_value** must be populated by a String set as a separator.  
 
   Note that the iid_separator setting impacts all LUs in the project.
 
   **Example**:
 
-  Insert the following record to tdm_general_parameters to set the separator to @ : 
+  Insert the following record to the tdm_general_parameters table to set the separator to @ : 
 
   ```sql
   insert into tdm_general_parameters (param_name, param_value) values ('iid_separator', '@');
