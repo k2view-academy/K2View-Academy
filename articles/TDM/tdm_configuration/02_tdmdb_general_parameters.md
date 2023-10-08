@@ -31,7 +31,7 @@ The clean-up parameters are automatically created in **tdm_general_parameters** 
   insert into tdm_general_parameters (param_name, param_value) values ('iid_separator', '@');
   ```
 
-  If the source Customer ID is 123_4 and the environment is ENV1, the LUI is set as **ENV1@123_4**. This way the TDM process can parse the LUI correctly and get the correct Customer ID.
+  If the source Customer ID is 123_4 and the environment is ENV1, the LUI is set as **ENV1@123_4**. This way, the TDM process can parse the LUI correctly and get the correct Customer ID.
   
 
 ## Maximum [Reservation Period](/articles/TDM/tdm_architecture/08_entity_reservation.md) for Testers
