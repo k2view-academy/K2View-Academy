@@ -12,7 +12,7 @@ Update this parameter to set a different retention period.
 
 ### How do I Run the TDM Cleanup Process?
 
-By default, the **TDMDB_CleanUp** job is scheduled to run automatically every 7 days in the TDM Job's table. You can set it to run manually or set a different time interval for an automatic execution.
+By default, the **TDMDB_CleanUp** job is scheduled to run automatically every 7 days in the TDM Jobs table. You can set it to run manually or set a different time interval for an automatic execution.
 
 Click for more information about the [Jobs table](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4). 
 
