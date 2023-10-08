@@ -1,20 +1,18 @@
 <web>
 
-# Command Palette & Keyboard Shortcuts
+# Productivity Tips
+
+
 
 ## Command Palette 
 
-Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` on a Mac or `F1` in Windows (or `Ctrl+Shift+P`) to bring up the **Command Palette**.
+Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` on a Mac or or `Ctrl+Shift+P` in Windows, to bring up the **Command Palette**.
 
 - Each command appears with its associated shortcut (if one exists). If you forget a keyboard shortcut (also referred to as a "key binding"), use the **Command Palette** to help you out.
 
 - The Command Palette shows first the recently used commands and then all other commands.
 - If you do not remember the exact command, just start to type the keyword that might fit to filter relevant matches. The Command Palette will complete the command. 
 - The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands. Once the palette is opened type "Fabric" to filter and see them. 
-
-
-
-
 
 
 
@@ -26,7 +24,7 @@ To open the full list of shortcuts you can either:
 
 * Use top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
 * Use left bottom **Preferences** <img src="images/web/settings.png" style="zoom:67%;" /> gear icon > **Open Keyboard Shortcuts**
-    
+  
 ### General & Navigation
 
 <table>
@@ -41,7 +39,9 @@ To open the full list of shortcuts you can either:
         </tr>
         <tr >
             <td>⌘P / CTRL+P</td>
-            <td>Quickly open files</td>    
+            <td>
+                Quickly Open recent files, shown in the drop down list, or search by typing filename.<br>
+Typing filename:line number will lead you to that line in file.</td>    
         </tr>
         <tr >
             <td>⌘J / CTRL+J</td>
@@ -73,9 +73,6 @@ To open the full list of shortcuts you can either:
         </tr>
         </tbody>
     </table>
-
-
-
 ### Debug
 
 <table>
@@ -122,6 +119,19 @@ To open the full list of shortcuts you can either:
         </tr>
         </tbody>
     </table>
+
+
+## Save / Auto Save
+
+By default, Web Studio requires an explicit action to save your changes to disk, by using **Ctrl+S** or via top menu **File > Save**.
+
+However, it's easy to turn on `Auto Save`, which will save your changes after a preconfigured delay. With this option turned on, there is no need to explicitly save the file. To turn on `Auto Save` use the **File** > **Auto Save** toggle that turns on and off save after a delay. 
+
+
+
+## Rename Entities
+
+When renaming entities, Studio is making for you some of the tasks...
 
 
 

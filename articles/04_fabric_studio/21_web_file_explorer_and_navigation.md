@@ -8,7 +8,7 @@ This article explains how to explore files and their contents in the Fabric Web 
 
 The Fabric Web Studio is file and folder based. To explore your project, open the Explorer View (opened by default) - the top most icon <img src="images/web/explorer.png" style="zoom:67%;" /> in the activity bar. The explorer that appears at the side bar contains two sub-views - *Project* and *Open Editors*.
 
-## PROJECT ##
+## Project Tree Explorer ##
 
 The Project Tree explorer is used to browse, open, and manage files and folders in your project. 
 
@@ -24,14 +24,6 @@ After expanding a folder, the contents of the folder are shown in the Explorer. 
 
 
 
-### Multi-selection
-
-You can select multiple files in the **File Explorer** and its **OPEN EDITORS** sub-view to run actions (such as Delete or Open) on multiple items. Use the `Ctrl/Cmd` key with `click` to select individual files and `Shift` + `click` to select a range. 
-
-> **Tip:** If you select two or more items, you can use the right-click context menu **Compare with Each Other** command to quickly check the difference between two files.
-
-
-
 ### Filtering the Document Tree
 
 You can type to filter the currently visible files in the **File Explorer**. With the focus on the **File Explorer**, start to type part of the file name you want to match. You will see a filter box in the top-right of the **File Explorer** showing what you have typed so far and matching file names will be highlighted. When you press the cursor keys to move up and down the file list, it will jump between matching files or folders.
@@ -44,11 +36,21 @@ Hovering over the filter box and selecting **Enable Filter on Type** (the three 
 
 
 
-## OPEN EDITORS ##
+### Open Editors ###
 
 At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This shows a list of open files. 
 
 <img src="images/web/21_2_open_editors.PNG" style="zoom:67%;" />
+
+
+
+### Multi-selection
+
+You can select multiple files in the **File Explorer** and its **OPEN EDITORS** sub-view to run actions (such as Delete or Open) on multiple items. Use the `Ctrl/Cmd` key with `click` to select individual files and `Shift` + `click` to select a range. 
+
+> **Tip:** If you select two or more items, you can use the right-click context menu **Compare with Each Other** command to quickly check the difference between two files.
+
+
 
 ## Search
 
@@ -82,3 +84,4 @@ The breadcrumb navigation bar always show the file path. If the current file typ
 
 
 
+</web>

@@ -6,6 +6,8 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 <studio>
 
+To create a new Graphit Web Service follow these steps:
+
 1. Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
     ![images](17_Graphit/images/new_graphit_file_studio_bigger.png)
@@ -46,9 +48,9 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 
     The below image shows the **nested nodes layout result**: 
-
+    
     ![](17_Graphit/images/new_graphit_example.png)
-
+    
     Note that exposing the SQL fields is optional and even if you choose **NO**, the fields will be displayed in the output document. Yet, exposing them allows you to manipulate them. It is sometimes preferred by implementors for a better visualized output document, to see a full layout of the structure.
 
 8. **Save** the Graphit file. A pop-up message will appear, asking you to assign a **Name** and a **Category** for your Graphit file.
@@ -59,14 +61,23 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
     ![](17_Graphit/images/project_tree_incl_graphit_file_name.png)
 
-    ​
+    
 
 </studio>
 
 <web>
 
+You can create a new web service either from the Fabric menu at the top menu bar or from the project tree.
+
+When initiated from the Fabric menu:
+
+1. Open **Fabric** Menu, choose **New Web Service**
+2. Select **New Graphit Web Service**
+
+When initiated from the project tree: 
+
 1. Go to **Project Tree**, click on **Implementation** -> **Logical Units / Data Products** -> **Web Services**
-2. Expand **Web Services** -> right-click on **Graphit/Demo** and choose **New Graphit**
+2. Expand **Web Services** -> right-click on **Graphit** and choose **New Graphit**
 
 ![](17_Graphit/images/web_choose_new_graphit.png)
 

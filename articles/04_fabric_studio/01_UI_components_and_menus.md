@@ -1,7 +1,7 @@
-# Fabric Studio User Interface
+# Get Started with Fabric Studio
 
 ## What Is the Fabric Studio?
-Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
+Fabric Studio is a designer tool that manages the construction of [Data Products](/articles/01_fabric_overview/02_fabric_glossary.md#logical-unit--data-product). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
 
 Fabric Studio offers a user-friendly look-and-feel development environment known as the *Implementation Layer*. Each project is initiated and maintained via this platform and working space. 
 
@@ -11,13 +11,9 @@ As an integrated tool, Fabric Studio allows you to:
 * Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project into the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
-Additionally, the Fabric Studio enables you to integrate your projects into source version control systems based on either Git <studio>or the Apache Subversion (SVN) standard</studio>.
+Additionally, the Fabric Studio enables you to integrate your projects into source version control systems based on either Git <studio>or the Apache Subversion (SVN) standard.
 
-<studio>
-
-[Click for more information about Best Practices for Working with GIT and SVN](07_best_practices_for_working_with_GIT_and_SVN.md).
-
-</studio>
+[Click for more information about Best Practices for Working with GIT and SVN](07_best_practices_for_working_with_GIT_and_SVN.md). </studio>
 
 <web>
 
@@ -27,11 +23,9 @@ Additionally, the Fabric Studio enables you to integrate your projects into sour
 
 
 
-## Get Started
-
 <studio>
 
-### Start Page
+## Start Page
 
 Upon opening the desktop Studio, the Start Page will appear. 
 
@@ -52,13 +46,23 @@ The Start Page can be reopened, even after it is closed, by using the *Tools* ac
 
 
 
-Once a project is opened, the debug panel appears on the upper left side of the window, and the activity toolbar appears along the left side of the window.
+## User Interface Layout
+
+Once a project is opened, the Studio's main user interface layout is shown. It is divided into several main areas:
+
+* **Debug Panel** (A & B)  - Action panel for managing actions toward the Fabric debug server.
+* **Activity Toolbar** (C) - Enables making various actions, as explained below. 
+* **Project Tree** (D) - The Project's Folders Tree displays the components of the current project as a hierarchy of entities. Click for more information about the [Project Tree](08_fabric_project_tree.md).
+* **Logs Panel** (E)  - Enables viewing logs, output and debug steps.  Click for more information [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+* **Editor** (F) - The main area in which you edit all your project files and entities. 
+
+
+
+![debug toolbar](images/04_01_01b_main_ui.png)
 
 
 
 ### Debug Panel
-
-![debug toolbar](images/fabric_studio_debug_panel.png)
 
 The debug panel enables access to the Fabric debug server, Cassandra debug server and to the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
 
@@ -139,7 +143,7 @@ The debug panel enables access to the Fabric debug server, Cassandra debug serve
 <tr>
  <td width="60pxl" valign="top"><p><img src="images/04_01_02_icon1.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
-<p>file</p>
+<p>File</p>
 </td>
 </tr>
 <tr>
@@ -158,7 +162,7 @@ The debug panel enables access to the Fabric debug server, Cassandra debug serve
 <tr>
 <td width="60pxl" valign="top"><p><img src="images/04_01_02_icon4.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
-<p>Query Builder</p>
+<p><a href="/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview">Query Builder</a></p>
 </td>
 </tr>
 <tr>
@@ -182,10 +186,10 @@ The debug panel enables access to the Fabric debug server, Cassandra debug serve
 </tbody>
 </table>
 
-**File Tab**
+#### **File Menu**
 
 
-The File tab has the following options:
+The File menu has the following options:
 
 * New Project. 
 * Open Project. 
@@ -193,7 +197,8 @@ The File tab has the following options:
 * Close Project. 
 * Recent Projects.
 
-#### New Item Tab
+#### **New Item Menu**
+
 Click **New Item** to open a **New Item** under a selected **LU** or under **Shared Objects**:
 * Select an **LU** from the current **Logical Unit** dropdown list in order to create the new item under the selected **LU**. Examples for such new items are [Function](/articles/07_table_population/11_3_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
 * In order to create a new item under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the current Logical Unit dropdown list should be empty.
@@ -204,19 +209,17 @@ Note that this area allows you to open a new item only for LU or for Shared Obje
 
 <web>
 
-The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it adopts a common user interface and layout, maximizing the space provided for the editor while leaving enough room to browse and access the full context of your project.
+## User Interface Layout
 
+The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to while designing your Fabric project, and an editor on the right, showing the content of the files you have opened.
 
-
-## Basic Layout
-
- The Fabric Web Studio adopts Visual Studio Code concepts. The UI is divided into several main areas:
+More specifically, the Fabric Web Studio follows Visual Studio Code layout concepts, where the user interface is divided into several main areas:
 
 * **Editor** (A) - The main area in which you edit all your project files and entities. You may open as many editors as you like side by side vertically and horizontally.
 * **Activity Bar** (B) -  Located on the far left-hand side and allows you to switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled.
-* **Side Bar** (C) - Contains different views, like the Explorer, assisting you while working on your Fabric project.
-* **Status Bar** (D) - Information about the open project and the files you are editing.
-* **Panel** (E) - Displays different panel modules below the editor area. Examples for such panel modules are the Fabric Terminal, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
+* **Side Bar** (C) - Contains different views, like the File Explorer, assisting you while working on your Fabric project. Click for more information about the [Project Tree](08_fabric_project_tree.md).
+* **Status Bar** (D) - Information about the opened project and the files you are editing.
+* **Panel** (E) - Displays different panel modules below the editor area. Examples for such panel modules are the Fabric Terminal, Fabric Logs Viewer, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
 * **Minimap** & **Outline** (F) - Code outline, provides you with a high-level overview of your source code, which is useful for a quick navigation and a code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area in order to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
 * **Fabric Apps Panel** (G) - Since the Web Studio works as part of the Fabric Web Platform, you can navigate to its other apps via this panel. 
 * **Top Menu** (H) - From the top menu you can either carry out IDE operations or activate certain Fabric commands. 
@@ -230,7 +233,7 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 
 
 
-## Activity Bar and Views
+### Activity Bar and Views
 
 The **Activity Bar** lets you switch quickly between views. Once you click on a view, the **Side Bar** changes accordingly and allows you to make the relevant operations for this view. 
 
@@ -264,71 +267,61 @@ The views that appear by default on the Web Studio are as follows:
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/datasource_explorer.png" alt="data source explorer" /></td>
     <td style="padding-left: 30px;"><strong>DB Interface Explorer</strong></td>
     <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views, and columns. According to the opened editor's context it lets you apply actions like: executing SQL queries at Query Builder, adding DB statements to Fabric functions, adding DB actors to Broadway and adding an SQL section to Graphit. To learn more about using the Git tool within the Web Studio see <a href="25_web_data_explorer.md">here</a>.</td>
-</tr>
-<tr>
-    <td style="text-align: center; padding-top: 10px;"><img src="images/web/log.png" alt="log viewer" /></td>
-    <td style="padding-left: 30px;"><strong>Log Viewer</strong></td>
-    <td style="width:60%">Enables you to select and view Fabric logs, in a rich and useful mode. When clicked it allows you to select which log to open (from the Side Bar). To learn more about Log Viewer and how to use it effectively see <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">here</a>.</td>
-</tr>
-</tbody>
-</table>
-
+</tr></tbody></table>
 
 
 >**Tip:** You can change the order of views in the Activity Bar by dragging and dropping them.
 
   
 
-## Command Palette
+### Fabric Menu 
 
-The Command Palette is an interactive window that provides access to the Fabric Web Studio functionality, including keyboard shortcuts for many common operations. You can open files, execute editor commands, and launch Fabric dedicated editors such as Create New LU, Create new Broadway flow and many more.
+The Fabric menu which is part of the top menu bar, provides several Fabric and Studio actions:
 
-You can reach the Command Palette from the top menu by selecting **View > Find command** or use ⇧⌘P in Mac or F1 in Windows to bring it up.
+* **Open Fabric Terminal** - Opens the Fabric Terminal at the bottom panel area, where you can run [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
+* **Watch Fabric Log** - Opens the Fabric Log terminal, where you can see the active Fabric log, in "tail" mode.   
+* **Show Fabric Apps**
+* **Deploy all Updated Logical Units** - Let you deploy at once all data products/logical units that have been changed and not redeployed yet.
+* **Version Tag** - Activates the [Project Versioning Tagging](/articles/16_deploy_fabric/04_project_versioning.md) process.
+* **Create new** Fabric project's entities (some of these actions are available also at the project's tree context menu):
+  * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
+  * New Web Service - Lets you to create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located at the Web Service logical unit, according to a chosen category.
+  * New Java Function - Lets you to easily create either a [Fabric function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger, or LUDB, as well as regular function. When Fabric function is selected then it will be crated with relevant decelerations and format.
+  * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
+  * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
+  * New [Custom DB Interface type](/articles/05_DB_interfaces/10_database_types.md)
+* **Export project to Zip File** - Prepare a zip file that contains the whole project entities and files at the Project's tree root folder. 
 
-To learn more about useful Command Palette commands and shortcuts see [here](20_web_command_keyboard_shortcuts.md).
+
+
+### Status Bar
+
+The status bar provides an Information and status about the opened project and the files you are editing, as well as enables making actions. 
+
+![status bar](images/web/01-status-bar.png)
+
+it is divided into few parts (yet - there is no visual separation between them):
+
+* **GIT** - shows the current GIT branch name, that your space is pointing on. Next to it there is a *Synchronize Changes* action icon that when clicked it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
+* **Problems status** - quick indication of error and warnings in the project's files. When clicked, the *Problems* panel is opened. 
+* **Project Version** - version is shown if exists. Click [here](/articles/16_deploy_fabric/04_project_versioning.md) for more information about project versions.
+* **Deployment status**. If not all LUs are deployed, then when hovering it shows the undeployed LUS. You can then click on it to deploy them
 
 
 
-## Color Themes
+### Color Themes
 
 As part of Web Studio Settings Capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
 
 To select a color theme
 
-1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) located at the bottom left area of Web Studio. 
+1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) located at the bottom left area of Web Studio.  
 2. Use the cursor keys to preview the colors of the theme.
 3. Select a desired theme and click Enter.
 
 
 
-<br/>
-
-
-
->**Notes:** 
->
->1. Fabric Web Studio is basically a Visual Studio code-like editor, with small differences. While you can look and learn from VS Code's many user guides, keep in mind that they are not the same.
->2. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of having a code editor orientation and being a file and folder based.
->3. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project.
-
 </web>
-
-
-
-### The Project Tree
-
-The Project Tree displays the components of the current project as a hierarchy of entities. The project is the top-level in the hierarchy. Each project has the following branches (sub-objects): 
-
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the objects used by all Logical Units and project references.
-* References, reference information that may be used throughout the instance. References includes also [common project's tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
-* [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), a collection of all functions that are defined as Web Services for this project.
-* [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
-
-Click for more information about the [Project Tree](08_fabric_project_tree.md).
-
-Click for more information about the [Query Builder.](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview)
-
-Click for more information [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
 
 

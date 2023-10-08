@@ -35,9 +35,7 @@ More specific **Commit** actions can be found in the **Views and More Actions** 
 
 ## Git Status Bar Actions
 
-There is a **Synchronize Changes** action in the Status Bar, next to the branch indicator, when the current checked out branch has an upstream branch configured. **Synchronize Changes** will pull remote changes down to your local repository and then push local commits to the upstream branch.
-
-If there is no upstream branch configured and the Git repository has remotes set up, the **Publish** action is enabled. This will let you publish the current branch to a remote.
+There is a **Synchronize Changes** action in the Status Bar, next to the branch indicator, When clicked, it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
 
 
 

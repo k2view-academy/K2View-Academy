@@ -46,13 +46,15 @@ When opened from either the Schema Editor, Graphit or Broadway - the Query Build
 
 ## Query Editor Panel
 
-You can edit the SQL commands in the top Query Editor panel.  
+You can edit the SQL commands in the Query Editor panel - the upper part of the Query Builder window.  
 
 It contains the editing area and top action bar, where you can run your query by clicking on the **Execute** button or clear the editing area by clicking on the **Clear** button.
 
-You can open Query Builder where Fabric is the data source. In such case, several fields will be shown in the top bar of the Query Editor panel: Sync mode, Select LU, Instance ID. Set these fields before executing the query.
+> Note: You can open Query Builder where Fabric is the data source. In such case, several fields will be shown in the top bar of the Query Editor panel: Sync mode, Select LU, Instance ID. Set these fields before executing the query.
+>
+> ![fabric top](images/web/01_fabric_interface_top_bar.png)
 
-![fabric top](images/web/01_fabric_interface_top_bar.png)
+
 
 
 
@@ -87,6 +89,8 @@ When executing the query, the results are presented in a table view in the Resul
     * To ungroup, click again on the column header arrow.
 
     ![grouping](C:\Users\EyalOrbach\OneDrive - K2View\K2View-Academy-7.2\articles\11_query_builder\images\web\01_results_grouping.png)
+
+
 
 </web>
 
