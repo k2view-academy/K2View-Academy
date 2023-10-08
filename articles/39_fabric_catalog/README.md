@@ -1,5 +1,4 @@
-<strong>Fabric Catalog<strong>
-​        
+<strong>Fabric Catalog<strong>    
 
 <ul>
 	<li><a href="/articles/39_fabric_catalog/01_catalog_overview.md">Fabric Catalog Overview</a></li>

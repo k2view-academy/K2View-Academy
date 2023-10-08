@@ -4,7 +4,7 @@
 
 The purpose of the Catalog Masking mechanism is to perform masking based on the Catalog artifact rather than based on the logic defined in each LU population. 
 
-3 new actors have been introduced for this purpose: CatalogMaskingMapper, CatalogMaskingRecord and CatalogMaskingField.
+3 new actors have been introduced for this purpose: *CatalogMaskingMapper*, *CatalogMaskingRecord* and *CatalogMaskingField*.
 
 * The **CatalogMaskingMapper** Actor receives a Dataset, which maps the data on the fly, and does not load the entire Dataset to memory. The actor iterates internally on each entry and invokes the CatalogMaskingRecord Actor which returns a Dataset with the same structure it was received.
 * The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the CatalogMaskingField Actor for each pair. The actor returns an object with the same structure it was received.
