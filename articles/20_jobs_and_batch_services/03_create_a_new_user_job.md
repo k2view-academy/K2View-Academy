@@ -47,7 +47,7 @@ Go to the **Project Tree** > your **LU** > **Jobs**.
 
 <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
-Jobs can be created also as References regardless of the specific LU. In the **Job table**, enter the values pertaining to the Job.
+Jobs can be created also as References regardless of the specific LU. In the **Jobs table**, enter the values pertaining to the Job.
 
 <table style="width: 900px; height: 193px;">
 <tbody>
