@@ -9,9 +9,9 @@ A Load task contains the following tabs:
 - [Requested Entities](#requested-entities-tab) - opens if the Data Type contains entities.
 - [Task Scheduling](22_task_execution_timing_tab.md)
 
-When checking the **Set Task Variables** setting, a new [Task Variables](23_task_globals_tab.md) tab opens.
+When checking the **Set Task Variables** checkbox, a new [Task Variables](23_task_globals_tab.md) tab opens.
 
-When checking the **Reference** Data Type setting, a [Reference tab](24_task_reference_tab.md) opens.
+When checking the **Reference** Data Type checkbox, a [Reference tab](24_task_reference_tab.md) opens.
 
 
 
