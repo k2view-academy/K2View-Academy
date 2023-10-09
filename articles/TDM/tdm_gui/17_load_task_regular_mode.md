@@ -227,7 +227,7 @@ Note that nested groups of parameters can be added, for example, in order to def
 #### Getting the Number of Matching Entities
 
 Click Refresh next to the **Entities Matched** in order to calculate the number of entities that match the selected parameters.
-The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, selecting customers based on their number of open cases, subscriber_type, and vip_status (see the screenshot above).
+The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, selecting customers based on their number of open cases, subscriber_type, and vip_status (see the above screenshot).
 
 - Click ![refesh](images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
