@@ -171,8 +171,8 @@ The **Filter out Reserved Entities** checkbox has been added in TDM 7.6 and it i
 For example:
 
 - There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's environments.
-- If the Filter out Reserved Entities checkbox is checked, the Entities Matched is 490.
-- If the Filter out Reserved Entities checkbox is cleared, the Entities Matched is 500.
+- If the Filter out Reserved Entities checkbox is checked, the *Entities Matched* result is 490.
+- If the Filter out Reserved Entities checkbox is cleared, the *Entities Matched* result is 500.
 
 #### How Do I Add a Condition? 
 
