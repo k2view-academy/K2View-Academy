@@ -219,7 +219,7 @@ Note that nested groups of parameters can be added, for example, in order to def
 
 ![params example](images/parameters_example1.png)
 
-#### How Do I Remove A Parameter or a Parameters Group?
+#### How Do I Remove a Parameter or a Parameters Group?
 
 1.  Click ![remove parameter](images/delete_parameters_icon.png) next to the parameter in order to delete it.
 2.  Click **Remove Group** to remove a parameter's group.
