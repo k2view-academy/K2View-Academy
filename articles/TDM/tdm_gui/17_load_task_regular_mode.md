@@ -54,7 +54,7 @@ Click for more information on [how overriding the Sync mode and the Task Operati
 
 #### Retention Period
 
-The [Retention Period](16_extract_task.md#retention-period) setting is displayed if the Sync Policy is **not** set to **Do Not Sync From Source Data** to enable setting a retention period on the task's entities if they are synced by the task execution. The default **Retention Period** is **Do not Delete**.
+The [Retention Period](16_extract_task.md#retention-period) setting is displayed if the Sync Policy is **not** *Do Not Sync*. This setting enables to limit the time for which the synced entities are kept in Fabric. The default **Retention Period** value is **Do not Delete** (do not limit the time for which the entities are kept is Fabric).
 
 #### Reservation Period
 
