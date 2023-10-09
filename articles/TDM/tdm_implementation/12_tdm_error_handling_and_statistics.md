@@ -2,7 +2,7 @@
 
 The TDM library includes a set of generic flows for error handling and statistics gathering that are based on Broadway capabilities and are tailored for TDM business requirements. 
 
-These generic flows gather errors and statistics during task execution and populate them into dedicated tables. This data is used for monitoring  TDM tasks and creating TDM execution reports.
+These generic flows gather errors and statistics during task executions and populate them into dedicated tables. This data is used for monitoring TDM tasks and creating TDM execution reports.
 
 ### How Do I Perform Error Handling in TDM?
 
@@ -19,13 +19,13 @@ ENTITY_STATUS = failed
 
 PopulateTableErrorsWithFailed.flow also sets the error category as *Entity Failed* in the **task_exe_error_detailed** table, while PopulateTableErrorsWithReject.flow sets a record as *Record Rejected*.
 
-The error handling utility is invoked from each Load flow's **Load Data To Target** Stage. An error can be suppressed in order to continue a task execution and reach the statistics gathering step.
+The error handling utility is invoked from each Load flow's **Load Data To Target** Stage. An error can be suppressed in order to continue a task execution and to reach the statistics gathering step.
 
-By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress** setting is unchecked, i.e. the entity is rejected due to the error:
+By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress** checkbox is unchecked, that is, the entity is rejected due to the error:
 
 ![image](images/12_tdm_err_stat_01.PNG)
 
- If a record needs to be rejected - instead of failing an entire entity - replace the Inner flow name with **PopulateTableErrorsWithReject** and check the **Suppress** setting. 
+If a record needs to be rejected - instead of failing an entire entity - replace the Inner flow name with **PopulateTableErrorsWithReject** and check the **Suppress** checkbox.
 
 [Click to learn how to use the ErrorHandling Actor](/articles/19_Broadway/actors/06_error_handling_actors.md#how-do-i-use-the-errorhandler-actor).
 
@@ -35,10 +35,10 @@ By default, the **PopulateTableErrorsWithFailed** is invoked and the **Suppress*
 
 The [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report) includes the Statistics Report tab that compares the number of records in each table in the source and target environments.  
 
-The TDM library includes the **StatsLoader** Broadway actor that populates the statistics data into **task_exe_stats_detailed** TDM DB table. The generated load flows include the following Broadway actors:
+The TDM library includes the **StatsLoader** Broadway Actor that populates the statistics data into **task_exe_stats_detailed** TDM DB table. The generated load flows include the following 2 Broadway Actors:
 
-- **StatsReader** - gets the load statistics from the **DbLoad** actor that loads the data to the target DB. 
-- **StatsLoader** - gets the statistical information from the StatsReader and populates it in task_exe_stats_detailed TDM DB table. This table is extracted by the [task execution report API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/07_get_task_execution_reports_APIs.md#get-task-execution-summary-report) to generate the Statistics Report tab of the Task Execution Report. 
+- **StatsReader** - gets the load statistics from the **DbLoad** Actor that loads the data to the target DB. 
+- **StatsLoader** - gets the statistical information from the StatsReader Actor and populates it in task_exe_stats_detailed TDM DB table. This table is extracted by the [task execution report API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/07_get_task_execution_reports_APIs.md#get-task-execution-summary-report) to generate the Statistics Report tab of the Task Execution Report. 
 
 See an example below:
 
@@ -46,11 +46,11 @@ See an example below:
 
 
 
-#### TDM Custom TMX Statistics
+#### TDM Custom JMX Statistics
 
-Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. Additionally, Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for better monitoring. 
+Fabric provides [JMX metrics](/articles/34_JMX_statistics/01_JMX_overview.md) to enable comprehensive and low-resolution monitoring and management of applications. The JMX metrics can be accessed using monitoring tools such as Grafana. Additionally, Fabric enables adding [customized JMX statistics](/articles/34_JMX_statistics/03_JMX_custom.md) for a better monitoring. 
 
-TDM 7.6 adds the following customized JMX metrics in order to have better monitoring of the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync:
+TDM 7.6 adds the following customized JMX metrics in order to have a better monitoring on the TDM executions. The metrics are extracted from the TDMDB by the TDM LU sync: 
 
 - **TotalLoadedRecordsPerLoadFlow** - number of records loaded to the target DB by each load Broadway flow. The following information is provided:
 
@@ -76,8 +76,13 @@ TDM 7.6 adds the following customized JMX metrics in order to have better monito
 
 - **TotalTaskExecutionsPerStatus** - total number of task executions per execution status.
 
-Notes: 
+**Implementation Guidelines** 
+
+Set the **POPULATE_JMX_STATS** shared Global to **true** to enable the execution of **populationJMX** population flow on TASK_EXECUTION TDM LU table.
+
+Notes:
+
 - Each task execution is accumulated as one execution even if the task contains multiple LUs.
-- You must **add the fnTDMJMXStats enrichment function to the TDM LU** (TASK_EXECUTION LU table) to enable the TDM customized JMX metrics.
+- TDM 8.0 required adding the fnTDMJMXStats enrichment function to the TDM LU (TASK_EXECUTION LU table) to enable the TDM customized JMX metrics. TDM 8.1 does not require this manual edit of the TDM LU schema. Instead, you need to set the **POPULATE_JMX_STATS** Global to **true**. 
 
 [![Previous](/articles/images/Previous.png)](11_tdm_implementation_using_generic_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
