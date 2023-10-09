@@ -82,7 +82,7 @@ When checked, the task execution process replaces the IDs of all selected entiti
 
 Notes:
 
-- The Replace Sequence is not displayed on **Data Versioning** task, since the data version is loaded 'as is'.
+- The Replace Sequence is not displayed on **Data Versioning** task since the data version is loaded 'as is'.
 - The Replace Sequence setting is disabled if the tester user does not have permissions to replace the sequence in the **Write** [TDM Environment permission setting](10_environment_roles_tab.md#role-permissions) on the task's target environment.
 - The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestrator.flow-from-the-template).
 
