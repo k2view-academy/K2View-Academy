@@ -127,7 +127,7 @@ Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm
 
 ### Entity list 
 
-This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them. Note that a warning is thrown if the entity list has entities that are reserved for another user.
+This is the **default option**. Populate the list of entities for the task with entities separated with a comma between them. Note that a warning is thrown if the entity list includes entities that are reserved for another user.
 
 ### Custom Logic
 
