@@ -42,12 +42,14 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
 - Soft deploy the TDM LU to Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
-- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 8.0. For
+- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 8.1. For
 example:
-  - CURRENT_TDM_VERSION = 7.6.
-  - TARGET_TDM_VERSION = 8.0.
+  - CURRENT_TDM_VERSION = 8.0.
+  - TARGET_TDM_VERSION = 8.1.
 
 - Note that the **version’s list** is set in **TDMDBUpgradeScripts** actor (imported from the TDM Library).
+
+- For more details see [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V8.1/TDM_Upgrade_Procedure_to_V8.1.pdf).
 
 
 ## Create K2masking Keyspace in Cassandra
@@ -101,5 +103,4 @@ The below steps should be followed if a new APIDOC is generated to include proje
 10. Extract the zip file and copy the generated HTML file under the `\TDM\web\TDM\apidoc` sub-directory.
 
 11. Open the TDM Portal and click the API Doc tab. Verify that the API doc is displayed properly.
-
 
