@@ -187,7 +187,7 @@ The TDM Portal displays the SQL query, which is built based on the selected para
 
 There are several types of parameters:
 
-- **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values. Select a value from the drop-down list.
+- **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
   
