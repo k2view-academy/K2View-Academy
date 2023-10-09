@@ -31,7 +31,7 @@ The following execution parameters are set on **Load tasks**:
 
 #### Data Type
 
-Check the **Entities** checkbox and/or **Reference** checkbox to load them to the target environment selected in the **Provision to Environment** setting.
+Check the Entities and/or the Reference checkboxes to load the task's entities and/or Reference tables to the target environment (set in 'Load (provision) to Environment' task setting).
 
 Note that the Entities checkbox must be checked in the task if it also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task type checkbox is checked together with the Load task type checkbox).
 
