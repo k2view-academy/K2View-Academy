@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V7.2.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.2.0.md).
+[FABRIC V7.2.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric).
 
 ### Download Container Images 
 
