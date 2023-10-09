@@ -1,6 +1,6 @@
 # TDM Load Task
 
-A Load task contains the **Load** task type; it loads (provisions) the task's entities and/or Reference tables to the target environment. A Load task can also delete entities from target environments before loading them and/or reserve the target entities in the TDM DB. Note that when the Load task type checkbox is checked - the Reserve task type checkbox is being checked by default as well.
+A Load task contains the **Load** task type; it loads (provisions) the task's entities and/or Reference tables to the target environment. By selecting multiple task actions (types), a Load task can also delete entities from target environments before loading them, and/or reserve the target entities in the TDM DB. Note that when the Load task type checkbox is checked - the Reserve task type checkbox is being checked by default as well.
 
 A Load task contains the following tabs:
 
