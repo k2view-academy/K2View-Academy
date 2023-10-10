@@ -64,7 +64,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
          
        For example: crm_address_number_of_records. 
        
-       The external parameter **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
+       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each.
 
 ## Implementation of Data Generation Flows 
 
