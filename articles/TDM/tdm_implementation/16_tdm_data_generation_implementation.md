@@ -1,6 +1,6 @@
 # Data Generation Implementation
 
-The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables: an LU table can be populated with either source data or generated synthetic data.  
+The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data.  
 
 ## Implementation of LU Populations 
 
