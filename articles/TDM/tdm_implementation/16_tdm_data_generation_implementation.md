@@ -135,7 +135,7 @@ The following data generation flows are created for each LU table:
 
 - IDs:
   - The data generation flow sends the parent IDs to the child table's population based on the parent-child LU schema definition.
-  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table by the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input and maps the parent customer_id in the Address record.
+  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table by the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id in the Address record.
 
   - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in **TDMSeqSrc2TrgMapping**.
 
