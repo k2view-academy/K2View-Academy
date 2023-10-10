@@ -98,7 +98,7 @@ Gen_[the sequence name in TDMSeqSrc2TrgMapping]
 
 **Example:**
 
-The customer, contract, and address tables of the CRM LU have the following sequence mapping: 
+The customer, contract and address tables of the CRM LU have the following sequence mapping: 
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example_2.png)
 
