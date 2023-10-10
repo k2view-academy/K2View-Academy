@@ -54,15 +54,17 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    [lu name]_[lu table name]_number_of_records
    ```
    
-   Note that if the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
+   Notes:
+    - If the **rowsGeneratorDistribution** input argument is edited, it must be set to be **External parameter**. Otherwise, this parameter cannot be overridden the the TDM task.
+   - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
-   ```
-   [lu name]_[lu table name]_number_of_records
-   ```
-   
-   For example: crm_address_number_of_records. 
-   
-   The external parameter **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
+       ```
+       [lu name]_[lu table name]_number_of_records
+       ```
+         
+       For example: crm_address_number_of_records. 
+       
+       The external parameter **enables the user to override the range for the number of generated records**  for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each. 
 
 ## Implementation of Data Generation Flows 
 
