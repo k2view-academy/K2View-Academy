@@ -81,7 +81,7 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, the data generation flow is integrated with [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on the fields' type. Additionally, TDM supports the data generation of synthetic data without a Fabric catalog if the catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, the data generation flow is integrated with [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on the fields' type. Additionally, TDM supports the data generation of synthetic data without Fabric catalog, in case the catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
