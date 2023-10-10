@@ -55,7 +55,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
    ```
    
    Notes:
-   - If the **rowsGeneratorDistribution** input argument is edited, it must be set to be **External parameter**. Otherwise, this parameter cannot be overridden the the TDM task.
+   - If the **rowsGeneratorDistribution** input argument is edited, but **not** set to be **External parameter**, the parameter cannot be overridden by the TDM task.
    - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
        ```
