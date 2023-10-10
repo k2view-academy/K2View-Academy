@@ -55,7 +55,7 @@ The LU population must be based on a Broadway flow (instead of a DB Query or a r
    ```
    
    Notes:
-    - If the **rowsGeneratorDistribution** input argument is edited, it must be set to be **External parameter**. Otherwise, this parameter cannot be overridden the the TDM task.
+   - If the **rowsGeneratorDistribution** input argument is edited, it must be set to be **External parameter**. Otherwise, this parameter cannot be overridden the the TDM task.
    - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
        ```
@@ -74,14 +74,14 @@ The data generation flows must be created on each source LU table to support syn
 The data generation flow must have the following naming convention:
 
 ```
-${population name}.population.generator
+${population name}.generator
 ```
 
-For example: activity.population.generator
+For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards the data generation flow is integrated with [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate a synthetic data based on the fields' type. In addition, the TDM supports a data generation of synthetic data without Fabric catalog if the catalog is not implemented in the TDM project.
+From TDM 8.1 onwards the data generation flow is integrated with [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate a synthetic data based on the fields' type. In addition, the TDM supports the data generation of synthetic data without a Fabric catalog if the catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
@@ -98,7 +98,7 @@ Gen_[the sequence name in TDMSeqSrc2TrgMapping]
 
 **Example:**
 
-The customer, contract and address tables of the CRM LU have the following sequence mapping: 
+The customer, contract, and address tables of the CRM LU have the following sequence mapping: 
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example_2.png)
 
@@ -117,9 +117,9 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 The following data generation flows are created for each LU table:
 
-1. Data generation flow. This flow has the following naming convention:  `${table name}.population.generator` .
+1. Data generation flow. This flow has the following naming convention:  `${population name}.generator` .
 
-    Example: contract.population.generator
+    Example: contract.pop.generator
 
 
 
@@ -141,7 +141,7 @@ The following data generation flows are created for each LU table:
 
 - Other fields are populated with synthetic data:
 
-  - By default, this process calls the **CatalogGeneratorRecord** Actor to get the default values from [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) based on their type. 
+  - By default, this process calls the **CatalogGeneratorRecord** Actor to get the generated values from [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) based on the fields' catalog specification if set, and the field type (if no specification is set, a default value is generated for the field based on its type).
 
   - If no data is returned by the CatalogGeneratorRecord Actor (Fabric catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize  data generation Actors based on the fields' data type. Note that these default data generation Actors are selected based on the mapping defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors mapping and should be edited before the creation of the data generation flows.
 
@@ -268,13 +268,13 @@ The following data generation flows are created for each LU table:
 
 There are several optional modes for the data generation inner flow:
 
-- **Row by row** - the inner flow can return a single row and let the RowsGenerator Actor handle parent rows and number of rows per parent. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type. 
-- **Rows per parent** - if the inner flow returns a single result named **result** with a **collection of maps**, the Actor will collect them and move to the next parent row.
-- **Handle all parent rows** - a flow can traverse the parent_rows and return a **collection of maps**. The Actor will return these rows and will not call the inner flow again.
+- **Row by row** - this is the recommended approach and is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
-The data generation flow returns multiple results that will serve as the row columns and it is executed in the **row by row** mode. You can edit the data generation flow to be executed in either the **rows per parent** or the **handle all parent rows** modes as explained above.
+Note that you can edit the data generation flow to be executed in different modes if needed: 
+  
+- **Rows per parent** - generate all records for each input parent ID. For example, generating 2-5 open cases and 1-6 close cases per each parent activity ID requires using the 'rows per parent' mode.
+- **Handle all parent rows** - generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
 
-For example, generating 2-5 open cases and 1-6 close cases per activity requires using the 'rows per parent' mode.
 
 Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples about the RowsGenerator Actor.
 
