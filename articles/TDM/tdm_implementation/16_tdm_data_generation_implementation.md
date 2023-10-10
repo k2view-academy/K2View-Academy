@@ -268,7 +268,7 @@ The following data generation flows are created for each LU table:
 
 There are several optional modes for the data generation inner flow:
 
-- **Row by row** - this is the recommended approach and is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
+- **Row by row** - this is the recommended approach and it is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
 Note that you can edit the data generation flow to be executed in different modes if needed: 
   
