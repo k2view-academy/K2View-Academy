@@ -78,9 +78,9 @@ The **TDMLUInit** flow runs **one-time** on the LU to add the TDM tables to an e
 
    - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create data generation flows for the LU.
 
-​	See an example of the TDMLUInit flow's input parameters:
+   See an example of the TDMLUInit flow's input parameters:
 
-![TDMLUInit](images/TDMLUInit_input_parameters.png)
+  ![TDMLUInit](images/TDMLUInit_input_parameters.png)
 
 4. Run the flow in Fabric Studio.
 
