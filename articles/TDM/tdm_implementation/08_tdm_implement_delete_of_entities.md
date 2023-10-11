@@ -45,7 +45,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
         
 
-   2. [TDMInitFlow] ().
+   2. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow).
 
    3. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the following:
 
