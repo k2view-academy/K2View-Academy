@@ -159,7 +159,7 @@ The following data generation flows are created for each LU table:
 
 - The overridden fields must be added to a Map. The Map needs to be sent as a parameter to the **Merge Maps of all Fields** Actor in the data generation flow.
 
-  In the example flow, the logic to generate the Associated_line, Associated_line_fmt, Contract_ref_id, and Description fields is overridden using MTables instead of the default generated values. These fields are added to a Map and sent to **Merge Maps of all Fields** Actor:
+  In the below example flow, the logic to generate the Associated_line, Associated_line_fmt, Contract_ref_id, and Description fields is overridden using MTables instead of the default generated values. These fields are added to a Map and are sent to the **Merge Maps of all Fields** Actor:
 
   ![data generation example](images/data_generation_flow_example.png)
 
