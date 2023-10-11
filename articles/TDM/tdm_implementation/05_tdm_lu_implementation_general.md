@@ -64,20 +64,17 @@ The **TDMLUInit** flow runs **one-time** on the LU to add the TDM tables to an e
    - **SOURCE_INTERFACE** -  populated with the source DB interface name.
 
    - **SOURCE_SCHEMA** -  populated with the source DB schema name.
-
+     
+   - **TARGET_SCHEMA** - populated with the target DB schema name.
+     
+   - **TARGET_INTERFACE** - populated with the target DB interface name.
+     
+   - **TARGET_ENVIRONMENT** - populated with the target environment name. 
 
 
 3. Additional flow's input parameters:
 
-   - Set the following input parameters in order to create and add the target tables to the LU:
-
-     - **CREATE_DELETE_TABLES** - set it to **true**.
-
-     - **TARGET_SCHEMA** - populated with the target DB schema name.
-
-     - **TARGET_INTERFACE** - populated with the target DB interface name.
-
-     - **TARGET_ENVIRONMENT** - populated with the target environment name. 
+   - Set the  **CREATE_DELETE_TABLES** input parameter to **true** in order to create and add the target tables to the LU.
 
    - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create data generation flows for the LU.
 
