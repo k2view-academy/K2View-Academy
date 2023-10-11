@@ -31,7 +31,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
 5. In order to create the target tables and add them to the LU, run either:
 
-   1.  **createDeleteTablesAndPopulations** flow (imported from the TDM library). Set the input parameters:
+   1. **createDeleteTablesAndPopulations** flow (imported from the TDM library). Set the input parameters:
 
       - **LU_NAME**
 
@@ -45,7 +45,9 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
         
 
-   2. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the following:
+   2. [TDMInitFlow] ().
+
+   3. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the following:
 
       1. Creates and adds the delete entity's target LU tables to the LU.
       2. Creates and adds the [data generation flows](tdm_implementation/16_tdm_data_generation_implementation.md) to the LU tables, if needed.
@@ -54,14 +56,18 @@ TDM 8.1 added an automatic generation of the target tables and their population 
       The flow gets the following input parameters:
 
       - **CREATE_DELETE_TABLES** - set this parameter to **true** to create and add the LU the target tables to support the delete entity. 
-      - **LU_NAME**
-      - **TARGET_SCHEMA**
-      - **TARGET_INTERFACE**
-      - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow: (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
-      - **TARGET_ENVIRONMENT**
-      - **CREATE_GENERATE_FLOWS** - valid values: true/false. When true, the flow creates and adds data generation flows to the LU.. The default value is false.
 
-   
+      - **LU_NAME**
+
+      - **TARGET_SCHEMA**
+
+      - **TARGET_INTERFACE**
+
+      - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing objects. When set to **false**, the flow skips existing objects and creates new ones, if needed. This indicator is checked by all 3 parts of the flow: (adding target LU tables, adding data generation flows, and adding the delete and load flows). The **default** value is **false**.
+
+      - **TARGET_ENVIRONMENT**
+
+        
 
 6. Open the LUs schema, right-click > Automatic Layout to view the added target tables.
 
