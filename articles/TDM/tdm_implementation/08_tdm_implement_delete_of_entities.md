@@ -45,14 +45,10 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
         
 
-   2. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow).
+   2. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true**.
 
-   3. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the following:
-
-      1. Creates and adds the delete entity's target LU tables to the LU.
-      2. Creates and adds the [data generation flows](tdm_implementation/16_tdm_data_generation_implementation.md) to the LU tables, if needed.
-      3. Creates the delete and load flows based on the updated LU.
-
+   3. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the target LU tables to support the entity deletion and adds them to the LU. In addition, it creates the delete and load flows based on the updated LU. 
+      
       The flow gets the following input parameters:
 
       - **CREATE_DELETE_TABLES** - set this parameter to **true** to create and add the LU the target tables to support the delete entity. 
