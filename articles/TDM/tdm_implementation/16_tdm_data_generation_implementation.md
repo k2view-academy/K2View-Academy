@@ -171,8 +171,12 @@ The following data generation flows are created for each LU table:
   - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. Note that it is recommended to leave the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data) checkbox clear in the **Synthetic** environment in order to set the **enable_masking** key to **false** for data generation tasks. The key-setting of the **generate_consistent** to **true** and the **enable_masking** to **false** on data generation tasks is needed in order to ensure that the data generation flow generates synthetic values on PII fields, and that the Masking Actors in the LU population do not override the generated synthetic values of the PII fields.
   - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
   - The **GenerateConsistent** Actor does not have an input value. Therefore, if you have a PII field that exists across LUs and is set in multiple records in the LUI, you need to use a **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer can have multiple contracts and each contract needs to have a different name. The contracts exist in both LUs - CRM and Billing. Populate the Masking Actor's input parameters in the data generation flow as follows:
-    - **value**: populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter. See example below:
+    - **value**: populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter.
+
+      See example below:
+
       ![pii example](images/data_generation_pii_example_1.png)
+      
     - **category**: populate it with **generate_consistent** value.
   
 - PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
