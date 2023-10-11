@@ -123,7 +123,7 @@ The following data generation flows are created for each LU table:
 
 
 
-2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their type. This inner flow is called if Fabric catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
+2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their types. This inner flow is called when Fabric catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
 
     Example: contract.typeDefaultsGenerator
 
