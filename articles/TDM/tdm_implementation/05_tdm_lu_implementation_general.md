@@ -171,7 +171,7 @@ Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/
 
  Use either one of the following methods to create and add the target tables to the LU:
 
-1.  Run the **TDMLUInit** flow. See the details above.
+1.  Run the [TDMLUInit](#ii-run-the-tdmluinit-flow) flow.
 2. Run the **createAllFromTemplates** flow to add the TAR_  tables, data generation flows, and the load and delete flows to the LU. 
 3. Run the **createDeleteTablesAndPopulations** flow to add the TAR_  tables to the LU. 
 
