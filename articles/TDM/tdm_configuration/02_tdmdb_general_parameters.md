@@ -16,7 +16,7 @@ The cleanup parameters are automatically created in **tdm_general_parameters** b
 
 - To create different LUIs per environment and per data version, the TDM concatenates additional identifiers to each IID: environment name (for all tasks) and version identifier for Data Versioning tasks. By default, the LUI parts are separated by an underscore, e.g., ENV1_45773.
 - However, if the source entity ID already contains an underscore, another separator must be set on the LUI. Insert a **new record** to the tdm_general_parameters table in order to set an LUI separator that is different from the defaultive (underscore) value.
-      
+  
 - The **param_name** of the LUI separator is **iid_separator**.  
 
 - The **param_value** must be populated by a String set as a separator.  
@@ -115,4 +115,4 @@ The maximum number of days that a tester can set to a retention period in the ta
   
   
 
-[![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
