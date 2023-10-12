@@ -2,7 +2,8 @@
 
 ### What Is a Logical Unit?
 A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose. It holds a set of definitions and instructions that are used for integrating data from source systems, processes the data and stores it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
-An LU is defined and configured in the Fabric Studio. These definitions are comprised of 3 main objects:
+
+An LU is defined and configured in the Fabric Studio, as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). These definitions are comprised of 3 main types of objects:
 
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of an LU table upon its columns, PKs, indexes and triggers.
 
@@ -11,7 +12,28 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
     * Ability to manipulate the fed data i.e. performance of enrichment, cleansing, masking, transforming, etc. 
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table. The Root Table holds the LU’s unique key.
 
+
+
+In addition to these main objects, there are some others, which are part of logical units,  that used to define the logic. they can be found at the project tree under each logical unit:
+
+- Java - [Globals](typora://app/articles/08_globals/01_globals_overview.md) and [Functions](typora://app/articles/07_table_population/08_project_functions.md)
+- [Broadway](typora://app/articles/19_Broadway/01_broadway_overview.md)
+- Instance Groups
+- Resources, files that can be saved as part of a project..
+
+<studio>    
+
+- [Translations](typora://app/articles/09_translations/01_translations_overview_and_use_cases.md).
+- Parsers.
+- Jobs.
+- IIDFinder. 
+
+</studio>
+
+
+
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
+
 * LU / Data Product: Customer.
 * Data sources: CRM, <studio>Ordering, Billing and Collection, </studio><web>Billing and Assets.</web>
 * LU tables: The tables that will hold the data you want to keep about a customer from the 4 data sources.

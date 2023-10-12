@@ -1,4 +1,4 @@
-# LU Hierarchy and Linking Populations
+# LU Tables' Hierarchy and Linking Populations
 
 ## Table Population Links Overview
 An LU schema structure displays a hierarchical presentation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
@@ -65,7 +65,7 @@ An LU schema structure displays a hierarchical presentation of the data related 
 **Note:** An LU table can be added to an LU schema without a Table Population object. Such table is not populated by the sync of the instance, but rather by a separate transaction.
 
 
-## What Are the Table Population's Input Arguments?
+## Table Population's Input Arguments
 <web>
 
 Input arguments of a population flow are defined by the **PopulationArgs** Actor's input argument that must be set to an **External** population type.
@@ -103,7 +103,7 @@ There are [two types of Source Objects](/articles/07_table_population/02_source_
 
 
 
-## How Do I Edit the Input Arguments In a DB Query?
+## Edit the Input Arguments In a DB Query
 When creating a DB query, by default all Input fields are set to True.  
 
 To edit an Input argument, do the following: 
@@ -114,44 +114,73 @@ Click the **source object** of the Population window (the DB query) and verify t
 
 </studio>
 
-## How Do I Link Tables? 
+## Linking Tables
 A link can be added in both directions:
 * **Child to parent**, linking the child population to a parent table.
 * **Parent to child**, linking a parent table to a child population.
 
+you can either link them by dragging a connection line or by using the Tables Connection Assistance popup, as following:
+
+### Link a Child Table Population to a Parent Table
+1. Click the Population name of the child table.
+
+2. Connect each **input field** to a **parent table** using one of the following methods:
+
+   - Drag the **connection line** from this field into the **parent table** and **column**.
+
+   - <studio>Right click on this field, select **Add link from** > **parent table** > **column**.</studio>
+
+   - <web>Right click on this field connector, select the source table and then select source table field.</web>
+
+     <web>
+
+     ![](images/web/12_link_tables_6.png)
+
+​	</web>
+
+### Link a Parent Table to a Child Table Population
+
+1. Click the **parent table**.
+2. Connect each **parent column** to the **child population** using one of the following methods:
+
+   - Click the **child population** header and drag the **connection line** to the **parent table** and **column**.
+
+   - <studio>Right click, select **Add link to** > **child population** > **column**.</studio>
+
+   - <web>Right click on this field out connector, select the target table,  the target table population and then the target input field.</web>
+
+     <web>
+
+     ![](images/web/12_link_tables_7.png)
+
+   ​	</web>
+
+
+
+> **Note:** Link all the Input fields of the selected Table Population object to one parent table. A Table Population object cannot be linked to several parent tables. 
+
+
+
 <web>
 
-1. Click on the child population header.
-2. Connect each of its input fields connectors to a parent table output connectors.
+## Highlight Table Population Links
+
+In complex and big schemas, sometime it is hard to track on the population link, from which table it comes or to which tables it goes. For this, you can click on it and then you can see it as a dashed animated line.
+
+![](images/web/12_dashed_link.gif)
 
 </web>
 
-<studio>
-
-## How Can I Link the Child Population to a Parent Table? 
-1. Click the **Child Population** header.
-2. Connect each **input field** to a **parent table** using one of the following methods:
-  * Drag the **connection line** to the **parent table** and **column**.
-  * Right click, select **Add link from** > **parent table** > **column**.
-
-## How Can I Link a Parent Table to a Child Population?
-1. Click the **parent table**.
-2. Connect each **parent column** to the **child population** using one of the following methods:
-  * Click the **child population** header and drag the **connection line** to the **parent table** and **column**.
-  * Right click, select **Add link to** > **child population** > **column**.
-
-</studio>
 
 
-
-**Note:** Link all the Input fields of the selected Table Population object to one parent table. A Table Population object cannot be linked to several parent tables. 
-
-
-
-## How Can I Delete Table Population Links?
+## Delete Table Population Links
 
 <studio>Either click on the link and press the **Delete** key or right-click and select **Delete**</studio>.
 <web>Click on the link and press the **Delete** key</web>
+
+
+
+
 
 
 

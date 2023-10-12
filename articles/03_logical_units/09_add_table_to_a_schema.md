@@ -67,28 +67,39 @@ While using one of the first two methods, the tables are also created in Fabric 
 
 2. From the **Project Explorer**, open your Logical Unit > Schema and on the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window top bar, click the <img src="images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window, where you can choose one of three options:
 
-   * Choose from list
    * Create New from source with SQL query
+   
    * Create New manually
+   
+   * Choose from list
+   
+     
 
-
-#### Choose From List
-
-Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
-![add table select from list](images/web/9_add_new_table.PNG)
-
-
-#### Create New from Source with SQL Query
-
-Name the table and click on Create. Query Builder popup window appears.
-
-In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
+<div style="margin-left: 40px;"> 
+<b>Create New from Source with SQL Query</b><br/>
+<ol>
+<li>Name the table and click on Create. Query Builder popup window appears.</li>
+<li>In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.</li>
 
 ![QB popup](images/web/01_QB_WEB_popup2.png)
 
-Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
+<li>Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.</li>
+
+</ol>    
+
+
 
 ![QB popup](images/web/01_QB_WEB_popup3.png)
+
+#### 
+
+
+</div>
+
+Choose From List
+
+Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
+![add table select from list](images/web/9_add_new_table.PNG)
 
 #### Create New Manually
 

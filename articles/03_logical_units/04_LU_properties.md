@@ -1,8 +1,8 @@
+# Logical Unit Properties
+
+The Properties tab in the LU schema window side panel contains the following properties:
+
 <studio>
-
-# LU Properties
-
-The Properties tab in the LU schema window contains the following properties:
 
 <table style="width: 900px;">
 <tbody>
@@ -66,11 +66,45 @@ The Properties tab in the LU schema window contains the following properties:
 </tr>
 </tbody>
 </table>
+</studio>
 
+<web>
+
+<table style="width: 900px;">
+<tbody>
+<tr>
+<td width="170pxl">
+<p><strong>Sync</strong></p>
+</td>
+<td width="630pxl">
+<p>Sets the <a href="/articles/14_sync_LU_instance/08_sync_timeout.md">sync timeout</a> and <a href="/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
+<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered following a Sync's success or failure or following a successful Delete instance.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Misc</strong></p>
+</td>
+<td>
+<p>Contains various settings such as <a href="/articles/32_LU_storage/01_LU_storage_overview.md#storage-types">storage</a>, <a href="/articles/32_LU_storage/02_storage_management.md#changing-the-location-of-the-cache">cache location</a> and Enable data encryption.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 119px;">
+<p><strong><a href="15_LU_schema_edit_reference_tab.md">Dependent References</a></strong></p>
+</td>
+<td style="width: 414px;">
+<p>Used to configure the Reference Tables that are accessible from this LU.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</web>
 
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
 
-</studio>
+
 
 
 
