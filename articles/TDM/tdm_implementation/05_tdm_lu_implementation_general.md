@@ -73,7 +73,7 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
    - **TARGET_ENVIRONMENT** - populated with the target environment name. 
 
 
-3. Additional flow's input parameters:
+3. Additional **flow input parameters**:
 
    - Set the  **CREATE_DELETE_TABLES** input parameter to **true** in order to create and add the target tables to the LU.
 
