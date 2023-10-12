@@ -79,7 +79,7 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
 
    - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create data generation flows for the LU.
 
-   See an example of the TDMLUInit flow's input parameters:
+   Below is an example of the TDMLUInit flow's input parameters:
 
   ![TDMLUInit](images/TDMLUInit_input_parameters.png)
 
