@@ -34,7 +34,7 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
 ### II. Run the TDMLUInit Flow
 
-The **TDMLUInit** flow runs **one-time** on the LU to add the TDM tables to an existing LU schema **after adding the source LU tables** to it. The flow edits the LU as follows:
+After building the LU schema with the source LU tables, the **TDMLUInit** flow runs on the LU **one time** in order to add the TDM tables to this LU schema as well. The flow edits the LU as follows:
 
 - It adds the TDM tables to the LU schema.
 
