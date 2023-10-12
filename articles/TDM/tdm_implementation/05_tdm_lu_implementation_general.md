@@ -176,7 +176,7 @@ Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/
 
 Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
-Click for more information about [deleting entities](/articles/TDM/tdm_gui/14_task_overview.md#task-types) from a target environment using a TDM task.
+Click for more information about [deleting entities](/articles/TDM/tdm_gui/14_task_overview.md#task-types) from a target environment, using a TDM task.
 
 ## LU Debug
 
