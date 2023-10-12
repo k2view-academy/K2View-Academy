@@ -9,7 +9,7 @@ Fabric 7.2 has just been released and it includes the following:
   * The LU Schema creation and Masking based on the Catalog's classifications.
   
 * Project versioning including version tagging in Studio, deployment of tagged version to server and assessment.
-* Supporting additional Fabric System Databases (such as SQLite and Postgres), MDB Export & Import, major performance improvements and optimizations in Broadway and more...
+* Supporting additional Fabric System databases (such as SQLite and Postgres), MDB Export & Import, major performance improvements and optimizations in Broadway and more...
 
 See the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Release_Notes_V7.2.0.pdf.html) and [Upgrade Procedure to 7.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Upgrade_Procedure_To_V7.2.pdf.html) for the full list of features and fixes.
 
