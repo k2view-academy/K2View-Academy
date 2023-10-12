@@ -139,7 +139,7 @@ For a better performance, set the **TDM_SEQ_REPORT** Global to **false** to prev
 
 In order to create the load and delete flows, run either:
 
-I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow.  Note that this flow is designed to run  one-time when creating an LU and it also adds the TDM tables to the LU. If the LU already has the TDM tables, it is recommended to run the **createAllFromTemplates ** flow (see the next bullet) to add the target tables to the LU.
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Note that this flow is designed to run one time when creating an LU and it also adds the TDM tables to the LU. If the LU already has the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the next bullet) to add the target tables to the LU.
 
 II. **createAllFromTemplates** flow.  This flow creates the following:
 
