@@ -112,7 +112,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 In order to create the data generation flows, run either:
 
-I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run  one-time when creating an LU and it also adds the TDM tables to the LU. If the LU already has the TDM tables, it is recommended to run the **createAllFromTemplates ** flow (see the next bullet) to add the target tables to the LU.
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the next bullet) to add the target tables to the LU.
 
 II. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows). Set the **CREATE_GENERATE_FLOWS** input parameter to **true**.
 
