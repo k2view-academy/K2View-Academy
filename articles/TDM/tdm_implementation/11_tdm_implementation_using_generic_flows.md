@@ -84,7 +84,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
 
-II. Run the [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, add add the TDM setup to the input LU.
+II. Run the [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
 
 III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
 
