@@ -36,16 +36,16 @@ Note that **the LU_PARAMS table must be added to the LU schema although it is no
 
 The **TDMLUInit** flow runs **one-time** on the LU to add the TDM tables to an existing LU schema **after adding the source LU tables** to it. The flow edits the LU as follows:
 
-- Adds the TDM tables to the LU schema.
+- It adds the TDM tables to the LU schema.
 
-- Sets the FABRIC_TDM_ROOT LU table to be the root LU table and links it to the main source LU table. 
+- It sets the FABRIC_TDM_ROOT LU table to be the root LU table and links it to the main source LU table. 
 
-- Recreates the LU population of the main source LU table.
+- It recreates the LU population of the main source LU table.
 
   Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
 
-- Creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and data generation flows.
-- Creates the delete and load flows.
+- It creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and data generation flows.
+- It creates the delete and load flows.
 - **Optional updates**:
   - Creating and adding the target tables to the LU to support the [delete entities implementation](08_tdm_implement_delete_of_entities.md).
   - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [Generate tasks](/articles/TDM/tdm_gui/16a_generate_task.md).  
