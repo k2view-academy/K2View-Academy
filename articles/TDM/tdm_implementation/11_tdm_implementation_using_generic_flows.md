@@ -131,7 +131,7 @@ Click for more information about [customizing the replace sequence logic](/artic
 
 ### Set the Sequence Report Global
 
-A new Global has been added to the Shared Globals in TDM 8.1: **TDM_SEQ_REPORT**. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and generates the **Replace Sequence Summary Report** tab in the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report). 
+A new Global has been added to the Shared Globals in TDM 8.1 - **TDM_SEQ_REPORT**. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
 For a better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report**. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT as **false**.
 
