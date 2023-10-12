@@ -61,59 +61,61 @@ While using one of the first three methods, the tables are also created in Fabri
 
 <web>
 
-While using one of the first two methods, the tables are also created in Fabric LU and then added to the schema. The last one enables adding an existing LU table, which is not in use in the schema.
-
 1. From the **DB Interface Explorer**, click on the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon from the Activity panel on the left as described [here](/articles/03_logical_units/05_create_a_new_LU_object.md). This option is useful when you wish to add tables from data sources.
 
 2. From the **Project Explorer**, open your Logical Unit > Schema and on the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window top bar, click the <img src="images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window, where you can choose one of three options:
 
    * Create New from source with SQL query
-   
+
    * Create New manually
-   
+
    * Choose from list
-   
+
      
 
-<div style="margin-left: 40px;"> 
-<b>Create New from Source with SQL Query</b><br/>
-<ol>
-<li>Name the table and click on Create. Query Builder popup window appears.</li>
-<li>In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.</li>
+   **Create New from Source with SQL Query**
 
-![QB popup](images/web/01_QB_WEB_popup2.png)
+   1. Name the table and click on Create. Query Builder popup window appears.
 
-<li>Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.</li>
+   2. In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
 
-</ol>    
-
-
-
-![QB popup](images/web/01_QB_WEB_popup3.png)
-
-#### 
-
-
-</div>
-
-Choose From List
-
-Select the table from the list of tables. The drop-down menu displays the existing tables in the LU that are not a part of the schema.
-![add table select from list](images/web/9_add_new_table.PNG)
-
-#### Create New Manually
-
-Name the table and click on **Create**. A new empty table popup window appears.
-
-Define and populate the table's columns: 
-
-* When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
-* Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
-
-![QB popup](images/web/01_QB_WEB_popup4_manual.png)
-
-The table is automatically created (unless already exists and just added to the schema) with the [population](/articles/07_table_population/14_table_population_based_Broadway.md) and is added to the LU schema.
-
+      ![QB popup](images/web/01_QB_WEB_popup2.png)
+      
+   3. Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
+      
+   
+      ![QB popup](images/web/01_QB_WEB_popup3.png)
+   
+   
+   
+   **Create New Manually**
+   
+   1. Name the table and click on **Create**. A new empty table popup window appears.
+   
+   2. Define and populate the table's columns: 
+   
+      - When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
+   
+      - Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
+   
+        ![QB popup](images/web/01_QB_WEB_popup4_manual.png)
+   
+        
+   
+    In this 2 options, the table is automatically created with the [population](/articles/07_table_population/14_table_population_based_Broadway.md) and is added to the LU schema.
+   
+   
+   
+   **Choose From List**
+   
+   Select the table from the list of tables. 
+   
+   While using one of the first two methods, the tables are also created in Fabric LU and then added to the schema. This option enables adding an existing LU table, which is not in use in the schema.
+   
+   ![add table select from list](images/web/9_add_new_table.PNG)
+   
+   
+   
    
 
 [![Previous](/articles/images/Previous.png)](05_create_a_new_LU_objectmd)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_delete_table_from_a_schema.md)
