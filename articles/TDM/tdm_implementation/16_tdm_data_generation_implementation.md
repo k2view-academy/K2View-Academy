@@ -61,7 +61,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
        ```
        [lu name]_[lu table name]_number_of_records
        ```
-         
+       
        For example: crm_address_number_of_records. 
        
        The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each.
@@ -109,19 +109,30 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 
 #### 2. Generate the data generation flows for the LU table
+
+In order to create the data generation flows, run either:
+
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run  one-time when creating an LU and it also adds the TDM tables to the LU. If the LU already has the TDM tables, it is recommended to run the **createAllFromTemplates ** flow (see the next bullet) to add the target tables to the LU.
+
+II. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows). Set the **CREATE_GENERATE_FLOWS** input parameter to **true**.
+
+III. **createGenerateDataTableFlows** flow:
+
 - Deploy both the **LU**, for which you need to generate the data generation flows, and the **TDM LU** to Fabric debug server.
+
 - Open the **createGenerateDataTableFlows** flow imported from the TDM library.
+
 - Populate the **LU_NAME** and **OVERRIDE_EXISTING_FLOWS** input parameters. 
+
 - Run the flow to create the data generation flows for the LU tables, except for the tables populated in the [TDMFilterOutTargetTables](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-filter-out), whose **generator_filterout** checkbox is checked (true). The data generation flows are automatically created in the **GeneratorFlows** subdirectory, under the Broadway directory of the LU.
-- Note that you can also run the [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) to generate the data generation flows together with the target LU tables and the load and delete flows for the LU.
+
+  
 
 The following data generation flows are created for each LU table:
 
 1. Data generation flow. This flow has the following naming convention:  `${population name}.generator` .
 
     Example: contract.pop.generator
-
-
 
 2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their types. This inner flow is called when Fabric catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
 
@@ -275,7 +286,7 @@ There are several optional modes for the data generation inner flow:
 - **Row by row** - this is the recommended approach and it is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
 Note that you can edit the data generation flow to be executed in different modes if needed: 
-  
+
 - **Rows per parent** - generate all records for each input parent ID. For example, generating 2-5 open cases and 1-6 close cases per each parent activity ID requires using the 'rows per parent' mode.
 - **Handle all parent rows** - generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
 

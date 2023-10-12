@@ -44,6 +44,7 @@ The **TDMLUInit** flow runs **one-time** on the LU to add the TDM tables to an e
 
   Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
 
+- Creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and and data generation flows.
 - Creates the delete and load flows.
 - **Optional updates**:
   - Creating and adding the target tables to the LU to support the [delete entities implementation](08_tdm_implement_delete_of_entities.md).

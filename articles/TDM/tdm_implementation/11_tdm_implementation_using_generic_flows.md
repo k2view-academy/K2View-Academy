@@ -84,7 +84,9 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
 
-II. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs  and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
+II. Run the [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, add add the TDM setup to the input LU.
+
+III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs  and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
 
 Each generated sequence Actor includes a flow that invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
 
@@ -135,9 +137,13 @@ Set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_
 
 ## Step 3 - Create, Load and Delete Flows
 
-- In this step you will run the **createAllFromTemplates** from the Shared Objects Broadway folder. This flow creates the following:
+In order to create the load and delete flows, run either:
 
-  1. Creates and adds the [delete entity's target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) to the LU, if needed.
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow.  Note that this flow is designed to run  one-time when creating an LU and it also adds the TDM tables to the LU. If the LU already has the TDM tables, it is recommended to run the **createAllFromTemplates ** flow (see the next bullet) to add the target tables to the LU.
+
+II. **createAllFromTemplates** flow.  This flow creates the following:
+
+- 1. Creates and adds the [delete entity's target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) to the LU, if needed.
 
   2. Creates and adds the [data generation flows](16_tdm_data_generation_implementation.md) to the LU tables, if needed.
 
