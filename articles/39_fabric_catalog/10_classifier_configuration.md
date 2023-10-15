@@ -55,7 +55,10 @@ Click to get more details about the [Catalog masking mechanism](09_build_artifac
 
 ### Configuration Save
 
-Once the Save button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree. As a result, the updated configuration MTables can be committed to your Project.
+Once the Save button is clicked, the following MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree:
+
+* The Regex setup tab updates the **metadata_profiling** and **data_profiling** MTables.
+* The PII & Masking setup tab updates the **pii_profiling** and **catalog_classification_generators** MTables.
 
 
 
