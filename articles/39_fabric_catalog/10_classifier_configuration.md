@@ -1,29 +1,32 @@
 # Classifier Configuration
 
-The Classifier Configuration screen includes the following tabs that provide various configuration capabilities for the Catalog.
+The purpose of the Classifier Configuration screen is to setup the rules used by the [Catalog plugins](04_plugin_framework.md#built-in-plugins) and the [Catalog Masking actors](11_catalog_masking.md). The Catalog includes a set of built-in rules defined on the product level. These rules can be updated to fit the project's needs. 
+
+It includes the following tabs:
 
 ### Regex Setup
 
-The **Regex Setup** tab allows to view and update the profiling regular expression rules that are used by the Profiling built-in plugins (click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins). 
+The **Regex Setup** tab allows to view and update the profiling regular expression rules that are used by the Profiling built-in plugins: *Data Regex Classifier* and *Metadata Regex Classifier*. 
 
 <img src="images/classifier.png" style="zoom: 67%;" />
 
-* **Type** can be either Field Name or Field Value:
+The columns of the tab are:
 
+* **Classification** defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
+
+* **Type** can be either **Field Name** or **Field Value**:
   * The entries defined with the **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * The entries defined with the **Field Value** type are used by the *Data Regex Classifier* plugin.
-
-* **Regular Expression** displays the expression applied on the field, either its name or its value, depending on the **Type**.
-
+* **Regular Expression** defines the expression applied on the field, either its name or its value, depending on the **Type**.
 * **Score** defines the confidence level that the current rule is true. 
 
-* Each **Classification** can have several definitions in this tab, with the same or different types.
+Each **Classification** can have several definitions, with the same or different types.
 
-* When a match is found, a new property Classification is created in the Catalog for a field that match the above rules. The property's value is **Classification** that matched the regular expression. 
+You can edit the existing records or add the new records using this screen. The Classification value can be either new or selected from the list.
 
-* If a match is found for more than one expression, the property is created with the Classification that has the highest score.
+Once the Save button is clicked, the **metadata_profiling**  and **data_profiling** MTables are updated in the Fabric's memory and also in the Project tree.  
 
-  <img src="images/field_classification.png" style="zoom: 67%;" />
+Click [here](04_plugin_framework.md#built-in-plugins) to get more details about these plugins. 
 
 ### PII & Masking Setup
 
