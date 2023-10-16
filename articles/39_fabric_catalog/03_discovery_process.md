@@ -8,21 +8,23 @@ The K2view Discovery process is depicted in the below diagram and it includes th
 * The first step of the Discovery job is a Crawler. It scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 * Next, a Plugin Framework is triggered automatically upon completion of the Crawler's process. The Plugin Framework is a platform for executing predefined rules (plugins) to run on the Catalog schema and to enhance it accordingly. Examples of plugins are: 
   * Creating a relation between 2 objects, based on field names matching rules.
-  * Classification of fields based on their data and/or metadata (field name) - as email, phone, etc.
-  * Determining whether a field holds sensitive data, in which case it should be marked as PII.
+  * Classification of fields based on their data and/or metadata (field value and field name) - as email, phone, social security number, etc.
+  * Determining whether a field should be marked as PII.
 
 
 * Upon completion of the Plugin Framework execution, the Catalog schema is saved into the *neo4j* Graph DB and it can be viewed via the Catalog application.
 
 The Catalog supports the following actions:
 
+- Versioning - a new version is created when the Discovery job identifies changes in a data source while comparing with the previous Catalog version. By default, the Catalog application displays the latest version.
+- Manual overrides - editing of the Catalog's latest version is available in the Catalog application, and it includes updating of the Catalog nodes' properties and editing of the relations between the nodes.
+- The Catalog artifact (including the identified classifications and PII indications) can be built and saved into the Project tree, in order to be used by the Catalog Masking mechanism. 
 
-* Versioning - a new version is created when the Discovery job identifies changes in a data source while comparing with the previous Catalog version. By default, the Catalog application displays the latest version.
-* Manual overrides - editing of the Catalog is available in the Catalog application, and it includes updating of the Catalog nodes' properties and editing of the relations between the nodes.
-* The Catalog artifact (including the identified classifications and PII indications) can be built and saved into the Project tree, in order to be used by the Catalog Masking mechanism. 
-* Once the process has been completed, the Logical Unit schema can be created based on the Catalog's version.
+Once the process has been completed, the Logical Unit schema can be created based on the Catalog's version. In addition, the data can be masked during the sync process by using the Catalog Masking actors. 
 
 ![](images/DiscoveryE2E.png)
+
+Further articles of this section provide more information about every step of the Discovery process, the details regarding the Catalog application and the exposed APIs. 
 
 
 
