@@ -4,9 +4,9 @@
 
 The Catalog supports **versioning**, which is the ability to create a new Catalog version in the  *neo4j* Graph DB every time the Discovery process runs and finds differences when comparing with the previous version.
 
-Then, using the Catalog application, a user can view each version separately or check the differences between 2 selected versions, as described below.
+A user can view each version separately or check the differences between 2 selected versions using the Catalog application, as described below.
 
-Note that if the Discovery process doesn't identify any changes in the data source or in the plugins' settings, it doesn't create a new Catalog version.
+Note that if the Discovery process doesn't identify any changes in the data source or in the plugins' rules, it doesn't create a new Catalog version.
 
 Additional trigger for a version creation is a manual edit of the Catalog. 
 
@@ -32,7 +32,7 @@ To compare 2 versions, click the comparison <img src="images/compare.png" style=
 
 When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the comparison icon in the Catalog's legend:
 
-<img src="images/view_diff_only.png" style="zoom:67%;" />
+<img src="images/data_platform_diff.gif"  />
 
 To return to a regular view mode, open the version's drop-down list again and click a version number.
 
