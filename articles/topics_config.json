@@ -1,352 +1,352 @@
 {
-	"Branches": [
-		{
-			"display name": "eyal",
-			"branch name": "Academy_7.2_eyal",
-			"build": true
-		}
-	],
-	"Views": [
-		{
-			"view name": "studio",
-			"tooltip": "Desktop-Studio",
-			"default": true,
-			"enabled": true,
-			"icon on": "images/icon_studio_on.png",
-			"icon off": "images/icon_studio_off.png"
-		},
-		{
-			"view name": "web",
-			"tooltip": "Web-Studio",
-			"default": false,
-			"enabled": true,
-			"icon on": "images/icon_web_on.png",
-			"icon off": "images/icon_web_off.png"
-		}
-	],
-	"Groups": [
-		{
-			"group display name": "Fabric Overview & Architecture",
-			"group icon": "images/icon-1.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Fabric Overview",
-					"value": "01_fabric_overview"
-				},
-				{
-					"display name": "Fabric Architecture",
-					"value": "02_fabric_architecture"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Implementation",
-			"group icon": "images/icon-2.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Logical Units",
-					"value": "03_logical_units"
-				},
-				{
-					"display name": "Fabric Studio",
-					"value": "04_fabric_studio"
-				},
-				{
-					"display name": "LU Tables",
-					"value": "06_LU_tables"
-				},
-				{
-					"display name": "LU Tables Population",
-					"value": "07_table_population"
-				},
-				{
-					"display name": "Globals",
-					"value": "08_globals"
-				},
-				{
-					"display name": "Translations and MTables",
-					"value": "09_translations"
-				},
-				{
-					"display name": "Enrichment Functions",
-					"value": "10_enrichment_function"
-				},
-				{
-					"display name": "Query Builder",
-					"value": "11_query_builder"
-				},
-				{
-					"display name": "LU Navigation",
-					"value": "12_LU_navigation"
-				},
-				{
-					"display name": "LUDB Viewer and Debug",
-					"value": "13_LUDB_viewer_and_studio_debug_capabilities"
-				},
-				{
-					"display name": "Sync LU Instance",
-					"value": "14_sync_LU_instance"
-				},
-				{
-					"display name": "Fabric Deployment",
-					"value": "16_deploy_fabric"
-				},
-				{
-					"display name": "Broadway",
-					"value": "19_Broadway"
-				},
-				{
-					"display name": "Graphit",
-					"value": "15_web_services_and_graphit/17_Graphit"
-				},
-				{
-					"display name": "Jobs and Batch Services",
-					"value": "20_jobs_and_batch_services"
-				},
-				{
-					"display name": "Common DB",
-					"value": "22_reference(commonDB)_tables"
-				},
-				{
-					"display name": "Templates",
-					"value": "35_templates"
-				}
-			]
-		},
-		{
-			"group display name": "Test Data Management (TDM)",
-			"group icon": "images/icon-3.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "TDM Overview",
-					"value": "TDM/tdm_overview"
-				},
-				{
-					"display name": "TDM Portal",
-					"value": "TDM/tdm_gui"
-				},
-				{
-					"display name": "TDM Implementation",
-					"value": "TDM/tdm_implementation"
-				},
-				{
-					"display name": "TDM Configuration",
-					"value": "TDM/tdm_configuration"
-				},
-				{
-					"display name": "TDM Architecture",
-					"value": "TDM/tdm_architecture"
-				}
-			]
-		},
-		{
-			"group display name": "Data Privacy Management (DPM)",
-			"group icon": "images/icon-4.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "DPM Overview",
-					"value": "DPM/01_DPM_Overview"
-				},
-				{
-					"display name": "Administrator Module",
-					"value": "DPM/02_Admin_Module"
-				},
-				{
-					"display name": "Representantive User Interface",
-					"value": "DPM/03_Representantive_User_Interface"
-				},
-				{
-					"display name": "Customer Direct Requests",
-					"value": "DPM/04_Customer_Direct_Requests"
-				},
-				{
-					"display name": "Steward User Interface",
-					"value": "DPM/05_Steward_User_Interface"
-				},
-				{
-					"display name": "Case Owner User Interface",
-					"value": "DPM/06_Case_Owner_User_Interface"
-				},
-				{
-					"display name": "Supervisor User Interface",
-					"value": "DPM/07_Supervisor_User_Interface"
-				},
-				{
-					"display name": "Consent Management",
-					"value": "DPM/08_Consent_Management"
-				}
-			]
-		},
-		{
-			"group display name": "Security, Audit and Hardening",
-			"group icon": "images/icon-5.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Credentials",
-					"value": "17_fabric_credentials"
-				},
-				{
-					"display name": "Security",
-					"value": "26_fabric_security"
-				},
-				{
-					"display name": "Auditing",
-					"value": "27_auditing"
-				},
-				{
-					"display name": "Fabric Infrastructure",
-					"value": "99_fabric_infras"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Connectivity to External World",
-			"group icon": "images/icon-6.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "DB Interfaces",
-					"value": "05_DB_interfaces"
-				},
-				{
-					"display name": "Non-DB Interfaces",
-					"value": "24_non_DB_interfaces"
-				},
-				{
-					"display name": "Web Services",
-					"value": "15_web_services_and_graphit"
-				},
-				{
-					"display name": "Fabric Change Data Capture",
-					"value": "18_fabric_cdc"
-				},
-				{
-					"display name": "External Resources",
-					"value": "31_external_resources"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Web Framework Apps",
-			"group icon": "images/icon-7.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Web Framework",
-					"value": "30_web_framework"
-				},
-				{
-					"display name": "Fabric Catalog",
-					"value": "39_fabric_catalog"
-				},
-				{
-					"display name": "Data Explorer",
-					"value": "36_data_editor"
-				},
-				{
-					"display name": "Reports",
-					"value": "38_reports"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Advanced Configuration",
-			"group icon": "images/icon-8.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Troubleshooting",
-					"value": "21_Fabric_troubleshooting"
-				},
-				{
-					"display name": "Transactions Management",
-					"value": "23_fabric_transactions"
-				},
-				{
-					"display name": "Environments",
-					"value": "25_environments"
-				},
-				{
-					"display name": "Cassandra Loader",
-					"value": "28_cassandra_loader"
-				},
-				{
-					"display name": "Tracing",
-					"value": "29_tracing"
-				},
-				{
-					"display name": "LU Storage",
-					"value": "32_LU_storage"
-				},
-				{
-					"display name": "JMX Statistics",
-					"value": "34_JMX_statistics"
-				}
-			]
-		}
-	],
-	"KB": [
-		{
-			"KB display name": "Release Notes and Upgrade",
-			"KB display text": "The release notes including the latest release features & fixes, and the upgrade procedure documents.",
-			"KB icon": "images/icon-release.png",
-			"link":"https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Upgrade_Procedure_To_V7.2.pdf.html"
-			"visible": true
-		},
-		{
-			"KB display name": "Demo Projects",
-			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM including the setup guidelines.",
-			"KB icon": "images/icon-demo.png",
-			"link":"https://support.k2view.com/Academy/articles/demo_project/README.html"
-			"visible": true
-		},
-		{
-			"KB display name": "Maintenance & Operational",
-			"KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
-			"KB icon": "images/icon-maintenance.png",
-			"link":"https://support.k2view.com/Academy/articles/98_maintenance_and_operational/README.html"
-			"visible": true
-		},
-		{
-			"KB display name": "Best Practices",
-			"KB display text": "Recommended tools, best practices and implementation examples. Tips & tricks for working with Fabric.",
-			"KB icon": "images/icon-best.png",
-			"link":"https://support.k2view.com/Academy/articles/COE/README.html"
-			"visible": true
-		}
-	],
-	"Community": [
-		{
-			"comm display name": "Webinars",
-			"comm display text": "Registration for K2View webinars and seminars including the recording and past webinars materials.",
-			"comm icon": "../community/webinars/images/webinar_icon.png",
-			"visible": true,
-			"path": "../community/webinars",
-			"view all link": "../community/webinars/README.html",
-			"view all text": "Click to view all the Webinars"
-		},
-		{
-			"comm display name": "Spotlight",
-			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
-			"comm icon": "../community/spotlight/images/spotlight.png",
-			"visible": true,
-			"path": "../community/spotlight",
-			"view all link": "../community/spotlight/README.html",
-			"view all text": "Click to view all the Spotlights"
-		},
-		{
-			"comm display name": "Q&A",
-			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
-			"comm icon": "../community/q_a/images/q_a_icon.png",
-			"visible": true,
-			"path": "../community/q_a",
-			"view all link": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed",
-			"view all text": "Click to view all Q&A"
-		}
-	]
+    "Branches": [
+        {
+            "display name": "eyal",
+            "branch name": "Academy_7.2_eyal",
+            "build": true
+        }
+    ],
+    "Views": [
+        {
+            "view name": "studio",
+            "tooltip": "Desktop-Studio",
+            "default": true,
+            "enabled": true,
+            "icon on": "images/icon_studio_on.png",
+            "icon off": "images/icon_studio_off.png"
+        },
+        {
+            "view name": "web",
+            "tooltip": "Web-Studio",
+            "default": false,
+            "enabled": true,
+            "icon on": "images/icon_web_on.png",
+            "icon off": "images/icon_web_off.png"
+        }
+    ],
+    "Groups": [
+        {
+            "group display name": "Fabric Overview & Architecture",
+            "group icon": "images/icon-1.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "Fabric Overview",
+                    "value": "01_fabric_overview"
+                },
+                {
+                    "display name": "Fabric Architecture",
+                    "value": "02_fabric_architecture"
+                }
+            ]
+        },
+        {
+            "group display name": "Fabric Implementation",
+            "group icon": "images/icon-2.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "Logical Units",
+                    "value": "03_logical_units"
+                },
+                {
+                    "display name": "Fabric Studio",
+                    "value": "04_fabric_studio"
+                },
+                {
+                    "display name": "LU Tables",
+                    "value": "06_LU_tables"
+                },
+                {
+                    "display name": "LU Tables Population",
+                    "value": "07_table_population"
+                },
+                {
+                    "display name": "Globals",
+                    "value": "08_globals"
+                },
+                {
+                    "display name": "Translations and MTables",
+                    "value": "09_translations"
+                },
+                {
+                    "display name": "Enrichment Functions",
+                    "value": "10_enrichment_function"
+                },
+                {
+                    "display name": "Query Builder",
+                    "value": "11_query_builder"
+                },
+                {
+                    "display name": "LU Navigation",
+                    "value": "12_LU_navigation"
+                },
+                {
+                    "display name": "LUDB Viewer and Debug",
+                    "value": "13_LUDB_viewer_and_studio_debug_capabilities"
+                },
+                {
+                    "display name": "Sync LU Instance",
+                    "value": "14_sync_LU_instance"
+                },
+                {
+                    "display name": "Fabric Deployment",
+                    "value": "16_deploy_fabric"
+                },
+                {
+                    "display name": "Broadway",
+                    "value": "19_Broadway"
+                },
+                {
+                    "display name": "Graphit",
+                    "value": "15_web_services_and_graphit/17_Graphit"
+                },
+                {
+                    "display name": "Jobs and Batch Services",
+                    "value": "20_jobs_and_batch_services"
+                },
+                {
+                    "display name": "Common DB",
+                    "value": "22_reference(commonDB)_tables"
+                },
+                {
+                    "display name": "Templates",
+                    "value": "35_templates"
+                }
+            ]
+        },
+        {
+            "group display name": "Test Data Management (TDM)",
+            "group icon": "images/icon-3.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "TDM Overview",
+                    "value": "TDM/tdm_overview"
+                },
+                {
+                    "display name": "TDM Portal",
+                    "value": "TDM/tdm_gui"
+                },
+                {
+                    "display name": "TDM Implementation",
+                    "value": "TDM/tdm_implementation"
+                },
+                {
+                    "display name": "TDM Configuration",
+                    "value": "TDM/tdm_configuration"
+                },
+                {
+                    "display name": "TDM Architecture",
+                    "value": "TDM/tdm_architecture"
+                }
+            ]
+        },
+        {
+            "group display name": "Data Privacy Management (DPM)",
+            "group icon": "images/icon-4.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "DPM Overview",
+                    "value": "DPM/01_DPM_Overview"
+                },
+                {
+                    "display name": "Administrator Module",
+                    "value": "DPM/02_Admin_Module"
+                },
+                {
+                    "display name": "Representantive User Interface",
+                    "value": "DPM/03_Representantive_User_Interface"
+                },
+                {
+                    "display name": "Customer Direct Requests",
+                    "value": "DPM/04_Customer_Direct_Requests"
+                },
+                {
+                    "display name": "Steward User Interface",
+                    "value": "DPM/05_Steward_User_Interface"
+                },
+                {
+                    "display name": "Case Owner User Interface",
+                    "value": "DPM/06_Case_Owner_User_Interface"
+                },
+                {
+                    "display name": "Supervisor User Interface",
+                    "value": "DPM/07_Supervisor_User_Interface"
+                },
+                {
+                    "display name": "Consent Management",
+                    "value": "DPM/08_Consent_Management"
+                }
+            ]
+        },
+        {
+            "group display name": "Security, Audit and Hardening",
+            "group icon": "images/icon-5.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "Credentials",
+                    "value": "17_fabric_credentials"
+                },
+                {
+                    "display name": "Security",
+                    "value": "26_fabric_security"
+                },
+                {
+                    "display name": "Auditing",
+                    "value": "27_auditing"
+                },
+                {
+                    "display name": "Fabric Infrastructure",
+                    "value": "99_fabric_infras"
+                }
+            ]
+        },
+        {
+            "group display name": "Fabric Connectivity to External World",
+            "group icon": "images/icon-6.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "DB Interfaces",
+                    "value": "05_DB_interfaces"
+                },
+                {
+                    "display name": "Non-DB Interfaces",
+                    "value": "24_non_DB_interfaces"
+                },
+                {
+                    "display name": "Web Services",
+                    "value": "15_web_services_and_graphit"
+                },
+                {
+                    "display name": "Fabric Change Data Capture",
+                    "value": "18_fabric_cdc"
+                },
+                {
+                    "display name": "External Resources",
+                    "value": "31_external_resources"
+                }
+            ]
+        },
+        {
+            "group display name": "Fabric Web Framework Apps",
+            "group icon": "images/icon-7.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "Web Framework",
+                    "value": "30_web_framework"
+                },
+                {
+                    "display name": "Fabric Catalog",
+                    "value": "39_fabric_catalog"
+                },
+                {
+                    "display name": "Data Explorer",
+                    "value": "36_data_editor"
+                },
+                {
+                    "display name": "Reports",
+                    "value": "38_reports"
+                }
+            ]
+        },
+        {
+            "group display name": "Fabric Advanced Configuration",
+            "group icon": "images/icon-8.png",
+            "visible in main": true,
+            "topics": [
+                {
+                    "display name": "Troubleshooting",
+                    "value": "21_Fabric_troubleshooting"
+                },
+                {
+                    "display name": "Transactions Management",
+                    "value": "23_fabric_transactions"
+                },
+                {
+                    "display name": "Environments",
+                    "value": "25_environments"
+                },
+                {
+                    "display name": "Cassandra Loader",
+                    "value": "28_cassandra_loader"
+                },
+                {
+                    "display name": "Tracing",
+                    "value": "29_tracing"
+                },
+                {
+                    "display name": "LU Storage",
+                    "value": "32_LU_storage"
+                },
+                {
+                    "display name": "JMX Statistics",
+                    "value": "34_JMX_statistics"
+                }
+            ]
+        }
+    ],
+    "KB": [
+        {
+            "KB display name": "Release Notes and Upgrade",
+            "KB display text": "The release notes including the latest release features & fixes, and the upgrade procedure documents.",
+            "KB icon": "images/icon-release.png",
+            "link": "https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Upgrade_Procedure_To_V7.2.pdf.html",
+            "visible": true
+        },
+        {
+            "KB display name": "Demo Projects",
+            "KB display text": "Sample demo projects of Data Fabric, TDM and DPM including the setup guidelines.",
+            "KB icon": "images/icon-demo.png",
+            "link": "https://support.k2view.com/Academy/articles/demo_project/README.html",
+            "visible": true
+        },
+        {
+            "KB display name": "Maintenance & Operational",
+            "KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
+            "KB icon": "images/icon-maintenance.png",
+            "link": "https://support.k2view.com/Academy/articles/98_maintenance_and_operational/README.html",
+            "visible": true
+        },
+        {
+            "KB display name": "Best Practices",
+            "KB display text": "Recommended tools, best practices and implementation examples. Tips & tricks for working with Fabric.",
+            "KB icon": "images/icon-best.png",
+            "link": "https://support.k2view.com/Academy/articles/COE/README.html",
+            "visible": true
+        }
+    ],
+    "Community": [
+        {
+            "comm display name": "Webinars",
+            "comm display text": "Registration for K2View webinars and seminars including the recording and past webinars materials.",
+            "comm icon": "../community/webinars/images/webinar_icon.png",
+            "visible": true,
+            "path": "../community/webinars",
+            "view all link": "../community/webinars/README.html",
+            "view all text": "Click to view all the Webinars"
+        },
+        {
+            "comm display name": "Spotlight",
+            "comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
+            "comm icon": "../community/spotlight/images/spotlight.png",
+            "visible": true,
+            "path": "../community/spotlight",
+            "view all link": "../community/spotlight/README.html",
+            "view all text": "Click to view all the Spotlights"
+        },
+        {
+            "comm display name": "Q&A",
+            "comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
+            "comm icon": "../community/q_a/images/q_a_icon.png",
+            "visible": true,
+            "path": "../community/q_a",
+            "view all link": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed",
+            "view all text": "Click to view all Q&A"
+        }
+    ]
 }
