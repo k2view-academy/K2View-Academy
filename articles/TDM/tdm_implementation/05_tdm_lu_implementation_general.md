@@ -54,7 +54,7 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
 
 #### Flow Execution:
 
-1.  Deploy the LU to Fabric debug server before running the flow. 
+1. Verify that the LU schema does not have [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md) and deploy the LU to Fabric debug server before running the flow. 
 
 2. Set the flow's input parameters before executing it:
 
