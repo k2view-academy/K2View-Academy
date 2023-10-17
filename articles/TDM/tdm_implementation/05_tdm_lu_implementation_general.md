@@ -72,7 +72,7 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
      
    - **TARGET_INTERFACE** - populated with the target DB interface name.
      
-   - **TARGET_ENVIRONMENT** - populated with the target environment name. 
+   - **TARGET_ENVIRONMENT** - populated with one of the target environments' names. 
 
 
 3. Additional **flow input parameters**:
