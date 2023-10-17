@@ -166,7 +166,7 @@ The following data generation flows are created for each LU table:
 
 ##### Data Generators
 
-- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows. This needs to be done in later flow stages, after calling the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow.
+- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows. This needs to be done in later flow stages, after the **Prepare Generated Data** stage (after calling the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow).
 
 - The overridden fields must be added to a Map. The Map needs to be sent as the last parameter to the **Merge Maps of all Fields** Actor in the data generation flow.
 
