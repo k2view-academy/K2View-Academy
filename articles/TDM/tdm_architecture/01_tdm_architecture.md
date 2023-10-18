@@ -74,7 +74,7 @@ K2view TDM architecture ensures efficient and quick data transmission between di
 
 ## TDM  - Data Provisioning Flow
 
-In general, data provisioning can be divided into 2 main sections:
+In general, data provisioning is divided into 2 main sections:
 -   Data provisioning requests are created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM Portal and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
     - **What** - a Business Entity to be provisioned such as customer, employee, order, product, source and target environments, subset of entities, and general request parameters like Sync mode.
     - **When** - when a task has to be executed. Execute either by a request or by setting scheduling parameters for periodical task execution.     
