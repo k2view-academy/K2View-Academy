@@ -4,7 +4,7 @@
 
 ### Overview
 
-The Catalog is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** application from the context menu. Upon opening, the application displays the data from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various nodes, searching for nodes, viewing their properties, and more.
+The Catalog application is accessible from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** from the menu. Upon opening, the application displays the data retrieved from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various nodes, searching for nodes, viewing their properties, and more.
 
 This article includes the following sub-sections:
 
@@ -21,7 +21,7 @@ The Catalog's main area enables navigation between different hierarchy levels, b
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
-The Legend presents 3 types of nodes with their respective icons. 
+The Legend presents 3 types of nodes with their respective icons and allows to hide or unhide all the elements of the same type. 
 
 <img src="images/catalog_app.png" style="zoom:75%;" />
 
@@ -29,8 +29,8 @@ The Legend presents 3 types of nodes with their respective icons.
 
 When the Catalog application opens, it displays the latest version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
-* Select another version for viewing via the drop-down list.
-* Click the compare <img src="images/compare.png" style="zoom:75%;" /> icon to perform a versions comparison analysis.  
+* **View** another version by clicking its number in the drop-down list.
+* **Compare** between two versions by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
 
 [Click here for more information about the Catalog Versioning](06_catalog_versioning.md).
 
@@ -95,7 +95,7 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Each element has different properties. For example, a FIELD has properties such as Column Size and Source Data Type - identified by the Crawler, and PII and Classification - identified by the plugins.
+Each element has different properties. For example, a Dataset field has properties such as *column size* and *source data type* - identified by the Crawler, and *PII* and *Classification* - and created by the plugins.
 
 Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name opens the More Info pop-up window that provides more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
@@ -113,7 +113,15 @@ The Catalog application supports deep linking from the Data Platform to the fiel
 /app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
 ~~~
 
-The version should be either the word **latest** or **V** with the version number (e.g., V13).
+The version should be either the word **latest** or **V** with the version number, for example:
+
+~~~
+/app/catalog/latest/CRM_DB/public/customer/customer_id
+~~~
+
+~~~
+/app/catalog/V2/CRM_DB/public/customer/customer_id
+~~~
 
 This link can be shared as it directs other users to a specific in-app location, saving them the time and energy of trying to locate a particular node.
 
