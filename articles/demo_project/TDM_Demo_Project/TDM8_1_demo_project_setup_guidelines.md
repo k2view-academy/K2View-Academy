@@ -1,8 +1,8 @@
-# TDM 8.0 Demo Project - Setup and Implementation Guidelines
+# TDM 8.1 Demo Project - Setup and Implementation Guidelines
 
 ## Databases Setup
 
-The TDM demo project is aligned with TDM 8.0 and is based on PostgreSQL databases:
+The TDM demo project is aligned with TDM 8.1 and is based on PostgreSQL databases:
 
 <table>
 <tr>
@@ -132,15 +132,17 @@ I.
      - Set  **TDM Environment Name** setting to **SRC**.
      - Add the system to this environment.
      - Set the version of the BILLING system to PROD.
-
+     - Check the **Mask Sensitive Data** checkbox.
+   
    - TAR:
-
+   
      - Set  **Environment Type** setting to **Both** to enable running Data Versioning tasks on this environment.
      - Set  **TDM Environment Name** setting to **TAR**.
      - Add the systems (products) to this environment.
      - Set the version of the BILLING system to DEV.
+     - The the Mask Sensitive Data checkbox needs to remain clear.
 
-​    See instructions on how to work with the TDM GUI in the following [link](/articles/TDM/tdm_gui/README.md).
+​    See instructions on how to work with the TDM Portal in the following [link](/articles/TDM/tdm_gui/README.md).
 
 II. 
 
