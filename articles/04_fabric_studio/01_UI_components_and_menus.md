@@ -3,11 +3,12 @@
 ## What Is the Fabric Studio?
 Fabric Studio is a designer tool that manages the construction of [Data Products](/articles/01_fabric_overview/02_fabric_glossary.md#logical-unit--data-product). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
 
-Fabric Studio offers a user-friendly look-and-feel development environment known as the *Implementation Layer*. Each project is initiated and maintained via this platform and working space. 
+Fabric Studio offers a user-friendly look-and-feel development environment, known as the *Implementation Layer*, providing code and low-code tools for ease the impetration process. Each project is initiated and maintained via this platform and working space. 
 
 As an integrated tool, Fabric Studio allows you to:
-* Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
-* Use robust ETL (Extract, Transform, Load) options in order to define the mapping logic for various tables in the LUs. The transformation objects that are used may be [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md) <studio>as well as [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)</studio>.
+* Design [Data Products / Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md) 
+* Use robust ETL (Extract, Transform, Load) options in order to define the population logic for various tables in the LUs. 
+* Define the connectivity to data sources as well as project's APIs to be exposed to your organization apps.
 * Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project into the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
@@ -298,12 +299,12 @@ The Fabric menu which is part of the top menu bar, provides several Fabric and S
 
 The status bar provides an Information and status about the opened project and the files you are editing, as well as enables making actions. 
 
-![status bar](images/web/01-status-bar.png)
+![status bar](images/web/01_statusbar.png)
 
 it is divided into few parts (yet - there is no visual separation between them):
 
-* **GIT** - shows the current GIT branch name, that your space is pointing on. Next to it there is a *Synchronize Changes* action icon that when clicked it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
-* **Problems status** - quick indication of error and warnings in the project's files. When clicked, the *Problems* panel is opened. 
+* **GIT** - shows the current GIT branch name ("main" in the example), that your space is pointing on. Next to it there is a *Synchronize Changes* action icon that when clicked it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
+* **Problems status** - quick indication of few problems levels in the project's files - error, warnings and info )in the example - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel is opened, showing the problems details. 
 * **Project Version** - version is shown if exists. Click [here](/articles/16_deploy_fabric/04_project_versioning.md) for more information about project versions.
 * **Deployment status**. If not all LUs are deployed, then when hovering it shows the undeployed LUS. You can then click on it to deploy them
 
@@ -319,15 +320,8 @@ To select a color theme
 2. Use the cursor keys to preview the colors of the theme.
 3. Select a desired theme and click Enter.
 
-
-
 </web>
 
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/02_window_tab_context_menu.md)
-
-
-
-
-

@@ -110,4 +110,5 @@ When renaming entities, Studio is making for you some of the tasks. For example:
 
 
 
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/24_web_debug.md)
 </web>

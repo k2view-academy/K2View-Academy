@@ -84,4 +84,9 @@ The breadcrumb navigation bar always show the file path. If the current file typ
 
 
 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/02_window_tab_context_menu.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/22_web_search.md)
+
 </web>

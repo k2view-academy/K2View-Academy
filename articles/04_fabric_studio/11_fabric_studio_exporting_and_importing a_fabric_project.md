@@ -4,7 +4,7 @@
 
 Fabric Studio has a proprietary encapsulation functionality that encapsulates an entire project or selected components. Fabric projects can be backed up and restored using the Export and Import options that trigger the encapsulation and decapsulation processes.
 
-### Exporting Selected Project Components
+## Exporting Selected Project Components
 
 There are two Export options:
 * Export an entire project.
@@ -18,7 +18,7 @@ To export a project, do the following:
 1. Right-click on the **Project Group** or on **Object** and then click **Export**. 
 2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file is created with a k2export extension.
 
-### Importing Selected Project Components
+## Importing Selected Project Components
 
 You can import an entire exported project or specific branches of a Project Tree whereby the imported objects are attached to an existing project.
 
@@ -57,7 +57,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
     ![image](images/04_11_03_confirmation_window.PNG)
 
-### Custom Import Process
+## Custom Import Process
 
 1. Right-click on the root of **Project Tree**, click on **Import** and then click **Custom Import**.
 
@@ -97,7 +97,7 @@ When importing objects with the same name and location in the Project Tree, a ye
 
 <web>
 
-### Import / Upload files
+## Import / Upload Files
 
 Importing project files or folders into your project can be done either by:
 
@@ -120,7 +120,18 @@ The upload progress will be displayed at the bottom right corner of the screen:
 
 
 
-### Export / Download 
+## Export / Download Project
+
+To export the whole project:
+
+1. At **Fabric** top menu, choose **Export Project To Zip File...**
+2. Type the name of the target zip file.
+3. The zip file will be generated and located at project's root folder.
+4. Right click to download it.
+
+
+
+## Export / Download Files or Folders
 
 To export files or folders:
 

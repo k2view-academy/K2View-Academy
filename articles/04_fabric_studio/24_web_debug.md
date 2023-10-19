@@ -31,11 +31,11 @@ It consists of:
 ## Breakpoints
 
 Breakpoints can be set and toggled by right-clicking in the **editor margin** the line on which you want to add the breakpoint and selecting "Add Breakpoint". You can optionally add a conditional breakpoint or a logpoint. An additional method for adding a breakpoint is by selecting the line on which you want to add the breakpoint, and pressing `F9`. 
-  
+
 ![Breakpoint box](images/web/breakpoint_box.png)  
-  
+
 Finer breakpoint control (enable/disable/set condition) can be done in the Debug View's **BREAKPOINTS** section.
-  
+
 * Breakpoints in the editor margin are shown as red filled circles.
 * Disabled breakpoints have a filled gray circle.
 * When a debugging session starts, breakpoints that cannot be registered with the debugger change to a gray hollow circle. The same might happen if the source is edited while a debug session without live-edit support is running.
@@ -139,6 +139,13 @@ Another way to start debugging is to right-click a Java file in the File Explore
 #### Shortcuts
 
 Use `F5` to start debugging or `CTRL+F5` to start running without debugging.
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/26_web_basic_editing.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/27_web_productivity_tips.md)
+
+
 
 </web>
 

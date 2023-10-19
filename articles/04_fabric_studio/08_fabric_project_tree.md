@@ -4,7 +4,7 @@ A Fabric project has a tree-like structure. Known as the **Project Tree**, it di
 
 The **Project Tree** is displayed on the left side of the Fabric Studio window.
 
-To initiate an action, right click on a component and select the action. For instance, right clicking on Broadway creates a new flow.
+To initiate an action, right click on a component and select the action. As this is a context menu, then in each component and level, different options will be shown. For instance, right clicking on Broadway offers you createing a new flow or actor. 
 
 <studio>
 
@@ -15,7 +15,7 @@ A current active project in the Studio has its name displayed at the top of the 
 [Click for more information about Creating a New Project.](05_creating_a_new_project.md) 
 
 
-### Project Tree Components
+## Project Tree Components
 
 Each project has the following main components: 
 
@@ -59,8 +59,6 @@ Each project has the following main components:
 
 <web>
 
-<img src="images/web/project_tree.png" />
-
 Initiating an action may be done by any of the following three methods: 
 
 - right-click on the context menu in the Project Tree 
@@ -71,7 +69,7 @@ Initiating an action may be done by any of the following three methods:
 
 - via **View > command Palette...** (top menu bar) 
 
-### Project Tree Components
+## Project Tree Components
 
 Each project has the following main components (under Project > Implementation): 
 
@@ -84,11 +82,13 @@ Each project has the following main components (under Project > Implementation):
   * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * [Custom Interface Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
   * [Java Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) 
-  * Resources, files that can be saved as part of a project. 
+  * Resources, resource files like images and scripts, that can be used as part of a project, in LU level. 
 
 * **lib** - Java library files, required by a project, such as utility JARs or JDBC drivers, that are not provided as part of the product. 
 
-> Note: The *project-resources* folder resides at the project tree is not part of the Fabric project but it is a useful folder you can use at your workspace.
+* **project-resources**, a useful folder where you can locate resources, which shall be used n the project.
+
+<img src="images/web/project_tree.png" />
 
 </web>
 
@@ -165,14 +165,12 @@ The following table lists the recommended project component prefixes conventions
 Note that when using the above prefix conventions, it is also recommended to use meaningful names for the project’s components.
 
 <studio>
-
-[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_adding_fabric_projects_to_version_control.md)
-
+[![Previous](/articles/images/Previous.png)](22_web_search.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_adding_fabric_projects_to_version_control.md)
 </studio>
-
 <web>
-
-[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_web_versioncontrol.md)
 
 </web>
 

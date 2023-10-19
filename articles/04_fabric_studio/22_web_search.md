@@ -1,8 +1,10 @@
 <web>
 
-# Search 
+# Search Across Files
 
-The Fabric Web Studio allows you to quickly search terms and content over all files in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to open the Search box, where you can enter your search term. Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file and see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
+The Fabric Web Studio allows you to quickly search terms and content over all **files** in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to open the Search box, where you can enter your search term. 
+
+Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file and see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
 
 ![search base](images/web/22_1_search.png)
 
@@ -38,5 +40,12 @@ You can also Search and Replace across files. Expand the Search widget to displa
 ![search and replace](images/web/22_2_global_search_replace.png)
 
 You can replace across all files from the Replace text box, replace all in one file or replace a single change. When you type text into the Replace text box, you will see a diff display of the pending changes.
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/21_web_file_explorer_and_navigation.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/08_fabric_project_tree.md)
+
+
 
 </web>
