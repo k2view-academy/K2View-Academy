@@ -4,9 +4,9 @@
 
 ### Overview
 
-The Plugin Framework is an internal platform for running the plugins. Each plugin is a piece of business logic that executes predefined rules in order to complement the Discovery schema. 
+The Plugin Framework is an internal platform for running the plugins. Each plugin is a piece of business logic that executes predefined rules in order to complement the Catalog schema. 
 
-The Plugin Framework is executed by the Discovery job after completion of the Crawler. It runs over the Discovery schema and executes the plugins. Each plugin’s execution results with a change to the Catalog schema, such as creation or removal of Catalog elements. Each plugin calculates a score - a confidence level of a plugin result's accuracy. The score is calculated per each Catalog element.
+The Plugin Framework is executed by the Discovery job after completion of the Crawler. It runs over the Catalog schema and executes the plugins. If the plugin’s rule returns true, it can result with a change to the Catalog schema, such as creation or removal of Catalog elements. Each plugin calculates a score - a confidence level of a plugin result's accuracy. The score is calculated per each Catalog element.
 
 The Data Discovery solution includes a constantly growing list of built-in plugins. The list of active plugins and their execution order is configured using the **plugins.discovery**, as described further in this article.
 
