@@ -2,7 +2,7 @@
 
 We have just released TDM 8.1, which includes the following:
 
-- **Major Performance improvements** on task Parameters handling.
+- **Major Performance Improvements** on Task Parameters handling.
 - **Web-Studio Certified** - shifting from translation tables to MTables.
 - **Simplification of Implementation** - automating the TDM setup for a given LU and enabling a Catalog-based masking and data generation.
 - **Entity clone**, based on business parameters.
