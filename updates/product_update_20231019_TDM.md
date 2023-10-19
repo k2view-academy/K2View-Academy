@@ -3,7 +3,7 @@
 We have just released TDM 8.1, which includes the following:
 
 - **Major Performance improvements** on task Parameters handling.
-- **Web-Studio Certified**: shifting from translation tables to MTables.
+- **Web-Studio Certified** - shifting from translation tables to MTables.
 - **Simplification of implementation**: automating the TDM setup for a given LU and enabling a Catalog-based masking and data generation.
 - **Entity clone**, based on business parameters.
 - **Architecture and Technical upgrade**: alignment with PostgreSQL 15 and supporting PostgreSQL as system DB, no dependency on Cassandra.
