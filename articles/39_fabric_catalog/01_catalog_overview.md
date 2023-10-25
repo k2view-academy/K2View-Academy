@@ -28,7 +28,7 @@ The Logical Unit creation is based on the discovered and enriched data model. Th
 
 The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
-Further articles provide more details about the Discovery process, the Catalog application and the exposed Catalog APIs. 
+Further articles provide more details about the Discovery process, the Catalog application and the exposed APIs. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
 
