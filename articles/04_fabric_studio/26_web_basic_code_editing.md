@@ -9,8 +9,8 @@ Web Studio is a full, professional and comprehensive IDE, Visual Studio Code lik
 Rather than providing such guides, This article takes you through the following core capabilities provided by the Web studio source code editor, helping you get moving with your code:
 
 * Powerful Editing
-* Easy and streamlined Debugging, as explained [here]().
-* In-Product Source Control, as explained [here]()
+* Easy and streamlined Debugging, as explained [here](/articles/04_fabric_studio/24_web_debug.md).
+* In-Product Source Control, as explained [here](/articles/04_fabric_studio/23_web_versioncontrol.md)
 
 
 
@@ -61,15 +61,18 @@ When possible completions are found, the IntelliSense suggestions will pop up as
 
 You can trigger IntelliSense in the the editor by typing Ctrl+Space or by typing a trigger character - the dot character (.) in Java or JavaScript. 
 
-
-
 More detailed explanations and examples can be found [here](https://code.visualstudio.com/docs/editor/intellisense). 
 
 The comprehensive Java language support is done by using Red Hat extension (published both at [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.java) and at [Open VSX](https://open-vsx.org/extension/redhat/java))
 
 
 
->  Note: Similar code completion and behavior, though less contextual, is available also at Query Builder SQL editor, using the [Query Builder Assistance](). 
+> **NOTES**: 
+>
+> * Web studio comes with built-in support for  various programming language like Java, JavaScript, TypeScript, CSS, and HTML. More rich language extensions can be found in [Open VSX Registry](https://open-vsx.org/), which is similar to the VS Code Marketplace.
+> * Similar code completion and behavior, though less contextual, is available also at Query Builder SQL editor, using the Query Builder Assistance. 
+
+
 
 ### Code Snippet Support
 
@@ -100,24 +103,19 @@ Following are Fabric prefixes and snippets:
   * `fabric-code-fabric-fetch` - Adds a code template for fetching data from Fabric DB (including loop).
   * `fabric-code-fabric-execute` - Adds a code template for executing SQL at Fabric DB.
 
+![](images/web/26_fabric_code_snippet.png)
 
 
 
+### Code navigation
 
-WEB APP VITE
-
-Extensions?
-
+Right click on any symbol in your code and see the various options of going to its definitions, its type definitions, references, call hierarchy and so on. You can also use the CTRL key and click on the symbol to go to its definition.
 
 
 
+### Refactoring
 
-> **NOTE**: Web studio comes with built-in support for  various programming language like Java, JavaScript, TypeScript, CSS, and HTML.
->
-> More rich language extensions can be found in [Open VSX Registry](https://open-vsx.org/), which is similar to the VS Code Marketplace.
-
-
-
+[Source code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) can improve the quality and maintainability of your project by restructuring your code while not modifying the runtime behavior. Web Studio, following VS Code, supports refactoring operations such as [Extract Method](https://refactoring.com/catalog/extractMethod.html) and [Extract Variable](https://refactoring.com/catalog/extractVariable.html) to improve your code base from within your editor. read [here](https://code.visualstudio.com/docs/editor/refactoring) more about how to use it.
 
 
 
