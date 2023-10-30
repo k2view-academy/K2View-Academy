@@ -6,7 +6,7 @@
 
 ## Command Palette 
 
-Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` on a Mac or or `Ctrl+Shift+P` in Windows, to bring up the **Command Palette**.
+Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` (`Cmd`+`Shift`+`P`) on Mac or or `Ctrl`+`Shift`+`P` in Windows, to bring up the **Command Palette**.
 
 - Each command appears with its associated shortcut (if one exists). If you forget a keyboard shortcut (also referred to as a "key binding"), use the **Command Palette** to help you out.
 
@@ -18,7 +18,7 @@ Access all available Fabric Web Studio functionality and commands from the top m
 
 ## Keyboard Shortcuts
 
-Following are useful keyboard shortcuts for Mac & Windows ( ⌘ refers to the CMD button on a Mac (CTRL in Windows), and  ⌥ stands for Alt on a Mac (ALT key in Windows)).
+Following are useful keyboard shortcuts for Mac / Windows ( ⌘ refers to the CMD button on Mac, and  ⌥ stands for Alt on Mac).
 
 To open the full list of shortcuts you can either:
 
@@ -71,13 +71,26 @@ Typing filename:line number will lead you to that line in file.</td>
             <td>⇧⌘D / CTRL+Shift+D</td>
             <td>Open Debug View</td>
         </tr>
-        </tbody>
+        <tr>
+            <td>^` / CTRL+`</td>
+            <td>Show/Hide Linux Terminal</td>
+        </tr>
+        <tr>
+            <td>^⇧` / CTRL+Shift+`</td>
+            <td>Create and show another Linux Terminal, if one is already opened</td>
+        </tr>
+</tbody>
     </table>
 
-### Editing & Debug
+
+### Editing and Debugging
 
 <table>
 <tbody style="vertical-align: text-top; ">
+        <tr>
+            <th>Shortcut</th>
+            <th>Description</th>
+        </tr>
 <tr>
             <td>^G / CTRL+G</td>
             <td>Go to a line within a file</td>
@@ -86,8 +99,45 @@ Typing filename:line number will lead you to that line in file.</td>
             <td>⇧⌘K / Ctrl+Shift+K</td>
             <td>Delete a line</td>
         </tr>
+        <tr>
+            <td>⌘K ⌘C / Ctrl+K CTRL+C</td>
+            <td>Comment out selected lines</td>
+        </tr>
+        <tr>
+            <td>⌘K ⌘U / Ctrl+K CTRL+U</td>
+            <td>Uncomment selected lines</td>
+        </tr>
+        <tr>
+            <td>⇧⌘\ &nbsp; / &nbsp; Ctrl+Shift+\</td>
+            <td>Jump to the matching bracket</td>
+        </tr>
+	    <tr>
+            <td>⌥⌘[ / Ctrl+Shift+[ </td>
+            <td>Fold (collapse) region</td>
+        </tr>
+	    <tr>
+            <td>⌥⌘] / Ctrl+Shift+] </td>
+            <td>Unfold (expand) region</td>
+        </tr>
+	    <tr>
+            <td>⌘K ⌘[ / Ctrl+K Ctrl+[ </td>
+            <td>Fold (collapse) all subregions</td>
+        </tr>
+	    <tr>
+            <td>⌘K ⌘] / Ctrl+K Ctrl+] </td>
+            <td>Unfold (expand) all subregions</td>
+        </tr>
+	    <tr>
+            <td>⌘K ⌘0 / Ctrl+K Ctrl+0 </td>
+            <td>Fold (collapse) all regions</td>
+        </tr>
+	    <tr>
+            <td>⌘K ⌘j / Ctrl+K Ctrl+j </td>
+            <td>Unfold (expand) all regions </td>
+</tr>
  </tbody>
 </table>
+
 
 
 ## Save / Auto Save
@@ -107,6 +157,12 @@ When renaming entities, Studio is making for you some of the tasks. For example:
 * When renaming a Data Product/Logical unit, all relevant files under it, like java packages will be automatically updated.
 * When renaming an interface file name, the name, which exists inside the file content will be changed, accordingly, .
 * When renaming a table name, will update its related population flow name.
+
+
+
+## Code Completion (Intelisence) and Code Snippet
+
+Learn [here](/articles/04_fabric_studio/26_web_basic_code_editing.md) about this capability, available when editing your code.
 
 
 

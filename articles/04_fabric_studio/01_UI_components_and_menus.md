@@ -12,11 +12,15 @@ As an integrated tool, Fabric Studio allows you to:
 * Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project into the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
-Additionally, the Fabric Studio enables you to integrate your projects into source version control systems based on either Git <studio>or the Apache Subversion (SVN) standard.
+<studio>
+
+Additionally, the Fabric Studio enables you to integrate your projects into source version control systems based on either Git or the Apache Subversion (SVN) standard.
 
 [Click for more information about Best Practices for Working with GIT and SVN](07_best_practices_for_working_with_GIT_and_SVN.md). </studio>
 
 <web>
+
+Fabric Studio has built in integrwith source version control GIT based systems.
 
 [Click for more information about Best Practices for Working with GIT](23_web_versioncontrol.md).
 
@@ -319,6 +323,16 @@ To select a color theme
 1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) located at the bottom left area of Web Studio.  
 2. Use the cursor keys to preview the colors of the theme.
 3. Select a desired theme and click Enter.
+
+
+
+>**Studio Desktop .Net Compatibility:** 
+>
+>1. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of having a code editor orientation and being a file and folder based.
+>2. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project. Yet, some of the editors are not equals or not exist in each. For example, Translations editor does not exist at Web Studio, while MTables editor does not exists in Desktop studio. Nevertheless, because the same Fabric server is running at backend, all features are supported in runtime, even though an editor is not available.
+>3. In general, Web studio is considered the next generation of k2view Studio and thus most of new features and capabilities are available only there.  
+
+
 
 </web>
 
