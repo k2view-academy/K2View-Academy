@@ -179,12 +179,22 @@ For example:
   To add a parameter:
 
   - Click **Add Condition**. 
+
   - Select the parameter and the operator from the drop-down lists and populate their values. Note that from TDM 8.1 onwards it is possible to select the IN or NOT IN operators on combo parameters and on text parameters.
+
   - Set the value on the parameter. You can set multiple values on a parameter if the selected operator is IN or NOT IN:
     - Combo parameters - click on the value field multiple times and select the required values from the dropdown on each click.
-    - Free text parameters - populate the values separated by a comma. For example: NY, CA.  
+    
+    - Free text parameters - populate the values separated by a comma. For example: NY, CA.
+    
+    - See the example below:
+    
+      ![params example](images/task_parameters_in_operator_example.png)  
+    
   - Add the **AND/OR** operator to connect the parameter to the previous parameters or group.
-The TDM Portal displays the SQL query, which is built based on the selected parameters.
+  The TDM Portal displays the SQL query, which is built based on the selected parameters.
+
+  
 
 #### How Do I Populate a Parameter's Value?
 
