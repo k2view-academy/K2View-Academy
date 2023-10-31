@@ -406,7 +406,7 @@ The customLogicSql flow runs in a **direct call** mode.
 
 **Examples of an input SELECT query**:
 
-1. Populating both - the **sql** and the **sqlParams** parameters: 
+1. Populating both parameters - the **sql** and the **sqlParams**: 
 
    - **sql**: 
 
