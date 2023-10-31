@@ -30,6 +30,8 @@
 <li><a href="/articles/04_fabric_studio/26_web_basic_editing.md">Basic Editing</li>
 <li><a href="/articles//04_fabric_studio/24_web_debug.md">Code Debugging</a></li> 
 <li><a href="/articles//04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li>
+</ul>
+
 </web>        
 
 
