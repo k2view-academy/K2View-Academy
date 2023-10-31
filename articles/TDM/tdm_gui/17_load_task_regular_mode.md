@@ -182,7 +182,7 @@ For example:
 
   - Select the parameter and the operator from the drop-down lists and populate their values. Note that from TDM 8.1 onwards it is possible to select the IN or NOT IN operators on combo parameters and on text parameters.
 
-  - Set the value on the parameter. You can set multiple values on a parameter if the selected operator is IN or NOT IN:
+  - Set the value on the parameter. You can set multiple values on a parameter if the selected operator is either IN or NOT IN:
     - Combo parameters - click on the value field multiple times and select the required values from the dropdown on each click.
     
     - Free text parameters - populate the values separated by a comma. For example: NY, CA.
