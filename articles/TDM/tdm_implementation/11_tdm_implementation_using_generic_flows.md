@@ -390,12 +390,12 @@ Edit the flow in order to use it in the TDM tasks:
  - Populate the **interface** input parameter in the **Run Input SQL** Actor (currently it is defined as an empty linked field).
  - It is recommended to update the external name of the **sql** input parameter in the **Run Input SQL** Actor to a meaningful name (currently it is populated with SQL). For example: SQL query on CRM DB. 
  - Add the CustomLogicSql flow to the **CustomLogicFlows** Actor. Populate the new record as follows:
-   -  LU_NAME: optional. Can be empty.
+   -  LU_NAME: optional. Can be left empty.
    -  FLOW_NAME: CustomLogicSql
    -  DESCRIPTION: populated with a free text.
    -  DIRECT_FLOW: true
   - Redeploy the Web-Services to Fabric.
-  - Redeploy the LU name in the LU_NAME field if it is populated. Else (if the LU_NAME field is empty) - redeploy the TDM LU to Fabric.
+  - If the LU_NAME field is populated with an LU name, redeploy the LU name to Fabric. Else (if the LU_NAME field is empty), redeploy the TDM LU to Fabric.
     
 The following parameters can be set by the user that creates the task:
 
