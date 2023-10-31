@@ -397,7 +397,7 @@ Edit the flow in order to use it in the TDM tasks:
   - Redeploy the Web-Services to Fabric.
   - Redeploy the LU name in the LU_NAME field if it is populated. Else (if the LU_NAME field is empty) - redeploy the TDM LU to Fabric.
     
-The following parameters can be set by the user who creates the task:
+The following parameters can be set by the user that creates the task:
 
 - **sql** - mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
 - **sqlParams** - optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
