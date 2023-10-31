@@ -385,12 +385,23 @@ TDM 8.1 enables 2 execution modes for the Custom Logic flows:
 
 #### CustomLogicSql Flow
 
-A new generic Custom Logic flow has been added to the TDM library in TDM 8.1 - **CustomLogicSql**. This flow gets an SQL query to run on the TDM DB. The following parameters can be set by the user who creates the task:
+A new generic Custom Logic flow has been added to the TDM library in TDM 8.1 - **CustomLogicSql**. This flow gets an SQL query to run on a given DB interface. 
+Edit the flow in order to use it in the TDM tasks:
+ - Populate the **interface** input parameter in the **Run Input SQL** Actor (currently it is defined as an empty linked field).
+ - It is recommended to update the external name of the **sql** input parameter in the **Run Input SQL** Actor to a meaningful name (currently it is populated with SQL). For example: SQL query on CRM DB. 
+ - Add the CustomLogicSql flow to the **CustomLogicFlows** Actor. Populate the new record as follows:
+   -  LU_NAME: will be empty
+   -  FLOW_NAME: CustomLogicSql
+   -  DESCRIPTION: populated with a free text.
+   -  DIRECT_FLOW: true
+  - Redeploy the TDM LU to Fabric.
+    
+The following parameters can be set by the user who creates the task:
 
 - **sql** - mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
 - **sqlParams** - optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
 
-The customLogicSql flow runs in a direct call mode. 
+The customLogicSql flow runs in a **direct call** mode. 
 
 **Examples of an input SELECT query**:
 
