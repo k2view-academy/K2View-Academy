@@ -187,7 +187,7 @@ For example:
     
     - Free text parameters - populate the values separated by a comma. For example: NY, CA.
     
-    - See the example below:
+    - View the below example:
     
       ![params example](images/task_parameters_in_operator_example.png)  
     
