@@ -50,7 +50,7 @@ The following table lists the TDM tables and their description.
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_params_distinct_values</td>
 <td valign="top" width="400pxl"><p>Parameters table. Contains the list of all parameters, their values and types.</p>
- <p><a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">Click for more information about parameters handling.</a></p>
+ <p><a href="07_tdm_parameters_handling.md">Click for more information about parameters handling.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
 </tr>    
