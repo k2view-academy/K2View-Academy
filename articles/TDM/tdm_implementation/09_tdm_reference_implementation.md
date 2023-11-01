@@ -27,7 +27,7 @@ The list of Reference tables available for TDM tasks is populated in the [RefLis
 
 - **lu_name** - populated by the LU name to enable a selection of the related Reference table in a TDM task based on the task's LUs.
 
-- **ID** - populated by an increment number.
+- **id** - populated by an increment number.
 
 - **reference_table_name** - populated by the Reference table in the source environment.
 
@@ -43,11 +43,14 @@ The list of Reference tables available for TDM tasks is populated in the [RefLis
 
 - **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be later used to customize the load flow to run an Upsert on the target Reference table.
 
-- **truncate** - by default, the TDM runs a delete on the Reference table in the target environment before loading it. If you have permission to run a truncate on the target Reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
+- **truncate_indicator** - by default, the TDM runs a delete on the Reference table in the target environment before loading it. If you have permission to run a truncate on the target Reference table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
-- **count_bf** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target. 
+- **count_flow** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target.
+	
+![image](https://github.com/k2view-academy/K2View-Academy/assets/43947470/f2caa5b2-d73b-4867-b3ce-67509123838e)
+
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
