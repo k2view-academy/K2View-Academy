@@ -1,4 +1,4 @@
-# Fabric Project Tree
+# 	Fabric Project Tree
 
 A Fabric project has a tree-like structure. Known as the **Project Tree**, it displays components in a hierarchical order. Each entity in the tree initiates a different action.
 
@@ -164,13 +164,12 @@ The following table lists the recommended project component prefixes conventions
 
 Note that when using the above prefix conventions, it is also recommended to use meaningful names for the project’s components.
 
-<studio>
+<div class="studio">
 [![Previous](/articles/images/Previous.png)](22_web_search.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_adding_fabric_projects_to_version_control.md)
-</studio>
-<web>
+</div>
+<div class="web">
 [![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_web_versioncontrol.md)
-
-</web>
+</div>
 
