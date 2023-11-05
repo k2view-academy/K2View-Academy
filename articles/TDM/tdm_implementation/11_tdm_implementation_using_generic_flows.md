@@ -195,13 +195,15 @@ You can run each one of the load flows in debug mode. Normally, when running a t
 
 ### TDMOrchestrator Flow
 
-The purpose of the **TDMOrchestrator.flow** is to encapsulate all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as:
+The **TDMOrchestrator** flow orchestrates all the processes related to the **executed entity** in **one single flow** and in **one transaction**. A separate TDMOrchestrator flow runs on each task's LU. This flow includes the invocation of all steps such as:
+ 
+- Initiates the TDM task execution keys.
+- Syncs the entity into the Fabric, if needed.
+- Deletes the entity from the target environment, if the task requires it.
+- Loads the entity to the target, if the task requires it.
+- Performs [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-* Initiate the TDM load.
-* Delete the target data, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md).
-* Load the new data into the target, if required by the task's [operation mode](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) or the [Data Versioning load task](/articles/TDM/tdm_gui/18_load_task_data_versioning_mode.md). 
-* Manage the TDM process as **one** transaction. Note that the TDM 7.5.1 excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
-* Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
+Note that from TDM 7.5.1 onwards the TDM excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 
 TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding the need to generate this flow on each LU separately. 
 
