@@ -201,7 +201,7 @@ The **TDMOrchestrator** flow orchestrates all the processes related to the **exe
 - Syncs the entity into the Fabric, if needed.
 - Deletes the entity from the target environment, if the task requires it.
 - Loads the entity to the target, if the task requires it.
-- Performs [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
+- Performs [error handling and statistics gathering](12_tdm_error_handling_and_statistics.md). 
 
 Note that from TDM 7.5.1 onwards the TDM excludes Fabric from the transaction using the new Fabric 6.5.8 Broadway Actor: NoTx. This fix is needed for the entity clone as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 
