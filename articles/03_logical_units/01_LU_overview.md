@@ -39,7 +39,7 @@ The LU metadata includes 3 main objects:
 </web>
 
 ### What Is a Logical Unit Instance (LUI)?
-A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Data Product in the LUT structure definition.
+A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Data Product instance in the LUT structure definition.
 Using our example from above (Customer 360), assume that Company ABC has 35 million customers:
 
 * LU/LUT = Customer.
