@@ -39,7 +39,7 @@ The LU metadata includes 3 main objects:
 </web>
 
 ### What Is a Logical Unit Instance (LUI)?
-A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Digital Entity in the LUT structure definition.
+A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Data Product in the LUT structure definition.
 Using our example from above (Customer 360), assume that Company ABC has 35 million customers:
 
 * LU/LUT = Customer.
@@ -49,15 +49,15 @@ Fabric will hold 35 million instances (LUIs) of the Customer LUT. That is, one p
 
 ### Things to Consider Before Designing an LU 
 
-Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
+Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data.
 
 
 ### General Recommendations for Designing an LU 
-Digital Entity data is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data source.
+Data Product is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data source.
 
-In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
+In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view.
 
-For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create an LU for each Digital Entity subtype (in our example, different Customer Types).
+For example, if you have a Data Product called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create an LU for each subtype (in our example, different Customer Types).
 
 Below is a table of **pros and cons** of each alternative:
 
@@ -68,13 +68,13 @@ Below is a table of **pros and cons** of each alternative:
 <p><strong>Item</strong></p>
 </td>
 <td width="250">
-<p><strong>LU per Digital Entity</strong></p>
+<p><strong>LU per Data Product</strong></p>
 </td>
 <td width="250">
-<p><strong>LU per Digital Entity and data source</strong></p>
+<p><strong>LU per Data Product and data source</strong></p>
 </td>
 <td width="250">
-<p><strong>LU per Digital Entity sub type</strong></p>
+<p><strong>LU per Data Product sub type</strong></p>
 </td>
 </tr>
 <tr>
