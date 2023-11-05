@@ -238,6 +238,8 @@ More specifically, the Fabric Web Studio follows Visual Studio Code layout conce
 
 
 
+<br/>
+
 ### Activity Bar and Views
 
 The **Activity Bar** lets you switch quickly between views. Once you click on a view, the **Side Bar** changes accordingly and allows you to make the relevant operations for this view. 
@@ -277,7 +279,9 @@ The views that appear by default on the Web Studio are as follows:
 
 >**Tip:** You can change the order of views in the Activity Bar by dragging and dropping them.
 
-  
+###   
+
+<br/>
 
 ### Fabric Menu 
 
@@ -299,6 +303,8 @@ The Fabric menu which is part of the top menu bar, provides several Fabric and S
 
 
 
+<br/>
+
 ### Status Bar
 
 The status bar provides an Information and status about the opened project and the files you are editing, as well as enables making actions. 
@@ -314,6 +320,8 @@ it is divided into few parts (yet - there is no visual separation between them):
 
 
 
+<br/>
+
 ### Color Themes
 
 As part of Web Studio Settings Capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
@@ -325,6 +333,8 @@ To select a color theme
 3. Select a desired theme and click Enter.
 
 
+
+<br/>
 
 >**Studio Desktop .Net Compatibility:** 
 >

@@ -164,12 +164,7 @@ The following table lists the recommended project component prefixes conventions
 
 Note that when using the above prefix conventions, it is also recommended to use meaningful names for the project’s components.
 
-<div class="studio">
-[![Previous](/articles/images/Previous.png)](22_web_search.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_adding_fabric_projects_to_version_control.md)
-</div>
-<div class="web">
-[![Previous](/articles/images/Previous.png)](05_creating_a_new_project.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_web_versioncontrol.md)
-</div>
 
+
+
+[![Previous](/articles/images/Previous.png)]<studio>(22_web_search.md)</studio><web>(05_creating_a_new_project.md)</web>[<img align="right" width="60" height="54" src="/articles/images/Next.png">]<studio>(06_adding_fabric_projects_to_version_control.md)</studio><web>(23_web_versioncontrol.md)</web>
