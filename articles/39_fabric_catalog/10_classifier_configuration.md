@@ -45,9 +45,9 @@ Each **Classification** can have **only one** definition (row) in this tab.
 
 To edit the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
 
-* The **Generator** can be either an actor or a flow that will be used to perform the masking logic for the values of field with a given Classification.
+* The **Generator** can be either one of the existing built-in actors, a custom actor or a flow that will be used to perform the masking logic for the values of field with a given Classification.
 
-* For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own flow and attach it here.
+* For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
 
   <img src="images/classifier_pii_masking_edit.png" style="zoom: 67%;" />
 
