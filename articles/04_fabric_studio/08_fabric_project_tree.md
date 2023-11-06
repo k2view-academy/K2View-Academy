@@ -167,10 +167,10 @@ Note that when using the above prefix conventions, it is also recommended to use
 
 
 <div class="studio">
-<a href="05_creating_a_new_project.html"><img onclick="popupimg(this)" src="/Academy/articles/images/Previous.png" alt="Previous"></a>
-<a href="23_web_versioncontrol.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/Academy/articles/images/Next.png"></a>
+<a href="05_creating_a_new_project.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="23_web_versioncontrol.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
 </div>
 <div class="web">
-<a href="22_web_search.html"><img onclick="popupimg(this)" src="/Academy/articles/images/Previous.png" alt="Previous"></a>
-<a href="06_adding_fabric_projects_to_version_control.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/Academy/articles/images/Next.png"></a>
+<a href="22_web_search.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="06_adding_fabric_projects_to_version_control.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
 </div>
