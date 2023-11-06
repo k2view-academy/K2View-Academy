@@ -63,7 +63,7 @@ The Git tool supports viewing of diffs within Web Studio, showing original and m
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/24_web_debug.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/25_web_data_explorer.md)
 
 </web>

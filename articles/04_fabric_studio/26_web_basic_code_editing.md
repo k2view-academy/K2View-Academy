@@ -120,7 +120,7 @@ Right click on any symbol in your code and see the various options of going to i
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/25_web_data_explorer.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04_fabric_studio/12_shared_objects.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/24_web_debug.md)
 
 

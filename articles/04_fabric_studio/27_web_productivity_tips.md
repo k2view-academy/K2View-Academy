@@ -166,5 +166,5 @@ Learn [here](/articles/04_fabric_studio/26_web_basic_code_editing.md) about this
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/24_web_debug.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/25_web_data_explorer.md)
 </web>

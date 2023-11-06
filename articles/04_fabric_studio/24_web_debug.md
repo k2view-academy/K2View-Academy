@@ -143,7 +143,7 @@ Use `F5` to start debugging or `CTRL+F5` to start running without debugging.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/26_web_basic_editing.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/27_web_productivity_tips.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/23_web_versioncontrol.md)
 
 
 

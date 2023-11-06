@@ -1,11 +1,15 @@
-<studio>
 
-# Logic Files and Categories
 
-There are two types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of [Globals](/articles/08_globals/01_globals_overview.md) variables. In Fabric Studio the term **Logic Category Files** refers to a Java package that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. Although the functions are presented in the Project Tree as separate files, they are basically stored under one file called the Logic.java file under the selected category.  
+# Java Logic Files and Categories
+
+There are two types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of [Globals](/articles/08_globals/01_globals_overview.md) variables. 
+
+In Fabric Studio the term **Logic Category Files** refers to a Java *package* that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. While several Java files can be resided at a category/package, only single Logic file shall be there.
+
+<sutdio>Although the functions are presented in the Project Tree as separate files, they are basically stored under one file called the Logic.java file under the selected category. </studio> 
 
 ### Shared Java Files
-Java files residing on a shared level can be inherited by any [project](/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example,  Web Services, References or [Logical Units](/articles/03_logical_units/02_create_a_logical_unit_flow.md) and can be shared throughout a project.\
+Java files residing on a shared level can be inherited by any [project](/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example,  Web Services, References or [Logical Units](/articles/03_logical_units/02_create_a_logical_unit_flow.md) and can be shared throughout a project.
 It is highly recommended to avoid duplicating names of Shared Objects at lower levels of a project, for example; within a Logical Unit component. However, if there are duplicated object file names, the file that resides under the specific lower level component has priority when executed.
 
 A Java file residing at a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level has two out-of-the-box Java template files:
@@ -19,6 +23,8 @@ A Java file residing at a [Shared Objects](/articles/04_fabric_studio/12_shared_
 Designated Logic.java files are specific to their level of definition, which can be References, Web Services or Logical Units.
 
 The Globals.java file is automatically created under either the References or each Logical Unit, which are both empty.
+
+<studio>
 
 ### How Do I Associate a Function to a Category?
 
@@ -38,14 +44,40 @@ Each category creates a separate Logic.java file that has a specific path to dif
 * Version control is managed on a Logic.java file level and not on a function level. 
 * Functions can be edited from IntelliJ by pressing Ctrl+I in a function in the Fabric Studio to activate IntelliJ. Fabric Studio enables you to open the source file.
 
+</studio>
+
 ### How Do I Create a Category?
+
+<studio>
 
 Go to the **Project Tree**, right click **Java** and click **New SharedLogic Category File / New Logic Category File**.
 
 Note that when creating a new function, enter a new category name to automatically create a new category folder.
 
-
-
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
-
 </studio>
+
+<web>
+
+Creating a new category is actually aimed to create a new Logic Java file. For this do the following:
+
+1. Go to the **Project Tree**, at the required location - a Logical Unit or Shared Objects.
+2. Right click **src**  under the Java folder and 
+3. Choose **New Java Logic File**
+4. In the opened popup, type the name of the category/package
+5. A new package folder will be created, containing a Logic file template, where package name is already set. 
+
+</web>
+
+
+
+
+<div class="studio">
+<a href="/articles/04_fabric_studio/08_fabric_project_tree.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+</div>
+<div class="web">
+<a href="/articles/04_fabric_studio/08_fabric_project_tree.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/12_shared_objects.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+</div>
+
+
