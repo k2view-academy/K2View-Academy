@@ -69,6 +69,18 @@ Creating a new category is actually aimed to create a new Logic Java file. For t
 </web>
 
 
+<studio>
+
+[![Previous](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
+
+</studio>
+
+<web>
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
+
+</web>
+
 
 
 <div class="studio">
