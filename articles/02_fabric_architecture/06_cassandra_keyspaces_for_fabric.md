@@ -16,7 +16,7 @@ Fabric supports several types of Databases as System Database storage:
   * Cons
     * Consistency
     * Not easy to operate and maintain
-* Rational database, such as PostgreSQL
+* Relational database, such as PostgreSQL
   * Pros
     * Consistency
     * In case of the TDM solution, PostgreSQL is already introduced
