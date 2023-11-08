@@ -71,7 +71,7 @@ Creating a new category is actually aimed to create a new Logic Java file. For t
 
 <studio>
 
-[![Previous](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
 
 </studio>
 
@@ -80,16 +80,5 @@ Creating a new category is actually aimed to create a new Logic Java file. For t
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
 
 </web>
-
-
-
-<div class="studio">
-<a href="/articles/04_fabric_studio/08_fabric_project_tree.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
-<a href="/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
-</div>
-<div class="web">
-<a href="/articles/04_fabric_studio/08_fabric_project_tree.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
-<a href="/articles/04_fabric_studio/12_shared_objects.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
-</div>
 
 
