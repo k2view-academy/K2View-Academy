@@ -4,30 +4,30 @@ Fabric System Database is used by Fabric internal processes to monitor, secure, 
 
 Fabric supports several types of Databases as System Database storage:
 
-* NoSQL distributed database, such as Cassandra DB
-  * Pros
-    * Scalable
-    * Distributed
-    * Built-in TTL mechanism on row level
-    * If Cassandra is used as a MicroDB storage, there is no need to introduce additional DBs
-    * Managed services (such as AWS Keyspaces or Astra) are supported
-    * Supported by the iidFinder solution
-    * Built-in mechanism for managing parallel threads during bulk instance loading.
-  * Cons
-    * Consistency
-    * Not easy to operate and maintain
-* Relational database, such as PostgreSQL
-  * Pros
-    * Consistency
-    * In case of the TDM solution, PostgreSQL is already introduced
-    * Compliance with services such as Cloud Spanner, AlloyDB
-    * Easy to maintain 
-  * Cons
-    * Single point of failure
-    * Not supported by the iidFinder solution
-* Sqlite
-  * Pros
-    * Development and single-node environments
+- NoSQL distributed database, such as Cassandra DB
+  - Pros
+    - Scalable
+    - Distributed
+    - Built-in TTL mechanism on row level
+    - If Cassandra is used as a MicroDB storage, there is no need to introduce additional DBs
+    - Managed services (such as AWS Keyspaces or Astra) are supported
+    - Supported by the iidFinder solution
+    - Built-in mechanism for managing parallel threads during bulk instance loading.
+  - Cons
+    - Consistency
+    - Not easy to operate and maintain
+- Relational database, such as PostgreSQL
+  - Pros
+    - Consistency
+    - In case of the TDM solution, PostgreSQL is already introduced
+    - Compliance with services such as Cloud Spanner, AlloyDB
+    - Easy to maintain 
+  - Cons
+    - Single point of failure
+    - Not supported by the iidFinder solution
+- Sqlite
+  - Pros
+    - Development and single-node environments
 
 Fabric uses the Cassandra DB as its default system management database. 
 
