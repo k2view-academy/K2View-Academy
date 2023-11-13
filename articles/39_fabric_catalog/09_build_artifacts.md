@@ -20,7 +20,7 @@ The artifact is created for the Catalog version that is displayed in the applica
 
 Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
 
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_classifier_configuration.md) 
+[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_settings.md) 
 
 </web>
 

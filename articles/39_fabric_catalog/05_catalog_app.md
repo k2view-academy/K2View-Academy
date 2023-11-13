@@ -85,6 +85,8 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * Build the Catalog **artifacts**. [Click here for more information about the Catalog artifacts](09_build_artifacts.md).
 * **Search** <img src="images/search.png" style="zoom:80%;" />the catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
+* **Schema Insights** <img src="images/insights.png" style="zoom:80%;" />, for analyzing the Catalog's statistics either in a view version mode or in a version comparison mode. The insights are currently available on Schema level only. 
+* **Data Viewer** <img src="images/data_viewer.png" style="zoom:80%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source. 
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
 * **Navigation map** <img src="images/navigation.png" style="zoom:80%;" />, for opening the Catalog's mini-map and navigation panel. 
 * **Zoom in / out**, for adjusting the zoom of the view.
