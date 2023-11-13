@@ -16,7 +16,7 @@ To apply the Catalog Masking mechanism, start with running the Discovery job, va
   * The actor starts from checking whether the field should be masked. The check is based on the field's PII and Masking columns set in the catalog_field_info MTable after building the Catalog artifact. [Click for more information about the Catalog artifact](09_build_artifacts.md).
     * If both PII is true and the Masking property is not OFF (see below more details about the Masking property), the field's value should be masked. 
   * Then, the actor retrieves the field's Classification from the **catalog_field_info** MTable and searches for the generator in the **catalog_classification_generators** MTable. The generator can be either one of the existing built-in actors (RandomSSN, RandomZipCode, etc.), a custom actor or a flow.
-    * Click for more information about the Catalog's [PII & Masking Setup](10_catalog_settings.md).
+    * Click for more information about the Catalog's [PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup).
   * Finally, the actor internally invokes the **Masking** actor, sending its parameters as follows:
     * The maskingId is set to the Classification.
     * The flowName is set to the Generator defined in the **catalog_classification_generators** MTable for this Classification.
