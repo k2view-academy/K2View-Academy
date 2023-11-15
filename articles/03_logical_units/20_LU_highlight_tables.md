@@ -14,7 +14,7 @@ Highlighting Connected Tables feature helps you to better understand the connect
 
 ### Activate Highlighting
 
-To activate the highlighting: 
+To activate the highlighting feature: 
 
 1. First, select a table that you wish to see its connections to other tables. 
 
