@@ -8,7 +8,7 @@ When maintaining large logical units with many tables, it becomes difficult to u
 
 ## Highlighting Connected Tables 
 
-Highlighting Connected Tables feature helps you to better understand the connection and relations between tables, especially in large schemas, by highlighting related tables.
+Highlighting connected tables helps you to better understand the connection and relations between tables, especially in large schemas, by highlighting related tables.
 
 
 
