@@ -50,11 +50,11 @@ Once chosen, all other tables become blurred. Additionally, the light bulb icon 
 
 ### Deactivate Highlighting
 
-To deactivate the highlighting and turn it off, either click on the bulb icon, or: click on the highlighting arrow down and click on the selected highlighting option. 
+To deactivate the highlighting feature and turn it off, either click on the light bulb icon, or click on the highlighting arrow down and then on the selected highlighting option.
 
 ### Change Highlighting Type
 
-In case the highlighting is turned-on and you wish change the high;ight type (for example, from focusing on all connected tables to only predecessors): click on the highlighting arrow down and select the desired option.
+In case the highlighting feature is turned on and you wish change the highlight type (for example, from focusing on all connected tables to only predecessors): click on the highlighting arrow down and select the desired option.
 
 
 
