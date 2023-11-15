@@ -50,11 +50,11 @@ Once chosen, all other tables become blurred. Additionally, the highlighting bul
 
 ### Deactivate Highlighting
 
-To deactivate the highlighting feature and turn it off, either click on the highlighting bulb icon, or click on the highlighting down arrow and then on the selected highlighting option.
+To deactivate the highlighting feature and turn it off, either click on the highlighting bulb icon, or click on the down arrow symbol and then on the selected highlighting option.
 
 ### Change Highlighting Type
 
-In case the highlighting feature is turned-on and you wish change the highlighting option type (for example, from focusing on all connected tables to focusing on only predecessors), click on the highlighting down arrow and select the desired option.
+In case the highlighting feature is turned-on and you wish change the highlighting option type (for example, from focusing on all connected tables to focusing on only predecessors), click on the down arrow symbol and select the desired option.
 
 
 
