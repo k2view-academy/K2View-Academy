@@ -20,7 +20,7 @@ To activate the highlighting feature:
 
 2. Choose to highlight by either:
 
-   - Click on the Schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)). 
+   - Click on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)). 
 
    - Open the table menu (ellipsis, 3 dot menu) and choose **Highlight by relation**
 
