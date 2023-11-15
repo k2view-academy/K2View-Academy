@@ -42,7 +42,7 @@ Once chosen, all other tables become blurred. Additionally, the highlighting bul
 
 
 
-> **Hint**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the highlighting bulb icon. (You can also click on the down arrow symbol, located next to it, in the schema's top bar, and look for the 'v' sign). 
+> **Tip**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the highlighting bulb icon. (You can also click on the down arrow symbol, located next to it, in the schema's top bar, and look for the 'v' sign). 
 
 > **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
 
