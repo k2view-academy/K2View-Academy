@@ -34,7 +34,7 @@ To activate the highlighting feature:
 
 
 
-Once chosen, all other tables become blurred. Additionally, the light bulb icon at the schema' top bar turns orange, indicating that the highlighting feature is currently turned-on.
+Once chosen, all other tables become blurred. Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlighting feature is currently turned-on.
 
 
 
@@ -42,19 +42,19 @@ Once chosen, all other tables become blurred. Additionally, the light bulb icon 
 
 
 
-> **Hint**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the light bulb icon. (You can also click on the down arrow symbol, located next to the light bulb icon, at the schema's top bar, and look for the 'v' sign). 
+> **Hint**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the highlighting bulb icon. (You can also click on the down arrow symbol, located next to it, in the schema's top bar, and look for the 'v' sign). 
 
-> **Note**: When the Tables' Highlighting feature is turned on, other tables are still available and active.
+> **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
 
 
 
 ### Deactivate Highlighting
 
-To deactivate the highlighting feature and turn it off, either click on the light bulb icon, or click on the highlighting arrow down and then on the selected highlighting option.
+To deactivate the highlighting feature and turn it off, either click on the highlighting bulb icon, or click on the highlighting down arrow and then on the selected highlighting option.
 
 ### Change Highlighting Type
 
-In case the highlighting feature is turned on and you wish change the highlight type (for example, from focusing on all connected tables to only predecessors): click on the highlighting arrow down and select the desired option.
+In case the highlighting feature is turned-on and you wish change the highlighting option type (for example, from focusing on all connected tables to focusing on only predecessors), click on the highlighting down arrow and select the desired option.
 
 
 
