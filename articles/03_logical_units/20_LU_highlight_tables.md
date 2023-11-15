@@ -34,7 +34,7 @@ To activate the highlighting feature:
 
 
 
-Once chosen, all other tables become blurred. In addition, the bulb icon at the schema' top bar turns orange, indicating that the highlighting feature is currently turned-on.
+Once chosen, all other tables become blurred. Additionally, the light bulb icon at the schema' top bar turns orange, indicating that the highlighting feature is currently turned-on.
 
 
 
