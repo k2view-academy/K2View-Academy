@@ -1,8 +1,8 @@
 <web>
 
-# Schema's Tables Highlighting
+# Schema Tables' Highlighting
 
-When maintaining large logical units with many tables, it becomes difficult to understand and manage a complex schema. The Tables Highlighting feature enables to highlight some of the tables and bring then into focus.
+When maintaining large logical units with many tables, it becomes difficult to understand and manage a complex schema. The Tables' Highlighting feature enables to highlight some of the tables and bring then into focus.
 
 
 
@@ -16,7 +16,7 @@ Highlighting Connected Tables feature helps you to better understand the connect
 
 To activate the highlighting: 
 
-1. First, select the table that you wish to see its connections to other tables. 
+1. First, select a table that you wish to see its connections to other tables. 
 
 2. Choose to highlight by either:
 
