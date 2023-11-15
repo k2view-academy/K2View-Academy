@@ -26,7 +26,7 @@ To activate the highlighting feature:
 
      ![](images/web/20_highlight_menu.png)
 
-3. Select one of the highlighting option types:
+3. Select one of the following highlighting option types:
 
    - Only connected tables, All connected tables - predecessors and successors
    - Only predecessors
