@@ -2,7 +2,7 @@
 
 # Schema's Tables Highlighting
 
-While maintaining large logical units with many tables, it becomes difficult to understand and manage a complex schema. The Tables Highlighting feature enables to highlight some of the tables and bring then into focus.
+When maintaining large logical units with many tables, it becomes difficult to understand and manage a complex schema. The Tables Highlighting feature enables to highlight some of the tables and bring then into focus.
 
 
 
