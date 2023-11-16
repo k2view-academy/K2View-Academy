@@ -60,6 +60,8 @@ Once the Save button is clicked, the following MTables are updated in the Fabric
 * The Regex setup tab updates the **metadata_profiling** and **data_profiling** MTables.
 * The PII & Masking setup tab updates the **pii_profiling** and **catalog_classification_generators** MTables.
 
+Note that Classifier Configuration settings impact the above MTables only. There is no need to re-build the catalog artifact when the configurations are updated.
+
 
 
 [![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_catalog_masking.md) 
