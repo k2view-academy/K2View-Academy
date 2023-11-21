@@ -28,7 +28,7 @@ You can type a keyword into the search box, where the result widget would then d
 
 
 
-## Mini Map Navigation
+## Navigation Mini Map
 
 You can have an overview of the whole schema's diagram using the Navigation Map feature. To activate it, click on the schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg)).
 
