@@ -56,7 +56,7 @@ When clicked, in addition to the appearing Magnifier that appears on the schema 
 
 To turn it off and deactivate the Magnifier, click on this control icon again.
 
-> Note: While the Magnifier is activated, all actions are still available, also a the magnified elements. 
+> Note: While the Magnifier is activated, all other actions are still available, including the magnified elements.
 
 
 
