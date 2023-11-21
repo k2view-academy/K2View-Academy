@@ -2,15 +2,15 @@
 
 # Big Schema Productivity Tips
 
-While maintaining large logical units with many tables, sometimes it becomes hard to understand and manage its complex schema. This article suggests several features and productivity tips that may help you.
+When maintaining large logical units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article suggests several features and productivity tips that may in such case.
 
 
 
 ## Schema Search 
 
-Use the schema Search input field for looking tables, table-groups, tables' columns, populations and their input fields.
+Use the schema Search input field for looking for tables, table-groups, tables' columns, populations and their input fields.
 
-To do so, first tap the search box located at the schema top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears besides each element name.
+To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears besides each element name.
 
 ![](images/web/21_search1.png)
 
