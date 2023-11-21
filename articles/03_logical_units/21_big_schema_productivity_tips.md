@@ -68,7 +68,7 @@ The Highlighting Connected Tables feature helps you to better understand the con
 
 ## Connecting Tables
 
-In a large schema, it is sometimes difficult to connect tables that are located far from each other, by drawing a link. Instead, you can right-click on either the input field connector (in the 'child' table) or the outer field connector (in the 'parent' table) and use the opened popup to set the connection. Read [here](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#linking-tables.md) to learn more about this feature.
+In a large schema, it is sometimes difficult to connect tables that are located far from each other, by drawing a link. Instead, you can right-click on either the input field connector (in the 'child' table) or the outer field connector (in the 'parent' table) and use the open popup window to set the connection. Read [here](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#linking-tables.md) to learn more about this feature.
 
 
 
