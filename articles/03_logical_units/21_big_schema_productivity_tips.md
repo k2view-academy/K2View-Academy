@@ -74,7 +74,7 @@ In a large schema, it is sometimes difficult to connect tables that are located 
 
 ## Population Order View
 
-Studio provides a Population Order View that makes it easier to understand and manage when each table is populated during an LUI's sync process. This view is accessible using the right schema tab, alongside the Schema Properties tab. Read [here](/articles/03_logical_units/19_LU_population_order_view.md) to learn about this feature.
+Studio provides a Population Order View that makes it easier to understand and manage when each table is populated during an LUI's sync process. This view is accessible using the right schema tab, alongside the Schema Properties tab. Read [here](/articles/03_logical_units/19_LU_population_order_view.md) to learn more about this feature.
 
 
 
