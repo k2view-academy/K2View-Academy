@@ -20,7 +20,7 @@ You can type a keyword into the search box, where the result widget would then d
 
 * The results show the entire element name containing the searched text, which is highlighted in orange. 
 
-* Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the schema hierarchy. The below screenshot shows the example: "CRM > CONTRACT > CONTRACT_REF_ID". In this example, 'CRM' is the name of the group (which is optional), then table name and column, as hovering done on a table's column. 
+* Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the schema hierarchy. The below screenshot shows the example: "CRM > CONTRACT > CONTRACT_REF_ID". In this example, 'CRM' is the name of the group (which is optional), followed by a table name and a column, as the hovering is done on a table's column.
 
   ![](images/web/21_search2.png)
 
