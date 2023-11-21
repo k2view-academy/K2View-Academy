@@ -24,7 +24,7 @@ You can type a keyword into the search box, where the result widget would then d
 
   ![](images/web/21_search2.png)
 
-* Clicking on an entry directs you to the element's location, either the group or to the table, and selecting it.
+* Clicking on an entry directs you to the element's location, to either the group or the table, and selects it.
 
 
 
