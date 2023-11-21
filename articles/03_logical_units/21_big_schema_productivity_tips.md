@@ -24,11 +24,11 @@ You can type a keyword into the search box, where the result widget would then d
 
   ![](images/web/21_search2.png)
 
-* Clicking on an entry takes you directly to the element location, either the group or to the table, and selecting it.
+* Clicking on an entry directs you to the element's location, either the group or to the table, and selecting it.
 
 
 
-## Navigation Mini Map
+## Mini Map Navigation
 
 You can have an overview of the whole schema's diagram using the Navigation Map feature.  on schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg))  to activate it. 
 
