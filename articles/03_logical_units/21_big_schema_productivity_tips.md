@@ -2,7 +2,7 @@
 
 # Big Schema Productivity Tips
 
-When maintaining large logical units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article suggests several features and productivity tips that may in such case.
+When maintaining large logical units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article suggests several features and productivity tips that may assist in such a case.
 
 
 
