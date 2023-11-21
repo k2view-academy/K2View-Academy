@@ -36,7 +36,7 @@ Once Opened - at the top-left side of the schema diagram window, you can click a
 
 ![](images/web/21_map.png)
 
-When clicked, in addition to the navigation map itself that appears, the Navigation Map icon becomes orange colored, indicating it is turned-on. To turn it off, click on this control icon again.
+When clicked, in addition to the navigation map itself that appears, the Navigation Map icon turns orange, indicating that it is turned-on. To turn it off, click on this control icon again.
 
 
 
