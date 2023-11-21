@@ -145,9 +145,9 @@ You can link them by either dragging a connection line or by using the Tables Co
 
    - Click the **child population** header and drag the **connection line** to the **parent table** and **column**.
 
-   - <studio>Right click, select **Add link to** > **child population** > **column**.</studio>
+   - <studio>Right-click, select **Add link to** > **child population** > **column**.</studio>
 
-   - <web>Right click on this field out connector, select the target table,  the target table population and then the target input field.</web>
+   - <web>Right-click on this field out connector, select the target table, the target table population and then the target input field.</web>
 
      <web>
 
@@ -165,7 +165,7 @@ You can link them by either dragging a connection line or by using the Tables Co
 
 ## Highlight Table Population Links
 
-In complex and big schemas, sometime it is hard to track on the population link, from which table it comes or to which tables it goes. For this, you can click on it and then you can see it as a dashed animated line.
+In complex and large schemas, it is sometimes difficult to track the population link, from which table it comes or to which tables it goes. For this, you can click on it and then you can see it as a dashed animated line.
 
 ![](images/web/12_dashed_link.gif)
 
