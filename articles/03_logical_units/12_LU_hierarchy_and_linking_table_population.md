@@ -22,7 +22,7 @@ An LU schema structure displays a hierarchical presentation of the data related 
 
     </web>
 
-  * Population 2, populates the the installation address of each subscription. It is linked to the SUBSCRIBER table and it selects the source address records belonging to the SUSBCRIBER_ID.
+  * Population 2, populates the installation address of each subscription. It is linked to the SUBSCRIBER table and it selects the source address records belonging to the SUSBCRIBER_ID.
 
     <studio>
 
