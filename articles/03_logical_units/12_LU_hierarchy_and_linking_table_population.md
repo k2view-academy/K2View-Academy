@@ -40,7 +40,7 @@ An LU schema structure displays a hierarchical presentation of the data related 
 
   <studio>
 
-  * **Example 1:** The INVOICE Table Population object can be linked to the BALANCE LU table by two columns: SUBSCRIBER_ID and BALANCE. This is a valid link.
+  * **Example 1:** The INVOICE Table Population object can be linked to the BALANCE LU table by 2 columns: SUBSCRIBER_ID and BALANCE. This is a valid link.
 
     ![image](images/03_12_link_tables3.png)
 
