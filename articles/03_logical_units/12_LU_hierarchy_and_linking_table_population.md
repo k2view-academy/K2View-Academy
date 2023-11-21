@@ -44,7 +44,7 @@ An LU schema structure displays a hierarchical presentation of the data related 
 
     ![image](images/03_12_link_tables3.png)
 
-  * **Example 2:** Linking the INVOICE Table Population object to two different LU tables - BALANCE and SUBSCRIBER is invalid.
+  * **Example 2:** Linking the INVOICE Table Population object to 2 different LU tables - BALANCE and SUBSCRIBER is invalid.
 
     ![image](images/03_12_link_tables4.png)
 
