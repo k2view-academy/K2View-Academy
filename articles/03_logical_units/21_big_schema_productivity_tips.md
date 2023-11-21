@@ -1,6 +1,6 @@
 <web>
 
-# Big Schema Productivity Tips
+# Large Schema - Productivity Tips
 
 When maintaining large logical units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article suggests several features and productivity tips that may assist in such a case.
 
@@ -62,7 +62,7 @@ To turn it off and deactivate the Magnifier, click on this control icon again.
 
 ## Highlighting Tables and Links
 
-Highlighting Connected Tables feature helps you to better understanding the connection and relations between tables, especially in big schemas, by highlighting related tables. Use the schema's top bar highlighting bulb control icon ( ![](images/web/light-off.svg))  to activate it. Read [here](/articles/03_logical_units/20_LU_highlight_tables.md) to learn about this feature.
+The Highlighting Connected Tables feature helps you to better understand the connection and relations between tables, especially in large schemas, by highlighting related tables. Use the schema's top bar highlighting bulb control icon ( ![](images/web/light-off.svg)) to activate it. Read [here](/articles/03_logical_units/20_LU_highlight_tables.md) to learn about this feature.
 
 
 
