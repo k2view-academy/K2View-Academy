@@ -116,10 +116,10 @@ Click the **source object** of the Population window (the DB query) and verify t
 
 ## Linking Tables
 A link can be added in both directions:
-* **Child to parent**, linking the child population to a parent table.
-* **Parent to child**, linking a parent table to a child population.
+* **Child to parent** - linking the child population to a parent table.
+* **Parent to child** - linking a parent table to a child population.
 
-you can either link them by dragging a connection line or by using the Tables Connection Assistance popup, as following:
+You can link them by either dragging a connection line or by using the Tables Connection Assistance popup window, as follows:
 
 ### Link a Child Table Population to a Parent Table
 1. Click the Population name of the child table.
@@ -128,9 +128,9 @@ you can either link them by dragging a connection line or by using the Tables Co
 
    - Drag the **connection line** from this field into the **parent table** and **column**.
 
-   - <studio>Right click on this field, select **Add link from** > **parent table** > **column**.</studio>
+   - <studio>Right-click on this field, select **Add link from** > **parent table** > **column**.</studio>
 
-   - <web>Right click on this field connector, select the source table and then select source table field.</web>
+   - <web>Right-click on this field connector, select the source table and then select source table field.</web>
 
      <web>
 
