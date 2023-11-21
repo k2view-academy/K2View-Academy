@@ -52,11 +52,11 @@ An LU schema structure displays a hierarchical presentation of the data related 
 
     <web>
 
-  * **Example 1:** The CASE_NOTE Table Population object can be linked to the CASES LU table by two columns: CASE_ID and NOTE_DATE. This is a valid link.
+  * **Example 1:** The CASE_NOTE Table Population object can be linked to the CASES LU table by 2 columns: CASE_ID and NOTE_DATE. This is a valid link.
 
     <img src="images/web/12_link_tables_3.PNG" alt="image" style="zoom:80%;" />
 
-  * **Example 2:** Linking the CASE_NOTE Table Population object to two different LU tables - CASES and ACTIVITY - is invalid; a validation error will be displayed in the Problems panel when trying to save. 
+  * **Example 2:** Linking the CASE_NOTE Table Population object to 2 different LU tables - CASES and ACTIVITY - is invalid; a validation error will be displayed in the Problems panel when trying to save. 
 
     <img src="images/web/12_link_tables_4.PNG" alt="image" style="zoom:80%;" />
 
