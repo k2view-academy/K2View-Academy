@@ -90,7 +90,7 @@ While using one of the first three methods, the tables are also created in Fabri
    
    **Create New Manually**
    
-   1. Name the table and click on **Create**. A new empty table popup window appears.
+   1. Name the table and click on **Create**. A new empty table pop-up window appears.
    
    2. Define and populate the table's columns: 
    
