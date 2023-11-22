@@ -77,7 +77,7 @@ While using one of the first three methods, the tables are also created in Fabri
 
    1. Name the table and click on Create. A Query Builder pop-up window appears.
 
-   2. In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and table list to find the relevant table and select it.
+   2. In the Query Builder window, select the required interface. Then either write the SQL query in the upper part of the Query Builder or expand the interface schema and table list to find the relevant table and select it.
 
       ![QB popup](images/web/01_QB_WEB_popup2.png)
       
