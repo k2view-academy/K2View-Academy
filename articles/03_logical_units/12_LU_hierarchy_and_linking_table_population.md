@@ -116,8 +116,8 @@ Click the **source object** of the Population window (the DB query) and verify t
 
 ## Linking Tables
 A link can be added in both directions:
-* **Child to parent** - linking the child population to a parent table.
-* **Parent to child** - linking a parent table to a child population.
+* **Child to parent** - linking the child table population to a parent table.
+* **Parent to child** - linking a parent table to a child table population.
 
 You can link them by either dragging a connection line or by using the Tables Connection Assistance popup window, as follows:
 
