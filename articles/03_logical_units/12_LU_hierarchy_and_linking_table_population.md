@@ -176,7 +176,7 @@ In complex and large schemas, it is sometimes difficult to track the population 
 ## Delete Table Population Links
 
 <studio>Either click on the link and press the **Delete** key or right-click and select **Delete**</studio>.
-<web>Click on the link and press the **Delete** key</web>
+<web>Click on the link and press the **Delete** key.</web>
 
 
 
