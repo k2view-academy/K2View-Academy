@@ -96,7 +96,7 @@ While using one of the first three methods, the tables are also created in Fabri
    
       - When populating a column with a name and moving on to populate the next column, a new row is automatically added at the bottom of the table.
    
-      - Once the table contains several columns, you can reorganize them by using the drag and drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
+      - Once the table contains several columns, you can reorganize them by using the drag-and-drop method, by clicking on ![](images/web/new_table_dots.PNG) icon.
    
         ![QB popup](images/web/01_QB_WEB_popup4_manual.png)
    
