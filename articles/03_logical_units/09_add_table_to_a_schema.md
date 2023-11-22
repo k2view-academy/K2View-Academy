@@ -8,7 +8,7 @@ The following are some of the methods you can use for adding a table to an [LU s
 
 While using one of the first three methods, the tables are also created in Fabric LU and then added to the schema. The last one enables adding an existing LU table, which is not in use in the schema.
 
-1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating tables and their populations and adding them to the LU schema.
+1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating tables and their populations, and adding them to the LU schema.
 
 2. Use the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) appears at the right side of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window:
 
@@ -23,7 +23,7 @@ While using one of the first three methods, the tables are also created in Fabri
 
    
 
-3. Right click the **Schema window** and select one of the following options:
+3. Right-click the **Schema window** and select one of the following options:
 
     * **New Table from SQL Based DB Query**.
     * **New Table from SQL Based Root Function**.
