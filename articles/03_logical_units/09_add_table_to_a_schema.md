@@ -10,7 +10,7 @@ While using one of the first three methods, the tables are also created in Fabri
 
 1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating tables and their populations, and adding them to the LU schema.
 
-2. Use the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) appears at the right side of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window:
+2. Use the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) that appears on the right side of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) window:
 
    * Click on the DB Objects tab.
    * Click **DB Connection** and select a [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) from the drop-down menu.
