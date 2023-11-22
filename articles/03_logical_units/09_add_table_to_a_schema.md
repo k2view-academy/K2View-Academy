@@ -31,7 +31,7 @@ While using one of the first three methods, the tables are also created in Fabri
     * **New Table from SQL Based Broadway Flow**.
     
 
-    All the above 3 options open the Query Builder. The LU table and its populations are automatically generated, based on an SQL query defined in the Query Builder.
+    All of the above 3 options open the Query Builder. The LU table and its populations are automatically generated, based on an SQL query defined in the Query Builder.
     
     ![image](images/03_09_03_tables3.png)
 
