@@ -1,7 +1,7 @@
 # LU Tables' Hierarchy and Linking Populations
 
 ## Table Population Links Overview
-An LU schema structure displays a hierarchical presentation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
+An LU schema structure displays a hierarchical presentation of data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
 * Each LU table can have one or several Table Population objects. Each such object - except the Table Population object of the Root LU table - should be linked to a parent table via its [input arguments](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#what-are-the-table-populations-input-arguments). 
 
 * Each Table Population object can be linked to a different parent LU table.
