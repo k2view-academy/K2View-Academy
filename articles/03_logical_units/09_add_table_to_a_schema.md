@@ -102,7 +102,7 @@ While using one of the first three methods, the tables are also created in Fabri
    
         
    
-    In this 2 options, the table is automatically created with the [population](/articles/07_table_population/14_table_population_based_Broadway.md) and is added to the LU schema.
+    In these 2 options, the table is automatically created with the [population](/articles/07_table_population/14_table_population_based_Broadway.md) and is added to the LU schema.
    
    
    
