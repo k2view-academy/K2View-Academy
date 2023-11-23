@@ -14,7 +14,7 @@ An LU is defined and configured in the Fabric Studio as a core element of the [F
 
 
 
-In addition to these main objects, there are some others, which are part of logical units,  that used to define the logic. they can be found at the project tree under each logical unit:
+In addition to these main objects, there are some others, which are part of logical units, that used to define the logic. They can be found in the Project Tree, under each logical unit:
 
 - Java - [Globals](typora://app/articles/08_globals/01_globals_overview.md) and [Functions](typora://app/articles/07_table_population/08_project_functions.md)
 - [Broadway](typora://app/articles/19_Broadway/01_broadway_overview.md)
