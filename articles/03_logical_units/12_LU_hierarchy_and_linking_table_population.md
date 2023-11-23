@@ -2,7 +2,7 @@
 
 ## Table Population Links Overview
 An LU schema structure displays a hierarchical presentation of data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects :
-* Each LU table can have one or several Table Population objects. Each such object - except the Table Population object of the Root LU table - should be linked to a parent table via its [input arguments](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#what-are-the-table-populations-input-arguments). 
+* Each LU table can have one or several Table Population objects. Each such object - except the Table Population object of the Root LU table - should be linked to a parent table via its [input arguments](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#table-populations-input-arguments). 
 
 * Each Table Population object can be linked to a different parent LU table.
 
@@ -143,11 +143,11 @@ You can link them by either dragging a connection line or by using the Tables Co
 1. Click the **parent table**.
 2. Connect each **parent column** to the **child table population** using one of the following methods:
 
-   - Click the **child table population** header and drag the **connection line** to the **parent table** and **column**.
+   - Click the **child table population** header and drag a **connection line** between the **parent table**'s column and the **child table**'s input field.
 
    - <studio>Right-click, select **Add link to** > **child table population** > **column**.</studio>
 
-   - <web>Right-click on this field output connector, select the target table, the target table population and then the target input field.</web>
+   - <web>Right-click on a field's output connector, select the target table, the target table population and then the target input field.</web>
 
      <web>
 
