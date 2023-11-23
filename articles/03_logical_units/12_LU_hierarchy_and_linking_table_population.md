@@ -165,7 +165,7 @@ You can link them by either dragging a connection line or by using the Tables Co
 
 ## Highlight Table Population Links
 
-In complex and large schemas, it is sometimes difficult to track the population link, from which table it comes and/or to which tables it goes. For this reason, you can click on it and then you can see it as a dashed animated line.
+In complex and large schemas, it is sometimes difficult to track the population link, from which table it comes and/or to which tables it goes. You can therefore click on the link and see it as an animated dashed line.
 
 ![](images/web/12_dashed_link.gif)
 
