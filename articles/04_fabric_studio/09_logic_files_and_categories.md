@@ -67,7 +67,6 @@ Creating a new category is actually aimed to create a new Logic Java file. For t
 5. A new package folder will be created, containing a Logic file template, where package name is already set. 
 
 </web>
-
 <studio>
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
 </studio>
