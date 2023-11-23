@@ -19,7 +19,7 @@ In addition to these main objects, there are some others that are part of logica
 - Java - [Globals](typora://app/articles/08_globals/01_globals_overview.md) and [Functions](typora://app/articles/07_table_population/08_project_functions.md)
 - [Broadway](typora://app/articles/19_Broadway/01_broadway_overview.md)
 - Instance Groups
-- Resources - files that can be saved as part of a project.
+- Resources - files that can be saved as part of a project
 
 <studio>    
 
