@@ -1,6 +1,6 @@
 # Logical Unit / Data Product Overview
 
-### What Is a Logical Unit?
+### What is a Logical Unit?
 A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose. It holds a set of definitions and instructions used for integrating data from source systems, processes the data and stores it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
 
 An LU is defined and configured in the Fabric Studio as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). These definitions are comprised of 3 main types of objects:
@@ -56,9 +56,9 @@ In addition to these main objects, there are some others that are part of logica
 
 </web>
 
-### What Is a Logical Unit Instance (LUI)?
+### What is a Logical Unit Instance (LUI)?
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Digital Entity in the LUT structure definition.
-Using our example from above (Customer 360), assume that Company ABC has 35 million customers:
+Using our above example (Customer 360), assume that Company ABC has 35 million customers:
 
 * LU/LUT = Customer.
 * LUI = one single customer database.
