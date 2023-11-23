@@ -3,7 +3,7 @@
 ### What Is a Logical Unit?
 A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose. It holds a set of definitions and instructions that are used for integrating data from source systems, processes the data and stores it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
 
-An LU is defined and configured in the Fabric Studio, as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). These definitions are comprised of 3 main types of objects:
+An LU is defined and configured in the Fabric Studio as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). These definitions are comprised of 3 main types of objects:
 
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of an LU table upon its columns, PKs, indexes and triggers.
 
