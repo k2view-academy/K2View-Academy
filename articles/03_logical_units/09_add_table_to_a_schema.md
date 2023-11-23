@@ -6,7 +6,7 @@ The following are some of the methods you can use for adding a table to an [LU s
 
 <studio>
 
-While using one of the first three methods, the tables are also created in Fabric LU and then added to the schema. The last one enables adding an existing LU table, which is not in use in the schema.
+While using one of the first three methods, the tables are also created in Fabric LU and then added to the schema. The forth method enables adding an existing LU table, which is not in use in the schema.
 
 1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) for creating tables and their populations, and adding them to the LU schema.
 
