@@ -24,9 +24,9 @@ In addition to these main objects, there are some others that are part of logica
 <studio>    
 
 - [Translations](typora://app/articles/09_translations/01_translations_overview_and_use_cases.md).
-- Parsers.
-- Jobs.
-- IIDFinder. 
+- Parsers
+- Jobs
+- IIDFinder 
 
 </studio>
 
