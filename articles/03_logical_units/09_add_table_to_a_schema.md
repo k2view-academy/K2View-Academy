@@ -23,7 +23,7 @@ While using one of the first three methods, the tables are also created in Fabri
 
    
 
-3. Right-click the **Schema window** and select one of the following options:
+3. Right-click anywhere in the **Schema window** and select one of the following options:
 
     * **New Table from SQL Based DB Query**.
     * **New Table from SQL Based Root Function**.
