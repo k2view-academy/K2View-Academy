@@ -60,8 +60,8 @@ In addition to these main objects, there are some others that are part of logica
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Digital Entity in the LUT structure definition.
 Using our above example (Customer 360), assume that Company ABC has 35 million customers:
 
-* LU/LUT = Customer.
-* LUI = one single customer database.
+* LU/LUT = Customer
+* LUI = one single customer database
 
 Fabric will hold 35 million instances (LUIs) of the Customer LUT. That is, one physical database for each customer.
 
