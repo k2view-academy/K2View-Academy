@@ -147,7 +147,7 @@ You can link them by either dragging a connection line or by using the Tables Co
 
    - <studio>Right-click, select **Add link to** > **child population** > **column**.</studio>
 
-   - <web>Right-click on this field out connector, select the target table, the target table population and then the target input field.</web>
+   - <web>Right-click on this field output connector, select the target table, the target table population and then the target input field.</web>
 
      <web>
 
