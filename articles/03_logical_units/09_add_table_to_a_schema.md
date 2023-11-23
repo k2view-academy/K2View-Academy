@@ -15,7 +15,7 @@ While using one of the first three methods, the tables are also created in Fabri
    * Click on the DB Objects tab.
    * Click **DB Connection** and select a [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) from the drop-down menu.
    * From the window underneath the **DB Connection** drop-down menu, open the table tree, select a **Table**, open its drop-down menu and drag the table from its title into the **LU schema**. You can drag several tables at the same time.
-   * A right-click menu appears; select one of the following from it: **Create Table Based DB Query** or **Create Table Based Root Function** or **Create Table Based Broadway Flow**.
+   * A click menu then appears in the **LU schema**; select one of the following three options from it: **Create Table Based DB Query** or **Create Table Based Root Function** or **Create Table Based Broadway Flow**.
 
    The selected table or tables are automatically created with the selected type of [population](/articles/07_table_population/01_table_population_overview.md) and added to the LU schema.
 
