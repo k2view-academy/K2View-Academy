@@ -92,7 +92,7 @@ Below is a table of **pros and cons** of each alternative:
 <p><strong>LU per Digital Entity and data source</strong></p>
 </td>
 <td width="250">
-<p><strong>LU per Digital Entity sub type</strong></p>
+<p><strong>LU per Digital Entity subtype</strong></p>
 </td>
 </tr>
 <tr>
