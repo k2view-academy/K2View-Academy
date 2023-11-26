@@ -73,7 +73,7 @@ Every Fabric project starts by defining its LUs. Analyze the business requiremen
 ### General Recommendations for Designing an LU 
 Digital Entity data is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data source.
 
-In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
+In general, an LU should be based on the smallest number of data sources, as long as it represents a full view of a Data Product.
 
 For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create an LU for each Digital Entity subtype (in our example, different Customer Types).
 
