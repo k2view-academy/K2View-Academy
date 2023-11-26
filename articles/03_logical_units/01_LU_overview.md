@@ -77,7 +77,7 @@ In general, an LU should be based on the smallest number of data sources, as lon
 
 For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create an LU for each Digital Entity subtype (in our example, different Customer Types).
 
-Below is a table of **pros and cons** of each alternative:
+Below is a **pros and cons** table of each alternative:
 
 <table role="table" width="800">
 <tbody>
