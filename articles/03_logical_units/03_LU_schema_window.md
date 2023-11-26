@@ -100,7 +100,7 @@ The side panel is divided into several tabs:
 <p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Enrichment functions - directly related to specific LU tables - are included in the display.</p>
+<p>Defines the execution order of Enrichment functions using the upward and downward arrows. Only Enrichment functions - directly related to specific LU tables - are included in the display.</p>
 </td>
 </tr>
 <tr>
