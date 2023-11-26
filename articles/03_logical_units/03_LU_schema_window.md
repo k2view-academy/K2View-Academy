@@ -175,7 +175,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <td width="557">
 <p>Update Tables from Database.</p>
 <p>When clicked, the LU tables schema is refreshed from the source database. This action is required when the LU tables schema has been updated in the source database.</p>
-<p>Note: only current tables are updated. Tables are manually added or deleted from an LU.</p>
+<p>Note: Only current tables are updated. Tables are manually added or deleted from an LU.</p>
 </td>
 </tr>
 <tr>
