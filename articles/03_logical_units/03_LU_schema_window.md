@@ -139,7 +139,7 @@ The side panel is divided into several tabs:
 The side panel is divided into 2 tabs:
 
 * **[Schema Properties](04_LU_properties.md)** - where you can set the logical unit definitions.
-* **[Population Order View](19_LU_population_order_view.md)** - where you can see and manage the tables' list and the order of the table population flows.
+* **[Population Order View](19_LU_population_order_view.md)** - where you can see and manage both the tables' list and the order of table population flows.
 
 
 
