@@ -161,27 +161,27 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
-<p>Group SubGraph.</p>
+<p>Group SubGraph</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
 <td width="557">
-<p>Ungroup SubGraph.</p>
+<p>Ungroup SubGraph</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp;<img src="images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
-<p>Update Tables from Database.</p>
-<p>When clicked, the LU tables schema is refreshed from the source database. This action is required when the LU tables schema has been updated in the source database.</p>
+<p>Update Tables From Database</p>
+<p>When clicked, the LU tables' schema is refreshed from the source database. This action is required when the LU tables' schema has been updated in the source database.</p>
 <p>Note: Only current tables are updated. Tables are manually added or deleted from an LU.</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
 <td width="557">
-<p>Refresh Items, refreshes items from an implementation into the LU schema.</p>
+<p>Refresh Items - refreshes items from an implementation into the LU schema.</p>
 </td>
 </tr>
 </tbody>
@@ -208,7 +208,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/refresh.png" alt="" /></td>
 <td width="630pxl">
-<p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
+<p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated in the population editor.</p>
 </td>
 </tr>
 <tr>
