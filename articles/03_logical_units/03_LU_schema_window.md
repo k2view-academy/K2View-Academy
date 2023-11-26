@@ -108,7 +108,7 @@ The side panel is divided into several tabs:
 <p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><strong>DB Objects Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Displays a list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
+<p>Displays a list of objects in the source database according to the selected DB Interface in the DB Connection field.</p>
 <p>DB objects can be refreshed by clicking on the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
 <p>Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
