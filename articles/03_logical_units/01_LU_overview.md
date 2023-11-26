@@ -8,7 +8,7 @@ An LU is defined and configured in the Fabric Studio as a core element of the [F
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of an LU table upon its columns, PKs, indexes and triggers.
 
 2. [**LU Table Population**](/articles/07_table_population/01_table_population_overview.md): 
-    * Feed data into LU tables from a variety of data sources and keep it up to date.
+    * Data feeding into LU tables from a variety of data sources and keep it up to date.
     * Ability to manipulate the fed data, that is, performance of enrichment, cleansing, masking, transforming, etc. 
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table. The Root Table holds the LU’s unique key.
 
