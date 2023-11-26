@@ -126,7 +126,7 @@ The side panel is divided into several tabs:
 <p><strong><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline">Diagram Outline Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays an overview of the LU structure and enables a search of a subset of tables included in the schema.</p>
+<p>Displays an overview of the LU structure, and enables searching a subset of tables that is included in the schema.</p>
 </td>
 </tr>
 </tbody>
@@ -138,12 +138,12 @@ The side panel is divided into several tabs:
 
 The side panel is divided into 2 tabs:
 
-* **[Schema Properties](04_LU_properties.md)**, where you can set the logical unit definitions.
-* **[Population Order View](19_LU_population_order_view.md)**, where you can see and manage the tables' list and their population flows order.
+* **[Schema Properties](04_LU_properties.md)** - where you can set the logical unit definitions.
+* **[Population Order View](19_LU_population_order_view.md)** - where you can see and manage the tables' list and the order of the table population flows.
 
 
 
-The side panel can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper right corner of the schema window.
+The side panel can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper-right corner of the schema window.
 
 </web>
 
