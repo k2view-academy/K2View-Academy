@@ -92,7 +92,7 @@ The side panel is divided into several tabs:
 <p><strong><a href="15_LU_schema_edit_reference_tab.md">References Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
-<p>Used to configure the Reference Tables that are accessible from this LU.</p>
+<p>Used for configuring the Reference Tables that are accessible from this LU.</p>
 </td>
 </tr>
 <tr>
