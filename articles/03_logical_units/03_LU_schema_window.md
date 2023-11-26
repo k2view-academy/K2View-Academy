@@ -1,6 +1,6 @@
 # Logical Unit / Data Product Schema Window
 
-Logical Unit schema diagram represents the design for a specific data product dataset, its tables, their relations, population flows, synchronization rules and other business definitions.  
+A Logical Unit schema diagram represents the design for a specific data product dataset, its tables, their relations, population flows, synchronization rules and other business definitions.  
 
 
 In order to open the **Logical Unit Schema** window, go to the **Project Tree**, click on the **LU Name** and then on the **Schema**.
