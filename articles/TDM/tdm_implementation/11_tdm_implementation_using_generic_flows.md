@@ -534,7 +534,7 @@ View the below example:
 
 
 
-Check the **DIRECT_FLOW** checkbox to enable a direct call of the Custom Logic flow.
+Check the **DIRECT_FLOW** checkbox to enable a [direct call](#custom-logic---tdm-81-improvements) of the Custom Logic flow.
 
 Redeploy the Web-Services.
 
