@@ -118,7 +118,7 @@ The side panel is divided into several tabs:
 <p><strong>Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays a list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area in order to add it to the LU schema.</p>
+<p>Displays a list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag a table into the Logical Unit diagram area in order to add it to the LU schema.</p>
 </td>
 </tr>
 <tr>
