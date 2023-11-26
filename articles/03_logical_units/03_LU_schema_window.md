@@ -17,7 +17,7 @@ In order to open the **Logical Unit Schema** window, go to the **Project Tree**,
 
 </web>
 
-The Logical Unit Schema window has three main sections:
+The Logical Unit Schema window has 3 main sections:
 * Logical Unit schema diagram
 * <studio>Logical Unit tabs panel</studio><web>Logical Unit side panel</web>
 * Logical Unit toolbar
