@@ -159,7 +159,7 @@ Below is a **pros and cons** table of each alternative:
 
 The file name's ambiguity is not supported within the same Logical Unit. This is not restricted by the Fabric Studio on purpose, allowing the implementor to continue the work and to update the names later. For example, if 2 Java function files with identical names were exported from other projects or libraries, they can be saved in the project in the Fabric Studio. 
 
-However, **at run-time there should be no ambiguity within the LU**, otherwise the server will run the first file that it finds (no commitment to what is considered the first one).
+However, **at run-time there should be no ambiguity within the LU**, otherwise the server will run the first file that it finds (with no commitment to what is considered the first one).
 
 
 
