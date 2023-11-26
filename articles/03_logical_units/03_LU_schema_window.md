@@ -65,7 +65,7 @@ The Logical Unit schema diagram displays the Root Table, the hierarchy of the ta
 
 </studio>
 
-In order to make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
+In order to make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing tables in the Customer LU.
 
 [Click for more information about Grouping and Ungrouping LU Tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md).
 
