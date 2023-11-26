@@ -375,13 +375,13 @@ You can build one or multiple Broadway flows to get a list of entities for a tas
 
 ### Custom Logic - TDM 8.1 Improvements
 
-TDM 8.1 enables 2 execution modes for the Custom Logic flows:
+TDM 8.1 enables **2 execution modes** for the Custom Logic flows:
 
-1. **Direct call** - a newly added mode, where the batch process calls the Custom Logic flow directly, getting the entity list without pre-populating the entities in a dedicated table. This approach is **available only when the flow is based on one DbCommand**, i.e., runs one Select query to get the required entities.
+1. **Direct call** - a newly added mode, where the batch process calls the Custom Logic flow directly, **getting the entity list without pre-populating the entities in a dedicated table**. This approach is **available only when the flow is based on one DbCommand**, i.e., runs one Select query to get the required entities.
 
    The direct call mode has a better performance: it does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and runs the task execution on any chunk of consumed entities. 
 
-2. **Indirect call** - the indirect call creates and populates a dedicated table in the TDM DB. The table is created per execution with the following naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a Select query from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
+2. **Indirect call** - the indirect call **creates and populates a dedicated table in the TDM DB**. The table is created per execution with the following naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a Select query from the newly created table to get the task's entities. The table is dropped from the DB when the task execution is completed.  
 
    Note that previous TDM versions populated the entities into a dedicated Cassandra table in **k2view_tdm** keyspace. From TDM 8.1 onwards, the entity table is created in the TDM DB.
 
@@ -406,7 +406,7 @@ The following parameters can be set by the user that creates the task:
 
 The customLogicSql flow runs in a **direct call** mode. 
 
-**Examples of an input SELECT query**:
+##### Examples of an input SELECT query:
 
 1. Populating both parameters - the **sql** and the **sqlParams**: 
 
@@ -426,7 +426,7 @@ The customLogicSql flow runs in a **direct call** mode.
 
 
 
-### Step 7.1 - Create the Custom Logic Flow
+### Step 7.1 - Create a new Custom Logic Flow
 
 The Custom Logic Broadway flow can be created in either the **Shared Objects** or **a given LU**.
 
@@ -441,13 +441,13 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - The input parameter name must **not contain spaces or double quotes**.
 
-- TDM 8.0 added an integration of **Broadway editors** into the TDM portal when populating either the data generation parameters or the Custom logic parameters in the task’s tabs. This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
+- TDM 8.0 added an integration of **Broadway editors** into the TDM portal when populating either the data generation parameters or the Custom logic parameters in the task’s tabs. This integration enables the user to select a valid value from a list, to set dates, and to set distributed parameters. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the TDM integration with the Broadway editors and related implementation instructions.
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g., "CA,NY". The Broadway flow can split this String by the delimiter. The values must be delimited by the delimiter, which is set in the split Actor in Broadway flow.
 
-- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the Select statement.  See the [CustomLogicSql flow's examples](#customlogicsql-flow) above.
+- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the Select statement.  See the [CustomLogicSql flow's examples](#how-do-i-create-the-tdm-broadway-flows) above.
 
   
 
@@ -455,7 +455,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 #### Direct Call Flow
 
-The Custom Logic flow must have the following structure:
+The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must have the following structure:
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
