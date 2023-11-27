@@ -250,7 +250,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/light-off.svg" alt="" /></td>
 <td width="630pxl">
-<p>Highlight tables - activated when clicked, as explained <a href="/articles/03_logical_units/20_LU_highlight_tables.md">here</a></p>
+<p>Highlight tables - activated when clicked, as explained <a href="/articles/03_logical_units/20_LU_highlight_tables.md">here.</a></p>
 </td>
 </tr>
 <tr>
