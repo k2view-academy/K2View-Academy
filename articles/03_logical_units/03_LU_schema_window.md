@@ -232,7 +232,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/auto-layout.svg" alt="" /></td>
 <td width="630pxl">
-<p>Schema auto-layout.</p>
+<p>Schema auto-layout - automatically arranges and optimizes visualization.</p>
 </td>
 </tr>
 <tr>
