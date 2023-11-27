@@ -238,7 +238,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.png" alt="" /></td>
 <td width="630pxl">
-<p>Open the Data Viewer pop-up in order to run queries on IID of the current LU.</p>
+<p>Open the Data Viewer pop-up window in order to run queries on IID of the current LU.</p>
 </td>
 </tr>
 <tr>
