@@ -150,7 +150,7 @@ The side panel can be collapsed or expanded by clicking the <img src="images/web
 ## Logical Unit Schema Window Toolbar
 <studio>
 
-The LU Diagram window displays the following toolbar - by default:
+The LU schema's diagram window displays the following toolbar:
 
 ![image](images/1.3_LU_window_icons.png)
 
