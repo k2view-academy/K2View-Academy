@@ -18,16 +18,16 @@ In order to open the **Logical Unit Schema** window, go to the **Project Tree**,
 </web>
 
 The Logical Unit Schema window has 3 main sections:
-* Logical Unit schema diagram
+* Logical Unit schema's diagram
 * <studio>Logical Unit tabs panel</studio><web>Logical Unit side panel</web>
 * Logical Unit toolbar
 
 
 
-## Logical Unit Schema Diagram
+## Logical Unit Schema's Diagram
 
-The Logical Unit schema diagram is a working design area where you can define the Logical Unit’s structure. 
-* A Logical Unit schema diagram displays a hierarchy of all business entities related to a Root Table. 
+The Logical Unit schema's diagram is a working area where you can design the Logical Unit’s structure. 
+* A Logical Unit schema's diagram displays a hierarchy of all business entities related to a Root Table. 
 * Each table can have one or more population/s, where each population is linked to its parent table.
 
 [Click for more information about Logical Unit Tables.](/articles/06_LU_tables/01_LU_tables_overview.md)
@@ -48,7 +48,7 @@ The Logical Unit schema diagram is a working design area where you can define th
 
 </web>
 
-The Logical Unit schema diagram displays the Root Table, the hierarchy of the tables included in the Logical Unit and the relationships between them:
+The Logical Unit schema's diagram displays the Root Table, the hierarchy of the tables included in the Logical Unit and the relationships between them:
 * The Root Table of the LU schema is Customer. 
 
 * Each table is displayed with all of its fields in a scrollable table.
