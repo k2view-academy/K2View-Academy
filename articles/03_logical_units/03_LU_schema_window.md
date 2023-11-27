@@ -208,13 +208,13 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/refresh.png" alt="" /></td>
 <td width="630pxl">
-<p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated in the population editor.</p>
+<p>**Refresh** Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated in the population editor.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.svg" /></td>
 <td width="630pxl">
-<p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
+<p>Ungroup, Remove the selected tables from the group, in case you select tables; remove the group if a group is selected.</p>
 </td>
 </tr>
 <tr>
