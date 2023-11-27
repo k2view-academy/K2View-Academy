@@ -214,7 +214,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.svg" /></td>
 <td width="630pxl">
-<p>Ungroup - remove the selected tables from the group, in case you select tables; remove the group if a group is selected.</p>
+<p>Ungroup - remove selected tables from a group, in case you select tables; remove an entire group if a group is selected.</p>
 </td>
 </tr>
 <tr>
@@ -238,7 +238,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.png" alt="" /></td>
 <td width="630pxl">
-<p>Open the Data Viewer pop-up window in order to run queries on IID of the current LU.</p>
+<p>Open the Data Viewer pop-up window in order to run queries on the current LU's IIDs.</p>
 </td>
 </tr>
 <tr>
