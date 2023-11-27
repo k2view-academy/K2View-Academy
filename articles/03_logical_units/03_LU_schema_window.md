@@ -214,7 +214,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.svg" /></td>
 <td width="630pxl">
-<p>Ungroup - remove selected tables from a group, in case you select tables; remove an entire group if a group is selected.</p>
+<p>Ungroup - remove either selected tables from a group (in case you select tables) or an entire group (if a group is selected).</p>
 </td>
 </tr>
 <tr>
