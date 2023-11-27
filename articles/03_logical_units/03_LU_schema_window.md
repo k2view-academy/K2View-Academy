@@ -232,7 +232,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/auto-layout.svg" alt="" /></td>
 <td width="630pxl">
-<p>Schema auto-layout - automatically arranges and optimizes visualization.</p>
+<p>Schema's Auto Layout - automatically arranges and optimizes visualization.</p>
 </td>
 </tr>
 <tr>
@@ -244,7 +244,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/data-viewer.svg" alt="" /></td>
 <td width="630pxl">
-<p>Open the Table Data Viewer's bottom panel. The data will be displayed according to the selected table.</p>
+<p>Open the Table Data Viewer's bottom panel (height adjustable). The data will be displayed according to the selected table.</p>
 </td>
 </tr>
 <tr>
@@ -256,7 +256,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/magnifier1.png" alt="" /></td>
 <td width="630pxl">
-<p>Magnifier - activated when clicked; can be moved across the schema diagram to enlarge existing features, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#magnifier">here</a>.</p>
+<p>Magnifier - activated when clicked; can be moved across the schema's diagram to enlarge existing elements, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#magnifier">here</a>.</p>
 </td>
 </tr>
 <tr>
