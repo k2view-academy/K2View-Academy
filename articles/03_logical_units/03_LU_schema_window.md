@@ -256,7 +256,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/magnifier1.png" alt="" /></td>
 <td width="630pxl">
-<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#magnifier">here</a>.</p>
+<p>Magnifier - activated when clicked; can be moved across the schema diagram to enlarge existing features, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#magnifier">here</a>.</p>
 </td>
 </tr>
 <tr>
