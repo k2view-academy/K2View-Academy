@@ -262,7 +262,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/mini-map-off.svg" alt="" /></td>
 <td width="630pxl">
-<p>Open the schema's mini-map and navigation panel, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#navigation-mini-map">here</a>.</p>
+<p>Navigation Minimap - when clicked, it provides an overview of the whole schema, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#navigation-mini-map">here</a>.</p>
 </td>
 </tr>
 <tr>
