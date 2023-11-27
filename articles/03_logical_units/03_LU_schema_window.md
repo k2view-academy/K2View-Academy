@@ -274,7 +274,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_search_table_or_group.png" alt="" /></td>
 <td width="630pxl">
-<p>Search elements (table, table- groups, table's columns) in the schema, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#schema-search">here</a>.</p>
+<p>Search elements (table, table-groups, table's columns) in the schema, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#schema-search">here</a>.</p>
 </td>
 </tr>
 </tbody>
