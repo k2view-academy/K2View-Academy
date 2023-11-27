@@ -187,7 +187,7 @@ The LU schema's diagram window displays the following toolbar:
 </tbody>
 </table>
 
-You can customize the schema's toolbar by right-clicking on it and selecting Customize...; a pop-up window opens, where you can choose and tick various actions, thus adding related elementssome :
+You can customize the schema's toolbar by right-clicking on it and selecting 'Customize...'; a pop-up window opens, where you can choose and tick various actions, for the display of related elements in the toolbar:
 
 [Click for more information about Group and Ungroup SubGraph Objects.](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md)
 
