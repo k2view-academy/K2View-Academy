@@ -11,7 +11,7 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
 2. Open the [project name].k2proj file to be edited.
 
-3. Edit the **DataChangeIndicators** element by adding the **DataChange** element. Set the consumer name in DataChange name attribute and set the available types for the CDC columns in the **Option**/**s** elements.
+3. Edit the **DataChangeIndicators** element by adding the **DataChange** element. Set the consumer name in *DataChange name* attribute and set the available types for the CDC columns in the **Option**/**s** elements.
 
    By default, the **DataChangeIndicators** contains the **Search** consumer. View the below example:
 
