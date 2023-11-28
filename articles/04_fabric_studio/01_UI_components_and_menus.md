@@ -53,13 +53,13 @@ The Start Page can be reopened, even after it was closed, by using the *Tools* a
 
 ## User Interface Layout
 
-Once a project is opened, the Studio's main user interface layout is shown. It is divided into several main areas:
+Once a project has opened, the Studio's main user interface layout is shown. It is divided into several main areas:
 
-* **Debug Panel** (A & B)  - Action panel for managing actions toward the Fabric debug server.
-* **Activity Toolbar** (C) - Enables making various actions, as explained below. 
+* **Debug Panel** (A & B) - action panel for managing actions toward the Fabric debug server.
+* **Activity Toolbar** (C) - enables making various actions, as explained below. 
 * **Project Tree** (D) - The Project's Folders Tree displays the components of the current project as a hierarchy of entities. Click for more information about the [Project Tree](08_fabric_project_tree.md).
-* **Logs Panel** (E)  - Enables viewing logs, output and debug steps.  Click for more information [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
-* **Editor** (F) - The main area in which you edit all your project files and entities. 
+* **Logs Panel** (E) - enables viewing logs, output and debug steps. Click for more information [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+* **Editor** (F) - the main area in which you edit all your project files and entities.
 
 
 
