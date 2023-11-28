@@ -49,16 +49,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
       - **TARGET_ENVIRONMENT**
 
-   3.   **createDeleteTablesAndPopulations** flow (imported from the TDM library). This flow creates the target tables with their population flows and adds them to the LU schema.  Set the input parameters:
-
-      - **LU_NAME**
-
-      - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing population flows for the target tables. When set to **false**, the flow skips existing flows and creates new flows only, if needed. The **default** value is **false**.
-
-      - **TARGET_SCHEMA**
-
-      - **TARGET_INTERFACE**
-         
+            
 
 6. Open the LUs schema, right-click > Automatic Layout to view the added target tables.
 
