@@ -32,7 +32,7 @@ Fabric Studio has built-in integrwith source version control GIT-based systems.
 
 ## Start Page
 
-Upon opening the desktop Studio, the Start Page will appear. 
+Upon opening the desktop Studio, the Start Page appears. 
 
 ![image](images/04_01_01_start_a_page.png)
 
