@@ -39,7 +39,7 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
    <studio>
 
-5. Close and reopen your project to reload the changes in the .k2proj file.
+5. Close and reopen your project to reload the changes done in the .k2proj file.
 
 6. Open the required LU table as a new tab added for the data change. A new tab is added for the CDC consumer defined in the .k2proj file: 
 
