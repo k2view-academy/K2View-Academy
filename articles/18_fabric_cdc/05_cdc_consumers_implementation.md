@@ -33,7 +33,7 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
      </DataChangeIndicators>
    ```
 
-   Note that the **Search** name cannot be used for additional data change consumers since it is reserved for **ElasticSearch**. 
+   Note that the name '**Search**' is a reserved name, as it is a reserved word for **Elasticsearch**, and should not be altered nor used for additional data change consumers. 
 
    
 
