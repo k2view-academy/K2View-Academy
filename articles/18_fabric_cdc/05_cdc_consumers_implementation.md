@@ -2,7 +2,7 @@
 
 ## Adding CDC Consumers
 
-Fabric has a built-in integration with Elasticsearch and can also send CDC changes to other consumers. 
+Fabric has a built-in integration with Elasticsearch and it can also send CDC changes to other consumers. 
 
 The Fabric Studio can be customized. Consumers can be added to CDC fields by editing the [project name].k2proj field of a Fabric project:
 
