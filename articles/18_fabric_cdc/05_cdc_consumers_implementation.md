@@ -64,7 +64,7 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
 ### Creating Indexes for Other CDC Consumers
 
-When defining LU in the Fabric Studio, selected tables and columns can be set to publish CDC messages each time they are updated. 
+When defining an LU in the Fabric Studio, selected tables and columns can be set to publish CDC messages each time they are updated. 
 For example, to notify an external consumer system about a customer's change of address, the following columns are defined as CDC columns in the ADDRESS table in the CUSTOMER LU: STATE, CITY, STREET, HOUSE_NO, ZIP_CODE.
 
 <web>
