@@ -45,9 +45,9 @@ The Start Page has links, including:
 
 [Click for more information about Creating a New Project.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-Click the K2View icon on the top left corner of the Studio in order to restore, move, change size, minimize, maximize or close the Fabric Studio.
+Click the K2view icon in the upper-left corner of the Studio in order to restore, move, change size, minimize, maximize or close the Fabric Studio.
 
-The Start Page can be reopened, even after it is closed, by using the *Tools* actions.
+The Start Page can be reopened, even after it was closed, by using the *Tools* actions.
 
 
 
