@@ -11,7 +11,11 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
 2. Open the [project name].k2proj file to be edited.
 
-3. Edit the **DataChangeIndicators** tag by adding the **DataChange** tag. By default, the **DataChangeIndicators** contains the **Search** consumer.  Set the consumer name in the **name** and set the index types of the CDC columns in the **Options** tag.  See the example below:
+3. Edit the **DataChangeIndicators** element by adding the **DataChange** element. Set the consumer name in DataChange name attribute and set the available types for the CDC columns in the **Option**/**s** elements.
+
+By default, the **DataChangeIndicators** contains the **Search** consumer.
+
+View the below example:
 
    ```
     <DataChangeIndicators>
@@ -35,13 +39,13 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
    
 
-4. Save the .k2proj file.
+5. Save the .k2proj file.
 
    <studio>
 
-5. Close and reopen your project to reload the changes done in the .k2proj file.
+6. Close and reopen your project to reload the changes done in the .k2proj file.
 
-6. Open the required LU table as a new tab added for the data change. A new tab is added for the CDC consumer defined in the .k2proj file: 
+7. Open the required LU table as a new tab added for the data change. A new tab is added for the CDC consumer defined in the .k2proj file: 
 
    ![cdc_consumers](images/cdc_consumers_tabs.png)
 
