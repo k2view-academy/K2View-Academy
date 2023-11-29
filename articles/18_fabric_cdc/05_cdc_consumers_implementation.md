@@ -71,7 +71,7 @@ For example, to notify an external consumer system about a customer's change of 
 
 <web>
 
-You can add either column by column to the list, by clicking on the `+` action button, or all at once, in case any change is important, by clicking on add-all-columns  ![](images/web_table_prop_cdc_add_all.png) action button. When this button is clicked, a pop-up window opens, where you can either choose multiple columns or click to select all, as well as set the columns' type (selecting from the drop-down list).
+You can add either column by column to the list, by clicking on the `+` action button, or all columns once, by clicking on add-all-columns ![](images/web_table_prop_cdc_add_all.png) action button. When this button is clicked, a pop-up window opens, where you can either choose multiple columns or click to select all, as well as set the columns' type (selecting from the drop-down list).
 
 ![](images/web_table_prop_cdc_add_all_popup.png)
 
