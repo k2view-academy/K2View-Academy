@@ -57,7 +57,7 @@ Once a project has opened, the Studio's main user interface layout is shown. It 
 
 * **Debug Panel** (A & B) - an action panel for managing actions toward the Fabric debug server.
 * **Activity Toolbar** (C) - enables making various actions, as explained below. 
-* **Project Tree** (D) - The Project's Folders Tree displays the components of the current project as a hierarchy of entities. Click for more information about the [Project Tree](08_fabric_project_tree.md).
+* **Project Tree** (D) - displays different sections of the current project in a hierarchical structure. Click for more information about the [Project Tree](08_fabric_project_tree.md).
 * **Logs Panel** (E) - enables viewing logs, output and debug steps. Click for more information about the [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 * **Editor** (F) - the main area in which you edit all your project files and entities.
 
