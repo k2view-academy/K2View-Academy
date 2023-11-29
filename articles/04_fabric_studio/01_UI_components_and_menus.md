@@ -208,7 +208,7 @@ Click **New Item** to open a **New Item** under either a selected **LU** or **Sh
 * Select an **LU** from the current **Logical Unit** drop-down list in order to create the new item under the selected **LU**. Examples for such new items are [Function](/articles/07_table_population/11_3_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
 * In order to create a new item under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the current Logical Unit drop-down list should be empty.
 
-Note that this area allows you to open a new item only for an LU or for Shared Objects. 
+Note that this area allows you to open a new item only for an LU or Shared Objects.
 
 </studio>
 
