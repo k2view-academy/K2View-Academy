@@ -69,7 +69,7 @@ Once a project has opened, the Studio's main user interface layout is shown. It 
 
 ### Debug Panel
 
-The debug panel enables access to the Fabric debug server, Cassandra debug server and to the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
+The debug panel enables access to the Fabric debug server, Cassandra debug server and to the Fabric Web Admin. The debug panel is divided into 2 main areas - Fabric and Cassandra:
 
 <table>
 <tbody>
