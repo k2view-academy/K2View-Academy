@@ -46,14 +46,14 @@ The context menu allows performing the following actions:
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on a selected node can either expand or collapse it.
 
+* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
+
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
 * **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements. The difference between the Expand and Focus actions is that Focus dives into the next hierarchy level, eliminating other nodes from the screen.
-
-  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
-
-  * In the Focus view, breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, and they allow to navigate up the tree.
-
+* For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
+  
+* In the Focus view, breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, and they allow to navigate up the tree.
 
 <img src="images/breadcrumbs.png" style="zoom: 67%;" />
 
@@ -85,6 +85,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * Build the Catalog **artifacts**. [Click here for more information about the Catalog artifacts](09_build_artifacts.md).
 * **Search** <img src="images/search.png" style="zoom:80%;" /> the catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
+* **Connected only** <img src="images/connected_only.png" style="zoom:80%;" />, for focusing on a selected node with its predecessors and successors only. When clicked, all other nodes are hidden and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" /> to indicate that. Clicking the icon again unhides the nodes to the original view. 
 * **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, for analyzing the Catalog's statistics either in a view version mode or in a version comparison mode. The insights are currently available on Schema level only. 
 * **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source. 
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
