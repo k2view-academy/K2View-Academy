@@ -56,7 +56,7 @@ The Fabric Studio can be customized. Consumers can be added to CDC fields by edi
 
    <web>
 
-   5. Open the required LU table properties, on the right pane of the schema window - when a table is selected, or in the table's window. 
+   5. Open the CDC section of the Table Properties pane for adding columns. The Table Properties pane can be shown either in the Schema window, when you select a table and open the properties pane, or when opening a table through the Project Tree and then open its properties pane. 
 
    6. Expand the Data Change Indexes section, where the added CDC consumer will be shown as a new subsection.
 
