@@ -20,7 +20,7 @@ Additionally, the Fabric Studio enables you to integrate your projects into sour
 
 <web>
 
-Fabric Studio has built-in integrwith source version control GIT-based systems.
+Fabric Studio has a built-in integration with GIT-source version control.
 
 [Click for more information about Best Practices for Working with GIT](23_web_versioncontrol.md).
 
