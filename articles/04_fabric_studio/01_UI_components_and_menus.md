@@ -220,8 +220,8 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 More specifically, the Fabric Web Studio follows Visual Studio Code layout concepts, where the user interface is divided into several main areas:
 
 * **Editor** (A) - the main area in which you edit all your project files and entities. You may open many editors, alongside each other, vertically and horizontally.
-* **Activity Bar** (B) - it is the left-most sidebar, allowing you to switch between views, where each provides a different aspect in tailoring your project.
-* **Side Bar** (C) - Contains different views, like the File Explorer, assisting you while working on your Fabric project. Click for more information about the [Project Tree](08_fabric_project_tree.md).
+* **Activity Bar** (B) - it is the left-most menu, allowing you to switch between views.
+* **Side Bar** (C) - the second sidebar from the left, containing a variety of views - where each provides a different aspect in tailoring your project - such as File Explorer that assists you during the work on your Fabric project. Click for more information about the [Project Tree](08_fabric_project_tree.md).
 * **Status Bar** (D) - Information about the opened project and the files you are editing.
 * **Panel** (E) - Displays different panel modules below the editor area. Examples for such panel modules are the Fabric Terminal, Fabric Logs Viewer, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
 * **Minimap** & **Outline** (F) - Code outline, provides you with a high-level overview of your source code, which is useful for a quick navigation and a code comprehension. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area in order to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top right, which, when expanded, shows the symbol tree of the currently active editor.
