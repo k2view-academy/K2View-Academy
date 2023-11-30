@@ -219,8 +219,8 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 
 More specifically, the Fabric Web Studio follows Visual Studio Code layout concepts, where the user interface is divided into several main areas:
 
-* **Editor** (A) - The main area in which you edit all your project files and entities. You may open as many editors as you like side by side vertically and horizontally.
-* **Activity Bar** (B) -  Located on the far left-hand side and allows you to switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled.
+* **Editor** (A) - the main area in which you edit all your project files and entities. You may open many editors, alongside each other, vertically and horizontally.
+* **Activity Bar** (B) - it is the left-most sidebar, allowing you to switch between views, where each provides a different aspect in tailoring your project.
 * **Side Bar** (C) - Contains different views, like the File Explorer, assisting you while working on your Fabric project. Click for more information about the [Project Tree](08_fabric_project_tree.md).
 * **Status Bar** (D) - Information about the opened project and the files you are editing.
 * **Panel** (E) - Displays different panel modules below the editor area. Examples for such panel modules are the Fabric Terminal, Fabric Logs Viewer, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
