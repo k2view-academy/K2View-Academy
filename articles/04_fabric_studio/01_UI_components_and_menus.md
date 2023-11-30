@@ -215,7 +215,7 @@ Click **New Item** to open a **New Item** under either a selected **LU** or **Sh
 
 ## User Interface Layout
 
-The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it adopts a common user interface and a layout of an explorer on the left, showing all of the files and folders you have access to while designing your Fabric project, and an editor on the right, showing the content of the files you have opened.
+The Fabric Web Studio has a simple and intuitive layout. Like many other code editors (also called IDE - Integrated Development Environment), it has a common user interface and a layout of an explorer on the left, where all files and folders are shown for designing your Fabric project, and an editor on the right, displaying your open files' content.
 
 More specifically, the Fabric Web Studio follows Visual Studio Code layout concepts, where the user interface is divided into several main areas:
 
