@@ -243,7 +243,7 @@ More specifically, the Fabric Web Studio follows Visual Studio Code layout conce
 
 The **Activity Bar** lets you switch quickly between views. Once you click on a view, the **Side Bar** changes accordingly, allowing you to make the relevant operations for this view.
 
-The Web Studio comes with several default views in the Activity Bar, as described below. You can open them, as well as other views, using the **View: Open View** command. Selecting a view adds it to the Activity Bar. 
+The Web Studio comes with several default views in the Activity Bar, as described below. You can open them, as well as other views, using the **View: Open View** command from the Top Menu. Selecting a view adds it to the Activity Bar.
 
 The views that appear by default on the Web Studio are as follows:
 
