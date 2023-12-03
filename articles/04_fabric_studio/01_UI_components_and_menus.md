@@ -284,7 +284,7 @@ The views that appear by default on the Web Studio are as follows:
 
 ### Fabric Menu 
 
-The Fabric menu which is part of the top menu bar, provides several Fabric and Studio actions:
+The Fabric menu, which is part of the Top Menu bar, provides several Fabric and Studio actions:
 
 * **Open Fabric Terminal** - Opens the Fabric Terminal at the bottom panel area, where you can run [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
 * **Watch Fabric Log** - Opens the Fabric Log terminal, where you can see the active Fabric log, in "tail" mode.   
