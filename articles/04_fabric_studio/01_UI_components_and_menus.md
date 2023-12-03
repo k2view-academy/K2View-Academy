@@ -313,7 +313,7 @@ The status bar provides information about and status of both the open project an
 It is divided into a few parts (yet - there is no visual separation between them):
 
 * **GIT** - shows the current GIT branch name ('main' in the above example), that your space is pointing on. Next to it, there is a *Synchronize Changes* action icon that when clicked - it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
-* **Problems status** - a quick indication of few problems levels in the project's files - error, warnings and info (in the example - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
+* **Problems status** - a quick indication of few problems levels in the project's files - error, warnings and info (as per the above example, there are - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
 * **Project Version** - a version is shown if it exists. Click [here](/articles/16_deploy_fabric/04_project_versioning.md) for more information about project versions.
 * **Deployment status** - states whether all LUs have been deployed; hovering over it shows the undeployed LUs. You can then click on it to deploy them.
 
@@ -323,11 +323,11 @@ It is divided into a few parts (yet - there is no visual separation between them
 
 ### Color Themes
 
-As part of Web Studio Settings Capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
+As part of the Web Studio's setting capabilities, you can modify the colors in the Visual Studio Code's user interface to suit your preferences and work environment.
 
-To select a color theme
+To select a color theme:
 
-1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) located at the bottom left area of Web Studio.  
+1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using the Preference gear icon ![](images/web/settings.png) located at the bottom-left area of Web Studio.  
 2. Use the cursor keys to preview the colors of the theme.
 3. Select a desired theme and click Enter.
 
