@@ -233,7 +233,7 @@ More specifically, the Fabric Web Studio follows Visual Studio Code layout conce
 
 
 
->**Tip:** You can reorganize the editors and panels, placing them in locations convenient to you. Drag and drop the the various tabs and panel modules in order to reposition the editor or the panel in the desired location on the screen.
+>**Tip:** You can reorganize the editors and panels, placing them in locations convenient to you. Drag and drop the various tabs and panel modules in order to reposition them in the desired location on the screen.
 
 
 
