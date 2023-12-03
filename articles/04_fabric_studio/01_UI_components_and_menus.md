@@ -298,7 +298,7 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
   * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
   * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * New [Custom DB Interface type](/articles/05_DB_interfaces/10_database_types.md)
-* **Export project to Zip File** - prepares a zip file that contains the all the project's entities and files in the Project Tree's root folder. 
+* **Export project to Zip File** - prepares a zip file that contains all of the project's entities and files in the Project Tree's root folder. 
 
 
 
