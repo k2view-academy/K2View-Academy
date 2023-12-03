@@ -252,7 +252,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td width="60px" style="text-align: center; padding-top: 10px;"><img src="images/web/explorer.png" alt="explorer" /></td>
     <td style="padding-left: 30px;"><strong>File Explorer</strong></td>
-    <td style="width:60%">Used for browsing, opening and editing files in your project. <br>When selected, the Side Bar shows the project tree, enabling you to open and edit files or take other actions using the context menu. To learn more about how to explore files in your project, see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
+    <td style="width:60%">Used for browsing, opening and editing files in your project. <br>When selected, the Side Bar shows the Project Tree, enabling you to open and edit files or take other actions using the context menu. To learn more about how to explore files in your project, see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
 </tr>
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
@@ -291,14 +291,14 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
 * **Show Fabric Apps**
 * **Deploy all Updated Logical Units** - lets you deploy, at once, all data products/logical units that have been changed but not yet redeployed.
 * **Version Tag** - activates the [Project Versioning Tagging](/articles/16_deploy_fabric/04_project_versioning.md) process.
-* **Create new** Fabric project's entities (some of these actions are also available in the project tree's context menu):
+* **Create new** Fabric project's entities (some of these actions are also available in the Project Tree's context menu):
   * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
   * New Web Service - lets you create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located in the Web Services logical unit, according to a chosen category.
   * New Java Function - lets you to easily create either a [Fabric function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger, or LUDB, as well as a regular function. When Fabric function is selected, then it will be created with relevant decelerations and format.
   * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
   * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * New [Custom DB Interface type](/articles/05_DB_interfaces/10_database_types.md)
-* **Export project to Zip File** - Prepare a zip file that contains the whole project entities and files at the Project's tree root folder. 
+* **Export project to Zip File** - prepares a zip file that contains the all the project's entities and files in the Project Tree's root folder. 
 
 
 
