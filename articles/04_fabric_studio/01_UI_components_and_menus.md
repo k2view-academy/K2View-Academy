@@ -225,7 +225,7 @@ More specifically, the Fabric Web Studio follows Visual Studio Code layout conce
 * **Status Bar** (D) - located at the very bottom of the screen and presents information about the open project and the files you are editing.
 * **Panel** (E) - displays different panel modules below the Editor area. Examples for such panel modules are the Fabric Terminal, Fabric Logs Viewer, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
 * **Minimap** & **Outline** (F) - a code outline, provides a high-level overview of your source code, which is useful for both a quick navigation and the code comprehension. A file's minimap is shown on the right side of the Editor. You can either click or drag the shaded area in order to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top-right, which, when expanded, shows the symbol tree of the currently active editor.
-* **Fabric Apps Panel** (G) - Since the Web Studio works as part of the Fabric Web Platform, you can navigate to its other apps via this panel. 
+* **Fabric Apps Panel** (G) - as the Web Studio works as part of the Fabric Web Platform, you can navigate to its other apps via this panel. 
 * **Top Menu** (H) - From the top menu you can either carry out IDE operations or activate certain Fabric commands. 
 
 
