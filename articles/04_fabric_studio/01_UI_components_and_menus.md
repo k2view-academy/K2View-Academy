@@ -267,7 +267,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/debug.png" alt="debug" /></td>
     <td style="padding-left: 30px;"><strong>Debug</strong></td>
-    <td style="width:60%">Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see <a href="24_web_debug.md">here</a>.</td>
+    <td style="width:60%">Run and Debug View displays variables, call stacks and breakpoints. To learn more about how to debug your project see <a href="24_web_debug.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/datasource_explorer.png" alt="data source explorer" /></td>
