@@ -252,7 +252,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td width="60px" style="text-align: center; padding-top: 10px;"><img src="images/web/explorer.png" alt="explorer" /></td>
     <td style="padding-left: 30px;"><strong>File Explorer</strong></td>
-    <td style="width:60%">Used to browse, open, and edit the files in your project. <br>When selected, the Side Bar shows the project tree, enabling you to open and edit files or make other actions using the context menu. To learn more how to explore files in your project see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
+    <td style="width:60%">Used for browsing, opening, and editing files in your project. <br>When selected, the Side Bar shows the project tree, enabling you to open and edit files or take other actions using the context menu. To learn more about how to explore files in your project, see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
 </tr>
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
