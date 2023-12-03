@@ -286,12 +286,12 @@ The views that appear by default on the Web Studio are as follows:
 
 The Fabric menu, which is part of the Top Menu bar, provides several Fabric and Studio actions:
 
-* **Open Fabric Terminal** - Opens the Fabric Terminal at the bottom panel area, where you can run [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
-* **Watch Fabric Log** - Opens the Fabric Log terminal, where you can see the active Fabric log, in "tail" mode.   
+* **Open Fabric Terminal** - opens the Fabric Terminal in the bottom panel area, where you can run [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
+* **Watch Fabric Log** - opens the Fabric Log terminal, where you can see the active Fabric log, in a tail mode.
 * **Show Fabric Apps**
-* **Deploy all Updated Logical Units** - Let you deploy at once all data products/logical units that have been changed and not redeployed yet.
+* **Deploy all Updated Logical Units** - lets you deploy, at once, all data products/logical units that have been changed but not yet redeployed.
 * **Version Tag** - Activates the [Project Versioning Tagging](/articles/16_deploy_fabric/04_project_versioning.md) process.
-* **Create new** Fabric project's entities (some of these actions are available also at the project's tree context menu):
+* **Create new** Fabric project's entities (some of these actions are available also in the project tree's context menu):
   * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
   * New Web Service - Lets you to create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located at the Web Service logical unit, according to a chosen category.
   * New Java Function - Lets you to easily create either a [Fabric function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger, or LUDB, as well as regular function. When Fabric function is selected then it will be crated with relevant decelerations and format.
