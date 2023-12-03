@@ -313,7 +313,7 @@ The status bar provides information about and status of both the open project an
 It is divided into a few parts (yet - there is no visual separation between them):
 
 * **GIT** - shows the current GIT branch name ('main' in the above example), that your space is pointing on. Next to it, there is a *Synchronize Changes* action icon that when clicked - it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
-* **Problems status** - a quick indication of few problems levels in the project's files - error, warnings and info )in the example - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
+* **Problems status** - a quick indication of few problems levels in the project's files - error, warnings and info (in the example - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
 * **Project Version** - a version is shown if it exists. Click [here](/articles/16_deploy_fabric/04_project_versioning.md) for more information about project versions.
 * **Deployment status** - states whether all LUs have been deployed; hovering over it shows the undeployed LUs. You can then click on it to deploy them.
 
