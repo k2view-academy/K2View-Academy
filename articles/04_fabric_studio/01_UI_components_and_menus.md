@@ -306,7 +306,7 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
 
 ### Status Bar
 
-The status bar provides information about and the status of both the open project and the files you are editing, as well as enables making actions. 
+The status bar provides information about and status of both the open project and the files you are editing, as well as enables performing actions.
 
 ![status bar](images/web/01_statusbar.png)
 
