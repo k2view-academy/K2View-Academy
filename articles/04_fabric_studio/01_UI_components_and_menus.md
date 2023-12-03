@@ -252,7 +252,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td width="60px" style="text-align: center; padding-top: 10px;"><img src="images/web/explorer.png" alt="explorer" /></td>
     <td style="padding-left: 30px;"><strong>File Explorer</strong></td>
-    <td style="width:60%">Used for browsing, opening and editing files in your project. <br>When selected, the Side Bar shows the Project Tree, enabling you to open and edit files or take other actions using the context menu. To learn more about how to explore files in your project, see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
+    <td style="width:60%">Used for browsing, opening and editing files in your project. <br>When selected, the Side Bar shows the Project Tree, enabling you to open and edit files or perform other actions using the context menu. To learn more about how to explore files in your project, see  <a href="21_web_file_explorer_and_navigation.md">here</a>.</td>
 </tr>
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
@@ -262,7 +262,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
     <td style="padding-left: 30px;"><strong>Source Control</strong></td>
-    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing these changes to the origin, as well as taking various source control actions. <br>A badge appears on the Source Control icon in the Activity Bar, showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a>.</td>
+    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing these changes to the origin, as well as performing various source control actions. <br>A badge appears on the Source Control icon in the Activity Bar, showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/debug.png" alt="debug" /></td>
