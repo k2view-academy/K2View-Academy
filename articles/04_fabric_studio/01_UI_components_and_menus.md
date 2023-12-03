@@ -262,7 +262,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
     <td style="padding-left: 30px;"><strong>Source Control</strong></td>
-    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing those changes to the origin, as well as taking various source control actions. <br>A badge appears on the Source Control icon in the Activity Bar, showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a>.</td>
+    <td style="width:60%">Git source View, shows the details of current repository changes and also enables comparing these changes to the origin, as well as taking various source control actions. <br>A badge appears on the Source Control icon in the Activity Bar, showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/debug.png" alt="debug" /></td>
