@@ -310,7 +310,7 @@ The status bar provides an Information and status about the opened project and t
 
 ![status bar](images/web/01_statusbar.png)
 
-it is divided into few parts (yet - there is no visual separation between them):
+It is divided into a few parts (yet - there is no visual separation between them):
 
 * **GIT** - shows the current GIT branch name ("main" in the example), that your space is pointing on. Next to it there is a *Synchronize Changes* action icon that when clicked it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
 * **Problems status** - quick indication of few problems levels in the project's files - error, warnings and info )in the example - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel is opened, showing the problems details. 
