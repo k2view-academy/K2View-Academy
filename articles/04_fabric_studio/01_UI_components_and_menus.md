@@ -293,7 +293,7 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
 * **Version Tag** - activates the [Project Versioning Tagging](/articles/16_deploy_fabric/04_project_versioning.md) process.
 * **Create new** Fabric project's entities (some of these actions are also available in the project tree's context menu):
   * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
-  * New Web Service - lets you create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located at the Web Service logical unit, according to a chosen category.
+  * New Web Service - lets you create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located in the Web Service logical unit, according to a chosen category.
   * New Java Function - lets you to easily create either a [Fabric function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger, or LUDB, as well as regular function. When Fabric function is selected then it will be crated with relevant decelerations and format.
   * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
   * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
