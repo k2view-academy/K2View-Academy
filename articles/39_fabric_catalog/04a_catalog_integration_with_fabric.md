@@ -1,6 +1,6 @@
 <web>
 
-# Catalog Integration with Fabric
+# Catalog Integration with Studio
 
 ### Run Discovery
 
