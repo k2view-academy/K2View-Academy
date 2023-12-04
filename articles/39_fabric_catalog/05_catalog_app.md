@@ -85,10 +85,10 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * Build the Catalog **artifacts**. [Click here for more information about the Catalog artifacts](09_build_artifacts.md).
 * **Search** <img src="images/search.png" style="zoom:80%;" /> the catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
-* **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, for focusing on a selected node with its predecessors and successors only. When clicked, all other nodes are hidden and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" /> to indicate that. Clicking the icon again unhides the nodes to the original view. 
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, for running the Discovery Job on the selected Data Platform from the Catalog Application. 
-* **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, for analyzing the Catalog's statistics either in a view version mode or in a version comparison mode. The insights are currently available on Schema level only. 
-* **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source. 
+* **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, for focusing on a selected node with its predecessors and successors only. When clicked, all other nodes are hidden and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" /> to indicate that. Clicking the icon again unhides the nodes to the original view. Available in V7.2.1.
+* **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, for running the Discovery Job on the selected Data Platform from the Catalog Application. Available in V7.2.1.
+* **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, for analyzing the Catalog's statistics either in a view version mode or in a version comparison mode. The insights are currently available on Schema level only. Available in V7.2.1.
+* **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source. Available in V7.2.1.
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
 * **Navigation map** <img src="images/navigation.png" style="zoom:80%;" />, for opening the Catalog's mini-map and navigation panel. 
 * **Zoom in / out**, for adjusting the zoom of the view.
