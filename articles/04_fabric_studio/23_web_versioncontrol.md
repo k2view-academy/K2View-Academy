@@ -21,7 +21,7 @@ You can also find indicators of the **status of your repository** at the bottom-
 
 ## Commit
 
-**Staging** (Git add) and **unstaging** (Git reset) can be done via contextual actions in the files or by drag-and-drop.
+**Staging** (Git add) and **unstaging** (Git reset) can be done either via contextual actions in the files or by the drag-and-drop feature.
 
 You can type a commit message above the changes and press `Ctrl+Enter` (macOS: `⌘+Enter`) to commit them. If there are any staged changes, only changes will be committed. Otherwise, you'll get a prompt asking you to select what changes you'd like to commit and get the option to change your commit settings.
 
