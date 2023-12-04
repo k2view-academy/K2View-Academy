@@ -294,7 +294,7 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
 * **Create new** Fabric project's entities (some of these actions are also available in the Project Tree's context menu):
   * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
   * New Web Service - lets you create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located in the Web Services logical unit, according to a chosen category.
-  * New Java Function - lets you easily create either a [Fabric Project function type](/articles/07_table_population/08_project_functions.md) such as Event, Decision, Trigger or LUDB, or a regular function. When a Fabric Project function is selected, then it will be created with the relevant declarations and format.
+  * New Java Function - lets you easily create either a [Fabric Project function type](/articles/07_table_population/08_project_functions.md) such as Event, Decision, Trigger or LUDB, or a regular function. When a Fabric Project function is selected, it will be created with the relevant declarations and format.
   * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
   * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * New [Custom DB Interface type](/articles/05_DB_interfaces/10_database_types.md)
