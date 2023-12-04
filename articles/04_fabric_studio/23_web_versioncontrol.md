@@ -11,7 +11,7 @@ The Source Control <img src="images/web/scm.png" style="zoom:7%;" /> icon in the
 
 Clicking the icon will show you the details of your current repository changes: **CHANGES**, **STAGED CHANGES** and **MERGE CHANGES**.
 
-> Tip: To bring up the Source Control View you can also use the keyboard shortcut `CTRL+SHIFT+G`.
+> Tip: To bring up the Source Control View, you can also use the keyboard shortcut `CTRL+SHIFT+G`.
 
 Clicking each item will show you in detail **the textual changes within each file**. Note that for unstaged changes, the editor on the right still lets you edit the file.
 
