@@ -294,7 +294,7 @@ The Fabric menu, which is part of the Top Menu bar, provides several Fabric and 
 * **Create new** Fabric project's entities (some of these actions are also available in the Project Tree's context menu):
   * New [Data Product (Logical Unit)](/articles/03_logical_units/01_LU_overview.md)
   * New Web Service - lets you create either Graphit or Java based [custom web service](/articles/15_web_services_and_graphit/05_custom_ws.md), to be located in the Web Services logical unit, according to a chosen category.
-  * New Java Function - lets you easily create either a [Fabric function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger or LUDB, as well as a regular function. When Fabric function is selected, then it will be created with the relevant decelerations and format.
+  * New Java Function - lets you easily create either a [Fabric Project function type](/articles/07_table_population/08_project_functions.md), like Event, Decision, Trigger or LUDB, or a regular function. When a Fabric Project function is selected, then it will be created with the relevant declarations and format.
   * New [Broadway Flow](/articles/19_Broadway/02a_broadway_flow_overview.md)
   * New [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * New [Custom DB Interface type](/articles/05_DB_interfaces/10_database_types.md)
@@ -313,7 +313,7 @@ The status bar provides information about and status of both the open project an
 It is divided into a few parts (yet - there is no visual separation between them):
 
 * **GIT** - shows the current GIT branch name ('main' in the above example), that your space is pointing on. Next to it, there is a *Synchronize Changes* action icon that when clicked - it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
-* **Problems status** - a quick indication of few problems levels in the project's files - error, warnings and info (as per the above example, there are - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
+* **Problems status** - a quick indication of a few problem levels in the project's files - error, warnings and info (as per the above example, there are - 0 errors, 1 warning and 2 info issues). When clicked, the *Problems* panel opens, showing details of the problems.
 * **Project Version** - a version is shown if it exists. Click [here](/articles/16_deploy_fabric/04_project_versioning.md) for more information about project versions.
 * **Deployment status** - states whether all LUs have been deployed; hovering over it shows the undeployed LUs. You can then click on it to deploy them.
 
