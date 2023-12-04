@@ -15,7 +15,7 @@ Clicking the icon will show the details of your current repository changes: **CH
 
 Clicking each item will show you in detail **the textual changes within each file**. Note that for unstaged changes, the editor on the right still lets you edit the file.
 
-You can also find indicators of the **status of your repository** atthe bottom-left corner of the status bar: the **current branch**, **dirty indicators**, and the number of **incoming and outgoing commits** of the current branch. You can **checkout** any branch in your repository by clicking that status indicator and selecting the Git reference from the list.
+You can also find indicators of the **status of your repository** at the bottom-left corner of the status bar: the **current branch**, **dirty indicators**, and the number of **incoming and outgoing commits** of the current branch. You can **checkout** any branch in your repository by clicking that status indicator and selecting the Git reference from the list.
 
 
 
