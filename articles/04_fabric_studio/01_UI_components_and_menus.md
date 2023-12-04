@@ -257,7 +257,7 @@ The views that appear by default on the Web Studio are as follows:
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
 <td style="padding-left: 30px;"><strong>Search</strong></td>
-<td style="width:60%">Provides a global search and replace across your project files. This tool, which opens from the Side Bar, allows you make smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a>.</td>
+<td style="width:60%">Provides an an overall Search and Replace functionality across your project files. This tool, which opens from the Side Bar, allows you to carry out smart searches using various filters. To learn more about using the Search tool within the Web Studio see <a href="22_web_search.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
