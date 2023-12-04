@@ -35,7 +35,7 @@ More specific **Commit** actions can be found in the **Views and More Actions** 
 
 ## Git Status Bar Actions
 
-There is a **Synchronize Changes** action in the Status Bar, next to the branch indicator, When clicked, it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
+There is a **Synchronize Changes** action icon in the Status Bar, next to the branch indicator; when clicked, it pulls remote changes down to your local repository and then pushes local commits to the upstream branch.
 
 
 
