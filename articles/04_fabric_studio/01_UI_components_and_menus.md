@@ -338,8 +338,8 @@ To select a color theme:
 >**Studio Desktop .Net Compatibility:** 
 >
 >1. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of having a code editor orientation and being a file and folder based.
->2. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project. Yet, some of the editors are not equals or not exist in each. For example, Translations editor does not exist at Web Studio, while MTables editor does not exists in Desktop studio. Nevertheless, because the same Fabric server is running at backend, all features are supported in runtime, even though an editor is not available.
->3. In general, Web studio is considered the next generation of k2view Studio and thus most of new features and capabilities are available only there.  
+>2. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project. Yet, some of the editors are not equals or not exist in each. For example, Translations editor does not exist in Web Studio, while MTables editor does not exist in Desktop studio. Nevertheless, because the same Fabric server is running at backend, all features are supported in runtime, even though an editor is not available.
+>3. In general, Web studio is considered the next generation of K2view Studio and thus most of the new features and capabilities are available only there.  
 
 
 
