@@ -63,7 +63,7 @@ Once a project has opened, the Studio's main user interface layout is shown. It 
 
 
 
-![debug toolbar](images/04_01_01b_main_ui.png)
+![layout](images/1_main_ui.jpg)
 
 
 
