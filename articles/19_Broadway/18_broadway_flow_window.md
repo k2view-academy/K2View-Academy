@@ -199,7 +199,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 
 To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Actor.
 
-<table style="width:900px; height: 352px;">
+<table style="width:900px;">
 <tbody>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 200px;">Collapse / Expand</td>
@@ -211,7 +211,11 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 169.4px;">Copy Selection</td>
-<td style="width: 370.8px; height: 18px;">Copy the selected Actor.</td>
+<td style="width: 370.8px; height: 18px;">Copy the selected Actor(s) and the links between them. The selection then can be pasted in the same or another flow. Available in V7.2.1.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 169.4px;">Cut Selection</td>
+<td style="width: 370.8px; height: 18px;">Cut the selected Actor(s) and the links between them. The selection then can be pasted in the same or another flow.</td>
 </tr>
 <tr style="height: 36px;">
 <td style="height: 36px; width: 169.4px;"><a href="07_broadway_flow_linking_actors.md">Link</a></td>
@@ -249,6 +253,8 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
+
 
 
 ### Actor Properties Window
