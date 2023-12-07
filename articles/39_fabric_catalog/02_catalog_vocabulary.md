@@ -59,42 +59,32 @@ The following 2 tables describe the **node and relation types**, and how they ar
 ### Relation Types
 
 <table style="width: 700px;">
-<tbody> 
+<tbody>
 <tr style="height: 35px;">
 <td width="100pxl"><strong>Relation Type</strong></td>
 <td width="600pxl"><strong>Description</strong></td>
 </tr>
-<tr style="height: 46px;">
-<td style="width: 20%; height: 184px;" rowspan="4"><strong>contains</strong></td>
+<tr>
+<td style="width: 20%; height: 184px;"><strong>contains</strong></td>
 <td style="width: 80%; height: 46px;">
-<p>dataPlatform contains schema</p>
+<p>dataPlatform <strong>contains</strong> schema</p>
+<p>schema <strong>contains</strong> dataset</p>
+<p>dataset <strong>contains</strong> class</p>
+<p>class <strong>contains</strong> field</p>
+<p>The direction is One To Many.</p>
 </td>
 </tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>schema contains dataset</p>
-</td>
-</tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>dataset contains class</p>
-</td>
-</tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>class contains field</p>
-</td>
-</tr>
-<tr style="height: 46px;">
+<tr>
 <td style="width: 20%; height: 142px;"><strong>refersTo</strong></td>
 <td style="width: 80%; height: 96px;">
-<p>dataset refers to dataset</p>
+<p>dataset <strong>refers to</strong> dataset</p>
 <p>Example: <em>INVOICE refers to CUSTOMER</em></p>
-<p>The direction is Many To One. The PK / FK column names are included in the relation's properties.</p>
+<p>The direction is Many To One. The PK / FK columns are included in the relation's properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
