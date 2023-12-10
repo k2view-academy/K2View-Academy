@@ -166,5 +166,12 @@ Learn [here](/articles/04_fabric_studio/26_web_basic_code_editing.md) about this
 
 
 
+## Viewing Diffs
+
+You can diff any two files by right-clicking on a file in the Project Tree or in the **OPEN EDITORS** list and choosing **Select for Compare**, and then right-clicking on a second file and choosing **Compare with Selected**. 
+
+
+
+
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/25_web_data_explorer.md)
 </web>
