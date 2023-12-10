@@ -5,7 +5,7 @@
 
 The Fabric Web Studio has an integrated source control management (SCM) system and it includes [Git](https://git-scm.com/) support in-the-box.
 
-The Source Control <img src="images/web/scm.png" style="zoom:7%;" /> icon in the Activity Bar on the left-most menu indicates an **overview of how many changes** you currently have in your repository.
+The Source Control <img src="images/web/scm.png" style="zoom:7%;" /> icon in the Activity Bar on the left-most menu provides an **indication of overview of how many changes** you currently have in your repository.
 
 
 
