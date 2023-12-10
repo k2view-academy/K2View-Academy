@@ -53,13 +53,11 @@ If you open a folder that is a Git repository and begin making changes, Web Stud
 
 Merge conflicts are recognized by Web Studio. Differences are highlighted and there are inline actions to accept either one or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
 
+
+
 ## Viewing Diffs
 
-The Git tool supports viewing of diffs within Web Studio, showing the original and the modified files, side by side.
-
-
-
->**Tip:** You can diff any two files by first right-clicking on a file in the Explorer or **OPEN EDITORS** list and selecting **Select for Compare**, and then right-click on the second file to compare with and select **Compare with 'file_name_you_chose'**. Alternatively, from the keyboard hit `Ctrl+Shift+P` and select **File: Compare Active File With** and you will be presented with a list of recent files.
+The Git tool supports viewing of diffs within Web Studio, showing the original and the modified files, side by side. To view the difference between them, double click on the file name.  
 
 
 
