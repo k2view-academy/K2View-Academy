@@ -59,7 +59,7 @@ Each project has the following main components:
 
 <web>
 
-Initiating an action may be done by any of the following 3 methods: 
+Initiating an action may be done by any of the following 3 practices: 
 
 - right-clicking on the context menu in the Project Tree 
 
