@@ -19,7 +19,7 @@ A current active project in the Studio has its name displayed at the top of the 
 
 Each project has the following main components: 
 
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include the following sub-branches:
+* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) - used by all Logical Units and project references and may include the following sub-branches:
   * [Broadway](/articles/19_Broadway/01_broadway_overview.md)
 
   * [Database Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) 
