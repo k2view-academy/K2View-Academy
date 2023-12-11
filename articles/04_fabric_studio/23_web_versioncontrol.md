@@ -57,7 +57,7 @@ Merge conflicts are recognized by Web Studio. Differences are highlighted and th
 
 ## Viewing Diffs
 
-The Git tool supports viewing of diffs within Web Studio, showing the original and the modified files, side by side. To view the difference between them, double click on the file name.  
+The Git tool supports viewing of diffs within Web Studio, showing both the original and the modified files, side by side. To view the differences between them, double-click on the file name.  
 
 
 
