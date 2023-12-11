@@ -26,7 +26,7 @@ Each project has the following main components:
 
   * [Java Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) 
 
-  * Resources, files that can be saved as part of a project. 
+  * Resources - files that can be saved as part of a project. 
 
   * Environments 
 
