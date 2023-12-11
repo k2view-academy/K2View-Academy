@@ -77,7 +77,7 @@ Each project has the following main components (under Project > Implementation):
   * **References** - reference information that can be used throughout the logical units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
   * **[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)** - a collection of functions that can be exposed through Fabric’s Web Service layer. Web Services may include Java WS, Graphit WS and supportive [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows.
 
-* **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - are used by all Logical Units and project references and may include the following sub-branches:
+* **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - used by all Logical Units and project references and may include the following sub-branches:
   * Broadway
   * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * [Custom Interface Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
