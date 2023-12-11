@@ -8,7 +8,7 @@ To initiate an action, right-click on a component and select the action. As this
 
 <studio>
 
-A current active project in the Studio has its name displayed at the top of the Project Tree, i.e., in the below example, the current active project is Demo_6_5.
+A current active project in the Studio has its name displayed at the top of the Project Tree; the current active project seen in the below example is Demo_6_5.
 
 ![image](../../articles/13_LUDB_viewer_and_studio_debug_capabilities/images/Logical_Units_Tree.png)
 
