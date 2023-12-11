@@ -61,7 +61,7 @@ Each project has the following main components:
 
 Initiating an action may be done by any of the following 3 methods: 
 
-- right-click on the context menu in the Project Tree 
+- right-clicking on the context menu in the Project Tree 
 
 
 - using the **Fabric** item (top menu bar)
