@@ -4,7 +4,7 @@ A Fabric project has a tree-like structure. Known as the **Project Tree**, it di
 
 The **Project Tree** is displayed on the left side of the Fabric Studio window.
 
-To initiate an action, right click on a component and select the action. As this is a context menu, then in each component and level, different options will be shown. For instance, right clicking on Broadway offers you createing a new flow or actor. 
+To initiate an action, right-click on a component and select the action. As this is a context menu, then in each component and level, different options will be shown. For instance, right clicking on Broadway offers you createing a new flow or actor. 
 
 <studio>
 
