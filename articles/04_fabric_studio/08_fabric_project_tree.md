@@ -71,7 +71,7 @@ Initiating an action may be done by any of the following 3 practices:
 
 ## Project Tree Components
 
-Each project has the following main components (under Project > Implementation): 
+Each project has the following main components (found under Project > Implementation): 
 
 * **Logical Units / Data Products** - a collection of all defined [**L**ogical **U**nits / Data Products](/articles/03_logical_units/01_LU_overview.md) in the project. Of this collection, there are 2 *system* LUs - **References** and **Web Services** - that exist by default in any project:
   * **References** - reference information that can be used throughout Logical Units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
