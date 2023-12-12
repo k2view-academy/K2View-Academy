@@ -155,7 +155,7 @@ The following table lists the recommended project component prefixes conventions
 <p>Instance Group</p>
 </td>
 <td width="136">
-<p>Ig%</p>
+<p>ig%</p>
 </td>
 </tr>
 </tbody>
