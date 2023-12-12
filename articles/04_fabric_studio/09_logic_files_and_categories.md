@@ -58,10 +58,10 @@ Note that when creating a new function, enter a new category name to automatical
 
 <web>
 
-Creating a new category is actually aimed to create a new Logic Java file. For this do the following:
+Creating a new category is actually aimed to create a new Logic Java file. It can be done by following these steps:
 
 1. Go to the **Project Tree**, at the required location - a Logical Unit or Shared Objects.
-2. Right-click **src** under the Java folder and 
+2. Right-click **src** under the Java folder, and 
 3. Choose **New Java Logic File**
 4. In the open pop-up window, type the name of the category/package
 5. A new package folder will be created, containing a Logic file template, where the package name is already set. 
