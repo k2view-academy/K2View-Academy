@@ -30,9 +30,9 @@ The Globals.java file is automatically created under either the References or ea
 
 When creating a new Java function, it must be associated to a category such as Built-in or Product. Each category has multiple sub-categories, like Date or Math, that hold the most common types of functions for that sub-category.
 
-* If the category does not exist, then a new Logic.java file will be created, and the function will be associated to it.
-* When the category exists, the new function is associated to the existing Logic.java file.
-* If a new category name is entered into the Category setting, a new **category** will be created, and the function will be associated to the new Logic.java file.
+* If the category does not exist, then a new Logic.java file will be created, and the function would be associated to it.
+* When the category exists, the new function would be associated to the existing Logic.java file.
+* If a new category name is entered into the Category setting, a new **category** will be created, and the function would be associated to the new Logic.java file.
 
 Each category creates a separate Logic.java file that has a specific path to differentiate it from other files in other categories.
 
