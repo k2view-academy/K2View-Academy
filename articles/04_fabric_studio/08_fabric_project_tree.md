@@ -82,7 +82,7 @@ Each project has the following main components (under Project > Implementation):
   * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * [Custom Interface Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
   * [Java Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) 
-  * Resources, resource files like images and scripts, that can be used as part of a project, in LU level. 
+  * Resources - resource files such as images and scripts, that can be used as part of a project, in the LU level. 
 
 * **lib** - Java library files, required by a project, such as utility JARs or JDBC drivers, that are not provided as part of the product. 
 
