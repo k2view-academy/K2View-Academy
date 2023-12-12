@@ -19,7 +19,7 @@ A current active project in the Studio has its name displayed at the top of the 
 
 Each project has the following main components: 
 
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) - used by all Logical Units and project references and may include the following sub-branches:
+* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) - used by all Logical Units and project references and may include the following sub-components:
   * [Broadway](/articles/19_Broadway/01_broadway_overview.md)
 
   * [Database Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) 
@@ -37,7 +37,7 @@ Each project has the following main components:
 
 * **Logical Units** - a collection of all [**L**ogical **U**nits](/articles/03_logical_units/01_LU_overview.md) defined in the project.
 
-* **References** - reference information that can be used throughout LU instances. **References** may include the following sub-branches:
+* **References** - reference information that can be used throughout LU instances. **References** may include the following sub-components:
 
   * Broadway
 
@@ -77,7 +77,7 @@ Each project has the following main components (under Project > Implementation):
   * **References** - reference information that can be used throughout Logical Units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
   * **[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)** - a collection of functions that can be exposed through Fabric’s Web Service layer. Web Services may include Java WS, Graphit WS and supportive [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows.
 
-* **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - used by all Logical Units and project references and may include the following sub-branches:
+* **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - used by all Logical Units and project references and may include the following sub-components:
   * Broadway
   * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
   * [Custom Interface Types](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
