@@ -6,7 +6,7 @@ Fabric Studio is a designer tool that manages the construction of [Data Products
 
 Web Studio is a full, professional and comprehensive IDE, Visual Studio Code like editor. If you are not familiar with source code editors, you can watch and learn from VS Code's user guides, but keep in mind that Web Studio is not precisely the same (as it is based on Code OSS, the open source project behind VS Code).
 
-Rather than providing such guides, This article takes you through the following core capabilities provided by the Web studio source code editor, helping you get moving with your code:
+Rather than providing such guides, this article takes you through the following core capabilities provided by the Web studio source code editor, helping you get moving with your code:
 
 * Powerful Editing
 * Easy and streamlined Debugging, as explained [here](/articles/04_fabric_studio/24_web_debug.md).
