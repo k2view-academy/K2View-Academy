@@ -16,7 +16,7 @@ Rather than providing such guides, this article takes you through the following 
 
 ## Powerful Editing
 
-Offering a professional code editor, Web studio provides wide variety capabilities, among them:
+Offering a professional code editor, Web Studio provides a wide variety of capabilities, among them:
 
 - As-you-type reporting of parsing and compilation errors. 
 - Syntax highlighting and bracket matching
