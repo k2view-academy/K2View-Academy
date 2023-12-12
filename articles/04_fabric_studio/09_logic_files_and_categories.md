@@ -12,7 +12,7 @@ In Fabric Studio, the term **Logic Category Files** refers to a Java *package* t
 Java files that reside on a shared level can be inherited by any [project](/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example, Web Services, References or [Logical Units](/articles/03_logical_units/02_create_a_logical_unit_flow.md), and can be shared throughout a project.
 It is highly recommended to avoid duplicating names of Shared Objects at lower levels of a project, for example, within a Logical Unit component. However, if there are duplicated object file names, the file that resides under the specific lower level component - gets a priority upon execution.
 
-A Java file that resides on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level has 2 out-of-the-box Java template files:
+A Java file, which resides on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level, has 2 out-of-the-box Java template files:
 * SharedLogic.java - a placeholder for all shared functions. 
 * SharedGlobals.java - a placeholder for all shared Globals. 
 
