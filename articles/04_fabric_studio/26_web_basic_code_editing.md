@@ -16,21 +16,21 @@ This article walks you through the following core capabilities - provided by the
 
 ## Powerful Editing
 
-Offering a professional code editor, Web Studio provides a wide variety of capabilities, among them:
+Offering a professional code editor, Web Studio provides a wide variety of capabilities, among them are:
 
 - As-you-type reporting of parsing and compilation errors. 
-- Syntax highlighting and bracket matching
+- Syntax highlighting and bracket matching.
 - Smart Code Completion, Code Snippet support and correction suggestions.
-- Code navigation, like Go to Definition and Find All References
-- Code Refactoring
+- Code navigation, like Go to Definition and Find All References.
+- Code Refactoring.
 
 
 
-### Parsing and Compilation Errors Indicators
+### Parsing and Compilation Error Indicators
 
-The as-you-type reporting is shown inline the editor with red line under the error and also in the right mini-map code outline.
+The as-you-type reporting is shown inline the editor with a red line under the error and also in the right mini-map code outline.
 
-Along with that, there are other indications on errors and warnings in a file:
+Along with that, there are other indications of errors and warnings in a file:
 
 * On the project tree - where whole files hierarchy is red colored.
 * At the Warning and Error panels
