@@ -2,14 +2,14 @@
 
 # Java Logic Files and Categories
 
-There are two types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of [Globals](/articles/08_globals/01_globals_overview.md) variables. 
+There are 2 types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of [Globals](/articles/08_globals/01_globals_overview.md) variables. 
 
-In Fabric Studio the term **Logic Category Files** refers to a Java *package* that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. While several Java files can be resided at a category/package, only single Logic file shall be there.
+In Fabric Studio, the term **Logic Category Files** refers to a Java *package* that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. While several Java files can be resided at a category/package, only single Logic file shall be there.
 
-<sutdio>Although the functions are presented in the Project Tree as separate files, they are basically stored under one file called the Logic.java file under the selected category. </studio> 
+<studio>Although the functions are presented in the Project Tree as separate files, they are basically stored under a single file, called *Logic.java file*, under the selected category. </studio> 
 
 ### Shared Java Files
-Java files residing on a shared level can be inherited by any [project](/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example,  Web Services, References or [Logical Units](/articles/03_logical_units/02_create_a_logical_unit_flow.md) and can be shared throughout a project.
+Java files residing on a shared level can be inherited by any [project](/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example, Web Services, References or [Logical Units](/articles/03_logical_units/02_create_a_logical_unit_flow.md) and can be shared throughout a project.
 It is highly recommended to avoid duplicating names of Shared Objects at lower levels of a project, for example; within a Logical Unit component. However, if there are duplicated object file names, the file that resides under the specific lower level component has priority when executed.
 
 A Java file residing at a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level has two out-of-the-box Java template files:
