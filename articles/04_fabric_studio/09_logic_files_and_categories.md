@@ -20,7 +20,7 @@ A Java file, which resides on a [Shared Objects](/articles/04_fabric_studio/12_s
 
 ### Designated Java Files
 
-Designated Logic.java files are specific to their level of definition, which can be either References, Web Services or Logical Units.
+Designated Logic.java files are files assigned to their levels of definition; such levels can be either References, Web Services or Logical Units.
 
 The Globals.java file is automatically created under either the References or each Logical Unit.
 
