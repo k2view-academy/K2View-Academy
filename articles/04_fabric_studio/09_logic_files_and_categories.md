@@ -28,7 +28,7 @@ The Globals.java file is automatically created under either the References or ea
 
 ### How Do I Associate a Function to a Category?
 
-When creating a new Java function, it must be associated to a category such as a Built-in or Product. Each category has multiple sub-categories, like Date or Math, that hold the most common types of functions for that sub-category.
+When creating a new Java function, it must be associated to a category such as Built-in or Product. Each category has multiple sub-categories, like Date or Math, that hold the most common types of functions for that sub-category.
 
 * If the category does not exist, a new Logic.java file is created and the function is associated to it. 
 * When the category exists, the new function is associated to the existing Logic.java file.
