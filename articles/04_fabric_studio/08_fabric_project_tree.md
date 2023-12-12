@@ -86,7 +86,7 @@ Each project has the following main components (under Project > Implementation):
 
 * **lib** - Java library files, required by a project, such as utility JARs or JDBC drivers, that are not provided as part of the product. 
 
-* **project-resources** - a useful folder where you can locate resources, which shall be used in the project.
+* **project-resources** - a useful folder for locating resources that shall be used in the project.
 
 <img src="images/web/project_tree.png" />
 
