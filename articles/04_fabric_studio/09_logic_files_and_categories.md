@@ -22,7 +22,7 @@ A Java file residing at a [Shared Objects](/articles/04_fabric_studio/12_shared_
 
 Designated Logic.java files are specific to their level of definition, which can be References, Web Services or Logical Units.
 
-The Globals.java file is automatically created under either the References or each Logical Unit, which are both empty.
+The Globals.java file is automatically created under either the References or each Logical Unit, that are both empty.
 
 <studio>
 
