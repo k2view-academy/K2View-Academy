@@ -52,7 +52,7 @@ Each category creates a separate Logic.java file that has a specific path, diffe
 
 Go to the **Project Tree**, right-click **Java** and click **New SharedLogic Category File / New Logic Category File**.
 
-Note that when creating a new function, enter a new category name to automatically create a new category folder.
+Note that when creating a new function, you should enter a new category name, which would automatically create a new category folder.
 
 </studio>
 
