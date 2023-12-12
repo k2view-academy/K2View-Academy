@@ -9,7 +9,7 @@ Web Studio is a full, professional and comprehensive IDE, Visual Studio Code lik
 Rather than providing such guides, this article takes you through the following core capabilities provided by the Web studio source code editor, helping you get moving with your code:
 
 * Powerful Editing
-* Easy and streamlined Debugging, as explained [here](/articles/04_fabric_studio/24_web_debug.md).
+* Easy and streamlined Debugging, as explained [here](/articles/04_fabric_studio/24_web_debug.md)
 * In-Product Source Control, as explained [here](/articles/04_fabric_studio/23_web_versioncontrol.md)
 
 
