@@ -34,7 +34,7 @@ When creating a new Java function, it must be associated to a category such as B
 * When the category exists, the new function would be associated to the existing Logic.java file.
 * If a new category name is entered into the Category setting, a new **category** will be created, and the function would be associated to the new Logic.java file.
 
-Each category creates a separate Logic.java file that has a specific path to differentiate it from other files in other categories.
+Each category creates a separate Logic.java file that has a specific path, differentiating it from other files in other categories.
 
 [Click for more information about Project Functions.](/articles/07_table_population/08_project_functions.md)
 
