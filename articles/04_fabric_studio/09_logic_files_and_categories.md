@@ -4,7 +4,7 @@
 
 There are 2 types of Java files in Fabric Studio, one is dedicated to the development of Java functions and the other for the creation of [Globals](/articles/08_globals/01_globals_overview.md) variables. 
 
-In Fabric Studio, the term **Logic Category Files** refers to a Java *package* that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. While several Java files can be resided at a category/package, only single Logic file shall be there.
+In Fabric Studio, the term **Logic Category Files** refers to a Java *package* that stores the Logic.java file. The Logic.java file contains all the Java functions defined under the Logic Category. While several Java files can reside in a category/package, only a single Logic file shall exist there.
 
 <studio>Although the functions are presented in the Project Tree as separate files, they are basically stored under a single file, called the Logic.java file, under the selected category. </studio> 
 
