@@ -74,7 +74,7 @@ Initiating an action may be done by any of the following 3 practices:
 Each project has the following main components (under Project > Implementation): 
 
 * **Logical Units / Data Products** - a collection of all defined [**L**ogical **U**nits / Data Products](/articles/03_logical_units/01_LU_overview.md) in the project. Of this collection, there are 2 *system* LUs - **References** and **Web Services** - that exist by default in any project:
-  * **References** - reference information that can be used throughout the logical units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
+  * **References** - reference information that can be used throughout Logical Units, such as [reference common tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
   * **[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)** - a collection of functions that can be exposed through Fabric’s Web Service layer. Web Services may include Java WS, Graphit WS and supportive [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows.
 
 * **[Shared Objects](/articles/04_fabric_studio/12_shared_objects.md)** - used by all Logical Units and project references and may include the following sub-branches:
