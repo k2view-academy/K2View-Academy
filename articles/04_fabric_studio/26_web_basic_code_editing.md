@@ -28,7 +28,7 @@ Offering a professional code editor, Web Studio provides a wide variety of capab
 
 ### Parsing and Compilation Error Indicators
 
-The as-you-type reporting is shown both inline the editor with a red line under the error, and in the upper-right mini-map code outline.
+The as-you-type reporting of parsing and compilation errors is shown both inline the editor with a red line under the error, and in the upper-right mini-map code outline.
 
 Along with that, there are other indications of errors and warnings in a file:
 
