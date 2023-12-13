@@ -69,7 +69,7 @@ The comprehensive Java language support is done by using Red Hat extension (publ
 
 > **NOTES**: 
 >
-> * Web Studio comes with a built-in support for various programming languages like Java, JavaScript, TypeScript, CSS and HTML. More rich language extensions can be found in [Open VSX Registry](https://open-vsx.org/), which is similar to the VS Code Marketplace.
+> * Web Studio comes with a built-in support for various programming languages like Java, JavaScript, TypeScript, CSS and HTML. However, richer language extensions can be found in [Open VSX Registry](https://open-vsx.org/), which is similar to the VS Code Marketplace.
 > * Similar code completion and behavior, though less contextual, is available also in Query Builder SQL editor, using the Query Builder Assistance. 
 
 
