@@ -39,7 +39,7 @@ Along with that, there are other indications of errors and warnings in a file:
 
 
 
-In addition, when applicable, the editor, using the language engine, hint you suggests a correction for the problem.
+Moreover, the editor, when applicable, uses the language engine and hints as well as suggests a correction to the problem.
 
 The below example illustrates these indicators and hints:
 
