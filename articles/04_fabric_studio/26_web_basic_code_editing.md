@@ -41,7 +41,7 @@ Along with that, there are other indications of errors and warnings in a file:
 
 In addition, when applicable, the editor, using the language engine, hint you suggests a correction for the problem.
 
-The below example illustrate these indicators and hints
+The below example illustrates these indicators and hints:
 
 ![](images/web/26_parse_indicators.gif)
 
