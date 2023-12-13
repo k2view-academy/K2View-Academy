@@ -63,7 +63,7 @@ You can trigger IntelliSense in the editor by typing either Ctrl+Space or a trig
 
 More detailed explanations and examples can be found [here](https://code.visualstudio.com/docs/editor/intellisense).
 
-The comprehensive Java language support is done by using Red Hat extension (published in both [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.java) and [Open VSX](https://open-vsx.org/extension/redhat/java))
+The comprehensive Java language support is done by using Red Hat extension (published in both [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.java) and [Open VSX](https://open-vsx.org/extension/redhat/java)).
 
 
 
