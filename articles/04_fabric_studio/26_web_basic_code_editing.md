@@ -57,7 +57,7 @@ Matching brackets will be highlighted as soon as the cursor is close to one of t
 
 Code smarter with code completion, code hinting and info for variables, methods, member lists and imported modules. These features have been put together by VS Code - which Web Studio is based on - into the general term *IntelliSense*, which, as suggested by its name, provides intelligent code completion based on both language semantics and the analysis of your source code.
 
-When possible completions are found, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (like variables and methods) is filtered to include only members containing your typed characters. Pressing Tab or Enter will insert the selected member. 
+When possible completions are found, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (such as variables and methods) is filtered to include only members containing your typed characters. Pressing Tab or Enter will insert the selected member. 
 
 You can trigger IntelliSense in the editor by typing either Ctrl+Space or a trigger character - the dot character (.) in Java or JavaScript.
 
