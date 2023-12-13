@@ -55,7 +55,7 @@ Matching brackets will be highlighted as soon as the cursor is close to one of t
 
 ### Smart Code Completion
 
-Code smarter with code completions, hinting and info for variables, methods, member lists and imported modules. This is also called in VS Code, which Web studio based on -  *IntelliSense*. It is called like that as it provides intelligent code completions based on language semantics and an analysis of your source code. 
+Code smarter with code completions, hinting and info for variables, methods, member lists and imported modules. This is also called in VS Code, which Web Studio is based on - *IntelliSense*. It is called like that as it provides intelligent code completions based on both language semantics and the analysis of your source code.
 
 When possible completions are found, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (like variables and methods) is filtered to only include members containing your typed characters. Pressing Tab or Enter will insert the selected member. 
 
