@@ -80,7 +80,7 @@ Code snippets are templates that make it easier to enter repeating code patterns
 
 Snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions, and similarly, by typing a snippet prefix (trigger text), where you can see also snippet suggestions. You can then either select the snippet or scroll down with arrows and then press Tab to insert the snippet.
 
-Web Studio has built-in snippets for a number of languages such as: java, JavaScript, TypeScript, Markdown, and also offers various Fabric snippets. 
+Web Studio has built-in snippets for a number of languages such as Java, JavaScript, TypeScript, Markdown, and it also offers various Fabric snippets. 
 
 Type `fabric` for Fabric code's snippet prefix, and then a list of Fabric related snippets will be revealed. You can continue and type also other parts of the snippet prefix, to limit the suggestions. For example: `fabric-func` will bring only Fabric' functions snippets and not others.
 
