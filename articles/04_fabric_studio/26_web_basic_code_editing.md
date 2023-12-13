@@ -57,13 +57,13 @@ Matching brackets will be highlighted as soon as the cursor is close to one of t
 
 Code smarter with code completion, code hinting and info for variables, methods, member lists and imported modules. This is also called in VS Code, which Web Studio is based on - *IntelliSense*. It is called like that as it provides intelligent code completions based on both language semantics and the analysis of your source code.
 
-When possible completions are found, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (like variables and methods) is filtered to only include members containing your typed characters. Pressing Tab or Enter will insert the selected member. 
+When possible completions are found, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (like variables and methods) is filtered to include only members containing your typed characters. Pressing Tab or Enter will insert the selected member. 
 
-You can trigger IntelliSense in the the editor by typing Ctrl+Space or by typing a trigger character - the dot character (.) in Java or JavaScript. 
+You can trigger IntelliSense in the editor by typing either Ctrl+Space or a trigger character - the dot character (.) in Java or JavaScript.
 
-More detailed explanations and examples can be found [here](https://code.visualstudio.com/docs/editor/intellisense). 
+More detailed explanations and examples can be found [here](https://code.visualstudio.com/docs/editor/intellisense).
 
-The comprehensive Java language support is done by using Red Hat extension (published both at [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.java) and at [Open VSX](https://open-vsx.org/extension/redhat/java))
+The comprehensive Java language support is done by using Red Hat extension (published in both [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.java) and [Open VSX](https://open-vsx.org/extension/redhat/java))
 
 
 
