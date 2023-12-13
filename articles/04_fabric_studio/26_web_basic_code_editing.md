@@ -51,7 +51,7 @@ The below example illustrates these indicators and hints:
 
 Syntax highlighting determines the color and style of the displayed source code. It is responsible for changing the color of keywords, thus differentiating them from strings and comments and variable names.
 
-Matching brackets will be highlighted as soon as the cursor is close to one of them. You can easily jump between the brackets and also collapse regions that are surrounded by these brackets as explained [here](/articles/04_fabric_studio/27_web_productivity_tips.md#editing-and-debugging). This capability enables you to cope with a long source code and to focus only on what is relevant to you now.
+Matching brackets will be highlighted as soon as the cursor is close to one of them. You can easily jump between the brackets and also collapse segments that are surrounded by these brackets as explained [here](/articles/04_fabric_studio/27_web_productivity_tips.md#editing-and-debugging). This capability enables you to cope with a long source code and to focus only on the required piece of code relevant to you now.
 
 ### Smart Code Completion
 
