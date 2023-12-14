@@ -99,7 +99,7 @@ Following are Fabric prefixes and snippets:
 * Other Fabric code's snippets:
   * `fabric-global` - adds a [Globals](/articles/08_globals/01_globals_overview.md) variable template. 
   * `fabric-code-db-fetch` - adds a code template for fetching data from a DB interface (including loop). 
-  * `fabric-code-db-execute` - adds a code template for executing SQL in DB interface.
+  * `fabric-code-db-execute` - adds a code template for executing SQL in a DB interface.
   * `fabric-code-fabric-fetch` - adds a code template for fetching data from Fabric DB (including loop).
   * `fabric-code-fabric-execute` - adds a code template for executing SQL in Fabric DB.
 
