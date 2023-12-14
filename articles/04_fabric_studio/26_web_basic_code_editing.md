@@ -109,7 +109,7 @@ Following are Fabric prefixes and snippets:
 
 ### Code navigation
 
-Right click on any symbol in your code and see the various options of going to its definitions, its type definitions, references, call hierarchy and so on. You can also use the CTRL key and click on the symbol to go to its definition.
+Right-click on any symbol in your code and see the various options of going to its definitions, its type definitions, references, call hierarchy and so on. You can also use the CTRL key and click on the symbol to go to its definition.
 
 
 
