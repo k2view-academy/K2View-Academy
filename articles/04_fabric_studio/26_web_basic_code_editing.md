@@ -78,7 +78,7 @@ The comprehensive Java language support is done by using Red Hat extension (publ
 
 Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.
 
-Snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions, and similarly, by typing a snippet prefix (trigger text), where you can see also snippet suggestions. You can then either select the snippet or scroll down with arrows and then press Tab to insert the snippet.
+Appearing snippets in IntelliSense (Ctrl+Space) are mixed with other suggestions. Similarly, snippet suggestions are also shown when typing a snippet prefix (a trigger text). You can then either select the snippet or scroll down with arrows and then press Tab to insert the snippet.
 
 Web Studio has built-in snippets for a number of languages such as Java, JavaScript, TypeScript, Markdown, and it also offers various Fabric snippets. 
 
