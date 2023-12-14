@@ -115,7 +115,7 @@ Right-click on any symbol in your code and see the various options of going to i
 
 ### Refactoring
 
-[Source code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) can improve the quality and maintainability of your project by restructuring your code while not modifying the runtime behavior. Web Studio, following VS Code, supports refactoring operations such as [Extract Method](https://refactoring.com/catalog/extractMethod.html) and [Extract Variable](https://refactoring.com/catalog/extractVariable.html) to improve your code base from within your editor. read [here](https://code.visualstudio.com/docs/editor/refactoring) more about how to use it.
+[Source code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) can improve the quality and maintainability of your project by restructuring your code while not modifying the runtime behavior. Web Studio, following VS Code, supports refactoring operations such as [Extract Method](https://refactoring.com/catalog/extractMethod.html) and [Extract Variable](https://refactoring.com/catalog/extractVariable.html) to improve your code base from within your editor. Read [here](https://code.visualstudio.com/docs/editor/refactoring) more about how to use it.
 
 
 
