@@ -21,7 +21,7 @@ Offering a professional code editor, Web Studio provides a wide variety of capab
 - As-you-type reporting of parsing and compilation errors 
 - Syntax highlighting and bracket matching
 - Smart Code Completion, Code Snippet support and correction suggestions
-- Code navigation, like Go to Definition and Find All References
+- Code navigation, such as Go to Definition and Find All References
 - Code Refactoring
 
 
