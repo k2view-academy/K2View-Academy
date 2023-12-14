@@ -82,7 +82,7 @@ Appearing snippets in IntelliSense (Ctrl+Space) are mixed with other suggestions
 
 Web Studio has built-in snippets for several languages such as Java, JavaScript, TypeScript, Markdown, and it also offers various Fabric snippets. 
 
-Type `fabric` for Fabric code's snippet prefix, and then a list of Fabric related snippets will be revealed. You can continue and type also other parts of the snippet prefix, to limit the suggestions. For example: `fabric-func` will bring only Fabric' functions snippets and not others.
+Type `fabric` for a Fabric code's snippet prefix, and then a list of Fabric related snippets will be revealed. You can continue and type also other parts of the snippet prefix, to limit the suggestions. For example: `fabric-func` will bring only Fabric' functions snippets and not others.
 
 Following are Fabric prefixes and snippets:   
 
