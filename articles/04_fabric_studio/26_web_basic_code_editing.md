@@ -87,15 +87,15 @@ Typing `fabric` for a Fabric code's snippet prefix, reveals a list of Fabric rel
 Following are Fabric prefixes and snippets:   
 
 * Functions
-  * `fabric-function` - Creates a regular [Fabric project function](/articles/07_table_population/08_project_functions.md) template.
-  * `fabric-function-enrichment` - Creates an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) template.
-  * `fabric-function-decision` - Creates a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) template.
-  * `fabric-function-trigger` - Creates a [Trigger function](/articles/07_table_population/11_4_creating_a_trigger_function.md) template.
-  * `fabric-function-event` - Creates an [Event function](/articles/07_table_population/11_5_creating_an_event_function.md) template.
-  * `fabric-function-ludb` - Create a [LUDB function](/articles/07_table_population/11_3_creating_an_LUDB_function.md) template.
-  * `fabric-function-ws` - Create a [Web-Service function](/articles/15_web_services_and_graphit/07_custom_ws_create_java_ws.md) template.
-    * `fabric-methods` - reveal fabric methods list to be used in WS permissions definition.
-  * `fabric-function-ws-raw` - Creates a Web-Service snippet function template, with all available parameters & settings.
+  * `fabric-function` - creates a regular [Fabric project function](/articles/07_table_population/08_project_functions.md) template.
+  * `fabric-function-enrichment` - creates an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) template.
+  * `fabric-function-decision` - creates a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) template.
+  * `fabric-function-trigger` - creates a [Trigger function](/articles/07_table_population/11_4_creating_a_trigger_function.md) template.
+  * `fabric-function-event` - creates an [Event function](/articles/07_table_population/11_5_creating_an_event_function.md) template.
+  * `fabric-function-ludb` - creates a [LUDB function](/articles/07_table_population/11_3_creating_an_LUDB_function.md) template.
+  * `fabric-function-ws` - creates a [Web-Service function](/articles/15_web_services_and_graphit/07_custom_ws_create_java_ws.md) template.
+    * `fabric-methods` - reveals a fabric methods list to be used in WS permissions definition.
+  * `fabric-function-ws-raw` - creates a Web-Service snippet function template, with all available parameters and settings.
 * Other Fabric code's snippets:
   * `fabric-global` - Add a [Globals](/articles/08_globals/01_globals_overview.md) variable template. 
   * `fabric-code-db-fetch` - Adds a code template for fetching data from a DB interface (including loop). 
