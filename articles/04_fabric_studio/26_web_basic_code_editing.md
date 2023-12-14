@@ -97,11 +97,11 @@ Following are Fabric prefixes and snippets:
     * `fabric-methods` - reveals a fabric methods list to be used in WS permissions definition.
   * `fabric-function-ws-raw` - creates a Web-Service snippet function template, with all available parameters and settings.
 * Other Fabric code's snippets:
-  * `fabric-global` - Add a [Globals](/articles/08_globals/01_globals_overview.md) variable template. 
-  * `fabric-code-db-fetch` - Adds a code template for fetching data from a DB interface (including loop). 
-  * `fabric-code-db-execute` - Adds a code template for executing SQL at DB interface.
-  * `fabric-code-fabric-fetch` - Adds a code template for fetching data from Fabric DB (including loop).
-  * `fabric-code-fabric-execute` - Adds a code template for executing SQL at Fabric DB.
+  * `fabric-global` - adds a [Globals](/articles/08_globals/01_globals_overview.md) variable template. 
+  * `fabric-code-db-fetch` - adds a code template for fetching data from a DB interface (including loop). 
+  * `fabric-code-db-execute` - adds a code template for executing SQL in DB interface.
+  * `fabric-code-fabric-fetch` - adds a code template for fetching data from Fabric DB (including loop).
+  * `fabric-code-fabric-execute` - adds a code template for executing SQL in Fabric DB.
 
 ![](images/web/26_fabric_code_snippet.png)
 
