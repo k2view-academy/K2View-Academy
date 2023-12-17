@@ -111,13 +111,15 @@ Note that in case of more than one *refers_to* relations between two Datasets, t
 
 ### Deep Linking
 
-The Catalog application supports deep linking from the Data Platform to the field level. When navigating the Catalog tree and clicking a node, the node's path is added to the application URL using the following format:
+When navigating the Catalog tree and clicking a node, the node's path is added to the application URL using the following format:
 
 ~~~
 /app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
 ~~~
 
-The version should be either the word **latest** or **V** with the version number, for example:
+Having a full node path allows sharing it as a direct link to a specific in-app location, saving the time and energy of trying to locate a particular node.
+
+The ```<version>``` should be either the word **latest** or **V** with the version number, for example:
 
 ~~~
 /app/catalog/latest/CRM_DB/public/customer/customer_id
@@ -127,7 +129,7 @@ The version should be either the word **latest** or **V** with the version numbe
 /app/catalog/V2/CRM_DB/public/customer/customer_id
 ~~~
 
-This link can be shared as it directs other users to a specific in-app location, saving them the time and energy of trying to locate a particular node.
+The Catalog can also be accessed from the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio, as explained [here](04a_catalog_integration_with_fabric.md#open-in-catalog).
 
 
 

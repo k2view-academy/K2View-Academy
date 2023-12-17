@@ -14,21 +14,21 @@ To apply the Catalog Masking mechanism, start with running the Discovery job, va
 * The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure it was received.
 * The **CatalogMaskingField** Actor’s purpose is to mask a single field’s value based on the Catalog’s classification and the masking rules definition. 
   * The actor starts from checking whether the field should be masked. The check is based on the field's PII and Masking columns set in the catalog_field_info MTable after building the Catalog artifact. [Click for more information about the Catalog artifact](09_build_artifacts.md).
-    * If both PII is true and the Masking property is not OFF (see below more details about the Masking property), the field's value should be masked. 
+    * If both PII is true and the Masking property is not OFF, the field's value should be masked. (More details about the Masking property are explained further in this article).
   * Then, the actor retrieves the field's Classification from the **catalog_field_info** MTable and searches for the generator in the **catalog_classification_generators** MTable. The generator can be either one of the existing built-in actors (RandomSSN, RandomZipCode, etc.), a custom actor or a flow.
     * Click for more information about the Catalog's [PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup).
   * Finally, the actor internally invokes the **Masking** actor, sending its parameters as follows:
-    * The maskingId is set to the Classification.
-    * The flowName is set to the Generator defined in the **catalog_classification_generators** MTable for this Classification.
+    * The *maskingId* is set to the Classification.
+    * The *flowName* is set to the Generator defined in the **catalog_classification_generators** MTable for this Classification.
     * If the given Generator has parameters, they are also taken from the above MTable.
 
 ### The Masking Property
 
-While the Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the **Masking** property can be added manually when it is required to control the masking mechanism of specific fields. 
+While the Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the **Masking** property should be added manually when it is required to control the masking mechanism of some fields. 
 
 <img src="images/masking_prop.png" style="zoom:80%;" />
 
-The purpose of adding the Masking property is to mark the fields identified as PII, that require special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values:
+The purpose of adding the Masking property to a field is to override the Classification level definitions. It indicated that this field requires a special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values:
 
 * **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (meaning the same input will always return the same masked value).
 * **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
@@ -36,7 +36,7 @@ The purpose of adding the Masking property is to mark the fields identified as P
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
 * **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor's responsibility to add the custom masking logic to the relevant LU population.
 
-Note that when the Masking property is set to either Consistent, Unique or Consistent & Unique value, it overrides the same definition on the Classification level performed via the [Catalog Settings screen](10_catalog_settings.md).
+
 
 
 
