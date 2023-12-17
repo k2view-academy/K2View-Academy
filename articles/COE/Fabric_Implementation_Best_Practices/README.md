@@ -10,6 +10,7 @@ Various tips, tricks, and recommendations when working with Fabric are found in 
 <li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_iid_finder.md">Best Practices - IID Finder</a></li>
 <li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md">Best Practices - Security</a></li>
 <li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_broadway.md">Best Practices - Broadway</a></li>
+<li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_dependencies.md">Best Practices - Dependencies</a></li>
 </ul><strong>
 
 
