@@ -42,13 +42,13 @@ The **PII & Masking Setup** tab allows to view and update the PII and Catalog ba
 The tab includes two definitions per each Classification:
 
 * **PII** - to indicate whether the Classification is considered as PII. 
-* **Generator** - to define which masking logic should be applied by the [Catalog masking mechanism](09_build_artifacts.md#catalog-masking).
+* **Generator** - to define which random generation logic should be applied by the [Catalog masking mechanism](09_build_artifacts.md#catalog-masking).
 
 Each **Classification** can have **only one** definition (row) in this tab.
 
 To edit the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
 
-* The **Generator** can be either one of the existing built-in actors, a custom actor or a flow that will be used to perform the masking logic for the values of field with a given Classification.
+* The **Generator** can be either one of the existing built-in actors, a custom actor or a flow that will be used to perform the generation logic for the values of field with a given Classification.
 
 * For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
 
