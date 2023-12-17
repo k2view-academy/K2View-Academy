@@ -2,7 +2,7 @@
 
 We have just released Fabric 7.2.1, which includes the following:
 
-* **Fabric Catalog** performance improvements and optimizations, as well as Salesforce support and few additional features.
+* Fabric Catalog performance improvements and optimizations, as well as Salesforce support and few additional features (such as an ability to run the discovery from the Catalog app)
 * Fabric and project dependencies with no collisions.
 *  SSH-RSA support, iidFinder support of AWS keayspaces, Broadway usability and new actors, etc.
 
