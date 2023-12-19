@@ -32,7 +32,7 @@ The as-you-type reporting of parsing and compilation errors is shown both inline
 
 Along with that, there are other indications of errors and warnings in a file:
 
-* In the Project Tree - where a whole files hierarchy is colored red
+* In the Project Tree - where a whole hierarchy of files is colored red
 * In the Warning and Error panels
 * On the left side of the bottom panel 
 * In the Top Editor tab
