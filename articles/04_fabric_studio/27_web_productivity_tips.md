@@ -20,9 +20,9 @@ Access all available Fabric Web Studio functionalities and commands from the top
 
 Following are useful keyboard shortcuts for Mac / Windows ( ⌘ refers to the CMD button on Mac, and  ⌥ stands for Alt on Mac).
 
-To open the full list of shortcuts you can either:
+To open the full list of shortcuts, either:
 
-* Use the top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
+* Use the top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**, or
 * Use the bottom-left **Preferences** <img src="images/web/settings.png" style="zoom:67%;" /> gear icon > **Open Keyboard Shortcuts**
   
 ### Navigation
