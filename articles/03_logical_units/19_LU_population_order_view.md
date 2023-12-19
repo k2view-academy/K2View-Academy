@@ -25,7 +25,7 @@ The view shows a table with several columns: Order, Table and population flow na
   * When you change the order, it is automatically reflected and affected the schema's diagram.
   * When editing the order, the table is not reordered, in a way that you would not loose the location of your changes.
 
-- Clicking on a table name within the table, will lead you to the table location in the schema's diagram, as well as highlight it by blinking (Note that the table is not being selected, in order for it to remain in schema's perspective view).
+- Clicking on a table name within the Population Order View tab, will lead you to the table location in the schema's diagram, as well as highlight it by blinking (note that the table is not being selected, in order for it to remain in schema's perspective view).
 
 ![](images/web/19_highlight_in_diagram.gif)
 
