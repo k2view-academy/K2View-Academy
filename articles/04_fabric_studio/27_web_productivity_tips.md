@@ -150,7 +150,7 @@ However, it is easy to turn on the `Auto Save`, which will save your changes eve
 
 ## Rename Entities
 
-Rename an entity can be done from the project tree context menu. To do so: Right click on a file and choose the **Rename** option, or click **`F2`** key.
+Renaming an entity can be done from the project tree context menu. To do so, either right-click on a file and choose the **Rename** option, or click the **`F2`** key.
 
 When renaming entities, Studio is making for you some of the tasks. For example:
 
