@@ -12,7 +12,7 @@ Access all available Fabric Web Studio functionalities and commands from the top
 
 - The Command Palette first shows the recently used commands and then all the other commands.
 - If you do not remember the exact command, just start to type the keyword that might fit to filter relevant matches. The Command Palette will complete the command. 
-- The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands. Once the palette is opened type "Fabric" to filter and see them. 
+- The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands. Once the palette opens, type "Fabric" to filter and see the commands. 
 
 
 
