@@ -31,7 +31,7 @@ The sample size is configured in the plugins.discovery file as follows:
 * The default sample size is 10% of the dataset rows.
 * Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows) per each dataset.
 
-**Data Platforms Include / Exclude List**
+**Data Platforms Exclusion List**
 
 The data_platforms section of the plugins.discovery configuration file enables setting:
 
@@ -58,7 +58,11 @@ For example, the following field names will be matched: customer.ID, CUSTOMER_ID
 
 This plugin includes a blacklist of field names (e.g., 'username' or 'age') and a blacklist of field types (e.g., date, time, blob) to be excluded from the matching algorithm. These blacklists are defined in the plugins.discovery file as plugin input parameters, and they can be updated on a project level.
 
-If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability of the match's correctness. The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
+If a match is found, the plugin evaluates both the relation direction and the foreign key fields using the matching rule. The *refers to* relation direction is Many-to-One. The relation is created with a score - a probability of the match's correctness. 
+
+**Matching Rules**
+
+The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
 
 * **field_name_is_id_and_pk** - Dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
   
@@ -136,6 +140,10 @@ If a match is found, the plugin evaluates both the relation direction and the fo
   * The relation is created and its direction is random. The score is 0.4.
 * **same_field_names_not_pk** - Both datasets have fields with the same names (normalized, not in *field_name_blk*), both are non-PK.
   * The relation is created and its direction is random. The score is 0.2.
+
+**Field Exclusion List**
+
+Fields can be excluded from the matching algorithm of the *Metadata Logical Reference* plugin by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** sections of the plugin's input parameters. This can be useful when, for example, there is the same field name across many datasets of the same schema that should not be part of the *refers to* relation, such as: lastModifiedDate.
 
 #### Data Regex Classifier
 
