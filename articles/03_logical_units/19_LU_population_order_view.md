@@ -6,7 +6,7 @@ The Logical Unit Schema Population Order View provides a simple way to view and 
 
 
 
-To open Population Order View:
+To open the Population Order View:
 
 1. Click on the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper right corner of the schema window.
 2. Choose the Population Order View tab.
