@@ -144,7 +144,7 @@ Typing filename: line number will lead you to that line in file.</td>
 
 By default, Web Studio requires an explicit action to save your changes to a disk, by using **Ctrl+S** or via the top menu - **File > Save**.
 
-However, it is easy to turn on `Auto Save`, which will save your changes every preconfigured time (default is 4 seconds). With this option turned on, there is no need to explicitly save the file. To turn on `Auto Save`, use the **File** > **Auto Save** toggle that turns it on and off.
+However, it is easy to turn on the `Auto Save`, which will save your changes every preconfigured time (default is 4 seconds). With this option turned on, there is no need to explicitly save the file. To turn on the `Auto Save`, use the **File** > **Auto Save** toggle that turns it on and off.
 
 
 
