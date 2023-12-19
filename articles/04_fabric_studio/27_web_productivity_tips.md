@@ -40,8 +40,8 @@ To open the full list of shortcuts, either:
         <tr >
             <td>⌘P / CTRL+P</td>
             <td>
-                Quickly Open recent files, shown in the drop-down list, or search by typing a filename.<br>
-Typing filename:line number will lead you to that line in file.</td>    
+                Quickly open recent files, shown in the drop-down list, or search by typing a filename.<br>
+Typing filename: line number will lead you to that line in file.</td>    
         </tr>
         <tr >
             <td>⌘J / CTRL+J</td>
