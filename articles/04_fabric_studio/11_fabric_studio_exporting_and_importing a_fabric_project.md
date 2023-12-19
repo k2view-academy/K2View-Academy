@@ -6,7 +6,7 @@ Fabric Studio has a proprietary encapsulation functionality that encapsulates an
 
 ## Exporting Selected Project Components
 
-There are two Export options:
+There are 2 Export options:
 * Export an entire project.
 * Export a specific object, for example:
   * Group of items, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](/articles/03_logical_units/01_LU_overview.md).
@@ -14,8 +14,8 @@ There are two Export options:
   * Java files (categories).
   * Objects, whereby you can export a specific object from the Project Tree. Java functions cannot be exported using this method.
 
-To export a project, do the following:
-1. Right-click on the **Project Group** or on **Object** and then click **Export**. 
+To export a project, perform the following:
+1. Right-click on either the **Project Group** or **Object** and then click **Export**.
 2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file is created with a k2export extension.
 
 ## Importing Selected Project Components
