@@ -160,7 +160,7 @@ When renaming entities, Studio carries out some of the tasks on your begalf. For
 
 
 
-## Code Completion (IntelliSense) and Code Snippet
+## Code Completion (*IntelliSense*) and Code Snippet
 
 Learn [here](/articles/04_fabric_studio/26_web_basic_code_editing.md) about this capability, available when editing your code.
 
