@@ -8,7 +8,7 @@
 
 Access all available Fabric Web Studio functionalities and commands from the top menu by selecting **View > Command Palette** or use `⇧⌘P` (`Cmd`+`Shift`+`P`) on Mac or `Ctrl`+`Shift`+`P` in Windows, to bring up the **Command Palette**.
 
-- Each command appears with its associated shortcut (if one exists). If you forget a keyboard shortcut (also referred to as a "key binding"), use the **Command Palette** to help you out.
+- Each command appears with its associated shortcut (if one exists). If you forget a keyboard shortcut (also referred to as a 'key binding'), use the **Command Palette** to help you out.
 
 - The Command Palette shows first the recently used commands and then all other commands.
 - If you do not remember the exact command, just start to type the keyword that might fit to filter relevant matches. The Command Palette will complete the command. 
