@@ -77,7 +77,7 @@ Typing filename: line number will lead you to that line in file.</td>
         </tr>
         <tr>
             <td>^⇧` / CTRL+Shift+`</td>
-            <td>Create and show another Linux Terminal, if one is already opened</td>
+            <td>Create and show another Linux Terminal, if one is already open</td>
         </tr>
 </tbody>
     </table>
