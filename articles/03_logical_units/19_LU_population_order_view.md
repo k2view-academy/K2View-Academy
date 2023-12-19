@@ -20,7 +20,7 @@ To open the Population Order View:
 The view shows a table with several columns: Order, Table and population flow name.
 
 * The default table sort order is by the population order. This lets you understand what tables are populated first. 
-* You can change the sort order as well as filter the table or group rows (for example by population order), using the table's top control actions
+* You can change the sort order as well as filter the table or group rows (for example by population order), using the table's top control actions.
 * The population order is editable, letting you control and manage them, without the need to look for it at the schema
   * When you change the order, it is automatically reflected and affected the schema diagram.
   * When editing the order, the table is not reordered, so that you will not loose the location of your changes.
