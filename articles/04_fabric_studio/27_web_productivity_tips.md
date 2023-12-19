@@ -22,7 +22,7 @@ Following are useful keyboard shortcuts for Mac / Windows ( ⌘ refers to the CM
 
 To open the full list of shortcuts you can either:
 
-* Use top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
+* Use the top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
 * Use left bottom **Preferences** <img src="images/web/settings.png" style="zoom:67%;" /> gear icon > **Open Keyboard Shortcuts**
   
 ### Navigation
