@@ -154,7 +154,7 @@ Renaming an entity can be done from the Project Tree context menu. To do so, eit
 
 When renaming entities, Studio is making for you some of the tasks. For example:
 
-* When renaming a Data Product/Logical unit, all relevant files under it, like java packages will be automatically updated.
+* When renaming a Data Product/Logical unit, all relevant files under it - such as Java packages - will be automatically updated.
 * When renaming an interface file name, the name, which exists inside the file content, will be changed accordingly.
 * When renaming a table name, will update its related population flow name.
 
