@@ -20,7 +20,7 @@ To export a project, perform the following:
 
 ## Importing Selected Project Components
 
-You can import an entire exported project or specific branches of a Project Tree whereby the imported objects are attached to an existing project.
+You can import an entire exported project or specific branches of a Project Tree, where the imported objects are attached to an existing project.
 
 **Notes**  
 * There is no backwards support compatibility. Importing a project exported from a later version of K2View Fabric Studio is not supported.
