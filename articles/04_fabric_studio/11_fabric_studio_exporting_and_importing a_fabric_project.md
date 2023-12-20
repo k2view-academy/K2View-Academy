@@ -71,7 +71,7 @@ The Custom Import window displays the number of imported and overwritten items.
 
 3.  Right-click the **Target Project Tree** to display a context menu with the following options:
 
-    a. **Remove All Conflicted Items** - removes all conflicting items from the target whereby only new items remain.\
+    a. **Remove All Conflicted Items** - removes all conflicting items from the target, where only new items remain.\
     b. **Remove Import Items** - removes selected items only. Right-click an item to select it.\
     c. **Show Conflicted Items Only** - displays only items that conflict with existing items.\
     d. **Show Import Item Only** - displays imported items only.\
