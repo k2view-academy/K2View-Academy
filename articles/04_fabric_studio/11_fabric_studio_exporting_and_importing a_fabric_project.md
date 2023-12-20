@@ -6,8 +6,8 @@ Fabric Studio has a proprietary encapsulation functionality that encapsulates an
 
 ## Exporting Selected Project Components
 
-There are 2 Export options:
-* Export an entire project.
+There are 2 exporting options:
+* Export an entire project, or
 * Export a specific object, for example:
   * Group of items, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](/articles/03_logical_units/01_LU_overview.md).
   * Sub-groups, [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
