@@ -35,7 +35,7 @@ You can import an entire exported project or specific branches of a Project Tree
 ***Import* Options**
 
 * **Import All** - imports the entire exported project; several confirmation messages are displayed during the import process, validating whether to override the existing files, to create a new LU, etc.
-* **Custom Import** - enables you to select the exported objects or group items to be imported.
+* **Custom Import** - enables you to either select the exported objects or group items to be imported.
 
 ***Import All* Process**
 
