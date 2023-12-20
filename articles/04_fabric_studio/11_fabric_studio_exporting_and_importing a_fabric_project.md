@@ -49,7 +49,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
     ![image](images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
-3. A confirmation window opens, asking you whether you want to:\
+3. A confirmation message appears in a pop-up window, asking you whether you want to:\
     a. Overwrite the specific file.\
     b. Overwrite all the conflicting files in the import package.\
     c. Decline the overwrite of the specific file.\
