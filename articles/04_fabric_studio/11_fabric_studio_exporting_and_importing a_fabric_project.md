@@ -16,7 +16,7 @@ There are 2 *Export* options:
 
 To export a project, perform the following:
 1. Right-click on either the **Project Group** or **Object** and then click **Export**.
-2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file is created with a k2export extension.
+2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file will then be created with a k2export extension.
 
 ## Importing Selected Project Components
 
