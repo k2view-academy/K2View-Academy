@@ -44,7 +44,7 @@ You can import an entire exported project or specific branches of a Project Tree
 ![image](images/04_11_01_k2export_file.PNG)
 
 2. Select the **file** and click **Open**:  
-    a. If the file name exists, click either **OK** to confirm or **Ignore** to overwrite/skip the files.\
+    a. Select the LU from the drop-down list to import the files to and click **OK**, or click **Ignore** to skip.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file name.
 
     ![image](images/04_11_02%20LU%20file%E2%80%99s%20name.png)
