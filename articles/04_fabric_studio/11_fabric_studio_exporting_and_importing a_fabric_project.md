@@ -75,7 +75,7 @@ The Custom Import window displays the number of imported and overwritten items.
     b. **Remove Import Items** - removes selected items only. Right-click an item to select it.\
     c. **Show Conflicted Items Only** - displays only items that conflict with existing items.\
     d. **Show Import Item Only** - displays imported items only.\
-    e. **Show All Items** - displays all items in the project tree.
+    e. **Show All Items** - displays all items in the Project Tree.
 
 4. Click on **Import & Close** to confirm the Import process or to close the window for canceling it. 
 5. A confirmation window opens asking you whether you want to:
