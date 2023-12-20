@@ -37,7 +37,7 @@ You can import an entire exported project or specific branches of a Project Tree
 * **Import All** - imports the entire exported project together with notes regarding overwritten data and creating new LU.
 * **Custom Import** - enables you to select the exported objects or group items to be imported.
 
-**Import All Process**
+***Import All* Process**
 
 1. Right-click on the root of the **Project Tree**, click on **Import** and then choose **Import All** to open the File **Browser** and select the **k2export** **file** to be imported.  
 
