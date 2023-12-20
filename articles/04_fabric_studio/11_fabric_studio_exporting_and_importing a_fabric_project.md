@@ -24,7 +24,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
 **Notes**  
 * There is no support for backward compatibility. Importing a project, which is exported from a later version of K2view Fabric Studio, is not supported.
-* Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group. I.e., you may copy Java files from Shared Objects into Reference Java files. 
+* Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group, i.e., Java files from Shared Objects into Reference Java files.
 * The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overwrites the entire file including its Java functions.  
 * When updating a specific function in a Java file, add the function to the Java file manually. 
 * Java files are imported into the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
