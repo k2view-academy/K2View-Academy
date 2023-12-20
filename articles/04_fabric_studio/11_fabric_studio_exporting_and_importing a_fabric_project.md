@@ -6,7 +6,7 @@ Fabric Studio has a proprietary encapsulation functionality that encapsulates an
 
 ## Exporting Selected Project Components
 
-There are 2 exporting options:
+There are 2 *Export* options:
 * Export an entire project, or
 * Export a specific object, for example:
   * Group of items, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](/articles/03_logical_units/01_LU_overview.md).
@@ -32,7 +32,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
 ### How Can I Import a K2EXPORT File Into My Project?
 
-**Import Options**
+***Import* Options**
 
 * **Import All** - imports the entire exported project together with notes regarding overwritten data and creating new LU.
 * **Custom Import** - enables you to select the exported objects or group items to be imported.
