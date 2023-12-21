@@ -77,8 +77,8 @@ The Custom Import window displays the number of imported and overwritten items.
     d. **Show Import Item Only** - displays imported items only.\
     e. **Show All Items** - displays all items in the Project Tree.
 
-4. Click on **Import & Close** (bottom-right corner) to confirm the Import process or to close the window for canceling it. 
-5. A confirmation window opens, asking whether you want to:
+4. Click on **Import & Close** (bottom-right corner) to confirm the Import process and to close Import tab. 
+5. A confirmation window opens, asking whether you want to either:
 
     a. Overwrite the specific file.\
     b. Overwrite all the conflicting files in the import package.\
