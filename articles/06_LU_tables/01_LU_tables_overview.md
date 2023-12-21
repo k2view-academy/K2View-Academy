@@ -7,7 +7,7 @@ An LU table can also act as the Master of Data that holds the data generated in 
 
 [Click for more information about how to add an LU Table to an LU Schema](/articles/03_logical_units/09_add_table_to_a_schema.md). 
 
-<studio>LU tables can be created either automatically, for example, using the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) or manually. 
+<studio>LU tables can be created either automatically, for example, by using the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) or manually.
 
 When building a table manually, first define the table's properties, columns and indexes and then create the Table Population map, which holds the transformation and mapping rules.
 
