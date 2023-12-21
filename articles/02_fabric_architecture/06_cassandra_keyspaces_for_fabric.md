@@ -2,7 +2,7 @@
 
 Fabric System Database is used by Fabric internal processes to monitor, secure, control, configure, audit and operate the application.
 
-Fabric supports several types of Databases as System Database storage:
+Fabric supports several types of Databases as System Database storage, as described below.
 
 **NoSQL distributed database, such as Cassandra DB**
 
@@ -29,14 +29,14 @@ Fabric supports several types of Databases as System Database storage:
   - Single point of failure
   - Not supported by the iidFinder solution
 
-**Sqlite**
+**SQLite**
 
 - Pros:
   - Development and single-node environments
 
 Fabric uses the Cassandra DB as its default system management database. 
 
-Fabric creates several keyspaces or schemas (in case of Sqlite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
+Fabric creates several keyspaces or schemas (in case of SQLite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
 Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema, such as **k2view_customer**.
 
@@ -327,11 +327,11 @@ The following table lists the keyspaces or schemas created by Fabric:
 
 By default, the system DB it is set to Cassandra. 
 
-When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the follows shall be set at config.ini:
+When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the following should be set in config.ini:
 
-* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as system DB, then you can ignore this section.
+* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as System DB, then you can ignore this section.
 
-* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator.
+* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as System DB, 'fabric' may also be used as an authenticator.
 
    
 
