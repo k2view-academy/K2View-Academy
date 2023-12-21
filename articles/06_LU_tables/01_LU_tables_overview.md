@@ -15,7 +15,7 @@ Creating a population for an LU table is optional. When a table acts as the Mast
 
 </studio>
 
-<web>LU tables can be created either manually or based on data source tables. In the later option a [table population](/articles/07_table_population/01_table_population_overview.md) is automatically created, according to table's definitions</web>
+<web>LU tables can be created either manually or based on data source tables. In the latter option, a [table population](/articles/07_table_population/01_table_population_overview.md) is automatically created, according to table's definitions</web>
 
 
 ### LU Table Definitions
