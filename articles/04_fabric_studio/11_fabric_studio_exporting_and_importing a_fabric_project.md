@@ -140,7 +140,7 @@ To export files or folders:
 
 The files and folders are then downloaded into your PC/Mac.
 
-Note: When selecting folders or multiple files, the download outcome is a compressed "tar" file.
+Note: When selecting folders or multiple files, the download outcome is a compressed TAR file.
 
 
 
