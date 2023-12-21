@@ -173,19 +173,46 @@ Fabric database credentials are validated each time a user attempts to access Fa
 Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
 It is also possible to skip the sync process between Fabric user and System DB (e.g. Cassandra) user by setting **READ_ONLY_AUTHENTICATORS** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
+
 ## Setting Credentials
+Define credentials, either by Admin UI (Security tab) or by Fabric commands, as follows: 
+- Create a new role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)).
+- Assign a security profile to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role)).
+- Create an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)).
+- Assign a role to API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token)).
+- Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
-Create the users and define their credentials, as follows: 
+### Bootstrap Credentials
+Fabric can also be started for the first time with predefines apikeys, roles and permissions.
+- Copy the **rolesPrivileges.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Change the file name to **rolesPrivileges.json**.
+- Edit the file with the required values.
+   - Define roles and associated operations, at `"roles"` array object.
+   - Define apikeys and their association to roles, at `"apikeys"` array object.
+- When Fabric starts for the first time, it looks for this file and if exists apply its definitions. 
 
-- [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
-- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
-- [Assign a role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
-- [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
-- [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
+Note: You can define only the operations and roles because resourses do not exist yet, as project was not deployed yet.
 
-- Exit Fabric and log in with this user or use the token to invoke a Web Service.
+Example:
+```
+{
+    "roles": {
+        "deploy": ["DEPLOY", "DEPLOY_ENVIRONMENTS", "SET_GLOBAL_ENVIRONMENT"]
+    },
+    "apikeys": {
+        "t1234": ["deploy"]
+    }
+}
+```
+ 
 
-## Admin User
+## Users Credentials
+Users might be defined at Fabric system DB and accoridngly shall be associated to roles, as follows. 
+- Assign a role to the user by either Admin UI (Security tab) or ([by command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
+
+Note: When Fabric integrates with an external authenitcator, Fabric does not manage and store users information and users permissions are applied by roles. For more infomration about User Identification and Access Management read [here](/articles/26_fabric_security/07_user_IAM_overview.md).
+
+### Admin User
 
 By default, Fabric creates the **admin** user as the initial superuser when starting for the first time and defines their user and password as **"admin"**. Fabric can also be started for the first time with another initial superuser that is not defined as admin/admin.  
 
