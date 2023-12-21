@@ -77,7 +77,7 @@ The Custom Import window displays the number of imported and overwritten items.
     d. **Show Import Item Only** - displays imported items only.\
     e. **Show All Items** - displays all items in the Project Tree.
 
-4. Click on **Import & Close** (bottom-right corner) to confirm the Import process and to close Import tab. 
+4. Click on **Import & Close** (bottom-right corner of the screen) to confirm the Import process and to close Import tab.
 5. A confirmation window opens, asking whether you want to either:
 
     a. Overwrite the specific file.\
@@ -101,13 +101,13 @@ When importing objects with the same name and location in the Project Tree, a ye
 
 Importing project files or folders into your project can be done by either:
 
-* Using the **File > Upload Files...** available at top menu bar, when the target folder at the project tree is selected.
+* Using the **File > Upload Files...** available at top menu bar, when the target folder in the Project Tree is selected.
 * Dragging and dropping them from your PC/Mac folder into the required location.
 
-* Using the context menu (right-click) on the target folder in the project tree.
+* Using the context menu (right-click) on the target folder in the Project Tree.
   ​     
 
-The upload progress will be displayed at the bottom right corner of the screen:
+The upload progress will be displayed at the bottom-right corner of the screen:
 
   ![image](images/web/5_upload_progress.PNG)
 
