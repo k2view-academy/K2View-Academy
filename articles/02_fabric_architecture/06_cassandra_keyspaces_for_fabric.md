@@ -13,7 +13,7 @@ Fabric supports several types of Databases as System Database storage, as descri
   - If Cassandra is used as a MicroDB storage, there is no need to introduce additional DBs
   - Managed services (such as AWS Keyspaces or Astra) are supported
   - Supported by the iidFinder solution
-  - Built-in mechanism for managing parallel threads during bulk instance loading.
+  - Built-in mechanism for managing parallel threads during bulk instance loading
 - Cons:
   - Consistency
   - Not easy to operate and maintain
