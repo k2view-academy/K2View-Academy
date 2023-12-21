@@ -143,7 +143,7 @@ The following matching rules are defined in the plugins.discovery file and are a
 
 **Field Exclusion List**
 
-Fields can be excluded from the matching algorithm of the *Metadata Logical Reference* plugin by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** sections of the plugin's input parameters. This can be useful when, for example, there is the same field name across many datasets of the same schema that should not be part of the *refers to* relation, such as: lastModifiedDate.
+Fields can be excluded from the *Metadata Logical Reference* plugin's matching algorithm by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, the same field name exists in many datasets of the same schema and this field should not be part of the *refers to* relation, e.g., lastModifiedDate.
 
 #### Data Regex Classifier
 
@@ -175,6 +175,23 @@ If a regular expression (aka regex) matches the field's name, a Classification p
 
 To update the metadata profiling rules, go to the [Catalog Settings > Classifier Regex Setup tab](10_catalog_settings.md#classifier-regex-setup).
 
+**Field Exclusion List**
+
+Fields can be excluded from the *Metadata Regex Classifier* plugin's logic by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the classification process. 
+
+Example:
+
+~~~json
+"input_parameters": {
+	"field_name_exclude_list": [
+					"^(?i)[a-z]+_?ID$"
+	],
+	"field_type_exclude_list": [
+					"boolean"
+	]
+}
+~~~
+
 #### Classification PII Marker
 
 The purpose of *Classification PII Marker* plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
@@ -182,6 +199,23 @@ The purpose of *Classification PII Marker* plugin is to go over all the fields t
 The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
 To update the Classification's PII indicator, go to the [Catalog Settings > Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup). 
+
+**Field Exclusion List**
+
+Fields can be excluded from the *Classification PII Marker* plugin's logic by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the PII marking process. 
+
+Example:
+
+~~~json
+"input_parameters": {
+	"field_name_exclude_list": [
+					"^(?i)[a-z]+_?ID$"
+	],
+	"field_type_exclude_list": [
+					"boolean"
+	]
+}
+~~~
 
 #### NULL Percentage
 
