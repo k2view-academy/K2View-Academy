@@ -39,7 +39,7 @@ Once selecting one of the above templates, a *New Data Set* window opens with a 
 
 It is recommended to update the default data set **name** to a meaningful and a suitable name, for example below it is updated to **ACTIVITY**:
 
-<img src="images/02_new_data_set.png"  />
+<img src="images/02_new_data_set.png" style="zoom:80%;" />
 
 There is a quick way to set up data binding with Fabric built-in endpoints. [Click here to get more details on how to do it.](05_quick_data_binding_with_Fabric.md)
 
@@ -60,11 +60,11 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
 1. Click on the **Validate** button (bottom left corner of *New Data Set* window) to validate the data set. Note that prior to the validation, the number of fields is 0.
 
-   ![](images/03_validate_data_set.png)
+   <img src="images/03_validate_data_set.png" style="zoom:80%;" />
 
 2. When the **Uri/path** includes a parameter, you will be prompted to insert the parameter value: 
 
-    ![](images/03_param_value_prompt.png)
+    <img src="images/03_param_value_prompt.png" style="zoom:80%;" />
 
 3. Populate a valid parameter value and click **Save & Run** to run the validation.
 
@@ -72,7 +72,8 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
     * If the configuration is invalid or if there are other issues relating to data connection, the dialog box displays an error message at the top area of the Data Set window.
 
-      ![](images/03_invalid_ds.png)
+
+    <img src="images/03_invalid_ds.png" style="zoom:80%;" />
 
 4. The fields can be updated as follows:
 
@@ -81,7 +82,8 @@ For completion of its creation, a Data Set must be validated. The validation is 
 
     * In addition to Database Fields, you can define **Calculated Fields** to be added to the data set by using an expression. 
 
-      ![](images/03_calc_fields.png)
+
+    <img src="images/03_calc_fields.png" style="zoom:80%;" />
 
 5. Click on the **Save Changes** button to finalize the Data Set definition.
 
