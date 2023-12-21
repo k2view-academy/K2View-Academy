@@ -115,8 +115,8 @@ The upload progress will be displayed at the bottom-right corner of the screen:
 
 > Note: 
 >
-> * As this is a standard IDE file upload action, there is no validation of what you are uploading and where. 
-> * When asked about overriding elements, your selection affects all uploaded files.
+> * As this is a standard IDE file upload action, there is no validation of what you are uploading and whereto. 
+> * When asked about overwriting elements, your selection affects all uploaded files.
 
 
 
