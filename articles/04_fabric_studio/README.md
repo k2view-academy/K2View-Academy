@@ -1,9 +1,6 @@
 <strong>Fabric Studio<strong>
 
-<!--div class="studio"-->
-
 <studio>
-
 <ul>
 <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
@@ -19,14 +16,8 @@
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li>
 </ul>
-
 </studio>
-
 <web>
-
-<!--/div>
-
-<div class="web"-->
 <ul>
 <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
@@ -41,8 +32,4 @@
 <li><a href="/articles//04_fabric_studio/25_web_data_explorer.md">DB Interface Explorer</a></li>
 <li><a href="/articles//04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li>
 </ul>
-<!--/div-->
-
 </web>
-
-
