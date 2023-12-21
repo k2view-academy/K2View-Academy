@@ -135,7 +135,7 @@ To export the whole project:
 
 To export files or folders:
 
-1. Choose them in the project tree and then 
+1. Choose them in the Project Tree, and then 
 2. Use the **File > Download** available from top menu bar or context menu (right-click) > Download option.
 
 The files and folders are then downloaded into your PC/Mac.
