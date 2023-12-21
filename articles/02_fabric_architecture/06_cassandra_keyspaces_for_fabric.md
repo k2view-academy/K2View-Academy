@@ -325,7 +325,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 
 [Click here for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
 
-By default, the system DB it is set to Cassandra. 
+By default, the system DB is set to Cassandra. 
 
 When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the following should be set in config.ini:
 
