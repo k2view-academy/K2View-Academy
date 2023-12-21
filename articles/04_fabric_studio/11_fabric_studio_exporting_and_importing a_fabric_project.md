@@ -124,7 +124,7 @@ The upload progress will be displayed at the bottom-right corner of the screen:
 
 To export the whole project:
 
-1. From **Fabric** in the top menu, choose **Export Project To Zip File...**
+1. From **Fabric** in the top menu bar, choose **Export Project To Zip File...**
 2. Type the name of the target zip file.
 3. The zip file will be generated and located in project's root folder.
 4. Right-click to download it.
