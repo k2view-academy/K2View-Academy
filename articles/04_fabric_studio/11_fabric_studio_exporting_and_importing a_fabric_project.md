@@ -99,7 +99,7 @@ When importing objects with the same name and location in the Project Tree, a ye
 
 ## Import / Upload Files
 
-Importing project files or folders into your project can be done either by:
+Importing project files or folders into your project can be done by either:
 
 * Using the **File > Upload Files...** available at top menu bar, when the target folder at the project tree is selected.
 * Dragging and dropping them from your PC/Mac folder into the required location.
