@@ -2,11 +2,11 @@
 
 LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md#logical-unit-lu-overview). There are several ways to create a new LU table.
 
-There are three main methods for creating a new LU table:
+There are 3 main methods for creating a new LU table:
 
-1. Based on Data Source table
+1. Based on a Data Source table
 2. Manually
-3. Duplicate an existing table
+3. By duplicating an existing table
 
 
 
@@ -16,13 +16,13 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 <studio>
 
-* Right click the work area and select either the **New Table From SQL Based DB Query** , the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
+* Right-click the work area and select either the **New Table From SQL Based DB Query**, the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
 
 * From the Project Tree: 
 
   * Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU schema. If a table exists, you can select to either override the existing implementation or not.
 
-  * Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU schema. Note that if the table is used as the Master of Data, there is no need to create a Table Population.
+  * Creating a new table **manually**. In this option, the table population should be created separately. Once the population has been created, add the table to the LU schema. Note that if the table is used as the master data, there is no need to create a Table Population.
 
     
 
