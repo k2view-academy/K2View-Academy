@@ -19,10 +19,10 @@ Creating a population for an LU table is optional. When a table acts as the Mast
 
 
 ### LU Table Definitions
-At LU table window you can define the following:
+In an LU table window you can define the following:
 *	[Table Columns](/articles/06_LU_tables/02_create_an_LU_table.md) - holds a list of columns and their definitions.
 *	[Table Indexes](/articles/06_LU_tables/03_table_indexes.md#index-definition) - holds a list of indexes that are added to an LU table to improve the selection process. Each LU table can have several indexes where each index can contain several columns.
-*	CDC Indexes - holds a list of table's fields to be published to an external system using the CDC mechanism. This is done per CDC topic, for example "Search", which is used for a cross-instance search at Elasticsearch. Read [here](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md) to learn how to configure it.
+*	CDC Indexes - holds a list of table fields to be published to an external system using the CDC mechanism. This is done per CDC topic, for example "Search", which is used for a cross-instance search at Elasticsearch. Read [here](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md) to learn how to configure it.
 *	Other [Table Properties](/articles/06_LU_tables/04_table_properties.md) - where the table’s properties like the Primary Key, [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) or related [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) are defined. 
 
 ### Built-in Platform LU Tables
