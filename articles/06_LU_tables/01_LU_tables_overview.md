@@ -3,7 +3,7 @@
 LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md) and their [Schemas](/articles/03_logical_units/03_LU_schema_window.md). 
 Their purpose is to hold data, which is retrieved from various sources after it has been transformed according to a project’s requirements.
 
-An LU table can also act as the Master of Data that holds the data generated in Fabric and is not synced by source systems.
+An LU table can also act as the master data, which holds data that is generated in Fabric and not synced by source systems.
 
 [Click for more information about how to add an LU Table to an LU Schema](/articles/03_logical_units/09_add_table_to_a_schema.md). 
 
@@ -11,7 +11,7 @@ An LU table can also act as the Master of Data that holds the data generated in 
 
 When building a table manually, you should first define the table's properties, columns and indexes, and then create the Table Population map, which holds the transformation and mapping rules.
 
-Creating a population for an LU table is optional. When a table acts as the Master of Data, it does not get feeds from source systems and the [Table Population](/articles/07_table_population/01_table_population_overview.md) is redundant.  
+Creating a population for an LU table is optional. When a table acts as the master data, it does not get feeds from source systems and the [Table Population](/articles/07_table_population/01_table_population_overview.md) is made redundant.
 
 </studio>
 
