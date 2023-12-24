@@ -22,7 +22,7 @@ The plugins.discovery configuration file includes the settings of the Discovery 
 
 This file can be updated per your project's requirements. Once the plugins.discovery configuration file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
 
-**Data Sample Settings**
+### Data Sample Settings
 
 The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
 
@@ -31,7 +31,7 @@ The sample size is configured in the plugins.discovery file as follows:
 * The default sample size is 10% of the dataset rows.
 * Min=100 and max=10000 definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than MIN (100 rows) or higher than MAX (10000 rows) per each dataset.
 
-**Data Platforms Exclusion List**
+### Data Platforms Exclusion List
 
 The data_platforms section of the plugins.discovery configuration file enables setting:
 
