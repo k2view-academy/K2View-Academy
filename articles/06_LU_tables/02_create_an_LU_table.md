@@ -16,7 +16,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 <studio>
 
-* Right-click the work area and select either the **New Table From SQL Based DB Query**, the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
+* Right-click on the working area and select either the **New Table From SQL Based DB Query**, the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
 
 * From the Project Tree: 
 
