@@ -18,7 +18,11 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_0_studio.png"  />
 
-2. Next, if needed, click **Add Input** to add the required keys as input arguments. 
+2. Next, if needed - provide a map of column names and values to the **mtableKey** input parameter to be used as the lookup key(s):
+
+   <img src="../images/99_actors_09_1_studio.png"  />
+
+3. Alternatively, click **Add Input** to add the required keys as input arguments. It can be combined with the **mtableKey** map.
 
 </studio>
 
@@ -39,7 +43,11 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_2.png"  />
 
-4. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
+4. Alternatively, you can provide a map of column names and values to the **mtableKey** input parameter to be used as the lookup key(s):
+
+   <img src="../images/99_actors_09_1_studio.png"  />
+
+5. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
 
    <img src="../images/99_actors_09_3.png"  />
 
