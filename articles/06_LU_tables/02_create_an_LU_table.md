@@ -144,7 +144,7 @@ While creating or editing an LU table, you can set the columns and their types, 
 <p><strong>Default Value</strong></p>
 </td>
 <td width="502">
-<p>The value set in this column is used to populate the table when there is no input for this column.</p>
+<p>The value set in this column is used for populating the table when there is no input for this column.</p>
 </td>
 </tr>
 <tr>
