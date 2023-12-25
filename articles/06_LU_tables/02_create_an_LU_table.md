@@ -136,7 +136,7 @@ While creating or editing an LU table, you can set the columns and their types, 
 <p><strong>Mandatory</strong></p>
 </td>
 <td width="502">
-<p>When checked, this column must be populated (not null), otherwise leave it unchecked.</p>
+<p>When checked, this column must be populated (not null); otherwise, leave it unchecked.</p>
 </td>
 </tr>
 <tr>
