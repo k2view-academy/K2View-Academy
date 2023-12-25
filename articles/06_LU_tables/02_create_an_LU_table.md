@@ -85,7 +85,7 @@ From the Project Tree:
 1. Right-click on a table and choose **Duplicate** from the context menu.
 2. A dialog box opens, where you insert a name to the duplicated table and click OK.
 
-A new table is created along with duplicated table population flow.
+A new table is created along with a duplicated table population flow.
 
 </web>
 
