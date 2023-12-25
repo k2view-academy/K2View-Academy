@@ -101,7 +101,7 @@ Note that in specific cases, the Data Type of a column - that has been automatic
 
 ## Table Definition  
 
-While creating or editing an LU table you can set the columns and their types, mark mandatory fields and set the default values. 
+While creating or editing an LU table, you can set the columns and their types, mark mandatory fields and set the default values. 
 
 <table width="623">
 <tbody>
