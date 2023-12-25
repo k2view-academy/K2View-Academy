@@ -74,7 +74,7 @@ From the Project Tree:
 <studio>
 
 *	Copy an existing LU table from one LU to another. In this option, if there is a table population, it is copied as well.
-*	Use the **Save As** option. Note that this option does not copy the Table Population.
+*	Use the **Save As** option. Note that this option does not copy the table population.
 
 </studio>
 
