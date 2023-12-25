@@ -38,7 +38,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
   * Right-click on the table and choose "Add Tables to Schema". The table will be created in Fabric, according to the selected table definitions, along with its population, and will be added to the schema. 
 
-    > Note that you can expand the table in the DB Interface Explorer and select specific columns. When doing it, the created Fabric table will contain only the columns which were selected.
+    > Note that you can expand the table in the DB Interface Explorer and select specific columns. By doing so, the created Fabric table will contain only the columns that were selected.
 
 * Create a table based on data source tables, using **Query Builder**:
 
