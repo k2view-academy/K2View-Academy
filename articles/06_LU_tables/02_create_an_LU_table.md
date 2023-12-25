@@ -123,7 +123,7 @@ While creating or editing an LU table, you can set the columns and their types, 
 <li>Integer</li>
 <li>Real</li>
 <li>Text</li>
-<li>Datetime, saved as java.sql.Timestamp class (supported to nanoseconds level)</li>
+<li>Datetime, saved as java.sql.Timestamp class (supported up to nanoseconds level)</li>
 <li>Date, saved as java.sql.Date class</li>
 <li>Time, saved as java.sql.Time class</li>
 <li>Blob</li>
