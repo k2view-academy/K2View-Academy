@@ -46,7 +46,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
   * Choose "Create New from source with SQL query".
   * Name the table and click on Create.
   * A Query Builder pop-up window appears.
-  * In the Query Builder window, select the required interface. Then either write the SQL query in the upper part in the Query Builder or expand the interface schema and its table list to find the relevant table and select it.
+  * In the Query Builder window, select the required interface. Then either write the SQL query in the upper part of the Query Builder or expand the interface schema and its table list to find the relevant table and select it.
   * Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
 
 </web>
