@@ -73,8 +73,8 @@ From the Project Tree:
 
 <studio>
 
-*	Copying an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
-*	Using the **Save As** option. Note that this option does not copy the Table Population.
+*	Copy an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
+*	Use the **Save As** option. Note that this option does not copy the Table Population.
 
 </studio>
 
@@ -82,10 +82,10 @@ From the Project Tree:
 
 From the Project Tree:
 
-1. Right-click on the table and at the opened context menu choose **Duplicate**.
-2. At the opened dialog box give a name to the duplicated table and click OK.
+1. Right-click on a table and choose **Duplicate** from the context menu.
+2. A dialog box opens, where you insert a name to the duplicated table and click OK.
 
-New table is created along with duplicated table population flow.
+A new table is created along with duplicated table population flow.
 
 </web>
 
