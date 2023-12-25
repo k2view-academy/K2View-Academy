@@ -95,7 +95,7 @@ A new table is created along with a duplicated table population flow.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
 
-Note that in specific cases, the Data Type of a column - that has been automatically created based on a DB table - may need to be manually edited. For example, a **Number** column in Oracle is created in Fabric with **Data Type = Real**. This column may need to be modified to either an **Integer** or **Text** in the LU table.
+Note that in specific cases, the Data Type of a column - that has been automatically created based on a DB table - may need to be manually edited. For example, a **Number** column in Oracle is created in Fabric with **Data Type = Real**. This column may need to be modified to either an **Integer** or a **Text** in the LU table.
 
 
 
