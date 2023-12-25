@@ -59,7 +59,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right-click **Tables** > **New Table** to display the **Columns tab** in the **Table Schema** window.
 2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):
-    * Complete the settings of each table column like the **Name** or **Data Type**.
+    * Complete the settings of each table column, such as the **Name** or **Data Type**.
     * Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).
     * Optional: Define the **CDC** and the table’s **Search** indexes.
 3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
