@@ -81,7 +81,7 @@ While using one of the first three methods, the tables are also created in Fabri
 
       ![QB popup](images/web/01_QB_WEB_popup2.png)
       
-   3. Once a query exists in the Query Builder, you can test it by clicking on **Execute** button. When done, click on **Create** button.
+   3. Once a query exists in the Query Builder, you can test it by clicking on the **Execute** button. When done, click on the **Create** button.
       
    
       ![QB popup](images/web/01_QB_WEB_popup3.png)
