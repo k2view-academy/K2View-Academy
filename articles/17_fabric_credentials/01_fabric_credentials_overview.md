@@ -14,7 +14,7 @@ Using roles makes permissions management much easier. It avoids having to manual
 
 User access control management can be performed using either:
 
-- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
+- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
 
 - [Web Admin UI](/articles/30_web_framework/03_web_admin_application.md)
 
