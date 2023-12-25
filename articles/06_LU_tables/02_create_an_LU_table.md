@@ -42,7 +42,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 * Create a table based on data source tables, using **Query Builder**:
 
-  * At schema window top bar, click the <img src="/articles/03_logical_units/images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** popup window
+  * In the  schema window's top bar, click the <img src="/articles/03_logical_units/images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** pop-up window
   * Choose "Create New from source with SQL query".
   * Name the table and click on Create.
   * Query Builder popup window appears.
