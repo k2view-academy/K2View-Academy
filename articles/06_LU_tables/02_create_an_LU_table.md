@@ -22,7 +22,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
   * Use the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to either create or edit the LU. The tables and their populations are automatically created and added to the LU schema. If a table already exists, it is possible to override the existing implementation.
 
-  * Create a new table **manually**. In this option, the table population should be created separately. Once the population has been created, add the table to the LU schema. Note that if the table is used as the master data, there is no need to create a table population.
+  * Create a new table **manually**. In this option, the table population should be created separately. Once the population has been created, add the table to the LU schema. Note that if the table is used as the master data, there is no need to create the table population.
 
     
 
