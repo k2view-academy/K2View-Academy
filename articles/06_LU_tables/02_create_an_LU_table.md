@@ -40,7 +40,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
     > Note that you can expand the table in the DB Interface Explorer and select specific columns. By doing so, the created Fabric table will contain only the columns that were selected.
 
-* Create a table based on data source tables, using **Query Builder**:
+* Create a table based on data source tables, using the **Query Builder**:
 
   * In the  schema window's top bar, click the <img src="/articles/03_logical_units/images/web/new-table_nobg.png" style="zoom: 70%;" /> icon to open the **Add New Table** pop-up window
   * Choose "Create New from source with SQL query".
