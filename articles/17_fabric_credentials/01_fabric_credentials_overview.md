@@ -37,7 +37,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>ACTIVATE_KEY</strong></p>
 </td>
 <td width="600pxl">
-<p>This permission is needed to generate a new key when using Fabric's key generator capability</p>
+<p>This permission is needed for generating a new key when using Fabric's key generator capability</p>
 </td>
 </tr>
 <tr>
@@ -45,7 +45,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>ASSIGN_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p>This permission is needed to assign a role to a specific user</p>
+<p>This permission is needed for assigning a role to a specific user</p>
 </td>
 </tr>
 <tr>
