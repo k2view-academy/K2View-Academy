@@ -32,7 +32,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 * Create a table based on data source table, using the **DB Interface Explorer**:
 
-  * Switch from the Project tree to the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left Activity Bar.
+  * Switch from the Project Tree to the **DB Interface Explorer** by clicking the <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> icon on the left Activity Bar.
 
   * Click on the relevant interface data source and select the required table.
 
