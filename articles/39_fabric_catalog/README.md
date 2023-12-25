@@ -5,6 +5,8 @@
 	<web><li><a href="/articles/39_fabric_catalog/02_catalog_vocabulary.md">Catalog Vocabulary</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/03_discovery_process.md">Discovery Process</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/04_plugin_framework.md">Plugin Framework</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/04a_builtin_plugins.md">Built-In Plugins</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md">Catalog Integration with Fabric</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/05_catalog_app.md">Catalog Application</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/06_catalog_versioning.md">Catalog Versioning</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/07_manual_overrides.md">Manual Overrides</a></li></web>
