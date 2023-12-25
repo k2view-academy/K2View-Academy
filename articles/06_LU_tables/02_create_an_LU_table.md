@@ -69,7 +69,7 @@ From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 ## Duplicate an existing table 
 
-From the project tree:
+From the Project Tree:
 
 <studio>
 
@@ -80,9 +80,9 @@ From the project tree:
 
 <web>
 
-From the project tree:
+From the Project Tree:
 
-1. Right click on the table and at the opened context menu choose **Duplicate**.
+1. Right-click on the table and at the opened context menu choose **Duplicate**.
 2. At the opened dialog box give a name to the duplicated table and click OK.
 
 New table is created along with duplicated table population flow.
