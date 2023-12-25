@@ -128,7 +128,7 @@ While creating or editing an LU table, you can set the columns and their types, 
 <li>Time, saved as java.sql.Time class</li>
 <li>Blob</li>
 </ul>
-<p>Note that if the Oracle field type is <strong>Number</strong>, Fabric sets the <strong>Data Type</strong> of this field to <strong>Real</strong> in the <strong>LU table</strong> and the number in Fabric has a decimal point. Therefore, if a column in the <strong>LU table</strong> does not need a decimal point (for example, for the CUSTOMER ID), change the <strong>Data Type</strong> of the <strong>LU Table</strong> column to <strong>Integer</strong> or <strong>Text</strong>.</p>
+<p>Note that if the Oracle field type is <strong>Number</strong>, Fabric sets the <strong>Data Type</strong> of this field to <strong>Real</strong> in the <strong>LU table</strong> and the number in Fabric has a decimal point. Therefore, if a column in the <strong>LU table</strong> does not need a decimal point (for example, for the CUSTOMER ID), change the <strong>Data Type</strong> of the <strong>LU Table</strong> column to either an <strong>Integer</strong> or a <strong>Text</strong>.</p>
 </td>
 </tr>
 <tr>
