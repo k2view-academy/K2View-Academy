@@ -85,7 +85,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
 </td>
 <td width="600pxl">
-<p>The ability to invoke a web service and to read or write data from Fabric instances and/or CommonDB</p>
+<p>The ability to invoke a web service and to read/write data from Fabric instances and/or CommonDB</p>
 </td></tr>
 <tr>
 <td width="300pxl">
