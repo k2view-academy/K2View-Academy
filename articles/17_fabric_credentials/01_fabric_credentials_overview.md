@@ -70,7 +70,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>DELETE_INSTANCE</strong></p>
 </td>
 <td width="600pxl">
-<p>Used for deletion of one or multiple instances from Fabric</p>
+<p>Used for the deletion of one or multiple instances from Fabric</p>
 </td>
 </tr>
 <tr>
