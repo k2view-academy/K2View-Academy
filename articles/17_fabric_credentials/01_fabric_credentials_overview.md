@@ -179,7 +179,7 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 - Create a new role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)).
 - Assign a security profile to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role)).
 - Create an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)).
-- Assign a role to API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token)).
+- Assign a role to an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token)).
 - Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
 ### Bootstrap Credentials
