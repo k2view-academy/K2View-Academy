@@ -113,7 +113,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>ALL</strong></p>
 </td>
 <td width="600pxl">
-<p>Allows above-mentioned permissions</p>
+<p>Allows the above-mentioned permissions</p>
 </td></tr>
 </table>
 
