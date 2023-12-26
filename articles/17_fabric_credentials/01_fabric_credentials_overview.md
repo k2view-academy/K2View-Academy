@@ -191,7 +191,7 @@ Fabric can also be started for the first time with predefines apikeys, roles and
    - Define apikeys and their association to roles, at `"apikeys"` array object.
 - When Fabric starts for the first time, it looks for this file and if exists apply its definitions. 
 
-Note: You can define only the operations and roles because resourses do not exist yet, as project was not deployed yet.
+Note: You can define only the operations and roles because resources do not exist yet, as project was not deployed yet.
 
 Example:
 ```
