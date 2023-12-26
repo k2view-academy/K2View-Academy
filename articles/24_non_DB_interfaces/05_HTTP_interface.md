@@ -6,7 +6,7 @@ To create a new HTTP interface, take the following steps:
 
 <studio>
 
-1. Go to **Project Tree** > **Shared Objects**, right-click **Interfaces**, select **New Interface** and then select **HTTP** from the **Interface Type** drop-down menu to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right-click **Interfaces**, select **New Interface** and then select **HTTP** from the **Interface Type** drop-down list to open the **New Interface** window.
 
 
    ![image](images/03_http_1.png)
