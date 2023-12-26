@@ -78,7 +78,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong></p>
 </td>
 <td width="600pxl">
-<p>Ability to run the deploy command on a project or entire environment</p>
+<p>Ability to run the deploy command on a project or on an entire environment</p>
 </td></tr>
 <tr>
 <td width="300pxl">
@@ -92,7 +92,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>To set the environment or Globals for the current session onto which role is defined/p>
+<p>To set the environment or Globals for the current session onto which a role is defined/p>
 </td></tr>
 <tr>
 <td width="300pxl">
