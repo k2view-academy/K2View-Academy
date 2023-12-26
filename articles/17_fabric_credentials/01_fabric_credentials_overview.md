@@ -208,7 +208,7 @@ Example:
 
 ## Users Credentials
 Users may be defined in Fabric system DB and shall accoridngly be associated to roles, as follows: 
-- Assign a role to the user by either Admin UI (Security tab) or ([by command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
+- Assign a role to the user by either Admin UI (Security tab) or ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
 
 Note: When Fabric integrates with an external authenitcator, Fabric does not manage and store users information and users permissions are applied by roles. For more infomration about User Identification and Access Management read [here](/articles/26_fabric_security/07_user_IAM_overview.md).
 
