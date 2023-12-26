@@ -70,7 +70,7 @@ To create a new HTTP interface, take the following steps:
 
 The Fabric HTTP Interface supports various standard authentication and authorization types (aka schemas) that can be used to access external protected resources. 
 
-Each Authentication Type (except for the **None** type) requires specific security credentials (provided by the resource provider) that are populated by the implementer into the HTTP Interface Properties and used by Fabric to authenticate remote vendor servers.  
+Each Authentication Type (except for the **None** type) requires specific security credentials (provided by the resource provider) that are populated by the implementor into the HTTP Interface Properties and used by Fabric to authenticate remote vendor servers.  
 
 Fabric supports the following: 
 
