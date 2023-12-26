@@ -53,7 +53,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>EDIT_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p>Used to modify the scope of permissions for a specific role permission</p>
+<p>Used for modifying the scope of permissions for a specific role permission</p>
 </td>
 </tr>
 <tr>
