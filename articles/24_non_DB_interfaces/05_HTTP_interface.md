@@ -60,7 +60,7 @@ To create a new HTTP interface, take the following steps:
 </tr>
 <tr>
 <td>&nbsp;<strong>Test Connection Valid Status</strong></td>
-<td>List of http response codes that can successfully pass the test connection activity. e.g. 401,404. <br/> Added for Release 6.5.3 </td>
+<td>List of HTTP response codes that can successfully pass the test connection activity. e.g. 401,404. <br/> Added for Release 6.5.3 </td>
 </tr>
 </tbody>
 </table>
