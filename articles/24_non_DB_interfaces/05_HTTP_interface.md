@@ -97,7 +97,7 @@ Fabric supports the following:
 
   Below are the supported OAuth Authentication methods and their additional properties, other than the common that are mentioned above:
 
-    * **OAuth 2.0 Password Credentials** - an OAuth protocol's grant type flow. Fabric (the client) first interacts  with an authorization server, provides a user and password and gets an access token which is then used for the resource server's calls. This interface requires the following properties:
+    * **OAuth 2.0 Password Credentials** - an OAuth protocol's grant type flow. Fabric (the client) first interacts with an authorization server, provides a user and password and gets an access token, which is then used for the resource server's calls. This interface requires the following properties:
 
        * User 
        * Password
