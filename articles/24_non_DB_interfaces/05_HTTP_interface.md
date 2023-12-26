@@ -79,7 +79,7 @@ Fabric supports the following:
   * User
   * Password
 
-  Note: this mechanism does not provide confidentiality, hence it is usually used over HTTPS and not HTTP.
+  Note: This mechanism does not provide confidentiality, hence it is usually used over HTTPS and not over HTTP.
 
 * ***Bearer* Authentication** (aka token authentication) - an HTTP Authentication Type/schema that uses cryptic string security tokens called Bearer Tokens. Fabric (the client) sends this token in the `Authorization` header when sending requests to a resource. This interface requires the following properties:
 
