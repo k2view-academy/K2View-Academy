@@ -118,7 +118,7 @@ If the service provider does not require authentication, select **None** in the 
 
 The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the relative path to the interface. The **params** input argument must be populated when relevant. The **format** input argument must be populated with the required output format, e.g. JSON.
 
-For example, in order to invoke a Fabric Web Service, do the following:
+For example, in order to invoke a Fabric Web Service, take the following steps:
 
 1.  Define HTTP interface with the relevant authentication type, e.g. *Bearer*, and set the Token value.
 
