@@ -7,7 +7,7 @@
 <li><a href="03_broadway_actor.md">Broadway Actor Overview</a></li>
 <li><a href="03_broadway_actor_window.md">Broadway Actor Window</a></li>
 <li><a href="04_built_in_actor_types.md">Built-in Actor Types</a></li>
-<li><a href="actors/README.md">Actors Specifications and Examples</a></li>
+<li><a href="actors/README.md">Actors Specifications</a></li>
 <li><a href="05_data_types.md">Data Types in Broadway</a></li>
 <li><a href="06_export_actor.md">Actor Inheritance Mechanism</a></li>
 <li><a href="07_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
