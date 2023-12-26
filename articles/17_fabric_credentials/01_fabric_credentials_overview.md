@@ -191,7 +191,7 @@ Fabric can also be initially started with predefines API keys, roles and permiss
    - Define API keys and their association to roles, at `"apikeys"` array object.
 - When Fabric starts initially, it looks for this file; if it exists, definitions are applied. 
 
-Note: You can define only the operations and roles as resources do not yet exist due to the project not yet being deployed.
+Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
 
 Example:
 ```
