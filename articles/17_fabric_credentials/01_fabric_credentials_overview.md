@@ -99,7 +99,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>ALL_WS</strong></p>
 </td>
 <td width="600pxl">
-<p>Allows all web-services related permissions</p>
+<p>Allows all web services-related permissions</p>
 </td></tr>
 <tr>
 <td width="300pxl">
