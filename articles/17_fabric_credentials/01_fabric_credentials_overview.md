@@ -92,7 +92,7 @@ Roles are also used for maintaining consistency across Fabric and being assigned
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>To set the environment or Globals for the current session onto which a role is defined/p>
+<p>Used for setting the environment or Globals for the current session onto which a role is defined/p>
 </td></tr>
 <tr>
 <td width="300pxl">
