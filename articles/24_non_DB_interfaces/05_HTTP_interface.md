@@ -126,9 +126,9 @@ For example, in order to invoke a Fabric Web Service, take the following steps:
 
 2. In a Broadway flow, use either an **Http** or an **HttpJson** Actor to invoke a WS. Populate the input arguments as follows:
 
-   * Set **interface** to the predefined Http interface.
+   * Set the **interface** to the predefined Http interface.
 
-   * Set **path** to the WS, relative to the interface. For example:
+   * Set the **path** to the WS, relative to the interface. For example:
 
      ~~~
      /api/isAlive
@@ -140,7 +140,7 @@ For example, in order to invoke a Fabric Web Service, take the following steps:
      /api/wsCustomerSSN?
      ~~~
 
-   * When using **Http** Actor, set **format** input argument to be the required output format, e.g. JSON.
+   * When using an **Http** Actor, set **format** input argument to be the required output format, e.g. JSON.
 
 3. Use a **JsonParser** Actor to parse the WS output.
 
