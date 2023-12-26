@@ -175,7 +175,7 @@ Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_A
 It is also possible to skip the sync process between Fabric user and System DB (e.g. Cassandra) user by setting **READ_ONLY_AUTHENTICATORS** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
 ## Setting Credentials
-Define credentials, either by Admin UI (Security tab) or by Fabric commands, as follows: 
+Define credentials by either Admin UI (Security tab) or Fabric commands, as follows: 
 - Create a new role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)).
 - Assign a security profile to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role)).
 - Create an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)).
