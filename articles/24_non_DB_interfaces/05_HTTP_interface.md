@@ -56,7 +56,7 @@ To create a new HTTP interface, take the following steps:
 </tr>
 <tr>
 <td>&nbsp;<strong>Authentication Type</strong></td>
-<td>Access authentication type. Default value = Basic.<br/>When Basic is selected, the properties shown in this window are the same as those shown in the above figure. If a different access authentication type is selected (Basic, Bearer, etc) - different properties would be shown. These differences are detailed in the below section. </td>
+<td>Access authentication type. Default value = Basic.<br/>When Basic is selected, the properties shown in this window are the same as those shown in the above figure. If a different access authentication type is selected (Basic, Bearer, etc), then different properties would be shown. These differences are detailed in the below section. </td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Test Connection Valid Status</strong></td>
