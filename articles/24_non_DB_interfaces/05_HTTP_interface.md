@@ -1,8 +1,8 @@
 # HTTP Interface
 
-The HTTP interface type defines the connections to an HTTP/s host and can be used by Broadway Actors.
+The HTTP interface type defines the connections to an HTTP/s host and it can be used by Broadway Actors.
 
-To create a new HTTP interface, do the following:
+To create a new HTTP interface, take the following steps:
 
 <studio>
 
