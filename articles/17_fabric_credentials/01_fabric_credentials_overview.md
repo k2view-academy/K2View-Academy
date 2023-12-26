@@ -183,15 +183,15 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 - Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
 ### Bootstrap Credentials
-Fabric can also be started for the first time with predefines API keys, roles and permissions.
+Fabric can also be initially started with predefines API keys, roles and permissions.
 - Copy the **rolesPrivileges.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Change the file name to **rolesPrivileges.json**.
 - Edit the file with the required values.
    - Define roles and associated operations, at `"roles"` array object.
    - Define API keys and their association to roles, at `"apikeys"` array object.
-- When Fabric starts for the first time, it looks for this file and if exists apply its definitions. 
+- When Fabric starts initially, it looks for this file; if it exists, definitions are applied. 
 
-Note: You can define only the operations and roles because resources do not exist yet, as project was not deployed yet.
+Note: You can define only the operations and roles as resources do not yet exist due to the project not yet being deployed.
 
 Example:
 ```
