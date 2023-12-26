@@ -76,7 +76,7 @@ Fabric supports the following:
 
 * ***Basic* HTTP Authentication** - built into the HTTP protocol. Fabric (the client) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. This interface requires the following properties:
 
-  * User
+  * User name
   * Password
 
   Note: This mechanism does not provide confidentiality, hence it is usually used over HTTPS and not over HTTP.
@@ -97,12 +97,12 @@ Fabric supports the following:
 
   Below are the supported OAuth Authentication methods and their additional properties, other than the common that are mentioned above:
 
-    * **OAuth 2.0 Password Credentials** - an OAuth protocol's grant type flow. Fabric (the client) first interacts with an authorization server, provides a user and password and gets an access token, which is then used for the resource server's calls. This interface requires the following properties:
+    * **OAuth 2.0 Password Credentials** - an OAuth protocol's grant type flow. Fabric (the client) first interacts with an authorization server, provides a user name and password and gets an access token, which is then used for the resource server's calls. This interface requires the following properties:
 
-       * User 
+       * User name 
        * Password
 
-    * **OAuth 2.0 Password Credentials - Basic Auth Headers** - an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type Fabric provides the User and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and is considered as best practice.
+    * **OAuth 2.0 Password Credentials - Basic Auth Headers** - an OAuth protocol grant type flow. It is similar to "OAuth 2.0 Password Credentials" but in this type, Fabric provides the User name and Password to the authorization server in the request header, rather than in the request body. This type is more recommended and is considered as best practice.
 
     * **OAuth 2.0 Client Credentials** - an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server, which returns the access token used by Fabric for the resource's server calls. This interface requires only the above base properties.
 
