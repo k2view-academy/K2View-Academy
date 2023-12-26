@@ -10,9 +10,9 @@ Fabric includes an authentication and authorization mechanism that enables manag
   - Access to the methods that access LUIs can be defined on a role level.
 - Assigning security profiles to roles.
 
-Using roles makes permissions management much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users may be assigned as 'administrators'.
+The use of roles makes permissions management much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users may be assigned as 'administrators'.
 
-User access control management can be performed using either:
+User access control management can be performed by using either one of these two methods:
 
 - [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
 
