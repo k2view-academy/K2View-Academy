@@ -120,7 +120,7 @@ The above Broadway flow uses an **Http** Actor to connect to the HTTP server tha
 
 For example, in order to invoke a Fabric Web Service, take the following steps:
 
-1.  Define HTTP interface with the relevant authentication type, e.g. *Bearer*, and set the Token value.
+1.  Define the HTTP interface with the relevant authentication type, e.g. *Bearer*, and set the Token value.
 
    ![image](images/03_http_4.PNG)
 
