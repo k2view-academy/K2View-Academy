@@ -85,7 +85,7 @@ Fabric supports the following:
 
   * token
 
-* **OAuth Authentication** methods - The Fabric HTTP Interface supports various OAuth authentication methods. Following are their common properties:
+* **OAuth Authentication** methods - the Fabric HTTP Interface supports various OAuth authentication methods. Following are their common properties:
   
   * Access Token URL - address of the authorization server providing the access token.
   * Client ID - provided by the external resource/authorized vendor. 
