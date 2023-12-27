@@ -26,7 +26,7 @@ The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md
 - Data Versioning features:
   - Users can save (extract) specific versions of either a selected list of entities or a selected list of metadata (reference) tables.
   - Users can load either a selected version of entities or metadata tables to the selected target environment.
--  Data provisioning - can be done either on-demand or automatically (based on scheduling parameters). For Example: automatic data provisioning every Monday, 08:00 AM.
+-  Data provisioning - can be done either on-demand or automatically (based on scheduling parameters), e.g., an automatic data provisioning every Monday, 08:00 AM.
 
 
 
