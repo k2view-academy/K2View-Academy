@@ -10,7 +10,7 @@ The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md
 
 ### Key TDM Features
 
-- Built-in self-service web application where testers can request data to be provisioned on-demand and in real-time. 
+- Built-in self-service web application, where testers can request data to be provisioned on-demand and in real-time. 
 - Central storage of provisioned entities in Fabric.
 - Copying data into live testing environments.
 - Request for a subset of entities for data provisioning:
