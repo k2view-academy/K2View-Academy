@@ -6,7 +6,7 @@ While enterprise IT continues to adopt DevOps to accelerate the delivery of solu
 
 One of the main challenges in providing real data for testing teams is that data is often split between different data sources. For example, a Customer may be broken up between Customer Care, Billing, Ordering, Ticketing and Collection systems. To run functional tests on a Customer in an integrative testing environment, the customer's data must be extracted from all relevant source systems.
 
-The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) - a data lake for each Data Product instance - ensures a smooth data provisioning, based on the company's business needs rather than running a separate copy on each data source.
+The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) - a data lake for each Data Product instance - ensures a smooth data provisioning, based on the company's business needs, rather than running a separate copy on each data source.
 
 ### Key TDM Features
 
