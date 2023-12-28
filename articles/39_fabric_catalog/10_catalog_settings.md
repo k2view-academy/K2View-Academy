@@ -2,7 +2,7 @@
 
 # Catalog Settings
 
-The purpose of the Settings screen in the Catalog is to configure various rules used by the Catalog. The Catalog includes the built-in rules defined on the product level. These rules can be updated to fit the Project's needs. 
+The purpose of the Settings screen in the Catalog application is to view and edit the rules used by the Catalog. The Catalog includes the built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
 
 This article includes the following sections:
 
