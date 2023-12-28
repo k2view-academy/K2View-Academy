@@ -83,7 +83,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
 <tr>
     <td style="vertical-align: top;"><p><strong>Data Change Indexes</strong></p></td>    
     <td style="vertical-align: top;">Columns' definitions per CDC Consumer</td>
-    <td style="vertical-align: top;"><p>Refers to <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list</p>
+    <td style="vertical-align: top;"><p>Refers to <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list.</p>
 </td>
 </tr>
 </tbody>
