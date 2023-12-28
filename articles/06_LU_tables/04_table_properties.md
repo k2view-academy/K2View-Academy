@@ -77,7 +77,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
     <td style="vertical-align: top;"><p><strong>Triggers</strong></p></td>    
     <td style="vertical-align: top;">Trigger List</td>
     <td style="vertical-align: top;"><p>Refers to <a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> that are executed when there is a change in LU table's data.</p>
-<p>To add a Trigger function, click the "+" button and select the function name. Only Trigger functions are displayed.</p>
+<p>To add a Trigger function, click the '+' button and select the function name. Only Trigger functions are displayed.</p>
 </td>
 </tr>
 <tr>
