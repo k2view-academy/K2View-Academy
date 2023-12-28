@@ -8,4 +8,4 @@ We have just released Fabric 7.2.1, which includes the following additions:
 
 The full list is found in our [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Release_Notes_V7.2.1.pdf.html) and [Upgrade Procedure to 7.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V7.2/Fabric_Upgrade_Procedure_To_V7.2.pdf.html).
 
-<img src="images/img6.png" alt="image" style="zoom: 80%;" />
+<img src="images/img7.png" alt="image" style="zoom: 80%;" />
