@@ -21,7 +21,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
 <td style="vertical-align: top;"><p><strong>Query Statements Settings</strong></p></td>
 <td style="vertical-align: top;">Columns Collation</td>
 <td style="vertical-align: top;">
-  <p>There are 3 options how to get and handle the retrieved data:</p>
+  <p>There are 3 options for getting and handling the retrieved data:</p>
     <ul>
      <li>BINARY - (default) compares the exact string in the field with the SQL statement.</li>
      <li>NOCASE - enables the Select statement to ignore upper/lower case letters when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set to either &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
