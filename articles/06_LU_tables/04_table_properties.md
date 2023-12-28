@@ -2,7 +2,7 @@
 
 <web>
 
-The Table Properties tab is displayed in the right pane of the Schema window, when a table is selected, or at the Table's window.
+The Table Properties tab is displayed in the right pane of the Schema window, when a table is selected, or when opening a table through the Project Tree and then open its properties pane.
 
 ![](images/web_table_properties.png)
 
