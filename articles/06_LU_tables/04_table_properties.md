@@ -25,7 +25,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
     <ul>
      <li>BINARY - (default) compares the exact string in the field with the SQL statement.</li>
      <li>NOCASE - enables the Select statement to ignore upper/lower case letters when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set to either &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
-     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value &lsquo;.</li>
+     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value&lsquo;.</li>
    </ul>
 </td>
 </tr>
