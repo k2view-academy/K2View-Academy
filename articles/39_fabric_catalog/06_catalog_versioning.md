@@ -30,7 +30,7 @@ The Catalog tree is then displayed using the standard coloring scheme, where all
 
 To compare 2 versions, click the comparison <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the 2 versions, as follows:
 
-* The new elements are green, the removed elements are red, and the updated elements are blue.
+* The new elements are green, the removed elements are red, and the updated elements are purple.
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed value is in red.
 * All unchanged entities and relations are grey.
 
