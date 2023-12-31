@@ -16,7 +16,7 @@ The below image is an example of a Catalog artifact:
 
 <img src="images/catalog_info_mtable.png" style="zoom:75%;" />
 
-The artifact is created for the Catalog version that is displayed in the application. The last column's heading holds the version number, such as *V4* in the case of the above image. This column remains always empty.
+The artifact is created for the Catalog version that is displayed in the application. The last column's heading holds the version number, such as **V4** in the case of the above image. This column remains always empty.
 
 Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
 

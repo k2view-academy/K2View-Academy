@@ -12,7 +12,7 @@ To initiate the Discovery process:
 
 * Alternatively, run the following command from the Fabric terminal:
 
-  ~~~bash
+  ~~~
   startjob DISCOVERY_CRAWLER name='<interface name>' uid='<interface name>';
   ~~~
 

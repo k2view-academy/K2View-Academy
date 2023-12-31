@@ -46,7 +46,7 @@ The context menu allows performing the following actions:
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on a selected node can either expand or collapse it.
 
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
+* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform. Available in V7.2.1.
 
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
@@ -99,7 +99,7 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Each element has different properties. For example, a Dataset field has properties such as *column size* and *source data type* - identified by the Crawler, and *PII* and *Classification* - and created by the plugins.
+Each element has different properties. For example, a Dataset field has properties such as **column size** and **source data type** - identified by the Crawler, and **PII** and **Classification** - and created by the plugins.
 
 Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name opens the More Info pop-up window that provides more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 

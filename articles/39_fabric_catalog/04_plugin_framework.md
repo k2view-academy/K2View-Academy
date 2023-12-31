@@ -10,11 +10,11 @@ The Plugin Framework is executed by the Discovery job after completion of the Cr
 
 The Data Discovery solution includes a constantly growing list of built-in plugins. 
 
-The following article describes the main configuration parameters of the plugins.discovery file. The list of active plugins and their execution order and configuration parameters are described in the [next article](04a_builtin_plugins.md).
+The following article describes the main configuration parameters of the **plugins.discovery** file. The list of active plugins, their execution order and configuration parameters are described in the [next article](04a_builtin_plugins.md).
 
 ### Plugins Pipeline
 
-The **plugins.discovery** is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The plugins.discovery is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
 The plugins.discovery configuration file includes the settings of the Discovery job such as:
 
@@ -44,10 +44,10 @@ The syntax is to either provide the schema name - ```<schema>``` - to be fully i
 
 **Example:**
 
-~~~json
+~~~
 "data_platforms":{
     "AdventureWorks": {
-       "exclude_list": ["Sales.Curren.*"],
+       "exclude_list": ["Sales.Current.*"],
        "include_list": ["Sales"]
     },
     "SF_DB": {
@@ -56,14 +56,16 @@ The syntax is to either provide the schema name - ```<schema>``` - to be fully i
 }
 ~~~
 
+
+
 The above configuration defines the following rules:
 
-* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales. All other schemas should be ignored. In addition, the job will ignore all tables of the Sales schema that start with 'Curren'. 
+* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales. All other schemas should be ignored. In addition, the job will ignore all tables of the Sales schema that start with 'Current'. 
 * The table APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
 
 ### Plugin Threshold
 
-Each plugin's definition in the plugins.discovery includes a *threshold* - the score above which the plugin result impacts the Catalog. When the threshold is set to 0.4 and the rule receives a calculated score of 0.4 or below, this rule has no impact on the Catalog. See the detailed example further in this article. 
+Each plugin's definition in the plugins.discovery includes a **threshold** - the score above which the plugin result impacts the Catalog. When the threshold is set to 0.4 and the rule receives a calculated score of 0.4 or below, this rule has no impact on the Catalog. See the detailed example further in this article. 
 
 To enable the Catalog to show more results, update the threshold to a number lower than 0.4, and vice versa, to show less results, update the threshold to a higher number.
 

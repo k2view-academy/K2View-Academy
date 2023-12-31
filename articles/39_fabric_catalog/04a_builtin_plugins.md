@@ -4,7 +4,7 @@
 
 ### Metadata Logical Reference
 
-The purpose of a *Metadata Logical Reference* plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
+The purpose of a **Metadata Logical Reference** plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
 
 The matching algorithm works by comparing the field names of 2 different datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is ID.
 
@@ -97,11 +97,11 @@ The following matching rules are defined in the plugins.discovery file and are a
 
 #### Field Exclusion List
 
-Fields can be excluded from the *Metadata Logical Reference* plugin's matching algorithm by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, the same field name exists in many datasets of the same schema and this field should not be part of the *refers to* relation, e.g., lastModifiedDate.
+Fields can be excluded from the **Metadata Logical Reference** plugin's matching algorithm by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, the same field name exists in many datasets of the same schema and this field should not be part of the *refers to* relation, e.g., lastModifiedDate.
 
 ### Data Regex Classifier
 
-The purpose of *Data Regex Classifier* plugin is to classify the source fields based on their data - field value. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
+The purpose of **Data Regex Classifier** plugin is to classify the source fields based on their data - field value. This classification helps to identify which Catalog entities store sensitive information and should therefore be masked. 
 
 This plugin runs on a data snapshot that is extracted from the source, and it executes the regular expressions defined in a built-in **data_profiling** MTable.
 
@@ -119,7 +119,7 @@ When the expression matches a field's value, the probability that this field hol
 
 ### Metadata Regex Classifier
 
-The purpose of *Metadata Regex Classifier* plugin is to classify the source fields based on their metadata - field name. 
+The purpose of **Metadata Regex Classifier** plugin is to classify the source fields based on their metadata - field name. 
 
 The matching rules are defined using regular expressions in a built-in **metadata_profiling** MTable. 
 
@@ -131,13 +131,13 @@ To update the metadata profiling rules, go to the [Catalog Settings > Classifier
 
 #### Field Exclusion List
 
-Fields can be excluded from the *Metadata Regex Classifier* plugin's logic by their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the classification process. 
+Fields can be excluded from the **Metadata Regex Classifier** plugin's logic by their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the classification process. 
 
 The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. The **field_name_exclude_list** definition can be either the exact field name or a regular expression.
 
 **Example:**
 
-~~~json
+~~~
 "input_parameters": {
 	"field_name_exclude_list": [
 					"(?i).*NAME.*",
@@ -149,9 +149,11 @@ The exclusion list can be defined using the **field_name_exclude_list** and **fi
 }
 ~~~
 
+
+
 ### Classification PII Marker
 
-The purpose of *Classification PII Marker* plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
+The purpose of **Classification PII Marker** plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
 
 The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
@@ -159,13 +161,13 @@ To update the Classification's PII indicator, go to the [Catalog Settings > Clas
 
 #### Field Exclusion List
 
-Fields can be excluded from the *Classification PII Marker* plugin's logic by their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the PII marking process. 
+Fields can be excluded from the **Classification PII Marker** plugin's logic by their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the PII marking process. 
 
 The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. The **field_name_exclude_list** definition can be either the exact field name or a regular expression.
 
 **Example:**
 
-~~~json
+~~~
 "input_parameters": {
 	"field_name_exclude_list": [
 					"^(?i)[a-z]+_?ID$"
@@ -176,6 +178,8 @@ The exclusion list can be defined using the **field_name_exclude_list** and **fi
 }
 ~~~
 
+
+
 ### NULL Percentage
 
 The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated on each column of non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained earlier in this article.
@@ -184,7 +188,7 @@ As a result, the **Null Percentage** property is added to the field's properties
 
 For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
-###
+##
 
 [![Previous](/articles/images/Previous.png)](04_plugin_framework.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
 
