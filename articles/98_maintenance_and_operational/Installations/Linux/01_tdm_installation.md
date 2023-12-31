@@ -1,6 +1,6 @@
 # TDM Installation and Initial Configuration
 
-This document describes the installation guidelines and the initial configuration activities requires for a new TDM installation or an upgrade of a TDM 7.x version to the current version.
+This document describes the installation guidelines and the initial configuration activities required for a new TDM installation or an upgrade of a TDM 7.x version to the current version.
 
 ## TDM Installation  -  Prerequisites
 
@@ -30,14 +30,13 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-- From TDM 7.6 onwards TDM creates of the TDM DB objects by the TDM LU's deploy flow:
+- From TDM 7.6 onwards TDM creates the TDM DB objects by the TDM LU's deploy flow:
 
-   - Creates the TDM DB tables, sequences, views and functions.
+   - Creates the TDM DB tables, sequences, views, and functions.
 
   Notes: 
-  - **You must set the BUILD_TDMDB Global to true and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
-  - You must create the TDM database and user in advance. The database and user names must be aligned with the TDM interface. You can run the **TDMDBCreateRoleAndDB** flow (located in the TDM LU) to create the **TDMDB** database and **tdm** user (role) in the postgreSQL DB.
-
+  - You must set the **BUILD_TDMDB Global to true in order to create the TDM DB** by the TDM deploy flow.
+  - You must set the **POSTGRESQL_ADMIN interface** to be **active** in order to **create the TDMDB database and 'tdm' user (role) in the postgreSQL DB**.
   
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
@@ -52,7 +51,7 @@ example:
 - For more details see [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V8.1/TDM_Upgrade_Procedure_to_V8.1.pdf).
 
 
-## Create K2masking Keyspace in Cassandra
+## Create K2masking Keyspace
 
 The **k2masking** keyspace is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
 

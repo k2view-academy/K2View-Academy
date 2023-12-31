@@ -1,212 +1,55 @@
-# Kafka Hardening (TLS mode)
+# Kafka Custom Hardening
 
-The following steps are used to harden the Kafka server in a Fabric cluster.
+In this section you configure Kafka with hardening accompanied by your own inputs.
 
-## Step 1 - Shut Down Services    
+Follow the guidelines for the correct settings, depending on your needs.
 
-Check that the following services are switched off:
-- Kafka
-- ZooKeeper
-- Fabric
-
-```shell
-# stop kafka
-~/kafka/bin/kafka-server-stop -daemon ~/kafka/server.properties
-# stop zookeeper
-~/kafka/bin/zookeeper-server-stop -daemon ~/kafka/zookeeper.properties
-```
+> **NOTE:** 
+> In case it is your first Kafka setup with customized hardening, go to step 3. 
+> In case you've had Kafka in the past, without hardening, and now you wish to add a hardening configuration, follow the below instructions:
 
 
-## Step 2. Keys Generation
+1. Stop Kafka
+~~~bash
+$CONFLUENT_HOME/bin/kafka-server-stop -daemon ~/kafka/server.properties
+~~~
+2. Stop Zookeeper
+~~~bash
+$CONFLUENT_HOME/bin/zookeeper-server-stop -daemon ~/kafka/zookeeper.properties
+~~~
+3. Create Kafka certificates
 
-1. Run the secure_kafka.sh script to generate self-signed keys and certificates, It included with our supplied psackage or can be downloaded from [here] (https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh)
-
-2. run the following commands on a single Kafka node only, Set the Password to your own choice:
-
-```bash
-./secure_kafka.sh Q1w2e3r4t5
-```
-
-The following output is generated:
-
-```bash
-Generating a 2048 bit RSA private key
-......................+++
-................................................................................+++
-writing new private key to '/opt/apps/kafka/.kafka_ssl/ca-key.key'
------
-Subject Attribute S has no known NID, skipped
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
-Signature ok
-subject=/C=IL/ST=IL/L=Israel/O=K2VIEW/OU=K2VIEW/CN=kafka
-Getting CA Private Key
-Certificate was added to keystore
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
-Certificate reply was installed in keystore
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
-Certificate was added to keystore
- 
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
-Signature ok
-subject=/C=IL/ST=Il/L=Israel/O=K2VIEW/OU=K2VIEW/CN=kafka
-Getting CA Private Key
-Certificate was added to keystore
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
-Certificate reply was installed in keystore
-
-Warning:
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
-Certificate was added to keystore
-
-```
+run the following command **on a single Kafka node only**, set the password per your choice:
+~~~bash
+/opt/apps/kafka/secure_kafka.sh <PASSWORD>
+~~~
+4. Execute the Kafka setup with hardening flags
+~~~bash
+/opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3 [KAFKA_SSL_FLAGS]
+~~~
 
 
-## Step 3 - Replicate to All Nodes
+Below are your **KAFKA_SSL_FLAGS** options:
 
-The following 11 files are generated in the $K2_HOME/.kafka_ssl directory:
+## Choose Keystore password only
+~~~bash
+--ssl --keystore_password <keystorePWD>
+~~~
+ > In this case, both the Truststore password and key password inside the keystore will be defined as the keystore password value.
 
-- ca-crt.crt
-- ca-key.key
-- ca-crt.srl
-- kafka.client.csr
-- kafka.client.keystore.jks
-- kafka-client-signed.crt
-- kafka.client.truststore.jks
-- kafka.server.csr
-- kafka.server.keystore.jks
-- kafka-server-signed.crt
-- kafka.server.truststore.jks
-
-and the file kafka_keys.tar.gz containing them will be created, ready to be copied to all nodes.
-
-Copy the file to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
+## Choose the Keystore and Truststore values
+~~~bash
+--ssl --keystore_path </path/to/keystore> --keystore_password <keystorePWD> --truststore_path </path/to/truststore> --truststore_password <truststorePWD>
+~~~
+ > In this case, the Keystore and Truststore paths are defined differently, where each has a different password.
 
 
-copy to other kafka nodes and fabric
-``` bash
-scp Kafka_keys.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
-```
-
-In case Docker installation use following commands to copy between running containers
-```bash
-docker cp kafka:/opt/apps/kafka/Kafka_keyz.tar.gz ./
-docker cp Kafka_keyz.tar.gz fabric:/usr/local/k2view/
-```
-
-on the Fabric and other Kafka nodes use the following to extract 
-```bash
-mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf kafka_keys.tar.gz -C $K2_HOME/.kafka_ssl
-```
-
-
-# Zookeeper Configuration
-
-Notes: 
-- These configuration must be applied to every node in the cluster
-- Since ZooKeeper does not support SSL authentication, MD5 authentication (username and password) is used.
-
-## Step 1 - SASL Authentication
-
-```bash
-echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider" >> $CONFLUENT_HOME/zookeeper.properties
-```
-
-
-## Step 2 - create zookeeper_jaas.conf
-
-```bash
-echo \
-'Server {
-org.apache.zookeeper.server.auth.DigestLoginModule required
-user_super="kafka"
-user_kafka="kafka";
-};
-
-Client {
-    org.apache.zookeeper.server.auth.DigestLoginModule required
-    username="kafka"
-    password="kafka";
-};' > $CONFLUENT_HOME/zookeeper_jaas.conf
-```
-
-## Step 3 - Start the ZooKeeper Service
-
-When starting ZooKeeper make sure the following command is invoked: 
-
-```bash
-export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties
-```
-
-The ZooKeeper daemon starts.
-
-
-# Kafka Server Configuration
-Note that the following steps must be applied for each node in cluster.
-
-## Step 1 - SSL Authentication
-Define the 2-way SSL authentication between the Kafka server and clients:
-
-```bash
-sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
-sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
-sed -i "32i security.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
-sed -i "33i ssl.client.auth=requested" $CONFLUENT_HOME/server.properties
-sed -i 's/^advertised.listeners/#&/' $CONFLUENT_HOME/server.properties
-sed -i 's/^advertised.host.name/#&/' $CONFLUENT_HOME/server.properties
-sed -i "60i ssl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
-sed -i "61i ssl.truststore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
-sed -i "62i ssl.keystore.location=$K2_HOME/.kafka_ssl/kafka.server.keystore.jks" $CONFLUENT_HOME/server.properties
-sed -i "63i ssl.keystore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
-sed -i "64i ssl.key.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
-sed -i "65i ssl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties
-```
-
-
-## Step 2 - kafka_server_jaas.conf
-
-1. Create kafka_server_jaas.conf file:
-
-```bash
-echo \
-'KafkaServer {
-    org.apache.kafka.common.security.plain.PlainLoginModule required
-    username="kafka"
-    password="kafka"
-    user_kafkabroker="kafka"
-    user_client1="kafka";
-};
-
-Client {
-    org.apache.zookeeper.server.auth.DigestLoginModule required
-    username="kafka"
-    password="kafka";
-};' > $CONFLUENT_HOME/kafka_server_jaas.conf
-```
-## Step 3 - Start the Kafka Server
-
-When starting Kafka make sure the following command is invoked:
-
-```bash
-export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties
-```
-
-The Kafka daemon starts.
+## Choose all SSL flags 
+~~~bash
+--ssl --keystore_path </path/to/keystore> --keystore_password <keystorePWD> --truststore_path </path/to/truststore> --truststore_password <truststorePWD> --keypass <keyPWD>
+~~~
+ > In this case, Keystore and Truststore paths are defined differently, where each has a different password. In addition, the Key password inside the Keystore is different than the Keystore password.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
+***In case you have a cluster, copy the certificate tar.gz file to the whole cluster and repeat the above commands on every node.***

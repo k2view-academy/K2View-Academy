@@ -25,29 +25,15 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
 2. Verify that the **ROOT_TABLE_NAME** LU's Global is set. 
 
-3. Complete the adding of all source LU tables to the LU schema.
+3. Complete the addition of all source LU tables to the LU schema.
 
 4. Deploy the LU to the debug server.
 
 5. In order to create the target tables and add them to the LU, run either:
 
-   1. **createDeleteTablesAndPopulations** flow (imported from the TDM library). Set the input parameters:
+   1. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
 
-      - **LU_NAME**
-
-      - **OVERRIDE_EXISTING_FLOWS** - valid values: true/false. When set to **true**, the flow deletes and recreates existing population flows for the target tables. When set to **false**, the flow skips existing flows and creates new flows only, if needed. The **default** value is **false**.
-
-      - **TARGET_SCHEMA**
-
-      - **TARGET_INTERFACE**
-
-        This flow creates the target tables with their population flows, and adds them to the LU schema.
-
-        
-
-   2. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
-
-   3. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). This flow creates the target LU tables to support the entity deletion and adds them to the LU. In addition, it creates the delete and load flows based on the updated LU.
+   2. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true** to create the target LU tables, add them to the LU, and create the delete flows based on the updated LU. Note that this flow also creates the load flows.
       
       The flow gets the following input parameters:
 
@@ -63,7 +49,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
       - **TARGET_ENVIRONMENT**
 
-        
+            
 
 6. Open the LUs schema, right-click > Automatic Layout to view the added target tables.
 

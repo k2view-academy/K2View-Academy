@@ -1,10 +1,8 @@
-<web>
-
 # Report Viewer
 
 ### Overview
 
-The Viewer component can be reached by opening **Reports** from the list of pre-integrated applications of the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and it enables the following options:
+The Report Viewer can be reached by opening **Reports** from the list of pre-integrated applications of the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and it enables the following options:
 
 * Open Report
 * Search
@@ -34,9 +32,14 @@ Click ![](images/export_icon.png) to open the EXPORT toolbox, which allows expor
 
 ![](images/06_open_report_export.png)
 
-
+<web>
 
  [![Previous](/articles/images/Previous.png)](06_design_report_layout.md)
 
 </web>
 
+<studio>
+
+ [![Previous](/articles/images/Previous.png)](01_reports_overview.md)
+
+</studio>
