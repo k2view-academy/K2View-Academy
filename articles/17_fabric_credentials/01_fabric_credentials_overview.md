@@ -184,12 +184,14 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 
 ### Bootstrap Credentials
 Fabric can also be initially started with predefines API keys, roles and permissions.
+- Turn on this capability by adding a new line contains "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Copy the **rolesPrivileges.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Change the file name to **rolesPrivileges.json**.
 - Edit the file with the required values.
    - Define roles and associated operations, at `"roles"` array object.
    - Define API keys and their association to roles, at `"apikeys"` array object.
-- When Fabric starts initially, it looks for this file; if it exists, definitions are applied. 
+- When Fabric starts, it looks for this file; if it exists, definitions are applied. 
+- Once applied by Fabric, the file is deleted from the config directory.
 
 Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
 
@@ -204,10 +206,10 @@ Example:
     }
 }
 ```
- 
+
 
 ## Users Credentials
-Users may be defined in Fabric system DB and shall accoridngly be associated to roles, as follows: 
+Users may be defined in Fabric system DB and shall accordingly be associated to roles, as follows: 
 - Assign a role to the user by either Admin UI (Security tab) or ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
 
 Note: When Fabric integrates with an external authenticator, Fabric does neither manage nor store users' information, and the users' permissions are applied by roles. For more information about User Identification and Access Management - read [here](/articles/26_fabric_security/07_user_IAM_overview.md).
