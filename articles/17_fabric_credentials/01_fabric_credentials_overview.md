@@ -196,7 +196,7 @@ Fabric can also be started with predefines API keys, roles and permissions. This
 Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
 
 Example:
-```
+~~~
 {
     "roles": {
         "deploy": ["DEPLOY", "DEPLOY_ENVIRONMENTS", "SET_GLOBAL_ENVIRONMENT"]
@@ -205,7 +205,7 @@ Example:
         "t1234": ["deploy"]
     }
 }
-```
+~~~
 
 
 ## Users Credentials
