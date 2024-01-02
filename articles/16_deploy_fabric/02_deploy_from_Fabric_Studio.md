@@ -1,14 +1,18 @@
 # Deploy from Fabric Studio
 
-New or already existing Fabric project implementations must be deployed to the server side in a way that all recent code changes are compiled and ready to be used.
+New or already existing Fabric project implementations must be deployed to the server in a way that recent code changes are compiled and ready to be used.
+
+A deployment can be performed from either the Fabric Studio, as explained in this article, or using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
 
 <studio>
 
-A deployment can be performed from either the Fabric Studio (using **Deploy to Server**) or the Fabric server (using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md)).
+Studio allowed you to perform deployment either into the local development server, or into a remote server. 
 
 Before starting the Deployment process on a project, check that the target Fabric server is configured. To do so, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window and configure the required Fabric server, or use the  **"debug"** server entry, that is already configured to localhost, i.e. to the Fabric server that the Studio works with by default.
 
 Note that to **force the sync** of the LU Instances after deployment, you should check the [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) checkbox in the **Server Configuration** window.
+
+> it is highly recommended not to directly deploy from Studio into sensitive server like staging and production. Deployment into such environments, shall be done using CI/CD pipeline that verify first the candidate deployment package. Moreover, a combination and margining of several developers work is may needed.
 
 </studio>
 
@@ -81,5 +85,4 @@ To deploy a specific LU, right-click on its name in the project tree. In the con
 
 </web>
 
-[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)<studio>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)</studio><web>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/04_project_versioning.md)</web>
-
+[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)

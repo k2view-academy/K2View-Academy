@@ -36,37 +36,38 @@ The deployment of a Fabric project is performed on the following levels:
   
 - **Deployment of Environments** 
 
-<studio>
-Deployment can be performed from either one of the below 2 locations:
-	
-- [The Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio), using **Deploy to Server**. 
 
-- The Fabric server, using an [Offline Deploy](03_offline_deploy.md), an act that refers to deploying the artifacts that were created in the Fabric Studio, by 		choosing **Build Deploy Artifacts**. 
+
+Deployment can be performed using several methods:	
+
+- At the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
+- <studio>At the Fabric server itself, using Build and Deploy scripts.</studio><web>At k2cloud UI</web>
+- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified it can be sent into the target server.
+
+The 2 later options are also called [Offline Deploy](03_offline_deploy.md).
+
+
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
 A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
 
-</studio>
+
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the LUs that use these objects in order to bring the changes into effect. For example, when an interface is updated, all LUs that use this interface should be re-deployed.
 
 ### Soft Deploy
 
-**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is useful mainly for implementors that work in a development environment and that frequently change their code, such as Broadway flows or Java functions.
+**Soft Deploy** is a Fabric's capability to exclude automatic processes from the LU deployment. Accordingly, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
 
 <studio>
 
-You can use the Soft Deploy option to deploy changes without triggering automatic processes such as:
+In addition, when using the Soft Deploy option, these processes are not triggered:
 
 * User jobs
 * Parsers
 * Interface listener
 
-Moreover, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
-
 To activate the Soft Deploy when deploying from the Fabric Studio, turn on the Soft Deploy option in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
-
-To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
 </studio>
 
@@ -75,6 +76,10 @@ To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), 
 To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft Deploy. 
 
 </web>
+
+To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+
+
 
 ### How Do I Check Which Project is Deployed to Fabric? 
 
