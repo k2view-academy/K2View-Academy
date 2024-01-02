@@ -2,8 +2,8 @@
 
 ### What is Fabric Deployment?
 The implementation of a Fabric project can be divided into 2 on-going stages:
-- **Stage 1 - Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
-- **Stage 2 - Deployment** of the project into the Fabric server, where all recent changes, done after its last deployment, are applied and are functioning on the server side. 
+- **Stage 1 - design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
+- **Stage 2 - deployment** of the project into the Fabric server, where all recent changes, done after its last deployment, are applied and are functioning on the server side. 
 
 
 
@@ -12,7 +12,7 @@ A deployment includes the newly created or modified Fabric objects such as [LU S
 
 The deployment of a Fabric project is performed on the following levels:
 
-- **Deployment of Logical Units**, each LU is deployed separately. 
+- **Deployment of Logical Units**; each LU is deployed separately. 
   
   - When required, a deployment can be performed on a specific LU only if the LU has been modified.
   
@@ -40,9 +40,9 @@ The deployment of a Fabric project is performed on the following levels:
 
 Deployment can be performed using several methods:	
 
-- At the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
-- <studio>At the Fabric server itself, using Build and Deploy scripts.</studio><web>At k2cloud UI</web>
-- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified it can be sent into the target server.
+- In the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
+- <studio>In the Fabric server itself, using Build and Deploy scripts.</studio><web>At k2cloud UI</web>
+- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified - it can be sent into the target server.
 
 The 2 later options are also called [Offline Deploy](03_offline_deploy.md).
 
