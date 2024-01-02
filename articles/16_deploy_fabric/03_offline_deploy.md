@@ -13,7 +13,7 @@ These methods based on that you are going to deploy prebuilt project artifacts, 
 
 
 
-## Offline Deployment with Build and Deploy scripts
+## Offline Deployment using Build and Deploy scripts
 
 There are two ways to perform this Offline Deployment method:
 - Build and deploy in two steps. First, build the artifacts either at the Fabric Studio or at a server using the [buildArtifacts](03_offline_deploy.md#deployment-scripts-syntax-and-options) script. Then, do the deployment by <studio> either running the Fabric **Deploy** command on the target Fabric server, or by running the *buildAndDeployArtifacts* script (using the DEPLOYONLY flag) or by </studio> using API calls.

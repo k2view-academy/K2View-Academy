@@ -1,8 +1,10 @@
+# Environment Offline Deployment
+
+Offline environment deployment is used to deploy environments to a server not from Studio. 
+
 <studio>
 
-# Offline Environment Deployment
-
-Offline environment deployment is used to deploy an environment to a server from an XML file. 
+## Offline Deployment using scripts
 
 Do the following:
 
@@ -22,153 +24,64 @@ Fabric encrypts the passwords in the file (if they are not already encrypted) an
 
 Note that deploying an XML file overrides all existing environments except for *_dev*, which is the default environment. If the environment exists in Fabric, but not in the deployed XML file, it is removed from Fabric.
 
-### XML File Example
+</studio>
 
-~~~
-<?xml version="1.0" encoding="utf-8"?>
-<FabEnvironmentsManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Environments</Name>
-  <EnvironmentsList>
-    <Environment enabled="true" name="ENV1">
-      <DbInterfacesList>
-        <DbInterface k2StudioObjectName="DB_CASSANDRA" dbType="cassandra" active="true">
-          <dbHost>10.21.2.69</dbHost>
-          <dbPort>9042</dbPort>
-          <dbUser>k2admin</dbUser>
-          <dbPasswordEncrypted>rf/LY4LdIwL5Q+F3C5TMNWv5gAw814CnqcsgbfyNkhU=:bOzdf3eL8LrbgR81zptHoSyKueeR9F75UdwbwWX1MxA=</dbPasswordEncrypted>
-          <connString>jdbc:cassandra://10.21.2.69:9042?consistency=QUORUM</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-        <DbInterface k2StudioObjectName="HIS_DB" dbType="oracle" active="true">
-          <dbHost>10.21.2.64</dbHost>
-          <dbPort>1521</dbPort>
-          <dbScheme>XE</dbScheme>
-          <dbUser>TDM_SOURCE</dbUser>
-          <dbPasswordEncrypted>EJeepLJexKPIEw5s9Mqy2lLpOzPuHQLLDWQdyWwovSY=:gc2q4ziZnB6Ihrx/ticaTa0Hqlx0a04N8Ujk+0bbjBg=</dbPasswordEncrypted>
-          <connString>jdbc:oracle:thin:@10.21.2.64:1521/XE</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-        <DbInterface k2StudioObjectName="LIS_DB" dbType="postgresql" active="true">
-          <dbHost>10.21.2.64</dbHost>
-          <dbPort>5433</dbPort>
-          <dbScheme>postgres</dbScheme>
-          <dbUser>postgres</dbUser>
-          <dbPasswordEncrypted>QSvWFjtcJ+pWYgF8VecrYxo2UmCTm0420hz8YbcFB5Q=:5bJumCAZyUtvuHC5CqrTTcp19f8ie0999vyQG68A5Wo=</dbPasswordEncrypted>
-          <connString>jdbc:postgresql://10.21.2.64:5433/postgres?stringtype=unspecified</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-        <DbInterface k2StudioObjectName="TARGET_DB" dbType="oracle" active="true">
-          <dbHost>10.21.2.64</dbHost>
-          <dbPort>1521</dbPort>
-          <dbScheme>xe</dbScheme>
-          <dbUser>TDM_TARGET</dbUser>
-          <dbPasswordEncrypted>2FLgpNlqwxI4O+y8AwQpQodKVZiZiU51Obm4iqb2kMU=:GXM0qdrtHJUMQZ+Fa61tHlJHG+4m1jkR1qQL2Ua0Zhw=</dbPasswordEncrypted>
-          <connString>jdbc:oracle:thin:@10.21.2.64:1521/xe</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-        <DbInterface k2StudioObjectName="TARGET_PG" dbType="postgresql" active="true">
-          <dbHost>10.21.2.64</dbHost>
-          <dbPort>5434</dbPort>
-          <dbScheme>postgres</dbScheme>
-          <dbUser>postgres</dbUser>
-          <dbPasswordEncrypted>dqmdIUWuyC+4KaNDEKDlBimtd2utoESMq2Oj4NhUzCY=:X8P+ihKPTG2WuwfX0xztOPSS3lDLrr7Y+UrkzjkHf/c=</dbPasswordEncrypted>
-          <connString>jdbc:postgresql://10.21.2.64:5434/postgres?stringtype=unspecified</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-        <DbInterface k2StudioObjectName="TDM" dbType="postgresql" active="true">
-          <dbHost>10.21.2.69</dbHost>
-          <dbPort>5432</dbPort>
-          <dbScheme>TDMDB</dbScheme>
-          <dbUser>tdm</dbUser>
-          <dbPasswordEncrypted>G40KJfdkxcNAR3O4AvhRG4LI5bbctSaVgsAINS7oMpg=:kleDmQHaba5HuipBJcr7UBFVBE330iVmDRmCFGZ5Flo=</dbPasswordEncrypted>
-          <connString>jdbc:postgresql://10.21.2.69:5432/TDMDB?stringtype=unspecified</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-        </DbInterface>
-      </DbInterfacesList>
-      <GenericInterfacesList>
-        <GenericInterface type="REDIS" displayName="Redis" enabled="true" version="1.8">
-          <Name>FabricRedis</Name>
-          <Properties>
-            <Property name="Servers" dataType="string" mandatory="true">
-              <Value>10.21.2.69</Value>
-            </Property>
-            <Property name="Password" dataType="password">
-              <Value>3CPlQl20N1nyIA1VsgdiuBNNmH+S9OE41A7sPrllRwI=:O/OpRncg9GNaxLV1lfa95dSgApBJqBMyjcsO+e6Ky4s=</Value>
-            </Property>
-            <Property name="ConnectionTimeout" dataType="integer">
-              <Value>10000</Value>
-            </Property>
-            <Property name="SoTimeout" dataType="integer">
-              <Value>10000</Value>
-            </Property>
-            <Property name="MaxAttempts" dataType="integer">
-              <Value>10</Value>
-            </Property>
-            <Property name="MaxTotal" dataType="integer">
-              <Value>128</Value>
-            </Property>
-            <Property name="MaxIdle" dataType="integer">
-              <Value>128</Value>
-            </Property>
-            <Property name="MinIdle" dataType="integer">
-              <Value>16</Value>
-            </Property>
-            <Property name="TestOnBorrow" dataType="boolean">
-              <Value>True</Value>
-            </Property>
-            <Property name="TestOnReturn" dataType="boolean">
-              <Value>True</Value>
-            </Property>
-            <Property name="TestWhileIdle" dataType="boolean">
-              <Value>True</Value>
-            </Property>
-            <Property name="MinEvictableIdle" dataType="long">
-              <Value>60000</Value>
-            </Property>
-            <Property name="EvictionRunIntervals" dataType="long">
-              <Value>30000</Value>
-            </Property>
-            <Property name="TestPerEviction" dataType="int">
-              <Value>3</Value>
-            </Property>
-            <Property name="BlockWhenExhausted" dataType="boolean">
-              <Value>False</Value>
-            </Property>
-          </Properties>
-          <TestConnection enabled="false" />
-        </GenericInterface>
-        <GenericInterface type="CUSTOM" displayName="Custom" enabled="true" version="1.2">
-          <Name>REDIS</Name>
-          <Properties>
-            <Property name="Host" dataType="string">
-              <Value>10.21.2.69</Value>
-            </Property>
-            <Property name="Port" dataType="integer">
-              <Value>6379</Value>
-            </Property>
-            <Property name="User" dataType="string">
-              <Value>redis</Value>
-            </Property>
-            <Property name="Password" dataType="password">
-              <Value>j+ABoVf02YBOSRZf86+Fl0vFmGBZiZI+TK5wwXWJeJE=:FUuUui2MhDnInQCGJGnKE2MOXJ4a51l9EScYFDIQ/NM=</Value>
-            </Property>
-            <Property name="Data" dataType="string" multiLine="true">
-              <Value />
-            </Property>
-          </Properties>
-          <TestConnection enabled="false" />
-        </GenericInterface>
-      </GenericInterfacesList>
-    </Environment>
-  </EnvironmentsList>
-</FabEnvironmentsManager>
-~~~
+
+
+## Offline Deployment using API calls
+
+### Request URL Format
+
+<span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white"> POST</span>   `https://<FABRIC-IP>:<FABRIC-PORT>/deployEnvironment?[token=<APIKEY>][user=<USER-NAME>&password=<PASSWORD>][&environment=<ENVIRONMENT-TO-SET>]`
+
+
+
+#### Parameters
+
+<table>
+	<thead>
+		<tr>
+            <th width="120px" ><p><strong>Parameter</strong></p></th>
+            <th ><p><strong>Description</strong></p></th>
+            <th width="100px"><p><strong>Mandatory</strong></p></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><p>environment</p></td>
+		    <td><p>When sent, the target fabric server set this environment to be active, similar to running <a href="https://support.k2view.com/Academy/articles/25_environments/05_set_and_list_commands.md">"SET_GLOBAL ENVIRONMENT"</a> command.</p></td>
+			<td><p>N</p></td>
+		</tr>
+    </tbody>
+</table>
+
+#### Authentication & Authorization
+
+* Authentication is done by either user and password (*user* & *password* parameters) or by API Key (*token* parameter), that shall be sent as parameters. 
+* The request caller shall be authorized with right permissions to perform the deploy (Granted with "DEPLOY_ENVIRONMENTS" permission). See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
+
+ 
+
+### Request Body
+
+body parameters, along with the deployment files, to be sent with ContentType header = multipart/form-data
+
+<table>
+	<thead>
+		<tr>
+            <th width="120px"><p><strong>Parameter</strong></p></td>
+            <th ><p><strong>Description</strong></p></td>
+            <th width="100px"><p><strong>Mandatory</strong></p></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><p>file</p></td>
+		    <td><p>Path to the Environments XML file</p></td>
+			<td><p>Y</p></td>
+		</tr>
+    </tbody>
+</table>
 
 
 
