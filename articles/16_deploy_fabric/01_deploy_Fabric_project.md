@@ -40,9 +40,9 @@ The deployment of a Fabric project is performed on the following levels:
 
 Deployment can be performed using several methods:	
 
-- At the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
-- <studio>At the Fabric server itself, using Build and Deploy scripts.</studio><web>At k2cloud UI</web>
-- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified it can be sent into the target server.
+- In the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
+- <studio>In the Fabric server itself, using Build and Deploy scripts.</studio><web>At k2cloud UI</web>
+- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified - it can be sent into the target server.
 
 The 2 later options are also called [Offline Deploy](03_offline_deploy.md).
 
