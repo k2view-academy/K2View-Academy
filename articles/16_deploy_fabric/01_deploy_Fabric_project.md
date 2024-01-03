@@ -61,7 +61,7 @@ Note that Shared Objects are not independent objects in a project and therefore 
 
 <studio>
 
-In addition, when using the Soft Deploy option, these processes are not triggered:
+Additionally, when using the Soft Deploy option, these processes are not triggered:
 
 * User jobs
 * Parsers
