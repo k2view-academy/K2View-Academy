@@ -18,6 +18,7 @@ Supported Secret Management providers are:
 - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/)
 - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
 - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/)
+- [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
 
 
 
@@ -109,16 +110,43 @@ section name: [encryption_azure_sm]
 
 
 
+#### CyberArk CCP
+
+section name: [encryption_cyberark_sm]
+
+Authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using HTTP basic authentication method:
+
+* AUTH_TOKEN
+* AUTH_PASSWORD
+* AUTH_USER
+
+Other parameters:
+
+* APP_ID
+* FOLDER, optional (default is Root. Can be specified or override per secret)
+* SAFE_NAME, optional (can be specified or override per secret)
+* SERVER_IP, will be used in the URL parameter
+* TIMEOUT (default is 5000 ms)
+* URL, Expected format: https://{SERVER_IP}/AIMWebService/api/Accounts
+
+
+
 ### Interface Connection Details Settings
 
-To mark an interface connection details property to be taken from the Secrets Manager, you shall use this pattern in its value:
+To mark an interface connection details to be taken from the Secrets Manager, you shall use this pattern in its values, at the Interface screen (see [here](/articles/05_DB_interfaces/06_editing_interface_settings.md) for more details):
 
 ${secretmanager:\<id-at-seceret-manager\>}
-For example: ${secretmanager:mysql.password}
+For example: ${secretmanager:mysql-password}
+
+
+
+* Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
+* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the "&" concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password}"
+
+
 
 > Notes: 
 >
-> * Each Secret Manager service has its own pattern, usually by hierarchy; you should follow these patterns. 
 > * The Secret Manager service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use the Secret Manager service, while others, like local testing, may not. 
 > * You can use the "Test connection" option to verify that the connection settings are OK, also when the Secret Manager service is activated.
 > * The following properties can be addressed to the Secrets Manager for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Manager.  
