@@ -205,6 +205,7 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 	    </tr>
     </tbody>
 </table>
+
 #### Authentication & Authorization
 
 * Authentication is done by either user and password (*user* & *password* parameters) or by API Key (*token* parameter), that shall be sent as parameters. 
