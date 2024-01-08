@@ -185,12 +185,11 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 ### Bootstrap Credentials
 Fabric can also be started with predefines API keys, roles and permissions. This is available since Fabric 7.2.1.
 - Turn on this capability by adding a new line contains "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
-- Copy the **rolesPrivileges.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
-- Change the file name to **rolesPrivileges.json**.
-- Edit the file with the required values.
-   - Define roles and associated operations, at `"roles"` array object.
-   - Define API keys and their association to roles, at `"apikeys"` array object.
-- When Fabric starts, it looks for this file; if it exists, definitions are applied. 
+- Create a file named **rolesPrivileges.json** at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Edit the file with the required values. It is built from 2 main independent objects - "roles" and "apikeys", where each can be set or skipped regardless the other one.
+   - Define roles' associated operations, per role, at the "roles" array object.
+   - Define API keys association to roles, per API key, at the `"apikeys"` array object.
+- When Fabric starts, it looks for this file; if it exists, definitions are applied (only for roles / apikeys which do not exist yet). 
 - Once applied by Fabric, the file is deleted from the config directory.
 
 Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
@@ -207,8 +206,12 @@ Example:
 }
 ```
 
+In the above example, the role named "deploy" has 3 associated operations and API key "t1234". When applied, the roles and API keys will be created, if not exist yet at Fabric, and the defined permissions are associated to them. 
+
+
 
 ## Users Credentials
+
 Users may be defined in Fabric system DB and shall accordingly be associated to roles, as follows: 
 - Assign a role to the user by either Admin UI (Security tab) or ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
 
