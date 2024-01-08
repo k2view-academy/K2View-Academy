@@ -75,7 +75,7 @@ More detailed requirements for each are described below:
 
    ```bash
    cd ~/ 
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/7.2/D_k2view_Confluent_7.2_package_06.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.1/Server/fabric-7.2.1_103/D_k2view_fabric_7.2.1_103.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.1/Server/fabric-7.2.1_103/compose_fabric_7.2.1_103.tar.gz
