@@ -28,13 +28,13 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   - **reserve_ind**  - indicates if the task reserved entities on the environment.
   - **reserve retention period fields** - define the reservation period on the task's entities.
 
-  ### Map the TDM Portal Task Types (actions) to Tasks TDM Table
+  ### Map the TDM Portal Task Actions (types) to Tasks TDM Table
 
   <table width="900pxl">
   <tbody>
   <tr>
   <td width="400pxl">
-  <p><strong>Task Type Combination</strong></p>
+  <p><strong>Task Actions Combination</strong></p>
   </td>
   <td width="500pxl">
   <p><strong>TDM Tasks Table Population</strong></p>
