@@ -1,6 +1,6 @@
 # TDM Delete Task
 
-A Delete task contains only the **Delete** task type and deletes (cleans) the selected entities from the target environment. The delete task also releases the cleaned entities if the entity is reserved.
+A Delete task contains only the **Delete** task action and deletes (cleans) the selected entities from the target environment. The delete task also releases the cleaned entities if the entity is reserved.
 
 Note that the deleted flows must be implemented in the Fabric implementation. 
 
@@ -27,7 +27,7 @@ Check the **Entities** to delete the requested entities from the target environm
 
 Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
 
-### Post Execution Processes
+### Post-Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
 
