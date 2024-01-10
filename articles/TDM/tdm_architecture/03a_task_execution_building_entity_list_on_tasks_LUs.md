@@ -20,7 +20,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p><strong>Where the Entities are Taken From</strong></p>
 </td>
 <td width="200pxl">
-<p><strong>Task Types</strong></p>
+<p><strong>Task Actions</strong></p>
 </td>
 </tr>
 <tr>
@@ -31,7 +31,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p>Run the task on the list of entities that are set in the task itself or in the task overridden execution parameters.</p>
 </td>
 <td width="200pxl">
-<p>All task types</p>
+<p>All task actions</p>
 </td>
 </tr>
 <tr>
@@ -42,7 +42,7 @@ The entity list of the root LUs is based on the task's entity selection method:
   <p>Run the selected <a href="/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method">Broadway flow</a> to get the entity list.</p>
 </td>
 <td width="200pxl">
-<p>All task types</p>
+<p>All task actions</p>
 </td>
 </tr>
 <tr>
