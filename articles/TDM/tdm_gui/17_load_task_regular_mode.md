@@ -1,6 +1,6 @@
 # TDM Load Task
 
-A Load task contains the **Load** task type; it loads (provisions) the task's entities and/or Reference tables to the target environment. By selecting multiple task actions (types), a Load task can also delete entities from target environments before loading them, and/or reserve the target entities in the TDM DB. Note that when the Load task type checkbox is checked - the Reserve task type checkbox is being checked by default as well.
+A Load task contains the **Load** task action; it loads (provisions) the task's entities and/or Reference tables to the target environment. By selecting multiple task actions (types), a Load task can also delete entities from target environments before loading them, and/or reserve the target entities in the TDM DB. Note that when the Load task action checkbox is checked - the Reserve task action checkbox is checked by default as well.
 
 A Load task contains the following tabs:
 
@@ -33,7 +33,7 @@ The following execution parameters are set on **Load tasks**:
 
 Check the Entities and/or the Reference checkboxes to load the task's entities and/or Reference tables to the target environment (set in 'Load (provision) to Environment' task setting).
 
-Note that the Entities checkbox must be checked in the task if it also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task type checkbox is checked together with the Load task type checkbox).
+Note that the Entities checkbox must be checked in the task if it also includes an [entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) (the Reserve task action checkbox is checked together with the Load task action checkbox).
 
 Click [here](24_task_reference_tab.md) for more information about the reference handling. 
 
@@ -48,17 +48,17 @@ This setting enables the user to change the [default LUI sync mode](/articles/14
 Notes:
 
 - This setting is **only available when the Data Versioning checkbox is clear (regular task)**. A Load Data Versioning task gets the data version from the TDM warehouse (Fabric) and reloads it to the target environment.
-- The **Do Not Sync From Source Data** option is not displayed if the user selects a combination of Extract and Load task types.
+- The **Do Not Sync From Source Data** option is not displayed if the user selects a combination of Extract and Load task actions.
 
 Click for more information on [how overriding the Sync mode and the Task Operation mode impacts the task execution process](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
 #### Retention Period
 
-The [Retention Period](16_extract_task.md#retention-period) setting is displayed if the Sync Policy is **not** *Do Not Sync From Source Data*. This setting enables to limit the time for which the synced entities are kept in Fabric. The default **Retention Period** value is **Do not Delete** (do not limit the time for which the entities are kept is Fabric).
+The [Retention Period](16_extract_task.md#retention-period) setting is displayed if the Sync Policy is **not** *Do Not Sync From Source Data*. This setting enables to limit of the time for which the synced entities are kept in Fabric. The default **Retention Period** value is **Do not Delete** (do not limit the time for which the entities are kept is Fabric).
 
 #### Reservation Period
 
-The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type checkbox is checked together with the Load task type checkbox).
+The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task action checkbox is checked together with the Load task action checkbox).
 
 Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
@@ -78,7 +78,7 @@ Check to open the Task Variables tab and [set the variable value on a task level
 
 ##### Replace Sequence
 
-When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required for avoiding key duplications if the testing environment is not empty and contains entities.
+When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required to avoid key duplications if the testing environment is not empty and contains entities.
 
 Notes:
 
@@ -274,5 +274,5 @@ The **Filter out Reserved Entities** checkbox indicates if entities that are res
 
 
 
- [![Previous](/articles/images/Previous.png)](16_extract_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_load_task_data_versioning_mode.md)
+ [![Previous](/articles/images/Previous.png)](16a_generate_task.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](18_load_task_data_versioning_mode.md)
 
