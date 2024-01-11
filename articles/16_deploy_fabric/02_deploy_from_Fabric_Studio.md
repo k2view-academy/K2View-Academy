@@ -12,7 +12,7 @@ Before starting the deployment process on a project, check that the target Fabri
 
 Note that in order to **force the sync** of the LU Instances after deployment, you should check the [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) checkbox in the **Server Configuration** window.
 
-> It is highly recommended not to deploy directly from Studio into a sensitive server such as staging and production. Deployment into such environments shall be done using CI/CD pipeline that first verifies the potential deployment package. Moreover, a combination and margining of several developers' work may be required.
+> It is highly recommended not to deploy directly from Studio into a sensitive server such as staging and production. Deployment into such environments shall be done using CI/CD pipeline that first verifies the potential deployment package. Moreover, it may be required to combine the work of several developers.
 
 </studio>
 
