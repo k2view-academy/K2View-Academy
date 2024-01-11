@@ -12,9 +12,9 @@ A deployment includes the newly created or modified Fabric objects such as [LU S
 
 The deployment of a Fabric project is performed on the following levels:
 
-- **Deployment of Logical Units**; each LU is deployed separately. 
+- **Deployment of Logical Units** - each LU is deployed separately. 
   
-  - When required, a deployment can be performed on a specific LU only if the LU has been modified.
+  - When required, a deployment can be performed on a specific LU, only if the LU has been modified.
   
 - **Deployment of Broadway flows** as part of the LU to which they belong.
 
