@@ -2,7 +2,7 @@
 
 New or already existing Fabric project implementations must be deployed to the server in a way that recent code changes are compiled and ready to be used.
 
-A deployment can be performed from either the Fabric Studio, as explained in this article, or using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
+A deployment can be performed either from the Fabric Studio, as explained in this article, or by using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
 
 <studio>
 
