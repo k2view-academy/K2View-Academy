@@ -83,7 +83,7 @@ To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), 
 
 ### How Do I Check Which Project is Deployed to Fabric? 
 
-Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message is displayed. 
+Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message displays.
 
 <studio>
 	
