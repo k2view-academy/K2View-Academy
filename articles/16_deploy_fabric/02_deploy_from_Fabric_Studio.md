@@ -10,7 +10,7 @@ Studio allowed you to perform deployment into either the local development serve
 
 Before starting the deployment process on a project, check that the target Fabric server is configured. To do so, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window and configure the required Fabric server, or use the  **'debug'** server entry, that is already configured to localhost, that is, to the Fabric server that the Studio works by default with.
 
-Note that to **force the sync** of the LU Instances after deployment, you should check the [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) checkbox in the **Server Configuration** window.
+Note that in order to **force the sync** of the LU Instances after deployment, you should check the [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) checkbox in the **Server Configuration** window.
 
 > it is highly recommended not to directly deploy from Studio into sensitive server like staging and production. Deployment into such environments, shall be done using CI/CD pipeline that verify first the candidate deployment package. Moreover, a combination and margining of several developers work is may needed.
 
