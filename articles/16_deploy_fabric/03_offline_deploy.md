@@ -9,7 +9,7 @@ Such deployment, which is not done from the [Fabric Studio](/articles/16_deploy_
 - In the Fabric server itself, using a Deploy script.
 - Remotely, using API calls.
 
-These methods based on that you are going to deploy prebuilt project artifacts, after they passed verifications. Moreover, your CI/CD tools, that responsible for the verification pipeline can performs these methods related actions.
+These methods are based on that you are going to deploy prebuilt project artifacts, after they have passed verifications. Moreover, your CI/CD tools, that are responsible for the verification pipeline, can performs these methods related actions.
 
 
 
