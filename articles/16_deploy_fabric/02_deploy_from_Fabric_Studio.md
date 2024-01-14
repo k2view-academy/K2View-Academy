@@ -37,7 +37,7 @@ The following steps must be performed in the Fabric Studio for each deployed obj
 1. Right-click the **object** to be deployed and then select **Deploy to Server** to display the list of servers defined in the **User Preferences** window. Note that the **Force Upgrade Post Deploy** notification displays next to the server if the server is checked as Force Upgrade Post Deploy in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) tab.
 2. Do either:
 
-  - Click [**Server Name**].
+  - Click [**Server Name**], or
   - Click **Add/Edit** to open the **User Preferences** window if the required server configuration is missing. 
 
 ## Deploying Fabric Objects to the Local Fabric Debug Server
