@@ -53,7 +53,7 @@ To deploy the Fabric implementation to the Fabric debug server, do either:
 
 <web>
 
-## Deploying Fabric project  
+## Deploying a Fabric Project  
 
 You can activate a deployment and see the Deployment Status in several places within the Fabric Studio.
 
