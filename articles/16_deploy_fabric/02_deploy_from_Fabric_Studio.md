@@ -73,11 +73,11 @@ Deployment can be done for either all updated LUs, those that are not yet deploy
 
 To deploy all updated LUs, perform either one of the following actions:
 
-* In top menu bar, click Fabric and then "Deploy All Updated Logical Units".
-* In the bottom status bar, hover with the mouse over "Deployment Status", to display a tooltip that implies which LUs are not deployed. Clicking on "Deployment Status" will trigger the deployment on these LUs.
-* Open the command pallet (you can use the CTRL+SHIST+P shortcut), look for "Deploy All Updated Logical Units" and click on it.
+* In the top menu bar, click Fabric and then 'Deploy All Updated Logical Units'.
+* In the bottom status bar, hover with the mouse over 'Deployment Status', to display a tooltip that implies which LUs are not deployed. Clicking on 'Deployment Status' will trigger the deployment on these LUs.
+* Open the command pallet (you can use the CTRL+SHIST+P shortcut), look for 'Deploy All Updated Logical Units' and click on it.
 
-> Note: The "Deploy All" action activates a Soft Deploy, unless this is the first time an LU is being deployed. This definition can be changed at the Preferences page, which is accessible via the bottom-left gear icon.
+> Note: The 'Deploy All' action activates a Soft Deploy, unless this is the first time an LU is being deployed. This definition can be changed in the Preferences page, which is accessible via the bottom-left gear icon.
 
 
 
