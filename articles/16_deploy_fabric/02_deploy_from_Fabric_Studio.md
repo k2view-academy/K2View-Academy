@@ -20,7 +20,7 @@ Note that in order to **force the sync** of the LU Instances after deployment, y
 
 The Fabric Studio **Auto Deploy** capability performs an automatic deployment of the code changes, to the local Fabric server, while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway  Population, Parser and GraphIt. 
 
-This reduces frictions while debugging and frees the user from doing the manual deployment upon each code change.
+This reduces frictions during the debugging process and frees the user from performing a manual deployment upon each code change.
 
 Fabric performs a local deployment according to the following logic: 
 
