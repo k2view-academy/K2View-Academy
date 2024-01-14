@@ -63,7 +63,7 @@ A deployed LU has a green circle next to its name in the Project Tree. Otherwise
 
 Additionally, you can look at the 'Deployment Status' at the bottom status bar and see whether all LUs are deployed. When hovering over it with the mouse, a tooltip appears, implying which LUs are not deployed.
 
-The below illustration shows the Project Tree, where all LUs - except "Web Services" - appear with a green circle, indicating that they are deployed. A similar indication exists in the bottom status bar. 
+The below illustration shows the Project Tree, where all LUs - except 'Web Services' - appear with a green circle, indicating that they are deployed. A similar indication exists at the bottom status bar.
 
 ![](images/16_2_web_deploy_status_bar.png)
 
