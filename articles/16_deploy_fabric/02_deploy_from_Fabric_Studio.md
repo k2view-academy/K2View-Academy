@@ -24,7 +24,7 @@ This reduces frictions while debugging and frees the user from doing the manual 
 
 Fabric performs a local deployment according to the following logic: 
 
-- If the Schema was changed, full deploy is performed.
+- If the Schema was changed, a full deploy is performed.
 - If Java was changed, only Java resources and Broadway are deployed.
 - If Broadway was changed, only Broadway is deployed.
 
