@@ -46,7 +46,7 @@ To debug an LU, it must first be deployed to the local Fabric debug server. A de
 
 To deploy the Fabric implementation to the Fabric debug server, do either:
 
-- Right-click the selected Fabric object > **Deploy To debug**.
+- Right-click the selected Fabric object > **Deploy To debug**, or
 - Click **Deploy** in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 </studio>
