@@ -81,7 +81,7 @@ To deploy all updated LUs, perform either one of the following actions:
 
 
 
-To deploy a specific LU, right-click on its name in the Project Tree. In the context menu you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+To deploy a specific LU, right-click on its name in the Project Tree. In the context menu, you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 </web>
 
