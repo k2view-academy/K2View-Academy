@@ -4,10 +4,10 @@ New or updated Fabric project implementations must be deployed to the server.
 
 Deploying into non-development servers shall be done carefully, verifying that the right changes will be applied. Verification can be human code-reviews, as well as tools the perform 3rd-party dependency vulnerability checks and code analysis for quality & security. 
 
-Such deployment, which is not done from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md), is called an 'Offline Deploy', where Fabric provides 2 main methods for doing it: 
+Such deployment, which is not done from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md), is called an *Offline Deploy*, where Fabric provides 2 main methods for doing it: 
 
-- At the Fabric server itself, using Deploy script.
-- Remotely, using API calls. 
+- In the Fabric server itself, using a Deploy script.
+- Remotely, using API calls.
 
 These methods based on that you are going to deploy prebuilt project artifacts, after they passed verifications. Moreover, your CI/CD tools, that responsible for the verification pipeline can performs these methods related actions.
 
