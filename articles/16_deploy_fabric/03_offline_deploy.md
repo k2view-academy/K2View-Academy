@@ -34,7 +34,7 @@ To build the artifacts **at the Fabric Studio**:
 
 2. Right-click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
-3. look for the **ludb.JAR** and **ludbXMLs.ZIP** files. 
+3. Look for the **ludb.JAR** and **ludbXMLs.ZIP** files.
 
 </studio>
 
