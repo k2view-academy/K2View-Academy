@@ -59,11 +59,11 @@ You can activate a deployment and see the Deployment Status in several places wi
 
 ### Deployment Status
 
-A deployed LU has a green circle next to its name in the project tree. Otherwise, for example while making changes in its content, the circle turns gray.
+A deployed LU has a green circle next to its name in the Project Tree. Otherwise, for example while making changes in its content, the circle turns gray.
 
 In addition, you can look at the "Deployment Status" in the bottom status bar to see whether all LUs are deployed. When hovering over it with the mouse, a tooltip appears, implying which LUs are not deployed.
 
-The below illustration shows the project tree, where all LUs - except "Web Services" - appear with a green circle, indicating that they are deployed. A similar indication exists in the bottom status bar. 
+The below illustration shows the Project Tree, where all LUs - except "Web Services" - appear with a green circle, indicating that they are deployed. A similar indication exists in the bottom status bar. 
 
 ![](images/16_2_web_deploy_status_bar.png)
 
@@ -81,7 +81,7 @@ To deploy all updated LUs, perform either one of the following actions:
 
 
 
-To deploy a specific LU, right-click on its name in the project tree. In the context menu you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+To deploy a specific LU, right-click on its name in the Project Tree. In the context menu you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 </web>
 
