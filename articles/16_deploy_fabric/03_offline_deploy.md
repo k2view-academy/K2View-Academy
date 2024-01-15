@@ -38,7 +38,7 @@ To build the artifacts **in the Fabric Studio**:
 
 </studio>
 
-To build the artifacts **at a server**, run the *[buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options)* script.
+To build the artifacts **in a server**, run the *[buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options)* script.
 
 <studio>
 
