@@ -48,8 +48,7 @@ The latter 2 options are also called [Offline Deploy](03_offline_deploy.md).
 
 
 
-When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
-A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
+In the Fabric Project, deployment involves generating 2 files (a .jar and a .zip) for each Fabric Object. These files store all the components under the Logical Unit (LU) in the project's directory structure. Each Fabric Object has its own subdirectory under **/storage/lu** for storing its deployment artifacts, and this directory is created during the first deployment within the project. Later Fabric Object deployments add their respective directories (in an epoch format) under **/storage/lu**.
 
 
 
