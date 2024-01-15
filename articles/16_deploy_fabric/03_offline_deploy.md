@@ -26,7 +26,7 @@ There are 2 ways to perform this Offline Deployment method:
 
 <studio>
 
-To build the artifacts **at the Fabric Studio**:
+To build the artifacts **in the Fabric Studio**:
 
 1. Right-click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification displays following a successfully built of the artifacts.
 
