@@ -42,7 +42,7 @@ To build the artifacts **in a server**, run the *[buildArtifacts.sh](/articles/1
 
 <studio>
 
-Copy the **ludb.JAR** and **ludbXMLs.ZIP** files, of the relevant LUs into the target Fabric server and run the Fabric **Deploy** command using the following syntax:
+Copy the **ludb.JAR** and **ludbXMLs.ZIP** files of the relevant LUs into the target Fabric server, and run the Fabric **Deploy** command using the following syntax:
 
 ~~~
 DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
