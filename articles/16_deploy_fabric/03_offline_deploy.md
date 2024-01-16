@@ -20,7 +20,7 @@ There are 2 ways to perform this Offline Deployment method:
 
   > Building artifacts in a server is aimed to be done by CI/CD tool, using a docker image that contains Fabric in it. This way, Fabric is not required to run for building the artifacts.
 
-- Build and deploy in one step. <studio>Build and deploy in the target Fabric server using the  [buildAndDeployArtifacts](03_offline_deploy.md#deployment-scripts-syntax-and-options) script.</studio><web>Use the k2cloud UI.</web>
+- Build and deploy in one step. <studio>Build and deploy in the target Fabric server using the  [buildAndDeployArtifacts](03_offline_deploy.md#build-and-deploy-artifacts) script.</studio><web>Use the k2cloud UI.</web>
 
 ### Build and Deploy in Two Steps
 
