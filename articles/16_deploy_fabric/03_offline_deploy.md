@@ -209,7 +209,7 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 #### Authentication & Authorization
 
 * Authentication is done by either user and password (*user* & *password* parameters) or by API Key (*token* parameter), that shall be sent as parameters. 
-* The request caller shall be authorized with right permissions to perform the deploy on required LUT / web-services. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
+* The request caller shall be authorized with the right permissions to perform the deploy on the required LUT / web-services. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
 
  
 
