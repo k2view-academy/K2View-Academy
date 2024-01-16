@@ -98,7 +98,7 @@ The following table describes the syntax and the mandatory/optional parameters f
 </table>
 <studio>
 
-#### Build And Deploy Artifacts
+#### Build and Deploy Artifacts
 
 <table>
 <tbody>
