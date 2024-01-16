@@ -47,11 +47,12 @@ Common input arguments of masking Actors are:
   * If the **k2masking** keyspace does not exist, create it by using either the **masking-create-cache-table.flow** example flow. 
   * IN-MEMORY interface is useful for testing as it can only be used in a single node configuration.
 * **verifyUnique** - determines whether different input values can be masked with the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment where the useEnvironment is set to true, and per execution id where the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique, as in the case of masking an SSN.
-
   Notes:
     * Set the **useExecutionId** to **false**, the **useEnvironment** to **true**, and the **verifyUnique** to **true** in order to get unique masked values on a given field per environment for all executions.
     * If an interface is **IN-MEMORY**, uniqueness is checked only on a single node and not across a DC or a Cluster.
     * If an interface is **NONE**, no uniqueness check is performed.
+
+* **TTL** - time in seconds to keep the masked values in the cache table. The default value is 86400 seconds (24 hours). If this parameter is 0, the masked value will not be deleted from the cache table. Note that the TTL is supported only when creating the k2masking keyspace in Cassandra or populating the interface parameter with IN-MEMORY value.
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
