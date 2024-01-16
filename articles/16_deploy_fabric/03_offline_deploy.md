@@ -187,13 +187,13 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 		</tr>
         <tr>
 			<td><p>noSync</p></td>
-		    <td><p>Indicate if deploy shall run in no-sync mode, applying only schema changes, but without triggering sync</p></td>
+		    <td><p>Indicates if deploy shall run in a no-sync mode, applying only schema changes, but without triggering a sync.</p></td>
 			<td><p>N</p></td>
 			<td><p>false</p></td>            
 		</tr>
 		<tr>
             <td><p>softDeploy</p></td>
-            <td><p>Indicate if deploy shall run in soft deploy mode - without triggering automatic processes</p></td>
+            <td><p>Indicates if deploy shall run in a soft deploy mode - without triggering automatic processes.</p></td>
             <td><p>N</p></td>
    			<td><p>false</p></td>
 	    </tr>
