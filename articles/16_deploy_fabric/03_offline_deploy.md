@@ -181,7 +181,7 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 	<tbody>
 		<tr>
 			<td><p>luName</p></td>
-		    <td><p>The name of the LUT that shall be deployed. Each deploy command manages only single LUT</p></td>
+		    <td><p>The name of the LUT that shall be deployed. Each deploy command manages only a single LUT.</p></td>
 			<td><p>Y</p></td>
 			<td><p></p></td>            
 		</tr>
