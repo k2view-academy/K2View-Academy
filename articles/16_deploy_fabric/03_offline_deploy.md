@@ -199,7 +199,7 @@ Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_ins
 	    </tr>
    		<tr>
             <td><p>methodList</p></td>
-            <td><p>specify which methods to be deployed, when luName=k2_ws (Web Services). Methods names shall be separated by &ldquo;,&rdquo;. When empty or not sent - whole methods are deployed</p></td>
+            <td><p>Specifies which methods to be deployed, when luName=k2_ws (Web Services). Method names shall be separated by &ldquo;,&rdquo;. When empty or not sent - whole methods are deployed.</p></td>
             <td><p>N</p></td>
    			<td><p></p></td>
 	    </tr>
