@@ -63,7 +63,7 @@ DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementati
 
 
 ### Build and Deploy in One Step
-To build the artifacts and the deployment together, in one step, from the server, run the *[buildAndDeployArtifacts](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options)* script.
+To build the artifacts and the deployment together, in one step, from the server, run the *[buildAndDeployArtifacts](/articles/16_deploy_fabric/03_offline_deploy.md#build-and-deploy-artifacts)* script.
 
 </studio>
 
