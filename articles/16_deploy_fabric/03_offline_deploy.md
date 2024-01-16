@@ -16,7 +16,7 @@ These methods should be used only after the prebuilt project artifacts - aimed f
 ## Offline Deployment using Build and Deploy scripts
 
 There are 2 ways to perform this Offline Deployment method:
-- Build and deploy in 2 steps: First, build the artifacts in either the Fabric Studio or a server, using the [buildArtifacts](03_offline_deploy.md#deployment-scripts-syntax-and-options) script. Then, perform the deployment by <studio> running either the Fabric **Deploy** command on the target Fabric server or the *buildAndDeployArtifacts* script (using the DEPLOYONLY flag) or by </studio> using API calls.
+- Build and deploy in 2 steps: First, build the artifacts in either the Fabric Studio or a server, using the [buildArtifacts](03_offline_deploy.md#build-artifacts) script. Then, perform the deployment by <studio> running either the Fabric **Deploy** command on the target Fabric server or the *buildAndDeployArtifacts* script (using the DEPLOYONLY flag) or by </studio> using API calls.
 
   > Building artifacts in a server is aimed to be done by CI/CD tool, using a docker image that contains Fabric in it. This way, Fabric is not required to run for building the artifacts.
 
@@ -38,7 +38,7 @@ To build the artifacts **in the Fabric Studio**:
 
 </studio>
 
-To build the artifacts **in a server**, run the *[buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options)* script.
+To build the artifacts **in a server**, run the *[buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#build-artifacts)* script.
 
 <studio>
 
