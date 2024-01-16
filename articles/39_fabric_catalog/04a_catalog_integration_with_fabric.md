@@ -28,13 +28,15 @@ To view a data source element in the Catalog application, do the following:
 
 * Right-click the element and click **Open in Catalog**. 
 
+  <img src="images/show_catalog_commands.png" style="zoom:75%;" />
+
 * The Catalog application opens and the selected element is displayed in the Catalog tree.
 
 * Note that the **Open in Catalog** command can be executed on all levels: interface, schema, table or field.
 
 [Click here for more information about the Catalog Application.](05_catalog_app.md)
 
-<img src="images/show_catalog_commands.png" style="zoom:75%;" />
+
 
 Note that **Run Discovery Job** and **Open in Catalog** commands may be hidden in the Web Studio. 
 
