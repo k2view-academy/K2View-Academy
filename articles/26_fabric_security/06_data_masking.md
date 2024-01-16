@@ -56,7 +56,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 #### Cache with Expiration Date
 
-- Each cached link of a hashed value to a masked value can have a TTL (Time To Live). This link will expire once the TTL has been reached, and the original value will be masked again. Note that the TTL is supported only when creating the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#list-of-fabric-related-system-keyspaces-or-schemas) in Cassandra. 
+- Each cached link of a hashed value to a masked value can have a TTL (Time To Live). This link will expire once the TTL has been reached, and the original value will be masked again. Note that the TTL is supported only when creating the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#list-of-fabric-related-system-keyspaces-or-schemas) in Cassandra or populating the **interface** parameter in the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) with **IN-MEMORY** value. 
 
 #### Caching Level Parameters
 
