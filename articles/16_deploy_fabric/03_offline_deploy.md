@@ -126,7 +126,7 @@ The following table describes the syntax and the mandatory/optional parameters f
 
 
 ### Deploy Command Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric server. Note that for deployment you can also run the *buildAndDeployArtifacts* script, using the DEPLOYONLY flag.
+The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric server. Note that for deployment, you can also run the *buildAndDeployArtifacts* script, using the DEPLOYONLY flag.
 
 <table width="900px">
 <tbody>
