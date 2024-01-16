@@ -80,7 +80,7 @@ The following table describes the syntax and the mandatory/optional parameters f
 <td>
    <p style="text-align: left;">
    <strong>buildArtifacts.sh</strong> for Linux or</p>
-   <p><strong>buildArtifacts.bat</strong> for windows</p>
+   <p><strong>buildArtifacts.bat</strong> for Windows</p>
    </td>
    <td>
    <p><strong>Description</strong>: Build the artifact files.</p>
