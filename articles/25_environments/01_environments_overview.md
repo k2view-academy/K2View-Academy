@@ -23,7 +23,7 @@ An environment can be deployed either from the k2cloud UI or by [an environment'
 
 </web>
 
-Explicit definition of the environments in a project is optional. When no environment is defined and a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) is deployed to a Fabric server, all the project's interfaces are deployed together with their connection details to a default *_dev* environment. The default environment is not displayed in the Fabric Studio or in the environment's configuration XML file.
+Explicit definition of the environments in a project is optional. When no environment is defined and a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) is deployed to a Fabric server, all the project's interfaces are deployed together with their connection details to a default *_dev* environment. The default environment is displayed neither in the Fabric Studio nor in the environment's configuration XML file.
 
 An environment can be defined on a cluster level and on a session level. Therefore a user can override an active environment per session and work on it without interacting with the changes of other users. Setting and resetting an active environment per cluster or per session is performed using the [SET environment commands](05_set_and_list_commands.md).
 
