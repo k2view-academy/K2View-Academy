@@ -4,7 +4,7 @@ An environment's offline deployment is used for deploying environments to a serv
 
 <studio>
 
-## Offline Deployment using scripts
+## Offline Deployment using Scripts
 
 Do the following:
 
