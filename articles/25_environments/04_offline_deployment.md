@@ -18,7 +18,7 @@ Perform the following actions:
    Deploy environments from file ‘{filename}’
    ~~~
 
-where {filename} includes the file's path and name on the server.
+   where {filename} includes the file's path and name on the server.
 
 Fabric encrypts the passwords in the file (if they are not already encrypted) and saves the XML file with the encrypted passwords.
 
