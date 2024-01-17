@@ -13,13 +13,13 @@ Only one environment can be active, at a specific time, after it is selected fro
 
 <studio>
 
-An environment can be deployed either from the [Fabric Studio](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) or at server (aka [offline environment deployment](/articles/25_environments/04_offline_deployment.md)).
+An environment can be deployed either from the [Fabric Studio](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) or in a target server (aka [an environment's offline deployment](/articles/25_environments/04_offline_deployment.md)).
 
 </studio>
 
 <web>
 
-An environment can be deployed either from the k2cloud UI or by [offline environment deployment](/articles/25_environments/04_offline_deployment.md).
+An environment can be deployed either from the k2cloud UI or by [an environment's offline deployment](/articles/25_environments/04_offline_deployment.md).
 
 </web>
 
