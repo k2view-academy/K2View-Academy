@@ -49,7 +49,7 @@ Note that deploying an XML file overrides all existing environments - except for
 	<tbody>
 		<tr>
 			<td><p>environment</p></td>
-		    <td><p>When sent, the target fabric server set this environment to be active, similar to running <a href="/articles/25_environments/05_set_and_list_commands.md">"SET_GLOBAL ENVIRONMENT"</a> command.</p></td>
+		    <td><p>When sent, the target Fabric server sets this environment to be active, similar to running <a href="/articles/25_environments/05_set_and_list_commands.md">"SET_GLOBAL ENVIRONMENT"</a> command.</p></td>
 			<td><p>N</p></td>
 		</tr>
     </tbody>
