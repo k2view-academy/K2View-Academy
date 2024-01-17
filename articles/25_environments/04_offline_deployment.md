@@ -22,7 +22,7 @@ Where {filename} includes the file's path and name on the server.
 
 Fabric encrypts the passwords in the file (if they are not already encrypted) and saves the XML file with the encrypted passwords.
 
-Note that deploying an XML file overrides all existing environments except for *_dev*, which is the default environment. If the environment exists in Fabric, but not in the deployed XML file, it is removed from Fabric.
+Note that deploying an XML file overrides all existing environments - except for *_dev* - which is the default environment. If the environment exists in Fabric, but not in the deployed XML file, it is removed from Fabric.
 
 </studio>
 
