@@ -233,7 +233,7 @@ body parameters, along with the deployment files, to be sent with ContentType he
 		</tr>
 		<tr>
             <td><p>projectXmlData</p></td>
-            <td><p>path to the ludbXMLs ZIP file. When not specified, only Java files will be deployed.</p></td>
+            <td><p>Path to the ludbXMLs ZIP file. When not specified, only Java files will be deployed.</p></td>
             <td><p>N</p></td>    
 	    </tr>
     </tbody>
