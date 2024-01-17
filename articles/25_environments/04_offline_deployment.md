@@ -6,7 +6,7 @@ An environment's offline deployment is used for deploying environments to a serv
 
 ## Offline Deployment using Scripts
 
-Do the following:
+Perform the following actions:
 
 1. Connect to a server using the Fabric Console.
 
