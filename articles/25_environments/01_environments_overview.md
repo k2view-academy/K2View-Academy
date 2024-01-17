@@ -1,6 +1,6 @@
 # Environments Overview
 
-Fabric Environments are used for running the same project implementation on various data sources and parameters by switching between them according to specific needs. For example:
+Fabric Environments are used for running the same project implementation on various data sources and parameters. Switching between the environments is done according to specific needs. For example:
 
 -  Defining environments for development. 
 -  UAT testing and production. 
