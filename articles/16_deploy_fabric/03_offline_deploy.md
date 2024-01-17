@@ -149,7 +149,7 @@ The following table describes the syntax and the mandatory/optional parameters w
 Note that NOSYNC FALSE is equivqlent to checking the <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> checkbox in the Server Configuration window in the Fabric Studio.</li>
 <li>SOFT_DEPLOY - optional. Default is <strong>False</strong>.
 <ul>
-<li>In case the value of this parameter is set to TRUE, the deploy is performed without automatic processes: user jobs, parsers and interface listener, deploy.flow.</li>
+<li>In case the value of this parameter is set to TRUE, the deploy is performed without these automatic processes: user jobs, parsers and interface listener, deploy.flow.</li>
 </ul>
 </li>
 <li>WS_METHODS - optional. When LU Type = Web Services (k2_ws), specify which methods are selected, separated by &ldquo;,&rdquo;. Empty for all.</li>
