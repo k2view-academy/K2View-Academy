@@ -57,14 +57,14 @@ Note that deploying an XML file overrides all existing environments - except for
 
 #### Authentication & Authorization
 
-* Authentication is done by either user and password (*user* & *password* parameters) or by API Key (*token* parameter), that shall be sent as parameters. 
-* The request caller shall be authorized with right permissions to perform the deploy (Granted with "DEPLOY_ENVIRONMENTS" permission). See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
+* Authentication is done by either user and password (*user* & *password* parameters) or by an API Key (*token* parameter), that shall be sent as parameters. 
+* The request caller shall be authorized with the right permissions to perform the deploy (granted with "DEPLOY_ENVIRONMENTS" permission). See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
 
  
 
 ### Request Body
 
-body parameters, along with the deployment files, to be sent with ContentType header = multipart/form-data
+Body parameters, along with the deployment files, to be sent with ContentType header = multipart/form-data.
 
 <table>
 	<thead>
