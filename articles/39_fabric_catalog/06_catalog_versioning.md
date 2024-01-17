@@ -40,7 +40,7 @@ To return to a regular view mode, open the version's drop-down list again and cl
 
 **Show Updates Only**
 
-When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the comparison icon in the Catalog's legend:
+When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the "Show updated only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
 
 <img src="images/data_platform_diff.gif"  />
 
