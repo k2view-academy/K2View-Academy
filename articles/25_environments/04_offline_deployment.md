@@ -1,6 +1,6 @@
-# Environment Offline Deployment
+# Environment's Offline Deployment
 
-Offline environment deployment is used to deploy environments to a server not from Studio. 
+An environment's offline deployment is used for deploying environments to a server not from Studio. 
 
 <studio>
 
