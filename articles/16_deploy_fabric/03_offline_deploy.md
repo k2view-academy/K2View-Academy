@@ -144,9 +144,9 @@ The following table describes the syntax and the mandatory/optional parameters w
 <li>NOSYNC - gets Boolean value:
 <ul>
 <li>NOSYNC TRUE: Only schema changes trigger sync after deploy.</li>
-<li>NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time the instance is accessed.</li>
+<li>NOSYNC FALSE: Any deploy (even without any changes) triggers a sync on the first time the instance is accessed.</li>
 </ul>
-Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.</li>
+Note that NOSYNC FALSE is equivqlent to checking the <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> checkbox in the Server Configuration window in the Fabric Studio.</li>
 <li>SOFT_DEPLOY - optional. Default is <strong>False</strong>.
 <ul>
 <li>In case the value of this parameter is set to TRUE, the deploy is performed without automatic processes: user jobs, parsers and interface listener, deploy.flow.</li>
