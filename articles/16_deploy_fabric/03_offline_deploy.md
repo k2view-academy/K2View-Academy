@@ -117,7 +117,7 @@ The following table describes the syntax and the mandatory/optional parameters f
    <li>-l [LUTNAME] - optional parameter. If not set, the deploy runs for the entire project.</li>
    <li>-u [USER] - optional parameter. Default is <strong>admin</strong>.</li>
    <li>-p [PASSWORD] - optional parameter. Default is <strong>admin</strong>.</li>
-   <li>-d [DEPLOYONLY] - optional parameter. If <strong>True</strong>, the script only runs a <strong>deploy</strong> command without creating and deleting the artifacts.</li>
+   <li>-d [DEPLOYONLY] - optional parameter. If <strong>True</strong>, the script runs only a <strong>deploy</strong> command, without creating and deleting the artifacts.</li>
    </ul>
    </td>
    </tr>
