@@ -12,7 +12,7 @@ Perform the following actions:
 
 2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location - **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments** - or manually edit the existing XML file.
 
-3. Deploy it using the following command:
+3. Deploy the environments file using the following command:
 
    ~~~
    Deploy environments from file ‘{filename}’
