@@ -9,7 +9,7 @@ Fabric Environments are used for running the same project implementation on vari
 An environment is defined by either a partial or a full list of a project's [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) together with their connection details (server, port, etc.), and it must be deployed to the server. Additionally, an environment can override the values in [globals](/articles/08_globals/01_globals_overview.md). 
 
 
-Only one environment can be active, at a specific time, after it is selected from a predefined list of environments and switched as needed. 
+Only one environment can be active, at a specific time, after it is selected from a predefined list of environments and switched to as needed. 
 
 <studio>
 
