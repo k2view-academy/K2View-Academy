@@ -1,10 +1,10 @@
 # Environments Overview
 
-Fabric Environments are used to run the same project implementation on various data sources and parameters by switching between them according to specific needs. For example:
+Fabric Environments are used for running the same project implementation on various data sources and parameters by switching between them according to specific needs. For example:
 
 -  Defining environments for development. 
 -  UAT testing and production. 
--  Switching between several different testing environments in the K2View TDM. 
+-  Switching between several different testing environments in the K2view TDM. 
 
 An environment is defined by a partial or a full list of a project's [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) together with their connection details (server, port, etc.) and must be deployed to the server. In addition, an environment can override the values in [globals](/articles/08_globals/01_globals_overview.md). 
 
