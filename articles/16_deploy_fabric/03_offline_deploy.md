@@ -215,7 +215,7 @@ Note that NOSYNC FALSE is equivqlent to checking the <a href="/articles/14_sync_
 
 ### Request Body
 
-Body parameters, along with the deployment files, to be sent with ContentType header = multipart/form-data
+Body parameters, along with the deployment files, to be sent with ContentType header = multipart/form-data.
 
 <table>
 	<thead>
