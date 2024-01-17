@@ -1,7 +1,7 @@
 # Table Indexes
 
 ## What Is an LU Table Index?  
-An index can be created for an LU table in order to improve performance when querying / updating LU tables in memory during the Sync process. Indexes are created on a table level and can be built for one or many fields. Each LU table can have several indexes where each index can contain several columns.
+An index can be created for an LU table in order to improve performance when querying / updating LU tables in memory during the Sync process. Indexes are created on a table level and can be built for either one field or many fields. Each LU table can have several indexes, where each index can contain several columns.
 
 ## When Do I Create an Index?
 When querying LU tables, indexes should be considered for fields used in WHERE clauses.
