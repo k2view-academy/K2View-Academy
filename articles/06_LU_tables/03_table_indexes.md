@@ -58,7 +58,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 <p><strong>Unique</strong></p>
 </td>
 <td width="464">
-<p>Defines whether the current index is unique. Check to set or unset this definition.</p>
+<p>Defines whether the current index is unique. Check the checkbox for setting/unsetting this definition.</p>
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double-click [**Table Name**] to open the table’s settings. 
 2.	In the **Columns** tab, right-click one field or more fields and select **Create Index from Selected Columns**. 
 3.	Click the **Indexes** tab to display a list of indexes. 
-4.	Check / uncheck **PK** and **Unique** to complete the index definition.
+4.	Check/uncheck **PK** and **Unique** checkboxes to complete the index definition.
 5.	**Save** the table. 
 
 ## How Do I Delete an Index?  
