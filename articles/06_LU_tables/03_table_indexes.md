@@ -33,7 +33,7 @@ It is therefore recommended to create 2 indexes for the ORDERS table:
 
 
 ## Index Definition 
-LU table indexes are defined in the **Indexes Tab** in the **Table window** where they can also be added, modified or removed from a table. The following Index settings can be defined:  
+LU table indexes are defined in the **Indexes Tab** in the **Table window**, where they can also be added, modified or removed from a table. The following Index settings can be defined:  
 
 <table>
 <tbody>
