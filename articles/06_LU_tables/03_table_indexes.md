@@ -16,7 +16,7 @@ The USAGE table contains 100K records per customer. The SELECT SQL statement is:
 </code></pre>
 
 
-To improve the performance of this statement, a combined index should be created for the TYPE and PRIORITY columns, where TYPE is the first column in the index and PRIORITY is the second.
+To improve the performance of this statement, a combined index should be created for the TYPE and PRIORITY columns, where TYPE is the 1st column in the index and PRIORITY is the 2nd.
 
 **Example 2**
 The ORDERS table is a parent table of the CONTRACT and ORDERS_SUMMARY tables: 
