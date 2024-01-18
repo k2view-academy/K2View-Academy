@@ -23,8 +23,8 @@ The ORDERS table is a parent table of the CONTRACT and ORDERS_SUMMARY tables:
 *	The CONTRACT table is linked to the ORDERS table via the CONTRACT_ID field.
 *	The ORDERS_SUMMARY table is linked to the ORDERS table via the ORDER_TYPE field. 
 It is therefore recommended to create 2 indexes for the ORDERS table:
-*	one for the CONTRACT_ID field, and
-*	one for the ORDER_TYPE field.
+      -	one for the CONTRACT_ID field, and
+      -	one for the ORDER_TYPE field.
 
 <studio>
 
