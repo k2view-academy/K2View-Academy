@@ -74,7 +74,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 
 ## How Do I Add an Index? 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double-click [**Table Name**] to open the table’s settings. 
-2.	In the **Columns** tab, right-click one or more fields and select **Create Index from Selected Columns**. 
+2.	In the **Columns** tab, right-click one field or more fields and select **Create Index from Selected Columns**. 
 3.	Click the **Indexes** tab to display a list of indexes. 
 4.	Check / uncheck **PK** and **Unique** to complete the index definition.
 5.	**Save** the table. 
