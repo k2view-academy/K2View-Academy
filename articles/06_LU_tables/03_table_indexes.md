@@ -80,7 +80,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 5.	**Save** the table. 
 
 ## How Do I Delete an Index?  
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table’s settings. 
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double-click [**Table Name**] to open the table’s settings. 
 2.	In the **Indexes** tab, click **Delete** to delete the index.
 
 
