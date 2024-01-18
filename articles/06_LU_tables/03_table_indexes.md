@@ -92,13 +92,13 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 ## Index Definition 
 
 1. Select the LU table by either 
-   - Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table
+   - Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double-click [**Table Name**] to open the table
    - Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Schema** > select the relevant table 
-2. Reveal the table's properties side panel by clicking the ![img](../03_logical_units/images/web/show_properties1.png) icon in the upper right corner of the window (it might be already opened)
+2. Reveal the table's properties side panel by clicking the ![img](../03_logical_units/images/web/show_properties1.png) icon in the upper-right corner of the window (it might be already opened)
 3. Expand the Indexes tab, where you can see the already defined indexes.
 4. Click the "+" to add indexes 
    - The index is automatically gets an index ID.
-   - You can choose if it will be a unique index.
+   - You can choose whether it will be a unique index.
    - Select the table's fields to be part of the index.
 5. You can delete an index by clicking on the trash icon aside its ID.
 
