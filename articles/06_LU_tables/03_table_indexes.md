@@ -108,7 +108,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window**, whe
 
 ## How Do I Get a List of Indexes? 
 
-The **DESCRIBE** command is one of Fabric view commands and it is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
+The **DESCRIBE** command is one of Fabric's view commands and it is used for querying the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
 
 **Syntax:**
