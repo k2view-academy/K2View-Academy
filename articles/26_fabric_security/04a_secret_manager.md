@@ -119,9 +119,9 @@ For example: ${secretmanager:mysql.password}
 > Notes: 
 >
 > * Each Secrets Management service has its own pattern, usually by hierarchy; you should follow these patterns. 
-> * The Secret Manager service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use the Secret Manager service, while others, like local testing, may not. 
-> * You can use the "Test connection" option to verify that the connection settings are OK, also when the Secret Manager service is activated.
-> * The following properties can be addressed to the Secrets Manager for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Manager.  
+> * The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use the Secrets Management service, while others, like local testing, may not. 
+> * You can use the "Test connection" option to verify that the connection settings are OK, also when the Secrets Management service is activated.
+> * The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
 
 
 
