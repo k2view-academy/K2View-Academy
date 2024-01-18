@@ -93,7 +93,7 @@ Fabric supports one of the following authentication methods for Azure Key Vault:
  1. CLIENT_ID + CLIENT_SECRET + TENANT
  2. USE_MANAGED_IDENTITY_AUTH + CLIENT_ID + RESOURCE_ID 
  3. CLIENT_ID + USER_NAME + PASSWORD + TENANT_ID
- 4. When Fabric is hosted on an Azure server or when Azure [CLI](https://learn.microsoft.com/en-us/cli/azure/) agent is installed and activated, Fabric is already considered as authenticated, without providing further authentication credentials.
+ 4. When Fabric is hosted on an Azure server or when Azure [CLI](https://learn.microsoft.com/en-us/cli/azure/) agent is installed and activated, Fabric is already considered as being authenticated, without providing further authentication credentials.
 
 section name: [encryption_azure_sm]
 
