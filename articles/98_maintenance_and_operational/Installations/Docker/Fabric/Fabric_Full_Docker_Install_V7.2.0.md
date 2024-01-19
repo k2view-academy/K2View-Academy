@@ -61,12 +61,12 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/Server/fabric-7.2.0_279-HF4/D_k2view_fabric_7.2.0_279.tar.gz
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.0/Server/fabric-7.2.0_279-HF4/D_k2view_fabric_7.2.0_279.tar.gz
    <br>md5: 09cf1734613a76c62598c24dac037508</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/Server/fabric-7.2.0_279-HF4/compose_fabric_7.2.0_279.tar.gz
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.0/Server/fabric-7.2.0_279-HF4/compose_fabric_7.2.0_279.tar.gz
    <br>md5: dfec23a0b5cb790dcf4649b9296cc4e2</br></td>
    </tr>
    </tbody>
@@ -77,8 +77,8 @@ More detailed requirements for each are described below:
    cd ~/ 
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/Server/fabric-7.2.0_279-HF4/D_k2view_fabric_7.2.0_279.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/Server/fabric-7.2.0_279-HF4/compose_fabric_7.2.0_279.tar.gz 
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.0/Server/fabric-7.2.0_279-HF4/D_k2view_fabric_7.2.0_279.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.0/Server/fabric-7.2.0_279-HF4/compose_fabric_7.2.0_279.tar.gz 
    ```
 3. Load the Docker images as follows: (skip Kafka if not needed)
 
