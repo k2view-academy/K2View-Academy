@@ -36,7 +36,7 @@ Supported Secrets Management providers are:
 
 In order to use a Secrets Manager:
 
-1. Set the configuration at config.ini file with the selected Secrets Manager access and permissions details.
+1. Set the configuration in the config.ini file with the selected Secrets Manager access and permissions details.
 2. Provision and mark the required interface connection details as those that shall be taken from the Secrets Manager, as part of the project's implementation settings.
 
 ### Config.ini file
