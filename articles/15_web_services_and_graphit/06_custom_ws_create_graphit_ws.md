@@ -93,7 +93,7 @@ or click on **New Category** to enter a new category name, followed by *Enter* f
 
 The following step is to enter **a name** for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
 
-Using the file name, you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The popup itself provides some tips about the recommended naming conventions.
+Using the file name, you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The pop-up window itself provides some tips about the recommended naming conventions.
 
 ![](17_Graphit/images/web_enter_new_graphit_name.png)
 
@@ -105,7 +105,7 @@ The Graphit file is saved, its name appears at the top of its layout, it is open
 
 
 
-4. Start with choosing, from the drop-down list, any of the below commands/functions (node types): 
+4. Start by choosing, from the drop-down list, any of the below commands/functions (node types): 
 
 ![](17_Graphit/images/light_commands_functions_node_types.png)
 
@@ -117,7 +117,7 @@ It is useful to place the **get** command - a function that retrieves the LUI (L
 
 ![](17_Graphit/images/light_get_command_builder_add_bigger.png)
 
-Once this 1st node is created, it will looks like this:
+Once this 1st node has been created, it will looks like this:
 ![](17_Graphit/images/light_first_graphit_node.png)
 
 You can later change the **get** command, when needed, by clicking on the ![](17_Graphit/images/selection.png) icon, triggering the *Get Command Builder* pop-up window again.
@@ -125,7 +125,7 @@ You can later change the **get** command, when needed, by clicking on the ![](17
 
 
 6. Hover over the node and click on the plus icon ![](17_Graphit/images/add_sibling.png)in order to add a sibling node to the example layout.
-7. Name the newly created node by populating the left-hand-field.
+7. Name the newly created node by populating the left-hand field.
 
 Note that only nodes with a tag name are displayed in the output document, when a Graphit web service is called.
 
