@@ -80,7 +80,7 @@ Fabric supports 2 authentication methods:
 
   
 
-In addition, this shall be set:
+Additionally, this shall be set:
 
 * URL - the Vault API endpoint to get the secrets.
 
