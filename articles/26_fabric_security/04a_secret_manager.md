@@ -32,7 +32,7 @@ Supported Secrets Management providers are:
 
 
 
-## Using a Secrets Management Service
+## Using Secrets Management Services
 
 In order to use a Secrets Management provider:
 
