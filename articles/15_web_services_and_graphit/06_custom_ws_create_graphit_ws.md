@@ -1,6 +1,6 @@
 # Create Custom-Built Web Service with Graphit
 
-As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing capabilities. To learn more about Graphit utility - read [here](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md).
+As a powerful low-code utility, Graphit enables web service planning and generation in a visualized layout, as well as inline testing capabilities. To learn more about the Graphit utility - read [here](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md).
 
 A Graphit file is structured as a hierarchical representation of nodes, where each node defines an entry element in the structure of the JSON, XML or CSV document. 
 
