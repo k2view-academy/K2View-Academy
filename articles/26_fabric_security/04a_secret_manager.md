@@ -24,7 +24,7 @@ Supported Secrets Management providers are:
 ## How does it work
 
 1. The customer's security team administrator creates a set of credentials on either the database or a similarly secured resource server, and then provisions them as secrets in the Secrets Management provider. The latter encrypts and stores the credentials within the secrets.
-2. The administrator configures these secrets' access permissions required for Fabric, as the client application.
+2. The administrator has to grant Fabric (client application) with permissions to approach these secrets.
 3. When Fabric opens a connection in order to access a resource server such as a database, via an interface, it examines whether its credentials are defined as reference IDs in the external Secrets Management provider. If they are defined this way, Fabric queries the Secrets Management provider for the relevant secrets. 
 4. The Secrets Management provider retrieves the secrets, decrypts and returns them to Fabric over a secured (HTTPS with TLS) channel.
 5. Fabric uses the secrets as the resource server credentials, as defined in the interface.
