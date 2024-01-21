@@ -6,7 +6,7 @@ A Graphit file is structured as a hierarchical representation of nodes, where ea
 
 <studio>
 
-To create a new Graphit Web Service follow these steps:
+To create a new Graphit Web Service, follow these steps:
 
 1. Go to **Project Tree**, click on **Web Services** > **Graphit** > right-click & choose **New Graphit File**. 
 
@@ -14,7 +14,7 @@ To create a new Graphit Web Service follow these steps:
 
     A Graphit file opens, containing a newly created Graphit node, which should be populated.
 
-2. Start with choosing, from the drop-down list, any of the below commands/functions (node types): 
+2. Start by choosing, from the drop-down list, any of the below commands/functions (node types): 
 
     ![](17_Graphit/images/commands_functions_node_types.png)
 
