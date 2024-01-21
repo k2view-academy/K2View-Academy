@@ -28,7 +28,7 @@ Supported Secrets Management providers are:
 3. When Fabric opens a connection in order to access a resource server such as a database, via an interface, it examines whether its credentials are defined as reference IDs in the external Secrets Management provider. If they are defined this way, Fabric queries the Secrets Management provider for the relevant secrets. 
 4. The Secrets Management provider retrieves the secrets, decrypts and returns them to Fabric over a secured (HTTPS with TLS) channel.
 5. Fabric uses the secrets as the resource server credentials, as defined in the interface.
-6. Fabric caches the credentials in memory. Once a connection to a resource server failed due to credentials, Fabric assumes that credentials were changed and accesses again to the secret manager to get them.
+6. Fabric caches the credentials in memory. If a connection to a resource server fails due to credentials, Fabric assumes that the credentials were changed, and accesses the Secrets Management provider again to get them.
 
 
 
