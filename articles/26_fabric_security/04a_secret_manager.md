@@ -105,7 +105,7 @@ section name: [encryption_azure_sm]
 - PASSWORD
 - RESOURCE_ID
 - USE_MANAGED_IDENTITY_AUTH
-- ENDPOINT_TEMPLATE - by default it is https://{key_vault_name}.vault.azure.net, so otherwise it is different, this property is optional and Fabric uses this default, according to the key vault name.
+- ENDPOINT_TEMPLATE - this property is optional. The default value is https://{key_vault_name}.vault.azure.net, where Fabric uses it according to the key vault name.
 
 
 
