@@ -45,7 +45,7 @@ Each of the supported Secrets Management providers has its own dedicated section
 
 In addition to populating these details, you shall turn it on by setting the 'ENABLED' property to 'true', in the section of the chosen Secrets Management provider.
 
-Following are the config attributes required for each Secrets Management provider:
+Following are the config.ini attributes required for each Secrets Management provider:
 
 #### AWS Secrets Manager
 
