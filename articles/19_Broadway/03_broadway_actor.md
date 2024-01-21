@@ -10,7 +10,7 @@ When a flow requires business logic that is not supported by a built-in Actor, a
 
 This article describes the following options for working with Actors:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
-- [Saving a flow as an Actor](03_broadway_actor.md#how-do-i-save-flow-as-actor) that can be used as an inner flow of other Broadway flows.
+- [Saving a flow as an Actor](03_broadway_actor.md#how-do-i-save-a-flow-as-an-actor) that can be used as an inner flow of other Broadway flows.
 - [Exporting Actors](03_broadway_actor.md#how-do-i-export-an-actor) to create inherited Actors with extended business logic. 
 
 To learn about more complex scenarios, such as creating or editing an Actor, refer to the [Actor Editor](28_actor_editor.md) article. 
