@@ -111,7 +111,7 @@ section name: [encryption_azure_sm]
 
 ### Interface Connection Details Settings
 
-To mark an interface connection details property to be taken from the Secrets Management provider, you shall use this pattern in its value:
+Marking an interface connection details property, to be taken from the Secrets Management provider, you shall use this pattern in its value:
 
 ${secretmanager:\<id-at-seceret-manager\>}
 For example: ${secretmanager:mysql.password}
