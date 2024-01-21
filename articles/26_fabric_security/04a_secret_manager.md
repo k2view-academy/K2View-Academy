@@ -41,11 +41,11 @@ In order to use a Secrets Management provider:
 
 ### Config.ini file
 
-Each of the supported Secrets Managers has its own dedicated section at config.ini file, with all required access and permissions details.
+Each of the supported Secrets Management providers has its own dedicated section in the config.ini file, with all required access and permissions details.
 
-In addition of populating these details, you shall turn it on, by setting the 'ENABLED' property to be 'true', in the section of the chosen secret manager.
+In addition to populating these details, you shall turn it on by setting the 'ENABLED' property to 'true', in the section of the chosen Secrets Management provider.
 
-Following are the config attributes required for each secret manger:
+Following are the config attributes required for each Secrets Management provider:
 
 #### AWS Secrets Manager
 
