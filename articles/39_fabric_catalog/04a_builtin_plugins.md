@@ -6,7 +6,7 @@
 
 The purpose of a **Metadata Logical Reference** plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
 
-The matching algorithm works by comparing the field names of 2 different datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name if the field name is ID.
+The matching algorithm works by comparing the field names of 2 different datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name in case the field name is an ID.
 
 For example, the following field names will be matched: customer.ID, CUSTOMER_ID and CustomerID.
 
