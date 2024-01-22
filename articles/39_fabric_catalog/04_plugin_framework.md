@@ -40,7 +40,7 @@ The [data_platforms] section of the plugins.discovery file enables setting:
 * The list of schema(s) and dataset(s) to be **excluded** from the Discovery job run.
 * The list of schema(s) and dataset(s) to be **included** in the Discovery job run.
 
-The syntax should either provide the schema name - ```<schema>``` - to be fully included (or excluded), or the coma separated list of ```<schema>.<table>``` or ```*.<table>```. To exclude (or include) all tables that start with the same letters, the syntax should be based on a "starts with" regular expression. For example: ```main.CUST.*``` will exclude (or include) all tables that start with CUST.
+The syntax should provide either the schema name - ```<schema>``` - to be fully included (or excluded), or the comma-separated list of ```<schema>.<table>``` or ```*.<table>```. To exclude (or include) all tables that start with the same letters, the syntax should be based on a "starts with" regular expression. For example: ```main.CUST.*``` will exclude (or include) all tables that start with CUST.
 
 **Example:**
 
