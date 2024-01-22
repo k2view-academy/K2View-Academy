@@ -10,7 +10,7 @@ The Plugin Framework is executed by the Discovery job after completion of the Cr
 
 The Data Discovery solution includes a constantly growing list of built-in plugins. 
 
-The following article describes the main configuration parameters of the **plugins.discovery** file. The list of active plugins, their execution order and configuration parameters are described in the [next article](04a_builtin_plugins.md).
+This article describes the main configuration parameters of the **plugins.discovery** file. The list of active plugins, their execution order and configuration parameters are described in the [next article](04a_builtin_plugins.md).
 
 ### Plugins Pipeline
 
