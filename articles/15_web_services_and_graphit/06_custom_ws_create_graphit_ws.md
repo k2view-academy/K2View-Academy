@@ -67,7 +67,7 @@ To create a new Graphit Web Service, follow these steps:
 
 <web>
 
-You can create a new web service from either the Fabric menu at the top menu bar or the project tree.
+You can create a new web service from either the Fabric menu at the top menu bar or the Project Tree.
 
 When initiated from the Fabric menu:
 
