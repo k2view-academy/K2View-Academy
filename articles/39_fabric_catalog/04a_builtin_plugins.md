@@ -97,7 +97,7 @@ The following matching rules are defined in the plugins.discovery file and are a
 
 #### Field Exclusion List
 
-Fields can be excluded from the **Metadata Logical Reference** plugin's matching algorithm by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, the same field name exists in many datasets of the same schema and this field should not be part of the *refers to* relation, e.g., lastModifiedDate.
+Fields can be excluded from the **Metadata Logical Reference** plugin's matching algorithm either by their name or type. The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. This can be useful when, for example, the same field name exists in many datasets of the same schema and this field should not be part of the *refers to* relation, e.g., lastModifiedDate.
 
 ### Data Regex Classifier
 
