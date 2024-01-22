@@ -115,7 +115,7 @@ The below regular expression ```\b(?:\d[ -]*?){13,16}\b``` is executed on the fi
 
 ![](images/regex_example.png)
 
-When the expression matches a field's value, the probability that this field holds a credit card number is 0.8. So, in case of a match, the score is 0.8 and when there is no match, the score is 0. The expression is executed on all values on the given column in the data sample and the average score is calculated. Then, the calculated average score is compared with plugin's threshold as explained earlier in this article. If the calculated average score is above the threshold, the Classification = CREDIT_CARD property is added to the field.
+When the expression matches a field's value, the probability that this field holds a credit card number is 0.8. Thus, in case of a match, the score is 0.8 and when there is no match, the score is 0. The expression is executed on all values on the given column in the data sample and the average score is calculated. Then, the calculated average score is compared with the plugin's threshold as explained earlier in this article. If the calculated average score is above the threshold, the Classification = CREDIT_CARD property is added to the field.
 
 ### Metadata Regex Classifier
 
