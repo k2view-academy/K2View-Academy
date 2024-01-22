@@ -60,7 +60,7 @@ The syntax should provide either the schema name - ```<schema>``` - to be fully 
 
 The above configuration defines the following rules:
 
-* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales. All other schemas should be ignored. In addition, the job will ignore all tables of the Sales schema that start with 'Current'. 
+* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales. All other schemas should be ignored. Moreover, the job will ignore all tables of the Sales schema that start with 'Current'. 
 * The table APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
 
 ### Plugin Threshold
