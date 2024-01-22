@@ -2,8 +2,8 @@
 
 ### What is Fabric Deployment?
 The implementation of a Fabric project can be divided into 2 on-going stages:
-- **Stage 1 - Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
-- **Stage 2 - Deployment** of the project into the Fabric server, where all recent changes, done after its last deployment, are applied and are functioning on the server side. 
+- **Stage 1 - design, configuration and coding** - which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio, in order to implement the business requirements.
+- **Stage 2 - deployment** of the project into the Fabric server, where all recent changes, done after its last deployment, are applied and are functioning on the server side. 
 
 
 
@@ -12,9 +12,9 @@ A deployment includes the newly created or modified Fabric objects such as [LU S
 
 The deployment of a Fabric project is performed on the following levels:
 
-- **Deployment of Logical Units**, each LU is deployed separately. 
+- **Deployment of Logical Units** - each LU is deployed separately. 
   
-  - When required, a deployment can be performed on a specific LU only if the LU has been modified.
+  - When required, a deployment can be performed on a specific LU, only if the LU has been modified.
   
 - **Deployment of Broadway flows** as part of the LU to which they belong.
 
@@ -36,37 +36,37 @@ The deployment of a Fabric project is performed on the following levels:
   
 - **Deployment of Environments** 
 
-<studio>
-Deployment can be performed from either one of the below 2 locations:
-	
-- [The Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio), using **Deploy to Server**. 
 
-- The Fabric server, using an [Offline Deploy](03_offline_deploy.md), an act that refers to deploying the artifacts that were created in the Fabric Studio, by 		choosing **Build Deploy Artifacts**. 
 
-When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
-A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
+Deployment can be performed using several methods:	
 
-</studio>
+- In the [Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio). 
+- <studio>In the Fabric server itself, using Build and Deploy scripts.</studio><web>In k2cloud UI.</web>
+- Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified, it can be sent into the target server.
+
+The latter 2 options are also called [Offline Deploy](03_offline_deploy.md).
+
+
+
+In the Fabric Project, deployment involves generating 2 files (a .jar and a .zip) for each Fabric Object. These files store all the components under the Logical Unit (LU) in the project's directory structure. Each Fabric Object has its own subdirectory under **/storage/lu** for storing its deployment artifacts, and this directory is created during the first deployment within the project. Later Fabric Object deployments add their respective directories (in an epoch format) under **/storage/lu**.
+
+
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the LUs that use these objects in order to bring the changes into effect. For example, when an interface is updated, all LUs that use this interface should be re-deployed.
 
 ### Soft Deploy
 
-**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is useful mainly for implementors that work in a development environment and that frequently change their code, such as Broadway flows or Java functions.
+**Soft Deploy** is a Fabric's capability to exclude automatic processes from the LU deployment. Accordingly, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
 
 <studio>
 
-You can use the Soft Deploy option to deploy changes without triggering automatic processes such as:
+Moreover, when using the Soft Deploy option, these processes are not triggered:
 
 * User jobs
 * Parsers
 * Interface listener
 
-Moreover, when the Soft Deploy is being used, the [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) is not running. 
-
 To activate the Soft Deploy when deploying from the Fabric Studio, turn on the Soft Deploy option in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
-
-To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
 </studio>
 
@@ -76,9 +76,13 @@ To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft
 
 </web>
 
+To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+
+
+
 ### How Do I Check Which Project is Deployed to Fabric? 
 
-Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message is displayed. 
+Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message displays.
 
 <studio>
 	
@@ -89,7 +93,7 @@ To perform a project’s deployment check in the Fabric server, use the **SET** 
 <web>
 	
 To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal
-(Choose **Fabric -> Open Fabric Terminal**)
+(choose **Fabric -> Open Fabric Terminal**).
 
 </web>
 
@@ -112,7 +116,7 @@ You can check which objects are deployed in the Fabric server by using the Fabri
 - **list ENVIRONMENTS/ENVS** - provides a list of environments deployed to the Fabric server.
 - **list BF/BROADWAY_FLOWS** - lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server:
   - If LU_NAME is provided, the command lists only Broadway flows that belong to the LU.
-  - If FLOW is specified, the result shows a row for each input and output argument of the flow, along with their type and schema. If more than one flow is found with the same name, the result will be a list of LUs. Specify the LU_NAME to ensure that a single flow is found.
+  - If FLOW is specified, the result shows a row for each input and output arguments of the flow, along with their type and schema. If more than one flow are found with the same name, the result will be a list of LUs. Specify the LU_NAME to ensure that a single flow is found.
 
 - **list INSTANCE_GROUPS/IGS** - lists all instance groups of all LU Types deployed to the server.
 - **list DB_SOURCES** - lists all the DB interfaces.
@@ -148,7 +152,7 @@ fabric>list lut storage=y;
 
 ### How Are Deployed Objects Reflected in Cassandra?
 
-Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#cassandra-) as follows:
+A project deployment is reflected in [**Cassandra**](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#cassandra-) as follows:
 - The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) creates new records in the [**k2_lut_info** table](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) under the **k2system** keyspace. A separate record is created for each LU and Reference table and for each deployed Web Service.
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
@@ -160,7 +164,7 @@ As the project implementation is an on-going process, where many changes are don
 
 Fabric offers project version tagging that shows the deployed version tag on the deployed server.
 
-The version tag creation is done along with GIT tagging capability, allowing for a project version to be preserved both as a property in the project definitions file (k2proj.xml) and as a GIT annotated tag.
+The version tag creation is done along with a GIT tagging capability, allowing for a project version to be preserved both as a property in the project definitions file (k2proj.xml) and as a GIT annotated tag.
 
 While Fabric provides the mechanism and technology for project versioning, the project owner and developers shall follow the related project lifecycle procedures, when tagging a version and while deploying the project.  
 

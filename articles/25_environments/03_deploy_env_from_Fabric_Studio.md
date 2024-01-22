@@ -1,8 +1,8 @@
-<studio>
-
 # Deploying an Environment from the Fabric Studio
 
 To deploy an environment to the server from the Fabric Studio, do the following:
+
+<studio>
 
 1. Go to **Project Tree** > **Shared Objects** and double click **Environments** to open the Environments window.
 
@@ -18,6 +18,16 @@ To deploy an environment to the server from the Fabric Studio, do the following:
 
    ![image](images/25_03_3.PNG)
 
+</studio>
+
+<web>
+
+Click the **Deploy Environments** <img src="images/deploy_button.png"  /> button at the top of environments bar. 
+
+</web>
+
+
+
 Notes:
 
 * All the environments are deployed to the server. A list of deployed environments can be displayed using the LIST command.
@@ -26,6 +36,7 @@ Notes:
 
 [Click for more information about SET and LIST commands for environments](/articles/25_environments/05_set_and_list_commands.md).
 
+
+
 [![Previous](/articles/images/Previous.png)](02_create_new_environment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_offline_deployment.md)
 
-</studio>

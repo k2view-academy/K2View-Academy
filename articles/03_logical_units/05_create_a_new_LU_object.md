@@ -1,6 +1,6 @@
-# Create a New Logical Unit (LU) Object
+# Create a New Logical Unit / Data Product
 
-A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be added by either:
+A new [Logical Unit](/articles/03_logical_units/01_LU_overview.md) can be added by either:
 
 * Creating a new Logical Unit.
 * Duplicating a Logical Unit. 

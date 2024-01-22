@@ -1,25 +1,42 @@
 # Logical Unit / Data Product Overview
 
-### What Is a Logical Unit?
-A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is the blueprint (metadata) for delivering a trusted dataset for a Business Entity (e.g., customer, order, or loan). It holds a set of definitions and instructions for integrating multi-source data, processing and governing the data, storing, and delivering it. LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created from the LU, each corresponding to a Business Entity instance (e.g., individual customers). An LU is defined and configured in the Fabric Studio. 
+### What is a Logical Unit?
+A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose (a Business Entity like customer, order, or loan). It holds a set of definitions and instructions used for integrating data from source systems, processing and governing the data, storing, and delivering it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
 
-The LU metadata includes 3 main objects:
-
+An LU is defined and configured in the Fabric Studio as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). 
+These definitions are comprised of 3 main types of objects:
 
 1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md): The definition of a table within the LU Schema, with its columns, primary keys, indexes, and triggers.
 
-2. [**LU Table Population**](/articles/07_table_population/01_table_population_overview.md):
-    * Ingests data into LU tables from multiple  data sources, and keeps it up to date.
-    * Processes the ingested data (transforming, cleansing, masking, and enriching).
-
+2. [**LU Table Population**](/articles/07_table_population/01_table_population_overview.md): 
+    * Data feeding into LU tables from a variety of data sources and keep it up to date.
+    * Ability to manipulate the fed data, which includes enriching, cleansing, masking, transforming, etc. 
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU schema has one LU table defined as its Root Table. The Root Table holds the LU’s unique key.
 
 
+In addition to these main objects, there are some others that are a part of the logical unit, and they are used for defining its life cycle. They can be found in the Project Tree, under each logical unit:
+
+- Java - [Globals](typora://app/articles/08_globals/01_globals_overview.md) and [Functions](typora://app/articles/07_table_population/08_project_functions.md)
+- [Broadway](typora://app/articles/19_Broadway/01_broadway_overview.md)
+- Instance Groups
+- Resources - files that can be saved as part of a project
+- IIDFinder 
+<studio>    
+
+- [Translations](typora://app/articles/09_translations/01_translations_overview_and_use_cases.md)
+- Parsers
+- Jobs
+
+</studio>
+
+
+
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
+
 * LU / Data Product: Customer.
 * Data sources: CRM, <studio>Ordering, Billing and Collection, </studio><web>Billing and Assets.</web>
-* LU tables: The tables that will hold the data you want to keep about a customer from the 4 data sources.
-* LU Table Populations: The set of definitions that will be used to extract, transform, clean, aggregate, validate (etc.) the data from the 4 data sources into the LU tables.
+* LU tables: The tables that will hold the data you wish to keep about a customer from the 4 data sources.
+* LU Table Populations: The set of definitions that will be used for extracting, transforming, cleaning, aggregating, validating (etc.) the data from the 4 data sources into the LU tables.
 * LU schema: The definition of the Root Table and the relationship between all LU tables.
 
 <studio>
@@ -42,8 +59,8 @@ The LU metadata includes 3 main objects:
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database, which holds the data of one single Business Entity instance in the LUT structure definition.
 Using our example from above (Customer 360), assume that Company ABC has 35 million customers:
 
-* LU/LUT = Customer.
-* LUI = one single customer database.
+* LU/LUT = Customer
+* LUI = one single customer database
 
 Fabric will hold 35 million instances (LUIs) of the Customer LUT. That is, one physical database for each customer.
 
@@ -55,11 +72,11 @@ Every Fabric project starts by defining its LUs. Analyze the business requiremen
 ### General Recommendations for Designing an LU 
 Business Entity is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data source.
 
-In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Business Entity.
+In general, an LU should be based on the smallest number of data sources, as long as it represents a full view of a Data Product.
 
 For example, if you have a Data Product called Customer, but different Customer Types (e.g. consumer and business) have different data sources, the recommended approach will be to create an LU for each subtype (in our example, different Customer Types).
 
-Below is a table of **pros and cons** of each alternative:
+Below is a **pros and cons** table of each alternative:
 
 <table role="table" width="800">
 <tbody>
@@ -139,9 +156,9 @@ Below is a table of **pros and cons** of each alternative:
 
 **Note:**
 
-The file name ambiguity is not supported within the same Logical Unit. This is not restricted by the Fabric Studio on purpose, to allow the implementor continue his work and update the names later. For example, if 2 Java function files with identical names were exported from other projects or libraries, they can be saved in the project in the Fabric Studio. 
+The file name's ambiguity is not supported within the same Logical Unit. This is not restricted by the Fabric Studio on purpose, allowing the implementor to continue the work and to update the names later. For example, if 2 Java function files with identical names were exported from other projects or libraries, they can be saved in the project in the Fabric Studio. 
 
-However, **at run-time there should be no ambiguity within the LU**, otherwise the server will run the first file that it finds (no commitment to what is considered the first one).
+However, **at run-time there should be no ambiguity within the LU**, otherwise the server will run the first file it finds (with no commitment as to what is considered the first one).
 
 
 

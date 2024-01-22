@@ -30,5 +30,15 @@ The following components can be shared in a Fabric project:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md)
+
+
+<div class="studio">
+<a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project..html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+</div>
+
+<div class="web">
+<a href="/articles/04_fabric_studio/09_logic_files_and_categories.html"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/26_web_basic_code_editing.html"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+</div>
 

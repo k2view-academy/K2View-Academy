@@ -4,52 +4,52 @@
 
 Fabric Studio has a proprietary encapsulation functionality that encapsulates an entire project or selected components. Fabric projects can be backed up and restored using the Export and Import options that trigger the encapsulation and decapsulation processes.
 
-### Exporting Selected Project Components
+## Exporting Selected Project Components
 
-There are two Export options:
-* Export an entire project.
+There are 2 ***Export*** options:
+* Export an entire project, or
 * Export a specific object, for example:
-  * Group of items, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](/articles/03_logical_units/01_LU_overview.md).
-  * Sub-groups, [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
+  * Group of items - [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LUs](/articles/03_logical_units/01_LU_overview.md).
+  * Sub-groups - [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
   * Java files (categories).
-  * Objects, whereby you can export a specific object from the Project Tree. Java functions cannot be exported using this method.
+  * Objects - you can export a specific object from the Project Tree; however, Java functions cannot be exported using this method.
 
-To export a project, do the following:
-1. Right-click on the **Project Group** or on **Object** and then click **Export**. 
-2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file is created with a k2export extension.
+To export a project, perform the following:
+1. Right-click on either the **Project Group** or **Object** and then click **Export**.
+2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file will then be created with a k2export extension.
 
-### Importing Selected Project Components
+## Importing Selected Project Components
 
-You can import an entire exported project or specific branches of a Project Tree whereby the imported objects are attached to an existing project.
+You can import an entire exported project or specific branches of a Project Tree, where the imported objects are attached to an existing project.
 
 **Notes**  
-* There is no backwards support compatibility. Importing a project exported from a later version of K2View Fabric Studio is not supported.
-* Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group. I.e., you may copy Java files from Shared Objects into Reference Java files. 
-* The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overwrites the entire file including its Java functions.  
-* When updating a specific function in a Java file, add the function to the Java file manually. 
+* There is no support for backward compatibility. Importing a project, which is exported from a later version of K2view Fabric Studio, is not supported.
+* Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group, i.e., Java files from Shared Objects into Reference Java files.
+* The *Import* process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overwrites the entire file, including its Java functions.  
+* When updating a specific function in a Java file, add the function manually to the Java file. 
 * Java files are imported into the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 * Importing [Globals](/articles/08_globals/01_globals_overview.md) to an existing Globals file does not overwrite the existing Java file. Both files are merged into one file. In case they have the same name, the new file overwrites the existing file with the value of the imported variable. 
 
 ### How Can I Import a K2EXPORT File Into My Project?
 
-**Import Options**
+***Import* Options**
 
-* **Import All** - imports the entire exported project together with notes regarding overwritten data and creating new LU.
-* **Custom Import** - enables you to select the exported objects or group items to be imported.
+* **Import All** - imports the entire exported project; several confirmation messages are displayed during the import process, validating whether to override the existing files, to create a new LU, etc.
+* **Custom Import** - enables you to either select the exported objects or group items to be imported.
 
-**Import All Process**
+***Import All* Process**
 
 1. Right-click on the root of the **Project Tree**, click on **Import** and then choose **Import All** to open the File **Browser** and select the **k2export** **file** to be imported.  
 
 ![image](images/04_11_01_k2export_file.PNG)
 
 2. Select the **file** and click **Open**:  
-    a. If the file name exists, click either **OK** to confirm or **Ignore** to overwrite or skip the files.\
+    a. Select the LU from the drop-down list to import the files to and click **OK**, or click **Ignore** to skip.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file name.
 
     ![image](images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
-3. A confirmation window opens asking you whether you want to:\
+3. A confirmation message appears in a pop-up window, asking you whether you want to:\
     a. Overwrite the specific file.\
     b. Overwrite all the conflicting files in the import package.\
     c. Decline the overwrite of the specific file.\
@@ -57,7 +57,7 @@ You can import an entire exported project or specific branches of a Project Tree
 
     ![image](images/04_11_03_confirmation_window.PNG)
 
-### Custom Import Process
+## Custom Import Process
 
 1. Right-click on the root of **Project Tree**, click on **Import** and then click **Custom Import**.
 
@@ -71,14 +71,14 @@ The Custom Import window displays the number of imported and overwritten items.
 
 3.  Right-click the **Target Project Tree** to display a context menu with the following options:
 
-    a. **Remove All Conflicted Items** - removes all conflicting items from the target whereby only new items remain.\
+    a. **Remove All Conflicted Items** - removes all conflicting items from the target, where only new items will remain.\
     b. **Remove Import Items** - removes selected items only. Right-click an item to select it.\
     c. **Show Conflicted Items Only** - displays only items that conflict with existing items.\
     d. **Show Import Item Only** - displays imported items only.\
-    e. **Show All Items** - displays all items in the project tree.
+    e. **Show All Items** - displays all items in the Project Tree.
 
-4. Click on **Import & Close** to confirm the Import process or to close the window for canceling it. 
-5. A confirmation window opens asking you whether you want to:
+4. Click on **Import & Close** (bottom-right corner of the screen) to confirm the Import process and to close Import tab.
+5. A confirmation window opens, asking whether you want to either:
 
     a. Overwrite the specific file.\
     b. Overwrite all the conflicting files in the import package.\
@@ -97,17 +97,17 @@ When importing objects with the same name and location in the Project Tree, a ye
 
 <web>
 
-### Import / Upload files
+## Import / Upload Files
 
-Importing project files or folders into your project can be done either by:
+Importing project files or folders into your project can be done by either:
 
-* Using the **File > Upload Files...** available at top menu bar, when the target folder at the project tree is selected.
+* Using the **File > Upload Files...** available at top menu bar, when the target folder in the Project Tree is selected.
 * Dragging and dropping them from your PC/Mac folder into the required location.
 
-* Using the context menu (right-click) on the target folder in the project tree.
+* Using the context menu (right-click) on the target folder in the Project Tree.
   ​     
 
-The upload progress will be displayed at the bottom right corner of the screen:
+The upload progress will be displayed at the bottom-right corner of the screen:
 
   ![image](images/web/5_upload_progress.PNG)
 
@@ -115,21 +115,32 @@ The upload progress will be displayed at the bottom right corner of the screen:
 
 > Note: 
 >
-> * As this is a standard IDE file upload action, there is no validation on what you are uploading and where. 
-> * When asked about overriding elements, your selection affects all uploaded files.
+> * As this is a standard IDE file upload action, there is no validation of what you are uploading and whereto. 
+> * When asked about overwriting elements, your selection affects all uploaded files.
 
 
 
-### Export / Download 
+## Export / Download Project
+
+To export the whole project:
+
+1. From **Fabric** in the top menu bar, choose **Export Project To Zip File...**
+2. Type the name of the target zip file.
+3. The zip file will be generated and located in project's root folder.
+4. Right-click to download it.
+
+
+
+## Export / Download Files or Folders
 
 To export files or folders:
 
-1. Choose them in the project tree and then 
+1. Choose them in the Project Tree, and then 
 2. Use the **File > Download** available from top menu bar or context menu (right-click) > Download option.
 
 The files and folders are then downloaded into your PC/Mac.
 
-Note: when selecting folders or multiple files, the download outcome is a compressed "tar" file.
+Note: When selecting folders or multiple files, the download outcome is a compressed TAR file.
 
 
 

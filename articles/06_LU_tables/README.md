@@ -1,6 +1,6 @@
 <strong>LU Tables<strong>
-<ul>
 
+<ul>
 <li><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables Overview</a></li>
 <li><a href="/articles/06_LU_tables/02_create_an_LU_table.md">Create an LU Table</a></li>
 <li><a href="/articles/06_LU_tables/03_table_indexes.md">Table Indexes</a></li>

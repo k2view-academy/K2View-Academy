@@ -94,5 +94,10 @@ Nodes that can be added:
 
 
 
+​	
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/23_web_versioncontrol.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/27_web_productivity_tips.md)
+
 </web>
 

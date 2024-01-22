@@ -41,7 +41,7 @@ The following steps discuss how a new Java-based Web Service is created, and inc
    <p>Replace the <strong>&lt;instanceID&gt; placeholder</strong> with the input parameter <strong>CUSTOMER_ID</strong>.</p>
    <p>Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);</p>
 
-9. Set the [**Web Service Properties**](02_web_services_properties.md) in the right pane.
+9. Set the [Web Service Properties](/articles/15_web_services_and_graphit/09_custom_ws_properties.md) in the right pane.
 
 </studio>
 
@@ -65,7 +65,7 @@ public static void webServiceName(@param(description="") String param1) throws E
 }
 ```
 5. Write your web service logic in the Java Editor.
-6. Set the [Web Service Properties](09_custom_ws_properties.md) by changing the function annotations. 
+6. Set the [Web Service Properties](/articles/15_web_services_and_graphit/09_custom_ws_properties.md) by changing the function annotations. 
 
 > Notes that you can add web services functions by pressing CTRL -> SPACE and selecting the requested snippet (tip: start typing fabric to reveal the required one - "fabric-function-ws").
 

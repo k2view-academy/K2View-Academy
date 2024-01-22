@@ -48,13 +48,14 @@ Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) f
 
 The following activities can be done on each environment:
 
-* Click the **Test Connection**<img src="images/test_conn_icon.png" style="zoom:80%;" />icon to test the connections of all interfaces under this environment. Once the test connection is completed, the results (success or failure icon) are displayed next to each interface name:
-
-  <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
-
 * Click the **Delete** <img src="images/delete_icon.png" style="zoom:90%;" />icon to delete the environment.
 
 * Click the **Active**<img src="images/active_toggle.png" style="zoom:90%;" />icon to disable or enable the environment.
+
+* Click the **Test All Connections** button to test the connections of all interfaces under this environment. Once the test connection is completed, the results (success or failure icon) are displayed next to each interface name:
+
+  <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
+
 
 </web>
 

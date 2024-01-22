@@ -1,30 +1,9 @@
-# LU Schema Window
+# Logical Unit / Data Product Schema Window
 
-### Logical Unit (LU) - Related Objects
-A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a tree-like structure known as the Project Tree; it displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window and its Logical Units (LUs) are located under the Logical Units branch.
-
-The following objects are located under each [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
-* [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema).
-* Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md).
-* Resources, files that can be saved as part of a project. E.g., an Excel file.
-* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md). 
-* [Broadway](/articles/19_Broadway/01_broadway_overview.md).
-
-<studio>    
-
-* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
-* Parsers.
-* Instance Groups: lists of instances to be migrated into Fabric for the LU. 
-* Jobs.
-* IIDFinder. 
+A Logical Unit schema's diagram represents the design for a specific data product dataset, its tables, their relations, population flows, synchronization rules and other business definitions.  
 
 
-</studio>
-
-### 
 In order to open the **Logical Unit Schema** window, go to the **Project Tree**, click on the **LU Name** and then on the **Schema**.
-
-### Logical Unit Schema Window
 
 <studio>
 
@@ -36,20 +15,19 @@ In order to open the **Logical Unit Schema** window, go to the **Project Tree**,
 
 ![image](images/web/03_lu_schema_window_H.png)
 
-
-
-
-
 </web>
 
-The Logical Unit Schema window has three main sections:
-* [Logical Unit schema diagram.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
-* <studio>[Logical Unit tabs panel.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-tabs-panel)</studio><web>[Logical Unit properties panel](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-properties-panel)</web>
-* [Logical Unit toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
+The Logical Unit Schema window has 3 main sections:
+* Logical Unit schema's diagram
+* <studio>Logical Unit tabs panel</studio><web>Logical Unit side panel</web>
+* Logical Unit toolbar
 
-### Logical Unit Schema Diagram
-The Logical Unit schema diagram is a working area where you can define the Logical Unit’s structure. 
-* A Logical Unit schema diagram displays a hierarchy of all business entities related to a Root Table. 
+
+
+## Logical Unit Schema's Diagram
+
+The Logical Unit schema's diagram is a working area where you can design the Logical Unit’s structure. 
+* A Logical Unit schema's diagram displays a hierarchy of all business entities related to a Root Table. 
 * Each table can have one or more population/s, where each population is linked to its parent table.
 
 [Click for more information about Logical Unit Tables.](/articles/06_LU_tables/01_LU_tables_overview.md)
@@ -70,7 +48,7 @@ The Logical Unit schema diagram is a working area where you can define the Logic
 
 </web>
 
-The Logical Unit schema diagram displays the Root Table, the hierarchy of the tables included in the Logical Unit and the relationships between them:
+The Logical Unit schema's diagram displays the Root Table, the hierarchy of the tables included in the Logical Unit and the relationships between them:
 * The Root Table of the LU schema is Customer. 
 
 * Each table is displayed with all of its fields in a scrollable table.
@@ -87,13 +65,17 @@ The Logical Unit schema diagram displays the Root Table, the hierarchy of the ta
 
 </studio>
 
-In order to make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
+In order to get a clearer view of the schema's structure, you can group a list of tables. For example, group all Billing tables in the Customer LU.
 
 [Click for more information about Grouping and Ungrouping LU Tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md).
 
+
+
+## Logical Unit Side Panel
+
 <studio>
 
-### Logical Unit Tabs Panel
+The side panel is divided into several tabs:
 
 <table style="width: 900px;">
 <tbody>
@@ -110,7 +92,7 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 <p><strong><a href="15_LU_schema_edit_reference_tab.md">References Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
-<p>Used to configure the Reference Tables that are accessible from this LU.</p>
+<p>Used for configuring the Reference Tables that are accessible from this LU.</p>
 </td>
 </tr>
 <tr>
@@ -118,7 +100,7 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 <p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Enrichment functions - directly related to specific LU tables - are included in the display.</p>
+<p>Defines the execution order of Enrichment functions using the upward and downward arrows. Only Enrichment functions - directly related to specific LU tables - are included in the display.</p>
 </td>
 </tr>
 <tr>
@@ -126,9 +108,9 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 <p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><strong>DB Objects Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
-<p>DB objects can be refreshed by clicking on the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
-<p>Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
+<p>Displays a list of objects in the source database according to the selected DB Interface in the DB Connection field.</p>
+<p>DB objects can be refreshed by clicking on the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> drop-down list.</p>
+<p>Dragging an object to the diagram creates a new table in the schema. &nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -136,7 +118,7 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 <p><strong>Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays the list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area in order to add it to the LU schema.</p>
+<p>Displays a list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag a table into the Logical Unit diagram area in order to add it to the LU schema.</p>
 </td>
 </tr>
 <tr>
@@ -144,7 +126,7 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 <p><strong><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline">Diagram Outline Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays an overview of the LU structure and enables a search of a subset of tables included in the schema.</p>
+<p>Displays an overview of the LU structure, and enables searching a subset of tables that is included in the schema.</p>
 </td>
 </tr>
 </tbody>
@@ -154,96 +136,64 @@ In order to make the structure of the table schema clearer, group or ungroup a l
 
 <web>
 
-### Logical Unit Properties Panel
+The side panel is divided into 2 tabs:
 
-The properties panel displays the schema properties. It can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper right corner of the schema window.
-
-<table style="width: 900px;">
-<tbody>
-<tr>
-<td width="170pxl">
-<p><strong>Sync</strong></p>
-</td>
-<td width="630pxl">
-<p>Sets the <a href="/articles/14_sync_LU_instance/08_sync_timeout.md">sync timeout</a> and <a href="/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
-<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered following a Sync's success or failure or following a successful Delete instance.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><strong>Misc</strong></p>
-</td>
-<td>
-<p>Contains various settings such as <a href="/articles/32_LU_storage/01_LU_storage_overview.md#storage-types">storage</a>, <a href="/articles/32_LU_storage/02_storage_management.md#changing-the-location-of-the-cache">cache location</a> and Enable data encryption.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 119px;">
-<p><strong><a href="15_LU_schema_edit_reference_tab.md">Dependent References</a></strong></p>
-</td>
-<td style="width: 414px;">
-<p>Used to configure the Reference Tables that are accessible from this LU.</p>
-</td>
-</tr>
-</tbody>
-</table>
+* **[Schema Properties](04_LU_properties.md)** - where you can set the logical unit definitions.
+* **[Population Order View](19_LU_population_order_view.md)** - where you can see and manage both the tables' list and the order of table population flows.
 
 
+
+The side panel can be collapsed or expanded by clicking the <img src="images/web/show_properties.PNG" style="zoom:50%;" /> icon in the upper-right corner of the schema window.
 
 </web>
 
-
-
-### Logical Unit (LU) Schema Window Toolbar
+## Logical Unit Schema Window Toolbar
 <studio>
 
-The LU Diagram window displays the following toolbar - by default:
+The LU schema's diagram window displays the following toolbar:
 
 ![image](images/1.3_LU_window_icons.png)
 
-You can customize your window by adding or deleting toolbars to/from diagram windows:
+
 
 <table>
 <tbody>
-
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
-<p>Group SubGraph.</p>
+<p>Group SubGraph</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
 <td width="557">
-<p>Ungroup SubGraph.</p>
+<p>Ungroup SubGraph</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp;<img src="images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
-<p>Update Tables from Database.</p>
-<p>When clicked, the LU tables schema is refreshed from the source database. This action is required when the LU tables schema has been updated in the source database.</p>
-<p>Note: only current tables are updated. Tables are manually added or deleted from an LU.</p>
+<p>Update Tables From Database</p>
+<p>When clicked, the LU tables' schema is refreshed from the source database. This action is required when the LU tables' schema has been updated in the source database.</p>
+<p>Note: Only current tables are updated. Tables are manually added or deleted from an LU.</p>
 </td>
 </tr>
 <tr>
 <td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
 <td width="557">
-<p>Refresh Items, refreshes items from an implementation into the LU schema.</p>
+<p>Refresh Items - refreshes items from an implementation into the LU schema.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-
+You can customize the schema's toolbar by right-clicking on it and selecting 'Customize...'; a pop-up window shall then open, where you can add/remove toolbars to/from the display:
 
 [Click for more information about Group and Ungroup SubGraph Objects.](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md)
 
 [Click for more information about Fabric Studio Diagrams Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
 [Click for more information about LU Refresh Options.](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md)
-
-[![Previous](/articles/images/Previous.png)](02_create_a_logical_unit_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_LU_properties.md)
 
 </studio>
 
@@ -255,38 +205,24 @@ The LU Schema toolbar includes the following elements:
 
 <table style="width: 900px;">
 <tbody>
-
-
-
 <tr>
-
 <td style="text-align: center;" width="170pxl"><img src="images/web/refresh.png" alt="" /></td>
 <td width="630pxl">
-<p>Refresh Schema's elements that are based on changes done externally to this window. For example, when a table was edited via the project tables folder or when population inputs were updated at the population editor.</p>
+<p>Refresh schema's elements that are based on changes made outside this window. For example, when a table was edited via the project tables folder or when population inputs were updated in the population editor.</p>
 </td>
 </tr>
-
-<tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier.svg" alt="" /></td>
-<td width="630pxl">
-<p>Magnifier - activated when clicked; can be moved anywhere over the schema diagram in order to magnify existing features.</p>
-</td>
-</tr>
-
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/ungroup.svg" /></td>
 <td width="630pxl">
-<p>Ungroup, Remove the selected tables from the group, in case you select tables; Remove the group if a group is selected.</p>
+<p>Ungroup - remove either selected tables from a group (in case you select tables) or an entire group (if a group is selected).</p>
 </td>
 </tr>
-
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/group.svg" alt="" /></td>
 <td width="630pxl">
 <p>Group the selected tables.</p>
 </td>
 </tr>
-
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/new-table.svg" alt="" /></td>
 <td width="630pxl">
@@ -296,29 +232,37 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/auto-layout.svg" alt="" /></td>
 <td width="630pxl">
-
-<p>Schema auto-layout.</p>
+<p>Schema's Auto Layout - automatically arranges and optimizes visualization.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_data_viewer.png" alt="" /></td>
 <td width="630pxl">
-
-<p>Open the Data Viewer popup in order to run queries on IID of the current LU.</p>
+<p>Open the Data Viewer pop-up window in order to run queries on the current LU's IIDs.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/data-viewer.svg" alt="" /></td>
 <td width="630pxl">
-
-<p>Open the Table Data Viewer bottom panel. The data will be displayed according to the selected table.</p>
+<p>Open the Table Data Viewer's bottom panel (height adjustable). The data will be displayed according to the selected table.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/light-off.svg" alt="" /></td>
+<td width="630pxl">
+<p>Highlight tables - activated when clicked, as explained <a href="/articles/03_logical_units/20_LU_highlight_tables.md">here.</a></p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/magnifier1.png" alt="" /></td>
+<td width="630pxl">
+<p>Magnifier - activated when clicked; can be moved across the schema's diagram to enlarge existing elements, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#magnifier">here</a>.</p>
 </td>
 </tr>
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/mini-map-off.svg" alt="" /></td>
 <td width="630pxl">
-
-<p>Open the schema's mini-map and navigation panel.</p>
+<p>Navigation Minimap - when clicked, it provides an overview of the whole schema, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#navigation-mini-map">here</a>.</p>
 </td>
 </tr>
 <tr>
@@ -330,7 +274,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/schema_search_table_or_group.png" alt="" /></td>
 <td width="630pxl">
-<p>Search a table or a table's group in the LU schema.</p>
+<p>Search elements (tables, table-groups, tables' columns, populations) in the schema, as explained <a href="/articles/03_logical_units/21_big_schema_productivity_tips.md#schema-search">here</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -338,8 +282,8 @@ The LU Schema toolbar includes the following elements:
 
 
 
-
-
-[![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
-
 </web>
+
+
+
+[![Previous](/articles/images/Previous.png)](02_create_a_logical_unit_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_LU_properties.md)
