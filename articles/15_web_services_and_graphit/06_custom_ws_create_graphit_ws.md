@@ -57,7 +57,7 @@ To create a new Graphit Web Service, follow these steps:
 
     ![](17_Graphit/images/new_item_name_and_category.png)
 
-    Once **Ok**'ed, the newly created Graphit file name appears in the **Project tree**, under its category, and automatically receives a '**.graphit**' **suffix**:
+    Once **Ok**'ed, the newly created Graphit file name appears in the **Project Tree**, under its category, and automatically receives a '**.graphit**' **suffix**:
 
     ![](17_Graphit/images/project_tree_incl_graphit_file_name.png)
 
@@ -74,7 +74,7 @@ When initiated from the Fabric menu:
 1. Open **Fabric** Menu, choose **New Web Service**
 2. Select **New Graphit Web Service**
 
-When initiated from the project tree: 
+When initiated from the Project Tree: 
 
 1. Go to **Project Tree**, click on **Implementation** -> **Logical Units / Data Products** -> **Web Services**
 2. Expand **Web Services** -> right-click on **Graphit** and choose **New Graphit**
@@ -161,7 +161,7 @@ To learn more about editing a Graphit file - using the Graphit Editor - read [he
 
 
 
-> NOTE: Prior to  Fabric 7, Graphit files were located only under Java/resources folder. This option is still available, for a backward compatibility.
+> NOTE: Prior to Fabric 7, Graphit files were located only under Java/resources folder. This option is still available, for a backward compatibility.
 
 
 
