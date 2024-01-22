@@ -90,7 +90,7 @@ The following matching rules are defined in the plugins.discovery file and are a
     </tbody>
     </table>
 
-* **same_field_names_pk** - common fields that are part of the PK in both datasets, and where both datasets have identical number of PKs.
+* **same_field_names_pk** - common fields that are part of the PK in both datasets, and where both datasets have an identical PKs number.
   * The relation is created and its direction is random. The score is 0.4.
 * **same_field_names_not_pk** - both datasets have fields with the same names (normalized, not in *field_name_blk*), both are non-PK.
   * The relation is created and its direction is random. The score is 0.2.
