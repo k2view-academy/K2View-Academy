@@ -149,7 +149,7 @@ Note that exposing the SQL fields is optional and even if you choose **NO**, the
 
 
 
-It now appears in the **Project tree**, under its category, and automatically receives a '**.graphit**' **suffix**:
+It now appears in the **Project Tree**, under its category, and automatically receives a '**.graphit**' **suffix**:
 
 ![](17_Graphit/images/web_category_and_name_of_graphit_inside_project_tree.png)
 
