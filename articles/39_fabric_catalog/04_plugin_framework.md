@@ -26,7 +26,7 @@ This file can be updated per your project's requirements. Once the plugins.disco
 
 ### Data Sample Settings
 
-The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
+The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is being used by the various plugins during the job run. Once the plugins execution has been completed, the data sample is deleted.
 
 The sample size is configured in the [sample_size] section of the plugins.discovery file as follows:
 
