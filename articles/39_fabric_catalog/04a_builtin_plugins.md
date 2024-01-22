@@ -131,7 +131,7 @@ To update the metadata profiling rules, go to the [Catalog Settings > Classifier
 
 #### Field Exclusion List
 
-Fields can be excluded from the **Metadata Regex Classifier** plugin's logic by their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the classification process. 
+Fields can be excluded from the **Metadata Regex Classifier** plugin's logic by either their name or type. This can be useful when, for example, you need to exclude all fields with certain name or name pattern from the classification process. 
 
 The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. The **field_name_exclude_list** definition can be either the exact field name or a regular expression.
 
