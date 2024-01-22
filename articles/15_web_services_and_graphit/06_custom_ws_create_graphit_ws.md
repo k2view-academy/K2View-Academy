@@ -134,7 +134,7 @@ Note that only nodes with a tag name are displayed in the output document, when 
 
 Read [here](https://support.k2view.com/Academy/articles/11_query_builder/01_query_builder_overview.html) for more information about Query Builder.
 
-Following the creation of the 2nd node and its population, a message pops up, asking whether you want to create table fields, i.e. laying out and exposing the SQL fields in the Graphit; choose **YES**.
+Following the creation of the 2nd node and its population, a message pops up, asking whether you want to create table fields, i.e., laying out and exposing the SQL fields in the Graphit; choose **YES**.
 
 ![](17_Graphit/images/create_table_fields_message.png)
 
