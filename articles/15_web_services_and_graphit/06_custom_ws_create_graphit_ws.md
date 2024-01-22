@@ -87,11 +87,11 @@ When initiated from the Project Tree:
 
 ![](17_Graphit/images/web_choose_category.png)
 
-or click on **New Category** to enter a new category name, followed by *Enter* for saving it:
+or, click on **New Category** to enter a new category name, followed by *Enter* for saving it:
 
 ![](17_Graphit/images/web_enter_new_category.png)
 
-The following step is to enter **a name** for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
+The next step is to enter **a name** for your new Graphit file, followed by *Enter* for saving it. Note that the name should contain only alpha-numeric characters.
 
 Using the file name, you can control and set both the web-service version and its verb. For more information - read [here](09_custom_ws_properties.md#Graphit). The pop-up window itself provides some tips about the recommended naming conventions.
 
