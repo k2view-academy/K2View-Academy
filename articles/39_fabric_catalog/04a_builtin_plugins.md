@@ -18,17 +18,17 @@ If a match is found, the plugin evaluates both the relation direction and the fo
 
 The following matching rules are defined in the plugins.discovery file and are applied by the plugin:
 
-* **field_name_is_id_and_pk** - Dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
+* **field_name_is_id_and_pk** - dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
   
   * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Example: *customer.ID (PK) and* *activity.customer_id*
-* **field_name_is_id_and_not_pk** - Dataset1 has a non-PK field **id** and dataset2 has a field **dataset1id** (normalized).
+* **field_name_is_id_and_not_pk** - dataset1 has a non-PK field **id** and dataset2 has a field **dataset1id** (normalized).
   * The relation *dataset2 refers to dataset1* is created and its score is 0.6.
   * Example: *customer.ID (non-PK) and* *activity.customer_id*
-* **single_field_pk_and_not_pk** - Dataset1 has a PK field **id** and dataset2 has a field with the same name (normalized), non-PK.
+* **single_field_pk_and_not_pk** - dataset1 has a PK field **id** and dataset2 has a field with the same name (normalized), non-PK.
   * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Example: *customer.customer_id (PK) and* *activity.customer_id* 
-* **common_fields_in_both_pk** - Common fields that are part of the PK in both datasets, but where dataset1 has less PKs than dataset2.
+* **common_fields_in_both_pk** - common fields that are part of the PK in both datasets, but where dataset1 has less PKs than dataset2.
   * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Some examples of the matching rules are:
 
