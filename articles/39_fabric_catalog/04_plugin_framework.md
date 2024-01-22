@@ -67,7 +67,7 @@ The above configuration defines the following rules:
 
 Each plugin's definition in the plugins.discovery includes a **threshold** - the score above which the plugin result impacts the Catalog. When the threshold is set to 0.4 and the rule receives a calculated score of 0.4 or below, this rule has no impact on the Catalog.
 
-To enable the Catalog to show more results, update the threshold to a number lower than 0.4, and vice versa, to show less results, update the threshold to a higher number.
+To enable the Catalog to show more results - update the threshold to a number lower than 0.4, and to show less results - update the threshold to a higher number.
 
 ### Custom Plugins
 
