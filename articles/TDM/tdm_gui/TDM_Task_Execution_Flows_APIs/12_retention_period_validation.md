@@ -52,7 +52,7 @@ Get the task's environment id from the [tasks](03_get_task_details_APIs.md) API 
 
 
 
-### Validate the Retention Period on the Extract Data Versioning Task
+### Validate the Retention Period on Extract Data Versioning Task
 
 Get the maximum number of days from the [retentionperiodinfo](10_retention_period_options.md) API and compare it with the task's retention period:
 
@@ -71,9 +71,29 @@ Note that if the task's retention period is set with a different unit (that is, 
 
 
 
-### Validate the Reservation Period for Testers
+### Validate the Reservation Period
 
-Call the **validatereserveretentionperiod** API to validate the reservation period of the task's entities. The maximum retention period is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter of the tdm_general_parameters TDM DB table.
+### Option I
+
+Get the maximum number of days from the [retentionperiodinfo](10_retention_period_options.md) API and compare it with the task's retention period:
+
+- **maxRetentionPeriodForReserve** attribute returns the maximum number of days to be set in the retention period for **Entity Reservation**. 
+
+  Example: 
+
+  ```json
+  "maxRetentionPeriodForReserve": {
+        "units": "Days",
+        "value": "10"
+      }
+  ```
+
+
+Note that if the task's retention period is set with a different unit (that is, the unit is not set to 'Days'), the task's retention period must be converted to days to validate it.
+
+### Option II
+
+Call the **validatereserveretentionperiod** API to validate the reservation period of the task's entities.
 
 #### API URL
 

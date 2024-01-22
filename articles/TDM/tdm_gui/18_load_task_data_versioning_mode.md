@@ -1,6 +1,6 @@
 # TDM Load Task - Data Versioning Mode
 
-A Load task contains the **Load** task type and loads (provisions) the task's entities and/or Reference tables to the target environment. A [Data Versioning Load task](15_data_flux_task.md) gets the selected entities or Reference tables from the selected data version created on the source environment, deletes the current data from the target environment,  and reloads the selected data version  to the selected target environment.
+A Load task contains the **Load** task action and loads (provisions) the task's entities and/or Reference tables to the target environment. A [Data Versioning Load task](15_data_flux_task.md) gets the selected entities or Reference tables from the selected data version created on the source environment, deletes the current data from the target environment,  and reloads the selected data version  to the selected target environment.
 
 A Load task contains the following tabs:
 
@@ -28,7 +28,7 @@ The following execution parameters are set on **Load Data Versioning tasks**:
 
 ### Data Type
 
-Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting .
+Check **Entities** and/or **Reference** to load them to the target environment selected in the **Provision to Environment** setting.
 
 Note that you must check the Entities Data Type if the [Reserve](/articles/TDM/tdm_architecture/08_entity_reservation.md) Task Action is also checked in the task.
 
@@ -36,7 +36,7 @@ Click [here](24_task_reference_tab.md) for more information about the reference 
 
 ### Reservation Period
 
-The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
+The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task action is checked together with the Load task action).
 
 Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
@@ -54,7 +54,7 @@ This setting has been added by TDM 7.5.2. The user can populate it with a free t
 
 Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
 
-### Post Execution Processes
+### Post-Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
 
@@ -62,7 +62,7 @@ Select all, partial, or one [post execution process](04_tdm_gui_business_entity_
 
 Note:
 
-- The **Set Sync Policy**, **Retention Period** and **Replace Sequence** settings are not displayed when the Data Versioning is checked as the task gets the selected data version from the TDM warehouse (Fabric) and reloads it to the target 'as is'.
+- The **Set Sync Policy**, **Retention Period**, and **Replace Sequence** settings are not displayed when the Data Versioning is checked as the task gets the selected data version from the TDM warehouse (Fabric) and reloads it to the target 'as is'.
 
 ## Requested Entities Tab
 

@@ -1,8 +1,8 @@
 # TDM Reference Processes
 
-The list of Reference tables available for TDM tasks is populated in the [trnRefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnreflist) translation object.  TDM 7.6 onwards stores the Reference tables in a dedicated LU: **TDM_Reference**. Each Reference table is stored as a separate LUI.  
+The list of Reference tables available for TDM tasks is populated in the [RefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#reflist) MTable. TDM 7.6 onwards stores the Reference tables in a dedicated LU: **TDM_Reference**. Each Reference table is stored as a separate LUI.  
 
-Previous TDM versions stored the extracted reference tables in the Cassandra DB:  the TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target environment. 
+Previous TDM versions stored the extracted reference tables in the Cassandra DB: The TDM Extract tasks stored the selected reference data in the Cassandra DB and the TDM Load tasks selected the reference tables from Cassandra and loaded them into the target environment. 
 
 
 
@@ -34,14 +34,14 @@ Note that **the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) 
 
 
 
-### TDM_Refrence LU - reference_table LU Table 
+### TDM_Reference LU - reference_table LU Table 
 
 The reference_table LU table keeps the reference data. The LU table has the following fields:
 
 - TABLE_NAME - populated with the reference table name, e.g., CUSTOMER_TYPE.
 - TDM_TASK_EXECUTION_ID - populated, by default, with **ALL**. When running a TDM Extract task in [Data Versioning mode](/articles/TDM/tdm_gui/16_extract_task.md#entity-versioning), this column is populated by the task_execution_id of the task execution. 
 - SOURCE_ENV_NAME - populated by the source environment.
-- TABLE_DATA - the table data are extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
+- TABLE_DATA - the table data is extracted into a JSON structure. The JSON is compressed and saved in a BLOB field. 
 - RECORD_COUNT - number of records of the reference table.
 - TABLE_FIELDS - list of the reference table's fields.
 
@@ -111,7 +111,7 @@ The reference_table LU table keeps the reference data. The LU table has the foll
 
  
 
-- Creating and executing an Extract task with a regular mode (Data Versioning setting is cleared) to extract CUSTOMER_TYPE Reference table from ENV1.  A new LUI is created in TDM_Reference LU: Customer|ENV1|ALL|CUSTOMER_TYPE.
+- Creating and executing an Extract task with a regular mode (Data Versioning checkbox is unchecked) to extract CUSTOMER_TYPE Reference table from ENV1. A new LUI is created in TDM_Reference LU: Customer|ENV1|ALL|CUSTOMER_TYPE.
 
 - The LU table is populated as follows:
 

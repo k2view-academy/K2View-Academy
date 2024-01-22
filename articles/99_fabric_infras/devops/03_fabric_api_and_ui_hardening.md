@@ -6,7 +6,7 @@
 
 Run the Web server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the key store. 
 
-* Usage: ```certifcates.sh genkey <ALIAS> [CNAME] [PASSWORD]```
+* Usage: ```certificates.sh genkey <ALIAS> [CNAME] [PASSWORD]```
 
 ### Step 2 - Copy the key to all Fabric nodes
 

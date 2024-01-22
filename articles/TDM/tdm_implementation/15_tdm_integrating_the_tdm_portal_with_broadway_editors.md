@@ -1,6 +1,6 @@
 # Integrating the TDM Portal with Broadway Web Editors
 
-TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters](16_tdm_data_generation_implementation.md#external-business-parameters) or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
+TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [data generation parameters] or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
 
 This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
 

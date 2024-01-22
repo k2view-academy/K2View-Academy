@@ -17,35 +17,35 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <table style="width: 700px;">
 <tbody>
 <tr style="height: 35px;">
-<td style="width: 200px;"><strong>Node Type</strong></td>
-<td style="width: 500px;"><strong>RDBMS</strong></td>
+<td style="width: 100px;"><strong>Node Type</strong></td>
+<td style="width: 600px;"><strong>Fabric Interface Type</strong></td>
 </tr>
 <tr>
-<td style="width: 189.703px;"><strong>DATA_PLATFORM</strong></td>
-<td style="width: 321.297px;">DB Interface</td>
+<td style="width: 189.703px;"><strong>dataPlatform</strong></td>
+<td style="width: 321.297px;">Represents a Fabric interface in the Catalog data model</td>
 </tr>
 <tr>
-<td style="width: 189.703px;"><strong>SCHEMA</strong></td>
-<td style="width: 321.297px;">Schema of DB Interface</td>
+<td style="width: 189.703px;"><strong>schema</strong></td>
+<td style="width: 321.297px;">Represents a schema of the Fabric interface</td>
 </tr>
 <tr>
-<td style="width: 189.703px;"><strong>DATASET</strong></td>
-<td style="width: 321.297px;">DB Table or View</td>
+<td style="width: 189.703px;"><strong>dataset</strong></td>
+<td style="width: 321.297px;">Represents a dataset (e.g. table) of the Fabric interface’s schema</td>
 </tr>
 <tr>
-<td style="width: 189.703px;"><strong>CLASS</strong></td>
-<td style="width: 321.297px;">DB Table or View (1:1 to DATASET)</td>
+<td style="width: 189.703px;"><strong>class</strong></td>
+<td style="width: 321.297px;">Represents a dataset (e.g. table) of the Fabric interface’s schema (1:1 to dataset)</td>
 </tr>
 <tr>
-<td style="width: 189.703px;" rowspan="2"><strong>FIELD</strong></td>
-<td style="width: 321.297px;">Columns of DB Table or View</td>
+<td style="width: 189.703px;" rowspan="2"><strong>field</strong></td>
+<td style="width: 321.297px;">Represents a dataset field</td>
 </tr>
 <tr>
 <td style="width: 321.297px;">
-<p>The FIELD data type can be:</p>
+<p>The field data type can be:</p>
 <ul>
-<li>PRIMITIVE - string, integer, blob, date, number, Boolean or any.</li>
-<li>COLLECTION - an array of primitive values.</li>
+<li>primitive - string, integer, blob, date, number, boolean or any.</li>
+<li>collection - an array of primitive values.</li>
 </ul>
 </td>
 </tr>
@@ -55,45 +55,37 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 
 
+
 ### Relation Types
 
 <table style="width: 700px;">
-<tbody> 
+<tbody>
 <tr style="height: 35px;">
-<td width="200pxl"><strong>Relation Type</strong></td>
-<td width="500pxl"><strong>Description</strong></td>
+<td width="100pxl"><strong>Relation Type</strong></td>
+<td width="600pxl"><strong>Description</strong></td>
 </tr>
-<tr style="height: 46px;">
-<td style="width: 20%; height: 184px;" rowspan="4"><strong>CONTAINS</strong></td>
+<tr>
+<td style="width: 20%; height: 184px;"><strong>contains</strong></td>
 <td style="width: 80%; height: 46px;">
-<p>DATA_PLATFORM contains SCHEMA</p>
+<p>dataPlatform <strong>contains</strong> schema</p>
+<p>schema <strong>contains</strong> dataset</p>
+<p>dataset <strong>contains</strong> class</p>
+<p>class <strong>contains</strong> field</p>
+<p>The direction is One To Many.</p>
 </td>
 </tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>SCHEMA contains DATASET</p>
-</td>
-</tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>DATASET contains CLASS</p>
-</td>
-</tr>
-<tr style="height: 46px;">
-<td style="width: 80%; height: 46px;">
-<p>CLASS contains FIELD</p>
-</td>
-</tr>
-<tr style="height: 46px;">
-<td style="width: 20%; height: 142px;"><strong>REFERS TO</strong></td>
+<tr>
+<td style="width: 20%; height: 142px;"><strong>refersTo</strong></td>
 <td style="width: 80%; height: 96px;">
-<p>DATASET refers to DATASET</p>
+<p>dataset <strong>refers to</strong> dataset</p>
 <p>Example: <em>INVOICE refers to CUSTOMER</em></p>
-<p>The direction is Many To One. The PK / FK column names are included in the relation's properties.</p>
+<p>The direction is Many To One. The PK / FK columns are included in the relation's properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
 
 
 

@@ -71,4 +71,4 @@
 
 20. When using **FileWriter**, always add **ResetActors** at the end of the flow to reset the **FileWriter(s)** – to ensure flush of the file buffer into file.
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md) 
+[![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_dependencies.md) 

@@ -148,7 +148,7 @@ The application can be installed locally on either a workstation or a server wit
 <p><strong>Physical Memory </strong><strong>(RAM)</strong></p>
 </td>
 <td style="width: 628.922px;">
-<p>8 GB RAM</p>
+<p>16 GB RAM</p>
 </td>
 </tr>
 <tr>

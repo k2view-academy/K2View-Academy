@@ -14,7 +14,7 @@ TDM_Tasks
 
 ### API Description
 
-Starts a task execution and return the execution's task_execution_id on success. The API can get an optional input of overriden parameters for the task execution.
+Starts a task execution and returns the execution's task_execution_id on success. The API can get an optional input of overridden parameters for the task execution.
 
 #### Validate the Task Execution Parameters
 
@@ -283,7 +283,6 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"sourceEnvironmentName": "SRC1",
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
-		"MASKING_FLAG": "0",
 		"Customer.Global2": "value2",
 		"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
 	},
@@ -305,7 +304,6 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"sourceEnvironmentName": "SRC1",
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
-		"MASKING_FLAG": "0",
 		"Customer.Global2": "value2"
 	},
  "numberOfEntities": 10
@@ -323,7 +321,7 @@ Override the selected version
 	"sourceEnvironmentName": "TAR1",
 	"targetEnvironmentName": "TAR1",
 	"taskGlobals": {
-		"MASKING_FLAG": "0"
+		"EMAIL": "john123@gmail.com"
 	},
  "dataVersionExecId": 10
 }
@@ -335,7 +333,7 @@ Override the selected version
 	"entitieslist": "1,2,4,9,8,11,33",
 	"sourceEnvironmentName": "TAR1",
 	"taskGlobals": {
-		"MASKING_FLAG": "0"
+		EMAIL": "john123@gmail.com"
 	},
  	"dataVersionRetentionPeriod": {
 		"unit": "Days",

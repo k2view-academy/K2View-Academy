@@ -2,7 +2,7 @@
 
 Templates are ready-made Fabric objects that can be used throughout a project. Working with a defined built-in structure rather than creating an object from scratch, saves time and increases efficiency. Templates can also reduce implementation errors since they use and embed the correct methodologies and Fabric’s best practices.
 
-Templates can be used for various purposes in Broadway flows and Actors, Java files, Graphit and the Data Catalog.
+Templates can be used for various purposes in Broadway flows and Actors, Java files and Graphit.
 
 Fabric Templates support the usage of placeholders for smoother and smarter reuse. When creating an object based on a template, the user populates the template’s placeholders so that the new object is auto-generated with the data that is already embedded in the created object.
 

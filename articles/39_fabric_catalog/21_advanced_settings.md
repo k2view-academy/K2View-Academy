@@ -28,8 +28,6 @@ The file is located in ```fabric/staticWeb``` folder and can be updated on the p
 
 ### General
 
-The [data_discovery] section of config.ini file defines the Discovery process configurations, such as the connection details to the *neo4j* GraphDB.
-
 ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
 

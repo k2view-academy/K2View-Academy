@@ -2,7 +2,7 @@
 
 ## TDM Relationship Tables
 
-To support LU hierarchy and extracting or copying selected business entities and their related data, TDM must identify which child entities are related to each parent entity. 
+To support LU hierarchy and extracting or copying of selected business entities and their related data, TDM must identify which child entities are related to each parent entity. 
 
 For example, to copy Customer 1 from the Production environment, TDM must identify the Billing Accounts and the Orders of Customer 1. 
 
@@ -14,7 +14,7 @@ TDM relationship tables hold the links between the parent ID and their children 
 
 This table holds the link between the **parent-child source IDs**. The relationship is saved per source environment. Additionally, each [Data versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) extract task creates separate records in the TDM_LU_TYPE_RELATION_EID table with the version name, the date and the time of the extracted version of entities.
 
-This table is used for the following:
+This table is used for:
 - [building the list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing TDM tasks on a [BE with a hierarchical structure](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities). The TDM execution process gets the children entities of the parent entities that have been successfully processed by the executed task.
 - displaying the hierarchy of the processed entities by the executed task.
 
@@ -32,19 +32,19 @@ This table is used for the following:
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_1</td>
-<td valign="top" width="700pxl">Name of the parent LU; e.g., Customer.</td>
+<td valign="top" width="700pxl">Name of the parent LU (such as Customer).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_2</td>
-<td valign="top" width="700pxl">Name of the child LU; e.g., Order.</td>
+<td valign="top" width="700pxl">Name of the child LU (such as Order).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Entity ID (EID) of the parent LU; e.g., 1.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the parent LU (such as 1).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Entity ID (EID) of the child LU; e.g., 12.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the child LU (such as 12).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
@@ -180,19 +180,19 @@ This table holds the link between the **parent-child target IDs**. The relations
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_1</td>
-<td valign="top" width="700pxl">Name of the parent LU; e.g., Customer.</td>
+<td valign="top" width="700pxl">Name of the parent LU (such as Customer).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type_2</td>
-<td valign="top" width="700pxl">Name of the child LU; e.g., Order.</td>
+<td valign="top" width="700pxl">Name of the child LU (such as Order).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU; e.g., 30.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU (such as 30).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU; e.g., 101.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU (such as 101).</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
@@ -204,9 +204,9 @@ This table holds the link between the **parent-child target IDs**. The relations
 
 ### Which Process Populates the TDM Relation Tables?
 
-The TDM relation tables are populated by carrying out a sync on the parent LUI. The TDM_LU_TYPE_RELATION_EID table's population flow runs the **fnEnrichmentChildLink** function to populate **both relation tables**: TDM_LU_TYPE_RELATION_EID and TDM_LU_TYPE_REL_TAR_EID. The fnEnrichmentChildLink function populates these tables based on LU tables' data: it runs the SQL queries populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of the task's child LUs. The SQL queries retrieve the LU tables' data. Therefore, the table's population has an execution order 999 to run after the remaining LU tables' population. The table holds the related child IDs on each parent LUI.  
+The TDM relation tables are populated by carrying out a sync on the parent LUI. The TDM_LU_TYPE_RELATION_EID table's population flow runs the **fnEnrichmentChildLink** function to populate **both relation tables**: TDM_LU_TYPE_RELATION_EID and TDM_LU_TYPE_REL_TAR_EID. The fnEnrichmentChildLink function populates these tables based on LU tables' data: it runs the SQL queries populated in the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable to get the child IDs of the task's child LUs. The SQL queries retrieve the LU tables' data. Therefore, the table's population has an execution order 999 to run after the remaining LU tables' population. The table holds the related child IDs on each parent LUI.  
 
-The TDM_LU_TYPE_RELATION_EID table is populated for all TDM tasks except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md) or [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md), where no data are extracted from the data sources. 
+The TDM_LU_TYPE_RELATION_EID table is populated for all TDM tasks except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md) or [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md), where no data is extracted from the data sources. 
 
 The TDM_LU_TYPE_REL_TAR_EID table is populated only if the TDM task deletes entities from the target environment. 
 
@@ -214,7 +214,7 @@ The TDM_LU_TYPE_REL_TAR_EID table is populated only if the TDM task deletes enti
 
 Although Business Entities are defined in the TDM Portal, the following guidelines must be implemented to support parent-child LU hierarchy:
 
-- Populate the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
+- Populate the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
 
   
 

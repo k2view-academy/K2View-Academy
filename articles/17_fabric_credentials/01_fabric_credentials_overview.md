@@ -10,16 +10,16 @@ Fabric includes an authentication and authorization mechanism that enables manag
   - Access to the methods that access LUIs can be defined on a role level.
 - Assigning security profiles to roles.
 
-Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users might be assigned as “administrators”. 
+The use of roles makes permissions management much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users may be assigned as 'administrators'.
 
-User access control management can be performed using either:
+User access control management can be performed by using either one of these two methods:
 
-- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
+- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
 
 - [Web Admin UI](/articles/30_web_framework/03_web_admin_application.md)
 
 ##  List of Permissions 
-Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
+Roles are assigned with many or all of the following permissions:
 
 
 <table>
@@ -37,7 +37,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ACTIVATE_KEY</strong></p>
 </td>
 <td width="600pxl">
-<p>This permission is needed to generate a new key when using Fabric's key generator capability</p>
+<p>This permission is needed for generating a new key when using Fabric's key generator capability</p>
 </td>
 </tr>
 <tr>
@@ -45,7 +45,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ASSIGN_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p>This permission is needed to assign a role to a specific user</p>
+<p>This permission is needed for assigning a role to a specific user</p>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>EDIT_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p>Used to modify the scope of permissions for a specific role permission</p>
+<p>Used for modifying the scope of permissions for a specific role permission</p>
 </td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>DELETE_INSTANCE</strong></p>
 </td>
 <td width="600pxl">
-<p>Used to delete one or multiple instances from Fabric</p>
+<p>Used for the deletion of one or multiple instances from Fabric</p>
 </td>
 </tr>
 <tr>
@@ -78,28 +78,28 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong></p>
 </td>
 <td width="600pxl">
-<p>Ability to run the deploy command on a project or entire environment</p>
+<p>Ability to run the deploy command on either a project or an entire environment</p>
 </td></tr>
 <tr>
 <td width="300pxl">
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
 </td>
 <td width="600pxl">
-<p>The ability to invoke a web service and to read or write data from Fabric instances and/or CommonDB</p>
+<p>The ability to invoke a web service and to read/write data from Fabric instances and/or CommonDB</p>
 </td></tr>
 <tr>
 <td width="300pxl">
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>To set the environment or Globals for the current session onto which role is defined/p>
+<p>Used for setting the environment or Globals for the current session onto which a role is defined/p>
 </td></tr>
 <tr>
 <td width="300pxl">
 <p><strong>ALL_WS</strong></p>
 </td>
 <td width="600pxl">
-<p>Allows all web-services related permissions</p>
+<p>Allows all web services-related permissions</p>
 </td></tr>
 <tr>
 <td width="300pxl">
@@ -113,7 +113,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ALL</strong></p>
 </td>
 <td width="600pxl">
-<p>Allows above-mentioned permissions</p>
+<p>Allows the above-mentioned permissions</p>
 </td></tr>
 </table>
 
@@ -168,31 +168,69 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 </table>
 
 
-Fabric database credentials are validated each time a user attempts to access Fabric via the console, [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) or other interfaces. Permissions can be set on an [LU](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) level or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
+Fabric database credentials are validated each time a user attempts to access Fabric via the console, [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) or other interfaces. Permissions can be set on either an [LU](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
 Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
 It is also possible to skip the sync process between Fabric user and System DB (e.g. Cassandra) user by setting **READ_ONLY_AUTHENTICATORS** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
+
 ## Setting Credentials
+Define credentials by either Admin UI (Security tab) or Fabric commands, as follows: 
+- Create a new role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)).
+- Assign a security profile to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role)).
+- Create an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)).
+- Assign a role to an API Key ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token)).
+- Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
-Create the users and define their credentials, as follows: 
+### Bootstrap Credentials
+Fabric can also be started with predefines API keys, roles and permissions. This is available since Fabric 7.2.1.
+- Turn on this capability by adding a new line contains "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Create a file named **rolesPrivileges.json** at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Edit the file with the required values. It is built from 2 main independent objects - "roles" and "apikeys", where each can be set or skipped regardless the other one.
+   - Define roles' associated operations, per role, at the "roles" array object.
+   - Define API keys association to roles, per API key, at the `"apikeys"` array object.
+- When Fabric starts, it looks for this file; if it exists, definitions are applied (only for roles / apikeys which do not exist yet). 
+- Once applied by Fabric, the file is deleted from the config directory.
 
-- [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
-- [Assign a security profile to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-security_profile-security_profile-to-role-role).
-- [Assign a role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
-- [Create API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the API Key](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
-- [Grant permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
+Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
 
-- Exit Fabric and log in with this user or use the token to invoke a Web Service.
+Example:
+```
+{
+  "roles": {
+     "deploy": ["DEPLOY", "DEPLOY_ENVIRONMENTS", "SET_GLOBAL_ENVIRONMENT"]
+  },
+  "apikeys": {
+     "t1234": ["deploy"]
+  }
+}
+```
 
-## Admin User
+In the above example, the role named "deploy" has 3 associated operations and API key "t1234". When applied, the roles and API keys will be created, if not exist yet at Fabric, and the defined permissions are associated to them. 
 
-By default, Fabric creates the **admin** user as the initial superuser when starting for the first time and defines their user and password as **"admin"**. Fabric can also be started for the first time with another initial superuser that is not defined as admin/admin.  
+
+
+## Users Credentials
+
+Users may be defined in Fabric system DB and shall accordingly be associated to roles, as follows: 
+- Assign a role to the user by either Admin UI (Security tab) or ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
+
+Note: When Fabric integrates with an external authenticator, Fabric does neither manage nor store users' information, and the users' permissions are applied by roles. For more information about User Identification and Access Management - read [here](/articles/26_fabric_security/07_user_IAM_overview.md).
+
+### Admin User
+
+By default, Fabric creates the **admin** user as the initial superuser - when initially starting - and it defines its user and password as 'admin'. Fabric can also be initially started with a different initial superuser, which is not defined as admin/admin.
 
 - Copy the **adminInitialCredentials.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+
 - Change the **File Name** to **adminInitialCredentials**.
+
 - Edit the file and update the **User**/**Password** to the required values. Note that the username must only contain lowercase letters.
-- When Fabric starts for the first time, the new user is created and the **adminInitialCredentials** file is deleted.
+
+- When Fabric starts initially, the new user is created and the **adminInitialCredentials** file is deleted.
+
 - There is no need to provide a password on **adminInitialCredentials** file when the users are maintained outside of Fabric (when the **READ_ONLY_AUTHENTICATORS** parameter in the config.ini is set to true).
+
+  
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)

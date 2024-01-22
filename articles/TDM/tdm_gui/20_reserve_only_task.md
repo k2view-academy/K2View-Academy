@@ -1,6 +1,6 @@
 # TDM Reserve Task
 
-A Reserve task contains only the **Reserve** task type and it [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
+A Reserve task contains only the **Reserve** task action and it [reserves the selected entities](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the task's environment.
 
 A Reserve task contains the following tabs:
 
@@ -21,7 +21,7 @@ Check the **Entities** to reserve the requested entities in the target environme
 
 ### Reservation Period
 
-The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task type is checked together with the Load task type).
+The reservation period settings are displayed **if the load task also reserves the loaded entities** on the target environment (the Reserve task action is checked together with the Load task action).
 
 Note that when the Reservation Period is set to zero, the entities are reserved for an unlimited period.  
 
@@ -39,7 +39,7 @@ This setting has been added by TDM 7.5.2. The user can populate it with a free t
 
 Check to open the Task Variables tab and [set the variable value on a task level](23_task_globals_tab.md).
 
-### Post Execution Processes
+### Post-Execution Processes
 
 Select all, partial, or one [post execution process](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) of the selected BE.
 

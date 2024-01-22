@@ -18,7 +18,11 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_0_studio.png"  />
 
-2. Next, if needed, click **Add Input** to add the required keys as input arguments. 
+2. Next, if needed - provide a map of column names and values to the **mtableKey** input parameter to be used as the lookup key(s):
+
+   <img src="../images/99_actors_09_1_studio.png"  />
+
+3. Alternatively, click **Add Input** to add the required keys as input arguments. It can be combined with the **mtableKey** map.
 
 </studio>
 
@@ -32,14 +36,18 @@ The MTable name, keys and the keys' values can be set during the flow design-tim
 
    <img src="../images/99_actors_09_1.png" style="zoom: 80%;" />
 
-3. Once selected, the keys are added to the Actor as new input arguments and the selected result fields are added to the Actor as output arguments. 
+3. Once selected, the MTable Keys are added to the Actor as new input arguments to be used as the lookup key(s). The selected Results fields are added to the Actor as output arguments. 
 
    * When an Actor returns an array, the single result fields added as output arguments, will include the value of the first results array row.
    * When a key's link type is set to **Const**, the input becomes a list that contains this column's distinct values. You can then choose a value, rather than manually type it in. 
 
    <img src="../images/99_actors_09_2.png"  />
 
-4. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
+4. Alternatively, you can provide a map of column names and values to the **mtableKey** input parameter to be used as the lookup key(s):
+
+   <img src="../images/99_actors_09_1_web.png"  />
+
+5. The same capability of selecting a value from the list is also available when you need to set a **default** value for an MTable key (when it has an **External** or **Link** link type).
 
    <img src="../images/99_actors_09_3.png"  />
 

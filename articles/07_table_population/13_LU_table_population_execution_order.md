@@ -8,6 +8,8 @@ The default order of an LU table’s population is set when the LU schema is cre
 
 By default, the populations with the same execution order run sequentially **within the same execution order**.
 
+When linking a population, or changing its parent table order, it will increase all other populations with higher order number, by keeping the same “gaps” between them, Child tables are increased according to the lowest population order of the parent table.
+
 To improve the sync time of an LUI, Fabric can support parallel syncs on several populations within the same execution order. This can be set in config.ini using the parameter **MAX_PARALLEL_SYNC_SAME_ORDER (default value = 1)**. When this parameter is greater than 1, it allows Fabric to run the LU Table Populations with the same execution order in parallel groups (according to the parameter’s value) in order to bring data from the source DB faster. The part of the sync that writes the data into Fabric remains sequential.
 
 ### How Do I Set the Population Order?

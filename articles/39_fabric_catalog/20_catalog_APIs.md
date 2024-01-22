@@ -239,12 +239,12 @@ The syntax of the request body definition is as follows:
   * Keyword is a string included in the node (or relation) name
 
 * **type** defines which object types will be searched
-  * The valid values are: DATA_PLATFORM, SCHEMA, DATASET, FIELD, RELATION
+  * The valid values are: dataPlatform, schema, dataset, field, relation
   * Send an empty array in case of no limitation on object type
 * **advanced** includes a list of additional search parameters, such as:
-  * **PII** is a PII property with either **true** or false **value**
-  * **CLASSIFICATION** is a Classification property with one of its valid values
-  * **SCORE** is a maximum score of the searched object types (nodes or relations)
+  * **pii** is a PII property with either **true** or false **value**
+  * **classification** is a Classification property with one of its valid values
+  * **score** is a maximum score of the searched object types (nodes or relations)
 
 At least one of the search parameters must be provided in the request body. 
 
@@ -256,7 +256,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: When searching for *dataset* and *field* nodes, whose name includes a *customer* keyword, the request body is:
+Example 1: When searching for Data Platform and Schema nodes, whose name includes a *customer* keyword, the request body is:
 
 ~~~json
 {
@@ -264,8 +264,8 @@ Example 1: When searching for *dataset* and *field* nodes, whose name includes a
         "customer"
     ],
     "type": [
-        "DATASET",
-        "FIELD"
+        "dataPlatform",
+        "schema"
     ],
     "advanced": {
     }
@@ -279,15 +279,15 @@ Example 2: When searching for *any* nodes with *PII = true* and *Classification 
     "input": [],
     "type": [],
     "advanced": {
-        "PII": "true",
-        "CLASSIFICATION": "EMAIL"
+        "pii": "true",
+        "classification": "EMAIL"
     }
 }
 ~~~
 
 
 
-[![Previous](/articles/images/Previous.png)](10_classifier_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
+[![Previous](/articles/images/Previous.png)](11_catalog_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
 
 
 

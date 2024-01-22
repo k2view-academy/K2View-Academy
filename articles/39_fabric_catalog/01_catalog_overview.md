@@ -16,12 +16,12 @@ Fabric's Discovery and Catalog solution provides an insight into the Fabric inte
 - Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
 - Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules, which can be modified on the project level.
 
-The Discovery results are presented in a new Catalog application, which allows to:
+The Discovery process results are presented in a new Catalog application, which allows to:
 
 - Display the Catalog data model as a tree and navigate through its elements.
 - View the Catalog’s elements properties and edit them manually, if needed.
 - Support multiple Catalog versions and their comparison.
-- Search any node by either keywords or any additional advanced search parameters.
+- Search any node by either keywords or an advanced search parameters.
 - View and modify the profiling rules.
 
 The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling and classification.

@@ -1,6 +1,6 @@
 # TDM Installation and Initial Configuration
 
-This document describes the installation guidelines and the initial configuration activities requires for a new TDM installation or an upgrade of a TDM 7.x version to the current version.
+This document describes the installation guidelines and the initial configuration activities required for a new TDM installation or an upgrade of a TDM 7.x version to the current version.
 
 ## TDM Installation  -  Prerequisites
 
@@ -8,12 +8,12 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** - Fabric 7.1 and above. see [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
-- **PostgreSQL DB** - The TDM DB tables are created on a PostgreSQL DB. PostgreSQL v9.6 or v13 versions are certified. For more details, see [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
+- **Fabric Server** - TDM 8.1 works with Fabric 7.2 and above. see [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
+- **PostgreSQL DB** - The TDM DB tables are created on a PostgreSQL DB. PostgreSQL v13 or v15 versions are certified. For more details, see [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
 
 ### Docker Installation 
 
-Click here to open the [TDM 8.0 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V8.0.md).
+Click here to open the [TDM 8.1 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V8.1.md).
 
 ## Import the TDM Library
 Both TDM layers - backend and frontend - are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) from v7.6 onwards.
@@ -30,27 +30,28 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 ## Create the TDM PostgreSQL DB (in case of new installation)
 
-- From TDM 7.6 onwards TDM creates of the TDM DB objects by the TDM LU's deploy flow:
+- From TDM 7.6 onwards TDM creates the TDM DB objects by the TDM LU's deploy flow:
 
-   - Creates the TDM DB tables, sequences, views and functions.
+   - Creates the TDM DB tables, sequences, views, and functions.
 
   Notes: 
-  - **You must set the BUILD_TDMDB Global to true and the POSTGRESQL_ADMIN interface to be active to create the TDM DB** by the TDM deploy flow.
-  - You must create the TDM database and user in advance. The database and user names must be aligned with the TDM interface. You can run the **TDMDBCreateRoleAndDB** flow (located in the TDM LU) to create the **TDMDB** database and **tdm** user (role) in the postgreSQL DB.
-
+  - You must set the **BUILD_TDMDB Global to true in order to create the TDM DB** by the TDM deploy flow.
+  - You must set the **POSTGRESQL_ADMIN interface** to be **active** in order to **create the TDMDB database and 'tdm' user (role) in the postgreSQL DB**.
   
 ## Upgrade the TDM PostgreSQL DB (if not a new installation)
 
 - Soft deploy the TDM LU to Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
-- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 8.0. For
+- Run the **RunTDMDBUpgradeScripts** flow. Populate the current version and the target version input parameters. Set the target version parameter to 8.1. For
 example:
-  - CURRENT_TDM_VERSION = 7.6.
-  - TARGET_TDM_VERSION = 8.0.
+  - CURRENT_TDM_VERSION = 8.0.
+  - TARGET_TDM_VERSION = 8.1.
 
 - Note that the **version’s list** is set in **TDMDBUpgradeScripts** actor (imported from the TDM Library).
 
+- For more details see [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V8.1/TDM_Upgrade_Procedure_to_V8.1.pdf).
 
-## Create K2masking Keyspace in Cassandra
+
+## Create K2masking Keyspace
 
 The **k2masking** keyspace is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
 
@@ -85,7 +86,7 @@ The below steps should be followed if a new APIDOC is generated to include proje
 
 4. Edit the buildTdmApiJSON flow: edit the port in the path input parameter of the HttpJson actor.
 
-5. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 8.0. This version is added to the generated APIDOC.
+5. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 8.1. This version is added to the generated APIDOC.
 
 6. Open the Swagger editor using the following URL: https://editor.swagger.io/.
 
@@ -101,5 +102,4 @@ The below steps should be followed if a new APIDOC is generated to include proje
 10. Extract the zip file and copy the generated HTML file under the `\TDM\web\TDM\apidoc` sub-directory.
 
 11. Open the TDM Portal and click the API Doc tab. Verify that the API doc is displayed properly.
-
 

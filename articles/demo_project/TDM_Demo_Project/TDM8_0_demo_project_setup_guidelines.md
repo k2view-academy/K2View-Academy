@@ -139,7 +139,7 @@ I.
      - Set  **TDM Environment Name** setting to **TAR**.
      - Add the systems (products) to this environment.
      - Set the version of the BILLING system to DEV.
- 
+
 ​    See instructions on how to work with the TDM GUI in the following [link](/articles/TDM/tdm_gui/README.md).
 
 II. 

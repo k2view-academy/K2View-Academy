@@ -125,12 +125,15 @@ When a Decision function returns False it always skips a sync. Therefore, when w
 
 
 
-[Click to go to the Decision Functions Overview.](/articles/14_sync_LU_instance/05_sync_decision_functions.md)\
-[Click for more information about Sync Modes.](/articles/14_sync_LU_instance/02_sync_modes.md)\
-[Click for more information about Sync Behavior.](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)\
+[Click to go to the Decision Functions Overview.](/articles/14_sync_LU_instance/05_sync_decision_functions.md)
+
+[Click for more information about Sync Modes.](/articles/14_sync_LU_instance/02_sync_modes.md)
+
+[Click for more information about Sync Behavior.](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)
+
 [Click for more information about the Skip Sync Method.](/articles/14_sync_LU_instance/09_skip_sync.md)
 
-Click to display a list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+Click to display a list of Fabric APIs: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
 ### Decision Functions - Code Examples
 

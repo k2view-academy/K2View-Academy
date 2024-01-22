@@ -20,7 +20,9 @@ It is possible to store the MTables in FabricDB schema either instead or in addi
 
 **Creating an MTable at run-time**
 
-Another way to create a new MTable is by using a MTableLoad Actor at run-time. In this case, the new MTable is only available on one node. If the MTable should be distributed to all nodes, use the ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command prior to running the MTableLoad Actor. [Click here for more information about MTable Actors.](/articles/19_Broadway/actors/09_MTable_actors.md)
+Another way to create a new MTable is by using a MTableLoad Actor at run-time. In this case, the new MTable is only available on one node. 
+
+The ```SET CLUSTER_DISTRIBUTE_AFFINITY = ALL``` command can be used to distribute the subsequent Fabric command to the specified affinity.
 
 Note that if the MTable is created (or updated) dynamically at run-time, its data is removed during the Fabric restart.
 

@@ -9,7 +9,7 @@ When LUI data is retrieved by the Web Service, Fabric uses the cache mechanism t
 
 The Smart Proxy mechanism is off by default. It can be applied by the setting the Web Service annotations  as explained further in this article.
 
-## How Do I Set Up the smartProxi?
+## How Do I Set Up the Smart Proxy?
 
 Start from adding the ```smartProxy=true``` parameter on the WS input:
 

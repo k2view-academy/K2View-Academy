@@ -4,7 +4,7 @@ This is the first task's tab and it defines the main information about the task.
 
 ![general tab](images/load_task_general_tab.png)
 
-1. **Task title (name)**. A free text. Note that the task title is a must .
+1. **Task title (name)**. A free text. Note that the task title is a must.
 
 2. [Task Actions](14_task_overview.md#task-actions-types): Extract, Generate, Load, Delete and Reserve. 
 
@@ -19,7 +19,7 @@ This is the first task's tab and it defines the main information about the task.
    <tbody>
    <tr>
    <td width="300pxl">
-   <p><strong>Task Type</strong></p>
+   <p><strong>Task Actions</strong></p>
    </td>
    <td width="400pxl">
    <p><strong>Selected Environments</strong></p>

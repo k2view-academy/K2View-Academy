@@ -36,7 +36,7 @@ A project's Global can be overridden on either a [TDM environment](/articles/TDM
 
 The task execution process sets the values on the Globals on a [session level](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
-Note: Task level variables have a higher priority than TDM environment level variable. That is, if a variable (Global) is set on both - the task and the related environment levels - the task's Global value gets the higher priority.
+Note: Task-level variables have a higher priority than TDM environment-level variables. That is if a variable (Global) is set on both - the task and the related environment levels - the task's Global value gets the higher priority.
 
 ### Overriding the Sync Mode on the Task Execution 
 
@@ -52,7 +52,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 <p><strong>Task Level Sync Policy</strong></p>
 </td>
 <td style="height: 100px; width: 125px;" valign="top">
-<p><strong>Task Type</strong></p>
+<p><strong>Task Actions</strong></p>
 </td>
 <td style="height: 100px; width: 125px;" valign="top">
 <p><strong>Execution Sync Mode</strong></p>
@@ -270,7 +270,7 @@ TDM supports the override of the following parameters:
 <p><strong>Parameter Description</strong></p>
 </td>
 <td width="200pxl">
-<p><strong>Task Types</strong></p>
+<p><strong>Task Actions</strong></p>
 </td>
 <td width="150pxl">
 <p><strong>Data Versioning </strong></p>
@@ -284,7 +284,7 @@ TDM supports the override of the following parameters:
 <p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can contain only one Business Entity ID when executing a task that clones a Business Entity.</p>
 </td>
 <td width="200pxl">
-<p>All task types except a Generate task</p>
+<p>All task actions except a Generate task</p>
 </td>
 <td width="150pxl">
 <p>True/False</p>

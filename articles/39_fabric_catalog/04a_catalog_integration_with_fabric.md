@@ -1,6 +1,6 @@
 <web>
 
-# Catalog Integration with Fabric
+# Catalog Integration with Studio
 
 ### Run Discovery
 
@@ -12,7 +12,7 @@ To initiate the Discovery process:
 
 * Alternatively, run the following command from the Fabric terminal:
 
-  ~~~bash
+  ~~~
   startjob DISCOVERY_CRAWLER name='<interface name>' uid='<interface name>';
   ~~~
 
@@ -28,17 +28,19 @@ To view a data source element in the Catalog application, do the following:
 
 * Right-click the element and click **Open in Catalog**. 
 
+  <img src="images/show_catalog_commands.png" style="zoom:75%;" />
+
 * The Catalog application opens and the selected element is displayed in the Catalog tree.
 
 * Note that the **Open in Catalog** command can be executed on all levels: interface, schema, table or field.
 
 [Click here for more information about the Catalog Application.](05_catalog_app.md)
 
-<img src="images/show_catalog_commands.png" style="zoom:75%;" />
+
 
 Note that **Run Discovery Job** and **Open in Catalog** commands may be hidden in the Web Studio. 
 
-[Click here for more information about how to update this show/hide setting](11_advanced_settings.md#web-studio).
+[Click here for more information about how to hide these menu items](21_advanced_settings.md#web-studio).
 
 
 

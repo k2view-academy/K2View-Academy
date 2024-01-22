@@ -6,15 +6,15 @@
 
 The Catalog supports the ability to perform manual overrides. 
 
-To start the manual overrides, click **Actions > Edit Catalog** in the menu bar. To end it, either save the changes or discard them. Upon saving, a new Catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual, which enables keeping them as a part of the Catalog after running the Discovery job (Crawler) again.
+To start the manual overrides, click **Actions > Edit Catalog** in the menu bar. To finish the editing, either save the changes or discard them. Upon saving, a new Catalog version is created in *neo4j*. Once the changes are committed to *neo4j*, they are marked as manual, which enables keeping them as a part of the Catalog after running the Discovery job again.
 
-The graph's coloring scheme changes in the edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. This means that all entities and relations become grey and then every change is indicated by either green, red or blue color.
+The graph's coloring scheme changes in the edit mode to the same theme as in the [version comparison](06_catalog_versioning.md) mode. This means that all entities and relations become grey and then every change is indicated by either green, red or purple color.
 
 Only the latest Catalog version can be edited. This article includes the description of available manual overrides.
 
 ### Edit Properties
 
-As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g., PK or source data type) and some are created by the plugins (e.g., PII or Classification). The Catalog allows to update only the properties that are predefined as editable in the ```properties-info.JSON``` configuration file. This definition can be updated on the project level. [Click here for more information about the configuration file](11_advanced_settings.md#catalog-application-configuration).
+As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g., PK or source data type) and some are created by the plugins (e.g., PII or Classification). The Catalog allows to update only the properties that are predefined as editable in the ```properties-info.json``` configuration file. This definition can be updated on the project level. [Click here for more information about the configuration file](11_advanced_settings.md#catalog-application-configuration).
 
 <img src="images/edit_prop_1.png" style="zoom:75%;" />
 
@@ -55,8 +55,6 @@ While the Catalog is in the edit mode, all updates are aggregated on the client 
 Alternatively, it is possible to exit the edit mode without saving any changes, by clicking the **Discard** button.
 
 The Save and Discard buttons are only visible when the Catalog application is in an edit mode.
-
-<img src="images/manual_override.png" style="zoom:75%;" />
 
 
 
