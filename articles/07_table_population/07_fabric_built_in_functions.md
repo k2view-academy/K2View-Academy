@@ -8,7 +8,7 @@ The full Fabric API list can be found at: http://[Fabric IP address]:3213/static
 </studio>
 
 <web>
-The full Fabric API list can be found at: https://[Fabric Space URL]:3213/static/doc/user-api/index.html  
+The full Fabric API list can be found at: https://[Fabric Space URL]/static/doc/user-api/index.html  
 </web>
 
 <table style="width: 528px;">
