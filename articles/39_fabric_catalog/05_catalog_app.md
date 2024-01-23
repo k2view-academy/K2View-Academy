@@ -30,7 +30,7 @@ The Legend presents 3 types of nodes with their respective icons and allows to h
 When the Catalog application opens, it displays the latest version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
 * **View** another version by clicking its number in the drop-down list.
-* **Compare** between two versions by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
+* **Compare** between 2 versions by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
 
 [Click here for more information about the Catalog Versioning](06_catalog_versioning.md).
 
