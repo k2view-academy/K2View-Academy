@@ -3,14 +3,6 @@
 Fabric offers several **Built-in functions** which can be used for different types of data transformation. Built-in functions can be either connected to other Fabric objects in a map or invoked from another function by Java coding.  
 Built-in functions are grouped into different categories.  The following table displays a list of categories and examples for each category.
 
-<studio>
-The full Fabric API list can be found at: http://[Fabric IP address]:3213/static/doc/user-api/index.html
-</studio>
-
-<web>
-The full Fabric API list can be found at: https://[Fabric Space URL]/static/doc/user-api/index.html  
-</web>
-
 <table style="width: 528px;">
 <tbody>
 <tr>
