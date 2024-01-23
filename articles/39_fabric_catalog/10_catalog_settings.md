@@ -54,6 +54,8 @@ To edit the Generator and its parameters - click the <img src="images/edit_maski
 
   <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
+* **Important**: when writing a custom flow to perform the generation logic, the flow must have a 'value' external input, even if this flow doesn't need to receive any input value.
+
 Once the Save button is clicked, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 Click to get more details about the [Catalog masking mechanism](09_build_artifacts.md#catalog-masking).
