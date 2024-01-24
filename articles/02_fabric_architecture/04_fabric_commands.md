@@ -726,15 +726,20 @@ The following Fabric commands have been introduced for this purpose:
 
 * **MDB_EXPORT <u>without</u> IID**
   * In this mode, the schema of the specified Logical Unit (LU) is dropped (if exists) and created again.
-  * All pre-defined constraints (such as PKs, FKs, and indexes), are included in the exported schema.
-  * The command returns the number of exported tables. 
+  * All pre-defined constraints (such as PKs, FKs, and indexes), are included in the exported schema. 
+  * The command returns the number of exported tables.
+  * Notes:
+     - The FK creation is configurable and depends on the command's **FK** parameter (true/false). 
+     - A new column named **__iid** is added to each table, as well as to each table’s primary key (PK). 
 
 * **MDB_EXPORT <u>with</u> IID**
-  * In this mode, data is retrieved from the Fabric MDB and written to the external storage using the driver provided by the specified interface.
+  * In this mode, data is retrieved from the Fabric MDB and written to the pre-created PG schema using the driver provided by the specified interface.
+  * The data will be added to the PG tables based on their PKs and FKs, ensuring that the table constraints are respected.
   * The command returns the number of exported rows.
+    
 * **MDB_IMPORT with IID**
-  * The command enables the data import from external storage into the Fabric MDB, replacing the existing MDB data.
-  * Using this import command assumes that the data has been exported via corresponding MDB_EXPORT command.
+  * The command enables the data import from the external PG storage into the Fabric MDB, replacing the existing MDB data.
+
 
 Both import and export commands can optionally receive a list of tables to be excluded from the import or export process.
 
