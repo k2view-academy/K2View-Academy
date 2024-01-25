@@ -83,9 +83,17 @@ While setting up a K8s cluster you shall follow these guidelines:
 * The supported versions for Helm chart are: 3.X
 
 - Verify that you have a client environment with the kubectl and Helm command-line tools, configured with a service account or a user that has an admin access to a namespace on the subject Kubernetes cluster.
+
 - Ensure you use NGINX Ingress Controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instruction).
+
 - Ensure you use Calico CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instruction).
+
+- Prepare a domain name that will be used for this cluster and can be resolved by DNS. Provide it k2view team. 
+
+  When creating a namespace its name is being associated as a subdomain to this domain in the ingress controller. For example, if domain is "k2dev.company.com" and a created namespace is "test", then URL of this namespace, that users shall access to, will be "test.k2dev.company.com".
+
 - Ensure the following according to the cloud provider:
+
   - AWS
     - Amazon EFS CSI Driver shall be installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here]([https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
     - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
