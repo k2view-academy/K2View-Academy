@@ -463,7 +463,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
 2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
-3. **customLogicDirectFlowUtil** - filters out the reserved entities if needed,  and formats the entity IDs for the task execution. Set the **NUMBER_OF_ENTITIES** input parameter to be external, and link the DBCOmmand result to the input **values** parameter. 
+3. **customLogicDirectFlowUtil** - filters out the reserved entities if needed,  and formats the entity IDs for the task execution. Set the **NUMBER_OF_ENTITIES** input parameter to be external, and link the DBCOmmand result to the **input values** parameter.  The **output values** parameter must be external.
 
 
 #### Indirect Call Flow
