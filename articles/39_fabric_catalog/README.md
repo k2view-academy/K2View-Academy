@@ -16,5 +16,5 @@
 	<web><li><a href="/articles/39_fabric_catalog/11_catalog_masking.md">Catalog Based Masking</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/12_discovery_monitor.md">Discovery Job Execution Monitor</a></li></web>
 	<web><li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li></web>
-	<web><li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Catalog Advanced Settings</a></li></web>
+	<web><li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Advanced Configuration</a></li></web>
 </ul>
