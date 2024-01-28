@@ -28,7 +28,7 @@ phone pii:true type:field
 
 And vice versa, you can define your search criteria using syntax only in the text box, which will automatically feed back the search criteria fields. 
 
-[Click here for more details about the syntax](10_catalog_APIs.md#search-catalog).
+Click [here](10_catalog_APIs.md#search-catalog) for more details about the syntax of Catalog search.
 
 ### Search Results
 
