@@ -22,7 +22,7 @@ Advanced Search allows to narrow the search results by specifying one (or more) 
 
 Note that once Advanced Search opens, each selection of the search criteria feeds the search text box at the top, using predefined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
 
-~~~json
+~~~
 phone pii:true type:field
 ~~~
 
