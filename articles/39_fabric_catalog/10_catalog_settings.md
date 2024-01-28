@@ -41,24 +41,26 @@ The **PII & Masking Setup** tab allows to view and update the PII and Catalog ba
 
 The tab includes two definitions per each Classification:
 
-* **PII** - to indicate whether the Classification is considered as PII. 
-* **Generator** - to define which random generation logic should be applied by the [Catalog masking mechanism](09_build_artifacts.md#catalog-masking).
+* **PII** - indicates whether the Classification is considered as PII. 
+* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md).
 
 Each **Classification** can have **only one** definition (row) in this tab.
 
-To edit the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon.
+#### Generator Setup
 
-* The **Generator** can be either one of the existing built-in actors, a custom actor or a flow that will be used to perform the generation logic for the values of field with a given Classification.
+To setup the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. 
 
-* For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
+<img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
-  <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
+Here you could select a Generator (actor or flow) for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
 
-* **Note**: when a flow or an actor is selected to be used as a Generator, its first input (defined as Link or External link type) is considered to include the value to be masked and thus is hidden by this configuration screen. So, when creating a custom flow to generate a random value based on your specific logic, the flow must have an  external input called 'value', even if this flow doesn't need to receive any input value.
+The generated value is populated to a field with a given Classification, upon the invocation of a Catalog masking actor - e.g. during the table population. For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
 
-Once the Save button is clicked, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Upon selecting an actor or a flow, its respective input parameters are automatically added to the setup screen. Note that the first input is considered to include the value to be masked and is not one of the configuration parameters. Thus, it is hidden by this configuration screen. So, when creating a custom actor or flow to generate a value, the actor/flow must have an input called 'value', even if this flow doesn't need to receive any input. Otherwise, the first input (defined as Link or External) will be hidden.
 
-Click to get more details about the [Catalog masking mechanism](09_build_artifacts.md#catalog-masking).
+Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+
+Click to get more details about the [Catalog masking mechanism](11_catalog_masking.md).
 
 
 
