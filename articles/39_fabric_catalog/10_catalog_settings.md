@@ -52,7 +52,7 @@ To setup the Generator and its parameters - click the <img src="images/edit_mask
 
 <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
-Here you could select a Generator (actor or flow) for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
+Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
 
 The generated value is populated to a field with a given Classification, upon the invocation of a Catalog masking actor - e.g. during the table population. For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
 
