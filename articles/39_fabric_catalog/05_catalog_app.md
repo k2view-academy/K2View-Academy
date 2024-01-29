@@ -100,7 +100,7 @@ The Properties Tab displays the selected element's name, the icon of the type an
 
 ​	<img src="images/properties.png" style="zoom: 67%;" />
 
-Each element has different properties. For example, a Dataset field has properties such as **column size** and **source data type** - identified by the Crawler, and **PII** and **Classification** - and created by the plugins.
+Each element has different properties. For example, a Dataset field has properties such as **column size** and **source data type** - identified by the Crawler, and **PII** and **Classification** that are created by the plugins.
 
 Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name opens the More Info pop-up window that provides more details about the property. For example, the property's Origin, which can be the Crawler, one of the plugins or manual.
 
