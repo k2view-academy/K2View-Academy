@@ -80,10 +80,10 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
-  * **Edit** the catalog manually. [Click here for more information about the Manual Overrides](07_manual_overrides.md).
+  * **Edit** the Catalog manually. [Click here for more information about the Manual Overrides](07_manual_overrides.md).
   * View the list of **hidden nodes**. Clicking a node in this list unhides it and the node returns to the Catalog tree.
   * Build the Catalog **artifacts**. [Click here for more information about the Catalog artifacts](09_build_artifacts.md).
-* **Search** <img src="images/search.png" style="zoom:80%;" /> the catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
+* **Search** <img src="images/search.png" style="zoom:80%;" /> the Catalog. [Click here for more information about the Catalog Search](08_search_catalog.md). 
 * **Expand**, **collapse** and **hide**, acts that trigger the same activities as using the node's context menu. Multiple element selection is supported.  
 * **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, for focusing on a selected node with its predecessors and successors only. When clicked, all other nodes are hidden and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" /> to indicate that. Clicking the icon again unhides the nodes to the original view. Available in V7.2.1.
 * **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, for running the Discovery Job on the selected Data Platform from the Catalog Application. Available in V7.2.1.
