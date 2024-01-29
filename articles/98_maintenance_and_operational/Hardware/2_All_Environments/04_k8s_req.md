@@ -18,7 +18,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 <table>
 <tbody>
 <tr>
-<td>
+<td valign="top">
 <p><strong>CPU</strong></p>
 </td>
 <td>
@@ -35,15 +35,17 @@ A Kubernetes worker node is expected to meet the following requirements:
 </td>
 </tr>
 <tr>
-<td>
+<td valign="top">
 <p><strong>Storage</strong></p>
 </td>
 <td>
-<p>300 GB SSD disk (minimum)</p>
+<p>Serving Studio namespaces: 300 GB SSD disk (minimum)</p>
+<p>Serving Fabric cluster namespaces: Storage shall be calclulated according to the project's estimated needs</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 ### How many nodes I need?
@@ -59,17 +61,17 @@ Below are some use cases:
   * TDM solution needs a Postgres POD. Accordingly the minimum required for such namespace is:
     * Fabric: 4 cores, 16GB RAM
     * PG: 2 cores, 8 GB RAM
-  * A Project using a real-time data streaming, a Cassandra POD is required (for the IIDFinder module). . Accordingly the minimum required for such namespace is:
+  * A Project using a real-time data streaming, a Cassandra POD is required (for the IIDFinder module).  Accordingly the minimum required for such namespace is:
     * Fabric: 4 cores, 16GB RAM (In this case also Kafka application is running on this POD)
     * Cassandra: 2 cores, 8GB RAM
 
-* **Non Studio** namespaces like UAT, SIT, pre-production and production, requires scalable Fabric PODs (e.g. starting with 2 Fabric PODs). 
+* **Non Studio** namespaces like UAT, SIT, pre-production and production, requires a cluster of several Fabric PODs, using K8S auto-scale capabilities.
 
   On the other hand, PODs or resources which required for Studio namespace, might not be needed here: for non-studio case, it is recommended to use manages services (buckets / blob-storage for massive storage; managed DBs like managed Postgres or managed Cassandra; Managed Kafka rather than running it on Fabric POD).
 
 
 
-> Note: You might consider having several clusters. For example: Dev cluster for Studio; QA and preproduction; Production. This can be useful for more security segregation and network policies (which clusters are allowed to access to what data platforms/DBs). In addition it can help for resources allocation, as scaling in and out might be different and you may wish to avoid the affect of Studio namespaces on production and vice-versa.
+> Note: You might consider having several clusters. For example: Dev cluster for Studio; QA and preproduction; Production. This can be useful for more security segregation (that is: which clusters are allowed to access to what data platforms/DBs). In addition it can help for resources allocation, as scaling in and out might be different and you may wish to avoid the affect of Studio namespaces on production and vice-versa.
 >
 > In POT only single cluster is required for Studio namespaces. 
 
@@ -86,9 +88,11 @@ While setting up a K8s cluster you shall follow these guidelines:
 
 - Ensure you use NGINX Ingress Controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instruction).
 
-- Ensure you use Calico CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instruction).
+  - Ensure you have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instruction for Calico CNI. K2cloud deployments use basic network policy and accordingly most of the CNI’s fit).
 
-- Prepare a domain name that will be used for this cluster and can be resolved by DNS. Provide it k2view team. 
+- Prepare a domain name that will be used for this cluster and can be resolved by DNS. The domain should point to the load balancer that point to the Nginx ingress controller with domain wildcard. 
+
+  Provide it k2view team. 
 
   When creating a namespace its name is associated as a subdomain to this domain in the ingress controller. For example, if domain is "k2dev.company.com" and a created namespace is "test", then URL of this namespace, that users shall access to, will be "test.k2dev.company.com".
 
@@ -98,15 +102,13 @@ While setting up a K8s cluster you shall follow these guidelines:
     - Amazon EFS CSI Driver shall be installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here]([https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
     - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
     - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). for Dev Studio type cluster autoscaling is not required.
-    - Have an ACM cert that attached on the NLB level.
+    - Have an ACM cert that attached on the LB level.
   - GCP
     - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes, Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
     - Provide k2view the cluster's TLS/HTTPS certificate.
   - Azure
-    - Have AKS with single AZ (due to Azure limitation of persistent volume cross AZ)
     - Provide k2view the cluster's TLS/HTTPS certificate.
-
-
+    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes cross AZ, which can affect on user experience, when K8s reviving or moving his namespace).
 
 ### Persistent volumes and Storage classes
 
@@ -136,13 +138,18 @@ The type of volume that shall be provisioned depends on the cloud provider:
 
 ### K2-agent
 
-The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It is used for polling instructions, for deployment, from the k2cloud platform Mailbox. 
+The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It is used for polling instructions, for deployment, from the k2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
 
-As part of cluster preparations, you shall deploy the k2-agent.
+The k2-agent source-code can be found [here](https://github.com/k2view/k2-agent).
+
+As part of cluster preparations, you shall deploy the k2-agent. It is deployed at a dedicated namespace (by default at "k2view-agent" namespace).
 
 * Refer [here](https://github.com/k2view/blueprints/tree/main/helm/k2view-agent) for the k2-agent helm charts and with its configuration values.
 
 * Cluster's dedicated Mailbox ID shall be obtained from k2view, to be applied at the agent values.
+
+* The kubeInterface should be accessible by the k2-agent.
+
 
 
 
@@ -169,11 +176,18 @@ The cluster interacts with external hosts, which you shall open the outbound net
 - https://cloud.k2view.com (used to get intrucstions via Mailbox from the K2cloud platform orchestrator)
 - https://nexus.share.cloud.k2view.com (used to grab Fabric and k2-agent images)
 - https://github.com (used to grab the deployments Helm charts)
+- Cluster shall have access to your data platforms/DBs, as required by the project.
 
-> Notes: 
->
-> * Container images as well as Helm charts can be hosted in your registry. If you consume them from there, please inform k2view team about, to be configured it at the K2cloud platform.
-> * Cluster shall have access to managed services or to your data platforms/DBs, as required by your .
+> Note:  Container images as well as Helm charts can be hosted in your registry. If you consume them from there, please inform k2view team about, to be configured it at the K2cloud platform.
+
+ 
+
+### Managed service Credentials 
+
+For Fabric cluster namespace, like production, where massive data is handled, it is recommended to use managed services (like managed Postgres or bucket / blob storage). K2cloud is creating on-the-fly relevant managed resources, during such namespaces that need them. For this purpose, k2-agent namespace need to have credentials to make it. This can be achieved by using K8s cloud native credentials: 
+
+* AWS: using IAM role ARN, attached to k2view-agent namespace service account. This shall be set at the k2-agent configuration
+* GCP: using service account. The GCP service account name and project ID shall be set at the k2-agent configuration.
 
  
 
@@ -181,5 +195,5 @@ The cluster interacts with external hosts, which you shall open the outbound net
 
 The K2cloud fully managed solution includes monitoring mechanism, for collecting and showing Fabric's metrics and logs.
 
-Assuming that you have your standards and regulation about monitoring, monitoring is out of self-host guidelines scope. You can contact k2view team, when required, for further explanations.
+Assuming that you have your standards and regulation about monitoring, monitoring is out of self-host guidelines scope. Contact k2view team, when required, for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information of Fabric (non-cloud) monitoring setup examples.
 
