@@ -63,7 +63,7 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
 * **Expand** <img src="images/expand.png" style="zoom:80%;" /> Dataset fields:
 
-  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII where applicable.
+  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII, where applicable.
 
     ​	<img src="images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
