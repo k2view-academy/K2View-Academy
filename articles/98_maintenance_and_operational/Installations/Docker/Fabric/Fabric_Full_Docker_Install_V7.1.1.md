@@ -1,4 +1,4 @@
-## FABRIC V7.1.1_79-HF7 DOCKER INSTALLATION
+## FABRIC V7.1.1_85-HF8 DOCKER INSTALLATION
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ More detailed requirements for each are described below:
    <tbody>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz 
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz 
    <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
    </tr>
    <tr>
@@ -60,13 +60,13 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_79-HF7/D_k2view_fabric_7.1.1_79.tar.gz
-   <br>md5: d72d8dc8acd2cd1f57262a14237dbbec</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_85-HF8/D_k2view_fabric_7.1.1_85.tar.gz
+   <br>md5: 2f6af6e5dfd91e4d047001cdf8819162</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_79-HF7/compose_fabric_7.1.1_79.tar.gz
-   <br>md5: c28c4dd1ad9c62829349bcfa6d40629b</br></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_85-HF8/compose_fabric_7.1.1_85.tar.gz
+   <br>md5: fcc9d5aadaad600b6b0bdf5869bced8c</br></td>
    </tr>
    </tbody>
    </table>
@@ -74,24 +74,24 @@ More detailed requirements for each are described below:
 
    ```bash
    cd ~/ 
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/3.11.12/D_k2view_cassandra_3.11.12.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz 
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_79-HF7/D_k2view_fabric_7.1.1_79.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_79-HF7/compose_fabric_7.1.1_79.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_85-HF8/D_k2view_fabric_7.1.1_85.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.1/fabric_7.1.1/Server/fabric-7.1.1_85-HF8/compose_fabric_7.1.1_85.tar.gz
    ```
 3. Load the Docker images as follows:
 
    ```bash
     docker load -i D_k2view_cassandra_3.11.12.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_3.tar.gz
-    docker load -i D_k2view_fabric_7.1.1_79.tar.gz 
+    docker load -i D_k2view_fabric_7.1.1_85.tar.gz 
    ```
 
    You can see the names of the images by using the command `docker images`
 4. Extract the Config archives as follows:
 
    ```bash
-   tar -zxvf compose_fabric_7.1.1_79.tar.gz 
+   tar -zxvf compose_fabric_7.1.1_85.tar.gz 
    ```
 
 #### Run Single Fabric, Cassandra and Kafka Instances
@@ -99,7 +99,7 @@ More detailed requirements for each are described below:
 Run Docker Compose as follows:
 
 ```bash
-cd compose_fabric_7.1.1_79
+cd compose_fabric_7.1.1_85
 # run:  
 docker-compose up -d 
 
@@ -114,7 +114,7 @@ Cassandra and Fabric will start automatically.
 1. To stop the Docker Compose, do the following:
 
    ```bash
-   cd compose_fabric_7.1.1_79
+   cd compose_fabric_7.1.1_85
    #run: 
    docker-compose stop
    ```
