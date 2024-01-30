@@ -186,14 +186,14 @@ The cluster interacts with external hosts, which you shall open the outbound net
 
 For Fabric cluster namespace, like production, where massive data is handled, it is recommended to use managed services (like managed Postgres or bucket / blob storage). K2cloud is creating on-the-fly relevant managed resources, during such namespaces that need them. For this purpose, k2-agent namespace need to have credentials to make it. This can be achieved by using K8s cloud native credentials: 
 
-* AWS: using IAM role ARN, attached to k2view-agent namespace service account. This shall be set at the k2-agent configuration.
-* GCP: using service account. The GCP service account name and project ID shall be set at the k2-agent configuration.
+* AWS: using IAM role ARN, attached to k2view-agent namespace service account. This shall be set in the k2-agent configuration.
+* GCP: using service account. The GCP service account name and project ID shall be set in the k2-agent configuration.
 
  
 
 ### Monitoring
 
-The K2cloud fully managed solution includes monitoring mechanism, for collecting and showing Fabric's metrics and logs.
+The K2cloud fully-managed-solution includes monitoring mechanism, for collecting and showing Fabric's metrics and logs.
 
-Assuming that you have your standards and regulation about monitoring, monitoring is out of self-host guidelines scope. Contact k2view team, when required, for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information of Fabric (non-cloud) monitoring setup examples.
+Assuming that you have your standards and regulations about monitoring, monitoring is out of the self-host guidelines scope. Contact K2view team, when required, for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information of Fabric (non-cloud) monitoring setup examples.
 
