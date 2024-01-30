@@ -62,7 +62,7 @@ Below are some use cases:
     * Fabric: 4 cores, 16GB RAM
     * PG: 2 cores, 8 GB RAM
   * A Project using a real-time data streaming, a Cassandra POD is required (for the IIDFinder module).  Accordingly, the minimum required for such namespace is:
-    * Fabric: 4 cores, 16GB RAM (in this case, Kafka application is also runsg on this POD).
+    * Fabric: 4 cores, 16GB RAM (in this case, Kafka application is also running on this POD).
     * Cassandra: 2 cores, 8GB RAM
 
 * **Non Studio** namespaces like UAT, SIT, pre-production and production, requires a cluster of several Fabric PODs, using K8S auto-scale capabilities.
