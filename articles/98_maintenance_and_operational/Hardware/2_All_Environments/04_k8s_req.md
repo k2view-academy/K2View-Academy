@@ -56,7 +56,7 @@ Below are some use cases:
 
 * **Studio** namespaces requires, as minimum, for Fabric POD: 4 cores and 16GB RAM. (On this POD several applications are running: Fabric runtime, Studio and Neo4J). 
 
-  Additional PODs might be required, depends on the project's and solution types:
+  Additional PODs may be required, depending on the project's and solution types:
 
   * TDM solution needs a Postgres POD. Accordingly the minimum required for such namespace is:
     * Fabric: 4 cores, 16GB RAM
