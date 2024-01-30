@@ -48,9 +48,9 @@ A Kubernetes worker node is expected to meet the following requirements:
 
 
 
-### How many nodes I need?
+### How Many Nodes Do I Need?
 
-Determining the base number of the required worker nodes, as well as the maximum number of nodes for cluster horizontal auto-scaling, is depended on K8s cluster purpose, your project needs and project's type. According to that, different modules and PODs are required to be deployed, which affect on the nodes calculations.
+Determining the base number of the required worker nodes, as well as the maximum number of nodes for cluster horizontal auto-scaling, depends on the K8s cluster purpose, your project needs and the project's type. According to these, different modules and PODs are required to be deployed, which affect the nodes calculations.
 
 Below are some use cases:
 
