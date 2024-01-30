@@ -71,7 +71,7 @@ Below are some use cases:
 
 
 
-> Note: You might consider having several clusters. For example: Dev cluster for Studio; QA and preproduction; Production. This can be useful for more security segregation (that is: which clusters are allowed to access to what data platforms/DBs). In addition it can help for resources allocation, as scaling in and out might be different and you may wish to avoid the affect of Studio namespaces on production and vice-versa.
+> Note: You may consider having several clusters. For example: Dev cluster for Studio; QA and preproduction; Production. This can be useful for more security segregation (that is: which clusters are allowed to access to what data platforms/DBs). In addition it can help for resources allocation, as scaling in and out might be different and you may wish to avoid the affect of Studio namespaces on production and vice-versa.
 >
 > In POT only single cluster is required for Studio namespaces. 
 
