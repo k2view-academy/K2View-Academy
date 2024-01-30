@@ -101,7 +101,7 @@ While setting up a K8s cluster, you shall follow these guidelines:
   - AWS
     - Amazon EFS CSI Driver shall be installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here]([https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
     - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
-    - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). for Dev Studio type cluster autoscaling is not required.
+    - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). For Dev Studio type cluster, autoscaling is not required.
     - Have an ACM cert that attached on the LB level.
   - GCP
     - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes, Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
