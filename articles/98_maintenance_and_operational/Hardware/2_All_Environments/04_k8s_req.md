@@ -22,7 +22,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 <p><strong>CPU</strong></p>
 </td>
 <td>
-<p>4 cores (minimum) or 8 cores (recommended)</p>
+<p>8 cores (minimum) or 16 cores (recommended)</p>
 <p>64-bit CPU architecture</p>
 </td>
 </tr>
@@ -31,7 +31,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 <p><strong>RAM</strong></p>
 </td>
 <td>
-<p>16 GB RAM (minimum) or 64 GB RAM (recommended)</p>
+<p>32 GB RAM (minimum) or 64 GB RAM (recommended)</p>
 </td>
 </tr>
 <tr>
@@ -54,15 +54,15 @@ Determining the base number of the required worker nodes, as well as the maximum
 
 Below are some use cases:
 
-* **Studio** namespaces requires, as minimum, for Fabric POD: 4 cores and 16GB RAM. (On this POD several applications are running: Fabric runtime, Studio and Neo4J). 
+* **Studio** namespaces requires, as minimum, for Fabric POD: 8 cores and 32GB RAM. (On this POD several applications are running: Fabric runtime, Studio and Neo4J). 
 
   Additional PODs may be required, depending on the project's and solution types:
 
   * The TDM solution needs a Postgres POD. Accordingly, the minimum required for such namespace is:
-    * Fabric: 4 cores, 16GB RAM
+    * Fabric: 8 cores, 32GB RAM
     * PG: 2 cores, 8 GB RAM
   * A Project using a real-time data streaming, a Cassandra POD is required (for the IIDFinder module).  Accordingly, the minimum required for such namespace is:
-    * Fabric: 4 cores, 16GB RAM (in this case, Kafka application is also running on this POD).
+    * Fabric: 8 cores, 32GB RAM (in this case, Kafka application is also running on this POD).
     * Cassandra: 2 cores, 8GB RAM
 
 * **Non-Studio** namespaces, such as UAT, SIT, pre-production and production, require a cluster of several Fabric PODs, using K8S auto-scale capabilities.
