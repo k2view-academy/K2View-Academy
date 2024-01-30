@@ -104,19 +104,19 @@ While setting up a K8s cluster, you shall follow these guidelines:
     - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). For Dev Studio type cluster, auto-scaling is not required.
     - Have an ACM cert that attached on the LB level.
   - GCP
-    - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes, Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
+    - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes. Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
     - Provide k2view the cluster's TLS/HTTPS certificate.
   - Azure
     - Provide k2view the cluster's TLS/HTTPS certificate.
-    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes cross AZ, which can affect on user experience, when K8s reviving or moving his namespace).
+    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes cross AZ, which can affect the user experience when K8s revives or moves his namespace).
 
-### Persistent volumes and Storage classes
+### Persistent Volumes and Storage Classes
 
-The type of volume that shall be provisioned depends on the cloud provider:
+The type of volume that shall be provisioned, depends on the cloud provider:
 
 - AWS: EFS storage class is being used for Studio namespaces. Please refer [here](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/examples/kubernetes/dynamic_provisioning/specs/storageclass.yaml) to EFS storage class sample.
 
-  These are the default names and UIDs which used by k2cloud deployments. If different values have to be set - provide them to k2view. 
+  These are the default names and UIDs that are used by k2cloud deployments. If different values have to be set - provide them to K2view. 
 
   The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with k2view about the project and solution type that you are using. For example, for TDM solution usually only fabric and PG are required. 
 
