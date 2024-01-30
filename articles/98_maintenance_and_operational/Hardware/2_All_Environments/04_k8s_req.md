@@ -79,7 +79,7 @@ Below are some use cases:
 
 ## K8s Cluster Preparations
 
-While setting up a K8s cluster you shall follow these guidelines:
+While setting up a K8s cluster, you shall follow these guidelines:
 
 * The supported versions for a Kubernetes cluster are: 1.24 - 1.27
 * The supported versions for Helm chart are: 3.X
