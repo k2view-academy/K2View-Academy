@@ -94,7 +94,7 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
   Provide it k2view team. 
 
-  When creating a namespace its name is associated as a subdomain to this domain in the ingress controller. For example, if domain is "k2dev.company.com" and a created namespace is "test", then URL of this namespace, that users shall access to, will be "test.k2dev.company.com".
+  When creating a namespace, its name is associated as a subdomain to this domain in the ingress controller. For example, if the domain is "k2dev.company.com" and a created namespace is "test", then the URL of this namespace, that users shall access, will be "test.k2dev.company.com".
 
 - Ensure the following according to the cloud provider:
 
