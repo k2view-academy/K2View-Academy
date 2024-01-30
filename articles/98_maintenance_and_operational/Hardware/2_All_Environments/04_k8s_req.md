@@ -90,7 +90,7 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
   - Ensure you have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instruction for Calico CNI. K2cloud deployments use basic network policy and accordingly most of the CNI’s fit).
 
-- Prepare a domain name that will be used for this cluster and can be resolved by DNS. The domain should point to the load balancer that point to the Nginx ingress controller with domain wildcard. 
+- Prepare a domain name that will be used for this cluster and that can be resolved by DNS. The domain should point to the load balancer that points to the Nginx ingress controller with domain wildcard. 
 
   Provide it k2view team. 
 
