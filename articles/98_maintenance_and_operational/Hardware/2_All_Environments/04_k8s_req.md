@@ -40,7 +40,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 </td>
 <td>
 <p>Serving Studio namespaces: 300 GB SSD disk (minimum)</p>
-<p>Serving Fabric cluster namespaces: Storage shall be calclulated according to the project's estimated needs</p>
+<p>Serving Fabric cluster namespaces: Storage shall be calclulated according to the project's estimated needs.</p>
 </td>
 </tr>
 </tbody>
