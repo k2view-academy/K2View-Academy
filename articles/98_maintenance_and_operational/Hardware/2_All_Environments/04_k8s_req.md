@@ -65,7 +65,7 @@ Below are some use cases:
     * Fabric: 4 cores, 16GB RAM (in this case, Kafka application is also running on this POD).
     * Cassandra: 2 cores, 8GB RAM
 
-* **Non Studio** namespaces like UAT, SIT, pre-production and production, requires a cluster of several Fabric PODs, using K8S auto-scale capabilities.
+* **Non-Studio** namespaces, such as UAT, SIT, pre-production and production, require a cluster of several Fabric PODs, using K8S auto-scale capabilities.
 
   On the other hand, PODs or resources which required for Studio namespace, might not be needed here: for non-studio case, it is recommended to use manages services (buckets / blob-storage for massive storage; managed DBs like managed Postgres or managed Cassandra; Managed Kafka rather than running it on Fabric POD).
 
