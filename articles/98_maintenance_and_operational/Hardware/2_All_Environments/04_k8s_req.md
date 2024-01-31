@@ -118,7 +118,7 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 
   These are the default names and UIDs that are used by k2cloud deployments. If different values have to be set - provide them to K2view. 
 
-  The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with k2view about the project and solution type that you are using. For example, for TDM solution usually only fabric and PG are required. 
+  The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with K2view about the project and solution type that you are using. For example, for TDM solution usually only fabric and PG are required. 
 
   - name: efs-fabric
     uid: "1000"
