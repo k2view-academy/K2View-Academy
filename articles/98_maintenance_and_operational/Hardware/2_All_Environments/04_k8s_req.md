@@ -146,7 +146,7 @@ As part of cluster preparations, you shall deploy the k2-agent. It is deployed a
 
 * Refer [here](https://github.com/k2view/blueprints/tree/main/helm/k2view-agent) for the k2-agent helm charts and with its configuration values.
 
-* Cluster's dedicated Mailbox ID shall be obtained from k2view, to be applied at the agent values.
+* Cluster's dedicated Mailbox ID shall be obtained from K2view, to be applied at the agent values.
 
 * The kubeInterface should be accessible by the k2-agent.
 
@@ -155,7 +155,7 @@ As part of cluster preparations, you shall deploy the k2-agent. It is deployed a
 
 ### Fabric containers registry 
 
-For simplicity, k2view suggests using its shared Nexus for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection into the Nexus host. Refer to the Networking section. 
+For simplicity, K2view suggests using its shared Nexus for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection into the Nexus host. Refer to the Networking section. 
 
 You can also use your registry. For this, you shall:
 
