@@ -5,7 +5,7 @@ K2cloud is also available as a *fully-managed* service (PaaS), where K2view mana
 
 
 
-Terraform sample for the creation and installation of the infrastructure, as well as Helm chart being used during the deployment can be found [here](https://github.com/k2view/blueprints/).
+A Terraform sample for the creation and installation of the infrastructure, as well as the Helm chart used during the deployment, can be found [here](https://github.com/k2view/blueprints/).
 
 The namespaces creation and on-going lifecycle is handled by the K2cloud platform's Orchestrator. 
 
