@@ -58,9 +58,9 @@ The generated value is populated to a field with a given Classification, upon th
 
 Upon selecting an actor or a flow, its respective input parameters are automatically added to the setup screen. Note that the first input is considered to include the value to be masked and is not one of the configuration parameters. Thus, it is hidden by this configuration screen. So, when creating a custom actor or flow to generate a value, the actor/flow must have an input called 'value', even if this flow doesn't need to receive any input. Otherwise, the first input (defined as Link or External) will be hidden.
 
-Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
 
-Click to get more details about the [Catalog masking mechanism](11_catalog_masking.md).
+Click for more details about the [Catalog masking mechanism](11_catalog_masking.md).
 
 
 
