@@ -54,7 +54,7 @@ To set up the Generator and its parameters - click the <img src="images/edit_mas
 
 Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
 
-The generated value is populated to a field with a given Classification, upon the invocation of a Catalog masking actor - e.g. during the table population. For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
+The generated value is populated to a field with a given Classification, upon the invocation of a Catalog Masking actor - e.g. during the table population. For example, for masking the fields classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it here.
 
 Upon selecting an actor or a flow, its respective input parameters are automatically added to the setup screen. Note that the first input is considered to include the value to be masked and is not one of the configuration parameters. Thus, it is hidden by this configuration screen. So, when creating a custom actor or flow to generate a value, the actor/flow must have an input called 'value', even if this flow doesn't need to receive any input. Otherwise, the first input (defined as Link or External) will be hidden.
 
