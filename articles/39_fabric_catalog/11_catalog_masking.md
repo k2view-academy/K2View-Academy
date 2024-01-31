@@ -42,8 +42,8 @@ While the Classification and PII properties are added to the Catalog nodes by th
 
 The purpose of adding the Masking property to a field is to override the Classification level definitions. It indicated that this field requires special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values:
 
-* **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (meaning the same input will always return the same masked value).
-* **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (meaning the masking value will be unique).
+* **Consistent** - the Catalog Masking Actors should produce a consistent value across the Catalog (that is, the same input will always return the same masked value).
+* **Unique** - the Catalog Masking Actors should produce a unique value across the Catalog (that is, the masking value will be unique).
 * **Consistent & Unique** - the Catalog Masking Actors should produce a consistent yet unique value across the Catalog.
 * **Generate value** - the Catalog Masking Actors should produce any random value, not consistent and not unique. 
 * **OFF** - the Catalog Masking mechanism should not mask the field. This valid value is useful when a custom masking logic is required. In this case, it is the implementor's responsibility to add the custom masking logic to the relevant LU population.
