@@ -25,7 +25,7 @@ The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on th
 The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure it was received.
 
 The **CatalogMaskingField** Actor’s purpose is to mask a single field’s value based on the Catalog’s Classification and the masking rules definition. 
-* The actor starts from checking whether the field should be masked. The check is based on the field's PII and Masking columns in the Catalog artifact (catalog_field_info MTable). [Click for more information about the Catalog artifact](09_build_artifacts.md).
+* The actor starts by checking whether the field should be masked. The check is based on the field's PII and Masking columns in the Catalog artifact (catalog_field_info MTable). [Click for more information about the Catalog artifact](09_build_artifacts.md).
   * If both PII is true and the Masking property is not OFF, the field's value should be masked. (More details about the Masking property are explained further in this article).
 * Then, the actor retrieves the field's Classification from the **catalog_field_info** MTable and searches for the generator in the **catalog_classification_generators** MTable. The generator can be either one of the existing built-in actors (RandomSSN, RandomZipCode, etc.), a custom actor or a flow.
   * Click for more information about the Catalog's [PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup).
