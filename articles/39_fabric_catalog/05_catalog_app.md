@@ -106,7 +106,7 @@ Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" 
 
 When the selected element is a relation (a link) between 2 objects in the Catalog tree, the relation's properties are displayed. 
 
-Note that in case of more than one *refers_to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers_to* relations between the **movie** and the **language** Datasets:
+Note that in case there are more than one *refers_to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers_to* relations between the **movie** and the **language** Datasets:
 
 <img src="images/properties_two_links.png" style="zoom: 75%;" />
 
@@ -118,7 +118,7 @@ When navigating the Catalog tree and clicking a node, the node's path is added t
 /app/catalog/<version>/<data platform>/<schema>/<dataset>/<field>
 ~~~
 
-Having a full node path allows sharing it as a direct link to a specific in-app location, saving the time and energy of trying to locate a particular node.
+Having a full node path allows sharing it as a direct link to a specific in-app location, thus saving the time and energy to try and locate a particular node.
 
 The ```<version>``` should be either the word **latest** or **V** with the version number, for example:
 
