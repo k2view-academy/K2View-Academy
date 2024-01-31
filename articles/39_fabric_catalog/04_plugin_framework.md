@@ -40,14 +40,13 @@ The [data_platforms] section of the plugins.discovery file enables setting:
 * The list of schema(s) and dataset(s) to be **excluded** from the Discovery job run.
 * The list of schema(s) and dataset(s) to be **included** in the Discovery job run.
 
-The syntax should provide either the schema name - ```<schema>``` - to be fully included (or excluded), or the comma-separated list of ```<schema>.<table>``` or ```*.<table>```. To exclude (or include) all tables that start with the same letters, the syntax should be based on a "starts with" regular expression. For example: ```main.CUST.*``` will exclude (or include) all tables that start with CUST.
+The syntax should provide either the schema name - ```<schema>``` - to be fully included (or excluded), or the comma-separated list of ```<schema>.<table>``` or ```*.<table>```. 
 
 **Example:**
 
 ~~~json
 "data_platforms":{
     "AdventureWorks": {
-       "exclude_list": ["Sales.Current.*"],
        "include_list": ["Sales"]
     },
     "SF_DB": {
@@ -60,7 +59,7 @@ The syntax should provide either the schema name - ```<schema>``` - to be fully 
 
 The above configuration defines the following rules:
 
-* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales. All other schemas should be ignored. Moreover, the job will ignore all tables of the Sales schema that start with 'Current'. 
+* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales.
 * The tables APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
 
 ### Plugin Threshold
