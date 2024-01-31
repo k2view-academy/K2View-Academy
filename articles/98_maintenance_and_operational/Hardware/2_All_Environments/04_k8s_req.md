@@ -54,7 +54,7 @@ Determining the base number of the required worker nodes, as well as the maximum
 
 Below are some use cases:
 
-* **Studio** namespaces requires, as minimum, for Fabric POD: 8 cores and 32GB RAM. (On this POD several applications are running: Fabric runtime, Studio and Neo4J). 
+* The minimum requirement for **Studio** namespaces, for Fabric POD, is: 8 cores and 32GB RAM. (There are several applications running on this POD: Fabric runtime, Studio and Neo4J).
 
   Additional PODs may be required, depending on the project's and solution types:
 
