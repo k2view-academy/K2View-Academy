@@ -105,9 +105,9 @@ While setting up a K8s cluster, you shall follow these guidelines:
     - Have an ACM cert that attached on the LB level.
   - GCP
     - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes. Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
-    - Provide k2view the cluster's TLS/HTTPS certificate.
+    - Provide K2view with the cluster's TLS/HTTPS certificate.
   - Azure
-    - Provide k2view the cluster's TLS/HTTPS certificate.
+    - Provide K2view with the cluster's TLS/HTTPS certificate.
     - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes cross AZ, which can affect the user experience when K8s revives or moves his namespace).
 
 ### Persistent Volumes and Storage Classes
