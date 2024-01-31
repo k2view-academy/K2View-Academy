@@ -35,11 +35,11 @@ Click [here](04_plugin_framework.md#built-in-plugins) for more details about the
 
 ### Classifier PII & Masking Setup
 
-The **PII & Masking Setup** tab allows to view and update the PII and Catalog based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
+The **PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
 
 <img src="images/settings_pii_mask.png" style="zoom:80%;" />
 
-The tab includes two definitions per each Classification:
+The tab includes 2 definitions per each Classification:
 
 * **PII** - indicates whether the Classification is considered as PII. 
 * **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md).
