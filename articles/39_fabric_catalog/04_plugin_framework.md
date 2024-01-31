@@ -40,14 +40,16 @@ The [data_platforms] section of the plugins.discovery file enables setting:
 * The list of schema(s) and dataset(s) to be **excluded** from the Discovery job run.
 * The list of schema(s) and dataset(s) to be **included** in the Discovery job run.
 
-The syntax should provide either the schema name - ```<schema>``` - to be fully included (or excluded), or the comma-separated list of ```<schema>.<table>``` or ```*.<table>```. 
+The syntax should provide either the schema name - ```<schema>``` - to be fully included (or excluded), or the comma-separated list of tables - ```<schema>.<table>``` or ```*.<table>```. 
+
+If the interface's driver supports wildcards (used in conjunction with the LIKE operator), they can be included in the ```<table>``` definition of the exclude or include lists. For example, the % symbol usually represents one or more characters in JDBC driver. Thus, writing ```<schema>.<ABC%>``` will define the datasets with name starting with 'ABC'.
 
 **Example:**
 
 ~~~json
 "data_platforms":{
     "AdventureWorks": {
-       "include_list": ["Sales"]
+       "include_list": ["Production.Product%"]
     },
     "SF_DB": {
        "exclude_list": ["SFORCE.APEXCLASS","SFORCE.APEXLOG","SFORCE.ASSETHISTORY"]
@@ -59,7 +61,7 @@ The syntax should provide either the schema name - ```<schema>``` - to be fully 
 
 The above configuration defines the following rules:
 
-* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Sales.
+* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Production. And it should only include the datasets that start with 'Product'.
 * The tables APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
 
 ### Plugin Threshold
