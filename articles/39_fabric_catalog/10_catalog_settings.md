@@ -48,7 +48,7 @@ Each **Classification** can have **only one** definition (row) in this tab.
 
 #### Generator Setup
 
-To setup the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. 
+To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. 
 
 <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
