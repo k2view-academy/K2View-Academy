@@ -153,19 +153,19 @@ As part of cluster preparations, you shall deploy the k2-agent. It is deployed a
 
 
 
-### Fabric containers registry 
+### Fabric Containers Registry 
 
 For simplicity, K2view suggests using its shared Nexus for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection into the Nexus host. Refer to the Networking section. 
 
 You can also use your registry. For this, you shall:
 
-* Contact k2view team to get Nexus access credentials.
+* Contact the K2view team to get Nexus access credentials.
 * Take the relevant images, scan them if required, and upload into your registry.
-* Provide to k2view the URL of the registry.
+* Provide K2view with the URL of the registry.
 
 
 
-The non Fabric images - Postgres, Casandra and Neo4j - are not provided by k2view. Rather, use the images as published at Docker Hub. If you prefer hosting them also in your registry, inform k2view team about, to be configured it at the K2cloud platform.
+The non Fabric images - Postgres, Casandra and Neo4j - are not provided by K2view. Rather, use the images as published at Docker Hub. If you prefer hosting them also in your registry, inform K2view team about, to be configured it at the K2cloud platform.
 
 
 
