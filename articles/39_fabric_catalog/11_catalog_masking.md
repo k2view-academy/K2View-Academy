@@ -20,7 +20,7 @@ Their purpose is to mask the values based on the Catalog’s classification and 
 
 The Catalog-based masking logic is included in the **CatalogMaskigField** Actor while the **CatalogMaskingMapper** and the **CatalogMaskingRecord** Actors serve as a wrapper - on a dataset level and a record level respectively.
 
-The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory. The actor iterates internally on each record and invokes the **CatalogMaskingRecord** Actor. The actor returns a dataset with the same structure it was received.
+The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory; this actor iterates internally on each record and invokes the **CatalogMaskingRecord** Actor. The **CatalogMaskingMapper** Actor returns a dataset with the same structure it was received.
 
 The **CatalogMaskingRecord** Actor receives a record, splits it internally into key-value pairs and invokes the **CatalogMaskingField** Actor for each pair. The actor returns an object with the same structure it was received.
 
