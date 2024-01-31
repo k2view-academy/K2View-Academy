@@ -18,7 +18,7 @@ The following 3 actors have been introduced by the Catalog Masking mechanism:
 
 Their purpose is to mask the values based on Catalog’s classification and masking rules definition. The object (or record) to be masked is set using the following 3 actor’s input  parameters: dataPlatform, schema and dataset, that identify it in the  Catalog.
 
-The Catalog based masking logic is included in the CatalogMaskigField while the CatalogMaskingMapper and the CatalogMaskingRecord serve as a wrapper - on a dataset level and a record level accordingly. 
+The Catalog-based masking logic is included in the CatalogMaskigField while the CatalogMaskingMapper and the CatalogMaskingRecord serve as a wrapper - on a dataset level and a record level accordingly. 
 
 The **CatalogMaskingMapper** Actor receives a dataset, which maps the data on the fly, and does not load the entire dataset to memory. The actor iterates internally on each record and invokes the **CatalogMaskingRecord** Actor. The actor returns a dataset with the same structure it was received.
 
