@@ -15,7 +15,7 @@ The **Regex Setup** tab allows to view and update the Profiling regular expressi
 
 <img src="images/settings_regex.png" style="zoom:80%;" />
 
-The columns of the tab are:
+The columns of this tab are:
 
 * **Classification** defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
 
