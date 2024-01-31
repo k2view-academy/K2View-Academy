@@ -58,7 +58,7 @@ Below are some use cases:
 
   Additional PODs may be required, depending on the project and solution types:
 
-  * The TDM solution needs a Postgres POD. Accordingly, the minimum required for such namespace is:
+  * The TDM solution needs a Postgres POD. Accordingly, the minimum requirement for such namespace is:
     * Fabric: 8 cores, 32GB RAM
     * PG: 2 cores, 8 GB RAM
   * A Project using a real-time data streaming, a Cassandra POD is required (for the IIDFinder module).  Accordingly, the minimum required for such namespace is:
