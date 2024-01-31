@@ -4,7 +4,7 @@
 
 The purpose of the Catalog Masking mechanism is to perform masking based on the Catalog's classifications. It provides a great simplification of the masking implementation, since it allows to base the masking logic on the Discovery results in the Catalog rather than defining it manually in each LU table population. 
 
-To apply the Catalog Masking mechanism on a flow or population, start with running the Discovery job and building the [Catalog artifact](09_build_artifacts.md). Then, create an LU and add either the **CatalogMaskingMapper** or **CatalogMaskingRecord** Actor to LU populations. 
+To apply the Catalog Masking mechanism on a flow or population, start with running the Discovery job and building the [Catalog artifact](09_build_artifacts.md). Then, create an LU and add either the **CatalogMaskingMapper** or the **CatalogMaskingRecord** Actor to LU populations. 
 
 <img src="images/population_with_masking.png" style="zoom:80%;" />
 
