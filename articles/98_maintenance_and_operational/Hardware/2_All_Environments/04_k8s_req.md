@@ -138,7 +138,7 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 
 ### K2-agent
 
-The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions, for deployment, from the K2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
+The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions, for deployment, from the K2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to K2cloud orchestrator is required.
 
 The k2-agent source-code can be found [here](https://github.com/k2view/k2-agent).
 
@@ -175,7 +175,7 @@ The cluster interacts with external hosts, into which you shall open the outboun
 
 - https://cloud.k2view.com (used to get intrucstions via Mailbox from the K2cloud platform orchestrator)
 - https://nexus.share.cloud.k2view.com (used for fetching Fabric and k2-agent images)
-- https://github.com (used for fetching the deployments Helm charts)
+- https://github.com (used for fetching the deployments' Helm charts)
 - Cluster shall have access to your data platforms/DBs, as required by the project.
 
 > Note: Container images as well as Helm charts can be hosted in your repositories. If you consume them from there, please inform K2view team about it, so they can be configured in the K2cloud platform.
