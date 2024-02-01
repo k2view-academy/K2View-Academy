@@ -132,17 +132,17 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 - GCP
   - Use regional pd 
 - Azure
-  - Currently Azure does not have an NFS/EFS equivalent solution and thus a local disk shall be used. 
+  - Currently Azure does not have an NFS/EFS equivalent solution and therefore a local disk shall be used. 
 
 
 
 ### K2-agent
 
-The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It is used for polling instructions, for deployment, from the k2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
+The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions, for deployment, from the k2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
 
 The k2-agent source-code can be found [here](https://github.com/k2view/k2-agent).
 
-As part of cluster preparations, you shall deploy the k2-agent. It is deployed at a dedicated namespace (by default at "k2view-agent" namespace).
+As part of cluster preparations, you shall deploy the k2-agent. It is deployed in a dedicated namespace (whose default name is "k2view-agent").
 
 * Refer [here](https://github.com/k2view/blueprints/tree/main/helm/k2view-agent) for the k2-agent helm charts and with its configuration values.
 
