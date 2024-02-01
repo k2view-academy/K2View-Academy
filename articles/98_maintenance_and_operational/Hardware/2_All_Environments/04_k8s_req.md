@@ -116,7 +116,7 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 
 - AWS: EFS storage class is being used for Studio namespaces. Please refer [here](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/examples/kubernetes/dynamic_provisioning/specs/storageclass.yaml) to EFS storage class sample.
 
-  These are the default names and UIDs that are used by k2cloud deployments. If different values have to be set - provide them to K2view. 
+  These are the default names and UIDs that are used by K2cloud deployments. If different values have to be set - provide them to K2view. 
 
   The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with K2view about the project and the solution that you are using. For example, for the TDM solution - usually only Fabric and PG are required. 
 
