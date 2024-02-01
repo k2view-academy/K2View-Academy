@@ -184,7 +184,7 @@ The cluster interacts with external hosts, into which you shall open the outboun
 
 ### Managed service Credentials 
 
-For Fabric cluster namespace, like production, where massive data is handled, it is recommended to use managed services (like managed Postgres or bucket / blob storage). K2cloud is creating on-the-fly relevant managed resources, during such namespaces that need them. For this purpose, k2-agent namespace need to have credentials to make it. This can be achieved by using K8s cloud native credentials: 
+For Fabric cluster namespace, like production, where massive data is handled, it is recommended to use managed services (like managed Postgres or bucket / blob storage). K2cloud is creating on-the-fly relevant managed resources during the namespaces creation process. For this creation purpose, the k2-agent namespace needs to have credentials. This can be achieved by using K8s cloud native credentials: 
 
 * AWS: using IAM role ARN, attached to k2view-agent namespace service account. This shall be set in the k2-agent configuration.
 * GCP: using service account. The GCP service account name and project ID shall be set in the k2-agent configuration.
