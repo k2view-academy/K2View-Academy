@@ -86,11 +86,11 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
 - Verify that you have a client environment with the kubectl and Helm command-line tools, configured with a service account or a user that has an admin access to a namespace on the subject Kubernetes cluster.
 
-- Ensure you use NGINX Ingress Controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instructions).
+- Ensure you use NGINX Ingress controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instructions).
 
   - Ensure you have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instructions for Calico CNI. K2cloud deployments use basic network policy and accordingly most of the CNI’s fit).
 
-- Prepare a domain name that will be used for this cluster and that can be resolved by DNS. The domain should point to the load balancer that points to the Nginx ingress controller with domain wildcard. 
+- Prepare a domain name that will be used for this cluster and that can be resolved by DNS. The domain should point to the load balancer that points to the NGINX Ingress controller with domain wildcard. 
 
   Provide it k2view team. 
 
