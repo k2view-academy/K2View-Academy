@@ -146,7 +146,7 @@ As part of cluster preparations, you shall deploy the k2-agent. It is deployed a
 
 * Refer [here](https://github.com/k2view/blueprints/tree/main/helm/k2view-agent) for the k2-agent helm charts and with its configuration values.
 
-* Cluster's dedicated Mailbox ID shall be obtained from K2view, to be applied at the agent values.
+* Cluster's dedicated Mailbox ID shall be obtained from K2view, to be applied in the agent's configuration values.
 
 * The kubeInterface should be accessible by the k2-agent.
 
