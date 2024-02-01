@@ -174,11 +174,11 @@ The non-Fabric images - Postgres, Casandra and Neo4j - are not provided by K2vie
 The cluster interacts with external hosts, into which you shall open the outbound network - all in port 443:
 
 - https://cloud.k2view.com (used to get intrucstions via Mailbox from the K2cloud platform orchestrator)
-- https://nexus.share.cloud.k2view.com (used to grab Fabric and k2-agent images)
-- https://github.com (used to grab the deployments Helm charts)
+- https://nexus.share.cloud.k2view.com (used for fetching Fabric and k2-agent images)
+- https://github.com (used for fetching the deployments Helm charts)
 - Cluster shall have access to your data platforms/DBs, as required by the project.
 
-> Note:  Container images as well as Helm charts can be hosted in your registry. If you consume them from there, please inform K2view team about, to be configured it in the K2cloud platform.
+> Note: Container images as well as Helm charts can be hosted in your registry. If you consume them from there, please inform K2view team about, to be configured it in the K2cloud platform.
 
  
 
