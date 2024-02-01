@@ -92,9 +92,9 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
 - Prepare a domain name that will be used for this cluster and that can be resolved by DNS. The domain should point to the load balancer that points to the NGINX Ingress controller with domain wildcard. 
 
-  Provide it k2view team. 
+  Provide the domain name to the K2view team.
 
-  When creating a namespace, its name is associated as a subdomain to this domain in the Ingress controller. For example, if the domain is "k2dev.company.com" and a created namespace is "test", then the URL of this namespace, that users shall access, will be "test.k2dev.company.com".
+  When creating a namespace, its name is associated as a subdomain to this domain name in the Ingress controller. For example, if the domain is "k2dev.company.com" and a created namespace is "test", then the URL of this namespace, that users shall access, will be "test.k2dev.company.com".
 
 - Ensure the following according to the cloud provider:
 
