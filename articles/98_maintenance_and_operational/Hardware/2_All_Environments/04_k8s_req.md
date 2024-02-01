@@ -171,7 +171,7 @@ The non-Fabric images - Postgres, Casandra and Neo4j - are not provided by K2vie
 
 ### Connectivity and Networking
 
-The cluster interacts with external hosts, which you shall open the outbound network into them - all in port 443:
+The cluster interacts with external hosts, into which you shall open the outbound network - all in port 443:
 
 - https://cloud.k2view.com (used to get intrucstions via Mailbox from the K2cloud platform orchestrator)
 - https://nexus.share.cloud.k2view.com (used to grab Fabric and k2-agent images)
