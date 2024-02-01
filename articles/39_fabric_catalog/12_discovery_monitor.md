@@ -9,7 +9,7 @@ The monitor is split into the following areas:
 
 * The **Execution Time** area shows the job start time and its duration. If the job has been completed, the end time is displayed as well. 
 * The **Error / Warnings** area displays the error (in case of the job failure) or the number of warnings received during the job execution.
-* The **Execution Progress** is the main monitor area. It shows the progress of the job including the percent of completion of each step and the number of elements found.
+* The **Execution Progress** is the main monitor area. It shows the progress of the job, including the percent of completion of each step and the number of elements found.
   * The steps displayed in this area are dynamic, and they depend on the job configuration. The disabled plugins are not displayed.
 
 The monitor allows to stop the Discovery job, when it is in progress, or to start the job execution for the selected data platform.
