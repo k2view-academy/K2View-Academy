@@ -108,7 +108,7 @@ While setting up a K8s cluster, you shall follow these guidelines:
     - Provide K2view with the cluster's TLS/HTTPS certificate.
   - Azure
     - Provide K2view with the cluster's TLS/HTTPS certificate.
-    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes cross AZ, which can affect the user experience when K8s revives or moves his namespace).
+    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZ, which can affect the user experience when K8s revives or moves his namespace).
 
 ### Persistent Volumes and Storage Classes
 
@@ -118,7 +118,7 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 
   These are the default names and UIDs that are used by k2cloud deployments. If different values have to be set - provide them to K2view. 
 
-  The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with K2view about the project and solution type that you are using. For example, for TDM solution usually only fabric and PG are required. 
+  The below list covers several storage classes, that not all of them are required for all projects. Please check with your team and with K2view about the project and the solution that you are using. For example, for the TDM solution - usually only Fabric and PG are required. 
 
   - name: efs-fabric
     uid: "1000"
