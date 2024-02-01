@@ -138,7 +138,7 @@ The type of volume that shall be provisioned, depends on the cloud provider:
 
 ### K2-agent
 
-The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions, for deployment, from the k2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
+The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions, for deployment, from the K2cloud platform Mailbox. Adopting this workflow eliminates the need of connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to cloud K2cloud orchestrator is required.
 
 The k2-agent source-code can be found [here](https://github.com/k2view/k2-agent).
 
