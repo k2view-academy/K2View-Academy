@@ -165,7 +165,7 @@ You can also use your registry. For this, you shall:
 
 
 
-The non Fabric images - Postgres, Casandra and Neo4j - are not provided by K2view. Rather, use the images as published at Docker Hub. If you prefer hosting them also in your registry, inform K2view team about, to be configured it at the K2cloud platform.
+The non-Fabric images - Postgres, Casandra and Neo4j - are not provided by K2view. Instead, you should use the images as published in the Docker Hub. If you prefer hosting them also in your registry, inform the K2view team about it, so they can be configured in the K2cloud platform.
 
 
 
