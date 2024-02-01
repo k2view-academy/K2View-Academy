@@ -195,5 +195,5 @@ For Fabric cluster namespace, like production, where massive data is handled, it
 
 The K2cloud fully-managed-solution includes monitoring mechanism, for collecting and showing Fabric's metrics and logs.
 
-Assuming that you have your standards and regulations about monitoring, monitoring is out of the self-host guidelines scope. Contact K2view team, when required, for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information of Fabric (non-cloud) monitoring setup examples.
+Assuming that you have your standards and regulations about monitoring, monitoring is out of the self-host guidelines scope. Contact the K2view team, when required, for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information of Fabric (non-cloud) monitoring setup examples.
 
