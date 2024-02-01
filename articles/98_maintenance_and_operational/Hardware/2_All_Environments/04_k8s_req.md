@@ -178,7 +178,7 @@ The cluster interacts with external hosts, into which you shall open the outboun
 - https://github.com (used for fetching the deployments Helm charts)
 - Cluster shall have access to your data platforms/DBs, as required by the project.
 
-> Note: Container images as well as Helm charts can be hosted in your registry. If you consume them from there, please inform K2view team about, to be configured it in the K2cloud platform.
+> Note: Container images as well as Helm charts can be hosted in your repositories. If you consume them from there, please inform K2view team about it, so they can be configured in the K2cloud platform.
 
  
 
