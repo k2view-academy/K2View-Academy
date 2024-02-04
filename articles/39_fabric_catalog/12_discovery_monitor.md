@@ -4,8 +4,8 @@ The purpose of the Discovery job execution monitor is to track the progress of t
 
 The monitor is split into the following areas:
 
-* The **General Info** area allows to select the Data Platform in order to retrieve the monitoring details. 
-  * The monitor shows the last execution for the given data platform, either in progress or completed.
+* The **General Info** area allows to select the Data Platform in order to retrieve details of the monitoring.
+  * The monitor shows the last execution for the given Data Platform, either throughout its progress or when completed.
 
 * The **Execution Time** area shows the job's start time and its duration. If the job has been completed, the end time is displayed as well. 
 * The **Error / Warnings** area displays the error (in case of a job failure) or the number of warnings received during the job execution.
