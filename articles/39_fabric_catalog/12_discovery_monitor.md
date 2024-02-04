@@ -14,7 +14,7 @@ The monitor is split into the following areas:
 
 The monitor allows to stop the Discovery job, when it is in progress, or to start the job execution for the selected data platform.
 
-Upon the job completion, the monitor displays the version number and indicates whether a new version has been created or not.
+Upon completion of the job, the monitor displays the version number and indicates whether a new version has been created or not.
 
 ![](images/monitor.png)
 
