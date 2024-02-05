@@ -36,15 +36,17 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
 **Example 1 - Using an Error Handler in a Flow** 
 
-1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, using the **Validation** error handler in Stage 3 of the flow, check that the lower number does not equal zero. 
+1. Create a flow which divides a higher number by a lower number. 
+
+2. Before doing the division of two number in Stage 4, check the division by zero by throwing the "Can't divide by zero!" exception using the **ErrorMsg** **JavaScript** Actor. The **Validation** error handler catches the exception and invokes its internal logic - check that the lower number is not zero: ```a != 0```
 
    ![image](images/99_24_02.PNG)
 
-3. If the lower number equals zero, throw an error using the **ErrorMsg** **JavaScript** Actor. Stage 4 is not executed since the error handler stops the flow's execution. 
+3. If the lower number equals zero, the **ErrorMsg** **JavaScript** Actor returns false and as a result stops the flow's execution.  The division by zero in Stage 4 is not executed.
 
-   ![image](images/99_24_03.PNG)
+   ![image](images/99_24_03.png)
 
-**Example 2 - Catching an Exception using an Error Handler**
+**Example 2 - Catching an Exception using an Error Handler and continue the flow**
 
 1. Create a flow that inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without a failure.
 
@@ -67,7 +69,7 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
 Note that catching an exception can also be done using a dedicated **ErrorHandler** Actor as explained [here](actors/06_error_handling_actors.md).
 
-**Example 3 - Catching an Exception using an Error Handler Implemented by an Inner Flow**
+**Example 3 - Catching an Exception using an Error Handler implemented by an Inner Flow**
 
 The following is an example of error handling using an inner flow as an error handler. Use the flow created in Example 2 and replace the **JavaScript** error handler with the **Inner Flow** error handler. 
 
