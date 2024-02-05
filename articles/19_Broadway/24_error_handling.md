@@ -48,7 +48,7 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
 1. Create a flow that inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without a failure.
 
-2. To catch the DB exception, add the **DbExeptionCheck** error handler using the **JavaScript** Actor to the **LU Table** Stage as follows:
+2. To catch the DB exception, add the error handler using the **JavaScript** Actor to the **LU Table** Stage as follows:
 
    <img src="images/99_24_08.PNG" alt="image" style="zoom:80%;" />
 
