@@ -48,15 +48,15 @@ Each **Classification** can have **only one** definition (row) in this tab.
 
 #### Generator Setup
 
-To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. 
-
-<img src="images/settings_masking_edit.png" style="zoom: 80%;" />
-
-Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
+To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. 
 
 Upon the invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated to a field with a given Classification. For example, for masking fields that are classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it as the Classification's generator using the above screen.
 
+<img src="images/settings_masking_edit.png" style="zoom: 80%;" />
+
 Upon selecting an actor or a flow, its respective input parameters are automatically added to the setup screen. Note that the first input parameter (defined as Link or External) is considered to include the value that should be masked, and not one of the masking configuration parameters. Thus, this input parameter is hidden in this configuration screen. When creating a custom actor or a flow to generate a value, the actor/flow must have an input called 'value', even if this flow doesn't need to receive any input, to prevent hiding the first input (defined as Link or External).
+
+<img src="images/settings_masking_flow.png"  />
 
 Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
 
