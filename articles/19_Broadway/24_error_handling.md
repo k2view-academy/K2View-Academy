@@ -44,7 +44,7 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
 3. If the lower number equals zero, the **ErrorMsg** **JavaScript** Actor returns false and as a result stops the flow's execution.  The division by zero in Stage 4 is not executed.
 
-   ![image](images/99_24_03.png)
+   ![image](images/99_24_03.PNG)
 
 **Example 2 - Catching an Exception using an Error Handler and continue the flow**
 
