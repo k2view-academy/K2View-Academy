@@ -56,7 +56,7 @@ Upon the invocation of a Catalog Masking actor - e.g., during a table population
 
 Upon selecting an actor or a flow, its respective input parameters are automatically added to the setup screen. Note that the first input parameter (defined as Link or External) is considered to include the value that should be masked, and not one of the masking configuration parameters. Thus, this input parameter is hidden in this configuration screen. When creating a custom actor or a flow to generate a value, the actor/flow must have an input called 'value', even if this flow doesn't need to receive any input, to prevent hiding the first input (defined as Link or External).
 
-<img src="images/settings_masking_flow.png"  />
+<img src="images/settings_masking_flow.png" style="zoom: 80%;" />
 
 Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
 
