@@ -12,11 +12,13 @@ The monitor is split into the following areas:
 * The **Execution Progress** is the monitor's main area. It shows the progress of the job, including the completion percentage of each step and the number of elements found.
   * The steps displayed in this area are dynamic, and they depend on the job configuration. The disabled plugins are not displayed.
 
+<img src="images/monitor_inprogress.png" style="zoom:80%;" />
+
 The monitor allows to either stop the Discovery job, when it is in progress, or to start the job execution for the selected Data Platform.
 
 Upon completion of the job, the monitor displays the version number and indicates whether a new version has been created or not.
 
-![](images/monitor.png)
+<img src="images/monitor.png" style="zoom:80%;" />
 
 
 
