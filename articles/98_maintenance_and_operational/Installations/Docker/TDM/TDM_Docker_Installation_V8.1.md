@@ -9,7 +9,7 @@
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v8.x/V8.1/TDM%208.1_download_links.docx?d=w86a1bbb2c0194a7887934ae51a45e42b&csf=1&web=1&e=PKSaKH">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7BAD4D11C5-FC8E-4794-AD25-B31ECE391ED4%7D&file=TDM%208.1.0_download_links.docx&action=default&mobileredirect=true">Download links</a></li>
 </ul>
 
 
