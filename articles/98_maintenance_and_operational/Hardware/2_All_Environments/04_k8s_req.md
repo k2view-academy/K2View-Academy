@@ -59,11 +59,11 @@ Below are some use cases:
   Additional PODs may be required, depending on the project and solution types:
 
   * The TDM solution needs a Postgres POD. Accordingly, the minimum requirement for such namespace is:
-    * Fabric: 8 cores, 32GB RAM
-    * PG: 2 cores, 8 GB RAM
+        * Fabric: 8 cores, 32GB RAM
+        * PG: 2 cores, 8 GB RAM
   * A Project, using a real-time data streaming, requires a Cassandra POD (for the IIDFinder module).  Accordingly, the minimum requirement for such namespace is:
-    * Fabric: 8 cores, 32GB RAM (in this case, Kafka application is also running on this POD).
-    * Cassandra: 2 cores, 8GB RAM
+        * Fabric: 8 cores, 32GB RAM (in this case, Kafka application is also running on this POD).
+        * Cassandra: 2 cores, 8GB RAM
 
 * **Non-Studio** namespaces, such as UAT, SIT, pre-production and production, require a cluster of several Fabric PODs, using K8S auto-scale capabilities.
 
@@ -100,15 +100,15 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
   - AWS
     - Amazon EFS CSI Driver shall be installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here](https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
-    - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
-    - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). For Dev Studio type cluster, auto-scaling is not required.
-    - Have an ACM cert that attached on the LB level.
+      - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
+      - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). For Dev Studio type cluster, auto-scaling is not required.
+      - Have an ACM cert that attached on the LB level.
   - GCP
-    - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes. Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
-    - Provide K2view with the cluster's TLS/HTTPS certificate.
+      - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes. Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
+      - Provide K2view with the cluster's TLS/HTTPS certificate.
   - Azure
-    - Provide K2view with the cluster's TLS/HTTPS certificate.
-    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZ, which can affect the user experience when K8s revives or moves his namespace).
+      - Provide K2view with the cluster's TLS/HTTPS certificate.
+      - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZ, which can affect the user experience when K8s revives or moves his namespace).
 
 ### Persistent Volumes and Storage Classes
 
@@ -157,15 +157,14 @@ As part of cluster preparations, you shall deploy the k2-agent. It is deployed i
 
 For simplicity, K2view suggests using its shared Nexus for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection into the Nexus host. Refer to the Networking section. 
 
-You can also use your registry. For this, you shall:
+You can also use your OCI based registry. For this, you shall:
 
 * Contact the K2view team to get Nexus access credentials.
 * Take the relevant images, scan them if required, and upload into your registry.
 * Provide K2view with the URL of the registry.
 
 
-
-The non-Fabric images - Postgres, Casandra and Neo4j - are not provided by K2view. Instead, you should use the images as published in the Docker Hub. If you prefer hosting them also in your registry, inform the K2view team about it, so they can be configured in the K2cloud platform.
+The non-Fabric images - Postgres, Casandra and Neo4j - are not provided by K2view. Instead, you should use the images as published in the Docker Hub. If you prefer hosting them also in your registry, inform the K2view team about it, so they can be configured in the K2cloud platform orchestrator.
 
 
 
@@ -178,7 +177,7 @@ The cluster interacts with external hosts, into which you shall open the outboun
 - https://github.com (used for fetching the deployments' Helm charts)
 - Cluster shall have access to your data platforms/DBs, as required by the project.
 
-> Note: Container images as well as Helm charts can be hosted in your repositories. If you consume them from there, please inform K2view team about it, so they can be configured in the K2cloud platform.
+> Note: As mentioned, container images can be hosted in your OCI registry. Helm charts can be also copied into your GIT repository and maintained there (It is the responsibility of your team to synchronize with the official repository to ensure smooth operation). If you consume them from your repositories, inform K2view team about it, so they can be configured in the K2cloud platform orchestrator.
 
  
 
