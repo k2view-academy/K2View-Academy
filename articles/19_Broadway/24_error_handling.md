@@ -42,7 +42,7 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context 
 
    ![image](images/99_24_02.PNG)
 
-3. If the lower number equals zero, the **ErrorMsg** **JavaScript** Actor returns false and as a result stops the flow's execution.  The division by zero in Stage 4 is not executed.
+3. If the lower number equals zero, the **Validation** error handler returns false and as a result stops the flow's execution.  The division by zero in Stage 4 is not executed.
 
    ![image](images/99_24_03.PNG)
 
