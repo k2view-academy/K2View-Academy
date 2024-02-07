@@ -6,18 +6,27 @@
 
 The Catalog application is accessible from the [K2view Web Framework](/articles/30_web_framework/01_web_framework_overview.md) by selecting the **Catalog** from the menu. Upon opening, the application displays the data retrieved from *neo4j* Graph DB and it allows navigating from one level to another through a data model’s graph, expanding and/or collapsing various nodes, searching for nodes, viewing their properties, and more.
 
-This article includes the following sub-sections:
+The Catalog has a top bar navigation which includes the following areas:
 
-* Catalog application [Main area](05_catalog_app.md#main-area), which displays the Catalog tree.
-* Catalog application [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
-* Catalog application [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
-* Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
+* **Navigator** displays the Catalog tree. It allows to navigate through it and to perform various activities. The Navigator is described in this article, in the following sub-sections:
 
-### Main Area
+  * [Navigator's main area](05_catalog_app.md#main-area), which displays the Catalog tree.
 
-**General Navigation**
+  * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 
-The Catalog's main area enables navigation between different hierarchy levels, by expanding and collapsing various nodes.
+  * [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
+
+  * Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
+
+* **Monitor** displays the Discovery job execution progress. It allows to re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
+
+* **Settings** allows to view and edit the pre-defined profiling and masking rules used by the Catalog. [Click here to get more details about the Settings tab](10_catalog_settings.md). 
+
+### Navigator's Main Area
+
+**General**
+
+The Catalog Navigator's main area enables navigation between different hierarchy levels, by expanding and collapsing various nodes.
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
@@ -27,7 +36,7 @@ The Legend presents 3 types of nodes with their respective icons and allows to h
 
 **Catalog's Version**
 
-When the Catalog application opens, it displays the latest version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
+The Navigator displays the latest Catalog version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
 * **View** another version by clicking its number in the drop-down list.
 * **Compare** between two versions by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
