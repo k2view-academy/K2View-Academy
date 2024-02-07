@@ -10,7 +10,7 @@ The Catalog has a top bar navigation which includes the following areas:
 
 * **Navigator** displays the Catalog tree. It allows to navigate through it and to perform various activities. The Navigator is described in this article, in the following sub-sections:
 
-  * [Navigator's main area](05_catalog_app.md#main-area), which displays the Catalog tree.
+  * [Navigator's main area](05_catalog_app.md#navigators-main-area), which displays the Catalog tree.
 
   * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
 
