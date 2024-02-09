@@ -73,7 +73,7 @@ Below are some use cases:
 
 > Note: You may consider having several clusters. For example: Dev cluster for Studio; QA and preproduction; Production. This separation leads to a higher enforcement of security and privacy policies (that is: which clusters are allowed to access what data platforms/DBs). Additionally, it can help for resources allocation, as scaling in and out may be different, and you may wish to avoid the effect of Studio namespaces on production and vice versa.
 >
-> In POT, only single cluster is required for Studio namespaces. 
+> In POT - for Studio namespaces, a single 3 nodes K8s cluster is required. 
 
 
 
@@ -86,20 +86,16 @@ While setting up a K8s cluster, you shall follow these guidelines:
 
 - Verify that you have a client environment with the kubectl and Helm command-line tools, configured with a service account or a user that has an admin access to a namespace on the subject Kubernetes cluster.
 
-- Ensure you use NGINX Ingress controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instructions).
-
-  - Ensure you have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instructions for Calico CNI. K2cloud deployments use basic network policy, and accordingly, most of the CNIs fit).
-
 - Prepare a domain name that will be used for this cluster and that can be resolved by DNS. The domain should point to the load balancer that points to the NGINX Ingress controller with domain wildcard. 
 
   Provide the domain name to the K2view team.
 
   When creating a namespace, its name is associated as a subdomain to this domain name in the Ingress controller. For example, if the domain is "k2dev.company.com" and a created namespace is "test", then the URL of this namespace, that users shall access, will be "test.k2dev.company.com".
 
-- Ensure the following according to the cloud provider:
+- Ensure the following, according to the cloud provider:
 
   - AWS
-    - Amazon EFS CSI Driver shall be installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here](https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
+    - Amazon EFS CSI Driver is installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here](https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
       - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
       - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). For Dev Studio type cluster, auto-scaling is not required.
       - Have an ACM cert that attached on the LB level.
@@ -109,6 +105,11 @@ While setting up a K8s cluster, you shall follow these guidelines:
   - Azure
       - Provide K2view with the cluster's TLS/HTTPS certificate.
       - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZ, which can affect the user experience when K8s revives or moves his namespace).
+
+> The proposed sample Terraform defines several modules that are part of the cluster preparations. If according to your organization regulation you need to change some parts of it or run your Terraform, ensure the following:
+> * You use NGINX Ingress controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instructions).
+> * You have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instructions for Calico CNI. K2cloud deployments use basic network policy, and accordingly, most of the CNIs fit).
+
 
 ### Persistent Volumes and Storage Classes
 
