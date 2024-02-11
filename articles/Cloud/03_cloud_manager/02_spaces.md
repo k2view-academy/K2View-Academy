@@ -6,7 +6,7 @@ The Spaces page is the starting point to your daily basis work, as it is reached
 
 ## Space List
 
-Spaces page shows the space list, ordered by their creation time, newer to older, lets you to create new space, to see spaces' status and info, as well take action upon each space.
+The Spaces page presents the list of spaces, arranged by their creation time order (newer to older), lets you to create a new space, to see spaces' status and info, as well take action upon each space.
 
 By default, only spaces that you created are shown. To see all spaces, created by your teammates, choose the "Show All Space" radio button at the top bar.
 
