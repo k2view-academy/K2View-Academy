@@ -14,15 +14,15 @@ Additionally, the Auto-Refresh feature is turned on by default on the top bar as
 
 ![](images/spaces-top-bar.png)  
 
-## Space Card
+## Space Card's Anatomy
 
-Each space card built from top bar, mini dashboard metrics and in a glance information area.
+Each Space card comprises of a top bar, mini dashboard metrics and in a glance information area.
 
 ### **Top Bar** 
 
-* **Name**, When clicked you will leave the cloud manager and move to the space itself.  Clicking on the external link icon (![](images/ext-link.png)) will lead you to the space in  another browser tab.
+* **Space name** - when clicked, you will leave the k2cloud and be directed to the space itself. Clicking on the external link icon (![](images/ext-link.png)) next to the **Space name**, will lead you to the Space in another browser tab.
 
-* **Status**, Identified by the bar's color
+* **Status** - is identified by the bar's color:
 
   * Blue = <span style="background-color: #0969da; padding: 0 7px; color:white">live</span> and active. In this case metrics graphs are active too, and some actions are available.
   * Gray = <span style="background-color: #999999; padding: 0 7px; color:white">not active</span>  - when space is paused or when it is in a transition process - creating/pausing/resuming/deleting. In a transition process actions are not available.
