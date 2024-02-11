@@ -2,7 +2,11 @@
 
 We have just released Fabric 7.2.2, which includes the following features:
 
-* Discovery job execution monitor - for tracking the job progress & performance, the ability to use Fabric as a data source (via JDBC connection) and the Catalog App performance improvements.
+* In the Catalog:
+  * Discovery job execution monitor - for tracking the job progress 
+  * Ability to use Fabric as a data source (via JDBC connection)
+  * Catalog App performance improvements
+
 * Each LU (including the Shared Objects LU) can now have multiple Global variables java files.
 * Cassandra driver can now connect to cloud managed services – AWS Keyspaces.
 
