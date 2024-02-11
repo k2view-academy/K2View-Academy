@@ -17,13 +17,13 @@ Click here to open the [TDM 8.1 Docker Installation document](/articles/98_maint
 
 ## Import the TDM Library
 Both TDM layers - backend and frontend - are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) from v7.6 onwards.
-Download the TDM Library from the [download links](https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/doc2.aspx?sourcedoc=%7B86A1BBB2-C019-4A78-8793-4AE51A45E42B%7D&file=TDM%208.0_download_links.docx&action=default&mobileredirect=true), import and deploy it.
+Download the TDM Library from the [download links](https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7BAD4D11C5-FC8E-4794-AD25-B31ECE391ED4%7D&file=TDM%208.1.0_download_links.docx&action=default&mobileredirect=true), import and deploy it.
 
-Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for instructions how to import and deploy the TDM Library.
+Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for instructions on how to import and deploy the TDM Library.
 
 ## TDM Web Application
 
-Import the updated TDM LU to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web sub folder) into the TDM LU. The deployment of the TDM LU also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
+Import the updated TDM LU to Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web subfolder) into the TDM LU. The deployment of the TDM LU also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
