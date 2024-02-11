@@ -20,15 +20,15 @@ Each Space card comprises of a top bar, mini dashboard metrics and in a glance i
 
 ### **Top Bar** 
 
-* **Space name** - when clicked, you will leave the k2cloud and be directed to the space itself. Clicking on the external link icon (![](images/ext-link.png)) next to the **Space name**, will lead you to the Space in another browser tab.
+* **Space name** - when clicked, you will leave the k2cloud and be directed to the Space itself. Clicking on the external link icon (![](images/ext-link.png)) next to the **Space name**, will lead you to the Space in another browser tab.
 
-* **Status** - is identified by the bar's color:
+* **Status** - is indicated by the bar's color:
 
   * Blue = <span style="background-color: #0969da; padding: 0 7px; color:white">live</span> and active. In this case metrics graphs are active too, and some actions are available.
-  * Gray = <span style="background-color: #999999; padding: 0 7px; color:white">not active</span>  - when space is paused or when it is in a transition process - creating/pausing/resuming/deleting. In a transition process actions are not available.
-  * Red = <span style="background-color: #CC0000; padding: 0 7px; color:white">error</span> where an information alert icon ( ![](images/info-alert.png)) appears on the status bar. Clicking on it will open a tooltip with more information about the error, which can be sent to the Cloud Ops team. 
+  * Gray = <span style="background-color: #999999; padding: 0 7px; color:white">inactive</span> - when the Space is either paused or in a transition process - creating/pausing/resuming/deleting. In a transition process actions are not available.
+  * Red = <span style="background-color: #CC0000; padding: 0 7px; color:white">error</span>, where a clickable information alert icon (![](images/info-alert.png)) appears on the top bar. Clicking on it opens a tooltip with more information about the error, which can be sent to the Cloud Ops team for handling.
 
-* **Actions**, available via the ellipsis (3-dots) menu at bar's right side. Various actions are available, depended by current space's status and space profile. Note that actions are not available for a space with an error status. Actions are:
+* **Actions** - available via the vertical ellipsis (3-dots) menu on the top bar's right side. Various actions are available, depending on the current Space's status and profile. Note that actions are not available for a Space with an error status. Actions are:
 
   * **Redeploy Environments**, uploading into the space a fresh Environments file, from the project at GIT, and deploy it.
 
