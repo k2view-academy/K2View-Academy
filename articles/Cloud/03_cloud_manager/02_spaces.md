@@ -8,9 +8,9 @@ The Spaces page is the starting point to your daily basis work. It is reached di
 
 The Spaces page presents the list of spaces, arranged by their creation time order (newer to older), lets you to create a new space, to see spaces' status and info, as well take action upon each space.
 
-Upon entering the **k2cloud Orchestrator**, you can see that *Show My Spaces* is selected by default on the top bar of the Spaces page; this brings about a display of only the Spaces that you have created. However, it is also possible to select *Show All Spaces* and see all the Spaces created by other users.
+Upon entering the **k2cloud Orchestrator**, you can see that *Show My Spaces* is selected by default in the top bar of the Spaces page; this brings about a display of only the Spaces that you have created. However, it is also possible to select *Show All Spaces* and see all the Spaces created by other users.
 
-Additionally, the Auto-Refresh feature is turned on by default on the top bar as well, bringing about a display of the most up-to-date Spaces information. It can be turned on and off, and you can also click the *Refresh* button for an on-demand refresh.
+Additionally, the Auto Refresh feature is turned on by default in the top bar as well, bringing about a display of the most up-to-date Spaces information. It can be turned on and off, and you can also click the *Refresh* button for an on-demand refresh.
 
 ![](images/spaces-top-bar.png)  
 
@@ -30,33 +30,33 @@ Each Space card comprises of a top bar, mini dashboard metrics and in a glance i
 
 * **Actions** - available via the vertical ellipsis (3-dots) menu on the top bar's right side. Various actions are available, depending on the current Space's status and profile. Note that actions are not available for a Space with an error status. Actions are:
 
-  * **Redeploy Environments**, uploading into the space a fresh Environments file, from the project at GIT, and deploy it.
+  * **Redeploy Environments** - uploading a fresh Environments file into the Space, from the project in GIT, and deploying it.
 
-    On click - a pop will appear, offers you also to change and set the global environment
+    On click - a pop will appear, offering you also to change and set the global environment.
 
     ![](images/redeploy-env.png)
 
-    Clicking on Redeploy will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
+    Clicking on *Redeploy* will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
 
-    > Available only for non Studio spaces. For a Studio space you shall redeploy it via Studio, to avoid misunderstanding.
+    > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
 
-  * **Redeploy Project**, update the space with the updated project in GIT and deploy either the whole project or specified LU/s.
+  * **Redeploy Project** - update the Space with the updated project in GIT and deploy either the whole project or specified LU/s.
 
     On click - a pop will appear, lets you also to deploy either whole project or specific LUs.
 
-    When "Deploy LUs" is chosen, you can type the LUs with comma separated.
+    When *Deploy LUs* is chosen, you can type the LUs separated by a comma.
 
     ![](images/redeploy-proj.png)
 
-    Clicking on Redeploy will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
+    Clicking on *Redeploy* will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
 
-    > Available only for non Studio spaces. For a Studio space you shall redeploy it via Studio, to avoid misunderstanding.
+    > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
 
   * **Settings**
 
-  * **Refresh Status**, trigger a refresh status action manually, either the auto-refresh is turned on, at spaces page top bar, or not.
+  * **Refresh Status** - trigger a refresh status action manually, either the Auto Refresh is turned on, in the top bar of the Spaces page, or not.
 
-  * **Restart**, restart the space, for example when a configuration which requires Fabric restart is needed.
+  * **Restart** - restart the Space, for example, when a configuration that requires a Fabric restart is needed.
 
     > Available only for Studio spaces, to avoid  
 
