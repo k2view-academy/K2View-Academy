@@ -10,6 +10,8 @@ The Spaces page presents the list of spaces, arranged by their creation time ord
 
 By default, only spaces that you created are shown. To see all spaces, created by your teammates, choose the "Show All Space" radio button at the top bar.
 
+![](images/spaces-top-bar-default.png)
+
 In addition, by default the auto-refresh is turned on so that you can see the most updated information about the spaces. You can turn it on and off at the top bar, as well click to activate refresh, on demand.
 
 ![](images/spaces-top-bar.png)  
