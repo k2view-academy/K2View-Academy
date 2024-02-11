@@ -8,11 +8,9 @@ The Spaces page is the starting point to your daily basis work. It is reached di
 
 The Spaces page presents the list of spaces, arranged by their creation time order (newer to older), lets you to create a new space, to see spaces' status and info, as well take action upon each space.
 
-Upon entering the **k2cloud Orchestrator**, you can see that *Show My Spaces* is selected by default in the Spaces page, which shows only the Spaces that you have created. However, it is also possible to select *Show All Spaces* and see all the Spaces created by other users.
+Upon entering the **k2cloud Orchestrator**, you can see that *Show My Spaces* is selected by default on the top bar of the Spaces page; this brings about a display of only the Spaces that you have created. However, it is also possible to select *Show All Spaces* and see all the Spaces created by other users.
 
-![](images/spaces-top-bar-default.png)
-
-In addition, by default the auto-refresh is turned on so that you can see the most updated information about the spaces. You can turn it on and off at the top bar, as well click to activate refresh, on demand.
+Additionally, the Auto-Refresh feature is turned on by default on the top bar as well, bringing about a display of the most up-to-date Spaces information. It can be turned on and off, and you can also click the *Refresh* button for an on demand refresh.
 
 ![](images/spaces-top-bar.png)  
 
