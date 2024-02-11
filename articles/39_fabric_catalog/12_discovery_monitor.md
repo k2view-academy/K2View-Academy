@@ -4,6 +4,8 @@ The purpose of the Discovery job execution monitor is to track the progress of t
 
 The monitor is split into the following areas:
 
+* The **Run** <img src="images/run.png" style="zoom: 80%;" />icon is located at the top of the Monitor screen, and it is replaced by the **Stop** <img src="images/stop.png" style="zoom: 80%;" />icon during the job execution. The monitor allows to start the job execution for the selected Data Platform, or to stop the job, when it is in progress.
+  
 * The **General Info** area allows to select the Data Platform in order to retrieve details of the monitoring.
   * The monitor shows the last execution for the given Data Platform, either throughout its progress or when completed.
 
@@ -11,16 +13,15 @@ The monitor is split into the following areas:
 * The **Error / Warnings** area displays either the error (in case of a job failure) or the number of warnings received during the job execution, if any.
 * The **Execution Progress** is the monitor's main area. It shows the progress of the job, including the completion percentage of each step and the number of elements found.
   * The steps displayed in this area are dynamic, and they depend on the job configuration. The disabled plugins are not displayed.
+  * Each step has an indication whether it is in progress, not started or completed. 
 
 <img src="images/monitor_inprogress.png" style="zoom:80%;" />
 
-The monitor allows to either stop the Discovery job, when it is in progress, or to start the job execution for the selected Data Platform.
-
 Upon completion of the job, the monitor displays the version number and indicates whether a new version has been created or not.
 
-<img src="images/monitor.png" style="zoom:80%;" />
+<img src="images/monitor_new.png" style="zoom:80%;" />
 
-
+<img src="images/monitor_unchanged.png" style="zoom:80%;" />
 
 
 
