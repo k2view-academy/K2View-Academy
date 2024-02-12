@@ -22,13 +22,13 @@ Advanced Search allows to narrow the search results by specifying one (or more) 
 
 Note that once Advanced Search opens, each selection of the search criteria feeds the search text box at the top, using predefined syntax. For example, when searching by the keyword = phone, PII is true and object type is field, the search syntax is:
 
-~~~json
+~~~
 phone pii:true type:field
 ~~~
 
 And vice versa, you can define your search criteria using syntax only in the text box, which will automatically feed back the search criteria fields. 
 
-[Click here for more details about the syntax](10_catalog_APIs.md#search-catalog).
+Click [here](10_catalog_APIs.md#search-catalog) for more details about the syntax of Catalog search.
 
 ### Search Results
 

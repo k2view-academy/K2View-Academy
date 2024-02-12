@@ -42,7 +42,7 @@ https://localhost:3213/api/catalog
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
-The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the CONTAINS relations to its respective schema nodes. 
+The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the *contains* relations to its respective schema nodes. 
 
 The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -94,7 +94,7 @@ https://localhost:3213/api/catalog/1...latest
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
-The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved with the CONTAINS relations to its respective dataset nodes. 
+The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved with the *contains* relations to its respective dataset nodes. 
 
 The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -152,7 +152,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/schema`
 
-The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include the datasets, the REFERS_TO relations between the dataset nodes, fields and properties. 
+The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include the datasets, fields and their properties, and the *refersTo* relations between the dataset nodes. 
 
 The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -188,8 +188,16 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <p>The schema name.</p>
 </td>
 </tr>
+<tr>
+<td>propertiesToInclude</td>
+<td>N</td>
+<td>
+<p>Coma-separated list of properties to be included in the output. When empty, all properties are included. Available in V7.2.2.</p><p>E.g.: propertiesToInclude=pii,pk</p>
+</td>
+</tr>
 </tbody>
 </table>
+
 
 **Examples of an API call in the *view* mode:**
 
@@ -272,7 +280,7 @@ Example 1: When searching for Data Platform and Schema nodes, whose name include
 }
 ~~~
 
-Example 2: When searching for *any* nodes with *PII = true* and *Classification = EMAIL* properties, the request body is:
+Example 2: When searching for any node types with *PII = true* and *Classification = EMAIL* properties, the request body is:
 
 ~~~json
 {
@@ -287,7 +295,7 @@ Example 2: When searching for *any* nodes with *PII = true* and *Classification 
 
 
 
-[![Previous](/articles/images/Previous.png)](11_catalog_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
+[![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
 
 
 

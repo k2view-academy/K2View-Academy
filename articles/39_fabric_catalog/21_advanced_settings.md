@@ -1,6 +1,6 @@
 <web>
 
-# Catalog Advanced Settings
+# Advanced Configuration
 
 ### Web Studio
 

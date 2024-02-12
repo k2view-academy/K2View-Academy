@@ -8,7 +8,7 @@ To initiate the Discovery process:
 
 * Start by defining an interface for your data source in the Fabric Studio. 
 
-* Next, trigger the Discovery job (Crawler) on this interface. This is done by opening the [DB Interface explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right-clicking on the interface and selecting **Run Discovery Job**.
+* Next, trigger the Discovery job on this interface. This is done by opening the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right-clicking on the interface and selecting **Run Discovery Job**.
 
 * Alternatively, run the following command from the Fabric terminal:
 
@@ -24,15 +24,13 @@ Once the Discovery job execution on a data source has been completed, the [DB In
 
 To view a data source element in the Catalog application, do the following:
 
-* Open the DB Interface explorer tab in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
+* Open the DB Interface Explorer tab in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
 
 * Right-click the element and click **Open in Catalog**. 
 
   <img src="images/show_catalog_commands.png" style="zoom:75%;" />
 
-* The Catalog application opens and the selected element is displayed in the Catalog tree.
-
-* Note that the **Open in Catalog** command can be executed on all levels: interface, schema, table or field.
+* The Catalog application opens and the selected element is displayed in the Catalog's Navigator tree.
 
 [Click here for more information about the Catalog Application.](05_catalog_app.md)
 
