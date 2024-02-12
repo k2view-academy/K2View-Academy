@@ -56,16 +56,16 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
   * **Refresh Status** - trigger a refresh status action manually, either the Auto Refresh is turned on, in the top bar of the Spaces page, or not.
 
-  * **Restart** - restart the Space, for example, when a configuration that requires a Fabric restart is needed.
+  * **Restart** - restart the Space, e.g., when a configuration that requires a Fabric restart is needed.
 
     > Available only for Studio spaces, to avoid  
 
-  * **Pause/Resume**, either of these appear according the current status (Pause when space is running and vice versa). By pausing your space you can save budget as its resource are going down. 
+  * **Pause/Resume** - either of these appear in accordance with the Space's current status (*Pause* when the Space is running and vice versa). Note that pausing your Space would save on your budget as its resource are going down. 
 
     > * Available only for Studio spaces, to avoid
-    > * When pausing your space you do **not** loose the changes that you might made in your project, even if not pushed to GIT. On resuming the space you will have it.
+    > * When pausing your Space you do **not** loose the changes that you may have made in your project, although you have not pushed it to GIT. Upon resuming the Space, you will have it.
 
-  * **Delete**, delete the space, after getting your approval in the opened dialog box. 
+  * **Delete** - delete the space, after getting your approval in the open dialog box. 
 
     > Available only for Studio spaces, to avoid
 
