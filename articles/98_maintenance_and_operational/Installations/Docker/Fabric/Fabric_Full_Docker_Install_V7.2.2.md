@@ -43,10 +43,35 @@ More detailed requirements for each are described below:
 #### Load Container Images
 
 1. Download the latest versions of Fabric, Cassandra and Docker Compose using 1 the below 4 links:
-   > Kafka is no longer required for a single node setup, if needed, please download the relevant container and uncommnet the Kafka section in the docker-compose.yml file
-   >
+     > Kafka is no longer required for a single node setup, if needed, please download the relevant container and uncommnet the Kafka section in the docker-compose.yml file
 
-<table style="border-collapse: collapse; width: 100%;">
+  <table style="border-collapse: collapse; width: 100%;">
+
+   <tbody>
+   
+   <tr>
+   <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/7.2/D_k2view_Confluent_7.2_package_06.tar.gz
+   <br>md5: 7f6d3cbe0761ba7dfa861a9d4fa4ef69</br></td>
+   </tr>
+   <tr>
+   <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz 
+   <br>md5: 5674945c399c58bc32b5aa49c381131fcd<br></td>
+   </tr>
+   <tr>
+   <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_55/D_k2view_fabric_7.2.2_55.tar.gz
+   <br>md5: 98b12d6a9fc1d4bd25373364678a507b</br></td>
+   </tr>
+   <tr>
+   <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_55/compose_fabric_7.2.2_55.tar.gz
+   <br>md5: f21700abeab2d1bd3cf14671c488f007</br></td>
+   </tr>
+   </tbody>
+   </table>
+2. Copy all files to the k2view directory as follows: (skip Kafka if not needed)
 
 ```bash
    cd ~/ 
