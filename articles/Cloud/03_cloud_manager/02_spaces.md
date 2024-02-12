@@ -44,7 +44,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     On click - a pop will appear, lets you also to deploy either whole project or specific LUs.
 
-    When *Deploy LUs* is chosen, you can type the LUs separated by a comma.
+    When *Deploy LUs* is chosen, you can type the LUs - separated by a comma.
 
     ![](images/redeploy-proj.png)
 
