@@ -76,7 +76,7 @@ The mini-dashboard provides a quick view of the Space's performance and operatio
 
   The graph is divided into 2 y-axes, one for read and the other for writes.
 
-*  **API Calls** - which shows information about the calls that are done into Fabric by your platforms. The y-axis on the left shows the overall count number of calls, whereas the y-axis on the right shows the count of API calls' responses that returned as failures. This gives you an at-a-glance indication of whether the operation and functioning are as expected.
+*  **API Calls** - which shows information about the calls that are done into Fabric by your platforms. The y-axis on the left shows the overall count number of calls, whereas the y-axis on the right shows the count of API calls' responses that are returned as failures. This gives you an at-a-glance indication of whether the operation and functioning are as expected.
 
 ### Card Information
 
