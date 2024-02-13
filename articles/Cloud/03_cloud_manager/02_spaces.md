@@ -40,7 +40,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     > Available only for non-Studio Spaces. A Studio Space shall be redeployed via Studio.
 
-  * **Redeploy Project** - update the Space with the updated project in GIT and deploy either the whole project or specified LU/s.
+  * **Redeploy Project** - updates the Space with the updated project in GIT and deploys either the whole project or specified LU/s.
 
     Upon clicking - a pop-up window appears, letting you also to deploy either a whole project or specific LUs.
 
@@ -54,7 +54,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
   * **Settings**
 
-  * **Refresh Status** - trigger a refresh status action manually, either the Auto Refresh is turned on, in the top bar of the Spaces page, or not.
+  * **Refresh Status** - triggers a refreshing of the Space's status, regardless of whether the Auto Refresh is turned on, in the top bar of the Spaces page, or not.
 
   * **Restart** - restart the Space, e.g., when a configuration that requires a Fabric restart is needed.
 
