@@ -26,7 +26,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
   * Blue = <span style="background-color: #0969da; padding: 0 7px; color:white">live</span> and active. In this case metrics graphs are active too, and some actions are available.
   * Gray = <span style="background-color: #999999; padding: 0 7px; color:white">inactive</span> - when the Space is either paused or in a transition process - creating/pausing/resuming/deleting. In a transition process actions are not available.
-  * Red = <span style="background-color: #CC0000; padding: 0 7px; color:white">error</span>, where a clickable information alert icon (![](images/info-alert.png)) appears in the Space's top bar. Clicking on it opens a tooltip with more information about the error, which can be sent to the Cloud Ops team for handling.
+  * Red = <span style="background-color: #CC0000; padding: 0 7px; color:white">error</span>, where a clickable information alert icon (![](images/info-alert.png)) appears in the Space's top bar. Clicking on it opens a tooltip with added error description, which can be sent to the Cloud Ops team for handling.
 
 * **Actions** - available via the vertical ellipsis (3-dots) menu on the right side in the Space's top bar. Various actions are available, depending on the current Space's status and profile. Note that actions are not available for a Space with an error status. Actions are:
 
