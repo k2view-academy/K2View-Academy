@@ -137,7 +137,7 @@ The exclusion list can be defined using the **field_name_exclude_list** and **fi
 
 **Example:**
 
-~~~
+~~~json
 "input_parameters": {
 	"field_name_exclude_list": [
 					"(?i).*NAME.*",
@@ -188,7 +188,7 @@ As a result, the **Null Percentage** property is added to the field's properties
 
 For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
-#
+
 
 [![Previous](/articles/images/Previous.png)](04_plugin_framework.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
 
