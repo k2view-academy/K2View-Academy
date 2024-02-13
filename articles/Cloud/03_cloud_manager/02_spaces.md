@@ -63,9 +63,9 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
   * **Pause/Resume** - either one of these actions appears in accordance with the Space's current status (*Pause* when the Space is running and vice versa). Note that pausing your Space would free-up resources and cut cost.
 
     > * Available only for Studio spaces, to avoid
-    > * When pausing your Space you do **not** loose the changes that you may have made in your project, although you have not pushed it to GIT. Upon resuming the Space, you will have it.
+    > * When pausing your Space you do **not** loose the changes that you may have made in your project, although you have not pushed it to GIT. Upon resuming the Space, it will include those changes.
 
-  * **Delete** - delete the space, after getting your approval in the open dialog box. 
+  * **Delete** - deletes the Space, after getting your approval in the open dialog box. 
 
     > Available only for Studio spaces, to avoid
 
@@ -75,11 +75,11 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
 The mini-dashboard provides a quick view of the Space's performance and operation. It contains 2 graphs that display data of the last 5 minutes. Wider and detailed information can be inspected in the Monitor app. - k2monitor (accessible via hamburger icon located in the top-right-corner of k2cloud Orchestrator). 
 
-* **Reads & Writes** - to the Fabric storage. This information is important for both performance and financial aspects. In cluster mode, where there is a lot of data, the data (LUIs) is stored in cloud providers' storages that charge by read and write transactions.
+* **Reads & Writes** - to the Fabric storage. This information is important for both performance (traffic/usage) and financial aspects. 
 
-  The graph is divided into 2 Y-Axes, one for read and the other for writes.
+  The graph is divided into 2 y-axes, one for read and the other for writes.
 
-*  **API Calls** - which shows information about the calls that are done into Fabric by your platforms. The right y-axis is the Count - the number of calls, where the left y-axis shows the average response time. This gives you an at-a-glance indication of things are functional as expected.
+*  **API Calls** - which shows information about the calls that are done into Fabric by your platforms. The y-axis on the right shows the count of Api calls' responses that returned as a failure, whereas the y-axis on the left shows the count number of calls. This gives you an at-a-glance indication of whether the operation and functioning are as expected.
 
 ### Card Information
 
