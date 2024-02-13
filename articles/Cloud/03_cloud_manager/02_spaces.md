@@ -1,12 +1,12 @@
 # Spaces
 
-A **Space** is a Fabric cluster - a full working environment with all required modules and services. Through the k2cloud - also known as **k2cloud Orchestrator** - which constitutes of editable UI screens, the user is able to easily spin up a Space. This is done through the Spaces page, where you just need to choose what and where - the project, the profile and the location.
+A **Space** is a Fabric cluster - a full working environment with all required modules and services. Through the k2cloud - also known as **k2cloud Orchestrator** - which constitutes of editable UI screens, the user is able to easily create a Space. This is done through the Spaces page, where you just need to choose what and where - the project, the profile and the location.
 
 The Spaces page is the starting point to your daily basis work. It is reached directly by default when accessing the **k2cloud Orchestrator** on https://cloud.k2view.com/. The Spaces page displays your organization's spaces, each via its own **Space card** that provides information about the Space, showing operational mini-dashboards, and lets you take actions through it. 
 
-## Space List
+## Spaces List
 
-The Spaces page presents the list of spaces, arranged by their creation time order (newer to older), lets you to create a new space, to see spaces' status and info, as well take action upon each space.
+The Spaces page presents the list of Spaces, arranged by their creation time order (newer to older), lets you to create a new space, to see spaces' status and info, as well take action upon each space.
 
 Upon entering the **k2cloud Orchestrator**, you can see that *Show My Spaces* is selected by default in the top bar of the Spaces page; this brings about a display of only the Spaces that you have created. However, it is also possible to select *Show All Spaces* and see all the Spaces created by other users.
 
