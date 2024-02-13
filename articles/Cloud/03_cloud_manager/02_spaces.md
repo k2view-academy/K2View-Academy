@@ -44,7 +44,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     Upon clicking - a pop-up window appears, letting you also to deploy either a whole project or specific LUs.
 
-    When *Deploy LUs* is chosen, you can type the LUs - separated by a comma.
+    When *Deploy LUs* is chosen, you can type the LUs, separated by a comma.
 
     ![](images/redeploy-proj.png)
 
@@ -60,7 +60,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     > Available only for Studio spaces, to avoid  
 
-  * **Pause/Resume** - either of these appear in accordance with the Space's current status (*Pause* when the Space is running and vice versa). Note that pausing your Space would save on your budget as its resource are going down. 
+  * **Pause/Resume** - either one of these actions appears in accordance with the Space's current status (*Pause* when the Space is running and vice versa). Note that pausing your Space would free-up resources and cut cost.
 
     > * Available only for Studio spaces, to avoid
     > * When pausing your Space you do **not** loose the changes that you may have made in your project, although you have not pushed it to GIT. Upon resuming the Space, you will have it.
