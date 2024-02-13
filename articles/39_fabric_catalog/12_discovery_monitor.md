@@ -24,7 +24,7 @@ The monitor displays the execution progress by using various icons, as follows:
 
   <img src="images/monitor_new.png" style="zoom:80%;" />
 
-* The following image shows that the job has been completed and a new version was **not** created:
+* The following image shows that the job has been completed without creating a new version:
 
   <img src="images/monitor_unchanged.png" style="zoom:80%;" />
 
