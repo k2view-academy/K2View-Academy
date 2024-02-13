@@ -36,7 +36,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     ![](images/redeploy-env.png)
 
-    Clicking on *Redeploy* will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
+    Clicking on *Redeploy* will close the pop-up window and you will see the status-change dialog box, indicating of the deployment progress.
 
     > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
 
@@ -48,7 +48,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     ![](images/redeploy-proj.png)
 
-    Clicking on *Redeploy* will close the popup and you will see the status-change dialog box, indicating you on the deployment progress.
+    Clicking on *Redeploy* will close the pop-up window and you will see the status-change dialog box, indicating of the deployment progress.
 
     > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
 
