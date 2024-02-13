@@ -38,7 +38,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     Clicking on *Redeploy* will close the pop-up window and you will see the status-change dialog box, indicating of the deployment progress.
 
-    > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
+    > Available only for non-Studio Spaces. A Studio Space shall be redeployed via Studio.
 
   * **Redeploy Project** - update the Space with the updated project in GIT and deploy either the whole project or specified LU/s.
 
@@ -50,7 +50,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
     Clicking on *Redeploy* will close the pop-up window and you will see the status-change dialog box, indicating of the deployment progress.
 
-    > Available only for non-Studio Spaces. For a Studio Space, you shall redeploy it via Studio, to avoid misunderstanding.
+    > Available only for non-Studio Spaces. A Studio Space shall be redeployed via Studio.
 
   * **Settings**
 
