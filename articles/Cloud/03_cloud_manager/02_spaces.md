@@ -71,6 +71,7 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 ### Space Card Information
 
 The main part of the Space card is divided into 3 sections. 
+
 INSERT SPACE CARD IMAGE HERE
 * The **upper section** describes basic information outlining the project, its profile and the site.
   * *Project* provides the Fabric-related project name, followed by parentheses that include the name of the branch/tag that the project is being worked on. This overall name provides a brief overview and hints which project this Space is based on.
