@@ -68,7 +68,11 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
    
   * **Support**
 
-### Mini Dashboard
+### Space Card Information
+
+The card information area is divided into 3 sections. The upper describes base info of what and where - the project, the profile and the site. The middle shows which modules are deployed and served on that space. The third section contains teh information about who created the space and when, as well as change date, for example in case it was paused or resumed.
+
+### Mini Dashboards
 
 The mini-dashboard provides a quick view of the Space's performance and operation. It contains 2 graphs that display data of the last 5 minutes. Wider and detailed information can be inspected in the Monitor app. - k2monitor (accessible via hamburger icon located in the top-right-corner of k2cloud Orchestrator). 
 
@@ -77,12 +81,6 @@ The mini-dashboard provides a quick view of the Space's performance and operatio
   The graph is divided into 2 y-axes, one for read and the other for writes.
 
 *  **API Calls** - which shows information about the calls that are done into Fabric by your platforms. The y-axis on the left shows the overall count number of calls, whereas the y-axis on the right shows the count of API calls' responses that are returned as failures. This gives you an at-a-glance indication of whether the operation and functioning are as expected.
-
-### Card Information
-
-The card information area is divided into 3 sections. The upper describes base info of what and where - the project, the profile and the site. The middle shows which modules are deployed and served on that space. The third section contains teh information about who created the space and when, as well as change date, for example in case it was paused or resumed.
-
-
 
 ## Create a Space
 
