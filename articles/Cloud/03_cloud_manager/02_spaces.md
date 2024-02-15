@@ -70,7 +70,14 @@ Each **Space card** comprises of a top bar, mini dashboard metrics and in a glan
 
 ### Space Card Information
 
-The card information area is divided into 3 sections. The upper describes base info of what and where - the project, the profile and the site. The middle shows which modules are deployed and served on that space. The third section contains teh information about who created the space and when, as well as change date, for example in case it was paused or resumed.
+The main part of the Space card is divided into 3 sections. 
+INSERT SPACE CARD IMAGE HERE
+* The **upper section** describes basic information outlining the project, its profile and the site.
+  * *Project* provides the Fabric-related project name, followed by parentheses that include the name of the branch/tag that the project is being worked on. This overall name provides a brief overview and hints which project this Space is based on.
+  * The *Profile* name, just like the Project name, is as self-explanatory as can be, aiming to be clear and concise, as it tries to represent this Space.
+  * The *Site* outlines where does this Space operate. It represents a Kubernetes cluster. K2view supports major Cloud Service Providers (CSPs) - GCP, AWS and Azure - and each organization usually uses only 1 CSP.
+* The middle section shows what modules are deployed and are running on this Space, such as Fabric, Studio, Cassandra, PostgreSQL and Neo4j. 
+* The third section contains the Space creator’s name, the creation date and a status change date. The latter is the date on which the Space’s status (e.g., paused or resumed) was changed.
 
 ### Mini Dashboards
 
