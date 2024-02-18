@@ -23,8 +23,10 @@ Download the neo4j installation package from the download page... TBD
 
 Download the Catalog Add-Ons zip file from the download page and unzip it in your project. It includes the following:
 
-* The ```apps.json``` file, which is copied to the ```\Implementation\LogicalUnits\k2_ws\web``` folder in your project tree and it enables access to the Catalog from the Web Framework menu.
+* The ```apps.json``` file, which is copied to the ```\Implementation\LogicalUnits\k2_ws\web``` folder in your project tree and enables access to the Catalog from the Web Framework menu.
 * The  ```Discovery``` folder, which includes the Catalog's Settings MTables and the ```plugins.discovery``` configuration file. The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your project tree. 
+  * Note that the Discovery folder is hidden and cannot be seen in the .NET Studio. Nevertheless, the MTables included in the Discovery folder are loaded to the Fabric memory upon the Deploy.
+
 
 
 
