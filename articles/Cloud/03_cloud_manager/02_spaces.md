@@ -98,7 +98,7 @@ To create a new Space:
 2. Define the what and where: The name of the space, the project, the profile and where it shall be created - the site. According to your deployment, each of the select list might contain one or more options.
 3. Click on the 'Create' button.
 
-The newly created Space card then appears at the top left of the Spaces list, as the list is arranged by creation date, from newer to older. In addition, as long as you do not leave the Spaces page, it is visually emphasized with a gray border.
+The newly created Space card then appears at the top left of the Spaces list, as the list is arranged by creation date, from newer to older. Additionally, as long as you do not leave the Spaces page, the newly created Space card is visually emphasized with a gray border.
 
 The Space creation process has 3 states - Create, Start and Ready/Error. A progress bar indicates in which state the card is currently exists. Note that even if you leave the page and get back, you will still see the state and the progress bar, for any action you make.
 
