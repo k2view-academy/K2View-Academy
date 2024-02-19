@@ -82,7 +82,7 @@ INSERT SPACE CARD IMAGE HERE
 
 ### Mini Dashboards
 
-The mini-dashboard provides a quick view of the Space's performance and operation. It contains 2 graphs that display data of the last 5 minutes. Wider and detailed information can be inspected in the Monitor app. - k2monitor (accessible via hamburger icon located in the top-right-corner of k2cloud Orchestrator). 
+There are 2 clickable mini dashboards in the Space card - *mDB Reads & Writes* and *API Calls*. They are located on the right side of the Space card and provide a quick view of the Space's performance and operation. Each mini dashboard contains 2 graphs that display data of the last 5 minutes. Wider and detailed information can be reached for inspection by clicking on each mini dashboard, as well as through accessing the Monitor app. Both these actions lead to the same informative page that displays the data via Metrics and Logs tabs.  
 
 * **Reads & Writes** - to the Fabric storage. This information is important for both performance (traffic/usage) and financial aspects. 
 
