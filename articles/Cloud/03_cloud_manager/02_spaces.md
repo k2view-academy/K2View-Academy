@@ -16,7 +16,7 @@ Additionally, the Auto Refresh feature is turned on by default in the top bar as
 
 ## Space Card's Anatomy
 
-Each **Space card** comprises of a top bar, the main informative part and 2 mini dashboard.
+Each **Space card** comprises of a top bar, the main informative part and 2 mini dashboards.
 
 ### **Top Bar** 
 
