@@ -100,6 +100,6 @@ To create a new Space:
 
 The newly created Space card then appears at the top left of the Spaces list, as the list is arranged by creation date and time (newer to older). Additionally, as long as you do not leave the Spaces page, the newly created Space card is visually emphasized with a gray border.
 
-The Space creation process has 3 states - Create, Start and Ready/Error. A progress bar indicates in which state the card is currently exists. Note that even if you leave the page and get back, you will still see the state and the progress bar, for any action you make.
+The Space creation process has 3 stages - Create, Start and Ready/Error. A progress bar indicates which stage the card is currently at. Note that even if you leave the Spaces page and get back to it, you will still see the stage on the progress bar, for any action you may make.
 
 > The Space creation process may vary between project and profiles. For non-Studio Spaces, the Space creation contains also the step of build and deploy execution, which may take time in case the deployment also responsible to make some further automatic processes execution, defined in [deploy.flow](/articles/19_Broadway/09a_automatic_flows_execution_upon_deploy.md) or as user jobs. 
