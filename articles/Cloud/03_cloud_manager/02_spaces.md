@@ -70,7 +70,7 @@ Each **Space card** comprises of a top bar, the main informative part and 2 mini
 
 ### Space Card Information
 
-The **main part of the Space car**d is divided into 3 sections: 
+The **main part of the Space card** is divided into 3 sections: 
 
 INSERT SPACE CARD IMAGE HERE
 * Its **upper section** describes basic information outlining the project, its profile and the site.
