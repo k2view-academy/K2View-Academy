@@ -76,7 +76,7 @@ INSERT SPACE CARD IMAGE HERE
 * Its **upper section** describes basic information outlining the project, its profile and the site.
   * ***Project*** provides the Fabric-related project name, followed by parentheses that include the name of the branch/tag that the project is being worked on. This overall name provides a brief overview and hints which project this Space is based on.
   * The ***Profile*** name, just like the Project name, is as self-explanatory as possible, aiming to be clear and concise, and to represent this Space.
-  * The ***Site*** outlines where does this Space operate. It represents a Kubernetes cluster. K2view supports the 3 major Cloud Service Providers (CSPs) - GCP, AWS and Azure - and each organization usually uses only 1 CSP. The *Site* comprises of the selected CSP's logo, followed by a name.
+  * The ***Site*** outlines where does this Space operate. It represents a Kubernetes cluster. K2view supports the 3 major Cloud Service Providers (CSPs) - GCP, AWS and Azure - and each organization usually uses only 1 CSP. The ***Site*** comprises of the selected CSP's logo, followed by a name.
 * Its **middle section** shows what modules are deployed and are running on this Space, such as Fabric, Studio, Cassandra, PostgreSQL and Neo4j. 
 * Its **third section** contains the Space creator’s name, the creation date and a status change date. The latter is the date on which the Space’s status (e.g., paused or resumed) was changed.
 
