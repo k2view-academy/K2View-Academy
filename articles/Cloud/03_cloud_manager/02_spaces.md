@@ -95,7 +95,7 @@ There are 2 clickable mini dashboards in the Space card - *mDB Reads & Writes* a
 To create a new Space: 
 
 1. Click on either the 'Create Space **+**' button at the top bar of the Spaces page, or the last empty card, labelled as ‘Create Space’.
-2. Define the what and where: The name of the space, the project, the profile and where it shall be created - the site. According to your deployment, each of the select list might contain one or more options.
+2. Define the what and where: The name of the space, the project, the profile and where it shall be created - the site. According to the setup and your project needs, the Profile and Site select lists will contain one or more options.
 3. Click on the 'Create' button.
 
 The newly created Space card then appears at the top left of the Spaces list, as the list is arranged by creation date, from newer to older. Additionally, as long as you do not leave the Spaces page, the newly created Space card is visually emphasized with a gray border.
