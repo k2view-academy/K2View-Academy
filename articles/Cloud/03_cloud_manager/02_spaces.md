@@ -2,7 +2,7 @@
 
 A **Space** is a Fabric cluster - a full working environment with all required modules and services. Through the k2cloud - also known as **k2cloud Orchestrator** - which constitutes of editable UI screens, the user is able to easily create a Space. This is done through the Spaces page, where you just need to choose *what and where* - the project, the profile and the site (location).
 
-The Spaces page is the starting point to your daily basis work. It is reached directly by default when accessing the **k2cloud Orchestrator** on https://cloud.k2view.com/. The Spaces page displays your organization's spaces, each via its own **Space card** that provides information about the Space, showing operational mini-dashboards, and lets you take actions through it. 
+The Spaces page is the starting point to your daily basis work. It is reached directly by default when accessing the **k2cloud Orchestrator** on https://cloud.k2view.com/. The Spaces page displays your organization's spaces, each via its own **Space card** that provides information about the Space, shows operational mini dashboards, and lets you take actions through it. 
 
 ## Spaces List
 
