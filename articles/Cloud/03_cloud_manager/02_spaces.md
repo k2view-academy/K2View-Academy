@@ -1,6 +1,6 @@
 # Spaces
 
-A **Space** is a Fabric cluster - a full working environment with all required modules and services. Through the k2cloud - also known as **k2cloud Orchestrator** - which constitutes of editable UI screens, the user is able to easily create a Space. This is done through the Spaces page, where you just need to choose what and where - the project, the profile and the location.
+A **Space** is a Fabric cluster - a full working environment with all required modules and services. Through the k2cloud - also known as **k2cloud Orchestrator** - which constitutes of editable UI screens, the user is able to easily create a Space. This is done through the Spaces page, where you just need to choose *what and where* - the project, the profile and the location.
 
 The Spaces page is the starting point to your daily basis work. It is reached directly by default when accessing the **k2cloud Orchestrator** on https://cloud.k2view.com/. The Spaces page displays your organization's spaces, each via its own **Space card** that provides information about the Space, showing operational mini-dashboards, and lets you take actions through it. 
 
@@ -95,7 +95,7 @@ There are 2 clickable mini dashboards in the Space card - *mDB Reads & Writes* a
 To create a new Space: 
 
 1. Click on either the 'Create Space **+**' button at the top bar of the Spaces page, or the last empty card, labelled as ‘Create Space’.
-2. Define the what and where: The name of the space, the project, the profile and where it shall be created - the site. According to the setup and your project needs, the Profile and Site select lists will contain one or more options.
+2. Define *what and where*: The name of the Space, the Project, the Profile and where it shall be created - the Site. According to the setup and your project needs, the Profile and Site select lists will contain one or more options.
 3. Click on the 'Create' button.
 
 The newly created Space card then appears at the top left of the Spaces list, as the list is arranged by creation date and time (newer to older). Additionally, as long as you do not leave the Spaces page, the newly created Space card is visually emphasized with a gray border.
