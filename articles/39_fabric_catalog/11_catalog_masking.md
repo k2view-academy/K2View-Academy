@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Masking Mechanism
 
 The purpose of the Catalog Masking mechanism is to perform masking based on the Catalog's Classifications. It provides a great simplification of the masking implementation, since it allows to base the masking logic on the Discovery results in the Catalog rather than defining it manually in each LU table population. 
@@ -54,7 +52,7 @@ The purpose of adding the Masking property to a field is to override the Classif
 
 [![Previous](/articles/images/Previous.png)](10_catalog_settings.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_discovery_monitor.md) 
 
-</web>
+
 
 
 

@@ -1,6 +1,6 @@
-<web>
-
 # Advanced Configuration
+
+<web>
 
 ### Web Studio
 
@@ -12,11 +12,13 @@
 * The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files. 
 
   * The **plugins.discovery** is a configuration file that defines a list of plugins and their execution order. 
-  * The **MTables** subfolder holds the MTables used by the Catalog's various processes.
+  * The **MTable** subfolder holds the MTables used by the Catalog's various processes.
 
-  <img src="images/discovery_folder.png" style="zoom:75%;" />
+  <img src="images/discovery_folder.png" style="zoom: 80%;" />
 
   Click [here](/articles/39_fabric_catalog/04_plugin_framework.md) for more details about these files.
+
+</web>
 
 ### Catalog Application Configuration
 
@@ -34,4 +36,3 @@ ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether t
 
 [![Previous](/articles/images/Previous.png)](20_catalog_APIs.md)
 
-</web>

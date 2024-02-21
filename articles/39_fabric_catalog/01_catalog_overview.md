@@ -28,12 +28,11 @@ The Catalog information - including the data model, properties and classificatio
 
 <studio>
 
-Note that when using the .NET Studio, few setup steps must be taken prior to running the Discovery process. Some solution limitations are applied, for example the Logical Unit creation in the .NET Studio cannot be based on the Catalog.
+Note that when using the .NET Studio, few setup steps must be taken prior to running the Discovery process. Some solution limitations are applied, for example the Logical Unit creation based on the Catalog is not available in the .NET Studio.
 
 </studio>
 
 Further articles provide more details about the Discovery process, the Catalog application and the exposed APIs. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
-
 
