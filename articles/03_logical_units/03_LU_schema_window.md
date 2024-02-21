@@ -206,9 +206,21 @@ The LU Schema toolbar includes the following elements:
 <table style="width: 900px;">
 <tbody>
 <tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/new-table.svg" alt="" /></td>
+<td width="630pxl">
+<p>Add a new table to the schema by either creating one or selecting one from the list.</p>
+</td>
+</tr>
+<tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/refresh.png" alt="" /></td>
 <td width="630pxl">
 <p>Refresh schema's elements that are based on changes made outside this window. For example, when a table was edited via the project tables folder or when population inputs were updated in the population editor.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="170pxl"><img src="images/web/reconciliation.svg" alt="" /></td>
+<td width="630pxl">
+<p>Find tables' columns mismtaches vs the origin data sources tables, for <a href="">tables reconcilliation</a> purposes.</p>
 </td>
 </tr>
 <tr>
@@ -221,12 +233,6 @@ The LU Schema toolbar includes the following elements:
 <td style="text-align: center;" width="170pxl"><img src="images/web/group.svg" alt="" /></td>
 <td width="630pxl">
 <p>Group the selected tables.</p>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;" width="170pxl"><img src="images/web/new-table.svg" alt="" /></td>
-<td width="630pxl">
-<p>Add a new table to the schema by either creating one or selecting one from the list.</p>
 </td>
 </tr>
 <tr>
@@ -279,6 +285,7 @@ The LU Schema toolbar includes the following elements:
 </tr>
 </tbody>
 </table>
+
 
 
 
