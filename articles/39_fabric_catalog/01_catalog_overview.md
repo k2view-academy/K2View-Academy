@@ -1,7 +1,5 @@
 # Fabric Catalog Overview
 
-<web>
-
 Today, nearly all companies are required to combine and integrate data from multiple sources, while collecting huge amounts of data on their customers, markets, suppliers, etc. Each day, more diverse sources and new data formats are added. Many of these data sources are neither well structured nor have predefined relations. As a result, decision makers are drowning in data and yet seeking for insights. On top of that, the ever-growing data security risks cause companies to give this issue a higher priority.
 
 Data Discovery is a process that can help companies cope with the above-mentioned issues. Its purpose is to:
@@ -28,14 +26,14 @@ The Logical Unit creation is based on the discovered and enriched data model. Th
 
 The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
+<studio>
+
+Note that when using the .NET Studio, few setup steps must be taken prior to running the Discovery process. Some solution limitations are applied, for example the Logical Unit creation in the .NET Studio cannot be based on the Catalog.
+
+</studio>
+
 Further articles provide more details about the Discovery process, the Catalog application and the exposed APIs. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_catalog_vocabulary.md) 
 
-</web>
 
-<studio>
-
-The Fabric Discovery and Catalog solution is available only in the Web Studio.
-
-</studio>
