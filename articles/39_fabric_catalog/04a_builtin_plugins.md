@@ -10,6 +10,8 @@ The following article describes the basic built-in plugins introduced by the Fab
 * [Classification PII Marker](04a_builtin_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
 * [NULL Percentage](04a_builtin_plugins.md#null-percentage) - to calculate the percentage of NULL values per column, based on the data snapshot.
 
+Additional built-in plugins description can be found [here](plugins/README.md).
+
 ### Metadata Logical Reference
 
 The purpose of a **Metadata Logical Reference** plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
