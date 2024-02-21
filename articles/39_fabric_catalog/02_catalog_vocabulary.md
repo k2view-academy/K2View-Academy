@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Vocabulary
 
 The Fabric Catalog introduces a vocabulary that describes the catalog entities and the relations between them. The relations indicate the connections between the data entities and determine their hierarchy.
@@ -94,4 +92,3 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 [![Previous](/articles/images/Previous.png)](01_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_discovery_process.md) 
 
-</web>

@@ -1,6 +1,14 @@
-<web>
-
 # Built-In Plugins
+
+### Overview
+
+The following article describes the basic built-in plugins introduced by the Fabric's Discovery and Catalog solution:
+
+* [Metadata Logical Reference](04a_builtin_plugins.md#metadata-logical-reference) - to create *refers to* relations between two datasets based on the field name comparison.
+* [Data Regex Classifier](04a_builtin_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
+* [Metadata Regex Classifier](04a_builtin_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
+* [Classification PII Marker](04a_builtin_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
+* [NULL Percentage](04a_builtin_plugins.md#null-percentage) - to calculate the percentage of NULL values per column, based on the data snapshot.
 
 ### Metadata Logical Reference
 

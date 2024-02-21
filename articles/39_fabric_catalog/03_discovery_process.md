@@ -1,5 +1,3 @@
-<web>
-
 # Discovery Process
 
 The K2view Discovery process is depicted in the below diagram and it includes the following major steps:
@@ -30,4 +28,3 @@ Once the process has been completed, the Logical Unit schema can be created base
 
 [![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_plugin_framework.md) 
 
-</web>

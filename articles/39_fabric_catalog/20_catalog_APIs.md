@@ -1,5 +1,3 @@
-<web>
-
 # Catalog APIs
 
 Fabric provides out-of-the-box Web Service APIs for querying a project's Catalog.
@@ -150,7 +148,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 ## Get Catalog's Schema Details
 
-<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/schema`
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}`
 
 The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include the datasets, fields and their properties, and the *refersTo* relations between the dataset nodes. 
 
@@ -298,5 +296,3 @@ Example 2: When searching for any node types with *PII = true* and *Classificati
 [![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
 
 
-
-</web>
