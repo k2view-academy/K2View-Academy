@@ -75,13 +75,14 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <tr>
 <td style="width: 20%; height: 142px;"><strong>refersTo</strong></td>
 <td style="width: 80%; height: 96px;">
-<p>dataset <strong>refers to</strong> dataset</p>
-<p>Example: <em>INVOICE refers to CUSTOMER</em></p>
+<p>dataset <strong>refersTo</strong> dataset (PK field)</p>
+<p>Example: <em>INVOICE refersTo CUSTOMER (customer_id)</em></p>
 <p>The direction is Many To One. The PK / FK columns are included in the relation's properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
