@@ -14,7 +14,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 <table style="width: 700px;">
 <tbody>
-<tr style="height: 35px;">
+<tr>
 <td style="width: 100px;"><strong>Node Type</strong></td>
 <td style="width: 600px;"><strong>Fabric Interface Type</strong></td>
 </tr>
@@ -58,9 +58,9 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 <table style="width: 700px;">
 <tbody>
-<tr style="height: 35px;">
-<td width="100pxl"><strong>Relation Type</strong></td>
-<td width="600pxl"><strong>Description</strong></td>
+<tr>
+<td style="width: 100px;"><strong>Relation Type</strong></td>
+<td style="width: 600px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td style="width: 20%; height: 184px;"><strong>contains</strong></td>
