@@ -72,7 +72,7 @@ When the main use case is querying data on a cross entities level, such as:
 
 It is storngly recommened to use Business Entity on PostgreSQL capability, that stores all the Logical Unit data in PostgreSQL while indexing the data by the entity ID. 
 
-[Click for more information about Business Entity on PostgreSQL.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+[Click for more information about Business Entity on PostgreSQL.](/articles/32_LU_storage/04_business_entity_on_pg.md).
 
 #### 2.1.3 CommonDB
 
