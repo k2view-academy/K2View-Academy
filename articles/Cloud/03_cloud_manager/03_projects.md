@@ -1,6 +1,6 @@
 # Projects
 
-A **Project** is one of three parameters outlined in a Cloud Space. It is composed of some parts and it describes 2 important and diverse factors - the location of a Fabric Project on GIT and the Profiles connected to a Project. The Project’s definitions are the basis for Spaces creation and a Space contains at least 3 main fields that derive from the Project.
+A **Project** is a parameter that is outlined in a Cloud Space. It is composed of some parts and it describes 2 important and diverse factors - the location of a Fabric Project on GIT and the Profiles connected to a Project. The Project’s definitions are the basis for Spaces creation and a Space contains at least 3 main fields that derive from the Project.
 
 ## A Project's Life Cycle
 A Project is started when created by an implementor, who also develops it and then pushes it to GIT. The implementor then has to pass it onwards to QA, production and pre-production teams. The Project has been made stable as it was added a GIT version and tag, and it is connected to a certain GIT branch. If someone else/a user wants to continue working and developing the same Project in GIT, but on another branch, he has to create a Space on the other branch of the Project. In such case, a Project Space Profile, known as Profile, is required. Every Project has its own Project Space Profile, which helps with the life cycle of the Project.
@@ -9,6 +9,7 @@ In case the user makes some changes to his Project, namely, implementation and e
 
 If a developer has now created a new branch in GIT as he wishes to continue the development, he would want the Project to be updated in the Projects page.
 In case an old unused branch exists, it can simply be deleted in order to avoid being an extra load in the Project Space Profiles section. When deleted, the Project Space Profile, known as Profile, will be neither visible nor available for selection when creating a Space in the Spaces page. For this reason, when creating a Space, the selection order should first be a Project, followed by a Profile - provisioned in the Projects page - followed by a Site, which is a choice derived from the selected Project Space Profile, i.e., Profile. This relation can be regarded as dependency relation.
+
 In summary, the aim of the Projects page is to provision a Project there and to accompany the Fabric Project throughout its Project’s life cycle, since it is alive and ongoing as changes constantly take place. 
 A Customer/Organization/Client may have between 1 and 2 Projects, but many Project Space Profiles.  
 A best practice would be to have one single GIT Project or one single Fabric Project that represents a Project in its logical sense at the Customer’s/Organization’s/Client’s end.
