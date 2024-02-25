@@ -1,3 +1,7 @@
 # Projects
 
 A **Project** is one of three parameters outlined in a Cloud Space. It is composed of some parts and it describes 2 important and diverse factors - the location of a Fabric Project on GIT and the Profiles connected to a Project. The Project’s definitions are the basis for Spaces creation and a Space contains at least 3 main fields that derive from the Project.
+
+## A Project's Life Cycle
+A Project starts with being created by an implementor, who also develops it and then pushes it to GIT. The implementor then has to pass it onwards to QA, production and pre-production teams. The Project has been made stable as it was added a GIT version and tag, and it is connected to a certain GIT branch. If someone else/a user wants to continue working and developing the same Project in GIT, but on another branch, he has to create a Space on the other branch of the Project. In such case, a Project Space Profile, known as Profile, is required. Every Project has its own Project Space Profile, which helps with the life cycle of the Project.
+Additionally, each Customer’s/Organization’s/Client’s user type – such as implementor, QA, production, etc. – belongs to a separate business operation unit, works on a different Site, which is based on different permissions. This Site separation prevents interferences between the various Organization’s business operation units, but more importantly, the Site is a part of the Project Space Profile’s definition.
