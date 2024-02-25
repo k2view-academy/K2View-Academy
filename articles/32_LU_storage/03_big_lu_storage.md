@@ -48,5 +48,5 @@ However, there is no upgrade path for existing projects. You must clean all data
 It is recommended to turn this feature on only when dealing with very large LUIs that are split into multiple chunks.
 
 
-[![Previous](/articles/images/Previous.png)](02_storage_management.md)
+[![Previous](/articles/images/Previous.png)](02_storage_management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_business_entity_on_pg.md)
 

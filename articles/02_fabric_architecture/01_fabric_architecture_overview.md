@@ -44,7 +44,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 
 ### 2.1 Fabric Storage
 
-Fabric uses three types of storage engines:
+Fabric uses four types of storage engines:
 
 #### 2.1.1 MicroDB
 At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit Instance](/articles/03_logical_units/01_LU_overview.md#what-is-a-logical-unit-instance-lui)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
@@ -61,14 +61,28 @@ The MicroDBs (LUIs) are compressed as blob chunks and are stored in the LU stora
 
 [Click for more information about LU Storage Types](/articles/32_LU_storage/01_LU_storage_overview.md).
 
-#### 2.1.2 CommonDB
+#### 2.1.2 Business Entity on PostgreSQL
+
+When the main use case is querying data on a cross entities level, such as:
+
+- Customers average invoice amount
+- Number of Customers per credit class
+- Mostly sold campaign in the last month
+- etc..
+
+It is storngly recommened to use Business Entity on PostgreSQL capability, that stores all the Logical Unit data in PostgreSQL while indexing the data by the entity ID. 
+
+[Click for more information about Business Entity on PostgreSQL.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+
+#### 2.1.3 CommonDB
+
 The CommonDB is an additional SQLite database schema used for storing [reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) common to all MicroDBs. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their [synchronization](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) across nodes. 
 
 The CommonDB is always made available for queries in every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB by using only one SQL query.
 
 
-#### 2.1.3 System Database
-Fabric uses Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. 
+#### 2.1.4 System Database
+Fabric uses by default Cassandra or a Cassandra managed service (such as AWS Keyspaces or Astra) as an application management database. 
 
 Starting from V7.2, SQLite and PostgreSQL are also supported as Fabric System DB.
 

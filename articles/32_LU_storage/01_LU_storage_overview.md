@@ -21,11 +21,11 @@ To display an LU's storage type, use the Fabric LIST command.
 
 [Click for more information about the LIST command](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server).
 
-Note that Fabric uses the Cassandra DB as a default application management database. Therefore, changing the LU Storage from Cassandra DB to one of the above storage types doesn't replace the Fabric need for other persistent storage. 
+Note that Fabric uses the Cassandra DB as a default system management database. Therefore, changing the LU Storage from Cassandra DB to one of the above storage types doesn't replace the Fabric need for other persistent storage. 
 
-[Click for more information about Fabric Operational Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+[Click for more information about Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
-
+Starting Fabric 8.0 it is possible to store the business entities on PostgreSQL when the use case is mostly around querying cross entities data, you can read further here ...
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
