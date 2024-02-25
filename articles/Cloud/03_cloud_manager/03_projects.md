@@ -24,7 +24,7 @@ The Auto Refresh feature is turned off by default in the top bar, as it is less 
 
 INSERT IMAGE OF PROJECT PAGE’S TOP DEFAULT BAR
 
-### Projects list
+### Projects List
 The Projects page presents the list of Projects in a line layout, where the user can open, close, save, etc. This repetitive visualization is kept throughout the k2cloud Orchestrator. 
 Additionally, the Auto Refresh feature is turned on by default in the top bar as well, bringing about a display of the most up-to-date Spaces information. It can be turned on and off, and you can also click the Refresh button for an on-demand refresh.
 
