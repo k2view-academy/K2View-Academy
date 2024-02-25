@@ -28,3 +28,5 @@ INSERT IMAGE OF PROJECT PAGE’S TOP DEFAULT BAR
 The Projects page presents the list of Projects in a line layout, where the user can open, close, save, etc. This repetitive visualization is kept throughout the k2cloud Orchestrator. 
 Additionally, the Auto Refresh feature is turned on by default in the top bar as well, bringing about a display of the most up-to-date Spaces information. It can be turned on and off, and you can also click the Refresh button for an on-demand refresh.
 
+Each Project’s line includes its name, source (a base source of GIT, GIT Repository), creation date, creator’s details, last modification date and an action button for disabling/enabling a Project. Disabling a Project is used when users should no longer be able to create more Spaces on this Project. This possibility is an alternative to deleting the Project; disabling a project makes is invisible on the Spaces page and hence not selectable when creating a new Space. 
+
