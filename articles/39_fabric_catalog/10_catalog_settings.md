@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Settings
 
 The purpose of the Settings screen in the Catalog application is to view and edit the rules used by the Catalog. The Catalog includes the built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
@@ -66,4 +64,3 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 [![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_catalog_masking.md) 
 
-</web>

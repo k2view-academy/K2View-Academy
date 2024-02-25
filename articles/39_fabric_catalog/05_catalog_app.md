@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Application
 
 ### Overview
@@ -115,7 +113,7 @@ Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" 
 
 When the selected element is a relation (a link) between 2 objects in the Catalog tree, the relation's properties are displayed. 
 
-Note that in case there are more than one *refers_to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers_to* relations between the **movie** and the **language** Datasets:
+Note that in case there are more than one *refers to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers to* relations between the **movie** and the **language** Datasets:
 
 <img src="images/properties_two_links.png" style="zoom: 75%;" />
 
@@ -139,10 +137,11 @@ The ```<version>``` should be either the word **latest** or **V** with the versi
 /app/catalog/V2/CRM_DB/public/customer/customer_id
 ~~~
 
+<web>
+
 The Catalog can also be accessed from the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio, as explained [here](04a_catalog_integration_with_fabric.md#open-in-catalog).
 
-
+</web>
 
 [![Previous](/articles/images/Previous.png)](04a_catalog_integration_with_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_catalog_versioning.md) 
 
-</web>

@@ -1,5 +1,3 @@
-<web>
-
 # Manual Overrides
 
 ### Overview
@@ -46,7 +44,7 @@ The relations can be modified as follows:
 
 * To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
 
-Only *refers_to* relations can be edited. 
+Only *refers to* relations can be edited. 
 
 ### Saving Manual Overrides
 
@@ -60,4 +58,3 @@ The Save and Discard buttons are only visible when the Catalog application is in
 
 [![Previous](/articles/images/Previous.png)](06_catalog_versioning.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_search_catalog.md) 
 
-</web>

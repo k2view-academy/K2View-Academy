@@ -1,6 +1,16 @@
-<web>
-
 # Built-In Plugins
+
+### Overview
+
+The following article describes the basic built-in plugins introduced by the Fabric's Discovery and Catalog solution:
+
+* [Metadata Logical Reference](04a_builtin_plugins.md#metadata-logical-reference) - to create *refers to* relations between two datasets based on the field name comparison.
+* [Data Regex Classifier](04a_builtin_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
+* [Metadata Regex Classifier](04a_builtin_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
+* [Classification PII Marker](04a_builtin_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
+* [NULL Percentage](04a_builtin_plugins.md#null-percentage) - to calculate the percentage of NULL values per column, based on the data snapshot.
+
+Additional built-in plugins description can be found [here](plugins/README.md).
 
 ### Metadata Logical Reference
 
@@ -25,7 +35,8 @@ The following matching rules are defined in the plugins.discovery file and are a
 * **field_name_is_id_and_not_pk** - dataset1 has a non-PK field **id** and dataset2 has a field **dataset1id** (normalized).
   * The relation *dataset2 refers to dataset1* is created and its score is 0.6.
   * Example: *customer.ID (non-PK) and* *activity.customer_id*
-* **single_field_pk_and_not_pk** - dataset1 has a PK field **id** and dataset2 has a field with the same name (normalized), non-PK.
+* **single_field_pk_and_not_pk** - dataset1 has a PK field and dataset2 has a field with the same name (normalized), non-PK.
+  
   * The relation *dataset2 refers to dataset1* is created and its score is 0.8.
   * Example: *customer.customer_id (PK) and* *activity.customer_id* 
 * **common_fields_in_both_pk** - common fields that are part of the PK in both datasets, but where dataset1 has less PKs than dataset2.

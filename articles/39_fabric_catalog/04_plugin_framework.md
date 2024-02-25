@@ -1,5 +1,3 @@
-<web>
-
 # Plugin Framework
 
 ### Overview
@@ -74,4 +72,3 @@ The Plugin Framework supports execution of custom plugins. In order to incorpora
 
 [![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_builtin_plugins.md) 
 
-</web>

@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Versioning
 
 The Catalog supports **versioning**, which is the ability to create a new Catalog version in the *neo4j* Graph DB every time the Discovery process runs and finds differences when comparing with the previous version.
@@ -48,4 +46,3 @@ When a Schema contains too many Datasets, it might be difficult to identify the 
 
 [![Previous](/articles/images/Previous.png)](05_catalog_app.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_manual_overrides.md) 
 
-</web>

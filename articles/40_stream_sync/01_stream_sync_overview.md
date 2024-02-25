@@ -1,8 +1,15 @@
-# Stream Sync Overview
+# Stream Sync 
+
+## Overview
+
+Fabric Sync is a mechanism that synchronizes data between the data sources and Fabric by extraction and transformation processes executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui). Fabric sync can be performed in two modes:
+
+* Synchronization by request, based on a predefined sync method and the sync mode. [Click here to get more information about Sync LUI by request, various sync modes and sync methods](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+* Proactive sync. A Proactive approach is required in huge systems that have millions of database changes per second with many CSRs simultaneously querying  Fabric and requesting fresh data. The CSR must receive a quick response and cannot wait for the data to be refreshed online from source systems. Proactive sync ensures a much faster response time to external data requests.
 
 ## What is Stream Sync?
 
-**Stream Sync** is a Fabric module which enables keeping Fabric synchronized with source systems by processing only the changes in the source system, without the need to re-synchronize the entire instance on every change in the source.
+**Stream Sync** is a Fabric module which enables Fabric proactive synchronization with source systems by processing only the changes in the source system, without the need to re-synchronize the entire instance on every change in the source.
 
 The Stream Sync job runs on a Fabric server and receives the Insert, Update and Delete transactions from the source system via a pre-defined PubSub interface. The job identifies which Instance ID is impacted by the change and updates it in the relevant tables of the Fabric DB. 
 

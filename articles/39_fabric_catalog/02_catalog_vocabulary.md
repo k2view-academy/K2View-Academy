@@ -1,5 +1,3 @@
-<web>
-
 # Catalog Vocabulary
 
 The Fabric Catalog introduces a vocabulary that describes the catalog entities and the relations between them. The relations indicate the connections between the data entities and determine their hierarchy.
@@ -16,7 +14,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 <table style="width: 700px;">
 <tbody>
-<tr style="height: 35px;">
+<tr>
 <td style="width: 100px;"><strong>Node Type</strong></td>
 <td style="width: 600px;"><strong>Fabric Interface Type</strong></td>
 </tr>
@@ -60,9 +58,9 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 <table style="width: 700px;">
 <tbody>
-<tr style="height: 35px;">
-<td width="100pxl"><strong>Relation Type</strong></td>
-<td width="600pxl"><strong>Description</strong></td>
+<tr>
+<td style="width: 100px;"><strong>Relation Type</strong></td>
+<td style="width: 600px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td style="width: 20%; height: 184px;"><strong>contains</strong></td>
@@ -77,8 +75,8 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <tr>
 <td style="width: 20%; height: 142px;"><strong>refersTo</strong></td>
 <td style="width: 80%; height: 96px;">
-<p>dataset <strong>refers to</strong> dataset</p>
-<p>Example: <em>INVOICE refers to CUSTOMER</em></p>
+<p>dataset <strong>refersTo</strong> dataset (PK field)</p>
+<p>Example: <em>INVOICE refersTo CUSTOMER (customer_id)</em></p>
 <p>The direction is Many To One. The PK / FK columns are included in the relation's properties.</p>
 </td>
 </tr>
@@ -92,6 +90,6 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 
 
+
 [![Previous](/articles/images/Previous.png)](01_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_discovery_process.md) 
 
-</web>
