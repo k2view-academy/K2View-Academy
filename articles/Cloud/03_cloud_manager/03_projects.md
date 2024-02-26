@@ -30,5 +30,5 @@ Additionally, the Auto Refresh feature is turned on by default in the top bar as
 
 Each Project’s line includes its name, source (a base source of GIT, GIT Repository), creation date, creator’s details, last modification date and an action button for disabling/enabling a Project. Disabling a Project is used when users should no longer be able to create more Spaces on this Project. This possibility is an alternative to deleting the Project; disabling a Project makes is invisible on the Spaces page and hence not selectable when creating a new Space. Additionally, there is a trash icon next to the action button, with which a user can delete a Project. However, if the trash icon is grayed-out, it means that the Project is in use and cannot be deleted, which is also what is stated in the toolkit when hovering over the grayed-out trash icon. When the user wishes to delete a Project, which can be deleted, a *Delete* pop-up message appears, asking whether "you are sure you want to delete the project".
 
-In summary, various users can use a Project in their Space, which demonstrates yet again the dependency relation.
+In summary, various users can use a certain Project in their Space, which demonstrates yet again the dependency relation.
 
