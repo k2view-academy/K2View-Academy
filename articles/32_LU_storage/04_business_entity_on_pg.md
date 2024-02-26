@@ -51,12 +51,12 @@ Since data is not stored as a MicroDB, the following Fabric capabilities are not
 3. LUDB functions.
 4. Lookup tables must defined in a string type.
 5. When using System of record functionality, it is required to specify the field names.
-6. Logical Unit table delete mode property doesn't support Not updated value.
-7. In order to change LU table column type, it is required drop and redeploy the LU.
+6. The Logical Unit table's delete mode property doesn't support a 'Not updated' value.
+7. In order to change an LU table column type, it is required drop and redeploy the LU.
 8. Logical Unit table column collation property supports only BINARY value.
 9. CDC is not supported.
 10. Index can't include more than 32 columns.
-11. Logical Unit tables names, column names and schema names can't exceed 63 characters.
+11. Logical Unit table names, column names and schema names can't exceed 63 characters.
 
 [![Previous](/articles/images/Previous.png)](03_big_lu_storage.md)
 
