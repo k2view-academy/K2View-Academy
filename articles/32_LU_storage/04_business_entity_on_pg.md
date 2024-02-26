@@ -1,8 +1,8 @@
 # Business Entity on PostgreSQL
 
-Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business entity's instance is saved as separate rows in PostgreSQL.
+Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business entity's instance is saved in separate rows in PostgreSQL.
 
-This functionality should be used when the main use case is driven mostly from cross-instance queries, server reportings, dashboards or analytics systems.
+This functionality should be used when the main use case is driven mostly from cross-instance queries, server reportings, dashboards or data analytics systems.
 
 This is the preffered option when asking the following:
 
@@ -14,7 +14,7 @@ The Logical Unit's data is saved in PostgreSQL in 2 different schemas:
 
 1. __{Logical Unit Name}, contains all the Logical Unit table names and data per instance; each table holds:
 
-   1.1 __iid + Logical Unit table original PK as the PostgreSQL table's primary key.
+   1.1 __iid + Logical Unit table's original PK as the PostgreSQL table's primary key.
 
 2. {Logical Unit Name}, contains views on all the Logical Unit tables for Fabric's internal use.
 
@@ -22,11 +22,11 @@ This structure opesn the ability to query data in the Business Entity's instance
 
 When using the DbLoad Actor in Broadway, it is required to use the batch mode in order to ensure good sync performance results.
 
-The common tables solution is aligned with this functionality, thus the data is saved under {common table schema name} or common if the schema is set to default.
+The common tables solution is aligned with this functionality, thus the data is saved under either {common table schema name} or common, if the schema is set to default.
 
 This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
-Data can be encrypted using PostgreSQL encryption at several levels capabilities, it provides flexibility in protecting data from disclosure (due to database server theft), unscrupulous administrators and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. You can read further [here](https://www.postgresql.org/docs/current/encryption-options.html).
+Data can be encrypted using PostgreSQL encryption at several levels. This encryption provides flexibility in protecting data from disclosure (due to database server theft), unscrupulous administrators and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. You can read further [here](https://www.postgresql.org/docs/current/encryption-options.html).
 
 ### Configuration
 
@@ -40,7 +40,7 @@ In order to turn this functionality on, the following steps should be taken:
 
 For the purpose of getting data of cross-business entities' instances, it is possible to publish data to Elasticsearch by using the Fabric CDC solution.
 
-Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elasticsearch); however, if scalability is crutual, the Fabric CDC to Elasticsearch solution should be considered.
+Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elasticsearch); however, if scalability is crutual, the Fabric CDC data publishing to Elasticsearch solution should be considered.
 
 ### Limitations
 
@@ -49,7 +49,7 @@ Since data is not stored as a MicroDB, the following Fabric capabilities are not
 1. Logical Unit DB viewer.
 2. Trigger functions.
 3. LUDB functions.
-4. Lookup tables must defined in a string type.
+4. Lookup tables must be defined in a string type.
 5. When using System of record functionality, it is required to specify the field names.
 6. The Logical Unit table's delete mode property doesn't support a 'Not updated' value.
 7. In order to change an LU table column type, it is required drop and redeploy the LU.
