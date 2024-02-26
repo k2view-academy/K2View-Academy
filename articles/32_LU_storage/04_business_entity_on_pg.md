@@ -26,7 +26,7 @@ The common tables solution is aligned with this functionality, thus the data is 
 
 This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
-Data can be encrypted using PostgreSQL encryption at several levels capabilities, it provides flexibility in protecting data from disclosure due to database server theft, unscrupulous administrators, and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. You can read further [here](https://www.postgresql.org/docs/current/encryption-options.html).
+Data can be encrypted using PostgreSQL encryption at several levels capabilities, it provides flexibility in protecting data from disclosure (due to database server theft), unscrupulous administrators and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. You can read further [here](https://www.postgresql.org/docs/current/encryption-options.html).
 
 ### Configuration
 
