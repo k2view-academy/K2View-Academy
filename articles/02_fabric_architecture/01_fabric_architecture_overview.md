@@ -70,7 +70,7 @@ When the main use case is querying data on a cross-entities level, such as:
 - Mostly sold campaign in the last month
 - etc.
 
-It is strongly recommended to use Business Entity on PostgreSQL capability, that stores all the Logical Unit data in PostgreSQL while indexing the data by the entity ID. 
+It is strongly recommended to use Business Entity on PostgreSQL capability, which stores all the Logical Unit data in PostgreSQL while indexing the data by the entity ID. 
 
 [Click for more information about Business Entity on PostgreSQL.](/articles/32_LU_storage/04_business_entity_on_pg.md).
 
