@@ -30,17 +30,17 @@ Data can be encrypted using PostgreSQL encryption at several levels capabilities
 
 ### Configuration
 
-In order to turn this functionality on the following should be done:
+In order to turn this functionality on, the following steps should be taken:
 
 1. Set the System DB to PostgreSQL, [click for more information about Fabric System Database setup](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 2. Set FABRICDB_ENGINE=postgresql in the **[fabric]** section of the **config.ini** file.
 3. Restart Fabric.
 
-### Business Entity on PostgreSQL vs CDC on Elastic Search
+### Business Entity on PostgreSQL vs CDC on Elasticsearch
 
-In order to get cross business entities's instances data it is possible to publish data to  Elastic Search using Fabric CDC solution.
+In order to get cross business entities's instances data, it is possible to publish data to Elasticsearch using Fabric CDC solution.
 
-Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elastic Search), however if scalability is crutual, Fabric CDC to Elastic Search solution should be considered.
+Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elasticsearch), however if scalability is crutual, Fabric CDC to Elasticsearch solution should be considered.
 
 ### Limitations
 
