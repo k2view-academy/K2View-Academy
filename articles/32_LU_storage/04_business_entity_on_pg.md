@@ -2,13 +2,13 @@
 
 Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business entity's instance is saved as separate rows in PostgreSQL.
 
-This functionality should be used when the main use case is mostly driven from a cross instances queries, servers reporting, dashboards or analytics systems.
+This functionality should be used when the main use case is driven mostly from cross-instance queries, servers reporting, dashboards or analytics systems.
 
 This is the preffered option when asking the following:
 
 1. Query the number of customers per credit class.
 2. List the customers with over payments.
-3. Query how many customers lives in New York city.
+3. Query how many customers live in New York city.
 
 The Logical Unit's data is saved in PostgreSQL in two different  schemas:
 
