@@ -1,6 +1,6 @@
 # Business Entity on PostgreSQL
 
-Fabric can use PostgreSQL as Logical Unit's storage layer where each business entity's instance is saved as separate rows in PostgreSQL.
+Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business entity's instance is saved as separate rows in PostgreSQL.
 
 This functionality should be used when the main use case is mostly driven from a cross instances queries, servers reporting, dashboards or analytics systems.
 
