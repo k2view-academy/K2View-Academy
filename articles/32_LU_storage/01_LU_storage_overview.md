@@ -25,7 +25,7 @@ Note that Fabric uses the Cassandra DB as a default system management database. 
 
 [Click for more information about Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
-Starting with Fabric 8.0, it is possible to store the business entities on PostgreSQL when the use case is mostly around querying cross-entities data; for further reading click [here](/articles/32_LU_storage/04_business_entity_on_pg.md).
+Starting with Fabric 8.0, it is possible to store the business entities on PostgreSQL when the use case is mostly around querying cross-entities data; for further reading, click [here](/articles/32_LU_storage/04_business_entity_on_pg.md).
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
