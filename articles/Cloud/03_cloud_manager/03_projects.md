@@ -33,13 +33,22 @@ Each Project’s line includes its name, source (a base source of GIT, GIT Repos
 In summary, various users can use a certain Project in their Space, which demonstrates yet again the dependency relation.
 
 ### Project’s Identity Section
-Clicking the Project name in the Project’s line opens a display of a 2-sided section. The left side presents the **Name** of the Project, and underneath it you shall see the ***Space Profiles*** sub-section, i.e., the part that presents the Project Space Profiles, known and named as **Profiles**. The Profile is a general and basic description of the Project Space Profile. Regarded as a **base Space Profile**, it provides descriptions, such as on which Fabric image it will be present, whether Studio will be there or not, will the Profile be with Postgres or with a system DB of some sort. This section may contain 1 Profile, a few, or a list of Profiles (which would be scrollable). Additionally, a new Profile can be added to the Project through this section by clicking the '*Add Profile* **+**' button (INSERT 'ADD PROFILE+' IMAGE). A vertical ellipsis (INSERT 'VERTICAL ELLIPSIS' IMAGE) is shown at the end of each Profile line, which opens an option for further actions. The right side of the section presents the **‘GIT world’**, that is, the location of the saved Fabric Project (upon its implementation) in GIT. The fields there can/need to be populated once.
+**Clicking the Project name** in the Project’s line opens a display of a 2-sided section, left and right. 
+
+* The **left side** presents 2 sub-sections:
+  * ***Name*** of the Project
+  * ***Space Profiles***, the part that presents the Project Space Profiles known as **Profiles**, and is **divided into 3 parts**:
+    * The *Name* of the Profile, as it would appear in the Space card on the Spaces page.
+    * *Profiles*, which provides a general and basic description of the Project Space Profile. Regarded as a **base Space Profile**, it provides explanations, such as on which Fabric image it will be present, whether Studio will be there or not, will the Profile be with Postgres or with a system DB of some sort. This part may contain 1 Profile, a few, or a list of Profiles (which would be scrollable). 
+    * *Site* is the location on which a Space can be created. It depends on and derives from the Profile. In this part, 1 or more Sites are available for selection. This is where the Project’s owner decides of and defines the Site options to be used when Space creators create their Spaces (in the Spaces Page). For instance, it could be that a certain Profile can run or be supported on a specific Site only. Based on this factor, K2view's CloudOps shall decide, while observing each Client’s requirements, which would be the most suitable Site for the base Space profile, and will accordingly create and allocate it to the Client.
+
+Additionally, a new Profile can be added to the Project through the Space Profiles sub-section by clicking the '*Add Profile* **+**' button (INSERT 'ADD PROFILE+' IMAGE). A vertical ellipsis (INSERT 'VERTICAL ELLIPSIS' IMAGE) is shown at the end of each Profile line, which opens an option for further actions.
+  
+* The **right side** presents the **‘GIT world’**, that is, the location of the saved Fabric Project (upon its implementation) in GIT. The fields there can/need to be populated once.
 
 > A field with an asterisk next to its name, is mandatory, and it wouldn’t be possible to save the Project without populating it.
 
-The Site is the location on which a Space can be created. In the Site column of the Space Profiles section, 1 or more Sites can be selected. This is where the Project’s owner decides of and defines the Site options to be used when Space creators create their Spaces (in the Spaces Page).
-
 The Projects page is the one that dictates factors for the Spaces page.
 
-The ability to state where (i.e., choose the Site) depends on the Profile.
-It could be that a certain Profile can run or be supported on a specific Site only. This is up to K2view's CloudOps to decide while observing each Client’s requirements; accordingly this base space profile would be created and allocated to the Client.
+
+
