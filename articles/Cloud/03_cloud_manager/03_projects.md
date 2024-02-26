@@ -44,4 +44,4 @@ The Site is the location on which a Space can be created. In the Site column of 
 The Projects page is the one that dictates parameters for the Spaces page.
 
 The ability to state where (i.e., choose the Site) depends on the Profile.
-It could be that a certain Profile can run or be supported only on a specific Site, and this is decided by the k2view administrator, who observes each Client’s requirements and accordingly creates their Profile.
+It could be that a certain Profile can run or be supported on a specific Site only, which is being decided by the K2view administrator (a.k.a CloudOps) who observes each Client’s requirements and accordingly creates their Profile.
