@@ -22,7 +22,7 @@ This structure opesn the ability to query data in the Business Entity's instance
 
 When using the DbLoad Actor in Broadway, it is required to use the batch mode in order to ensure good sync performance results.
 
-The common tables solution is aligned with this functionality so the data is saved under {common table schema name} or common if the schema is set to default.
+The common tables solution is aligned with this functionality, thus the data is saved under {common table schema name} or common if the schema is set to default.
 
 This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
