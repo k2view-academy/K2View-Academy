@@ -40,7 +40,7 @@ In order to turn this functionality on, the following steps should be taken:
 
 In order to get cross business entities's instances data, it is possible to publish data to Elasticsearch by using the Fabric CDC solution.
 
-Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elasticsearch), however if scalability is crutual, Fabric CDC to Elasticsearch solution should be considered.
+Business Entity on PostgreSQL is the preferred solution, as it requires to maintain one DB less (no Elasticsearch); however, if scalability is crutual, the Fabric CDC to Elasticsearch solution should be considered.
 
 ### Limitations
 
