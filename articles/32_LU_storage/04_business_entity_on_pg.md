@@ -44,13 +44,13 @@ Business Entity on PostgreSQL is the preferred solution, as it requires to maint
 
 ### Limitations
 
-Since data is not stored as a MicroDB the following Fabric capabilities are not supported in this mode:
+Since data is not stored as a MicroDB, the following Fabric capabilities are not supported in this mode:
 
 1. Logical Unit DB viewer.
 2. Trigger functions.
 3. LUDB functions.
-4. Lookup tables must defined in String type.
-5. When using System of record functionality, it is required to specify the fields names.
+4. Lookup tables must defined in a string type.
+5. When using System of record functionality, it is required to specify the field names.
 6. Logical Unit table delete mode property doesn't support Not updated value.
 7. In order to change LU table column type, it is required drop and redeploy the LU.
 8. Logical Unit table column collation property supports only BINARY value.
