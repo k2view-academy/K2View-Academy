@@ -12,11 +12,11 @@ This is the preffered option when asking the following:
 
 The Logical Unit's data is saved in PostgreSQL in 2 different schemas:
 
-1. __{Logical Unit Name}, contains all the Logical Unit tables names and data per instance, each table holds:
+1. __{Logical Unit Name}, contains all the Logical Unit table names and data per instance; each table holds:
 
    1.1 __iid + Logical Unit table original PK as the PostgreSQL table's primary key.
 
-2. {Logical Unit Name}, contains views on all the Logical Unit tables for Fabric internal use.
+2. {Logical Unit Name}, contains views on all the Logical Unit tables for Fabric's internal use.
 
 This structure open the ability to query data in the Business Entity's instance level when needed.
 
