@@ -18,13 +18,13 @@ The Logical Unit's data is saved in PostgreSQL in 2 different schemas:
 
 2. {Logical Unit Name}, contains views on all the Logical Unit tables for Fabric's internal use.
 
-This structure open the ability to query data in the Business Entity's instance level when needed.
+This structure opesn the ability to query data in the Business Entity's instance level when needed.
 
-When using DbLoad Actor in Broadway, it is required to use batch mode in order to ensure good sync performance results.
+When using the DbLoad Actor in Broadway, it is required to use the batch mode in order to ensure good sync performance results.
 
-Common tables solution is aligned with this functionality so the data is saved under {common table schema name} or common if the schema is set to default.
+The common tables solution is aligned with this functionality so the data is saved under {common table schema name} or common if the schema is set to default.
 
-This mode is supported in the system level, it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
+This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
 Data can be encrypted using PostgreSQL encryption at several levels capabilities, it provides flexibility in protecting data from disclosure due to database server theft, unscrupulous administrators, and insecure networks. Encryption might also be required to secure sensitive data such as medical records or financial transactions. You can read further [here](https://www.postgresql.org/docs/current/encryption-options.html).
 
