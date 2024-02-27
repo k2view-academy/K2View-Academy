@@ -37,8 +37,8 @@ In summary, a particular Project can be used by various users in their Spaces, w
 
 * The **left side** presents 2 sub-sections:
   * ***Name*** of the Project
-  * ***Space Profiles***, a table presenting the Project Space Profiles, known as **Profiles**. Scrollable for a longer list presentation, this table is **divided into 3 columns**:
-    * The ***Name*** of the Profile, as it would appear in the Space card on the Spaces page.
+  * ***Space Profiles***, a table presenting the Project Space Profiles, known as **Profiles**. The table is scrollable when containing a long Profiles list. It is **divided into 3 columns**:
+    * The ***Name*** of the Profile, as it would appear on the Space card in the Spaces page.
     * ***Profiles***, which provides a general and basic description of the Project Space Profile. Regarded as a **base Space Profile**, it provides explanations, such as on which Fabric image it will be present, whether Studio will be there or not, will the Profile be with Postgres or with a system DB of some sort. This column may contain 1 Profile, a few, or a list of Profiles. 
     * ***Site*** is the location on which a Space can be created. It depends on and derives from the base Space Profile. In this column, 1 or more Sites are available for selection. This is where the Project’s owner or a member of K2view's CloudOps - decides of and defines the Site options to be used when Space creators create their Spaces (in the Spaces Page). For instance, it could be that a certain Profile can run or be supported on a specific Site only. Based on this factor, K2view's CloudOps member shall decide, while observing each Client’s requirements, which would be the most suitable Site for the Client with the given base Space profile, and will accordingly create and allocate it to the Client.
 
