@@ -48,7 +48,7 @@ Additionally, a new Profile can be added to the Project through the Space Profil
 
 > A field with an asterisk next to its name, is mandatory, and it wouldn’t be possible to save the Project without populating it.
 
-The Projects page is the one that dictates factors for the Spaces page.
+The Projects page is the one that dictates factors to the Spaces page.
 
 
 
