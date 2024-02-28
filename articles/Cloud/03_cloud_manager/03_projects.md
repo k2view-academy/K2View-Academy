@@ -48,7 +48,7 @@ Additionally, a new Profile can be added to the Project through the Space Profil
   * ***Source Type***, which is currently 'Git'.
   * ***Repository URL***, the address of the location on Git; appears also in the line of each Project in the Projects list.
   * ***Path***, an optional field.
-  * ***Branch / Tag***, an optional field, as it can also be populated in the *Advanced Settings* pop-up window (accessible via the vertical ellipsis), where it would then override this field. Note that such population reflects in parentheses following the Project name on the Space card in the Spaces page.
+  * ***Branch / Tag***, an optional field here, as it can also be populated in the *Advanced Settings* pop-up window (accessible via the vertical ellipsis), where it would then override this field. Note that such population reflects in parentheses following the Project name on the Space card in the Spaces page.
   * ***Token***, which is only aimed for cloning a Project.
 
 > Any field with an asterisk next to its name, is mandatory, and it wouldn’t be possible to save the Project without populating it.
