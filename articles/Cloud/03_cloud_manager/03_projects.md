@@ -45,11 +45,11 @@ In summary, a particular Project can be used by various users in their Spaces, w
 Additionally, a new Profile can be added to the Project through the Space Profiles sub-section by clicking the '*Add Profile* **+**' button (INSERT 'ADD PROFILE+' IMAGE), and a vertical ellipsis (INSERT 'VERTICAL ELLIPSIS' IMAGE) is shown at the end of each Project Space Profile line, which directs the user to an *Advanced Settings* pop-up window.
   
 * The **right side** presents the **‘GIT world’**, that is, the location of the saved Fabric Project (upon its implementation) in GIT. It contains the following 5 fields: The fields there can/need to be populated once.
-  * *Source Type*, which is currently 'Git'.
-  * *Repository URL*, the address of the location on Git; appears also in the line of each Project in the Projects list.
-  * *Path*, an optional field.
-  * *Branch / Tag*, an optional field, that when populated, it reflects in parentheses in the Project name on the Space card in the Spaces page.  
-  * *Token*, which is only aimed for cloning a Project.
+  * ***Source Type***, which is currently 'Git'.
+  * ***Repository URL***, the address of the location on Git; appears also in the line of each Project in the Projects list.
+  * ***Path***, an optional field.
+  * ***Branch / Tag***, an optional field, as it can also be populated in the *Advanced Settings* pop-up window (accessible via the vertical ellipsis), where it would then override this field. Note that such population reflects in parentheses following the Project name on the Space card in the Spaces page.
+  * ***Token***, which is only aimed for cloning a Project.
 
 > Any field with an asterisk next to its name, is mandatory, and it wouldn’t be possible to save the Project without populating it.
 
