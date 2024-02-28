@@ -55,5 +55,7 @@ Additionally, a new Profile can be added to the Project through the Space Profil
 
 The Projects page is the one that dictates factors to the Spaces page, not before ascription and cross-reference within the tenant is orchestrated by a K2view's CloudOps member.
 
+## Create a Project
+
 
 
