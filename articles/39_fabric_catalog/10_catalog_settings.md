@@ -7,7 +7,7 @@ This article includes the following sections:
 * [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
 * [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
 
-### Classifier Regex Setup
+## Classifier Regex Setup
 
 The **Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins: *Data Regex Classifier* and *Metadata Regex Classifier*. 
 
@@ -31,7 +31,7 @@ Once the Save button is clicked, the **metadata_profiling** and **data_profiling
 
 Click [here](04_plugin_framework.md#built-in-plugins) for more details about these plugins.
 
-### Classifier PII & Masking Setup
+## Classifier PII & Masking Setup
 
 The **PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
 
@@ -44,7 +44,7 @@ This tab includes 2 definitions per each Classification:
 
 Each **Classification** can have **only one** definition (row) in this tab.
 
-#### Generator Setup
+### Generator Setup
 
 To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
 
@@ -59,6 +59,15 @@ Upon selecting an actor or a flow, its respective input parameters are automatic
 Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
 
 Click for more details about the [Catalog masking mechanism](11_catalog_masking.md).
+
+### Advanced Masking Settings
+
+The purpose of the Advanced Settings popup is to define additional parameters for masking functionality. The following is included:
+
+* **Masking indicators** are the inputs that determine masking behavior during the flow run. They can be either set on the Catalog Masking actor's inputs or in the Catalog's settings here. When set here, the definition is per classification and it overrides the Catalog Masking actor's settings.
+* **Formatter name and parameters** are set in order to enable the format preserving masking.
+
+
 
 
 
