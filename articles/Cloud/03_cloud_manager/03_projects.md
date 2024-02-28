@@ -57,5 +57,14 @@ The Projects page is the one that dictates factors to the Spaces page, not befor
 
 ## Create a Project
 
+To create a new Project:
+1. Click on either the 'Create Project +' button at the top bar of the Projects page, or the bottom gray line, labelled as ‘Create Project’.
+2. Populate a Project Name.
+3. Add a Profile/s to your Project. In order to facilitate the Project Space profiling process, all this Project’s existing Space Profiles are visible and selectable as they were ascribed by K2view’s CloudOps per the Project requirements. The tendency is to name the new Project Space Profile like the base Space Profile. The Site will be available for selecting according to the chosen base Space Profile.
 
+If you wish to add a brand new Profile, click on ‘Add Profile+’ icon and an empty Profile line would appear at the bottom of the list. Populate its Name, choose a base Space Profile, select an available Site and click the vertical ellipsis for opening the Advanced Settings pop-up window. The first 4 fields there are rather important for defining the Profile:
+* Git Branch/Tag
+* Environment
+* Spaces Limit
+* config.ini
 
