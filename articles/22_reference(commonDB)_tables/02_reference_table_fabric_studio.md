@@ -1,4 +1,4 @@
-# How to Create a New Reference Table in Fabric Studio
+# Reference Tables in Fabric Studio
 
 A  Reference table holds information that is common to either all LU instances or to multiple LUs. For optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
 
@@ -16,7 +16,7 @@ A  Reference table holds information that is common to either all LU instances o
 
 4.  Select a **table**. To select multiple tables, press the Ctrl key.
 
-![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
+![image](images/01_create_new_common_tables.PNG)
 
 
 
@@ -28,18 +28,18 @@ Add a prefix to the Reference table's name in the **Name Prefix** field (window'
 
 To populate the Reference Table using a Broadway flow, tick the **Table population based Broadway flow** box.
 
-![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
+![image](images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
 6. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
-    If the table does not appear immediately, click ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) Refresh on the top of the Project Tree.
+    If the table does not appear immediately, click <img src="images/03_create_new_common_tables_refreshbutton.PNG" alt="image" style="zoom:80%;" /> Refresh on the top of the Project Tree.
 
-![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
+![image](images/02_create_new_common_tables_schema.PNG)
 
 </studio>  
 
 <web>
 
-1. Switch to DB Interface Explorer View by clicking on its icon ( ![images](images/22_02_web_db_interface_explorer_icon.png)), located on the Activity Bar.
+1. Switch to DB Interface Explorer View by clicking on its icon ( <img src="images/22_02_web_db_interface_explorer_icon.png" alt="images" style="zoom:80%;" />), located on the Activity Bar.
 
 2. Choose the DB Interface and the required table
 
@@ -66,7 +66,7 @@ A new reference table can be created also manually.
    - Choose/highlight the *Tables* folder > right-click on it
    - Choose the *New Table* option from the opened context menu 
 
-     ![images](images/22_02_web_references_new_table.png)
+     <img src="images/22_02_web_references_new_table.png" alt="images" style="zoom:80%;" />
 
    - Name the new Table. Press **Enter** to confirm or **Escape** to cancel.
 
@@ -103,7 +103,7 @@ To access the Reference Viewer do the following:
 
 2.  Click the **data file** to display the components hierarchy in the Instance DB Tree pane.
 
-![image](images/05_create_new_common_tables_dataviewer.PNG)
+<img src="images/05_create_new_common_tables_dataviewer.PNG" alt="image" style="zoom:80%;" />
 
 2.  Click the **table name** to display the table's data in the main Data Viewer window. 
 
@@ -138,7 +138,7 @@ Properties can be defined in the **Table Properties** panel in the right pane of
   - NOCASE, folds upper case characters to their lower case equivalents.
   - RTRIM, ignores trailing space characters.
 
-![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
+![image](images/06_create_new_common_tables_properties.PNG)
 
 
 #### Sync Method
@@ -224,7 +224,7 @@ Before accessing the Reference Table from a specific LU, or before it can be use
 
 3. Add the required Reference tables to the Reference List: Use the plus (+) button to add another table and then select a table from the list
 
-   ![image](images/22_02_web_dependent_ref_at_schema.jpg)
+   <img src="images/22_02_web_dependent_ref_at_schema.jpg" alt="image" style="zoom:80%;" />
 
 </web>
 
