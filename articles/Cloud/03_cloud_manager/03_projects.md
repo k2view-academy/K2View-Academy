@@ -49,7 +49,7 @@ Additionally, a new Profile can be added to the Project through the Space Profil
   * ***Repository URL***, the address of the location on Git; appears also in the line of each Project in the Projects list.
   * ***Path***, an optional field.
   * ***Branch / Tag***, a Git branch indicates the location of all Git files, which is essential for a Space creation, a process that includes branch-cloning. This field is optional here, as it can also be populated in the *Advanced Settings* pop-up window (accessible via the vertical ellipsis), where it would then override this field. Note that such population is reflected in the parentheses following the Project name on the Space card in the Spaces page.
-  * ***Token***, which is only aimed for cloning a Project.
+  * ***Token***, Authentication on Git is done via a token, also known as Personal Access Token (‘PAT’), which is a hidden password. It is being used here for the purpose of cloning only, and for security reasons, after this specific usage it becomes non-existent.
 
 > Any field with an asterisk next to its name, is mandatory, and it wouldn’t be possible to save the Project without populating it.
 
