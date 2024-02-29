@@ -65,7 +65,7 @@ To create a new Project:
 
 If you wish to add **a brand new Profile**, click on ‘Add Profile+’ icon and an empty Profile line would appear at the bottom of the list. Populate its Name, choose a base Space Profile, select an available Site and click the vertical ellipsis for opening the Advanced Settings pop-up window. The first 4 fields there are rather important for defining the Profile:
 * Git Branch/Tag - indicates to the Project Space Profile whether to run on a specified Git branch (which indicates the location of all Git files) or be tagged (referencing a specific commit within the project history). The system is able to identify both. When not populated here, parameters will be taken from *Branch / Tag* field in he ‘GIT world’ in the Project’s Identity Section.
-* Environment - each Fabric project lives on a certain environment that can be defined in this field, and accordingly the environment is set at the backend. The environment can also be mentioned - for setting - as part of the name, in the newly created Project Space Profile.
+* Environment - each Fabric project lives on a certain environment. The latter can be defined in this field, and accordingly be set at the backend. The environment can also be mentioned - for setting - as part of the name, in the newly created Project Space Profile.
 * Spaces Limit
 * config.ini
 
