@@ -67,5 +67,5 @@ If you wish to add **a brand new Profile**, click on ‘Add Profile+’ icon and
 * Git Branch/Tag - indicates to the Project Space Profile whether to run on a specified Git branch (which indicates the location of all Git files) or be tagged (referencing a specific commit within the project history). The system is able to identify both. When not populated here, parameters will be taken from *Branch / Tag* field in he ‘GIT world’ in the Project’s Identity Section.
 * Environment - each Fabric project lives on a certain environment. The latter can be defined in this field, and accordingly be set at the backend. The environment can also be mentioned - for setting - as part of the name, in the newly created Project Space Profile.
 * Spaces Limit - this number states how many Spaces can be created on this Project Space Profile. This parameter serves the project owner for resources control.
-* config.ini - 
+* config.ini - the config is based on the very basic Fabric, overridden by config details stated in the base Space Profile (if any), and on top of that, it is based on the config.ini details stated in this field. The final result is a combined config.Ini.
 
