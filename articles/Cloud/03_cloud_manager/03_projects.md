@@ -62,7 +62,7 @@ To create a new Project:
 2. Populate a Project Name.
 3. Add a Profile/s to your Project. In order to facilitate the Project Space profiling process, all this Project’s existing Space Profiles are visible and selectable as they were ascribed by K2view’s CloudOps per the Project requirements. The tendency is to name the new Project Space Profile like the base Space Profile. The Site will be available for selecting according to the chosen base Space Profile.
 
-If you wish to add a brand new Profile, click on ‘Add Profile+’ icon and an empty Profile line would appear at the bottom of the list. Populate its Name, choose a base Space Profile, select an available Site and click the vertical ellipsis for opening the Advanced Settings pop-up window. The first 4 fields there are rather important for defining the Profile:
+If you wish to add **a brand new Profile**, click on ‘Add Profile+’ icon and an empty Profile line would appear at the bottom of the list. Populate its Name, choose a base Space Profile, select an available Site and click the vertical ellipsis for opening the Advanced Settings pop-up window. The first 4 fields there are rather important for defining the Profile:
 * Git Branch/Tag - indicates to the Project Space Profile whether to run on a specified Git branch (which indicates the location of all Git files) or be tagged (referencing a specific commit within the project history). The system is able to identify both. When not populated here, parameters will be taken from *Branch / Tag* field in he ‘GIT world’ in the Project’s Identity Section.
 * Environment
 * Spaces Limit
