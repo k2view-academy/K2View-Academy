@@ -43,6 +43,8 @@ In summary, a particular Project can be used by various users in their Spaces, w
     * ***Site*** is the location on which a Space can be created. It depends on and derives from the base Space Profile. In this column, 1 or more Sites are available for selection. This is where the Project’s owner or a member of K2view's CloudOps - decides of and defines the Site options to be used when Space creators create their Spaces (in the Spaces Page). For instance, it could be that a certain Profile can run or be supported on a specific Site only. Based on this factor, K2view's CloudOps member shall decide, while observing each Client’s requirements, which would be the most suitable Site for the Client with the given base Space Profile, and will accordingly create and allocate it to the Client.
 
 Additionally, a new Profile can be added to the Project through the Space Profiles sub-section by clicking the '*Add Profile* **+**' button (INSERT 'ADD PROFILE+' IMAGE), and a vertical ellipsis (INSERT 'VERTICAL ELLIPSIS' IMAGE) is shown at the end of each Project Space Profile line, which directs the user to an *Advanced Settings* pop-up window.
+
+> A *Delete* option is available only for when a Space is not alive. When a Space is alive, only the *Advanced* option (for editing) is available.
   
 * The **right side** presents the **‘GIT world’**, that is, the location of the saved Fabric Project (upon its implementation) in GIT. It contains the following 5 fields: The fields there can/need to be populated once.
   * ***Source Type***, which is currently 'Git'.
