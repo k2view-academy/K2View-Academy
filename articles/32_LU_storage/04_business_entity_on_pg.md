@@ -55,8 +55,10 @@ Since data is not stored as a MicroDB, the following Fabric capabilities are not
 7. In order to change an LU table column type, it is required drop and redeploy the LU.
 8. Logical Unit table column collation property supports only BINARY value.
 9. CDC is not supported.
-10. Index can't include more than 32 columns.
-11. Logical Unit table names, column names and schema names can't exceed 63 characters.
+10. Partial LUI encryption is not supported.
+11. TTL is not supported.
+12. Index can't include more than 32 columns.
+13. Logical Unit table names, column names and schema names can't exceed 63 characters.
 
 [![Previous](/articles/images/Previous.png)](03_big_lu_storage.md)
 
