@@ -33,7 +33,7 @@ Click [here](04_plugin_framework.md#built-in-plugins) for more details about the
 
 ### Classifier PII & Masking Setup
 
-The **PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each Classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
+The **PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
 
 <img src="images/settings_pii_mask.png" style="zoom:80%;" />
 
@@ -44,9 +44,9 @@ This tab includes 2 definitions per each Classification:
 
 Each **Classification** can have **only one** definition (row) in this tab.
 
-#### Masking Setup
+#### Generator Setup
 
-To set up the masking parameters (such as the Generator) - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
+To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
 
 Upon the invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated to a field with a given Classification. For example, for masking fields that are classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it as the Classification's generator using the above screen.
 
