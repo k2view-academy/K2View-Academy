@@ -12,7 +12,7 @@ This article describes the main configuration parameters of the **plugins.discov
 
 ### Plugins Pipeline
 
-The plugins.discovery is the configuration file of the Plugins Pipeline process. This file is located in the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The plugins.discovery is the configuration file of the Plugins Pipeline process. Starting from V8.0, this file is located in the ```/fabric/resources/discovery``` folder. If a project level override is needed, the file should be copied to the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
 The plugins.discovery configuration file includes the settings of the Discovery job such as:
 

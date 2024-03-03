@@ -40,13 +40,13 @@ The **PII & Masking Setup** tab allows to view and update the PII and Catalog-ba
 This tab includes 2 definitions per each Classification:
 
 * **PII** - indicates whether the Classification is considered as PII. 
-* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md).
+* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) per each Classification.
 
 Each **Classification** can have **only one** definition (row) in this tab.
 
-### Generator Setup
+### Masking Setup
 
-To set up the Generator and its parameters - click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area. Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
+Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area in order to set up the Generator and its parameters (Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters). Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
 
 Upon the invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated to a field with a given Classification. For example, for masking fields that are classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or a flow and attach it as the Classification's generator using the above screen.
 
@@ -62,12 +62,12 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 ### Advanced Masking Settings
 
-The purpose of the Advanced Settings popup is to define additional parameters for masking functionality. The following is included:
+The purpose of the Advanced Masking Settings popup is to define additional parameters for masking functionality. The following is included:
 
-* **Masking indicators** are the inputs that determine masking behavior during the flow run. They can be either set on the Catalog Masking actor's inputs or in the Catalog's settings here. When set here, the definition is per classification and it overrides the Catalog Masking actor's settings.
+* **Masking indicators** are the inputs that determine masking behavior during the flow run. They can be either set per population via the Catalog Masking actor inputs or per Classification via the Catalog's settings here. The Catalog definition overrides the Catalog Masking actor's settings - per the fields with the same Classification.
 * **Formatter name and parameters** are set in order to enable the format preserving masking.
 
-
+<img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
 
 
 
