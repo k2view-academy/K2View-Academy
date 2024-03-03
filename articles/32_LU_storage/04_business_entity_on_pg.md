@@ -2,7 +2,7 @@
 
 Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business entity's instance is saved in separate rows in PostgreSQL.
 
-This functionality should be used when the main use case is driven mostly from cross-instance queries, server reportings, dashboards or data analytics systems.
+This functionality should be used when the main use case is driven mostly from cross-instance queries, for reportings, dashboards or data analytics systems.
 
 This is the preffered option when asking the following:
 
@@ -18,7 +18,7 @@ The Logical Unit's data is saved in PostgreSQL in 2 different schemas:
 
 2. {Logical Unit Name}, contains views on all the Logical Unit tables for Fabric's internal use.
 
-This structure opesn the ability to query data in the Business Entity's instance level when needed.
+This structure opens the ability to query data in the Business Entity's instance level when needed.
 
 When using the DbLoad Actor in Broadway, it is required to use the batch mode in order to ensure good sync performance results.
 
