@@ -41,7 +41,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 >   For test and POT Environment domain and certificates can be provided by K2view.
 
 * A user with sudo privilege to run the script.
-* Kubernetes/Docker images (will be provided by K2view)
+* Kubernetes/Docker images (will be provided by K2view, Depend on the required projects)
 * FW access to GitHub and K2view Cloud manager at port 443 (https). 
 * Mailbox ID and Cloud manager URL (will be provided be K2view) to be used by Kubernetes module K2view-agent (more explanation below)  
 
