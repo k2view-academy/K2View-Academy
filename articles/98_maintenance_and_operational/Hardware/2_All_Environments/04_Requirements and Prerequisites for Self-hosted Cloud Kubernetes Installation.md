@@ -1,4 +1,4 @@
-# Requirements and Prerequisites for Self-hosted Cloud Kubernetes Installation 
+# Requirements and Prerequisites for Hybrid On-Premise K2view Cloud Installation 
 
 ## Hardware requirements 
 A Kubernetes worker node is expected to meet the following requirements:
@@ -76,8 +76,18 @@ Run script 'single_node.sh'  and follow all the in-screen instructions
 ```bash
 ./single_node.sh
 ```
+This script will install the following tools:
+* cert-manager - more info at <a href="https://cert-manager.io/" target="_blank">https://cert-manager.io/</a>
+* NGINX Ingress - more info at <a href="https://docs.nginx.com/" target="_blank">https://docs.nginx.com/</a>
+* hostpath-storage
+* docker registry - more info at <a href="https://microk8s.io/docs/registry-built-in" target="_blank">https://microk8s.io/docs/registry-built-in/</a>
+* metrics-server
 
- 
+During the installation installer will request to provide the prerequisites:
+* Mailbox ID
+* Cloud manager URL
+* Certificate files
+* DNS Record
 
 Once the setup finishes (it can take several minutes), open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application! 
 
