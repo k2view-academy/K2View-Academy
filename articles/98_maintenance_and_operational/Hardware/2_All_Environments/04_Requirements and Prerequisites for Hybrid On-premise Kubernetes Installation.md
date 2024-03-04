@@ -1,4 +1,4 @@
-# Requirements and Prerequisites forK2cloud on-prem K8s Installation 
+# Requirements and Prerequisites for K2cloud on-prem K8s Installation 
 
 ## Supported OS
 the Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
