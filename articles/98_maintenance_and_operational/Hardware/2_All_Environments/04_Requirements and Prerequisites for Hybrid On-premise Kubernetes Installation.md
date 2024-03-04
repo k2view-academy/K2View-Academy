@@ -41,6 +41,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 >   For test and POT Environment domain and certificates can be provided by K2view.
 
 * A user with sudo privilege to run the script.
+* Kubernetes/Docker images (will be provided by K2view)
 * FW access to GitHub and K2view Cloud manager at port 443 (https). 
 * Mailbox ID and Cloud manager URL (will be provided be K2view) to be used by Kubernetes module K2view-agent (more explanation below)  
 
@@ -86,9 +87,33 @@ This script will install the following tools:
 During the installation installer will request to provide the prerequisites:
 * Mailbox ID
 * Cloud manager URL
-* Certificate files
 * DNS Record
 
-Once the setup finishes (it can take several minutes), open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application! 
+Once the setup finishes (it can take several minutes), and before we can create new space, few steps need to be taken:
+* Load the downloaded docker images
+```bash
+docker load -i /path/to/file.tar.gz
+```
+* Tag the image to fit the local repository
+```bash
+docker tag <IMAGE_HASH> localhost:32000/image-name:tag
+```
+* Import the downloaded images to the Kubernetes local repository.
+```bash
+docker push localhost:32000/image-name:tag
+```
+* Deploy it in the nginx namespace and restart nginx controller
+```bash
+deploy_certificate.sh
+```
 
+open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application!
+
+To start new space
+* Click the **create Space +**
+![Create Space](images/spaces_start.png)
+* Add the required details (Space Name, Project Name, Etc)
+![Space Details](images/new_space.png)
+* Wait for the space to be created 
+![Space Details](images/space_view.png)
  
