@@ -1,7 +1,7 @@
 # Requirements and Prerequisites for K2cloud on-prem K8s Installation 
 
 ## Supported OS
-the Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
+The Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
 ## Hardware requirements 
 A Kubernetes worker node is expected to meet the following requirements:
 
