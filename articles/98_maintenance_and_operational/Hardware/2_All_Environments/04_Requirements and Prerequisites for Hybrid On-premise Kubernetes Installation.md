@@ -1,5 +1,7 @@
-# Requirements and Prerequisites for Hybrid On-Premise K2view Cloud Installation 
+# Requirements and Prerequisites forK2cloud on-prem K8s Installation 
 
+## Supported OS
+the Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
 ## Hardware requirements 
 A Kubernetes worker node is expected to meet the following requirements:
 
@@ -41,11 +43,11 @@ A Kubernetes worker node is expected to meet the following requirements:
 >   For test and POT Environment domain and certificates can be provided by K2view.
 
 * A user with sudo privilege to run the script.
+* Docker engine (latest version) - will be used to push the images to the k8s local repository
 * Kubernetes/Docker images (will be provided by K2view, Depend on the required projects)
-* FW access to GitHub and K2view Cloud manager at port 443 (https). 
-* Mailbox ID and Cloud manager URL (will be provided be K2view) to be used by Kubernetes module K2view-agent (more explanation below)  
+* Mailbox ID and Cloud manager URL (will be provided be K2view) to be used by Kubernetes module K2view-agent (more explanation below).
+* FW access to GitHub.com and K2view Cloud manager at port 443 (https).
 
- 
 
 ## Kubernetes components and the K2view-agent 
 
@@ -104,16 +106,8 @@ docker push localhost:32000/image-name:tag
 ```
 * Deploy it in the nginx namespace and restart nginx controller
 ```bash
-deploy_certificate.sh
+deploy_certificate.sh /pah/to/fullchain.cer /path/to/private.key
 ```
 
-open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application!
+open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application.
 
-To start new space
-* Click the **create Space +**
-![Create Space](images/spaces_start.png)
-* Add the required details (Space Name, Project Name, Etc)
-![Space Details](images/new_space.png)
-* Wait for the space to be created 
-![Space Details](images/space_view.png)
- 
