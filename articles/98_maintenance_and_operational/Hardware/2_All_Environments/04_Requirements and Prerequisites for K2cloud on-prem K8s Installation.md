@@ -1,7 +1,10 @@
-# Requirements and Prerequisites for K2cloud on-prem K8s Installation 
+# Requirements, Prerequisites and Installation Instructions for K2cloud On-prem K8s Clsuter  
+
+This article describes the guidelines and instructions for creating a K2cloud's site - a K8s clsuter, ready for operation.
 
 ## Supported OS
-the Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
+The K2cloud K8s clsuter can Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
+
 ## Hardware requirements 
 A Kubernetes worker node is expected to meet the following requirements:
 
@@ -40,7 +43,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 * An a record on public domain, pointing the the server that will host the kubernetes node (can point either private or public IP).
 * An asterisks certificate (with private key) for the selected domain.
 
->   For test and POT Environment domain and certificates can be provided by K2view.
+  > For a POT Environment domain and certificates can be provided by K2view.
 
 * A user with sudo privilege to run the script.
 * Docker engine (latest version) - will be used to push the images to the k8s local repository
