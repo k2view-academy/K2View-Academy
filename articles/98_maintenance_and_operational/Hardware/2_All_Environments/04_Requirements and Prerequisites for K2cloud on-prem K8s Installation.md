@@ -142,4 +142,34 @@ docker push localhost:32000/image-name:tag
 deploy_certificate.sh /path/to/fullchain.cer /path/to/private.key
 ```
 
-open the K2view Cloud Manager portal using the internet browser of your preference and create a space. After this space starts, you can begin using the application.
+## Starting and Stopping the Cluster and Services 
+
+Use the following commands to stop and restart the cluster:
+
+**Stoping The Cluster**
+
+```bash
+microk8s stop
+```
+
+**Starting The Cluster**
+
+```bash
+microk8s start
+```
+
+**Restarting The Cluster**
+
+```bash
+microk8s restart
+```
+
+**Uninstalling The Cluster**
+
+Delete the spaces and other resources from the Cloud Manager and then use the following commands to remove the cluster from your machine.
+
+```bash
+ microk8s uninstall
+```
+
+
