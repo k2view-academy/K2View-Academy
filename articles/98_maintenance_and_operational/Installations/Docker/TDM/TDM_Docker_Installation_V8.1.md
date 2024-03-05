@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V7.2.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.2.0.md).
+[FABRIC V7.2.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V7.2.2.md).
 
 ### Download Container Images 
 
@@ -24,7 +24,7 @@ Create a K2V_TDM directory and download the following into it:
 ~~~bash
 docker load -i D_K2V_PG15_MD5.tar.gz
 docker load -i D_k2view_cassandra_4.1.3.tar.gz 
-docker load -i D_k2view_fabric_7.2.0_218.tar.gz 
+docker load -i D_k2view_fabric-7.2.2_75.tar
 unzip compose_TDM_8.1.zip
 ~~~
 
