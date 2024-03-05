@@ -1,9 +1,11 @@
-# Requirements, Prerequisites and Installation Instructions for K2cloud On-prem K8s Clsuter  
+# Prerequisites and Installation Instructions for K2cloud On-prem K8s Clsuter  
 
-This article describes the guidelines and instructions for creating a K2cloud's site - a K8s clsuter, ready for operation.
+This article describes the guidelines and instructions for creating a K2cloud's site - a K8s (kuberentes) clsuter, ready for operation.
+
+While K2cloud K8s clsuter at cloud (fully-managed or self-hosted) deployment is done using Teraform, based on each cloud provider K8s infrastructure, the on-prem clsuter, is done by runing a script that is responsible for preperations of all reuired infrasturcture componnents.
 
 ## Supported OS
-The K2cloud K8s clsuter can Installation script support both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
+The K2cloud K8s clsuter can be installed on both Debian Based (Debian, Ubuntu) and RHEL Based (Redhat, Centos, Fedora, Amazon Linux 2) Linux Distributions.
 
 ## Hardware requirements 
 A Kubernetes worker node is expected to meet the following requirements:
@@ -40,27 +42,23 @@ A Kubernetes worker node is expected to meet the following requirements:
 </table>
 
 ## Prerequisites 
-* An a record on public domain, pointing the the server that will host the kubernetes node (can point either private or public IP).
+* A record on public domain, pointing the the server that will host the kubernetes node (can point either private or public IP).
 * An asterisks certificate (with private key) for the selected domain.
 
   > For a POT Environment domain and certificates can be provided by K2view.
 
 * A user with sudo privilege to run the script.
-* Docker engine (latest version) - will be used to push the images to the k8s local repository
-* Kubernetes/Docker images (will be provided by K2view, Depend on the required projects)
-* Mailbox ID and Cloud manager URL (will be provided be K2view) to be used by Kubernetes module K2view-agent (more explanation below).
-* FW access to GitHub.com and K2view Cloud manager at port 443 (https).
+* Docker engine (latest version), or an OCI compatible tool. This will be used to push the images to the k8s local repository.
+* K2view Kubernetes Docker images. Will be provided by K2view, Depend on the required projects.
+* Mailbox ID and Cloud manager URL. Will be provided be K2view.This will be used by the K2view-agent (more explanation below).
+* Firewall outbound access to GitHub.com and K2view Cloud manager at port 443 (https).
 
 
 ## Kubernetes components and the K2view-agent 
 
-The script provided will automatically install and configure everything that's required to have Kubernetes running and ready to be access K2view Cloud Manager. In Linux, Kubernetes will be installed using MicroK8s (https://microk8s.io/) along with some additional controllers. Although some might be optional, NGINX must be used as ingress controller 
+The installation script will automatically configure and install everything that is required to have K8s running and ready to be access K2view Cloud Manager. It is installed using MicroK8s (https://microk8s.io/) along with some additional controllers. 
 
- 
-The k2view-agent is a module used to bridge the communication from K2view Cloud Manager to the Kubernetes cluster. It will retrieve all the deployment instructions from K2view Cloud Manager from your cluster's dedicated mailbox (the Mailbox Id will be provided by K2view). With that, no inbound connection is required in the server running Kubernetes, only outbound traffic to K2view Cloud Manager URL. The K2view-agent will be deployed using helm. 
-
- 
-
+In addition to the K8s, k2view-agent Pod is also being deployed during the installation process. The k2view-agent is a module used to bridge the communication from K2view Cloud Manager to the K8s cluster. It pulls its dedicated instructions from K2view Cloud Manager according to cluster's mailbox (the Mailbox ID is provided by K2view). With that, there is only outbound traffic to K2view Cloud Manager URL and no inbound connection is required.  
  
 
 ## Installation 
