@@ -37,7 +37,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 </table>
 
 ## Prerequisites 
-* An A record on public domain, pointing the the server that will host the kubernetes node (can point either private or public IP).
+* An a record on public domain, pointing the the server that will host the kubernetes node (can point either private or public IP).
 * An asterisks certificate (with private key) for the selected domain.
 
 >   For test and POT Environment domain and certificates can be provided by K2view.
