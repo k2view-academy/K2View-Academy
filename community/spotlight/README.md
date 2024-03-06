@@ -3,6 +3,7 @@
 
 
 <ul>
+<li><a href="/community/spotlight/20240306_fabric_catalog.md">Fabric 7.2 Discovery and Catalog</a></li>
 <li><a href="/community/spotlight/20230329_fabric_7_broadway.md">Fabric 7.0 Broadway Enhancements</a></li>
 <li><a href="/community/spotlight/20230329_sync_on_demand.md">Sync On Demand</a></li>
 <li><a href="/community/spotlight/20220814_ws_permissions.md">WS Elevated and Additional Permissions</a></li>
