@@ -1,5 +1,15 @@
 <!--block-->
 
+<img src="images/catalog_overview.png" style="zoom:80%;" />
+
+### Fabric 7.2 Discovery and Catalog 
+
+Fabric's Discovery and Catalog solution provides an insight into the Fabric interfaces. It includes auto-discovery of the data source's elements, data model enrichment and auto-profiling.
+
+[Read more >](20240306_fabric_catalog.md)
+
+<!--block-->
+
 <img src="images/broadway_7_look.png" style="zoom:80%;" />
 
 ### Fabric 7.0 Broadway Enhancements
@@ -23,18 +33,5 @@ The purpose of a Sync On Demand mode is to reduce the time spent by Fabric perfo
 In this mode, the sync is performed only on tables that are a part of the executed SELECT statement and their parent tables. 
 
 [Read more >](20230329_sync_on_demand.md)
-
-<!--block-->
-
-<img src="images/swagger_0.png" style="zoom:80%;" />
-
-### WS Elevated and Additional Permissions
-
-Fabric Web Services have two properties related to user role permissions:
-
-* Elevated Permission - whether user permissions should be elevated to WS.
-* Additional Permissions - enables WS to activate certain methods which are prohibited to the user's role permissions.
-
-[Read more >](20220814_ws_permissions.md)
 
 <!--block-->
