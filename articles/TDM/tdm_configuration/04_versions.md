@@ -104,6 +104,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         </tr>
         <tr>
             <td align="left">6.2.0</td>
+            <td>September 7, 2020</td>
             <td>6.2.0</td>
             <td>3.11.9</td>
             <td>2.14</td>
@@ -111,6 +112,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         </tr>
         <tr>
             <td align="left">6.1.1</td>
+            <td>June 28, 2020</td>
             <td>6.1.1</td>
             <td>3.11.9</td>
             <td>2.13</td>
@@ -118,6 +120,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         </tr>
         <tr>
             <td align="left">6.1.0</td>
+            <td>May 6, 2020</td>
             <td>6.1.0</td>
             <td>3.11.9</td>
             <td>2.13</td>
@@ -125,6 +128,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         </tr>
         <tr>
             <td align="left">5.5.0</td>
+            <td>January 20, 2020</td>
             <td>5.5.0</td>
             <td>3.11.9</td>
             <td>2.10</td>
