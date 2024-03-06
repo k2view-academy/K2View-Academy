@@ -25,3 +25,6 @@ When the LU Schema is ready, right click on the Logical Unit name in the project
 
 The **streamSync.flow** includes the remarks with explanations about what can be modified. The implementor should update the flow (by setting the PubSub interface) and do additional changes if needed (e.g. add custom actors). In addition, the **deploy.flow** of the selected LU should be updated - by modifying the **BroadwayJob** Actor with the above flow name.
 
+
+
+[![Previous](/articles/images/Previous.png)](01_stream_sync_overview.md)

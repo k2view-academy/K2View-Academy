@@ -34,4 +34,4 @@ The articles of this section describe the **Stream Sync** solution.
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_stream_sync_architecture.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_stream_sync_init.md) 
