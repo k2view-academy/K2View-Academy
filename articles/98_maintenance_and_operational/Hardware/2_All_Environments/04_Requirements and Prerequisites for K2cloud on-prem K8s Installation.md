@@ -49,26 +49,26 @@ A K8s worker node is expected to meet the following requirements, and accordingl
 
 ## Preparations and Provisioning
 
-* Prepare a record on public domain, pointing the the server that will host the K8s node (can point either private or public IP). 
+* Prepare a record on a public domain, pointing to the server that will host the K8s node (can point to either a private or a public IP). 
 
-* Have an asterisks certificate (with private key) for the selected domain.
+* Have an asterisks certificate (with a private key) for the selected domain.
 
-  > For a POT Environment both domain and certificates can be provided by K2view.
+  > For a POT Environment, both domain and certificates can be provided by K2view.
 
 * Have a user with sudo privilege to run the script.
 
 * Have a Docker engine (latest version), or an OCI compatible tool. This will be used to push the images to the k8s local repository.
 
-* Verify that host has an outbound access to GitHub.com and K2view Cloud manager at port 443 (https).
+* Verify that the host has an outbound access to GitHub.com and to K2view Cloud manager in port 443 (https).
 
 * Provide to K2view:
 
   * The prepared domain name.
-  * The Fabric Git project details that is going to be used.
+  * The Fabric Git project details that are going to be used.
 
 * Get from K2view:
 
-  * K2view Kubernetes Docker images, depended on the required projects.
+  * K2view Kubernetes Docker images, depending on the required projects.
 
   * Mailbox ID and Cloud manager URL. 
 
@@ -76,7 +76,7 @@ A K8s worker node is expected to meet the following requirements, and accordingl
 
 ## Installation 
 
-The installation script will automatically configure and install everything that is required to have K8s running and ready to be access K2view Cloud Manager.
+The installation script will automatically configure and install everything required for having K8s running and ready to be access K2view Cloud Manager.
 
 You should perform the following commands:
 
