@@ -1,6 +1,6 @@
 # Prerequisites and Installation Instructions for K2cloud On-prem K8s Cluster  
 
-This article describes the guidelines and instructions for creating a K2cloud's site - a K8s (kuberentes) cluster, ready for operation.
+This article describes the guidelines and instructions for creating a K2cloud's site - a K8s (kubernetes) cluster, ready for operation.
 
 While K2cloud K8s cluster deployment at cloud (fully-managed or self-hosted) is done using Teraform, based on each cloud provider K8s infrastructure, the on-prem K8s clsuter deployment is done by runing a script that is responsible for the preperations of all reuired infrasturcture componnents. This cab be considered as a kuberentes in-a-box.
 
