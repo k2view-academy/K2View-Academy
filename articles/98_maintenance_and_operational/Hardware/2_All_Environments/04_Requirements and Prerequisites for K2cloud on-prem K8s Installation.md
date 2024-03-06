@@ -2,7 +2,7 @@
 
 This article describes the guidelines and instructions for creating a K2cloud's site - a K8s (kubernetes) cluster, ready for operation.
 
-While K2cloud K8s cluster deployment on cloud (fully-managed or self-hosted) is done using Teraform, based on each cloud provider K8s infrastructure, the on-prem K8s clsuter deployment is done by runing a script that is responsible for the preperations of all reuired infrasturcture componnents. This cab be considered as a kuberenetes in-a-box.
+While K2cloud K8s cluster deployment on cloud (fully-managed or self-hosted) is done using Teraform, based on each cloud provider K8s infrastructure, the on-prem K8s clsuter deployment is done by runing a script that is responsible for the preperations of all reuired infrasturcture components. This cab be considered as a kubernetes in-a-box.
 
 
 
