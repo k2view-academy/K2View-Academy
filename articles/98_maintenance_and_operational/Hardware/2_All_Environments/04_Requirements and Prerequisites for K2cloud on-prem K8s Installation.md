@@ -76,23 +76,23 @@ A K8s worker node is expected to meet the following requirements, and accordingl
 
 ## Installation 
 
-The installation script will automatically configure and install everything required for having K8s running and ready to be access K2view Cloud Manager.
+The installation script will automatically configure and install everything required for having K8s running and ready.
 
 You should perform the following commands:
 
-Clone Git repository 'k2view/blueprints' in [GitHub](https://github.com/k2view/blueprints/tree/main/baremetal)
+Clone the Git repository 'k2view/blueprints' in [GitHub](https://github.com/k2view/blueprints/tree/main/baremetal)
 
 ```bash
 git clone https://github.com/k2view/blueprints.git
 ```
 
-Navigate to directory 'blueprints/baremetal' 
+Navigate to the directory 'blueprints/baremetal' 
 
 ```bash
 cd blueprints/baremetal
 ```
 
-Run script 'single_node.sh'  and follow all the in-screen instructions 
+Run the script 'single_node.sh' and follow all the in-screen instructions 
 
 ```bash
 ./single_node.sh
@@ -109,14 +109,14 @@ This script installs the following:
 * [docker registry](https://microk8s.io/docs/registry-built-in)
 * metrics-server
 
-During the installation, the installer script will request to provide the values prepared at the prerequisites phase:
+During the installation, the installer script will request to provide the values prepared in the Prerequisites phase:
 
 * Mailbox ID
 * Cloud manager URL
 * DNS Record
 
 
-Once the setup finishes (it can take several minutes), and before you can create new space, few steps need to be taken:
+Once the setup finishes (it may take several minutes) - and before you can create a new space - a few steps need to be taken:
 
 * Load the downloaded docker images
 
