@@ -343,12 +343,12 @@
 	"Community": [
 		{
 			"comm display name": "Webinars",
-			"comm display text": "Registration for K2View webinars and seminars including the recording and past webinars materials.",
+			"comm display text": "Registration for K2view webinars and seminars including the recording and past webinars materials.",
 			"comm icon": "../community/webinars/images/webinar_icon.png",
 			"visible": true,
 			"path": "../community/webinars",
 			"view all link": "../community/webinars/README.html",
-			"view all text": "Click to view all the Webinars"
+			"view all text": "Click to view all"
 		},
 		{
 			"comm display name": "Spotlight",
@@ -357,7 +357,7 @@
 			"visible": true,
 			"path": "../community/spotlight",
 			"view all link": "../community/spotlight/README.html",
-			"view all text": "Click to view all the Spotlights"
+			"view all text": "Click to view all"
 		},
 		{
 			"comm display name": "Q&A",
@@ -366,7 +366,7 @@
 			"visible": true,
 			"path": "../community/q_a",
 			"view all link": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed",
-			"view all text": "Click to view all Q&A"
+			"view all text": "Click to view all"
 		}
 	]
 }
