@@ -10,5 +10,6 @@
         <li><a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md">Cassandra Basic Commands</a></li>
         <li><a href="/articles/02_fabric_architecture/08_kafka_basic_commands.md">Kafka Basic Commands</a></li>
 	<li><a href="/articles/02_fabric_architecture/09_AWS_keyspaces.md">AWS Keyspaces Limitations & Troubleshooting</a></li>
+  <li><a href="/articles/02_fabric_architecture/10_versions.md">Fabric Versions</a></li>
 </ul>
 
