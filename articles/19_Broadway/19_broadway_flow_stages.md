@@ -8,7 +8,7 @@ This article describes the following Stage features:
 - A Stage can be split to create [more than one Stage on the same level](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages).
 - [Stage conditions](19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
 
-### How Do I Add or Delete a Stage?
+## How Do I Add or Delete a Stage?
 
 A Stage can be added anywhere in the flow.
 
@@ -23,7 +23,7 @@ A Stage can be added anywhere in the flow.
 
   <img src="images/99_19_delete_branch.PNG" alt="Flow-Plus Icon" style="zoom:80%;" />
 
-### How Do I Split or Merge the Stages?
+## How Do I Split or Merge the Stages?
 
 Each Stage can be split into two (and so on) to create several stages on the same dependency level.
 
@@ -34,7 +34,7 @@ The Split's logic depends on the position of the Stage in the flow and includes 
 - If the Stage before the current Stage is not split, the current Stage is split into two.
 - If the Stage before the current Stage is split (for example, there are four Stages on the same level), the current Stage is split into the same number of Stages.
 
-### What is a Stage Condition?
+## What is a Stage Condition?
 
 If a condition is required in the flow, the flow can be split and a **Stage Condition** Actor can be added to one or more Stages that have been created as a result of the split.
 
@@ -49,7 +49,7 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 -  A merged Stage will run after all its parent Stages have been executed.
 -  If no parent Stages have been executed (all conditions are false), the merged Stage is not executed.
 
-### How Do I Define a Stage Condition?
+## How Do I Define a Stage Condition?
 
 To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor is green.
 
@@ -60,6 +60,16 @@ To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) > **Else**.
 <img src="images/99_19_else.PNG" alt="image" style="zoom: 67%;" />
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
+
+Starting V8.0 you can define **elseif** conditions. When a Stage is split into several stages on the same dependency level, you can define the **elseif** logic by adding a Stage condition and marking the same stage as **else**. The conditions of all Stages of the same level will continue to be evaluated top -> down, by the following rules:
+
+* Start from evaluation of all Stages with condition only (and no **else**).
+* If none of them is true, evaluate all Stages with **else** and a condition, in a top -> down order.
+* If none of them is true, execute the **else** Stage.
+
+In the below example, the order of the Stage 
+
+<img src="images/99_19_cond_elseif.png" alt="image" style="zoom:80%;" />
 
 ### Stage Conditions Example
 
