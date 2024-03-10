@@ -59,6 +59,8 @@ A K8s worker node is expected to meet the following requirements, and accordingl
 
 * Have a Docker engine (latest version), or an OCI compatible tool. This will be used to push the images to the k8s local repository.
 
+* Have snapd (snap daemon)  for installting snaps applications 
+
 * Verify that the host has an outbound access to GitHub.com and to K2view Cloud manager in port 443 (https).
 
 * Provide to K2view:
