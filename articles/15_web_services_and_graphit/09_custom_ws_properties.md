@@ -18,7 +18,7 @@ At Java function, the Web Service Properties panel is located on the top right c
 
 <web>
 
-At Java function, the Web Service properties setting is done using annotations, as explained [here](/articles/15_web_services_and_graphit/10_annotations.md). 
+At Java function, the Web Service properties setting is done using annotations, as explained [here](13_custom_ws_java_annotations.md). 
 
 </web>
 
