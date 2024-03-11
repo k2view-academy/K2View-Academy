@@ -254,102 +254,102 @@ The below table displays the various Fabric versions, released date and end of l
       <tr>
             <td>5.5.5</td>
             <td>October 14, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
       <tr>
             <td>5.5.4</td>
             <td>June 10, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
       <tr>
             <td>5.5.3</td>
             <td>May 18, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
       <tr>
             <td>5.5.2</td>
             <td>April 19, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
       <tr>
             <td>5.5.1</td>
             <td>February 15, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
       <tr>
             <td>5.5.0</td>
             <td>December 29, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.9</td>
             <td>February 27, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.8</td>
             <td>January 20, 2020</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.7</td>
             <td>December 8, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.6</td>
             <td>December 1, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.5</td>
             <td>November 14, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.4</td>
             <td>November 7, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.3</td>
             <td>October 31, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.2</td>
             <td>October 13, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.1</td>
             <td>October 2, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.4.0</td>
             <td>August 28, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.3.0-5.3.22</td>
             <td>June 10, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.2.0-5.2.3</td>
             <td>April 17, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.1.0-5.1.1</td>
             <td>March 14, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>5.0.0-5.0.1</td>
             <td>January 26, 2019</td>
-            <td></td>
+            <td>April 30, 2024</td>
         </tr>
         <tr>
             <td>4.X and older</td>
