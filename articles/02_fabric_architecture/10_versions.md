@@ -354,7 +354,7 @@ The below table displays the various Fabric versions, released date and end of l
         <tr>
             <td>4.X and older</td>
             <td>November, 2018</td>
-            <td></td>
+            <td>November 30, 2022</td>
         </tr>
     </tbody>
 </table>
