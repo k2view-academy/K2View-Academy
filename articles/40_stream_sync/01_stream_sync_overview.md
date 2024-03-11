@@ -17,11 +17,11 @@ For example, the Oracle’s Golden Gate system publishes messages with the data 
 
 The Stream Sync has a sophisticated algorithm that can identify whether the received data updates are incomplete or missing logical relationships due to the out-of-order arrival. If the received data is invalid or incomplete, it is handled differently from the case when the received data is valid and complete.
 
-## IidFinder vs Stream Sync
+## IID Finder vs Stream Sync
 
 Starting from V8.0, Fabric provides two solutions for the Fabric DB synchronization with the source system changes:
 
-*  **IidFinder** is a legacy solution relevant for Fabric over SQLite operational DB. Its configuration is based on iifConfig.ini and it runs as a separate process.
+*  **IID Finder** is a legacy solution relevant for Fabric over SQLite operational DB. Its configuration is based on iifConfig.ini and it runs as a separate process.
 * **Stream Sync** is a new solution introduced in V8.0. It is relevant for FabricDbOne over PostgreSQL only. It is configured via the config.ini file and it runs as a Fabric job.
 
 Both solutions use the same resources, such as:
