@@ -1,13 +1,13 @@
 # Complex Field Parsing
 
-Starting V8.0, the Catalog supports parsing of complex fields using a **Complex Field Parser** plugin. Complex field is a text field of a dataset populated with complex structures, such as JSON or an XML.
+Starting V8.0, the Catalog supports parsing of text fields which include complex structures (JSON or XML) using a **Complex Field Parser** plugin. 
 
-The plugins uses the data snapshot taken from the source to parse the dataset's fields. When the plugin identifies a complex structure embedded into a field, a node type **class** is created for each complex field level, recursively for all levels of the embedded complex structure. The parsing logic is:
+The plugins uses the data snapshot taken from the source. When the plugin identifies a complex structure embedded into a field, a node type **class** is created for each complex field level, recursively for all levels of the embedded complex structure. The parsing logic is as follows:
 
-* If the same complex field includes different structures within the data snapshot, they will be combined under the same class.
+* If the same complex field includes different structures within the data snapshot, these structures  are combined as the fields of the same class.
 * If the same field includes structures (e.g. JSON) and regular strings, the parsing is not performed.
 
-A **definedBy** relation type is created to connect between a complex field and its respective class. This relation cannot be deleted in the Edit mode. 
+A **definedBy** relation type is created to connect between a complex field and its respective class. This relation cannot be added or deleted in the Edit mode. 
 
 ![](../images/complex_field.png)
 

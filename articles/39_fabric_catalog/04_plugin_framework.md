@@ -12,7 +12,7 @@ This article describes the main configuration parameters of the **plugins.discov
 
 ### Plugins Pipeline
 
-The plugins.discovery is the configuration file of the Plugins Pipeline process. Starting from V8.0, this file is located in the ```/fabric/resources/discovery``` folder. If a project level override is needed, the file should be copied to the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The plugins.discovery is the configuration file of the Plugins Pipeline process. Starting from V8.0, this file is part of the product's resource and it is located in the ```/fabric/resources/discovery``` folder. 
 
 The plugins.discovery configuration file includes the settings of the Discovery job such as:
 
@@ -20,11 +20,13 @@ The plugins.discovery configuration file includes the settings of the Discovery 
 * Data platform's include / exclude lists
 * List of active plugins, their threshold and the execution order
 
-This file can be updated per your project's requirements. Once the plugins.discovery configuration file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
+When a project level override is needed (such as setting an exclude list or disabling a plugin), the file should be copied to the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+
+Every time the plugins.discovery file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
 
 ### Data Sample Settings
 
-The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is being used by the various plugins during the job run. Once the plugins' execution has been completed, the data sample is deleted.
+The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is being used by various plugins during the job run. Once the plugins' execution has been completed, the data sample is deleted.
 
 The sample size is configured in the [sample_size] section of the plugins.discovery file as follows:
 
