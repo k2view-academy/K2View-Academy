@@ -62,12 +62,16 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 ### Advanced Masking Settings
 
-The purpose of the Advanced Masking Settings popup is to define additional parameters for masking functionality. The following is included:
+The purpose of the Advanced Masking Settings popup is to setup additional parameters for masking functionality. The following is included:
 
-* **Masking indicators** are the inputs that determine masking behavior during the flow run. They can be either set per population via the Catalog Masking actor inputs or per Classification via the Catalog's settings here. The Catalog definition overrides the Catalog Masking actor's settings - per the fields with the same Classification.
+* **Masking indicators** determine masking behavior during the flow run. They can be either set per population via the Catalog Masking actor inputs or per Classification via the Catalog Settings here. The Catalog definition overrides the Catalog Masking actor's one - for all the fields with the same Classification.
 * **Formatter name and parameters** are set in order to enable the format preserving masking.
 
 <img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
+
+The Advanced Masking Settings are defined per each classification using the above popup. The Submit button in the popup screen keeps the data in the client until the save is done using the Save button on the **PII & Masking Setup** tab. Then the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
+
+The Advanced Masking Settings are available starting V8.0.
 
 
 
