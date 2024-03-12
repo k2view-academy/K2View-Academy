@@ -64,11 +64,11 @@ Referring to the 6 web services defined in the above code snippet, we can observ
 This annotation is automatically added before each of the web services defined in the project. 
 
 #### @desc
-The [description tag](/articles/15_web_services_and_graphit/02_web_services_properties.md#description) is added before the public function declaration - e.g.
+The [description tag](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#description) is added before the public function declaration - e.g.
 ```("Show example of annotations 3")``` 
 
 #### @serializeNull
-When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is de-activated for a given web service (this is done from the property panel of the web service Java file) a @serializeNull(false) tag is added before the declaration of the method itself.
+When [serialization](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#serialize-null) is de-activated for a given web service (this is done from the property panel of the web service Java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
 #### @param
 This annotation allows users to parse a specific function or variable as a parameter to the web service when it is called. This way the web service can benefit from dynamic input and output capabilities.
@@ -119,16 +119,16 @@ Additionally, variables can also be parsed into the path, as shown in the ```tes
 
 
 #### Verbs 
-The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties) are added:
+The following [properties](/articles/15_web_services_and_graphit/09_custom_ws_properties.md) are added:
 
-- [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the Java web service window in Fabric Studio.
+- [method](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the Java web service window in Fabric Studio.
 
 #### Properties
 The following flags are used to set the web services formats:
-- [custom payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) - in this case is set to true: ``` isCustomPayload = true``` 
-- [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) - can be either XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
-- [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) - brings the data response 'as is' or not: e.g. ```isRaw = true```
-- [elevated permission](/articles/15_web_services_and_graphit/02_web_services_properties.md#elevated_permission) - indicates whether users' permissions should be elevated to the web service or not.
+- [custom payload](/articles/09_custom_ws_properties.md#custom-payload) - in this case is set to true: ``` isCustomPayload = true``` 
+- [produce](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#produce) - can be either XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
+- [isRaw](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#is-raw) - brings the data response 'as is' or not: e.g. ```isRaw = true```
+- [elevated permission](/articles/15_web_services_and_graphit/09_custom_ws_properties.md#elevated_permission) - indicates whether users' permissions should be elevated to the web service or not.
 
 #### @legacy
 Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.
