@@ -184,7 +184,7 @@ Following are properties that are available only for Java function web services:
 </tr>
 <tr>
 <td valign="top"><p><h5>Custom Payload</h5></p></td>
-<td valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters panel, or if they should be implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric. Click here to see a code snippet for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---xml">an XML format payload</a> or for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---json">a JSON format payload.</a>
+<td valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters panel, or if they should be implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric. Click here to see a code snippet for <a href="/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md#example-of-a-custom-payload---xml">an XML format payload</a> or for <a href="/articles/15_web_services_and_graphit/12_custom_ws_java_examples.md#example-of-a-custom-payload---json">a JSON format payload.</a>
 This flag must be set to True in the properties panel in order to be activated.
 </td>
 </tr>
@@ -206,6 +206,7 @@ For example, when set to False and the user role has no WRITE permissions, the u
 </tr>
 </tbody>
 </table>    
+
 
 
 
