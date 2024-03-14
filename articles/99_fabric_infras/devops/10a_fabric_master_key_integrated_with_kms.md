@@ -104,6 +104,32 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
 
 
+## Integration with Thales KMS
+
+1. From KMS, get the specific master key information - partition ID, master key ID, user, password, KMS server URL
+
+2. In Fabric, set the values in config.ini under ``[encryption_thales_kms]`` section, according to the KMS information, as following: 
+
+   ~~~
+   [encryption_thales_kms]
+   USER=
+   PASSWORD=
+   AUTH_DOMAIN=
+   KEY_ID=
+   AAD=
+   BASE_URL_TEMPLATE=
+   ~~~
+
+   >  Notes: 
+   >
+   >  * The BASE_URL_TEMPLATE, the server URL, shall include the key_id inside the URL with {} wrapping brackets, for example: https://<KMS-host>/api/keys/{key_id}
+   >  * Relevant config.ini parameters, like user and password, are encrypted and are not saved in the file in their clear/plain form.
+   >  * Changes in the config.ini file shall be done on all Fabric nodes.
+
+3. In Fabric, run ``activatekey name='<name>' generatorType='Java_AES' storeType='KMIP_KMS'``.
+
+
+
 ## Symmetric and Asymmetric Master Key Encryption Types
 
 While KMS providers enable working with either symmetric or asymmetric encryption types, Fabric supports the symmetric key type. This type should be selected in KMS when creating the master key. 

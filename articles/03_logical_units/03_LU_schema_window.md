@@ -173,7 +173,7 @@ The LU schema's diagram window displays the following toolbar:
 <tr>
 <td width="60">&nbsp;<img src="images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
-<p>Update Tables From Database</p>
+<p>Tables' Reconciliation - Update Tables From Database</p>
 <p>When clicked, the LU tables' schema is refreshed from the source database. This action is required when the LU tables' schema has been updated in the source database.</p>
 <p>Note: Only current tables are updated. Tables are manually added or deleted from an LU.</p>
 </td>
@@ -186,6 +186,7 @@ The LU schema's diagram window displays the following toolbar:
 </tr>
 </tbody>
 </table>
+
 
 You can customize the schema's toolbar by right-clicking on it and selecting 'Customize...'; a pop-up window shall then open, where you can add/remove toolbars to/from the display:
 
@@ -220,7 +221,7 @@ The LU Schema toolbar includes the following elements:
 <tr>
 <td style="text-align: center;" width="170pxl"><img src="images/web/reconciliation.svg" alt="" /></td>
 <td width="630pxl">
-<p>Find tables' columns mismtaches vs the origin data sources tables, for <a href="">tables reconcilliation</a> purposes.</p>
+<p>Find tables' columns mismtaches vs the origin data sources tables, for <a href="/articles/06_LU_tables/07_reconciliation.md">tables reconcilliation</a> purposes.</p>
 </td>
 </tr>
 <tr>
@@ -285,6 +286,7 @@ The LU Schema toolbar includes the following elements:
 </tr>
 </tbody>
 </table>
+
 
 
 
