@@ -23,6 +23,8 @@ Common input arguments of masking Actors are:
 * **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
 * **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor - for enabling the execution of the data generation flow or Actor - which generates a fake value.
   
+* **formatter** - this optional input has been added in Fabric 8.0 in order to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).  This parameter can be set either with a formatter flow or Actor in order to **preserve the original format in the masked value** and set the same masked values to all fields that have the same normalized (’naked‘) value although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or Actor to format the masked value based on the original format. 
+  
 * **category** - this parameter has been added by Fabric 6.5.3 and it indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
   
   - **enable_sequences**, which generates a new ID value
@@ -66,6 +68,56 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 
 * **sequenceInterface** and **sequenceId** - the **sequenceInterface** is populated with the interface name. The **sequenceId** is populated with the sequence name defined in the sequence interface. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment** - define the initial value of the sequence and the value of the increment. 
+
+
+
+### Formatter Actors and Flows
+
+#### SimpleMaskingFormat
+
+Fabric 8.0 offers this Actor to run a simple formatting logic. This Actor works in 2 modes:
+
+- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from original value all the characters that are in the **formatDeny** (back list) and/or that are not in the **formatAllow** (white list)  parameters.
+
+- **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
+
+In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included that are in the formatDeny and/or that are not in the formatAllow parameters.
+
+ In case the formatAllow is empty, any character is allowed, except for the characters specified in the formatDeny.
+
+ At least one the following inputs - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both inputs are empty, the formatter will do nothing. 
+
+ If the normal value is longer than the original value, the remaining characters will be added to the output value.
+
+ **Input Arguments:**
+
+- - **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
+  - **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
+
+- - **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+  - **formatAllow**: indicates which characters can be included in the normalized value.  The formatAllow can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
+    - Example: the formatAllow is Numeric. Therefore,  all non-numeric characters need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12-542-99 and the formatAllow = Numeric, the normalized value 1254299.
+  - **formatDeny**: indicates which characters must be excluded from the originalValue in order to get the normalized value. The formatDeny can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
+    - Example: if the formatDeny is '-', all the dashes need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12A-542B-99 and the formatDeny = '-', the normalized value would be 12A542B99.
+
+- 
+
+#### Custom Formatting Logic
+
+You can define either a flow or an Actor to set a custom formatting logic. The formatter flow/Actor must contain the following parameters:
+
+**Input parameters:**
+
+- - **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
+  - **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
+
+- - **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+
+**Output parameters:**
+
+- - **value**: populated with the normalized or formatted value. Depends on the formatterMode. 
+
+Note that if you build an formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
 
 ### How Do I Mask Data Using Masking Actors?
 
