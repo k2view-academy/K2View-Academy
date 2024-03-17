@@ -67,11 +67,11 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 #### Format Preserving Masking
 
-Fabric 8.0 adds a new optional parameter to the Masking actor: **formatter**. This parameter can be set either with a [formatter flow or Actor] in order to **preserve the original format in the masked value** and set the same masked values to all fields that have the same normalized (’naked‘) value although they have a different format.
+Fabric 8.0 adds a new optional parameter to the Masking actor: **formatter**. This parameter can be set either with a [formatter flow or Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#formatter-actors-and-flows) in order to **preserve the original format in the masked value** and set the same masked values to all fields that have the same normalized (’naked‘) value although they have a different format.
 
 Example:
 
-- The phone number exists in multiple fields in the data source with different formats: +1 (254) 455 5666 , +1(254)4555666, +1 (254)-455-5666.
+- The phone number exists in multiple fields in the data source with different formats: +1 (254) 455 5666, +1(254)4555666, +1 (254)-455-5666.
 - All these fields must get the same masked value (since they correspond to a single phone number), but the format needs to be different for each field in order to match its original format.
 
 <table>
@@ -117,7 +117,7 @@ The following diagram describes how the Masking Actor uses the formatter in orde
 
 ![fpm flow](images/format_preserving_masking_flow.png)
 
-Click [here] for more information about the formatter flows and Actors.
+Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#formatter-actors-and-flows) for more information about the formatter flows and Actors.
 
 ## K2view Masking Advantages
 
