@@ -75,9 +75,9 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 
 #### SimpleMaskingFormat
 
-Fabric 8.0 offers this Actor to run a simple formatting logic. This Actor works in 2 modes:
+Fabric 8.0 includes this Actor to run a simple formatting logic. This Actor works in 2 modes:
 
-- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from original value all the characters that are in the **formatDeny** (back list) and/or that are not in the **formatAllow** (white list)  parameters.
+- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the **formatDeny** (backlist) and/or that are not in the **formatAllow** (white list)  parameters.
 
 - **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
 
@@ -85,22 +85,20 @@ In order to build the formatted output, it adds to the normal value all the char
 
  In case the formatAllow is empty, any character is allowed, except for the characters specified in the formatDeny.
 
- At least one the following inputs - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both inputs are empty, the formatter will do nothing. 
+ At least one the following inputs - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both inputs are empty, the formatter Actor/flow will do nothing. 
 
  If the normal value is longer than the original value, the remaining characters will be added to the output value.
 
  **Input Arguments:**
 
-- - **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
-  - **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
+- **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
+- **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
 
-- - **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
-  - **formatAllow**: indicates which characters can be included in the normalized value.  The formatAllow can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
+- **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+- **formatAllow**: indicates which characters can be included in the normalized value.  The formatAllow can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
     - Example: the formatAllow is Numeric. Therefore,  all non-numeric characters need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12-542-99 and the formatAllow = Numeric, the normalized value 1254299.
-  - **formatDeny**: indicates which characters must be excluded from the originalValue in order to get the normalized value. The formatDeny can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
+- **formatDeny**: indicates which characters must be excluded from the originalValue in order to get the normalized value. The formatDeny can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
     - Example: if the formatDeny is '-', all the dashes need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12A-542B-99 and the formatDeny = '-', the normalized value would be 12A542B99.
-
-- 
 
 #### Custom Formatting Logic
 
@@ -108,16 +106,18 @@ You can define either a flow or an Actor to set a custom formatting logic. The f
 
 **Input parameters:**
 
-- - **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
-  - **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
+- **formatterMode**: indicates if the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
+- **originalValue**: populated with the original (source or generated) value. The originalValue is needed for both modes.
 
-- - **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+- **normalValue**: populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
 
 **Output parameters:**
 
-- - **value**: populated with the normalized or formatted value. Depends on the formatterMode. 
+- **value**: populated with the normalized or formatted value. Depends on the formatterMode. 
 
-Note that if you build an formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
+Notes:
+- If you build a formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
+- The mandatory input and output parameters must be set as external parameters in the formatter flow.
 
 ### How Do I Mask Data Using Masking Actors?
 
