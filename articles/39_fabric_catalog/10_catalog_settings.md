@@ -2,7 +2,7 @@
 
 The purpose of the Settings screen in the Catalog application is to view and edit the rules used by the Catalog. The Catalog includes built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
 
-This article includes the following sections:
+This article includes the following 2 sections:
 
 * [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
 * [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
