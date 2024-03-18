@@ -14,7 +14,7 @@ This article describes the main configuration parameters of the **plugins.discov
 
 The plugins.discovery is the configuration file of the Plugins Pipeline process. Starting from V8.0, this file is part of the product's resource and it is located in the ```/fabric/resources/discovery``` folder. 
 
-The plugins.discovery configuration file includes the settings of the Discovery job such as:
+The plugins.discovery configuration file includes settings of the Discovery job, such as:
 
 * Data sample settings
 * Data platform's include / exclude lists
