@@ -27,7 +27,7 @@ Each **Classification** can have several definitions, with the same or different
 
 Using this screen, you can either edit existing definitions or add new ones. The Classification value can be either new or selected from the list.
 
-Once the Save button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
+Once the Save button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 Click [here](04_plugin_framework.md#built-in-plugins) for more details about these plugins.
 
