@@ -70,7 +70,7 @@ To enable the Catalog to show more results - update the threshold to a number lo
 
 ### Custom Plugins
 
-The Plugin Framework supports execution of custom plugins. In order to incorporate a custom plugin into the process, it needs to be added to the Plugins Pipeline configuration file.
+The Plugin Framework supports the execution of custom plugins. In order to incorporate a custom plugin into the process, it needs to be added to the Plugins Pipeline configuration file.
 
 [![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_builtin_plugins.md) 
 
