@@ -18,15 +18,25 @@ All CDC messages initiated by a given transaction have the same value in their *
 
 ### CDC Message
 
-The CDC Message publishes transaction messages to **Kafka** **CDC Consumer** topics for each UPDATE, INSERT or DELETE activity. The partition key is the LUI (IID).
+The CDC Message publishes transaction messages to **Kafka** **CDC Consumer** topics for each UPDATE, INSERT, or DELETE activity. The partition key is the LUI (IID).
+
+The Data to Kafka is being produced asynchronously, parallelized, and transactioned for each MicroDB (LUI). 
 
 Each CDC message has its own value in the **msgNo** property.
 
 The **msgCount** property of each CDC message is populated by the number of CDC messages initiated by a transaction for a given CDC consumer. 
 
-### CDC Consumer
+### CDC Consumers
+The data is kept in Kafka with a **separate topic for each Fabric's consumer**.
 
-Fabric has a built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUMER jobs start automatically when deploying an LU with **search** indexes. The Jobs UID is **search**. The CDC consumer job consumes the messages in the Kafka **search** topic and creates **search** indexes in Elasticsearch.
+#### Search Consumer
+
+Fabric has a built-in integration with Elasticsearch. The search loader job starts automatically when deploying an LU with **search** indexes. The Jobs UID is **search**. The CDC consumer job consumes the messages in the Kafka **search** topic and feeds the ElasticSeach with the MicroDB's changes to create **search** indexes in Elasticsearch. The search loader job works as follows:
+- Data consumed synchronously, ordered for each microdb instance’s changes.
+- Data transferred to ElasticSearch asynchronously for each change.
+- Before UPDATE/DELETE changes the ElasticSearch index is refreshed to reflect the most available data state.
+
+Each search loader job has a default of 5 concurrent threads for the INSERT changes and 1 for UPDATE and DELETE changes.
 
 [Click for more information about Fabric Search capabilities](cdc_consumers/search/01_search_overview_and_use_cases.md).
 
