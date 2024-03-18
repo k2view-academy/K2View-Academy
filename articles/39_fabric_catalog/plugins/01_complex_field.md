@@ -7,7 +7,7 @@ The plugins uses the data snapshot taken from the source. When the plugin identi
 * If the same complex field includes different structures within the data snapshot, these structures  are combined as the fields of the same class.
 * If the same field includes structures (e.g., JSON) and regular strings, the parsing is not performed.
 
-A **definedBy** relation type is created to connect between a complex field and its respective class. This relation cannot be added or deleted in the Edit mode. 
+A **definedBy** relation type is created to connect between a complex field and its respective class. This relation cannot be added or deleted in an Edit mode. 
 
 ![](../images/complex_field.png)
 
