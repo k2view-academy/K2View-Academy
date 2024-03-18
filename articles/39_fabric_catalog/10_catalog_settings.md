@@ -9,7 +9,7 @@ This article includes the following 2 sections:
 
 ## Classifier Regex Setup
 
-The **Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins: *Data Regex Classifier* and *Metadata Regex Classifier*. 
+The **Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*. 
 
 <img src="images/settings_regex.png" style="zoom:80%;" />
 
