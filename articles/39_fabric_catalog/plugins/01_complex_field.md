@@ -1,6 +1,6 @@
 # Complex Field Parsing
 
-Starting V8.0, the Catalog supports parsing of text fields which include complex structures (JSON or XML) using a **Complex Field Parser** plugin. 
+Starting V8.0, the Catalog supports parsing of text fields that include complex structures (JSON or XML) using a **Complex Field Parser** plugin. 
 
 The plugins uses the data snapshot taken from the source. When the plugin identifies a complex structure embedded into a field, a node type **class** is created for each complex field level, recursively for all levels of the embedded complex structure. The parsing logic is as follows:
 
