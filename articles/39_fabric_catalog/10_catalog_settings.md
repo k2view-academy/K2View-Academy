@@ -42,7 +42,7 @@ This tab includes 2 definitions per each Classification:
 * **PII** - indicates whether the Classification is considered as PII. 
 * **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) per each Classification.
 
-Each **Classification** can have **only one** definition (row) in this tab.
+In this tab, each **Classification** can have **only one** definition (row).
 
 ### Masking Setup
 
@@ -56,7 +56,7 @@ Upon selecting an actor or a flow, its respective input parameters are automatic
 
 <img src="images/settings_masking_flow.png" style="zoom: 80%;" />
 
-Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
+Once the Save button is clicked on the **PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 Click for more details about the [Catalog masking mechanism](11_catalog_masking.md).
 
@@ -69,7 +69,7 @@ The purpose of the Advanced Masking Settings popup is to setup additional parame
 
 <img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
 
-The Advanced Masking Settings are defined per each classification using the above popup. The Submit button in the popup screen keeps the data in the client until the save is done using the Save button on the **PII & Masking Setup** tab. Then the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project Tree.
+The Advanced Masking Settings are defined per each classification using the above popup. The Submit button in the popup screen keeps the data in the client until the save is done using the Save button on the **PII & Masking Setup** tab. Then the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 The Advanced Masking Settings are available starting V8.0.
 
