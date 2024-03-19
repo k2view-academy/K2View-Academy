@@ -17,7 +17,7 @@ For example, the Oracle’s Golden Gate system publishes messages with the data 
 
 The Stream Sync has a sophisticated algorithm that can identify whether the received data updates are incomplete or missing logical relationships due to the out-of-order arrival. If the received data is invalid or incomplete, it is handled differently from the case when the received data is valid and complete.
 
-## IID Finder vs Stream Sync
+## IID Finder vs. Stream Sync
 
 Starting from V8.0, Fabric provides two solutions for the Fabric DB synchronization with the source system changes:
 
