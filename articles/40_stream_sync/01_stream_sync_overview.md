@@ -9,7 +9,7 @@ Fabric Sync is a mechanism that synchronizes data between the data sources and F
 
 ## What is Stream Sync?
 
-**Stream Sync** is a Fabric module which enables Fabric proactive synchronization with source systems by processing only the changes in the source system, without the need to re-synchronize the entire instance on every change in the source.
+**Stream Sync** is a Fabric module, which enables Fabric proactive synchronization with source systems by processing only the changes in the source system, without the need to re-synchronize the entire instance on every change in the source.
 
 The Stream Sync job runs on a Fabric server and receives the Insert, Update and Delete transactions from the source system via a pre-defined PubSub interface. The job identifies which Instance ID is impacted by the change and updates it in the relevant tables of the Fabric DB. 
 
