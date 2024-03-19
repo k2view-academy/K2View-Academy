@@ -64,7 +64,7 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 The purpose of the Advanced Masking Settings pop-up window is to set up additional parameters for the masking functionality. This window includes the following:
 
-* **Masking indicators** determine masking behavior during the flow run. They can be either set per population via the Catalog Masking actor inputs or per Classification via the Catalog Settings here. The Catalog definition overrides the Catalog Masking actor's one - for all the fields with the same Classification.
+* **Masking indicators** determine masking behavior during the flow run. They can be set either per population via the Catalog Masking actor inputs or per Classification via the Catalog Settings here. The Catalog definition overrides the Catalog Masking actor's one - for all the fields with the same Classification.
 * **Formatter name and parameters** are set in order to enable the [format-preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).
 
 <img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
