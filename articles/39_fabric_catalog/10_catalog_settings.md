@@ -39,7 +39,7 @@ The **PII & Masking Setup** tab allows to view and update the PII and Catalog-ba
 
 This tab includes 2 definitions per each Classification:
 
-* **PII** - indicates whether the Classification is considered as PII. 
+* **PII** - indicates whether the Classification is considered PII. 
 * **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) per each Classification.
 
 In this tab, each **Classification** can have **only one** definition (row).
