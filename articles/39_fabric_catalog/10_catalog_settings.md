@@ -48,7 +48,7 @@ In this tab, each **Classification** can have **only one** definition (row).
 
 Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area in order to set up the Generator and its parameters (Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters). Here you could select an actor or a flow for generating a random value. The Generator can be either one of the existing built-in actors, a custom actor or a flow. Note that a flow should be created under the **Shared Objects** Broadway folder in the Fabric Studio.
 
-Upon invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated to a field with a given Classification. For example, for masking fields that are classified as Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or flow and attach it as the Classification's generator using the above screen.
+Upon invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated to a field with a given Classification. For example, for masking fields that are classified as a Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or flow and attach it as the Classification's generator using the above screen.
 
 <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
