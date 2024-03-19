@@ -36,7 +36,7 @@ Fabric has a built-in integration with Elasticsearch. The search loader job star
 - Data transferred to ElasticSearch asynchronously for each change.
 - Before UPDATE/DELETE changes the ElasticSearch index is refreshed to reflect the most available data state.
 
-Each search loader job has a default of 5 concurrent threads for the INSERT changes and 1 for UPDATE and DELETE changes.
+Each search loader job has a default of 5 concurrent threads for the INSERT changes, 1 thread for UPDATE changes, and 1 thread for the DELETE changes. Note that the number of concurrent threads for the INSERT changes is configurable (BULK_PROCESSOR_MAX_CONCURRENT_WORKERS config.ini parameter).
 
 [Click for more information about Fabric Search capabilities](cdc_consumers/search/01_search_overview_and_use_cases.md).
 
