@@ -69,7 +69,7 @@ The purpose of the Advanced Masking Settings pop-up window is to set up addition
 
 <img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
 
-The Advanced Masking Settings are defined per each classification using the above popup. The Submit button in the popup screen keeps the data in the client until the save is done using the Save button on the **PII & Masking Setup** tab. Then the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+The Advanced Masking Settings are defined per each Classification using the above pop-up window. The Submit button in the popup screen keeps the data in the client until the save is done using the Save button on the **PII & Masking Setup** tab. Then the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 The Advanced Masking Settings are available starting V8.0.
 
