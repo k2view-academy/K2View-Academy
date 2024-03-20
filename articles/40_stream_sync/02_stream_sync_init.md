@@ -6,7 +6,7 @@ Below are the steps to initialize the Stream Sync upon the LU Schema creation:
 
 1. Create a Logical Unit (Data Product) and open its Schema (which is currently empty). 
 2. Open the LU Schema's Properties and set the **Enabled** checkbox in the **IID Finder tab** to **true**.
-3. Once the tables are added to the Schema and it is saved, the table populations are created for each LU table. The input parameter **stream_sync_enabled** of the **SourceDBQuery Actor** is automatically set to **true** for all populations where interface is **not fabric**.
+3. Once the tables are added to the Schema, and the Schema is saved, the table populations are created for each LU table. The input parameter **stream_sync_enabled** of the **SourceDBQuery Actor** is automatically set to **true** for all populations where the interface is **not fabric**.
 
 The **stream_sync_enabled** will have to be set manually on each relevant population for the existing LU's Schema populations.
 
