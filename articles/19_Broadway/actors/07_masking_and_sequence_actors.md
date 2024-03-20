@@ -10,7 +10,7 @@ The masking process contains the generation (manufacturing) of a random syntheti
 
 Note that if there is a need to mask data before they are loaded to Fabric, masking Actors can be used in Broadway population flows.
 
-Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID: the **MaskingSequence**  and the **Sequence** Actors generate a unique sequence ID based on the provided input arguments.
+Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID: the **MaskingSequence** and the **Sequence** Actors generate a unique sequence ID based on the provided input arguments.
 
 [Click for more information about the data generation Actors](07a_data_generators_actors.md).
 
@@ -23,7 +23,7 @@ Common input arguments of masking Actors are:
 * **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
 * **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor - for enabling the execution of the data generation flow or Actor - which generates a fake value.
   
-* **formatter** - this optional input has been added in Fabric 8.0 in order to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).  This parameter can be set either with a formatter flow or Actor in order to **preserve the original format in the masked value** and set the same masked values to all fields that have the same normalized (’naked‘) value although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or Actor to format the masked value based on the original format. 
+* **formatter** - this optional input has been added in Fabric 8.0 in order to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).  This parameter can be set with either a formatter flow or an Actor in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or an Actor to format the masked value based on the original format. 
   
 * **category** - this parameter has been added by Fabric 6.5.3 and it indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
   
