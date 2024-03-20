@@ -113,7 +113,7 @@ Example:
 
 
 
-The following diagram describes how the Masking Actor uses the formatter in order to preserve the original format in the masked value:
+The following diagram describes how the Masking Actor uses the formatter for preserving the original format in the masked value:
 
 ![fpm flow](images/format_preserving_masking_flow.png)
 
