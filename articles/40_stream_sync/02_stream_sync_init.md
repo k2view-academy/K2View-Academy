@@ -21,7 +21,7 @@ Note that *Show IID Finder properties* is a Web Studio setting that either shows
 
 ### IID Finder XML Generation
 
-When the LU Schema is ready, right click on the Logical Unit name in the Project tree and click the **Generate** **IID Finder XML** menu item. The following will be performed:
+When the LU Schema is ready, right-click on the Logical Unit name in the Project tree and click the **Generate** **IID Finder XML** menu item. The following will be performed:
 
 * The **IID Finder** folder becomes visible under the selected LU.
 * The **IID Finder XML** is generated in the above folder, based on the LU Schema.
