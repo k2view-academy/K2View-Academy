@@ -26,9 +26,9 @@ Starting from V8.0, Fabric provides 2 solutions for the Fabric DB synchronizatio
 
 Both solutions use the same resources, such as:
 
-* IID Finder folder under the Logical Unit folder in the Studio
-* IID Finder tab in the LU Schema properties
-* Several specific input parameters in the **SourceDbQuery** Actor (used in the population flows)
+* IID Finder folder under the Logical Unit folder in the Studio.
+* IID Finder tab in the LU Schema properties.
+* Several specific input parameters in the **SourceDbQuery** Actor (used in the population flows).
 
 The articles of this section describe the **Stream Sync** solution.
 
