@@ -18,7 +18,7 @@ A transaction on an LUI may involve several updates in several of its LU tables.
 
 The CDC Message publishes transaction messages to **Kafka**  for each UPDATE, INSERT or DELETE activity. Kafka uses the **CDC_TOPIC**  topic name for keeping transaction messages. The partition key is the LUI (iid).
 
-The Data to Kafka is being produced asynchronously, parallelized, and transactioned for each MicroDB (LUI).
+The Data to Kafka is being produced asynchronously and parallelized for each MicroDB (LUI).
 
 
 ### CDC Publisher
