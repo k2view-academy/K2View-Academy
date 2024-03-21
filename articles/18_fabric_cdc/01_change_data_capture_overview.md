@@ -2,7 +2,7 @@
 
 The Fabric Change Data Capture (CDC) solution can notify external systems about data changes published via Kafka. Fabric CDC can send different data segments to different CDC consumers and different LU table columns can be defined as CDC fields for different CDC consumers. Each CDC consumer has its own Kafka topic and gets its own CDC messages so that each CDC consumer gets only the data changes that are relevant for it.
 
-Fabric CDC also integrates with the [Elasticsearch search provider]((/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md), enabling cross-instance search capabilities.
+Fabric CDC also integrates with the [Elasticsearch search provider](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md), enabling cross-instance search capabilities.
 
 For example:
 -  Consumer A gets data changes about the Customer's usage.
