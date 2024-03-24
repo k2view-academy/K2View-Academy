@@ -1,5 +1,7 @@
 #  Error Handling
 
+### Overview
+
 Broadway has a built-in error handling mechanism that handles exceptions in a flow using **error handlers**. 
 
 An error handler can be assigned to each flow's [Stage](19_broadway_flow_stages.md)  to catch its exceptions and to decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor or an [Inner flow](22_broadway_flow_inner_flows.md) can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter. 
@@ -27,6 +29,16 @@ error.rootClassName
 An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. The **error** object can be passed to the inner flow for analysis and further handling, for example, writing an error message into the DB.
 
 It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
+
+### Retry Mechanism Using Error Handler
+
+Starting V8.0, the Retry mechanism can be configured using any actor defined as the stage’s **error handler**, as follows:
+
+* The Actor should return **result = retry** instead of true or false to activate the retry mechanism.
+* The number of retries and interval should be implemented by the error handler Actor (Java code, LU function, etc.).
+* The Retry is then enabled on each actor of such stage.
+
+For easier configuration of the Retry mechanism, the **ErrorHandler** actor can be used. For more details, refer to the [Error Handling Actors](actors/06_error_handling_actors.md) article.
 
 ### How Do I Add an Error Handler to a Stage?
 
