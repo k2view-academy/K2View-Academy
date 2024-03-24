@@ -15,7 +15,7 @@ This is a one-time setup that should be performed once per project.
 
 ## Installation of neo4j
 
-Download the neo4j installation package from the download page... TBD
+Start from the neo4j installation as described [here](99_neo4j_installation_guide.md).
 
 
 

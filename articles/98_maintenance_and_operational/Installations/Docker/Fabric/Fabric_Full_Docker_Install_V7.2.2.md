@@ -1,6 +1,6 @@
-FABRIC V7.2.2_75-HF1 DOCKER INSTALLATION
+## FABRIC V7.2.2_75-HF1 DOCKER INSTALLATION
 
-Prerequisites
+### Prerequisites
 
 These prerequisites are for the purpose of development, training, a demo or a small Proof-of-Concept installation. You can use 1 of the following 2 environments:
 
@@ -48,7 +48,7 @@ More detailed requirements for each are described below:
   <table style="border-collapse: collapse; width: 100%;">
 
    <tbody>
-   
+
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/7.2/D_k2view_Confluent_7.2_package_06.tar.gz
@@ -124,10 +124,10 @@ Cassandra and Fabric will start automatically.
 
    ```bah
    docker exec -u=cassandra -it cassandra bash su - cassandra 
-
+   
    ## stop cassandra  
    stop-server
-
+   
    ## restart cassandra  
    stop-server && cassandra
    ```
