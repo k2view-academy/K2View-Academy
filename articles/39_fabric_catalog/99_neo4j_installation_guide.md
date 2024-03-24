@@ -1,12 +1,14 @@
 <studio>
 
-# K2view's Neo4j Installation Guide
+# Neo4j Installation Guide
 
-This document provides a step-by-step guide on how to install neo4j on:
+This document provides a step-by-step guide on how to install **neo4j** on:
 
 * [Linux](99_neo4j_installation_guide.md#linux)
 * [macOS](99_neo4j_installation_guide.md#macos)
 * [Windows](99_neo4j_installation_guide.md#windows)
+
+The neo4j is required for using the Fabric Discovery and Catalog solution, when working in a .NET Studio. 
 
 ## Prerequisites
 JDK version >= 17
@@ -15,36 +17,40 @@ JDK version >= 17
 
 ## Linux
 
-### Create neo4j user and directory:
+#### Create neo4j user and directory:
 
 ```bash
 sudo useradd -m -d /opt/apps/neo4j neo4j
 ```
 
-### Switch to neo4j user:
+#### Switch to neo4j user:
 ```bash
 sudo su - neo4j
 ```
 
-### Download K2View's Neo4j package (located [here](https://download.k2view.com/index.php/s/qwAxMaHQFiErvu7)).
+#### Download K2view's Neo4j package:
 
-### Untar the package:
+Download the link from [here]([neo4j_download_link.docx](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=SAQTzf)).
+
+Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+
+#### Untar the package:
 ```bash
 tar -zxvf k2view-neo4j-enterprise-5.16.0-unix.tar.gz
 ```
 
-### Remove tar.gz file:
+#### Remove tar.gz file:
 ```bash
 rm -rf k2view-neo4j-enterprise-5.16.0-unix.tar.gz
 ```
 
-### Source bash profile:
+#### Source bash profile:
 ```bash
 source ~/.bash_profile  # or use bash -l
 ```
 
-### Change initial password (optional):
-The current password is 'changeit'. 
+#### Change initial password (optional):
+The default password is **changeit**. 
 
 To set a new password, run the following:
 
@@ -53,12 +59,12 @@ To set a new password, run the following:
 ```
 Then, update the neo4j new password in the [data_discovery] section of Fabric config.ini file.
 
-### Start neo4j:
+#### Start neo4j:
 ```bash
 neo4j start
 ```
 
-### Start neo4j as a service (optional):
+#### Start neo4j as a service (optional):
 
 1. Connect as a root user.
 
@@ -109,25 +115,29 @@ For more details on installing Neo4j on Linux, please visit the following link:
 
 ## macOS
 
-### Create neo4j folder and move into it:
+#### Create neo4j folder and move into it:
 ```bash
 mkdir -p /opt/apps/neo4j
 cd /opt/apps/neo4j
 ```
 
-### Download K2View's Neo4j package (located [here](https://download.k2view.com/index.php/s/qwAxMaHQFiErvu7)).
+#### Download K2view's Neo4j package:
 
-### Untar the package:
+Download the link from [here]([neo4j_download_link.docx](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=SAQTzf)).
+
+Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+
+#### Untar the package:
 ```bash
 tar -zxf k2view-neo4j-enterprise-5.16.0-unix.tar.gz
 ```
 
-### Remove tar.gz file:
+#### Remove tar.gz file:
 ```bash
 rm -f k2view-neo4j-enterprise-5.16.0-unix.tar.gz
 ```
 
-### Update .zprofile witn neo4j environment:
+#### Update .zprofile witn neo4j environment:
 ```bash
 echo '# Set NEO4J_HOME environment variable' >> ~/.zprofile
 echo 'export NEO4J_HOME="/opt/apps/neo4j"' >> ~/.zprofile
@@ -135,13 +145,13 @@ echo '# Add NEO4J_HOME/bin to PATH' >> ~/.zprofile
 echo 'export PATH="$NEO4J_HOME/bin:$PATH"' >> ~/.zprofile
 ```
 
-### Source zcs profiles:
+#### Source zcs profiles:
 ```bash
 source ~/.zprofile  # or use zsh -l
 ```
 
-### Change initial password (oprional):
-Current password is 'changeit'. 
+#### Change initial password (optional):
+The default password is **changeit**. 
 
 To set a new password, run the following:
 
@@ -150,12 +160,12 @@ To set a new password, run the following:
 ```
 Then, update the neo4j new password in the [data_discovery] section of Fabric config.ini file.
 
-### Start neo4j:
+#### Start neo4j:
 ```bash
 neo4j start
 ```
 
-### Start neo4j as a service (optional):
+#### Start neo4j as a service (optional):
 
 1. Create a neo4j.plist configuration file:
 
@@ -209,37 +219,41 @@ For more details on installing Neo4j on macOS, please visit the following link:
 
 ## Windows
 
-Note that the installation should be done using the **Powershell** commands.
+Note that the installation on Windows should be done using the **Powershell** commands.
 
-### Create neo4j directory:
+#### Create neo4j directory:
 ```powershell
 New-Item -Path '\path\to\neo4j-folder' -ItemType Director
 ```
 
-### Move to neo4j-folder:
+#### Move to neo4j-folder:
 ```powershell
 cd '\path\to\neo4j-folder'
 ```
 
-### Download K2View's Neo4j package (located [here](https://download.k2view.com/index.php/s/GvNzL6SGGvANtfy)).
+#### Download K2view's Neo4j package:
 
-### Unzip the package:
+Download the link from [here]([neo4j_download_link.docx](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=SAQTzf)).
+
+Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+
+#### Unzip the package:
 ```powershell
 Expand-Archive -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip .
 ```
 
-### Remove zip file:
+#### Remove zip file:
 ```powershell
 Remove-Item -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip
 ```
 
-### Environment Variables:
+#### Environment Variables:
 
 Add NEO4J_HOME System Environment pointing to neo4j folder.
 
 Add neo4j bin folder to system PATH.
 
-### Update neo4j gds key path:
+#### Update neo4j GDS key path:
 ```powershell
 # Get the current directory with double backslashes 
 $currentDir = (Get-Location).Path -replace '\\', '\\'
@@ -255,8 +269,8 @@ $currentDir = (Get-Location).Path -replace '\\', '\\'
 } | Set-Content .\conf\neo4j.conf
 ```
 
-### Change initial password (optional):
-Current password is 'changeit'. 
+#### Change initial password (optional):
+The default password is **changeit**. 
 
 To set a new password, run the following:
 
@@ -265,7 +279,7 @@ neo4j-admin set-initial-password <new-password>
 ```
 Then, update the neo4j new password in the [data_discovery] section of Fabric config.ini file.
 
-### Install neo4j Windows service:
+#### Install neo4j Windows service:
 ```powershell
 neo4j windows-service install
 ```
