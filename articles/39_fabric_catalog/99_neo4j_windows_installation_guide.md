@@ -93,4 +93,8 @@ For more details on installing neo4j on Windows, please visit the following link
 
 
 
+[![Previous](/articles/images/Previous.png)](99_catalog_setup_guide.md)
+
+
+
 </studio>
