@@ -4,23 +4,23 @@
 
 ## Introduction
 
-This article describes the steps to be taken in order to setup the Fabric Catalog when using the Desktop Studio:
+This article describes the steps to be taken in order to setup the Fabric Catalog when using the Desktop Studio V7.2 and onward:
 
-* Installation of neo4j - once per Studio environment. 
-* Catalog configuration setup - once per project.
+* Installation of neo4j - performed once per Studio environment. 
+* Catalog configuration setup - performed once per project.
 
 
 ## Installation of neo4j
 
-Install the neo4j GraphDB as described [here](99_neo4j_installation_guide.md).
+Install the neo4j GraphDB as described [here](99_neo4j_windows_installation_guide.md).
 
 
 
 ## Catalog Configuration Setup
 
-Download the [Catalog Add-On zip file](https://download.k2view.com/index.php/s/JNcyTc0Vdd82Cf9) and unzip it in your project. Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+Download the [Implementation zip file](https://download.k2view.com/index.php/s/HAgVCsNHqsD2hvq) and unzip it into your project.
 
-It includes the following:
+The following will be updated in your project:
 
 * The ```web``` folder, which includes the ```apps.json``` file to enable access to the Catalog from the K2view Web Framework's menu.
   * This folder is copied to the ```\Implementation\LogicalUnits\k2_ws``` folder in your project tree.
@@ -28,8 +28,10 @@ It includes the following:
 * The  ```Discovery``` folder, which includes the ```plugins.discovery``` configuration file and the Catalog  MTables for classification and masking. 
   * The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your project tree. 
 
+Deploy the project upon the completion.
 
-Note that the copied folders are hidden in the .NET Studio and thus cannot be seen in the project tree. Nevertheless, they will be loaded to the Fabric memory upon the project deployment.
+
+Note that the copied folders are hidden in the Desktop Studio and thus cannot be seen in the project tree. 
 
 
 ## Solution Limitations

@@ -17,4 +17,6 @@
 	<li><a href="/articles/39_fabric_catalog/12_discovery_monitor.md">Discovery Job Execution Monitor</a></li>
 	<li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li>
 	<li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Advanced Configuration</a></li>
+	<studio><li><a href="/articles/39_fabric_catalog/99_catalog_setup_guide.md">Catalog Setup Guide for Desktop Studio</a></li></studio>
+	
 </ul>
