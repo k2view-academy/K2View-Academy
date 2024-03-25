@@ -21,7 +21,7 @@ Install the neo4j GraphDB as described [here](99_neo4j_installation_guide.md).
 
 ## Catalog Configuration Setup
 
-Download the Catalog Add-On zip file from [here]([AddOns.zip](https://k2view.sharepoint.com/:u:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/AddOns.zip?csf=1&web=1&e=tV1bM5)) and unzip it in your project. Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+Download the Catalog Add-On zip file [AddOns.zip](https://k2view.sharepoint.com/:u:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/AddOns.zip?csf=1&web=1&e=tV1bM5) and unzip it in your project. Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
 
 It includes the following:
 
