@@ -1,10 +1,10 @@
 <studio>
 
-# Catalog Setup Guide
+# Catalog Setup Guide for Desktop Studio
 
 ## Introduction
 
-This article describes the steps to be taken in order to setup the Fabric Catalog when using the .NET Studio:
+This article describes the steps to be taken in order to setup the Fabric Catalog when using the Desktop Studio:
 
 * Installation of neo4j
 * Catalog configuration setup
