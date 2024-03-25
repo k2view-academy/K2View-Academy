@@ -41,7 +41,7 @@ There is no integration between the .NET Studio and the Catalog. As a result, th
 1. The Discovery job cannot be triggered from the .NET Studio. You should invoke the job either using the Fabric terminal via the command line or from the Catalog's Monitor tab in the Web Framework.
 2. The Logical Unit Schema cannot be created based on the Catalog results, thus you cannot use the
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_neo4j_windows_installation_guide.md.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_neo4j_windows_installation_guide.md) 
 
 
 
