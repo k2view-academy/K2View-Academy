@@ -6,11 +6,8 @@
 
 This article describes the steps to be taken in order to setup the Fabric Catalog when using the Desktop Studio:
 
-* Installation of neo4j
-* Catalog configuration setup
-
-This setup should be performed once per project.
-
+* Installation of neo4j - once per Studio environment. 
+* Catalog configuration setup - once per project.
 
 
 ## Installation of neo4j
