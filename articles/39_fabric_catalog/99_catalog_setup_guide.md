@@ -4,30 +4,29 @@
 
 ## Introduction
 
-This article describes the steps to be taken in order to setup the Fabric Catalog when working in the Fabric .NET Studio:
+This article describes the steps to be taken in order to setup the Fabric Discovery and Catalog when using the Fabric .NET Studio:
 
 * Installation of neo4j
 * Catalog configuration setup
 
-This is a one-time setup that should be performed once per project.
+This setup should be performed once per project.
 
 
 
 ## Installation of neo4j
 
-Download the neo4j installation package from the download page... TBD
+Start from the neo4j installation as described [here](99_neo4j_installation_guide.md).
 
 
 
 ## Catalog Configuration Setup
 
-Download the Catalog Add-Ons zip file from the download page and unzip it in your project. It includes the following:
+Download the Catalog Add-Ons zip file from [here] and unzip it in your project. It includes the following:
 
 * The ```apps.json``` file, which is copied to the ```\Implementation\LogicalUnits\k2_ws\web``` folder in your project tree and enables access to the Catalog from the Web Framework menu.
 * The  ```Discovery``` folder, which includes the Catalog's Settings MTables and the ```plugins.discovery``` configuration file. The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your project tree. 
-  * Note that the Discovery folder is hidden and cannot be seen in the .NET Studio. Nevertheless, the MTables included in the Discovery folder are loaded to the Fabric memory upon the Deploy.
 
-
+Note that the Discovery folder is hidden and cannot be seen in the .NET Studio. Nevertheless, the MTables included in the Discovery folder are loaded to the Fabric memory upon the Deploy.
 
 
 ## Solution Limitations

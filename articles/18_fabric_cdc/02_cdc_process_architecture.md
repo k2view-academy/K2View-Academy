@@ -32,8 +32,8 @@ The data is kept in Kafka with a **separate topic for each Fabric's consumer**.
 #### Search Consumer
 
 Fabric has a built-in integration with Elasticsearch. The search loader job starts automatically when deploying an LU with **search** indexes. The Jobs UID is **search**. The CDC consumer job consumes the messages in the Kafka **search** topic and feeds the ElasticSeach with the MicroDB's changes to create **search** indexes in Elasticsearch. The search loader job works as follows:
-- Data consumed synchronously, ordered for each microdb instance’s changes.
-- Data transferred to ElasticSearch asynchronously for each change.
+- Data is consumed synchronously, ordered for each microdb instance’s changes.
+- Data is transferred to ElasticSearch asynchronously for each change.
 - Before UPDATE/DELETE changes the ElasticSearch index is refreshed to reflect the most available data state.
 
 Each search loader job has a default of 5 concurrent threads for the INSERT changes, 1 thread for UPDATE changes, and 1 thread for the DELETE changes. Note that the number of concurrent threads for the INSERT changes is configurable (BULK_PROCESSOR_MAX_CONCURRENT_WORKERS config.ini parameter).
