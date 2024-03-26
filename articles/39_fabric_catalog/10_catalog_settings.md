@@ -15,9 +15,9 @@ The **Classifier Regex Setup** tab allows to view and update the Profiling regul
 
 The columns of this tab are:
 
-* **Classification** defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
+* **Classification**, which defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
 
-* **Type** can be either **Field Name** or **Field Value**:
+* **Type**, which can be either **Field Name** or **Field Value**:
   * The entries defined with the **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * The entries defined with the **Field Value** type are used by the *Data Regex Classifier* plugin.
 * **Regular Expression** defines the expression applied on the field, either its name or its value, depending on the **Type**.
