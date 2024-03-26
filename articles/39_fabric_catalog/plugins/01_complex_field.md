@@ -1,8 +1,6 @@
 # Complex Field Parsing
 
-Starting V8.0, the Catalog supports parsing of text fields that include complex structures (JSON or XML) using a **Complex Field Parser** plugin. 
-
-The plugins uses the data snapshot taken from the source. When the plugin identifies a complex structure embedded into a field, a node type **class** is created for each complex field level, recursively for all levels of the embedded complex structure. The parsing logic is as follows:
+Starting from V8.0, Fabric's Catalog supports parsing of text fields that include complex structures (JSON or XML). This is done using a **Complex Field Parser** plugin, which uses the data snapshot taken from the source. When the plugin identifies a complex structure embedded into a field, a **class** node is created for each complex field's level, recursively, for all levels of this embedded complex structure. The parsing logic is as follows:
 
 * If the same complex field includes different structures within the data snapshot, these structures  are combined as the fields of the same class.
 * If the same field includes structures (e.g., JSON) and regular strings, the parsing is not performed.
