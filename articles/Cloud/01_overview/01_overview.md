@@ -1,14 +1,14 @@
-# What is K2view Cloud?
+# What is K2cloud?
 
-Adopting cloud technology is crucial, as it offers unparalleled agility, scalability, and business continuity. These characteristics align with the requirements of a data-oriented platform.
+Adopting cloud technology is crucial, as it offers unparalleled agility, scalability, and business continuity. These characteristics align with the requirements of data-oriented platforms, where more and more data is gathered and processed.
 
-K2view Cloud is a comprehensive orchestration platform that empowers users to effortlessly, with a click, generate, manage, and observe various Fabric runtime environments, including Training, Development with Web studio IDE, QA, CI/CD, Staging, and Production. These Fabric runtime environments are running in the Cloud, where K2view Cloud uses the most modern and up-to-date cloud technology, while encapsulating all cloud operation complexity from users.
+K2cloud is a comprehensive orchestration platform that empowers users to effortlessly, with a click, generate, manage, and observe various Fabric runtime environments, including Training, Development with Web studio IDE, QA, CI/CD, Staging, and Production. These Fabric runtime environments are running in the Cloud, where K2cloud uses the most modern and up-to-date cloud technology, Kubernetes based, while encapsulating all cloud operation complexity from users.
 
-The platform offers the flexibility to choose between a fully managed cloud service, a self-hosted environment, or a hybrid setup, enabling seamless accessibility from any location.
+The platform offers the flexibility to choose between a fully managed cloud service, a self-hosted environment (customer tenant or on-prem), or a hybrid setup, enabling seamless accessibility from any location.
 
 ## Key Objectives and Benefits
 
-K2view Cloud platform offers many advantages for a variety of teams, for different roles and from several points of view.
+K2cloud platform offers advantages for a variety of teams, for different roles and from several points of view.
 
 * **Improve Business Productivity**, focus on the business logic implementation.
   * Spin up with a click the right Fabric runtime environment you need.
@@ -32,16 +32,18 @@ K2view Cloud platform offers many advantages for a variety of teams, for differe
 
 
 
-## K2view Cloud Anywhere
+## K2cloud Deployment Types
 
-K2view lets you managing any type of deployment by the Cloud Platform.
+K2view lets you managing various types of deployments (fully managed, self-hosted, hybrid), on various cloud providers (GCP, AWS, Azure) Kubernetes infra.
 
-* **Fully Managed**, K2view cloud-hosted, for a fully managed and automated experience, while data access is fully secured.
-* **Self-Hosted**, prevent data from leaving your environment by having Fabric deployed in your VPC or on-premise to meet the strictest data movement requirements.
-* **Hybrid**, control when and how data moves from your on-premises environment to the cloud for efficient and secure purposes
+* **Fully Managed**, K2view cloud-hosted, for a fully managed and automated experience, while data access is fully secured. A separated account is created on behalf each customer, at the cloud provider, to ensure having a full separated setup. 
+* **Self-Hosted**, prevent data from leaving your environment by having Fabric deployed in your cloud tenant or on-premise. to meet the strictest data movement requirements.
+* **Hybrid**, control when and how data moves from your on-premises environment to the cloud for efficient and secure purposes.
 
 
 
-## Cloud Providers Zero lock-In
+K2view uses a uniform methodology, where all deployment types infra, behavior and lifecycle are built and function the same way.
 
-Deploy on any of the main clouds including AWS, GCP or Microsoft Azure to fit your organization's requirements. 
+
+
+![](images/k2cloud overview1.jpg)
