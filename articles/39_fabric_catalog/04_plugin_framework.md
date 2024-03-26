@@ -17,7 +17,7 @@ The plugins.discovery is the configuration file of the Plugins Pipeline process.
 The plugins.discovery configuration file includes settings of the Discovery job, such as:
 
 * Data sample settings
-* Data platform's include / exclude lists
+* Data platform's inclusion / exclusion lists
 * List of active plugins, their threshold and the execution order
 
 When a project-level override is needed (such as setting an exclude list or disabling a plugin), the file should be copied to the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
@@ -60,7 +60,7 @@ The above configuration defines the following rules:
 * The only schema to be included in the Discovery Job on the AdventureWorks data platform is Production.
 * The tables APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
 
-If the interface's driver supports wildcards (used in conjunction with the LIKE operator), they can be included in the ```<table>``` definition of the exclude or include lists. For example, the % symbol usually represents one or more characters in JDBC driver. Thus, writing ```<schema>.<ABC%>``` will define the datasets with name starting with 'ABC'.
+If the interface's driver supports wildcards (used in conjunction with the LIKE operator), they can be included in the ```<table>``` definition of the exclusion or inclusion lists. For example, the % symbol usually represents one or more characters in JDBC driver. Thus, writing ```<schema>.<ABC%>``` will define the datasets with name starting with 'ABC'.
 
 ### Plugin Threshold
 
