@@ -57,8 +57,8 @@ The syntax should provide either the schema name - ```<schema>``` - to be fully 
 
 The above configuration defines the following rules:
 
-* The only schema to be included in the Discovery Job on the AdventureWorks data platform is Production.
-* The tables APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery Job on the SF_DB data platform. 
+* The only schema to be included in the Discovery job on the AdventureWorks data platform is Production.
+* The tables APEXCLASS, APEXLOG and ASSETHISTORY should be excluded from the Discovery job on the SF_DB data platform. 
 
 If the interface's driver supports wildcards (used in conjunction with the LIKE operator), they can be included in the ```<table>``` definition of the exclusion or inclusion lists. For example, the % symbol usually represents one or more characters in JDBC driver. Thus, writing ```<schema>.<ABC%>``` will define the datasets with name starting with 'ABC'.
 
