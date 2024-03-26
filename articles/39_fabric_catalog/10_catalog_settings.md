@@ -1,6 +1,6 @@
 # Catalog Settings
 
-The purpose of the Settings screen in the Catalog application is to view and edit the rules used by the Catalog. The Catalog includes built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
+The purpose of the Settings screen in the Catalog application is to enable viewing and editing the rules used by the Catalog. The Catalog includes built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
 
 This article includes the following 2 sections:
 
@@ -9,7 +9,7 @@ This article includes the following 2 sections:
 
 ## Classifier Regex Setup
 
-The **Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*. 
+The **Classifier Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
 
 <img src="images/settings_regex.png" style="zoom:80%;" />
 
