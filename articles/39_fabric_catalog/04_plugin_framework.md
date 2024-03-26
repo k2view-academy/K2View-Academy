@@ -18,7 +18,7 @@ The plugins.discovery configuration file includes settings of the Discovery job,
 
 * Data sample settings
 * Data platform's inclusion / exclusion lists
-* List of active plugins, their threshold and the execution order
+* List of active plugins, their threshold and execution order
 
 When a project-level override is needed (such as setting an exclude list or disabling a plugin), the file should be copied to the Web Studio under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
