@@ -15,7 +15,7 @@ For an existing LU Schema, set the **stream_sync_enabled** parameter manually fo
 Note that *Show IID Finder properties* is a Web Studio setting that either shows or hides the **IID Finder tab** in the LU Schema's Properties. 
 
 * When a new project is created, *Show IID Finder properties* is unchecked, thus the **IID Finder tab** in the LU Schema's Properties is hidden. 
-* In order to initialize the Stream Sync, unhide the tab by updating this setting via the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
+* In order to initialize the Stream Sync module, unhide the tab by updating this setting via the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
 
 </web>
 
