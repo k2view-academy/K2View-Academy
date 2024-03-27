@@ -15,7 +15,7 @@ The Stream Sync job runs on a Fabric server and receives the Insert, Update and 
 
 For example, the Oracle GoldenGate system publishes messages with the data updates that occurr in the source Oracle DB table to Kafka. Stream Sync then listens to Kafka and saves the changes in internal tables in order to process them and to update the instances in Fabric.
 
-The Stream Sync has a sophisticated algorithm that can identify whether the received data updates are incomplete or missing logical relationships due to the out-of-order arrival. If the received data is invalid or incomplete, it is handled differently from the case when the received data is valid and complete.
+The Stream Sync has a rather sophisticated algorithm, capable of identifying whether the received data updates are incomplete or missing logical relationships due to an out-of-order arrival. Invalid or incomplete received data is handled differently from valid and complete received data.
 
 ## IID Finder vs. Stream Sync
 
