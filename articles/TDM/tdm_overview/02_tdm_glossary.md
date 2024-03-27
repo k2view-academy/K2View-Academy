@@ -115,13 +115,8 @@
 <h4>Task</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The following task types are supported by the TDM:</p>
-<ul>
-<li>Extract task - the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
-<li>Load task - the batch process initiates a&nbsp;<a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;that&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>
-<li>Delete task - the batch process initiates a <a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;that&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a>&nbsp;from Fabric to sync the target keys for delete into Fabric and delete the entities from the selected target environment.</li>
-<li>Reserve task - the batch process initiates a&nbsp;<a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Broadway flow</a>&nbsp;that marks the entities as <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">reserved entities</a> in the TDM DB.</li>
-</ul>
+    <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The task can run on selected business entities (with or without related referential tables) of on tables only. The business entities can be either extracted from a source environment or can be synthetically generated.</p> 
+    <p>Click <a href="/articles/TDM/tdm_gui/14_task_overview.md">here</a> for more information about the TDM tasks.</p>
 </td>
 </tr>
 <tr>
@@ -143,6 +138,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 
