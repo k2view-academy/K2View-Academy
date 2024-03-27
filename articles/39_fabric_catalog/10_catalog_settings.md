@@ -37,10 +37,10 @@ The **Classifier PII & Masking Setup** tab allows to view and update the PII and
 
 <img src="images/settings_pii_mask.png" style="zoom:80%;" />
 
-This tab includes 2 definitions per each Classification:
+Each **Classification** in this tab is unique, and it includes 2 attributes:
 
-* **PII** - indicates whether the Classification is considered PII. 
-* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) per each Classification.
+* **PII** - indicates whether the Classification is considered Personally Identifiable Information. 
+* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) in order to generate values for the pupose of masking.
 
 In this tab, each **Classification** can have **only one** definition (row).
 
