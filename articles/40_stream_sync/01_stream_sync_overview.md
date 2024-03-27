@@ -28,7 +28,7 @@ Both solutions use the same resources, such as:
 
 * IID Finder folder under the Logical Unit folder in the Studio.
 * IID Finder tab in the LU Schema properties.
-* Several specific input parameters in the **SourceDbQuery** Actor (used in the population flows).
+* Several specific input parameters in the **SourceDbQuery** Actor (used in population flows).
 
 The articles of this section describe the **Stream Sync** solution.
 
