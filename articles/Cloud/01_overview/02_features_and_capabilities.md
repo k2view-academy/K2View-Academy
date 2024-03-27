@@ -1,0 +1,111 @@
+# K2cloud Features & Capabilities
+
+This article explores some of the features and capabilities, relevant to different roles and personas within your organization.
+
+## Business logic teams: Improving productivity
+
+Along the Fabric's project lifetime, there is a need to have various Fabric environments, to support the lifecycle of the project's implementation and Fabric released versions. 
+
+K2cloud simplify the operations, so that implementors, QA and DevOps teams benefit from streamlined operations:  Implementors and QA teams can easily spin up within a click any type of environment, without need to wait to DevOps team to prepare it, where DevOps can enjoy from not being involved within so much efforts required from them to make it. Below are few examples of a project lifecycle and environment variations:
+
+#### Example 1: project changes
+
+1. **Dev1**: Fabric 7.2, single node, Postgres, with Studio. 
+
+1. **QA**: Fabric 7.2, single node, Postgres, *without* Studio. 
+   - On approval, Dev1 create a project version tag 5.
+2. **Dev2**: works on the next project's features: Fabric 7.2, single node, Studio, Postgres, *project branch 123*
+3. **Staging**: Fabric *cluster 2 nodes*, Fabric 7.2, *managed Postgres*, without Studio, *project tag 5*
+4. **Production**: Fabric cluster 3 *initial* nodes with *scale* up to 6, *dedicated site*, *extended CPU*, Fabric 7.2, managed Postgres, without Studio, Tag 4, *Environment E3*
+
+#### Example 2: Product changes
+
+1. **QA** regression on *new Fabric* *and TDM*: Fabric 8 + TDM 9, without project implementation changes, project tag 5
+
+2. **Dev3**: Align project implementation for new Fabric 8.0/TDM 9, Single node, Postgres, Studio, project branch 124.
+
+   
+
+## DevOps teams: Simplify Operation
+
+K2cloud platform is beneficial for **DevOps** teams, as it provides capabilities that aimed to simplify Fabric environments operation and maintenance. 
+
+### Orchestrating End-to-End Processes
+
+Any of the user can achieve the following tasks, by himself, within a click:
+
+1. **Creation** (Non-Dev Fabric workloads Example):
+   - Auto provision managed services.
+   - Configure Fabric and non-managed services appropriately.
+   - Apply privileged access control settings and certificates.
+   - Clone, build, and deploy project.
+2. **Redeploy**:
+   - Redeploy environments or logical units (LU/s), for non-dev Fabric workloads.
+3. **Pause / Resume / Delete**:
+   - Manage application states efficiently.
+
+### Using Kubernetes (K8S) as Infrastructure
+
+- Kubernetes: The de facto standard for enterprise container orchestration.
+  - Provides an infrastructure abstraction layer for handling compute, networking, storage, and app health monitoring.
+  - Ensures resilience and scalability for containerized applications.
+
+### Aligning with Delivery Standards
+
+- GitOps Delivery Methods:
+  - Adopt Helm charts methodology for deployment.
+  - Maintain consistency and version control tracking.
+
+### Monitoring
+
+- **Operational Monitoring**:
+  - Track Kubernetes clusters and namespaces.
+  - Ensure smooth operation.
+- **Functional Monitoring**:
+  - Collect and display Fabric metrics dashboard and logs.
+
+
+
+## Security teams: Empowering Security
+
+### Securing users’ access
+
+The access to either k2cloud platform UI or to the spaces, is done according to privileges.
+
+* Front IDP – CyberArk, FedRAMP Identity and access management leader
+
+* Enables multi factor authentication, using various authenticators, while applying different policies by profiles. 
+
+* Enables SSO Integration
+
+* Each space – Fabric workload - is reparented by its own web-app at IDP, with associated permission roles. Users can access spaces according to matched roles.
+
+* Access monitoring and reports
+
+### Separation
+
+* SaaS - Each organization has its own account (managed by k2view at the cloud provider), and accordingly his Fabric workloads are fully separated.
+
+* k2cloud is a multi tenant application, with full separation, where each organization can see and access its own projects and spaces.
+
+### Zero Trust
+
+* **Outbound only connectivity**: k2cloud platform does not have any access to the clusters or spaces, or any data they manage. This is achieved by that the k2agent, deployed at each K8s cluster, in its own namespace, pulls its dedicated instructions. It plays like a proxy forwarder - it initiates REST calls into the k2cloud orchestrator, and move the response into the K8s cluster control plane, as YAML files.
+
+* **No secrets**
+
+  * k2cloud platform does not save secrets – all needed credentials, like access to managed services, are set at the k2-agent, When you own your cloud deployment, as self hosted tenant, you are responsible to set these values,without informing or exposing it to k2view.
+
+  * All around usage of K8S secrets modules.
+
+* **Secure access to data platforms**: Have a single cluster output point, using NAT GW, let you easily define whitelist to the spaces in that cluster, withotut doing it per Fabric workload environment. Moreover, following k2view recommendation of having 2-3 clusters - studio, QA & Staging, and production, you can define that only production cluster will have access to specific sensitive data platform.
+
+* Avoid vulnerabilities - Fabric images can be scanned and uploaded to customer’s OCI repository. K2cloud orchestrator providers a simple way - via UI - to provision the images location, where accordingly spaces will be created from scanned images.
+
+
+
+
+
+
+
+​              
