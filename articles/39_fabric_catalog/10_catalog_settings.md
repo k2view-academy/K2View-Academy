@@ -52,7 +52,7 @@ Upon invocation of a Catalog Masking actor - e.g., during a table population - t
 
 <img src="images/settings_masking_edit.png" style="zoom: 80%;" />
 
-When selecting an actor or a flow, its respective input parameters are automatically added below it. Note that the first input parameter - defined as Link or External - is considered as the value that should be masked, and not a masking configuration parameter; hence, it is hidden and is not dynamically added. Therefore, when selecting a Generator, its first input should be named 'value', even if this Generator doesn't need to receive any input (for preventing the hiding of the first input).
+When selecting an actor or a flow, its respective input parameters are dynamically added below it. Note that the first input parameter - defined as Link or External - is considered as the value that should be masked, and not a masking configuration parameter; hence, it is hidden and is not dynamically added. Therefore, when selecting a Generator, its first input should be named 'value', even if this Generator doesn't need to receive any input (for preventing the hiding of the first input).
 
 <img src="images/settings_masking_flow.png" style="zoom: 80%;" />
 
