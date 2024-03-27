@@ -5,7 +5,7 @@
 Fabric Sync is a mechanism that synchronizes data between the data sources and Fabric by extraction and transformation processes that are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui). Fabric Sync can be performed in 2 modes:
 
 * Synchronization by request, which is based on predefined sync method and sync mode. [Click here for more information about Sync LUI by request, and various sync methods and sync modes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
-* Proactive sync. A Proactive approach is required in huge systems that have millions of database changes per second with many CSRs simultaneously querying  Fabric and requesting fresh data. The CSR must receive a quick response and cannot wait for the data to be refreshed online from source systems. Proactive sync ensures a much faster response time to external data requests.
+* Proactive sync. A Proactive approach is required in very large systems where millions of database changes occur per second, and numerous CSRs simultaneously query Fabric and request fresh data. A CSR must receive quick responses and should not be delayed due to an online data refreshing from source systems. The proactive sync mode ensures a much faster response time to external data requests, as it does not rely on an online refresh, since the data is always synchronized, as explained below.
 
 ## What is Stream Sync?
 
