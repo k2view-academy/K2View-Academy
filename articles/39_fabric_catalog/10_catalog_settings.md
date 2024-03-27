@@ -33,7 +33,7 @@ Click [here](04_plugin_framework.md#built-in-plugins) for more details about the
 
 ## Classifier PII & Masking Setup
 
-The **PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described further. 
+The **Classifier PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described later in this article.
 
 <img src="images/settings_pii_mask.png" style="zoom:80%;" />
 
