@@ -1,8 +1,8 @@
 # Stream Sync Initialization
 
-### Populations Setup for Stream Sync
+### Logical Unit Setup for Stream Sync
 
-Below are the steps to initialize the Stream Sync upon the LU Schema creation:
+Below are the steps to initialize the Stream Sync module upon an LU Schema creation:
 
 1. Create a Logical Unit (Data Product) and open its Schema (which is currently empty). 
 2. Open the LU Schema's Properties and set the **Enabled** checkbox in the **IID Finder tab** to **true**.
