@@ -18,18 +18,18 @@ The columns of this tab are:
 * **Classification**, which defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
 
 * **Type**, which can be either **Field Name** or **Field Value**:
-  * The entries defined with the **Field Name** type are used by the *Metadata Regex Classifier* plugin.
-  * The entries defined with the **Field Value** type are used by the *Data Regex Classifier* plugin.
-* **Regular Expression** defines the expression applied on the field, either its name or its value, depending on the **Type**.
-* **Score** defines the confidence level that the current rule is true. 
+  * Entries defined as the **Field Name** type are used by the *Metadata Regex Classifier* plugin.
+  * Entries defined as the **Field Value** type are used by the *Data Regex Classifier* plugin.
+* **Regular Expression**, which defines the expression applied on the field, either its name or its value, depending on the **Type**.
+* **Score**, which defines the confidence level that the current rule is true. 
 
 Each **Classification** can have several definitions, with the same or different **Types**.
 
-Using this screen, you can either edit existing definitions or add new ones. The Classification value can be either new or selected from the list.
+Using this tab, you can either edit existing definitions or add new ones. The Classification value can be either new or selected from the list.
 
 Once the Save button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-Click [here](04_plugin_framework.md#built-in-plugins) for more details about these plugins.
+Click [here](04_plugin_framework.md#built-in-plugins) for more details about these Profiling plugins.
 
 ## Classifier PII & Masking Setup
 
