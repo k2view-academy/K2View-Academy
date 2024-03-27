@@ -27,7 +27,7 @@ When the LU Schema is ready, right-click on the Logical Unit name in the Project
 * The **IID Finder XML** is generated in the above folder, based on the LU Schema.
 * A product built-in **streamSync.flow** is copied into the **Broadway** folder of this LU.
 
-The **streamSync.flow** includes remarks with explanations about what can be modified. The implementor should update this flow by setting the PubSub interface. Additional changes such as adding custom actors can be done if needed. Moreover, the **deploy.flow** of the selected LU should be updated - by modifying the **BroadwayJob** Actor with the **streamSync.flow** flow name.
+The **streamSync.flow** includes remarks with explanations about what can be modified. The implementor should update this flow by setting the PubSub interface. Additional changes such as adding custom actors can be done if needed. Moreover, the **deploy.flow** of the selected LU should be updated, by modifying the **BroadwayJob** Actor with the **streamSync.flow** flow name.
 
 
 
