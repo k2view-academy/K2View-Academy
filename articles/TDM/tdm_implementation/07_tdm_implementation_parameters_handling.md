@@ -17,6 +17,12 @@ Parameter tables are used for the following:
 - Creating the entity list for the task if the task's selection method is based on parameters.
 - Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
 
+### AI-based Generation
+
+The AI-based generated entities are not "synced" from a data source. The AI process generates entities, and the TDM imports the the generated entities to Fabric. A post TDM process updates the parameters tables for the imported entities to enable a selection of these entities based on parameters.
+
+Click [here] for more information about the AI based generation.
+
 ## TDM Parameters - Implementation Guidelines
 
 1.  Verify that the LU_PARAMS is attached to the LU Schema.
@@ -120,9 +126,8 @@ Parameter tables are used for the following:
     </tr>
     </tbody>
     </table>
-
     
-
+    
 4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams** function. This function runs the LU's SQL queries in the **LuParams**, creates the LU parameters table in the TDM DB if needed, and populates the LU parameters table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
     - Line number = {"(722) 404-4222","+1 (372) 682-2450,"+1 (799) 979-1233","883-486-7523","1394031132"}
