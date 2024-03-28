@@ -32,7 +32,7 @@ It is recommended to use inner flows as error handlers when the same error valid
 
 ### Retry Mechanism Using Error Handler
 
-Starting V8.0, the Retry mechanism can be configured using any actor defined as the stage’s **error handler**, as follows:
+Starting from V8.0, the Retry mechanism can be configured using any actor defined as the stage’s **error handler**, as follows:
 
 * The Actor should return **result = retry** instead of true or false to activate the retry mechanism.
 * The number of retries and interval should be implemented by the error handler Actor (Java code, LU function, etc.).
