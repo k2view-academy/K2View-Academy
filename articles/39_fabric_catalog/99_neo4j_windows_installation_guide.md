@@ -41,9 +41,9 @@ Remove-Item -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip
 
 #### Environment Variables:
 
-Add NEO4J_HOME System Environment pointing to neo4j folder.
+Add NEO4J_HOME System Environment pointing to the neo4j folder.
 
-Add neo4j bin folder to system PATH.
+Add neo4j bin folder to system path.
 
 #### Update neo4j GDS key path:
 ```powershell
