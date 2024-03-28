@@ -27,7 +27,7 @@ cd '\path\to\neo4j-folder'
 
 Download the link from [here](https://download.k2view.com/index.php/s/GvNzL6SGGvANtfy/download).
 
-Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+Note that this link is internal. If you don't have permissions to the folder, open a Freshdesk ticket.
 
 #### Unzip the package:
 ```powershell
