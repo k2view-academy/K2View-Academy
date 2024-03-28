@@ -18,7 +18,7 @@ Install the neo4j GraphDB as described [here](99_neo4j_windows_installation_guid
 
 ## Catalog Configuration Setup
 
-Download the [Implementation zip file](https://download.k2view.com/index.php/s/HAgVCsNHqsD2hvq) and unzip it into your project.
+Download the [Implementation zip file](https://download.k2view.com/index.php/s/HAgVCsNHqsD2hvq), unzip it and deploy your project.
 
 The following will be updated in your project:
 
@@ -28,7 +28,6 @@ The following will be updated in your project:
 * The  ```Discovery``` folder, which includes the ```plugins.discovery``` configuration file and the Catalog MTables for classification and masking. 
   * The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your Project tree. 
 
-Deploy the project upon the completion.
 
 
 Note that the copied folders are hidden in the Desktop Studio and thus cannot be seen in the Project tree. 
