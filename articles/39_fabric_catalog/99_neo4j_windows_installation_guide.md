@@ -85,7 +85,7 @@ neo4j start
 
 ## Additional Information
 
-For more details on installing neo4j on Windows, please visit the following link:
+For more details about installing neo4j on Windows, please visit the following link:
 
 [Installing Neo4j on Windows](https://neo4j.com/docs/operations-manual/current/installation/windows/)
 
