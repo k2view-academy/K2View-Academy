@@ -23,15 +23,15 @@ Download the [Implementation zip file](https://download.k2view.com/index.php/s/H
 The following will be updated in your project:
 
 * The ```web``` folder, which includes the ```apps.json``` file to enable access to the Catalog from the K2view Web Framework's menu.
-  * This folder is copied to the ```\Implementation\LogicalUnits\k2_ws``` folder in your project tree.
+  * This folder is copied to the ```\Implementation\LogicalUnits\k2_ws``` folder in your Project tree.
 
-* The  ```Discovery``` folder, which includes the ```plugins.discovery``` configuration file and the Catalog  MTables for classification and masking. 
-  * The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your project tree. 
+* The  ```Discovery``` folder, which includes the ```plugins.discovery``` configuration file and the Catalog MTables for classification and masking. 
+  * The Discovery folder is copied under ```\Implementation\SharedObjects\Interfaces``` folder in your Project tree. 
 
 Deploy the project upon the completion.
 
 
-Note that the copied folders are hidden in the Desktop Studio and thus cannot be seen in the project tree. 
+Note that the copied folders are hidden in the Desktop Studio and thus cannot be seen in the Project tree. 
 
 
 ## Solution Limitations
