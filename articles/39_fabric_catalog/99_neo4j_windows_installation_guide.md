@@ -4,7 +4,7 @@
 
 The neo4j is required for using the Fabric Discovery and Catalog solution, when working in a Desktop Studio. This document provides a step-by-step guide on how to **install neo4j on Windows**.
 
-Note that the installation on Windows should be done using the **Powershell** commands.
+Note that the installation on Windows should be done using **Powershell** commands.
 
 ## Prerequisites
 JDK version >= 17
