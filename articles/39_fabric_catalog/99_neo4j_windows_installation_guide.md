@@ -4,7 +4,7 @@
 
 The neo4j is required for using the Fabric Discovery and Catalog solution, when working in a Desktop Studio. This document provides a step-by-step guide on how to **install neo4j on Windows**.
 
-Note that the installation on Windows should be done using the **Powershell** commands.
+Note that the installation on Windows should be done using **Powershell** commands.
 
 ## Prerequisites
 JDK version >= 17
@@ -27,7 +27,7 @@ cd '\path\to\neo4j-folder'
 
 Download the link from [here](https://download.k2view.com/index.php/s/GvNzL6SGGvANtfy/download).
 
-Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
+Note that this link is internal. If you don't have permissions to access the folder, open a Freshdesk ticket.
 
 #### Unzip the package:
 ```powershell
@@ -41,9 +41,9 @@ Remove-Item -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip
 
 #### Environment Variables:
 
-Add NEO4J_HOME System Environment pointing to neo4j folder.
+Add NEO4J_HOME System Environment pointing to the neo4j folder.
 
-Add neo4j bin folder to system PATH.
+Add neo4j bin folder to system path.
 
 #### Update neo4j GDS key path:
 ```powershell
@@ -85,7 +85,7 @@ neo4j start
 
 ## Additional Information
 
-For more details on installing neo4j on Windows, please visit the following link:
+For more details about installing neo4j on Windows, please visit the following link:
 
 [Installing Neo4j on Windows](https://neo4j.com/docs/operations-manual/current/installation/windows/)
 
