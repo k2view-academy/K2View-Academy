@@ -23,6 +23,14 @@ The following example shows how different types of errors are handled whereby er
 
 ![image](../images/99_actors_06_3.PNG)
 
+### Retry Using the ErrorHandler Actor
+
+Starting from V8.0, the ErrorHandler Actor supports the retry mechanism. The Retry is configured using the **Retries** and **Interval** fields. The fields' default values are 0 and 500 msec. The Inner Flow can also be defined (though it is optional). In this case, the Inner Flow is “stronger” than Retry, meaning that the Inner Flow can reset the retry. 
+
+Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
+
+![image](../images/99_actors_06_5.PNG)
+
 ### How Do I Use the ErrorFields Actor?
 
 The **ErrorFields** Actor can be used to get detailed information about an exception. The Actor can be used either as an error handler or as a regular Actor in an inner flow to access error information. The **ErrorFields** Actor always suppresses exceptions. 
