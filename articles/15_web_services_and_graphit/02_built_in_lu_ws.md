@@ -309,7 +309,7 @@ Environment variable
 </tr>    
 </tbody>
 </table>
-<p>&nbsp;</p>
+
 
 **Examples:**
 
