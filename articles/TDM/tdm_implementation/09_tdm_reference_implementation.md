@@ -94,7 +94,7 @@ The TDM table flow uses [Fabric catalog masking](/articles/39_fabric_catalog/11_
 
 #### Run the Catalog to Identify Tables Relation
 
-??To check with Taha
+Running the discovery for the DB interfaces. Note that once job is completed, the interface metadata will be retrieved from the catalog.
 
 ### Step 4 - Special Handling
 
