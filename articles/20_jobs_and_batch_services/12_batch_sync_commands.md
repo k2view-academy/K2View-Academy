@@ -216,16 +216,16 @@ MAX_WORKERS_PER_NODE - Set the maximum workers per node for this batch. Note tha
 </td>
 <td valign="top" width="400pxl">
 <p>
-If there are no arguments, lists all active Batch processes together with their respective status:
-NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
-FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
-FILTER, filters Batch processes. The filter field must be populated by a string and can be reffered to the Batch command or the execution id. 
-Note that the filter supports regex.
+If there are no arguments, lists all active Batch processes together with their respective status.    </p>
+<p>
+Statuses are: NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL.
+FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
+FILTER - filters Batch processes. The filter field must be populated by a string and can be referred to the Batch command, Fabric command or the execution id of the batch process. The filter supports regex.
 </p>
 </td>
 <td valign="top" width="300pxl">
    <p>BATCH_LIST STATUS='ALL'; – list the history of all batch processes.</p>
-   <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
+   <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of the batch processes under the given filter. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
 </td>
 </tr> 
 <tr>
@@ -278,12 +278,13 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="400pxl">
 <p>
-Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set by the command. The limitation of 10,000 is the default value and is set by Fabric so that a result is given in a reasonable almount of time. 
-- STATUS, which can be WAITING, COMPLETED, or FAILED.
-- ENTITIES, lists of entities separated by a comma.
-- AFFINITY, DCs or nodes.
-- SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
-- LIMIT, limit the number of entities to a lower number than 10,000. The default limit is set to 10,000 entities if no limit is provided as an argument. </p>
+Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set. The limitation of 10,000 is a default and is set by Fabric so that a result is given in a reasonable amount of time. </p>
+<p>
+STATUS - can be WAITING, COMPLETED, or FAILED.
+ENTITIES - lists of entities separated by a comma.
+AFFINITY - DCs or nodes.
+SORT_BY_PROCESS_TIME - if True, shows only the entities with the highest process time. If set, ignore all other parameters.
+LIMIT - limit a number of entities. </p>
 </td>
 <td valign="top" width="300pxl">
 <p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
@@ -291,15 +292,19 @@ Displays the status of instances of a given Batch process ID. This command retur
 </tr> 
 </table>
 
+
 ## Batch Commands Examples
 
 ### BATCH_LIST
 
-Command  
+**Command**  
 
-``` BATCH_LIST status='all'```
+~~~ 
+BATCH_LIST status='all'
+~~~
 
-Result 
+**Result** 
+
 ```
 |Id                                  |Command                                                                                                                                                                |Start date         |End date           |Status|Created by|Completion %|Execution id                        |Error|
 +------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------+------+----------+------------+------------------------------------+-----+
@@ -309,17 +314,19 @@ Result
 
 ### BATCH_SUMMARY
 
-Command 
+**Command** 
 
-``` BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e' ```
+~~~ 
+BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e' 
+~~~
 
-Result
+**Result**
 
-<img src="/articles/20_jobs_and_batch_services/images/22_jobs_and_batch_services_commandsExamples.PNG">
+<img src="images/22_jobs_and_batch_services_commandsExamples.PNG">
 
 This command returns execution information and statistics for a given bid on each node in the execution:
 - Name, the Node ID.
-- %Completed, percentage of executions run on each node.
+- % Completed, percentage of executions run on each node.
 - Ent/sec, average entities executed per seconds (pace - counting the average on the last 100 sec).
 
 Note that all other fields are self-explanatory. 
@@ -328,16 +335,21 @@ Note that all other fields are self-explanatory.
 
 
 ## Batch Command with Embedded SQL Statements
-Instead of referring to an Instance Group, the Batch command can embed an SQL statement to select the entities on which the Batch command is executed:
+Instead of referring to an Instance Group, the Batch command can embed an SQL statement to select the entities on which the Batch command is executed.
+
+**Command**
+
 ```
 BATCH <LU> from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?'
 ```
 
-Example 
+**Example** 
 
 ```
 BATCH Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";
 ```
+
+**Result**
 
 
 ```
@@ -345,6 +357,7 @@ BATCH Customer from CRM_DB USING('select customer_id from Customer where custome
 +------------------------------------+------------------------------------+-------------------+----------------+-----+--------+
 |83fade2f-2ae6-4359-8b7a-bdd1866d2191|7b7f5a4b-2e2c-4f0e-90d5-865bac3484ee|10                 |0               |10   |1       |
 ```
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/11_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/13_migrate_commands.md) 
