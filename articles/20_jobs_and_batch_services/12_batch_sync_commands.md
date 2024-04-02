@@ -210,23 +210,16 @@ MAX_WORKERS_PER_NODE - Set the maximum workers per node for this batch. Note tha
 <p><strong>Example</strong></p>
 </td>
 </tr>
-
-
 <tr>
 <td valign="top" width="300pxl">
-
 <h6>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h6>
-
 </td>
 <td valign="top" width="400pxl">
-
 <p>
 If there are no arguments, lists all active Batch processes together with their respective status:
-
-- NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
-- FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
-- FILTER, filters Batch processes. The filter field must be populated by a string and can be reffered to the Batch command or the execution id. 
-
+NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
+FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
+FILTER, filters Batch processes. The filter field must be populated by a string and can be reffered to the Batch command or the execution id. 
 Note that the filter supports regex.
 </p>
 </td>
@@ -238,10 +231,8 @@ Note that the filter supports regex.
 <tr>
 <td valign="top" width="300pxl">
 <h6>BATCH_INFO '&ltbatch_id&gt'</h6>
-
 </td>
 <td valign="top" width="400pxl">
-
 <p>Returns the general information of the batch process such as the batch command, Fabric command, LU name, Environment...
 </p>
 </td>
@@ -252,10 +243,8 @@ Note that the filter supports regex.
 <tr>
 <td valign="top" width="300pxl">
 <h6>BATCH_SUMMARY '&ltbatch_id&gt'</h6>
-
 </td>
 <td valign="top" width="400pxl">
-
 <p>This report brings a table holding a summary about node, DC and cluster levels.                                    
 </p>
 </td>
@@ -263,16 +252,11 @@ Note that the filter supports regex.
 <p>BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
 </td>
 </tr> 
-
-
-
 <tr>
 <td valign="top" width="300pxl">
 <h6>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</h6>
-
 </td>
 <td valign="top" width="400pxl">
-
 <p>Lists all currently running instances by batch processes in the cluster level and returns the following information: 
    <li>Node ID</li>  <li>Batch process ID</li>
     <li>Entity ID</li>
@@ -288,17 +272,13 @@ Note that the filter supports regex.
 <p>This command will return all running batch processes with names containing the "cust" pattern</p>
 </td>
 </tr> 
-
 <tr>
 <td valign="top" width="300pxl">
 <h6>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h6>
-
 </td>
 <td valign="top" width="400pxl">
-
 <p>
 Displays the status of instances of a given Batch process ID. This command returns up to 10,000 entities if no limit is set by the command. The limitation of 10,000 is the default value and is set by Fabric so that a result is given in a reasonable almount of time. 
-
 - STATUS, which can be WAITING, COMPLETED, or FAILED.
 - ENTITIES, lists of entities separated by a comma.
 - AFFINITY, DCs or nodes.
@@ -309,7 +289,6 @@ Displays the status of instances of a given Batch process ID. This command retur
 <p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
 </td>
 </tr> 
-
 </table>
 
 ## Batch Commands Examples
