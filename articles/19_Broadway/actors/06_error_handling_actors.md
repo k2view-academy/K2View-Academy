@@ -23,14 +23,6 @@ The following example shows how different types of errors are handled whereby er
 
 ![image](../images/99_actors_06_3.PNG)
 
-### Retry Using the ErrorHandler Actor
-
-Starting from V8.0, the ErrorHandler Actor supports the retry mechanism. The Retry is configured using the **Retries** and **Interval** fields. The fields' default values are 0 and 500 msec. The Inner Flow can also be defined (though it is optional). In this case, the Inner Flow is “stronger” than Retry, meaning that the Inner Flow can reset the retry. 
-
-Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
-
-![image](../images/99_actors_06_5.PNG)
-
 ### How Do I Use the ErrorFields Actor?
 
 The **ErrorFields** Actor can be used to get detailed information about an exception. The Actor can be used either as an error handler or as a regular Actor in an inner flow to access error information. The **ErrorFields** Actor always suppresses exceptions. 
@@ -42,5 +34,17 @@ The **ErrorFields** Actor can be used to get detailed information about an excep
 When the **ErrorFields** Actor is used in an inner flow that is invoked from the **ErrorHandler** Actor, the **error** input argument must be defined as External. Then the error details are automatically passed from the calling flow.
 
 <img src="../images/99_actors_06_4.PNG" alt="image" style="zoom:80%;" />
+
+### Retry Using Error Handling Actors
+
+Starting from V8.0, the **ErrorHandler** Actor supports the retry mechanism. The Retry is configured using the **Retries** and **Interval** fields. The fields' default values are 0 and 500 msec. 
+
+If any actor of the stage with an ErrorHandler fails and the retry fields are set, the actor will be executed again. 
+
+If the Inner Flow is defined in the ErrorHandler's editor, the Retry logic is taken from the flow and not from the actor's fields. 
+
+Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
+
+![image](../images/99_actors_06_5.PNG)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)

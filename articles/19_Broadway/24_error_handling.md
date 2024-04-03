@@ -30,26 +30,6 @@ An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error
 
 It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
-### Retry Mechanism Using Error Handler
-
-Starting from V8.0, the retry mechanism can be configured using an actor or an inner flow defined as the stage’s error handler, as follows:
-
-* Add an error handler to a stage using an actor or an inner flow. 
-* To enable the retry mechanism, the stage’s **error handler** should return **result = retry** instead of *true* or *false*.
-* The number of retries and interval duration should be implemented by an error handler (inner flow, Java code, LU function, etc.).
-
-For easier configuration of the Retry mechanism, the **ErrorHandler** Actor can be used. For more details, refer to the [Error Handling Actors](actors/06_error_handling_actors.md) article.
-
-When there are several actors in a stage, the retry is enabled on each actor of this stage. For example:
-
-<img src="images/99_24_retry1.PNG" alt="image" style="zoom:80%;" />
-
-* Both DbCommand1 and DbLoad1 actors can trigger the retry.
-
-* If DbCommand1 throws an exception, the retry mechanism is triggered.
-
-* If the DbCommand1 is executed successfully after the retry, the flow moves to DbLoad1. If it also fails, the retry counter is restarted and the retry mechanism is triggered for it as well.
-
 ### How Do I Add an Error Handler to a Stage?
 
 Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
@@ -150,7 +130,30 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 4. Several types of validations can be performed using different inner flows. For example, add a validation that input numbers are not negative and if yes - throw an exception and stop the flow. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
 
-   
+### Retry Mechanism Using Error Handler
+
+Starting from V8.0, the retry mechanism can be configured using an actor or an inner flow defined as the stage’s **error handler**, as follows:
+
+* Add an error handler to a stage using any actor (e.g. InnerFlow or LUFunction). 
+* To enable the retry, the stage’s error handler should return **result = retry** instead of *true* or *false*.
+* The number of retries and interval duration should be implemented by an error handler. 
+  * For example, based on a certain condition - the actor should return *retry* to continue retries or either *true* or *false* to stop the retries. 
+
+The **ErrorHandler** Actor has been enhanced to be used for easier setup of the retry mechanism. For more details, refer to the [Retry Using Error Handling Actors](actors/06_error_handling_actors.md#retry-using-error-handling-actors) article.
+
+When there are several actors in a stage, the retry is enabled on each actor of this stage. 
+
+In the below example:
+
+<img src="images/99_24_retry1.PNG" alt="image" style="zoom:80%;" />
+
+* Both **DbCommand1** and **DbLoad1** Actors can trigger the retry.
+
+* If **DbCommand1** throws an exception, the retry mechanism is triggered.
+
+* If the **DbCommand1** is executed successfully after the retry, the retry counter is reset and the flow moves to **DbLoad1**. If it also fails, the retry mechanism is triggered for it as well.
+
+
 
 [![Previous](/articles/images/Previous.png)](23_transactions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_broadway_flow_window_run_and_debug_flow.md)
 
