@@ -7,7 +7,7 @@ Replications of Reference tables are kept within each Fabric Node, therefore Fab
 - Manage the synchronization process with their source, either automatically in the background, on-demand at any given time, or according to a specific schedule.
 - Ensure high availability levels at all times with the lowest access time possible.
 
-CommonDB consists of a single SQLite file that holds all the Reference tables populated by external sources or from Fabric System of Records (SOR).
+CommonDB consists of an SQLite file per schema that holds all the Reference tables populated by external sources or from Fabric System of Records (SOR).
 
 This means that in a distributed Fabric Cluster environment, each Fabric node contains all common tables within this specific SQLite file. 
 
