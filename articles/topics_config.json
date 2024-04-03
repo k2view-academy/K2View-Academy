@@ -359,14 +359,14 @@
 			"comm display name": "Spotlight",
 			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
 			"comm icon": "../community/spotlight/images/spotlight.png",
-			"visible": true,
+			"visible": false,
 			"path": "../community/spotlight",
 			"view all link": "../community/spotlight/README.html",
 			"view all text": "Click to view all"
 		},
 		{
 			"comm display name": "K2Alpinist",
-			"comm display text": "k2view Alpinist program for the advanced developers and implementors.",
+			"comm display text": "K2view Alpinist program for the advanced developers and implementors.",
 			"comm icon": "../community/alpinist/images/Alpinist.png",
 			"visible": true,
 			"path": "../community/alpinist",

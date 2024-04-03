@@ -4,7 +4,7 @@ Broadway has a built-in error handling mechanism that handles exceptions in a fl
 
 This article describes the **ErrorHandler** and **ErrorFields** Actors which are dedicated for error handling.
 
-For information about the basic Broadway Error Handling mechanism, refer to [Error Handling](/articles/19_Broadway/24_error_handling.md) article.
+For information about the error handling mechanism of Broadway, refer to the [Error Handling](/articles/19_Broadway/24_error_handling.md) article.
 
 ### How Do I Use the ErrorHandler Actor?
 
@@ -46,5 +46,9 @@ If the Inner Flow is defined in the ErrorHandler's editor, the Retry logic is ta
 Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
 
 ![image](../images/99_actors_06_5.png)
+
+When the retry is implemented by an **inner flow** rather than by the **ErrorHandler** Actor, the **ErrorFields** Actor should be used in this inner flow to check the number of attempts that have already been executed - using the **attempt** output parameter.
+
+![image](../images/99_actors_06_6.png)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)
