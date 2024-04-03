@@ -1,6 +1,11 @@
 {
 	"Branches": [
 		{
+			"display name": "Fabric 8.0",
+			"branch name": "Academy_8.0",
+			"build": true
+		},
+		{
 			"display name": "Fabric 7.2",
 			"branch name": "Academy_7.2",
 			"build": true
@@ -164,7 +169,7 @@
 		},
 		{
 			"group display name": "Data Privacy Management (DPM)",
-			"group icon": "images/icon-4.png",
+			"group icon": "images/cloudManagement.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -354,11 +359,20 @@
 			"comm display name": "Spotlight",
 			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
 			"comm icon": "../community/spotlight/images/spotlight.png",
-			"visible": true,
+			"visible": false,
 			"path": "../community/spotlight",
 			"view all link": "../community/spotlight/README.html",
 			"view all text": "Click to view all"
 		},
+		{
+			"comm display name": "K2Alpinist",
+			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
+			"comm icon": "../community/alpinist/images/Alpinist.png",
+			"visible": true,
+			"path": "../community/alpinist",
+			"view all link": "../community/alpinist/README.html",
+			"view all text": "Click to view all"
+		},		
 		{
 			"comm display name": "Q&A",
 			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
