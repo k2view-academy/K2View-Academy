@@ -45,6 +45,6 @@ If the Inner Flow is defined in the ErrorHandler's editor, the Retry logic is ta
 
 Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
 
-![image](../images/99_actors_06_5.PNG)
+![image](../images/99_actors_06_5.png)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)
