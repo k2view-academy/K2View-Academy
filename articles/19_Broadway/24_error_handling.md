@@ -145,7 +145,7 @@ When there are several actors in a stage, the retry is enabled on each actor of 
 
 In the below example:
 
-<img src="images/99_24_retry1.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_24_retry1.png" alt="image" style="zoom:80%;" />
 
 * Both **DbCommand1** and **DbLoad1** Actors can trigger the retry.
 
