@@ -196,7 +196,7 @@ You can run each one of the load flows in debug mode. Normally, when running a t
 ### TDMOrchestrator Flow
 
 The **TDMOrchestrator** flow orchestrates all the processes related to the **executed entity** in **one single flow** and in **one transaction**. A separate TDMOrchestrator flow runs on each task's LU. This flow includes the invocation of all steps such as:
- 
+
 - Initiates the TDM task execution keys.
 - Syncs the entity into the Fabric, if needed.
 - Deletes the entity from the target environment, if the task requires it.
@@ -230,7 +230,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   TDM 8.1 adds new templates to integrate with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table. 
   
   Perform the following acts in order to use the new TDM templates for the Catalog masking:
-     
+  
   - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
   - Optional: Edit the population flows to override the Catalog’s masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
      - Note: If you need to send the original (source) values for the Masking Actors in the LU population, move the Query result to an ArrayBuilder and connect the ArrayBuilder output to the CatalogMaskingMapper Actor instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper Actor and to the Masking Actor.
@@ -400,6 +400,7 @@ Edit the flow in order to use it in the TDM tasks:
   - Redeploy the Web-Services to Fabric.
   - If the LU_NAME field is populated with an LU name, redeploy the LU name to Fabric. Else (if the LU_NAME field is empty), redeploy the TDM LU to Fabric.
     
+
 The following parameters can be set by the user that creates the task:
 
 - **sql** - mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
@@ -460,7 +461,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution.
+1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as external parameter.
 
 2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
