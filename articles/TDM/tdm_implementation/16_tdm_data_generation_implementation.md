@@ -1,6 +1,6 @@
-# Data Generation Implementation
+# Rule-Based Data Generation Implementation
 
-The TDM data generation creates synthetic entities. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data.  
+The TDM data generation creates synthetic entities based on rules or AI. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data.  The following article describes the **rule-based** data generation implementation.
 
 ## Implementation of Logical Unit Population 
 
@@ -56,6 +56,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
    
    Notes:
    - If the **rowsGeneratorDistribution** input argument is edited, but **not** set to be an **External parameter**, the parameter cannot be overridden by the TDM task.
+   
    - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
        ```
@@ -65,6 +66,10 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
        For example: crm_address_number_of_records. 
        
        The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each.
+
+3. **Optional** - **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate 1 address per customer. Do not enable the tester to set the number of generated addresses per customer in the task.  Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+
+
 
 ## Implementation of Data Generation Flows 
 
