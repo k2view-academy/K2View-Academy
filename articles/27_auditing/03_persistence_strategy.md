@@ -18,7 +18,7 @@ In order to switch the persistence strategy to Kafka, do the following:
 1. Update the  **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** file to: 
 
    ~~~
-   AUDIT_PERSISTENCY_STRATEGY = com.k2view.fabric.auditing.persistence.KafkaBeanPersistence
+   AUDIT_PERSISTENCE_STRATEGY = com.k2view.fabric.auditing.persistence.KafkaBeanPersistence
    ~~~
 
 2. Verify that AUDIT is set to ON in the **config.ini** file.
@@ -35,7 +35,7 @@ In order to switch the persistence strategy to Kafka, do the following:
 
 When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from the System DB to Kafka. 
 
-For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** and restart the Fabric node as explained above.
+For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
 
 Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
 
@@ -72,10 +72,10 @@ In case of your own class, it must be created under the **com.k2view.external.fa
 
 Build artifacts by doing the same steps as described [in the Filtering Strategy article](02_filtering_strategy.md). Then, do the following:
 
-1. Update the **config.ini** file with the full path of the class in the  **AUDIT_PERSISTENCY_STRATEGY** parameter. For example:
+1. Update the **config.ini** file with the full path of the class in the  **AUDIT_PERSISTENCE_STRATEGY** parameter. For example:
 
    ~~~
-   AUDIT_PERSISTENCY_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
+   AUDIT_PERSISTENCE_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
    ~~~
 
 2. Verify that AUDIT is set to ON in the **config.ini** file.
