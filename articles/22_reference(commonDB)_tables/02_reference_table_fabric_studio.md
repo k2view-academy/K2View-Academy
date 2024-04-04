@@ -131,7 +131,7 @@ Properties can be defined in the **Table Properties** panel in the right pane of
 #### Main Properties
 
 - Name, can be defined or modified.
-- Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic [CommonDB schema](04_fabric_commonDB_sync.md#overview). In the illustration below the reference table *ref_geoCodeUSA* is attached to the *extraRefDB* schema. 
+- Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic [CommonDB schema](04_fabric_commonDB_sync.md#overview). 
 - Full Text Search 
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
