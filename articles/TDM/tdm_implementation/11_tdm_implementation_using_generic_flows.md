@@ -460,7 +460,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution.
+1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as external parameter.
 
 2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
@@ -471,7 +471,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
 - **Stage 1**: 
 
-  - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a Select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs.
+  - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a Select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs. 
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM Library).
   - Notes: 
       - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
