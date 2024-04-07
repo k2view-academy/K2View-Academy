@@ -123,7 +123,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_tables</td>
-  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">Reference tables</a> included in each TDM task.</td>
+  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">tables</a> included in each TDM task whether the task includes Business entities and referential data or the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
@@ -167,7 +167,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_exe_stats</td>
-<td valign="top" width="400pxl">List of <a href="05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job">Reference tables</a> to be processed by the execution of a given task.</td>
+<td valign="top" width="400pxl">List of <a href="05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job">Tables</a> to be processed by the execution of a given task whether the task includes Business entities and referential data or the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>
@@ -180,6 +180,11 @@ The following table lists the TDM tables and their description.
   <td valign="top" width="400pxl"><p>Mapping of source and target sequences.</p>
     <p><a href="/articles/19_Broadway/actors/08_sequence_implementation_guide.md">Click for more information about sequence implementation</a>.</p></td>
 <td valign="top" width="300pxl">Task Execution</td>
+</tr>
+<tr>
+ <td valign="top" width="200pxl"><h4>tdm_ai_gen_iid_mapping</td>
+    <td valign="top" width="400pxl">Mapping of the AI-based generated entity ID and the LUI that is generated and imported into Fabric for the generated entity.</td>
+<td valign="top" width="300pxl">Task Execution</td>    
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_exe_stats_detailed</td>
@@ -198,6 +203,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 
