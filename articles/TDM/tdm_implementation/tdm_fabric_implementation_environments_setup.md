@@ -26,19 +26,29 @@ Note that **you must not include an underscore ('_') in the environment name whe
 
 The TDM implementation must include the **creation and deployment** of all the TDM environments with their connection details to enable the execution of the TDM tasks. 
 
-### Defining the Synthetic Environment for the Generate Tasks
+### Defining the Synthetic Environments for the Data Generation Tasks
 
-TDM 8.0 added a support of a new task action (type): Generate - for generating synthetic entities.
+TDM supports 2 data generation methods:
 
-The [Generate task](/articles/TDM/tdm_gui/16a_generate_task.md) is based on a dummy source environment named **Synthetic**. The **Synthetic** environment must be created and deployed in Fabric with the TDM and DB_CASSANDRA interfaces (these interfaces must be enabled), and must also be created in the TDM DB.
+- **Rule-based** data generation (added in TDM 8.0)
+- **AI-based** data generation (added in TDM 9.0).
 
+Both methods use dummy source environments. Each method has its own dummy environment. The following Globals define the dummy environment names:
 
+- **SYNTHETIC_ENVIRONMENT** - defines the rule-based environment name. Default value is **Synthetic**.
+- **AI_ENVIRONMENT** - defines the AI-based environment name. Default value is **AI**. 
+
+Both dummy environments must be created and deployed in Fabric with the TDM interfaces. In addition, the AI-based environment must be deployed with the following interfaces:
+
+- **AI_DB** - PostgreSQL DB used as an interface layer between the TDM and the AI processes. 
+- **AI_Execution** - HTTPS interface for the Kubernetes layer for the AI processes - training and data generation.
+
+[Click here] for more information about the TDM - AI intergation.  
 
 ### Notes:
 
 - **Every change of either a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
-- It is important to **set the TDM_APIDOC_JSON Local File System interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
-- The create/update TDM DB scripts add the Synthetic environment to the TDM DB. Still, there is a need to add the Systems to the Synthetic environment in the TDM portal.
+- The create/update TDM DB scripts add the Synthetic environments to the TDM DB. Still, there is a need to add the Systems to the Synthetic environments in the TDM portal.
 
 [Click here](/articles/25_environments/02_create_new_environment.md) for more information about Fabric environments.
 
