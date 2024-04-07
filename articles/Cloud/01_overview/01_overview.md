@@ -40,10 +40,6 @@ K2view lets you managing various types of deployments (fully managed, self-hoste
 * **Self-Hosted**, prevent data from leaving your environment by having Fabric deployed in your cloud tenant or on-premise. to meet the strictest data movement requirements.
 * **Hybrid**, control when and how data moves from your on-premises environment to the cloud for efficient and secure purposes.
 
-
-
 K2view uses a uniform methodology, where all deployment types infra, behavior and lifecycle are built and function the same way.
 
 
-
-![](images/k2cloud overview1.jpg)
