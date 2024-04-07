@@ -21,14 +21,7 @@ The [task execution process](03_task_execution_processes.md#main-tdm-task-execut
 1. It first sets the task's source environment as the active environment and gets the LUI from Fabric.
 2. After the LUI sync, it sets the task's target environment as the active environment and runs the delete and/or load flows on the target environment.
 
-### Setting Key-Value Parameters
 
-Set execution parameters like the following indicators:
-- Replace sequence
-- Delete before load
-- Insert to target
-
-These parameters are based on the task's settings and are set on a session level.
 
 ### Overriding Globals Values 
 
@@ -42,142 +35,132 @@ Note: Task-level variables have a higher priority than TDM environment-level var
 
 When executing a TDM task, set the Sync mode according to the following table:
 
-<table style="height: 1403px;" width="900pxl">
+<table width="900pxl">
 <tbody>
-<tr style="height: 100px;">
-<td style="height: 100px; width: 125px;" valign="top">
-<p><strong>Source Env Sync Policy</strong></p>
+<tr>
+<td valign="top" width="150pxl">
+<p><strong>Source env -&nbsp; Override Sync Mode</strong></p>
 </td>
-<td style="height: 100px; width: 125px;" valign="top">
-<p><strong>Task Level Sync Policy</strong></p>
+<td valign="top" width="300pxl">
+<p><strong>Task - Source env - policy for fetching data</strong></p>
 </td>
-<td style="height: 100px; width: 125px;" valign="top">
-<p><strong>Task Actions</strong></p>
-</td>
-<td style="height: 100px; width: 125px;" valign="top">
+<td valign="top" width="150pxl">
 <p><strong>Execution Sync Mode</strong></p>
 </td>
-<td style="height: 100px; width: 400px;" valign="top">
+<td valign="top" width="300pxl">
 <p><strong>Results</strong></p>
 </td>
 </tr>
 <tr style="height: 64px;">
-<td style="height: 64px; width: 97.7841px;" valign="top">
+<td style="height: 64px; width: 120.094px;" valign="top">
 <p>None</p>
 </td>
-<td style="height: 64px; width: 189.815px;" valign="top">
-<p>Sync New Data</p>
+<td valign="top" width="300pxl">
+<ul>
+<li>Available data from the Test data store, new data from &lt;source env&gt;&nbsp;</li>
+</ul>
 </td>
-<td style="height: 64px; width: 96.8466px;" valign="top">
-<p>Extract, Load, Delete</p>
-</td>
-<td style="height: 64px; width: 98.4091px;" valign="top">
+<td style="height: 64px; width: 121.688px;" valign="top">
 <p>On</p>
 </td>
-<td style="height: 64px; width: 384.361px;" valign="top">
+<td valign="top" width="300pxl">
 <p>LUIs are synced according to their sync method. See the <a href="/articles/14_sync_LU_instance/10_sync_behavior_summary.md">Sync Behavior Summary table</a>.</p>
 </td>
 </tr>
 <tr style="height: 64px;">
-<td style="height: 64px; width: 97.7841px;" valign="top">
+<td style="height: 64px; width: 120.094px;" valign="top">
 <p>None</p>
 </td>
-<td style="height: 64px; width: 189.815px;" valign="top">
-<p>Refresh all Data From Source</p>
+<td valign="top" width="300pxl">
+<ul>
+<li>All data from &lt;source env&gt;</li>
+</ul>
 </td>
-<td style="height: 64px; width: 96.8466px;" valign="top">
-<p>Extract, Load, Delete</p>
-</td>
-<td style="height: 64px; width: 98.4091px;" valign="top">
+<td style="height: 64px; width: 121.688px;" valign="top">
 <p>Force</p>
 </td>
-<td style="height: 64px; width: 384.361px;" valign="top">
+<td valign="top" width="300pxl">
 <p>LUIs are synced from the source.</p>
 </td>
 </tr>
-<tr style="height: 64px;">
-<td style="height: 64px; width: 97.7841px;" valign="top">
-<p>Always sync</p>
+<tr>
+<td style="width: 120.094px;">
+<p>None</p>
 </td>
-<td style="height: 64px; width: 189.815px;" valign="top">
-<p>Sync New Data</p>
+<td style="width: 120.797px;">
+<ul>
+<li>Available &lt;source env&gt; data in the Test data store&nbsp;</li>
+<li>Selected snapshot (version)&nbsp;</li>
+</ul>
 </td>
-<td style="height: 64px; width: 96.8466px;" valign="top">
-<p>Extract, Load, Delete</p>
+<td style="width: 121.688px;">
+<p>If the task includes a delete =&gt; On</p>
+<p>Else =&gt; Off</p>
 </td>
-<td style="height: 64px; width: 98.4091px;" valign="top">
-<p>Force</p>
-</td>
-<td style="height: 64px; width: 384.361px;" valign="top">
-<p>LUIs are synced from the source.</p>
-</td>
-</tr>
-<tr style="height: 64px;">
-<td style="height: 64px; width: 97.7841px;" valign="top">
-<p>Always sync</p>
-</td>
-<td style="height: 64px; width: 189.815px;" valign="top">
-<p>Refresh all Data From Source</p>
-</td>
-<td style="height: 64px; width: 96.8466px;" valign="top">
-<p>Extract, Load, Delete</p>
-</td>
-<td style="height: 64px; width: 98.4091px;" valign="top">
-<p>Force</p>
-</td>
-<td style="height: 64px; width: 384.361px;" valign="top">
-<p>LUIs are synced from the source.</p>
-</td>
-</tr>
-<tr style="height: 64px;">
-<td style="height: 64px; width: 97.7841px;" valign="top">
-<p>Do Not Sync</p>
-</td>
-<td style="height: 64px; width: 189.815px;" valign="top">
-<p>Refresh all Data From Source</p>
-</td>
-<td style="height: 64px; width: 96.8466px;" valign="top">
-<p>Extract, Load, Delete</p>
-</td>
-<td style="height: 64px; width: 98.4091px;" valign="top">
-<p>Force</p>
-</td>
-<td style="height: 64px; width: 384.361px;" valign="top">
-<p>LUIs are synced from the source.</p>
-</td>
-</tr>
-<tr style="height: 110px;">
-<td style="height: 110px; width: 97.7841px;" valign="top">&nbsp;</td>
-<td style="height: 110px; width: 189.815px;" valign="top">
-<p>Sync New Data</p>
-<p>Do Not Sync</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-<td style="height: 110px; width: 96.8466px;" valign="top">
-<p>Load</p>
-</td>
-<td style="height: 110px; width: 98.4091px;" valign="top">
-<p>Off</p>
-</td>
-<td style="height: 110px; width: 384.361px;" valign="top">
+<td style="width: 384.422px;">
 <ul>
 <li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric:</li>
-Get the data from Fabric.</ul>
+<li>If the LUIs exist in Fabric:
+<ul>
+<li>Source LU tables:</li>
+Get the data from Fabric.
+<li>Target LU tables (populated for a delete activity):</li>
+Sync the data from the target environment.</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 64px;">
+<td style="height: 64px; width: 120.094px;" valign="top">
+<p>Always sync</p>
+</td>
+<td valign="top" width="300pxl">
+<ul>
+<li>Available data from the Test data store, new data from &lt;source env&gt;&nbsp;</li>
+</ul>
+</td>
+<td style="height: 64px; width: 121.688px;" valign="top">
+<p>Force</p>
+</td>
+<td valign="top" width="300pxl">
+<p>LUIs are synced from the source.</p>
+</td>
+</tr>
+<tr style="height: 64px;">
+<td style="height: 64px; width: 120.094px;" valign="top">
+<p>Always sync</p>
+</td>
+<td valign="top" width="300pxl">
+<ul>
+<li>All data from &lt;source env&gt;</li>
+</ul>
+</td>
+<td style="height: 64px; width: 121.688px;" valign="top">
+<p>Force</p>
+</td>
+<td valign="top" width="300pxl">
+<p>LUIs are synced from the source.</p>
 </td>
 </tr>
 <tr style="height: 155px;">
-<td style="height: 155px; width: 97.7841px;" valign="top">
-<p>None</p>
+<td style="height: 155px; width: 120.094px;">
+<p>Do Not Sync</p>
 </td>
-<td style="height: 155px; width: 189.815px;" valign="top">
-<p>Do Not Sync From Source Data</p>
+<td style="height: 155px; width: 120.797px;">
+<ul>
+<li>Only the following options are available in the task:
+<ul>
+<li>Available &lt;source env&gt; data in the Test data store&nbsp;</li>
+<li>Selected snapshot (version)&nbsp;</li>
+</ul>
+</li>
+</ul>
 </td>
-<td style="height: 155px; width: 96.8466px;" valign="top">Load and Delete</td>
-<td style="height: 155px; width: 98.4091px;" valign="top">On</td>
-<td style="height: 155px; width: 384.361px;" valign="top">
+<td style="height: 155px; width: 121.688px;">
+<p>If the task includes a delete =&gt; On</p>
+<p>Else =&gt; Off</p>
+</td>
+<td style="height: 155px; width: 384.422px;">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
@@ -188,67 +171,11 @@ Get the data from Fabric.
 Sync the data from the target environment.</ul>
 </li>
 </ul>
-</td>
-</tr>
-<tr style="height: 155px;">
-<td style="height: 155px; width: 97.7841px;">
-<p>Do Not Sync</p>
-</td>
-<td style="height: 155px; width: 189.815px;">
-<p>Sync New Data</p>
-</td>
-<td style="height: 155px; width: 96.8466px;">Load and Delete</td>
-<td style="height: 155px; width: 98.4091px;">On</td>
-<td style="height: 155px; width: 384.361px;">
-<ul>
-<li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric:
-<ul>
-<li>Source LU tables:</li>
-Get the data from Fabric.
-<li>Target LU tables:</li>
-Sync the data from the target environment.</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr style="height: 54px;">
-<td style="height: 54px; width: 97.7841px;" valign="top">
-<p>N/A</p>
-</td>
-<td style="height: 54px; width: 189.815px;" valign="top">
-<p>N/A</p>
-</td>
-<td style="height: 54px; width: 96.8466px;" valign="top">Delete</td>
-<td style="height: 54px; width: 98.4091px;" valign="top">On</td>
-<td style="height: 54px; width: 384.361px;" valign="top">Target LU tables are synced from the target environment.</td>
-</tr>
-<tr style="height: 125px;">
-<td style="height: 125px; width: 97.7841px;" valign="top">
-<p>N/A</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-<td style="height: 125px; width: 189.815px;" valign="top">
-<p>Do Not Sync From Source Data</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-</td>
-<td style="height: 125px; width: 96.8466px;" valign="top">
-<p>Load</p>
-</td>
-<td style="height: 125px; width: 98.4091px;" valign="top">
-<p>Off</p>
-</td>
-<td style="height: 125px; width: 384.361px;" valign="top">
-<ul>
-<li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric:</li>
-Get the data from Fabric.&nbsp;</ul>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -437,7 +364,7 @@ This API validates the overridden parameters with the user's permissions on the 
 - Validate the task's BE and LUs with the [systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, a user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if he does not have permissions to run such a task on this environment.
 
-##### Data Versioning Validations
+##### Data Versioning (snapshot) Validations
 
 - Data versioning extract tasks - validate the retention period to verify that it does not exceed the maximum days allowed for the tester.
 
