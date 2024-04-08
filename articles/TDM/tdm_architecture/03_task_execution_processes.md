@@ -5,14 +5,18 @@ This article describes the task execution's steps and the TDM processes of each 
 The Task Execution process consists of the following steps:
 
 1. Creating a task execution request.
-2. Initiating a Batch process on each task's LU and implementing post-execution processes in an asynchronous mode.
-3. Updating the status of the completed processes.
+2. Initiating Batch processes for the task's pre-execution processes.
+3. Initiating Batch processes for the task's entities and/or tables.
+4. Initiating  Batch processes for the task's post-execution processes
+5. Updating the status of the completed processes.
+
+All Batch processes run in an [asynchronous mode](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#batch-process-execution--resiliency). 
 
 A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM Portal, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
 
-A task can include Entities and/or Reference tables, both of which can have post-execution processes. For example, sending an email to a user after a task has been executed.
+A task can include Entities and/or tables. All tasks that run on a Business Entity can have pre-execution and/or post-execution processes based on the BE's definition. For example, sending an email to a user after a task has been executed.
 
-The following diagram displays the task execution process:
+The following diagram displays the task execution process for entities:
 
 ![task execution process](images/tdm_task_execution_processes.png)
 
@@ -30,11 +34,11 @@ The task execution order of the related task's components is as follows:
 
 2. Running of the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE.
 
-The following diagram describes the main TDM Task Execution process:
+The following diagram describes the main TDM Task Execution process on Business Entities and referential tables:
 
 ![task execution job](images/tdmExcuteTask_job_flow.png)
 
-The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each LU or post-execution process and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
+The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each Batch process in asynchronous mode and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
 
 Both jobs must be executed in parallel. 
 
@@ -50,19 +54,21 @@ Both jobs must be executed in parallel.
 
 
 
+[Click here] for more information about task's tables handling.
+
 ## checkMigrateAndUpdateTDMDB Job
 
 This job runs every 10 seconds and checks the execution status of the running process. It selects records from the **task_execution_list** in the TDM DB table where the execution_status is **running**.
 
 The execution status is being checked as follows:
 
-1. Checks the execution status of all related Reference tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
+1. Checks the execution status of all related tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
 2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
 When the process has been completed, the following TDM DB tables are updated by this job:
 
 - **task_execution_list**, updates the execution_status and additional data.
-- [task_execution_entities](02_tdm_database.md#task_execution_entities), populates each entity or Reference table and its status. Sets the **id_type** to **ENTITY** or **REFERENCE** according to the entity or Reference table data type.
+- [task_execution_entities](02_tdm_database.md#task_execution_entities), populates each entity or table and its status. Sets the **id_type** to **ENTITY** or **REFERENCE** according to the entity or table data type.
 - [task_exe_error_detailed](02_tdm_database.md#task_exe_error_detailed), populates the execution errors in Extract tasks. Note that the execution errors of Load tasks are reported to this table by the **PopulateTableErrors** Actor.
 
 A new Global has been added in TDM 8.1: **TDM_BATCH_LIMIT**. This Global enables to limit the number of entities to be populated into the TDM execution tables per task execution. From Fabric 7.2 onwards, it is possible to populate the **LIMIT** parameter of the [batch_details command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_details-batch_id-statusstatus-entitiesentity-1entity-2-affinityaffinity-limitlimit-sort_by_process_timetruefalse) with -1 to get all batch's entities without a limit. Therefore, the TDM_BATCH_LIMIT Global is set by -1 by default, allowing to get all the batch's entities and populate them into the TDM DB during the task execution.
