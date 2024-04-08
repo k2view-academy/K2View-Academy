@@ -102,17 +102,29 @@ The entity list of the root LUs is based on the task's entity selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p><h4>Generate Synthetic Entities</p>
+<p><h4>Rule-based Generate Synthetic Entities</p>
 </td>
 <td width="400pxl">
     <p>Create a list of dummy entities for generating synthetic entities tasks.</p>
 </td>
 <td width="200pxl">
-<p>Generate tasks (Generate task action is selected).</p>    
+<p>Rule-based entites' generation.</p>    
 </td>    
-</tr>    
+</tr>
+<tr>
+<td width="300pxl">
+<p><h4>AI-based Generate Synthetic Entities</p>
+</td>
+<td width="400pxl">
+    <p>The AI generates the required entities with a dummy ID for each generated entity. TDM creates a unique LUI on each generated entity before importing the entity to Fabric. The mapping between the AI generated ID and its Fabric LUI (imported LUI) is kept in <strong>tdm_ai_gen_iid_mapping</strong> TDM DB table.</p>
+</td>
+<td width="200pxl">
+<p>AI-based entites' generation.</p>    
+</td>    
+</tr>      
 </tbody>
 </table>
+
 
 
 
@@ -137,7 +149,7 @@ The entity list of a child LU must include all IDs relating to parent IDs that h
 
 Click for an [execution of hierarchical BE](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities) example.
 
-The generated entity list is based on a JOIN of the [task_execution_entities](02_tdm_database.md#task_execution_entities) and the [TDM relationship tables](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm-relationship-tables):
+The child LU's entity list is based on a JOIN of the [task_execution_entities](02_tdm_database.md#task_execution_entities) and the [TDM relationship tables](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm-relationship-tables):
 
 <p>&nbsp;</p>
 <table width="900pxl">
@@ -156,9 +168,9 @@ The generated entity list is based on a JOIN of the [task_execution_entities](02
 <li style="text-align: left;">Extract + Load + Reserve</li>
 <li style="text-align: left;">Load</li>
 <li style="text-align: left;">Load + Reserve</li>
-<li style="text-align: left;">Generate</li>
-<li style="text-align: left;">Generate + Load</li>
-<li style="text-align: left;">Generate + Load + Reserve</li>
+<li style="text-align: left;">Rule-based Generate</li>
+<li style="text-align: left;">Rule-based Generate + Load</li>
+<li style="text-align: left;">Rule-based Generate + Load + Reserve</li>
 </ul>
 </td>
 <td width="600pxl">
@@ -190,6 +202,7 @@ The generated entity list is based on a JOIN of the [task_execution_entities](02
 </tr>
 </tbody>
 </table>
+
 
 
 
