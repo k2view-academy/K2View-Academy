@@ -34,7 +34,7 @@ The task execution order of the related task's components is as follows:
 
 2. Running of the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE.
 
-The following diagram describes the main TDM Task Execution process on Business Entities and referential tables:
+The following diagram describes the main **TDM task execution process on Business Entities and referential tables**:
 
 ![task execution job](images/tdmExcuteTask_job_flow.png)
 
@@ -54,6 +54,12 @@ Both jobs must be executed in parallel.
 
 
 
+The following diagram describes the main **TDM task execution process on a task with tables only**:
+
+![task execution job](images/task_execution_flow_tables_only.png)
+
+
+
 [Click here] for more information about task's tables handling.
 
 ## checkMigrateAndUpdateTDMDB Job
@@ -62,7 +68,7 @@ This job runs every 10 seconds and checks the execution status of the running pr
 
 The execution status is being checked as follows:
 
-1. Checks the execution status of all related tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
+1. If the task contains selected tables to be processed - it checks the execution status of all related tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
 2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
 When the process has been completed, the following TDM DB tables are updated by this job:
