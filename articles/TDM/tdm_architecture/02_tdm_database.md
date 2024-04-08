@@ -167,7 +167,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_exe_stats</td>
-<td valign="top" width="400pxl">List of <a href="05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job">Tables</a> to be processed by the execution of a given task whether the task includes Business entities and referential data or the task consists of tables only.</td>
+<td valign="top" width="400pxl">List of Tables to be processed by the execution of a given task whether the task includes Business entities and referential data or the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>

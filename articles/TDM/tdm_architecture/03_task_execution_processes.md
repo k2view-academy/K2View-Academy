@@ -60,7 +60,7 @@ The following diagram describes the main **TDM task execution process on a task 
 
 
 
-[Click here] for more information about task's tables handling.
+[Click here](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md) for more information about task's tables handling.
 
 ## checkMigrateAndUpdateTDMDB Job
 

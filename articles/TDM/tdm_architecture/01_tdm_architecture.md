@@ -13,7 +13,7 @@ The K2View TDM has the following components:
 ### TDM Portal
 The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and offers self-service implementation of the following activities:
 - TDM definitions, setting TDM Business Entities, environments, roles and permissions. 
-- Creation and execution of TDM tasks that provide a selected subset of entities or Reference tables to the selected environment. 
+- Creation and execution of TDM tasks that provide a selected subset of entities or tables to the selected environment. 
 
 ### TDM DB
 
@@ -37,11 +37,11 @@ When running a TDM task, data from the selected entities is stored and synchroni
    - Synchronizing data from source systems in order to get the most up-to-date data on entities when required.
   - Version control - TDM enables creating and executing [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks in order to maintain various versions (snapshots) of each selected list of entities. Each version is kept as a separate LUI. For example, saving a version of a customer's list every 2 hours in order to back up the data during functional tests. 
 
-  #### Reference Tables
+  #### Tables
 
-Reference or Operational tables that are copied as they are, can be extracted from the source environment and saved into Fabric. These tables can be later loaded into selected target environments.
+A TDM task can provision selected tables with or without Business Entities. The tables are extracted from the source environment and can stored in Fabric. The tables that are stored in Fabric can be later loaded into selected target environments.
 
-[Click here for more information about TDM Reference Handling](05_tdm_reference_processes.md).
+[Click here for more information about TDM Tables implementation](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md).
 
 #### Fabric ETL Capabilities
 
