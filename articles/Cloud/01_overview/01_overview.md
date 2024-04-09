@@ -8,7 +8,7 @@ The platform offers the flexibility to choose between a fully managed cloud serv
 
 ## Key Objectives and Benefits
 
-K2cloud platform offers advantages for a variety of teams, for different roles and from several points of view.
+K2cloud platform offers advantages for a variety of teams, for different roles and from aspects.
 
 * **Improve Business Productivity**, focus on the business logic implementation.
   * Spin up with a click the right Fabric runtime environment you need.
