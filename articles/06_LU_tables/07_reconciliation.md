@@ -1,15 +1,25 @@
-# Tables Reconciliation
+# Data product (LU) Tables Reconciliation
 
 Tables Reconciliation allows you to analyze changes made to the connected source data platform tables upon which your project’s tables are based on. It provides a valuable solution for two primary scenarios:
 
-1. Building Project Tables: When constructing project tables based on source data platforms, you may intentionally omit certain columns, selecting only those necessary for your data product’s business entity model. However, at a later stage, you might want to revisit the skipped columns and decide to incorporate them into your project’s table.
-2. Project Lifecycle Updates: Throughout the project’s lifecycle, the connected source data platform tables may undergo modifications—such as adding or removing columns. In such cases, you can use Tables Reconciliation to identify discrepancies between the source and project tables, allowing you to take informed actions within the Table Editor.
-
-According to these cases, Tables Reconciliation enables you to easily find mismatches of added, removed and unused columns, within the Table Editor, and take action according to your needs.
-
-
+1. **Building Project Tables**: Implementors may initially exclude certain columns while creating project tables from source data platforms, selecting only those essential for the business entity model of the data product. However, there may later arise a need to add these previously skipped columns to the project’s table. Tables Reconciliation can be used to reveal these columns.
+2. **Project Lifecycle Updates**: As the project progresses, the source data platform tables connected to it might be modified—columns could be added or removed. Tables Reconciliation can be used to spot these differences between the source and project tables, enabling informed decision-making within the Table Editor.
 
 > Note: Tables Reconciliation process is relevant only for those tables which were built based on source data platforms, using the DB Explorer, since introducing this feature - Fabric 8.0.
+
+
+
+
+
+·     Tables Reconciliation provides the capability for analyzing changes made to the connected source data platform tables upon which your project’s tables are based on. It provides a valuable solution for two primary scenarios:
+
+o  Construction of Project Tables: During the initial setup of project tables from source data platforms, implementers may decide to exclude certain columns which are less relevant to the business entity model of the data product. Subsequent requirements may necessitate the incorporation of columns previously omitted. The Tables Reconciliation feature facilitates the identification of these columns for potential addition.
+
+o  Modifications Throughout Project Lifecycle: Over the course of a project, changes may occur in the source data platform tables linked to it, such as the insertion or deletion of columns. Tables Reconciliation can be used to spot these differences between the source and project tables, enabling informed decision-making within the Table Editor.
+
+
+
+
 
 
 
@@ -21,16 +31,17 @@ You can trigger the mismatches finder either in schema level or per table:
 
 #### Schema
 
-Activating the mismatches finder at the schema - the main tables design surface - gives you an overview of mismatches of the LU schema's tables, either if such changes are related to each other or not.
+Activating the mismatches finder at the schema - the main tables design surface - gives you an overview of mismatches of the LU (aka Data Product) schema's tables.
 
 1. At the top schema toolbar look for the ![](../03_logical_units/images/web/reconciliation.svg) Reconciliation action icon. 
 2. Click on the icon to activate the mismatches finder, or click on the arrow aside it and choose one of the 3 options.
+3. As a result, mismatches finding process is starting.
 
 ![](images/schema_recon_bar_select.png)
 
 #### Table
 
-You can activate the mismatches finder on a specific table:
+You can activate the mismatches finder on a specific table, rather than on LU schema:
 
 * At the Schema, choose a table and click to open its Properties panel.
 
@@ -40,6 +51,7 @@ You can activate the mismatches finder on a specific table:
 
 1. Switch to the *Data Source Origin* tab.
 2. look for the ![](../03_logical_units/images/web/reconciliation.svg) Reconciliation action icon. You can click on the icon to activate the mismatches finder, or click on the arrow aside it and choose one of the 3 options.
+3. As a result, mismatches finding process is starting.
 
 
 
@@ -47,33 +59,39 @@ You can activate the mismatches finder on a specific table:
 
 
 
-
-
-1. As a result, mismatches finding process is starting.
-2. Upon mismatches finding process is concluded:  
-   - If mismatches were found, then if acticated within schema the relevant tables headers become purple colored.
-   - If mismatches were not found a notification message appears at the bottom right side of the window. indicating it.
-
-
-
-
-
-> Reconciliation Mismatches Finder Notes:
+> Notes:
 >
-> * The mismatch finding process looks either directly at the source data platforms or at the outcome of the Catalog's Discovery, when it being used.
+> * The mismatch finding process looks either directly at the source data platforms or at the Catalog's Discovery outcome , when it being used.
 > * When mismatch finding process is activated, the Reconciliation action icon becomes to be orange colored, hinting the user that Reconciliation is  turned on and "active".
->   * When in turned on, you can click on the Reconciliation action icon to turn it off, hiding all the mismatches findings.
-> * 
+>   * When it turned on, you can click on the Reconciliation action icon to turn it off, hiding all the mismatches findings.
+>   * When it turned on, you can switch to one of the other mismatch finder options, by clicking on the down arrow and selecting it. You can do it as long as you did not take actions on the finder results. If you already took action, you shall save first your changes or discard them, before able to activate another option.
 
 
 
-turn off...
+## Reconciliation Mismatches Finder Results
 
-how to switch...
+Upon mismatches finding process is concluded:  
 
-### 
+- When mismatches are found, then
+  - if you activated the finder within a schema, the relevant tables headers become purple colored. then you will be able to examine each table changes, as explained below.
+  - If you activated the finder within at table opened from the project tree, you will the changes at the table.
+- If mismatches were not found a notification message appears at the bottom right side of the window. indicating it.
+
+
+
+![](images/recon_schema_results.png)
+
+
 
 ## Table Editor - Reconciliation Mode
+
+Examining a table changes, as found by the Reconciliation Mismatches Finder, you shall open the table for editing. The table editor is opened in *Reconciliation Mode*. 
+
+
+
+![](images/recon_table_editor.png)
+
+
 
 
 
