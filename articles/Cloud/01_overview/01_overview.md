@@ -23,7 +23,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
   * Providing rich observability and monitoring dashboards.
 
 * **Empower Security** with zero trust enablement
-  * Enforce access control & privileges management for any environment.
+  * Enforce access control & privilege management for any environment.
   * Apply end-to-end access governance control and monitoring.
   * Have a Built-in SSO capabilities with federated customer’s IDP.
   * Built on CyberArk, a FedRAMP authorized, Identity Security and Access Management leader.
