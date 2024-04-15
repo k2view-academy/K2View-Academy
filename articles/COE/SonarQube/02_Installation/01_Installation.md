@@ -16,7 +16,7 @@
 
 ## <u>2.2	SonarQube Installation</u>
 
-**1. [Download](https://www.sonarqube.org/downloads/) and install SonarQube-8.5 Community edition or higher version.**
+**1. [Download](https://www.sonarqube.org/downloads/) and install SonarQube-10.4 Community edition or higher version.**
 	
  	e.g., install under C:\sonarQube\sonarqube-<version>
 
@@ -27,17 +27,9 @@
 
    *Note: You must download and config java 11 to execute SonarQube.*
 
-   
-**3. Delete all plugins (jars) under** *C:\sonarQube\sonarqube-\<version>\lib\extensions*   
-	**except** of *sonar-java-plugin-\<version>.jar.*
+**3. Download (right panel) java and xml plugins and copy to** *C:\sonarQube\sonarqube-\<version>\extensions\plugins.*
 
-
-**4. [Download](/articles/COE/SonarQube/02_Installation) and copy the plugin Snapshots**   
-	*java-custom-rules-\<version>* & *sonar-xml-plugin-\<version>*  
-	**to** 
-	*C:\sonarQube\sonarqube-\<version>\extensions\plugins.*
-
-**5. Start SonarQube server:** 
+**4. Start SonarQube server:** 
 	
 	- open C:\sonarQube\sonarqube-<version>\bin\windows-x86-64\ in File Explorer
 	- open cmd (windows) pointing to that path by typing cmd in the Address Bar in File explorer
@@ -45,23 +37,23 @@
 	- wait for server to be up and running, you supposed to see below message:
 		jvm 1    | 2020.12.28 12:41:35 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
 
-**6. Open your browser and type http://localhost:9000/ (9000 is default)**  
+**5. Open your browser and type http://localhost:9000/ (9000 is default)**  
 
 	log-in using default System Administrator credentials (login=admin, password=admin).
 
-**7. Create Quality Profiles.**  
-   Quality Profiles are sets of rules to be applied on project when scanned. 
- 	
-	Follow below steps in order to import k2view customized QPs.  
-   	
-	- [Download](/articles/COE/SonarQube/02_Installation) k2view_profiles.zip 
-	  and extract XML and Java profiles and save the in temporary place.
-   	- Open SonarQube UI, Go to Home Page --> Quality Profiles --> Restore
-	- You will be asked to choose a back up file, choose the files you extracted for XML and Java.  
-   	- After restoring set each profile as Default.
-	
-![image](/articles/COE/SonarQube/images/13_default.png)
- 
+**6. Create Quality Profiles.**  
+   Quality Profiles are sets of rules to be applied on project when scanned.
+   Create QP for each plugin, need to run the steps for each plugin (XML/Java)
+   
+   	- Open SonarQube UI, Go to Home Page --> Quality Profiles --> Create
+   	- Choose "Extend an existing quality profile"
+   	- "Language" choose XML or Java
+	- "Parent" choose "Sonar way (Built-in)", or any default profile used for the project.
+	- "Name" give a uniqe QP name. (later on you will use this name when applying this QP to your project)  
+	- Open your new QP, under "Rule breakdown" click on "Activate More"
+ 	- On the left panel, open tags, search for k2view, mark "k2view" and "k2view-iidf", click on "Bulk Change" and choose "Activate In <QP name>" and Ok.
+  	- Apply this QP on your project under: <Project> -> Project Settings -> Quality Profiles and change Current Qualirt Profile to your newly created QP.
+  
 **Note:**
 	*For any configuration changes go to conf folder and sonar.properties file.
 	Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.*
