@@ -12,7 +12,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
 
 * **Improve Business Productivity**, focus on the business logic implementation.
   * Spin up with a click the most suitable Fabric runtime environment for you.
-  * Have a full development web framework with standard IDE experience, available anywhere, anytime.
+  * Have a full development web framework with a standard IDE experience, available anywhere and anytime.
   * Have an all-in-one platform for developing, testing and debugging.
 
 * **Simplify Operation** with minimal required IT TCO, by:
