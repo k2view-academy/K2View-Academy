@@ -6,7 +6,7 @@ This article explores some of the features and capabilities that are relevant to
 
 Along the Fabric's project lifetime, there is a need to have various Fabric environments, to support the lifecycle of the project's implementation and Fabric released versions. 
 
-K2cloud simplify the operations, so that implementors, QA and DevOps teams benefit from streamlined operations:  Implementors and QA teams can easily spin up within a click any type of environment, without need to wait to DevOps team to prepare it, where DevOps can enjoy from not being involved within so much efforts required from them to make it. Below are few examples of a project lifecycle and environment variations:
+K2cloud simplifies the operations, so that implementors, QA and DevOps teams benefit from streamlined operations: Implementors and QA teams can easily spin up within a click any type of environment, without need to wait to DevOps team to prepare it, where DevOps can enjoy from not being involved within so much efforts required from them to make it. Below are few examples of a project lifecycle and environment variations:
 
 #### Example 1: Project changes
 
