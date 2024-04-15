@@ -1,6 +1,6 @@
 # K2cloud Features & Capabilities
 
-This article explores some of the features and capabilities, relevant to different roles and personas within your organization.
+This article explores some of the features and capabilities that are relevant to different roles and personas within your organization.
 
 ## Business logic teams: Improving productivity
 
