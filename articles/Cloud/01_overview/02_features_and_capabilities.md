@@ -44,7 +44,7 @@ Any of the user can achieve the following tasks, by himself, within a click:
 3. **Pause / Resume / Delete**:
    - Manage application states efficiently.
 
-### Using Kubernetes (K8S) as Infrastructure
+### Using Kubernetes (K8S) as an Infrastructure
 
 - Kubernetes: The de facto standard for enterprise container orchestration.
   - Provides an infrastructure abstraction layer for handling compute, networking, storage, and app health monitoring.
