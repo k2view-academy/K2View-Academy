@@ -36,7 +36,7 @@ The K2cloud platform is beneficial for **DevOps** teams as it provides capabilit
 Any of the user can achieve the following tasks, by himself, within a click:
 
 1. **Creation** (Non-Dev Fabric workloads Example):
-   - Auto provision managed services.
+   - Auto-provision managed services.
    - Configure Fabric and non-managed services appropriately.
    - Apply privileged access control settings and certificates.
    - Clone, build, and deploy project.
