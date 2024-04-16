@@ -2,21 +2,6 @@
 
 All configuration parameters are located in the *common_area_config* section of the config.ini file located in the *Fabric Home directory* of each Fabric Node.
 
-
-### Update Size
-The allowed size of an update message can be configured using the UPDATE_SIZE and SNAPSHOT_SIZE parameters in the *common_area_memory_queues_config* section.
-
-On Kafka:
-```
-# Memory queue size for update - e.g. 10 MB
-UPDATE_SIZE=10000
-```
-
-```
-# Memory queue size for snapshot
-#SNAPSHOT_SIZE=100
-```
-
 ### Update Distribution
 Fabric allows users to use server's RAM to distribute messages (in a single-node configuration only) in order to avoid the need for Kafka configurations. It is very important to note that in that case, overall data persistency cannot be ensured.
 
