@@ -14,7 +14,7 @@ K2cloud simplifies the operations, so that implementors, QA and DevOps teams ben
 
 1. **QA**: Fabric 7.2, single node, Postgres, *without* Studio. 
    - Upon approval, Dev1 creates a project version tag 5.
-2. **Dev2**: works on the next project's features: Fabric 7.2, single node, Studio, Postgres, *project branch 123*
+2. **Dev2** works on the next project's features: Fabric 7.2, single node, Studio, Postgres, *project branch 123*
 3. **Staging**: Fabric *cluster 2 nodes*, Fabric 7.2, *managed Postgres*, without Studio, *project tag 5*
 4. **Production**: Fabric cluster 3 *initial* nodes with *scale* up to 6, *dedicated site*, *extended CPU*, Fabric 7.2, managed Postgres, without Studio, Tag 4, *Environment E3*
 
