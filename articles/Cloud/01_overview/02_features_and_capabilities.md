@@ -29,7 +29,7 @@ Below are a few examples of a project lifecycle and environment variations:
 
 ## DevOps Teams: Simplify Operation
 
-K2cloud platform is beneficial for **DevOps** teams, as it provides capabilities that aimed to simplify Fabric environments operation and maintenance. 
+The K2cloud platform is beneficial for **DevOps** teams as it provides capabilities that aim to simplify Fabric environments' operation and maintenance. 
 
 ### Orchestrating End-to-End Processes
 
