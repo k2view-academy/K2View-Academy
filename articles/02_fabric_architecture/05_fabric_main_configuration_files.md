@@ -283,7 +283,6 @@ Fabric's main configuration file which holds different sections of parameters wh
 <ul>
 <li>common_area_config</li>
 <li>common_area_pubsub</li>
-<li>common_area_memory_queues_config&nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
 <td style="width: 371px;" valign="top">
