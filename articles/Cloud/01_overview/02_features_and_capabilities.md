@@ -77,11 +77,11 @@ The access to either k2cloud platform UI or the spaces, is done according to pri
 
 * Enables multi-factor authentication, using various authenticators, while applying different policies by profiles. 
 
-* Enables SSO Integration
+* Enables SSO Integration.
 
 * Each space – Fabric workload - is reparented by its own web-app at IDP, with associated permission roles. Users can access spaces according to matched roles.
 
-* Access monitoring and reports
+* Access monitoring and reports.
 
 ### Separation
 
