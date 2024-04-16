@@ -67,15 +67,15 @@ Any of the user can achieve the following tasks, by himself, within a click:
 
 
 
-## Security teams: Empowering Security
+## Security Teams: Empowering Security
 
-### Securing users’ access
+### Securing Users’ Access
 
-The access to either k2cloud platform UI or to the spaces, is done according to privileges.
+The access to either k2cloud platform UI or the spaces, is done according to privileges.
 
-* Front IDP – CyberArk, FedRAMP Identity and access management leader
+* Front IDP – CyberArk, FedRAMP Identity and access management leader.
 
-* Enables multi factor authentication, using various authenticators, while applying different policies by profiles. 
+* Enables multi-factor authentication, using various authenticators, while applying different policies by profiles. 
 
 * Enables SSO Integration
 
