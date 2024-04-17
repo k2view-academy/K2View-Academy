@@ -169,7 +169,7 @@
 		},
 		{
 			"group display name": "Data Privacy Management (DPM)",
-			"group icon": "images/cloudManagement.png",
+			"group icon": "images/images/icon-4.png",
 			"visible in main": true,
 			"topics": [
 				{
