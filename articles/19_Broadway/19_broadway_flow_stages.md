@@ -61,13 +61,15 @@ To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) > **Else**.
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 
+### Elseif Stage Condition
+
 Starting V8.0 you can define **elseif** conditions. When a Stage is split into several stages on the same dependency level, you can define the **elseif** logic by adding a Stage condition and marking the same stage as **else**. The conditions of all Stages of the same level will continue to be evaluated top -> down, by the following rules:
 
 * Start from evaluation of all Stages with condition only (and no **else**).
 * If none of them is true, evaluate all Stages with **else** and a condition, in a top -> down order.
 * If none of them is true, execute the **else** Stage.
 
-In the below example, the order of the Stage 
+In the below example, the order of the Stage execution is: Stage 2 -> Stage 5 -> Stage 3 -> Stage 4.
 
 <img src="images/99_19_cond_elseif.png" alt="image" style="zoom:80%;" />
 
