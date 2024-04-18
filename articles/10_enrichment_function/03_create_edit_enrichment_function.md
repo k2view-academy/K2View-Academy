@@ -36,6 +36,10 @@ Do the following:
 6. To remove an Enrichment function, click <img src="C:\K2View-Academy\articles\07_table_population\images\web\trash.PNG" style="zoom:67%;" /> icon next to the Enrichment function definition in the Table Properties.
 7. **Save** the LU Table (File > Save or CTRL-S). 
 
+Note that the Enrichments tab is hidden by default. To show it in the Studio, open the **Settings** and click the **Show Enrichments List** option. 
+
+![settings](images/10_03_settings.png)
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/01_enrichment_function_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
