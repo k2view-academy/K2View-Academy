@@ -2,7 +2,7 @@
 
 ### What Are Sync Method Levels?
 
-[Sync properties](/articles/14_sync_LU_instance/04_sync_methods.md) can be defined on [LU schema,](/articles/03_logical_units/03_LU_schema_window.md) [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. By default, LU tables, Table Population objects and Enrichment functions inherit the sync properties defined for the LU schema.\
+[Sync properties](/articles/14_sync_LU_instance/04_sync_methods.md) can be defined on [LU schema,](/articles/03_logical_units/03_LU_schema_window.md) [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. By default, LU tables, Table Population objects and Enrichment functions inherit the sync properties defined for the LU schema.
 The sync properties of an LU schema can be overridden, as follows:
 * Setting sync properties on the LU Table. By default, the related Table Population objects and the Enrichment functions attached to the LU table inherit the sync properties of the LU table.
 * Setting sync properties on each Table Population object. 
@@ -33,7 +33,7 @@ You may need to override the LU schema's sync properties on LU tables or Table P
 <li>All populations in the LU table require the same sync method.</li>
 <li>The LU table has an Enrichment function which requires a specific sync method.</li>
 </ul>
-<p>For example, an Eenrichment function of an LU table initiates a purging (cleaning) process on a DB table to remove old data from the DB table. Since the Enrichment function needs to be executed frequently, set a specific sync method on the related LU table.</p>
+<p>For example, an Enrichment function of an LU table initiates a purging (cleaning) process on a DB table to remove old data from the DB table. Since the Enrichment function needs to be executed frequently, set a specific sync method on the related LU table.</p>
 </td>
 <td width="386">
 <p>The table has several populations where each population requires a different sync method.</p>
