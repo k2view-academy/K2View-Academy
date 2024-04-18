@@ -33,7 +33,7 @@ You may need to override the LU schema's sync properties on LU tables or Table P
 <li>All populations in the LU table require the same sync method.</li>
 <li>The LU table has an Enrichment function which requires a specific sync method.</li>
 </ul>
-<p>For example, an Eenrichment function of an LU table initiates a purging (cleaning) process on a DB table to remove old data from the DB table. Since the Enrichment function needs to be executed frequently, set a specific sync method on the related LU table.</p>
+<p>For example, an Enrichment function of an LU table initiates a purging (cleaning) process on a DB table to remove old data from the DB table. Since the Enrichment function needs to be executed frequently, set a specific sync method on the related LU table.</p>
 </td>
 <td width="386">
 <p>The table has several populations where each population requires a different sync method.</p>
