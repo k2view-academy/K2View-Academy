@@ -2,7 +2,7 @@
 
 ### What Are Sync Method Levels?
 
-[Sync properties](/articles/14_sync_LU_instance/04_sync_methods.md) can be defined on [LU schema,](/articles/03_logical_units/03_LU_schema_window.md) [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. By default, LU tables, Table Population objects and Enrichment functions inherit the sync properties defined for the LU schema.\
+[Sync properties](/articles/14_sync_LU_instance/04_sync_methods.md) can be defined on [LU schema,](/articles/03_logical_units/03_LU_schema_window.md) [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. By default, LU tables, Table Population objects and Enrichment functions inherit the sync properties defined for the LU schema.
 The sync properties of an LU schema can be overridden, as follows:
 * Setting sync properties on the LU Table. By default, the related Table Population objects and the Enrichment functions attached to the LU table inherit the sync properties of the LU table.
 * Setting sync properties on each Table Population object. 
