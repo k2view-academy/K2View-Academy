@@ -65,7 +65,7 @@ Note that although any Actor can be used as a condition, a **JavaScript** Actor 
 
 Starting from V8.0, you can define **elseif** conditions. When a Stage is split into several Stages on the same dependency level, you can define the **elseif** logic by adding a Stage Condition and marking the same stage as **else**. The conditions of all Stages of the same level will continue to be evaluated top -> down, by the following rules:
 
-* Start from evaluation of all Stages with condition only (and no **else**).
+* Start by evaluation of all Stages with a condition only (and without **else**).
 * If none of them is true, evaluate all Stages with **else** and a condition, in a top -> down order.
 * If none of them is true, execute the **else** Stage.
 
