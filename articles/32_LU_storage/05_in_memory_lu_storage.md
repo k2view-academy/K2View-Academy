@@ -8,7 +8,7 @@ One of the optimizations to the Fabric storage mechanism is the ability to save 
 
 The in-memory storage mode is best to be used in a project where an average LUI sync time is considerably low (comparing to the time of ATTACH/DETACH), while the concurrency level of the calls to Fabric is extremely high.
 
-The decision whether to move to an in-memory storage mode depends also on the operational requirements such as: are there multiple CPU, is there enough memory for LUI storage, etc.
+The decision whether to move to an in-memory storage mode depends also on the operational requirements such as number of CPUs, memory capacity enough for LUI storage, etc.
 
 ### Configuration
 
