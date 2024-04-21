@@ -50,31 +50,31 @@ Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:
 
 ### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in grey balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
 
-<img src="images/99_25_blue_balloons.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_25_blue_balloons.png" alt="image"  />
 
-To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
+To view a step's data, click the balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
 
 ![](images/flow_debug_display_data.png)
 
 ### Updating a Schema
 
-The Broadway Debug process *learns* the Schema of an Actor's arguments and can suggest how to update it based on a parameter's value.
+The Broadway Debug process *learns* the Schema of an Actor's arguments and can suggest how to update it based on a parameter's value. 
 
 1. When debugging an Actor, the parameter port turns red indicating that the Schema needs to be updated:
 
-   <img src="images/debug_update_schema.png" style="zoom:80%;" />
+   <img src="images/debug_update_schema.png"  />
 
 2. Click the **parameter's port** (red) to open the Compare Schema window.
 
-  <img src="images/compare_schema.png" style="zoom:67%;" />
+  <img src="images/compare_schema.png"  />
 
 3. Click **Update** to update the output parameter's Schema. 
 
-<img src="images/debug_update_schema_1.png" style="zoom:80%;" />
+<img src="images/debug_update_schema_1.png"  />
 
-Note that the Update Schema option can also be applied on complex structures.
+
 
 
 
