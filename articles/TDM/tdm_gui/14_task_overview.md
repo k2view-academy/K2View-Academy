@@ -1,192 +1,56 @@
 # TDM Task Overview
 
-Data provisioning and entity reservation are implemented by creating and executing TDM tasks. 
+Data generation or extract, provisioning and entity reservation are implemented by creating and executing TDM tasks. 
 
-A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the task action (type) and subset of processed entities, the source and target environments and additional information. For example, create a task to copy 5 customers with small and medium business plans from Production into the UAT1 target environment.
+A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the data source, task actions,  subset of processed entities and/or tables,  the target environments and additional information. For example, create a task to extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
 
-The actual data provisioning and/or entity reservation is performed by the task execution, where each task can be executed multiple times.
+The actual data processing and/or entity reservation is performed by the task execution, where each task can be executed multiple times.
 
-## Task Actions (types)
+## Task Actions
 
 The following task actions are supported by TDM:
 
-- **Extract** - extracts the selected entities and/or Reference tables from the selected source environment. The data can be saved in Fabric for a later use.
-- **Generate** - generates synthetic entities. The entities can be saved in Fabric for a later use.
-- **Load** - provisions  the selected entities and/or Reference tables to the selected target environment.
+- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test data store (Fabric) for a later use.
+- **Generate** - generates synthetic entities.  Either one of the entities generation methods can be applied: rule-based data generation or AI-based data generation. 
+- **Load** - provisions  the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run a AI-based training on a subset of entities. 
 - **Delete** - deletes the selected entities from the target environment.
 - **Reserve** - reserves the selected entities in the target environment.
 
-A TDM task can have a combination of multiple task actions.
-
-The following table describes the valid combinations of task actions in a TDM task: 
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td width="300pxl">
-<p><strong>Combination</strong></p>
-</td>
-<td width="600pxl">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Extract</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Extracts the data from the source environment into the TDM warehouse.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Extract + Load</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Refreshes all data from the source and provisions (loads) the data to the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Extract + Load + Reserve</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Extracts the data from the source environment.</li>
-<li>Provisions (loads) the data to the target environment and marks the entities as reserved.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Extract + Load + Delete</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Extracts the data from the source environment.</li>
-<li>Deletes and reprovisions (reloads) the data to the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Extract + Load + Delete + Reserve</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Extracts the data from the source environment.</li>
-<li>Deletes and reprovisions (reloads) it to the target environment.</li>
-<li>Marks the entities as reserved.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<p>Generate</p>
-</td>
-<td>
-<ul>
-<li>Generate synthetic entities</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<p>Generate + Load</p>
-</td>
-<td>
-<ul>
-<li>Generates synthetic entities.</li>
-<li>Provisions (loads) the generated entities to the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<p>Generate + Load + Reserve</p>
-</td>
-<td>
-<ul>
-<li>Generates synthetic entities.</li>
-<li>Provisions (loads) the generated entities to the target environment.</li>
-<li>Marks the entities as reserved.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Load</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Load + Reserve</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Gets the data from the TDM warehouse and provisions it to the target environment.</li>
-<li>Marks the provisioned entities as reserved.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Load + Delete</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Gets the data from the TDM warehouse.</li>
-<li>Deletes and reprovisions (reloads) it to the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Load + Delete + Reserve</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Gets the data from the TDM warehouse.</li>
-<li>Deletes and reprovisions (reloads) it to the target environment.</li>
-<li>Marks the entities as reserved.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Delete</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Deletes (cleans) the entities from the target environment.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td width="300pxl">
-<p>Reserve</p>
-</td>
-<td width="600pxl">
-<ul>
-<li>Reserves entities in the target environment.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 
 
+## Task Architectural Widget
+
+TDM 9.0 redesigns of the task creation flow in order to simplify the task creation or edit and make it more intuitive. A **graphic architectural widget** guides the user on the task’s related component:
+
+- Source – defines the data source of task’s entities and/or tables. The data source can be either a source environment or a synthetic data generation.
+
+- Subset – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
+
+- TDM data store – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
+
+- Target – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
+   
+
+**The task actions are set by components that are selected and set by the user**.  The Test data store is set for all task actions.
+
+Examples: 
+
+- The user wishes to extract entities from Production and save them in the TDM data store (Fabric) for a later use. The user needs to select the Source component:
+
+  
+
+  ![extract task widget](images/task_widget_extract_only.png)
+
+- The user wishes to extract entities from Production and load them into the UAT environment. The user needs to select both - Source and Target components:
+
+  ![load task widget](images/task_widget_load.png)
+
+
+
+The user can click on each one of the components to open its form and update its settings.   The task also has Save, Save & execute, and Advanced settings icons.
 
 ## Who Can Create a Task?
+
 -  Admin users.
 -  Environment owners can create a TDM task for their environment.
 -  Testers who can create a TDM task for the environments they are attached to by a [TDM Environment Permission Set](10_environment_roles_tab.md):
@@ -198,22 +62,9 @@ The following table describes the valid combinations of task actions in a TDM ta
 ## TDM Tasks List Window
 
 The TDM Task List displays, by default, the list of all Active tasks in the TDM. 
-It displays the following settings on each task. These settings can also be used to filter the displayed tasks:
+It displays a list of settings on each task. These settings can also be used to filter the displayed tasks.
 
-- Task ID
-- Task Title - task name
-- Task's source and target environments
-- BE name
-- Task Action - Extract, Generate, Load, Delete or Reserve
-- Task's Operation mode. Additional information about the task when multiple task actions are set in the task. For example: Delete and load entity.
-- Reserve Ind - indicates if the task [reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities.
-- [Data Versioning](15_data_flux_task.md) - true/false
-- Data Type - Entities and/or Reference 
-- Selection Method - selection criteria for entities
-- Number of processed entities
-- General parameters such as created by user and update date. 
-
-The following screenshot shows an example of the TDM Task List. 
+The following screenshot shows an example of the Tasks window: 
 
   ![tasks list](images/tdm_task_list_window.png)
 
@@ -223,11 +74,11 @@ The following screenshot shows an example of the TDM Task List.
 
 2. To display additional fields, click the fields.
 
-3. To remove a field from the display, click the field:
-
-   ![show hide columms](images/task_list_show_hide_columns.png)
+3. To remove a field from the display, click the field.
 
 4. To find a field, populate the **Search** bar in order to filter the tasks by the searched value.
+
+5. If the task has a description, an information icon is displayed next to the task name. Hover the information icon to view the task description.
 
 The TDM Portal displays a list of icons next to each task record:
 
@@ -235,51 +86,49 @@ The TDM Portal displays a list of icons next to each task record:
 - ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task temporarily to On Hold.
 - ![task icon](images/save_as_icon.png) Save As, copy the task into a new task.
 - ![task icon](images/task_execution_history_icon.png)[Task Execution History](27_task_execution_history.md), display the execution history of the selected task.
+-  ![delete icon](images/delete_task_icon.png)Delete the task.
 
 
 
 ## How Do I Create or Edit a Task?
 
 1. Click **New Task** in the right corner of the Tasks List window.
-2. To open a selected task, click the **Task Title** (task name) of the task.
+2. To open a selected task, click the **Task Name** of the task.
 3. Click the **Back** of **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
 Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
 
-## Task Tabs 
+## Task Components
 
-### Mandatory Tabs
+### Task Name
 
-#### 1. [General](14a_task_general_tab.md)
+The Task Name form is opened when creating a new task or opening a task. The task name and task description are optional. If no task name is set, a default task name is generated with some basic information about the task.
 
-Main task's information: 
+You can exist each form, including the Task Name, by clicking any task component. You can re-open the Task Name form by clicking the Task Name in upper the left corner of the window.
 
-- Task title (name)
-- Task action (s)
-- Business Entity
-- Environment(s)
+![task name](images/task_name_form.png)
 
-#### 2. Additional Execution Parameters
+### Task Architectural Widget
 
-This tab defines various execution parameters such as Data Type (Entities and/or Reference tables), Data Versioning, Reservation Period, etc... The list of parameters depends on the selected task actions and the user's permissions.
+Each task must include the [Test data store] (Fabric) and at least one environment: [Source] or [Target]. A task can include Source only, Target only, or both environments.
 
-#### 3. Requested Entities
+Click on each one of the components to open and update its form.
 
-Entities' selection method. The Requested Entities tab is opened if the task processes entities.
+### Advanced Settings
 
-#### 4. [Task Scheduling](22_task_execution_timing_tab.md) 
+The advanced settings include **optional** task settings:
 
-Execution by request or Scheduled Execution.
+- [Pre and post execution processes]
+- [Task variables](23_task_globals_tab.md)
+- [Scheduler](22_task_execution_timing_tab.md)
 
-### Optional Tabs
+### Save or Save & Execute
 
-#### [Task Variables](23_task_globals_tab.md)
+The Save icon saves the task in the TDM DB.
 
-Set the value of variables on the task level.
+The Save & execute icon saves the task in the TDM DB and executes the task.
 
-#### [Reference](24_task_reference_tab.md)
 
-Select reference table(s) if the task includes reference tables.
 
  [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_general_tab.md)
 
