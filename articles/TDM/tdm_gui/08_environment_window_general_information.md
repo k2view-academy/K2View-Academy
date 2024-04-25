@@ -61,7 +61,7 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 This checkbox, added by TDM 8.1, is displayed on any environment that can be used as a source environment (the environment type is Source or Both). When checked, this checkbox indicates that the environment contains sensitive data and it should therefore be masked before it is saved into Fabric. 
 
-Note: It is recommended to **clear** the Mask Sensitive Data checkbox in the **Synthetic** environment in order to ensure that the data generation parameters, that are set by the user in the [data generation task](16a_generate_task.md) and that refer to PII fields, are not overridden by the Masking Actors in the LU populations.
+Note: It is recommended to **clear** the Mask Sensitive Data checkbox in the **Synthetic** and **AI** environments in order to ensure that the data generation parameters, that are set by the user in the [data generation task](16a_generate_task.md) and that refer to PII fields, are not overridden by the Masking Actors in the LU populations.
 
 ## Environment Owners
 
