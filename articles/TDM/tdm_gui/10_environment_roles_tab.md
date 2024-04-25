@@ -88,7 +88,7 @@ Check the **All Users** checkbox.
 
 1. First priority: Assign a user ID to the TDM environment permission set.
 2. Second priority: Assign a user group to the TDM environment permission set. All the group's users can work with the TDM environment based on the permissions of the TDM environment permission set assigned to their group.
-3. Third priority: Assign a genertic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
+3. Third priority: Assign a generic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
 
 **Notes**
 
@@ -120,23 +120,23 @@ Enables the user to check the Delete [task action](14_task_overview.md#task-acti
 
 ##### Refresh All Data from Source
 
-Ask to sync the entities from the source when executing [extract](16_extract_task.md#request-parameters) or [load](19_load_task_request_parameters_regular_mode.md#override-sync-mode) tasks. 
+Ask to sync the entities from the source to get a fresh data in the task. 
 
-##### Refresh Reference Data
+##### Process Tables
 
-Create TDM tasks to extract or load [Reference tables](24_task_reference_tab.md).
+Create TDM tasks to extract or load [tables].
 
 #####  Task Scheduling 
 
-Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to run an automatic periodic execution of the task based on the scheduling parameters.
+Add [scheduling settings] in the TDM task to run an automatic periodic execution of the task based on the scheduling parameters.
 
 ##### Replace Sequences
 
-[Replace the sequences](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-sequence-creation-flows) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
+[Replace the sequences (IDs)](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-sequence-creation-flows) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
 
 ##### Data Versioning 
 
-Create [Data Versioning](15_data_flux_task.md) tasks.
+Create a [snapshot (data Versioning)] in the task.
 
 #### Max Number of Reserved Entities on Env
 
@@ -376,6 +376,14 @@ The maximum number of entities that the user can [reserve on the environment](/a
 </tbody>
 </table>
 
+
+## AI Environment - Permission Set
+
+The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task] and as a source environment for an [AI-based generation task]. Therefore the AI environment type must be **Both**.
+
+The **Read** permission on the AI environment grants a permission for the **AI-based entities generation** task.
+
+The  **Write** permission on the AI environment grants a permission for **AI training** task. 
 
 
 
