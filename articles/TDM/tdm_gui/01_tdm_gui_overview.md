@@ -40,7 +40,11 @@ The following tabs are displayed when selecting the TDM option in the applicatio
 
 ​                             
 
-To move between sections, click the required tab.
+To move between sections, click the required tab. 
+
+The Settings tab contains the following sub tabs:
+
+![tdm navigation](images/tdm_gui_settings_tab.png)
 
 ## TDM Breadcrumbs 
 
@@ -48,7 +52,7 @@ The TDM Portal uses breadcrumbs as a graphical control element to aid navigation
 
 ![breadcrumbs](images/breadcrumbs_example.png)
 
-- Click **Task Execution Summary - lo111s** to display the executions list of **lo111** task. 
+- Click **Task Execution Summary - extract all customers** to display the executions list of **extract all customers** task. 
 - Click **Tasks** to display all TDM tasks.
 
 ### TDM Delete
