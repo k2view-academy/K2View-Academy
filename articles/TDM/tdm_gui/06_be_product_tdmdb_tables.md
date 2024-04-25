@@ -38,13 +38,13 @@ Adding an LU to a BE creates a new record in this table. Each record is marked w
 - **LU relationship in the BE** - lu_parent_id and lu_parent_name columns holding the ID and name of the [parent LU](/articles/TDM/tdm_overview/03_business_entity_overview.md#building-an-lu-hierarchy-in-a-be) if it exists. 
 - **System (product) information** - product_id and product_name columns. The product_id links to the **Products** table.  The product_id and product_name columns are set to -1 and NULL default values when the record is created. System Information settings are defined when an LU is attached to a system. If the LU is deleted from a system, the system information's columns return to their default values.
 
-### TDM_BE_Post_Exe_Process
+### Tdm_Be_Exe_Process
 
-This table holds a list of [Post-Execution Processes](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) attached to each BE. A separate record is created for each post-execution process. Each record is marked with a unique **process_id** sequence which is the table's PK.
+This table holds a list of [Pre and Post Execution Processes](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) attached to each BE. A separate record is created for each pre or post execution process. Each record is marked with a unique **process_id** sequence.
 
 The following information is stored in this table:
 
-- **Process Information** -  process_id, process_name, process_description and execution_order columns.
+- **Process Information** -  process_id, process_name, process_type (can be pre or post), process_description and execution_order columns.
 - **BE information** -  be_id column that links to the **business_entities** table.
 
 
