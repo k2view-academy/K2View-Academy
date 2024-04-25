@@ -1,7 +1,19 @@
 # Creating a New Project
 
 ### What Is a Fabric Project?
-A Fabric project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb) structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the project must be defined in the Fabric Studio and can then be added to GIT <studio>or SVN</studio> version control. 
+A Fabric project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb) structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. 
+
+<web> 
+
+To do so, the project must be defined in the Fabric Studio and can then be added to GIT version control. 
+
+</web>
+
+<studio> 
+
+To do so, the project must be defined in the Fabric Studio and can then be added to GIT or SVN version control. 
+
+</studio>
 
 [Click for more information about Fabric Studio UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
