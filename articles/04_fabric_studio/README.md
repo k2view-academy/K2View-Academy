@@ -2,8 +2,8 @@
 <ul>
 
 <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li>
-<li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
-<studio><li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</li></studio>
+<li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</a></li>
+<studio><li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/04_user_preferences.md">User Preferences</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/05_creating_a_new_project.md">Creating a New Project</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md">Adding Fabric Projects to Version Control</a></li></studio>
@@ -17,7 +17,7 @@
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
 <studio><li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li></studio>
 <web><li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li></web>
-<web><li><a href="/articles/04_fabric_studio/26_web_basic_editing.md">Basic Code Editing</li></web>
+<web><li><a href="/articles/04_fabric_studio/26_web_basic_editing.md">Basic Code Editing</a></li></web>
 <web><li><a href="/articles//04_fabric_studio/24_web_debug.md">Code Debugging</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles//04_fabric_studio/25_web_data_explorer.md">DB Interface Explorer</a></li></web>
