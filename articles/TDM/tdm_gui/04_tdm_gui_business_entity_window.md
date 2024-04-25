@@ -16,7 +16,7 @@ The Business Entity window displays information about a selected BE. It has 3 ma
 
 - General Information, which consists of the BE Name and Description fields.
 - Logical Units tab.
-- Post Execution Processes tab.
+- Pre and Post Execution Processes tabs.
 
 The following is an example of a Customer Business Entity window:
 
@@ -62,34 +62,37 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 
 
-### Post Execution Processes Tab
+### Pre and Post Execution Processes Tabs
 
-This tab enables adding post-execution processes that must run at the end of the task's execution, after all the related LUs have been executed. For example, sending an email to the tester to notify that the execution of a task has ended. 
+These tabs enable adding pre and post execution processes. The pre-execution processes run at the beginning of the task's execution , before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
 
-Post-execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a post-execution process and a BE is many-to-many. That is, a BE can have several post-execution processes, and a post-execution process can be attached to multiple BEs. 
+Examples:
 
-The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each post-execution process attached to the task's BE. The execution order is set according to the execution order defined in the BE.
+- Running a cleanup flow before executing the task's LUs. 
+- Sending an email to the tester to notify that the execution of a task has ended. 
 
-The post-execution processes are optional: a BE can be defined without any post-execution processes.
+The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many. That is, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs.  Note that a given flow can be attached as both - pre and post execution process - to a BE.
 
-Note that the post-execution processes must be populated in [PostProcessList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postprocesslist) MTable object to be displayed by the BE window.
+The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process attached to the task. The execution order is set according to the execution order defined in the BE.
 
-#### How Do I Add a Post-Execution Process to a BE? 
+The pre and post execution processes are optional: a BE can be defined without any post-execution processes.
 
-1. Open the **Post Execution Processes** tab and click **Add Post Execution Processes** to open the **Post Execution Process** dialog box.  
+Note that the post-execution processes must be populated in [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed by the BE window.
 
-![be_Example](images/be_post_execution_processes_window.png)
+#### How Do I Add a Pre or Post Execution Process to a BE? 
 
-2. Click the **Process Name** and select a post-execution process from the drop-down list that holds all post-execution processes deployed to Fabric.
-3. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several post-execution processes that are executed simultaneously.
+1. Open the **Pre Execution Processes** or **Post Execution Processes** tabs and click  **Add Pre Execution Processes**  or **Add Post Execution Processes** to open a dialog box.  
+
+2. Click the **Process Name** and select a flow from the drop-down list that holds all pre/post execution processes deployed to Fabric.
+3. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several processes that are executed simultaneously.
 4. Populate the **Description** field (optional).
-5. Click **ADD POST EXECUTION PROCESS** to add the post-execution process to the BE.
-6. Repeat steps 1-5 to add additional post-execution processes, if needed.
+5. Click **ADD PRE/POST EXECUTION PROCESS** to add the process to the BE.
+6. Repeat steps 1-5 to add additional pre/post execution processes, if needed.
 
   
 
-Click [here](06_be_product_tdmdb_tables.md) for more information about the BE TDM DB tables and about the BE and the post-execution processes relationship.
- 
+Click [here](06_be_product_tdmdb_tables.md) for more information about the BE TDM DB tables and about the BE and the pre/post-execution processes relationship.
+
 
   [![Previous](/articles/images/Previous.png)](03_tdm_gui_data_centers_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_gui_product_window.md)
 
