@@ -22,14 +22,14 @@ The following task actions are supported by TDM:
 
 TDM 9.0 redesigns of the task creation flow in order to simplify the task creation or edit and make it more intuitive. A **graphic architectural widget** guides the user on the task’s related component:
 
-- Source – defines the data source of task’s entities and/or tables. The data source can be either a source environment or a synthetic data generation.
+- [Source](14a_task_source_component.md) – defines the data source of task’s entities and/or tables. The data source can be either a source environment or a synthetic data generation.
 
 - Subset – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
 
 - TDM data store – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
 
 - Target – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
-   
+  
 
 **The task actions are set by components that are selected and set by the user**.  The Test data store is set for all task actions.
 
@@ -47,7 +47,7 @@ Examples:
 
 
 
-The user can click on each one of the components to open its form and update its settings.   The task also has Save, Save & execute, and Advanced settings icons.
+The user can click on each one of the components to open its form and update its settings.  The task also has Save, Save & execute, and Advanced settings icons.
 
 ## Who Can Create a Task?
 
@@ -110,7 +110,7 @@ You can exist each form, including the Task Name, by clicking any task component
 
 ### Task Architectural Widget
 
-Each task must include the [Test data store] (Fabric) and at least one environment: [Source] or [Target]. A task can include Source only, Target only, or both environments.
+Each task must include the [Test data store] (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target]. A task can include Source only, Target only, or both environments.
 
 Click on each one of the components to open and update its form.
 
