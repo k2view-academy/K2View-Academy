@@ -12,10 +12,10 @@ The following information needs to be set for Entities & Referential data:
 
 - **Policy for fetching data** - this setting defines if the data needs to be extracted from the source environment or can be retrieved from the Test data store (Fabric). The following options are available:
 
-  1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. When this option is selected, new entities will be synced from the source environments. Entities that are already stored in the  Test data store will be taken from the Test data store, unless the sync policy, defined in the LU implementation, defines that they need to be synced from the source environment. 
+  1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. New entities will be synced from the source environments when this option is selected. Entities already stored in the  Test data store will be taken from the Test data store, unless the sync policy, defined in the LU implementation, defines that they need to be synced from the source environment. 
   2. **All data from [source environment name]** - always sync the data from the source environment. 
-  3. **Available [source environment name] data in the Test data store** - get the data from the Test data store if exists (extracted from the source environment by previous task executions). Do not access directly the source environment.  
-  4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test data store  by previous task executions. Do not access directly the source environment.  
+  3. **Available [source environment name] data in the Test data store** - get the data from the Test data store if exists (extracted from the source environment by previous task executions). The task execution does not access the source environment directly.  
+  4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test data store  by previous task executions. The task execution does not access the source environment directly.  
 
   Notes:
 
@@ -24,7 +24,7 @@ The following information needs to be set for Entities & Referential data:
 
 
 
-​		Click [here](/articles/14_sync_LU_instance/02_sync_modes.md) for more information about the task's data sync modes. 
+​		Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's data sync modes. 
 
 
 
