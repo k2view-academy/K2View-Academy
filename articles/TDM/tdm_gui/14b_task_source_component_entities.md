@@ -12,22 +12,15 @@ The following information needs to be set for Entities & Referential data:
 
 - **Policy for fetching data** - this setting defines if the data needs to be extracted from the source environment or can be retrieved from the Test data store (Fabric). The following options are available:
 
-  1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. New entities will be synced from the source environments when this option is selected. Entities already stored in the  Test data store will be taken from the Test data store, unless the sync policy, defined in the LU implementation, defines that they need to be synced from the source environment. 
-  2. **All data from [source environment name]** - always sync the data from the source environment. 
-  3. **Available [source environment name] data in the Test data store** - get the data from the Test data store if exists (extracted from the source environment by previous task executions). The task execution does not access the source environment directly.  
-  4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test data store  by previous task executions. The task execution does not access the source environment directly.  
+1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. New entities will be synced from the source environments when this option is selected. Entities already stored in the  Test data store will be taken from the Test data store, unless the sync policy, defined in the LU implementation, defines that they need to be synced from the source environment. 
+2. **All data from [source environment name]** - always sync the data from the source environment. 
+3. **Available [source environment name] data in the Test data store** - get the data from the Test data store if exists (extracted from the source environment by previous task executions). The task execution does not access the source environment directly.  
+4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test data store  by previous task executions. The task execution does not access the source environment directly.  
 
   Notes:
 
-<<<<<<< HEAD
   - Options 1 and 2 are not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
   - Option 2 (always sync) is available only for [permitted users](10_environment_roles_tab.md#refresh-all-data-from-source).
-=======
-  - **Options 1 and 2** are **not available** if the source environment is set with **Do not Sync** (08_environment_window_general_information.md#do-not-sync) option.
-  - Option 2 (always sync) is available only for permitted users (10_environment_roles_tab.md#refresh-all-data-from-source).
->>>>>>> 5e419025983ab2d7e6de0d3a300cbee5e0868cce
-
-
 
 ​		Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's data sync modes. 
 
