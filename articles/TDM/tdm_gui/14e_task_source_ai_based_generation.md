@@ -1,6 +1,6 @@
-# Task - Source Component - Rule-Based Generation
+# Task - Source Component - AI-Based Generation
 
-The TDM supports 2 modes of synthetic entities generation:
+The TDM supports 2 modes of synthetic entities' generation:
 
 - Rule-based generation.
 - AI-based generation.
