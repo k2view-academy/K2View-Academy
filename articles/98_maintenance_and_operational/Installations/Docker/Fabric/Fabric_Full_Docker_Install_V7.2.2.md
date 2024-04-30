@@ -62,12 +62,12 @@ More detailed requirements for each are described below:
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_160-HF4/D_k2view_fabric-7.2.2_160.tar.gz
-   <br>md5: c2b3a7f6ed21f5ce694e20c4b34d7b95</br></td>
+   <br>md5: fde170e4587216d4d07859e1b51f142e</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_160-HF4/compose_fabric_7.2.2_160.tar.gz
-   <br>md5: 4586445b28b925ce387db55b173bfd55</br></td>
+   <br>md5: da294322558d186618812ed6b8ed346d</br></td>
    </tr>
    </tbody>
    </table>
@@ -77,7 +77,7 @@ More detailed requirements for each are described below:
    cd ~/ 
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/7.2/D_k2view_Confluent_7.2_package_06.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_160-HF4/D_k2view_fabric-7.2.2_160.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_160-HF4/D_k2view_fabric_7.2.2_160.tar.gz
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_160-HF4/compose_fabric_7.2.2_160.tar.gz
 ```
 
