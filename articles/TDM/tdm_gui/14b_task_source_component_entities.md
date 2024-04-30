@@ -19,8 +19,8 @@ The following information needs to be set for Entities & Referential data:
 
   Notes:
 
-  - Options 1 and 2 are not available if the source environment is set with **Do not Sync** (08_environment_window_general_information.md#do-not-sync) option.
-  - Option 2 (always sync) is available only for permitted users (10_environment_roles_tab.md#refresh-all-data-from-source).
+  - Options 1 and 2 are not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
+  - Option 2 (always sync) is available only for [permitted users](10_environment_roles_tab.md#refresh-all-data-from-source).
 
 
 
