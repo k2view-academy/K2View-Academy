@@ -25,9 +25,9 @@ The following attributes need to be set in order to generate new entities:
 
 ### Data Generation Parameters
 
-The TDM portal is integrated with the Fabric Broadway editors when populating either the data generation parameters in the Requested Entities task’s tab.
+The TDM portal is integrated with the Fabric Broadway editors when populating the data generation parameters in the Requested Entities task’s tab.
 
-This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters:
+This integration enables the user to select a valid value from a list, set dates, and set distributed parameters:
 
 ![data generation params](images/generate_task_data_generation_params.png)
 
@@ -35,15 +35,15 @@ This integration enables the user to select a valid value from a list, to set da
 
 Check/uncheck the checkbox next to the parameter name in order to select/remove the parameter. You can add a search value to get the required parameter. The selected parameter is added to the window with the default values, if set.
 
-Click the information icon next to the parameter to view an additional information about the parameter.
+Click the information icon next to the parameter to view additional information about the parameter.
 
 ### Reset the Data Generation Parameter's Value
 
-Click the black Refresh icon next to the parameter's editor to reset your updates and get back to the previous value, if set. The previous value can be the default value or the previous value set by the user when opening and updating a Generate task.
+Click the black Refresh icon next to the parameter's editor to reset your updates and return to the previous value, if set. The previous value can be the default value or the previous value the user sets when opening and updating a Generate task.
 
 ### Data Generation - Distribution Parameters
 
-The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted** and **constant** (return one value).
+The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted**, and **constant** (return one value).
 
 The user can edit the distribution type and the related distribution parameters. The distribution parameters are set based on the selected distribution type:
 
@@ -53,7 +53,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/normal_dist_example.png)
 
-  In the above example, the generated customers get an invoice balance between 20-200. Most of the generated customers get an invoice balance around 80 with a standard deviation of 5.
+  In the above example, the generated customers get an invoice balance between 20-200. Most of the generated customers get an invoice balance of around 80 with a standard deviation of 5.
 
    
 
@@ -67,7 +67,7 @@ The user can edit the distribution type and the related distribution parameters.
 
  
 
-​	ii. The generated activities are created with activity date between the 1-Jan-2020 and 22-Apr-2024.  
+​	ii. The generated activities are created with an activity date between 1-Jan-2020 and 22-Apr-2024.  
 
 ![normal dist](images/uniform_dist_example2.png)
 
