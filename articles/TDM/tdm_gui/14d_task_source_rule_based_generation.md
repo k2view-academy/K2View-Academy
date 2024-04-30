@@ -33,7 +33,7 @@ This integration enables the user to select a valid value from a list, set dates
 
 ### Adding/Removing Data Generation Parameters to the Task 
 
-Check/uncheck the checkbox next to the parameter name in order to select/remove the parameter. You can add a search value to get the required parameter. The selected parameter is added to the window with the default values, if set.
+Check/uncheck the checkbox next to the parameter name in order to select/remove the parameter. You can add a search value to get the required parameter. The selected parameter is added to the window with the default values if set.
 
 Click the information icon next to the parameter to view additional information about the parameter.
 
@@ -65,11 +65,9 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/uniform_dist_example.png)
 
- 
+  ii. The generated activities are created with an activity date between 1-Jan-2020 and 22-Apr-2024:  
 
-​	ii. The generated activities are created with an activity date between 1-Jan-2020 and 22-Apr-2024.  
-
-![normal dist](images/uniform_dist_example2.png)
+  ![normal dist](images/uniform_dist_example2.png)
 
 - **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole. Both, the distributed values and the weights, need to be populated manually.
 
