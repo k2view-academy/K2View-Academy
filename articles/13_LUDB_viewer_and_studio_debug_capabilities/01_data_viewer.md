@@ -102,7 +102,7 @@ The Instance Tree area (top left) displays a tree of available data files in the
 ### Instance DB Tree
 
 The Instance DB Tree area (bottom left) displays the Table Tree, which includes: 
-* **k2_delta_errors** - holds information on errors, including when each error occured.
+* **k2_delta_errors** - holds information on errors, including when each error occurred.
 * **k2_main_info** - holds basic information about the LU, like the LU Name and its Instance ID.
 * **k2_objects_info** - holds information for each of the objects in the selected instance.
 * **k2_transactions_info** - holds basic information about each transaction (ID and timestamp).
