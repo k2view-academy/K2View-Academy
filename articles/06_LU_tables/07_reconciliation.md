@@ -1,3 +1,5 @@
+<web>
+
 # Data product (LU) Tables Reconciliation
 
 Tables Reconciliation allows you to analyze changes made to the connected source data platform tables upon which your project’s tables are based on. It provides a valuable solution for two primary scenarios, throughout project lifecycle:
@@ -13,7 +15,7 @@ Tables Reconciliation allows you to analyze changes made to the connected source
 
 The first step for reconciliation is to find the mismatches. You can find mismatches according to either of 3 options: Find only added/removed tables columns which were added or removed at source, unused columns comparing to source, find all mismatches, includes added/removed/unused.
 
-You can trigger the mismatches finder either in schema level or per table:
+You can trigger the mismatches finder either in *schema* level or per *table*:
 
 #### Schema
 
@@ -55,8 +57,8 @@ You can activate the mismatches finder on a specific table, rather than on LU sc
 Upon mismatches finding process is concluded:  
 
 - When mismatches are found, then
-  - if you activated the finder within a schema, the relevant tables headers become purple colored. then you will be able to examine each table changes, by opening the table for editing, throughout the table's menu.
-  - If you activated the finder within at a table you opened for editing from the project tree, you will the changes at the table, on the spot.
+  - if you activated the finder within a *schema*, the relevant tables headers become purple colored. then you will be able to examine each table changes, by opening the table for editing, throughout the table's menu.
+  - If you activated the finder within at a *table* which you opened for editing from the project tree, you will the changes at the table, on the spot.
 - If mismatches were not found a notification message appears at the bottom right side of the window. indicating it.
 
 
@@ -65,10 +67,10 @@ Upon mismatches finding process is concluded:
 
 
 
-> Note: When mismatch finding process is activated, the Reconciliation action icon becomes to be orange colored, hinting the user that Reconciliation is  turned on and "active".
->
-> * When it turned on, you can click on the Reconciliation action icon to turn it off, hiding all the mismatches findings.
-> * When it turned on, you can switch to one of the other mismatch finder options, by clicking on the down arrow and selecting it. You can do it as long as you did not take actions on the finder results. If you already took action, you shall save first your changes or discard them, before able to activate another option.
+When the mismatch finding process is activated, the Reconciliation action icon becomes to be orange colored, hinting the user that Reconciliation is turned-on and "active". Being in this state:
+
+* You can click on the Reconciliation action icon to turn it off, hiding all the mismatches findings.
+* You can switch to one of the other mismatch finder options, by clicking on the down arrow and selecting it. You can do it as long as you did not take actions on the finder results. If you already took action, you shall save first your changes or discard them, before able to activate another option.
 
 
 
@@ -84,25 +86,29 @@ The green and red colored table's entries, are those which identified with chang
 
 
 
-> The above example, illustrates a case where there are various changes (added, removed, not-in-use columns). Usually, within a specific table, fewer changes will be done.   
+> The above example, illustrates a case where there are various changes (added, removed, not-in-use columns). Usually, within a specific table, fewer changes will be done.
+>
+> Tables' columns are represented in the Table Editor as entries / lines. The terminology that is being used here is columns or entries.
 
 
 
 ## Reconciliation Actions
 
-According to the Reconciliation Mismatches Finder results, as shown in the table editor screen, you can choose, for each one of the mismatched columns,  either to take action or to decide about it later, as following:
+According to the Reconciliation Mismatches Finder results, as shown in the table editor screen, you can choose, for each one of the mismatched columns,  either to take an action or choose postponing such decision and doing it later, as following:
 
-* **Added** at source:
+* **Added** columns at source table (green colored entries):
 
-  * *Do not Add* the column also to the project's table. 
+  * *Decide Later* weather to add it or not. For example, you might prefer not decide now because you wish to be advised by your team if this column shall be used at your project.
 
-    According to this decision, Studio will not alert you later that this column exists at the source. You still be able to find it when looking for unused columns.
+  * *Add* the column also to the project's LU table.
 
-  * *Add* the column also to the project's table.
+  * *Do not Add* the column to the project's LU table. 
 
-  * *Decide Later* weather to add it or not. For example, you might not decide now because you wish to be advised by your team, if this column shall be added and used at project.
+    According to this decision, Studio will not alert you later that this column exists at the source. You still be able to find it when looking for *unused* columns.
 
-* **Removed** from source:
+* **Removed** columns from source (light red colored entries):
+
+  * *Decide Later* weather to remove it or not. For example, you might not decide now because you wish to be advised by your team, if this column shall be removed or maybe is still needed.
 
   * *Preserve* the column, although it was removed from the source. This probably useful for cases where this column is in use at implementation and need to be remained. Note that it is your responsibility from now on to populate its data, because the data will not be retrieved from source. 
 
@@ -110,39 +116,38 @@ According to the Reconciliation Mismatches Finder results, as shown in the table
 
   * *Remove* from table and be aligned with the source table.
 
-  * *Decide Later* weather to remove it or not. For example, For example, you might not decide now because you wish to be advised by your team, if this column shall be removed or maybe is still needed.
-
 * **Not In Use** at the LU table, while existing at the source data table: 
 
+  * *Do not Add* the column to the project's LU table. 
+  * *Add* the column also to the project's LU table.
 
 
-Once you are done with handling a table, either if you made decision at the tables entries or not, you close it by:
 
-* Click on OK: table considered as handled and your changes are preserved. In addition:
+
+Once you are done with handling a table, either if you made a decision at the tables entries and took action or not, you can close it by either:
+
+* *Clicking on OK*: the opened table considered as handled and your changes are preserved. In addition:
   * The table heading color becomes back to its "natural" bleu color
   * Opening the table over again, you will be able to see and examine the decision you made, as long as you did not save the change (saving the schema if you are in the schema editor, or saving the table if you are in table editing, opened from the project tree)
   * The Table Properties Source Origin (see below) indicates that you handled that table.
-* Click Cancel: table considered as not handled and accordingly, the above accompanying implications do not hold.
-
-
-
-Go next table
-
-
-
-## 
+  * You are automatically moved into the next table that found during the Reconciliation Mismatches Finder. This will be done as long as the bottom "Go next table" checkbox is ticked (default). This means that Table Editor will remain opened where next candidate table will appear.
+* *Clicking on Cancel*: the table is considered as not handled and accordingly, the above accompanying implications do not hold.
 
 
 
 ## Table Properties Source Origin
 
+The Table Properties Panel second tab - Data Source Origin - provides an overview and indicates upon which source data platform tables, this LU table is based and built upon. 
 
+The tab's top header shows when was the last time that the table was updated during the Reconciliation process, and also enables you to execute the  Reconciliation Mismatches Finder on this specific table, as explained above.
+
+The tab's body lists the source data platform columns, organized by Interface, the schema and the table at the source data platform.
 
 
 
 ## Highlighting Mismatched Tables
 
-In case you deal with a big schema, containing with many tables, you can easily find those tables by using the Highlighting option:
+In case you deal with a big schema, containing many tables, you can easily find those tables, which were found during the Reconciliation Mismatches Finder process, by using the Highlighting option:
 
 1. At the top schema toolbar look for the ![](../03_logical_units/images/web/light-off.svg)Highlighting action icon.  
 
@@ -153,3 +158,7 @@ In case you deal with a big schema, containing with many tables, you can easily 
 3. As a result, the relevant tables become highlighted while other are grayed-out
 
 > In case Reconciliation is not activated at the schema then this option is disabled
+
+
+
+</web>
