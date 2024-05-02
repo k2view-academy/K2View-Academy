@@ -133,7 +133,7 @@
 </td>
 <td>
 <p>The Entity Reservation feature is made to enable a user to reserve (lock) entities in the testing environment and prevent other users from re-provisioning these entities into the testing environment until the user completes the functional tests and can release these entities.</p>
-<p>For more information see <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
+<p>For more information, read <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
 </td>
 </tr>
 </tbody>
