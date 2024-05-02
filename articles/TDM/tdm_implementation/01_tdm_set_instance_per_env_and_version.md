@@ -57,7 +57,7 @@ The LUI format of each generated entity is identical to the default format. The 
 
 **Example:**
 
-- Synthetic_12.
+- Synthetic_12
 
 #### AI-based Generation
 
