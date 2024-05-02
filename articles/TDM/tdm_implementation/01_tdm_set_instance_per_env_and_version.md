@@ -17,7 +17,7 @@ Additionally, TDM enables a synthetic entity generation. Each generated entity m
 
 ### Default LUI
 
-When an entity is extracted from the source environment, and the Create data snapshot checkbox is checked, i.e. there is no need to create a separate entity snapshot upon each task execution, the LUI format is as follows: 
+When an entity is extracted from the source environment, and the Create data snapshot checkbox is checked, i.e., there is no need to create a separate entity snapshot upon each task execution, the LUI format is as follows: 
 
 ```
 <Source Env><separator><entity id>
