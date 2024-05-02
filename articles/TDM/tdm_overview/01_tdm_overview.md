@@ -25,7 +25,7 @@ The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
 - Entity reservation - enables the user to reserve entities in the testing environment, thus preventing other users from deleting or reloading these entities in the environment until the user completes their functional testing.
 - Automatic data security and masking on an entity-by-entity basis.
-- TDM 9.0 adds a support of automatic data masking on the provisioned tables when creating a task for tables provisioning. 
+- TDM 9.0 adds a support for automatic data masking on the provisioned tables when creating a task for tables provisioning. 
 - Support for an up-to-date data of the selected entities.
 - Cross-application integrity.
 - Data Versioning features:
