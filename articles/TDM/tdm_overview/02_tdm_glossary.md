@@ -25,7 +25,7 @@
 <h4>Fabric</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
+<p>K2view,ד Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for an end-to-end management of the data life cycle. For more details, read <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -33,7 +33,7 @@
 <h4>Broadway</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Broadway is a Fabric module that is used to design data movement, its transformation, and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric. For more details see <a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a>.</p>
+<p>Broadway is a Fabric module that is used to design data movement, its transformation, and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric. For more details, read <a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a>.</p>
 </td>
 </tr>
 <tr>
