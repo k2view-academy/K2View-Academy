@@ -31,7 +31,7 @@ When an entity is extracted from the source environment, and the Create data sna
 
 ### Delete Only and Reserve Only Tasks
 
-When the TDM task either **delete only** an entity from the target environment, or **reserve only** an entity in the target environment, the **target environment is concatenated to the LUI**, since the source environment is not set in these tasks.
+When the TDM task is set to either only **Delete** an entity from the target environment, or only **Reserve** an entity in the target environment, the **target environment is concatenated to the LUI**, since the source environment is not set in these tasks.
 
  **Example**:
 
