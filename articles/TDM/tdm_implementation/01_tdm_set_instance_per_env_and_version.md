@@ -35,7 +35,7 @@ When the TDM task either **delete only** an entity from the target environment, 
 
  **Example**:
 
-- Delete customer 22 from UAT environment. The LUI is UAT_22.
+- Delete Customer 22 from UAT environment. The LUI is UAT_22.
 
 ### Data Versioning Tasks
 
