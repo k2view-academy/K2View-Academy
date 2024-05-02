@@ -25,7 +25,7 @@ When an entity is extracted from the source environment, and the Create data sna
 
  **Example**:
 
-- Extract customer 1 from the PROD source environment. The LUI is PROD_1.
+- Extract Customer 1 from the PROD source environment. The LUI is PROD_1.
 
 
 
