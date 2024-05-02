@@ -91,7 +91,7 @@
 <h4><a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">Business Entity / BE</a></h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A Business Entity (BE) represents the main entity of the selected data for provisioning by TDM. A Business Entity can have multiple LUs in a hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering, and Usage LUs.</p>
+<p>A Business Entity (BE) represents the main entity of the selected data for provisioning by TDM. A Business Entity can have multiple LUs in a hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering and Usage LUs.</p>
 </td>
 </tr>
 <tr>
