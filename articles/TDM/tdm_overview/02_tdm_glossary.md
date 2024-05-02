@@ -74,7 +74,7 @@
 </td>
 <td width="600pxl">
 <p><span class="text-bold hx_keyword-hl rounded-1 d-inline-block">Fabric provides role</span>-based access control management. Fabric permissions are granted to each given role. Each Fabric user can be assigned to one or multiple roles.</p>
-<p>For more information see <a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a>.</p>
+<p>For more information, read <a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -83,7 +83,7 @@
 </td>
 <td width="600pxl">
 <p>There are 3 main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner and Tester.&nbsp;</p>
-<p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM Portal - Permission Groups</a>.</p>
+<p>For more information, read <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM Portal - Permission Groups</a>.</p>
 </td>
 </tr>
 <tr>
