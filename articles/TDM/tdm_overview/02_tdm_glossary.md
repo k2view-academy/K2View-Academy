@@ -49,7 +49,7 @@
 <h4>LU / Data Product</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> (LU, or Logical Unit Type - LUT), also known as Data Product, is a blueprint holding a set of definitions and instructions used to create and maintain the required dataset.</p>
+<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> (LU, or Logical Unit Type - LUT), also known as Data Product, is a blueprint holding a set of definitions and instructions used for creating and maintaining the required dataset.</p>
 </td>
 </tr>
 <tr>
