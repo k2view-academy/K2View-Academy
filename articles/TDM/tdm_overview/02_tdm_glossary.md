@@ -115,7 +115,7 @@
 <h4>Task</h4>
 </td>
 <td valign="top" width="600pxl">
-    <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The task can run on selected business entities (with or without related referential tables) of on tables only. The business entities can be either extracted from a source environment or can be synthetically generated.</p> 
+    <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The task can run on selected business entities (with or without related referential tables) of on tables only. The business entities can be either extracted from a source environment or synthetically generated.</p> 
     <p>Click <a href="/articles/TDM/tdm_gui/14_task_overview.md">here</a> for more information about the TDM tasks.</p>
 </td>
 </tr>
