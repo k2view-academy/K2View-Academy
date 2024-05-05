@@ -9,9 +9,9 @@ Note: You must also define the TDM environments in the TDM Portal; [click here](
 
 ## Defining TDM Environments in Fabric
 
-Fabric environments are used to run TDM processes on various environments by switching between them according to the task's environments.  The connection details of each environment's data sources are taken from the Fabric environment's data.
+Fabric environments are used for running TDM processes on various environments by switching between them according to the task's environments. The connection details of each environment's data sources are taken from the Fabric environment's data.
 
-**Example:** Running a TDM task to copy selected entities from the **Production** environment to the **UAT** environment. Fabric must extract the source data from Production and load it to UAT. Each environment can have different connection details for its data sources. 
+**Example:** Running a TDM task to copy selected entities from the **Production** environment to the **UAT** environment. Fabric must extract the source data from Production and load it to the UAT. Each environment can have different connection details for its data sources. 
 
 The TDM execution process sets the active environment as follows:
 
