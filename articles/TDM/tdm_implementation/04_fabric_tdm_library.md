@@ -145,7 +145,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows,  the LU of the Broadway flow, and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
+<p>Populate the list of Broadway flows, the LU of the Broadway flow, and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
 </td>
 </tr>
 <tr>
@@ -166,7 +166,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <li><strong>child_lu_eid_sql = </strong>select order_id from subscriber</li>
 <li><strong>child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
 </ul>
-<p>The parameters: tables, subscriber and tar_subscriber, must all be defined in the CRM LU schema.</p>  
+<p>The parameters - tables, subscriber and tar_subscriber - must all be defined in the CRM LU schema.</p>  
 </td>
 </tr>
 <tr>
