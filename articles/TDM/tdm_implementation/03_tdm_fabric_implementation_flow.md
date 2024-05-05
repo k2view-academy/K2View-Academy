@@ -9,7 +9,7 @@ A Fabric TDM project includes the following:
 - TDM Utilities - TDM Web Services, [TDM LU](04_fabric_tdm_library.md#tdm-lu) and TDM_TableLevel LU.
 - Logical Units - TDM entities and their related data are modeled into LUs like CRM, Billing, Ordering, etc.
 - Broadway flows that are defined under each LU in order to delete or load entities from/to the target environment.
-- An environment setup - a process in which the source and target environments of the TDM are defined. Setting the connection details of interfaces and the Globals in each environment.
+- An environment setup - a process in which the source and target environments of the TDM are defined, and the connection details of interfaces and the Globals in each environment are set.
 
 K2view offers a TDM library with TDM utilities as well as TDM Templates for Broadway flows. These utilities must be included in the TDM Fabric project. 
 
