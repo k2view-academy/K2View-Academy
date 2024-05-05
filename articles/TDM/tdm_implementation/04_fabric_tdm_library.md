@@ -72,7 +72,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>MigrateList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the query and interface name, or the Broadway flow to generate the entity list when running a task with a predefined entity list selection method for the entities' subset; one record per LU.</p>
+<p>Defines the query and interface name, or the Broadway flow to generate the entity list when running a task with a predefined entity list selection method for the entities' subset; one record per LU.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
@@ -122,7 +122,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>RefList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of available tables related to a Business entity and that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>.</p>
+<p>Defines the list of available tables related to a Business entity and that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>.</p>
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
@@ -141,7 +141,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>PostAndPreExecutionProcess </p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of pre-execution and post-execution flows to run before or at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends, or a process that populates a mapping table before the LU execution starts.</p>
+<p>Defines the list of pre-execution and post-execution flows to run before or at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends, or a process that populates a mapping table before the LU execution starts.</p>
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
