@@ -20,7 +20,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
    The following methods can be used to override the number range of generated records in the TDM implementation:
    
    i. Edit the default number range of generated records (set to 1-3 by default): update the
-   **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables except for the main source LU table.
+   **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables, except for the main source LU table.
    
    Example:
    Run the following Update statements in order to set the number of generated records to 2-4:
