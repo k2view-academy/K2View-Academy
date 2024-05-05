@@ -20,7 +20,7 @@ The TDM execution process sets the active environment as follows:
 
  To save a separate Logical Unit Instance (LUI) for each source environment, the TDM concatenates the source environment to each LUI.
 
-Note that **you must not include an underscore ('_') in the environment name when running the TDM using the default LUI separator**, since the default LUI separator is an underscore. This way, the TDM execution process cannot parse the LUI properly.
+Note that **you must not include an underscore ('_') in the environment name when running the TDM using the default LUI separator** as the default LUI separator is an underscore. This way, the TDM execution process would not properly parse the LUI.
 
  [Click here](01_tdm_set_instance_per_env_and_version.md) for more information about the TDM LUI format. 
 
