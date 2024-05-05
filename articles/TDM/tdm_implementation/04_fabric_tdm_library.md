@@ -236,10 +236,10 @@ TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period i
     <p><h5>TDMCleanUp</p>
         </td>
 <td valign="top" width="300pxl">
-    Defines the list of the TDM DB tables to be cleaned up by the TDM cleanup process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleanup process.
+    Defines the list of the TDM DB tables to be cleaned up by the TDM cleaning-up process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleaning-up process.
         </td>
   <td valign="top" width="400pxl">
-      Set the cleanup_ind field to FALSE to remove a table from the cleanup process. TDM tables can be added and Delete statements can be edited.
+      Set the cleanup_ind field to FALSE to remove a table from the cleaning-up process. TDM tables can be added and Delete statements can be edited.
         </td>
     </tr>
     </tbody>
