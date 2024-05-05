@@ -38,7 +38,7 @@ Both methods use dummy source environments. Each method has its own dummy enviro
 - **SYNTHETIC_ENVIRONMENT** - defines the rule-based environment name. Default value is **Synthetic**.
 - **AI_ENVIRONMENT** - defines the AI-based environment name. Default value is **AI**. 
 
-Both dummy environments must be created and deployed in Fabric with the TDM interfaces. In addition, the AI-based environment must be deployed with the following interfaces:
+Both dummy environments must be created and deployed in Fabric with the TDM interfaces. Additionally, the AI-based environment must be deployed with the following interfaces:
 
 - **AI_DB** - PostgreSQL DB used as an interface layer between the TDM and the AI processes. 
 - **AI_Execution** - HTTPS interface for the Kubernetes layer for the AI processes - training and data generation.
