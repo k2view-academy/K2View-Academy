@@ -108,7 +108,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/Older%20versions/Fabric_Release%20Notes%20V6.2.1.pdf">6.2.1</a></td>
             <td>October 15, 2020</td>
-            <td>April 30, 2024</td>
+            <td>June 30, 2024</td>
             <td>6.2.0</td>
             <td>3.11.9</td>
             <td>2.14</td>
@@ -117,7 +117,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/Older%20versions/Fabric_Release%20Notes%20V6.2.0.pdf">6.2.0</a></td>
             <td>September 7, 2020</td>
-            <td>April 30, 2024</td>
+            <td>June 30, 2024</td>
             <td>6.2.0</td>
             <td>3.11.9</td>
             <td>2.14</td>
@@ -126,7 +126,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         <tr>
             <td align="left">6.1.1</td>
             <td>June 28, 2020</td>
-            <td>April 30, 2024</td>
+            <td>June 30, 2024</td>
             <td>6.1.1</td>
             <td>3.11.9</td>
             <td>2.13</td>
@@ -135,7 +135,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         <tr>
             <td align="left">6.1.0</td>
             <td>May 6, 2020</td>
-            <td>April 30, 2024</td>
+            <td>June 30, 2024</td>
             <td>6.1.0</td>
             <td>3.11.9</td>
             <td>2.13</td>
@@ -144,7 +144,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         <tr>
             <td align="left">5.5.0</td>
             <td>January 20, 2020</td>
-            <td>May 25, 2023</td>
+            <td>June 30, 2024</td>
             <td>5.5.0</td>
             <td>3.11.9</td>
             <td>2.10</td>
