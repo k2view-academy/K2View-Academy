@@ -208,7 +208,7 @@ TDM supports overriding the following parameters:
 <p><a href="/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list">entitieslist</a></p>
 </td>
 <td width="225pxl">
-<p>Populates by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can contain only one Business Entity ID when executing a task that clones a Business Entity.</p>
+<p>Populated by a list of <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md"> Business Entity IDs </a>separated by a comma. This list can contain only one Business Entity ID when executing a task that clones a Business Entity.</p>
 </td>
 <td width="200pxl">
 <p>All task actions except a Generate task</p>
@@ -264,7 +264,7 @@ TDM supports overriding the following parameters:
 <p><strong>numberOfEntities<strong></p>
 </td>
 <td width="185">
-<p>Populates with a value that limits the number of entities to be processed by the task. This parameter is relevant only if an explicit entity list was not set.</p>
+<p>Populated with a value that limits the number of entities to be processed by the task. This parameter is relevant only if an explicit entity list was not set.</p>
 </td>
 <td width="99">
 <p>All tasks</p>
@@ -278,7 +278,7 @@ TDM supports overriding the following parameters:
 <p><strong>dataVersionExecId</strong></p>
 </td>
 <td width="185">
-<p>Populates with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.</p>
+<p>Populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.</p>
 </td>
 <td width="99">
 <p>Load task</p>
@@ -292,7 +292,7 @@ TDM supports overriding the following parameters:
 <p><strong>dataVersionRetentionPeriod</strong></p>
 </td>
 <td width="250pxl">
-<p>Populates with the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks&hellip;) and the value.</p>
+<p>Populated with the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks&hellip;) and the value.</p>
 </td>
 <td>Extract task</td>
 <td>True</td>
@@ -302,7 +302,7 @@ TDM supports overriding the following parameters:
 <p><strong>reserveInd</strong></p>
 </td>
 <td width="185">
-<p>Populates with True or False. Set to True if the task execution needs to reserve the entities on the target environment.</p>
+<p>Populated with True or False. Set to True if the task execution needs to reserve the entities on the target environment.</p>
 </td>
 <td width="99">
 <p>Load or Reserve tasks</p>
@@ -318,7 +318,7 @@ TDM supports overriding the following parameters:
 <p><strong>reserveRetention</strong></p>
 </td>
 <td width="185">
-<p>Populates with the reservation period of the task's entities. This parameter contains the unit (Hours, Days, Weeks.) and the value.</p>
+<p>Populated with the reservation period of the task's entities. This parameter contains the unit (Hours, Days, Weeks.) and the value.</p>
 </td>
 <td width="99">
 <p>Load or Reserve tasks</p>
