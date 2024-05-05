@@ -23,7 +23,7 @@ The [task execution process](03_task_execution_processes.md#main-tdm-task-execut
 
 
 
-### Overriding Globals Values 
+### Overriding Globals' Values 
 
 A project's Global can be overridden on either a [TDM environment](/articles/TDM/tdm_gui/12_environment_globals_tab.md) or a [TDM task](/articles/TDM/tdm_gui/23_task_globals_tab.md) level.
 
