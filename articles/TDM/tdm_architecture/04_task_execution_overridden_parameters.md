@@ -99,7 +99,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </td>
 <td style="width: 384.422px;">
 <ul>
-<li>First sync, return an error.</li>
+<li>If this is the first sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
 <li>Source LU tables:</li>
@@ -162,7 +162,7 @@ Sync the data from the target environment.</ul>
 </td>
 <td style="height: 155px; width: 384.422px;">
 <ul>
-<li>First sync, return an error.</li>
+<li>If this is the first sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
 <li>Source LU tables:</li>
