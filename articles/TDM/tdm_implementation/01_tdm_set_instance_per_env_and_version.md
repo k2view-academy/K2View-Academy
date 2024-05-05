@@ -53,7 +53,7 @@ Task execution IDs 11 and 15 extract and create a data snapshot of customer 1 fr
 
 #### Rule-based Generation
 
-The LUI format of each generated entity is identical to the default format. The concatenated source environment is the dummy environment named Synthetic (the name is set in the SYNTHETIC_ENVIRONMENT Global) that is used to identify rule-based generated entities. 
+The LUI format of each generated entity is identical to the default format. The concatenated source environment is the dummy environment named Synthetic (the name is set in the SYNTHETIC_ENVIRONMENT Global), which is used for identifying rule-based generated entities. 
 
 **Example:**
 
