@@ -265,7 +265,7 @@ Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, the deployment of the TDM L
 
 Notes:
 
-- Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option, or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric, thus avoiding a parallel execution of TDM jobs on the same TDM DB. 
+- Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option, or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric server, thus avoiding a parallel execution of TDM jobs on the same TDM DB. 
 - The apps.json file in the TDM LU overrides the list of web applications in Fabric. Open the file and edit it before the TDM LU deployment, if needed.
 
 
