@@ -378,7 +378,7 @@ If at least one of the validations fails, the API does not start the task and re
 
 ### Task Execution Process
 
-Overriding of task execution parameters does not update the task itself, but rather impacts the given task execution:
+Overriding task execution parameters does not update the task itself, but rather impacts the given task execution:
 
 The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) gets the overridden parameters from [task_execution_override_attrs](/articles/TDM/tdm_architecture/02_tdm_database.md#task_execution_override_attrs) TDM DB table and executes the task based on the overridden parameters.
 
