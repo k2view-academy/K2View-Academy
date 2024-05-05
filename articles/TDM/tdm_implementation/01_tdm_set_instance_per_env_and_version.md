@@ -61,7 +61,7 @@ The LUI format of each generated entity is identical to the default format. The 
 
 #### AI-based Generation
 
-The AI process generates entities with numeric IDs. The TDM process which imports the generated entities to Fabric creates a unique LUI on each generated entity with the following format:
+The AI process generates entities with numeric IDs. The TDM process, which imports the generated entities to Fabric, creates a unique LUI on each generated entity with the following format:
 
 ```
 <AI env name><separator><new seq value for the entity id><separator><task execution id>
@@ -69,7 +69,7 @@ The AI process generates entities with numeric IDs. The TDM process which import
 
 **Example:**
 
-- Task execution id 102818 generates a new entity. The LUI is AI_3_102818 .
+- Task execution id 102818 generates a new entity. The LUI is AI_3_102818.
 
 Notes:
 
