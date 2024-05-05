@@ -48,7 +48,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
    
    Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
    
-   - If you edit the **rowsGeneratorDistribution** input argument, you must set it to be **External parameter** with the following naming convention: 
+   - If you edit the **rowsGeneratorDistribution** input argument, you must set it to be an **External parameter** with the following naming convention: 
    
    ```
    [lu name]_[lu table name]_number_of_records
