@@ -30,7 +30,7 @@ The TDM implementation must include the **creation and deployment** of all the T
 
 TDM supports 2 data generation methods:
 
-- **Rule-based** data generation (added in TDM 8.0)
+- **Rule-based** data generation (added in TDM 8.0).
 - **AI-based** data generation (added in TDM 9.0).
 
 Both methods use dummy source environments. Each method has its own dummy environment. The following Globals define the dummy environment names:
