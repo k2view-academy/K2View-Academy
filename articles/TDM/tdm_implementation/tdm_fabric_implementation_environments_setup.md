@@ -15,8 +15,8 @@ Fabric environments are used for running TDM processes on various environments b
 
 The TDM execution process sets the active environment as follows:
 
-   1. Set the active environment to Production before synchronizing the entity from the data source.
-   2. Set the active environment to UAT before loading the entity to the target.
+   1. It sets the active environment to Production before synchronizing the entity from the data source.
+   2. It sets the active environment to UAT before loading the entity to the target.
 
  To save a separate Logical Unit Instance (LUI) for each source environment, the TDM concatenates the source environment to each LUI.
 
