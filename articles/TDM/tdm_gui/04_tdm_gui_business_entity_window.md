@@ -34,7 +34,7 @@ To use a BE in a TDM task, it must have one or more LUs assigned to it.
 
 #### How Do I Add an LU to a BE? 
 
-1. Click **Add Logical Unit** to display the **Add Logical Units** dialog box:
+1. Click **Add Logical Unit +** (top-right corner) to display the **Add Logical Units** dialog box:
 
 ![be_Example](images/BE_add_lu_window.png)
 
