@@ -193,7 +193,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>activities</td>
-<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity, specifying its date, time, user, type (create or update), impacted TDM component and description.  </td>
+<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity, specifying its date, time, user, type (create or update), impacting TDM component and description.  </td>
 <td valign="top" width="300pxl">TDM Activities</td>
 </tr>
 <tr>
