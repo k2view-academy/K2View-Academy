@@ -36,3 +36,5 @@ The retention period is set on the extracted entities and/or tables. When this p
   - Tables: Do not delete.
 
 
+ [![Previous](/articles/images/Previous.png)](15_task_subset_component.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_task_target_component.md)
+
