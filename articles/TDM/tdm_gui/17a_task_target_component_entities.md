@@ -16,7 +16,7 @@ When you start the task creation with the Target component, for example: a delet
 
 
 
-When you set the Source component before the Target, you Source selected [Business entity](14b_task_source_component_entities.md#business-entity) is already populated in the Target form:
+When you set the Source component before the Target, the selected [Business entity](14b_task_source_component_entities.md#business-entity) is already populated in the Target form:
 
 ![target example2](images/task_target_component_load_entities1.png)
 
