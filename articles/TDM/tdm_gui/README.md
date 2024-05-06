@@ -16,13 +16,10 @@
 <li><a href="12_environment_globals_tab.md">Environment Variables Tab</a></li>  
 <li><a href="13_reserved_entities_window.md">Reserved Entities Window</a></li>  
 <li><a href="14_task_overview.md">TDM Task Overview</a></li>  
-<li><a href="15_data_flux_task.md">TDM Data Versioning Tasks</a></li>  
-<li><a href="16_extract_task.md">TDM Extract Task</a></li>  
-<li><a href="16a_generate_task.md">TDM Generate Task</a></li>    
-<li><a href="17_load_task_regular_mode.md">TDM Load Task</a></li> 
-<li><a href="18_load_task_data_versioning_mode.md">TDM Load Task - Data Versioning Mode</a></li>  
-<li><a href="19_delete_only_task.md">TDM Delete Task</a></li>  
-<li><a href="20_reserve_only_task.md">TDM Reserve Task</a></li>  
+<li><a href="14a_task_source_component.md">Task - Source Component</a></li>  
+<li><a href="15_task_subset_component.md">Task - Subset Component</a></li>  
+<li><a href="16_task_test_data_store_component.md">Task - Test Data Store Component</a></li>    
+<li><a href="17_task_target_component.md">Task - Target Component</a></li> 
 <li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li>  
 <li><a href="26_task_execution.md">Task Execution</a></li> 
 <li><a href="27_task_execution_history.md">Task Execution History</a></li>

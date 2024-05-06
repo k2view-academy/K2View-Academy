@@ -13,5 +13,3 @@ You can clear the Delete action, but be aware that loading without a delete may 
 
 
 
- [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
-

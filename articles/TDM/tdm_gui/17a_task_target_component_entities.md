@@ -78,7 +78,3 @@ The start date of the reservation period is the task's execution time. The **res
 
 An optional setting. The user can populate it with a free text. The reservation note is displayed in the [Reserved Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) (Notes fields) and can be used for filtering the reserved entities display. The reservation note can be edited using the Reserved Entities window.
 
-
-
- [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
-
