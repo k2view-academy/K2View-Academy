@@ -4,7 +4,7 @@ The Target component contains the target environment settings. The Target enviro
 
 - Loading and/or deleting data to/from the target testing environment.
 - [Entity reservation](/articles/TDM/tdm_architecture/08_entity_reservation.md) - reserving entities for the user in the target testing environment.
-- AI training task - train the AI with a subset of entities for a synthetic AI-based entities' generation. 
+- AI training task - train the AI with a subset of entities for a [synthetic AI-based entities' generation](14e_task_source_ai_based_generation.md). 
 
 When clicking the Target component, the Target form is opened.
 
