@@ -42,7 +42,7 @@ Deletes the selected entities from the testing environment. Note that if you sel
 
 ### Load
 
-Loads the selected entities into the testing environment. The following checkboxes can be set with the Load actions: **Replace IDs for the copied entities** and **Generate clones for an entity**.  Only one checkbox can be checked.
+Loads the selected entities into the testing environment. The following checkboxes can be set with the Load actions: **Replace IDs for the copied entities** and **Generate clones for an entity**.  Only one checkbox can be checked. 
 
 The Load checkboxes are disabled in the following scenarios:
 
