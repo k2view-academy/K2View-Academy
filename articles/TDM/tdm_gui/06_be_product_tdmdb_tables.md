@@ -19,14 +19,14 @@ Note that to prevent creating several active BEs with the same name, the **be_na
 
 This table holds all [systems (products)](05_tdm_gui_product_window.md) defined in the TDM Portal.
 -  A new record is created for each system.  
--  Each system (product) is created in **Active** status and gets a unique **product_id** sequence which is the table's PK. 
+-  Each system (product) is created in **Active** status and gets a unique **product_id** sequence, which is the table's PK. 
 -  **Deleted systems** have an **Inactive** status and are not physically deleted from this table.
 
 Note that to prevent creating several active systems with the same name, the **product_name** column has a **unique index** when the status is **Active**. 
 
 ### Product_Logical_Units
 
-This table holds the links between a BE, LU and a system (product), as follows:
+This table holds the links between a BE, an LU and a system (product), as follows:
 - Links between LUs and a [BE](04_tdm_gui_business_entity_window.md).
 - Links between parent-child LU relationships in a BE.
 - Links between a BE and its LUs to a system (product). Each BE and LU combination can be attached to a [system](05_tdm_gui_product_window.md).
