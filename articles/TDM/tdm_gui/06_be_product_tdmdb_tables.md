@@ -9,7 +9,7 @@ Business Entity (BE) and System definitions **update the following TDM DB tables
 This table holds all [BEs](04_tdm_gui_business_entity_window.md) defined in the TDM Portal. 
 
 -  A new record is created for each BE. 
--  Each BE is created in **Active** status and gets a unique **be_id** sequence, which is the table's PK.
+-  Each BE is created with an **Active** status and gets a unique **be_id** sequence, which is the table's PK.
 
 - Deleted BEs have an **Inactive** status and are not physically deleted from this table.
 
@@ -19,7 +19,7 @@ Note that to prevent creating several active BEs with the same name, the **be_na
 
 This table holds all [systems (products)](05_tdm_gui_product_window.md) defined in the TDM Portal.
 -  A new record is created for each system.  
--  Each system (product) is created in **Active** status and gets a unique **product_id** sequence, which is the table's PK. 
+-  Each system (product) is created with an **Active** status and gets a unique **product_id** sequence, which is the table's PK. 
 -  **Deleted systems** have an **Inactive** status and are not physically deleted from this table.
 
 Note that to prevent creating several active systems with the same name, the **product_name** column has a **unique index** when the status is **Active**. 
@@ -36,7 +36,7 @@ Adding an LU to a BE creates a new record in this table. Each record is marked w
 - **LU information** - lu_id, lu_name, lu_description and lu_dc_name columns. 
 - **BE information** - be_id column. This is the link to the **business_entities** table.
 - **LU relationship in the BE** - lu_parent_id and lu_parent_name columns holding the ID and name of the [parent LU](/articles/TDM/tdm_overview/03_business_entity_overview.md#building-an-lu-hierarchy-in-a-be) if it exists. 
-- **System (product) information** - product_id and product_name columns. The product_id links to the **Products** table. The product_id and product_name columns are set to -1 and NULL default values when the record is created. System Information settings are defined when an LU is attached to a system. If the LU is deleted from a system, the system information's columns return to their default values.
+- **System (product) information** - product_id and product_name columns. The product_id links to the **Products** table. When a record is created, the product_id and product_name columns are set to the default values of -1 and NULL. System Information settings are defined when an LU is attached to a system. If the LU is deleted from a system, the system information's columns return to their default values.
 
 ### Tdm_Be_Exe_Process
 
