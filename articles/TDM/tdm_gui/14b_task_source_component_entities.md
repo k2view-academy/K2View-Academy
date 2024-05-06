@@ -6,11 +6,17 @@ The following information needs to be set for Entities & Referential data:
 
 ![source-entities](images/task_source_settings_entities.png)
 
-- **Business entity** - the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** is an **optional** setting that enables a partial selection of the systems or LUs in the task. Click the Advanced option to open a popup window with the selected BE's Systems and LUs. Note that if the selected source environment does not contain all BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  
+### Business entity
 
-- **Source environment** - select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window display the PII icon to indicate to the user that the source sensitive data is masked. 
+The task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** is an **optional** setting that enables a partial selection of the systems or LUs in the task. Click the Advanced option to open a popup window with the selected BE's Systems and LUs. Note that if the selected source environment does not contain all BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  
 
-- **Policy for fetching data** - this setting defines if the data needs to be extracted from the source environment or can be retrieved from the Test data store (Fabric). The following options are available:
+### Source environment
+
+Select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.   If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window display the PII icon to indicate to the user that the source sensitive data is masked. 
+
+### Policy for fetching data
+
+This setting defines if the data needs to be extracted from the source environment or can be retrieved from the Test data store (Fabric). The following options are available:
 
 1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. New entities will be synced from the source environments when this option is selected. Entities already stored in the  Test data store will be taken from the Test data store, unless the sync policy, defined in the LU implementation, defines that they need to be synced from the source environment. 
 2. **All data from [source environment name]** - always sync the data from the source environment. 
@@ -26,9 +32,11 @@ The following information needs to be set for Entities & Referential data:
 
 
 
-- **Referential tables** - check this checkbox to add related tables to the task's entities:
+### Referential tables
 
-  ![task related tables](images/task_source_entities_and_tables.png)
+ Check this checkbox to add related tables to the task's entities:
+
+![task related tables](images/task_source_entities_and_tables.png)
 
 
 
