@@ -153,6 +153,8 @@ The below table displays the various TDM versions, each with its compatible Fabr
     </tbody>
 </table>
 
+The information in the table is provided under the terms and conditions of the license agreement that you have signed with K2view (the “License”). In case of any conflict or discrepancy between this table and your License, the License shall prevail.
+
 
 
 
