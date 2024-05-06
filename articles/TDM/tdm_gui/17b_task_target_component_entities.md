@@ -1,14 +1,14 @@
 # Task - Target Component - Entities 
 
-The following information needs to be set when the task's data types is Business entities (with or without referential tables):
+The following information needs to be set when the task's data type is Business entities (with or without referential tables):
 
-- Destination of test data: Testing environments or AI training. The AI training is available only if the user has [Write permissions on the AI environment](10_environment_roles_tab.md#ai-environment---permission-set).
+- Destination of test data: Testing environments or AI training. The **AI training** is available **only for entities** and is available only for users that have [Write permissions on the AI environment](10_environment_roles_tab.md#ai-environment---permission-set).
 - Business entity - for example, Customer.
 
-The following attributes must be set if the destination of test data is Testing environment.
+The following attributes must be set for **Testing environment** data destination:
 
-- Target environment name
-- Activities on the target environment.
+- Target environment name.
+- Actions to perform on the target environment.
 
 When you start the task creation with the Target component, for example: a delete task, you must set the task's Business entity:
 
@@ -32,13 +32,13 @@ Select one TDM environment from the drop-down list. The drop-down list displays 
 
 ## Actions to perform
 
-The following actions can be performed on the selected testing environment:
+The following actions can be performed on the selected testing environment. You can select one of multiple actions: 
 
 ![target example3](images/task_target_component_task_actions.png)
 
 ### Delete
 
-Deletes the selected entities from the testing environment.
+Deletes the selected entities from the testing environment. Note that if you select a Delete only, the Source component is disabled since the task only deletes the entities from the target environment.
 
 ### Load
 
@@ -67,6 +67,8 @@ The task replaces the sequences (IDs) of each replica in order to avoid duplicat
 ### Reserve
 
 [Reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities for the user in the target environment in order to prevent other users from deleting and/or loading the reserved entities to the target environment.
+
+You can check the Reserve action only or check it with the Load action to reserve the loaded entities.  Note that if you select a Reserve only, the Source component is disabled since the task only reserves the entities for the target environment.
 
 The **reservation period** needs to be set for the reserved entities.  The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
