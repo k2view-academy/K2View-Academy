@@ -8,7 +8,7 @@ An environment's permission sets are displayed in the **Permission Sets tab** in
 
 - To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
-- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located at the upper-right corner of the window.
+- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located in the upper-right corner of the window.
 
 ## Permission Set Window 
 
