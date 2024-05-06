@@ -1,6 +1,6 @@
 # TDM Task Overview
 
-Data generation or extract, provisioning and entity reservation are implemented by creating and executing TDM tasks. 
+Data generation or extract, provisioning, and entity reservation are implemented by creating and executing TDM tasks. 
 
 A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the data source, task actions,  subset of processed entities and/or tables,  the target environments and additional information. For example, create a task to extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
 
@@ -10,9 +10,9 @@ The actual data processing and/or entity reservation is performed by the task ex
 
 The following task actions are supported by TDM:
 
-- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test data store (Fabric) for a later use.
-- **Generate** - generates synthetic entities.  Either one of the entities generation methods can be applied: rule-based data generation or AI-based data generation. 
-- **Load** - provisions  the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run a AI-based training on a subset of entities. 
+- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test data store (Fabric) for later use.
+- **Generate** - generates synthetic entities.  Either one of the entities' generation methods can be applied: rule-based data generation or AI-based data generation. 
+- **Load** - provisions  the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run AI-based training on a subset of entities. 
 - **Delete** - deletes the selected entities from the target environment.
 - **Reserve** - reserves the selected entities in the target environment.
 
@@ -20,22 +20,22 @@ The following task actions are supported by TDM:
 
 ## Task Architectural Widget
 
-TDM 9.0 redesigns of the task creation flow in order to simplify the task creation or edit and make it more intuitive. A **graphic architectural widget** guides the user on the task’s related component:
+TDM 9.0 redesigns the task creation flow in order to simplify the task creation or edit and make it more intuitive. A **graphic architectural widget** guides the user on the task’s related component:
 
 - [Source](14a_task_source_component.md) – defines the data source of task’s entities and/or tables. The data source can be either a source environment or a synthetic data generation.
 
-- Subset – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
+- [Subset](15_task_subset_component.md) – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
 
-- TDM data store – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
+- [Test data store](16_task_test_data_store_component.md) – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
 
-- Target – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
+- [Target](17_task_target_component.md) – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
   
 
-**The task actions are set by components that are selected and set by the user**.  The Test data store is set for all task actions.
+**The task actions are set by components that are selected and set by the user**.  The **Test data store must be set for all tasks**.
 
 Examples: 
 
-- The user wishes to extract entities from Production and save them in the TDM data store (Fabric) for a later use. The user needs to select the Source component:
+- The user wishes to extract entities from Production and save them in the TDM data store (Fabric) for later use. The user needs to select the Source component:
 
   
 
@@ -130,5 +130,5 @@ The Save & execute icon saves the task in the TDM DB and executes the task.
 
 
 
- [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_general_tab.md)
+ [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_source_component.md)
 
