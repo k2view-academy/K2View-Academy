@@ -30,11 +30,9 @@ This setting defines if the data needs to be extracted from the source environme
 
 ​		Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's data sync modes. 
 
-
-
 ### Referential tables
 
- Check this checkbox to add related tables to the task's entities:
+Check this checkbox to add related tables to the task's entities:
 
 ![task related tables](images/task_source_entities_and_tables.png)
 
