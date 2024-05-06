@@ -64,7 +64,7 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 ### Pre and Post Execution Processes Tabs
 
-These tabs enable adding pre and post execution processes. The pre-execution processes run at the beginning of the task's execution , before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
+These tabs enable adding pre and post execution processes. The pre-execution processes run at the beginning of the task's execution, before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
 
 Examples:
 
