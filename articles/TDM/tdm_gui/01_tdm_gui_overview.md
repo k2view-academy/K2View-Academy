@@ -42,7 +42,7 @@ The following tabs are displayed when selecting the TDM option in the applicatio
 
 To move between sections, click the required tab. 
 
-The Settings tab contains the following sub tabs:
+The Settings tab contains the following sub-tabs:
 
 ![tdm navigation](images/tdm_gui_settings_tab.png)
 
