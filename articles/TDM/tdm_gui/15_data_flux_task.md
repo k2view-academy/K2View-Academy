@@ -1,6 +1,6 @@
-# TDM Data Versioning Tasks
+# TDM Data Snapshot (Version) Tasks
 
-The Data Versioning mode enables saving backup versions (snapshots) of data during Functional tests and to then reload the latest saved version to the target environment, if needed. Once created, an extract task can be executed multiple times to create different data versions where each version is saved in Fabric.   
+TDM enables saving backup snapshots (versions) of data during the functional testing and to then reload the latest saved snapshot (version) to the target environment, if needed. Once created, the snapshot creation task can be executed multiple times to create different data versions where each version is saved in Fabric.   
 
 This functionality is useful when running a complex testing calendar in a testing environment. Backing up data every X steps or every X times enables testers to reload the latest version to their environment and repair data without returning to the original state and losing their updates. 
 
@@ -8,96 +8,18 @@ Note that the testing environment is often used as a source and target environme
 
 
 
-## How do I Create a Data Versioning Task?
+## How do I Create a Data Snapshot Task?
 
-Check the **Data Versioning** checkbox in the Additional Execution Parameters tab of the task window.
+Check the [Create Data Snapshot Checkbox](16_task_test_data_store_component.md#create-data-snapshot-checkbox)  checkbox in the [Test data store](16_task_test_data_store_component.md) task component.
 
+Note that when the task process tables, the each table is saved as a separate version on the Test data store.
 
+## Who Can Create a Data Snapshot Task?
 
-## Who Can Create a Data Versioning Task?
-
-The following users can create a Data Versioning task:
+The following users can create a data snapshot task:
 
 1. Admin users.
-2. Environment owner users who can create a Data Versioning task for their environment.
-3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](/articles/TDM/tdm_gui/10_environment_roles_tab.md).  
+2. Environment owner users.
+3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](10_environment_roles_tab.md).  
 
-
-
-## TDM Task Actions and Modes - Summary Table
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td valign="top" width="150pxl">
-<p><strong>Task Actions</strong></p>
-</td>
-<td valign="top" width="150pxl">
-<p><strong>Data Versioning</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="150pxl">
-<p>Extract</p>
-</td>
-<td valign="top" width="150pxl">
-<p>true</p>
-</td>
-<td valign="top" width="600pxl">
-<p>Extract the data of the selected entities from the source environment and save them as a separate version in Fabric.</p>
-<p>The extracted data get the execution datetime. Each entity gets the following Instance ID in Fabric:</p>
-<p>&lt;Source env name&gt;_&lt;entity id&gt;_&lt;task title&gt;_&lt;datetime&gt;</p>
-<p>For example, ENV1_100_extractTest3_20210218082453</p>
-<p>Since the execution datetime is concatenated to the LUI, each task execution creates a different set of LUIs.&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="150pxl">
-<p>Extract</p>
-</td>
-<td valign="top" width="150pxl">
-<p>false</p>
-</td>
-<td valign="top" width="600pxl">
-<p>Extract the data of the selected entities from the source environment and save them in Fabric.</p>
-<p>Each entity is saved in Fabric with the following instance ID:</p>
-<p>&lt;Source env name&gt;_&lt;entity id&gt;</p>
-<p>For example, ENV1_100.</p>
-<p>Note that each task execution may update the LUIs in Fabric.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="150pxl">
-<p>Load</p>
-</td>
-<td valign="top" width="150pxl">
-<p>true</p>
-</td>
-<td valign="top" width="600pxl">
-<p>Load a selected version created on the task's LUs and source environment into the selected target environment. The required entities are deleted from the target and reloaded according to the selected version.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="150pxl">
-<p>Load</p>
-</td>
-<td valign="top" width="150pxl">
-<p>false</p>
-</td>
-<td valign="top" width="600pxl">
-<p>Regular TDM load task.&nbsp; Get a list of entities from a source environment and copy them into the target environment.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
- [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_extract_task.md)
 
