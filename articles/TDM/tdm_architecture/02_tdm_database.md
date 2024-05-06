@@ -123,7 +123,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_tables</td>
-  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">tables</a> included in each TDM task whether the task includes Business entities and referential data or the task consists of tables only.</td>
+  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">tables</a> included in each TDM task, whether the task includes Business entities and referential data or whether the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
