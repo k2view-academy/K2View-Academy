@@ -49,7 +49,7 @@ When an Environment Type is Both, it can have both accesses: read and write. The
     - Select the environment as a source environment and create a task on up to 1000 entities.
     - Select the environment as a target environment and create a task on up to 10 entities.
 
-  Click for more information about [setting the number of entities on a TDM load task](17_load_task_regular_mode.md#requested-entities-tab). 
+  Click for more information about [setting the number of entities on a TDM load task](15a_entity_subset.md). 
 
 ### Testers
 
@@ -108,15 +108,15 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### **Delete Entity from Target** 
 
-Enables the user to check the Delete [task action](14_task_overview.md#task-actions-types) on the task. This permission applies only when the permission set has **Write** access.
+Enables the user to check the Delete [task action]([14_task_overview.md#task-actions-types](14_task_overview.md#task-actions)) on the task. This permission applies only when the permission set has **Write** access.
 
 ##### Entity Clone 
 
-[Create replicas](17_load_task_regular_mode.md#entity-clone-synthetic) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
+[Create replicas]([17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
 
 ##### Random Entity Selection
 
-[Randomly select entities](17_load_task_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
+[Randomly select entities](15a_entity_subset.md#random)) for TDM load task. This permission applies only when the permission set has **Write** access.
 
 ##### Refresh All Data from Source
 
@@ -124,19 +124,19 @@ Ask to sync the entities from the source to get a fresh data in the task.
 
 ##### Process Tables
 
-Create TDM tasks to extract or load [tables].
+Create TDM tasks to extract or load [tables](14c_task_source_component_tables.md).
 
 #####  Task Scheduling 
 
-Add [scheduling settings] in the TDM task to run an automatic periodic execution of the task based on the scheduling parameters.
+Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to run an automatic periodic execution of the task based on the scheduling parameters.
 
 ##### Replace Sequences
 
-[Replace the sequences (IDs)](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-sequence-creation-flows) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
+[Replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities)) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
 
 ##### Data Versioning 
 
-Create a [snapshot (data Versioning)] in the task.
+Create a [snapshot (data Versioning)](15_data_flux_task.md) in the task.
 
 #### Max Number of Reserved Entities on Env
 
