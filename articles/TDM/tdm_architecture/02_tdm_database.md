@@ -1,6 +1,6 @@
 # TDM Database
 
-TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. The TDM APIs and task execution processes connect to the TDM DB to get or update TDM settings or tasks.
+Both, TDM settings and TDM tasks, are kept in the TDM DB. The TDM DB is a dedicated PostgreSQL DB. The TDM APIs and task execution processes connect to the TDM DB to get or update TDM settings or tasks.
 
 The following table lists the TDM tables and their description.
 
