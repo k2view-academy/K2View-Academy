@@ -104,7 +104,7 @@ A list of permissions that can be assigned to a permission set. Check to grant o
 
 ##### **Ignore Test Connection**  
 
-TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether he wishes to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
+TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether he/she wishes to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
 
 ##### **Delete Entity from Target** 
 
