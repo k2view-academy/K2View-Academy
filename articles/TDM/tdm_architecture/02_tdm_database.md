@@ -35,7 +35,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_lu_type_rel_tar_eid</td>
-<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment and is populated by a sync of the parent LU. The table is used for building the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
+<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment, and it is populated by a sync of the parent LU. The table is used for building the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
   <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid">Click for more information about tdm_lu_type_rel_tar_eid.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
