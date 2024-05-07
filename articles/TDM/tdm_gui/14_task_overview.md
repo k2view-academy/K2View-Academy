@@ -10,7 +10,7 @@ The actual data processing and/or entity reservation is performed by the task ex
 
 The following task actions are supported by TDM:
 
-- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test data store (Fabric) for a later use.
+- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test Data store (Fabric) for a later use.
 - **Generate** - generates synthetic entities. Either one of the entities' generation methods can be applied: rule-based data generation or AI-based data generation. 
 - **Load** - provisions the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run AI-based training on a subset of entities. 
 - **Delete** - deletes the selected entities from the target environment.
@@ -26,7 +26,7 @@ TDM 9.0 redesigns the task creation flow in order to simplify the task creation 
 
 - [Subset](15_task_subset_component.md) – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
 
-- [Test data store](16_task_test_data_store_component.md) – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
+- [Test Data store](16_task_test_data_store_component.md) – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
 
 - [Target](17_task_target_component.md) – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
   
@@ -35,7 +35,7 @@ TDM 9.0 redesigns the task creation flow in order to simplify the task creation 
 
 Examples: 
 
-- The user wishes to extract entities from Production and save them in the TDM data store (Fabric) for later use. The user needs to select the Source component:
+- The user wishes to extract entities from Production and save them in the TDM Data store (Fabric) for later use. The user needs to select the Source component:
 
   
 
@@ -110,7 +110,7 @@ You can exist each form, including the Task Name, by clicking any task component
 
 ### Task Architectural Widget
 
-Each task must include the [Test data store] (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target]. A task can include Source only, Target only, or both environments.
+Each task must include the [Test Data store] (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target]. A task can include Source only, Target only, or both environments.
 
 Click on each one of the components to open and update its form.
 
