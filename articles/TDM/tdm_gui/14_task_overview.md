@@ -116,7 +116,7 @@ Click on each one of the components to open and update its form.
 
 ### Advanced Settings
 
-The advanced settings include **optional** task settings:
+The Advanced settings include **optional** task settings:
 
 - [Pre and post execution processes]
 - [Task variables](23_task_globals_tab.md)
