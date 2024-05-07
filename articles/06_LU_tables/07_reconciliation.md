@@ -1,6 +1,6 @@
 <web>
 
-# Data product (LU) Tables Reconciliation
+# Data Product (LU) Tables Reconciliation
 
 Tables Reconciliation allows you to analyze changes made to the connected source data platform tables upon which your project’s tables are based on. It provides a valuable solution for two primary scenarios, throughout project lifecycle:
 
