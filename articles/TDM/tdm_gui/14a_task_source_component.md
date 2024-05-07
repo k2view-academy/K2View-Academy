@@ -2,9 +2,9 @@
 
 The Source component contains the data source settings: from where the entities and/or tables are taken.
 
-The Source component is mandatory for all tasks except delete-only or reserve-only tasks.
+The Source component is mandatory for all tasks except for the delete-only or reserve-only tasks.
 
-When clicking the Source component, the Source form is opened:
+When clicking the Source component, the Source form opens:
 
 ![Source comp](images/task_source_component.png)
 
