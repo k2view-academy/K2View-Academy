@@ -47,7 +47,7 @@ Examples:
 
 
 
-The user can click on each one of the components to open its form and update its settings. The task also has Save, Save & execute, and Advanced settings icons.
+The user can click on each one of the components to open its form and update its settings. The task also has *Save task*, *Save & execute* and *Advanced settings* icons.
 
 ## Who Can Create a Task?
 
