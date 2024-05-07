@@ -62,7 +62,7 @@ The user can click on each one of the components to open its form and update its
 ## TDM Tasks List Window
 
 The TDM Task List displays, by default, the list of all Active tasks in the TDM. 
-It displays a list of settings on each task. These settings can also be used to filter the displayed tasks.
+It displays a list of settings on each task and these settings can also be used for filtering the displayed tasks.
 
 The following screenshot shows an example of the Tasks window: 
 
@@ -70,7 +70,7 @@ The following screenshot shows an example of the Tasks window:
 
   
 
-1. Click **Show/Hide Columns** to open a popup window, which displays the list of available fields for each task. 
+1. Click **Show/Hide Columns** to open a pop-up window, which displays the list of available fields for each task. 
 
 2. To display additional fields, click the fields.
 
