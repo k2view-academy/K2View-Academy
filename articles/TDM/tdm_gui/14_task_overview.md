@@ -104,7 +104,7 @@ Once the task has been edited, a new version with a new task_id is created. The 
 
 When creating a new task or opening a task, the Task name form opens. Populating the Task name and Task description fields is optional. If no Task name is set, a default Task name is generated with some basic information about the task.
 
-You can exit each form, including the Task name form, by clicking any task component. You can re-open the Task Name form by clicking the Task Name in upper the left corner of the window.
+You can exit each form, including the Task name form, by clicking any task component. You can re-open the Task name form by clicking the Task name in the upper-left corner of the window.
 
 ![task name](images/task_name_form.png)
 
