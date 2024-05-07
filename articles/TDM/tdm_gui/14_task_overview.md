@@ -78,7 +78,7 @@ The following screenshot shows an example of the Tasks window:
 
 4. To find a field, populate the **Search** bar in order to filter the tasks by the searched value.
 
-5. If the task has a description, an information icon is displayed next to the task name. Hover the information icon to view the task description.
+5. If the task has a description, an information icon is displayed next to the task name. Hover over the information icon to view the task description.
 
 The TDM Portal displays a list of icons next to each task record:
 
