@@ -2,7 +2,7 @@
 
 Data generation or extract, provisioning, and entity reservation are implemented by creating and executing TDM tasks. 
 
-A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the data source, task actions,  subset of processed entities and/or tables,  the target environments and additional information. For example, create a task to extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
+A TDM task is created in the TDM Portal. It holds a list of instructions and settings that define the data source, task actions, subset of processed entities and/or tables, the target environments and additional information. For example, extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
 
 The actual data processing and/or entity reservation is performed by the task execution, where each task can be executed multiple times.
 
