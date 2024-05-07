@@ -76,7 +76,7 @@ The following screenshot shows an example of the Tasks window:
 
 3. To remove a field from the display, click the field.
 
-4. To find a field, populate the **Search** bar in order to filter the tasks by the searched value.
+4. To find a field, populate the **Search** box in order to filter the tasks by the searched value.
 
 5. If the task has a description, an information icon is displayed next to the task name. Hover over the information icon to view the task description.
 
@@ -94,7 +94,7 @@ The TDM Portal displays a list of icons next to each task record:
 
 1. Click **New Task** in the right corner of the Tasks List window.
 2. To open a selected task, click the **Task Name** of the task.
-3. Click the **Back** of **Next** buttons to move between the tabs. 
+3. Click the **Back** or **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
 Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
 
