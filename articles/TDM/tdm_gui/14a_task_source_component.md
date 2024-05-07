@@ -16,7 +16,7 @@ There are 4 options to select the data source for the task:
   - [Rule-based generation](14d_task_source_rule_based_generation.md)
   - [AI-based generation](14e_task_source_ai_based_generation.md)  
 
-Click the Clear form to reset the form if needed.
+Click *Clear form* to reset the form, if needed.
 
 
 
