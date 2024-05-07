@@ -35,7 +35,7 @@ TDM 9.0 redesigns the task creation flow in order to simplify the task creation 
 
 Examples: 
 
-- The user wishes to extract entities from Production and save them in the TDM Data Store (Fabric) for a later use. The user needs to select the Source component:
+- The user wishes to extract entities from Production and save them in the Test Data Store (Fabric) for a later use. The user needs to select the Source component:
 
   
 
@@ -47,7 +47,7 @@ Examples:
 
 
 
-The user can click on each one of the components to open its form and update its settings.  The task also has Save, Save & execute, and Advanced settings icons.
+The user can click on each one of the components to open its form and update its settings. The task also has Save, Save & execute, and Advanced settings icons.
 
 ## Who Can Create a Task?
 
