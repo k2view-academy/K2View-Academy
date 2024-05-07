@@ -126,7 +126,7 @@ The Advanced settings include **optional** task settings:
 
 The Save icon saves the task in the TDM DB.
 
-The Save & execute icon saves the task in the TDM DB and executes the task.
+The *Save & execute* icon saves the task in the TDM DB and executes the task.
 
 
 
