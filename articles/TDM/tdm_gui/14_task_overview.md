@@ -102,7 +102,7 @@ Once the task has been edited, a new version with a new task_id is created. The 
 
 ### Task Name
 
-The Task Name form is opened when creating a new task or opening a task. The task name and task description are optional. If no task name is set, a default task name is generated with some basic information about the task.
+The Task name form is opened when creating a new task or opening a task. The task name and task description are optional. If no task name is set, a default task name is generated with some basic information about the task.
 
 You can exist each form, including the Task Name, by clicking any task component. You can re-open the Task Name form by clicking the Task Name in upper the left corner of the window.
 
