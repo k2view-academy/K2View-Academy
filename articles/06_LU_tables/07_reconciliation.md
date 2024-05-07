@@ -2,7 +2,7 @@
 
 # Data Product (LU) Tables Reconciliation
 
-Tables Reconciliation allows you to analyze changes made to the connected source data platform tables upon which your project’s tables are based on. It provides a valuable solution for two primary scenarios, throughout project lifecycle:
+Tables Reconciliation allows you to analyze changes made to the connected source data platform tables upon which your project’s tables are based. It provides a valuable solution for two primary scenarios, throughout the project lifecycle:
 
 1. **Data Product Business Entity Model Changes**: During the initial setup of project tables from source data platforms, implementers may decide to select  only those essential for the business entity model of the data product. Subsequent requirements may necessitate the incorporation of columns previously omitted. The Tables Reconciliation feature facilitates the identification of these columns for potential addition.
 2. **Source Data Platforms changes**: Over the course of a project, changes may occur in the source data platform tables linked to it—columns could be added or removed. Tables Reconciliation can be used to spot these differences between the source and project tables, enabling informed decision-making within the Table Editor.
