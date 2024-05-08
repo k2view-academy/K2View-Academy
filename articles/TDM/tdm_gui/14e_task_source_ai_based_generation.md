@@ -17,8 +17,8 @@ The following information needs to be set for **AI-based generation**:
 
 - **Data generation options**:
 
-  - Generate new data - new entities are generated. The generated entities are stored in the Test data store (Fabric). It is possible to populate also the [Target] component in the task to load the generated entities to the target environment.
-  - Use generated data in the Test data store - get pre-generated synthetic entities from the Test data store and load them into the target environment (set in the Target component). Set the entities subset in the Subset component and set the target environment in the target environment.
+  - Generate new data - new entities are generated. The generated entities are stored in the Test Data Store (Fabric). It is possible to populate also the [Target] component in the task to load the generated entities to the target environment.
+  - Use generated data in the Test data store - get pre-generated synthetic entities from the Test Data Store and load them into the target environment (set in the Target component). Set the entities subset in the Subset component and set the target environment in the target environment.
 
 ## Generate New Data 
 
@@ -26,7 +26,7 @@ The following attributes need to be set in order to generate new entities:
 
 - Number of entities to generate - this is a mandatory attribute. The number of entities populated by the tester user is [limited by the tester's environment's Read permissions](10_environment_roles_tab.md#read-and-write-and-number-of-entities) in the AI environment. 
 
-- Data generator - select a pre-created training model created by a [Training task] for the AI-based generation.  The TDM portal displays a warning message to the user if no training model is available for section:
+- Data generator - select a pre-created training model created by a [Training task] for the AI-based generation. The TDM portal displays a warning message to the user if no training model is available for section:
 
   ![training warning](images/ai_generation_warning_no_training.png)
 
