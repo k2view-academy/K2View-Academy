@@ -11,7 +11,7 @@ The following information needs to be set for **AI-based generation**:
 
 ![rule based](images/task_source_ai_based_gen.png)
 
-- **Business entity** - the task's [BE](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** is an **optional** setting that enables a partial selection of the systems or LUs in the task. Click the Advanced option to open a popup window with the selected BE's Systems and LUs.  Note that **you can select only one LU for AI-based generation** tasks.
+- **Business entity** - the task's [BE](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task. When clicking **Advanced**, a pop-up window opens with the selected BE's systems and LUs. Note that **you can select only one LU for AI-based generation** tasks.
 
   
 
