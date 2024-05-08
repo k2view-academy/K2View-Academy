@@ -79,7 +79,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   
 
-- **costant** distribution returns the populated value. For example: set the number of generated addresses to 1 address per customer:
+- **costant** distribution returns the populated value. For example: Set the number of generated addresses to 1 address per customer:
 
   
 
