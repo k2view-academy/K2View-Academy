@@ -1,6 +1,6 @@
 # Task - Source Component - Tables
 
-The **Tables** option enables the user to create a TDM task on **tables** only, **without a relation to a Business entity**. The user can select all or part of the tables that are included in the DB interfaces of the selected source environment.
+**Tables** is a data selection option that enables the user to create a TDM task on **tables** only **without a relation to a Business entity**. The user can select all or some tables that are included in the DB interfaces of the selected source environment.
 
 The following information needs to be set for Tables: 
 
