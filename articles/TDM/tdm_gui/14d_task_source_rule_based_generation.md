@@ -2,8 +2,8 @@
 
 The TDM supports 2 modes of synthetic entities' generation:
 
-- Rule-based generation.
-- AI-based generation.
+- Rule-based generation
+- AI-based generation
 
 The user can select either one of these methods to generate synthetic entities by the task.
 
