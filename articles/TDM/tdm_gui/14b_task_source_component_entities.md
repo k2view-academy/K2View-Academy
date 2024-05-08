@@ -20,13 +20,14 @@ This setting defines whether the data needs to be extracted from the source envi
 
 1. **Available data from the Test data store, new data from [source environment name]** - this is the default option. When it is selected, new entities will be synced from the source environments. Entities that are already stored in the Test Data Store will be taken from the Test Data Store, unless the sync policy - defined in the LU implementation - states that they need to be synced from the source environment.
 2. **All data from [source environment name]** - always sync the data from the source environment. 
-3. **Available [source environment name] data in the Test data store** - get the data from the Test Data Store, if exists (extracted from the source environment by previous task executions). The task execution does not access the source environment directly.  
-4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
+3. **Available [source environment name] data in the Test data store** - get the data from the Test Data Store, if exists (extracted from the source environment by previous task executions). 
+4. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. 
 
   Notes:
 
   - Options 1 and 2 are not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
   - Option 2 (always sync) is available only for [permitted users](10_environment_roles_tab.md#refresh-all-data-from-source).
+  - The task execution does not access the source environment directly when options 3 or 4 are selected.  
 
 ​		Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's data sync modes. 
 
