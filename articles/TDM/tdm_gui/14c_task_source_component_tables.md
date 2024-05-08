@@ -10,8 +10,8 @@ The following information needs to be set for Tables:
 
 - **Policy for fetching data** - this setting defines whether the data needs to be extracted from the source environment or whether it can be retrieved from the Test Data Store (Fabric). The following options are available:
 
-  1. **All data from [source environment name]** - extract the tables from the source environment. 
-  2. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
+1. **All data from [source environment name]** - extract the tables from the source environment. 
+2. **Selected snapshot (version)** - get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
 
   Note:
 
