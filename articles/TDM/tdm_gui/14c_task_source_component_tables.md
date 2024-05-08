@@ -29,7 +29,7 @@ The following information needs to be set for Tables:
 
     ![table versions](images/task_source_table_versions_list.png)
 
-  - Note that the Source component defines the tables list. A filter on the extracted records for each selected table can be added in the [Subset] component.
+  - Note that the Source component defines the tables list. A filter on the extracted records for each selected table can be added in the [Subset](15b_table_subset.md) component.
 
     
 
