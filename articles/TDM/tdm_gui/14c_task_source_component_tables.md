@@ -19,7 +19,7 @@ The following information needs to be set for Tables:
 
     
 
-- **Tables** - the task displays the source environment's active DB interfaces. On each DB interface, the task displays the related DB schemas and the tables in each schema. Select one or multiple tables and click the blue arrow to include the selected tables in the task. Click the trash icon next to the selected table to remove it from the task. If the **Policy for fetching data** is **Select snapshot (version)**, each selected table displays its latest data version:
+- **Tables** - the task displays the source environment's active DB interfaces. On each DB interface, the task displays the related DB schemas and the tables in each schema. Select one or multiple tables and click the blue arrow to include the selected tables in the task. To remove a selected table from the task, click the trash icon next to the selected table. If the **Policy for fetching data** is set to **Select snapshot (version)**, each selected table displays its latest data version:
 
   ![source-tables with versions](images/task_source_tables_only_snapshot.png)
 
