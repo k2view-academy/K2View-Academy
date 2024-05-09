@@ -55,7 +55,7 @@ The following selection methods are available:
 <p>Synthetic entities Rule-based/AI-based generation</p>
 </td>
 <td width="200pxl">
-<p>Use generated data in the Test Sata Store</p>
+<p>Use generated data in the Test Data Store</p>
 </td>
 <td width="500pxl">
 <ul>
