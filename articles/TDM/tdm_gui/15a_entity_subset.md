@@ -120,13 +120,13 @@ The Parameters selection has 2 modes:
 
 #### Filter out Reserved Entities Checkbox
 
-The **Filter out Reserved Entities** checkbox indicates if entities that are reserved for other users in the target environment, must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Number of entities matched** setting. Note that this checkbox can be checked only after the selection of the task's target environment in the [Target] component.
+The **Filter out Reserved Entities** checkbox indicates whether entities that are reserved for other users in the target environment, must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Number of entities matched** setting. Note that this checkbox can be checked only after the selection of the task's target environment in the [Target] component.
 
 For example:
 
 - There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's target environments.
 - If the Filter out Reserved Entities checkbox is checked, the *Entities Matched* result is 490.
-- If the Filter out Reserved Entities checkbox is cleared, the *Entities Matched* result is 500.
+- If the Filter out Reserved Entities checkbox is unchecked, the *Entities Matched* result is 500.
 
 #### How Do I Add a Condition?
 
