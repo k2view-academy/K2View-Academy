@@ -41,7 +41,7 @@ The following shared Globals have been added for the AI-based data generation:
 ###  AI Interfaces
 
 - **AI_DB** - this interfaces must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
-
+- **AI_Execution** - this interfaces must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. 
 ### AI Environment
 Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
 
@@ -63,7 +63,7 @@ For example, do not define a city as a special param, since the data generation 
 
 ![special params](images/ai_generation_special_params_example.png)
 
-
+**Note : a special field cannot be a mapping field simultaneously.
 
 ### Overriding Generated Values
 
