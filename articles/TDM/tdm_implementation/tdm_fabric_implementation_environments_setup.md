@@ -35,8 +35,8 @@ TDM supports 2 data generation methods:
 
 Both methods use dummy source environments. Each method has its own dummy environment. The following Globals define the dummy environment names:
 
-- **SYNTHETIC_ENVIRONMENT** - defines the rule-based environment name. Default value is **Synthetic**.
-- **AI_ENVIRONMENT** - defines the AI-based environment name. Default value is **AI**. 
+- **SYNTHETIC** - defines the rule-based environment name. Default value is **Synthetic**.
+- **AI** - defines the AI-based environment name. Default value is **AI**. 
 
 Both dummy environments must be created and deployed in Fabric with the TDM interfaces. Additionally, the AI-based environment must be deployed with the following interfaces:
 
