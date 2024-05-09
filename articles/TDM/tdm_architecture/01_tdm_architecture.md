@@ -6,7 +6,7 @@ The K2View TDM has the following components:
 
 - TDM Portal (self-service).
 - TDM DB.
-- Fabric. 
+- Test data store (Fabric). 
 
 ![tdm_architecture](images/tdm_architecture.png)
 
@@ -19,7 +19,7 @@ The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30
 
 TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB to get or update TDM settings or tasks.
 
-### Fabric
+### Test Data Store (Fabric)
 
 Fabric acts as a staging DB for the provisioned entities and as an ETL layer for extracting data from data sources and loading it to the target environment.
 
