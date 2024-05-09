@@ -51,9 +51,7 @@ The TDM 9 has 2 optional configuration tables for the AI-based training and gene
 
 #### TrainingMappingTables.csv
 
-A list of LU tables and fields that are logically related to each other. For example:
-
-- Contract.contract_ref_id and Contract.contract_description fields.
+Mapping fields are more likely to be columns of low cardinality for example  contract_description and contract_ref_id, but also have another property: the pairs or triplets or more connected by group id field in the mtable that are given as mapping_table_columns, are considered to have a one-to-one relationship. For example for the contract_description-contract_ref_id pair we always ensure that 'Unlimited call' only pairs with 101. That means that is ensures that the generated values for the mapping fields, always come from source data.
 
 #### TrainingSpecialFields.csv
 
