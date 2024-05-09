@@ -7,7 +7,7 @@ TDM 9.0 adds integration with AI-based entities' generation. K2view TDM supports
 
 The user who creates the task can select either one of these methods to generate synthetic entities by the task. 
 
-The diagram below describes the TDM - AI integration:
+The diagram below describes the TDM and AI integration:
 
 ![tdm-ai](images/tdm_ai_integration.png)
 
@@ -19,15 +19,15 @@ The following diagram describes the execution of AI training task:
 
 ![ai training](images/ai_training_task_process.png)
 
-## AI-based Generation Task
+## AI-Based Generation Task
 
-The AI-based data generation task generates synthetic entities based on a selected training models. The generated entities are imported to the Test data store (Fabric) and can be loaded to any target environment.
+The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test data store (Fabric) and can be loaded to any target environment.
 
 The following diagram describes the execution of AI training task:
 
 ![ai training](images/ai_generation_task_process.png)
 
-## AI Implementation
+## Implementation Stpes
 
 ### AI Globals
 
