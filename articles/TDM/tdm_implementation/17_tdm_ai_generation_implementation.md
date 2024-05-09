@@ -1,6 +1,6 @@
 # AI Implementation
 
-TDM 9.0 adds an integration with AI based entities generation. K2view TDM supports 2 modes of synthetic entities' generation:
+TDM 9.0 adds integration with AI-based entities' generation. K2view TDM supports 2 modes of synthetic entities' generation:
 
 - Rule-based generation
 - AI-based generation
