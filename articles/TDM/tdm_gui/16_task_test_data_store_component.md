@@ -8,7 +8,7 @@ Check the checkbox to create a [Data snapshot (version)](15_data_flux_task.md) f
 
 ### Entities
 
-This checkbox is clear by default. The checkbox can be checked whenever the Source' **Policy for fetching data** gets the data from the the source environment or the task synthetically generates new entities. 
+This checkbox is clear by default. The checkbox can be checked whenever the Source' **Policy for fetching data** gets the data from the source environment or the task synthetically generates new entities. 
 
 ### Tables 
 
