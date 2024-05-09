@@ -69,14 +69,16 @@ For example, do not define a city as a special param, since the data generation 
   - **a special field cannot be a mapping field simultaneously.**
   - **Primary and foreign keys columns as well as columns that are not string type cannot be overridden as being special fields.**
 
-### K2system 
+### K2system schema tables 
 - Creation of the K2system schema/tables: 
      - it will be done by the TDM deploy flow if the AI global is set to true see globals above
-     - these created tables are populated by the TDM AI Task and The AI Job: 
+     - these created tables are populated by the TDM AI Task and The AI Job:
+       
               - task_executions: This table holds all the task executions for all the task types.
               - task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that might be useful for later analysis.
               - entity_list: A table with all the entities relevant to an existing training/generation job.
-
+       
+![k2system_tables](images/k2system_tables.png)
 ### Overriding Generated Values
 
 - It is possible to define a post execution flow that gets the generated entities and updates them if needed.
