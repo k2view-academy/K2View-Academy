@@ -24,7 +24,7 @@ The retention period is set on the extracted entities and/or tables. When this p
 
 - **Do not retain** - avoid saving the task's entities and/or tables in Fabric (instead of saving and deleting). This option can be used, for example, to run an extract task on a large subset of entities in order to populate the TDM parameter’s tables on each entity without saving the entities into Fabric.
 
-- Setting of a time measuring unit (minutes/hours/days...) and a value. For example, save the data in Fabric for 2 days. After 2 days the data is automatically deleted from Fabric.
+- Setting of a time measuring unit (minutes/hours/days...) and a value. For example, save the data in Fabric for 2 days. After 2 days, the data is automatically deleted from Fabric.
 
   Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks** or **years**, depending on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
