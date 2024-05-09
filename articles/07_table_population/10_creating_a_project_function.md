@@ -10,13 +10,21 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 <web>
 
-To create a new function, either open an existing **Logic.java** file under the **Logical Unit** or click on **Logical Units** > [**LU Name**] > **Java** > right click on **src** > **New Java Logic File** (when you want to create a new Category).
+To create a new function, either:
 
-<img src="images/web/10_create_func_java.PNG" style="zoom:80%;" />
+* Use Fabric at the top menu, choose the required function and follow the wizard, asking you where to create it.
 
-The Web Studio provides a snippet syntax helper: type **Ctrl+Space** and then type **fabric** for Fabric snippets. For functions you can type FF. This will show you several function types. Once you have selected a function, the syntax helper will offer you the syntax along with some options.   
+  ![](images/web/10_fabric_menu.png)
 
-<img src="images/web/10_create_func.PNG" style="zoom:80%;" />
+  
+
+* Open an existing **Logic.java** file under the **Logical Unit** or click on **Logical Units** > [**LU Name**] > **Java** > right click on **src** > **New Java Logic File** (when you want to create a new Category).
+
+  ![](images/web/10_create_func_java.PNG)
+
+  The Web Studio provides a snippet syntax helper: type **Ctrl+Space** and then type **fabric** for Fabric snippets. For functions you can type FF. This will show you several function types. Once you have selected a function, the syntax helper will offer you the syntax along with some options.   
+
+  ![](images/web/10_create_func.PNG)
 
 For example, selecting **fabric-function-trigger** will provide the following function template:
 

@@ -54,8 +54,8 @@ The source version can be checked using a global variable: SOURCE_PRODUCT_VERSIO
 
 To enable Fabric to align the implementation logic to the source version, do the following:
 1. Define two Decision functions:\
-  a. Decision function 1: Return True if the source version is Production. Otherwise, return False.\
-  b. Decision function 2: Return True if the source version is Development. Otherwise, return False.
+    a. Decision function 1: Return True if the source version is Production. Otherwise, return False.\
+    b. Decision function 2: Return True if the source version is Development. Otherwise, return False.
 2. Attach Decision Function 1 to population objects aligned with the Production version.
 3. Attach Decision Function 2 to population objects aligned with the Development version.
 
@@ -67,17 +67,28 @@ A Decision function can check the current date and time.
 * If the current date and time = peak, return False to skip the Sync.\
 In this example, it is recommended to use the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function to perform a one-time execution of the Decision function per LUI.
 
+<studio>
+
 ### How Can I Create a Decision Function?
+
 1.	Go to the **Project Tree**, click the **LU** or **Shared Objects** and then right click the **Java folder**.
 2.	Click **New Function** and set the **Function Type** to **Decision Function**.
 3.	Define the **Name** of the **Function**.
 4.	To define the **Category** of the **Function** either:\
-  a. Select a **Category** from the dropdown list.\
-  b. Type in a **New Category**.
+     a. Select a **Category** from the dropdown list.\
+     b. Type in a **New Category**.
 5.	Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
 6.	Click **Save**.
 
-[Click for more information about Creating Project Functions.](/articles/07_table_population/08_project_functions.md)
+</studio>
+
+<web>
+
+[Click for more information about Creating Project Functions.](/articles/07_table_population/10_creating_a_project_function.md)
+
+</web>
+
+[Click for more information about Project Functions.](/articles/07_table_population/08_project_functions.md)
 
 [Click for more information about Decision Function Checks and Considerations.](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
