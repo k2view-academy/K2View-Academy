@@ -52,16 +52,20 @@ The TDM 9 has 2 optional configuration tables for the AI-based training and gene
 #### TrainingMappingTables.csv
 
 Mapping fields are more likely to be columns of low cardinality for example  contract_description and contract_ref_id, but also have another property: the pairs or triplets or more connected by group id field in the mtable that are given as mapping_table_columns, are considered to have a one-to-one relationship. For example for the contract_description-contract_ref_id pair we always ensure that 'Unlimited call' only pairs with 101. That means that is ensures that the generated values for the mapping fields, always come from source data.
+![mapping fields]()
 
 #### TrainingSpecialFields.csv
 
-The data generation process identifies text fields with high cardinality as **special fields**. For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not need to be real, just look realistic**. In some cases the **definition** of a field as a special param needs to be **overridden**. 
+It is optional to add some values to the column_name in TrainingSpecialFields Mtable. The system auto-detects the columns that should be treated as special fields. You can come on top of the auto-detection and, with your business knowledge, override the special fields either by setting any of them as true or false. 
+Special fields are considered the columns that have a high cardinality (above the default threshold set in training execution params), for these fields, the data generation generates values that do not come directly from the original data. **The generated values do not need to be real, just look realistic**. In some cases the **definition** of a field as a special param needs to be **overridden**. 
 
 For example, do not define a city as a special param, since the data generation process needs to generate real values for a city:
 
 ![special params](images/ai_generation_special_params_example.png)
 
-**Note : a special field cannot be a mapping field simultaneously.
+#### Notes
+  - **a special field cannot be a mapping field simultaneously.**
+  - **Primary and foreign keys columns as well as columns that are not string type cannot be overridden as being special fields.**
 
 ### Overriding Generated Values
 
