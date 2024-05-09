@@ -10,7 +10,7 @@ The following attributes must be set for **Testing environment** data destinatio
 - Target environment name.
 - Actions to perform on the target environment.
 
-When you start the task creation with the Target component, for example: a delete task, you must set the task's Business entity:
+When you start the task creation with the Target component, e.g., a delete task, you must set the task's Business entity:
 
 ![target example1](images/task_target_component_delete_only.png)
 
