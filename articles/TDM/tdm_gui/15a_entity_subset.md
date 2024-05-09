@@ -190,7 +190,7 @@ There are several types of parameters:
 
 #### Getting the Number of Matching Entities
 
-Click Refresh next to the **Number of entities matched** in order to calculate the number of entities that match the selected parameters. The Business parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, selecting customers based on their number of open cases, subscriber_type, and vip_status (see the above screenshot).
+Click Refresh next to the **Number of entities matched** in order to calculate the number of entities that match the selected parameters. The Business parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, selecting customers based on their number of open cases, subscriber_type, and vip_status (as seen in the above screenshot).
 
 - Click [![refesh](https://github.com/k2view-academy/K2View-Academy/raw/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
