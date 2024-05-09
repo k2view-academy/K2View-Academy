@@ -8,7 +8,7 @@ This document describes infrastructure and application setup for TDM with AI int
     - [VPC](#vpc)
     - [GKE](#gke)
     - [Admin Token](#admin-token)
-3. [TDM project configuration](#project-configuration)
+3. [TDM project configuration](#tdm-project-configuration)
 4. [Manual cleanup flow ](#manual-cleanup-flow)
 5. [AI tests results ](#ai_test_results)
 
