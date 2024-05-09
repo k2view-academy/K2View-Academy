@@ -46,7 +46,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 </tbody>
 </table>
 
-
+The CPU to memory ratio is usefull for memory optimizied machine's profile.
 
 ### How Many Nodes Do I Need?
 
@@ -54,20 +54,21 @@ Determining the base number of the required worker nodes, as well as the maximum
 
 Below are some use cases:
 
-* The minimum requirement for **Studio** namespaces, for Fabric POD, is: 8 cores and 32GB RAM. (There are several applications running on this POD: Fabric runtime, Studio and Neo4J).
+* The recommended resources for **Studio** namespaces, for Fabric POD, are: 4 cores and 16GB RAM. (There are several applications running on this POD: Fabric runtime, Studio and Neo4J). 
 
   Additional PODs may be required, depending on the project and solution types:
 
   * The TDM solution needs a Postgres POD. Accordingly, the minimum requirement for such namespace is:
-        * Fabric: 8 cores, 32GB RAM
+        * Fabric: 4 cores, 16GB RAM
         * PG: 2 cores, 8 GB RAM
   * A Project, using a real-time data streaming, requires a Cassandra POD (for the IIDFinder module).  Accordingly, the minimum requirement for such namespace is:
-        * Fabric: 8 cores, 32GB RAM (in this case, Kafka application is also running on this POD).
+        * Fabric: 4 cores, 16GB RAM (note that in this case, Kafka application is also running on this POD).
         * Cassandra: 2 cores, 8GB RAM
 
 * **Non-Studio** namespaces, such as UAT, SIT, pre-production and production, require a cluster of several Fabric PODs, using K8S auto-scale capabilities.
 
-  On the other hand, PODs or resources that are required for Studio namespace, might not be needed here: for a non-studio case, it is recommended to use managed services (buckets / blob-storage for a massive storage; managed DBs like managed Postgres or managed Cassandra; managed Kafka rather than running it on Fabric POD).
+  On the other hand, PODs and resources that are required for Studio namespace, might not be needed here: for a non-studio case, it is recommended to use managed services (buckets / blob-storage for a massive storage; managed DBs like managed Postgres or managed Cassandra; managed Kafka rather than running it on Fabric POD).
+  Accoridngly, a namespace might contian only Fabric Pods, where for each 2 cores and 8GB RAM are required. Note that different resources will be required, per your projects' needs.   
 
 
 
