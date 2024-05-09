@@ -1,6 +1,6 @@
 # Task - Table Subset
 
-The table subset enables an optional filtering on the records extracted for the task's tables. The table subset is available when selecting the [Tables](14c_task_source_component_tables.md#task---source-component---tables) option in the Source component, i.e. creating a task on tables only.
+The table subset enables an optional filtering on the records extracted for the task's tables. The table subset is available when selecting the [Tables](14c_task_source_component_tables.md#task---source-component---tables) option in the Source component, i.e., creating a task on tables only.
 
 A filter can be added to one, several, or all task's table.
 
