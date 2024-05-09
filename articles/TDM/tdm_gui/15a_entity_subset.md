@@ -1,6 +1,6 @@
 # Task - Entity Subset
 
-The entity subset must be defined for any task that extracts entities from the source environment or gets the pre-extracted/pre-generated entities from the Test data store.  The subset defines the **entities selection method**. 
+The entity subset must be defined for any task that extracts entities from the source environment or that gets the pre-extracted/pre-generated entities from the Test Data Store. The subset defines the **entities selection method**. 
 
 The following selection methods are available:
 
