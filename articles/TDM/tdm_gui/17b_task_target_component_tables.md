@@ -7,7 +7,7 @@ The following information needs to be set when the task's data type is [Tables o
 
 ![target example tables](images/task_target_tables.png)
 
-By default, both actions, Delete and Load, are checked. The Delete actions **deletes the entire table** in the target environment before loading the table.
+By default, both actions, Delete and Load, are checked. The Delete action **deletes the entire table** in the target environment before loading the table.
 
 You can clear the Delete action checkbox, but be aware that loading without a delete action may cause data duplication or unique constraint violation when loading the table into the target environment. in the target table. 
 
