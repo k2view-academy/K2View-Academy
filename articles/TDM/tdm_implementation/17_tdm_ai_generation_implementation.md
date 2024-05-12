@@ -40,8 +40,9 @@ The following shared Globals have been added for the AI-based data generation:
 
 ###  AI Interfaces
 
-- **AI_DB** - this interfaces must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
-- **AI_Execution** - this interfaces must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. fabirc interacts with k8 server using this HTTP/HTTPS interface for more information check https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token 
+- **AI_DB** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
+- **AI_Execution** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. Fabric interacts with K8 server using this HTTP/HTTPS interface.
+Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token) for more information. 
 ### AI Environment
 Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
 
@@ -81,7 +82,7 @@ For example, do not define a city as a special param, since the data generation 
 ![k2system_tables](images/k2system_tables.png)
 ### Overriding Generated Values
 
-- It is possible to define a post execution flow that gets the generated entities and updates them if needed.
+- It is possible to define a post-execution flow that gets the generated entities and updates them if needed.
 
 ### Cleanup Process 
-https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow
+Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
