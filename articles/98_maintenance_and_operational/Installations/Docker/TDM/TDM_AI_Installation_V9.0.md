@@ -10,7 +10,7 @@ This document describes the infrastructure and application setup for TDM with AI
     - [Admin Token](#admin-token)
 3. [TDM project configuration](#tdm-project-configuration)
 4. [Manual cleanup flow](#manual-cleanup-flow)
-5. [AI tests results](#ai_test_results)
+5. [AI tests results](#ai-tests---performance-results)
 
 ## Pre-requisites
 - K2view cloud site
