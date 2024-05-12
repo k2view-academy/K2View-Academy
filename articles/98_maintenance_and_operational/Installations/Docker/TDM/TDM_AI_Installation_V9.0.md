@@ -1,6 +1,6 @@
 # TDM with AI installation document
 
-This document describes infrastructure and application setup for TDM with AI integration.
+This document describes the infrastructure and application setup for TDM with AI integration.
 
 ## Table of contents
 1. [Pre-requisites](#pre-requisites)
@@ -118,12 +118,12 @@ echo $token
 # Alternative way to see the token
 kubectl describe secrets/full-admin-user-secret -n kube-system
 ```
-5. Copy the token, you will need in later steps
+5. Copy the token. The token is needed for later steps
 
 ## TDM project configuration
-https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md
+Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md) for TDM-AI project implementation guidelines.
 
 ## Manual cleanup flow 
-Cleanup process AICleanUp.flow located under TDM LU with inputs CleanALL Boolean if true the flow deletes all data in AI_execution and AI_DB else populate the TrainingExecutionIDs array that holds all training models that needs cleaning for example [1551,1660] the flow extracts all generations done by these training models and deletes all related data .
+Cleanup process AICleanUp.flow located under TDM LU with inputs CleanALL Boolean if true the flow deletes all data in AI_execution and AI_DB else populate the TrainingExecutionIDs array that holds all training models that needs cleaning for example [1551,1660] the flow extracts all generations done by these training models and deletes all related data.
 
-## AI tests results
+## AI Tests - Performance Results
