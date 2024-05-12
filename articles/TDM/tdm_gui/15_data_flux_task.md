@@ -12,7 +12,7 @@ Note that the testing environment is often used as a source as well as a target 
 
 Check the [Create Data Snapshot Checkbox](16_task_test_data_store_component.md#create-data-snapshot-checkbox)  checkbox in the [Test data store](16_task_test_data_store_component.md) task component.
 
-Note that when the task process tables, the each table is saved as a separate version on the Test Data Store.
+Note that when the task processes tables, each table is saved as a separate version in the Test Data Store.
 
 ## Who Can Create a Data Snapshot Task?
 
