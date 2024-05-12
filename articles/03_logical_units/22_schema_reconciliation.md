@@ -1,7 +1,0 @@
-<web>
-
-# Schema Reconciliation
-
-
-
-</web>
