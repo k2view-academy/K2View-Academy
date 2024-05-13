@@ -23,7 +23,7 @@ Activating the mismatches finder at the schema - the main tables design surface 
 
 1. At the top schema toolbar look for the ![](../03_logical_units/images/web/reconciliation.svg) Reconciliation action icon. 
 2. Click on the icon to activate the mismatches finder, or click on the arrow aside it and choose one of the 3 options.
-3. As a result, mismatches finding process is starting.
+3. As a result, the mismatches finding process starts.
 
 ![](images/schema_recon_bar_select.png)
 
