@@ -31,9 +31,9 @@ Activating the mismatches finder in the schema - the main tables design surface 
 
 You can activate the mismatches finder on a specific table, rather than on an LU schema:
 
-* At the Schema, choose a table and click to open its Properties panel.
+* In the schema, choose a table and click to open its Properties panel.
 
-* At the project tree, choose the table and open it. Then click to open its Properties panel.
+* In the Project tree, choose the table and open it; then click to open its Properties panel.
 
   
 
