@@ -151,7 +151,7 @@ In case you deal with a big schema, containing many tables, you can easily find 
 
 1. At the top schema toolbar look for the ![](../03_logical_units/images/web/light-off.svg)Highlighting action icon.  
 
-2. Click on the arrow aside and choose the *Mismatches vs Source* option.
+2. Click on the arrow next to this icon and choose the *Mismatches vs Source* option.
 
    ![](images/schema_recon_bar_highlight.png)
 
