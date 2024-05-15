@@ -55,7 +55,7 @@ Common input arguments of masking Actors are:
     * If an interface is **IN-MEMORY**, uniqueness is checked only on a single node and not across a DC or a Cluster.
 
 
-* **TTL** - Time to Live. This is the time in seconds to keep the masked values in the cache table. The default value is 86400 seconds (24 hours). If this parameter is set to 0, the masked value will not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
+* **TTL** - Time to Live. This is the time in seconds to keep the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this parameter is set to 0, the masked value will not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
