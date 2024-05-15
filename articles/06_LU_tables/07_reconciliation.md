@@ -22,7 +22,7 @@ You can trigger the mismatches finder either in *schema* level or per *table*:
 Activating the mismatches finder in the schema - the main tables design surface - provides a mismatches overview of the LU (aka Data Product) schema's tables.
 
 1. At the top schema toolbar, look for the ![](../03_logical_units/images/web/reconciliation.svg) Reconciliation action icon. 
-2. Click on the icon to activate the mismatches finder, or click on the arrow aside it and choose one of the 3 options.
+2. Click on the icon to activate the mismatches finder, or click on the arrow aside it and choose 1 of the 3 options.
 3. As a result, the mismatches finding process starts.
 
 ![](images/schema_recon_bar_select.png)
