@@ -96,21 +96,21 @@ The green and red colored table's entries, are those that are identified with ch
 
 According to the Reconciliation Mismatches Finder results, as shown in the table editor screen, you can choose - for each one of the mismatched columns - to either take action or postpone such decision and do it later, as follows:
 
-* **Added** columns at source table (green colored entries):
+* **Added** columns at source table (green-colored entries):
 
-  * *Decide Later* weather to add it or not. For example, you might prefer not decide now because you wish to be advised by your team if this column shall be used at your project.
+  * *Decide Later* whether to add it or not. For example, you may prefer not to decide now because you wish to be advised by your team if this column shall be used in your project.
 
   * *Add* the column also to the project's LU table.
 
   * *Do not Add* the column to the project's LU table. 
 
-    According to this decision, Studio will not alert you later that this column exists at the source. You still be able to find it when looking for *unused* columns.
+    According to this decision, Studio will not alert you later that this column exists in the source. You will still be able to find it when searching for *unused* columns.
 
-* **Removed** columns from source (light red colored entries):
+* **Removed** columns from source (light red-colored entries):
 
-  * *Decide Later* weather to remove it or not. For example, you might not decide now because you wish to be advised by your team, if this column shall be removed or maybe is still needed.
+  * *Decide Later* whether to remove it or not. For example, you may not decide now because you wish to be advised by your team if this column shall be removed or maybe it is still needed.
 
-  * *Preserve* the column, although it was removed from the source. This probably useful for cases where this column is in use at implementation and need to be remained. Note that it is your responsibility from now on to populate its data, because the data will not be retrieved from source. 
+  * *Preserve* the column, although it was removed from the source. This is probably useful in cases where this column is in use in the implementation and therefore needs to remain. Note that it is your responsibility from now on to populate its data, because the data will not be retrieved from source. 
 
     According to this decision, Studio will not alert you later that this column was removed at the source.
 
