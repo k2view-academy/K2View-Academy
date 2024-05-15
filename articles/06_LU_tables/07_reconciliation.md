@@ -127,8 +127,8 @@ According to the Reconciliation Mismatches Finder results, as shown in the table
 Once done with handling a table - either if you have made a decision at the tables entries and have taken action or not - you can close it by either:
 
 * *Clicking on OK*: the open table is considered as handled, and your changes are preserved. In addition:
-  * The table heading color turns back into its "natural" bleu color.
-  * Opening the table over again, you will be able to see and examine the decision you have made, as long as you did not save the change (saving the schema if you are in the schema editor, or saving the table if you are in table editing, opened from the Project tree)
+  * The table heading color turns back into its "natural" blue color.
+  * Opening the table over again, you will be able to see and examine the decision you have made, as long as you did not save the change (saving the schema if you are in the schema editor, or saving the table if you are in table editing, opened from the Project tree).
   * The Table Properties Source Origin (see below) indicates that you handled that table.
   * You are automatically moved into the next table that found during the Reconciliation Mismatches Finder. This will be done as long as the bottom "Go next table" checkbox is ticked (default). This means that Table Editor will remain opened where next candidate table will appear.
 * *Clicking on Cancel*: the table is considered as not handled and accordingly, the above accompanying implications do not hold.
