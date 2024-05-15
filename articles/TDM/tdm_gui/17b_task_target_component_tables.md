@@ -1,4 +1,4 @@
-# Task - Target Component - Entities 
+# Task - Target Component - Tables 
 
 The following information needs to be set when the task's data type is [Tables only](14c_task_source_component_tables.md):
 
