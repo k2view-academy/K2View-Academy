@@ -94,7 +94,7 @@ The green and red colored table's entries, are those that are identified with ch
 
 ## Reconciliation Actions
 
-According to the Reconciliation Mismatches Finder results, as shown in the table editor screen, you can choose, for each one of the mismatched columns,  either to take an action or choose postponing such decision and doing it later, as following:
+According to the Reconciliation Mismatches Finder results, as shown in the table editor screen, you can choose, for each one of the mismatched columns, either to take an action or choose postponing such decision and doing it later, as following:
 
 * **Added** columns at source table (green colored entries):
 
