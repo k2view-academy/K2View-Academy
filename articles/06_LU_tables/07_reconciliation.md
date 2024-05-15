@@ -47,7 +47,7 @@ You can activate the mismatches finder on a specific table, rather than on an LU
 
 
 
-> Note: The mismatches finding process looks either directly at the source data platforms or at the Catalog's Discovery outcome, when it being used.
+> Note: The mismatches finding process looks either directly at the source data platforms or at the Catalog's Discovery outcome, when it is being used.
 >
 
 
