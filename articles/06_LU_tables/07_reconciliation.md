@@ -13,7 +13,7 @@ The Tables Reconciliation is a feature that enables analysis of changes made to 
 
 ## Activating the Reconciliation Mismatches Finder
 
-The first step for reconciliation is to find the mismatches. You can find mismatches according to either of 3 options: Find only added/removed tables columns which were added or removed at source, unused columns comparing to source, find all mismatches, includes added/removed/unused.
+The first step of the reconciliation feature is to find the mismatches. This can be done according to 1 of the following 3 options: Find **only added/removed** tables' columns (added to the source or removed from it), Find **unused** columns in the project tables (comparing with the source), Find **all** mismatches between the project and the source tables (added/removed/unused). 
 
 You can trigger the mismatches finder either in *schema* level or per *table*:
 
