@@ -14,5 +14,5 @@ Click the filter icon next to the table and populate the filtering parameters fo
 
 Select a table column, operator, and populate the value or values. The values must be typed manually.
 
-Several conditions and/or groups can be defined as in the definition of a group of entities according to [business parameters](15a_entity_subset.md#business-parameters).
+Several conditions and/or groups can added to define the table's subset. 
 
