@@ -57,7 +57,7 @@ You can activate the mismatches finder on a specific table, rather than on an LU
 Upon mismatches finding process is concluded:  
 
 - When mismatches are found, then
-  - if you activated the finder within a *schema*, the relevant tables' headers turn purple. then you will be able to examine each table changes, by opening the table for editing, throughout the table's menu.
+  - if you activated the finder within a *schema*, the relevant tables' headers turn purple. You will then be able to examine each table changes, by opening the table for editing, throughout the table's menu.
   - If you activated the finder within at a *table* which you opened for editing from the project tree, you will the changes at the table, on the spot.
 - If mismatches were not found a notification message appears at the bottom right side of the window. indicating it.
 
