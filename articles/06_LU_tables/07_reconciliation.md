@@ -82,7 +82,7 @@ Upon opening a table which was signed by the Reconciliation Mismatches Finder, t
 
 ![](images/recon_table_editor.png)
 
-The green and red colored table's entries, are those which identified with changes at the data source. Gray colored entries are those which exists at the source data platform tables, but not at the corresponding LU table. 
+The green and red colored table's entries, are those that are identified with changes in the data source. Gray colored entries are those that exist in the source data platform tables, but not in the corresponding LU table.
 
 
 
