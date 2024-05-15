@@ -29,7 +29,7 @@ Activating the mismatches finder in the schema - the main tables design surface 
 
 #### Table
 
-You can activate the mismatches finder on a specific table, rather than on LU schema:
+You can activate the mismatches finder on a specific table, rather than on an LU schema:
 
 * At the Schema, choose a table and click to open its Properties panel.
 
