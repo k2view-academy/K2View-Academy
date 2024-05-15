@@ -39,7 +39,7 @@ You can activate the mismatches finder on a specific table, rather than on an LU
 
 1. Switch to the *Data Source Origin* tab.
 2. Look for the ![](../03_logical_units/images/web/reconciliation.svg) Reconciliation action icon. You can either click on the icon to activate the mismatches finder or click on the arrow next to the icon and choose 1 of the 3 options.
-3. As a result, the mismatches finding process is starting.
+3. As a result, the mismatches finding process starts.
 
 
 
