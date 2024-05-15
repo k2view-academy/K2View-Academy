@@ -86,9 +86,9 @@ The green and red colored table's entries, are those that are identified with ch
 
 
 
-> The above example, illustrates a case where there are various changes (added, removed, not-in-use columns). Usually, within a specific table, fewer changes will be done.
+> The above example illustrates a case where there are various changes (added, removed, not-in-use columns). Usually, within a specific table, fewer changes will be made.
 >
-> Tables' columns are represented in the Table Editor as entries / lines. The terminology that is being used here is columns or entries.
+> Tables' columns are represented in the Table Editor as entries/lines. The terminology that is being used here is columns or entries.
 
 
 
