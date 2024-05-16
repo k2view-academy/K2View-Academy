@@ -147,7 +147,7 @@ The tab's body lists the source data platform columns, organized by Interface, t
 
 ## Highlighting Mismatched Tables
 
-In case you deal with a big schema, containing many tables, you can easily find those tables, which were found during the Reconciliation Mismatches Finder process, by using the Highlighting option:
+In case you deal with a large schema, which contains many tables, you can easily find these tables that were found during the Reconciliation Mismatches Finder process, by using the Highlighting option:
 
 1. At the top schema toolbar look for the ![](../03_logical_units/images/web/light-off.svg)Highlighting action icon.  
 
