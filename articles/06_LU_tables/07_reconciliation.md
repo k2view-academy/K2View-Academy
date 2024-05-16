@@ -110,7 +110,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
   * *Decide Later* whether to remove it or not. For example, you may prefer to postpone your decision for later, as you wish to consult with your team first as to whether this column shall be removed or maybe it is still needed.
 
-  * *Preserve* the column, although it was removed from the source. This is probably useful in cases where this column is in use in the implementation and therefore needs to remain. Note that it is your responsibility - from now on - to populate its data as the data will not be retrieved from source. 
+  * *Preserve* the column, although it was removed from the source. This is probably useful in cases where this column is in use within the implementation and therefore needs to remain. Note that it is your responsibility - from now on - to populate its data as the data will not be retrieved from source. 
 
     According to this decision, Studio will not alert you later that this column was removed at the source.
 
