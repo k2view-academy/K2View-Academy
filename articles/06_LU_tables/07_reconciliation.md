@@ -67,7 +67,7 @@ Upon completion of the mismatches finding process:
 
 
 
-When the mismatches finding process is activated, the Reconciliation action icon turns orange, hinting to the user that Reconciliation is now active. Being in this state:
+When the mismatches finding process is activated, the Reconciliation action icon turns orange, hinting to the user that the Reconciliation process is now active. Being in this state:
 
 * You can click on the Reconciliation action icon to turn it off, hiding all the mismatches findings.
 * You can switch to one of the other mismatches finder options, by clicking on the down arrow and selecting it. You can do it as long as you did not take any actions on the finder's results. If you have already taken action, you shall first save your changes or discard them, before being able to activate another option.
