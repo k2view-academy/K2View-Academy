@@ -112,7 +112,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
   * *Preserve* the column, although it was removed from the source. This is probably useful in cases where this column is in use within the implementation and therefore needs to remain. Note that it is your responsibility - from now on - to populate its data as the data will not be retrieved from source. 
 
-    According to this decision, Studio will not alert you later that this column was removed at the source.
+    According to this decision, Studio will **not** alert you later about the removal of this column from at the source.
 
   * *Remove* from table and align with the source table.
 
