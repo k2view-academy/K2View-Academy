@@ -32,13 +32,13 @@ Select one TDM environment from the drop-down list. The drop-down list displays 
 
 ## Actions to perform
 
-The following actions can be performed on the selected testing environment. You can select one of multiple actions: 
+The following actions can be performed on the selected testing environment. You can select one or multiple actions: 
 
 ![target example3](images/task_target_component_task_actions.png)
 
 ### Delete
 
-Deletes the selected entities from the testing environment. The Delete action checkbox can be checked with the Load checkbox, or can be checked as a single action: delete only. Note that if you select the **Delete only**, the **Source component is disabled** since the task only deletes the entities from the target environment.
+Deletes the selected entities from the testing environment. The Delete action checkbox can be either checked with the Load checkbox, or checked as a single action: delete only. Note that if you select the **Delete only**, the **Source component is disabled** since the task deletes entities only from the target environment.
 
 ### Load
 
