@@ -43,7 +43,7 @@ Click the black Refresh icon next to the parameter's editor to reset your update
 
 ### Data Generation - Distribution Parameters
 
-The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted**, and **constant** (return one value).
+The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted** and **constant**..
 
 The user can edit the distribution type and the related distribution parameters. The distribution parameters are set based on the selected distribution type:
 
