@@ -39,7 +39,7 @@ Click the information icon next to the parameter to view additional information 
 
 ### Reset the Data Generation Parameter's Value
 
-Click the black Refresh icon next to the parameter's editor to reset your updates and return to the previous value, if set. The previous value can be the default value or the previous value the user sets when opening and updating a Generate task.
+Click the black Refresh icon next to the parameter's editor to reset your updates and return to the previous value, if set. The previous value can be the default value or the previous value the user has set when opening and updating a Generate task.
 
 ### Data Generation - Distribution Parameters
 
