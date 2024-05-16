@@ -98,7 +98,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
 * **Added** column(s) to the source table (green-colored entries):
 
-  * *Decide Later* whether to add it or not. For example, you may prefer not to decide now because you wish to be advised by your team if this column shall be used in your project.
+  * *Decide Later* whether to add it or not. For example, you may prefer to postpone your decision for later, as you wish to consult with your team as to whether this column shall be used in your project.
 
   * *Add* the column also to the project's LU table.
 
