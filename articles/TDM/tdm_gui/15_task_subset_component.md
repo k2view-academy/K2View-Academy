@@ -9,7 +9,7 @@ The entity subset is **mandatory** when the task extracts **entities** from the 
 
 The table subset is **optional** for tasks that are created for **tables only**. Note that TDM does not support a table subset when selecting [Entities & referential data](14b_task_source_component_entities.md) in the task's Source component.
 
-In general, the Subset component is located between the [Source](14a_task_source_component.md) and [Test data store] components to reflect the data subset extracted from the source or synthetically generated:
+In general, the Subset component is located between the [Source](14a_task_source_component.md) and [Test data store] components to reflect the data subset extracted from the source or the data subset which is synthetically generated:
 
 ![subset example](images/task_widget_subset_example2.png)
 
