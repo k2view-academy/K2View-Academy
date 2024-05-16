@@ -139,7 +139,7 @@ Once done with handling a table - either if you have made a decision at the tabl
 
 The Table Properties Panel second tab - Data Source Origin - provides an overview and indicates upon which source data platform tables, this LU table is based and built. 
 
-The tab's top header shows when was the last time that the table was updated during the Reconciliation process, and also enables you to execute the  Reconciliation Mismatches Finder on this specific table, as explained above.
+The tab's top header shows when was the last time that the table was updated during the Reconciliation process, and it also enables you to execute the Reconciliation Mismatches Finder on this specific table, as explained above.
 
 The tab's body lists the source data platform columns, organized by Interface, the schema and the table at the source data platform.
 
