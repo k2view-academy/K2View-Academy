@@ -20,7 +20,7 @@ When you set the Source component before the Target, the selected [Business enti
 
 ![target example2](images/task_target_component_load_entities1.png)
 
-Note that you can edit the Business entity setting - change the selected Business entity of change the LUs' selection for the task's Business entity, but changing the task's Business entity will reset the Source and Subset components.
+Note that you can edit the Business entity setting - change the selected Business entity or change the LUs' selection for the task's Business entity, but changing the task's Business entity will reset the Source and Subset components.
 
 
 
