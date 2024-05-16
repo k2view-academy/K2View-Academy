@@ -76,7 +76,7 @@ When the mismatches finding process is activated, the Reconciliation action icon
 
 ## Table Editor - Reconciliation Mode
 
-Upon opening a table which was signed by the Reconciliation Mismatches Finder, the table editor is opened in a *Reconciliation Mode*.
+Upon opening a table that was marked by the Reconciliation Mismatches Finder, the table editor opens in a *Reconciliation Mode*.
 
 
 
