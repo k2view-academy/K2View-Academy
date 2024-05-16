@@ -136,7 +136,7 @@ To add a parameter:
 - Select the parameter and the operator from the drop-down lists and populate their values. Note that from TDM 8.1 onwards it is possible to select the IN or NOT IN operators on combo parameters and on text parameters.
 - Set the value on the parameter. You can set multiple values on a parameter if the selected operator is either IN or NOT IN:
   - Combo parameters - click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
-  - Free text parameters - populate the values separated by a comma. For example: NY, CA.
+  - Free text parameters - populate the values with a separating comma. For example: NY, CA.
 - Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Portal displays the SQL query, which is built based on the selected parameters.
 
 
@@ -228,7 +228,7 @@ The following options are available:
 
 Populate the list of entities separated by a comma in the **Entities List** setting.
 
-The TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
+K2view's TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
 
 Each update on the entities list may change the list of available versions for the task. 
 
