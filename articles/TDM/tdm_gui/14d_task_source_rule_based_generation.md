@@ -25,7 +25,7 @@ The following attributes need to be set in order to generate new entities:
 
 ### Data Generation Parameters
 
-The TDM portal is integrated with the Fabric Broadway editors when populating the data generation parameters in the Requested Entities task’s tab.
+The TDM portal is integrated with the Fabric's Broadway editors when populating the data generation parameters in the Requested Entities task’s tab.
 
 This integration enables the user to select a valid value from a list, set dates, and set distributed parameters:
 
