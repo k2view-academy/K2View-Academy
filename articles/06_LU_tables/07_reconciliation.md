@@ -124,7 +124,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
 
 
-Once done with handling a table - either if you have made a decision at the tables entries and have taken action or not - you can close it by either:
+Once done with handling a table - either if you have made a decision regarding the table's entries and have taken action or not - you can close it by 1 of the following 2 options:
 
 * *Clicking on OK*: the open table is considered as handled, and your changes are preserved. In addition:
   * The table heading color turns back into its "natural" blue color.
