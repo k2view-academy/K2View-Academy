@@ -9,11 +9,11 @@ The entity subset is **mandatory** when the task extracts **entities** from the 
 
 The table subset is **optional** for tasks that are created for **tables only**. Note that TDM does not support a table subset when selecting [Entities & referential data](14b_task_source_component_entities.md) in the task's Source component.
 
-In general, the Subset component is located between the [Source](14a_task_source_component.md) and [Test data store](16_task_test_data_store_component.md) components to reflect the data subset extracted from the source or the data subset, which is synthetically generated:
+In general, the Subset component is located between the [Source](14a_task_source_component.md) and [Test Data Store](16_task_test_data_store_component.md) components to reflect the data subset extracted from the source or the data subset, which is synthetically generated:
 
 ![subset example](images/task_widget_subset_example2.png)
 
-However, when the data is not extracted from the source, the subset moves and is located between the [Test data store]((16_task_test_data_store_component.md)) and the [Target](17_task_target_component.md) components:  
+However, when the data is not extracted from the source, the subset moves and is located between the [Test Data Store]((16_task_test_data_store_component.md)) and the [Target](17_task_target_component.md) components:  
 
 - Getting pre-extracted or pre-generated data from the TDM Test Data Store:
 
