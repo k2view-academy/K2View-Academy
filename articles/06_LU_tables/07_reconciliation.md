@@ -155,7 +155,7 @@ In case you deal with a large schema, which contains many tables, you can easily
 
    ![](images/schema_recon_bar_highlight.png)
 
-3. As a result, the relevant tables become highlighted while other are grayed-out
+3. As a result, the relevant tables are highlighted while other are grayed-out.
 
 > In case Reconciliation is not activated at the schema then this option is disabled
 
