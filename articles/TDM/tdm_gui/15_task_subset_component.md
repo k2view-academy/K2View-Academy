@@ -3,7 +3,7 @@
 The Subset component is displayed by the following icon ![subset](images/task_subset_icon.png) and contains either of the following:
 
 - [Entity subset](15a_entity_subset.md) -  defines the entity subset for the task when the task extracts entities from the source environment or gets the pre-extracted/pre-generated entities from the Test Data Store. 
-- [Table subset](15b_table_subset.md) - an optional setting when the task runs on [tables only](14c_task_source_component_tables.md). It enables the user to filter the extracted records for the task's tables. 
+- [Table subset](15b_table_subset.md) - an optional setting to be used when the task runs on [tables only](14c_task_source_component_tables.md). It enables the user to filter the extracted records for the task's tables. 
 
 The entity subset is **mandatory** when the task extracts **entities** from the source environment or gets the pre-extracted/pre-generated entities from the Test Data Store.  
 
