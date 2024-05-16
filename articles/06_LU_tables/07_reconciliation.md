@@ -114,7 +114,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
     According to this decision, Studio will not alert you later that this column was removed at the source.
 
-  * *Remove* from table and be aligned with the source table.
+  * *Remove* from table and align with the source table.
 
 * **Not In Use** at the LU table, while existing at the source data table: 
 
