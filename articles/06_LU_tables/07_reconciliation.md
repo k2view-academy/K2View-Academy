@@ -104,7 +104,7 @@ According to the Reconciliation Mismatches Finder results, as shown in the Table
 
   * *Do not Add* the column to the project's LU table. 
 
-    According to this decision, Studio will not alert you later that this column exists in the source. You will still be able to find it when searching for *unused* columns.
+    According to this decision, Studio will **not** alert you later about this column's existence in the source. However, you will still be able to find it when searching for *unused* columns.
 
 * **Removed** columns from source (light red-colored entries):
 
