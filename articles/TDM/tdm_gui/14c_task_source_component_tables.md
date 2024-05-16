@@ -25,7 +25,7 @@ The following information needs to be set for Tables:
 
   
 
-  - The **Table version** (shown in the above image) is the name of the task that extracted the table's snapshot. When clicking on it, a pop-up window opens with the list of all available versions (below image), allowing the user to select  another table's version if needed:
+  - The **Table version** (shown in the above image) is the name of the task that extracted the table's snapshot. When clicking on it, a pop-up window opens with the list of all available versions (below image), allowing the user to select a different table's version, if needed:
 
     ![table versions](images/task_source_table_versions_list.png)
 
