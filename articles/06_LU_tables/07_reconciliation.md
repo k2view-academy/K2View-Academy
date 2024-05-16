@@ -88,7 +88,7 @@ The green and red colored table's entries, are those that are identified with ch
 
 > The above example illustrates a case where there are various changes (added, removed, not-in-use columns). Usually, within a specific table, fewer changes will be made.
 >
-> Tables' columns are represented in the Table Editor as entries/lines. The terminology that is being used here is columns or entries.
+> Tables' columns are represented in the Table Editor as entries/lines; the corresponding terminology used in this article is columns or entries.
 
 
 
@@ -96,7 +96,7 @@ The green and red colored table's entries, are those that are identified with ch
 
 According to the Reconciliation Mismatches Finder results, as shown in the Table Editor screen, you can choose - for each one of the mismatched columns - to either take action or postpone such decision and do it later, as follows:
 
-* **Added** columns at source table (green-colored entries):
+* **Added** column(s) to the source table (green-colored entries):
 
   * *Decide Later* whether to add it or not. For example, you may prefer not to decide now because you wish to be advised by your team if this column shall be used in your project.
 
