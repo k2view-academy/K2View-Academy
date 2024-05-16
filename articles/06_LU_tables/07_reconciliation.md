@@ -54,7 +54,7 @@ You can activate the mismatches finder on a specific table, rather than on an LU
 
 ## Reconciliation Mismatches Finder Results
 
-Upon mismatches finding process is concluded:  
+Upon completion of the mismatches finding process:  
 
 - When mismatches are found, then
   - if you activated the finder within a *schema*, the relevant tables' headers turn purple. You will then be able to examine each table changes, by opening the table for editing, throughout the table's menu.
