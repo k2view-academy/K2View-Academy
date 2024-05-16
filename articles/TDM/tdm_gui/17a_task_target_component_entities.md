@@ -46,9 +46,9 @@ Loads the selected entities into the testing environment. The following checkbox
 
 The Load checkboxes are disabled in the following scenarios:
 
-- The **Delete** checkbox is **checked**, i.e., the entities are deleted before they are loaded to the target environment.
-- The user is **not [permitted](10_environment_roles_tab.md#permissions)** to replace sequences (IDs) or generate entity clones on the task's target environment.
-- The [Policy for fetching data](14b_task_source_component_entities.md#policy-for-fetching-data) in the Source component is set to **Selected snapshot (version)**. 
+- When the **Delete** checkbox is **checked**, i.e., the entities are deleted before they are loaded to the target environment.
+- When the user is **not [permitted](10_environment_roles_tab.md#permissions)** to replace sequences (IDs) or generate entity clones on the task's target environment.
+- When the [Policy for fetching data](14b_task_source_component_entities.md#policy-for-fetching-data) in the Source component is set to **Selected snapshot (version)**. 
 
 #### Replace IDs for the copied entities 
 
