@@ -68,7 +68,7 @@ The task replaces the sequences (IDs) of each replica in order to avoid duplicat
 
 [Reserves](/articles/TDM/tdm_architecture/08_entity_reservation.md) the entities for the user in the target environment in order to prevent other users from deleting and/or loading the reserved entities to the target environment.
 
-You can check the Reserve action only or check it with the Load action to reserve the loaded entities. Note that if only the **Reserve** action checkbox is checked, the **Source component is disabled** since the task reserves the entities only for the target environment.
+You can check the Reserve action only or check it with the Load action to reserve the loaded entities. Note that if only the **Reserve** action checkbox is checked, then the **Source component is disabled** since the task reserves the entities only for the target environment.
 
 The **reservation period** needs to be set for the reserved entities. The maximum number of days of a reservation period is set in the **tdm_general_parameters** TDB DB table in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter.
 
