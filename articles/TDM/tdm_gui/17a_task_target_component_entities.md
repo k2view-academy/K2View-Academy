@@ -38,7 +38,7 @@ The following actions can be performed on the selected testing environment. You 
 
 ### Delete
 
-Deletes the selected entities from the testing environment. The Delete action checkbox can be either checked with the Load checkbox, or checked as a single action: delete only. Note that if you select the **Delete only**, the **Source component is disabled** since the task deletes entities only from the target environment.
+Deletes the selected entities from the testing environment. The Delete action checkbox can be either checked with the Load checkbox, or checked as a single action: delete only. Note that if you select the Delete **only**, the **Source component is disabled** since the task deletes entities only from the target environment.
 
 ### Load
 
