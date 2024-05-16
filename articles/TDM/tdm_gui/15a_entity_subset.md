@@ -81,11 +81,11 @@ Populate the list of entities for the task. The populated entities should be sep
 
 ## Predefined Entity List
 
-Run the SQL query or the [Broadway flow](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available only for Admin and Environment owner users.
+Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available only for Admin and Environment owner users.
 
 ## Predefined Custom Logic
 
-Select a predefined [Broadway flow](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order entity list for the task. Set the maximum number of entities to be retrieved by the flow. Populate the input parameters for the selected flow if needed.
+Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order entity list for the task. Set the maximum number of entities to be retrieved by the flow. Populate the input parameters for the selected flow if needed.
 
 ## Business Parameters
 
@@ -100,7 +100,7 @@ Select one or several parameters. Additionally, you can add the same parameter m
 Notes:
 
 - The list of parameters should be [predefined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) in the Fabric project.
-- The parameters and their values must be populated in the TDM DB. It is recommended to run a task to extract a large subset of entities from the source environment in order to populate the TDM DB parameters' tables and enable creating TDM tasks with business parameters. The [Retention period] for the initial extract task can be set to **Do not retain** if there is no need to store the extracted subset in the TDM Test Data Store.
+- The parameters and their values must be populated in the TDM DB. It is recommended to run a task to extract a large subset of entities from the source environment in order to populate the TDM DB parameters' tables and enable creating TDM tasks with business parameters. The [Retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain** if there is no need to store the extracted subset in the TDM Test Data Store.
 
 #### Use Parameters with Random Selection Checkbox
 
@@ -120,7 +120,7 @@ The Parameters selection has 2 modes:
 
 #### Filter out Reserved Entities Checkbox
 
-The **Filter out Reserved Entities** checkbox indicates whether entities that are reserved for other users in the target environment, must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Number of entities matched** setting. Note that this checkbox can be checked only after the selection of the task's target environment in the [Target] component.
+The **Filter out Reserved Entities** checkbox indicates whether entities that are reserved for other users in the target environment, must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Number of entities matched** setting. Note that this checkbox can be checked only after the selection of the task's target environment in the [Target](17_task_target_component.md) component.
 
 For example:
 
@@ -147,7 +147,7 @@ There are several types of parameters:
 
 - **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
 
-  Click for more information about [setting a parameter as a combo parameter](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
+  Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
 
 - **Number** - the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
 
@@ -155,7 +155,7 @@ There are several types of parameters:
 
   - Notes:
 
-    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
+    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
 
     - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.
 
@@ -192,7 +192,7 @@ There are several types of parameters:
 
 Click Refresh next to the **Number of entities matched** in order to calculate the number of entities that match the selected parameters. The Business parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can cross-check the matching entities of a selected combination of parameters and take into consideration parameters from different LUs in the same BE hierarchy. For example, selecting customers based on their number of open cases, subscriber_type, and vip_status (as seen in the above image).
 
-- Click [![refesh](https://github.com/k2view-academy/K2View-Academy/raw/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
+- Click [![refesh](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
 Click for more information about the [TDM parameters tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) created by TDM in the TDM DB to display a hierarchical view of TDM parameters.
 
