@@ -69,7 +69,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/uniform_dist_example2.png)
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight of the whole. Both, the distributed values and the weights, need to be populated manually.
+- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight as a porportion of the whole list. Both, the distributed values and the weights, need to be populated manually.
 
   Example:
 
