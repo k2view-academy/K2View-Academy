@@ -141,7 +141,7 @@ The Table Properties Panel second tab - Data Source Origin - provides an overvie
 
 The tab's top header shows when was the last time that the table was updated during the Reconciliation process, and it also enables you to execute the Reconciliation Mismatches Finder on this specific table, as explained above.
 
-The tab's body lists the source data platform columns, organized by Interface, the schema and the table at the source data platform.
+The tab's body lists the source data platform columns, organized by Interface, the schema and the table in the source data platform.
 
 
 
