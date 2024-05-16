@@ -7,13 +7,13 @@ The Tables Reconciliation is a feature that enables analysis of changes made to 
 1. **Data Product Business Entity Model Changes**: During the initial setup of project tables from source data platforms, implementors may decide to select only those essential for the business entity model of the data product. Subsequent requirements may necessitate the incorporation of columns previously omitted. The Tables Reconciliation feature facilitates the identification of these columns for the potential addition.
 2. **Source Data Platforms changes**: Over the course of a project, changes may occur in the source data platform tables that are linked to it - columns could be added or removed. Tables Reconciliation can be used to spot these differences between the source and project tables, enabling informed decision-making within the Table Editor.
 
-> Note: The Tables Reconciliation process is relevant only for those tables that were built based on source data platforms, using the DB Explorer, since introducing this feature - Fabric 8.0. While an LU's table is built, the platform saves additional data - the source data, schema and table it was created upon - as part of the table's metadata in Fabric; this enables the reconciliation process to find any existing mismatches. 
+> Note: The Tables Reconciliation process is relevant only for those tables that were built based on source data platforms, using the DB Explorer, since introducing this feature - Fabric 8.0. While an LU's table is built, the platform saves additional data - the source data, schema and table it was created upon - as part of the table's metadata in Fabric; this enables the Reconciliation process to find any existing mismatches. 
 
 
 
 ## Activating the Reconciliation Mismatches Finder
 
-The first step of the reconciliation feature is to find the mismatches. This can be done according to 1 of the following 3 options: Find **only added/removed** tables' columns (added to the source or removed from it), Find **unused** columns in the project tables (comparing with the source), Find **all** mismatches between the project and the source tables (added/removed/unused). 
+The first step of the Reconciliation feature is to find the mismatches. This can be done according to 1 of the following 3 options: Find **only added/removed** tables' columns (added to the source or removed from it), Find **unused** columns in the project tables (comparing with the source), Find **all** mismatches between the project and the source tables (added/removed/unused). 
 
 You can trigger the mismatches finder either in *schema* level or per *table*:
 
