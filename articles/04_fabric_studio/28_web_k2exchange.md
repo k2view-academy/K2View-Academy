@@ -34,7 +34,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 >
 > * **Dependencies**: In case 
 >
-> * **Conflicts**: if a file, that included in an extension that you are installing, is already exist in your project, then Studio will notify you about, whoe you the list of such files,  and let you decide either:
+> * **Conflicts**: if a file, that included in an extension which you are installing, is already exist in your project, then Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
 >   * Overwrite All, Replace the existing files with those which included in the extension.
 >   * Keep Both, preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
 >   * Cancel, so that extension will not be installed.
@@ -47,17 +47,24 @@ To uninstall an extension, click on the **Uninstall** button appears aside the e
 
 Once the extension is uninstalled, the files which were added into the project will be removed, as well as it will be removed from the *installed_extensions.json* file. Accordingly, you shall push to GIT these changes, after verifying that the project is not badly affected, i.e. it works as expected with the extension.
 
-> If you make changes at files which are part of an extension, then when uninstalling an extension   
+> If you make changes at files which are part of an extension, then when uninstalling an extension the Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
+>
+> * Proceed with the uninstall process, where those files will be removed. 
+> * Proceed with the uninstall process, keeping those files with "." suffix. 
+> * Cancel, so that extension will remain.
+>
 
 
 
 ## Update an extension
 
-K2echange enables updating extensions. You probably 
+K2echange enables updating extensions. You probably will be informed about the update by the extension's developer.
+
+To 
 
 
 
-
+> Upgrading an extension process is done by uninstalling it first and then reinstall.
 
 
 
@@ -66,6 +73,10 @@ K2echange enables updating extensions. You probably
 ## Install from a VSIX
 
 You can manually install a VS Code extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown, or the **Extensions: Install from VSIX** command in the **Command Palette**, point to the `.vsix` file.
+
+
+
+> General note: it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
 
 
 
