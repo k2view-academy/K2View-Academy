@@ -35,24 +35,50 @@ In addition to those project files, an additional file - *installed_extensions.j
 > * **Dependencies**: In case 
 >
 > * **Conflicts**: if a file, that included in an extension which you are installing, is already exist in your project, then Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
->   * Overwrite All, Replace the existing files with those which included in the extension.
->   * Keep Both, preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
->   * Cancel, so that extension will not be installed.
+>
+>   * **Overwrite All**, Replace the existing files with those which included in the extension.
+>   * **Keep Both**, preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
+>   * **Cancel**, so that extension will not be installed.
+>
+>   
+>   
+>   Example of a Conflicts popup window:
+>   
+>   ![](images/web/28_install_conflicts.png) 
+>   
+>   Note that only 10 files with conflicts will be listed in this popup.
+
 
 
 
 ## Uninstall an extension
 
-To uninstall an extension, click on the **Uninstall** button appears aside the extension. This will uninstall the extension and prompt you that reload is required in order to refresh the extensions list and their status. Once clicked - the Web studio (the browser tab) will be relaoded.
+To uninstall an extension, click on the **Uninstall** button appears aside the extension. This will uninstall the extension and prompt you that reload is required in order to refresh the extensions list and their status. Once clicked - the Web studio (the browser tab) will be reloaded.
+
+
+
+
+
+
+![img](images/web/28_uninstall_reload.png)
+
+
 
 Once the extension is uninstalled, the files which were added into the project will be removed, as well as it will be removed from the *installed_extensions.json* file. Accordingly, you shall push to GIT these changes, after verifying that the project is not badly affected, i.e. it works as expected with the extension.
 
+ 
+
 > If you make changes at files which are part of an extension, then when uninstalling an extension the Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
 >
-> * Proceed with the uninstall process, where those files will be removed. 
-> * Proceed with the uninstall process, keeping those files with "." suffix. 
-> * Cancel, so that extension will remain.
+> * **Delete All**, Proceed with the uninstall process, where those files will be removed. 
+> * **Keep Changes**, Proceed with the uninstall process, keeping those files with "." suffix. 
+> * **Cancel**, so that extension will remain.
 >
+> 
+>
+> Example of a Conflicts popup window:
+>
+> ![](images/web/28_uninstall_changes_alert.png)
 
 
 
@@ -72,7 +98,7 @@ To
 
 ## Install from a VSIX
 
-You can manually install a VS Code extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown, or the **Extensions: Install from VSIX** command in the **Command Palette**, point to the `.vsix` file.
+You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the opened popup window which will appear, and choose it.
 
 
 
