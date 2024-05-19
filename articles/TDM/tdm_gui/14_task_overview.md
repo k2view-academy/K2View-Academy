@@ -118,7 +118,7 @@ Click on each one of the components to open and update its form.
 
 The Advanced settings include **optional** task settings:
 
-- [Pre and post execution processes]
+- [Pre and post execution processes](21_task_pre_and_post_execution_processes.md)
 - [Task variables](23_task_globals_tab.md)
 - [Scheduler](22_task_execution_timing_tab.md)
 
