@@ -26,7 +26,7 @@ To install an extension, select the **Install** button. Once the installation ha
 
 The installed extension will then also appear on the INSTALLED extensions list.
 
-The extension's installation process includes adding the extension files into your project. After verifying that it fits to your needs, you shall commit and push it to GIT, so that other spaces that will be created upon will have it.
+The extension's installation process includes adding the extension files into your project. After verifying that it fits your needs, you shall commit and push it to GIT, so that other spaces that will be created upon will have it.
 
 In addition to those project files, an additional file - *installed_extensions.json* will be created, if it is the first extension at the project, or it will be updated with the new extension information. This file contains for each extension the installed version and the associated files. You shall push also this file with changes into GIT.
 
