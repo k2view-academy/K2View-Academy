@@ -1,6 +1,5 @@
 <strong>Fabric Studio<strong>
 <ul>
-
 <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</a></li>
 <studio><li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</a></li></studio>
@@ -21,7 +20,7 @@
 <web><li><a href="/articles//04_fabric_studio/24_web_debug.md">Code Debugging</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles//04_fabric_studio/25_web_data_explorer.md">DB Interface Explorer</a></li></web>
-<web><li><a href="/articles//04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
+<web><li><a href="/articles/04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
 
 </ul>
 
