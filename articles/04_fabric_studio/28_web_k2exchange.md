@@ -4,7 +4,7 @@
 
 The K2exchange is a store-like platform for publishing and consuming Fabric’s modules that are not part of the product and that are hence considered as extensions. Such extension modules can be Broadway actors and flows, connectors, templates, Java code and lib, LU web-app and SQL queries. 
 
-Project implementors can explore the extensions list, in the Web Studio, install and embed them into their project with a click, to support their development workflow.
+Project implementors can explore the extensions list, through the Web Studio, install and embed them into their project with a click, to support their development workflow.
 
 Additionally, Web Studio provides tools for creating, packing and publishing extensions to the K2exchange store.
 
@@ -14,7 +14,7 @@ Additionally, Web Studio provides tools for creating, packing and publishing ext
 
 You can browse and install extensions from within the Web Studio. Access the **Extensions** view by clicking on the Extensions icon in the **Activity Bar** on the left side of the Studio (![Extensions view icon](images/web/28_ext_icon.svg)), by choosing it at the top View menu > Extensions, or by using View: Extensions keyboard short - Mac: `⇧⌘X`, Windows/Linux: `Ctrl+Shift+X`.
 
-This will show you a list of the extensions on the K2exchange. The extensions in the list include a brief description and the publisher. On mouse hoover, you can see a popup tooltip, containing more information like the latest version. When selecting an extension item, the extension's details page is displayed at the right side of the screen, where you can learn more.
+This will present you with a list of the extensions on the K2exchange. The extensions in the list include a brief description and the publisher. On mouse hoover, you can see a popup tooltip, containing more information like the latest version. When selecting an extension item, the extension's details page is displayed at the right side of the screen, where you can learn more.
 
 > The extension list is divided into several sub-lists, such as *INSTALLED*, which can be useful when the main *K2 EXCHANGE* list includes many extensions and you wish to see only the installed extensions.
 
