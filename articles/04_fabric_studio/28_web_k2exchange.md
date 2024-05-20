@@ -106,8 +106,6 @@ You can manually install an extension packaged in a `.vsix` file. Using the **In
 
 ## Productivity Tips
 
-it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
-
-
+* it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
 
 </web>
