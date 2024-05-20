@@ -72,7 +72,7 @@ For example, do not define a city as a special param, since the data generation 
               - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that might be useful for later analysis.
               - Entity_list: A table with all the entities relevant to an existing training/generation job.
        
-![k2system_tables](images/k2system_tables.png)
+![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
 - It is possible to define a post-execution flow that gets the generated entities and updates them if needed.
