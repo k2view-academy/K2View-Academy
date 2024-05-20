@@ -41,9 +41,10 @@ The following shared Globals have been added for the AI-based data generation:
 
 - **AI_DB** - this custom interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow creating AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
 - **AI_Execution** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. 
-- **AI_DB_External** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. We utilize this custom interface to securely allow Fabric to interacts with k8 server  (this should holds the same creditionals as AI_DB interface the Data field should be populated with your database name).
-Click https://support.k2view.com/Academy/articles/24_non_DB_interfaces/07_custom_interface.html for more information about Custom Interface .
-Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token) for more information about the TDM with AI installation. 
+- **AI_DB_External** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. We utilize this custom interface to securely allow   Fabric to interacts with k8 server, this external interface should holds the same creditionals as AI_DB interface, the Data field should be populated with your database name.
+  ![ai training](images/External_DB.png)
+  Click [here](https://support.k2view.com/Academy/articles/24_non_DB_interfaces/07_custom_interface.html) for more information about Custom Interface .
+  Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token) for more information about the TDM with AI installation. 
 
 ### AI Environment
 Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
