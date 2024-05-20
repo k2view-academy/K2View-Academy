@@ -40,7 +40,7 @@ The AI-based data generation is based on pre-created **training models**. A crea
 
 ### How to Create an AI-based Generation Task 
 
-I. Open the and populate it as follows:
+I. Open the **Source** form and populate it as follows:
 
 1. Select the **AI based generation** option in the Source component.
 2. Select the **Business Entity** for the data generation. Click the **Advanced** setting to select only one LU for the task, since **AI-based training and generation tasks can run on one LU only**.
