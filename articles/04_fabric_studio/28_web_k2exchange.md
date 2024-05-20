@@ -20,7 +20,7 @@ This will show you a list of the extensions on the K2exchange. The extensions in
 
 
 
-## Install an extension
+## Install an Extension
 
 To install an extension, select the **Install** button. Once the installation is complete, it is indicated by a notification which appear at the bottom right of the screen. In addition, the **Install** button of the extension will be changed to a **Uninstall** button along with a gear button. 
 
