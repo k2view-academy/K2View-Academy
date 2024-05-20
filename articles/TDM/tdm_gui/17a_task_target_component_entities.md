@@ -2,7 +2,7 @@
 
 The following information needs to be set when the task's data type is Business entities (with or without referential tables):
 
-- Destination of test data: Testing environments or AI training. The **AI training** option creates a [training task]((19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and is available **only for entities** and is available only for users that have [Write permissions on the AI environment](10_environment_roles_tab.md#ai-environment---permission-set).
+- Destination of test data: Testing environments or AI training. The **AI training** option creates a [training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and is available **only for entities** and is available only for users that have [Write permissions on the AI environment](10_environment_roles_tab.md#ai-environment---permission-set).
 - Business entity - for example, Customer.
 
 The following attributes must be set for **Testing environment** data destination:
