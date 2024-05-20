@@ -24,7 +24,7 @@ This will present you with a list of the extensions on the K2exchange. The exten
 
 To install an extension, select the **Install** button. Once the installation has been completed, it is indicated by a notification which appear at the bottom right of the screen. Additionally, the **Install** button of the extension will be changed to a **Uninstall** button along with a gear button. 
 
-The installed extension will be then also appear at the INSTALLED extensions list.
+The installed extension will then also appear on the INSTALLED extensions list.
 
 The extension installation process includes adding the extension files into your project. After verifying it fits to your needs, you shall commit and push it to GIT, so that other spaces that will be created upon will have it.
 
