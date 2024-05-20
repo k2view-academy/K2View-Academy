@@ -26,7 +26,7 @@ The following attributes need to be set in order to generate new entities:
 
 - Number of entities to generate - this is a mandatory attribute. The number of entities populated by the tester user is limited by the tester's environment's Read permissions in the [AI environment](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
 
-- Data generator - select a pre-created training model created by a [Training task] for the AI-based generation. If no training model is available for selection, the TDM portal displays a warning message to the user:
+- Data generator - select a pre-created training model created by a [Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) for the AI-based generation. If no training model is available for selection, the TDM portal displays a warning message to the user:
 
   ![training warning](images/ai_generation_warning_no_training.png)
 
