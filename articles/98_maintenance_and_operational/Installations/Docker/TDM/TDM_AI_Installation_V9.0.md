@@ -127,3 +127,7 @@ Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementatio
 Cleanup process AICleanUp.flow located under TDM LU with inputs CleanALL Boolean if true the flow deletes all data in AI_execution and AI_DB else populate the TrainingExecutionIDs array that holds all training models that needs cleaning for example [1551,1660] the flow extracts all generations done by these training models and deletes all related data.
 
 ## AI Tests - Performance Results
+Training Results :
+![ai training](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/images/training_resutls.png)
+Generation Results : 
+![ai generation](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/images/generation_results.png)
