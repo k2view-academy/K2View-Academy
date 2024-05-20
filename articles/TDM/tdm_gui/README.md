@@ -19,7 +19,10 @@
 <li><a href="14a_task_source_component.md">Task - Source Component</a></li>  
 <li><a href="15_task_subset_component.md">Task - Subset Component</a></li>  
 <li><a href="16_task_test_data_store_component.md">Task - Test Data Store Component</a></li>    
-<li><a href="17_task_target_component.md">Task - Target Component</a></li> 
+<li><a href="17_task_target_component.md">Task - Target Component</a></li>
+<li><a href="18_task_provision_entities_from_source_env.md">How to Provision Entities from a Source Environment</a></li>
+<li><a href="19_task_synthetic_data_generation.md">Synthetic Data Generation</a></li> 
+<li><a href="20_task_provision_tables.md">How to Provision Tables from a Source Environment</a></li>     
 <li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li>  
 <li><a href="26_task_execution.md">Task Execution</a></li> 
 <li><a href="27_task_execution_history.md">Task Execution History</a></li>
