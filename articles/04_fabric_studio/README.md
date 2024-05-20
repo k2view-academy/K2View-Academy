@@ -29,5 +29,5 @@
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles//04_fabric_studio/25_web_data_explorer.md">DB Interface Explorer</a></li></web>
 <web><li><a href="/articles//04_fabric_studio/28_web_k2exchange.md">K2exchange</a></li></web>    
-<web><li><a href="/articles//04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
+<web><li><a href="/articles/04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
 </ul>

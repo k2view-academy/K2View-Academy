@@ -71,7 +71,7 @@ Once the extension is uninstalled, the files which were added into the project w
 > If you make changes at files which are part of an extension, then when uninstalling an extension the Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
 >
 > * **Delete All**, Proceed with the uninstall process, where those files will be removed. 
-> * **Keep Changes**, Proceed with the uninstall process, keeping those files with "." suffix. 
+> * **Keep Changes**, Proceed with the uninstall process, deleting extension related files, except those which were changed by you. 
 > * **Cancel**, so that extension will remain.
 >
 > 
@@ -94,9 +94,7 @@ To update an extension:
 
 
 
-> Upgrading an extension process is done by uninstalling it first and then reinstall.
-
-
+> Upgrading an extension process is done by uninstalling it first and then reinstall. Accordingly, if you changed files, which brought by the extension, you will be notified similarly to the uninstall process, with same dialog window.  
 
 
 
@@ -106,7 +104,9 @@ You can manually install an extension packaged in a `.vsix` file. Using the **In
 
 
 
-> General note: it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
+## Productivity Tips
+
+it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
 
 
 
