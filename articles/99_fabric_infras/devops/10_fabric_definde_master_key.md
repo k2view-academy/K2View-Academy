@@ -20,7 +20,7 @@ mkdir .keystore
 Run the ```keytool``` command on the coordinator node:
 
 ~~~bash
-keytool -genseckey -alias masterkey_key_name -keyalg aes -keysize 256 -storepass <password> -keystore  $K2_HOME/.keystore/fabric.keystore -storetype JCEKS
+keytool -genseckey -alias masterkey_key_name -keyalg aes -keysize 256 -storepass <password> -keystore  $K2_HOME/.keystore/fabric.keystore -storetype PKCS12
 ~~~
 
 - Copy the key to all other nodes:
