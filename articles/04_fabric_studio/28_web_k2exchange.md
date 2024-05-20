@@ -6,7 +6,7 @@ The K2exchange is a store-like platform for publishing and consuming Fabric’s 
 
 Project implementors can explore the extensions list, in the Web Studio, install and embed them into their project with a click, to support their development workflow.
 
-Additionally, Web Studio provides tools to create, pack, and publish extensions to the K2exchange store.
+Additionally, Web Studio provides tools for creating, packing and publishing extensions to the K2exchange store.
 
 
 
