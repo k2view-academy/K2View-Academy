@@ -94,7 +94,7 @@ To update an extension:
 
 
 
-> The process of upgrading an extension is done by uninstalling it first, and then reinstalling it. Accordingly, if you changed files, which brought by the extension, you will be notified similarly to the uninstall process, with same dialog window.  
+> The process of upgrading an extension is done by uninstalling it first, and then reinstalling it. Accordingly, if you changed files, which brought by the extension, you will be similarly notified about the uninstallation process, with the same dialog window.  
 
 
 
