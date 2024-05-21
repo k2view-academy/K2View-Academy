@@ -10,7 +10,7 @@ Note that the testing environment is often used as a source as well as a target 
 
 ## How do I Create a Data Snapshot Task?
 
-Check the [Create Data Snapshot Checkbox](16_task_test_data_store_component.md#create-data-snapshot-checkbox)  checkbox in the [Test Data Store](16_task_test_data_store_component.md) task component.
+Check the [Create Data Snapshot Checkbox](16_task_test_data_store_component.md#create-data-snapshot-checkbox) checkbox in the [Test Data Store](16_task_test_data_store_component.md) task component.
 
 Note that when the task processes tables, each table is saved as a separate version in the Test Data Store.
 
@@ -20,6 +20,9 @@ The following users can create a data snapshot task:
 
 1. Admin users.
 2. Environment owner users.
-3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](10_environment_roles_tab.md).  
+3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](10_environment_roles_tab.md).
+
+## How do I Load a Data Snapshot?
+Open the **Source** form and Select the **Selected snapshot (version)** option for the [Policy for fetching data](14b_task_source_component_entities.md#policy-for-fetching-data) field. 
 
 
