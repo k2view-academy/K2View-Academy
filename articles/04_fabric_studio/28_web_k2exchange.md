@@ -28,7 +28,7 @@ The installed extension will then also appear on the INSTALLED extensions list.
 
 The extension's installation process includes adding the extension files into your project. After verifying that the extension fits your needs, you shall commit and push it into your project to GIT, in a way that other spaces that will be created upon this project will contain this extension.
 
-In addition to those project files, an additional file - *installed_extensions.json* - will be created, if it is the first extension at the project, or it will be updated with the new extension information. This file contains for each extension the installed version and the associated files. You shall push this file as well with changes into GIT.
+As well as those project files, an additional file - *installed_extensions.json* - will be created, given that it is the first extension in the project, otherwise this additional file will be updated with the new extension information. This file contains the installed version and the associated files for each extension. You shall push this file as well with the changes into GIT.
 
 > **Notes:** 
 >
