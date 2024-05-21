@@ -22,7 +22,7 @@ This will present you with a list of the extensions on the K2exchange. Each of t
 
 ## Install an Extension
 
-To install an extension, select the **Install** button. Once the installation has been completed, an indicating notification will appear at the bottom-right corner of the screen. Additionally, the **Install** button of the extension will be replaced with an **Uninstall** button along with a gear button. 
+To install an extension, select the **Install** button. Once the installation has been completed, an indicating notification will appear at the bottom-right corner of the screen. Additionally, the **Install** button of the extension will be replaced with an **Uninstall** button along with a gear wheel button. 
 
 The installed extension will then also appear on the INSTALLED extensions list.
 
@@ -89,7 +89,7 @@ K2echange enables updating extensions. You probably will be informed about the u
 To update an extension:
 
 1. Find it in the INSTALLED extension list. 
-2. Click on the gear wheel beside it. A list of the other extension's versions will be shown.
+2. Click on the gear wheel button beside it. A list of the other extension's versions will be shown.
 3. Choose the required version (can be any - older or newer).
 
 
