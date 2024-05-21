@@ -5,7 +5,7 @@ K2view's TDM supports 2 modes of synthetic entities' generation:
 - Rule-based generation
 - AI-based generation
 
-The TDM enables for each one of these methods either to generate new entities or load pre-generated entities.
+TDM enables, for each one of these methods, to either generate new entities or load pre-generated entities.
 
 ## Generating Rule-based Entities
 
