@@ -64,7 +64,7 @@ To uninstall an extension, click on the **Uninstall** button that appears aside 
 
 
 
-Once the extension is uninstalled, the files which were added into the project will be removed, as well as it will be removed from the *installed_extensions.json* file. Accordingly, you shall push to GIT these changes, after verifying that the project is not badly affected, i.e. it works as expected with the extension.
+Once the extension is uninstalled, the files that were added into the project will be removed, as well as it will be removed from the *installed_extensions.json* file. Accordingly, you shall push to GIT these changes, after verifying that the project is not badly affected, i.e. it works as expected with the extension.
 
  
 
