@@ -84,7 +84,7 @@ Once the extension is uninstalled, its related files that were added into the pr
 
 ## Update an Extension
 
-K2echange enables updating extensions. You probably will be informed about the update by the extension's developer.
+K2echange enables updating extensions. You will probably be informed about such updates by the extension's developer.
 
 To update an extension:
 
