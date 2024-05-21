@@ -11,7 +11,7 @@ K2view's TDM enables overriding [Global variables](/articles/08_globals/01_globa
 
 The **Task variables** tab in the task's **Advanced settings** displays the list of variables set on a task level and enables setting variables on a task. 
 
-Click **Set Task Variable** to set a variable value on the task. A pop-up window opens:
+Click **Set Task Variable** to set a variable value on the task. The following pop-up window opens:
 
 ![add global](images/task_add_global.png)
 
