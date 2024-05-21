@@ -23,6 +23,6 @@ The following users can create a data snapshot task:
 3. Testers who can create a TDM task for environments with **Data Versioning** permissions that are attached to their [TDM Environment permission set](10_environment_roles_tab.md).
 
 ## How do I Load a Data Snapshot?
-Open the **Source** form and Select the **Selected snapshot (version)** option for the [Policy for fetching data](14b_task_source_component_entities.md#policy-for-fetching-data) field. 
+Open the **Source** form and select the **Selected snapshot (version)** option for the [Policy for fetching data](14b_task_source_component_entities.md#policy-for-fetching-data) field. 
 
 
