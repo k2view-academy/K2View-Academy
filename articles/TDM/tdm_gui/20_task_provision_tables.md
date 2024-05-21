@@ -1,6 +1,6 @@
 # How to Provision Tables from a Source Environment
 
-The following table describes how to create a task to provision tables from a selected source environment. For example: extract 5 tables from Production and load them to the UAT environment:
+The following table describes how to create a task to provision tables from a selected source environment. For example: Extract 5 tables from Production and load them to the UAT environment:
 
 
 
