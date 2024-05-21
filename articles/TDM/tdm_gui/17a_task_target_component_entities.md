@@ -26,7 +26,7 @@ Note that you can edit the Business entity setting - change the selected Busines
 
 ## Testing environment
 
-Select one TDM environment from the drop-down list. The drop-down list displays the list of available target environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.
+Select one TDM environment from the drop-down list. This list displays the available target environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.
 
 
 
