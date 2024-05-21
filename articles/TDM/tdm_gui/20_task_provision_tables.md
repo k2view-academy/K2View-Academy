@@ -71,7 +71,7 @@ The following table describes how to create a task to provision tables from a se
 <p>Extract and load Business entities and referential-related tables</p>
 </td>
 <td width="200pxl">
-<p>Extract 10 customers and the customer_type table from Production and load them to the UAT environment</p>
+<p>Extract 10 customers and the customer_type table from Production, and load them to the UAT environment</p>
 </td>
 <td width="200pxl">
 <p>Select the <strong>Entities & referential data</strong> option</p>
@@ -91,7 +91,7 @@ The following table describes how to create a task to provision tables from a se
 <p>Extract and load tables only</p>
 </td>
 <td width="200pxl">
-<p>Extract 5 tables from Production and load them to the UAT environment</p>
+<p>Extract 5 tables from Production, and load them to the UAT environment</p>
 </td>
 <td width="200pxl">
 <p>Select the <strong>Tables</strong> option</p>
@@ -111,7 +111,7 @@ The following table describes how to create a task to provision tables from a se
 <p>Load Business entities and referential-related tables</p>
 </td>
 <td width="200pxl">
-<p>Get from the Test Data Store 5 entities and one table pre-extracted from Production and load them to the UAT environment</p>
+<p>Get from the Test Data Store 5 entities and one table pre-extracted from Production, and load them to the UAT environment</p>
 </td>
 <td width="200pxl">
 <p>Select the <strong>Entities & referential data</strong> option</p>
@@ -131,7 +131,7 @@ The following table describes how to create a task to provision tables from a se
 <p>Load tables only</p>
 </td>
 <td width="200pxl">
-<p>Get from the Test Data Store 2 tables pre-extracted from Production and load them to the UAT environment</p>
+<p>Get from the Test Data Store 2 tables pre-extracted from Production, and load them to the UAT environment</p>
 </td>
 <td width="200pxl">
 <p>Select the <strong>Tables</strong> option</p>
