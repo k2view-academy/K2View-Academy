@@ -83,7 +83,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p><h4>Entity clone</p>
 </td>
 <td width="400pxl">
-<p>Create duplications on the target environment of the Entity ID set in the task. Note that only one LUI is created on the entity ID.</p>
+<p>Create duplications on the target environment of the first Entity ID returned by the task's subset. Only one LUI is created on the entity ID. Note that from TDM 9.0 onwards entity clone is defined as an attribute on the target and can be added to regardless the subset's selection method. </p>
 </td>
 <td width="200pxl">
 <p>Regular load tasks (Data Versioning is cleared)</p>
