@@ -42,7 +42,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 >
 >   
 >   
->   Example of a Conflicts po-pup window:
+>   Example of a Conflicts pop-up window:
 >   
 >   ![](images/web/28_install_conflicts.png) 
 >   
