@@ -46,7 +46,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 >   
 >   ![](images/web/28_install_conflicts.png) 
 >   
->   Note that only 10 files with conflicts will be listed in this popup.
+>   Note that only 10 files with conflicts will be listed in this pop-up.
 
 
 
