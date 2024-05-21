@@ -15,219 +15,21 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   ### Task General Information
 
   - **task_title**  - the task name. To prevent creating several active tasks with the same name, the **task_title** column has a **unique index** when the status is **Active**.
-  - **task_type** - **Extract** , **Load** or **Reserve**.
+  - **task_description** 
+  - **task_type** - **Extract** , **Load**, **Generate**, **AI-Generated**, **Training**, **Delete**, or **Reserve**.
   - **be_id** - the task's BE. The be_id can be linked to the **product_logical_units** TDM DB table. 
   - **number_of_entities** - populated by the number of entities in the task.
   - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
   - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
-  - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task.
+  - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task. From TDM 9.0 onwards the user's [Fabric role](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) is concatenated to the user name. This is needed in order to identify the task creator's Fabric role when the users are managed and kept by the  the organization’s identity provider (IDP), for example: SAML.  The task creator Fabric role needs to be identified in order to decide if a [tester user can execute a task](26_task_execution.md#who-can-execute-a-task-via-the-tdm-portal) created by another tester. 
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
-
+  
   ### Reservation Information
-
+  
   - **reserve_ind**  - indicates if the task reserved entities on the environment.
   - **reserve retention period fields** - define the reservation period on the task's entities.
-
-  ### Map the TDM Portal Task Actions (types) to Tasks TDM Table
-
-  <table width="900pxl">
-  <tbody>
-  <tr>
-  <td width="400pxl">
-  <p><strong>Task Actions Combination</strong></p>
-  </td>
-  <td width="500pxl">
-  <p><strong>TDM Tasks Table Population</strong></p>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Extract</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Extract</li>
-  <li>load_entity = false</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Extract + Load</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Extract + Load + Reserve</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = true</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Extract + Load + Delete</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Extract + Load + Delete + Reserve</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = true</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <p>Generate</p>
-  </td>
-  <td>
-  <ul>
-  <li>task_type = Generate</li>
-  <li>load_entity = false</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = false</li>
-  <li>selection_method = Generate</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <p>Generate + Load</p>
-  </td>
-  <td>
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = false</li>
-  <li>selection_method = Generate</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <p>Generate + Load + Reserve</p>
-  </td>
-  <td>
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = true</li>
-  <li>selection_method = Generate</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Load</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Load + Reserve</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = false</li>
-  <li>reserve_ind = true</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Load + Delete</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Load + Delete + Reserve</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = true</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = true</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="400pxl">
-  <p>Delete</p>
-  </td>
-  <td width="500pxl">
-  <ul>
-  <li>task_type = Load</li>
-  <li>load_entity = false</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  <tr style="height: 118px;">
-  <td style="width: 294.673px; height: 118px;">
-  <p>Reserve</p>
-  </td>
-  <td style="width: 589.929px; height: 118px;">
-  <ul>
-  <li>task_type = Reserve</li>
-  <li>load_entity = false</li>
-  <li>delete_before_load = true</li>
-  <li>reserve_ind = false</li>
-  </ul>
-  </td>
-  </tr>
-  </tbody>
-  </table>
-
+  
+  
   
 
 
@@ -241,17 +43,12 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
   ### Requested Entities Columns
 
-  - **selection method**: populated based on the selection method in the [Requested Entities tab](14_task_overview.md#3-requested-entities). This column can be populated by either:
-    - **L** - [Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-list) 
-    - **R** - [Random Selection](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#random-selection)
-    - **CLONE** - [Entity Clone](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#entity-clone).
-    - **PR** - [Parameters with a random selection checkbox](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
-    - **P** - [Parameters when a random selection checkbox is cleared](17_load_task_regular_mode.md#use-parameters-with-random-selection-checkbox).
-    - **ALL** - [Select All entities of the Selected Version](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-all-entities-of-the-selected-version) on [load Data Versioning tasks](18_load_task_data_versioning_mode.md), or [Select a Predefined Entity List](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#select-a-predefined-entity-list) on [Extract](16_extract_task.md) tasks.
-    - **REF** - create a [Reference Only](24_task_reference_tab.md) task.
-    - **C** - [Custom Logic](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic).
-    - **GENERATE** - [Generate synthetic entities](16a_generate_task.md).
-  - **selection_param_value**: populated when the task selection method is either Entity List, Parameters, Custom Logic or Entity Clone:
+These columns are used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task: 
+
+  - **selection method**: populated based on the task's data type (entities or tables) and the subset selection method. 
+  - **clone_ind**: this field is set to **true** if the task needs to [clone an entity](17a_task_target_component_entities.md#generate-clones-for-an-entity).
+  - **num_of_entities**: number of provisioned entities.
+  - **selection_param_value**: populated when the task selection method is either Entity List, Business Parameters, or Custom Logic selection methods:
 
   <table width="900pxl">
   <tbody>
@@ -284,7 +81,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   </tr>
   <tr>
   <td width="300pxl">
-  <p>Parameters, with or without a random selection</p>
+  <p>Business Parameters, with or without a random selection</p>
   </td>
   <td width="200pxl">
   <p>P, PR</p>
@@ -299,21 +96,6 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   </tr>
   <tr>
   <td width="300pxl">
-  <p>Entity Clone</p>
-  </td>
-  <td width="200pxl">
-  <p>CLONE</p>
-  </td>
-  <td width="400pxl">
-  <p>Populated with the cloned entity ID.</p>
-  <p><strong>Example</strong>:</p>
-  <ul>
-  <li>7889</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="300pxl">
       <p>Custom Logic</p>    
   </td>
   <td>C</td>
@@ -322,14 +104,18 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   </tbody>
   </table>
 
+ 
 
-  This column is used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task. 
+- **parameters** - populated when the task's subset is based on **Business parameters** selection method.
 
-  ### Data Versioning Parameters
+  ### Data Versioning Columns
 
   - **version_ind** - populated by **true** in a [Data Versioning task](15_data_flux_task.md).
-  - **selected_version_task_name**, **selected_version_datetime**, and **selected_version_task_exe_id** - the selected entities when creating a load Data Versioning task to reload a selected version of entities into the target environment.
-  - **selected_ref_version_task_name, selected_ref_version_datetime**, and **selected_ref_version_task_exe_id** - the selected Reference's version when creating a Data Versioning task to copy [a selected version of Reference tables](24_task_reference_tab.md) into the target environment.
+  - **selected_version_task_exe_id**- the task execution id of the selected data snapshot (version) loading a selected data snapshot (version). 
+
+### AI-Based Generation Columns
+
+- **selected_subset_task_exe_id** - the task execution of the selected training model (data generator) for the AI based generation.
 
   ### Environments Columns
 
@@ -339,7 +125,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
 - source_environment_id
 
-  #### Target Environment
+
+#### Target Environment
 
 - environment_id
 
@@ -347,16 +134,16 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
 #### Scheduling Parameters
 
-- **Scheduler** - set based on the task's [Execution Timing](22_task_execution_timing_tab.md):
-  - **Execution by Request**, populated by **immediate**.
-  - **Scheduled Execution**, populated by a **crontab** based on the selected scheduling parameters of the task.
+- **Scheduler** - set based on the task's [Scheduler](22_task_execution_timing_tab.md):
+  - If the Scheduler is not set (the task is execution by request), populated by **immediate**.
+  - If the Scheduler is set (scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
 - **scheduling_end_date** - populated by the **End Date** if set on scheduled tasks.
 
 #### Extract Tasks - [Retention Period](16_extract_task.md#retention-period)
 
 - **retention_period_type** and **retention_period_value**.
 
-#### Load Tasks - [Request Parameters](19_load_task_request_parameters_regular_mode.md)
+
 
 
 #### Other Parameters
@@ -372,17 +159,11 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
 This table holds the LUs list of each task. A separate record is created for each LU.
 
-## TASKS_POST_EXE_PROCESS
+## TASKS_EXE_PROCESS
 
 -------------------------
 
-This table holds a task's [post execution processes](04_tdm_gui_business_entity_window.md#post-execution-processes-tab). A new record is created for each post execution process.
-
-This table holds the following columns:
-
--  **task_id** - a unique identifier of the task, which links to the **Tasks** TDM DB table.
--  **process_id** - a unique identifier of the process, which links [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table.
--  **execution_order** - the execution_order of the post execution process as defined in the [tdm_be_post_exe_process](06_be_product_tdmdb_tables.md#tdm_be_post_exe_process) TDM DB table. 
+This table holds a task's [pre and post execution processes](21_task_pre_and_post_execution_processes.md). A new record is created for each pre or post execution process.
 
 ## TASK_GLOBALS
 
@@ -396,9 +177,9 @@ This table is populated with [data generation parameters](16a_generate_task.md#a
 
 ## TASK_REF_TABLES
 
-This table holds a list of the task's [Reference tables](24_task_reference_tab.md). A separate record is created for each Reference table.
+This table holds a list of the task's [tables](20_task_provision_tables.md). A separate record is created for each Reference table.
 
-  [![Previous](/articles/images/Previous.png)](24_task_reference_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](26_task_execution.md)
+  [![Previous](/articles/images/Previous.png)](20_task_provision_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](26_task_execution.md)
 
 
 
