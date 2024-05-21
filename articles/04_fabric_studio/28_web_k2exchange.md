@@ -100,7 +100,7 @@ To update an extension:
 
 ## Install from a VSIX
 
-You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the pop-up window that will appear, and choose it.
+You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command drop-down - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the pop-up window that will appear, and choose it.
 
 
 
