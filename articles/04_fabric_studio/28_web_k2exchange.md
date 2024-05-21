@@ -53,7 +53,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 
 ## Uninstall an extension
 
-To uninstall an extension, click on the **Uninstall** button appears aside the extension. This will uninstall the extension and prompt you that reload is required in order to refresh the extensions list and their status. Once clicked - the Web studio (the browser tab) will be reloaded.
+To uninstall an extension, click on the **Uninstall** button that appears aside the extension. This will uninstall the extension and prompt you that reload is required in order to refresh the extensions list and their status. Once clicked - the Web studio (the browser tab) will be reloaded.
 
 
 
