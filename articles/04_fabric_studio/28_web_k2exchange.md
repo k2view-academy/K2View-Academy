@@ -100,12 +100,12 @@ To update an extension:
 
 ## Install from a VSIX
 
-You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the opened popup window which will appear, and choose it.
+You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command dropdown - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the pop-up window that will appear, and choose it.
 
 
 
 ## Productivity Tips
 
-* it is recommended that for any of the extension actions to commit your changes first into GIT, so that it will be easy to compare and track changes.
+* It is recommended - for any of the extension actions - first to commit your changes into GIT, in order to easily compare and track changes.
 
 </web>
