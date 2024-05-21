@@ -26,11 +26,13 @@ A TDM task can include multiple LUs with a flat or hierarchical structure and po
 
 The execution of the related task components runs in the following order:
 
-1. LUs, run the LUs from parent to child.  
+1. [Pre-execution processes](21_task_pre_and_post_execution_processes.md) if added to the task. The pre-execution processes are executed according to their [execution order](04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) as defined in the task's BE. 
+
+2. LUs, run the LUs from parent to child.  
 
    Click for more information about the [execution order of hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
-2. Post Execution Processes, run the post execution processes after the execution of the LUs ends. The post execution processes are executed according to their [execution order](04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE. 
+3. [Post-execution processes](21_task_pre_and_post_execution_processes.md) if added to the task. The post-execution processes run after the execution of the LUs ends. The post execution processes are executed according to their [execution order](04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) as defined in the task's BE. 
 
 ## Monitoring Task Execution
 
