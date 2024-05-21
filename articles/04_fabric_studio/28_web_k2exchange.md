@@ -34,7 +34,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 >
 > * **Dependencies**: In case 
 >
-> * **Conflicts**: if a file, that included in an extension which you are installing, is already exist in your project, then Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
+> * **Conflicts**: If a file, that is included in an extension that you are installing, already exists in your project, then Studio will notify about it and will display the list of those files. Accordingly, you can decide to either:
 >
 >   * **Overwrite All**, Replace the existing files with those which included in the extension.
 >   * **Keep Both**, preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
@@ -42,7 +42,7 @@ In addition to those project files, an additional file - *installed_extensions.j
 >
 >   
 >   
->   Example of a Conflicts popup window:
+>   Example of a Conflicts po-pup window:
 >   
 >   ![](images/web/28_install_conflicts.png) 
 >   
