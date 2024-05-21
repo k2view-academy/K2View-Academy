@@ -81,7 +81,7 @@ The following table describes how to create a task to provision entities from a 
 </ul>
 </td>
 <td width="250pxl">
-<p>Get from the Test Data Store entities pre-extracted from Production and load them to the UAT environment.</p>
+<p>Get from the Test Data Store entities that were pre-extracted from Production, and load them to the UAT environment.</p>
 </td>
 <td width="100pxl">
 <p>&nbsp;</p>
