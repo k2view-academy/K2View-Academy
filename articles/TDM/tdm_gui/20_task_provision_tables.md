@@ -28,7 +28,7 @@ The following table describes how to create a task to provision tables from a se
 </tr>
 <tr>
 <td width="200pxl">
-<p>Extract Business entities and referential-related tables.</p>
+<p>Extract Business entities and referential-related tables</p>
 </td>
 <td width="200pxl">
 <p>Extract 10 customers and the customer_type table from Production.</p>
@@ -51,7 +51,7 @@ The following table describes how to create a task to provision tables from a se
 <p>Extract tables only</p>
 </td>
 <td width="200pxl">
-<p>Extract 5 tables from Production</p>
+<p>Extract 5 tables from Production.</p>
 </td>
 <td width="200pxl">
 <p>Select the <strong>Tables</strong> option</p>
