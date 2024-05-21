@@ -15,9 +15,9 @@ Click **Set Task Variable** to set a variable value on the task. The following p
 
 ![add global](images/task_add_global.png)
 
-- **Variable Name**, select a value from the dropdown list of Global variables defined in the Fabric implementation.
-- **Logical Unit**, can be populated with 'ALL' to impact all the task's LUs or with a specific LU name.
-- **Variable Value**,  the default value is displayed. You can set a different value on the variable.
+- **Variable Name** - select a value from the drop-down list of Global variables defined in the Fabric implementation.
+- **Logical Unit** - can be populated with either 'ALL' to impact all the task's LUs or a specific LU name.
+- **Variable Value** - the default value is displayed. You can set a different value on the variable.
 
 
 
