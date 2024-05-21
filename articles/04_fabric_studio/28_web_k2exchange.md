@@ -36,8 +36,8 @@ In addition to those project files, an additional file - *installed_extensions.j
 >
 > * **Conflicts**: If a file, that is included in an extension that you are installing, already exists in your project, then Studio will notify about it and will display the list of those files. Accordingly, you can decide to either:
 >
->   * **Overwrite All**, Replace the existing files with those which included in the extension.
->   * **Keep Both**, preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
+>   * **Overwrite All** - replace the existing files with those included in the extension.
+>   * **Keep Both** - preserve the existing file, aside the extension files which get ".new" suffix. You can then compare between them and accordingly decide how to handle the changes.
 >   * **Cancel**, so that extension will not be installed.
 >
 >   
