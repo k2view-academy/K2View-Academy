@@ -88,8 +88,8 @@ K2echange enables updating extensions. You probably will be informed about the u
 
 To update an extension:
 
-1. Find it in the INSTALLED extension list 
-2. Click on the gear wheel aside it. A list of the other extension's versions will be shown.
+1. Find it in the INSTALLED extension list. 
+2. Click on the gear wheel beside it. A list of the other extension's versions will be shown.
 3. Choose the required version (can be any - older or newer).
 
 
