@@ -28,7 +28,7 @@ The following table describes how to create a task to provision tables from a se
 </tr>
 <tr>
 <td width="200pxl">
-<p>Extract Business entities and referential-related tables</p>
+<p>Extract Business entities and referential (related) tables</p>
 </td>
 <td width="200pxl">
 <p>Extract 10 customers and the customer_type table from Production.</p>
@@ -68,7 +68,7 @@ The following table describes how to create a task to provision tables from a se
 </tr>
 <tr>
 <td width="200pxl">
-<p>Extract and load Business entities and referential-related tables.</p>
+<p>Extract and load Business entities and referential (related) tables.</p>
 </td>
 <td width="200pxl">
 <p>Extract 10 customers and the customer_type table from Production, and load them to the UAT environment.</p>
@@ -108,7 +108,7 @@ The following table describes how to create a task to provision tables from a se
 </tr>
 <tr>
 <td width="200pxl">
-<p>Load Business entities and referential-related tables</p>
+<p>Load Business entities and referential (related) tables</p>
 </td>
 <td width="200pxl">
 <p>Get from the Test Data Store 5 entities and one table pre-extracted from Production, and load them to the UAT environment.</p>
