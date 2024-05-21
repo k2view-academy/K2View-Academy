@@ -90,7 +90,7 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 </table>
 ​    
 
-The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week till the end of February.
+The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week until the end of February.
 
   
 
