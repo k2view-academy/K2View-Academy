@@ -68,15 +68,15 @@ Once the extension is uninstalled, its related files that were added into the pr
 
  
 
-> If you make changes at files which are part of an extension, then when uninstalling an extension the Studio will notify you about and will display the list of those files. Accordingly,  you can decide either:
+> If you make changes in the files that are part of an extension, then when uninstalling an extension the Studio will notify you about and will display the list of these files. Accordingly, you can decide to either:
 >
-> * **Delete All**, Proceed with the uninstall process, where those files will be removed. 
-> * **Keep Changes**, Proceed with the uninstall process, deleting extension related files, except those which were changed by you. 
-> * **Cancel**, so that extension will remain.
+> * **Delete All** - proceed with the uninstallation process, where these files will be removed. 
+> * **Keep Changes** - proceed with the uninstallation process, deleting extension-related files, except those that were changed by you.
+> * **Cancel** - so that the extension will remain.
 >
 > 
 >
-> Example of a Conflicts popup window:
+> Example of a Conflicts pop-up window:
 >
 > ![](images/web/28_uninstall_changes_alert.png)
 
