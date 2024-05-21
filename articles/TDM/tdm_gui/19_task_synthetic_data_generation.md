@@ -48,7 +48,7 @@ I. Open the **Source** form and populate it as follows:
 4. Set the **Number of entities to generate** .
 5. Select a **Data generator** (training model) for the AI-based generation.
 
-   Click [here](14e_task_source_ai_based_generation.md) for more information how to set the rule-based generation attributes in the Source component.
+   Click [here](14e_task_source_ai_based_generation.md) for more information on how to set the rule-based generation attributes in the Source component.
 
 II. Optional - populate the [Target](17a_task_target_component_entities.md) form and select a testing environment to load the generated entities to the target environment. 
 
@@ -56,7 +56,7 @@ II. Optional - populate the [Target](17a_task_target_component_entities.md) form
 
 ## Loading Pre-generated Entities
 
-1. Open the  **Source** form. Select either of the following options:
+1. Open the **Source** form. Select either one of the following two options:
 
    - [Rule based generation](14d_task_source_rule_based_generation.md)
    - [AI-based generation](14e_task_source_ai_based_generation.md)
@@ -66,7 +66,7 @@ II. Optional - populate the [Target](17a_task_target_component_entities.md) form
 3. Define the [Subset](15a_entity_subset.md) of entities. The following options are available:
 
    - [Load all generated entities of a selected data generation execution](15a_entity_subset.md#synthetic-entities---load-all-generated-entities-of-a-selected-data-generation-execution)
-   - Load a partial entity subset using either of the following selection methods:
+   - Load a partial entity subset using either one of the following selection methods:
      - [Predefined custom logic](15a_entity_subset.md#predefined-custom-logic)
      - [Business parameters](15a_entity_subset.md#business-parameters)
      - [Random](15a_entity_subset.md#synthetic-entities---load-all-generated-entities-of-a-selected-data-generation-execution)
