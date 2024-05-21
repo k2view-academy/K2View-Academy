@@ -17,7 +17,7 @@ I. Open the **Source** form and populate it as follows:
 4. Set the **Number of entities to generate**.
 5. Optional - data generation parameters' setting.
 
-   Click [here](14d_task_source_rule_based_generation.md) for more information how to set the rule-based generation attributes in the Source component.
+   Click [here](14d_task_source_rule_based_generation.md) for more information on how to set the rule-based generation attributes in the Source component.
 
 II. Optional - populate the [Target](17a_task_target_component_entities.md) form and select a testing environment to load the generated entities to the target environment. 
 
