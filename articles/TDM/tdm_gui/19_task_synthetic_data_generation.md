@@ -32,9 +32,9 @@ The AI-based data generation is based on pre-created **training models**. A crea
    Notes:
 
    - Click the **Advanced** setting to select only one LU for the task, since **AI-based training and generation tasks can run on one LU only**.
-   - You can select each one of the **Policy for fetching data** options, i.e. the task can either extract the entities  from the source environment, or  can get pre-extracted entities from the Test Data Store. 
+   - You can select each one of the **Policy for fetching data** options, that is, the task can either extract the entities from the source environment or get pre-extracted entities from the Test Data Store. 
 
-2. Open the **Subset** form and define the [entity subset](15a_entity_subset.md) for the AI training process.  For example, training the AI with customers based in NY.
+2. Open the **Subset** form and define the [entity subset](15a_entity_subset.md) for the AI training process. For example, training the AI with customers based in NY.
 
 3. Open the **Target** form and select the [AI training](17a_task_target_component_entities.md) option.
 
