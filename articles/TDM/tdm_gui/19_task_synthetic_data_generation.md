@@ -1,6 +1,6 @@
 # Synthetic Data Generation
 
-K2view's TDM supports 2 modes of synthetic entities' generation:
+K2view's TDM supports 2 methods of synthetic entities' generation:
 
 - Rule-based generation
 - AI-based generation
@@ -50,7 +50,7 @@ I. Open the **Source** form and populate it as follows:
 
    Click [here](14e_task_source_ai_based_generation.md) for more information on how to set the rule-based generation attributes in the Source component.
 
-II. Optional - populate the [Target](17a_task_target_component_entities.md) form and select a testing environment to load the generated entities to the target environment. 
+II. Optional - populate the [Target](17a_task_target_component_entities.md) form and select a testing environment in order to load the generated entities to the target environment. 
 
 
 
@@ -71,7 +71,7 @@ II. Optional - populate the [Target](17a_task_target_component_entities.md) form
      - [Business parameters](15a_entity_subset.md#business-parameters)
      - [Random](15a_entity_subset.md#synthetic-entities---load-all-generated-entities-of-a-selected-data-generation-execution)
 
-4. Populate the [Target](17a_task_target_component_entities.md) form and select a testing environment to load the generated entities to the target environment. 
+4. Populate the [Target](17a_task_target_component_entities.md) form and select a testing environment in order to load the generated entities to the target environment. 
 
    
 
