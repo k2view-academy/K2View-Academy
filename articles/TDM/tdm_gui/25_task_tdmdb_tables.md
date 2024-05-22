@@ -20,8 +20,8 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   - **be_id** - the task's BE. The be_id can be linked to the **product_logical_units** TDM DB table. 
   - **number_of_entities** - populated by the number of entities in the task.
   - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
-  - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise populated with **false**.
-  - **task_created_by**, and  **task_last_updated_by** - populated by the name of the user who creates the task. From TDM 9.0 onwards the user's [Fabric role](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) is concatenated to the user name. This is needed in order to identify the task creator's Fabric role when the users are managed and kept by the  the organization’s identity provider (IDP), for example: SAML.  The task creator Fabric role needs to be identified in order to decide if a [tester user can execute a task](26_task_execution.md#who-can-execute-a-task-via-the-tdm-portal) created by another tester. 
+  - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise, populated with **false**.
+  - **task_created_by**, and **task_last_updated_by** - populated by the name of the user who creates the task. From TDM 9.0 onwards the user's [Fabric role](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) is concatenated to the user name. This is required in order to identify the task creator's Fabric role when the users are managed and kept by the organization’s identity provider (IDP), for example: SAML. The task creator's Fabric role needs to be identified in order to decide if a [tester user can execute a task](26_task_execution.md#who-can-execute-a-task-via-the-tdm-portal) created by another tester. 
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
   
   ### Reservation Information
