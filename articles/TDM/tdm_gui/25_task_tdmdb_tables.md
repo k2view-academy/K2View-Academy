@@ -136,7 +136,7 @@ These columns are used by the TDM task execution process for [creating the entit
 
 - **Scheduler** - set based on the task's [Scheduler](22_task_execution_timing_tab.md):
   - If the Scheduler is not set (the task is execution by request), populated by **immediate**.
-  - If the Scheduler is set (scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
+  - If the Scheduler is set (a scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
 - **scheduling_end_date** - populated by the **End Date** if set on scheduled tasks.
 
 #### Extract Tasks - [Retention Period](16_extract_task.md#retention-period)
