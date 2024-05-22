@@ -27,7 +27,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   ### Reservation Information
   
   - **reserve_ind** - indicates whether the task has reserved entities on the environment.
-  - **reserve retention period fields** - define the reservation period on the task's entities.
+  - **reserve retention period fields** - defines the reservation period on the task's entities.
   
   
   
