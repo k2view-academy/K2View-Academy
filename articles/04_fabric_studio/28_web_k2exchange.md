@@ -34,11 +34,11 @@ As well as those project files, an additional file - *installed_extensions.json*
 >
 > * **Dependencies**: In case 
 >
-> * **Conflicts**: If a file, which is included in an extension that you are installing, already exists in your project, then Studio will notify about it and will display the list of those files. In such case, you can decide to either:
+> * **Conflicts**: If a file, which is included in an extension that you are installing, already exists in your project, then Studio will notify about it and will display the list of the conflicting files. In such case, you can decide to either:
 >
 >   * **Overwrite All** - replace the existing files with those included in the extension.
 >   * **Keep Both** - preserve the existing file, aside the extension files that have the suffix '.new'. You can then compare between them and accordingly decide how to handle the changes.
->   * **Cancel**, so that extension will not be installed.
+>   * **Cancel** - do not install the extension.
 >
 >   
 >   
