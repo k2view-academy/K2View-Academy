@@ -36,7 +36,7 @@ The execution of the related task components runs in the following order:
 
 ## Monitoring Task Execution
 
-The TDM Portal displays a list of the task's LUs and post execution processes and the status of the currently running processes.
+The TDM Portal displays a list of the task's LUs and post-execution processes and the status of the currently running processes.
 
 
 **Example:**
@@ -53,7 +53,7 @@ The TDM Portal displays a list of the task's LUs and post execution processes an
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
 
-- The **Logical Units Execution Summary** window displays the summary execution details of each LU or post execution process.
+- The **Logical Units Execution Summary** window displays the summary execution details of each LU or post-execution process.
 
 
 
