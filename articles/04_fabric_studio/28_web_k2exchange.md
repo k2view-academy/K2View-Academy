@@ -12,7 +12,7 @@ Additionally, the Web Studio provides tools for creating, packing and publishing
 
 ## Browse for Extensions
 
-You can browse and install extensions from within the Web Studio. Access the **Extensions** view by clicking on the Extensions icon in the **Activity Bar** on the left side of the Studio (![Extensions view icon](images/web/28_ext_icon.svg)), by choosing it at the top View menu > Extensions, or by using View: Extensions keyboard short - Mac: `⇧⌘X`, Windows/Linux: `Ctrl+Shift+X`.
+You can browse and install extensions from within the Web Studio. Access the **Extensions** view either by clicking on the Extensions icon in the **Activity Bar** on the left side of the Studio (![Extensions view icon](images/web/28_ext_icon.svg)), by choosing it at the top View menu > Extensions, or by using View: Extensions keyboard short - Mac: `⇧⌘X`, Windows/Linux: `Ctrl+Shift+X`.
 
 This will present you with a list of the extensions on the K2exchange. Each of the extensions in the list includes a brief description and its publisher. With a mouse hover, you can see a pop-up tooltip that contains more information about the extension, such as its latest version. When selecting an extension item, the extension's details page displays on the right side of the screen, where you can learn more about it.
 
