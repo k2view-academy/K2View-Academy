@@ -21,7 +21,7 @@ The following diagram describes the execution of the AI training task:
 
 ## AI-Based Generation Task
 
-The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test data store (Fabric) and can be loaded to any target environment.
+The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test Data Store (Fabric) and can be loaded to any target environment.
 
 The following diagram describes the execution of the AI training task:
 
