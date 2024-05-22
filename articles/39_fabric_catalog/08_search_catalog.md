@@ -34,7 +34,7 @@ Click [here](10_catalog_APIs.md#search-catalog) for more details about the synta
 
 The search results are presented in a list that can be exported into a CSV file. The result set returned to the client is limited to 750 nodes and 750 relations, meaning, one single search can yield a total of up to 1500 results.
 
-To navigate from the search results to a node in the Catalog tree, click the ![](images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refers_to* relation.
+To navigate from the search results to a node in the Catalog tree, click the ![](images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refersTo* relation.
 
 
 
