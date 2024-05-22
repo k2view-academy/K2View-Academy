@@ -65,17 +65,17 @@ For example, do not define a city as a special param as the data generation proc
 
 ### K2system schema tables 
 - Creation of the K2system schema/tables: 
-     - It will be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
-     - These created tables are populated by the TDM AI Task and The AI Job:
+     - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
+     - These created tables are populated by the TDM AI Task and the AI Job:
        
               - Task_executions: This table holds all the task executions for all the task types.
-              - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that might be useful for later analysis.
+              - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that may be useful for a later analysis.
               - Entity_list: A table with all the entities relevant to an existing training/generation job.
        
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
-- It is possible to define a post-execution flow that gets the generated entities and updates them if needed.
+- It is possible to define a post-execution flow that gets the generated entities and updates them, if needed.
 
 ### LU Implementation
 Verify that all LU source tables have a PK. The PK is required for the AI-based training and generation tasks.
