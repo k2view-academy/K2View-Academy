@@ -56,7 +56,7 @@ Add the AI environment to [Fabric environments](tdm_fabric_implementation_enviro
 This is an optional table that enables the addition of some values to the column_name in TrainingSpecialFields Mtable. The system auto-detects the columns that should be treated as special fields. You can come on top of the auto-detection and, with your business knowledge, override the special fields either by setting any of them as true or false. 
 Special fields are considered the columns that have a high cardinality (above the default threshold set in training execution params), for these fields, the data generation generates values that do not come directly from the original data. **The generated values do not need to be real, just look realistic**. In some cases the **definition** of a field as a special param needs to be **overridden**. 
 
-For example, do not define a city as a special param, since the data generation process needs to generate real values for a city:
+For example, do not define a city as a special param as the data generation process has to generate real values for a city:
 
 ![special params](images/ai_generation_special_params_example.png)
 
