@@ -59,15 +59,15 @@ The TDM Portal displays a list of the task's LUs and post-execution processes an
 
 ###  Open the Batch Monitoring Window
 
-Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get an additional information and have a better tracking about the task execution. 
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information and have a better tracking of the task execution. 
 
 ## Stop and Resume a Task Execution
 
 A task can be stopped if the processed entities fail due to an error, and can be resumed from the same point once the error has been fixed.  
 
-- Click ![stop](images/stop_execution_icon.png)in the right corner of the **Running Execution** window to stop the execution of the running or pending task's LUs or post execution processes, and to set the status of the task to **stopped**.
+- Click ![stop](images/stop_execution_icon.png)in the right corner of the **Running Execution** window to stop the execution of the running or pending task's LUs or post-execution processes, and to set the status of the task to **stopped**.
 
-- Click ![resume](images/resume_execution_icon.png) next to a record in **stopped** execution status in the **Logical Unit Summary** to resume the execution of **all** stopped task LUs and post execution processes:
+- Click ![resume](images/resume_execution_icon.png) next to a record in **stopped** execution status in the **Logical Unit Summary** to resume the execution of **all** stopped task LUs and post- execution processes:
 
   
 
