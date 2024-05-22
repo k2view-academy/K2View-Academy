@@ -14,7 +14,7 @@ The Task Executions Summary displays a list of executed tasks. When a task is ed
 
 Open the [Tasks List window](14_task_overview.md#tdm-tasks-list-window) and click the ![task icon](images/task_execution_history_icon.png) next to a selected task to open its Task Execution Summary window and display a full list of the task's executions.
 
-Click **Show/Hide Columns** to open a popup window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
+Click **Show/Hide Columns** to open a pop-up window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
 
 The following information is displayed for each executed task:
 
