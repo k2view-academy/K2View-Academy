@@ -113,7 +113,7 @@ These columns are used by the TDM task execution process to [create the entities
   - **version_ind** - populated by **true** in a [Data Versioning task](15_data_flux_task.md).
   - **selected_version_task_exe_id**- the task execution id of the selected data snapshot (version) loading a selected data snapshot (version). 
 
-### AI-Based Generation Columns
+### AI-based Generation Columns
 
 - **selected_subset_task_exe_id** - the task execution of the selected training model (data generator) for the AI based generation.
 
