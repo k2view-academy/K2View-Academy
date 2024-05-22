@@ -2,7 +2,7 @@
 
 # K2exchange
 
-The K2exchange is a store-like platform for publishing and consuming Fabric’s modules that are not part of the product and that are hence considered as extensions. Such extension modules can be Broadway actors and flows, connectors, templates, Java code and lib, LU web-app and SQL queries. 
+The K2exchange is a store-like platform for publishing and consuming Fabric’s modules that are not part of the product and that are hence considered as extensions. Such extension modules can be Broadway actors and flows, connectors, templates, Java code and libraries, LU web-app and SQL queries. 
 
 Project implementors can explore the extensions list, through the Web Studio, install and embed them into their project with a click, to support their development workflow.
 
