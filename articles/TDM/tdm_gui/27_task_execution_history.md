@@ -50,11 +50,11 @@ The window displays a summary on each LU or post-execution process of an execute
 
 The execution report displays the following information about the LU execution:
 
-- General information.
-- Entities list.
-- Reference tables list.
-- Execution errors.
-- Replaced sequences on Load tasks.
+- General information
+- Entities list
+- Reference tables list
+- Execution errors
+- Replaced sequences on Load tasks
 
 To generate and download a Summary Execution Report on an LU, click the ![task execution summary report](images/task_execution_summary_report_icon.png) next to each LU.
 
