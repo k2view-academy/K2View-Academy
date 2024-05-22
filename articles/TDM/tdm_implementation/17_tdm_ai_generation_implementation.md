@@ -27,7 +27,7 @@ The following diagram describes the execution of the AI training task:
 
 ![ai training](images/ai_generation_task_process.png)
 
-## Implementation Stpes
+## Implementation Steps
 
 ### AI Globals
 
