@@ -72,7 +72,7 @@ Once the extension is uninstalled, its related files that were added into the pr
 >
 > * **Delete All** - proceed with the uninstallation process, where these files will be removed. 
 > * **Keep Changes** - proceed with the uninstallation process, deleting extension-related files, except those that were changed by you.
-> * **Cancel** - so that the extension will remain.
+> * **Cancel** - do not uninstall the extension; leave it to remain.
 >
 > 
 >
