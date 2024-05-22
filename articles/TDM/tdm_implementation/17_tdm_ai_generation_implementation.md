@@ -39,7 +39,7 @@ The following shared Globals have been added for the AI-based data generation:
 
 ###  AI Interfaces
 
-- **AI_DB** - this postgres interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow creating AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
+- **AI_DB** - this Postgres interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow creating AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
 - **AI_Execution** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. 
 - **AI_DB_External** - this custom interface must be active in order to enable the AI-based generation functionality. We utilize this custom interface to securely allow Fabric to interact with the [k8 server](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token), this interface should hold the same credentials as AI_DB interface, and the Data field should be populated with your database name.
   ![ai training](images/External_DB.png)
