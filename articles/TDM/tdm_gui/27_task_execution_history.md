@@ -3,7 +3,7 @@
 The TDM Portal has several windows that display a task's execution history:
 
 - [Task Execution Summary](#task-executions-summary) - displays a list of the task's executions.
-- [Logical Units Execution Summary](#logical-units-execution-summary) - displays a list of a task's LUs and post execution processes.
+- [Logical Units Execution Summary](#logical-units-execution-summary) - displays a list of a task's LUs and post-execution processes.
 - [Task Execution- Detailed Statistics](#task-execution---detailed-statistics) - displays the hierarchical structure of copied and failed entities of an executed task.
 
 
