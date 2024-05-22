@@ -61,7 +61,7 @@ For example, do not define a city as a special param as the data generation proc
 ![special params](images/ai_generation_special_params_example.png)
 
 #### Notes
-  - **Primary and foreign keys** columns as well as columns that are **not string type cannot be overridden as being special fields.**
+  - **Primary and foreign keys** columns, as well as columns that are **not string type, cannot be overridden as being special fields.**
 
 ### K2system schema tables 
 - Creation of the K2system schema/tables: 
