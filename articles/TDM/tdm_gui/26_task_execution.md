@@ -8,7 +8,7 @@ The TDM Scheduling process checks the **End Date** of the task's scheduling para
 
 The following users can execute a TDM task:
 
-- **Admin users**.
+- **Admin users**
 - **Environment owners** of the task's environment:
   - **Extract tasks**, the environment owner of the source environment.
   - **Generate tasks**, the environment owner of the Synthetic environment.
