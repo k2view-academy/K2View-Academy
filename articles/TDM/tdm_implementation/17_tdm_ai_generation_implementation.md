@@ -33,9 +33,9 @@ The following diagram describes the execution of the AI training task:
 
 The following shared Globals have been added for the AI-based data generation:
 
-- **AI_DB_INTERFACE**  - the name of the AI DB interface. Default value is **AI_DB**. 
-- **CREATE_AI_K2SYSTEM_DB** - this Global indicates if the TDM deploy flow needs to create the AI k2system  tables if not exist. The default value is **false**. Set this Global to **true** in order to implement the AI-based data generation.
-- **AI_ENVIRONMENT**  -  this is the name of the AI dummy environment. The default value is  **AI**. 
+- **AI_DB_INTERFACE** - the name of the AI DB interface. Default value is **AI_DB**. 
+- **CREATE_AI_K2SYSTEM_DB** - this Global indicates if the TDM deploy flow needs to create the AI k2system tables if not exist. The default value is **false**. Set this Global to **true** in order to implement the AI-based data generation.
+- **AI_ENVIRONMENT** - this is the name of the AI dummy environment. The default value is **AI**. 
 
 ###  AI Interfaces
 
