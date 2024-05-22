@@ -40,11 +40,11 @@ Click [here](testParams2_Summary_Execution_Report_EXECID_217.xlsx) to download a
 
 ## Logical Units Execution Summary
 
-Displays an executed task's LUs and post execution processes. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
+Displays an executed task's LUs and post-execution processes. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
 
-Click **Show/Hide Columns** to open a popup window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
+Click **Show/Hide Columns** to open a pop-up window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
 
-The window displays a summary on each LU or post execution process of an executed task.
+The window displays a summary on each LU or post-execution process of an executed task.
 
 ### Generating a Task Execution Report on each Process
 
