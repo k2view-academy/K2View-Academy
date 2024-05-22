@@ -43,7 +43,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
 
   ### Requested Entities Columns
 
-These columns are used by the TDM task execution process to [create the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task: 
+These columns are used by the TDM task execution process for [creating the entities list of the root LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus) for each task: 
 
   - **selection method**: populated based on the task's data type (entities or tables) and the subset selection method. 
   - **clone_ind**: this field is set to **true** if the task needs to [clone an entity](17a_task_target_component_entities.md#generate-clones-for-an-entity).
