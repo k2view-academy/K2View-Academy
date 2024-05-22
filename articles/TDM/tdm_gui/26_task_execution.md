@@ -22,7 +22,7 @@ The following users can execute a TDM task:
 
 ## Task Execution Order
 
-A TDM task can include multiple LUs with a flat or hierarchical structure and post execution processes.
+A TDM task can include multiple LUs with a flat or hierarchical structure and post-execution processes.
 
 The execution of the related task components runs in the following order:
 
