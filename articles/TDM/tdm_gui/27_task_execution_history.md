@@ -18,17 +18,17 @@ Click **Show/Hide Columns** to open a pop-up window, which displays a list of av
 
 The following information is displayed for each executed task:
 
-- Task_execution_id.
+- Task_execution_id
 
-- Source and target environments.
+- Source and target environments
 
-- Task Executed By, the name of the user executing the task.
+- Task Executed By, which the name of the user executing the task.
 
-- BE name.
+- BE name
 
-- Summary statistics about the processed entities, Reference tables and post execution processes.
+- Summary statistics about the processed entities, Reference tables and post-execution processes.
 
-- Execution status, which is set to Completed when all a task's processes have been completed successfully.
+- Execution status, which is set to *Completed* when all of a task's processes have been completed successfully.
 
   
 
