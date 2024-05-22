@@ -10,7 +10,7 @@ The TDM Portal has several windows that display a task's execution history:
 
 ## Task Executions Summary 
 
-The Task Executions Summary displays a list of executed tasks. When a task is edited - a new version of the task is created. Each version has its own record in the Tasks Lists window and has its own Task Execution Summary. 
+The Task Executions Summary displays a list of executed tasks. When a task is edited - a new version of the task is created. Each version has its own record in the Tasks Lists window as well as its own Task Execution Summary. 
 
 Open the [Tasks List window](14_task_overview.md#tdm-tasks-list-window) and click the ![task icon](images/task_execution_history_icon.png) next to a selected task to open its Task Execution Summary window and display a full list of the task's executions.
 
