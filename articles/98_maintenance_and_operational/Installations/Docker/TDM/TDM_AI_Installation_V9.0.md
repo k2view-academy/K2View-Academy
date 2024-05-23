@@ -8,7 +8,7 @@ This document describes the infrastructure and application setup for TDM with AI
     - [VPC](#vpc)
     - [GKE](#gke)
     - [Admin Token](#admin-token)
-3. [TDM project configuration](#tdm-project-configuration)
+3. [TDM Project Configuration](#tdm-project-configuration)
 4. [Manual Cleanup Flow](#manual-cleanup-flow)
 5. [AI tests results](#ai-tests---performance-results)
 
@@ -120,7 +120,7 @@ kubectl describe secrets/full-admin-user-secret -n kube-system
 ```
 5. Copy the token. The token is needed for later steps
 
-## TDM project configuration
+## TDM Project Configuration
 Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md) for TDM-AI project implementation guidelines.
 
 ## Manual Cleanup Flow 
