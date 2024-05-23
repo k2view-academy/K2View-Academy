@@ -1,7 +1,7 @@
 # Fabric Studio License Activation
 
 Fabric License is managed remotely to control and monitor validations (to verify that number of installations and licenses' expiration dates). For this reason, an active Internet connection is required for an initial activation of the license.
-for this process, in case Fabric Studio is installed on a server with no Internet access, an external station with Internet access should be used.
+In case Fabric Studio is installed on a server with no Internet access, an external station with Internet access should be used for this process.
 
 #### Prerequisites
 License ID and Activation password (will be provided by View Account manager).
