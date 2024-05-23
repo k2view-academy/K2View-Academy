@@ -10,7 +10,7 @@ This document describes the infrastructure and the application setup for integra
     - [Admin Token](#admin-token)
 3. [TDM Project Configuration](#tdm-project-configuration)
 4. [Manual Cleanup Flow](#manual-cleanup-flow)
-5. [AI tests results](#ai-tests---performance-results)
+5. [AI Tests - Performance Results](#ai-tests---performance-results)
 
 ## Prerequisites
 - K2view cloud site
