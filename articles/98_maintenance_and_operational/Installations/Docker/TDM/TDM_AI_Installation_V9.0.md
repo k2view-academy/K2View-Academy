@@ -44,7 +44,7 @@ Keep the default values for the rest of the parameters.
 1. Open GCP console
 2. Go to Kubernetes Engine -> Clusters
 3. Click "Create"
-4. Click "Configure" in "Standard: You manage your cluster" option
+4. Click "Configure" in the "Standard: You manage your cluster" option
 5. Populate the following:
 - Cluster basics
     - Name
