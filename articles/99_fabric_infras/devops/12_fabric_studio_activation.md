@@ -21,7 +21,7 @@ The simplest activation is as follows:
 ![Success](./images/complete.png)
 
 #### Manual Activation - Method A
-Files Transfers is allowed.
+File transfers is allowed.
 * Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
 * Select 'Another computer's Internet connection' under Actions/'Using...'.
 * Enter your provided license details (License ID and Password).
@@ -38,7 +38,7 @@ Files Transfers is allowed.
 ![Success](./images/complete.png)
 
 #### Manual Activation - Method B
-File Transfer Is not allowed.
+File transfers is not allowed.
 * select 'Activate a license or renewal' option under Actions/'I want to'.
 * Select 'Another computer's internet connection' under Actions/Using.
 * Enter your provided license details (License ID and Password)
