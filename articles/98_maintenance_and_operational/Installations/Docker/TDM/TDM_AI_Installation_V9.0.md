@@ -3,7 +3,7 @@
 This document describes the infrastructure and application setup for TDM with AI integration.
 
 ## Table of Contents
-1. [Pre-requisites](#pre-requisites)
+1. [Prerequisites](#pre-requisites)
 2. [GPU-based GKE Creation](#gpu-based-gke-creation)
     - [VPC](#vpc)
     - [GKE](#gke)
@@ -12,7 +12,7 @@ This document describes the infrastructure and application setup for TDM with AI
 4. [Manual Cleanup Flow](#manual-cleanup-flow)
 5. [AI tests results](#ai-tests---performance-results)
 
-## Pre-requisites
+## Prerequisites
 - K2view cloud site
 - GCP account
 - GCP project with the necessary permissions for creating:
