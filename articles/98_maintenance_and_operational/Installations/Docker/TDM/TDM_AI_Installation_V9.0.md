@@ -73,7 +73,7 @@ kubectl get ns # Check that you can see the namespaces of the cluster
 ```
 
 ### Admin Token
-Admin token enables fabric to interact with K8S API server using HTTP/HTTPS interface
+An admin token enables fabric to interact with K8S API server using HTTP/HTTPS interface
 
 1. Create "admin-user.yaml" file
 2. Paste the following content in it
