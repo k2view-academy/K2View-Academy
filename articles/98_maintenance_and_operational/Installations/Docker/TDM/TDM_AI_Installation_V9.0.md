@@ -4,7 +4,7 @@ This document describes the infrastructure and application setup for TDM with AI
 
 ## Table of Contents
 1. [Pre-requisites](#pre-requisites)
-2. [GPU-based GKE creation](#gpu-based-gke-creation)
+2. [GPU-based GKE Creation](#gpu-based-gke-creation)
     - [VPC](#vpc)
     - [GKE](#gke)
     - [Admin Token](#admin-token)
