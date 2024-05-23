@@ -9,7 +9,7 @@ This document describes the infrastructure and application setup for TDM with AI
     - [GKE](#gke)
     - [Admin Token](#admin-token)
 3. [TDM project configuration](#tdm-project-configuration)
-4. [Manual cleanup flow](#manual-cleanup-flow)
+4. [Manual Cleanup Flow](#manual-cleanup-flow)
 5. [AI tests results](#ai-tests---performance-results)
 
 ## Pre-requisites
@@ -123,7 +123,7 @@ kubectl describe secrets/full-admin-user-secret -n kube-system
 ## TDM project configuration
 Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md) for TDM-AI project implementation guidelines.
 
-## Manual cleanup flow 
+## Manual Cleanup Flow 
 Cleanup process AICleanUp.flow located under TDM LU with inputs CleanALL Boolean if true the flow deletes all data in AI_execution and AI_DB else populate the TrainingExecutionIDs array that holds all training models that needs cleaning for example [1551,1660] the flow extracts all generations done by these training models and deletes all related data.
 
 ## AI Tests - Performance Results
