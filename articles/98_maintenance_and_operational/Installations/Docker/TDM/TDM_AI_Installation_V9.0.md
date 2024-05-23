@@ -130,5 +130,5 @@ The cleanup process, AICleanUp.flow, is located under the TDM LU with the inputs
 **AI Training Results:**
 ![ai training](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/images/training_resutls.png)
 
-**Generation Results:** 
+**AI Generation Results:** 
 ![ai generation](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_implementation/images/generation_results.png)
