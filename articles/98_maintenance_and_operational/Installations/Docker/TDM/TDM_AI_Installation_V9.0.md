@@ -124,7 +124,7 @@ kubectl describe secrets/full-admin-user-secret -n kube-system
 Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md) for TDM-AI project implementation guidelines.
 
 ## Manual Cleanup Flow 
-The cleanup process, AICleanUp.flow, is located under the TDM LU with inputs CleanALL Boolean if true the flow deletes all data in AI_execution and AI_DB else populate the TrainingExecutionIDs array that holds all training models that needs cleaning for example [1551,1660] the flow extracts all generations done by these training models and deletes all related data.
+The cleanup process, AICleanUp.flow, is located under the TDM LU with inputs CleanALL, type Boolean, and TrainingExecutionIDs, type array. If CleanALL is true, the flow deletes all the data in the AI_execution and AI_DB, else you shall populate TrainingExecutionIDs. For example, if you have 2 training models that hold the IDs 1551,1660, you should pass them to the flow as [1551,1660]. The flow extracts all generations done by these training models and deletes all their related data.
 
 ## AI Tests - Performance Results
 Training Results :
