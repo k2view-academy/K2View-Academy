@@ -49,7 +49,7 @@ Keep the default values for the rest of the parameters.
 - Cluster basics
     - Name
     - Location type: Zonal
-    - Zone (choose the zone from the region that you have created in the VPC section of this document)
+    - Zone (choose a zone from the region that you have created in the VPC section of this document)
 - Default Pool
     - Name
     - Number of nodes: 1
