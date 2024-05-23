@@ -1,6 +1,6 @@
 # TDM with AI installation document
 
-This document describes the infrastructure and application setup for integrating TDM with AI.
+This document describes the infrastructure and the application setup for integrating TDM with AI.
 
 ## Table of Contents
 1. [Prerequisites](#pre-requisites)
