@@ -39,10 +39,10 @@ File transfers is allowed.
 
 #### Manual Activation - Method B
 File transfers is not allowed.
-* select 'Activate a license or renewal' option under Actions/'I want to'.
-* Select 'Another computer's internet connection' under Actions/Using.
-* Enter your provided license details (License ID and Password)
-* Click Next.
+* Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
+* Select 'Another computer's Internet connection' under Actions/'Using...'.
+* Enter your provided license details (License ID and Password).
+* Click 'Next'.
 * Copy the request text (Keep the activation windows open until process is finished.)
 * Open the manual request page on your computer: [https://license.k2view.com/solo/customers/ManualRequest.aspx](https://license.k2view.com/solo/customers/ManualRequest.aspx)
 * Paste the request text in the text box and click submit.
