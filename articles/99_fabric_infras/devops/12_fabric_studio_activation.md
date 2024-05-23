@@ -9,7 +9,7 @@ License ID and Activation password (will be provided by View Account manager).
 #### Online Activation
 The simplest activation is as follows: 
 * Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
-* Select 'This computer's Internet connection.' under Actions/Using.
+* Select 'This computer's Internet connection.' under Actions/'Using...'.
 * Enter your provided license details (License ID and Password).
 * Click 'Next'.
 * Wait for the activation request to complete and then click 'Finish' to resume your work.
@@ -22,10 +22,10 @@ The simplest activation is as follows:
 
 #### Manual Activation - Method A
 Files Transfers is allowed.
-* select 'Activate a license or renewal' option under Actions/'I want to'.
-* Select 'Another computer's internet connection' under Actions/Using.
-* Enter your provided license details (License ID and Password)
-* Click Next.
+* Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
+* Select 'Another computer's Internet connection' under Actions/'Using...'.
+* Enter your provided license details (License ID and Password).
+* Click 'Next'.
 * Select a location for the request file (HTML file) and click next to save it. (Keep the activation windows open until the process is finished.)
 * Transfer the file to a computer with internet access and open it with your browser.
 * Download the Response file (XML file) and transfer it back to the server.
