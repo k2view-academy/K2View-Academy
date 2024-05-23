@@ -45,9 +45,9 @@ File transfers is not allowed.
 * Click 'Next'.
 * Copy the request text (keep the activation windows open until the process has been completed).
 * Open the manual request page on your computer: [https://license.k2view.com/solo/customers/ManualRequest.aspx](https://license.k2view.com/solo/customers/ManualRequest.aspx)
-* Paste the request text in the text box and click submit.
-* Copy the Response text
-* Paste the Response text back to the server and click next
+* Paste the request text in the text box and click 'Submit'.
+* Copy the Response text.
+* Paste the Response text back to the server and click 'Next'.
 
 ![Manual Activation](./images/offline_activation.png)
 ![ Manual Activation - Method B](./images/manual_method_b.png " Manual Activation - Method B")
