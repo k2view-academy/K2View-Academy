@@ -27,7 +27,7 @@ Files Transfers is allowed.
 * Enter your provided license details (License ID and Password).
 * Click 'Next'.
 * Select a location for the request file (HTML file) and click 'Next' to save it (keep the activation windows open until the process has been completed).
-* Transfer the file to a computer with internet access and open it with your browser.
+* Transfer the file to a computer with an Internet access and open it with your browser.
 * Download the Response file (XML file) and transfer it back to the server.
 * Browse for the response file and click next to finish the process.
 
