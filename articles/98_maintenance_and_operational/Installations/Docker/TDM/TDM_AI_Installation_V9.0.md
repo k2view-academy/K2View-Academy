@@ -64,9 +64,9 @@ Keep the default values for the rest of the parameters.
 - Networking
     - Network: Choose the network that you have created in the VPC section of this document
     - Node subnet: Choose the subnet that you created in the VPC section of this document
-6. After all the parameters are populated, click "Create"
-7. After the cluster is created, connect it to your kubectl by clicking on the name of your cluster -> Connect -> Command-line access. Copy the content, paste and run in your terminal.
-8. Verify the installation
+6. Following the population of all parameters, click "Create".
+7. Following the creation of the cluster, connect it to your kubectl by clicking on the cluster's name -> Connect -> Command-line access. Copy the content, paste it and run it in your terminal.
+8. Validate the installation.
 ```bash
 kubectl config current-context # Check the kubectl is connected to your cluster
 kubectl get ns # Check that you can see the namespaces of the cluster
