@@ -15,7 +15,7 @@ This document describes the infrastructure and application setup for TDM with AI
 ## Pre-requisites
 - K2view cloud site
 - GCP account
-- GCP project with necessary permissions to create:
+- GCP project with the necessary permissions for creating:
     - VPC
     - GKE
     - AlloyDB (optional)
