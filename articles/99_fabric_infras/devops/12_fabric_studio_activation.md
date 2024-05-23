@@ -52,6 +52,6 @@ File transfers is not allowed.
 ![Manual Activation](./images/offline_activation.png)
 ![ Manual Activation - Method B](./images/manual_method_b.png " Manual Activation - Method B")
 ![Manual Activation - Method B step 1](./images/method_b_step_1.png "Manual Activation - Method B step 1")
-![![![Method B step 2](./images/method_b_step_2.png)
+![Method B step 2](./images/method_b_step_2.png)
 ![Manual Activation - Method B - Complete](./images/manual_complete_method_b.png)
 ![Success](./images/complete.png)
