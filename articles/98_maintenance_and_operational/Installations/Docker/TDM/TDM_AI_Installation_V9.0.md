@@ -118,7 +118,7 @@ echo $token
 # Alternative way to see the token
 kubectl describe secrets/full-admin-user-secret -n kube-system
 ```
-5. Copy the token. The token is needed for later steps
+5. Copy the token; it is needed for later steps.
 
 ## TDM Project Configuration
 Click [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md) for TDM-AI project implementation guidelines.
