@@ -8,8 +8,8 @@ License ID and Activation password (will be provided by View Account manager).
 
 #### Online Activation
 The simplest activation is as follows: 
-* Select 'Activate a license or renewal' option under Actions/'I want to'.
-* Select 'This computer's internet connection' under Actions/Using.
+* Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
+* Select 'This computer's Internet connection.' under Actions/Using.
 * Enter your provided license details (License ID and Password).
 * Click Next.
 * Wait for the activation request to complete and click Finish to resume your work.
