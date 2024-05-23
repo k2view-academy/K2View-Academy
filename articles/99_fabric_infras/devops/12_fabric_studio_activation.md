@@ -7,12 +7,12 @@ for this process, in case Fabric Studio is installed on a server with no Interne
 License ID and Activation password (will be provided by View Account manager).
 
 #### Online Activation
-The simplest activation, 
-* select 'Activate a license or renewal' option under Actions/'I want to'.
+The simplest activation is as follows: 
+* Select 'Activate a license or renewal' option under Actions/'I want to'.
 * Select 'This computer's internet connection' under Actions/Using.
 * Enter your provided license details (License ID and Password)
 * Click Next.
-* Wait for activation request to complete and click Finish to resume your work.
+* Wait for the activation request to complete and click Finish to resume your work.
 
   ![Online Activation.png](./images/online_activation.png "Online Activation.png")
 
