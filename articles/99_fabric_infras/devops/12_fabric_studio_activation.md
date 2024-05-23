@@ -11,8 +11,8 @@ The simplest activation is as follows:
 * Select the 'Activate a license or renewal.' option under Actions/'I want to...'.
 * Select 'This computer's Internet connection.' under Actions/Using.
 * Enter your provided license details (License ID and Password).
-* Click Next.
-* Wait for the activation request to complete and click Finish to resume your work.
+* Click 'Next'.
+* Wait for the activation request to complete and then click 'Finish' to resume your work.
 
   ![Online Activation.png](./images/online_activation.png "Online Activation.png")
 
