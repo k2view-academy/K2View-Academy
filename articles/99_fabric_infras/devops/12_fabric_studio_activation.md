@@ -43,7 +43,7 @@ File transfers is not allowed.
 * Select 'Another computer's Internet connection' under Actions/'Using...'.
 * Enter your provided license details (License ID and Password).
 * Click 'Next'.
-* Copy the request text (Keep the activation windows open until process is finished.)
+* Copy the request text (keep the activation windows open until the process has been completed).
 * Open the manual request page on your computer: [https://license.k2view.com/solo/customers/ManualRequest.aspx](https://license.k2view.com/solo/customers/ManualRequest.aspx)
 * Paste the request text in the text box and click submit.
 * Copy the Response text
