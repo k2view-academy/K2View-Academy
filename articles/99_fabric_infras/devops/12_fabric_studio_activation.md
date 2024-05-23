@@ -29,7 +29,7 @@ Files Transfers is allowed.
 * Select a location for the request file (HTML file) and click 'Next' to save it (keep the activation windows open until the process has been completed).
 * Transfer the file to a computer with an Internet access and open it with your browser.
 * Download the Response file (XML file) and transfer it back to the server.
-* Browse for the response file and click next to finish the process.
+* Browse for the response file and click 'Next' to finish the process.
 
 ![Manual Activation](./images/offline_activation.png)
 ![Method A](./images/manual_method_a.png)
