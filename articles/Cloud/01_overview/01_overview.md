@@ -26,7 +26,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
   * Enforce access control & privilege management for any environment.
   * Apply end-to-end access governance control and monitoring.
   * Have a Built-in SSO capabilities with federated customer’s IDP.
-  * Built on CyberArk, a FedRAMP authorized, Identity Security and Access Management leader.
+  * Built on CyberArk, which is a FedRAMP authorized and a leader in Identity Security and Access Management.
   * Avoid the need for any installations on users PC.
   * Zero Trust by design, K2view does not have any access to the Fabric runtime environments.
 
