@@ -45,7 +45,7 @@ Any of the user can achieve the following tasks, by himself, within a click:
 3. **Pause / Resume / Delete**:
    - Manage application states efficiently.
 
-### Using Kubernetes (K8S) as an Infrastructure
+### Using Kubernetes (K8s) as an Infrastructure
 
 - Kubernetes: The de facto standard for enterprise container orchestration.
   - Provides an infrastructure abstraction layer for handling compute, networking, storage, and app health monitoring.
@@ -85,17 +85,17 @@ The access to either k2cloud platform UI or the spaces, is done according to pri
 
 ### Separation
 
-* SaaS - Each organization has its own account (managed by k2view at the cloud provider), and accordingly his Fabric workloads are fully separated.
+* SaaS - Each organization has its own account (managed by K2view at the cloud provider), and accordingly his Fabric workloads are fully separated.
 
-* k2cloud is a multi tenant application, with full separation, where each organization can see and access its own projects and spaces.
+* K2cloud is a multi tenant application, with full separation, where each organization can see and access its own projects and spaces.
 
 ### Zero Trust
 
-* **Outbound only connectivity**: k2cloud platform does not have any access to the clusters or spaces, or any data they manage. This is achieved by that the k2agent, deployed at each K8s cluster, in its own namespace, pulls its dedicated instructions. It plays like a proxy forwarder - it initiates REST calls into the k2cloud orchestrator, and move the response into the K8s cluster control plane, as YAML files.
+* **Outbound only connectivity**: K2cloud platform does not have any access to the clusters or spaces, or any data they manage. This is achieved by that the k2agent, deployed at each K8s cluster, in its own namespace, pulls its dedicated instructions. It plays like a proxy forwarder - it initiates REST calls into the k2cloud orchestrator, and move the response into the K8s cluster control plane, as YAML files.
 
 * **No secrets**
 
-  * k2cloud platform does not save secrets – all needed credentials, like access to managed services, are set at the k2-agent, When you own your cloud deployment, as self hosted tenant, you are responsible to set these values,without informing or exposing it to k2view.
+  * K2cloud platform does not save secrets – all needed credentials, like access to managed services, are set at the k2-agent, When you own your cloud deployment, as self hosted tenant, you are responsible to set these values,without informing or exposing it to k2view.
 
   * All around usage of K8S secrets modules.
 
