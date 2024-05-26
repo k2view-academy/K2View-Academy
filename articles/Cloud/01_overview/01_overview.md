@@ -22,7 +22,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
   * Supporting hybrid cloud.
   * Providing rich observability and monitoring dashboards.
 
-* **Empower Security** with zero trust enablement
+* **Empower Security** with a Zero Trust strategy implementation:
   * Enforce access control & privilege management for any environment.
   * Apply end-to-end access governance control and monitoring.
   * Have a Built-in SSO capabilities with federated customer’s IDP.
