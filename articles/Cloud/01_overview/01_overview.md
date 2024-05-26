@@ -18,7 +18,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
 * **Simplify Operation** with minimal required IT TCO, by:
   * Simplifying the creation, the deployments and upgrades of Fabric environments.
   * Providing high resilience and robustness.
-  * Providing auto workloads scale.
+  * Providing auto-scaling workloads.
   * Supporting hybrid cloud.
   * Providing rich observability and monitoring dashboards.
 
