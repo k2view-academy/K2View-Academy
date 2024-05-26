@@ -2,7 +2,7 @@
 
 Adopting cloud technology is crucial, as it offers unparalleled agility, scalability, and business continuity. These characteristics align with the requirements of data-oriented platforms, where more and more data is gathered and processed.
 
-K2cloud is a comprehensive orchestration platform that empowers users to effortlessly, with a click, generate, manage, and observe various Fabric runtime environments, including Training, Development with Web studio IDE, QA, CI/CD, Staging and Production. These Fabric runtime environments run in the Cloud, where K2cloud uses the most modern and up-to-date cloud technology, Kubernetes-based, while encapsulating all cloud operation complexity from users.
+K2cloud is a comprehensive orchestration platform that empowers users to effortlessly, with a click, generate, manage, and observe various Fabric runtime environments, including Training, Development with Web studio IDE, QA, CI/CD, Staging and Production. These Fabric runtime environments run in the Cloud, where K2cloud uses the most up-to-date cloud technology, Kubernetes-based, while encapsulating all cloud operation complexity from users.
 
 The platform offers the flexibility to choose between a fully managed cloud service, a self-hosted environment (customer tenant or on-prem), or a hybrid setup, enabling seamless accessibility from any location.
 
