@@ -34,7 +34,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
 
 ## K2cloud Deployment Types
 
-K2view allows you to manage various deployment types (fully managed, self-hosted, hybrid), on various cloud providers (GCP, AWS, Azure) Kubernetes infra.
+K2view allows you to manage various deployment types (fully managed, self-hosted, hybrid) on various cloud providers (GCP, AWS, Azure) that provide Kubernetes infra.
 
 * **Fully Managed**, K2view cloud-hosted, for a fully managed and automated experience, while data access is fully secured. A separated account is created on behalf each customer, in the cloud provider, to ensure having a full separated setup. 
 * **Self-Hosted**, prevent data from leaving your environment by having Fabric deployed in your cloud tenant or on-premises. to meet the strictest data movement requirements.
