@@ -39,7 +39,7 @@ Any of the user can achieve the following tasks, by himself, within a click:
    - Auto-provision managed services.
    - Configure Fabric and non-managed services appropriately.
    - Apply privileged access control settings and certificates.
-   - Clone, build, and deploy project.
+   - Clone, build, and deploy the project.
 2. **Redeploy**:
    - Redeploy environments or logical units (LU/s), for non-dev Fabric workloads.
 3. **Pause / Resume / Delete**:
