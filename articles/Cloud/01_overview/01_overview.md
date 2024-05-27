@@ -15,7 +15,7 @@ K2cloud platform offers advantages for a variety of teams, for different roles a
   * Have a full development web framework with a standard IDE experience, available anywhere and anytime.
   * Have an all-in-one platform for developing, testing and debugging.
 
-* **Simplify Operation** with minimal required IT TCO, by:
+* **Simplify Operation** with minimal required IT TCO (Total Cost of Ownership), by:
   * Simplifying the creation, the deployments and upgrades of Fabric environments.
   * Providing high resilience and robustness.
   * Providing auto-scaling workloads.
