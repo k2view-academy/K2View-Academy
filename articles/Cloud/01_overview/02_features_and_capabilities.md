@@ -73,13 +73,13 @@ Any of the user can achieve the following tasks, by himself, within a click:
 
 The access to either k2cloud platform UI or the spaces, is done according to privileges.
 
-* Front IDP – CyberArk, FedRAMP Identity and access management leader.
+* Front IdP – CyberArk, FedRAMP Identity and access management leader.
 
 * Enables multi-factor authentication, using various authenticators, while applying different policies by profiles. 
 
 * Enables SSO Integration.
 
-* Each space - Fabric workload - is reparented by its own web-app at IDP, with associated permission roles. Users can access spaces according to matched roles.
+* Each space - Fabric workload - is reparented by its own web-app at IdP, with associated permission roles. Users can access spaces according to matched roles.
 
 * Access monitoring and reports.
 
