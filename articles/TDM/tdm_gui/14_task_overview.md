@@ -28,7 +28,7 @@ TDM 9.0 redesigns the task creation flow in order to simplify the task creation 
 
 - [Test Data store](16_task_test_data_store_component.md) – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
 
-- [Target](17_task_target_component.md) – defines the target environment for the task, which can be either a testing environment or AI training to create a training model for AI-based synthetic entities’ generation.
+- [Target](17_task_target_component.md) – defines the target environment for the task, which can be either a testing environment or AI training to create a training model for an AI-based synthetic entities’ generation.
   
 
 **The task actions are set by components that are selected and set by the user**. The **Test Data Store must be set for all tasks**.
