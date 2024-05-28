@@ -101,7 +101,7 @@ The access to either k2cloud platform UI or the spaces, is done according to pri
 
 * **Secure access to data platforms**: Have a single cluster output point, using NAT GW, let you easily define whitelist to the spaces in that cluster, withotut doing it per Fabric workload environment. Moreover, following K2view recommendation of having 2-3 clusters - studio, QA & Staging, and production, you can define that only production cluster will have access to specific sensitive data platform.
 
-* Avoid vulnerabilities - Fabric images can be scanned and uploaded to the customer’s OCI repository. K2cloud orchestrator providers a simple way - via UI - to provision the images' location, where accordingly spaces will be created from the scanned images.
+* **Avoid vulnerabilities** - Fabric images can be scanned and uploaded to the customer’s OCI (Open Container Initiative) repository. The k2cloud orchestrator provides a simple way - via a UI - to provision the images' location, where accordingly spaces will be created from the scanned images.
 
 
 
