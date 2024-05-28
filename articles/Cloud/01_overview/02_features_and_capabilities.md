@@ -87,7 +87,7 @@ The access to either k2cloud platform UI or the spaces, is done according to pri
 
 * SaaS - each organization has its own account (managed by K2view in the cloud provider), which, in turn, has its own tenant, where the organization’s Fabric workloads are fully separated from those belonging to other organizations.
 
-* K2cloud is a multi-tenant application, with full separation between the tenants within it, and where each organization can see and access only its own projects and spaces; the tenant’s privacy is completely protected.
+* K2cloud is a multi-tenant application, with full separation between the tenants within it, and where each organization can view and access only its own projects and spaces; the tenant’s privacy is completely protected.
 
 ### Zero Trust
 
