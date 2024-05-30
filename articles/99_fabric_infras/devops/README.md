@@ -14,6 +14,6 @@
     <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Replace the Fabric Default Admin Password</a></li>
     <li><a href="/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md">Master Key Protection with KeyStore</a></li>
     <li><a href="/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md">Fabric Master Key Integrated with KMS</a></li>
-    <li><a href="/articles/99_fabric_infras/devops/12_fabric_studio_activation.md">Fabric Studio online and offline activation</a></li>    
+    <li><a href="/articles/99_fabric_infras/devops/12_fabric_studio_activation.md">Fabric Studio Online and Offline Activation</a></li>    
 </ul>
 
