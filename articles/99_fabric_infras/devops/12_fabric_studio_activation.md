@@ -1,4 +1,4 @@
-# Fabric Studio License Activation.
+# Fabric Studio License Activation
 
 Fabric License is managed remotely to control and monitor validations (To Verify that amount of installations and license expiration date)
 therefore an active internet connection is required for initial activation of the license.
