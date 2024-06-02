@@ -1,6 +1,6 @@
 # TDM Environments Overview
 
-K2view's TDM can create tasks that are executed in TDM environments. Each environment reflects a physical environment such as a production environment or a testing environment. In addition, the TDM has a **dummy environments** named **Synthetic** and **AI** to support the rule-based or AI-based generation of [synthetic entities](16a_generate_task.md) by TDM tasks. 
+K2view's TDM can create tasks that are executed in TDM environments. Each environment reflects a physical environment such as a production environment or a testing environment. In addition, the TDM has a **dummy environments** named **Synthetic** and **AI** to support the rule-based or AI-based generation of [synthetic entities](19_task_synthetic_data_generation.md) by TDM tasks. 
 Each environment must be defined in the following TDM components:
 
 - Fabric - set the [interfaces connection details and Globals values](/articles/25_environments/01_environments_overview.md) for each environment. 
