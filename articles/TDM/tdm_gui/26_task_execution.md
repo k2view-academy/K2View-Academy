@@ -42,18 +42,18 @@ The TDM Portal displays a list of the task's LUs and post-execution processes an
 **Example:**
 
 - Execute and extract the task with the following LUs:
-  - CRM, the root LU.
-  - Billing is children LU of the CRM LU.
+  - Customer. the root LU.
+  - Billing is children LU of the Customer LU.
 
-- The CRM LU is executed before the Billing LU:
+- The Customer LU is executed before the Billing LU:
 
   ![monitor execution](images/extract_task_execution_monitor.png)
 
-- The Billing LU is executed after the execution of the CRM LU has ended:
+- The Billing LU is executed after the execution of the Customer LU has ended:
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
 
-- The **Logical Units Execution Summary** window displays the summary execution details of each LU or post-execution process.
+- The **Logical Units Execution Summary** window displays the summary execution details of each LU, pre-execution processes, and post-execution processes.
 
 
 
