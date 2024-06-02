@@ -73,7 +73,7 @@ A task can be stopped if the processed entities fail due to an error, and can be
 
 ## Set the Task Execution to be On Hold
 
-Occasionally, you may need to temporarily set a task to On Hold. This status can be used, for example, if the testing environment is temporarily down, to hold all task executions on an environment until the testing environment is up again and to then reactivate the tasks for this environment.
+Occasionally, you may need to temporarily set a task to On Hold. This status can be used, for example, if the testing environment is temporarily down, to hold all task executions on an environment until the testing environment is up again, and to then reactivate the tasks for this environment.
 
 Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to Inactive), its task execution status cannot be modified.
 
@@ -96,7 +96,7 @@ Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
 - To execute a scheduled task on demand, click ![task execution icon](images/execute_task_icon.png). 
 
-- Both the TDM Portal and TDM Scheduling processes initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
+- Both - the TDM Portal and the TDM Scheduling process - initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
 
   Click for more information about the [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md).
 
@@ -104,7 +104,7 @@ Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
 - The TDM Scheduling process skips running tasks.
 
-- The TDM Scheduling process skips On Hold tasks.
+- The TDM Scheduling process skips tasks that are On Hold.
 
 
 
