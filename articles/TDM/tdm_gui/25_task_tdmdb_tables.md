@@ -135,9 +135,9 @@ These columns are used by the TDM task execution process for [creating the entit
 #### Scheduling Parameters
 
 - **Scheduler** - set based on the task's [Scheduler](22_task_execution_timing_tab.md):
-  - If the Scheduler is not set (the task is execution by request), populated by **immediate**.
-  - If the Scheduler is set (a scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
-- **scheduling_end_date** - populated by the **End Date** if set on scheduled tasks.
+  - If the Scheduler is not set (that is, the task is executed by request), the scheduler is populated by **immediate**.
+  - If the Scheduler is set (a scheduled task), the scheduler is populated by a **crontab** based on the selected scheduling parameters of the task.
+- **scheduling_end_date** - the scheduler is populated by the **End Date** if set on scheduled tasks.
 
 #### Extract Tasks - [Retention Period](16_task_test_data_store_component.md#retention-period)
 
