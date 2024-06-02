@@ -77,7 +77,7 @@ Occasionally, you may need to temporarily hold a task (i.e., set it 'On Hold'). 
 
 Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to Inactive), its task execution status cannot be modified.
 
-Tasks on a **Hold** task execution status, cannot be executed.  
+Tasks on a **Hold** task-execution-status, cannot be executed.  
 
 Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
