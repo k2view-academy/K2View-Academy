@@ -120,7 +120,7 @@ Enables the user to check the Delete [task action](17a_task_target_component_ent
 
 ##### Refresh All Data from Source
 
-Ask to sync the entities from the source to get a fresh data in the task. 
+Ask to sync the entities from the source to get fresh data in the task. 
 
 ##### Process Tables
 
@@ -379,7 +379,7 @@ The maximum number of entities that the user can [reserve on the environment](/a
 
 ## AI Environment - Permission Set
 
-The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task] and as a source environment for an [AI-based generation task]. Therefore the AI environment type must be **Both**.
+The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and as a source environment for an [AI-based generation task](19_task_synthetic_data_generation.md#how-to-create-an-ai-based-generation-task). Therefore the AI environment type must be **Both**.
 
 The **Read** permission on the AI environment grants a permission for the **AI-based entities generation** task.
 
