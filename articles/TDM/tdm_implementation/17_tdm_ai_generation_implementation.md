@@ -75,7 +75,7 @@ For example, do not define a city as a special param as the data generation proc
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
-- It is possible to define a post-execution flow that gets the generated entities and updates them, if needed.
+- In some cases it may be required to fix or override some of the AI-based generated values. It can be implemented by either defining a post-execution flow that gets the generated entities and updates them, or by adding an override logic to the load flows to update the values before they are loaded to the target environment.
 
 ### LU Implementation
 Verify that all LU source tables have a PK. The PK is required for the AI-based training and generation tasks.
