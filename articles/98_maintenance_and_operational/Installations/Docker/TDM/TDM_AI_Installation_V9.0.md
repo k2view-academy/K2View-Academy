@@ -1,4 +1,4 @@
-# TDM with AI installation document
+# TDM with AI Installation Document
 
 This document describes the infrastructure and the application setup for integrating TDM with AI.
 
