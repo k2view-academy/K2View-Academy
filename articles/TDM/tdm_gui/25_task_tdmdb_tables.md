@@ -110,7 +110,7 @@ These columns are used by the TDM task execution process for [creating the entit
 
   ### Data Versioning Columns
 
-  - **version_ind** - populated with **true** in a [Data Versioning task](15_data_flux_task.md).
+  - **version_ind** - populated with **true** in a [Data Snapshot (Version) task](15_data_flux_task.md).
   - **selected_version_task_exe_id** - the task execution id of the selected data snapshot (version) loading a selected data snapshot (version). 
 
 ### AI-based Generation Columns
