@@ -57,10 +57,10 @@ These columns are used by the TDM task execution process for [creating the entit
   <p><strong>Task selection method</strong></p>
   </td>
   <td width="200pxl">
-  <p><strong>selection_method</strong></p>
+  <p><strong>selection_method field</strong></p>
   </td>
   <td width="400pxl">
-  <p><strong>Selection_param_value</strong></p>
+  <p><strong>Selection_param_value field</strong></p>
   </td>
   </tr>
   <tr>
@@ -139,7 +139,7 @@ These columns are used by the TDM task execution process for [creating the entit
   - If the Scheduler is set (a scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
 - **scheduling_end_date** - populated by the **End Date** if set on scheduled tasks.
 
-#### Extract Tasks - [Retention Period](16_extract_task.md#retention-period)
+#### Extract Tasks - [Retention Period]([16_extract_task.md#retention-period](16_task_test_data_store_component.md#retention-period)
 
 - **retention_period_type** and **retention_period_value**.
 
@@ -151,7 +151,7 @@ These columns are used by the TDM task execution process for [creating the entit
 - **replace_sequences**
 - **sync_mode** - 
   - If the task does not override the sync mode, this column remains empty.
-  - If the task overrides the [sync mode](19_load_task_request_parameters_regular_mode.md#override-sync-mode), populated by **FORCE** or **OFF**. 
+  - If the task overrides the [sync mode]([/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution), populated by **FORCE** or **OFF**. 
 
  
 
