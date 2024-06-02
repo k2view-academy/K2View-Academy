@@ -48,8 +48,8 @@ Do not sync the entities from the source when running a TDM task with the enviro
 
 Example:
 
-- The Production team allocates a predefined window for extracting a subset of entities from Production. The access to Production is restricted to the predefined window.
-- An [Extract task](16_extract_task.md) must be created and run to extract a large subset of entities from Production and to sync it into Fabric. The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync**, thus preventing additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric.
+- The Production team allocates a predefined window for extracting a subset of entities from Production. The access to Production is restricted to the predefined window in which a large subset can be extracted and saved into the Test Data Store (Fabric). 
+- The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync**, thus preventing additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric.
 
 ### Always Sync  
 
