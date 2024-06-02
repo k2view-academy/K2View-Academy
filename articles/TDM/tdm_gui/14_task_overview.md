@@ -110,7 +110,7 @@ You can exit each form, including the Task name form, by clicking any task compo
 
 ### Task Architectural Widget
 
-Each task must include the [Test Data Store] (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target]. A task can include Source only, Target only, or both environments.
+Each task must include the [Test Data Store](16_task_test_data_store_component.md) (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target](17_task_target_component.md). A task can include Source only, Target only, or both environments.
 
 Click on each one of the components to open and update its form.
 
