@@ -139,7 +139,7 @@ These columns are used by the TDM task execution process for [creating the entit
   - If the Scheduler is set (a scheduled task), populated by a **crontab** based on the selected scheduling parameters of the task.
 - **scheduling_end_date** - populated by the **End Date** if set on scheduled tasks.
 
-#### Extract Tasks - [Retention Period]([16_extract_task.md#retention-period](16_task_test_data_store_component.md#retention-period)
+#### Extract Tasks - [Retention Period](16_task_test_data_store_component.md#retention-period)
 
 - **retention_period_type** and **retention_period_value**.
 
@@ -173,7 +173,7 @@ This table holds all [variables that are overridden by the task](23_task_globals
 
 ## TDM_GENERATE_TASK_FIELD_MAPPINGS
 
-This table is populated with [data generation parameters](16a_generate_task.md#adding-data-generation-parameters-to-the-task) for Generate tasks.
+This table is populated with [data generation parameters](14d_task_source_rule_based_generation.md#data-generation-parameters) for Generate tasks.
 
 ## TASK_REF_TABLES
 
