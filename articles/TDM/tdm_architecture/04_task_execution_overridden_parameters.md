@@ -53,7 +53,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </tr>
 <tr style="height: 64px;">
 <td style="height: 64px; width: 120.094px;" valign="top">
-<p>None</p>
+<p>Empty</p>
 </td>
 <td valign="top" width="300pxl">
 <ul>
@@ -69,7 +69,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </tr>
 <tr style="height: 64px;">
 <td style="height: 64px; width: 120.094px;" valign="top">
-<p>None</p>
+<p>Empty</p>
 </td>
 <td valign="top" width="300pxl">
 <ul>
@@ -85,7 +85,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </tr>
 <tr>
 <td style="width: 120.094px;">
-<p>None</p>
+<p>Empty</p>
 </td>
 <td style="width: 120.797px;">
 <ul>
@@ -175,6 +175,7 @@ Sync the data from the target environment.</ul>
 </tr>
 </tbody>
 </table>
+
 
 
 
