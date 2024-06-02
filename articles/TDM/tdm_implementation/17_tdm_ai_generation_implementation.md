@@ -47,7 +47,7 @@ The following shared Globals have been added for the AI-based data generation:
   Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token) for more information about the TDM with AI installation. 
 
 ### AI Environment
-Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
+Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and to the [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
 
 ### AI MTables 
 
