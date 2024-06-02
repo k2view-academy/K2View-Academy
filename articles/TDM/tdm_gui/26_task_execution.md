@@ -104,7 +104,7 @@ Hold and Activate task buttons are displayed on the Tasks screen of each task:
 
 - The TDM Scheduling process skips running tasks.
 
-- The TDM Scheduling process skips tasks that are On Hold.
+- The TDM Scheduling process skips tasks that are 'On Hold'.
 
 
 
