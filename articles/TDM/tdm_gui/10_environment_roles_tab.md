@@ -116,7 +116,7 @@ Enables the user to check the Delete [task action](17a_task_target_component_ent
 
 ##### Random Entity Selection
 
-[Randomly select entities](15a_entity_subset.md#random)) for TDM load task. This permission applies only when the permission set has **Write** access.
+[Randomly select entities](15a_entity_subset.md#random) for TDM load task. This permission applies only when the permission set has **Write** access.
 
 ##### Refresh All Data from Source
 
