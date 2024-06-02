@@ -151,7 +151,7 @@ These columns are used by the TDM task execution process for [creating the entit
 - **replace_sequences**
 - **sync_mode** - 
   - If the task does not override the sync mode, this column remains empty.
-  - If the task overrides the [sync mode](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution), populated by **FORCE** or **OFF**. 
+  - If the task overrides the [sync mode](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution), this parameter is populated by **FORCE** or **OFF**.
 
  
 
