@@ -84,4 +84,4 @@ Verify that all LU source tables have a PK. The PK is required for the AI-based 
 If the LU schema is updated, the next training task execution will drop and recreated the schema tables for the updated LU.
 
 ### Cleanup Process 
-The cleanup process of the AI execution server and the AI DB is a manual process running a dedicated flow. Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
+The cleanup process of the AI execution server and the AI DB is a manual process that runs a dedicated flow. Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
