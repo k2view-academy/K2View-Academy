@@ -108,11 +108,11 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### **Delete Entity from Target** 
 
-Enables the user to check the Delete [task action]([14_task_overview.md#task-actions-types](14_task_overview.md#task-actions)) on the task. This permission applies only when the permission set has **Write** access.
+Enables the user to check the Delete [task action](17a_task_target_component_entities.md#delete) on the task. This permission applies only when the permission set has **Write** access.
 
 ##### Entity Clone 
 
-[Create replicas]([17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
+[Create replicas](17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
 
 ##### Random Entity Selection
 
@@ -132,7 +132,7 @@ Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to ru
 
 ##### Replace Sequences
 
-[Replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities)) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
+[Replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
 
 ##### Data Versioning 
 
