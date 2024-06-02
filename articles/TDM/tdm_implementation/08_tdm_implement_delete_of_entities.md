@@ -66,7 +66,7 @@ TDM 8.1 added an automatic generation of the target tables and their population 
 
    
 
-#### Adding a Decision Function to the Target LU Tables
+### Adding a Decision Function to the Target LU Tables
 
 The target LU tables must be populated when running a TDM task that deletes the entities from the target environment. The target keys must be extracted from the target environment in order to enable deleting entities and their related data.
 
@@ -76,7 +76,7 @@ The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) 
 
 The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the target tables generation flow. 
 
-#### Populating Target Tables with the Target Environment
+### Populating Target Tables with the Target Environment
 
 The LUI sync can populate the branches, source environment and target environment when running a load task that requires both delete and load entity operations. 
 
