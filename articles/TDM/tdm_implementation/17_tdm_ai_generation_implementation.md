@@ -63,8 +63,8 @@ For example, do not define a city as a special param as the data generation proc
 #### Notes
   - **Primary and foreign keys** columns, as well as columns that are **not string type, cannot be overridden as being special fields.**
 
-### K2system schema tables 
-- Creation of the K2system schema/tables: 
+### K2system tables 
+- Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
      - These created tables are populated by the TDM AI Task and the AI Job:
        
