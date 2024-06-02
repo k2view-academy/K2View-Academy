@@ -81,7 +81,7 @@ To display the Task Execution - Detailed Statistics window (shown below), click 
 
 By default, the root LU's list of entities and tables is displayed. To view the entities and tables in the **Logical Units Hierarchy**, click the LU.
 
-The Source ID and Target ID sequences are displayed for each entity ID. When the task [replaces the source sequences](17_load_task_regular_mode.md#replace-sequence), the Target ID and Source ID can be different. If an LU in the tree has failed entities, it is marked in red.
+The Source ID and Target ID sequences are displayed for each entity ID. When the task [replaces the source IDs](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities), the Target ID and Source ID can be different. If an LU in the tree has failed entities, it is marked in red.
 
 #### Failed Entities List Tab
 
