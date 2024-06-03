@@ -1,26 +1,28 @@
 <!--block-->
 
-<img src="images/alpinist1.png" style="zoom: 50%;" />
+<img src="images/alpinist1.png" style="zoom: 40%;" />
 
 ### K2alpinist - Champion Academy
 
-The K2view Product Champion Academy offers comprehensive technical training and best practices, enabling members to lead K2view deployments and associated technologies effectively. Gain the expertise to create strategic, data-driven solutions that deliver business value and reduce dependency on external resources.
+The **K2view Product Champion Academy** offers comprehensive technical training and best practices, enabling members to lead K2view deployments and associated technologies effectively. 
 
 [Read more >](intro/K2viewProductChampionAcademy.md)
 
 <!--block-->
 
-<img src="images/registration.png" style="zoom: 70%;" />
+<img src="images/registration.png"  />
 
 ### Program Registration
 
-Welcome to the first step in your journey to becoming a K2view Alpinist. Click [here](https://www.k2view.com/k2alpinist-program-sign-up) to begin the registration process.
+Welcome to the first step in your journey to becoming a K2view Alpinist. 
+
+Click [here](https://www.k2view.com/k2alpinist-program-sign-up) to begin the registration process.
 
 
 
 <!--block-->
 
-<img src="images/coursesList.png" style="zoom: 70%;" />
+<img src="images/coursesList.png"  />
 
 ### Courses List
 
