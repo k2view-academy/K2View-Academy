@@ -63,7 +63,7 @@ Click the information icon next to each LU to open the [Batch Monitor](/articles
 
 ## Stop and Resume a Task Execution
 
-A task can be stopped if the processed entities fail due to an error, and can be resumed from the same point once the error has been fixed.  
+A task can be stopped if the processed entities fail due to an error; the task can be resumed from the same point once the error has been fixed. 
 
 - Click ![stop](images/stop_execution_icon.png)in the right corner of the **Running Execution** window to stop the execution of the running or pending task's LUs or post-execution processes, and to set the status of the task to **stopped**.
 
