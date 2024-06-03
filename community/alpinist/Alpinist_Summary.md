@@ -20,12 +20,4 @@ An interactive session how to build, configure, and expose RESTful data services
 
 <!--block-->
 
-<img src="images/img12.png" style="zoom:80%;" />
 
-### K2View DevCom Webinar on February 23rd
-
-The 4th K2View Development Meetup took place on February 23rd - addressing Fabric's Roadmap, BI solution and Web Framework.
-
-[Read more >](webinar_20220223/20220223_Webinar_Agenda_And_Speakers.md)
-
-<!--block-->
