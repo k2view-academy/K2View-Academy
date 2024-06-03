@@ -148,7 +148,7 @@ The following information is displayed for each failed table:
 - Table name
 - Error message
 
-See example below:
+View the below example:
 
 ![table list](images/task_execution_failed_tables.png)
 
