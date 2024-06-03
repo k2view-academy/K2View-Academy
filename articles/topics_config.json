@@ -348,7 +348,7 @@
 	"Community": [
 		{
 			"comm display name": "Webinars",
-			"comm display text": "Registration for K2view webinars and seminars including the recording and past webinars materials",
+			"comm display text": "Registration for K2view webinars and seminars including the recording and past webinars materials.",
 			"comm icon": "../community/webinars/images/webinar_icon.png",
 			"visible": true,
 			"path": "../community/webinars",
@@ -357,7 +357,7 @@
 		},
 		{
 			"comm display name": "Spotlight",
-			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers",
+			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
 			"comm icon": "../community/spotlight/images/spotlight.png",
 			"visible": false,
 			"path": "../community/spotlight",
@@ -366,7 +366,7 @@
 		},
 		{
 			"comm display name": "Alpinist",
-			"comm display text": "K2alpinist - Champion Academy which offers comprehensive technical training and best practices",
+			"comm display text": "K2alpinist Champion Academy offers comprehensive technical training materials and best practices.",
 			"comm icon": "../community/alpinist/images/Alpinist.png",
 			"visible": true,
 			"path": "../community/alpinist",
@@ -375,7 +375,7 @@
 		},		
 		{
 			"comm display name": "Q&A",
-			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle",
+			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
 			"comm icon": "../community/q_a/images/q_a_icon.png",
 			"visible": true,
 			"path": "../community/q_a",
