@@ -137,7 +137,7 @@ The following information is displayed for each successful table:
 - Table name
 - Number of records
 
-See example below:
+View the below example:
 
 ![table list](images/task_execution_table_list.png)
 
