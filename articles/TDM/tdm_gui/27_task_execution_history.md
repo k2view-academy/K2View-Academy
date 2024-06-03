@@ -68,7 +68,7 @@ The Task Execution - Detailed Statistics window displays the following:
 -  The hierarchical structure of the LUs and their entities.
 -  A sample list of successful and failed entities.
 -  Successful and failed and tables. 
--  Search option used for searching an entity.
+-  A search option used for searching an entity.
 
 To display the Task Execution - Detailed Statistics window (shown below), click ![entities list](images/entities_list_icon.png) in the right corner of the **Execution Summary** window.
 
