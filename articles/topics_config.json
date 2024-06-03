@@ -365,11 +365,11 @@
 			"view all text": "Click to view all"
 		},
 		{
-			"comm display name": "K2alpinist",
+			"comm display name": "Alpinist",
 			"comm display text": "K2alpinist - Champion Academy which offers comprehensive technical training and best practices",
 			"comm icon": "../community/alpinist/images/Alpinist.png",
 			"visible": true,
-			"path": "../community/K2alpinist",
+			"path": "../community/alpinist",
 			"view all link": "../community/alpinist/README.html",
 			"view all text": "Click to view all"
 		},		

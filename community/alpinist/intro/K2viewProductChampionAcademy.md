@@ -1,4 +1,4 @@
-<img src="images/alpinist1.png" style="zoom: 50%;" />
+<img src="../images/alpinist1.png" style="zoom: 50%;" />
 
 # K2view Product Champion Academy
 
@@ -11,7 +11,7 @@ lead the implementation of K2view and supporting tech stack
 **through optimized data-driven solutions, while minimizing**
 **your reliance on external resources.**
 
-<img src="images/alpinist2.png" style="zoom: 90%;" />
+<img src="../images/alpinist2.png" style="zoom: 90%;" />
 
 ## Prerequisites for success
 
