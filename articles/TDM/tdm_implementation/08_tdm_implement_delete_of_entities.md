@@ -10,7 +10,7 @@ Note that if there is no need to support the deletion of entities or Data Versio
 
 ## LU Schema - Sync Mode
 
-The task execution needs to sync only the target tables and keep the source tables "as is" in the following scenarios:
+The task execution needs to sync only the target tables and keep the source tables as they are in the following scenarios:
 
 - Load data snapshot (version) task - the task needs to delete the entities from the target environment and reload the pre-created data snapshot (version) to the environment.
 - Delete and load task whose [Policy for fetching data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#policy-for-fetching-data) is set to **Available [source environment name] data in the Test data store**. 
