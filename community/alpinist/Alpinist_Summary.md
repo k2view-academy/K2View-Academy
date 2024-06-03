@@ -14,9 +14,9 @@ The **K2view Product Champion Academy** offers comprehensive technical training 
 
 ### Program Registration
 
-Welcome to the first step in your journey to becoming a **K2view Alpinist**. Click [here](https://www.k2view.com/k2alpinist-program-sign-up) to begin the registration process.
+Welcome to the first step in your journey to becoming a **K2view Alpinist**. Click below to begin the registration process.
 
-[Read more >](intro/K2viewProductChampionAcademy.md)
+[Registration](https://www.k2view.com/k2alpinist-program-sign-up)
 
 <!--block-->
 
@@ -24,7 +24,7 @@ Welcome to the first step in your journey to becoming a **K2view Alpinist**. Cli
 
 ### Courses List
 
-K2alpinist Champion Academy offers a list of courses. Click [here](coursesList/CoursesList.md) to explore them.
+K2alpinist Champion Academy offers a list of courses.
 
 [Read more >](coursesList/CoursesList.md)
 
