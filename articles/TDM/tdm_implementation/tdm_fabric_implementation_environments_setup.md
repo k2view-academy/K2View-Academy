@@ -43,7 +43,7 @@ Both dummy environments must be created and deployed in Fabric with the TDM inte
 - **AI_DB** - PostgreSQL DB used as an interface layer between the TDM and the AI processes. 
 - **AI_Execution** - HTTPS interface for the Kubernetes layer for the AI processes - training and data generation.
 
-[Click here] for more information about the TDM - AI intergation.  
+[Click here](17_tdm_ai_generation_implementation.md) for more information about the TDM - AI integration.  
 
 ### Notes:
 
