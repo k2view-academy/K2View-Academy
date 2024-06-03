@@ -365,8 +365,8 @@
 			"view all text": "Click to view all"
 		},
 		{
-			"comm display name": "Alpinist",
-			"comm display text": "K2view Alpinist program for the advanced developers and implementors.",
+			"comm display name": "K2alpinist",
+			"comm display text": "K2alpinist - Champion Academy",
 			"comm icon": "../community/alpinist/images/Alpinist.png",
 			"visible": true,
 			"path": "../community/alpinist",

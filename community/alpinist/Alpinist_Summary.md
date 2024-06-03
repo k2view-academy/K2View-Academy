@@ -1,23 +1,31 @@
 <!--block-->
 
-<img src="images/devComm_100523.png" style="zoom: 50%;" />
+<img src="images/alpinist1.png" style="zoom: 50%;" />
 
-### DevCom Meetup on May 10
+### K2alpinist - Champion Academy
 
-Deep-dive into Fabric’s Triggers, Events, CDC and Elasticsearch integration functionality.
+The K2view Product Champion Academy offers comprehensive technical training and best practices, enabling members to lead K2view deployments and associated technologies effectively. Gain the expertise to create strategic, data-driven solutions that deliver business value and reduce dependency on external resources.
 
-[Read more >](webinar_20230510/Webinar_Agenda_And_Speakers.md)
-
-<!--block-->
-
-<img src="images/devComm_300323.png" style="zoom: 50%;" />
-
-### DevCom Meetup on March 30
-
-An interactive session how to build, configure, and expose RESTful data services in minutes – using Graphit, our drag-n-drop, low-code/no-code, visual web-service designer.
-
-[Read more >](webinar_20230330/Webinar_Agenda_And_Speakers.md)
+[Read more >](intro/K2viewProductChampionAcademy.md)
 
 <!--block-->
 
+<img src="images/registration.png" style="zoom: 70%;" />
 
+### Program Registration
+
+Welcome to the first step in your journey to becoming a K2View Alpinist. Click [here](https://www.k2view.com/k2alpinist-program-sign-up) to begin the registration process.
+
+
+
+<!--block-->
+
+<img src="images/coursesList.png" style="zoom: 70%;" />
+
+### Courses List
+
+Click [here](coursesList/CoursesList.md) to explore the list of available courses.
+
+
+
+<!--block-->
