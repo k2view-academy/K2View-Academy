@@ -94,7 +94,7 @@ An entity is marked as Failed if its process fails or if a child ID fails. For e
 
 #### View the Hierarchy of a Selected Entity
 
-Click the **Source Id** setting of an entity to view its hierarchy. 
+Click the **Source id** setting of an entity to view its hierarchy. 
 
 Example:
 
