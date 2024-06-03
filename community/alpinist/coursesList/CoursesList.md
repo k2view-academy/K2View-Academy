@@ -1,19 +1,19 @@
 # K2alpinist Courses List
 
-<table width="800pxl">
+<table width="900pxl">
 <tbody>
 <tr>
-<td width="200pxl">
-<h3><strong>Part 1</strong></h3>
+<td width="225pxl">
+<h2><strong>Part 1</strong></h2>
 </td>
-<td width="200pxl">
-<h3><strong>Part 2</strong></h3>
+<td width="225pxl">
+<h2><strong>Part 2</strong></h2>
 </td>
-<td width="200pxl">
-<h3><strong>Part 3</strong></h3>
+<td width="225pxl">
+<h2><strong>Part 3</strong></h2>
 </td>
-<td width="200pxl">
-<h3><strong>Part 4</strong></h3>
+<td width="225pxl">
+<h2><strong>Part 4</strong></h2>
 </td>
 </tr>
 <tr>
