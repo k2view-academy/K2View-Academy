@@ -1,6 +1,6 @@
 <!--block-->
 
-<img src="images/alpinist1.png" style="zoom: 20%;" />
+<img src="images/alpinist1-c.png" style="zoom: 70%;" />
 
 ### K2alpinist Champion Academy
 
