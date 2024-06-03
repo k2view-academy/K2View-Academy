@@ -87,8 +87,8 @@ The Source ID and Target ID sequences are displayed for each entity ID. When the
 
 An entity is marked as Failed if its process fails or if a child ID fails. For example, a Customer ID is marked as Failed if a copy of a billing subscriber fails.  The Failed Entities List tab displays both statuses: 
 
-- Copy Entity Status, marked as Failed if the task execution fails to process the entity ID.
-- Copy Hierarchy Data Status, marked as Failed if the task execution fails to process a child ID.
+- Entity Status, marked as Failed if the task execution fails to process the entity ID.
+- Hierarchy Data Status, marked as Failed if the task execution fails to process a child ID.
 
 ![failed entities](images/failed_entities_tab.png)
 
