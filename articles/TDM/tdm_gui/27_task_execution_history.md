@@ -40,7 +40,7 @@ Click [here](Extract_and_load_customers_Summary_Execution_Report_EXECID_2839.xls
 
 ## Execution Summary
 
-Displays an executed task's LUs, pre-execution processes and post-execution processes for the selected task execution. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
+This is a display of the LUs, pre-execution processes and post-execution processes for the selected task execution. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
 
 Click **Show/Hide Columns** to open a pop-up window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
 
