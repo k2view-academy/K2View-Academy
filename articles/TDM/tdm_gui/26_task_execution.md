@@ -73,9 +73,9 @@ A task can be stopped if the processed entities fail due to an error; the task c
 
 ## Set a Task Execution to be On Hold
 
-Occasionally, you may need to temporarily hold a task (i.e., set it 'On Hold'). This status can be used, for example, if the testing environment is temporarily down, for holding all task executions on an environment until the testing environment is up again, and to then reactivate the tasks for this environment.
+Occasionally, you may need to temporarily hold a task (i.e., set it 'On Hold'). This status can be used - for example, if the testing environment is temporarily down - for holding all task executions on an environment until the testing environment is up again, and to then reactivate the tasks for this environment.
 
-Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to Inactive), its task execution status cannot be modified.
+Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to  Inactive), its task execution status cannot be modified.
 
 Tasks on a **Hold** task-execution-status, cannot be executed.  
 
