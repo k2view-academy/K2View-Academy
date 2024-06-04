@@ -28,7 +28,7 @@ Each LU has 2 main branches that are linked to the **FABRIC_TDM_ROOT** root tabl
 
 The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
-TDM 8.1 added an automatic generation of the target tables and their population flow:
+TDM 8.1 has added an automatic generation of the target tables and their population flow:
 
 ### Target Tables Generation
 
