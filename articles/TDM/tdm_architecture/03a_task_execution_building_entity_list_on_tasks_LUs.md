@@ -61,7 +61,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p><h4>Select all entities of the selected version</p>
 </td>
 <td width="400pxl">
-<p>Select all entities that are successfully extracted by the selected data version. The entities are selected from TASK_EXECUTION_ENTITIES TDM DB table based on the task_execution_id of the selected data version.</p>
+<p>Select all entities that are successfully extracted by the selected data version. The entities are selected from the TASK_EXECUTION_ENTITIES TDM DB table based on the task_execution_id of the selected data version.</p>
 </td>
 <td width="200pxl">
 <p>Load data versioning tasks</p>
