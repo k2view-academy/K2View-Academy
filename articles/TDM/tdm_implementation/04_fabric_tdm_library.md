@@ -148,11 +148,11 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>PostAndPreExecutionProcess </p>
 </td>
 <td valign="top" width="300pxl">
-<p>Defines the list of pre-execution and post-execution flows to run before or at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends, or a process that populates a mapping table before the LU execution starts.</p>
+<p>Defines the list of pre-execution and post-execution flows to run before or at the end of a task's execution. For example, a process that sends a mail to notify the user when the task's execution ends, or a process that populates a mapping table before the LU execution starts.</p>
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows, the LU of the Broadway flow, and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
+<p>Populate the list of Broadway flows, the LU of the Broadway flow and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
 </td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM business entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent LU and child_lu field must be populated with the name of the child LU.</p>
+<p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent LU and the child_lu field must be populated with the name of the child LU.</p>
 <p>Both SQLs populated in child_lu_eid_sql and child_lu_tar_eid_Sql fields must run on the parent LU and get the source and target child IDs for each parent ID.</p>
 <p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />ChildLink of the Customer LU must be populated as follows:</p>
 <ul>
@@ -201,7 +201,7 @@ The following MTables have been added to the **References** in the TDM library. 
 
 ### Broadway Generic Flows and Templates
 
-The Fabric TDM library includes a set of built-in generic Broadway flows, defined for easy adaptation of a generic TDM implementation for a specific data model. 
+The Fabric TDM library includes a set of built-in generic Broadway flows, defined for an easy adaptation of a generic TDM implementation for a specific data model. 
 
 Click for more information about [Generic TDM Broadway Flows](10_tdm_generic_broadway_flows.md).
 
@@ -245,7 +245,7 @@ TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period i
     Defines the list of the TDM DB tables to be cleaned up by the TDM cleaning-up process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleaning-up process.
         </td>
   <td valign="top" width="400pxl">
-      Set the cleanup_ind field to FALSE to remove a table from the cleaning-up process. TDM tables can be added and Delete statements can be edited.
+      Set the cleanup_ind field to FALSE to remove a table from the cleaning-up process. TDM tables can be added, and Delete statements can be edited.
         </td>
     </tr>
     </tbody>
@@ -382,7 +382,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
   </tr>
   </table>
 
-- **LU_PARAMS** - parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** - parameters table. It must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
