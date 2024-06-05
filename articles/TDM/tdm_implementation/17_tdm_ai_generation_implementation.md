@@ -33,7 +33,7 @@ The following diagram describes the execution of the AI training task:
 
 The following shared Globals have been added for the AI-based data generation:
 
-- **AI_DB_INTERFACE** - the name of the AI DB interface. Default value is **AI_DB**. 
+- **AI_DB_INTERFACE** - the name of the AI DB interface. The default value is **AI_DB**. 
 - **CREATE_AI_K2SYSTEM_DB** - this Global indicates whether the TDM deploy flow needs to create the AI k2system tables in case they do not exist. The default value is **false**. Set this Global to **true** in order to implement the AI-based data generation.
 - **AI_ENVIRONMENT** - this is the name of the AI dummy environment. The default value is **AI**. 
 
@@ -47,7 +47,9 @@ The following shared Globals have been added for the AI-based data generation:
   Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#admin-token) for more information about the TDM with AI installation. 
 
 ### AI Environment
-Add the AI environment to [Fabric environments](tdm_fabric_implementation_environments_setup.md) and to the [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). 
+Add the AI environment to:
+- [Fabric environments](tdm_fabric_implementation_environments_setup.md)
+- [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). Add the related [Systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) to the AI environment in the TDM portal.
 
 ### AI MTables 
 
