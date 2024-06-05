@@ -18,7 +18,7 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI sync components - part 1" href="K2Alpinist-courses1-LUI-Sync-Process-Part-1.pdf">LUI sync components - part 1</a></p>
+<p><a title="LUI sync components - part 1" href="LUI-Sync-Process-Part-1.pdf">LUI sync components - part 1</a></p>
 </td>
 <td>
 <p>LU Schema functions</p>
@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI sync components - part 2" href="K2Alpinist-courses2-LUI-Sync-Process-Part-2.pdf">LUI sync components - part 2</a></p>
+<p><a title="LUI sync components - part 2" href="LUI-Sync-Process-Part-2.pdf">LUI sync components - part 2</a></p>
 </td>
 <td>
 <p>LUI Sync Options</p>
