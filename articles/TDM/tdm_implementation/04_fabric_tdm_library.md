@@ -37,11 +37,11 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
     
 
-- AI interfaces - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for a synthetic data generation. The AI-related interfaces must be disabled if the AI machine is not installed and the AI data generation is not in use.
+- [AI interfaces](17_tdm_ai_generation_implementation.md) - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for synthetic data generation. The AI-related interfaces must be disabled if the AI machine is not installed and the AI data generation is not in use.
 
 ### Shared Globals
 
-Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. The shared globals are located under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java.
+Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. TDM 9.0 locates the TDM library shared Globals are located under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and prevent an overriding of the project's globals by the TDM version upgrade process.
 
 ### Shared Functions
 
@@ -51,7 +51,7 @@ Import the TDM shared functions to your project. Note that as the TDM category c
 
 ## TDM Library - MTables
 
-TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support a development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
+TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support the development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
 
 The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
@@ -188,7 +188,6 @@ The following MTables have been added to the **References** in the TDM library. 
     </tr>    
 </tbody>
 </table>
-
 
 
 
