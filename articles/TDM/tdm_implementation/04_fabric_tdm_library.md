@@ -6,7 +6,7 @@ The TDM Library has all the utilities required for implementing a TDM project an
 - [TDM MTables](#tdm-library---MTables)
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
-- [TDM_Reference](09_tdm_reference_implementation.md) 
+- [TDM_Table level LU](09_tdm_reference_implementation.md) 
 
 The TDM Library must be imported to the Fabric project created for TDM. 
 
@@ -14,49 +14,51 @@ The TDM Library must be imported to the Fabric project created for TDM.
 
 ### TDM Web Services
 
-Import and deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM Portal application and they comprise the back-end layer of the TDM Portal application.
+Import and deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM Portal application and they constitute of the back-end layer of the TDM Portal application.
 
 As the TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories in order to simplify the TDM version upgrading.
 
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
-- **DB_CASSANDRA** - this is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
+- **DB_CASSANDRA** - this is the connection to the Cassandra DB. This interface is used by TDM utilities. Edit the IP address according to the environment.
 
 - **CASSANDRA_LD** - a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
 
--  **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
-   
--  **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
-   
+- **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
+
+- **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
+
     Note that if you work on a PostgreSQL with an SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and the TDM interfaces as follows:
-    
+
     - jdbc:postgresql://[ip address]:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=[full path of the .crt file]
     - Example:
       - jdbc:postgresql://localhost:5438/TDMDB?stringtype=unspecified&ssl=true&sslmode=verify-ca&sslrootcert=C:\k2view\pgSSL\cert\k2v_CA.crt 
-    
-- **FabricRedis** - this is the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. Note that from Fabric 7.1 onwards, the sequence Actors can get the next sequence value from a newly created DB sequence in the sequence interface (the sequence interface can be the TDM DB). The sequence is created by the Actor, if it doesn't yet exist. It is therefore recommended to get the next value from a DB sequence instead of using the Redis.
 
-    For more information, view the [Sequence Implementation Guide](/articles/19_Broadway/actors/08_sequence_implementation_guide.md).  
-
--  **TDM_APIDOC_JSON** - this is a local file system interface, used for generating the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
-    [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
     
-    It is important to **set the TDM_APIDOC_JSON interface as *disabled* in the Environments** in order to prevent errors when running the test connection on the task's environment (the Fabric server has a different IP address than the local Windows machine and cannot connect to the local machine's directory).
+
+- [AI interfaces](17_tdm_ai_generation_implementation.md) - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for a synthetic data generation. The AI-related interfaces must be disabled if the AI machine is not installed and the AI data generation is not in use.
 
 ### Shared Globals
 
-Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project.
+Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. TDM 9.0 locates the TDM library shared Globals are located under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and prevent an overriding of the project's globals by the TDM version upgrade process.
+
+#### SEQ_CACHE_INTERFACE Global
+A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
+- If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
+- If you wish to use the PostgreSQL DB as Fabric system DB, do the following:
+    - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
+
 
 ### Shared Functions
 
-TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
+The TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 
-Import the TDM shared functions to your project. Note that since the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
+Import the TDM shared functions to your project. Note that as the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
 
 ## TDM Library - MTables
 
-TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support a development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
+TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support the development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
 
 The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
@@ -77,7 +79,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>MigrateList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the query and interface name, or the Broadway flow to generate the entity list when running the <strong>extract task</strong> on all entities of each LU; one record per LU.</p>
+<p>Defines the query and interface name, or the Broadway flow to generate the entity list when running a task with a predefined entity list selection method for the entities' subset; one record per LU.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
@@ -127,23 +129,30 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>RefList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of available reference tables for <strong>TDM tasks</strong>.</p>
-<p>Click to read more about <a href="09_tdm_reference_implementation.md">Reference implementation</a>.</p> 
+<p>Defines the list of available tables related to a Business entity and that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>.</p>
+<p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
-<p>Populate this table for each reference table. A separate record must be created for each reference table. Set the LU name on each record.</p>
+<p>A separate record must be created for each table. Set the LU name on each record.</p>
 </td>
 </tr>
 <tr>
+<td><h5>TableLevelInterfaces</h5></td>
+<td>Defines DB interfaces that must be excluded from a TDM task for tables such as the TDM DB, or DBs that require special handling when creating a TDM task for tables.</td>
+<td>A separate record must be set for each DB. 
+<p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p>  
+</td>    
+</tr>    
+<tr>
 <td valign="top" width="200pxl">
-<p><h5>PostProcessList</p>
+<p><h5>PostAndPreExecutionProcess </p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the list of post-processes to run at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends.</p>
+<p>Defines the list of pre-execution and post-execution flows to run before or at the end of a task's execution. For example, a process that sends a mail to notify the user when the task's execution ends, or a process that populates a mapping table before the LU execution starts.</p>
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows and the LU of the Broadway flow. The LU can be empty if the post processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
+<p>Populate the list of Broadway flows, the LU of the Broadway flow and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
 </td>
 </tr>
 <tr>
@@ -155,7 +164,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM business entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent LU and child_lu field must be populated with the name of the child LU.</p>
+<p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent LU and the child_lu field must be populated with the name of the child LU.</p>
 <p>Both SQLs populated in child_lu_eid_sql and child_lu_tar_eid_Sql fields must run on the parent LU and get the source and target child IDs for each parent ID.</p>
 <p><strong>Example:</strong><u><br /></u>Customer LU is the parent of the Orders LU. <br />ChildLink of the Customer LU must be populated as follows:</p>
 <ul>
@@ -164,7 +173,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <li><strong>child_lu_eid_sql = </strong>select order_id from subscriber</li>
 <li><strong>child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
 </ul>
-<p>The parameters: tables, subscriber and tar_subscriber, must all be defined in the CRM LU schema.</p>  
+<p>The parameters - tables, subscriber and tar_subscriber - must all be defined in the CRM LU schema.</p>  
 </td>
 </tr>
 <tr>
@@ -178,7 +187,12 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>The COLUMN_NAME is populated by the name of the parameter and the SQL is populated by the SQL query that gets the values for the defined parameter.</p>
 <p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
 </td>
-</tr>    
+</tr> 
+<tr>
+    <td><h5>AI configuration tables</h5></td>
+    <td>Configration settings for AI-based data generation.</td>
+    <td>Click for more information about <a href>AI-based data generation implementation</a></td>
+    </tr>    
 </tbody>
 </table>
 
@@ -187,7 +201,7 @@ The following MTables have been added to the **References** in the TDM library. 
 
 ### Broadway Generic Flows and Templates
 
-The Fabric TDM library includes a set of built-in generic Broadway flows, defined for easy adaptation of a generic TDM implementation for a specific data model. 
+The Fabric TDM library includes a set of built-in generic Broadway flows, defined for an easy adaptation of a generic TDM implementation for a specific data model. 
 
 Click for more information about [Generic TDM Broadway Flows](10_tdm_generic_broadway_flows.md).
 
@@ -195,10 +209,10 @@ Click for more information about [Generic TDM Broadway Flows](10_tdm_generic_bro
 
 The TDM Logical Unit must be deployed to the Fabric project. It has the following tasks:
 
-- Saves information about executed TDM tasks. The TDM Portal provides execution statistics and reports based on the data in the TDM LU. The LUI of the TDM LU is a unique task_Execution_id generated by the TDM Portal for each executed task. 
+- Saving information about executed TDM tasks. The TDM Portal provides execution statistics and reports based on the data in the TDM LU. The LUI of the TDM LU is a unique task_Execution_id generated by the TDM Portal for each executed task. 
 - [Task execution jobs](/articles/TDM/tdm_architecture/03_task_execution_processes.md) are included in the TDM LU.
 - The TDM cleanup job that cleans the TDM DB is defined under the TDM LU. 
-- **From TDM 7.6 onwards, the TDM Portal code is included in the TDM LU**: the TDM Portal code is kept under the web sub-folder in the TDM LU. Note that the web directory can only be viewed using the Fabric web studio. If you use the desktop, you can right-click the TDM LU > Open Folder and view the web folder in the windows File Explorer.
+- **From TDM 7.6 onwards, the TDM Portal code is included in the TDM LU**: The TDM Portal code is saved under the web sub-folder in the TDM LU. Note that the web directory can only be viewed using the Fabric web studio. If you use the desktop, you can right-click the TDM LU > Open Folder and view the web folder in the windows File Explorer.
 - TDM 7.6 and onwards includes the TDM DB upgrade scripts and a flow.
 
 ### Set TTL (Time To Live) on the TDM LUIs
@@ -206,7 +220,7 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
 
 - **TDM_LU_RETENTION_PERIOD_TYPE** - by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
-- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated by 10. **Populate this Global with either a zero or an empty value to avoid setting TTL on the TDM LUIs**.
+- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated with the value 10. **Populate this Global with either a zero or an empty value to avoid setting TTL on the TDM LUIs**.
 
 ### TDM Cleanup Process
 
@@ -228,10 +242,10 @@ TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period i
     <p><h5>TDMCleanUp</p>
         </td>
 <td valign="top" width="300pxl">
-    Define the list of the TDM DB tables to be cleaned up by the TDM cleanup process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleanup process.
+    Defines the list of the TDM DB tables to be cleaned up by the TDM cleaning-up process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleaning-up process.
         </td>
   <td valign="top" width="400pxl">
-      Set the cleanup_ind field to FALSE to remove a table from the cleanup process. TDM tables can be added and Delete statements can be edited.
+      Set the cleanup_ind field to FALSE to remove a table from the cleaning-up process. TDM tables can be added, and Delete statements can be edited.
         </td>
     </tr>
     </tbody>
@@ -245,10 +259,10 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 
 - Deployment of the project's environments to Fabric.
 - Creating the k2masking keyspace in Cassandra, if it does not already exist.
-- TDM 7.6 added a creation of the TDM PostgreSQL DB: the TDM deploy flow Creates the TDM DB tables, sequences, views and functions.
+- TDM 7.6 has added a creation of the TDM PostgreSQL DB: The TDM deploy flow creates the TDM DB tables, sequences, views and functions.
 - Notes:
   - You must **set the BUILD_TDMDB Global to true (default is false) and the POSTGRESQL_ADMIN interface to be active** in order to create the TDM DB by the TDM deploy flow.
-  - TDM 8.0 added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is **true**. This Global is **false**, by **default**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
+  - TDM 8.0 has added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is set to **true**. This Global is set to **false**, by **default**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
 
 
 ### TDM LU Deployment
@@ -257,7 +271,7 @@ Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, the deployment of the TDM L
 
 Notes:
 
-- Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option, or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric, thus avoiding a parallel execution of TDM jobs on the same TDM DB. 
+- Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option, or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric server, thus avoiding a parallel execution of TDM jobs on the same TDM DB. 
 - The apps.json file in the TDM LU overrides the list of web applications in Fabric. Open the file and edit it before the TDM LU deployment, if needed.
 
 
@@ -368,7 +382,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
   </tr>
   </table>
 
-- **LU_PARAMS** - parameters table.  Must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** - parameters table. It must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
@@ -378,9 +392,9 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 
 
-## TDM_Reference LU
+## TDM_TableLevel LU
 
-TDM 7.6 onwards stores the extracted Reference tables in a new LU - TDM_Reference - instead of storing them in Cassandra. Each Reference table is stored as a separate LUI. For more information see [Reference Implementation](09_tdm_reference_implementation.md).
+TDM 9.0 and onwards stores the extracted tables in a new LU - TDM_TableLevel. Each table is stored as a separate LUI. For more information, read [Tables Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)

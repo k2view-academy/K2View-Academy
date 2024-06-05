@@ -2,8 +2,8 @@
 
 The TDM Portal is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
-- TDM administrative activities - defines TDM Business Entities, system, environments and permissions.
-- TDM copy activities - creates and executes TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
+- TDM administrative activities - this function defines TDM Business Entities, system, environments and permissions.
+- TDM copy activities - this function creates and executes TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
 
 TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM Portal, updates the TDM DB. 
 
@@ -13,7 +13,7 @@ The TDM Portal uses APIs to connect to the TDM DB in order to retrieve and updat
 
 The TDM Portal application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
 
-Fabric works with several authentication providers. Each authenticator is responsible for user's authentication, and provides a user-ID and his roles. The following are authentication providers, supported by Fabric:
+Fabric works with several authentication providers. Each authenticator is responsible for authenticating a user, and provides a user-ID and the user's roles. The following are authentication providers, supported by Fabric:
 
 - **Fabric** - for console, WS and web access, using its repository. This is Fabric's default authentication method. 
 - **LDAP** server - for console, WS and web access. Done via LDAP integration. 
@@ -22,7 +22,7 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
-You can click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option in order to log into the TDM Portal.
+To log into the TDM Portal, click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option.
 
 ![application list](images/fabric_web_applications_list.png)
 
@@ -40,7 +40,11 @@ The following tabs are displayed when selecting the TDM option in the applicatio
 
 ​                             
 
-To move between sections, click the required tab.
+To move between sections, click the required tab. 
+
+The Settings tab contains the following sub-tabs:
+
+![tdm navigation](images/tdm_gui_settings_tab.png)
 
 ## TDM Breadcrumbs 
 
@@ -48,7 +52,7 @@ The TDM Portal uses breadcrumbs as a graphical control element to aid navigation
 
 ![breadcrumbs](images/breadcrumbs_example.png)
 
-- Click **Task Execution Summary - lo111s** to display the executions list of **lo111** task. 
+- Click **Task Execution Summary - extract all customers** to display the executions list of **extract all customers** task. 
 - Click **Tasks** to display all TDM tasks.
 
 ### TDM Delete

@@ -31,14 +31,14 @@ Set the environment type to one of the following:
 
 Example:
 
-- A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Versioning task](16_extract_task.md#data-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task, data is saved in the TDM Fabric repository.
-- During functional tests, the data in the testing environment becomes corrupt and needs to be replaced with the most recent backed-up version created in the testing environment. The tester creates a [Load Data Versioning task](18_load_task_data_versioning_mode.md) and sets the testing environment to be both source and target. 
+- A tester backs up data in a testing environment before running functional tests by [creating a data snapshot](16_task_test_data_store_component.md#create-data-snapshot-checkbox) on the testing environment. The testing environment is set as a source environment. During the execution of the task, data is saved in the Test Data Store.
+- During functional tests, the data in the testing environment becomes corrupt and needs to be replaced with the most recent backed-up version created in the testing environment. The tester creates a task to [re-load the data snapshot (version)](15_data_flux_task.md#how-do-i-load-a-data-snapshot) and sets the testing environment to be both source and target. 
 
 ## Override Sync Mode
 
 Optional setting. 
 
-The Override mode can be set if the **Environment Type** is either **Source** or **Both**. This setting overrides the default Fabric [Sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) when extracting the selected entities from the source environment and sets another Sync mode that can be overridden on both the environment and the task levels.
+The Override mode can be set if the **Environment Type** is either **Source** or **Both**. This setting overrides the default Fabric [Sync mode](/articles/14_sync_LU_instance/02_sync_modes.md) when extracting the selected entities from the source environment, and sets another Sync mode that can be overridden on both the environment and the task levels.
 
 The following values can be set in the Override Sync Mode:
 
@@ -48,8 +48,8 @@ Do not sync the entities from the source when running a TDM task with the enviro
 
 Example:
 
-- The Production team allocates a predefined window for extracting a subset of entities from Production. The access to Production is restricted to the predefined window.
-- An [Extract task](16_extract_task.md) must be created and run to extract a large subset of entities from Production and to sync it into Fabric. The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync**, thus preventing additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric.
+- The Production team allocates a predefined window for extracting a subset of entities from Production. The access to Production is restricted to the predefined window in which a large subset can be extracted and saved into the Test Data Store (Fabric). 
+- The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync**, thus preventing additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric.
 
 ### Always Sync  
 
@@ -61,7 +61,7 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 This checkbox, added by TDM 8.1, is displayed on any environment that can be used as a source environment (the environment type is Source or Both). When checked, this checkbox indicates that the environment contains sensitive data and it should therefore be masked before it is saved into Fabric. 
 
-Note: It is recommended to **clear** the Mask Sensitive Data checkbox in the **Synthetic** environment in order to ensure that the data generation parameters, that are set by the user in the [data generation task](16a_generate_task.md) and that refer to PII fields, are not overridden by the Masking Actors in the LU populations.
+Note: It is recommended to **clear** the Mask Sensitive Data checkbox in the **Synthetic** and **AI** environments in order to ensure that the data generation parameters, that are set by the user in the [data generation task](16a_generate_task.md) and that refer to PII fields, are not overridden by the Masking Actors in the LU populations.
 
 ## Environment Owners
 

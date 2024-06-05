@@ -25,7 +25,7 @@
 <h4>Fabric</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>K2view Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle. For more details see <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
+<p>K2view,ד Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for an end-to-end management of the data life cycle. For more details, read <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -33,7 +33,7 @@
 <h4>Broadway</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Broadway is a Fabric module that is used to design data movement, its transformation, and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric. For more details see <a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a>.</p>
+<p>Broadway is a Fabric module that is used for designing data movement, its transformation, and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric. For more details, read <a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -49,7 +49,7 @@
 <h4>LU / Data Product</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> (LU, or Logical Unit Type - LUT), also known as Data Product, is a blueprint holding a set of definitions and instructions used to create and maintain the required dataset.</p>
+<p>A&nbsp;<a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> (LU, or Logical Unit Type - LUT), also known as Data Product, is a blueprint holding a set of definitions and instructions used for creating and maintaining the required dataset.</p>
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@
 <h4><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A micro-database, a small SQL database, is used to store Data Product / LU Instance (LUI) data. It is stored as an SQLite file, depending on the saved property's definition in the LU Schema.</p>
+<p>A micro-database, a small SQL database, is used for storing Data Product / LU Instance (LUI) data. It is stored as an SQLite file, depending on the saved property's definition in the LU Schema.</p>
 </td>
 </tr>
 <tr>
@@ -74,7 +74,7 @@
 </td>
 <td width="600pxl">
 <p><span class="text-bold hx_keyword-hl rounded-1 d-inline-block">Fabric provides role</span>-based access control management. Fabric permissions are granted to each given role. Each Fabric user can be assigned to one or multiple roles.</p>
-<p>For more information see <a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a>.</p>
+<p>For more information, read <a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a>.</p>
 </td>
 </tr>
 <tr>
@@ -83,7 +83,7 @@
 </td>
 <td width="600pxl">
 <p>There are 3 main types of TDM users, each with different permissions for different activities. Each type is called a&nbsp;<strong>Permission Group</strong>. The following Permission Groups are supported by TDM: Admin, Owner and Tester.&nbsp;</p>
-<p>For more information see <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM Portal - Permission Groups</a>.</p>
+<p>For more information, read <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">TDM Portal - Permission Groups</a>.</p>
 </td>
 </tr>
 <tr>
@@ -91,7 +91,7 @@
 <h4><a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">Business Entity / BE</a></h4>
 </td>
 <td valign="top" width="600pxl">
-<p>A Business Entity (BE) represents the main entity of the selected data for provisioning by TDM. A Business Entity can have multiple LUs in a hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering, and Usage LUs.</p>
+<p>A Business Entity (BE) represents the main entity of the selected data for provisioning by TDM. A Business Entity can have multiple LUs in a hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering and Usage LUs.</p>
 </td>
 </tr>
 <tr>
@@ -115,13 +115,8 @@
 <h4>Task</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The following task types are supported by the TDM:</p>
-<ul>
-<li>Extract task - the selected entities are extracted from the source environment and migrated into Fabric. The batch process initiates a&nbsp;<a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a>&nbsp;of the selected entities into Fabric.</li>
-<li>Load task - the batch process initiates a&nbsp;<a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;that&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a> from Fabric, transforms the data if needed, and loads the entities to the selected target environment.</li>
-<li>Delete task - the batch process initiates a <a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a>&nbsp;that&nbsp;<a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">retrieves the LUIs</a>&nbsp;from Fabric to sync the target keys for delete into Fabric and delete the entities from the selected target environment.</li>
-<li>Reserve task - the batch process initiates a&nbsp;<a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Broadway flow</a>&nbsp;that marks the entities as <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">reserved entities</a> in the TDM DB.</li>
-</ul>
+    <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM Portal. The task can run on selected business entities (with or without related referential tables) or on tables only. The business entities can be either extracted from a source environment or synthetically generated.</p> 
+    <p>Click <a href="/articles/TDM/tdm_gui/14_task_overview.md">here</a> for more information about the TDM tasks.</p>
 </td>
 </tr>
 <tr>
@@ -138,11 +133,12 @@
 </td>
 <td>
 <p>The Entity Reservation feature is made to enable a user to reserve (lock) entities in the testing environment and prevent other users from re-provisioning these entities into the testing environment until the user completes the functional tests and can release these entities.</p>
-<p>For more information see <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
+<p>For more information, read <a href="/articles/TDM/tdm_architecture/08_entity_reservation.md">Entity Reservation</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 

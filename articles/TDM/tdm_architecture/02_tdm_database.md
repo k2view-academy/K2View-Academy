@@ -1,6 +1,6 @@
 # TDM Database
 
-TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. The TDM APIs and task execution processes connect to the TDM DB to get or update TDM settings or tasks.
+Both, TDM settings and TDM tasks, are kept in the TDM DB. The TDM DB is a dedicated PostgreSQL DB. The TDM APIs and task execution processes connect to the TDM DB to get or to update TDM settings or tasks.
 
 The following table lists the TDM tables and their description.
 
@@ -35,14 +35,14 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>tdm_lu_type_rel_tar_eid</td>
-<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment and is populated by a sync of the parent LU. The table is used for building the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
+<td valign="top" width="400pxl"><p>TDM relationship table for target IDs. This table maps the target parent Entity ID to its target children Entity IDs per target environment, and it is populated by a sync of the parent LU. The table is used for building the entities list of the children LUs for <strong>Delete and load entity</strong> or <strong>Delete entity without load</strong> tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
   <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid">Click for more information about tdm_lu_type_rel_tar_eid.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>[LU_NAME]_params</td>
-<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and a source environment has a specific record that holds the Entity ID (IID), source environment name and the list of parameters defined for the LU (for example, customer type). The LU parameters table is created by a Fabric sync on each LU and is used for supporting a random selection and for selecting by parameters task selection methods.</p>
+<td valign="top" width="400pxl"><p>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and a source environment has a specific record that holds the Entity ID (IID), source environment name and the list of parameters defined for the LU (e.g., customer type). The LU parameters table is created by a Fabric sync on each LU and is used for supporting a random selection and for selecting by parameters task selection methods.</p>
  <p><a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">Click for more information about parameters handling.</a></p>
 </td>
 <td valign="top" width="300pxl">Business Entity</td>
@@ -123,7 +123,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_tables</td>
-  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">Reference tables</a> included in each TDM task.</td>
+  <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/24_task_reference_tab.md">tables</a> included in each TDM task, whether the task includes Business entities and referential data or whether the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
@@ -167,7 +167,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_exe_stats</td>
-<td valign="top" width="400pxl">List of <a href="05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job">Reference tables</a> to be processed by the execution of a given task.</td>
+<td valign="top" width="400pxl">List of Tables to be processed by the execution of a given task, whether the task includes Business entities and referential data or whether the task consists of tables only.</td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>
@@ -182,13 +182,18 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>
+ <td valign="top" width="200pxl"><h4>tdm_ai_gen_iid_mapping</td>
+    <td valign="top" width="400pxl">Mapping of the AI-based generated entity ID and the LUI that is generated and imported into Fabric for the generated entity.</td>
+<td valign="top" width="300pxl">Task Execution</td>    
+</tr>
+<tr>
 <td valign="top" width="200pxl"><h4>task_exe_stats_detailed</td>
 <td valign="top" width="400pxl">Detailed statistics of each task's execution.</td>
 <td valign="top" width="300pxl">Task Execution Statistics</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>activities</td>
-<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity, specifying its date, time, user, type (create or update), impacted TDM component and description.  </td>
+<td valign="top" width="400pxl">TDM activities log. A new record is created for each TDM activity, specifying its date, time, user, type (create or update), impacting TDM component and description.  </td>
 <td valign="top" width="300pxl">TDM Activities</td>
 </tr>
 <tr>
@@ -198,6 +203,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 

@@ -8,7 +8,7 @@ An environment's permission sets are displayed in the **Permission Sets tab** in
 
 - To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
-- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located at the upper-right corner of the window.
+- To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located in the upper-right corner of the window.
 
 ## Permission Set Window 
 
@@ -49,7 +49,7 @@ When an Environment Type is Both, it can have both accesses: read and write. The
     - Select the environment as a source environment and create a task on up to 1000 entities.
     - Select the environment as a target environment and create a task on up to 10 entities.
 
-  Click for more information about [setting the number of entities on a TDM load task](17_load_task_regular_mode.md#requested-entities-tab). 
+  Click for more information about [setting the number of entities on a TDM load task](15a_entity_subset.md). 
 
 ### Testers
 
@@ -88,7 +88,7 @@ Check the **All Users** checkbox.
 
 1. First priority: Assign a user ID to the TDM environment permission set.
 2. Second priority: Assign a user group to the TDM environment permission set. All the group's users can work with the TDM environment based on the permissions of the TDM environment permission set assigned to their group.
-3. Third priority: Assign a genertic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
+3. Third priority: Assign a generic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
 
 **Notes**
 
@@ -104,27 +104,27 @@ A list of permissions that can be assigned to a permission set. Check to grant o
 
 ##### **Ignore Test Connection**  
 
-TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
+TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether he/she wishes to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
 
 ##### **Delete Entity from Target** 
 
-Enables the user to check the Delete [task action](14_task_overview.md#task-actions-types) on the task. This permission applies only when the permission set has **Write** access.
+Enables the user to check the Delete [task action](17a_task_target_component_entities.md#delete) on the task. This permission applies only when the permission set has **Write** access.
 
 ##### Entity Clone 
 
-[Create replicas](17_load_task_regular_mode.md#entity-clone-synthetic) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
+[Create replicas](17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
 
 ##### Random Entity Selection
 
-[Randomly select entities](17_load_task_regular_mode.md#random-selection) for TDM load task. This permission applies only when the permission set has **Write** access.
+[Randomly select entities](15a_entity_subset.md#random) for TDM load task. This permission applies only when the permission set has **Write** access.
 
 ##### Refresh All Data from Source
 
-Ask to sync the entities from the source when executing [extract](16_extract_task.md#request-parameters) or [load](19_load_task_request_parameters_regular_mode.md#override-sync-mode) tasks. 
+Ask to sync the entities from the source to get fresh data in the task. 
 
-##### Refresh Reference Data
+##### Process Tables
 
-Create TDM tasks to extract or load [Reference tables](24_task_reference_tab.md).
+Create TDM tasks to extract or load [tables](14c_task_source_component_tables.md).
 
 #####  Task Scheduling 
 
@@ -132,15 +132,15 @@ Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to ru
 
 ##### Replace Sequences
 
-[Replace the sequences](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-sequence-creation-flows) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
+[Replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
 
 ##### Data Versioning 
 
-Create [Data Versioning](15_data_flux_task.md) tasks.
+Create a [snapshot (data Versioning)](15_data_flux_task.md) in the task.
 
 #### Max Number of Reserved Entities on Env
 
-The maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). From TDM 8.1 onwards, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
+The maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). From TDM 8.1 and onwards, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
 
 
 
@@ -376,6 +376,14 @@ The maximum number of entities that the user can [reserve on the environment](/a
 </tbody>
 </table>
 
+
+## AI Environment - Permission Set
+
+The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and as a source environment for an [AI-based generation task](19_task_synthetic_data_generation.md#how-to-create-an-ai-based-generation-task). Therefore the AI environment type must be **Both**.
+
+The **Read** permission on the AI environment grants a permission for the **AI-based entities generation** task.
+
+The  **Write** permission on the AI environment grants a permission for **AI training** task. 
 
 
 
