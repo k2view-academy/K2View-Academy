@@ -104,8 +104,8 @@ The **TableLevelInterfaces** MTable enables to either disable a tables' selectio
 By default, the MTable is populated with the TDM DBs to disable a selection of TDM tables by a TDM task. It is possible to add DB interfaces to this MTable to exclude them from the table selection in the TDM task or in order to set a special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
 
 - **interface_name** - the DB interface name as defined in the TDM product implementation. 
-- **suppress_indicator** - if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false** , the interface's tables can be selected in a TDM task.
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
+- **suppress_indicator** - if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false**, the interface's tables can be selected in a TDM task.
+- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 - **count_flow** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target. table's source interface.
 
