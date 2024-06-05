@@ -56,7 +56,7 @@ Import and deploy the TDM_TableLevel LU.
 
 ### Step 2 - Relate Tables to a Business Entity
 
-The list of referential tables available for a TDM task for Business entity & referential data  is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
+The list of referential tables available for a TDM task for Business entity and referential data  is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** - populated by the LU name to enable a selection of the related table in a TDM task based on the task's LUs.
 
@@ -68,7 +68,7 @@ The list of referential tables available for a TDM task for Business entity & re
 
 - **interface_name** - the table's source interface.
 
-- **target_ref_table_name** - This is an optional parameter. It can be populated when the table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
+- **target_ref_table_name** - this is an optional parameter. It can be populated when the table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
 
 - **target_schema_name** - populated by the target DB schema's name that stores the table.
 
@@ -76,7 +76,7 @@ The list of referential tables available for a TDM task for Business entity & re
 
 - **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be later used to customize the load flow to run an Upsert on the target table.
 
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
+- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
