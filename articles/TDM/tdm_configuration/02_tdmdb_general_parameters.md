@@ -93,26 +93,6 @@ The maximum number of days that a tester can set to a retention period in the ta
       where param_name = 'tdm_gui_params'; 
     ```
     
-    
-    
-    ### Update the TDM_GENERAL_PARAMETERS to Support a Reserve Task with Parameters 
-    
-    Run the following UPDATE statement on the TDM DB in order to enable the Parameters selection value for Reserve tasks: 
-    
-    ```sql
-    UPDATE 
-       tdm_general_parameters
-    SET 
-       param_value = REPLACE(param_value,'"enable_reserve_by_params":False','"enable_reserve_by_params":true') 
-    where param_name = 'tdm_gui_params'; 
-    ```
-    
-    Note that it is required to run an Extract task on a large subset of entities and to populate the Extract from Environment with the Reserve task's testing environment. The Extract task needs to run prior to the Reserve task creation in order to populate the Parameters tables in the TDM DB for the testing environment.
-    
-    Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about the Parameters' TDM DB tables. 
-  
-  
-  
-  
+   
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
