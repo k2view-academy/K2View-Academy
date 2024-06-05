@@ -1,6 +1,6 @@
 # TDM - Tables Implementation
 
-TDM enables the user to provision tables in a TDM task. The user can select either of the following options:
+TDM enables the user to provision tables in a TDM task. The user can select 1 of the following 2 options:
 
 1. Business entities and referential data. The included tables are related to the task's business entities and are needed to complete the data in the tested environment.
 2. Tables - TDM 9.0 enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
