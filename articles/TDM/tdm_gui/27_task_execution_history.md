@@ -14,7 +14,7 @@ The Task Executions Summary displays a list of executed tasks. When a task is ed
 
 Open the [Tasks List window](14_task_overview.md#tdm-tasks-list-window) and click the ![task icon](images/task_execution_history_icon.png) icon next to a selected task to open its Task Execution Summary window and display a full list of the task's executions.
 
-Click **Show/Hide Columns** to open a pop-up window, which displays a list of available fields for each task. Fields in green are displayed by default. Click a field to remove it from the display.
+Click **Show/Hide Columns** to open a pop-up window, which displays a list of available fields for each task. Fields in green are displayed by default; click any one of them to remove it from the display.
 
 The following information is displayed for each executed task:
 
@@ -32,13 +32,13 @@ The following information is displayed for each executed task:
 
   
 
-### Generating a Task Execution Summary Report
+### Generating a Task Executions Summary Report
 
 Click![task execution summary report](images/task_execution_summary_report_icon.png) next to each executed task to generate and download a summary report. Note that the report displays the [task execution overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md), if they exist.
 
 Click [here](Extract_and_load_customers_Summary_Execution_Report_EXECID_2839.xlsx) to download an example of a summary report.
 
-## Execution Summary
+## Executions Summary
 
 This is a display of the LUs, pre-execution processes and post-execution processes for the selected task execution. To display the Logical Units Execution Summary, click a task's **Task Execution Id** setting in the **Task Execution Summary** window.
 
