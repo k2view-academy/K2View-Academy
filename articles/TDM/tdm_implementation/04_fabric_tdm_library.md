@@ -138,7 +138,7 @@ The following MTables have been added to the **References** in the TDM library. 
 </tr>
 <tr>
 <td><h5>TableLevelInterfaces</h5></td>
-<td>Defines DB interfaces that must be excluded from a TDM task for tables such as the TDM DB, or DBs that require a special handling when creating a TDM task for tables.</td>
+<td>Defines DB interfaces that must be excluded from a TDM task for tables such as the TDM DB, or DBs that require special handling when creating a TDM task for tables.</td>
 <td>A separate record must be set for each DB. 
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p>  
 </td>    
