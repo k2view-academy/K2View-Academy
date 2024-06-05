@@ -91,11 +91,11 @@ The list of referential tables available for a TDM task for Business entity and 
 
 #### Edit the PII settings
 
-The TDM table flow uses [Fabric catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md).  You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the catalog if needed.
+The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog if needed.
 
 #### Run the Catalog to Identify Tables Relation
 
-Running the discovery for the DB interfaces. Note that once job is completed, the interface metadata will be retrieved from the catalog.
+Running the discovery for the DB interfaces. Note that once job is completed, the interface metadata will be retrieved from the Catalog.
 
 ### Step 4 - Special Handling
 
