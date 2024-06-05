@@ -44,8 +44,8 @@ Both jobs must be executed in parallel.
 
 **Example:**
 
-1. Execution of a task with **Customer** and **Billing LUs** and with a post-execution process that sends an email when the task execution ends. The Customer is the parent LU of Billing. 
-2. Three records are created in the task_execution_list on this task; all have the same task_execution_id.
+1. The execution of a task with **Customer** and **Billing LUs** and with a post-execution process that sends an email when the task execution ends. The Customer is the parent LU of Billing. 
+2. 3 records are created in the task_execution_list on this task; all have the same task_execution_id.
 3. The **tdmExecuteTask** job executes the Batch process on the **Customer LU**. 
 4. The **checkMigrateAndUpdateTDMDB** job updates the status of **Customer LU** after the execution has been completed.
 5. The **tdmExecuteTask** job starts executing **Billing LU** after the **Customer LU** (Billing's parent LU) is marked as completed.
@@ -69,7 +69,7 @@ This job runs every 10 seconds and checks the execution status of the running pr
 The execution status is being checked as follows:
 
 1. If the task contains selected tables to be processed - it checks the execution status of all related tables in [task_exe_ref_stats](02_tdm_database.md#task_ref_exe_stats) in the TDM DB table.
-2. Checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
+2. It checks the batch status based on the **batch_id** populated in **task_execution_list.fabric_execution_id** column by the tdmExecuteTask job. 
 
 When the process has been completed, the following TDM DB tables are updated by this job:
 
