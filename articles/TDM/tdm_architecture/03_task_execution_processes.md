@@ -38,7 +38,7 @@ The following diagram describes the main **TDM task execution process on Busines
 
 ![task execution job](images/tdmExcuteTask_job_flow.png)
 
-The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each Batch process in asynchronous mode and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
+The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each Batch process in an asynchronous mode and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
 
 Both jobs must be executed in parallel. 
 
