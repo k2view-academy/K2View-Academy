@@ -18,7 +18,7 @@
 </tr>
 <tr>
 <td>
-<p>LUI sync components - part 1</p>
+<p><a title="LUI sync components - part 1" href="K2Alpinist-courses1-LUI-Sync-Process-Part-1.pdf">LUI sync components - part 1</a></p>
 </td>
 <td>
 <p>LU Schema functions</p>
@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>
-<p>LUI sync components - part 2</p>
+<p><a title="LUI sync components - part 2" href="K2Alpinist-courses2-LUI-Sync-Process-Part-2.pdf">LUI sync components - part 2</a></p>
 </td>
 <td>
 <p>LUI Sync Options</p>
@@ -65,10 +65,10 @@
 <td>
 <p>Globals, Mtable</p>
 </td>
-<td >
+<td>
 <p>Graphit</p>
 </td>
-<td >
+<td>
 <p>Catalog</p>
 </td>
 </tr>
@@ -79,53 +79,53 @@
 <td>
 <p>Cassandra</p>
 </td>
-<td >
+<td>
 <p>Config</p>
 </td>
-<td >
+<td>
 <p>Views &amp; Security Profile</p>
 </td>
 </tr>
 <tr>
-<td >
+<td>
 <p>LU Schema tables + big</p>
 </td>
-<td >
+<td>
 <p>Kafka</p>
 </td>
-<td >
+<td>
 <p>Monitoring</p>
 </td>
-<td >
+<td>
 <p>GG &amp; Filtering</p>
 </td>
 </tr>
 <tr>
-<td >
+<td>
 <p>LU Schema -&nbsp;miscellaneous</p>
 </td>
 <td width="95">
 <p>Common</p>
 </td>
-<td >
+<td>
 <p>Troubleshooting</p>
 </td>
-<td >
+<td>
 <p>External Jars</p>
 </td>
 </tr>
 <tr>
-<td >
-<h4><strong>Summary session</strong></h4>
+<td>
+<h3><strong>Summary session</strong></h3>
 </td>
-<td >
-<h4><strong>Summary session</strong></h4>
+<td>
+<h3><strong>Summary session</strong></h3>
 </td>
-<td >
-<h4><strong>Summary session</strong></h4>
+<td>
+<h3><strong>Summary session</strong></h3>
 </td>
-<td >
-<h4><strong>Summary session</strong></h4>
+<td>
+<h3><strong>Summary session</strong></h3>
 </td>
 </tr>
 </tbody>
