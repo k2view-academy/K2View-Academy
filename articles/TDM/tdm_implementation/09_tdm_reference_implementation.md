@@ -2,7 +2,7 @@
 
 TDM enables the user to provision tables in a TDM task. The user can select 1 of the following 2 options:
 
-1. Business entities and referential data. The included tables are related to the task's business entities and are needed to complete the data in the tested environment.
+1. Business entities and referential data. The included tables are related to the task's business entities and are needed in the testing environment.
 2. Tables - TDM 9.0 enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
 
 The user can store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
