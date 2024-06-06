@@ -48,7 +48,7 @@ TDM 8.1 has added an automatic generation of the target tables and their populat
       
       The flow gets the following input parameters:
 
-      - **CREATE_DELETE_TABLES** - set this parameter to **true** to create and add the LU the target tables to support the delete entity. 
+      - **CREATE_DELETE_TABLES** - set this parameter to **true** to create and add the target tables and the delete flows to the LU in order to support the delete entity. 
 
       - **LU_NAME**
 
