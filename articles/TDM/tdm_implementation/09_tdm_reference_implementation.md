@@ -80,7 +80,7 @@ The list of referential tables available for a TDM task for Business entity and 
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
-- **count_flow** - an optional setting. Populate this setting to run a project Broadway flow to get the count (number of records) in the source or target.
+- **count_flow** - an optional setting. Populate this setting to run a project's Broadway flow to get the count (number of records) in the source or target.
 
   
 
