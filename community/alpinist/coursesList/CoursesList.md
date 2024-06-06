@@ -114,20 +114,6 @@
 <p>External Jars</p>
 </td>
 </tr>
-<tr>
-<td>
-<h3><strong>Summary session</strong></h3>
-</td>
-<td>
-<h3><strong>Summary session</strong></h3>
-</td>
-<td>
-<h3><strong>Summary session</strong></h3>
-</td>
-<td>
-<h3><strong>Summary session</strong></h3>
-</td>
-</tr>
 </tbody>
 </table>
 
