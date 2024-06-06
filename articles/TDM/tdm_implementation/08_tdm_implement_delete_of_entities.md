@@ -40,9 +40,9 @@ TDM 8.1 has added an automatic generation of the target tables and their populat
 
 4. Deploy the LU to the debug server.
 
-5. In order to create the target tables and add them to the LU, run either:
+5. In order to create the target tables and add them to the LU, run either 1 of the following 2 flows:
 
-   1. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
+   1. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true**. Note that this flow is designed to run one time only, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) in order to add the target tables to the LU.
 
    2. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows) (imported from the TDM library). Set the  **CREATE_DELETE_TABLES** input parameter to **true** to create the target LU tables, add them to the LU, and create the delete flows based on the updated LU. Note that this flow also creates the load flows.
       
