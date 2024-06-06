@@ -46,7 +46,7 @@ Import the list of shared [global variables](/articles/08_globals/01_globals_ove
 #### SEQ_CACHE_INTERFACE Global
 A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
 - If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
-- If you wish to use the PostgreSQL DB as Fabric system DB, do the following:
+- If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
     - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
 
 
