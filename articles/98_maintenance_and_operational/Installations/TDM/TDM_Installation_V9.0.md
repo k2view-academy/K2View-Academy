@@ -60,13 +60,13 @@ The TDM Portal application is pre-integrated with [Fabric Web Framework](/articl
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) TDM window and is kept in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-After installing TDM, the admin user must [log in to the TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) and define the Permission Group mapping of each user's group (= Fabric role). This process is done in order to enable the TDM users to work properly on the TDM Portal, based on their Permission Groups.
+After installing TDM, the admin user must [log into the TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) and define the Permission Group mapping of each user's group (= Fabric role). This process is done in order to enable the TDM users to work properly on the TDM Portal, based on their Permission Groups.
 
 
 
 ## TDM Cloud Installation 
 
-Open the Fabric 8.0 Web Studio,  click the Extension icon, and select TDM to install the TDM 9 library.
+Open the Fabric 8.0 Web Studio, click the Extension icon, and select TDM to install the TDM 9 library.
 
 Click [here](/articles/04_fabric_studio/28_web_k2exchange.md) for more information about Fabric's extensions. 
 
