@@ -26,7 +26,7 @@ Each LU has 2 main branches that are linked to the **FABRIC_TDM_ROOT** root tabl
 - **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md), where no data is extracted from the data sources.
 - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** when the task needs to delete the entities from the target environment.
 
-The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
+The target table contains the list of target IDs (keys) required for deleting the data of the selected entities from the target environment and for populating the [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) table with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
 TDM 8.1 has added an automatic generation of the target tables and their population flow:
 
