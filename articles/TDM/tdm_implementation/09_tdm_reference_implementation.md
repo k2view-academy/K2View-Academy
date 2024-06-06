@@ -99,7 +99,7 @@ Running the discovery for the DB interfaces. Note that once job is completed, th
 
 ### Step 4 - Special Handling
 
-The **TableLevelInterfaces** MTable enables to either disable a tables' selection from a given DB or set a special handling for the tables belong to a given DB.
+The **TableLevelInterfaces** MTable enables to either disable a tables' selection from a given DB or set a special handling for the tables that belong to a given DB.
 
 By default, the MTable is populated with the TDM DBs to disable a selection of TDM tables by a TDM task. It is possible to add DB interfaces to this MTable to exclude them from the table selection in the TDM task or in order to set a special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
 
