@@ -92,7 +92,7 @@ Click [here](TDM_AI_Installation_V9.0.md) to open the TDM AI installation docume
   - If you use **Cassandra** as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to **DB_CASSANDRA**.
 
   - If you wish to use the **PostgreSQL** DB as Fabric system DB, do the following:
-    - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the **POSTGRESQL_ADMIN** DB interface**.** 
+    - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
 
 ### Tables’ Processing - Increase the Maximum Number of Records
 
