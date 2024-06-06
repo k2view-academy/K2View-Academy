@@ -14,7 +14,7 @@ All Batch processes run in an [asynchronous mode](/articles/20_jobs_and_batch_se
 
 A [Task Execution process](/articles/TDM/tdm_gui/26_task_execution.md) can be initiated either from the TDM Portal, a direct call to the [start task execution API](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md), or via a [TDM Scheduling](/articles/TDM/tdm_gui/22_task_execution_timing_tab.md) process.  
 
-A task can include Entities and/or tables. All tasks that run on a Business Entity can have pre-execution and/or post-execution processes based on the BE's definition. For example, sending an email to a user after a task has been executed.
+A task can include entities and/or tables. All tasks that run on a Business Entity can have pre-execution and/or post-execution processes based on the BE's definition. For example, sending an email to a user after a task has been executed.
 
 The following diagram displays the task execution process for entities:
 
