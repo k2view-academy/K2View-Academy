@@ -1,6 +1,6 @@
 # TDM Installation and Initial Configuration
 
-This document describes the installation guidelines and the initial configuration activities required for a new TDM installation or an upgrade of a TDM to the current version.
+This document describes the installation guidelines and the initial configuration activities required for a new TDM installation or an upgrade of TDM to the current version.
 
 ## TDM On-Prem Installation 
 
