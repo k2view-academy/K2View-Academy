@@ -52,7 +52,7 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 ### Create K2masking Keyspace
 
-The **k2masking** keyspace is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** keyspace is **automatically created** by the the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
+The **k2masking** keyspace is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** keyspace is **automatically created** by the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** keyspace if needed.
 
 ### Add Permission Groups Mapping to the TDM
 
