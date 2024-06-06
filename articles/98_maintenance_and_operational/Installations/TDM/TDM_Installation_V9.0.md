@@ -80,7 +80,7 @@ Click [here](TDM_AI_Installation_V9.0.md) to open the TDM AI installation docume
 
 ## TDM Initial Configuration
 
-### Configure the Fabric System DB and the Masking and Sequence DB Global
+### Configure the Fabric's System DB including the Masking DB Global
 
 - TDM can work on either 1 of the following 2 Fabric system DBs: 
 
