@@ -33,7 +33,7 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 ### Create the TDM PostgreSQL DB (in case of a new installation)
 
-- From TDM 7.6 onwards TDM creates the TDM DB objects by the TDM LU's deploy flow:
+- From TDM 7.6 onwards, TDM creates the TDM DB objects by the TDM LU's deploy flow:
 
   - Creates the TDM DB tables, sequences, views, and functions.
 
@@ -44,10 +44,10 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 ### Upgrade the TDM PostgreSQL DB (if not a new installation)
 
-- Soft deploy the TDM LU to Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
+- Soft deploy the TDM LU to the Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
 - Run the **RunTDMDBUpgradeScripts** flow. 
 
-- For more details see [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
+- For more details, read [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
 
 
 ### Create K2masking Keyspace
