@@ -82,7 +82,7 @@ Click [here](TDM_AI_Installation_V9.0.md) to open the TDM AI installation docume
 
 ### Configure the Fabric System DB and the Masking and Sequence DB Global
 
-- The TDM can work on either of the following Fabric system DB: 
+- TDM can work on either 1 of the following 2 Fabric system DBs: 
 
   - Cassandra
   - PostgreSQL
