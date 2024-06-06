@@ -44,7 +44,7 @@ Each LUI contains the following tables:
 
 Notes: 
 
-- Previous TDM versions saved the tables into the TDM_Reference LU. This table is no longer in use from the TDM 9.0 onwards, and the tables must be re-extracted into the new tables LU - TDM_TableLevel.  
+- Previous TDM versions saved the tables into the TDM_Reference LU. This table is no longer in use from TDM 9.0 onwards, and the tables must be re-extracted into the new LU - TDM_TableLevel. 
 
 A TDM implementation has the following steps:
 
