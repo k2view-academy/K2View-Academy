@@ -96,7 +96,7 @@ Updates the following TDM DB table:
 
 The TDM LU holds the execution details of each task execution. The TDM's **instance ID** is the **task_execution_id** generated for each task execution.
 
-A task execution that has been completed is synchronized into the TDM LU. The execution information and the TDM execution reports are extracted from the TDM LUI data.
+A completed task execution is synchronized into the TDM LU. The execution information and the TDM execution reports are extracted from the TDM LUI data.
 
 
 
