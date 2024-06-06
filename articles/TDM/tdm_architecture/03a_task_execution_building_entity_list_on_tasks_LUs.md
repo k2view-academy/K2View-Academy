@@ -102,7 +102,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p><h4>Rule-based Generate Synthetic Entities</p>
+<p><h4>Rule-based Synthetic Entities' Generation</p>
 </td>
 <td width="400pxl">
     <p>Create a list of dummy entities for generating synthetic entities tasks.</p>
@@ -113,7 +113,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 </tr>
 <tr>
 <td width="300pxl">
-<p><h4>AI-based Generate Synthetic Entities</p>
+<p><h4>AI-based Synthetic Entities' Generation</p>
 </td>
 <td width="400pxl">
     <p>The AI generates the required entities with a dummy ID for each generated entity. TDM creates a unique LUI on each generated entity before importing the entity to Fabric. The mapping between the AI-generated ID and its Fabric LUI (imported LUI) is kept in <strong>tdm_ai_gen_iid_mapping</strong> TDM DB table.</p>
