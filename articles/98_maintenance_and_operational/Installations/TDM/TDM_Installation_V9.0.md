@@ -98,7 +98,7 @@ Click [here](TDM_AI_Installation_V9.0.md) to open the TDM AI installation docume
 
 - If you need to process tables (with or without entities) by the TDM tasks, note that the default limitation on number of processed records is 100K records. If your tables have a higher number of records, do the following:
 
-  - Open the **config.ini** file and edit the **[broadway]** section – add the **MAX_CONCRETE_ARRAY_SIZE** attribute and set its value with a value higher than 100,000. For example: 
+  - Open the **config.ini** file and edit the **[broadway]** section – add the **MAX_CONCRETE_ARRAY_SIZE** attribute and set its value with a value higher than 100,000; for example: 
 
     ```
     MAX_CONCRETE_ARRAY_SIZE=50000000
