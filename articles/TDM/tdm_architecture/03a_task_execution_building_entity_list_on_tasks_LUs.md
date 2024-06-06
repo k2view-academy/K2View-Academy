@@ -50,7 +50,7 @@ The entity list of the root LUs is based on the task's entity selection method:
 <p><h4>Select a predefined entity list</p>
 </td>
 <td width="400pxl">
-<p>Run the SQL query or the Broadway flow defined in the <a href="/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist">MigrateList</a> MTable for the LU.</p>
+<p>Run either the SQL query or the Broadway flow that are defined in the <a href="/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist">MigrateList</a> MTable for the LU.</p>
 </td>
 <td width="200pxl">
 <p>Extract tasks</p>
