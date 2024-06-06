@@ -31,7 +31,7 @@ Import the updated TDM LU to the Fabric project and deploy it to Fabric. Use the
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
 
-### Create the TDM PostgreSQL DB (in case of new installation)
+### Create the TDM PostgreSQL DB (in case of a new installation)
 
 - From TDM 7.6 onwards TDM creates the TDM DB objects by the TDM LU's deploy flow:
 
