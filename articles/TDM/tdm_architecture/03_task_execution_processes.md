@@ -86,11 +86,11 @@ A task execution is considered *complete* when it no longer has pending or runni
 1. It updates the execution summary in the TDM DB tables.
 2. It synchronizes the task execution details to Fabric: Each task execution is stored as an LUI in the TDM LU. 
 
-#### Updating Execution Summary TDM Tables
+#### Updating the Task Executions Summary Table
 
 Updates the following TDM DB table:
 
-- [task_execution_summary](02_tdm_database.md#task_execution_summary)
+- [task_executions_summary](02_tdm_database.md#task_execution_summary)
 
 #### Syncing the Task Execution ID to TDM LU
 
