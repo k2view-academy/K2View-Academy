@@ -35,7 +35,7 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 - From TDM 7.6 onwards, TDM creates the TDM DB objects by the TDM LU's deploy flow:
 
-  - Creates the TDM DB tables, sequences, views, and functions.
+  - It creates the TDM DB tables, sequences, views, and functions.
 
   Notes: 
 
