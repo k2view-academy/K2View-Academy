@@ -9,7 +9,7 @@
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7BAD4D11C5-FC8E-4794-AD25-B31ECE391ED4%7D&file=TDM%208.1.0_download_links.docx&action=default&mobileredirect=true">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.0/TDM%209.0_download_links.docx?d=wfda842d36611495a819eb891a3a2f780&csf=1&web=1&e=mXmGRs">Download links</a></li>
 </ul>
 
 
@@ -25,7 +25,6 @@ Create a K2V_TDM directory and download the following into it:
 docker load -i D_K2V_PG15_MD5.tar.gz
 docker load -i D_k2view_cassandra_4.1.3.tar.gz 
 docker load -i D_k2view_fabric-8.0.0_234.tar
-unzip compose_TDM_9.0.zip
 ~~~
 
 You can see the image names by using the command **docker images**. 
