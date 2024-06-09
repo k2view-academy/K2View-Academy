@@ -10,7 +10,7 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** - TDM 9.0 works with Fabric 8.0 and above. Read [here](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
+- **Fabric Server** - TDM 9.0 works with Fabric 8.0 and above. Read [here](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md).
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. PostgreSQL v13 or v15 versions are certified. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
 
 #### Docker Installation 
@@ -47,7 +47,7 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 - Soft deploy the TDM LU to the Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
 - Run the **RunTDMDBUpgradeScripts** flow. 
 
-- For more details, read [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
+- For more details, read [TDM Upgrade Document](/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
 
 
 ### Create K2masking Keyspace
