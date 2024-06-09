@@ -303,4 +303,4 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgene
 
 
 
-[![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
+[![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
