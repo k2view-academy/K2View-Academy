@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V8.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/Fabric_Full_Docker_Install_V8.0.md).
+[FABRIC V8.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric).
 
 ### Download Container Images 
 
@@ -31,10 +31,7 @@ You can see the image names by using the command **docker images**.
 
 ### Run the Compose File 
 
-1. Navigate to the compose folder as shown: 
-~~~bash
-    cd compose_TDM_9.0
-~~~
+1. Navigate to the compose folder.
 Note that the TDM compose file has the following settings that are different than the regular Fabric docker compose file:
 
 - Includes the PG docker
