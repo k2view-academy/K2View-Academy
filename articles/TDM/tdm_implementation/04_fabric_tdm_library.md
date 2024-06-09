@@ -21,9 +21,7 @@ As the TDM categories contain the product's Web Services, it is recommended to a
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
-- **DB_CASSANDRA** - this is the connection to the Cassandra DB. This interface is used by TDM utilities. Edit the IP address according to the environment.
-
-- **CASSANDRA_LD** - a Cassandra Loader interface. This interface is used by the Reference upgrade script (upgrade to TDM 7.5.1).
+- **DB_CASSANDRA** - this is the connection to the Cassandra DB. Edit the IP address according to the environment if you use the DB_CASSANDRA as the Fabric system DB.
 
 - **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
 
