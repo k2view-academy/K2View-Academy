@@ -87,3 +87,5 @@ If the LU schema is updated, the next training task execution will drop and recr
 
 ### Cleanup Process 
 The cleanup process of both the AI execution server and the AI DB is manual, and it runs a dedicated flow. Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
+
+[![Previous](/articles/images/Previous.png)](16_tdm_data_generation_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
