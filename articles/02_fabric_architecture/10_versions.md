@@ -12,7 +12,7 @@ The below table displays the various Fabric versions, released date and end of l
     </thead>
     <tbody>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.0/Fabric_Release_Notes_V8.0.pdf">8.0.0</a></td>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.0/Fabric_Release_Notes_V8.0.0.pdf">8.0.0</a></td>
             <td>June 4, 2024</td>
             <td></td>
         </tr>
