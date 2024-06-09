@@ -159,7 +159,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>2.10</td>
             <td>9.6</td>
         </tr>
-    </tbody> 
+    </tbody>
 </table>
 
 
