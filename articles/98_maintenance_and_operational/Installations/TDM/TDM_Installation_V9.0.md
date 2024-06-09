@@ -47,7 +47,7 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 - Soft deploy the TDM LU to the Fabric debug server. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
 - Run the **RunTDMDBUpgradeScripts** flow. 
 
-- For more details, read [TDM Upgrade Document](Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
+- For more details, read [TDM Upgrade Document](/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Upgrade_Procedure_to_V9.0.pdf).
 
 
 ### Create K2masking Keyspace
