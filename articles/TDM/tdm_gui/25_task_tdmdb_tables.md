@@ -177,7 +177,7 @@ This table is populated with [data generation parameters](14d_task_source_rule_b
 
 ## TASK_REF_TABLES
 
-This table holds a list of the task's [tables](20_task_provision_tables.md). A separate record is created for each Reference table.
+This table holds a list of the task's [tables](20_task_provision_tables.md). A separate record is created for each table.
 
   [![Previous](/articles/images/Previous.png)](20_task_provision_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](26_task_execution.md)
 
