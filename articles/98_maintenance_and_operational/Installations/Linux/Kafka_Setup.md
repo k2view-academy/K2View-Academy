@@ -13,7 +13,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 
 1. Log in to the previously created user that was designated to the Kafka installation.
 
-2. Download the package from [here](https://download.k2view.com/index.php/s/imhwNdkXgSSGpCw).
+2. Download the package from [here](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/latest%20version/K%207.2/K2view_Confluent_7.2_package_08.tar.gz).
 
 3. Log in to the Linux server as the 'Kafka' user and copy the package to the home directory.
 
