@@ -4,7 +4,7 @@
 
 ### Load The Package 
 
-1. Retrieve the latest Cassandra package (located at: [latest version](https://download.k2view.com/owncloud/index.php/s/kc3Zkc6RcaX48xE)).
+1. Retrieve the latest Cassandra package (located at: [latest version](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/latest%20version/C%203.11.12/k2v_cassandra-3.11.12_vanilla_01.tar.gz)).
 
 2. Connect to the Linux execution server as a 'cassandra' user and copy the package to the home directory.
 
