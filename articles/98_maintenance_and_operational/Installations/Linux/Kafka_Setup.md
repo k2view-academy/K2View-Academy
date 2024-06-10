@@ -9,7 +9,7 @@ Follow the setup script for configuring the setting correctly, depending on your
 
 1. Log in with the previously-created user name that was designated for the Kafka installation.
 
-2. Download the latest Kafka package (located [here](https://download.k2view.com/index.php/s/SomMMD6PDpUAfCp)).
+2. Download the latest Kafka package (located [here](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/latest%20version/K%207.2/K2view_Confluent_7.2_package_08.tar.gz)).
 
 3. Untar the package in the user home folder (the package name varies according to the version) as follows:
 
