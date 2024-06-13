@@ -14,7 +14,7 @@ The **K2view Product Champion Academy** offers comprehensive technical training 
 
 ### Program Registration
 
-Click *Regtister* to begin the registration process.
+Click *Register* to begin the registration process.
 
 [Register >](registration/Registration.md)
 
