@@ -13,7 +13,7 @@ Fabric Sync is a mechanism that synchronizes data between the data sources and F
 
 The Stream Sync job runs on a Fabric server and receives the Insert, Update and Delete transactions from the source system via a pre-defined PubSub interface. The job identifies which Instance ID is impacted by the change and updates it in the relevant tables of the Fabric DB. 
 
-For example, the Oracle GoldenGate system publishes messages with the data updates that occurr in the source Oracle DB table to Kafka. Stream Sync then listens to Kafka and saves the changes in internal tables in order to process them and to update the instances in Fabric.
+For example, the Oracle GoldenGate system publishes messages with the data updates that occur in the source Oracle DB table to Kafka. Stream Sync then listens to Kafka and saves the changes in internal tables in order to process them and to update the instances in Fabric.
 
 The Stream Sync has a rather sophisticated algorithm, capable of identifying whether the received data updates are incomplete or missing logical relationships due to an out-of-order arrival. Invalid or incomplete received data is handled differently from valid and complete received data.
 
