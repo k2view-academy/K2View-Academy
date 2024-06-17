@@ -69,7 +69,7 @@ Starting from V8.0, you can define **elseif** conditions. When a Stage is split 
 * If none of them is true, evaluate all Stages with **else** and a condition, in a top -> down order.
 * If none of them is true, execute the **else** Stage.
 
-In the below example, the order of the Stage execution is: Stage 2 -> Stage 5 -> Stage 3 -> Stage 4.
+In the below example, Stage 2 and Stage 5 are evaluated first. Then, if both of them are false, Stage 3 is evaluated.  Finally, if false, Stage 4 is performed.
 
 <img src="images/99_19_cond_elseif.png" alt="image" style="zoom:80%;" />
 

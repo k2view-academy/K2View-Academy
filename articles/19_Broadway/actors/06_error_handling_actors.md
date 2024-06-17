@@ -39,18 +39,26 @@ When the **ErrorFields** Actor is used in an inner flow that is invoked from the
 
 ### Retry Using Error Handling Actors
 
-Starting from V8.0, the **ErrorHandler** Actor supports the retry mechanism. The Retry is configured using the **Retries** and **Interval** fields. The fields' default values are 0 and 500 msec. 
+Starting from V8.0, Broadway supports the retry mechanism: if any actor of the stage fails and the retry is set, the actor is executed again. The Retry can be configured using the **Retries** and **Interval** fields in the **ErrorHandler** Actor's editor (the default values are 0 and 500 msec). 
 
-If any actor of the stage with an ErrorHandler fails and the retry fields are set, the actor will be executed again. 
+If the Inner Flow is defined in the ErrorHandler's editor, it overrides the Retry logic in the main flow. 
 
-If the Inner Flow is defined in the ErrorHandler's editor, the Retry logic is taken from the flow and not from the actor's fields. 
+Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type triggers its own retry counter. 
 
-Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type will trigger its own retry counter. 
+When the **Log** checkbox is checked, the number of attempts is written in the log, e.g.:
+
+~~~
+Stage 3 - starting to retry DbLoad1: 1
+~~~
+
+
 
 ![image](../images/99_actors_06_5.png)
 
-When the retry is implemented by an **inner flow** rather than by the **ErrorHandler** Actor, the **ErrorFields** Actor should be used in this inner flow to check the number of attempts that have already been executed - using the **attempt** output parameter.
+Note that the retry mechanism can be implemented by any actor defined as error handler in a flow (“red actor”). In this case, the actor should return **retry** instead of true or false to activate the retry mechanism. While the inner flow returns **retry**, the main flow will continue the attempts.
 
-![image](../images/99_actors_06_6.png)
+![image](../images/99_actors_06_7.png)
+
+When the retry is implemented by an **InnerFlow** Actor, the **ErrorFields** Actor might be used in this inner flow to check how many times the flow have already been executed - using the **attempt** output parameter. ![image](../images/99_actors_06_6.png)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)
