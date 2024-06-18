@@ -7,7 +7,7 @@ Starting from V8.0, Fabric's Catalog supports parsing of text fields that includ
 
 Once the field parsing is completed, a **Class** node is created for each complex field's level, recursively, for all levels of this embedded complex structure. 
 
-A **definedBy** relation type is created to connect between a complex field and its respective Class node. This relation cannot be added or deleted in an Edit mode. 
+A **definedBy** relation type is created to connect between a complex field and its respective Class node. This relation cannot be manually added or deleted in an Edit mode. 
 
 ![](../images/complex_field.png)
 
