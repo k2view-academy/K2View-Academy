@@ -381,9 +381,13 @@ The maximum number of entities that the user can [reserve on the environment](/a
 
 The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and as a source environment for an [AI-based generation task](19_task_synthetic_data_generation.md#how-to-create-an-ai-based-generation-task). Therefore the AI environment type must be **Both**.
 
-The **Read** permission on the AI environment grants a permission for the **AI-based entities generation** task.
+The **Read** permission on the AI environment grants a permission to generate new AI-based entities in the **AI-based entities generation** task.
 
 The  **Write** permission on the AI environment grants a permission for **AI training** task. 
+
+Note that even if a user does not have permissions on the AI environment, the user can still [get pre-generated synthetic entities](19_task_synthetic_data_generation.md#loading-pre-generated-entities) from the Test Data Store and load them into the target environment (set in the Target component).
+
+
 
 
 
