@@ -400,6 +400,11 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
   
 - **cluster_id**, cluster identifier. The cluster_id is set to support a configuration of several Fabric clusters on one Cassandra cluster. The cluster_id is concatenated to each [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) name. For example- if the cluster_id is set to “fabric1”, then Fabric concatenates “_fabric1” to each keyspace.
 
+ #### IID Finder
+
+  New Parameter added -  *iidfinder_job:1* to configure the number of cloud jobs per node. The defaulat value is 1.
+
+  Could be set to 0 if IidFinder is not used at all, or on some nodes, but not all of them.
 
 ## Update Configuration Files
 
