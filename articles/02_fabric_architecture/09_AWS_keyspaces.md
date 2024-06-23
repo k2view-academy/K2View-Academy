@@ -24,6 +24,8 @@ Below are various AWS Keyspaces limitations, that can lead to re-implementation 
   * Setting the read and write units per table means that the table's throughput capacity mode is updated in AWS to *PROVISIONED*. If you wish to keep the table on the *PAY_PER_REQUEST* throughput capacity mode, add onDemand after the RCU and WCU definition, as described above.
   * [Click here for more information about read and write capacity mode in AWS Keyspaces.](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html)
 
+* AWS Keyspaces supports unlogged batch commands with up to 30 commands in the batch. Only         unconditional **INSERT**, **UPDATE**, or **DELETE** commands are permitted in a batch. Logged batches are not supported. As a result, when using a **DbLoad** actor, keep batch=false.
+
 
 
 
