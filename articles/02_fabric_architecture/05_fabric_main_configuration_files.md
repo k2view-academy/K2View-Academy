@@ -368,7 +368,7 @@ When exposing or exporting data to upstream systems that require a different tim
 Fabric does allow changing this default behavior and changing the process time zone from UTC to the server's local time:
 
 - Go to the **jvm.options** file in the **config directory** and uncomment the following line (remove the # character) from the following parameter: **#-DFABRIC_LOCAL_TIMEZONE=true**.
-This affects internal activities such as [log file reporting](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) or trace files and can also change the behavior of some JDBC drivers against date fields that contain time zone information.
+  This affects internal activities such as [log file reporting](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) or trace files and can also change the behavior of some JDBC drivers against date fields that contain time zone information.
 
 <!-- drop 4- add a link to trace -->
 
@@ -391,14 +391,20 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
 - **logical_id,** used to define an Affinity for the Fabric jobs mechanism. The logical_id contains only letters and numbers. Several nodes can share the same logical_id. In addition, several logical IDs can be set for one node. The number of threads allocated to each logical_id can also be defined by concatenating it to the logical_id name separated with a colon sign. For example, the logical_id for a given node has the following values: A:2, B:3, and C:6. If there are 10 threads in the pool for this node, then the job using logical_id **C** as an Affinity will get 6 out of the 10 threads.
 
   - Affinity Pool Size (from 6.4.2 onwards)
-    
+
     A Recommended Pool Size capability has been added to the affinity function to rebalance jobs and get the ability to dynamically split (in runtime) jobs executions between nodes. 2 new parameters can be defined:
     - recommended number of nodes
     - maximum number of nodes
     - ```logical_id:2 4 or logical_id:2-4``` whereby 2 is the recommended number and 4 the maximum number of nodes to be allocated to jobs.
     - In cases where only one value is defined, it will be assumed that it refers to the maximum number of nodes. 
-  
+
 - **cluster_id**, cluster identifier. The cluster_id is set to support a configuration of several Fabric clusters on one Cassandra cluster. The cluster_id is concatenated to each [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) name. For example- if the cluster_id is set to “fabric1”, then Fabric concatenates “_fabric1” to each keyspace.
+
+  #### IID Finder
+
+  New Parameter added -  *iidfinder_job:1* to configure the number of cloud jobs per node. The defaulat value is 1.
+
+  Could be set to 0 if IidFinder is not used at all, or on some nodes, but not all of them.
 
 
 ## Update Configuration Files
