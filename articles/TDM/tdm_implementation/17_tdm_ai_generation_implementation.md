@@ -44,7 +44,9 @@ The following shared Globals have been added for the AI-based data generation:
 - **AI_DB_External** - this custom interface must be active in order to enable the AI-based generation functionality. This custom interface is utilized in order to securely allow Fabric to interact with the Kubernetes server [(K8s server)](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md#admin-token). The AI_DB_EXTERNAL custom interface should have the same credentials as the AI_DB interface, and the Data field should be populated with your database name.
   ![ai training](images/External_DB.png)
 
-  Click [here](https://support.k2view.com/Academy/articles/24_non_DB_interfaces/07_custom_interface.html) for more information about Custom Interface.
+Note that by default, the AI interfaces are disabled (inactive). 
+
+  Click [here](articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
   Click [here](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md) for more information about the TDM with AI installation. 
 
