@@ -46,7 +46,7 @@ The following shared Globals have been added for the AI-based data generation:
 
 Note that by default, the AI interfaces are disabled (inactive). 
 
-  Click [here](articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
+  Click [here](/articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
   Click [here](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md) for more information about the TDM with AI installation. 
 
