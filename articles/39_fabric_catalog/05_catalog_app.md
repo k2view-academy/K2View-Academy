@@ -98,7 +98,6 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 * **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level; available in V7.2.1.
 * **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source; available in V7.2.1.
 * **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
-* **Navigation map** <img src="images/navigation.png" style="zoom:80%;" />, for opening the Catalog's mini-map and navigation panel.
 * **Zoom in / out**, for adjusting the zoom of the view.
 
 ### Properties Tab

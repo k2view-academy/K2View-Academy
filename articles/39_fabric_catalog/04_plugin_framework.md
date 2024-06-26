@@ -24,18 +24,22 @@ When a project-level override is needed (such as setting an exclude list or disa
 
 Every time the plugins.discovery file is updated, the Discovery job should be rerun, applying the changes on the Catalog.
 
-### Data Sample Settings
+### Data Sample Size
 
 The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is being used by various plugins during the job run. Once the plugins' execution has been completed, the data sample is deleted.
 
-The sample size is configured in the [sample_size] section of the plugins.discovery file as follows:
+The sample size is configured in the **sample_size** section of the plugins.discovery file as follows:
 
 * Percentage defines the % of the dataset rows to be retrieved as a sample.
 * The min_size and max_size definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than minimum or higher than maximum per each dataset.
 
+### Global Shema Exclusion
+
+Starting from V8.0 HF1, a **global_schema_exclude** section has been added to the plugins.discovery file and it allows setting up a list of schemas to be excluded from any data platform when running the Discovery job. This section should be used for listing various system schemas. Its syntax supports regular expressions. For example, "SYS.*" mean to exclude all schemas with name that starts with 'SYS'. 
+
 ### Crawler Inclusion / Exclusion List
 
-The [data_platforms] section of the plugins.discovery file enables setting:
+The **data_platforms** section of the plugins.discovery file enables setting:
 
 * The list of schema(s) and dataset(s) to be **excluded** from the Discovery job run.
 * The list of schema(s) and dataset(s) to be **included** in the Discovery job run.

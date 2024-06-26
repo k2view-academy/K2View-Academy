@@ -34,11 +34,11 @@ The relations can be modified as follows:
 
 * To **add** a new relation, click on the Dataset1 (the parent table) and select **Add Relation** from its context menu. Then, click the Dataset2 (the child table). The Add Relation pop-up window will open with the following:
   * The name of the new link: *Dataset2 refers to Dataset1*. 
-  * PK Table Name is Dataset1 and PK Columns are the primary key columns of the Dataset1.
-  * FK Table Name is Dataset2.
-  * Populate the FK Columns and notes, and save the link.
+  * Parent Table Name is Dataset1 and Parent Key(s) are the primary key columns of the Dataset1.
+  * Child Table Name is Dataset2.
+  * Populate the Child Key(s) and notes, and save the link.
 * An alternative way to **add** a new relation is to select **Add Relation To**.
-  * The Add Relation pop-up window will open where you need to first select the Dataset2 and then populate the FK Columns.
+  * The Add Relation pop-up window will open where you need to first select the Child Table and then populate the Child Key(s).
 
 <img src="images/add_relation.png" style="zoom:75%;" />
 
