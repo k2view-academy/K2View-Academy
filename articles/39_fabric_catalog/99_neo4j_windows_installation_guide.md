@@ -18,16 +18,17 @@ JDK version >= 17
 New-Item -Path '\path\to\neo4j-folder' -ItemType Director
 ```
 
+Note that *\path\to\neo4j-folder* is an example name. You are free to chose another path for this folder.
+
 #### Move to neo4j-folder:
+
 ```powershell
 cd '\path\to\neo4j-folder'
 ```
 
 #### Download K2view's Neo4j package:
 
-Download the link from [here](https://download.k2view.com/index.php/s/GvNzL6SGGvANtfy/download).
-
-Note that this link is internal. If you don't have permissions to access the folder, open a Freshdesk ticket.
+Download the link from [here](https://teams.microsoft.com/l/message/19:0e037446-d87a-4bb3-a035-d2c92b5b8c6d_5f1ca505-59a4-4e49-af35-8d5f0207bc64@unq.gbl.spaces/1719476569954?context=%7B%22contextType%22%3A%22chat%22%7D).
 
 #### Unzip the package:
 ```powershell
@@ -39,11 +40,11 @@ Expand-Archive -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip .
 Remove-Item -Path .\k2view-neo4j-enterprise-5.16.0-windows.zip
 ```
 
-#### Environment Variables:
+#### Environment Variables in Windows:
 
 Add NEO4J_HOME System Environment pointing to the neo4j folder.
 
-Add neo4j bin folder to system path.
+Add neo4j bin folder to System Environment path.
 
 #### Update neo4j GDS key path:
 ```powershell
