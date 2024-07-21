@@ -9,9 +9,9 @@ Below are various AWS Keyspaces limitations, that can lead to re-implementation 
 * When using the AWS Keyspaces, the user management is handled by AWS. Thus, Fabric's capability to create and drop users (as it exists in Cassandra) is not supported. These activities would have to be done via the *adminInitialCredentials* file (which creates an admin user for the initial access only). Subsequently, the user management will be handled via the authentication server.
 * TTL (time-to-live) mechanism is not automatically supported in AWS keyspaces. Thus, following the table creation, it should be altered in order to activate the TTL support. 
 * To work with AWS Keyspaces as a Fabric interface, you should define it using the Cassandra interface type and set the connection settings to AWS server. Note that ```QUORUM``` is not supported and as a result, when defining an interface, QUORUM should be replaced with ```LOCAL_QUORUM``` via the server connection string.
-* 
+  
 * When creating keyspaces for the LU in AWS Keyspaces you must configure the following two parameters in order for the deploy to work: create_keyspace_for_lu=true and replication_factor = {'class': 'SingleRegionStrategy'}. In replication_factor param when working in keyspaces in AWS SingleRegionStrategy class should be the default value
-* 
+  
 * When working with Cassandra, the upper limit on a field size is 2GB, while in AWS Keyspaces it is 1 MB. Hence, when using the AWS Keyspaces, you would need to set the INSTANCE_CHUNK_SIZE in the config.ini to 990000 (or less).
 
   ~~~
