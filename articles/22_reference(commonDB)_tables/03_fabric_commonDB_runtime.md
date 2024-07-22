@@ -239,7 +239,7 @@ The following steps should be taken in order to set up common tables' backup in 
 
 * In your implementation, add a BroadwayJob Actor to the deploy.flow Broadway flow in the References LU that will run the REF_BACKUP command for all the relevant schemas. It will start the common tables backup job when deploying the References LU. 
 
-* Set the job interval to a value lower than the COMMONS_TABLE_TTL parameter in the config.ini. This will ensure that when a new node joins the Fabric cluster or a node recovery is needed, all the messages since the last backup will be consumed and a proper sync up will take place with no loss of data. It is also important to note that when setting up the job interval to a very long period, the backup and restore processes can take longer to run.
+* Set the job interval to a value lower than the COMMONS_TABLE_TTL parameter in the config.ini. This will ensure that when a new node joins the Fabric cluster or a node recovery is needed, all the messages since the last backup will be consumed and a proper sync up will take place with no loss of data. It is also important to note that when setting up the job interval to a very long period, the restore process can take longer to run.
 
   
 
