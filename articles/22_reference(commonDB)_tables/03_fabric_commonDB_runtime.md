@@ -210,7 +210,7 @@ Since the 7.1 release, it is possible to back up reference tables by schemas or 
 
 A reference backup is stored in the same storage as defined in the DEFAULT_GLOBAL_STORAGE_TYPE parameter in the config.ini, unless the COMMONS_BACKUP_DEFAULT_STORAGE parameter is set up in the config.ini.
 
-When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether a local common file exists, if not, it proceeds with checking whether common backup exists for this node, otherwise it asks for a new refreshed snapshot.
+When a new node is added to the Fabric cluster or when running a restart on an existing node, Fabric checks whether a local common file exists. In case it doesn't exist, Fabric proceeds with checking whether a common backup exists for this node, otherwise it asks for a new refreshed snapshot.
 
 The following commands are available for backing up/downloading a backup to - a local node:
 
