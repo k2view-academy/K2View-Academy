@@ -64,9 +64,9 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
 
    - **ROOT_COLUMN_NAME** - populated with the current instance ID field. For example: customer_id.
 
-   - **SOURCE_INTERFACE** -  populated with the source DB interface name.
+   - **SOURCE_INTERFACE** - populated with the source DB interface name.
 
-   - **SOURCE_SCHEMA** -  populated with the source DB schema name.
+   - **SOURCE_SCHEMA** - populated with the source DB schema name.
      
    - **TARGET_SCHEMA** - populated with the target DB schema name.
      
@@ -108,10 +108,10 @@ The population of the LU table needs to be based on a Broadway flow.
 
 #### Catalog Masking Integration
 
-- Fabric 7.2 introduces [Fabric Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields.
-- TDM 8.1 adds new templates to integrate the TDM with the catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to run the catalog-based masking on the identified PII fields before loading them into the LU table. Note that it is not mandatory to implement the Fabric catalog: if the catalog is not implemented, the CatalogMaskingMapper Actor returns an empty output.
+- Fabric 7.2 introduces [Fabric Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric Catalog supports a [Catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields.
+- TDM 8.1 adds new templates to integrate the TDM with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to run the Catalog-based masking on the identified PII fields before loading them into the LU table. Note that it is not mandatory to implement the Fabric Catalog: if the Catalog is not implemented, the CatalogMaskingMapper Actor returns an empty output.
 
-- Optional: Edit the population flows to override the catalog masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+- Optional: Edit the population flows to override the Catalog masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
 
 </web>
 
@@ -173,9 +173,9 @@ Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/
 
 ## Add the Target LU Tables to the LU Schema
 
- Use either one of the following methods to create and add the target tables to the LU:
+Use either one of the following methods to create and add the target tables to the LU:
 
-1.  Run the [TDMLUInit](#ii-run-the-tdmluinit-flow) flow.
+1. Run the [TDMLUInit](#ii-run-the-tdmluinit-flow) flow.
 2. Run the **createAllFromTemplates** flow to add the TAR_  tables, data generation flows, and the load and delete flows to the LU. 
 3. Run the **createDeleteTablesAndPopulations** flow to add the TAR_  tables to the LU. 
 
