@@ -88,11 +88,11 @@ After building the LU schema with the source LU tables, the **TDMLUInit** flow r
 4. Run the flow in Fabric Studio.
 
 ### III. Run the TDMLUInitBasedOnFabric Flow
-TDM 9.0.2 added a new flow: TDMLUInitBasedOnFabric. This flow is identical to the TDMLUInit flow except for the way it gets the schema structure: the TDMLUInit gets the schema structure from the source and target interfaces, but the **TDMLUInitBasedOnFabric gets the schema structure from the LU**. The new flow can be used instead of the TDMLUInit flow for a better performance under the following conditions:
-  - The target DB’s structure is similar to the source DB’s structure.
-  - The tables' and fields' names are **case-insensitive**.  
+TDM 9.0.2 has added a new flow: TDMLUInitBasedOnFabric. This flow is identical to the TDMLUInit flow except for the way it gets the schema structure: the TDMLUInit gets the schema structure from the source and target interfaces, but the **TDMLUInitBasedOnFabric gets the schema structure from the LU**. The new flow can be used instead of the TDMLUInit flow for a better performance under the following conditions:
+  - If the target DB’s structure is similar to the source DB’s structure.
+  - If the tables' and fields' names are **case-insensitive**.  
 
-Note that this flow requires setting the source and target interfaces and schemas as they need to be added to the main table population and the load and delete flows. 
+Note that this flow requires setting the source and target interfaces and schemas as they need to be added to the main table population and to the load and delete flows. 
 
 ## Add the Source LU Tables to the LU Schema
 
