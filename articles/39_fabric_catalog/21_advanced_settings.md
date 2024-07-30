@@ -28,6 +28,12 @@ The file is located in ```fabric/staticWeb/catalog``` folder and can be updated 
 
 ### General
 
+NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB parameter in the [data_discovery] section of config.ini specifies the maximum heap size for the Neo4j server. By default, it is set to 2048 Mb. 
+
+* The Neo4j heap size is set when starting Neo4j in a space. 
+* This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
+* To update the heap size in an existing space, stop Neo4j and the DATA_DISCOVERY_JOB, update this setting in config.ini and run the Discovery Job.
+
 ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
 
