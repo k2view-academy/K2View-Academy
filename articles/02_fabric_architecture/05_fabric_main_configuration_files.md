@@ -97,7 +97,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <tbody>
 <tr>
 <td style="width: 200px;" valign="top">
-<p><strong>Parameters Category</strong></p>
+<p><strong>Category</strong></p>
 </td>
 <td style="width: 200px;" valign="top">
 <p><strong>Section Names</strong></p>
