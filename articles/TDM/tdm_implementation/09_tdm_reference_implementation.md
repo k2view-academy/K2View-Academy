@@ -97,7 +97,7 @@ The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_
 
 Running the discovery for the DB interfaces. Note that once job is completed, the interface metadata will be retrieved from the Catalog.
 
-### Step 4 - Disabling Tables' Selection and Special Handling
+### Step 4 - Special Handling and Disabling Tables' Selection  
 
 The **TableLevelInterfaces** MTable enables to either disable a tables' selection from a given DB or set a special handling for the tables that belong to a given DB.
 
