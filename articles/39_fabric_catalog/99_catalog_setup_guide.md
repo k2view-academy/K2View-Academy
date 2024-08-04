@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This article describes the steps to be taken in order to set up the Fabric Catalog when using the Desktop Studio V7.2 and onwards:
+This article describes the steps to be taken in order to set up the Fabric Catalog when using the Desktop Studio V8.0 and onwards:
 
 * Installation of neo4j - performed once per Studio environment. 
 * Catalog configuration setup - performed once per project.
@@ -18,7 +18,7 @@ Install the neo4j GraphDB as described [here](99_neo4j_windows_installation_guid
 
 ## Catalog Configuration Setup
 
-Download the [Implementation zip file](https://download.k2view.com/index.php/s/HAgVCsNHqsD2hvq), unzip it and deploy your project.
+Download the [Implementation zip file](https://download.k2view.com/index.php/s/0GT9R8NBn4v7E2t), unzip it and deploy your project.
 
 The following will be updated in your project:
 
