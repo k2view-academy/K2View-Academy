@@ -40,7 +40,9 @@ The **Classifier PII & Masking Setup** tab allows to view and update the PII and
 Each **Classification** in this tab is unique, and it includes 2 attributes:
 
 * **PII** - indicates whether the Classification is considered Personally Identifiable Information. 
-* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) in order to generate values for the pupose of masking.
+* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) to generate masking values. The generator runs in either of the following scenarios:
+  - If the PII is checked.
+  - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation.
 
 In this tab, each **Classification** can have **only one** definition (row).
 
