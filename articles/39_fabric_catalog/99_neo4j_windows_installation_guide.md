@@ -28,7 +28,7 @@ cd '\path\to\neo4j-folder'
 
 #### Download K2view's Neo4j package:
 
-Download the link from [here](https://teams.microsoft.com/l/message/19:0e037446-d87a-4bb3-a035-d2c92b5b8c6d_5f1ca505-59a4-4e49-af35-8d5f0207bc64@unq.gbl.spaces/1719476569954?context=%7B%22contextType%22%3A%22chat%22%7D).
+Download the link from [here](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V Product Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=DvbnHK).
 
 #### Unzip the package:
 ```powershell
