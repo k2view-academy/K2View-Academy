@@ -4,7 +4,7 @@
 
 The following article describes the basic built-in plugins introduced by the Fabric's Discovery and Catalog solution:
 
-* [Metadata Logical Reference](04a_builtin_plugins.md#metadata-logical-reference) - to create *refers to* relations between two datasets based on the field name comparison.
+* [Metadata Logical Reference](04a_builtin_plugins.md#metadata-logical-reference) - to create *refers to* relations between two datasets based on the field name comparison. 
 * [Data Regex Classifier](04a_builtin_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
 * [Metadata Regex Classifier](04a_builtin_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
 * [Classification PII Marker](04a_builtin_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
@@ -14,7 +14,7 @@ Additional built-in plugins description can be found [here](plugins/README.md).
 
 ### Metadata Logical Reference
 
-The purpose of a **Metadata Logical Reference** plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints.
+The purpose of a **Metadata Logical Reference** plugin is to identify possible foreign key references between datasets and to create *refers to* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active via the plugins.discovery file. 
 
 The matching algorithm works by comparing the field names of 2 different datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name in case the field name is an ID.
 

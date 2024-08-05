@@ -13,4 +13,4 @@ A **definedBy** relation type is created to connect between a complex field and 
 
 Once the complex field is parsed and the **Class** nodes are created, it undergoes the auto-profiling process using the same profiling rules as all other Catalog fields. 
 
-The profiling is performed by the **Data Regex Classifier** and **Metadata Regex Classifier** plugins that create the Classification property for the fields of newly created classes. The **Classification PII Marker** plugin then creates the PII property where applicable. When at least one of the fields of the complex field is marked as PII, the complex field itself is marked as PII.
+The profiling is performed by the **Metadata Regex Classifier** plugin that create the Classification property for the fields of newly created classes. The **Classification PII Marker** plugin then creates the PII property where applicable. When at least one of the fields of the complex field is marked as PII, the complex field itself is marked as PII.

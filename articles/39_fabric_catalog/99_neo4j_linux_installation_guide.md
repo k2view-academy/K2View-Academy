@@ -26,7 +26,7 @@ sudo su - neo4j
 
 #### Download K2view's Neo4j package:
 
-Download the link from [here](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=5wjbBe).
+Download the link from [here](https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/Fabric/neo4j/neo4j_download_link.docx?d=w7b19f65f451a4a2ba20894fd0547581e&csf=1&web=1&e=I13Cg7).
 
 Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
 

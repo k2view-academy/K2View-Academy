@@ -96,13 +96,13 @@ Fabric's main configuration file which holds different sections of parameters wh
 <table width="900pxl">
 <tbody>
 <tr>
-<td style="width: 250px;" valign="top">
-<p><strong>Parameters Category</strong></p>
+<td style="width: 200px;" valign="top">
+<p><strong>Category</strong></p>
 </td>
-<td style="width: 250px;" valign="top">
+<td style="width: 200px;" valign="top">
 <p><strong>Section Names</strong></p>
 </td>
-<td style="width: 400px;" valign="top">
+<td style="width: 500px;" valign="top">
 <p><strong>Main Parameters</strong></p>
 </td>
 </tr>
@@ -347,8 +347,25 @@ Fabric's main configuration file which holds different sections of parameters wh
 </ul>
 </td>
 </tr>
+<tr>
+<td style="width: 184px;">
+<p><a href="/articles/39_fabric_catalog/03_discovery_process.md">Discovery Process</a></p>
+</td>
+<td style="width: 323px;">
+<ul>
+<li>data_discovery</li>
+</ul>
+</td>
+<td style="width: 371px;">
+<ul>
+<li>Neo4j connection parameters.</li>
+<li>Parameters for the Fabric and neo4j memory management during the Discovery process.</li>
+</ul>
+</td>
+</tr>
 </tbody>
 </table>
+
 
 
 
