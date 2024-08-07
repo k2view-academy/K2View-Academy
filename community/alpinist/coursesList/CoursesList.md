@@ -18,13 +18,13 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI sync components - part 1" href="LUI-Sync-Process-Part-1.pdf">LUI sync components - part 1</a></p>
+<p><a title="LUI Sync Components - 1" href="LUI-Sync-Process-Part-1.pdf">LUI Sync Components - 1</a></p>
 </td>
 <td>
-<p>LU Schema functions</p>
+<p>LU Schema Functions</p>
 </td>
 <td>
-<p>BW Actors for files/APIs</p>
+<p>BW Actors for Files/APIs</p>
 </td>
 <td>
 <p>Permissions</p>
@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI sync components - part 2" href="LUI-Sync-Process-Part-2.pdf">LUI sync components - part 2</a></p>
+<p><a title="LUI Sync Components - 2" href="LUI-Sync-Process-Part-2.pdf">LUI Sync Components - 2</a></p>
 </td>
 <td>
 <p>LUI Sync Options</p>
@@ -46,7 +46,7 @@
 </tr>
 <tr>
 <td>
-<p>BW + Selected actors</p>
+<p><a title="LU Table Population" href="LU-Table-Population.pdf">LU Table Population</a></p>
 </td>
 <td>
 <p>Jobs &amp; Batch</p>
@@ -60,7 +60,7 @@
 </tr>
 <tr>
 <td>
-<p>BW Advanced actors</p>
+<p>BW Advanced Actors</p>
 </td>
 <td>
 <p>Globals, Mtable</p>
@@ -74,7 +74,7 @@
 </tr>
 <tr>
 <td>
-<p>LU Table population</p>
+<p>BW + Selected Actors</p>
 </td>
 <td>
 <p>Cassandra</p>
@@ -88,7 +88,7 @@
 </tr>
 <tr>
 <td>
-<p>LU Schema tables + big</p>
+<p>LU Schema Tables + Big</p>
 </td>
 <td>
 <p>Kafka</p>
@@ -102,7 +102,7 @@
 </tr>
 <tr>
 <td>
-<p>LU Schema -&nbsp;miscellaneous</p>
+<p>LU Schema -&nbsp;Miscellaneous</p>
 </td>
 <td width="95">
 <p>Common</p>
