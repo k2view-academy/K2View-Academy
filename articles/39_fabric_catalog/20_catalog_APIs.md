@@ -221,7 +221,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 ## Build Catalog Artifacts
 
-<span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/build-catalog-artifacts`
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
 
 The API builds the Catalog artifacts, based on a given version. An artifact includes the details of all Catalog fields with their properties, such as Classification and PII. The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
@@ -294,5 +294,4 @@ Example 2: When searching for any node types with *PII = true* and *Classificati
 
 
 [![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
-
 
