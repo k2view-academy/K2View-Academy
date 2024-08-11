@@ -361,12 +361,12 @@
 			"view all text": "Click to view all"
 		},
 		{
-			"comm display name": "Spotlight",
-			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
-			"comm icon": "../community/spotlight/images/spotlight.png",
-			"visible": false,
-			"path": "../community/spotlight",
-			"view all link": "../community/spotlight/README.html",
+			"comm display name": "Mountaineer",
+			"comm display text": "The Mountaineer Champion program for advanced developers.",
+			"comm icon": "../community/mountaineer/images/mountaineer.png",
+			"visible": true,
+			"path": "../community/mountaineer",
+			"view all link": "../community/mountaineer/README.html",
 			"view all text": "Click to view all"
 		},
 		{
