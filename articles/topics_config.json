@@ -1,6 +1,11 @@
 {
 	"Branches": [
 		{
+			"display name": "Community Updates",
+			"branch name": "Community_updates",
+			"build": true
+		},
+		{
 			"display name": "Fabric 8.0",
 			"branch name": "Academy_8.0",
 			"build": true
