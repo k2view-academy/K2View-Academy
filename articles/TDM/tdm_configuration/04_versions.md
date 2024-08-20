@@ -16,6 +16,15 @@ The below table displays the various TDM versions, each with its compatible Fabr
     </thead>
     <tbody>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.4.pdf">9.0.4</a></td>
+            <td>August 20, 2024</td>
+            <td></td>
+            <td>8.0 HF2</td>
+            <td>3.11.14, 4.0.3, or 4.1.3</td>
+            <td>N/A</td>
+            <td>15</td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.3.pdf">9.0.3</a></td>
             <td>August 08, 2024</td>
             <td></td>
