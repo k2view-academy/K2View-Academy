@@ -143,15 +143,15 @@ The **ErrorHandler** Actor has been enhanced to be used for an easier setup of t
 
 When there are several actors in a stage, the retry is attempted on each one of them.
 
-In the below example:
+As seen in the below example -
 
 <img src="images/99_24_retry1.png" alt="image" style="zoom:80%;" />
 
-* Both **DbCommand1** and **DbLoad1** Actors can trigger the retry.
+* Both **DbCommand1** and **DbLoad1** Actors can trigger the retry mechanism.
 
-* If **DbCommand1** throws an exception, the retry mechanism is triggered.
+* If the **DbCommand1** Actor throws an exception, the retry mechanism is triggered.
 
-* If the **DbCommand1** is executed successfully after the retry, the retry counter is reset and the flow moves to **DbLoad1**. If it also fails, the retry mechanism is triggered for it as well.
+* If the **DbCommand1** Actor is executed successfully after the retry, the retry counter is reset and the flow moves to the **DbLoad1** Actor. If the **DbLoad1** Actor also fails, the retry mechanism is triggered for it as well.
 
 
 
