@@ -55,7 +55,7 @@ Stage 3 - starting to retry DbLoad1: 1
 
 ![image](../images/99_actors_06_5.png)
 
-Note that the retry mechanism can be implemented by any actor defined as error handler in a flow (“red actor”). In this case, the actor should return **retry** instead of true or false to activate the retry mechanism. While the inner flow returns **retry**, the main flow will continue the attempts.
+Note that the retry mechanism can be implemented by any actor defined as an error handler in a flow ('red actor'). In this case, the actor should return **retry** instead of true or false to activate the retry mechanism. While the inner flow returns **retry**, the main flow will continue the attempts.
 
 ![image](../images/99_actors_06_7.png)
 
