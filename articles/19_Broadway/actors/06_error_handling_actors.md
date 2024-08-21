@@ -37,9 +37,9 @@ When the **ErrorFields** Actor is used in an inner flow that is invoked from the
 
 <img src="../images/99_actors_06_4.PNG" alt="image" style="zoom:80%;" />
 
-### Retry Using Error Handling Actors
+### Retry via the Error Handling Actors
 
-Starting from V8.0, Broadway supports the retry mechanism: if any actor of the stage fails and the retry is set, the actor is executed again. The Retry can be configured using the **Retries** and **Interval** fields in the **ErrorHandler** Actor's editor (the default values are 0 and 500 msec). 
+Starting from V8.0, Broadway supports a retry mechanism: if any actor of the stage fails and the retry parameters are set, the actor is executed again. The retry can be configured using the **Retries** and **Interval** fields in the **ErrorHandler** Actor's editor (the default values are 0 and 500 msec). 
 
 If the Inner Flow is defined in the ErrorHandler's editor, it overrides the Retry logic in the main flow. 
 
