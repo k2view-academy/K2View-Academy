@@ -43,7 +43,7 @@ Starting from V8.0, Broadway supports a retry mechanism: if any actor of the sta
 
 If the Inner Flow is defined in the ErrorHandler's editor, it overrides the Retry logic in the main flow. 
 
-Retry can be defined for selected exception types only. When several different exception types are configured on the same ErrorHandler, each with a different retry - each exception type triggers its own retry counter. 
+A retry can be defined for selected exception types only. When several different exception types are configured using the same ErrorHandler Actor, each with different retry parameters, each exception type triggers its own retry counter.
 
 When the **Log** checkbox is checked, the number of attempts is written in the log, e.g.:
 
