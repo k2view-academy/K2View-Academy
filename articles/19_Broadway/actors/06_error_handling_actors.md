@@ -45,7 +45,7 @@ If the Inner Flow is defined in the ErrorHandler's editor, it overrides the Retr
 
 A retry can be defined for selected exception types only. When several different exception types are configured using the same ErrorHandler Actor, each with different retry parameters, each exception type triggers its own retry counter.
 
-When the **Log** checkbox is checked, the number of attempts is written in the log, e.g.:
+When the **Log** checkbox is checked, the number of attempts is written in the log, for example:
 
 ~~~
 Stage 3 - starting to retry DbLoad1: 1
@@ -55,7 +55,7 @@ Stage 3 - starting to retry DbLoad1: 1
 
 ![image](../images/99_actors_06_5.png)
 
-Note that the retry mechanism can be implemented by any actor defined as an error handler in a flow ('red actor'). In this case, the actor should return **retry** instead of true or false to activate the retry mechanism. While the inner flow returns **retry**, the main flow will continue the attempts.
+Note that the retry mechanism can be implemented by any actor defined as an error handler in a flow ('red actor'). In this case, the actor should return **result**=**retry** instead of *true* or *false* to activate the retry mechanism. While the inner flow returns **retry**, the main flow will continue the attempts.
 
 ![image](../images/99_actors_06_7.png)
 
