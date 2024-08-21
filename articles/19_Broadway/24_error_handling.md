@@ -134,7 +134,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 Starting from V8.0, the retry mechanism can be configured using an actor or an inner flow defined as the stage’s **error handler**, as follows:
 
-* Add an error handler to a stage using any actor (e.g. InnerFlow or LUFunction). 
+* Add an error handler to a stage using any actor (e.g., InnerFlow or LUFunction). 
 * To enable the retry, the stage’s error handler should return **result = retry** instead of *true* or *false*.
 * The number of retries and interval duration should be implemented by an error handler. 
   * For example, based on a certain condition - the actor should return *retry* to continue retries or either *true* or *false* to stop the retries. 
