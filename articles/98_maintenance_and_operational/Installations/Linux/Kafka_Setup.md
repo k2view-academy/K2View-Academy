@@ -9,60 +9,28 @@ Follow the setup script for configuring the setting correctly, depending on your
 
 1. Log in with the previously-created user name that was designated for the Kafka installation.
 
-2. Download the latest Kafka package (located [here](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/latest%20version/K%207.2/K2view_Confluent_7.2_package_09.tar.gz)).
+2. Download the latest Kafka package (located [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/latest+version/K+7.6/k2view_kafka_7.6.1.tar.gz)).
 
-3. Untar the package in the user home folder (the package name varies according to the version) as follows:
-
-    ~~~bash
-    tar -zxf k2view_Confluent_7.xxx.tar.gz -C /opt/apps/kafka && source /opt/apps/kafka/.bash_profile
-    ~~~
-
-
-### Set up the Kafka Nodes
-
-The script should be run seperately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
-
-The number of cluster nodes should be either greater than or equal to the replication factor number.
-
-**Mandatory required details:**
-* Node IPs
-* Replication factor
-
-#### <u>Multi Node Setup:</u>
-
-
-1. Run the following command on the **first node only**:
+3. Untar the package in the desired directory (see notes below) as follows:
 
     ~~~bash
-    /opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3 --start_kafka_loop
+    tar -zxf k2view_kafka_7.xxx.tar.gz -C /opt/apps/kafka && source /opt/apps/kafka/.setenv_kafka.sh
     ~~~
 
-> When setting up multi-node environment, the first zookeeper need to be up.
+<blockquote>
+The package name varies according to the version.
+
+The parent directory of Kafka and it's supporting apps is stored in environment variable `K2_HOME`. If using a directory different than `/opt/apps/kafka`, you will need to open the file `.setenv_kafka.sh` with the text editor of your preference and change the value of the environment variable `K2_HOME`
+</blockquote>
 
 
-2. On the rest of the Kafka nodes, one by one, execute:
+### Setting up Kafka
 
-    ~~~bash
-    /opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1,10.0.0.2,10.0.0.3  --replication_factor 3
-    ~~~
+We provide a setup script (located in `$K2_HOME/scripts/kafka-setup.sh`) that will configure your Kafka cluster.
 
-3. Validate that all the Zookeepers are running properly:
+In version 7.3 and below, Kafka requires ZooKeeper (which is also configured during the setup) for it's metadata management. Starting from version 7.4 and above, Kafka runs in "KRaft" mode by default, which doesn't require ZooKeeper. Although not recommended, this behavior can be changed by passing the flag `--metadata-mgmt zookeeper`
 
-    ~~~bash
-    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
-    ~~~
-
-After a short while, the following message should be displayed: 
-~~~
-Connecting to localhost:2181
-Welcome to ZooKeeper!
-JLine support is disabled
-
-WATCHER::
-
-WatchedEvent state:SyncConnected type:None path:null
-[1, 2, 3]
-~~~
+> For more information of all configurable parameters, run `$K2_HOME/scripts/kafka-setup.sh --help`
 
 
 #### <u>Single Node Setup:</u>
@@ -71,47 +39,95 @@ WatchedEvent state:SyncConnected type:None path:null
 1. Run the following command:
 
     ~~~bash
-    /opt/apps/kafka/kafka-setup.sh --ips 10.0.0.1
+    $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1
     ~~~
 
-2. Validate that the Kafka Broker and Zookeeper are up:
+    Once the script finished it's execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in zookeeper mode)
+
+
+#### <u>Multi Node Setup:</u>
+
+The setup script should be run seperately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
+
+The number of cluster nodes should be either greater than or equal to the replication factor number.
+
+**Mandatory required details:**
+* Node IPs
+* Replication factor
+
+1. Run the following command on the **first node only**:
 
     ~~~bash
-    jps
+    $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1,10.0.0.2,10.0.0.3  --replication-factor 3 --start-kafka-loop
     ~~~
 
-After a short while, list of processes should be displayed: 
-~~~
-<proc_id> QuorumPeerMain
-<proc_id> Kafka
-~~~
+    > When you see the message "Starting Kafka  (start loop enabled at HH:MM:SS, will timeout in N seconds)", you can start configuring the next node (but keep the terminal open)
 
 
+2. On the rest of the Kafka nodes, one by one, execute:
+
+    ~~~bash
+    $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1,10.0.0.2,10.0.0.3  --replication-factor 3
+    ~~~
+
+    Once the script finished it's execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in zookeeper mode)
+
+3. To validate that Kafka is running properly in all nodes:
+
+    *See item **"check the cluster's health"** in section **"Kafka cluster - Start, Shutdown and Monitor" below***
 
 ### Kafka cluster - Start, Shutdown and Monitor
 
-* To shut down the Kafka server (Kafka and Zookeeper instances), run the following commands:
+* To stop Kafka (and ZooKeeper if running in zookeeper mode), run the following command:
 
     ~~~bash
-    /opt/apps/kafka/kafka/bin/kafka-server-stop
-    /opt/apps/kafka/kafka/bin/zookeeper-server-stop
+    $K2_HOME/scripts/kafka-setup.sh stop
     ~~~
 
-* To start the Kafka server (Kafka and Zookeeper instances), run the following commands:
+* To start Kafka (and ZooKeeper if running in zookeeper mode), run the following command:
 
     ~~~bash
-    /opt/apps/kafka/kafka/bin/zookeeper-server-start -daemon /opt/apps/kafka/kafka/zookeeper.properties
-    /opt/apps/kafka/kafka/bin/kafka-server-start -daemon /opt/apps/kafka/kafka/server.properties    
+    $K2_HOME/scripts/kafka-setup.sh start
     ~~~
 
-* To verify that the Kafka and Zookeeper are running on a specifc node:
+* To verify that if Kafka (and ZooKeeper if running in zookeeper mode), is running on a specifc node:
 
     ~~~bash
-    jps
+    $K2_HOME/scripts/kafka-setup.sh status
     ~~~
 
-* To verify that the Zookeepers are running properly on all nodes, run the below command:
+* To check the cluster's health, run one of the following commands according to your configuration:
 
+    in zookeeper mode:
     ~~~bash
-    /opt/apps/kafka/kafka/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
+    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
+    ~~~
+
+    The following message should be displayed:
+    ~~~
+    Connecting to localhost:2181
+    Welcome to ZooKeeper!
+    JLine support is disabled
+
+    WATCHER::
+
+    WatchedEvent state:SyncConnected type:None path:null
+    [1, 2, 3]
+    ~~~
+
+    in kraft mode:
+    ~~~bash
+    $CONFLUENT_HOME/bin/kafka-metadata-quorum --bootstrap-server localhost:9093 describe --status
+    ~~~
+
+    The following message should be displayed:
+    ~~~
+    ClusterId:              K2ViewDocker-Cluster1A
+    LeaderId:               1
+    LeaderEpoch:            13
+    HighWatermark:          2866
+    MaxFollowerLag:         0
+    MaxFollowerLagTimeMs:   0
+    CurrentVoters:          [1,2,3]
+    CurrentObservers:       []
     ~~~
