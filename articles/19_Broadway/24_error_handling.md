@@ -139,7 +139,7 @@ Starting from V8.0, the retry mechanism can be configured using an actor or an i
 * The number of retries and interval duration should be implemented by an error handler. 
   * For example, based on a certain condition - the actor should return *retry* to continue retries or either *true* or *false* to stop the retries. 
 
-The **ErrorHandler** Actor has been enhanced to be used for easier setup of the retry mechanism. For more details, refer to the [Retry Using Error Handling Actors](actors/06_error_handling_actors.md#retry-using-error-handling-actors) article.
+The **ErrorHandler** Actor has been enhanced to be used for an easier setup of the retry mechanism. For more details, refer to the [Retry Using Error Handling Actors](actors/06_error_handling_actors.md#retry-using-error-handling-actors) article.
 
 When there are several actors in a stage, the retry is enabled on each actor of this stage. 
 
