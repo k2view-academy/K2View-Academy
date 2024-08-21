@@ -59,6 +59,6 @@ Note that the retry mechanism can be implemented by any actor defined as an erro
 
 ![image](../images/99_actors_06_7.png)
 
-When the retry is implemented by an **InnerFlow** Actor, the **ErrorFields** Actor might be used in this inner flow to check how many times the flow have already been executed - using the **attempt** output parameter. ![image](../images/99_actors_06_6.png)
+When the retry is implemented by an **InnerFlow** Actor, the **ErrorFields** Actor may be used in this inner flow to check how many times the flow has already been executed - using the **attempt** output parameter. ![image](../images/99_actors_06_6.png)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)
