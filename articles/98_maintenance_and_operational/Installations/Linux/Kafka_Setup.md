@@ -1,6 +1,6 @@
 # Apache Kafka Cluster Setup
 
-The provided Kafka package and setup scripts were designed for either a single node environment or a multi-node environment.
+The provided Kafka package and setup scripts are designed for either a single node environment or a multi-node environment.
 
 Follow the setup script for configuring the setting correctly, depending on your environment.
 
