@@ -61,7 +61,7 @@ The number of cluster nodes should be either greater than or equal to the replic
     $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1,10.0.0.2,10.0.0.3  --replication-factor 3 --start-kafka-loop
     ~~~
 
-    > When you see the message "Starting Kafka  (start loop enabled at HH:MM:SS, will timeout in N seconds)", you can start configuring the next node (but keep the terminal open)
+    > When you see the message "Starting Kafka  (start loop enabled at HH:MM:SS, will timeout in N seconds)", you can start configuring the next node (but keep the terminal open).
 
 
 2. On the rest of the Kafka nodes, one by one, execute:
