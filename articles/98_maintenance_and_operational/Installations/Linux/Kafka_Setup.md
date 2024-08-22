@@ -7,7 +7,7 @@ Follow the setup script for configuring the setting correctly, depending on your
 
 ### Load the Package 
 
-1. Log in with the previously-created user name that was designated for the Kafka installation.
+1. Log in with the previously-created user name designated for the Kafka installation.
 
 2. Download the latest Kafka package (located [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/latest+version/K+7.6/k2view_kafka_7.6.1.tar.gz)).
 
