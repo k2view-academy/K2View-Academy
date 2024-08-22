@@ -47,7 +47,7 @@ In version 7.3 and below, Kafka requires ZooKeeper (which is also configured dur
 
 #### <u>Multi-Node Setup:</u>
 
-The setup script should be run seperately on each node, in the order of the designated node numbers. It should not be run simultaneously as this might cause configuration issues.
+The setup script should be run separately on each node, in the order of the designated node numbers. It should not be run simultaneously as this might cause configuration issues.
 
 The number of cluster nodes should be either greater than or equal to the replication factor number.
 
