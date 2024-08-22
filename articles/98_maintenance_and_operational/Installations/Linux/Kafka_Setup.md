@@ -2,7 +2,7 @@
 
 The provided Kafka package and setup scripts are designed for either a single node environment or a multi-node environment.
 
-Follow the setup script for configuring the setting correctly, depending on your environment.
+Follow the setup script for a correct configuration of the setting, depending on your environment.
 
 
 ### Load the Package 
