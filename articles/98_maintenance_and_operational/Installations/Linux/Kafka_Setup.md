@@ -28,9 +28,9 @@ The parent directory of Kafka and its supporting apps are stored in the environm
 
 We provide a setup script (located in `$K2_HOME/scripts/kafka-setup.sh`) that will configure your Kafka cluster.
 
-In version 7.3 and below, Kafka requires ZooKeeper (which is also configured during the setup) for its metadata management. Starting from version 7.4 and above, Kafka runs in "KRaft" mode by default, which doesn't require ZooKeeper. Although not recommended, this behavior can be changed by passing the flag `--metadata-mgmt zookeeper`
+In version 7.3 and below, Kafka requires ZooKeeper (which is also configured during the setup) for its metadata management. Starting from version 7.4 and above, Kafka runs in "KRaft" mode by default, which doesn't require ZooKeeper. Although not recommended, this behavior can be changed by passing the flag `--metadata-mgmt zookeeper`.
 
-> For more information of all configurable parameters, run `$K2_HOME/scripts/kafka-setup.sh --help`
+> For more information of all configurable parameters, run `$K2_HOME/scripts/kafka-setup.sh --help`.
 
 
 #### <u>Single Node Setup:</u>
