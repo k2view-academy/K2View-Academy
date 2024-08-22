@@ -45,7 +45,7 @@ In version 7.3 and below, Kafka requires ZooKeeper (which is also configured dur
     Once the script completes its execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in ZooKeeper mode).
 
 
-#### <u>Multi Node Setup:</u>
+#### <u>Multi-Node Setup:</u>
 
 The setup script should be run seperately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration issues.
 
