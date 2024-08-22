@@ -20,7 +20,7 @@ Follow the setup script for a correct configuration of the setting, depending on
 <blockquote>
 The package name varies according to the version.
 
-The parent directory of Kafka and its supporting apps are stored in the environment variable `K2_HOME`. If using a directory different than `/opt/apps/kafka`, you will need to open the file `.setenv_kafka.sh` with the text editor of your preference and change the value of the environment variable `K2_HOME`.
+The parent directory of Kafka and its supporting apps are stored in the environment variable `K2_HOME`. If using a directory other than `/opt/apps/kafka`, you will need to open the file `.setenv_kafka.sh` with the text editor of your preference and change the value of the environment variable `K2_HOME`.
 </blockquote>
 
 
