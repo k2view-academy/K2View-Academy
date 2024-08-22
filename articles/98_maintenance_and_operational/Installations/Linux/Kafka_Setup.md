@@ -42,7 +42,7 @@ In version 7.3 and below, Kafka requires ZooKeeper (which is also configured dur
     $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1
     ~~~
 
-    Once the script finished it's execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in zookeeper mode)
+    Once the script completes its execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in ZooKeeper mode).
 
 
 #### <u>Multi Node Setup:</u>
