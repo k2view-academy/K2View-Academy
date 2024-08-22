@@ -90,7 +90,7 @@ The number of cluster nodes should be either greater than or equal to the replic
     $K2_HOME/scripts/kafka-setup.sh start
     ~~~
 
-* To verify that if Kafka (and ZooKeeper if running in zookeeper mode), is running on a specifc node:
+* To verify that Kafka (and ZooKeeper if running in zookeeper mode) is running on a specific node:
 
     ~~~bash
     $K2_HOME/scripts/kafka-setup.sh status
