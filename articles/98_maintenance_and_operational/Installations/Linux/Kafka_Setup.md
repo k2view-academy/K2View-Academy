@@ -115,7 +115,7 @@ The number of cluster nodes should be either greater than or equal to the replic
     [1, 2, 3]
     ~~~
 
-    In KRaft mode:
+    In ***KRaft*** mode:
     ~~~bash
     $CONFLUENT_HOME/bin/kafka-metadata-quorum --bootstrap-server localhost:9093 describe --status
     ~~~
