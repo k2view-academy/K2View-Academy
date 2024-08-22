@@ -74,7 +74,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 
 3. To validate that Kafka is running properly on all nodes:
 
-    *See item **"check the cluster's health"** in section **"Kafka cluster - Start, Shutdown and Monitor" below***
+    *See item **"check the cluster's health"** in section **"Kafka Cluster - Start, Shutdown and Monitor" below***
 
 ### Kafka Cluster - Start, Shutdown and Monitor
 
