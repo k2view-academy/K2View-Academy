@@ -61,24 +61,24 @@ The number of cluster nodes should be either greater than or equal to the replic
     $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1,10.0.0.2,10.0.0.3  --replication-factor 3 --start-kafka-loop
     ~~~
 
-    > When you see the message "Starting Kafka  (start loop enabled at HH:MM:SS, will timeout in N seconds)", you can start configuring the next node (but keep the terminal open).
+    > When you see the message "Starting Kafka (start loop enabled at HH:MM:SS, will timeout in N seconds)", you can start configuring the next node (but keep the terminal open).
 
 
-2. On the rest of the Kafka nodes, one by one, execute:
+2. On the rest of the Kafka nodes, one by one, execute the following command:
 
     ~~~bash
     $K2_HOME/scripts/kafka-setup.sh --ip-list 10.0.0.1,10.0.0.2,10.0.0.3  --replication-factor 3
     ~~~
 
-    Once the script finished it's execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in zookeeper mode)
+    Once the script completes its execution, you should see a message `Kafka UP` (followed by `ZooKeeper UP` if running in ZooKeeper mode).
 
-3. To validate that Kafka is running properly in all nodes:
+3. To validate that Kafka is running properly on all nodes:
 
     *See item **"check the cluster's health"** in section **"Kafka cluster - Start, Shutdown and Monitor" below***
 
-### Kafka cluster - Start, Shutdown and Monitor
+### Kafka Cluster - Start, Shutdown and Monitor
 
-* To stop Kafka (and ZooKeeper if running in zookeeper mode), run the following command:
+* To stop Kafka (and ZooKeeper if running in ZooKeeper mode), run the following command:
 
     ~~~bash
     $K2_HOME/scripts/kafka-setup.sh stop
