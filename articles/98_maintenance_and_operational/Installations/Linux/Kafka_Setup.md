@@ -84,7 +84,7 @@ The number of cluster nodes should be either greater than or equal to the replic
     $K2_HOME/scripts/kafka-setup.sh stop
     ~~~
 
-* To start Kafka (and ZooKeeper if running in zookeeper mode), run the following command:
+* To start Kafka (and ZooKeeper if running in ZooKeeper mode), run the following command:
 
     ~~~bash
     $K2_HOME/scripts/kafka-setup.sh start
@@ -98,7 +98,7 @@ The number of cluster nodes should be either greater than or equal to the replic
 
 * To check the cluster's health, run one of the following commands according to your configuration:
 
-    in zookeeper mode:
+    In ZooKeeper mode:
     ~~~bash
     $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
     ~~~
@@ -115,7 +115,7 @@ The number of cluster nodes should be either greater than or equal to the replic
     [1, 2, 3]
     ~~~
 
-    in kraft mode:
+    In KRaft mode:
     ~~~bash
     $CONFLUENT_HOME/bin/kafka-metadata-quorum --bootstrap-server localhost:9093 describe --status
     ~~~
