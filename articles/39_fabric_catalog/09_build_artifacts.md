@@ -18,6 +18,16 @@ The artifact is created for the Catalog version that is displayed in the applica
 
 Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
 
+### Split and Combine Artifacts
+
+Starting from V8.1, the Catalog's artifacts can be split into separate files per each data platform and schema of the Catalog version. This is only enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini is set to ON (by default, it’s set to OFF). 
+
+The name of separate files is: ```catalog_field_info___<dataPlatform>_<schema>.csv``` (with 3 underscore).
+
+Upon deploy, the files are combined into one single **catalog_field_info MTable** (though the files are kept separately in the Project tree).
+
+ 
+
 [![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_settings.md) 
 
 

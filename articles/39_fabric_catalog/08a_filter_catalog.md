@@ -4,10 +4,14 @@
 
 The Catalog application allows filtering the Catalog graph based on the Datasets, Class and Field properties.  Meaning, the property should be either on a dataset, class or field, in order that dataset/class will be displayed.
 
-To set the filter, click on the![](images/filter.png)icon in the menu bar. The default filterable properties are PII and Classification. The value can be set is to:
+Set the filter by clicking the![](images/filter.png)icon in the menu bar. 
 
-*  One of the existing property values
-* The 'property exists' value - meaning the property exists with any value
+<img src="images/menu_bar.png" style="zoom:85%;" />
+
+The PII and Classification properties are defined as filterable by default. Their value can be set is to:
+
+*  One of the existing property values.
+*  The 'property exists' value, meaning the property exists with any value.
 
 <img src="images/catalog_filter.png" style="zoom:70%;" />
 
@@ -33,7 +37,7 @@ To filter by another property (e.g. by sequenceName), add the property definitio
             }
 ~~~
 
-* `"filterable": true` adds the property to the Filter popup and allows filtering by it.
+* `"filterable": true` adds the property to the Catalog Filter popup and allows filtering by it.
 * `"allow_custom_values": true` allows typing custom values in the value drop-down list.
 
 <img src="images/catalog_filter_with_seq.png" style="zoom:70%;" />
