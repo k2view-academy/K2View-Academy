@@ -156,7 +156,7 @@ if(!env.toLowerCase().equals("prod") && !isFirstSync() && !isStructureChanged())
 
 // DEBUG- note- the output of getTableName() was added to the log, since when setting 
 // a decision function on the LU schema- it runs on each population of every LU table of the
-// schema
+// schema if all tables are inherited from the schema
 
 log.info("fnCheckSourceEnv- table name: " + getTableName() + ", active env: " + env.toLowerCase() + ", isFirstSync: " + isFirstSync() +
 ", isStructureChanged: " +  isStructureChanged() + ", Sync indicator: " + syncInd.toString());\

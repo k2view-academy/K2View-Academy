@@ -2,7 +2,7 @@
 
 Fabric includes a **Reports** application, which enables building interactive pixel-perfect reports. This application supports data binding to a wide range of JSON data sources, by providing a flexible connection configuration to a REST API endpoint.
 
-Fabric's **Reports** is a lightweight reporting solution, implemented using the 3rd party application - *ActiveReportsJS* - which is embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and Fabric Web Studio. The *ActiveReportsJS* license is included within Fabric license. No separate installation or configuration is required. 
+Fabric's **Reports** is a lightweight reporting solution, implemented using the 3rd party application - *ActiveReportsJS by Mescious* - which is embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and Fabric Web Studio. The *ActiveReportsJS* license is included within Fabric license. No separate installation or configuration is required. 
 
 Fabric's **Reports** application includes a Designer and a Viewer components:
 
@@ -19,7 +19,7 @@ Access to the Designer component is available via Fabric Web Studio only. Access
 
 Follow this user guide to learn more about each step of the reports setup, implementation and generation.
 
-[Click for more information about *ActiveReportsJS*.](https://www.grapecity.com/activereportsjs/docs/GettingStarted/Introduction)
+[Click for more information about *ActiveReportsJS*.](https://developer.mescius.com/activereportsjs/docs/GettingStarted/Introduction)
 
 <web>
 
