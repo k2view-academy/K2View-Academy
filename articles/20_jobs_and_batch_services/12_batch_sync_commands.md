@@ -33,7 +33,9 @@ BATCH LU ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LU.?" with A
 <p> Start the Batch process and sync all LU instances.
 GENERATE_ENTITIES_FIRST - if set to true, generate all entities before processing them.
 ALLOW_MULTIPLE - if set to true, multiplies executions of the same Batch process command. Default is False.
-MAX_WORKERS_PER_NODE - enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the MAX_NO_OF_WORKERS parameter in config.ini file. The number of workers allocated by a Fabric node cannot exceed the maximum number of workers set in the config.ini file. </p>
+MAX_WORKERS_PER_NODE - enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the MAX_NO_OF_WORKERS parameter in config.ini file. The number of workers allocated by a Fabric node cannot exceed the maximum number of workers set in the config.ini file.
+ESTIMATED_ENTITIES_COUNT - present the estimated number of entities to be processed, should be used in case of feeding a batch with stream of instances in such a case during the monitoring process a user wants to know what is the predicted number of instances to be processed.
+</p>
 </td>
 <td valign="top" width="300pxl">
 <p>BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
