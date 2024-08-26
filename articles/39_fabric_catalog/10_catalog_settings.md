@@ -1,11 +1,15 @@
 # Catalog Settings
 
-The purpose of the Settings screen in the Catalog application is to enable viewing and editing the rules used by the Catalog. The Catalog includes built-in rules for profiling and masking. These rules can be updated to fit the Project's needs. 
+The purpose of the Settings screen in the Catalog application is to enable viewing and editing the rules used by the Catalog. These rules can be updated to fit the Project's needs. 
 
-This article includes the following 2 sections:
+This article includes the following sections:
 
 * [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
-* [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
+* [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup) including:
+  * Masking Setup
+  * Advanced Masking Settings
+* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available in V8.1 including:
+  * Advanced Sequence Settings
 
 ## Classifier Regex Setup
 
@@ -44,15 +48,15 @@ Each **Classification** in this tab is unique, and it includes 2 attributes:
   - If the PII is checked.
   - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation.
 
-In this tab, each **Classification** can have **only one** definition (row).
+In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification in this tab.
 
 ### Masking Setup
 
-Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Classification area in order to set up the Generator and its parameters (Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
 Upon invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated in a field with a given Classification. For instance, when masking fields that are classified as a Social Security Number, you can either use the built-in RandomSSN.actor or create your own actor or flow and apply it as the Classification's Generator using the Classifier PII & Masking Setup tab.
 
-<img src="images/settings_masking_edit.png" style="zoom: 80%;" />
+<img src="images/settings_masking_edit.png"  />
 
 When selecting an actor or a flow, its respective input parameters are dynamically added below it. Note that the first input parameter - defined as Link or External - is considered as the value that should be masked, and not a masking configuration parameter; hence, it is hidden and is not dynamically added. Therefore, when selecting a Generator, its first input should be named 'value', even if this Generator doesn't need to receive any input (for preventing the hiding of the first input).
 
@@ -68,12 +72,37 @@ The purpose of the Advanced Masking Settings pop-up window is to allow setting u
 
 * **Masking indicators** determine the masking behavior during a flow run. They can be set either per population via the Catalog Masking Actor's inputs or per Classification via the Settings screen of the Catalog application. The Catalog definition of masking indicators overrides the setting of these indicators on the Catalog Masking Actor - for all the fields with the same Classification.
 * **Formatter Name and Parameters** are set in order to enable the [format-preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).
+* **Pre-Execution Logic** is an actor or a flow to be executed by the Catalog Masking Actor. 
 
-<img src="images/settings_masking_advanced.png" style="zoom: 80%;" />
+<img src="images/settings_masking_advanced.png" />
 
-The Advanced Masking Settings are defined per each Classification using the above pop-up window. The Submit button in this window aggregates the data in the application’s client side until saving is done using the Save button in the **Classifier PII & Masking Setup** tab. Then, the **catalog_classification_generators** MTable is updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+The Advanced Masking Settings are defined per each Classification using the above pop-up window. 
 
-The Advanced Masking Settings are available starting from V8.0.
+The **Submit** button in this window aggregates the data in the application’s client side until saving is done using the **Save** button in the **Classifier PII & Masking Setup** tab. 
+
+Upon clicking the **Save** button in the **Classifier PII & Masking Setup** tab, the **pii_profiling** and  **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+
+## Classifier Sequence Setup
+
+Starting from V8.1, sequences can be setup via the Catalog. 
+
+The **Classifier Sequence Setup** tab allows to setup the sequences that can be used in a project, e.g. as part of a TDM implementation. This tab doesn't have a product built-in setup because the sequences names and definitions are always project-specific. 
+
+Click **Add Record** button to create a sequence and populate a **Sequence Name**,  **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+
+Each sequence can have only one definition (row). Note that you cannot create a sequence (via the PII & Masking Setup tab) with the same name as a sequence in this tab.
+
+### Advanced Sequence Settings
+
+The purpose of the Advanced Sequence Settings pop-up window is to allow setting up of additional sequence parameters and it is very similar to the Advanced Masking Settings pop-up. 
+
+Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and  **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+
+The sequences are saved in the same MTable and the masking classifications - **catalog_classification_generators**, with the following difference:
+
+* The masking classifications have a category = **enable_masking**.
+* The non-PII sequences have a category = **enable_sequence**.
+* The PII-sequences have category = **enable_masking_uniqueness**.
 
 
 
