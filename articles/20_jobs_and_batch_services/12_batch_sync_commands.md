@@ -81,17 +81,30 @@ This command migrates all customers from the source systems into the Fabric CUST
 </tr> 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]]</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt] from MessageQueueInterface using('consumed messages topic name') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]]</h6>
 </td>
 <td valign="top" width="400pxl">
-<p>Batch-processes a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list.
-Optional parameters are the same as described above.</p>
+<p>Batch-processes a subset of the LUI based on a list of instances defined in the messaging queue consumed from the defined topic.
+To end such a batch process a batch_cancel command should run. this option was added to Fabric 7.2.2 HF14 and on to add the ability to run a batch dynamically
+on set of instances defined as input in a message queue, such as Kafka.</p>
 </td>
 <td valign="top" width="300pxl">
-<p>BATCH Customer.('100', '101', '102','103') FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=’true’;</p>
+<p>BATCH Customer from KafkaInterface1 using ('topic1') FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=’true’;</p>
 </td>
 </tr> 
 <tr>
+   <td valign="top" width="300pxl">
+<h6>BATCH &ltLU>[@&ltDC&gt].&ltIG&gt FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt];
+</td>
+<td valign="top" width="400pxl">
+<p>Batch-processes a subset of the LUI based on the <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> specified by the &ltIG&gt parameter. Optional parameters are the same as described above.</p>
+</td>
+<td valign="top" width="300pxl">
+<p>BATCH CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;</p>
+<p>This command migrates the customers defined in the ‘ig10CustomersList’ <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> into the CUSTOMER keyspace in the Fabric database.
+</p>
+   </td>
+</tr>
 <td valign="top" width="300pxl">
 <h6>BATCHF </h6>
 </td>
