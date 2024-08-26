@@ -27,7 +27,7 @@ BATCH LU ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LU.?" with A
 </td>
 </tr>
 <td valign="top" width="500pxl">
-<h6>BATCH &ltLU&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]; 
+<h6>BATCH &ltLU&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]]; 
 </td>
 <td valign="top" width="400pxl">
 <p> Start the Batch process and sync all LU instances.
@@ -42,7 +42,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 </tr>  
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU>[@&ltDC&gt].&ltIG&gt FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
+<h6>BATCH &ltLU>[@&ltDC&gt].&ltIG&gt FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]];
 </td>
 <td valign="top" width="400pxl">
 <p>Batch-processes a subset of the LUI based on the <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> specified by the &ltIG&gt parameter. Optional parameters are the same as described above.</p>
@@ -55,7 +55,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 </tr> 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
+<h6>BATCH &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>Batch-processes a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.
@@ -67,7 +67,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 </tr> 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>Batch-processes a subset of the LUI based on existing instances in Fabric in the entity table. 
@@ -79,7 +79,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 </tr> 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt]]</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>Batch-processes a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list.
