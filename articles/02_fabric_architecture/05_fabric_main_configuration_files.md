@@ -470,6 +470,6 @@ The interface enables a user with suitable permissions to the admin page to chan
 6. Adding an existing parameter which is configured as hidden, will override its value once saved.
 
 https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/02_fabric_architecture/images/configuration.png
-
+![configuration](./images/configuration.png)
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/04_fabric_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
