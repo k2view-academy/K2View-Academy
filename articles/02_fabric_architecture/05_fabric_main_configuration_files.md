@@ -450,7 +450,7 @@ The interface enables a user with suitable permissions to the admin page to chan
 ### Configuration filtering options
 - Show All - all configuration parameters are viewable in the table
 - Overrides Only (default view) - Only parameters which values were changed are viewable
-- Once the "Hidden" checkbox is checked on  the hidden parameters are also viewable
+- Once the "Hidden" checkbox is checked on, the hidden parameters are also viewable
 - All table columns can be filterrd, sorted and grouped by
 ### Update a parameter
 1. To update a parameter value go to the value column and edit (use the edit icon or simply edit) the value of a specific parameter you wish to change.
