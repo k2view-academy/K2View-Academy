@@ -7,7 +7,7 @@ A Decision function is a Java [project function](/articles/07_table_population/0
 * A sync is performed when a decision function returns **True**.
 * A sync is not performed when a decision function returns **False**.
 * Decision functions can be defined at [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels.
-  * When defined at an LU schema level, the decision function runs on each Table Population of each table in the LU schema.  
+  * When defined at an LU schema level, the decision function runs on each Table Population of each table in the LU schema if defined as inherited on all tables.  
   * When defined on an LU table, the decision function runs over each Table Population in the LU table.
   * If the decision function returns the same result for each population, it is recommended to set it on the Root Table’s population. Then invoke the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function's code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population. 
   * When defined for a Table Population, the Decision function runs on the defined population.
