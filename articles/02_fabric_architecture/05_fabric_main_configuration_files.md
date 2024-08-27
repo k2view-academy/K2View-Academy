@@ -456,7 +456,7 @@ The interface enables a user with suitable permissions to the admin page to chan
 1. To update a parameter value go to the value column and edit (use the edit icon or simply edit) the value of a specific parameter you wish to change.
 2. Once changed, the entire row wil automatically be highlighted to indicate a change occured
 3. Once saved, the highlighted indication will be turned off
-4. In case the changed parameter requies a restart to be applicable, a corresponding icon in the relevant key column will appear along with a tooltip indication
+4. In case the changed parameter requires a restart to be applicable, a corresponding icon in the relevant key column indicates that along with a tooltip indication
 5. Once a change in a parameter that requires a restart occurs and saved to system DB, the icon indication will blink and a popup indication on the save button wil be highlighted, indicating this change will be applicable only after a restart.
 6. Revert to default - Once a value was changed but not saved to system DB, the revert option will enable you to go back to the original default value. Upon saving the change, the revert option will not be available anymore until another change will be applied.
 7. When switching to the overrides only view after a change that wasnt saved was applied, once reverting to default value, the parameter will be removed from this view.
