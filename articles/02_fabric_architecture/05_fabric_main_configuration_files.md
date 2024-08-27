@@ -454,7 +454,7 @@ The interface enables a user with suitable permissions to the admin page to chan
 - All table columns can be filterrd, sorted and grouped by
 ### Update a parameter
 1. To update a parameter value go to the value column and edit (use the edit icon or simply edit) the value of a specific parameter you wish to change.
-2. Once changed, the full row wil automatically be highlighted to indicate a change occured
+2. Once changed, the entire row wil automatically be highlighted to indicate a change occured
 3. Once saved, the highlighted indication will be turned off
 4. In case the changed parameter requies a restart to be applicable, a corresponding icon in the relevant key column will appear along with a tooltip indication
 5. Once a change in a parameter that requires a restart occurs and saved to system DB, the icon indication will blink and a popup indication on the save button wil be highlighted, indicating this change will be applicable only after a restart.
