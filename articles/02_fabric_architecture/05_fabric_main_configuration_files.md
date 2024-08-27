@@ -444,8 +444,30 @@ When updating the iifConfig.ini, do the following:
 - When updating the parameters under **orphanage_job** or **sweep_job** sections, or **ENABLE_KAFKA_DELTA** parameters, restart the Fabric node.
 - Restart the IIDFinder process.
 
-Click for more information about the IIDFinder Process.
-
+## Configuration changes UI Interface
+### Objective
+The interface enables a user with suitable permissions to the admin page to change values in the config.ini file for its specific node and save changes (overrides) in the system DB
+### Configuration filtering options
+- Show All - all configuration parameters are viewable in the table
+- Overrides Only (default view) - Only parameters which values were changed are viewable
+- Once the "Hidden" checkbox is checked on  the hidden parameters are also viewable
+- All table columns can be filterrd, sorted and grouped by
+### Update a parameter
+1. To update a parameter value go to the value column and edit (use the edit icon or simply edit) the value of a specific parameter you wish to change.
+2. Once changed, the full row wil automatically be highlighted to indicate a change occured
+3. Once saved, the highlighted indication will be turned off
+4. In case the changed parameter requies a restart to be applicable, a corresponding icon in the relevant key column will appear along with a tooltip indication
+5. Once a change in a parameter that requires a restart occurs and saved to system DB, the icon indication will blink and a popup indication on the save button wil be highlighted, indicating this change will be applicable only after a restart.
+6. Revert to default - Once a value was changed but not saved to system DB, the revert option will enable you to go back to the original default value. Upon saving the change, the revert option will not be available anymore until another change will be applied.
+7. When switching to the overrides only view after a change that wasnt saved was applied, once reverting to default value, the parameter will be removed from this view.
+8. Reset drops will delete the overrides - if you have settings for a specific machine it is advisable to save them in the config.ini manually/hardcoded and use the following setting: IGNORE_CONFIG_OVERRIDES_ON_START for recovery purposes in case of bad value which will ignore all applied overrides.
+### Add a parameter
+1. Clicking on the Add Parameter button will open a new editable row highlighted in green
+2. The section column will provide a dropdown list of existing sections to choose from, or alternatively enter a new section.
+3. Use the edit icons on the 'KEY' and 'VALUE' columns to enter a new value
+4. Note - the 'Description' field is not editable
+5. A delete button in the revert column will enable to  delete the new added parameter row.
+6. Adding an existing parameter which is configured as hidden, will override its value once saved.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/04_fabric_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
