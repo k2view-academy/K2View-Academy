@@ -34,7 +34,7 @@ The distribution parameters are set based on the selected distribution type:
 
   ![weighted dist example](/articles/19_Broadway/images/weighted_dist_example.png)
 
-    Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Do the following in order to define a weighted distribution based on MTable:
+    Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Do the following in order to define a weighted distribution based on an MTable:
    1. Set the distribution type to **string** with **weighted distribution**.
    2. Then select an MTable and choose one key of the selected MTable to enable the selection of the key's values for the values listed in the weighted distribution.
    3. After selecting the MTable and key, you can add to the Actor weighted values based on the selected MTable. 
