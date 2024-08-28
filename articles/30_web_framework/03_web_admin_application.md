@@ -43,14 +43,14 @@ For example, the following image shows that the user navigated to **Admin > Proc
 * **Terminal,** bringing fabric console experience to a web application. 
 
 * **Configuration,** enables a user with suitable permissions to the admin page to change values in the config.ini file for its specific node and save changes (overrides) in the system DB
-* Update a parameter value and save changes to system DB.
-* Adding a new parameter and section
-* Indication on parmaters change which requires a restart via GUI
-* View hidden parameters.
-* Revert to deafault option
-* Reset drops handling
+- Update a parameter value and save changes to system DB.
+- Adding a new parameter and section
+- Indication on parmaters change which requires a restart via GUI
+- View hidden parameters.
+- Revert to deafault option
+- Reset drops handling
 
-  ![configuration](./images/configuration.png)
+  
 
 
 
