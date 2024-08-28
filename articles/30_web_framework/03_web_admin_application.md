@@ -4,7 +4,7 @@ Admin is a graphical web-based application used to conduct various Fabric Server
 
 Admin has four categories where each category has additional sub-categories. Navigation through the application is via the Web Framework's menu whereby breadcrumbs display a user's location. 
 
-For example, the following image shows that the user navigated to **Admin > Security > Permissions**.
+For example, the following image shows that the user navigated to **Admin > Processes > cluster**.
 
 ![admin](./images/admin.png)
 
