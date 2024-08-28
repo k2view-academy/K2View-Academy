@@ -50,7 +50,7 @@ For example, the following image shows that the user navigated to **Admin > Proc
    * Revert to deafault option
    * Reset drops handling
 
-  
+  ![configuration](./images/configuration.png)
 
 
 
