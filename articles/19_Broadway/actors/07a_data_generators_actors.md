@@ -28,12 +28,14 @@ The distribution parameters are set based on the selected distribution type:
 
 - **Uniform** distribution returns a random value between the **minimum** and **maximum** values.
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. For example, generate 20% of the customers in Miami, 30% in LA and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole.
+- **Weighted** distribution returns a value from the list, based on the value's weight. For example, 20% of the generated customers are based in Miami, 30% in LA, and 50% in NY. Weighted distribution uses a 'weights' map where the keys are the results and the values are positive numbers indicating the weight of the entry of the whole.
 
   See example:
 
   ![weighted dist example](/articles/19_Broadway/images/weighted_dist_example.png)
 
+    Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Select an MTable and choose one key of the selected MTable to enable selecting the key's values for the values list int he weighted distribtion. 
+  
 - **Costant** distribution returns the populated constant value. For example: set the number of generated addresses to 1 address per customer.
 
 ### RandomFromCollection
