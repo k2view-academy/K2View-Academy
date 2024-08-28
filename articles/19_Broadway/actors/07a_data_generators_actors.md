@@ -34,7 +34,7 @@ The distribution parameters are set based on the selected distribution type:
 
   ![weighted dist example](/articles/19_Broadway/images/weighted_dist_example.png)
 
-    Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Select an MTable and choose one key of the selected MTable to enable selecting the key's values for the values list int he weighted distribtion. 
+    Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Select an MTable and choose one key of the selected MTable to enable the selection of the key's values for the values listed in the weighted distribution. 
   
 - **Costant** distribution returns the populated constant value. For example: set the number of generated addresses to 1 address per customer.
 
