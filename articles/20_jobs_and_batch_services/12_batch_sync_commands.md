@@ -89,7 +89,7 @@ To end such a batch process a batch_cancel command should run. this option was a
 on set of instances defined as input in a message queue, such as Kafka.</p>
 </td>
 <td valign="top" width="300pxl">
-<p>BATCH Customer from KafkaInterface1 using ('topic1') FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=’true’;</p>
+<p>BATCH Customer from KafkaInterface1 using ('topic1') FABRIC_COMMAND="sync_instance CUSTOMER.?" with async="true";</p>
 </td>
 </tr> 
 <tr>
