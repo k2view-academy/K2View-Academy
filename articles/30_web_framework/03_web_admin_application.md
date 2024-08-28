@@ -6,7 +6,7 @@ Admin has four categories where each category has additional sub-categories. Nav
 
 For example, the following image shows that the user navigated to **Admin > Security > Permissions**.
 
-![image](images/admin.PNG)
+![configuration](./images/admin.png)
 
 ### Admin Categories
 
