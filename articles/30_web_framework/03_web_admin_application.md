@@ -42,7 +42,7 @@ For example, the following image shows that the user navigated to **Admin > Secu
 
 * **Terminal,** bringing fabric console experience to a web application. 
 
-  
+* **Configuration,** bringing fabric console experience to a web application.
 
 ### Admin History
 
