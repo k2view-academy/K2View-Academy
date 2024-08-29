@@ -444,14 +444,14 @@ When updating the iifConfig.ini, do the following:
 - When updating the parameters under **orphanage_job** or **sweep_job** sections, or **ENABLE_KAFKA_DELTA** parameters, restart the Fabric node.
 - Restart the IIDFinder process.
 
-## Configuration changes UI Interface
+## Configuration Changes' UI Interface
 ### Objective
-The interface enables a user with suitable permissions to the admin page to change values in the config.ini file for its specific node and save changes (overrides) in the system DB
+The interface enables a user with suitable permissions to access the admin page to change values in the config.ini file for its specific node and save changes (overrides) in the system DB.
 ### Configuration filtering options
-- Show All - all configuration parameters are viewable in the table
-- Overrides Only (default view) - Only parameters which values were changed are viewable
-- Once the "Hidden" checkbox is checked on, the hidden parameters are also viewable
-- All table columns can be filterrd, sorted and grouped by
+- Show All - all configuration parameters are viewable in the table.
+- Overrides Only (default view) - only parameters, whose values were changed, are viewable.
+- Once the 'Hidden' checkbox is checked, the hidden parameters are also viewable.
+- All table columns can be filterrd, sorted and grouped.
 ### Update a parameter
 1. To update a parameter value go to the value column and edit (use the edit icon or simply edit) the value of a specific parameter you wish to change.
 2. Once changed, the entire row wil automatically be highlighted to indicate a change applied
