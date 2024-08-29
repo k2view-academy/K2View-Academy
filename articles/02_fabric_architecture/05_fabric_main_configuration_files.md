@@ -473,6 +473,7 @@ Some sections of config.ini are not shown in the Configuration
 ### Known Issue
 Some parameters of the config.ini that are supposed to be unhidden are hidden in the Configuration table.
 To mitigate this issue if there is a parameter that needs to be used and does not shown in the table, tick on the hidden filter and you will be able to see it
+
 ![configuration](./images/configuration.png)
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/04_fabric_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
