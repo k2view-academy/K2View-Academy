@@ -20,11 +20,11 @@ First, look for the config parameters in the locations as described below:
 
 There are four authenticators which come as part of the Fabric platform, and are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
 
-- **cassandra**, when using Fabric local Cassandra as [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). 
+- **cassandra**, when using Fabric local Cassandra as [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) make sure the following 2 parameters are configured correctly in Cassandra.yaml, CASSANDRA_AUTHENTICATOR and CASSANDRA_AUTHORIZE. 
 - **fabric**, when using Fabric as authenticator. For this no further settings are required.
 - **ldap**, connect to LDAP server. For this option the LDAP server connection details are required and should be defined at section name: `ldap_auth`. 
 - **adldap**. connect to AD/LDAP server. For this option the AD/LDAP server connection details are required and shall be defined at section name: `adldap_auth`.
-- **block_all** meaning that access is blocked. For this no no further settings are required. 
+- **block_all** meaning that access is blocked. For this no further settings are required, recommanded option in case of SAML. 
 
 The default authenticator is "cassandra" when `server_authenticator` is not set.
 
