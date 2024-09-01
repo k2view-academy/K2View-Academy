@@ -44,3 +44,5 @@ To filter by another property (e.g. by sequenceName), add the property definitio
 
 
 
+[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_build_artifacts.md) 
+

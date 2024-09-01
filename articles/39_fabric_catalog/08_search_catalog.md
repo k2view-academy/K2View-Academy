@@ -40,5 +40,5 @@ To navigate from the search results to a node in the Catalog tree, click the ![]
 
 
 
-[![Previous](/articles/images/Previous.png)](07_manual_overrides.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_build_artifacts.md) 
+[![Previous](/articles/images/Previous.png)](07_manual_overrides.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08a_filter_catalog.md) 
 
