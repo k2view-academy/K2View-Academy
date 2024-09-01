@@ -463,7 +463,7 @@ The interface enables a user with suitable permissions to access the Admin page.
 8. Reset Drops will delete the overrides - if you have settings for a specific machine, it is advisable to save them in the config.ini manually/hardcoded and to use the following setting: IGNORE_CONFIG_OVERRIDES_ON_START for recovery purposes in case of a faulty value, which will ignore all applied overrides.
 ### Add a parameter
 1. Clicking on the Add Parameter button will open a new editable row highlighted in green.
-2. The section column will provide a drop-down list of existing sections to choose from, or alternatively enter a new section.
+2. The section column will provide a drop-down list of existing sections to choose from, or alternatively, a new section can be entered.
 3. Use the edit icons on the 'KEY' and 'VALUE' columns to enter a new value.
 4. Note: The 'Description' field is not editable.
 5. A delete button in the revert column will enable to delete the new added parameter row.
