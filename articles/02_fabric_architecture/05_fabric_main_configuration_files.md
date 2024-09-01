@@ -466,10 +466,10 @@ The interface enables a user with suitable permissions to access the Admin page.
 2. The section column will provide a drop-down list of existing sections to choose from, or alternatively, a new section can be entered.
 3. Use the edit icons on the 'KEY' and 'VALUE' columns to enter a new value.
 4. Note: The 'Description' field is not editable.
-5. A delete button in the revert column will enable deleting the new added parameter row.
+5. A delete button in the revert column will enable deleting the new added parameter's row.
 6. Adding an existing parameter, which is configured as hidden, will override its value once saved.
 
-Some sections of config.ini are not shown in the Configuration
+Some sections of config.ini are not shown in the configuration table UI.
 ### Known Issue
 Some parameters of the config.ini that are supposed to be unhidden are hidden in the Configuration table.
 To mitigate this issue if there is a parameter that needs to be used and does not shown in the table, tick on the hidden filter and you will be able to see it
