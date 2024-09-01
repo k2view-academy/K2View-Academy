@@ -28,7 +28,7 @@ Upon deploy, the files are combined into one single **catalog_field_info MTable*
 
  
 
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_settings.md) 
+[![Previous](/articles/images/Previous.png)](08a_filter_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_catalog_settings.md) 
 
 
 
