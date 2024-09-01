@@ -446,7 +446,7 @@ When updating the iifConfig.ini, do the following:
 
 ## Configuration Changes' UI Interface
 ### Objective
-The interface enables a user with suitable permissions to access the Admin page to change values in the config.ini file for its specific node and save changes (overrides) in the system DB.
+The interface enables a user with suitable permissions to access the Admin page. This is done in order to change values in the config.ini file, for the specific node, and to save these changes (overrides) in the system DB.
 ### Configuration filtering options
 - Show All - all configuration parameters are viewable in the table.
 - Overrides Only (default view) - only parameters, whose values were changed, are viewable.
