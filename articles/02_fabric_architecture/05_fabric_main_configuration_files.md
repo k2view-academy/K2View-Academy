@@ -471,8 +471,8 @@ The interface enables a user with suitable permissions to access the Admin page.
 
 Some sections of config.ini are not shown in the configuration table UI.
 ### Known Issue
-Some parameters of the config.ini that are supposed to be unhidden are hidden in the Configuration table.
-To mitigate this issue if there is a parameter that needs to be used and does not shown in the table, tick on the hidden filter and you will be able to see it
+Some parameters of the config.ini that are supposed to be unhidden - are hidden in the configuration table.
+To mitigate this issue, if there is a parameter that needs to be used and is not shown in the table, tick on the hidden filter, which will enable you to see it.
 
 ![configuration](./images/configuration.png)
 
