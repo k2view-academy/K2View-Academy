@@ -94,11 +94,25 @@ SYNC_PROTECTION can be edited in the config.ini file:
 SYNC_PROTECTION can be disabled on the session level using the SET SYNC_PROTECTION=off command.
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
+
+<studio>
+
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
 ![image](images/6_2_server_configuration_window.png)
 
+</studio>
+
+<web>
+
+The **Force Upgrade Post Deploy** can be defined by clicking the ![](images/settings.png) icon > in the left lower corner of the Web Studio, then clicking **Settings** and then searching for this parameters:
+
+![image](images/6_2_force_upgrade_web_studio.png)
+
+</web>
+
 This checkbox defines the Sync mode of the first GET of each LU instance (LUI) after the LU is deployed to the server:
+
 * If checked, the Sync mode is set to Force.
 * When unchecked, the Sync mode is set to On.
 
