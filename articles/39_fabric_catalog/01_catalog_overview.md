@@ -21,6 +21,7 @@ The Discovery process results are presented in a new Catalog application, which 
 - Support multiple Catalog versions and their comparison.
 - Search any node by either keywords or an advanced search parameters.
 - View and modify the profiling rules.
+- Create a Catalog artifact in a CSV-format file.
 
 The Logical Unit creation is based on the discovered and enriched data model. The Masking mechanism can be based on the Catalog profiling and classification.
 
