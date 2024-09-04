@@ -16,13 +16,17 @@ The monitor is split into the following areas:
 
 The monitor displays the execution progress by using various icons, as follows:
 
-* The following image shows the the job in progress:
+* The following image shows that the job is gathering the source data in order to start the crawler:
 
-  <img src="images/monitor_inprogress.png" style="zoom:80%;" />
+  <img src="images/monitor_gather.png"  />
+
+* The following image shows that the job is currently running:
+
+  <img src="images/monitor_inprogress.png"  />
 
 * The following image shows that the job has been completed and a new version was created: 
 
-  <img src="images/monitor_new.png" style="zoom:80%;" />
+  <img src="images/monitor_new.png" />
 
 * The following image shows that the job has been completed without creating a new version:
 

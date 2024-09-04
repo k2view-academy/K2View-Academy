@@ -8,24 +8,19 @@ Set the filter by clicking the![](images/filter.png)icon in the menu bar.
 
 <img src="images/menu_bar.png" style="zoom:85%;" />
 
-The PII and Classification properties are defined as filterable by default. Their value can be set is to:
+The PII and Classification properties are defined as filterable by default. Their value can be set is to either 'property exists' value or any other existing value, selected from a drop-down list.
 
-*  One of the existing property values.
-*  The 'property exists' value, meaning the property exists with any value.
+The value of Classification can be set to a custom value, that doesn't exist in a drop-down list.
 
-<img src="images/catalog_filter.png" style="zoom:70%;" />
+<img src="images/catalog_filter.png"  />
 
-Click **Apply** to apply the filter on the Catalog. The popup closes and the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. 
-
-When the filter is set after the Data Platform has been expanded, irrelevant Datasets are filtered out. When the filter is set before that, irrelevant Datasets are filtered upon the expand. 
+Click **Apply** to apply the filter on the Catalog. The popup closes and the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. If the Data Platform has been expanded before setting the filter, irrelevant Datasets are filtered out. Otherwise, irrelevant Datasets are filtered upon the expand of each Data Platform. 
 
 Click **Clear Filter** to clear the filter and return to the full Catalog view.
 
-
-
 ### How Do I Filter by Additional Properties
 
-To filter by another property (e.g. by sequenceName), add the property definition to the `properties-info.json` as follows:
+To filter by any other property (e.g. by sequenceName), add the property definition to the `properties-info.json` as follows:
 
 ~~~json
             {
@@ -40,7 +35,7 @@ To filter by another property (e.g. by sequenceName), add the property definitio
 * `"filterable": true` adds the property to the Catalog Filter popup and allows filtering by it.
 * `"allow_custom_values": true` allows typing custom values in the value drop-down list.
 
-<img src="images/catalog_filter_with_seq.png" style="zoom:70%;" />
+<img src="images/catalog_filter_with_seq.png"  />
 
 
 

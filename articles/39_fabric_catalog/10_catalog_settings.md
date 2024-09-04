@@ -5,17 +5,17 @@ The purpose of the Settings screen in the Catalog application is to enable viewi
 This article includes the following sections:
 
 * [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
-* [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup) including:
+* [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
   * Masking Setup
   * Advanced Masking Settings
-* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available in V8.1 including:
+* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available from V8.1.
   * Advanced Sequence Settings
 
 ## Classifier Regex Setup
 
 The **Classifier Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
 
-<img src="images/settings_regex.png" style="zoom:80%;" />
+![](images/settings_regex.png)
 
 The columns of this tab are:
 
@@ -39,7 +39,7 @@ Click [here](04_plugin_framework.md#built-in-plugins) for more details about the
 
 The **Classifier PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described later in this article.
 
-<img src="images/settings_pii_mask.png" style="zoom:80%;" />
+<img src="images/settings_pii_mask.png" />
 
 Each **Classification** in this tab is unique, and it includes 2 attributes:
 
@@ -90,7 +90,9 @@ The **Classifier Sequence Setup** tab allows to setup the sequences that can be 
 
 Click **Add Record** button to create a sequence and populate a **Sequence Name**,  **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
-Each sequence can have only one definition (row). Note that you cannot create a sequence (via the PII & Masking Setup tab) with the same name as a sequence in this tab.
+<img src="images/settings_seq.png" />
+
+Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking Setup tab) with the same name as a sequence in this tab.
 
 ### Advanced Sequence Settings
 
