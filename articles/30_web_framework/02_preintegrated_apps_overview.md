@@ -6,7 +6,6 @@ Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open 
 
 - [Admin](03_web_admin_application.md) - a web application that manages various Fabric Server and Cassandra activities, such as monitoring batch processes, managing credentials or executing Fabric commands.
   As part of the [Admin](03_web_admin_application.md) application (a new tab called 'Configuration') we have launched a new tool, where its main objective is to expose an interface that enables a user with suitable permissions to the Admin page to change values in the config.ini file, for a specific node, and to save these changes (overrides) in the system DB.
-- [Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) - a graphical tool that visualizes the results of the Fabric Data Discovery process. It provides an insight into the Fabric interfaces after performing the auto-discovery and auto-profiling of the data source's elements (schemas, tables, fields), modeled in the *neo4j* GraphDB. 
 - [Reports](/articles/38_reports/01_reports_overview.md) - a Reports Viewer application, which enables generating reports, created via the Designer component embedded into the Web Studio.
 - [Statistics](/articles/34_JMX_statistics/01_JMX_overview.md) - JMX monitoring of the processes that run on the Fabric server, Cassandra, etc.
 - [API](/articles/15_web_services_and_graphit/09_swagger.md) - a full framework implementation for invocating and testing Fabric Web Services via a visualization utility - Swagger UI.
