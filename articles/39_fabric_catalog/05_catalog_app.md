@@ -36,8 +36,8 @@ The Catalog Legend, which presents the 3 node types with their respective icons,
 
 The Navigator displays the latest Catalog version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
-* **View** another version by clicking its number in the drop-down list.
-* **Compare** between 2 versions by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
+* **View** another version, by clicking its number in the drop-down list.
+* **Compare** between 2 versions, by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
 
 [Click here for more information about the Catalog Versioning](06_catalog_versioning.md).
 
