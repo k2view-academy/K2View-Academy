@@ -16,7 +16,7 @@ The Catalog has a top bar navigation, which includes the following areas:
 
   * Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
 
-* The **Monitor** displays the Discovery job execution progress. It allows to re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
+* The **Monitor** displays the Discovery job execution progress. It allows to either re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
 
 * The **Settings** allows to view and edit the pre-defined profiling and masking rules used by the Catalog. [Click here to get more details about the Settings tab](10_catalog_settings.md). 
 
