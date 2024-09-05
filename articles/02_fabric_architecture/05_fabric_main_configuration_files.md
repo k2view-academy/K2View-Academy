@@ -460,7 +460,7 @@ The interface enables a user with suitable permissions to access the Admin page.
 5. Once a change in a parameter, which requires a restart, occurs and is saved to a system DB, the icon indication will blink and a pop-up indication on the save button will be highlighted, indicating that this change will be applicable only after a restart.
 6. Revert to default - once a value was changed, but not saved to a system DB, the revert option will enable you to go back to the original default value. Upon saving the change, the revert option will no longer be available, until another change will be applied.
 7. When switching to an overrides-only view, after a change has been applied but not saved, once reverting to the default value, the parameter will be removed from this view.
-8. Reset Drops will delete the overrides - if you have settings for a specific machine, it is advisable to save them in the config.ini manually/hardcoded and to use the following setting: IGNORE_CONFIG_OVERRIDES_ON_START for recovery purposes in case of a faulty value, which will ignore all applied overrides.
+8. Reset Drops will delete the overrides - if you have settings for a specific machine, it is advisable to save them in the config.ini manually/hardcoded, and to use the IGNORE_CONFIG_OVERRIDES_ON_START setting for recovery purposes in case of a faulty value, which will ignore all applied overrides.
 ### Add a parameter
 1. Clicking on the Add Parameter button will open a new editable row highlighted in green.
 2. The section column will provide a drop-down list of existing sections to choose from, or alternatively, a new section can be entered.
