@@ -47,8 +47,7 @@ For example, the following image shows that the user navigated to **Admin > Proc
    * Adding new parameters and sections.
    * Indication of a parmaters' change, which requires a restart via the GUI.
    * View hidden parameters.
-   * Revert to deafault option.
-   * Reset Drops handling.
+   * Revert to default option.
    * A new role permission was added, called SET_GLOBAL_CONFIG_OVERRIDES, to allow only authorized users to override the configuration parameter.
 
   ![configuration](./images/configuration.png)
