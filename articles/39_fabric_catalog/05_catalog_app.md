@@ -6,7 +6,7 @@ The Catalog application is accessible from the [K2view Web Framework](/articles/
 
 The Catalog has a top bar navigation, which includes the following areas:
 
-* **Navigator** displays the Catalog tree. It allows to navigate through it and to perform various activities. The Navigator is described in this article, in the following sub-sections:
+* The **Navigator** displays the Catalog tree. It allows to navigate through it and to perform various activities. The Navigator is described in this article, in the following sub-sections:
 
   * [Navigator's main area](05_catalog_app.md#navigators-main-area), which displays the Catalog tree.
 
@@ -16,9 +16,9 @@ The Catalog has a top bar navigation, which includes the following areas:
 
   * Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
 
-* **Monitor** displays the Discovery job execution progress. It allows to re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
+* The **Monitor** displays the Discovery job execution progress. It allows to re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
 
-* **Settings** allows to view and edit the pre-defined profiling and masking rules used by the Catalog. [Click here to get more details about the Settings tab](10_catalog_settings.md). 
+* The **Settings** allows to view and edit the pre-defined profiling and masking rules used by the Catalog. [Click here to get more details about the Settings tab](10_catalog_settings.md). 
 
 ### Navigator's Main Area
 
