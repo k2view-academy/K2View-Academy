@@ -32,7 +32,7 @@ To filter by any other property (e.g., by sequenceName), add the property defini
             }
 ~~~
 
-* `"filterable": true` adds the property to the Catalog Filter popup and allows filtering by it.
+* `"filterable": true` adds the property to the Catalog Filter pop-up and allows filtering by it.
 * `"allow_custom_values": true` allows typing custom values in the value drop-down list.
 
 <img src="images/catalog_filter_with_seq.png"  />
