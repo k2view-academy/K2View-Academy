@@ -20,7 +20,7 @@ Click **Clear Filter** to clear the filter and return to the full Catalog view.
 
 ### How Do I Filter by Additional Properties
 
-To filter by any other property (e.g. by sequenceName), add the property definition to the `properties-info.json` as follows:
+To filter by any other property (e.g., by sequenceName), add the property definition to the `properties-info.json` as follows:
 
 ~~~json
             {
