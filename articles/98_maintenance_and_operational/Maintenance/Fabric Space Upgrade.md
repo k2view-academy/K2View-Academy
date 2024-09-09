@@ -184,5 +184,3 @@ kubectl apply -f fabric-studio-clusterrolebinding.yaml
 ```
 
 ---
-
-This revised procedure includes the modified command in Step 1 to list the `fabric-deployment`, container versions, and their state, with permissions details moved to an appendix. Be sure to replace placeholders with actual values and screenshots for a complete guide.
