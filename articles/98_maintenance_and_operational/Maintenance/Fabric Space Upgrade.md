@@ -63,7 +63,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
 
 #### Step 5: Verify Web  Functionality
 
-1. Verify that the Web  is functioning as expected:
+1. Verify that the Fabric is functioning as expected:
    - Access the Web  and generate a piece of test code to ensure that it operates correctly.
    
 2. Check that the generated code is committed and pushed to the Git repository:
@@ -95,7 +95,7 @@ If the upgrade fails or any issues are encountered, follow the steps below to ro
    kubectl get pods -n space-k2view
    ```
 
-2. Confirm that the Web  is functioning as expected post-rollback:
+2. Confirm that the Fabric is functioning as expected post-rollback:
    - Generate/Run a code in Web  and verify its functionality.
 
 3. Confirm that the application is functioning as expected post-rollback.
@@ -136,8 +136,6 @@ If you encounter issues during the upgrade or rollback process, consider the fol
 7. **Cluster Health:** Ensure the overall health of the Kubernetes cluster is good, and there are no node issues, resource shortages, or other factors that could affect the deployment.
 
 8. **Contact Support:** If issues persist, consider reaching out to support with relevant logs, steps taken, and any specific errors encountered.
-
----
 
 ---
 
