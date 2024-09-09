@@ -22,7 +22,7 @@ Note that a Catalog artifact can be created for any Catalog version. Each new ar
 
 Starting from V8.1, the Catalog's artifacts can be split into separate files per each data platform and schema of the Catalog version. The files are then combined into one single **catalog_field_info MTable** (though the files are kept separately in the Project tree). 
 
-This feature allows to combine separate artifacts created in different projects (or different spaces) into a single artifact. Thus, you can copy the artifact files from one project to another and upon deploy they will be combined into one MTable.
+This feature allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Thus, you can copy the artifact files from one project to another and upon deploy they will be combined into one MTable.
 
 The split and combine is only enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini is set to ON (by default, it’s set to OFF). 
 
