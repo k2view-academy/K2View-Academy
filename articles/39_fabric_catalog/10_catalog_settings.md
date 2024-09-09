@@ -27,7 +27,7 @@ The columns of this tab are:
 * **Regular Expression**, which defines the expression applied on the field, either its name or its value, depending on the **Type**.
 * **Score**, which defines the confidence level that the current rule is true. 
 
-Each **Classification** can have several definitions, with the same or different **Types**.
+Each **Classification** can have several definitions, with either the same or different **Types**.
 
 Using this tab, you can either edit existing definitions or add new ones. The Classification value can be either new or selected from the list.
 
