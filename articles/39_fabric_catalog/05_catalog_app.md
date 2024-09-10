@@ -112,7 +112,7 @@ Each element has different properties. For example, a Dataset field has properti
 
 Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name, opens the More Info pop-up window that provides more details about the property, e.g., the property's Origin, which could be either the Crawler, one of the plugins or manual.
 
-When the selected element is a relation (a link) between 2 objects in the Catalog tree, the relation's properties are displayed. 
+When the selected element is a relation (a link) between 2 objects in the Catalog tree, its properties are displayed in the properties tab. 
 
 Note that in case there are more than one *refers to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers to* relations between the **movie** and the **language** Datasets:
 
