@@ -1,4 +1,4 @@
-# Filter Catalog
+# Catalog Filter
 
 ### Overview
 
