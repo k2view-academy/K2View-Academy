@@ -48,7 +48,7 @@ Each **Classification** in this tab is unique, and it includes 2 attributes:
   - Masking
   - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation
 
-In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification in this tab.
+In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab since both classifications & sequences are saved in the same MTable.
 
 ### Masking Setup
 
