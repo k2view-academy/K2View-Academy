@@ -114,7 +114,7 @@ Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" 
 
 When the selected element is a relation (a link) between 2 objects in the Catalog tree, its properties are displayed in the Properties tab. 
 
-Note that in case there are more than one *refers to* relations between 2 Datasets, the Catalog tree displays only one link. However, the Properties Tab displays details of all relations. In the below example, there are 2 *refers to* relations between the **movie** and the **language** Datasets:
+Note that in case there are more than one *refers to* relation between 2 Datasets, the Catalog tree displays only one link. However, the Properties tab displays details of all relations. In the below example, we can see that 2 *refers to* relations exist between the **movie** and the **language** Datasets:
 
 <img src="images/properties_two_links.png" style="zoom: 75%;" />
 
