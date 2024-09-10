@@ -95,12 +95,12 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 * **Search** <img src="images/search.png" style="zoom:80%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
 * **Filter** <img src="images/filter.png" style="zoom:80%;" />the Catalog graph by property. When a filter is set, the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
 * **Hide** <img src="images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
-* **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" />, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, for running the Discovery Job on the selected Data Platform.
-* **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
-* **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, for connecting to the selected Fabric interface and querying the data directly from the data source.
-* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
-* **Zoom in / out**, for adjusting the zoom of the view.
+* **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" />, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
+* **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
+* **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
+* **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
+* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
+* **Zoom in / out**, used for adjusting the zoom of the view.
 
 ### Properties Tab
 
