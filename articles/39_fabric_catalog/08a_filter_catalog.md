@@ -8,9 +8,9 @@ Set the filter by clicking the![](images/filter.png)icon in the menu bar.
 
 <img src="images/menu_bar.png" style="zoom:85%;" />
 
-The PII and Classification properties are defined as filterable, by default. Their value can be set is to either 'property exists' value or any other existing value, selected from a drop-down list.
+The PII and Classification properties are defined as filterable, by default. Their values can be set to either 'property exists' or any other existing value, selected from a drop-down list.
 
-The value of Classification can be set to a custom value, which doesn't exist in a drop-down list.
+The Classification value can be set to a custom value, which doesn't exist in a drop-down list.
 
 <img src="images/catalog_filter.png"  />
 
