@@ -58,11 +58,21 @@ Upon invocation of a Catalog Masking actor - e.g., during a table population - t
 
 <img src="images/settings_masking_edit.png"  />
 
-When selecting an actor or a flow, its respective input parameters are dynamically added below it. Note that the first input parameter - defined as Link or External - is considered as the value that should be masked, and not as a masking configuration parameter; hence, it is hidden and is not dynamically added. Therefore, when selecting a Generator, its first input should be named 'value', even if this Generator doesn't need to receive any input (for preventing the hiding of the first input).
+When selecting an actor or a flow, its respective input parameters are dynamically added below it. 
+
+**Guidelines for Masking flow creation**
+
+The first input parameter of a Masking flow (or a custom actor) - selected as a Generator - is considered as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden and is not dynamically added. This is applicable only for an input parameter of Link or External type. 
+
+Therefore, when creating such a flow, its first input should be named 'value', even if it doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+
+Below is a sample of such flow:
 
 <img src="images/settings_masking_flow.png" style="zoom: 80%;" />
 
-Once the Save button is clicked in the **Classifier PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+
+
+Once the Save button is clicked in the **Classifier PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 Click for more details about the [Catalog masking mechanism](11_catalog_masking.md).
 
