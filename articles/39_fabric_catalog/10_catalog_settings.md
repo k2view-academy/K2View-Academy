@@ -110,7 +110,7 @@ The purpose of the Advanced Sequence Settings pop-up window is to allow the sett
 
 Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-The sequences are saved in the same MTable and the masking classifications - **catalog_classification_generators**, with the following difference:
+The sequences are saved in the same MTable as the masking classifications - **catalog_classification_generators**, with the following difference:
 
 * The masking classifications have a category = **enable_masking**.
 * The non-PII sequences have a category = **enable_sequence**.
