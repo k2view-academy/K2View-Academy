@@ -20,7 +20,7 @@ Note that a Catalog artifact can be created for any Catalog version. Each new ar
 
 ### Splitting and Combining Artifacts
 
-Starting from V8.1, the Catalog artifacts can be split into separate files per each data platform and schema of a given Catalog version. The files are then combined into one single **catalog_field_info MTable** (though the files are kept separately in the Project tree). 
+Starting from V8.1, the Catalog artifacts can be split into separate files per each data platform and schema of a given Catalog version. The files' content is then combined into one single **catalog_field_info MTable** in Fabric's memory although the files are saved separately in the Project tree. 
 
 This feature allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Thus, you can copy the artifact files from one project to another and upon deploy they will be combined into one MTable.
 
