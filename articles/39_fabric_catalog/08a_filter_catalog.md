@@ -20,7 +20,7 @@ Click **Clear Filter** to clear the filter and return to the full Catalog view.
 
 ### How to Filter by Additional Properties
 
-To filter by any other property (e.g., by sequenceName), add the property definition to the `properties-info.json` as follows:
+To filter by any other property (e.g., by sequenceName), add the property definition to the **properties-info.json** as follows:
 
 ~~~json
             {
@@ -36,6 +36,10 @@ To filter by any other property (e.g., by sequenceName), add the property defini
 * `"allow_custom_values": true` allows typing custom values rather than selecting an existing value from the drop-down list.
 
 <img src="images/catalog_filter_with_seq.png"  />
+
+
+
+Follow the instructions [here](21_advanced_settings.md#catalog-application-configuration) in order to override the **properties-info.json** on the project level.
 
 
 
