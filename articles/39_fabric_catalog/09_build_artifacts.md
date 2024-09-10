@@ -10,11 +10,11 @@ Pre-requisite for building the Catalog artifact is running the Discovery Job for
 
 Building a Catalog artifact is done by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). A Catalog artifact is a file called **catalog_field_info.csv**. It is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder in the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
 
-The below image is an example of a Catalog artifact:
+The below image is a Catalog artifact example:
 
 <img src="images/catalog_info_mtable.png" style="zoom:75%;" />
 
-The artifact is created for the Catalog version that is displayed in the application. The last column's heading holds the version number, such as **V4** in the case of the above image. This column remains always empty.
+The artifact is created for the Catalog version, which is displayed in the application. The last column's heading holds the version number, **V4** in the above example. This column remains always empty.
 
 Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
 
