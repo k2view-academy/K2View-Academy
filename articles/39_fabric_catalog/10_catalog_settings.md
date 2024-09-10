@@ -106,7 +106,7 @@ Each sequence can have only one definition (row). Note that you cannot create a 
 
 ### Advanced Sequence Settings
 
-The purpose of the Advanced Sequence Settings pop-up window is to allow setting up of additional sequence parameters and it is very similar to the Advanced Masking Settings pop-up. 
+The purpose of the Advanced Sequence Settings pop-up window is to allow the setting up of additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up. 
 
 Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
