@@ -10,7 +10,7 @@ The Catalog has a top bar for navigation, which includes the following areas:
 
   * [Navigator's main area](05_catalog_app.md#navigators-main-area), which displays the Catalog tree.
 
-  * [Menu bar](05_catalog_app.md#menu-bar), which allows to perform various activities. 
+  * [Menu bar](05_catalog_app.md#menu-bar), from where various activities can be performed. 
 
   * [Properties tab](05_catalog_app.md#properties-tab), which displays the properties of the selected node or relation.
 
