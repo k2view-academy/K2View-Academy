@@ -28,7 +28,7 @@ Note that if the catalog_field_info.csv file exists in the Project tree, it shou
 
 The splitting and combining ability is enabled only when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (OFF is this parameter's default setting).
 
-The separate files' name is created based on the following template - ```catalog_field_info___<dataPlatform>_<schema>.csv``` - (containing 3 underscores before the data platform name).
+The separate files' name is created based on the following template - ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 
 
 
