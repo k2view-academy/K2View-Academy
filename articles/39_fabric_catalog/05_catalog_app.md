@@ -128,7 +128,7 @@ When navigating the Catalog tree and clicking a node, the node's path is added t
 
 Having a full node path allows sharing it as a direct link to a specific in-app location, thus saving the time and energy trying to locate a particular node.
 
-The ```<version>``` should be either the word **latest** or **V** with the version number, for example:
+The ```<version>``` should be either the word **latest**, or alternatively the letter **V** followed by the version number, for example:
 
 ~~~
 /app/catalog/latest/CRM_DB/public/customer/customer_id
