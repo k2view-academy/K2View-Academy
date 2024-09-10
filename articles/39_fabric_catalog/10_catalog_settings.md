@@ -60,7 +60,7 @@ Upon invocation of a Catalog Masking actor - e.g., during a table population - t
 
 When selecting an actor or a flow, its respective input parameters are dynamically added below it. 
 
-**Guidelines for Masking flow creation**
+**Guidelines for a Masking Flow Creation**
 
 The first input parameter of a Masking flow (or a custom actor) - selected as a Generator - is considered as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden and is not dynamically added. This is applicable only for an input parameter of Link or External type. 
 
@@ -108,7 +108,7 @@ Each sequence can have only one definition (row). Note that you cannot create a 
 
 The purpose of the Advanced Sequence Settings pop-up window is to allow setting up of additional sequence parameters and it is very similar to the Advanced Masking Settings pop-up. 
 
-Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 The sequences are saved in the same MTable and the masking classifications - **catalog_classification_generators**, with the following difference:
 
