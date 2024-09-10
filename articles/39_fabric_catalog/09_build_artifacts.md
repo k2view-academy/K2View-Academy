@@ -26,7 +26,7 @@ This ability allows to combine separate artifacts, created in different projects
 
 Note that if the catalog_field_info.csv file exists in the Project tree, it should be manually deleted.
 
-The split and combine is only enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini is set to ON (by default, it’s set to OFF). 
+The splitting and combining ability is enabled only when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (OFF is this parameter's default setting).
 
 The name of separate files is: ```catalog_field_info___<dataPlatform>_<schema>.csv``` (with 3 underscore).
 
