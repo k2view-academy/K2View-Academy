@@ -14,7 +14,7 @@ The Classification value can be set to a custom value, which doesn't exist in a 
 
 <img src="images/catalog_filter.png"  />
 
-Click **Apply** to apply the filter on the Catalog. The pop-up closes and the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. If the Data Platform has been expanded before setting the filter, irrelevant Datasets are filtered out. Otherwise, irrelevant Datasets are filtered upon the expand of each Data Platform. 
+Click **Apply** to apply the filter on the Catalog. The pop-up window then closes, and the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. If the Data Platform has been expanded prior to setting the filter, irrelevant Datasets are filtered out. Otherwise, the irrelevant Datasets are filtered out upon expansion of each Data Platform.
 
 Click **Clear Filter** to clear the filter and return to the full Catalog view.
 
