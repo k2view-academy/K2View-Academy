@@ -28,7 +28,7 @@ The Catalog Navigator's main area enables navigation between different hierarchy
 
 The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
-The Catalog Legend, which presents the 3 node types with their respective icons, allows to hide or unhide all the elements of the same type.
+The Catalog's Legend, which presents the 3 node types with their respective icons, allows to hide or unhide all the elements of the same type.
 
 <img src="images/catalog_app.png" style="zoom:75%;" />
 
@@ -53,7 +53,7 @@ The context menu allows performing the following actions:
   * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on a selected node can either expand or collapse it.
 
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform; available in V7.2.1.
+* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
 
 * **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
