@@ -24,6 +24,8 @@ Starting from V8.1, the Catalog artifacts can be split into separate files per e
 
 This ability allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
 
+Note that if the catalog_field_info.csv file exists in the Project tree, it should be manually deleted.
+
 The split and combine is only enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini is set to ON (by default, it’s set to OFF). 
 
 The name of separate files is: ```catalog_field_info___<dataPlatform>_<schema>.csv``` (with 3 underscore).
