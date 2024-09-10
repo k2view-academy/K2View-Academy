@@ -18,7 +18,7 @@ Click **Apply** to apply the filter on the Catalog. The pop-up window then close
 
 Click **Clear Filter** to clear the filter and return to the full Catalog view.
 
-### How Do I Filter by Additional Properties
+### How to Filter by Additional Properties
 
 To filter by any other property (e.g., by sequenceName), add the property definition to the `properties-info.json` as follows:
 
@@ -32,8 +32,8 @@ To filter by any other property (e.g., by sequenceName), add the property defini
             }
 ~~~
 
-* `"filterable": true` adds the property to the Catalog Filter pop-up and allows filtering by it.
-* `"allow_custom_values": true` allows typing custom values in the value drop-down list.
+* `"filterable": true` adds the property to the Catalog Filter pop-up window and allows filtering by it.
+* `"allow_custom_values": true` allows typing custom values in the value drop-down list rather than selecting an existing value from the drop-down list.
 
 <img src="images/catalog_filter_with_seq.png"  />
 
