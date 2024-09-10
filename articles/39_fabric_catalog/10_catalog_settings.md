@@ -76,7 +76,7 @@ The purpose of the Advanced Masking Settings pop-up window is to allow setting u
 
 <img src="images/settings_masking_advanced.png" />
 
-The Advanced Masking Settings are defined per each Classification using the above pop-up window. 
+The Advanced Masking Settings are defined per each Classification by using the above pop-up window.
 
 The **Submit** button in this window aggregates the data in the application’s client side until saving is done using the **Save** button in the **Classifier PII & Masking Setup** tab. 
 
