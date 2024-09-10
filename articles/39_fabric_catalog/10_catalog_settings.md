@@ -84,9 +84,9 @@ Upon clicking the **Save** button in the **Classifier PII & Masking Setup** tab,
 
 ## Classifier Sequence Setup
 
-Starting from V8.1, sequences can be setup via the Catalog. 
+Starting from V8.1, sequences can be set up via the Catalog. 
 
-The **Classifier Sequence Setup** tab allows to setup the sequences that can be used in a project, e.g. as part of a TDM implementation. This tab doesn't have a product built-in setup because the sequences names and definitions are always project-specific. 
+The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project, for example, as part of a TDM implementation. This tab doesn't have a product built-in setup because the sequence names and definitions are always project-specific. 
 
 Click **Add Record** button to create a sequence and populate a **Sequence Name**,  **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
