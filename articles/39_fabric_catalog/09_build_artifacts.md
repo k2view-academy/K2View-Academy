@@ -16,7 +16,7 @@ The below image is a Catalog artifact example:
 
 The artifact is created for the Catalog version, which is displayed in the application. The last column's heading holds the version number, **V4** in the above example. This column remains always empty.
 
-Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the previous one in the Project tree.
+Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the existing artifact in the Project tree.
 
 ### Split and Combine Artifacts
 
