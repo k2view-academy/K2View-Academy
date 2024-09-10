@@ -99,7 +99,7 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 * **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
 * **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
 * **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
-* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. Centered (default), vertical or horizontal layouts are supported.
+* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. A centered layout is the default, and vertical or horizontal layouts are supported.
 * **Zoom in / out**, used for adjusting the zoom of the view.
 
 ### Properties Tab
