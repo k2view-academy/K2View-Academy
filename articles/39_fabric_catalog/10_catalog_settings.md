@@ -86,9 +86,9 @@ Upon clicking the **Save** button in the **Classifier PII & Masking Setup** tab,
 
 Starting from V8.1, sequences can be set up via the Catalog. 
 
-The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project, for example, as part of a TDM implementation. This tab doesn't have a product built-in setup because the sequence names and definitions are always project-specific. 
+The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project, for example, as part of a TDM implementation. This tab doesn't have a product built-in setup as the sequence names and definitions are always project-specific. 
 
-Click **Add Record** button to create a sequence and populate a **Sequence Name**,  **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+Click the **Add Record** button to create a sequence and populate a **Sequence Name**, **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
 <img src="images/settings_seq.png" />
 
@@ -98,7 +98,7 @@ Each sequence can have only one definition (row). Note that you cannot create a 
 
 The purpose of the Advanced Sequence Settings pop-up window is to allow setting up of additional sequence parameters and it is very similar to the Advanced Masking Settings pop-up. 
 
-Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and  **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in the Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 The sequences are saved in the same MTable and the masking classifications - **catalog_classification_generators**, with the following difference:
 
