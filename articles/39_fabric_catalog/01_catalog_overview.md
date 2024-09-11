@@ -10,7 +10,7 @@ Data Discovery is a process that can help companies cope with the above-mentione
 
 Fabric's Discovery and Catalog solution provides an insight into the Fabric interfaces, starting with the RDBMS interface type. The Discovery process includes the following steps:
 
-- Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the *neo4j* GraphDB. 
+- Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the Neo4j Graph DB. 
 - Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
 - Auto-profiling of the data model elements by both the metadata (field name) and data (field value) to identify PII information and classify it based on pre-defined categories. The auto-profiling process uses a set of pre-defined rules, which can be modified on the project level.
 
