@@ -10,9 +10,9 @@ This article describes the steps to be taken in order to set up the Fabric Catal
 * Catalog configuration setup - performed once per project.
 
 
-## Installation of neo4j
+## Installation of Neo4j
 
-Install the neo4j GraphDB as described [here](99_neo4j_windows_installation_guide.md).
+Install the Neo4j Graph DB as described [here](99_neo4j_windows_installation_guide.md).
 
 
 
