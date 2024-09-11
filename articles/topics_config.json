@@ -364,7 +364,7 @@
 			"comm display name": "Mountaineer",
 			"comm display text": "The Mountaineer Champion program for advanced developers.",
 			"comm icon": "../community/mountaineer/images/mountaineer.png",
-			"visible":false,
+			"visible":true,
 			"path": "../community/mountaineer",
 			"view all link": "../community/mountaineer/README.html",
 			"view all text": "Click to view all"

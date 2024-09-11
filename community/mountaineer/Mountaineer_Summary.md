@@ -2,7 +2,7 @@
 
 <img src="images/alpinist1-c.png" style="zoom: 70%;" />
 
-### K2alpinist Champion Academy
+### K2alpinist Mountaineer Academy
 
 **K2view Product Champion Academy** offers comprehensive technical training and best practices, enabling members to lead K2view deployments and associated technologies effectively. 
 
