@@ -1,6 +1,6 @@
 # Catalog Versioning
 
-The Catalog supports **versioning**, which is the ability to create a new Catalog version in the *neo4j* Graph DB every time the Discovery process runs and finds differences when comparing with the previous version.
+The Catalog supports **versioning**, which is the ability to create a new Catalog version in the Neo4j Graph DB every time the Discovery process runs and finds differences when comparing with the previous version.
 
 A user can view each version separately or check the differences between 2 selected versions using the Catalog application, as described below.
 
