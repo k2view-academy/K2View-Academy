@@ -6,7 +6,7 @@
 
 This article describes the steps to be taken in order to set up the Fabric Catalog when using the Desktop Studio V8.0 and onwards:
 
-* Installation of neo4j - performed once per Studio environment. 
+* Installation of Neo4j - performed once per Studio environment. 
 * Catalog configuration setup - performed once per project.
 
 
