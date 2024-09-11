@@ -50,7 +50,7 @@ Once the Discovery job execution on a data source has been completed, the messag
 
 You can view the discovery results in the Catalog by clicking the button in the message.
 
-Upon the Discovery job completion, the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the Discovery schema from the *neo4j* rather than from the data source. Note that the tab should be refreshed.
+Upon the Discovery job completion, the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the Discovery schema from the Neo4j rather than from the data source. Note that the tab should be refreshed.
 
 To view a data source element in the Catalog application, do the following:
 
