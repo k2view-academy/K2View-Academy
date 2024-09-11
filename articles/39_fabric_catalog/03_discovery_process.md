@@ -10,7 +10,7 @@ The K2view Discovery process is depicted in the below diagram and it includes th
   * Determining whether a field should be marked as PII.
 
 
-* Upon completion of the Plugin Framework execution, the Catalog schema is saved into the *neo4j* Graph DB and it can be viewed via the Catalog application.
+* Upon completion of the Plugin Framework execution, the Catalog schema is saved into the Neo4j Graph DB and it can be viewed via the Catalog application.
 
 The Catalog supports the following actions:
 
