@@ -45,7 +45,7 @@ Each **Classification** in this tab is unique, and it includes 2 attributes:
 
 * **PII** - indicates whether the Classification is considered Personally Identifiable Information. 
 * **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) for generating masking values. The generator runs in the case of either:
-  - Masking
+  - Data masking
   - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation
 
 In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab since both classifications & sequences are saved in the same MTable.
@@ -60,11 +60,11 @@ Upon invocation of a Catalog Masking actor - e.g., during a table population - t
 
 When selecting an actor or a flow, its respective input parameters are dynamically added below it. 
 
-**Guidelines for a Masking Flow Creation**
+**Guidelines for Creating a Masking Flow**
 
-The first input parameter of a Masking flow (or a custom actor) - selected as a Generator - is considered as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden and is not dynamically added. This is applicable only for an input parameter of Link or External type. 
+The first input parameter of a masking flow (or a custom actor) - selected as a Generator - is considered as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden (and not dynamically added) when a masking flow is selected in the Masking setup screen above. This is applicable only for an input parameter of Link or External type. 
 
-Therefore, when creating such a flow, its first input should be named 'value', even if it doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+Therefore, when creating such a flow, its first input should be named 'value', even if this flow doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
 
 Below is a sample of such flow:
 
@@ -94,9 +94,11 @@ Upon clicking the **Save** button in the **Classifier PII & Masking Setup** tab,
 
 ## Classifier Sequence Setup
 
-Starting from V8.1, sequences can be set up via the Catalog. 
+Starting from V8.1, the Classifier Sequence Setup tab was added to the Catalog Settings. 
 
-The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project, for example, as part of a TDM implementation. This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
+The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project as part of the masking flow (note that usage of the sequences will be introduced in the next Fabric version). 
+
+This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
 
 Click the **Add Record +** button to create a sequence, and populate a **Sequence Name**, **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 

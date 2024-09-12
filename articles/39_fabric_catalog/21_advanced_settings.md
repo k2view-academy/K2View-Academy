@@ -28,7 +28,7 @@ The file is located in ```fabric/staticWeb/catalog``` folder.
 
 <web>
 
-In order to perform the project-level overrides in the **properties-info.JSON** file:
+In order to perform the project-level overrides in the **properties-info.json** file:
 
 * Create a **catalog** folder under the **Web** folder of the **Web Services** LU and copy the file into it. 
 
