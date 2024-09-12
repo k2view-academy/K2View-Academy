@@ -51,6 +51,20 @@ The maximum number of days that a tester can set to a retention period in the ta
 
   Click [here](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) for more information about the data generation implementation.
 
+## Parameter Coupling Mode
+
+TDM 9.1 has added a new capability - [parameters coupling](/articles/TDM/tdm_implementation/07b_param_implementation_param_coupling.md). The TDM can work either with the regular mode of parameters or with the new mode  of parameter coupling.
+
+The parameters' handling mode in set in the TDM_GENERAL_PARAMETERS in the PARAMS_COUPLING parameter name. The default value of this parameter is **false**. If you whish to work with the parameters coupling mode, update this parameter:
+
+```sql
+update tdm_general_parameters
+set param_value=true
+where param_name='PARAMS_COUPLING';
+```
+
+
+
 ## TDM Portal General Parameters
 
 - The [TDM portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) param_name is **tdm_gui_params**. The value of this parameter includes a list of the following parameters:
@@ -93,6 +107,6 @@ The maximum number of days that a tester can set to a retention period in the ta
       where param_name = 'tdm_gui_params'; 
     ```
     
-   
+  
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
