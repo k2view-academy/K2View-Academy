@@ -127,7 +127,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>RefList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Defines the list of available tables related to a Business entity, a list that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>.</p>
+<p>Defines the list of available tables related to a Business entity, a list that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>. In addition it can be used in order to set different interface/schema/table name between the source and target environments for table level </p>
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
@@ -135,9 +135,9 @@ The following MTables have been added to the **References** in the TDM library. 
 </td>
 </tr>
 <tr>
-<td><h5>TableLevelInterfaces</h5></td>
-<td>Defines DB interfaces that must be excluded from a TDM task for tables such as the TDM DB, or DBs that require special handling when creating a TDM task for tables.</td>
-<td>A separate record must be set for each DB. 
+<td><h5>TableLevelInterfaces and TableLevelDefinitions</h5></td>
+<td>These MTables defines special handling for task with tables.</td>
+<td>A separate record must be set for each DB or table. 
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p>  
 </td>    
 </tr>    
@@ -179,13 +179,25 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>LuParams</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Translation for the population of the LU_PARAMS table.&nbsp;</p>
+<p>This table is used for the population business parameters.&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
 <p>The COLUMN_NAME is populated by the name of the parameter and the SQL is populated by the SQL query that gets the values for the defined parameter.</p>
 <p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
 </td>
-</tr> 
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p><h5>LuParamsMapping</p>
+</td>
+<td valign="top" width="300pxl">
+<p>This table is used for the population business parameters when the <stong>parameters coupling mode</stong> is set.&nbsp;</p>
+</td>
+<td valign="top" width="400pxl">
+<p>Map each parameter to an LU table's field.</p>
+<p>Click for more information about <a href="/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md">handling parameters</a>. </p>
+</td>
+</tr>     
 <tr>
     <td><h5>AI configuration tables</h5></td>
     <td>Configration settings for AI-based data generation.</td>
@@ -193,6 +205,7 @@ The following MTables have been added to the **References** in the TDM library. 
     </tr>    
 </tbody>
 </table>
+
 
 
 
