@@ -55,7 +55,7 @@ The TDM extract task execution exports the LU tables to the TDM DB. A dedicated 
 
 ### TDM_PARAMS_DISTINCT_VALUES
 
-In addition, the TDM task execution process populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) TDM DB table with the parameters list and the valid values for [combo parameters].
+In addition, the TDM task execution process populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) TDM DB table with the parameters list and the valid values for [combo parameters](07_tdm_implementation_parameters_handling.md#optional---update-the-maximum-number-of-values-for-combo-parameters).
 
 This table is used for getting the list of available parameters and their valid values in the task.
 
