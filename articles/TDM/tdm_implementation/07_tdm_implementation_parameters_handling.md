@@ -31,7 +31,7 @@ Each mode requires its own implementation. See the implementation guidelines for
 
 [Parameter's Handling -  Regular Mode](07a_param_implementation_regular_mode.md)
 
-[Parameters Handling - Params Coupling Mode]
+[Parameters Handling - Params Coupling Mode](07b_param_implementation_param_coupling.md)
 
 - 
 
