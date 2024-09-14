@@ -2,7 +2,11 @@
 
 Fabric System Database is used by Fabric internal processes to monitor, secure, control, configure, audit and operate the application.
 
-Fabric supports several types of Databases as System Database storage, as described below.
+
+
+## System Database Types
+
+Fabric supports several types of Databases as System Database, as described below.
 
 **NoSQL distributed database, such as Cassandra DB**
 
@@ -17,6 +21,8 @@ Fabric supports several types of Databases as System Database storage, as descri
 - Cons:
   - Consistency
   - Not easy to operate and maintain
+
+
 
 **Relational database, such as PostgreSQL**
 
@@ -34,23 +40,42 @@ Fabric supports several types of Databases as System Database storage, as descri
 - Pros:
   - Development and single-node environments
 
-Fabric uses the Cassandra DB as its default system management database. 
+
 
 Fabric creates several keyspaces or schemas (in case of SQLite or PostgreSQL) for its operation, where each starts with the **k2** prefix.
 
 Each deployed LU creates an additional **k2view_[LU Name]** keyspace or schema, such as **k2view_customer**.
 
-**Notes:**
-
--  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace or schema name. For example, if the cluster_id is set to crm1, the created keyspace or schema is **k2view_customer_crm1**.
-- When a Fabric project opens in the Fabric Studio, it concatenates the project name to the schema name.
-- A <strong>k2view_k2_ws</strong> keyspace or schema is created for the deployed WS.
 
 
+> **Notes:**
+>
+> * When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace or schema name. For example, if the cluster_id is set to crm1, the created keyspace or schema is **k2view_customer_crm1**.
+> * When a Fabric project opens in the Fabric Studio, it concatenates the project name to the schema name.
+> * A <strong>k2view_k2_ws</strong> keyspace or schema is created for the deployed WS.
+> * When Fabric is configured to run a System DB type other than Cassandra - an internal product job runs, scans the tables to be cleaned and cleans them, using TTL concept. The definition of each table's TTL value is tracked in the k2_table_level_ttl table.
 
-When Fabric is configured to run a System DB type - other than Cassandra - an internal product job runs, scans the tables to be cleaned and cleans them, using TTL concept. The definition of each table's TTL value is tracked in the k2_table_level_ttl table.
 
-### List of Fabric-Related System Keyspaces or Schemas 
+
+Fabric uses the Cassandra DB as its default system management database. 
+
+When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the following should be set in config.ini:
+
+* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as System DB, then you can ignore this section.
+
+* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as System DB, 'fabric' may also be used as an authenticator.
+
+   
+
+The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to SYSTEM_DB. This means that by default, the Fabric storage type is the same as the Fabric System DB. You can either update the [system_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
+
+
+
+The credentials of the Fabric system database are configured at the config.ini and being encrypted by Fabric. You can also use one of the integrated [Secret Managers](/articles/26_fabric_security/04a_secret_manager.md) to store them.
+
+
+
+## List of Fabric-Related System Keyspaces or Schemas 
 
 The following table lists the keyspaces or schemas created by Fabric:
 
@@ -320,22 +345,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 </tbody>
 </table>
-
-
-
 [Click here for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
-
-By default, the system DB is set to Cassandra. 
-
-When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the following should be set in config.ini:
-
-* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as System DB, then you can ignore this section.
-
-* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as System DB, 'fabric' may also be used as an authenticator.
-
-   
-
-The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set to SYSTEM_DB. This means that by default, the Fabric storage type is the same as the Fabric System DB. You can either update the [system_db] settings only, impacting both the Storage and System DB types together, or define each one of them to have a different DB type.
 
 
 

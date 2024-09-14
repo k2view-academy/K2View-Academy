@@ -1,6 +1,6 @@
 # **Secrets Management Integration** 
 
-Fabric supports integration with Secrets Management services, with the intent that secrets - like passwords, used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) that enable communication to external systems - will not be stored in Fabric itself. (For information on how can secrets be securely stored in Fabric - read [here](/articles/26_fabric_security/04_fabric_interfaces_security.md)).
+Fabric supports integration with Secrets Management services, with the intent that secrets - like passwords, used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) that enable communication to external systems - will not be stored in Fabric itself. (For information on how can secrets be securely stored in Fabric - read [here](/articles/26_fabric_security/04_fabric_interfaces_security.md)).
 
 Secrets Management services are tools aimed for securely storing, managing, accessing and auditing sensitive information such as passwords, API keys, and other credentials, across the organization. Features of Secrets Management services include encryption, access controls, auditing and automatic rotation of secrets.
 
@@ -19,6 +19,7 @@ Supported Secrets Management providers are:
 - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
 - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/)
 - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
+- [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager)
 
 
 
@@ -56,6 +57,8 @@ properties:
 * ACCESS_KEY_ID
 * SECRET_ACCESS_KEY
 * REGION
+
+Authentication and authorization can be done by the service account that the server is associated with. This is an alternative to usage of Access ID and Access Key.
 
 
 
@@ -122,7 +125,7 @@ Authentication is done by sending an `Authorization: Bearer` header, either API 
 
 Other parameters:
 
-* APP_ID
+* APP_ID (can be set at config as well as at interface, for more granularity, when needed)
 * FOLDER, optional (default is Root. Can be specified or override per secret)
 * SAFE_NAME, optional (can be specified or override per secret)
 * SERVER_IP, will be used in the URL parameter
@@ -130,6 +133,28 @@ Other parameters:
 * URL, Expected format: https://{SERVER_IP}/AIMWebService/api/Accounts
 
 
+
+#### Google Cloud Secret Manager
+
+section name: [encryption_gcp_sm]
+
+Authentication is done by a credentials file:
+
+1. In the Google Cloud console
+   * Select **IAM & admin** > **Service account**.
+   * Find the service account you want to use
+   * Open your service account's Actions ⋮ menu, then select **Create key**.
+   * In the resulting **Create private key** dialog, select the **JSON** option, create the key, and download it.
+2. Locate the file at the Fabric server.
+3. Set the CREDENTIAL_FILE parameter, providing the path into the file.  
+
+Other parameters:
+
+* PROJECT_ID
+
+* LOCATION_ID, Optional - in case you use regional secret manager.
+
+  
 
 ### Interface Connection Details Settings
 
@@ -142,7 +167,9 @@ For example: ${secretmanager:mysql-password}
 
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
-* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the "&" concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password}"
+* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the "&" concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
+
+  >  Mentioning AppID can be added when more granularity, rather than general one which can be set at the config.in.
 
 
 
