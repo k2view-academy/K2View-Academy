@@ -156,7 +156,7 @@ Other parameters:
 
   
 
-### Interface Connection Details Settings
+### Interface Connection Details' Settings
 
 
 Marking an interface connection details property, to be taken from the Secrets Management provider, you shall use this pattern in its value:
