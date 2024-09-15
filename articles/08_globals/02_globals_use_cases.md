@@ -2,28 +2,34 @@
 
 Globals are predefined global variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. 
 
-A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table<studio> or Parser</studio>) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)).
+<web>
+
+A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)).
+
+</web>
 
 <studio>
+
+A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table or Parser) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md)).
 
 ### How Do I Add a Global to a Table Population?
 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**]. 
-2.	Click **Tables** > [**Table Name**] > [**Population Name**] to open the existing population.
-3.	Click the **Objects tab** in the right panel of the Table Population working area.
-4.	Click **Globals** and then click the **global** in the **Globals list**.
-5.	Drag the **global** into the working area.
-6.	Connect the **global** to the **table column**.
+  2.Click **Tables** > [**Table Name**] > [**Population Name**] to open the existing population.
+  3.Click the **Objects tab** in the right panel of the Table Population working area.
+  4.Click **Globals** and then click the **global** in the **Globals list**.
+  5.Drag the **global** into the working area.
+  6.Connect the **global** to the **table column**.
 
 [Click for more information about Globals – Code Examples](/articles/08_globals/04_globals_code_examples.md).
 
 ### How Do I Add a Global to a Parser Map?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**].
-2.	Click **Parsers** > [**Parser Map**] to open the existing parser map.
-3.	Click the **Objects tab** in the right panel of the Parser Map working area.
-4.	Click **Globals** and select the **global** in the **Globals list**.
-5.	Drag the **global** into the working area.
-6.	Connect the **global** to the **table column**.
+  2.Click **Parsers** > [**Parser Map**] to open the existing parser map.
+  3.Click the **Objects tab** in the right panel of the Parser Map working area.
+  4.Click **Globals** and select the **global** in the **Globals list**.
+  5.Drag the **global** into the working area.
+  6.Connect the **global** to the **table column**.
 
 </studio>
 
@@ -38,11 +44,13 @@ import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*;
 ~~~
 
 
-When opening a function or a Web Service in Fabric, a list of all Globals is displayed in the **Objects tab** in the left panel of the window. 
+
 * Globals that are defined in an LU or in Shared Objects are available for use in the LU functions of the same LU.
 * Globals that are defined in Shared Objects are available for use in Web Services and in the LU functions of all LUs.
 
 <studio>
+
+When opening a function or a Web Service in Fabric, a list of all Globals is displayed in the **Objects tab** in the left panel of the window. 
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
