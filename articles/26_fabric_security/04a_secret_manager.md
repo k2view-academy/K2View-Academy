@@ -99,7 +99,7 @@ Fabric supports one of the following authentication methods for Azure Key Vault:
  3. CLIENT_ID + USER_NAME + PASSWORD + TENANT_ID
  4. When Fabric is hosted on an Azure server or when Azure [CLI](https://learn.microsoft.com/en-us/cli/azure/) agent is installed and activated, Fabric is already considered as being authenticated, without providing further authentication credentials.
 
-section name: [encryption_azure_sm]
+Section name: [encryption_azure_sm]
 
 - KEY_VAULT_NAME - this property is required for any of the above 4 authentication method options
 - CLIENT_ID
@@ -115,7 +115,7 @@ section name: [encryption_azure_sm]
 
 #### CyberArk CCP
 
-section name: [encryption_cyberark_sm]
+Section name: [encryption_cyberark_sm]
 
 Authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using HTTP basic authentication method:
 
@@ -130,7 +130,7 @@ Other parameters:
 * SAFE_NAME, optional (can be specified or override per secret)
 * SERVER_IP, will be used in the URL parameter
 * TIMEOUT (default is 5000 ms)
-* URL, Expected format: https://{SERVER_IP}/AIMWebService/api/Accounts
+* URL, expected format: https://{SERVER_IP}/AIMWebService/api/Accounts
 
 
 
