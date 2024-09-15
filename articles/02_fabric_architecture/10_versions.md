@@ -19,7 +19,7 @@ The below table displays the various Fabric versions, released date and end of l
             <td>September 15, 2024</td>
             <td></td>
             <td></td>
-            <td>195</td>
+            <td>199</td>
             <td></td>
         </tr>
         <tr>
