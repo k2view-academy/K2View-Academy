@@ -1,6 +1,6 @@
 # TDM Parameters - Regular Mode - Implementation Guidelines
 
-Prerequisite: verify that the LU_PARAMS is attached to the LU Schema.
+Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
 
 ## Optional - Adding Parameters for Logical Unit
 
