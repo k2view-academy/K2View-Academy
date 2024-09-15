@@ -98,7 +98,7 @@ Prerequisite: verify that the LU_PARAMS is attached to the LU Schema.
 
    
 
-4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams** function. This function runs the LU's SQL queries in the **LuParams**, creates the LU parameters table in the TDM DB if needed, and populates the LU parameters table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams** function. This function runs the LU's SQL queries in the **LuParams**, creates the `<LU>_params` table in the TDM DB if needed, and populates the `<LU>_params` table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
    - Line number = {"(722) 404-4222","+1 (372) 682-2450,"+1 (799) 979-1233","883-486-7523","1394031132"}
 
