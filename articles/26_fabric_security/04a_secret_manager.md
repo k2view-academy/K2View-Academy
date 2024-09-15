@@ -169,14 +169,14 @@ For example: ${secretmanager:mysql-password}
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
 * For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the "&" concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
 
-  >  Mentioning AppID can be added when more granularity, rather than general one which can be set at the config.ini.
+  >  Mentioning AppID can be added when more granularity, rather than general one which can be set in the config.ini file.
 
 
 
 > Notes: 
 >
 > * Each Secrets Management provider has its own pattern, usually by hierarchy; you should follow these patterns. 
-> * The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use  Secrets Management services, while others, like local testing, may not. 
+> * The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, while others, like local testing, may not. 
 > * You can use the *Test connection* option to verify that the connection settings are OK, also when the Secrets Management service is activated.
 > * The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
 
