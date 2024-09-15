@@ -2,7 +2,11 @@
 
 The **Scheduler** tab in the task's **Advanced settings** enables setting a **scheduled execution**: 
 
-- Sets the automatic execution of a task via the TDM Scheduler process on predefined intervals.  For example, execute the task every Monday at 2:15 AM.
+- Check the **Set scheduling parameters** checkbox in order to define an automatic execution of a task via the TDM Scheduler process on predefined intervals. 
+
+![scheduling](images/task_scheduling_parameters_example2.png)
+
+- Sets the timing interval for the automatic scheduling. It is also possible to define an end date for the automatic scheduling.  For example, execute the task every Monday at 2:15 AM until the end of 2024.
 
 ![execution timing example1](images/task_scheduling_parameters_example1.png)
 
