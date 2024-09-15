@@ -23,7 +23,7 @@ Supported Secrets Management providers are:
 
 
 
-## How does it work
+## How does it Work
 
 1. The customer's security team administrator creates a set of credentials on either the database or a similarly secured resource server, and then provisions them as secrets in the Secrets Management provider. The latter encrypts and stores the credentials within the secrets.
 2. The administrator has to grant Fabric (client application) with permissions to approach these secrets.
