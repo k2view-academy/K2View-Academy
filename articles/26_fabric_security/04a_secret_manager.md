@@ -74,7 +74,7 @@ Fabric supports 2 authentication methods:
 
   When using this method, Fabric accesses the Vault URL with the token as the auth credentials, in order to get the secret.
 
-* [AppRole](https://developer.hashicorp.com/vault/docs/auth/approle), which is based on the role that Fabric is associated to at the Vault.
+* [AppRole](https://developer.hashicorp.com/vault/docs/auth/approle), which is based on the role that Fabric is associated to in the Vault.
 
   When using this method, Fabric first accesses the *approle* URL to dynamically get a token, and then uses this token as the auth credentials, in order to get the secret. For this method you shall specify the following attributes:
 
