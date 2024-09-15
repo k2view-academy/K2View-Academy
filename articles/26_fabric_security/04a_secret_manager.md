@@ -66,7 +66,7 @@ Authentication and authorization can be done by the service account that the ser
 
 Section name: [encryption_hashicorp_sm]
 
-The authentication within HashiCorp Vault is done by tokens that can be used directly or by using one of their other [auth methods](https://developer.hashicorp.com/vault/docs/concepts/auth), in which case the token is dynamically generated.
+The authentication within HashiCorp Vault is done either by tokens that can be used directly or by using one of their other [auth methods](https://developer.hashicorp.com/vault/docs/concepts/auth), in which case the token is dynamically generated.
 
 Fabric supports 2 authentication methods:
 
