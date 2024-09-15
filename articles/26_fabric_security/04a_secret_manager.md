@@ -152,7 +152,7 @@ Other parameters:
 
 * PROJECT_ID
 
-* LOCATION_ID, Optional - in case you use regional secret manager.
+* LOCATION_ID, Optional - in case you use a regional secret manager.
 
   
 
@@ -167,7 +167,7 @@ For example: ${secretmanager:mysql-password}
 
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
-* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the "&" concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
+* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the '&' concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
 
   >  Mentioning AppID can be added when more granularity, rather than general one which can be set in the config.ini file.
 
