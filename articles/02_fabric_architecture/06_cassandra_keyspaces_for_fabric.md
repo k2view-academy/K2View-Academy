@@ -75,7 +75,7 @@ The credentials of the Fabric system database are configured in the config.ini a
 
 
 
-## List of Fabric-Related System Keyspaces or Schemas 
+## List of Fabric-related System Keyspaces or Schemas 
 
 The following table lists the keyspaces or schemas created by Fabric:
 
