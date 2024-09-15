@@ -3,10 +3,9 @@
 TDM enables the user to provision tables in a TDM task. The user can select 1 of the following 2 options:
 
 1. Business entities and referential data. The included tables are related to the task's business entities and are needed in the testing environment.
-2. Tables - TDM 9.0 enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
+2. Tables - TDM 9.x enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
 
 The user can store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
-Note that the table and DB schema names must be identical in the source and target DBs.
 
 Each table is stored in Fabric as a separate LUI in the **TDM_TableLevel** LU, and each execution is stored as a separate LUI (a separate data snapshot). For example: running 2 executions of a task that extract Product_Mapping table. Each execution creates a separate LUI (snapshot).
 
@@ -44,9 +43,9 @@ Each LUI contains the following tables:
 
 Notes: 
 
-- Previous TDM versions saved the tables into the TDM_Reference LU. This table is no longer in use from TDM 9.0 onwards, and the tables must be re-extracted into the new LU - TDM_TableLevel. 
+- Previous TDM versions saved the tables into the TDM_Reference LU. This LU is no longer in use from TDM 9.0 onwards, and the tables must be re-extracted into the new LU - TDM_TableLevel. 
 
-A TDM implementation has the following steps:
+A TDM table-level implementation has the following steps:
 
 ## Step 1 - Deploy the TDM_TableLevel LU
 
@@ -77,10 +76,6 @@ Import and deploy the TDM_TableLevel LU.
 - **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
-
-- **count_flow** - an optional setting. Populate this setting to run a project's Broadway flow to get the count (number of records) in the source or target.
-
-  
 
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
@@ -153,6 +148,8 @@ The following settings should be populated for each record:
 - **load_flow** - populated with the load flow.
 
 ### Customized Table's Flows - Implementation Guidelines
+
+The customized table's flows are Broadway flows. These flows must be added under the Shared Objects or the TDM_TableLevel LU in the project tree.
 
 #### Extract Flow
 
