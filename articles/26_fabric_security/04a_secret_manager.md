@@ -136,16 +136,16 @@ Other parameters:
 
 #### Google Cloud Secret Manager
 
-section name: [encryption_gcp_sm]
+Section name: [encryption_gcp_sm]
 
 Authentication is done by a credentials file:
 
 1. In the Google Cloud console
    * Select **IAM & admin** > **Service account**.
-   * Find the service account you want to use
+   * Find the service account you want to use.
    * Open your service account's Actions ⋮ menu, then select **Create key**.
    * In the resulting **Create private key** dialog, select the **JSON** option, create the key, and download it.
-2. Locate the file at the Fabric server.
+2. Locate the file in the Fabric server.
 3. Set the CREDENTIAL_FILE parameter, providing the path into the file.  
 
 Other parameters:
