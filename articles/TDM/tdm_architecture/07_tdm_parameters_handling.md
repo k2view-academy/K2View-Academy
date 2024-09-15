@@ -1,4 +1,4 @@
-# TDM Parameters' Handling
+# TDM Parameter Handling
 
 The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a task. 
 
