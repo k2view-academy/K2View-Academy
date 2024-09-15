@@ -61,9 +61,9 @@ Fabric uses the Cassandra DB as its default system management database.
 
 When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the following should be set in config.ini:
 
-* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as System DB, then you can ignore this section.
+* Populate the parameter values included in `[system_db]` section, which introduced in Fabric V7.2. If you use Cassandra as a System DB, then you can ignore this section.
 
-* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra') . For more information about `SERVER_AUTHENTICATOR` config options read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as System DB, 'fabric' may also be used as an authenticator.
+* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra'). For more information about `SERVER_AUTHENTICATOR` config options, read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as System DB, 'fabric' may also be used as an authenticator.
 
    
 
@@ -71,7 +71,7 @@ The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set t
 
 
 
-The credentials of the Fabric system database are configured at the config.ini and being encrypted by Fabric. You can also use one of the integrated [Secret Managers](/articles/26_fabric_security/04a_secret_manager.md) to store them.
+The credentials of the Fabric system database are configured in the config.ini and are being encrypted by Fabric. You can also use one of the integrated [Secret Managers](/articles/26_fabric_security/04a_secret_manager.md) to store them.
 
 
 
