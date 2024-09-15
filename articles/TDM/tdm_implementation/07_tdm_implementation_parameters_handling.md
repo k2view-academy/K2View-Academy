@@ -27,7 +27,7 @@ The parameters' mode is set in the [TDM_GENERAL_PARAMETER](/articles/TDM/tdm_con
 
 ## TDM Parameters - Implementation Guidelines
 
-Each mode requires its own implementation. See the implementation guidelines for each mode:
+Each mode requires its own implementation. Read the implementation guidelines for each mode:
 
 [Parameter's Handling -  Regular Mode](07a_param_implementation_regular_mode.md)
 
