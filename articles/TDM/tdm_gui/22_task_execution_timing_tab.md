@@ -12,7 +12,7 @@ The **Scheduler** tab in the task's **Advanced settings** enables setting a **sc
 
 Notes:
 
-- Testers can set an automatic scheduling for a task only when their [TDM Environment permission set](10_environment_roles_tab.md) has permissions to select this method for the target environment. 
+- Testers can set an automatic scheduling for a task only when their [TDM Environment permission set](10_environment_roles_tab.md) has permission to select this method for the target environment. 
 - A scheduled task can still be executed on demand. To execute a scheduled task, click ![execution](images/execute_task_icon.png) next to the task record in the Tasks window.
 
 ### Scheduled Execution Parameters
@@ -94,7 +94,7 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 </table>
 ​    
 
-The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week until the end of February, 2024.
+The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week until the end of 2024.
 
   
 
