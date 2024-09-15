@@ -9,10 +9,10 @@ TDM 9.1 has added a new mode of parameters' handling: **parameters coupling**. T
 
 Examples of parameters coupling:
 
-- Search for business customers that have a product X and the product was purchased in 2024.  The purchase date must be linked to the product type.
-- Search for customers that have a VIP billing subscriber and the total debt of the VIP subscriber does not exceed $100. 
+- Search for business customers that have a product X and that the product was purchased in 2024. The purchase date must be linked to the product type.
+- Search for customers that have a VIP billing subscriber and that the total debt of the VIP subscriber does not exceed $100. 
 
-The parameters' mode is set in the [TDM_GENERAL_PARAMETER](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) table in a parameter named **PARAMS_COUPLING** and impacts all the TDM Business Entities (BEs). By default this parameter is false. Set this parameter to true in order to use the parameters coupling mode. 
+The parameters' mode is set in the [TDM_GENERAL_PARAMETER](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) table in a parameter named **PARAMS_COUPLING** and impacts all the TDM Business Entities (BEs). By default, this parameter is false. Set this parameter to true in order to use the parameters coupling mode. 
 
 ## Optional - Update the Maximum Number of Values for Combo Parameters
 
