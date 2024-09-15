@@ -23,7 +23,7 @@
 
 - Each parameter must be mapped into an LU table's field. The parameter name does not have to be identical to the lu_table_field.
 
-- If you have calculated parameters such as number of open cases or total open debt, add an LU table for these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-be-filtered-out)  actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
+- If you have calculated parameters such as number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-be-filtered-out)  actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
 
 - Verify that all the LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add a FK to tables when they are exported to the TDM DB.
 - Note that the MDB export does not support multiple populations with different links to parent tables. The LU tables in LuParamsMapping must have one link to a parent LU table.
@@ -52,7 +52,7 @@ The TDM extract task execution exports the LU tables to the TDM DB. A dedicated 
 - The exported tables are used for the following:
   - Getting the number of matching entities for the selected parameters of the task.
   - Creating the entity list for the task if the task's selection method is based on parameters.
-  - Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
+  - Creating the entity list for the task if a random selection of entities is used.  
 
 ### TDM_PARAMS_DISTINCT_VALUES
 
