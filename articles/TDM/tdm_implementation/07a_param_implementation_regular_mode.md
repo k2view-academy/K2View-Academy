@@ -106,7 +106,7 @@ Prerequisite: verify that the LU_PARAMS is attached to the LU Schema.
 
 ## TDM Parameter Tables
 
-When [synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
+When [synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the `<LU>_params` table in the TDM database. A separate `<LU>_params` table is created for each LU. The naming convention of the parameter table is `<LU Name>_params`, e.g., customer_params. 
 
 In addition, the TDM task execution process populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) TDM DB table with the parameters list and the valid values for [combo parameters].
 
@@ -115,7 +115,7 @@ Parameter tables are used for the following:
 - Getting the list of available parameters per task.
 - Getting the number of matching entities for the selected parameters of the task.
 - Creating the entity list for the task if the task's selection method is based on parameters.
-- Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the parameters table in the task's root LU.  
+- Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the `<LU>_params` table of the task's root LU.  
 
 ### AI-based Generation
 
