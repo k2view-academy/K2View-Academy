@@ -345,7 +345,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 </tbody>
 </table>
-[Click here for more information about Fabric Architecture overview.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)
+<p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Click here for more information about Fabric Architecture overview.</a></p>
 
 
 
