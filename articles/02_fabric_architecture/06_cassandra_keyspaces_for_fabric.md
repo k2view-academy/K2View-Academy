@@ -270,7 +270,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 <tr style="height: 164px;">
 <td style="height: 164px; width: 313.812px;" valign="top">
-<p><strong>k2staging</strong> - Staging tables for the IIDFinder mechanism:&nbsp;</p>
+<p><strong>k2staging</strong> - staging tables for the IIDFinder mechanism:&nbsp;</p>
 <p><span data-contrast="auto">A different set of caching, delta, solo and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
 <p>&nbsp;</p>
 </td>
@@ -279,7 +279,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 <tr style="height: 46px;">
 <td style="height: 260px; width: 313.812px;" rowspan="3" valign="top">
-<p><strong>K2view_&lt;LU Name&gt;</strong> - A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
+<p><strong>K2view_&lt;LU Name&gt;</strong> - a new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
 <p>Note that when deploying the LU to the Fabric debug server, Fabric also concatenates the Fabric version and the project name to the keyspace of each LU. For example: k2view_test_cust_6_2_kb_fabric_project.</p>
 </td>
 <td style="height: 46px; width: 208.925px;" valign="top">
@@ -308,7 +308,7 @@ The following table lists the keyspaces or schemas created by Fabric:
 </tr>
 <tr style="height: 46px;">
 <td style="height: 184px; width: 313.812px;" rowspan="4" valign="top">
-<p><strong>k2masking</strong> - Tables that support Broadway masking mechanism.</p>
+<p><strong>k2masking</strong> - tables that support Broadway masking mechanism.</p>
 <p>The <strong>k2masking</strong> keyspace can be created using the installation SQL script provided as part of the Masking library.</p>
 <p><a href="/articles/19_Broadway/actors/07_masking_and_sequence_actors.md">Click here for more information about Broadway Masking.</a></p>
 </td>
