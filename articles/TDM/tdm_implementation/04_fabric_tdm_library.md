@@ -39,7 +39,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
 ### Shared Globals
 
-Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. TDM 9.0 locates the TDM library shared Globals under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and prevent an overriding of the project's globals by the TDM version upgrade process.
+Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. TDM 9.0 locates the TDM library shared Globals under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and to prevent overriding the project's globals by the TDM version upgrade process.
 
 #### SEQ_CACHE_INTERFACE Global
 A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
