@@ -78,7 +78,7 @@ Fabric supports 2 authentication methods:
 
   When using this method, Fabric first accesses the *approle* URL to dynamically get a token, and then uses this token as the auth credentials, in order to get the secret. For this method you shall specify the following attributes:
 
-  * ROLE_ID, the role that Fabric is associated to in Vault.
+  * ROLE_ID, the role that Fabric is associated to in the Vault.
   * SECRET_ID, the secret that is used to get the token.
   * APPROLE_URL, optional, when AppRole endpoint is not the default setting (default setting ends with "/approle").
 
