@@ -150,7 +150,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows, the LU of the Broadway flow and the process type (pre/post). Each flow can have external parameters that can be overridden by the task's creator. The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.  </p>
+<p>Populate the list of Broadway flows, the LU of the Broadway flow and the process type (pre/post). Each flow can have external parameters that can be overridden by the task's creator. The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. Redeploy the LUs populated in this table, the TDM LU, and the Web Services.  </p>
 </td>
 </tr>
 <tr>
