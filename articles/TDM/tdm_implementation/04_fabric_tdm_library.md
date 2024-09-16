@@ -77,7 +77,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>MigrateList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Defines the interface name and the SQL query, or the Broadway flow that generates the entity list when running a task with a Predefined entity list selection method for the entity's subset; one record per LU and environment name. The environment can be empty.</p>
+<p>Defines the interface name and the SQL query, or alternatively the Broadway flow, to generate the entity list when running a task with a Predefined entity list selection method for the entity's subset; one record per LU and environment name. The environment can be empty.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
