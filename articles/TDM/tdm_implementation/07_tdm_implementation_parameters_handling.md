@@ -29,7 +29,7 @@ The parameters' mode is set in the [TDM_GENERAL_PARAMETER](/articles/TDM/tdm_con
 
 Each mode requires its own implementation. Read the implementation guidelines for each mode:
 
-[Parameter's Handling -  Regular Mode](07a_param_implementation_regular_mode.md)
+[Parameters Handling -  Regular Mode](07a_param_implementation_regular_mode.md)
 
 [Parameters Handling - Params Coupling Mode](07b_param_implementation_param_coupling.md)
 
