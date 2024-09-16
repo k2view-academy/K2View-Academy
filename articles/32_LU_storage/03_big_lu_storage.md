@@ -24,7 +24,14 @@ The chunk size is set using the config.ini file parameters, defined per node:
 
 * INSTANCE_CHUNK_SIZE, impacting the read from Cassandra (pagination) and write into Cassandra chunk size (default 10MB – 10485760 bytes).
 
-### Parallel Load Big LUI from Cassandra - Experimental Feature
+### Improve LUI Partitioning
+
+When dealing with a large amount of entity chunks, LUI Partitioning can be enabled by setting the following in the config.ini file: ```ENABLE_PARTITIONED_MDB=true```
+
+Note however that there is no upgrade path for existing projects. You must clean all data in Fabric and bring Fabric back.
+It is recommended to turn this feature on when dealing with large LUIs that are split into multiple chunks.
+
+### Parallel Load Big LUI from Cassandra
 
 When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
@@ -33,19 +40,9 @@ The config.ini parameters to configure the above are:
 * ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
 * ASYNC_LOAD_MAX_MEMORY_IN_MB, maximum memory to be allocated for the parallel load process. Set by default to 2000 MB.
 
-### Improve LUI partitioning - Experimental Feature
+These parameters are applicable when the LUI Partitioning is enabled.
 
-Another major performance improvement was introduced for release 6.5.4, when dealing with many entity chunks.
 
-The parameters needed to configure Fabric to deal with a large amount of entity chunks are the following: 
-
-* ENABLE_PARTITIONED_MDB=true
-* ASYNC_LOAD_MAX_THREADS bigger than zero
-
-They are to be enhanced on the config.ini file. 
-
-However, there is no upgrade path for existing projects. You must clean all data in Fabric and bring it back.
-It is recommended to turn this feature on only when dealing with very large LUIs that are split into multiple chunks.
 
 
 [![Previous](/articles/images/Previous.png)](02_storage_management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_business_entity_on_pg.md)
