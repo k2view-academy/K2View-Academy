@@ -35,7 +35,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
     
 
-- [AI interfaces](17_tdm_ai_generation_implementation.md) - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for a synthetic data generation. The AI-related interfaces must be disabled if the AI machine is not installed and the AI data generation is not in use.
+- [AI interfaces](17_tdm_ai_generation_implementation.md) - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for generating synthetic data. The AI-related interfaces must be disabled in case the AI machine is not installed and the AI data generation is not in use.
 
 ### Shared Globals
 
