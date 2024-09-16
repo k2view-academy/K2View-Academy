@@ -39,7 +39,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
 ### Shared Globals
 
-Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for executing TDM in your project. TDM 9.0 locates the TDM library shared Globals under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and to prevent overriding the project's globals by the TDM version upgrade process.
+Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for utilizing TDM in your project. TDM 9.0 locates the TDM library shared Globals under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and to prevent overriding the project's globals by the TDM version upgrade process.
 
 #### SEQ_CACHE_INTERFACE Global
 A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
@@ -127,7 +127,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>RefList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Defines the list of available tables related to a Business entity, a list that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>. In addition it can be used in order to set different interface/schema/table name between the source and target environments for table level </p>
+<p>Defines the list of available tables related to a Business entity, a list that can be included on a <strong>TDM task</strong> for <strong>Entities and referential data</strong>. Additionally, it can be used for setting different interface/schema/table name between the source and target environments for table level </p>
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
