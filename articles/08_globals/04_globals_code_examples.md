@@ -42,7 +42,7 @@ Notes:
 	- getGlobal(String globalName) - returns the global value for this session. In case of conflict values between LU's will throw an exception.
 	- getGlobal(String globalName, String lu) - returns LU global value for this session.
 
-- Invoking the Global directly in the code - for example: *if(CUSTOMER_CHECKS_ENABLED.equals("CRM"))*- returns the Global's value as set in the Globals.java file and does not return the overridden value if it exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+- Invoking the Global directly in the code - for example: *if(CUSTOMER_CHECKS_ENABLED.equals("CRM"))*- returns the Global's value as set in the Globals.java file and does not return the overridden value if it exists. To get the Global's overridden value use either the **getGlobal** method, or use the **set command**. For example:
 
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
@@ -52,7 +52,7 @@ if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equa
 
 ### Example of Using a Global in an SQL Statement in a Function
 
-A global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional. Here is an example of using a global called NEW_IND: 
+A global can be used in an SQL-prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional. Here is an example of using a global called NEW_IND: 
 
 ~~~java
 String sql = "SELECT * From ACTIVITY WHERE CUSTOMER_ID = ? AND ACTIVITY_ID = ? AND NEW_NOTE_IND = @NEW_IND@";
