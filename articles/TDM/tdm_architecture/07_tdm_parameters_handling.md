@@ -6,7 +6,7 @@ The list of available parameters is displayed on the task's BE (Business Entity)
 
 A BE can have either a flat or a hierarchical structure, and each LU has its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) in the TDM DB. 
 
-TDM 9.1 has added a new mode of parameters' handling: **parameters coupling**. The **regular parameters' mode** supports **isolated business parameters** in a parameters search. However, per the newly added **parameters coupling** capability, multiple parameters can be taken into account and joined, for an optimized param search that leads to **intersection finding**. This is done based on the LU schema structure and the relations between the LU tables.
+TDM 9.1 has added a new mode of parameter handling: **parameters coupling**. The **regular parameters' mode** supports **isolated business parameters** in a parameters search. However, per the newly added **parameters coupling** capability, multiple parameters can be taken into account and joined, for an optimized param search that leads to **intersection finding**. This is done based on the LU schema structure and the relations between the LU tables.
 
 Examples of parameters coupling:
 
