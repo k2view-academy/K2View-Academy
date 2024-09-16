@@ -179,7 +179,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>LuParams</p>
 </td>
 <td valign="top" width="300pxl">
-<p>This table is used for the population business parameters.&nbsp;</p>
+<p>This table is used for populating business parameters.&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
 <p>The COLUMN_NAME is populated by the name of the parameter and the SQL is populated by the SQL query that gets the values for the defined parameter.</p>
@@ -191,7 +191,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p><h5>LuParamsMapping</p>
 </td>
 <td valign="top" width="300pxl">
-<p>This table is used for the population business parameters when the <stong>parameters coupling mode</stong> is set.&nbsp;</p>
+<p>This table is used for populating business parameters when the <stong>parameters coupling mode</stong> is set.&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Map each parameter to an LU table's field.</p>
