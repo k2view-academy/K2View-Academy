@@ -42,7 +42,7 @@ Notes:
 	- getGlobal(String globalName) - returns the global value for this session. In case of conflict values between LU's will throw an exception.
 	- getGlobal(String globalName, String lu) - returns LU global value for this session.
 
-- Invoking the Global directly by the user code returns the Global's value and does not return the overridden value if it exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
+- Invoking the Global directly in the code - for example: *if(CUSTOMER_CHECKS_ENABLED.equals("CRM"))*- returns the Global's value as set in the Globals.java file and does not return the overridden value if it exists. To get the Global's overriden value use either the **getGlobal** method or use the **set command**. For example:
 
 ~~~java
 if (ludb().fetch("SET CRM.CUSTOMER_CHECKS_ENABLED").firstValue().toString().equals("Y")) {
