@@ -136,7 +136,7 @@ The following MTables have been added to the **References** in the TDM library. 
 </tr>
 <tr>
 <td><h5>TableLevelInterfaces and TableLevelDefinitions</h5></td>
-<td>These MTables defines special handling for task with tables.</td>
+<td>These MTables define special handling of tasks with tables.</td>
 <td>A separate record must be set for each DB or table. 
 <p>Click to read more about <a href="09_tdm_reference_implementation.md">Tables implementation</a>.</p>  
 </td>    
