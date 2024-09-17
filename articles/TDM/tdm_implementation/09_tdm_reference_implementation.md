@@ -112,7 +112,7 @@ By default, the MTable is populated with the TDM DBs to disable a selection of T
 
 - **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
 
-- **order_flow** - an optional setting. Populate this setting to run a project's Broadway flow to define customized logic to get the table's execution order.  The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
+- **order_flow** - an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
 
   ```json
   {
@@ -149,7 +149,7 @@ The following settings should be populated for each record:
 
 ### Customized Table's Flows - Implementation Guidelines
 
-The customized table's flows are Broadway flows. These flows must be added under the Shared Objects or the TDM_TableLevel LU in the project tree.
+The customized table's flows are Broadway flows. These flows must be added under the Shared Objects or the TDM_TableLevel LU in the Project tree.
 
 #### Extract Flow
 
