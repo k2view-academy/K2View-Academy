@@ -53,7 +53,7 @@ Import and deploy the TDM_TableLevel LU.
 
 ## Step 2 - Relate Tables to a Business Entity
 
-**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of referential tables available for a TDM task for a Business entity and referential data  is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
+**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of referential tables, that are available for a TDM task that contains a Business entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** - populated by the LU name to enable a selection of the related table in a TDM task based on the task's LUs.
 
