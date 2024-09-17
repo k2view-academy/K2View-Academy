@@ -167,13 +167,13 @@ The Catalog masking actor is invoked **after** the extract flow execution. Do th
 
 #### Load Flow
 
-- The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery**  flow (located in the TDM_TableLevel LU) to get the load flow template and customize the load logic.
+- The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery**  flow (located in the TDM_TableLevel LU) to get the load flow template and to customize the load logic.
 
   
 
 #### Delete Flow
 
-- The delete flow gets a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand**   flow (located in the TDM_TableLevel LU) to get the delete flow template and customize the delete logic.
+- The delete flow gets a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand**  flow (located in the TDM_TableLevel LU) to get the delete flow template and to customize the delete logic.
 
 
 
