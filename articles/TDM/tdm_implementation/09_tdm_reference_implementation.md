@@ -25,7 +25,7 @@ Each LUI contains the following tables:
 
 - TDM_REF_ROOT
 
-- A dynamic SQLite table created with the structure of the source table and contains the extracted table records. The dynamic SQLite table naming convention is: 
+- A dynamic SQLite table created with the structure of the source table and that contains the extracted table records. The dynamic SQLite table naming convention is: 
 
   ```
   __t_<source table name>
