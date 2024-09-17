@@ -157,13 +157,13 @@ The customized table's flows are Broadway flows. These flows must be added under
 
 ##### Customized Masking Logic
 
-The catalog masking actor is invoked **after** the extract flow execution. Do the following in order to set a customized masking logic on the table:
+The Catalog masking actor is invoked **after** the extract flow execution. Do the following in order to set a customized masking logic on the table:
 
-- If you need to set a customized logic on specific fields, edit the catalog and remove the PII property from these fields in the catalog in order to prevent double masking of these fields.
-- Sometimes, the customized masking logic is based on the catalog masking. For example, build the masked email based on the masked first and last names. If you need to call the catalog masking in the extract flow, do the following: override the masking of all the table's PII fields, do the following:
-  -  Add the **CatalogMaskingMapper** actor to the extract flow. 
+- If you need to set a customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking of these fields.
+- Sometimes, the customized masking logic is based on the Catalog masking. For example, build the masked email based on the masked first and last names. If you need to call the Catalog masking in the extract flow, do the following: override the masking of all the table's PII fields, do the following:
+  - Add the **CatalogMaskingMapper** actor to the extract flow. 
   - Add the customized masking actors to the extract flow.
-  - Set the **enable_masking** to **false** in the end of the extract flow in order to prevent a double masking of the table's record by the TDM execution processes. 
+  - Set the **enable_masking** to **false** in the end of the extract flow in order to prevent double masking of the table's record by the TDM execution processes. 
 
 #### Load Flow
 
