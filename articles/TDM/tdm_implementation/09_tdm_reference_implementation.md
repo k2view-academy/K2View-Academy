@@ -57,7 +57,7 @@ Import and deploy the TDM_TableLevel LU.
 
 - **lu_name** - populated by the LU name to enable a selection of the related table in a TDM task based on the task's LUs.
 
-- **id** - populated by an increment number.
+- **id** - populated by an incrementing number.
 
 - **reference_table_name** - populated by the table name in the source environment.
 
