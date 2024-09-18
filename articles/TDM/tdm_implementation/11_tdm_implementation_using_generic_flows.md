@@ -364,7 +364,7 @@ Note that previous TDM versions populated the entities into a dedicated Cassandr
 
 ### Debugging the Broadway Flow
 
-1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
+1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
 2. Populate the input parameters and run the customized Broadway flow. 
 
 
@@ -448,7 +448,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - Sending multiple values in one single parameter - you can define a String input parameter in order to get a list of values into the parameter and split it into an array in the flow, e.g., "CA,NY". The Broadway flow can split this String by the delimiter. The values must be delimited by the delimiter, which is set in the split Actor in Broadway flow.
 
-- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the Select statement.  See the [CustomLogicSql flow's examples](#examples-of-an-input-select-query) above.
+- You can get an input Select statement with binding parameters. The parameters' values can be either sent into a separate input parameter or added to the Select statement. See the [CustomLogicSql flow's examples](#examples-of-an-input-select-query) above.
 
   
 
@@ -472,7 +472,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 - **Stage 1**: 
 
   - Add a logic, requiring the entities - for example, a DbCommand Actor that runs a Select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs. 
-  - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM Library).
+  - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM library).
   - Notes: 
       - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
       - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way the query returns a limited size of records.
@@ -481,7 +481,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
   1. Stage 2: Set the selected entity ID - returned by the Actor of Stage 1 - to a String using the **ToString** Actor.
 
-  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM Library):
+  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM library):
 
      - **Input** - **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
      - **Output** - **recordLoaded**. This is the entity number counter, loaded into the entity table.
@@ -489,7 +489,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
    - Checking whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
    - Loading the available entities into the entity table in the TDM DB and updating the entities number counter.
 
-  3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM Library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
+  3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
@@ -527,7 +527,7 @@ Note: When exposing the SQL statement as an external parameter for the user, ver
 
 ### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
 
-Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM Library).
+Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
 
 View the below example:
 
@@ -537,7 +537,7 @@ View the below example:
 
 Check the **DIRECT_FLOW** checkbox to enable a [direct call](#custom-logic---tdm-81-improvements) of the Custom Logic flow.
 
-Redeploy the Web-Services.
+Redeploy the Web Services.
 
 [![Previous](/articles/images/Previous.png)](10_tdm_generic_broadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_tdm_error_handling_and_statistics.md)
 
