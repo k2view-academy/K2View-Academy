@@ -522,7 +522,7 @@ Note: When exposing the SQL statement as an external parameter for the user, ver
 
 ### Debugging the Customized Flow
 
-1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM Library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
+1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
 2. Populate the input parameters and run the customized flow. 
 
 ### Step 7.2 - Populate the Custom Logic Flow in the Custom Logic Table
