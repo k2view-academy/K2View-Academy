@@ -487,13 +487,13 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
      - **Output** - **recordLoaded**. This is the entity number counter, loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
    - Checking whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
-   - Loading the available entities into the entity table in the TDM DB and updating the entities number counter.
+   - Loading the available entities into the entity table in the TDM DB and updating the entity number counter.
 
   3. Stage 4: Calls **CheckAndStopLoop** TDM Actor (imported from the TDM library). Set the **NUM_OF_ENTITIES** to be an **external input parameter** to get its value from the task execution process. It checks the number of entities inserted to the entity table, and stops the loop if the custom flow reaches the task's number of entities. 
 
      **Example**:
 
-     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; then the entities' loop stops.
+     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; the entity loop then stops.
 
 
 Below are examples of a Custom Logic flow:
