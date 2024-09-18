@@ -251,7 +251,7 @@ The entity selection on a TDM task selects a subset of **root entities**, but th
   
   - FABRIC_TDM_ROOT - the entire table is exported.
   
-  - TDM_BE_IIDS - the entire table is exported. This table contains the BE ID,  entity id (iid field) and the root entity id (root_iid field). It has been added for the parameters coupling mode and is need in order to connect different LU schema. The SQL query joins the TDM_BE_IIDS of the LU schemas based on the BE_ID and the ROOT_IID fields. This table has an accumulative population mode, i.e. if an LU exists in multiple BEs, it aggregates the current link of the root entity id to the previous syncs.
+  - TDM_BE_IIDS - the entire table is exported. This table contains the BE ID, entity id (iid field) and the root entity id (root_iid field). It has been added for the parameters coupling mode and is needed in order to connect different LU schema. The SQL query joins the TDM_BE_IIDS of the LU schemas based on the BE_ID and the ROOT_IID fields. This table has an accumulative population mode, i.e., if an LU exists in multiple BEs, it aggregates the current link of the root entity id to the previous syncs.
   
   - The LU tables in LuParamsMapping MTable - only the parameter fields and the linked fields to the parent or child LU tables are exported.
   
