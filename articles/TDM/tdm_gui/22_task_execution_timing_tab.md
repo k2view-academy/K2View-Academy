@@ -46,7 +46,7 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 <td valign="top" width="300pxl">Daily</td>
 <td valign="top" width="600pxl">
 <ul>
-<li>Day interval. For example, every 1 day</li>
+<li>Day interval. E.g., every 1 day</li>
 <li>Hours</li>
 <li>Minutes</li>
 <li>Seconds</li>
@@ -65,8 +65,8 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 <td valign="top" width="300pxl">Monthly</td>
 <td valign="top" width="600pxl">
 <ul>
-<li>A day in the month. For example, 1st, 2nd, First Monday, Second Thursday...</li>
-<li>Months interval. For example, every 2 months</li>
+<li>A day in the month. E.g., 1st, 2nd, First Monday, Second Thursday...</li>
+<li>Months interval. E.g., every 2 months</li>
 <li>Hours</li>
 <li>Minutes</li>
 <li>Seconds</li>
@@ -78,8 +78,8 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 <td valign="top" width="600pxl">
 <ul>
 <li>Month</li>
-<li>A day in the month. For example, 1st, 2nd, First Monday, Second Thursday...</li>
-<li>Months interval. For example, every 2 months</li>
+<li>A day in the month. E.g., 1st, 2nd, First Monday, Second Thursday...</li>
+<li>Months interval. E.g., every 2 months</li>
 <li>Hours</li>
 <li>Minutes</li>
 <li>Seconds</li>
