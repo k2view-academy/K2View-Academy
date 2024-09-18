@@ -1,7 +1,7 @@
 ![image](https://github.com/k2view-academy/K2View-Academy/assets/104299047/4bae6090-46ad-4c4a-a73f-1169d22d7ac8)
 
 # Fabric Space Upgrade and Rollback Procedure
-Here's a detailed upgrade and rollback procedure for upgrading the Fabric application running on a Kubernetes cluster. 
+This document details the upgrade and rollback procedure for upgrading the Fabric application that runs on a Kubernetes cluster.
 Here's the updated upgrade and rollback procedure for the Fabric application running on Kubernetes, with Step 1 modified to include a command that lists the `fabric-deployment`, container versions, and their state.
 
 ---
