@@ -13,7 +13,7 @@ Examples of parameters coupling:
 - Search for business customers that have a product X and the product was purchased in 2024. The purchase date must be linked to the product type.
 - Search for customers that have a VIP billing subscriber and the total debt of the VIP subscriber does not exceed $100.
 
-The parameters' mode is set in the [TDM_GENERAL_PARAMETER](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) table in a parameter named **PARAMS_COUPLING** and impacts all the TDM Business Entities (BEs). By default this parameter is false. Set this parameter to true in order to use the parameters coupling mode.
+The parameters' mode is set in the [TDM_GENERAL_PARAMETER](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) table in a parameter named **PARAMS_COUPLING**, and it impacts all the TDM Business Entities (BEs). The default setting of this parameter is false. Set this parameter to true in order to use the parameters coupling mode.
 
 ## TDM Parameter Handling - Regular Mode
 
