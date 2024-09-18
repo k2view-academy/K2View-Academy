@@ -46,7 +46,7 @@ The maximum number of days that a tester can set to a retention period in the ta
 
 ## Data Generation Parameters
 
-- The **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters set the default range for the number of generated records, populated in the LU table for each parent ID by a [data generation task](/articles/TDM/tdm_gui/16a_generate_task.md). By default, these parameters are populated with 1 and 3, i.e., the data generation task generates 1-3 records for the LU tables except for the main source LU table that is created with only one record by the data generation task.
+- The **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters set the default range for the number of generated records, populated in the LU table for each parent ID by a [data generation task](/articles/TDM/tdm_gui/19_task_synthetic_data_generation.md). By default, these parameters are populated with 1 and 3, i.e., the data generation task generates 1-3 records for the LU tables except for the main source LU table that is created with only one record by the data generation task.
 - Edit these parameters, if needed, in order to set a different number range of records for synthetically generated entities.
 
   Click [here](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) for more information about the data generation implementation.
@@ -55,7 +55,7 @@ The maximum number of days that a tester can set to a retention period in the ta
 
 TDM 9.1 has added a new capability - [parameters coupling](/articles/TDM/tdm_implementation/07b_param_implementation_param_coupling.md). The TDM can work either with the regular mode of parameters or with the new mode  of parameter coupling.
 
-The parameters' handling mode in set in the TDM_GENERAL_PARAMETERS in the PARAMS_COUPLING parameter name. The default value of this parameter is **false**. If you whish to work with the parameters coupling mode, update this parameter:
+The parameters' handling mode in set in the TDM_GENERAL_PARAMETERS in the PARAMS_COUPLING parameter name. The default value of this parameter is **false**. If you wish to work with the parameters coupling mode, update this parameter:
 
 ```sql
 update tdm_general_parameters
