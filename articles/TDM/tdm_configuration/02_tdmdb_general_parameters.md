@@ -40,7 +40,7 @@ An admin user of the environment owner can reserve entities for an unlimited per
 
 The maximum number of days for the entity reservation is set in the **MAX_RESERVATION_DAYS_FOR_TESTER** parameter; the default value is 90 (90 days).
 
-## Maximum [Retention Period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) for Testers
+## Maximum [Retention Period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for Testers
 
 The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter; the default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**.
 
@@ -81,7 +81,7 @@ where param_name='PARAMS_COUPLING';
   
     ### Update the TDM_GENERAL_PARAMETERS to Support Fabric Storage without a TTL
   
-    TDM enables setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) (TTL) on the TDM tasks in order to save the task's entities in Fabric only for a limited period of time. However, if the [Fabric storage](/articles/32_LU_storage/01_LU_storage_overview.md) does not support a TTL for the LUIs (such as PG DB), the TDM needs to limit the TDM task’s retention period options to either **Do not Delete** or **Do not Retain**.
+    TDM enables setting a [retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) (TTL) on the TDM tasks in order to save the task's entities in Fabric only for a limited period of time. However, if the [Fabric storage](/articles/32_LU_storage/01_LU_storage_overview.md) does not support a TTL for the LUIs (such as PG DB), the TDM needs to limit the TDM task’s retention period options to either **Do not Delete** or **Do not Retain**.
     
     Run the following UPDATE statements in the TDM DB to update the **retentionPeriodTypes**, **versioningRetentionPeriod**, and **versioningRetentionPeriodForTesters** attributes. This is needed to enable setting only **Do not Delete** or **Do not Retain** values in the TDM task's retention period.
     
