@@ -209,7 +209,7 @@ TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding 
 
 ### TDMReserveOrchestrator Flow
 
-The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). Import the flow from the TDM Library into the Shared Objects and redeploy the TDM LU. 
+The **TDMReserveOrchestrator** runs the [reserve only tasks](/articles/TDM/tdm_gui/20_reserve_only_task.md). Import the flow from the TDM library into the Shared Objects and redeploy the TDM LU. 
 
 ## Step 5 - Mask the Sensitive Data
 
