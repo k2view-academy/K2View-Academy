@@ -27,7 +27,7 @@
 <p>Security &amp; Permissions</p>
 </td>
 <td>
-<p>IIDfinder</p>
+<p>IIDFinder</p>
 </td>
 </tr>
 <tr>
