@@ -275,8 +275,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   <p>enable_masking</p>
   </td>
   <td width="300pxl">
-  <p>Set by the task&rsquo;s attribute: <a href="/articles/TDM/tdm_gui/16_extract_task.md#mask-sensitive-data">Mask Sensitive data</a>.</p>
-      <p>Note that this attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. The user can add masking to the task even if the source environment is not defined as a sensitive data source.</p>
+   <p>This attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. 
   </td>
   <td width="350pxl">
   <p>Will be set to true for the following tasks:</p>    
@@ -307,7 +306,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   <p>enable_masking_uniqueness</p>
   </td>
   <td width="300pxl">
-      <p>Set by the task&rsquo;s attribute: <a href="/articles/TDM/tdm_gui/16_extract_task.md#mask-sensitive-data">Mask Sensitive data</a> (set to true if the enable_masking or enable_sequences are true).</p>
+     Set to true if the enable_masking or enable_sequences are true.</p>
   </td>
   <td width="350pxl">
   <p>Will be set to true for the following tasks:</p>    
