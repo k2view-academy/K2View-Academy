@@ -11,7 +11,7 @@ Examples:
 
 The pre and post execution processes are **optional**. A task can be created and executed without any post-execution processes.
 
-The pre and post execution processes that are available for tasks, are defined in the task's  [Business entity (BE)](/articles/TDM/tdm_overview/03_business_entity_overview.md) and must be [added to the BE by the admin user](04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs). You can select only pre and post execution processes from the list of processes added to the task's BE.  Note that a given flow can be attached as both - pre and post execution process - to a BE and a task with this BE. The execution order of the pre and post execution order is set according to the execution order defined in the BE.
+The pre and post execution processes that are available for tasks, are defined in the task's  [Business entity (BE)](/articles/TDM/tdm_overview/03_business_entity_overview.md) and must be [added to the BE by the admin user](04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs). You can select only pre and post execution processes from the list of processes added to the task's BE. Note that a given flow can be attached to a BE and to a task with this BE as both pre and post execution processes. The execution order of the pre and post execution order is set according to the execution order defined in the BE.
 
 
 
