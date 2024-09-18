@@ -18,83 +18,27 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI Sync Components - 1" href="LUI-Sync-Process-Part-1.pdf">LUI Sync Components - 1</a></p>
-</td>
-<td>
-<p>LU Schema Functions</p>
-</td>
-<td>
-<p>BW Actors for Files/APIs</p>
-</td>
-<td>
-<p>Permissions</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a title="LUI Sync Components - 2" href="LUI-Sync-Process-Part-2.pdf">LUI Sync Components - 2</a></p>
-</td>
-<td>
-<p>LUI Sync Options</p>
-</td>
-<td>
-<p>Consumer &amp; lookups</p>
-</td>
-<td>
-<p>Masking</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a title="LU Table Population" href="LU-Table-Population.pdf">LU Table Population</a></p>
-</td>
-<td>
-<p>Jobs &amp; Batch</p>
-</td>
-<td>
-<p>IID Finder</p>
-</td>
-<td>
-<p>CDC</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>BW Advanced Actors</p>
+<p><a title="LUI Sync Components - 1" href="LUI_Sync_Process_1.pdf">LUI Sync Components - 1</a></p>
 </td>
 <td>
 <p>Globals, Mtable</p>
 </td>
 <td>
-<p>Graphit</p>
+<p>Security &amp; Permissions</p>
 </td>
 <td>
-<p>Catalog</p>
+<p>IIDfinder</p>
 </td>
 </tr>
 <tr>
 <td>
-<p>BW + Selected Actors</p>
+<p><a title="LUI Sync Components - 2" href="LUI_Sync_Process_2.pdf">LUI Sync Components - 2</a></p>
 </td>
 <td>
-<p>Cassandra</p>
-</td>
-<td>
-<p>Config</p>
+<p>Common</p>
 </td>
 <td>
 <p>Views &amp; Security Profile</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>LU Schema Tables + Big</p>
-</td>
-<td>
-<p>Kafka</p>
-</td>
-<td>
-<p>Monitoring</p>
 </td>
 <td>
 <p>GG &amp; Filtering</p>
@@ -102,18 +46,73 @@
 </tr>
 <tr>
 <td>
-<p>LU Schema -&nbsp;Miscellaneous</p>
-</td>
-<td width="95">
-<p>Common</p>
+<p>BW + Selected actors</p>
 </td>
 <td>
-<p>Troubleshooting</p>
+<p>Jobs &amp; Batch</p>
+</td>
+<td>
+<p>CDC</p>
 </td>
 <td>
 <p>External Jars</p>
 </td>
 </tr>
+<tr>
+<td style="width: 217.969px;">
+<p><a title="LU Table population" href="LU_Table_population.pdf">LU Table population</a></p>
+</td>
+<td style="width: 217.109px;">
+<p>BW Advanced actors</p>
+</td>
+<td style="width: 219.172px;">
+<p>Config</p>
+</td>
+<td style="width: 217.75px;">
+<p>Masking</p>
+</td>
+</tr>
+<tr>
+<td style="width: 217.969px;">
+<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non-source_Schema_tables_&amp;_MDB_JMX_Stats.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
+</td>
+<td style="width: 217.109px;">
+<p>BW Actors for files/APIs</p>
+</td>
+<td style="width: 219.172px;">
+<p>Kafka</p>
+</td>
+<td style="width: 217.75px;">
+<p>Catalog</p>
+</td>
+</tr>
+<tr>
+<td style="width: 217.969px;">
+<p><a title="Big LUIs &amp; MDB Built-in functions" href="Big_LUIs_&amp;_MDB_Built-in_functions.pdf">Big LUIs &amp; MDB Built-in functions</a></p>
+</td>
+<td style="width: 217.109px;">
+<p>Consumer &amp; lookups</p>
+</td>
+<td style="width: 219.172px;">
+<p>Cassandra</p>
+</td>
+<td style="width: 217.75px;">
+<p>Troubleshooting</p>
+</td>
+</tr>
+<tr>
+<td style="width: 217.969px;">
+<p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
+</td>
+<td style="width: 217.109px;">
+<p>Graphit</p>
+</td>
+<td style="width: 219.172px;">
+<p>Monitoring</p>
+</td>
+<td style="width: 217.75px;">
+<p>&nbsp;</p>
+</td>
+</tr>
 </tbody>
 </table>
-
