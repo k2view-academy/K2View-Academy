@@ -115,7 +115,7 @@ This table serves 2 purposes:
 
      
 
-Click [here](16_tdm_data_generation_implementation.md) for more information about the synthetic data generation implementation.
+Click [here](16_tdm_data_generation_implementation.md) for more information about the rule-based synthetic data generation implementation.
 
 ### Custom Sequence Logic
 
