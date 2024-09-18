@@ -1,4 +1,4 @@
-# Broadway Flows Implementation
+ Broadway Flows Implementation
 
 The TDM library contains sets of generic flows that allow you to create a standard TDM implementation in just a few minutes. Once such implementation has been created, its flows can be edited and tailored to your project's needs.
 
@@ -13,7 +13,7 @@ Before starting to create Broadway flows, define the tables that should be filte
 To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
 * ALL_LUS - when a filtered-out table is relevant for all TDM LUs.
-* LU name - when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer's orders.
+* LU name - when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer orders.
 
  If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column box needs to be checked (true).
 
