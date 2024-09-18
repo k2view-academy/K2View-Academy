@@ -2,7 +2,7 @@
 
 The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) when creating a load task.  
 
-The list of available parameters is displayed on the task's BE (Business Entity). The list of parameters for each LU and the parameters' information -  the valid values of [combo parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#how-do-i-populate-a-parameters-value), number of values, parameter type, and minimum and maximum values for numeric parameters - are kept in the **tdm_params_distinct_values** TDM DB table.
+The list of available parameters is displayed on the task's BE (Business Entity). The list of parameters for each LU and the parameters' information -  the valid values of combo parameters, number of values, parameter type, and minimum and maximum values for numeric parameters - are kept in the **tdm_params_distinct_values** TDM DB table.
 
 A BE can have either a flat or a hierarchical structure and each LU has its own parameters list and its own [LU parameters table](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameter-tables) in the TDM DB. The LU parameters table is created and populated in the TDM DB by the LUI sync. The naming convention of the parameters tables is `<LU Name>_params`.
 
