@@ -18,7 +18,7 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI Sync Components - 1" href="LUI_Sync_Process_1.pdf">LUI Sync Components - 1</a></p>
+<p><a title="LUI Sync Components - 1" href="LUI_Sync_Components_1.pdf">LUI Sync Components - 1</a></p>
 </td>
 <td>
 <p>Globals, Mtable</p>
@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>
-<p><a title="LUI Sync Components - 2" href="LUI_Sync_Process_2.pdf">LUI Sync Components - 2</a></p>
+<p><a title="LUI Sync Components - 2" href="LUI_Sync_Components_2.pdf">LUI Sync Components - 2</a></p>
 </td>
 <td>
 <p>Common</p>
@@ -74,7 +74,7 @@
 </tr>
 <tr>
 <td style="width: 217.969px;">
-<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non-source_Schema_tables_&amp;_MDB_JMX_Stats.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
+<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
 </td>
 <td style="width: 217.109px;">
 <p>BW Actors for files/APIs</p>
