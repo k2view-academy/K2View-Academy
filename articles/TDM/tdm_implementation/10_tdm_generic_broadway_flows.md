@@ -21,7 +21,7 @@ The TDM orchestration flows manage the execution on each task's entity. The foll
 
 - **TDMGenerateOrchestrator** - this flow runs on every LU of a [rule-based generation](/articles/TDM/tdm_gui/19_task_synthetic_data_generation.md#generating-rule-based-entities) task execution.
 
-- **TDMReserveOrchestrator** - this flow runs on a [Reserve only task](/articles/TDM/tdm_gui/20_reserve_only_task.md) execution. Unlike the TDMOrchestrator flow that runs on each LU, this process is executed only once by each task execution, and it marks the root entities as a [reserved](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the TDM DB.
+- **TDMReserveOrchestrator** - this flow runs on a [Reserve only task](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/TDM/tdm_gui/17a_task_target_component_entities.md#reserve) execution. Unlike the TDMOrchestrator flow that runs on each LU, this process is executed only once by each task execution, and it marks the root entities as a [reserved](/articles/TDM/tdm_architecture/08_entity_reservation.md) in the TDM DB.
 
 - **Table level orchestrator** flows - these flows run a [Table level](/articles/TDM/tdm_gui/14c_task_source_component_tables.md) task executions.
 
