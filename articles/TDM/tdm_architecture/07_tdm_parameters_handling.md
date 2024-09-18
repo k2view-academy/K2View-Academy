@@ -1,6 +1,6 @@
 # TDM Parameters Handling
 
-The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) when creating a load task. It is also possible to [configure the TDM](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#tdm-portal-general-parameters) to enable the Parameters selection method for a [reserve task](/articles/TDM/tdm_gui/20_reserve_only_task.md#parameters). 
+The TDM enables the user to select entities based on [predefined parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) when creating a load task.  
 
 The list of available parameters is displayed on the task's BE (Business Entity). The list of parameters for each LU and the parameters' information -  the valid values of [combo parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#how-do-i-populate-a-parameters-value), number of values, parameter type, and minimum and maximum values for numeric parameters - are kept in the **tdm_params_distinct_values** TDM DB table.
 
