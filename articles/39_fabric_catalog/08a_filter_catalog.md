@@ -2,7 +2,7 @@
 
 ### Overview
 
-The Catalog application allows filtering the Catalog graph based on the Datasets, Class and Field properties. Hence, the property should be set either on a dataset, class or field, in order for the dataset/class to be displayed.
+The Catalog application allows filtering the Catalog graph based on the Datasets, Class or Field properties. Hence, the property should be set either on a dataset, class or field, in order for the dataset/class to be displayed.
 
 Set the filter by clicking the![](images/filter.png)icon in the menu bar. 
 
