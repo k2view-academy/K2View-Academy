@@ -61,10 +61,10 @@ Major upgrades may require additional steps, such as schema migrations, configur
    kubectl get pods -n space-k2view
    ```
 
-#### Step 5: Verify Web  Functionality
+#### Step 5: Verify Web Functionality
 
-1. Verify that the Fabric is functioning as expected:
-   - Access the Web  and generate a piece of test code to ensure that it operates correctly.
+1. Verify that Fabric is functioning as expected:
+   - Access the Web and generate a piece of test code to ensure that it operates correctly.
    
 2. Check that the generated code is committed and pushed to the Git repository:
    - Navigate to the relevant Git repository and verify the presence of the latest commits.
