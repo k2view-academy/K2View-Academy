@@ -14,7 +14,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
 
 **Prerequisites:**
 - Ensure you have kubectl access to the Kubernetes cluster.
-- Backup existing configuration and data as required.
+- Back up existing configuration and data as required.
 - Check that the code is correctly committed and pushed to the Git repository.
 - Verify the current state of the deployment and pods.
 
