@@ -33,7 +33,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
 
 #### Step 2: Check the Current Version of the Deployment
 
-1. To check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
+1. In order to check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
    ```bash
    kubectl get deployment fabric-deployment -n space-k2view -o=jsonpath='{.spec.template.spec.containers[0].image}'
    ```
