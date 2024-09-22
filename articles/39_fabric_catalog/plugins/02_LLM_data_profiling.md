@@ -95,7 +95,7 @@ This is an example definition of the LLM plugin for Use Case 2:
 
 The LLM plugin might help writing a free-text description of the Catalog fields. 
 
-Using the below example definition, you can cerate short descriptions of each data source field in the Catalog:
+Using the below example definition, you can create a short description of each data source's field in the Catalog:
 
 ~~~json
 {
