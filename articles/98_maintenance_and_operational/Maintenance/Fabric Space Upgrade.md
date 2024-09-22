@@ -8,7 +8,7 @@ Here's the updated upgrade and rollback procedure for the Fabric application run
 
 ### Upgrade Procedure for Fabric on Kubernetes
 
-**Note**: This procedure is valid only for minor upgrades or for all versions above 8.0.
+**Note**: This procedure is valid for either only minor upgrades or all versions above 8.0.
 Major upgrades may require additional steps, such as schema migrations, configuration changes, or downtime planning. Always consult the specific upgrade documentation for major version changes.
 
 
