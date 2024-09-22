@@ -68,7 +68,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
    
 2. Check that the generated code is committed and pushed to the Git repository:
    - Navigate to the relevant Git repository and verify the presence of the latest commits.
-   - Confirm that the commits correspond to the generated code from Web .
+   - Confirm that the commits correspond to the generated code from Web.
 
 ---
 
