@@ -135,7 +135,7 @@ If you encounter issues during the upgrade or the rollback process, consider the
 
 7. **Cluster Health:** Ensure the overall health of the Kubernetes cluster is good, and there are no node issues, resource shortages, or other factors that could affect the deployment.
 
-8. **Contact Support:** If issues persist, consider reaching out to support with relevant logs, steps taken, and any specific errors encountered.
+8. **Contact Support:** If issues persist, consider reaching out to support with the relevant logs, steps taken, and any specific errors encountered.
 
 ---
 
