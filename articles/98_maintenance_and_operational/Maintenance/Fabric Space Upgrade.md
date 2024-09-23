@@ -74,7 +74,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
 
 ### Rollback Procedure for Fabric on Kubernetes
 
-If the upgrade fails or any issues are encountered, follow the steps below to roll back to the previous version.
+If the upgrade fails or if any issues are being encountered, follow the steps below to roll back to the previous version.
 
 #### Step 1: Rollback to the Previous Revision
 
