@@ -107,7 +107,7 @@ If the upgrade fails or if any issues are being encountered, follow the steps be
 ---
 ### General Troubleshooting
 
-If you encounter issues during the upgrade or rollback process, consider the following general troubleshooting steps:
+If you encounter issues during the upgrade or the rollback process, consider the following general troubleshooting steps:
 
 1. **Check Logs:** Review the logs of the Fabric deployment for any error messages or warnings:
    ```bash
