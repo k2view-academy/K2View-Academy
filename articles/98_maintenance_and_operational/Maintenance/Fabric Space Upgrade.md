@@ -47,7 +47,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
    kubectl set image deployment/fabric-deployment fabric-container=<new-image>:<tag> -n space-k2view
    ```
    
-   Replace `<new-image>:<tag>` with the specific image name and tag for the new version.
+   Replace the `<new-image>:<tag>` string with the specific image name and tag for the new version.
 
 2. Verify the image update by checking the rollout status:
    ```bash
