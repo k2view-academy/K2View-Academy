@@ -124,7 +124,7 @@ If you encounter issues during the upgrade or the rollback process, consider the
    kubectl get svc,configmap,pvc -n space-k2view
    ```
 
-4. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate correctly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
+4. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate properly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
 
 5. **Check Pod Health:** Use the `describe` command to get detailed information about pod failures or restarts:
    ```bash
