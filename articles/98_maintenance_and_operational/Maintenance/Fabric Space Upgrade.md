@@ -95,10 +95,10 @@ If the upgrade fails or if any issues are being encountered, follow the steps be
    kubectl get pods -n space-k2view
    ```
 
-2. Confirm that Fabric is functioning as expected post-rollback:
+2. Confirm that Fabric is functioning as expected following the rollback:
    - Generate/Run a code in Web and verify its functionality.
 
-3. Confirm that the application is functioning as expected post-rollback.
+3. Confirm that the application is functioning as expected following the rollback.
 
 ---
 
