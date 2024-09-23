@@ -2,12 +2,12 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a data profiling plugin powered by LLM. The plugin invokes an LLM model via an OpenAI interface defined in the project and performs profiling of each column's metadata and data. The LLM plugin's response depends on the system prompt in the plugin's definition. The included system prompt can be modified per project's needs, based on the rules explained further in this article. 
+Starting from V8.2, the Catalog includes a data profiling plugin powered by LLM. The plugin invokes an LLM model via an OpenAI interface defined in the project and performs profiling of each column's metadata and data. The LLM plugin's response depends on the system prompt in the plugin's settings file. The pre-configured system prompt can be modified per project's needs, based on the rules explained further in this article. 
 
-The product includes settings for 3 pre-defined use cases:
+The product includes settings for the following 3 use cases:
 
-1. Improving classification of columns with sensitive / PII data. 
-2. Creation of a new business dimension (new property) defined by system prompt.
+1. Classification of columns with sensitive / PII data. 
+2. Creation of a new business dimension (new property).
 3. Creation of each column's short description.
 
 See below the explanation of each use case. By understanding how each use case is achieved via updating the system prompt and other plugin's input parameters, you can use the same plugin to achieve your own use cases.
@@ -29,7 +29,7 @@ The LLM plugin's input parameters definition:
 - ```"sample_prompt"``` defines a part of the system prompt related to the sample data. It is added to the system prompt when the ```"sample_size"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved at the Snapshot step and added to the prompt. 
 - ```"llm_interface"``` is an optional parameter. It can be set to a name of a project's OpenAI interface that should be used by the LLM plugin. 
-  - When ```"llm_interface"``` parameter is not defined in the plugin definition, the plugin will search for a OpenAI interface with Tag = discovery. 
+  - When ```"llm_interface"``` parameter is not set in the plugin definition, the plugin will search for a OpenAI interface with Tag = discovery. 
   - If such does not exist either, the default project's OpenAI interface will be used.
 
 ### Use Case 1 - LLM Based Classification
@@ -60,17 +60,16 @@ LLM can help to improve the classification task by analyzing the data and also b
 					"COUNTRY"
 				],
 		"sample_size": 10,
-		"sample_prompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
-		"llm_interface": "myGpt4o"
+		"sample_prompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}."
 	}
 }
 ```
 
 ### Use Case 2 - New Dimension Creation 
 
-The LLM plugin provides us with the flexibility to discover a new business parameter in the data source by setting up the relevant system prompt. 
+The LLM plugin provides us with the flexibility to discover new business parameters in the data source by setting up the relevant system prompt. 
 
-For example, you would like to identify all of your data source columns that include any medical information, such as a medical condition, any medical treatment or a drug. You can achieve this by setting up the system prompt and also defining a new property name - e.g., medicalInfo. 
+For example, you would like to identify all of the data source's columns that include any medical information, such as a medical condition, any medical treatment or a drug. It can be achieved by setting up the system prompt and also defining a new property name - e.g., medicalInfo. 
 
 This is an example definition of the LLM plugin for Use Case 2:
 
@@ -103,7 +102,7 @@ Using the below example definition, you can create a short description of each d
 	"class": "com.k2view.discovery.plugins.llm.LLMDataProfilingPlugin",
 	"active": true,
 	"threshold": 0.8,
-	"monitor_desc": "descriptions",
+	"monitor_desc": "Descriptions",
 	"input_parameters": {
 		"property_name": "description",
 		"system_prompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease write a one line description of the ${columnName} in order to use it in the technical documentation.\n${sample_prompt}\n Do not include table and coulmns names in your response.",
