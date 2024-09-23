@@ -76,7 +76,7 @@ Major upgrades may require additional steps, such as schema migrations, configur
 
 If the upgrade fails or if any issues are being encountered, follow the steps below to roll back to the previous version.
 
-#### Step 1: Rollback to the Previous Revision
+#### Step 1: Rollback to the Previous Version
 
 1. Use the following command to initiate a rollback to the previous deployment version:
    ```bash
