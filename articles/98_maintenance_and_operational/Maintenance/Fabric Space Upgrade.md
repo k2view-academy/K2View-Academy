@@ -119,7 +119,7 @@ If you encounter issues during the upgrade or the rollback process, consider the
    kubectl get events -n space-k2view --sort-by=.metadata.creationTimestamp
    ```
 
-3. **Resource Status:** Verify the status of related resources such as services, config maps, and persistent volume claims to ensure they are functioning correctly:
+3. **Resource Status:** Validate the status of related resources such as services, config maps, and persistent volume claims, ensuring they are functioning correctly:
    ```bash
    kubectl get svc,configmap,pvc -n space-k2view
    ```
