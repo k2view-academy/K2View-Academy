@@ -16,15 +16,17 @@ See below the explanation of each use case. By understanding how each use case i
 
 The LLM plugin's input parameters definition:
 
-- ```"property_name"``` is a field-level property that the plugin should create if needed, based on the LLM response and the threshold.
-  - ```"threshold": 0.8``` defines whether the plugin should be executed. The plugin skips the columns which already have the same property created by another plugin during the same Job execution, with a score above the threshold. 
-  - For example, if the Metadata Regex Classifier plugin created a classification with score = 0.9, the LLM plugin will not be executed on this field.
+- ```"threshold"``` defines the score above which the plugin should not be executed. It applies to the cases when the column already has **the same property** created by another plugin during the same Discovery Job execution. 
+  - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8, the LLM plugin should not be executed on this field.
+  - The threshold is set in order to minimize the number of calls to the LLM. 
+  - By default, ```"threshold":0.7```. It can be updated, based on the project's requirements.
+- ```"property_name"``` is a column property that the plugin should create, based on the LLM response.
 - ```"system_prompt"``` is a prompt definition. It is a dynamic string, comprised of several parts that are combined at the run time. Some of them are taken from the framework and some are taken from the plugin definition:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are respectively the names of a table, the column being profiled and the names of all other columns in this table. They are passed to the plugin by the framework.
   - ```${possible_values}``` is a list of valid values that can be assigned as a property's value. The values are taken from the ```"possible_values"``` input further in the plugin definition.
   - ```${sample_prompt}``` is a system prompt part related to the data sample. It is taken from the ```"sample_prompt"``` input further in the plugin definition.
 - ```"possible_values"``` is a list of possible property valid values. They can be defined as an array of strings in the plugin definition (as shown above). Alternatively, the values can be retrieved from any project MTable. To define that the values should be taken from an MTable, write ```<MTable Name>.<Column Name>```. 
-  - For example, ```"possible_values":"pii_profiling.name"```.
+  - For example, ```"possible_values":"llm_profiling.name"```.
 - ```"sample_size"``` defines a sample size to be used by LLM. If you don't want to send any sample data to the LLM, set the sample size to 0. 
 - ```"sample_prompt"``` defines a part of the system prompt related to the sample data. It is added to the system prompt when the ```"sample_size"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved at the Snapshot step and added to the prompt. 
@@ -36,16 +38,18 @@ The LLM plugin's input parameters definition:
 
 The Catalog includes 2 built-in plugins which classify the columns based on their data and metadata: [Data Regex Classifier](/articles/39_fabric_catalog/04a_builtin_plugins.md#data-regex-classifier) and [Metadata Regex Classifier](/articles/39_fabric_catalog/04a_builtin_plugins.md#metadata-regex-classifier). Both are using regular expressions to perform the profiling task. 
 
-However, these plugins might miss sensitive data in certain cases. For example, when a column name cannot be caught using a regular expression and also the regular expression cannot be applied on column values (e.g. names of people or geographic locations), the regex-driven plugins might miss columns with sensitive data. 
+However, these plugins might miss sensitive data in certain cases. For example, when a column name cannot be profiled using a regular expression and also the regular expression cannot be applied on column values (e.g. names of people or geographic locations), the regex-driven plugins might miss columns with sensitive data. 
 
-LLM can help to improve the classification task by analyzing the data and also by using the full context of a table and column names. This is an example definition of the LLM plugin for Use Case 1:
+LLM can help to improve the classification task by analyzing the data and also by using the full context of a table and column names. 
+
+This is an example definition of the LLM plugin for Use Case 1:
 
 ```json
 {
 	"name": "LLM Data Profiling Plugin",
 	"class": "com.k2view.discovery.plugins.llm.LLMDataProfilingPlugin",
 	"active": true,
-	"threshold": 0.8,
+	"threshold": 0.7,
 	"monitor_desc": "Classifications",
 	"input_parameters": {
 		"property_name": "classification",
@@ -56,7 +60,6 @@ LLM can help to improve the classification task by analyzing the data and also b
 					"ADDRESS",
 					"CITY",
 					"POSTAL_CODE",
-					"STATE",
 					"COUNTRY"
 				],
 		"sample_size": 10,
@@ -69,7 +72,7 @@ LLM can help to improve the classification task by analyzing the data and also b
 
 The LLM plugin provides us with the flexibility to discover new business parameters in the data source by setting up the relevant system prompt. 
 
-For example, you would like to identify all of the data source's columns that include any medical information, such as a medical condition, any medical treatment or a drug. It can be achieved by setting up the system prompt and also defining a new property name - e.g., medicalInfo. 
+For example, it is required to identify all of the data source's columns that include any medical information, such as a medical condition, a medical treatment or a drug. This requirements can be achieved by setting up the relevant system prompt and creating a new property: ```medicalInfo = true``` . 
 
 This is an example definition of the LLM plugin for Use Case 2:
 
@@ -94,7 +97,7 @@ This is an example definition of the LLM plugin for Use Case 2:
 
 The LLM plugin might help writing a free-text description of the Catalog fields. 
 
-Using the below example definition, you can create a short description of each data source's field in the Catalog:
+Using the below example definition, a short description of each data source's field in the Catalog will be created by the LLM plugin:
 
 ~~~json
 {

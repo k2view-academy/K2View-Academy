@@ -35,7 +35,7 @@ The sample size is configured in the **sample_size** section of the plugins.disc
 
 ### Global Shema Exclusion
 
-Starting from V8.0 HF1, a **global_schema_exclude** section has been added to the plugins.discovery file and it allows setting up a list of schemas to be excluded from any data platform when running the Discovery job. This section should be used for listing various system schemas. Its syntax supports regular expressions. For example, "SYS.*" mean to exclude all schemas with name that starts with 'SYS'. 
+A **global_schema_exclude** section allows setting up a list of schemas to be excluded from any data platform when running the Discovery job. This section should be used for listing various system schemas. Its syntax supports regular expressions. For example, "SYS.*" mean to exclude all schemas with name that starts with 'SYS'. 
 
 ### Crawler Inclusion / Exclusion List
 
