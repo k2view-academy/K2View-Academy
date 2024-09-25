@@ -16,18 +16,17 @@ See below the explanation of each use case. By understanding how each use case i
 
 The LLM plugin's input parameters definition:
 
-- ```"threshold"``` defines the score above which the plugin should not be executed. It applies to the cases when the column already has **the same property** created by another plugin during the same Discovery Job execution. 
-  - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8, the LLM plugin should not be executed on this field.
-  - The threshold is set in order to minimize the number of calls to the LLM. 
+- ```"threshold"``` defines the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to the cases when the column already has **the same property** created by another plugin during the same Discovery Job execution. 
   - By default, ```"threshold":0.7```. It can be updated, based on the project's requirements.
-- ```"property_name"``` is a column property that the plugin should create, based on the LLM response.
-- ```"system_prompt"``` is a prompt definition. It is a dynamic string, comprised of several parts that are combined at the run time. Some of them are taken from the framework and some are taken from the plugin definition:
-  - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are respectively the names of a table, the column being profiled and the names of all other columns in this table. They are passed to the plugin by the framework.
-  - ```${possible_values}``` is a list of valid values that can be assigned as a property's value. The values are taken from the ```"possible_values"``` input further in the plugin definition.
+  - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM plugin should not be executed on this column.
+- ```"property_name"``` is a column property that the plugin should create. The property's value will be the LLM response value.
+- ```"system_prompt"``` is a prompt definition. It is a dynamic string, comprised of several parts that are combined at the run time. Some of them are taken from the framework and some are taken from the plugin definition, as follows:
+  - ```${tableName} ```, ```${columns}``` and ```${columnName}``` respectively are a table and a column being profiled, as well as the names of all other columns in this table. These are passed to the plugin by the framework.
+  - ```${possible_values}``` defines a list of valid values that can be assigned as a property's value. They need to be defined when it is required that the LLM will select a value from a pre-defined list. The values are taken from the ```"possible_values"``` input further in the plugin definition.
   - ```${sample_prompt}``` is a system prompt part related to the data sample. It is taken from the ```"sample_prompt"``` input further in the plugin definition.
-- ```"possible_values"``` is a list of possible property valid values. They can be defined as an array of strings in the plugin definition (as shown above). Alternatively, the values can be retrieved from any project MTable. To define that the values should be taken from an MTable, write ```<MTable Name>.<Column Name>```. 
-  - For example, ```"possible_values":"llm_profiling.name"```.
-- ```"sample_size"``` defines a sample size to be used by LLM. If you don't want to send any sample data to the LLM, set the sample size to 0. 
+- ```"possible_values"``` is a list of possible property's valid values. They should be defined as an array of strings in the plugin definition (as shown above). Alternatively, the values can be retrieved from any project MTable. Note that it is recommended to define a relatively short the list of possible valid values. 
+  - The format of ```"possible_values"``` definition from an MTable is: ```<MTable Name>.<Column Name>```. For example, ```"possible_values":"llm_profiling.name"```.
+- ```"sample_size"``` defines a sample size to be used by LLM. By default, ```"sample_size": 10```.  If you don't want to send any sample data to the LLM, set the sample size to 0. 
 - ```"sample_prompt"``` defines a part of the system prompt related to the sample data. It is added to the system prompt when the ```"sample_size"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved at the Snapshot step and added to the prompt. 
 - ```"llm_interface"``` is an optional parameter. It can be set to a name of a project's OpenAI interface that should be used by the LLM plugin. 
