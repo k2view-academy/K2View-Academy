@@ -32,7 +32,7 @@ The LLM plugin's input parameters are:
 - ```"sample_size"``` defines a sample size to be used by LLM. By default, ```"sample_size": 10```.  If you don't want to send any sample data to the LLM, set the sample size to 0. 
 - ```"sample_prompt"``` defines a part of the system prompt related to the sample data. It is added to the system prompt when the ```"sample_size"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved at the Snapshot step and added to the prompt. 
-- ```"llm_interface"``` is an optional parameter. It can be set to a name of a project's  LLM AI interface that should be used by the LLM plugin. 
+- ```"llm_interface"``` is an optional parameter. It allows to override the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
   - When ```"llm_interface"``` parameter is not set in the plugin definition, the plugin will search for a LLM AI interface with Tag = discovery. 
   - If such does not exist either, the default project's LLM AI interface will be used.
 
