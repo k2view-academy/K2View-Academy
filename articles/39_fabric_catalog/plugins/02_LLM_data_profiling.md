@@ -9,7 +9,7 @@ The LLM plugin is added to the product plugins.discovery file twice, to accommod
 - Use Case 1: **LLM Data Profiling** - classification of columns with sensitive / PII data. 
 - Use Case 2: **LLM Description** - creation of each column's short description.
 
-Note that both settings are disabled by default and should be enabled in the project-level plugin.discovery file, if needed. The pre-requisite of working with LLM plugins is a definition of the LLM AI interface. 
+Note that both settings are disabled by default and should be enabled in the project-level plugin.discovery file, if needed. The pre-requisite of working with LLM plugins is a definition of the LLM AI interface in the project. 
 
 See below the explanation of each use case and its relevant settings. 
 
