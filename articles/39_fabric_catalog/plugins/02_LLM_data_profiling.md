@@ -2,18 +2,18 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project and performs profiling of each column's metadata and data. The LLM plugin's response depends on the system prompt in the plugin's settings file. The pre-configured system prompt can be modified per project's needs, based on the rules explained further in this article. 
+Starting from V8.2, the Catalog includes a data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project and performs profiling of each column's metadata and data. The LLM plugin's response depends on the system prompt in the plugins.discovery file. The pre-configured system prompt can be modified per the project's needs, based on the rules explained further in this article. 
 
 The LLM plugin is added to the product plugins.discovery file twice, to accommodate for the following use cases:
 
 - Use Case 1: **LLM Data Profiling** - classification of columns with sensitive / PII data. 
 - Use Case 2: **LLM Description** - creation of each column's short description.
 
-Note that both settings are disabled by default and should be enabled in the project-level plugin.discovery file, if needed. The pre-requisite of working with LLM plugins is a definition of the LLM AI interface in the project. 
+Note that both settings are disabled by default and should be enabled in the project-level plugin.discovery file, when needed. The pre-requisite of working with LLM plugin is a definition of a project LLM AI interface. 
 
-See below the explanation of each use case and its relevant settings. 
+The LLM Plugins definitions as well as the detail explanations of each use case and its relevant settings can be found further in this article. 
 
-In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the system prompt and other plugin's input parameters. For example, a new business dimension (new property) can be created via an advanced plugin setup. An explanation and an example are provided further in this article. 
+In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the system prompt and other plugin's input parameters. For example, a new business dimension (new property) can be created via an advanced plugin setup. An explanation and an example are also provided further in this article. 
 
 ### LLM Plugin Definition
 
