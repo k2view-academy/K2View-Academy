@@ -353,7 +353,7 @@
 	"Community": [
 		{
 			"comm display name": "Webinars",
-			"comm display text": "Registration for K2view webinars and seminars including the recording and past webinars materials.",
+			"comm display text": "Registration for K2view webinars and seminars, including the recording and past webinars materials.",
 			"comm icon": "../community/webinars/images/webinar_icon.png",
 			"visible": true,
 			"path": "../community/webinars",
