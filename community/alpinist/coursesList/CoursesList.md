@@ -17,100 +17,86 @@
 </td>
 </tr>
 <tr>
-<td>
+<td >
 <p><a title="LUI Sync Components - 1" href="LUI_Sync_Components_1.pdf">LUI Sync Components - 1</a></p>
 </td>
 <td>
 <p>Globals, Mtable</p>
 </td>
 <td>
-<p>Security &amp; Permissions</p>
+<p>Kafka, GG &amp; Filtering</p>
 </td>
-<td>
-<p>IIDFinder</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a title="LUI Sync Components - 2" href="LUI_Sync_Components_2.pdf">LUI Sync Components - 2</a></p>
-</td>
-<td>
-<p>Common</p>
-</td>
-<td>
-<p>Views &amp; Security Profile</p>
-</td>
-<td>
-<p>GG &amp; Filtering</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>BW + Selected actors</p>
-</td>
-<td>
-<p>Jobs &amp; Batch</p>
-</td>
-<td>
-<p>CDC</p>
-</td>
-<td>
-<p>External Jars</p>
-</td>
-</tr>
-<tr>
-<td style="width: 217.969px;">
-<p><a title="LU Table population" href="LU_Table_population.pdf">LU Table population</a></p>
-</td>
-<td style="width: 217.109px;">
-<p>BW Advanced actors</p>
-</td>
-<td style="width: 219.172px;">
-<p>Config</p>
-</td>
-<td style="width: 217.75px;">
-<p>Masking</p>
-</td>
-</tr>
-<tr>
-<td style="width: 217.969px;">
-<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
-</td>
-<td style="width: 217.109px;">
-<p>BW Actors for files/APIs</p>
-</td>
-<td style="width: 219.172px;">
-<p>Kafka</p>
-</td>
-<td style="width: 217.75px;">
-<p>Catalog</p>
-</td>
-</tr>
-<tr>
-<td style="width: 217.969px;">
-<p><a title="Big LUIs &amp; MDB Built-in functions" href="Big_LUIs_&amp;_MDB_Built-in_functions.pdf">Big LUIs &amp; MDB Built-in functions</a></p>
-</td>
-<td style="width: 217.109px;">
-<p>Consumer &amp; lookups</p>
-</td>
-<td style="width: 219.172px;">
-<p>Cassandra</p>
-</td>
-<td style="width: 217.75px;">
+<td >
 <p>Troubleshooting</p>
 </td>
 </tr>
 <tr>
-<td style="width: 217.969px;">
-<p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
+<td style="width: 218.016px;">
+<p><a title="LUI Sync Components - 2" href="LUI_Sync_Components_2.pdf">LUI Sync Components - 2</a></p>
 </td>
-<td style="width: 217.109px;">
-<p>Graphit</p>
-</td>
-<td style="width: 219.172px;">
-<p>Monitoring</p>
+<td style="width: 216.984px;">
+<p>Common</p>
 </td>
 <td style="width: 217.75px;">
+<p>IIDFinder Advanced</p>
+</td>
+<td style="width: 219.25px;">
+<p>Monitoring</p>
+</td>
+</tr>
+<tr>
+<td style="width: 218.016px;">
+<p><a title="LU Table population" href="LU_Table_population.pdf">LU Table population</a></p>
+</td>
+<td style="width: 216.984px;">
+<p>Jobs &amp; Batch</p>
+</td>
+<td style="width: 217.75px;">
+<p>CDC</p>
+</td>
+<td style="width: 219.25px;">
+<p>Config</p>
+</td>
+</tr>
+<tr>
+<td style="width: 218.016px;">
+<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
+</td>
+<td style="width: 216.984px;">
+<p>BW Advanced actors</p>
+</td>
+<td style="width: 217.75px;">
+<p>Cassandra &amp; Keyspaces</p>
+</td>
+<td style="width: 219.25px;">
+<p>ASOP</p>
+</td>
+</tr>
+<tr>
+<td style="width: 218.016px;">
+<p><a title="Big LUIs &amp; MDB Built-in functions" href="Big_LUIs_&amp;_MDB_Built-in_functions.pdf">Big LUIs &amp; MDB Built-in functions</a></p>
+</td>
+<td style="width: 216.984px;">
+<p>BW Actors for files/APIs</p>
+</td>
+<td style="width: 217.75px;">
+<p>Security &amp; Permissions</p>
+</td>
+<td style="width: 219.25px;">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 218.016px;">
+<p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
+</td>
+<td style="width: 216.984px;">
+<p>Graphit</p>
+</td>
+<td style="width: 217.75px;">
+<p>Catalog</p>
+</td>
+<td style="width: 219.25px;">
 <p>&nbsp;</p>
 </td>
 </tr>
