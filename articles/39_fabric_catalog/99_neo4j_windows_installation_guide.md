@@ -28,7 +28,7 @@ cd '\path\to\neo4j-folder'
 
 #### Download K2view's Neo4j package:
 
-Open a freshdesk ticket to download Neo4j package.
+Download the link from [here](https://download.k2view.com/index.php/s/N32tuucAeE0Mq7W/download).
 
 #### Unzip the package:
 ```powershell
