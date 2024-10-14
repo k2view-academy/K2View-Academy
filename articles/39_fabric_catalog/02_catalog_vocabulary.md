@@ -84,7 +84,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 <td >
 <p>The relation between a parent (dataset1) and a child (dataset2). The direction is Many To One (from child to parent).</p>
 <ul>
-<li>dataset2 <strong>refersTo</strong> dataset1 (parent keys)</li>
+<li>dataset2 <strong>refersTo</strong> dataset1 (foreign keys)</li>
 </ul>
 <p>Example: <em>INVOICE refersTo CUSTOMER (customer_id)</em></p>
 <p>The relation key columns are included in the relation's properties.</p>
