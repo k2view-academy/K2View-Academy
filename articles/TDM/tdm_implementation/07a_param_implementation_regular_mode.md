@@ -11,7 +11,7 @@ Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
 2. The LuParams has the following fields:
 
    - lu_name
-   - column_name
+   - column_name - populated with the parameter name. The parameter name can be different from the LU table's field name. 
    - sql
 
 3. LuParams example:
