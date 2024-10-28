@@ -1,18 +1,16 @@
 # Prerequisites and Installation Instructions for K2cloud On-prem K8s Cluster  
 
-This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster, ready for operation.
+This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
 
-While K2cloud K8s cluster deployment on cloud (fully-managed or self-hosted) is done using Teraform, based on each cloud provider K8s infrastructure, the on-prem K8s clsuter deployment is done by runing a script that is responsible for the preperations of all reuired infrasturcture components. This can be considered as a Kubernetes in-a-box.
-
-
+While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. This can be considered a Kubernetes in-a-box.
 
 ## Hardware Requirements 
 
-**Supported OS**: The K2cloud K8s cluster can be installed on both Debian-based (Debian, Ubuntu) and RHEL-based (Redhat, Centos, Fedora, Amazon Linux 2) Linux distributions.
+**Supported OS**: The K2cloud K8s cluster can be installed on Debian-based (Debian, Ubuntu) and RHEL-based (Redhat, Centos, Fedora, Amazon Linux 2) Linux distributions.
 
 
 
-A K8s worker node is expected to meet the following requirements, and accordingly shall be prepared:
+A K8s worker node is expected to meet the following requirements and accordingly shall be prepared:
 
 <table>
 <tbody>
@@ -49,36 +47,34 @@ A K8s worker node is expected to meet the following requirements, and accordingl
 
 ## Preparations and Provisioning
 
-* Prepare a record on a public domain, pointing to the server that will host the K8s node (can point to either a private or a public IP). 
+* Prepare a record on a public domain pointing to the server that will host the K8s node (it can point to either a private or a public IP). 
 
-* Have an asterisks certificate (with a private key) for the selected domain.
+* You need a wildcard certificate (with its corresponding private key) for the selected domain.
 
-  > For a POT Environment, both domain and certificates can be provided by K2view.
+  > For a Proof of Technology (POT) Environment, both domain and certificates can be provided by K2view.
 
-* Have a user with sudo privilege to run the script.
+* You need a user with sudo privilege to run the installation script.
 
-* Have a Docker engine (latest version), or an OCI compatible tool. This will be used to push the images to the k8s local repository.
+* You need a Docker engine installed (latest version), or an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
 
-* Have snapd (snap daemon)  for installting snaps applications 
+* You need to verify that the host has outbound access to GitHub.com and to the K2view Cloud Manager in port 443 (https).
 
-* Verify that the host has an outbound access to GitHub.com and to K2view Cloud manager in port 443 (https).
+* You need to provide K2view with:
 
-* Provide to K2view:
-
-  * The prepared domain name.
+  * The domain name of your environment
   * The Fabric Git project details that are going to be used.
 
-* Get from K2view:
+* You need to obtain from K2view:
 
   * K2view Kubernetes Docker images, depending on the required projects.
 
-  * Mailbox ID and Cloud manager URL. 
+  * Mailbox ID and the Cloud Manager's URL. 
 
 
 
 ## Installation 
 
-The installation script will automatically configure and install everything required for having K8s running and ready.
+The installation script will automatically configure and install everything required to have K8s running and ready.
 
 You should perform the following commands:
 
@@ -111,7 +107,7 @@ This script installs the following:
 * [docker registry](https://microk8s.io/docs/registry-built-in)
 * metrics-server
 
-During the installation, the installer script will request to provide the values prepared in the Prerequisites phase:
+During the installation, the installer script will request you provide the values prepared in the Prerequisites phase:
 
 * Mailbox ID
 * Cloud manager URL
@@ -148,7 +144,7 @@ deploy_certificate.sh /path/to/fullchain.cer /path/to/private.key
 
 Use the following commands to stop and restart the cluster:
 
-**Stoping The Cluster**
+**Stopping The Cluster**
 
 ```bash
 microk8s stop
@@ -168,7 +164,7 @@ microk8s restart
 
 **Uninstalling The Cluster**
 
-Delete the spaces and other resources from the Cloud Manager and then use the following commands to remove the cluster from your machine.
+Delete the spaces and other resources from the Cloud Manager, and then use the following commands to remove the cluster from your machine.
 
 ```bash
  microk8s uninstall
