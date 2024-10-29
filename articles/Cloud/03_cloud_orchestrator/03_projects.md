@@ -14,7 +14,7 @@ These 3 parts provides a powerful provisioning capability aimed for spaces diver
 
 * When the project is being made stable, a GIT version and tag, is set. In turn, a staging/pre-prod space is created, based on a space profile that points to this tag. Such space might be created on a different location/site.
 
-* If another implementor wants to continue working and developing project's next features he will do it on another GIT branch. According, another space profile will be created, enable him to create a space upon, without harming the capability of creating spaces based on the original branch. 
+* If another implementor wishes to continue working and developing the project's next features, he will do it on another GIT branch. Accordingly, another space profile will be created, enabling him to create a space upon, without harming the capability of creating spaces based on the original branch. 
 
   
 
@@ -23,7 +23,7 @@ The Projects page is reached by accessing the k2cloud Orchestrator on https://cl
 
 INSERT IMAGE OF TOP BAR OF k2cloud Orchestrator AFTER IT’S SWITCHED TO PROJECTS PAGE
 
-Upon entering the Projects page, you can see that *Show All Projects* is selected by default in its top bar; this brings about a display of all the projects created by other users in your tenant. 
+Upon entering the Projects page, you can see that *Show All Projects* is selected by default in its top bar; this brings about a display of all projects created by other users in your tenant. 
 
 The logic behind this is that the Project owner was most likely the one to define and create the Project. It is also possible to select *Show My Projects* for viewing Projects created by yourself. It is worth mentioning that **K2view Cloud Platform** is multi-tenant, which enables each User/Client to view his own Projects and Spaces only.
 The Auto Refresh feature is turned off by default in the top bar, as it is less commonly used since Projects are not often created. If a user wishes to see a display of the most up-to-date Customer’s Projects list, he can simply click the Refresh button for an on-demand refresh.
