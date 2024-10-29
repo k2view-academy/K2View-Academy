@@ -8,7 +8,7 @@ A **Project** in the K2cloud platform aimed to accompany the Fabric project thro
 
 These 3 parts provides a powerful provisioning capability aimed for spaces diversity, which needed for the project’s life cycle. For example: 
 
-* A project's implementor who works on the project, uses a space with a Studio profile on a specific Fabric version. He then pushes his changes to GIT.
+* A project's implementor, who works on the project, uses a space with a Studio profile on a specific Fabric version. He then pushes his changes to GIT.
 
 * The QA team verifies the implementation by creating a space without Studio, using another space profile, on that Fabric version.
 
