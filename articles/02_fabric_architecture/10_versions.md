@@ -41,9 +41,9 @@ The below table displays the various Fabric versions, released date and end of l
          <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V7.2/Fabric_Release_Notes_V7.2.2.pdf">7.2.2</a></td>
             <td>February 14, 2024</td>
-            <td>HF16</td>
-            <td>October 15, 2024</td>
-            <td>268</td>
+            <td>HF17</td>
+            <td>October 29, 2024</td>
+            <td>270</td>
             <td></td>
         </tr>
         <tr>
