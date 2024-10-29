@@ -12,7 +12,7 @@ These 3 parts provides a powerful provisioning capability aimed for spaces diver
 
 * The QA team verifies the implementation by creating a space without Studio, using another space profile, on that Fabric version.
 
-* When the project is being made stable, a GIT version and tag, is set. In turn, a staging/pre-prod space is created, based on a space profile that points to this tag. Such space might be created on a different location/site
+* When the project is being made stable, a GIT version and tag, is set. In turn, a staging/pre-prod space is created, based on a space profile that points to this tag. Such space might be created on a different location/site.
 
 * If another implementor wants to continue working and developing project's next features he will do it on another GIT branch. According, another space profile will be created, enable him to create a space upon, without harming the capability of creating spaces based on the original branch. 
 
