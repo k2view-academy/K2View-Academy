@@ -55,6 +55,7 @@ All rules are saved on the project level under the ```Implementation/SharedObjec
 The baseline configuration as well as the override rule can be viewed and updated via the [Discovery Job Setup screen in the Catalog Settings].
 
 
+[![Previous](/articles/images/Previous.png)](03_discovery_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
 
 
 
