@@ -26,5 +26,5 @@ Once the process has been completed, the Logical Unit schema can be created base
 
 
 
-[![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_plugin_framework.md) 
+[![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_discovery_job.md) 
 
