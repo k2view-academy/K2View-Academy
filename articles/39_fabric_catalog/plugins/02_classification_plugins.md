@@ -100,6 +100,3 @@ For example, when 30% of the values in a certain field are null, the Null Percen
 
 
 
-[![Previous](/articles/images/Previous.png)](04_plugin_framework.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04a_catalog_integration_with_fabric.md) 
-
-</web>
