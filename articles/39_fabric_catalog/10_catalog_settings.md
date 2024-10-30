@@ -2,14 +2,15 @@
 
 The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes pre-defined settings which can be updated to accommodate the Project's needs.
 
-This article includes the following sections:
+The Settings tab includes the following sections, described in this and other articles:
 
 * [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
 * [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
-  * Masking Setup
+  * Masking Setup Guidelines
   * Advanced Masking Settings
-* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available from V8.1.
+* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available from V8.1
   * Advanced Sequence Settings
+* [Discovery Job Setup Screen](13_discovery_job_setup_screen.md), available from V8.2
 
 ## Classifier Regex Setup
 
@@ -50,7 +51,7 @@ Each **Classification** in this tab is unique, and it includes 2 attributes:
 
 In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab since both classifications & sequences are saved in the same MTable.
 
-### Masking Setup
+### Masking Setup Guidelines
 
 Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
