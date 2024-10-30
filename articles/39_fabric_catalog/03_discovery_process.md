@@ -1,4 +1,4 @@
-# Discovery Process
+# Discovery E2E Process
 
 The K2view Discovery process is depicted in the below diagram and it includes the following major steps:
 
