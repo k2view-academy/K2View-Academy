@@ -43,7 +43,7 @@ The below table displays the various Fabric versions, released date and end of l
             <td>February 14, 2024</td>
             <td>HF17</td>
             <td>October 29, 2024</td>
-            <td>270</td>
+            <td>277</td>
             <td></td>
         </tr>
         <tr>
