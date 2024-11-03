@@ -21,7 +21,7 @@
 <p><a title="LUI Sync Components - 1" href="LUI_Sync_Components_1.pdf">LUI Sync Components - 1</a></p>
 </td>
 <td>
-<p><a title="Globals & Mtable" href="Globals_&_MTables.pdf">Globals & Mtable</a></p>
+<p><a title="Globals & MTables" href="Globals_MTables.pdf">Globals & MTables</a></p>
 </td>
 <td>
 <p>Kafka, GG &amp; Filtering</p>
