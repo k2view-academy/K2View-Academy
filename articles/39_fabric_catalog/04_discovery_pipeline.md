@@ -68,7 +68,7 @@ When there are multiple rules for the same process element, the most specific ru
 * A **Rule 1** is created for CRM_DB and it sets ```Plugin X``` to active. 
 * A **Rule 2** is created for CRM_DB and public2 schema, and it  sets ```Plugin X``` to active and a threshold = 0.8.
 
-So, depending of which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
+So, depending on which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
 
 All the above configuration changes are saved on the project level under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder. 
 
