@@ -1,4 +1,4 @@
-# Basic Classification Plugins
+# Regex-Based Profiling Plugins
 
 ### Overview
 
