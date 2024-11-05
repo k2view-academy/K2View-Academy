@@ -4,7 +4,7 @@
 
 <web>
 
-To initiate the Discovery process:
+To initiate the Discovery job:
 
 * Start by defining an interface for your data source in the Fabric Studio. 
 
@@ -32,7 +32,12 @@ To initiate the Discovery process:
 
 </studio>
 
-When the Discovery job is invoked, it automatically triggers the DATA_DISCOVERY_JOB listener job. The DATA_DISCOVERY_JOB is subscribed to the Pubsub topic dedicated to the Discovery process. Its purpose is to create a new Catalog version in the Neo4j Graph DB.
+When the Discovery job is invoked for the first time, it automatically triggers the following:
+
+* NEO4J_PROCESS, responsible for running the Neo4j.
+
+
+* DATA_DISCOVERY_JOB listener job. The DATA_DISCOVERY_JOB is subscribed to the Pubsub topic dedicated to the Discovery process. Its purpose is to create a new Catalog version in the Neo4j Graph DB.
 
 <studio>
 
@@ -76,5 +81,5 @@ Note that **Run Discovery Job** and **Open in Catalog** commands may be hidden i
 
 
 
-[![Previous](/articles/images/Previous.png)](04_discovery_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_catalog_app.md) 
+[![Previous](/articles/images/Previous.png)](04_discovery_pipeline.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_catalog_app.md) 
 

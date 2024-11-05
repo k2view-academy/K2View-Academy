@@ -1,20 +1,17 @@
 # Catalog Settings
 
-The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes pre-defined settings which can be updated to accommodate the Project's needs.
+The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes product pre-defined settings which can be updated to accommodate the Project's needs. The updates are saved in the project. 
 
-The Settings tab includes the following sections, described in this and other articles:
+The Settings includes the following sections, described in this and other articles:
 
-* [Classifier Regex Setup](10_catalog_settings.md#classifier-regex-setup)
-* [Classifier PII & Masking Setup](10_catalog_settings.md#classifier-pii--masking-setup)
-  * Masking Setup Guidelines
-  * Advanced Masking Settings
-* [Classifier Sequence Setup](10_catalog_settings.md#classifier-sequence-setup), available from V8.1
-  * Advanced Sequence Settings
-* [Discovery Job Setup Screen](13_discovery_job_setup_screen.md), available from V8.2
+* [Classifier Regex Tab](10_catalog_settings.md#classifier-regex-tab)
+* [PII & Masking Tab](10_catalog_settings.md#pii--masking-tab)
+* [Sequences Tab](10_catalog_settings.md#sequences-tab), available from V8.1
+* [Discovery Pipeline Tab](13_discovery_pipeline_settings.md), available from V8.2
 
-## Classifier Regex Setup
+## Classifier Regex Tab
 
-The **Classifier Regex Setup** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
+The **Classifier Regex** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
 
 ![](images/settings_regex.png)
 
@@ -36,9 +33,9 @@ Once the Save button is clicked, the **metadata_profiling** and **data_profiling
 
 Click [here](04_plugin_framework.md#built-in-plugins) for more details about these Profiling plugins.
 
-## Classifier PII & Masking Setup
+## PII & Masking Tab
 
-The **Classifier PII & Masking Setup** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described later in this article.
+The **PII & Masking** tab allows to view and update the PII and Catalog-based masking settings of each classification. The PII indicator is used by the *Classification PII Marker* built-in plugin. The Masking setup is used by the Catalog Masking actors as described later in this article.
 
 <img src="images/settings_pii_mask.png" />
 
@@ -51,7 +48,7 @@ Each **Classification** in this tab is unique, and it includes 2 attributes:
 
 In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab since both classifications & sequences are saved in the same MTable.
 
-### Masking Setup Guidelines
+#### Masking Setup Guidelines
 
 Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
@@ -73,11 +70,11 @@ Below is a sample of such flow:
 
 
 
-Once the Save button is clicked in the **Classifier PII & Masking Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Once the Save button is clicked in the **PII & Masking** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
 Click for more details about the [Catalog masking mechanism](11_catalog_masking.md).
 
-### Advanced Masking Settings
+#### Advanced Masking Settings
 
 The purpose of the Advanced Masking Settings pop-up window is to allow setting up of additional masking parameters. This window includes the following:
 
@@ -89,15 +86,13 @@ The purpose of the Advanced Masking Settings pop-up window is to allow setting u
 
 The Advanced Masking Settings are defined per each Classification by using the above pop-up window.
 
-The **Submit** button in this window aggregates the data in the application’s client side until saving is done using the **Save** button in the **Classifier PII & Masking Setup** tab. 
+The **Submit** button in this window aggregates the data in the application’s client side until saving is done using the **Save** button in the **PII & Masking** tab. 
 
-Upon clicking the **Save** button in the **Classifier PII & Masking Setup** tab, the **pii_profiling** and  **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
+Upon clicking the **Save** button in the **PII & Masking** tab, the **pii_profiling** and  **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-## Classifier Sequence Setup
+## Sequences Tab
 
-Starting from V8.1, the Classifier Sequence Setup tab was added to the Catalog Settings. 
-
-The **Classifier Sequence Setup** tab allows to set up the sequences that can be used in a project as part of the masking flow (note that usage of the sequences will be introduced in the next Fabric version). 
+The **Sequences** tab allows to set up the sequences that can be used in a project as part of the masking flow (note that usage of the sequences will be introduced in the next Fabric version). 
 
 This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
 
@@ -105,9 +100,9 @@ Click the **Add Record +** button to create a sequence, and populate a **Sequenc
 
 <img src="images/settings_seq.png" />
 
-Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking Setup tab) with the same name as a sequence in this tab.
+Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
 
-### Advanced Sequence Settings
+#### Advanced Sequence Settings
 
 The purpose of the Advanced Sequence Settings pop-up window is to allow the setting up of additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
 
@@ -115,9 +110,9 @@ Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the 
 
 The sequences are saved in the same MTable as the masking classifications - **catalog_classification_generators**, with the following difference:
 
-* The masking classifications have a category = **enable_masking**.
-* The non-PII sequences have a category = **enable_sequence**.
-* The PII-sequences have category = **enable_masking_uniqueness**.
+* The category of masking classifications is **enable_masking**.
+* The category of non-PII sequences is **enable_sequence**.
+* The category of PII-sequences is **enable_masking_uniqueness**.
 
 
 

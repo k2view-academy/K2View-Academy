@@ -1,6 +1,6 @@
-# Discovery E2E Process
+# E2E Discovery Process
 
-The K2view Discovery process is depicted in the below diagram and it includes the following major steps:
+The K2view Discovery solution is depicted in the below diagram and it includes the following major steps:
 
 * Define a Fabric interface for a given data source and initiate the Discovery job.
 * The first step of the Discovery job is a Crawler. It scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
@@ -26,5 +26,5 @@ Once the process has been completed, the Logical Unit schema can be created base
 
 
 
-[![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_discovery_job.md) 
+[![Previous](/articles/images/Previous.png)](02_catalog_vocabulary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_discovery_pipeline.md) 
 
