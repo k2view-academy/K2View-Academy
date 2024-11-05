@@ -1,4 +1,4 @@
-# LLM-Based Data Profiling
+# LLM-Based Profiling Plugins
 
 ### Overview
 
