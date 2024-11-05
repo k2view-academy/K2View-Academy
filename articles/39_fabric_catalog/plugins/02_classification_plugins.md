@@ -1,13 +1,12 @@
-# Regex-Based Profiling Plugins
+# Regex-Based Profiling
 
 ### Overview
 
 The following article describes the basic classification plugins in the Catalog solution:
 
-* [Data Regex Classifier](00_classification_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
-* [Metadata Regex Classifier](00_classification_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
-* [Classification PII Marker](00_classification_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
-* [NULL Percentage](00_classification_plugins.md#null-percentage) - to calculate the percentage of NULL values per column, based on the data snapshot.
+* [Data Regex Classifier](02_classification_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
+* [Metadata Regex Classifier](02_classification_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
+* [Classification PII Marker](02_classification_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
 
 ### Data Regex Classifier
 
@@ -17,7 +16,7 @@ This plugin runs on a data snapshot that is extracted from the source, and it ex
 
 If a regular expression (known as regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., EMAIL). If a match is found for more than one expression, the property is created with the Classification that got a higher calculated score. 
 
-To update the data profiling rules, go to the [Catalog Settings > Classifier Regex Setup tab](../10_catalog_settings.md#classifier-regex-setup).
+To update the data profiling rules, go to the [Catalog Settings > Classifier Regex tab](../10_catalog_settings.md#classifier-regex-tab).
 
 **Example:**
 
@@ -37,7 +36,7 @@ If a regular expression (known as regex) matches the field's name, a Classificat
 
 <img src="../images/field_classification.png" style="zoom: 67%;" />
 
-To update the metadata profiling rules, go to the [Catalog Settings > Classifier Regex Setup tab](../10_catalog_settings.md#classifier-regex-setup).
+To update the metadata profiling rules, go to the [Catalog Settings > Classifier Regex tab](../10_catalog_settings.md#classifier-regex-tab).
 
 #### Field Exclusion List
 
@@ -63,11 +62,11 @@ The exclusion list can be defined using the **field_name_exclude_list** and **fi
 
 ### Classification PII Marker
 
-The purpose of **Classification PII Marker** plugin is to go over all the fields that have got the **Classification** property (by either one of the above plugins) and to add the **PII** property. 
+The purpose of **Classification PII Marker** plugin is to go over all the fields that have got the **Classification** property (by either one of the profiling plugins) and to add the **PII** property. 
 
 The rules as to whether the classification type is considered a PII are defined in a built-in **pii_profiling** MTable. 
 
-To update the Classification's PII indicator, go to the [Catalog Settings > Classifier PII & Masking Setup](../10_catalog_settings.md#classifier-pii--masking-setup). 
+To update the Classification's PII indicator, go to the [Catalog Settings > PII & Masking tab](../10_catalog_settings.md#pii--masking-tab). 
 
 #### Field Exclusion List
 
@@ -89,14 +88,6 @@ The exclusion list can be defined using the **field_name_exclude_list** and **fi
 ~~~
 
 
-
-### NULL Percentage
-
-The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated on each column of non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained earlier in this article.
-
-As a result, the **Null Percentage** property is added to the field's properties when the calculated value is above the threshold. 
-
-For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
 
 
