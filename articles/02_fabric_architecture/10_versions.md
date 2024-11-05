@@ -15,6 +15,14 @@ The below table displays the various Fabric versions, released date and end of l
     </thead>
     <tbody>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.1/Fabric_Release_Notes_V8.1.2.pdf">8.1.2</a></td>
+            <td>November 5, 2024</td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.1/Fabric_Release_Notes_V8.1.1.pdf">8.1.1</a></td>
             <td>October 22, 2024</td>
             <td></td>
@@ -97,9 +105,9 @@ The below table displays the various Fabric versions, released date and end of l
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V6.5/Fabric_Release_Notes_V6.5.9.pdf">6.5.9</a></td>
             <td>September 2, 2022</td>
-            <td>HF24</td>
-            <td>June 30, 2024</td>
-            <td>240</td>
+            <td>HF25</td>
+            <td>November 3, 2024</td>
+            <td>252</td>
             <td></td>
         </tr>
         <tr>

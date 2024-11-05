@@ -20,6 +20,7 @@ Supported Secrets Management providers are:
 - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/)
 - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
 - [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager)
+- [OneIdentity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
 
 
 
@@ -156,6 +157,17 @@ Other parameters:
 
   
 
+#### OneIdentity Safeguard
+
+Section name: [encryption_safeguard_sm]
+
+Authentication is done by  certifications and keys that shall be applied.
+
+* HOST, the Safeguard URL, used for all API calls. 
+* TIMEOUT, Optional (default is 10000 ms)
+
+
+
 ### Interface Connection Details' Settings
 
 
@@ -171,14 +183,15 @@ For example: ${secretmanager:mysql-password}
 
   >  Mentioning that AppID can be added for more granularity, rather than general one, which can be set in the config.ini file.
 
+* For Safegurd, you shall specify both *asset name* and *account name* parameters, by using the '&' concatenating pattern. For example: "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
 
+  
 
 > Notes: 
 >
 > * The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, while others, like local testing, may not. 
 > * You can use the *Test connection* option to verify that the connection settings are OK, also when the Secrets Management service is activated.
 > * The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
-
 
 
 
