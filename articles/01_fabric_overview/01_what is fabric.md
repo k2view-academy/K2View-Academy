@@ -26,7 +26,7 @@ To summarize, Fabric architecture yields significant savings in computing, power
 
 ### Fabric Use Cases
 Fabric is a compelling solution for:
-* Anything 360, like: customer, order, device, server, car, credit-card or patient
+* Anything 360, such as customer, order, device, server, car, credit-card or patient
 * Micro services
 * <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>
 * Machine Learning / Artificial Intelligence
