@@ -35,7 +35,7 @@ Fabric is a compelling solution for:
 * Batch data processing
 
 ### Getting Started
-**Learn about Main Fabric Platform Modules:**
+**Learn about the Main Fabric Platform Modules:**
 * [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)  
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md)
 * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)
