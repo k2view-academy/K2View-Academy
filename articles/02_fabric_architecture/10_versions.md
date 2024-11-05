@@ -107,7 +107,7 @@ The below table displays the various Fabric versions, released date and end of l
             <td>September 2, 2022</td>
             <td>HF25</td>
             <td>November 3, 2024</td>
-            <td>250</td>
+            <td>252</td>
             <td></td>
         </tr>
         <tr>
