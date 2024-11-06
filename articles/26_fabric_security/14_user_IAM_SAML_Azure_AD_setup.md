@@ -7,7 +7,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 ### Prerequisite Requirements
 
 - Admin access to Azure AD.
-- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
 ## Configuration instructions: At Azure AD
 
@@ -47,7 +47,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
    </tbody>
    </table>
 
-8. Edit the **Basic SAML Configuration** section (1) - information should be taken to match the Fabric Configuration, as explained [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
+8. Edit the **Basic SAML Configuration** section (1) - information should be taken to match the Fabric Configuration, as explained [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
    - **Entity ID**
    - **Reply URL** **(Assertion Consumer Service URL)** - the location where the SAML assertion is sent with a POST operation back to Fabric. Its format: `https://<HOSTNAME>:<PORT>/api/authenticate` (host name shall be the Fabric LB).
@@ -76,7 +76,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
   </tbody>
   </table>
 
-11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
+11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
 
     <table>
     <tbody>
@@ -104,7 +104,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 ## Configuration instructions: At Fabric
 
-In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration), setting-up SAML with Azure AD requires adding an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
+In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration), setting-up SAML with Azure AD requires adding an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
 
 
 
