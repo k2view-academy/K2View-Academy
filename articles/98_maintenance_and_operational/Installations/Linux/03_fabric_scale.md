@@ -90,6 +90,6 @@ For more information about an advanced setup, read below:
 <ul>
    <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md">Fabric Installation</a></li>
    <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric main configuration files</a></li>
-   <li><a href="/articles/26_fabric_security/13_user_IAM_configiration.md">SAML configiration</a></li>
+   <li><a href="/articles/26_fabric_security/13_user_IAM_configuration.md">SAML configuration</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/03_hardware_req_for_prod.md">Hardware requirements</a></li>
 </ul>
