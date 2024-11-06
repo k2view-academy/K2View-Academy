@@ -2,11 +2,11 @@
 
 ### Overview
 
-The following article describes the basic classification plugins in the Catalog solution:
+The following article describes basic classification plugins included in the Catalog solution:
 
-* [Data Regex Classifier](02_classification_plugins.md#data-regex-classifier) - to classify the source fields based on their data - field value. 
-* [Metadata Regex Classifier](02_classification_plugins.md#metadata-regex-classifier) - to classify the source fields based on their metadata - field name.
-* [Classification PII Marker](02_classification_plugins.md#classification-pii-marker) - to set the fields as based on their classification.
+* [Data Regex Classifier](02_classification_plugins.md#data-regex-classifier) - classify the source fields based on their data (field value). 
+* [Metadata Regex Classifier](02_classification_plugins.md#metadata-regex-classifier) - classify the source fields based on their metadata (field name).
+* [Classification PII Marker](02_classification_plugins.md#classification-pii-marker) - create the ```PII=true``` property on Catalog fields, as based on their classification.
 
 ### Data Regex Classifier
 
