@@ -34,7 +34,7 @@ Below is the logical flow, illustrating these steps:
 
  
 
-For more information and guidelines about setting up Fabric with LDAP, refer to the examples for [Azure AD LDAP](/articles/26_fabric_security/11.1_user_IAM_AD_LDAP.md) and [Azure AD LDAPS](/articles/26_fabric_security/11.2_user_IAM_AD_LDAPS.md). For more information about SAML configuration in Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#ldap--ldaps-configuration).
+For more information and guidelines about setting up Fabric with LDAP, refer to the examples for [Azure AD LDAP](/articles/26_fabric_security/11.1_user_IAM_AD_LDAP.md) and [Azure AD LDAPS](/articles/26_fabric_security/11.2_user_IAM_AD_LDAPS.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#ldap--ldaps-configuration).
 
 
 
