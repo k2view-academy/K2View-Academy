@@ -8,8 +8,8 @@
 
   <img src="images/discovery_folder.png"  />
 
-  * The **MTable** subfolder holds the MTables used by the Catalog's various processes. In addition, when [Build Artifacts](09_build_artifacts.md) is performed, the Catalog artifact file called **catalog_field_info.csv** is also created in this folder.
-  * The **plugins.discovery** is a configuration file that defines a list of plugins and their execution order. Starting Fabric V8.0,  the file exists in this location only when project-level overrides have been performed. Click [here](/articles/39_fabric_catalog/04_plugin_framework.md) for more details about this file.
+  * The **MTable** subfolder holds the MTables used by the Catalog's various processes. In addition, when [Build Artifacts](09_build_artifacts.md) is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
+  * The **plugins.discovery** is a configuration file that defines a list of plugins and their execution order. Starting Fabric V8.0,  the file exists in this location only when project-level overrides have been performed. 
 
 * *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands **Run Discovery Job** and **Open in Catalog** in the Web Studio. 
 
@@ -20,23 +20,30 @@
 
 ### Catalog Application Configuration
 
-The **properties-info.json** is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog application elements. This JSON file defines for example:
-* Which properties are editable (via [manual override](07_manual_overrides.md)) in the Properties tab;
-* Which properties are searchable via the [Advanced Search](08_search_catalog.md#advanced-search) screen.
+The **properties-info.json** is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog UI elements. The following settings can be performed:
+* ```"editable": true``` - the property is editable via the [Edit Catalog capabililty](07_manual_overrides.md).
+* ```"deletable": true``` - the property can be deleted via the [Edit Catalog capabililty.](07_manual_overrides.md)
+* ```"searchable": true``` - the property is searchable using the [Advanced Search](08_search_catalog.md#advanced-search) screen.
+* ```"filterable": true``` - the property is filterable using the [Catalog Filter](08a_filter_catalog.md) screen.
+* ```"values":[]``` defines a list of property's valid values. For some properties, this list is combined with programmatically retrieved values (e.g. classification).
+* ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
+* ```"hidden": true``` - the property is hidden from the Catalog's Properties tab.
 
-The file is located in ```fabric/staticWeb/catalog``` folder.
-
-<web>
+The properties-info.json file is located in ```fabric/staticWeb/catalog``` folder.
 
 In order to perform the project-level overrides in the **properties-info.json** file:
 
 * Create a **catalog** folder under the **Web** folder of the **Web Services** LU and copy the file into it. 
 
+  <web>
+
 ![](images/web_catalog.png)
+
+</web>
 
 * After updating the file, save it and deploy the LUs.
 
-</web>
+
 
 ### General
 
