@@ -7,7 +7,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 ### Prerequisite Requirements
 
 - Admin access to Azure AD.
-- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
 ## Configuration instructions: At Azure AD
 
@@ -76,7 +76,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
   </tbody>
   </table>
 
-11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
+11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Read more [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) in SAML Configuration > Preparations > Provide to the IDP. 
 
     <table>
     <tbody>
