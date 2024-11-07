@@ -1,8 +1,8 @@
 # Big Logical Units
 
-There is a 2G limitation in Cassandra for writing compressed SQLite LUI files into a Cassandra **entity** table as blobs. Fabric enables storing big LUIs without limitations on size by splitting data into chunks. The SQLite file's chunks are written into the Cassandra **entity_chunks** table in parallel using the [Cassandra Loader](/articles/28_cassandra_loader/01_cassandra_loader_overview.md). 
+Fabric enables storing big LUIs without limitations on size by splitting data into chunks. The SQLite file's chunks are written into the System DB **entity_chunks** table in parallel. 
 
-The Loader configuration for the parallel save can be done using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) by adding a section named **[LU type]_ cassandra_entity_storage** per each LU. The parameters under this section are the same as the Cassandra Loader definition parameters (for example, Loader execution mode).
+When the System DB is Cassandra, the [Cassandra Loader](/articles/28_cassandra_loader/01_cassandra_loader_overview.md) is used. The Loader configuration for the parallel save can be done using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) by adding a section named **[LU type]_ cassandra_entity_storage** per each LU. The parameters under this section are the same as the Cassandra Loader definition parameters (for example, Loader execution mode).
 
 The LUI data is first written into the **entity_chunks** table and then after all chunks were written successfully the **entity** table is populated. 
 
@@ -22,7 +22,7 @@ The **entity_chunks** table includes the following data:
 
 The chunk size is set using the config.ini file parameters, defined per node:
 
-* INSTANCE_CHUNK_SIZE, impacting the read from Cassandra (pagination) and write into Cassandra chunk size (default 10MB – 10485760 bytes).
+* INSTANCE_CHUNK_SIZE, impacting the read from System DB (pagination) and write into System DB chunk size (default 10MB – 10485760 bytes).
 
 ### Improve LUI Partitioning
 
@@ -31,9 +31,9 @@ When dealing with a large amount of entity chunks, LUI Partitioning can be enabl
 Note however that there is no upgrade path for existing projects. You must clean all data in Fabric and bring Fabric back.
 It is recommended to turn this feature on when dealing with large LUIs that are split into multiple chunks.
 
-### Parallel Load Big LUI from Cassandra
+### Parallel Load Big LUI from System DB
 
-When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
+When loading the chunks of Big LUI from System DB to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
 The config.ini parameters to configure the above are:
 

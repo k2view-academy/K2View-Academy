@@ -69,13 +69,13 @@ Type **fabric** in the Fabric server command line.
 
 ## Reset Fabric
 
-The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from Fabric and Cassandra. The **reset.sh** script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts) and is used mainly:
+The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from Fabric and the Storage DB. The **reset.sh** script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts) and is used mainly:
 
 - In a **Test environment** to delete the current data and to restart the testing process from scratch.
 
 - In a **Production environment**. Note that the [DROP LUTYPE](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) command and the **reset.sh** script are rarely used in a Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run.
 
-Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command)) command which drops a specific LU, the **reset.sh script** performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
+Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command)) command which drops a specific LU, the **reset.sh script** performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from the Storage DB.
 
 The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
@@ -110,8 +110,8 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <td width="580pxl">
     <p>Reset mode. The following modes are supported:</p>
 <ul>
-    <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except for keyspaces set in the black-list parameter if set.</li>
-    <li><strong>drop_all</strong>, removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces set in the black-list parameter and system keyspaces.</li>
+    <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all storage schemas except for the schemas specified in the black-list parameter, if set.</li>
+    <li><strong>drop_all</strong>, removes Fabric storage on the local Fabric node, Kafka topics, and all storage schemas except the system schemas that are not deletable.</li>
     <li><strong>drop_local</strong>, removes Fabric storage on the local Fabric node only. For example, remove /dev/shm/ directory on the local node.</li>
 </ul>
 </td>
@@ -124,7 +124,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <p>No</p>
 </td>
 <td width="580pxl">
-<p>List of <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> or Kafka topic names that must be excluded from the drop.</p>
+<p>List of Storage DB schemas or Kafka topic names that must be excluded from the drop.</p>
 <p>The names have double quotes and are separated by a space.</p>
 </td>
 </tr>
@@ -147,7 +147,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 
 When a Fabric cluster clean-up is required, it is recommended to execute the **reset.sh** script in the following order:
 
-- Run on one node, ./reset.sh drop_all; - cleans Fabric storage on the local Fabric node and removes Cassandra keyspaces and Kafka topics. Removing Cassandra keyspaces and Kafka topics impacts  the entire Fabric cluster.
+- Run on one node, ./reset.sh drop_all; - cleans Fabric storage on the local Fabric node and removes the storage schemas and Kafka topics. Removing the storage schemas and Kafka topics impacts  the entire Fabric cluster.
 
 - Run on all other nodes, ./reset.sh drop_local; - cleans Fabric storage on the local Fabric node. To reset the Fabric cluster correctly, execute the **reset.sh** script on all fabric nodes, and only then [start](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-start) each Fabric node individually.
 
@@ -220,9 +220,9 @@ The Fabric **watchdog.sh** script is used to keep a specific command alive. The 
 
 **Script flow:**
 
-   1. Execute the command that is input to the function. Watchdog will run on Fabric by default if a specific command is not provided.
+      1. Execute the command that is input to the function. Watchdog will run on Fabric by default if a specific command is not provided.
 
-   2. Restart the command upon failure automatically according to the number of retries, during the grace period. The number of retries and the grace period are configurable. 
+      2. Restart the command upon failure automatically according to the number of retries, during the grace period. The number of retries and the grace period are configurable. 
 
 
 Note: watchdog script can monitor only commands that are not running in the background.
@@ -241,7 +241,7 @@ WATCHDOG_VERIFICATION_GRACE_SEC [optional (default=60)]: A verification grace pe
 
 ./watchdog.sh 'cassandra.sh -f' -r=4 -g=80
 
-​	run a watchdog on cassandra. During a grace period of 80 seconds, try to run cassandra.sh 4 times.
+​	run a watchdog on Cassandra. During a grace period of 80 seconds, try to run cassandra.sh 4 times.
 
 ## Kill Watchdog (available from Fabric 6.4.5)
 
@@ -253,15 +253,15 @@ The Fabric **watchdog-kill.sh** script is used kill (stop) a watchdog process an
 
 **Script syntax:**
 
-./watchdog-kill.sh <pid>
+./watchdog-kill.sh [pid]
 
-<pid> - the id of the watchdog (and its child processes) that is to be killed
+[pid] - the ID of the watchdog (and its child processes) that should be killed
 
  **Example**
 
 ./watchdog-kill.sh 1234
 
-​	Kill process id 1234, can be either the watchdog process id or the child process id. Both processes will be killed.
+​	Kill the process ID 1234, which can be either the watchdog process ID or the child process ID. Both processes will be killed.
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/02_fabric_directories.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/04_fabric_commands.md)
 
