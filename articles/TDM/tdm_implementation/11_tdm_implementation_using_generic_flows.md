@@ -84,7 +84,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
 
-II. Run the [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
+II. Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
 
 III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
 
@@ -139,7 +139,7 @@ For a better performance, set the **TDM_SEQ_REPORT** Global to **false** to prev
 
 In order to create the load and delete flows, run either:
 
-I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Note that this flow is designed to run one time when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
+I. [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Note that this flow is designed to run one time when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
 
 II. **createAllFromTemplates** flow. This flow:
 
