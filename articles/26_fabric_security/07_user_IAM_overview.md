@@ -46,7 +46,7 @@ Following are the supported authentication providers:
 
 Fabric also provides the option to **block** the access either for console or web access. This capability empowers the security access control, for example when an organization wants users access to be limited to only specific node/s in cluster.
 
-See [here](/articles/26_fabric_security/13_user_IAM_configiration.md) how to define and configure Fabric's authenticator. 
+Read [here](/articles/26_fabric_security/13_user_IAM_configuration.md) how to define and configure Fabric's authenticator. 
 
 ### Proprietary Custom Authenticator
 
@@ -58,7 +58,7 @@ To use such custom authenticator, implement the interface `com.k2view.fabric.aut
 
 Fabric provides a flexible mechanism, in which the customer can define a sequence of authenticators. Each authenticator is used as a fallback to its predecessor.
 
-For example, the console access can be set to be using an LDAP server, and if it fails to try using Fabric credentials. This fallback mechanism must be used carefully, and only in very specific cases. For more information see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#sequence-authenticators).
+For example, the console access can be set to be using an LDAP server, and if it fails to try using Fabric credentials. This fallback mechanism must be used carefully, and only in very specific cases. For more information see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#sequence-authenticators).
 
 Note that web access can be set to use either a SAML server, or other authenticators, but it cannot be combined with others. In other words, in case of using SAML server there can be no fallback.  
 

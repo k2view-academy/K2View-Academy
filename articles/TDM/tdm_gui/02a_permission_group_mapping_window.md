@@ -28,7 +28,7 @@ insert into public.permission_groups_mapping (
 ) values ('Initial mapping for admin user', '<admin group name>', 'admin', 'admin', 'admin', NOW(), NOW());
 ```
 
-Click for more information about [Fabric User IAM Configuration](/articles/26_fabric_security/13_user_IAM_configiration.md).
+Click for more information about [Fabric User IAM Configuration](/articles/26_fabric_security/13_user_IAM_configuration.md).
 
 ### How to Add a New Permission Group Mapping?
 

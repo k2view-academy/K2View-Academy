@@ -5,7 +5,7 @@ This article describes the setup and integration steps to connect your Single-Si
 ## Prerequisite Requirements
 
 - Admin access to Okta.
-- Access to Fabric configuration settings. For more information about SAML configuration at Fabric please see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
 ## Configuration instructions: At Okta
 
@@ -68,7 +68,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
    - **groups** - at the select list choose "*Matches regex*" and fill ".*" in the form field. 
 
-   - **Encryption Certificate** - browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Then click on '**Upload**'. See more [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) about the Fabric certificate file.
+   - **Encryption Certificate** - browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Then click on '**Upload**'. Read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) more about the Fabric certificate file.
 
    - **ACS URL** - as provided by Fabric team. It should be similar to this pattern: "https://\<fabric-external-domain-name>:\<port>/api/authenticate".
 

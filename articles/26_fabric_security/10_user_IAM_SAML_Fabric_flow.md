@@ -46,7 +46,7 @@ In both cases,  Fabric starts the authentication process with the IDP, as explai
 
 
 
-For more information and guidelines about setting up Fabric with SAML IDPs, refer to the examples for [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md). For more information about SAML configuration in Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
+For more information and guidelines about setting up Fabric with SAML IDPs, refer to the examples for [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/11_user_IAM_LDAP.md)
 

@@ -63,7 +63,7 @@ When working with a non-Cassandra System DB, like SQLite or PostgreSQL, the foll
 
 * Populate the parameter values included in `[system_db]` section, which was introduced in Fabric V7.2. If you use Cassandra as the System DB, then you can ignore this section.
 
-* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra'). For more information about `SERVER_AUTHENTICATOR` config options, read [here](/articles/26_fabric_security/13_user_IAM_configiration.md#server_authenticator-configuration). Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator.
+* Set the `SERVER_AUTHENTICATOR` config parameter's value to be 'fabric' (default value is 'cassandra'). For more information about `SERVER_AUTHENTICATOR` config options, read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#server_authenticator-configuration). Note: When using Cassandra as the System DB, 'fabric' may also be used as an authenticator.
 
    
 
