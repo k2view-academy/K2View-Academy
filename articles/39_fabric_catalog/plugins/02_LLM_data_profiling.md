@@ -24,11 +24,11 @@ The input parameters are:
   - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM plugin will not run on this column.
 - ```"propertyName"``` is a column's property that should be created by the plugin. 
   - By default,  ```"propertyName": "classification"```, to accommodate the LLM Data Profiling use case.
-- ```"system_prompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at the run time. Some of them are taken from the framework and some are taken from the plugin's definition, as follows:
+- ```"systemPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at the run time. Some of them are taken from the framework and some are taken from the plugin's definition, as follows:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` respectively are a table and a column being profiled, as well as the names of all other columns in this table. These are passed to the plugin by the framework.
   - ```${possibleValues}``` defines a list of valid values that can be assigned as a property's value. They need to be defined when it is required that the LLM will select a value from a pre-defined list. The values are taken from the ```"possibleValues"``` input parameter.
   - ```${samplePrompt}``` is a system prompt part related to the data sample. It is taken from the ```"samplePrompt"``` input parameter.
-  - The ```"system_prompt"``` should be updated to fit the required use case and project's needs. 
+  - The ```"systemPrompt"``` should be updated to fit the required use case and project's needs. 
 - ```"possibleValues"``` is a list of possible property's values. 
   - For example, ```"possibleVlues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
   - Alternatively, the values can be retrieved from a project's MTable. In this case, the setting should be: ```"possibleVlues":"<MTable name>.<Column name>"```. 
