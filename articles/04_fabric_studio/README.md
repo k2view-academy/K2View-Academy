@@ -2,8 +2,8 @@
 
 <ul>
 <studio><li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li></studio>
-<studio><li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li></studio>
-<studio><li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</li></studio>
+<studio><li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</a></li></studio>
+<studio><li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/04_user_preferences.md">User Preferences</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/05_creating_a_new_project.md">Creating a New Project</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md">Adding Fabric Projects to Version Control</a></li></studio>
@@ -18,14 +18,14 @@
 
 <ul>
 <web><li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Get Started: Fabric Studio Components</a></li></web>
-<web><li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li></web>
+<web><li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/22_web_search.md">Search for Terms and Content</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/08_fabric_project_tree.md">Fabric Project Tree</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/09_logic_files_and_categories.md">Logic Files and Categories</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/26_web_basic_editing.md">Basic Code Editing</li></web>
-<web><li><a href="/articles//04_fabric_studio/24_web_debug.md">Code Debugging</a></li></web>
+<web><li><a href="/articles/04_fabric_studio/24_web_debug.md">Code Debugging</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/25_web_data_explorer.md">DB Interface Explorer</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/28_web_k2exchange.md">K2exchange</a></li></web>    
