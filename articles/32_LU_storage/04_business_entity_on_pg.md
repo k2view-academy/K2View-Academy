@@ -24,7 +24,7 @@ When using the DbLoad Actor in Broadway, it is required to use the batch mode in
 
 The common tables solution is aligned with this functionality, thus the data is saved under {common table schema name} or common, if the schema is set to default.
 
-This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
+This mode is supported at the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
 Data can be encrypted using PostgreSQL encryption at several levels. This encryption provides flexibility in protecting data from disclosure (due to database server theft), unscrupulous administrators and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. For further reading, click [here](https://www.postgresql.org/docs/current/encryption-options.html).
 
