@@ -143,23 +143,23 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
     sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
-3. You can check your configuratin by connecting to cassandra by the followiong command: (use the user & password yo udefined earlier)
+3. You can check your configuration by connecting to cassandra by the followiong command: (use the user and password you have defined earlier)
    ```bash
    cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
    ```
 
 ## Step 5 - Disable the default cassandra superuser
 
-Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
+Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use.
 
-1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
+1. Connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
    ~~~bash
    echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
-2. drop the `cassandra` user
+2. Drop the `cassandra` user
 
    ~~~bash
    echo "drop role cassandra;" | cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
