@@ -94,7 +94,7 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 The [Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) can be used to start, stop and open the local **Cassandra Console**. Alternatively, do the following:
 
 - Run queries on Cassandra in the Fabric server using the [cql command](/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra).
-- Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) in the Fabric Studio and set the host to localhost. Set the user and password to **cassandra**. Then open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
+- Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) in the Fabric Studio and set the host to localhost. Set the user and password to **cassandra**. Then, open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
 
 
 [![Previous](/articles/images/Previous.png)](06_cassandra_keyspaces_for_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_kafka_basic_commands.md)
