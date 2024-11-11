@@ -19,9 +19,16 @@ For example, when 30% of the values in a certain field are null, the Null Percen
 
 The plugin scans the data of the data sample in order to calculate the following 3 parameters:
 
-* **Dataset Size** - actual number of values in a column in a data sample.
-* **Distinct Values** - number of distinct values per column in a data sample.
-* **Range Of Values** - the min and max values in a numeric column, in a data sample (e.g. 1 - 100).
+* **Dataset Size** - actual number of values in a column in the data sample.
+  * The data sample is retrieved per the Catalog settings. For example, the default is 10% of the table size with minimum 100 and maximum 500. However the actual data sample can vary, based on the table size.
+* **Distinct Values** - number of distinct values per column in the data sample. 
+  * This metric helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
+  * In addition,  it can help validating whether the data values are within an acceptable or predefined range. For example, in a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
+  * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
+* **Range Of Values** - the minimum and maximum in a numeric column, in the data sample (e.g. 1 - 100).
+  * Establishing the range of values present in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entry (e.g., a negative age value).
+  * Understanding the range helps ensure consistency across similar datasets. The range can inform business decisions by providing insights into variability and distribution. 
+  * As part of basic descriptive statistics, the range provides a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
 
 
 
