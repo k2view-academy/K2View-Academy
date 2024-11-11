@@ -150,7 +150,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 
 ## Step 5 - Disable the default cassandra superuser
 
-Cassandra's default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
+Cassandra's default **superuser** is `cassandra`, and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
 
 1. Connect to one of the Cassandra nodes' consoles, and create 2 new **superusers**
 
