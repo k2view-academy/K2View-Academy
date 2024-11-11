@@ -78,9 +78,9 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
-Copy the priveously created file  *cassandra_keys.tar.gz* to all cassandra noe in the cluster
+Copy the previously created file  *cassandra_keys.tar.gz* to all Cassandra nodes in the cluster.
 
-See the example below: 
+See the below example: 
 
 ``` bash
 
