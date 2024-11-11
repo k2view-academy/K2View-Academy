@@ -72,9 +72,9 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     - CLIENT_k2tls_PUBLIC.cer
     - CLUSTER_k2tls_PUBLIC.cer
 
-    And a cassandra_keys.tar.gz file containing all files,will be created, to be transfered to the other nodes
+    A cassandra_keys.tar.gz file, containing all of the above files, will be created, so it can be transferred to the other nodes.
 
-    > Note the certificate and key file name contain the cluster name you have set.
+    > Note that the certificate and the key file names contain the cluster name you have set.
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
