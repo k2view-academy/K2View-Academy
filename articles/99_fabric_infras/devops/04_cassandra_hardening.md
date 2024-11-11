@@ -96,7 +96,7 @@ mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INST
 
 1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
 2. Execute the below commands as a Cassandra user on all the Cassandra nodes.
-   > Replace the password in the following command with the one you have set before. 
+   > Replace the password in the following command with the one you have set earlier. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -127,7 +127,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 ## Step 4 - Cassandra CQLSHRC
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files created earlier.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
-> Replace the key and certificate file names with the files created before.
+> Replace the key and certificate file names with the files created earlier.
 
     ```bash
     mkdir -p ~/.cassandra
