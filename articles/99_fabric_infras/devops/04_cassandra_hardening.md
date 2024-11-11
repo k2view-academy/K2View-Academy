@@ -95,8 +95,8 @@ mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INST
 ## Step 3 - Cassandra YAML
 
 1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all the Cassandra nodes.
-   > Replace the password in the following command with the one you set before. 
+2. Execute the below commands as a Cassandra user on all the Cassandra nodes.
+   > Replace the password in the following command with the one you have set before. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
