@@ -8,8 +8,8 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 ## Step 1 - Keys Generation
 
-1. Connect as **cassandra** user
-2. Run the `secure_cassandra.sh` file that generate the keys. It included with our supplied psackage or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+1. Connect as **cassandra** user.
+2. Run the `secure_cassandra.sh` file that generates the keys. This file is included within our supplied package or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
 3. Stop Cassandra services before running the script.
     ```bash
     ## run: 
