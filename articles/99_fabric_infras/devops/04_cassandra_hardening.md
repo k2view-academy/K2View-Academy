@@ -8,8 +8,8 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 ## Step 1 - Keys Generation
 
-1. Connect as **cassandra** user
-2. Run the `secure_cassandra.sh` file that generate the keys. It included with our supplied psackage or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+1. Connect as **cassandra** user.
+2. Run the `secure_cassandra.sh` file that generates the keys. This file is included within our supplied package or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
 3. Stop Cassandra services before running the script.
     ```bash
     ## run: 
@@ -23,19 +23,19 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
     ````
 
-    **Note:** run on single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
+    **Note:** Run the below command on a single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters.
 
 
     ```bash
     ./secure_cassandra.sh {Password} {Cluster_Name}
     ```
 
-    for example: 
+    For example: 
 
     ```bash
     ./secure_cassandra.sh Q1w2e3r4t5 k2tls
     ```
-    output example:
+    An output example:
     
     ```bash
     Warning:
@@ -72,15 +72,15 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     - CLIENT_k2tls_PUBLIC.cer
     - CLUSTER_k2tls_PUBLIC.cer
 
-    And a cassandra_keys.tar.gz file containing all files,will be created, to be transfered to the other nodes
+    A cassandra_keys.tar.gz file, containing all of the above files, will be created, so it can be transferred to the other nodes.
 
-    > Note the certificate and key file name contain the cluster name you have set.
+    > Note that the key and certificate file names contain the cluster name you have set.
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
-Copy the priveously created file  *cassandra_keys.tar.gz* to all cassandra noe in the cluster
+Copy the previously created file  *cassandra_keys.tar.gz* to all Cassandra nodes in the cluster.
 
-See the example below: 
+See the below example: 
 
 ``` bash
 
@@ -95,8 +95,8 @@ mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INST
 ## Step 3 - Cassandra YAML
 
 1. Edit the `cassandra.yaml` file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all the Cassandra nodes.
-   > Replace the password in the following command with the one you set before. 
+2. Execute the below commands as a Cassandra user on all the Cassandra nodes.
+   > Replace the password in the following command with the one you have set earlier. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -127,7 +127,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 ## Step 4 - Cassandra CQLSHRC
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files created earlier.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
-> replace the key and certificate file name with the files created before.
+> Replace the key and certificate file names with the files created earlier.
 
     ```bash
     mkdir -p ~/.cassandra
@@ -143,23 +143,23 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
     sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
-3. You can check your configuratin by connecting to cassandra by the followiong command: (use the user & password yo udefined earlier)
+3. You can check your configuration by connecting to Cassandra with the followiong command: (use the user and password you have defined earlier)
    ```bash
    cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
    ```
 
 ## Step 5 - Disable the default cassandra superuser
 
-Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
+Cassandra's default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
 
-1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
+1. Connect to one of the Cassandra nodes' consoles, and create 2 new **superusers**
 
    ~~~bash
    echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
-2. drop the `cassandra` user
+2. Drop the `cassandra` user
 
    ~~~bash
    echo "drop role cassandra;" | cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
