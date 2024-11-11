@@ -387,10 +387,15 @@ The Fabric SET command enables updating Fabric settings on a session level.
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
   - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
   - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
-  
+
 - Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
 
-- **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: LATEST, ANY, TRY_LATEST. LASTEST (default) - bring the latest MicroDB version from Cassandra. The default can be changed in config.ini.
+- **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: 
+
+  - LATEST (default) - Check the Storage for the latest version of the MicroDB. Use the one in cache only if it is the latest.
+  - ANY - Use the MicroDB in cache if one exists, bring the MicroDB from Storage if not.
+  - TRY_LATEST - Try to bring the latest MicroDB from Storage. If the operation fails, use the one in cache, if exists.
+  - The default can be changed in config.ini.
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 
@@ -401,22 +406,22 @@ The Fabric SET command enables updating Fabric settings on a session level.
 - **SET FROM** command, update several settings in one compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
 
   - Scope, holds one or more set commands like "sync" or "environment".
-  
+
   - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
 
   - Examples:
-  
+
     ~~~
     fabric>set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
     (1 row affected)
-    
+
     fabric>set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
     (1 row affected)
-    
+
     fabric>set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
     (1 row affected)
     ~~~
-  
+
 - **SET USER_ROLES** command, returns the list of roles of the connected user.
 
 - **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
@@ -432,14 +437,14 @@ The Fabric SET command enables updating Fabric settings on a session level.
   ~~~
   fabric>set auto_mdb_scope=true;
   (1 row affected)
-  
+
   fabric>select * from CRM.customer where customer_id = 123;
   |CUSTOMER_ID|SSN       |FIRST_NAME|LAST_NAME|HAS_OPEN_CASES|VALIDATIONS_NOT_PASSED|
   +-----------+----------+----------+---------+--------------+----------------------+
   |123.0      |7416713403|Gaynelle  |Gill     |0             |null                  |
-  
+
   (1 rows)
-  
+
   fabric>select customer.customer_id, subscriber.contract_id, subscriber.contract_description 
   from CRM.customer, CRM.subscriber where customer.customer_id = 123;
   |CUSTOMER_ID|CONTRACT_ID|CONTRACT_DESCRIPTION|
@@ -449,15 +454,15 @@ The Fabric SET command enables updating Fabric settings on a session level.
   |123.0      |316.0      |450 min             |
   |123.0      |317.0      |Unlimited call      |
   |123.0      |318.0      |Unlimited text      |
-  
+
   (5 rows)
-  
+
   fabric>select * from CRM.address where entity_id = 123;
   Cannot execute the query due to missing WHERE clause on the IID column.
   ~~~
-  
+
   Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
-  
+
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 * **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
@@ -736,7 +741,7 @@ The following Fabric commands have been introduced for this purpose:
   * In this mode, data is retrieved from the Fabric MDB and written to the pre-created PG schema using the driver provided by the specified interface.
   * The data will be added to the PG tables based on their PKs and FKs, ensuring that the table constraints are respected.
   * The command returns the number of exported rows.
-    
+
 * **MDB_IMPORT with IID**
   * The command enables the data import from the external PG storage into the Fabric MDB, replacing the existing MDB data.
 

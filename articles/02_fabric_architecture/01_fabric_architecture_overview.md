@@ -168,7 +168,7 @@ Fabric allows subscription to queue messaging systems to stream-in data using se
 
 **3.3.1.3 APIs:**
 
-Fabric can consume external APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
+Fabric can consume external APIs such as Web Services, SOAP and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
 **3.3.1.4 DB Query:**

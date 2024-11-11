@@ -172,7 +172,7 @@ Fabric database credentials are validated each time a user attempts to access Fa
 
 Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
-It is also possible to skip the sync process between Fabric user and System DB (e.g. Cassandra) user by setting **READ_ONLY_AUTHENTICATORS** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
+It is also possible to skip the sync process between Fabric user and System DB (e.g., Cassandra) user by setting **READ_ONLY_AUTHENTICATORS** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is set to **false**.
 
 ## Setting Credentials
 Define credentials by either Admin UI (Security tab) or Fabric commands, as follows: 
@@ -183,7 +183,7 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 - Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
 ### Bootstrap Credentials
-Fabric can also be started with predefines API keys, roles and permissions. This is available since Fabric 7.2.1.
+Fabric can also be started with predefined API keys, roles and permissions. This is available since Fabric 7.2.1.
 - Turn on this capability by adding a new line contains "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Create a file named **rolesPrivileges.json** at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Edit the file with the required values. It is built from 2 main independent objects - "roles" and "apikeys", where each can be set or skipped regardless the other one.

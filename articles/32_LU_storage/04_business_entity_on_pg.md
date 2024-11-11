@@ -4,10 +4,10 @@ Fabric can use PostgreSQL as a Logical Unit's storage layer, where each business
 
 This functionality should be used when the main use case is driven mostly from cross-instance queries, for reportings, dashboards or data analytics systems.
 
-This is the preffered option when asking the following:
+This is the preferred option when asking the following:
 
 1. Query the number of customers per credit class.
-2. List the customers with over payments.
+2. List the customers with overpayments.
 3. Query how many customers live in New York city.
 
 The Logical Unit's data is saved in PostgreSQL in 2 different schemas:
@@ -24,7 +24,7 @@ When using the DbLoad Actor in Broadway, it is required to use the batch mode in
 
 The common tables solution is aligned with this functionality, thus the data is saved under {common table schema name} or common, if the schema is set to default.
 
-This mode is supported in the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
+This mode is supported at the system level; it is not possible to store some of the Logical Units as MicroDB and the others on PostgreSQL.
 
 Data can be encrypted using PostgreSQL encryption at several levels. This encryption provides flexibility in protecting data from disclosure (due to database server theft), unscrupulous administrators and insecure networks. Encryption may also be required to secure sensitive data, such as medical records or financial transactions. For further reading, click [here](https://www.postgresql.org/docs/current/encryption-options.html).
 

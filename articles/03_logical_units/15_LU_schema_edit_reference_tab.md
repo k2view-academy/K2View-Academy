@@ -28,7 +28,7 @@ Click [here](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_s
 
 <web>
 
-1. Open the **LU Schema Window**, click on the **Proproteins tab** and expand the **Dependent References** section. The References List appears. 
+1. Open the **LU Schema Window**, click on the **Properties tab** and expand the **Dependent References** section. The References List appears. 
 
 2. Click the <img src="images/web/plus.PNG" style="zoom:67%;" /> icon for adding a reference table to the LU and select it from the list.
 
