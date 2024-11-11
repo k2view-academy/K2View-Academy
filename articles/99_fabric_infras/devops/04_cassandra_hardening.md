@@ -74,7 +74,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
     A cassandra_keys.tar.gz file, containing all of the above files, will be created, so it can be transferred to the other nodes.
 
-    > Note that the certificate and the key file names contain the cluster name you have set.
+    > Note that the key and certificate file names contain the cluster name you have set.
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
@@ -127,7 +127,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 ## Step 4 - Cassandra CQLSHRC
 1. Edit the `.cassandra/cqlshrc` file using the appropriate passwords and certification files created earlier.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
-> Replace the key and certificate file name with the files created before.
+> Replace the key and certificate file names with the files created before.
 
     ```bash
     mkdir -p ~/.cassandra
@@ -143,16 +143,16 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
     sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
-3. You can check your configuration by connecting to cassandra by the followiong command: (use the user and password you have defined earlier)
+3. You can check your configuration by connecting to Cassandra with the followiong command: (use the user and password you have defined earlier)
    ```bash
    cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
    ```
 
 ## Step 5 - Disable the default cassandra superuser
 
-Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use.
+Cassandra's default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
 
-1. Connect to one of the Cassandra nodes console, and create 2 new **superuser's**
+1. Connect to one of the Cassandra nodes' consoles, and create 2 new **superusers**
 
    ~~~bash
    echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
