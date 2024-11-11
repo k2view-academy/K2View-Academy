@@ -23,7 +23,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
     rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
     ````
 
-    **Note:** Run on single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
+    **Note:** Run the below command on a single Cassandra node only. To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters.
 
 
     ```bash
