@@ -45,7 +45,7 @@ A dedicated server for each Fabric instance is preferred. Following a sizing pro
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
+<p>Direct attached SSD/NVMe-based storage is recommended for best performance.</p>
 <p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
 <p><strong>NAS is not certified.</strong>
 </td>
