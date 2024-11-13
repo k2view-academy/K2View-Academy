@@ -121,7 +121,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 * Volume of 100GB /opt/apps/fabric/storage
 
 ### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node. 
+* The FS must provide IOPS of at least 30K read and 10K write on each node. 
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 
