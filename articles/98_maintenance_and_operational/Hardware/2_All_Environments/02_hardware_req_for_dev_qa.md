@@ -640,5 +640,5 @@ Depending on your setup, not all ports are required:
 
 ### Connectivity
 
-Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources & destinations.
+Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources and destinations.
 Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
