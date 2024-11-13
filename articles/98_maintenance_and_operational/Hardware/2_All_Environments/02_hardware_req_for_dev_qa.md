@@ -78,7 +78,7 @@ A dedicated server for each Fabric instance is preferred. Following a sizing pro
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
