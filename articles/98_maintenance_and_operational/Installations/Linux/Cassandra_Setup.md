@@ -1,6 +1,6 @@
 # Cassandra Setup
 
-The provided Cassandra package and setup scripts were designed for either a single node or a multi-node environment.
+The provided Cassandra package and setup scripts were designed for either a single-node or a multi-node environments.
 
 Follow the setup script configuration for the correct settings, depending on your environment.
 
