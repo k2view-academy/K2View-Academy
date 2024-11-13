@@ -29,7 +29,7 @@ A dedicated server for each Fabric instance is preferred. Following a sizing pro
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
-<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp;recommended.</p>
 </td>
 </tr>
 <tr>
