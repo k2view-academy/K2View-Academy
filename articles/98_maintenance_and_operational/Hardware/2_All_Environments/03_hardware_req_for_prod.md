@@ -47,9 +47,9 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Network</strong></p>
 </td>
 <td style="width: 446px;">
-<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes, and source and destination Dbs.</p>
+<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes, and source and destination DBs.</p>
 </td>
 </tr>
 </tbody>
