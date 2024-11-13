@@ -135,8 +135,8 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 ### Hardware Requirements:
 <table>
@@ -194,7 +194,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -231,7 +231,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 Volume of 150GB /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
 
 ### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node.
+* The FS must provide IOPS of at least 30K read and 10K write on each node.
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 
@@ -246,9 +246,9 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
-* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric).
 
 
 ### Hardware Requirements:
