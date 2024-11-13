@@ -127,7 +127,7 @@ A dedicated server for each Kafka instance is preferred. Following a sizing proc
 ### Software Requirements:
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 #### Hardware Requirements:
