@@ -569,7 +569,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 </tbody>
 </table>
 
-### Linux Servers Ports
+### Linux Server Ports
 
 Open the following ports on the Linux server and ensure they are accessible from Management stations.
 
@@ -579,7 +579,7 @@ Depending on your setup, not all ports are required:
 <tbody>
 <tr>
 <td style="width: 161.109px;">
-<p><strong>Ports Number</strong></p>
+<p><strong>Port Numbers</strong></p>
 </td>
 <td style="width: 249.891px;">
 <p><strong>Role</strong></p>
