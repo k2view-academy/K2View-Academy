@@ -169,5 +169,3 @@ Delete the spaces and other resources from the Cloud Manager, and then use the f
 ```bash
  microk8s uninstall
 ```
-
-

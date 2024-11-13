@@ -1,7 +1,7 @@
-# Fabric Minimum  System Requirements for Production Installations
+# Fabric Minimum System Requirements for Production Installations
 ## Introduction
 
-* This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
+* This document provides information regarding the hardware, software, and the operating system requirements for Fabric installations.
 * TDM installation is based on Fabric with the additions of TDM library and PostgreSQL installation.
 
 ## Fabric Execution Servers - Node Specifications 
@@ -16,7 +16,7 @@ Use dedicated servers for Fabric instances. Following a sizing process, the exac
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
 For docker installation, the latest **Docker Engine** and **Docker Compose** installations are recommended.
@@ -48,7 +48,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 </td>
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
+<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
 <p><strong>NAS is not certified.</strong>
 </td>
 </tr>
@@ -66,7 +66,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Network</strong></p>
 </td>
 <td style="width: 446px;">
-<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
+<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes, and source and destination Dbs.</p>
 </td>
 </tr>
 </tbody>
@@ -92,7 +92,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -100,7 +100,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-8</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -108,7 +108,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D8d v5</p>
 </td>
 </tr>
 </tbody>
@@ -130,12 +130,12 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 The Kafka server installation is a Linux-based solution.
 Use dedicated servers for Kafka instances. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for Each Fabric Node Server
+### Minimum System Configuration for Each Kafka Node Server
 
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
@@ -164,7 +164,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 </td>
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
+<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
 <p><strong>NAS is not certified.</strong>
 </td>
 </tr>
@@ -205,7 +205,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -213,7 +213,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-8</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -221,7 +221,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D8d v5</p>
 </td>
 </tr>
 </tbody>
@@ -246,7 +246,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 * Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
 
@@ -276,7 +276,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 </td>
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
+<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
 <p><strong>NAS is not certified.</strong>
 </td>
 </tr>
@@ -317,7 +317,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -325,7 +325,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-8</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -333,14 +333,14 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D8d v5</p>
 </td>
 </tr>
 </tbody>
 </table>
 
 
-For Cloud based VM, NVMe storage type is preferred for a high performance.
+For Cloud-based VM, NVMe storage type is preferred for high performance.
 
 Further details are found below:
 
@@ -372,7 +372,7 @@ Further details are found below:
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with latest patches.
 
 ### Hardware Requirements:
@@ -400,7 +400,7 @@ Further details are found below:
 </td>
 <td style="width: 446px;">
 <p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
+<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
 <p><strong>NAS is not certified.</strong>
 </td>
 </tr>
@@ -441,7 +441,7 @@ Further details are found below:
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -449,7 +449,7 @@ Further details are found below:
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -457,7 +457,7 @@ Further details are found below:
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D4d v5</p>
 </td>
 </tr>
 </tbody>
