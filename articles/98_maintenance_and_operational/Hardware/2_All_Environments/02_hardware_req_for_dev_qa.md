@@ -128,7 +128,7 @@ A dedicated server for each Kafka instance is preferred. Following a sizing proc
 #### Operating system: 
 
 * RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 #### Hardware Requirements:
 <table>
@@ -286,13 +286,13 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-Supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -333,7 +333,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is required for TDM projects only.
-* K2view supports PostgreSQL version 9.6 & 13.x .
+* K2view supports PostgreSQL version 9.6 & 13.x.
 * PostgreSQL can be deployed in one of the following two ways:
     * On-premise as a virtual or physical machine. 
     * As a cloud service (SaaS)
@@ -343,8 +343,8 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 ### Hardware Requirements:
 <table>
@@ -381,7 +381,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Disk space can be increased according to the project scope and retention requirements.</p>
+<p>Disk space can be increased according to the project scope and the retention requirements.</p>
 </td>
 </tr>
 <tr>
@@ -401,7 +401,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -442,7 +442,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 ## Fabric Studio Requirements:
 
-Fabric Studio is used to configure, manage, and control the Fabric server operation and its installation is Windows-based.
+Fabric Studio is used for configuring, managing, and controlling the Fabric server operation, and its installation is Windows-based.
 The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
 
 ### Minimum System Configuration
