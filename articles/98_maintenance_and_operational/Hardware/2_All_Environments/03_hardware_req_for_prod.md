@@ -188,7 +188,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
@@ -300,7 +300,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
@@ -340,7 +340,7 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 </table>
 
 
-For Cloud-based VM, NVMe storage type is preferred for high performance.
+For Cloud-based VM, NVMe storage type is preferred for a high performance.
 
 Further details are found below:
 
@@ -367,7 +367,7 @@ Further details are found below:
 	* On-premise as a virtual or physical machine. 
 	* As a cloud service (SaaS)
 
-### Suggested System Configuration for PostgreSQL Server
+### Suggested System Configuration for a PostgreSQL Server
 
 ### Software Requirements:
 ### Operating system: 
@@ -424,7 +424,7 @@ Further details are found below:
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
@@ -463,7 +463,7 @@ Further details are found below:
 </tbody>
 </table>
 
-### Example of Cloud Supported SaaS 
+### Examples of Cloud-supported SaaS 
 * AWS RDS PostgreSQL - read more [here](https://aws.amazon.com/free/database/?trk=492c57d3-8cdc-4660-b6ac-d2008bd51b40&sc_channel=ps&ef_id=Cj0KCQjwmtGjBhDhARIsAEqfDEcolBtzTdv_q0Ob8_Xda3524RZfaxKgGOzqoi1IVjieHyRiSYgUEr0aAk12EALw_wcB:G:s&s_kwcid=AL!4422!3!645125273471!e!!g!!aws%20postgre%20sql!19574556899!145779849512)
 * GCP Cloud SQL PostgreSQL - read more [here](https://cloud.google.com/sql/docs/postgres/introduction)
 * Azure Database for PostgreSQL - read more [here](https://azure.microsoft.com/en-us/products/postgresql/?ef_id=_k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&OCID=AIDcmm81syc84i_SEM__k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&gclid=Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB)
@@ -598,7 +598,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 </tbody>
 </table>
 
-### Linux Servers Ports
+### Linux Server Ports
 
 Open the following ports on the Linux server and make sure they are accessible from Management stations.
 
@@ -608,7 +608,7 @@ Depending on your setup, not all ports are required:
 <tbody>
 <tr>
 <td style="width: 161.109px;">
-<p><strong>Ports Number</strong></p>
+<p><strong>Port Numbers</strong></p>
 </td>
 <td style="width: 249.891px;">
 <p><strong>Role</strong></p>
@@ -669,5 +669,5 @@ Depending on your setup, not all ports are required:
 
 ### Connectivity
 
-Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources & destinations.
+Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources and destinations.
 Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
