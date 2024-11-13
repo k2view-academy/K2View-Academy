@@ -11,7 +11,7 @@ The script should be run separately on each node, in the order of designated nod
 
 1. Make sure all Cassandra-related activities were performed; click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities.
 
-2. Verify that Python version 2.7 is being used for the supplied Cassandra link stated below
+2. Verify that Python version 2.7 is being used for the provided Cassandra package link stated below
 
     ~~~bash
     python --version
