@@ -3,7 +3,7 @@
 
 ### Introduction
 
-The articles in this section present hardware, software, and operating system requirements for Fabric and TDM installations.
+The articles in this section present hardware, software and operating system requirements for Fabric and TDM installations.
 
 The requirements for working in a Development/Quality Assurance environment are different from those aimed at working in a Production environment. It is assumed that the reader is familiar with Fabric and/or TDM.  
 
