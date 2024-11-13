@@ -75,13 +75,13 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
