@@ -9,7 +9,7 @@ The requirements for working in a Development/Quality Assurance environment are 
 
 ### Diagram 
 
-The below diagram depicts a generic system layout for Fabric and Test Data Management (TDM) projects. The number of Fabric, Cassandra, and Kafka nodes can vary and should be based on the size of the specific project.
+The below diagram depicts a generic system layout for Fabric and Test Data Management (TDM) projects. The number of Fabric, Cassandra and Kafka nodes can vary and should be based on the size of the specific project.
 
 <img src="images/01_fabric_hardware.png" style="zoom:40%;" />
 
