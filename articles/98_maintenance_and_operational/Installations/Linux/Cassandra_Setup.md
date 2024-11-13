@@ -37,15 +37,15 @@ The script should be run separately on each node, in the order of designated nod
 
 The number of seed nodes should match the chosen replication factor number.
 
-**Mandatory required details:**
+**Required mandatory details:**
 * Seed node IPs
 * Cassandra admin user
 * Cassandra admin password
 
 
 **Optional details:**
-* DataCenter name – unless defined otherwise, default will be set as DC1
-* Cluster name – unless defined otherwise, default will be set as Cassandra
+* DataCenter name – unless defined otherwise, the default will be set as DC1
+* Cluster name – unless defined otherwise, the default will be set as Cassandra
 * Replication factor number
 * Hardening and SSl configuration, TBD 
 
