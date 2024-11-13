@@ -4,7 +4,7 @@ The provided Cassandra package and setup scripts were designed for either a sing
 
 Follow the setup script configuration for a proper settings, depending on your environment.
 
-The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this may cause configuration and operation issues.
+The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this might cause configuration and operation issues.
 
 
 ## Pre-Installation Steps
