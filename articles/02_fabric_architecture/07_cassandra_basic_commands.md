@@ -2,7 +2,7 @@
 
 Fabric uses the Cassandra DB as a storage layer. CQL commands can be run to check Cassandra tables on [Fabric keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
-### Login Cassandra DB
+### Login to Cassandra DB
 
 Use the following command to connect to the Cassandra DB from the Cassandra server:
 
@@ -10,7 +10,7 @@ Use the following command to connect to the Cassandra DB from the Cassandra serv
 
 Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
 
-### Cassandra Useful Commands
+### Useful Cassandra Commands
 
 The following table holds useful **cqlsh** commands.
 
