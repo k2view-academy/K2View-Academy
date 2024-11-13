@@ -357,7 +357,7 @@ Further details are found below:
 
 
 ### Note:
-* The FS must provide IOPS of at least 30K read & 10K write on each node.
+* The FS must provide IOPS of at least 30K read and 10K write on each node.
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 ## PostgreSQL Server Node Specifications 
@@ -372,8 +372,8 @@ Further details are found below:
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 ### Hardware Requirements:
 <table>
@@ -399,9 +399,9 @@ Further details are found below:
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash-based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@ Further details are found below:
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -471,8 +471,8 @@ Further details are found below:
 
 ## Fabric Studio Requirements:
 
-Fabric Studio is used to configure, manage and control the Fabric server operation and its installation is Windows-based.
-The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
+Fabric Studio is used for configuring, managing and controlling the Fabric server operation, and its installation is Windows-based.
+The application can be installed locally on either a workstation or a server with Terminal Services for an RDP connection.
 
 ### Minimum System Configuration
 
