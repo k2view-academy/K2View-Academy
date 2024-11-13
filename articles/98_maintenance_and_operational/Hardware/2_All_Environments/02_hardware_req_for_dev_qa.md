@@ -442,7 +442,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 ## Fabric Studio Requirements:
 
-Fabric Studio is used for configuring, managing, and controlling the Fabric server operation, and its installation is Windows-based.
+Fabric Studio is used for configuring, managing and controlling the Fabric server operation, and its installation is Windows-based.
 The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
 
 ### Minimum System Configuration
