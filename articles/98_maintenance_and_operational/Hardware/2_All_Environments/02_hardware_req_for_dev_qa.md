@@ -139,7 +139,7 @@ A dedicated server for each Kafka instance is preferred. Following a sizing proc
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
-<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp;recommended.</p>
 </td>
 </tr>
 <tr>
@@ -179,13 +179,13 @@ A dedicated server for each Kafka instance is preferred. Following a sizing proc
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-Supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
