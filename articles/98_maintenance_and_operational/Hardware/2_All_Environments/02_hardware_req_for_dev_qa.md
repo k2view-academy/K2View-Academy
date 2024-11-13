@@ -72,7 +72,7 @@ A dedicated server for each Fabric instance is preferred. Following a sizing pro
 
 
 
-### Example of Cloud-supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
