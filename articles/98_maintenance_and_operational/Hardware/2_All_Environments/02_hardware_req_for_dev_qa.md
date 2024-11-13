@@ -233,8 +233,8 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 * Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
 
 
