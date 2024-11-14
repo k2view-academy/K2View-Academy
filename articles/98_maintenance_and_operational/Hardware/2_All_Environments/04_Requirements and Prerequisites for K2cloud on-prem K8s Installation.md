@@ -144,25 +144,25 @@ deploy_certificate.sh /path/to/fullchain.cer /path/to/private.key
 
 Use the following commands to stop and restart the cluster:
 
-**Stopping The Cluster**
+**Stopping the Cluster**
 
 ```bash
 microk8s stop
 ```
 
-**Starting The Cluster**
+**Starting the Cluster**
 
 ```bash
 microk8s start
 ```
 
-**Restarting The Cluster**
+**Restarting the Cluster**
 
 ```bash
 microk8s restart
 ```
 
-**Uninstalling The Cluster**
+**Uninstalling the Cluster**
 
 Delete the spaces and other resources from the Cloud Manager, and then use the following commands to remove the cluster from your machine.
 
