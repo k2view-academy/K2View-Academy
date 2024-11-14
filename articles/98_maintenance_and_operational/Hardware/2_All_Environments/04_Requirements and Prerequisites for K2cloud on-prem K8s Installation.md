@@ -59,7 +59,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
 * You need to verify that the host has outbound access to GitHub.com and to the K2view Cloud Manager in port 443 (https).
 
-* You need to provide K2view with:
+* K2view should be provided with:
 
   * The domain name of your environment
   * The Fabric Git project details that are going to be used.
