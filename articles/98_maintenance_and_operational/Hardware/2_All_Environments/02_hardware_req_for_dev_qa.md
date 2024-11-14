@@ -335,7 +335,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 * PostgreSQL is required for TDM projects only.
 * K2view supports PostgreSQL version 9.6 & 13.x.
 * PostgreSQL can be deployed in one of the following two ways:
-    * On-premise as a virtual or physical machine. 
+    * On-premises as a virtual or a physical machine. 
     * As a cloud service (SaaS)
 
 ### Suggested System Configuration for PostgreSQL Server
