@@ -68,7 +68,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
   * K2view Kubernetes Docker images, depending on the required projects.
 
-  * Mailbox ID and the Cloud Manager's URL. 
+  * Mailbox ID and the Cloud Manager URL. 
 
 
 
@@ -110,7 +110,7 @@ This script installs the following:
 During the installation, the installer script will request you to provide the values prepared in the Prerequisites phase:
 
 * Mailbox ID
-* Cloud manager URL
+* Cloud Manager URL
 * DNS Record
 
 
