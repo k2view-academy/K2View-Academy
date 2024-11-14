@@ -114,7 +114,7 @@ During the installation, the installer script will request you to provide the va
 * DNS Record
 
 
-Once the setup finishes (it may take several minutes) - and before you can create a new space - a few steps need to be taken:
+Once the setup process is complete (it may take a few minutes minutes) - and before you can create a new space - a few steps need to be taken:
 
 * Load the downloaded docker images
 
@@ -128,7 +128,7 @@ docker load -i /path/to/file.tar.gz
 docker tag <IMAGE_HASH> localhost:32000/image-name:tag
 ```
 
-* Import the downloaded images to the Kubernetes local repository.
+* Import the downloaded images to the Kubernetes local repository
 
 ```bash
 docker push localhost:32000/image-name:tag
