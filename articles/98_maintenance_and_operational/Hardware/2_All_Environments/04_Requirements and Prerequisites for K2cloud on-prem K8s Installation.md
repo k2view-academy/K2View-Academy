@@ -57,7 +57,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
 * The requirement is for either a Docker engine to be installed (latest version) or for an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
 
-* You need to verify that the host has outbound access to GitHub.com and to the K2view Cloud Manager in port 443 (https).
+* Verify that the host has outbound access to both GitHub.com and the K2view Cloud Manager in port 443 (https).
 
 * K2view should be provided with:
 
