@@ -49,7 +49,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
 * Create a DNS record pointing to the server hosting the K8s node (it can point to a private or a public IP). The DNS record for the server hosting the K8s node does not need to be registered in the public DNS. The only requirement is that users can resolve the DNS name internally to the customer's environment.
 
-* You need a wildcard certificate (with its corresponding private key) for the selected domain.
+* A wildcard certificate (with its corresponding private key) is needed for the selected domain.
 
   > For a Proof of Technology (POT) Environment, both domain and certificates can be provided by K2view.
 
