@@ -28,7 +28,7 @@ Tar and copy the Cassandra keys and certificates into all the Fabric nodes in th
 
 ## Step 2 - Set Fabric to connect to Cassandra
 
-1. Stop Fabric `k2fabric stop`
+1. Stop Fabric `k2fabric stop`.
 
 2. Extract the `keys.tar.gz` file
 
