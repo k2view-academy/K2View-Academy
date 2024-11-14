@@ -10,7 +10,7 @@ While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted)
 
 
 
-A K8s worker node is expected to meet the following requirements and accordingly shall be prepared:
+A K8s worker node is expected to meet the following requirements and shall be prepared accordingly:
 
 <table>
 <tbody>
