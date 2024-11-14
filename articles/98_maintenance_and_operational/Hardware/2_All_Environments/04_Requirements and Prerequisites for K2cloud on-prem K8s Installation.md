@@ -53,7 +53,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
   > For a Proof of Technology (POT) Environment, both domain and certificates can be provided by K2view.
 
-* You need a user with sudo privilege to run the installation script.
+* A user with sudo privilege is needed in order to run the installation script.
 
 * You need a Docker engine installed (latest version), or an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
 
