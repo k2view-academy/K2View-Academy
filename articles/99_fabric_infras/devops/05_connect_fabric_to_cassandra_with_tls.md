@@ -4,9 +4,9 @@ The following steps should be taken in order to connect Fabric to Cassandra in T
 
 ## Step 1 - Transfer the Cassandra Keys and Certificates to All Fabric Nodes
 
-Tar and copy the Cassandra Keys and Certificates into all the Fabric nodes in the cluster.  
+Tar and copy the Cassandra keys and certificates into all the Fabric nodes in the cluster.  
 
-1. Prepare tar file with all the certificates on one of the Cassandra nodes, as shown in the below example
+1. Prepare a tar file with all the certificates on one of the Cassandra nodes, as shown in the below example
 
    ~~~bash
    tar -czvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl .
