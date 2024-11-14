@@ -1,12 +1,12 @@
 # Connect Fabric to Cassandra in TLS mode
 
-The following steps for connecting Fabric to Cassandra in TLS mode
+The following steps should be taken in order to connect Fabric to Cassandra in TLS mode.
 
 ## Step 1 - Transfer the Cassandra Keys and Certificates to All Fabric Nodes
 
-Tar and copy them to all  Fabric nodes in the cluster.  
+Tar and copy them to all Fabric nodes in the cluster.  
 
-1. prepare tar file with all the certificates on one of the cassandra nodes as in the example bellow
+1. Prepare tar file with all the certificates on one of the Cassandra nodes, as shown in the below example
 
    ~~~bash
    tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
