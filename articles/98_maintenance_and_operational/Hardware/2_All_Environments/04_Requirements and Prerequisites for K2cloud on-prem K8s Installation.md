@@ -107,7 +107,7 @@ This script installs the following:
 * [docker registry](https://microk8s.io/docs/registry-built-in)
 * metrics-server
 
-During the installation, the installer script will request you provide the values prepared in the Prerequisites phase:
+During the installation, the installer script will request you to provide the values prepared in the Prerequisites phase:
 
 * Mailbox ID
 * Cloud manager URL
