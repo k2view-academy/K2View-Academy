@@ -12,7 +12,7 @@ Tar and copy the Cassandra keys and certificates into all the Fabric nodes in th
    tar -czvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl .
    ~~~
 
-2. Copy to the Fabric nodes
+2. Copy the Cassandra keys and certificates to the Fabric nodes
 
    ~~~bash
    # copy to all Fabric nodes
