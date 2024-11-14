@@ -9,7 +9,7 @@ Tar and copy them to all Fabric nodes in the cluster.
 1. Prepare tar file with all the certificates on one of the Cassandra nodes, as shown in the below example
 
    ~~~bash
-   tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
+   tar -czvf keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl .
    ~~~
 
 2. Copy to the fabric nodes
