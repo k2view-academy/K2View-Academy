@@ -61,10 +61,10 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
 * K2view should be provided with:
 
-  * The domain name of your environment
+  * The domain name of your environment.
   * The Fabric Git project details that are going to be used.
 
-* You need to obtain from K2view:
+* Contact K2view and obtain:
 
   * K2view Kubernetes Docker images, depending on the required projects.
 
