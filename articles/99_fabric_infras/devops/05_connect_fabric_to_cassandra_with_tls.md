@@ -12,7 +12,7 @@ Tar and copy them to all Fabric nodes in the cluster.
    tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
    ~~~
 
-2. copy to the fabric nodes
+2. Copy to the fabric nodes
 
    ~~~bash
    # copy to all Fabric nodes
@@ -20,7 +20,7 @@ Tar and copy them to all Fabric nodes in the cluster.
    scp keys.tar.gz fabric@172.27.0.102:/opt/apps/fabric/
    ~~~
 
-   In case Docker installation use following commands to copy between running containers
+   In case of a Docker installation, use following commands to copy between running containers
    ~~~bash
    docker cp cassandra:/opt/apps/cassandra/keys.tar.gz ./
    docker cp keys.tar.gz fabric:/usr/local/k2view/
@@ -30,7 +30,7 @@ Tar and copy them to all Fabric nodes in the cluster.
 
 1. Stop Fabric `k2fabric stop`
 
-2. extract the `keys.tar.gz` file
+2. Extract the `keys.tar.gz` file
 
    ~~~bash
    mkdir -p $K2_HOME/.cassandra_ssl && tar -zxvf keys.tar.gz -C $K2_HOME/.cassandra_ssl
