@@ -49,7 +49,7 @@ Tar and copy the Cassandra keys and certificates into all the Fabric nodes in th
     sed -i 's@#-Djavax.net.ssl.trustStorePassword=.*@-Djavax.net.ssl.trustStorePassword=Q1w2e3r4t5@g' $K2_HOME/config/jvm.options
     ```
 
-4. Start the Fabric service on each node: `k2fabric start`
+4. Start the Fabric service on each node: `k2fabric start`.
 
 
 
