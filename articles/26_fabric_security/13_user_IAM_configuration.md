@@ -2,13 +2,13 @@
 
 Fabric allows you to configure web access and console access according to required authentication methods.
 
-The configuration resides in the Fabric main configuration file - **config.ini**. For more information about this file see [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
+The configuration resides in the Fabric main configuration file - **config.ini**. For more information about this file, read [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
 
 First, look for the config parameters in the locations as described below:
 
-* The **web access** is based on the `WEB_AUTHENTICATION_PROTOCOL` property which gets one of 2 values:
-  * "SAML", indicate to Fabric to use SAML as IDP. In this case the `saml` section properties shall be set properly, as described later in this article. 
-  * SERVER_AUTHENTICATOR", indicate to Fabric to use the authenticators which are defined at `server_authenticator` section, as described later in this article. This is the default option and when it is in use you can leave `WEB_AUTHENTICATION_PROTOCOL` entry in comments. 
+* The **web access** is based on the `WEB_AUTHENTICATION_PROTOCOL` property, which gets one of 2 values:
+  * "SAML", indicate to Fabric to use SAML as IDP. In this case, the `saml` section properties shall be set properly, as described later in this article. 
+  * SERVER_AUTHENTICATOR", indicate to Fabric to use the authenticators that are defined in th `server_authenticator` section, as described later in this article. This is the default option and when it is in use you can leave `WEB_AUTHENTICATION_PROTOCOL` entry in comments. 
 
 - The **console access** is based on `server_authenticator` section definitions.
 
