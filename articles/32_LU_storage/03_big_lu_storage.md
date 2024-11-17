@@ -1,6 +1,6 @@
 # Big Logical Units
 
-Fabric enables storing big LUIs without limitations on size by splitting data into chunks. The SQLite file's chunks are written into the System DB **entity_chunks** table in parallel. 
+Fabric enables storing big LUIs without size limitations by splitting data into chunks. The SQLite file's chunks are written into the System DB **entity_chunks** table in parallel. 
 
 When the System DB is Cassandra, the [Cassandra Loader](/articles/28_cassandra_loader/01_cassandra_loader_overview.md) is used. The Loader configuration for the parallel save can be done using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) by adding a section named **[LU type]_ cassandra_entity_storage** per each LU. The parameters under this section are the same as the Cassandra Loader definition parameters (for example, Loader execution mode).
 
@@ -37,8 +37,8 @@ When loading the chunks of Big LUI from System DB to Fabric, as part of the GET 
 
 The config.ini parameters for configuring the above are:
 
-* ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
-* ASYNC_LOAD_MAX_MEMORY_IN_MB, maximum memory to be allocated for the parallel load process. Set by default to 2000 MB.
+* ASYNC_LOAD_MAX_THREADS - the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
+* ASYNC_LOAD_MAX_MEMORY_IN_MB - maximum memory to be allocated for the parallel load process. Set by default to 2000 MB.
 
 These parameters are applicable when the LUI Partitioning is enabled.
 
