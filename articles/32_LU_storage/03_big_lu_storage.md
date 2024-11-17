@@ -33,7 +33,7 @@ It is recommended to turn this feature on when dealing with large LUIs that are 
 
 ### Parallel Load Big LUI from System DB
 
-When loading the chunks of Big LUI from System DB to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
+When loading the chunks of Big LUI from System DB to Fabric, as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
 The config.ini parameters to configure the above are:
 
