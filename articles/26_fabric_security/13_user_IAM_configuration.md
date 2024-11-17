@@ -24,11 +24,11 @@ There are four authenticators which come as part of the Fabric platform, and are
 - **fabric**, when using Fabric as authenticator. For this no further settings are required.
 - **ldap**, connect to LDAP server. For this option the LDAP server connection details are required and should be defined at section name: `ldap_auth`. 
 - **adldap**. connect to AD/LDAP server. For this option the AD/LDAP server connection details are required and shall be defined at section name: `adldap_auth`.
-- **block_all** meaning that access is blocked. For this no further settings are required, recommanded option in case of SAML. 
+- **block_all** meaning that access is blocked. For this no further settings are required, recommended option in case of SAML. 
 
 The default authenticator is "cassandra" when `server_authenticator` is not set.
 
-As will be explained later in this article, Fabric allows using also proprietary custom authenticators.
+As to be explained later in this article, Fabric also allows using proprietary custom authenticators.
 
 
 
