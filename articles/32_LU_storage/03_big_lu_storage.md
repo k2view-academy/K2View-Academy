@@ -6,11 +6,11 @@ When the System DB is Cassandra, the [Cassandra Loader](/articles/28_cassandra_l
 
 The LUI data is first written into the **entity_chunks** table, and then, after all chunks were successfully written, the **entity** table is populated.
 
-The **entity** table includes the following data:
+The **entity** table includes the following:
 
 * batch_id - a unique ID that represents the relationship between an **entity** and **entity_chunks** tables.
 * chunks_count - the number of chunks.
-* data, holds the LUI SQLite file after compression. For performance optimization during parallel data inserts, the size is zero if the  number of chunks > 1.
+* data - holds the LUI SQLite file after compression. For performance optimization during parallel data inserts, when the number of chunks > 1, the SQLite file size is set to zero.
 
 The **entity_chunks** table includes the following data:
 
@@ -18,7 +18,7 @@ The **entity_chunks** table includes the following data:
 * sync_version - holds the same version that is populated in the **entity** table. 
 * batch_id - holds the same ID as in the **entity** table.
 * chunk_index - holds the chunk number.
-* data, holds the split SQLite file after compression for the chunk index.
+* data - holds the split SQLite file after compression for the chunk index.
 
 The chunk size is set using the config.ini file parameters, defined per node:
 
