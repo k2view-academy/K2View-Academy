@@ -26,7 +26,7 @@ The chunk size is set using the config.ini file parameters, defined per node:
 
 ### Improve LUI Partitioning
 
-When dealing with a large amount of entity chunks, LUI Partitioning can be enabled by setting the following in the config.ini file: ```ENABLE_PARTITIONED_MDB=true```
+When dealing with a large amount of entity chunks, LUI Partitioning can be enabled by setting the following parameter in the config.ini file: ```ENABLE_PARTITIONED_MDB=true```
 
 Note however that there is no upgrade path for existing projects. You must clean all data in Fabric and bring Fabric back.
 It is recommended to turn this feature on when dealing with large LUIs that are split into multiple chunks.
