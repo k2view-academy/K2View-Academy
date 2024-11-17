@@ -8,9 +8,9 @@ The LUI data is first written into the **entity_chunks** table, and then, after 
 
 The **entity** table includes the following data:
 
-* batch_id, unique ID that represents the relationship between an **entity** and **entity_chunks** tables.
-* chunks_count, number of chunks.
-* data, holds the LUI SQLite file after compression. For performance optimization during  parallel data inserts, the size is zero if the  number of chunks > 1.
+* batch_id - a unique ID that represents the relationship between an **entity** and **entity_chunks** tables.
+* chunks_count - the number of chunks.
+* data, holds the LUI SQLite file after compression. For performance optimization during parallel data inserts, the size is zero if the  number of chunks > 1.
 
 The **entity_chunks** table includes the following data:
 
