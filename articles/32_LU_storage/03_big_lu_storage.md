@@ -4,7 +4,7 @@ Fabric enables storing big LUIs without limitations on size by splitting data in
 
 When the System DB is Cassandra, the [Cassandra Loader](/articles/28_cassandra_loader/01_cassandra_loader_overview.md) is used. The Loader configuration for the parallel save can be done using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) by adding a section named **[LU type]_ cassandra_entity_storage** per each LU. The parameters under this section are the same as the Cassandra Loader definition parameters (for example, Loader execution mode).
 
-The LUI data is first written into the **entity_chunks** table and then after all chunks were written successfully the **entity** table is populated. 
+The LUI data is first written into the **entity_chunks** table, and then, after all chunks were successfully written, the **entity** table is populated.
 
 The **entity** table includes the following data:
 
