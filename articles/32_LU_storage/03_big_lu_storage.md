@@ -18,7 +18,7 @@ The **entity_chunks** table includes the following data:
 * sync_version - holds the same version that is populated in the **entity** table. 
 * batch_id - holds the same ID as in the **entity** table.
 * chunk_index - holds the chunk number.
-* data - holds the split SQLite file after compression for the chunk index.
+* data - holds the split SQLite file after compression, by the chunk index.
 
 The chunk size is set using the config.ini file parameters, defined per node:
 
