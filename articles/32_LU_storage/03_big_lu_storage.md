@@ -31,14 +31,14 @@ When dealing with a large amount of entity chunks, LUI Partitioning can be enabl
 Note that there is no upgrade path for existing projects. You must clean all data in Fabric and bring Fabric back up.
 It is recommended to turn this feature on when dealing with big LUIs that are split into multiple chunks.
 
-### Parallel Load Big LUI from System DB
+### Parallel Load of Big LUI from System DB
 
-When loading the chunks of Big LUI from System DB to Fabric, as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
+When loading the chunks of big LUIs from System DB to Fabric, as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
 The config.ini parameters for configuring the above are:
 
-* ASYNC_LOAD_MAX_THREADS - the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
-* ASYNC_LOAD_MAX_MEMORY_IN_MB - maximum memory to be allocated for the parallel load process. Set by default to 2000 MB.
+* ASYNC_LOAD_MAX_THREADS - the maximum number of threads (over all of the Fabric nodes) to be allocated. The default setting is 0, which means that the parallel load is disabled.
+* ASYNC_LOAD_MAX_MEMORY_IN_MB - the maximum memory to be allocated for the parallel load process. The default setting is 2000 MB.
 
 These parameters are applicable when the LUI Partitioning is enabled.
 
