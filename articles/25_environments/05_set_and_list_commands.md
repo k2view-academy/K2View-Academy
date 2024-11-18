@@ -24,7 +24,7 @@
     (1 row affected)
     ~~~
     
-  - To reset the environment to the default *_dev* on a cluster level, use the following syntax:
+  - To reset the environment to the default *_dev* on cluster level, use the following syntax:
 
     ~~~
     SET_GLOBAL ENVIRONMENT='';
