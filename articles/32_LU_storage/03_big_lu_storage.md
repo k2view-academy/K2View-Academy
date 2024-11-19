@@ -22,7 +22,7 @@ The **entity_chunks** table includes the following data:
 
 The chunk size is set using the config.ini file parameters, defined per node:
 
-* INSTANCE_CHUNK_SIZE - impacts the read from System DB (pagination) and write into System DB chunk size (whose default is 10MB – 10485760 bytes).
+* INSTANCE_CHUNK_SIZE - impacts the read from System DB (pagination) and write into System DB chunk size, whose default is 10MB (10,485,760 bytes).
 
 ### Improve LUI Partitioning
 
