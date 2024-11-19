@@ -109,7 +109,7 @@ This command displays the currently deployed project's name.
 
 [Click for more information about Fabric Basic Commands](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands). 
 
-### How Are Deployed Objects Reflected in the Fabric Server?
+### How are Deployed Objects Reflected in the Fabric Server?
 You can check which objects are deployed in the Fabric server by using the Fabric **LIST** command.
 - **list LU_TYPES/LUT** - provides a list of LU Types deployed to the Fabric server and can display an LU's [storage type](/articles/32_LU_storage/01_LU_storage_overview.md). This command can be invoked for either all deployed LU Types or a specific one.
 - **list WS** - provides a list of all Web Service methods deployed to the Fabric server. 
@@ -150,7 +150,7 @@ fabric>list lut storage=y;
 |CRM            |Default|
 ~~~
 
-### How Are Deployed Objects Reflected in System DB?
+### How are Deployed Objects Reflected in System DB?
 
 A project deployment is reflected in the [**System DB**](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#214-system-database) as follows:
 - The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) creates new records in the [**k2_lut_info** table](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) under the **k2system** System DB's schema. A separate record is created for each LU and Reference table and for each deployed Web Service.
