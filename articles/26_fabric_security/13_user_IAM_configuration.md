@@ -10,7 +10,7 @@ First, look for the config parameters in the locations as described below:
   * "SAML", indicates to Fabric to use SAML as IDP. In this case, the `saml` section properties shall be set properly, as described later in this article. 
   * SERVER_AUTHENTICATOR", indicates to Fabric to use the authenticators that are defined in the `server_authenticator` section, as described later in this article. This is the default option and when it is in use you can leave `WEB_AUTHENTICATION_PROTOCOL` entry in comments. 
 
-- The **console access** is based on `server_authenticator` section definitions.
+- The **console access** is based on the `server_authenticator` section definitions.
 
 <br/>
 
