@@ -108,12 +108,13 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td style="width: 184px;" valign="top">
-<p>Cassandra Connection</p>
+<p>Cassandra / System DB Connection</p>
 </td>
 <td style="width: 323px;" valign="top">
 <ul>
 <li>cassandra</li>
 <li>default_session</li>
+<li>system_db</li>
 </ul>
 </td>
 <td style="width: 371px;" valign="top">
@@ -296,7 +297,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <td style="width: 323px;" valign="top">
 <ul>
 <li>fabricdb</li>
-<li>cassandra_entity_storage</li>
+<li>system_db_entity_storage</li>
 </ul>
 </td>
 <td style="width: 371px;" valign="top">
