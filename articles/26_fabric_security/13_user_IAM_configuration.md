@@ -28,7 +28,7 @@ There are four authenticators which come as part of the Fabric platform, and are
 
 The default authenticator is "cassandra" when `server_authenticator` is not set.
 
-As to be explained later in this article, Fabric also allows using proprietary custom authenticators.
+As to be explained later in this article, Fabric also allows the use of proprietary custom authenticators.
 
 
 
