@@ -50,7 +50,7 @@ To encrypt only selected fields on the LU Instance, use the following built-in f
 
 ```public static String luEncrypt(String plainData) throws Exception```
 
-This function encrypts data in a text format using the latest master key and LUI key and can be used to encrypt individual fields in the LUI micro-database
+This function encrypts data in a text format using the latest master key and LUI key and can be used to encrypt individual fields in the LUI micro-database.
 
 Parameters:
 
@@ -76,8 +76,8 @@ Parameters:
 
 This function returns the following:
 
-- Decrypted text
-- Exceptions of failed decryptions 
+- Decrypted text.
+- Exceptions of failed decryptions.
 
 
 
@@ -94,8 +94,8 @@ encryptedData - encrypted data to be rekeyed
 
 This function returns the following:
 
-- Encrypted data, encrypted with the active key
-- Exceptions when the process fails
+- Encrypted data - encrypted with the active key.
+- Exceptions when the process fails.
 
 
 
