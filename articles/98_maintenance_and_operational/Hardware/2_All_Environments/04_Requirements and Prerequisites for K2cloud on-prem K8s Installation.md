@@ -2,7 +2,7 @@
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
 
-While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. This can be considered a Kubernetes in-a-box.
+While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. This can be considered as Kubernetes in a box.
 
 ## Hardware Requirements 
 
@@ -10,7 +10,7 @@ While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted)
 
 
 
-A K8s worker node is expected to meet the following requirements and accordingly shall be prepared:
+A K8s worker node is expected to meet the following requirements and shall be prepared accordingly:
 
 <table>
 <tbody>
@@ -49,26 +49,26 @@ A K8s worker node is expected to meet the following requirements and accordingly
 
 * Create a DNS record pointing to the server hosting the K8s node (it can point to a private or a public IP). The DNS record for the server hosting the K8s node does not need to be registered in the public DNS. The only requirement is that users can resolve the DNS name internally to the customer's environment.
 
-* You need a wildcard certificate (with its corresponding private key) for the selected domain.
+* A wildcard certificate (with its corresponding private key) is needed for the selected domain.
 
   > For a Proof of Technology (POT) Environment, both domain and certificates can be provided by K2view.
 
-* You need a user with sudo privilege to run the installation script.
+* A user with sudo privilege is needed in order to run the installation script.
 
-* You need a Docker engine installed (latest version), or an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
+* The requirement is for either a Docker engine to be installed (latest version) or for an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
 
-* You need to verify that the host has outbound access to GitHub.com and to the K2view Cloud Manager in port 443 (https).
+* Verify that the host has outbound access to both GitHub.com and the K2view Cloud Manager in port 443 (https).
 
-* You need to provide K2view with:
+* K2view should be provided with:
 
-  * The domain name of your environment
+  * The domain name of your environment.
   * The Fabric Git project details that are going to be used.
 
-* You need to obtain from K2view:
+* Contact K2view and obtain:
 
   * K2view Kubernetes Docker images, depending on the required projects.
 
-  * Mailbox ID and the Cloud Manager's URL. 
+  * Mailbox ID and the Cloud Manager URL. 
 
 
 
@@ -107,14 +107,14 @@ This script installs the following:
 * [docker registry](https://microk8s.io/docs/registry-built-in)
 * metrics-server
 
-During the installation, the installer script will request you provide the values prepared in the Prerequisites phase:
+During the installation, the installer script will request you to provide the values prepared in the Prerequisites phase:
 
 * Mailbox ID
-* Cloud manager URL
+* Cloud Manager URL
 * DNS Record
 
 
-Once the setup finishes (it may take several minutes) - and before you can create a new space - a few steps need to be taken:
+Once the setup process is complete (it may take a few minutes minutes) - and before you can create a new space - a few steps need to be taken:
 
 * Load the downloaded docker images
 
@@ -128,7 +128,7 @@ docker load -i /path/to/file.tar.gz
 docker tag <IMAGE_HASH> localhost:32000/image-name:tag
 ```
 
-* Import the downloaded images to the Kubernetes local repository.
+* Import the downloaded images to the Kubernetes local repository
 
 ```bash
 docker push localhost:32000/image-name:tag
@@ -144,30 +144,28 @@ deploy_certificate.sh /path/to/fullchain.cer /path/to/private.key
 
 Use the following commands to stop and restart the cluster:
 
-**Stopping The Cluster**
+**Stopping the Cluster**
 
 ```bash
 microk8s stop
 ```
 
-**Starting The Cluster**
+**Starting the Cluster**
 
 ```bash
 microk8s start
 ```
 
-**Restarting The Cluster**
+**Restarting the Cluster**
 
 ```bash
 microk8s restart
 ```
 
-**Uninstalling The Cluster**
+**Uninstalling the Cluster**
 
 Delete the spaces and other resources from the Cloud Manager, and then use the following commands to remove the cluster from your machine.
 
 ```bash
  microk8s uninstall
 ```
-
-

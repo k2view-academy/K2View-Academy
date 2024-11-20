@@ -2,7 +2,7 @@
 
 The following steps ensure that the keys that secure Fabric and Cassandra are properly generated and configured.
 
-- The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all the following sections by a new password.
+- The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all of the following sections by a new password.
 - Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the full and correct path location for both Fabric and Cassandra.
 
 
@@ -150,7 +150,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 
 ## Step 5 - Disable the default cassandra superuser
 
-Cassandra's default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
+Cassandra's default **superuser** is `cassandra`, and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
 
 1. Connect to one of the Cassandra nodes' consoles, and create 2 new **superusers**
 

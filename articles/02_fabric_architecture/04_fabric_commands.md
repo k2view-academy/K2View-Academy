@@ -501,7 +501,7 @@ This can be used when external systems (such as BI) that are not familiar with t
 
 Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
 
-The values are kept in the Cassandra **global_settings** table under [k2system keyspace.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+The values are kept in the System DB **global_settings** table under [k2system](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) schema.
 
 ### Fabric Security and Credentials
 
@@ -516,9 +516,9 @@ Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_
 
 #### Drop LU Command
 
-The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the keyspace for the LU from Cassandra and the related LU entry from the k2_lut_info in Cassandra. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the the LU from Storage and the related LU entry from the k2_lut_info in the System DB. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
-[Click for more information about Cassandra Keyspaces.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+[Click for more information about Fabric System DB.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
 Note that this command is used mainly in a Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
 
@@ -542,7 +542,7 @@ The interfaces of an active environment can be tested using the **TEST_CONNECTIO
 
 ### Run Queries on System DB
 
-CQL queries can be run on System DB in the Fabric server using the **CQL** command only for the selected statement.
+CQL queries can be run on Cassandra System DB in the Fabric server using the **CQL** command only for the selected statement.
 
 **Example of CQL command on Cassandra:**
 

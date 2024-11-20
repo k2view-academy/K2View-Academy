@@ -2,33 +2,33 @@
 
 Fabric allows you to configure web access and console access according to required authentication methods.
 
-The configuration resides in the Fabric main configuration file - **config.ini**. For more information about this file see [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
+The configuration resides in the Fabric main configuration file - **config.ini**. For more information about this file, read [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
 
 First, look for the config parameters in the locations as described below:
 
-* The **web access** is based on the `WEB_AUTHENTICATION_PROTOCOL` property which gets one of 2 values:
-  * "SAML", indicate to Fabric to use SAML as IDP. In this case the `saml` section properties shall be set properly, as described later in this article. 
-  * SERVER_AUTHENTICATOR", indicate to Fabric to use the authenticators which are defined at `server_authenticator` section, as described later in this article. This is the default option and when it is in use you can leave `WEB_AUTHENTICATION_PROTOCOL` entry in comments. 
+* The **web access** is based on the `WEB_AUTHENTICATION_PROTOCOL` property, which gets one of 2 values:
+  * "SAML", indicates to Fabric to use SAML as IDP. In this case, the `saml` section properties shall be set properly, as described later in this article. 
+  * SERVER_AUTHENTICATOR", indicates to Fabric to use the authenticators that are defined in the `server_authenticator` section, as described later in this article. This is the default option; when it is in use you can leave `WEB_AUTHENTICATION_PROTOCOL` entry in comments. 
 
-- The **console access** is based on `server_authenticator` section definitions.
+- The **console access** is based on the `server_authenticator` section definitions.
 
 <br/>
 
 ## server_authenticator Configuration
 
-`server_authenticator`  property defines which authenticator to be used. In case SAML is not in use it is relevant also for the web access. 
+`server_authenticator` property defines which authenticator to be used. In case SAML is not in use it is relevant also for the web access. 
 
-There are four authenticators which come as part of the Fabric platform, and are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
+There are 4 authenticators that come as part of the Fabric platform, and are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
 
-- **cassandra**, when using Fabric local Cassandra as [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) make sure the following 2 parameters are configured correctly in Cassandra.yaml, CASSANDRA_AUTHENTICATOR and CASSANDRA_AUTHORIZE. 
-- **fabric**, when using Fabric as authenticator. For this no further settings are required.
-- **ldap**, connect to LDAP server. For this option the LDAP server connection details are required and should be defined at section name: `ldap_auth`. 
-- **adldap**. connect to AD/LDAP server. For this option the AD/LDAP server connection details are required and shall be defined at section name: `adldap_auth`.
-- **block_all** meaning that access is blocked. For this no further settings are required, recommanded option in case of SAML. 
+- **cassandra**, when using Fabric local Cassandra as [Fabric System DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), make sure the following 2 parameters are configured correctly in Cassandra.yaml, CASSANDRA_AUTHENTICATOR and CASSANDRA_AUTHORIZE. 
+- **fabric**, when using Fabric as the authenticator. No further settings are required for it.
+- **ldap**, connect to LDAP server. For this option, the LDAP server connection details are required and should be defined in section name: `ldap_auth`. 
+- **adldap**, connect to AD/LDAP server. For this option, the AD/LDAP server connection details are required and should be defined in section name: `adldap_auth`.
+- **block_all**, means that access is blocked. No further settings are required for it, and it is the recommended option in case of SAML. 
 
 The default authenticator is "cassandra" when `server_authenticator` is not set.
 
-As will be explained later in this article, Fabric allows using also proprietary custom authenticators.
+As explained later in this article, Fabric also allows the use of proprietary custom authenticators.
 
 
 

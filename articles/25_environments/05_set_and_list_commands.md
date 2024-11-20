@@ -13,7 +13,7 @@
     |...
     ~~~
 
-- The **SET_GLOBAL ENVIRONMENT** command is used to set the active environment **of the entire cluster**. This command has a global impact and replaces the active environment of all open Fabric sessions and of new Fabric sessions. The values are kept in the **global_settings** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+- The **SET_GLOBAL ENVIRONMENT** command is used for setting the active environment **of the entire cluster**. This command has a global impact and replaces the active environment of all open Fabric sessions and of new Fabric sessions. The values are kept in the **global_settings** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
   - Use the following syntax:
 
@@ -24,7 +24,7 @@
     (1 row affected)
     ~~~
     
-  - To reset the environment to the default *_dev* on a cluster level, use the following syntax:
+  - To reset the environment to the default *_dev* on cluster level, use the following syntax:
 
     ~~~
     SET_GLOBAL ENVIRONMENT='';
@@ -47,7 +47,7 @@
     SET ENVIRONMENT='';
     ~~~
 
-* The **LIST ENVIRONMENTS** command is used to list all deployed environments.
+* The **LIST ENVIRONMENTS** command is used for listing all deployed environments.
 
   * Use the following syntax:
 

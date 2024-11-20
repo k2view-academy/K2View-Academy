@@ -7,7 +7,7 @@
 ## Fabric Execution Servers - Node Specifications 
 
 The Fabric server installation is a Linux-based solution.
-A dedicated servers for Fabric instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined . 
+A dedicated server for each Fabric instance is preferred. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ## Minimum System Configuration for Each Fabric Node Server
 
@@ -15,7 +15,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution (for example: Centos, Oracle Linux).   
+* RedHat (version 7 or higher) based distribution (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
 
@@ -29,7 +29,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
-<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp;recommended.</p>
 </td>
 </tr>
 <tr>
@@ -45,9 +45,9 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 <p><strong>Network</strong></p>
 </td>
 <td style="width: 446px;">
-<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes and source and destination Dbs.</p>
+<p>1 Gbps network speed between the Fabric nodes, Cassandra Nodes, Kafka nodes, and source and destination DBs.</p>
 </td>
 </tr>
 </tbody>
@@ -72,13 +72,13 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 
 
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -89,7 +89,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -97,7 +97,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -105,7 +105,7 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D4d v5</p>
 </td>
 </tr>
 </tbody>
@@ -120,15 +120,15 @@ A dedicated servers for Fabric instance is prefered. Following a sizing process,
 ## Kafka Server Node Specifications 
 
 The Kafka server installation is a Linux-based solution.
-A dedicated servers for Kafka instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+A dedicated server for each Kafka instance is preferred. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
-### Minimum System Configuration for Each Fabric Node Server
+### Minimum System Configuration for Each Kafka Node Server
 
 ### Software Requirements:
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 #### Hardware Requirements:
 <table>
@@ -139,7 +139,7 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
-<p>For high-load or complex scenarios: Octa-cores are&nbsp; recommended.</p>
+<p>For high-load or complex scenarios: Octa-cores are&nbsp;recommended.</p>
 </td>
 </tr>
 <tr>
@@ -155,9 +155,9 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -179,13 +179,13 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -196,7 +196,7 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.2xlarge</p>
+<p>m5.xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -204,7 +204,7 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v2</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -212,7 +212,7 @@ A dedicated servers for Kafka instance is prefered. Following a sizing process, 
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D4d v5</p>
 </td>
 </tr>
 </tbody>
@@ -225,7 +225,7 @@ Volume of 50G /opt/apps/kafka/ - will be used also as the home directory for a K
 ## Cassandra Server Node Specifications 
 
 The Cassandra server installation is a Linux-based solution.
-A dedicated servers for Cassandra instance is prefered. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
+A dedicated server for each Cassandra instance is preferred. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
 
 ### Minimum System Configuration for Each Cassandra Node Server
 
@@ -233,9 +233,9 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
-* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric)
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric).
 
 
 ### Hardware Requirements:
@@ -262,9 +262,9 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -286,13 +286,13 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -303,7 +303,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.2xlarge</p>
+<p>m5.xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -311,7 +311,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v2</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -319,7 +319,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D4d v5</p>
 </td>
 </tr>
 </tbody>
@@ -333,9 +333,9 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is required for TDM projects only.
-* K2view supports PostgreSQL version 9.6 & 13.x .
+* K2view supports PostgreSQL version 9.6 & 13.x.
 * PostgreSQL can be deployed in one of the following two ways:
-    * On-premise as a virtual or physical machine. 
+    * On-premises as a virtual or a physical machine. 
     * As a cloud service (SaaS)
 
 ### Suggested System Configuration for PostgreSQL Server
@@ -343,8 +343,8 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with latest patches (for example: Centos, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with latest patches.
+* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
+* Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 ### Hardware Requirements:
 <table>
@@ -370,9 +370,9 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Storage</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Direct attached SSD/NVME based storage is recommended for best performance.</p>
-<p><strong>SAN</strong> supported with flash based disks. RAID-0 is preferred.</p>
-<p><strong>NAS is not certified.</strong>
+<p>Direct-attached SSD/NVMe-based storage is recommended for best performance.</p>
+<p><strong>SAN (Storage Area Network)</strong> is supported only with flash-based disks, and RAID-0 is the preferred disk chain method.</p>
+<p><strong>NAS (Network Attached Storage) is not certified.</strong>
 </td>
 </tr>
 <tr>
@@ -381,7 +381,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 </td>
 <td style="width: 446px;">
 <p>For application data, at least 100 GB free disk space is required.</p>
-<p>Disk space can be increased according to the project scope and retention requirements.</p>
+<p>Disk space can be increased according to the project scope and the retention requirements.</p>
 </td>
 </tr>
 <tr>
@@ -395,13 +395,13 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 </tbody>
 </table>
 
-### Example of Cloud Supported Instance Types:
+### Examples of Cloud-supported Instance Types:
 
 <table>
 <tbody>
 <tr style="height: 46px;">
 <td style="width: 240.469px; height: 46px;">
-<p><strong>Cloud provider</strong></p>
+<p><strong>Cloud Provider</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
 <p><strong>Instance Type</strong></p>
@@ -412,7 +412,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.xlarge, a1.2xlarge</p>
+<p>m5.xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -420,7 +420,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p> D16d v2</p>
+<p>e2-standard-4</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -428,13 +428,13 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-4</p>
+<p>D4d v5</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-### Example of Cloud Supported SaaS 
+### Examples of Cloud-supported SaaS 
 * AWS RDS PostgreSQL - read more [here](https://aws.amazon.com/free/database/?trk=492c57d3-8cdc-4660-b6ac-d2008bd51b40&sc_channel=ps&ef_id=Cj0KCQjwmtGjBhDhARIsAEqfDEcolBtzTdv_q0Ob8_Xda3524RZfaxKgGOzqoi1IVjieHyRiSYgUEr0aAk12EALw_wcB:G:s&s_kwcid=AL!4422!3!645125273471!e!!g!!aws%20postgre%20sql!19574556899!145779849512)
 * GCP Cloud SQL PostgreSQL - read more [here](https://cloud.google.com/sql/docs/postgres/introduction)
 * Azure Database for PostgreSQL - read more [here](https://azure.microsoft.com/en-us/products/postgresql/?ef_id=_k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&OCID=AIDcmm81syc84i_SEM__k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&gclid=Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB)
@@ -442,7 +442,7 @@ A dedicated servers for Cassandra instance is prefered. Following a sizing proce
 
 ## Fabric Studio Requirements:
 
-Fabric Studio is used to configure, manage and control the Fabric server operation and its installation is Windows-based.
+Fabric Studio is used for configuring, managing and controlling the Fabric server operation, and its installation is Windows-based.
 The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
 
 ### Minimum System Configuration
@@ -569,9 +569,9 @@ Local administrator privileges are needed for the Fabric Studio installation.
 </tbody>
 </table>
 
-### Linux Servers Ports
+### Linux Server Ports
 
-Open the following ports on the Linux server and make sure they are accessible from Management stations.
+Open the following ports on the Linux server and ensure they are accessible from Management stations.
 
 Depending on your setup, not all ports are required:
 
@@ -579,7 +579,7 @@ Depending on your setup, not all ports are required:
 <tbody>
 <tr>
 <td style="width: 161.109px;">
-<p><strong>Ports Number</strong></p>
+<p><strong>Port Numbers</strong></p>
 </td>
 <td style="width: 249.891px;">
 <p><strong>Role</strong></p>
@@ -640,5 +640,5 @@ Depending on your setup, not all ports are required:
 
 ### Connectivity
 
-Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources & destinations.
+Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all sources and destinations.
 Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
