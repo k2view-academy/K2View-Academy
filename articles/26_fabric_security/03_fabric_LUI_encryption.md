@@ -18,7 +18,7 @@ By default, when creating a Logical Unit, the **Enable Data Encryption** field i
 
 To encrypt each instance (LUI), set the **Enable Data Encryption** property of the LU schema to **True**. 
 
-See the screenshot below:
+View the below screenshot:
 
 <img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
