@@ -16,9 +16,9 @@ First, look for the config parameters in the locations as described below:
 
 ## server_authenticator Configuration
 
-`server_authenticator` property defines which authenticator to be used. In case SAML is not in use it is relevant also for the web access. 
+The `server_authenticator` property defines which authenticator should be used. In case SAML is not in use, it is relevant also for the web access. 
 
-There are 4 authenticators that come as part of the Fabric platform, and are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
+There are 4 authenticators that come as part of the Fabric platform and that are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
 
 - **cassandra**, when using Fabric local Cassandra as [Fabric System DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), make sure the following 2 parameters are configured correctly in Cassandra.yaml, CASSANDRA_AUTHENTICATOR and CASSANDRA_AUTHORIZE. 
 - **fabric**, when using Fabric as the authenticator. No further settings are required for it.
@@ -28,7 +28,7 @@ There are 4 authenticators that come as part of the Fabric platform, and are con
 
 The default authenticator is "cassandra" when `server_authenticator` is not set.
 
-As explained later in this article, Fabric also allows the use of proprietary custom authenticators.
+As explained later in this article, Fabric allows the use of proprietary custom authenticators as well.
 
 
 
