@@ -9,7 +9,7 @@ The underlying key, using the SHA-256 algorithm, is a hash that consists of the 
 - LUI (instance ID). For example: “123”
 - Master key, [input key](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-master-key) generated. 
 
-Since each Instance ID has a different value, Fabric creates a different key for each Instance ID. Fabric saves the key description of each Instance ID in the ENTITY table in Cassandra. This way, Fabric can decrypt the entity when necessary.
+Since each Instance ID has a different value, Fabric creates a different key for each Instance ID. Fabric saves the key description of each Instance ID in the ENTITY table in the Storage DB. This way, Fabric can decrypt the entity when necessary.
 The encrypted master key used to encrypt the Instance ID can be taken from the KEYS table according to the key's description.
 
 ## Encrypting an LUI Using the Fabric Studio
@@ -24,9 +24,9 @@ See the screenshot below:
 
 There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE that controls the two LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each are described below:
 
-> **ON_SAVE** (default value from 6.5.4): Encrypt the LUI when saving it to Cassandra. 
+> **ON_SAVE** (default value from 6.5.4): Encrypt the LUI when saving it the storage layer. 
 > The encryption is done after the compression. The advantage of using this encryption mode is twofold compared to the non-encrypted mode: 
-> The data is stored encrypted in Cassandra, and at the same time the data has minimal performance and storage impact. 
+> The data is stored encrypted in the Storage DB, and at the same time the data has minimal performance and storage impact. 
 > It is important to mention that data in the cache is not encrypted, therefore it is the user’s responsibility to ensure that the data 
 > in the cache is secured on the operating system level.
 
