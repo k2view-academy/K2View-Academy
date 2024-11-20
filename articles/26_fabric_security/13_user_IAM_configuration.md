@@ -34,9 +34,9 @@ As explained later in this article, Fabric allows the use of proprietary custom 
 
 ### Sequence Authenticators
 
-A sequence of authenticators can be specified using a comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as fallback to its predecessor.
+A sequence of authenticators can be specified using a comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as a fallback for its predecessor.
 
-Note that appropriate accompanying section must be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured then one additional section - "ldap_auth" - should be added.
+Note that an appropriate accompanying section must be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
 
 If there is a need to use the same type, for example - use 2 LDAP servers, where one is a fallback to another, then you need to do the following:
 
