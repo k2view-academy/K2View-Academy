@@ -22,7 +22,7 @@ View the below screenshot:
 
 <img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
-There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE that controls the two LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each are described below:
+There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE, which controls the 2 LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each is described below:
 
 > **ON_SAVE** (default value from 6.5.4): Encrypt the LUI when saving it the storage layer. 
 > The encryption is done after the compression. The advantage of using this encryption mode is twofold compared to the non-encrypted mode: 
