@@ -5,8 +5,8 @@ Fabric encrypts each LUI using the AES-256 mode encryption algorithm. Hence, the
 
 The underlying key, using the SHA-256 algorithm, is a hash that consists of the following parts:
 
-- LU type name (Logical Unit name). For example: “CUSTOMER”
-- LUI (instance ID). For example: “123”
+- LU type name (Logical Unit name). For example, “CUSTOMER”.
+- LUI (instance ID). For example, “123”.
 - Master key, [input key](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-master-key) generated. 
 
 Since each Instance ID has a different value, Fabric creates a different key for each Instance ID. Fabric saves the key description of each Instance ID in the ENTITY table in the Storage DB. This way, Fabric can decrypt the entity when necessary.
