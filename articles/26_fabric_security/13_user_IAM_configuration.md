@@ -90,7 +90,7 @@ The integration with a SAML IDP requires that both the identity provider (IDP) a
 
 
 
-### Keystore verification
+### Keystore Verification
 
 You can verify the certification keys by using this command: `keytool -list -storepass <passowrd> -keystore <path to the jks repository file>`. JKS (Java KeyStore) is a repository of security certificates – either authorization certificates or public key certificates – as well as corresponding private keys.
 
@@ -107,11 +107,11 @@ For more information and guidelines as to where and how this information should 
 
 
 
-### Editing the config.ini file
+### Editing the config.ini File
 
-Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was set and acquired at the preparation step.
+The following are configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was set and acquired in the preparation step.
 
-At the `[saml]` section edit these properties:
+Edit these properties in the `[saml]` section:
 
 - **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
 - **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used too) . This property is also populated at the IDP side.
