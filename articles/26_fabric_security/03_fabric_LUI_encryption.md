@@ -14,9 +14,9 @@ The encrypted master key used to encrypt the Instance ID can be taken from the K
 
 ## Encrypting an LUI Using the Fabric Studio
 
-By default, when creating a Logical Unit, the **Enable data encryption** field is set to **False**.
+By default, when creating a Logical Unit, the **Enable Data Encryption** field is set to **False**.
 
-To encrypt each instance (LUI), set the **Enable data encryption** property of the LU schema to **True**. 
+To encrypt each instance (LUI), set the **Enable Data Encryption** property of the LU schema to **True**. 
 
 See the screenshot below:
 
