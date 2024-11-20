@@ -2,7 +2,7 @@
 
 Fabric allows you to configure web access and console access according to required authentication methods.
 
-The configuration resides in the Fabric main configuration file - **config.ini**. For more information about this file, read [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
+The configuration resides in Fabric's main configuration file - **config.ini**. For more information about this file, read [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
 
 First, look for the config parameters in the locations as described below:
 
