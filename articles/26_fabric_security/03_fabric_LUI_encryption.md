@@ -24,18 +24,18 @@ View the below screenshot:
 
 There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE, which controls the 2 LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each is described below:
 
-> **ON_SAVE** (default value from 6.5.4): Encrypt the LUI when saving it the storage layer. 
+> **ON_SAVE** (default value from 6.5.4) - encrypts the LUI when saving it the storage layer. 
 > The encryption is done after the compression. The advantage of using this encryption mode is twofold compared to the non-encrypted mode: 
 > The data is stored encrypted in the Storage DB, and at the same time the data has minimal performance and storage impact. 
-> It is important to mention that data in the cache is not encrypted, therefore it is the user’s responsibility to ensure that the data 
+> It is important to mention that the data in the cache is not encrypted and it is therefore the user’s responsibility to ensure that the data 
 > in the cache is secured on the operating system level.
 
-> **MDB**: Encrypt on the MicroDB before the compression. The result here is that compression has a minimal impact on the MicroDB size
-> but it could affect performance when reading/writing data, as the MicroDB is much bigger compared to its size in a non-encrypted mode. On the other hand,
-> the microDB is stored encrypted in the cache as well.
+> **MDB** - encrypts on the MicroDB before the compression. The result here is that the compression has a minimal impact on the MicroDB size,
+> but it could affect the performance when reading/writing data, as the MicroDB is much bigger compared to its size in a non-encrypted mode. On the other hand,
+> the MicroDB is stored encrypted in the cache as well.
 
-Although ENTITY_ENCRYPTION_MODE is set to ON_SAVE by default, the user must set the **Enable data encryption** field 
-in LU schema properties to **True** , otherwise the LU will not be encrypted.
+Although ENTITY_ENCRYPTION_MODE is set to ON_SAVE by default, the user must set the **Enable Data Encryption** field 
+in LU schema properties to **True**, as otherwise the LU will not be encrypted.
 
 ## Partial LUI Encryption
 
@@ -50,11 +50,11 @@ To encrypt only selected fields on the LU Instance, use the following built-in f
 
 ```public static String luEncrypt(String plainData) throws Exception```
 
-This function encrypts data in text format using the latest master key and LUI key and can be used to encrypt individual fields in the LUI micro-database
+This function encrypts data in a text format using the latest master key and LUI key and can be used to encrypt individual fields in the LUI micro-database
 
 Parameters:
 
-- plainData, the text to encrypt
+- plainData - the text to encrypt
 
 
 The function returns the following:
@@ -66,13 +66,13 @@ The function returns the following:
 
 ```public static String luDecrypt(String encryptedData, String luName, String entityID) throws Exception```
 
-This function decrypts a string previously encrypted using the ```luEncrypt``` method:
+This function decrypts a string that was previously encrypted using the ```luEncrypt``` method:
 
 Parameters:
 
-- encryptedData, the encrypted data
-- luName, LUType for the data to decrypt
-- entityID, Instance ID of the instance holding this data
+- encryptedData - the encrypted data
+- luName - LUType for the data to decrypt
+- entityID - Instance ID of the instance holding this data
 
 This function returns the following:
 
@@ -85,11 +85,11 @@ This function returns the following:
 
 ```public static String luRekey(String encryptedData) throws Exception```
 
-This function decrypts data using its key and encrypts it using the latest master key. For a system to support the luRekey option, data must be rekeyed when resyncing the LUI.
+This function decrypts data using its key, and encrypts it using the latest master key. For a system to support the luRekey option, data must be rekeyed when resyncing the LUI.
 
 Parameters:
 
-encryptedData, encrypted data to be rekeyed
+encryptedData - encrypted data to be rekeyed
 
 
 This function returns the following:
