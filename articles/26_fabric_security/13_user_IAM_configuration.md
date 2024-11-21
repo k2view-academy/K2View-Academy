@@ -38,7 +38,7 @@ A sequence of authenticators can be specified using a comma separator:  `server_
 
 Note that an appropriate accompanying section must be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
 
-If there is a need to use the same type, for example - use 2 LDAP servers, where one is a fallback to another, then you need to do the following:
+If there is a need to use the same type - for example, use 2 LDAP servers, where one is a fallback to another - then you need to do the following:
 
 1. Give a name to each of them, for example: "ldap1", "ldap2"
 2. Make sure the additional section names match their names, for example: "ldap1_auth", "ldap2_auth"
