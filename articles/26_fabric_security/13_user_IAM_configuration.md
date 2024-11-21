@@ -113,11 +113,11 @@ The following are configuration actions that should be applied in the Fabric **c
 
 Edit these properties in the `[saml]` section:
 
-- **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
-- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used too) . This property is also populated at the IDP side.
-- **IDP_ENTITYID**, the entity ID, in URI format, as supplied by the IDP.
-- **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for SAML request. 
-- **SECURE**, flag indicating if certification and encryption is applied. Default is "true".
+- **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated in the IDP. 
+- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint in Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used as well). This property is also populated on the IDP side.
+- **IDP_ENTITYID**, the entity ID, in URI format, as provided by the IDP.
+- **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for the SAML request. 
+- **SECURE**, a flag indicating if certification and encryption is applied. Default is "true".
 - **SP_CERT_ALIAS**, alias to the certification that is uploaded to the IDP,which is the public key to sign and encrypt the SAML response 
 - **IDP_CERT_ALIAS**, alias to the certification supplied by the IDP, which is the public key to to sign and encrypt the SAML request.
 - **GROUPS_KEY_MAPPING** (optional), name of the groups list, as retrieved from IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
