@@ -52,9 +52,9 @@ If there is a need to use the same type, for example - use 2 LDAP servers, where
 
 ### Preparations & Prerequisites
 
-The integration with a SAML IDP requires that both the identity provider (IDP) and the service provider (SP) i.e. Fabric, will provide information to each other which will then be uploaded and configured in both platforms.
+The integration with a SAML IDP requires that both the identity provider (IDP) and the service provider (SP), i.e., Fabric, will provide information to each other, which will then be uploaded and configured in both platforms.
 
-* **Get from the IDP** - to be copied and downloaded from the IDP Admin user interfaces 
+* **Get from the IDP** - to be copied and downloaded from the IDP admin user interfaces 
 
   * IDP entity ID
 
@@ -175,7 +175,7 @@ The instructions for LDAP and LDAPS can be found [here](/articles/26_fabric_secu
 
 ## Proprietary Custom Authenticator
 
-In order to use a custom authenticator do the following at the config.ini:
+In order to use a custom authenticator, do the following in the config.ini:
 
 1. Add the `server_authenticator` authenticator list
 2. Add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
