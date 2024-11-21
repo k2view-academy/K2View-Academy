@@ -151,7 +151,7 @@ When Fabric is running on Windows OS, usually when working locally during the pr
 
 When LDAP is used as an authenticator, an admin role is automatically created for Fabric bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $K2_HOME/config.template/admin_privileges.template file as reference). 
 
-The role's name should be provided by the IT / LDAP owner (we assume he will create a dedicated role, to be used as K2view admin role).
+The role's name should be provided by IT / LDAP owner (we assume he will create a dedicated role, to be used as K2view admin role).
 
 ##### LDAPS: Secured LDAP
 
@@ -161,11 +161,11 @@ When working with LDAPS (this is a secured LDAP), you must get a certificate fil
 
 The `adldap_auth` or `ldap_auth` sections must define the following:
 
-- **url** - LDAP URL endpoint. in case of LDAPS (secured LDAP) it will start with "ldaps://" (note that it is in lowercase letters)
-- **security_level**, set to "simple" (The default value. It can be used also for LDAPS).
-- **admin_dn**, the LDAP admin user that has permissions to search and look for other users.
-- **admin_password**, the admin user password.
-- **users_base_dn**, the root base "dn" of the users.
+- **url** - an LDAP URL endpoint. In case of an LDAPS (secured LDAP), it will start with "ldaps://" (note that it is in lowercase letters).
+- **security_level** - set to "simple" (the default value, which can also be used for an LDAPS).
+- **admin_dn** - the LDAP admin user that has permissions to search and look for other users.
+- **admin_password** - the admin user password.
+- **users_base_dn** - the root base "dn" of the users.
 
 The values should be provided by the LDAP owner.
 
@@ -177,11 +177,11 @@ The instructions for LDAP and LDAPS can be found [here](/articles/26_fabric_secu
 
 In order to use a custom authenticator, do the following in the config.ini:
 
-1. Add the `server_authenticator` authenticator list
+1. Add the `server_authenticator` authenticator list.
 2. Add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
-   - Under this section add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added too and will be passed to the authenticator when activated.
+   - Under this section, add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added as well and will be passed to the authenticator when activated.
 
-For more information about customer authenticator implementation see [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
+For more information about customer authenticator implementation, read [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
 
 
 
