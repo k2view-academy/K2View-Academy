@@ -1,6 +1,6 @@
 # Get Started with Fabric Studio
 
-## What Is the Fabric Studio?
+## What is the Fabric Studio?
 Fabric Studio is a designer tool that manages the construction of [Data Products](/articles/01_fabric_overview/02_fabric_glossary.md#logical-unit--data-product). As an integrated tool, Fabric allows you to implement mapping rules into a *project* and to deploy your implementation to the *Fabric Server*.
 
 Fabric Studio offers a user-friendly look-and-feel development environment, known as the *Implementation Layer*, providing both code and low-code tools for easing the impetration process. Each project is initiated and maintained via this platform and working space. 
