@@ -119,9 +119,9 @@ Edit these properties in the `[saml]` section:
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for the SAML request. 
 - **SECURE**, a flag indicating if certification and encryption is applied. Default is "true".
 - **SP_CERT_ALIAS**, alias to the certification that is uploaded to the IDP, which is the public key to sign and encrypt the SAML response. 
-- **IDP_CERT_ALIAS**, alias to the certification supplied by the IDP, which is the public key to to sign and encrypt the SAML request.
-- **GROUPS_KEY_MAPPING** (optional), name of the groups list, as retrieved from the IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
-- **SP_SECURE** (optional, default is true), indicates if expecting SAML response to be secured (encrypted). Set it to *false* when IDP does not want to upload the certificate file, provided by k2view. Having that IDP does not have the public key, it cannot encrypt the response.
+- **IDP_CERT_ALIAS**, alias to the certification supplied by the IDP, which is the public key to sign and encrypt the SAML request.
+- **GROUPS_KEY_MAPPING** (optional), the name of the groups list, as retrieved from the IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
+- **SP_SECURE** (optional, default is true), indicates if expecting SAML response to be secured (encrypted). Set it to *false* when IDP does not want to upload the certificate file, provided by K2view. Having that IDP does not have the public key, it cannot encrypt the response.
 
 
 
@@ -131,13 +131,13 @@ In addition, `WEB_AUTHENTICATION_PROTOCOL` property's value shall set to "SAML".
 
 #### Configurations for Windows OS
 
-When Fabric is running on Windows OS, usually when working locally during the project implementation or testing, the following additional steps need to be done, in regards to the certification files.
+When Fabric is running on Windows OS, usually when working locally during the project implementation or testing, the following additional steps need to be taken, in relation to the certification files.
 
 1. Open the "fabric-server-start.bat" located in the Fabric server scripts directory - "<FABIRC_HOME>\Server\fabric\scripts".
-2. Update the following 4 properties
+2. Update the following 4 properties:
    - set javax_net_ssl_keyStore - the full path of the Fabric key store repository (jks file). This repository stores the the private key based upon which the public key is generated (this key is sent to the IDP).
    - set javax_net_ssl_keyStorePassword
-   - set javax_net_ssl_trustStore - the full path of the trust store, where the public key, which retrieved from the IDP, is stored (for local machine you can use same jks file, which holds the keystore).
+   - set javax_net_ssl_trustStore - the full path of the trust store, where the public key, which retrieved from the IDP, is stored (for local machine you can use the same jks file that holds the keystore).
    - set javax_net_ssl_trustStorePassword
 3. Restart Fabric.
 
