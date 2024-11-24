@@ -23,7 +23,7 @@ For example, when the LU's [Root table](/articles/01_fabric_overview/02_fabric_g
 
 The LU tables that are populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and can be defined either with or without a population. 
 
-Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. It is the implementation's responsibility to verify that the data, populated during the LUI update, does not conflict or override the changes of the LU table populated during the Sync process.
+Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however, the creation of a population for LU tables that will be populated by the update process is not blocked in Fabric. It is the implementation's responsibility to verify that the data, populated during the LUI update, does neither conflict nor override the changes of the LU table populated during the Sync process.
 
 There is a write lock per LUI during the process. This means that you can begin several transactions on an LUI only if the transactions are open on different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
 
@@ -34,9 +34,9 @@ Fabric can be configured as a [cluster](/articles/02_fabric_architecture/01_fabr
 
 The OPTIMISTIC_LOCKING parameter in the **config.ini** can be set per node to support a lightweight transaction as follows:
 
-- **NONE** (default). The latest transaction overrides the LUI (Instance ID).
-- **QUORUM**. The first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a quorum).
-- **LOCAL QUORUM**. The first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a local quorum on the DC).
+- **NONE** (default) - the latest transaction overrides the LUI (Instance ID).
+- **QUORUM** - the first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a quorum).
+- **LOCAL QUORUM** - the first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a local quorum on the DC).
 
 **Example**
 
