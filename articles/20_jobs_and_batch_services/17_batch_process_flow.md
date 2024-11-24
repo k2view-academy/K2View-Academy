@@ -227,23 +227,23 @@ The below illustration shows the sequence of actions involved in this process.
 
 ### Step 3
 
-- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Sources systems. In our example, the iiDs are X1, X2, X3, X4, and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
+- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Source systems. In our example, the iiDs are X1, X2, X3, X4 and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
 
 
 ### Step 4
 
-- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
+- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job Owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
 
 
 ### Step 5
 
-- Each node syncs the instances that has been allocated from the External Sources systems.
-- N3 collects statistics information on each of the nodes and entity synchronization. The information collected is written onto Cassandra.
+- Each node syncs the instances that has been allocated from the External Source systems.
+- N3 collects statistics information on each of the nodes and entity synchronization. The collected information is written into the System DB (e.g., Cassandra).
 
 
 ### Step 6
 
-- Each node writes iiDs into Cassandra
+- Each node writes iiDs into Cassandra.
 
 
 
