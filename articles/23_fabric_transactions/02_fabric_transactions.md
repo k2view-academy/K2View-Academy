@@ -25,7 +25,7 @@ The LU tables that are populated by the update process must be part of the [LU s
 
 Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. It is the implementation's responsibility to verify that the data, populated during the LUI update, does not conflict or override the changes of the LU table populated during the Sync process.
 
-There is a write lock per LUI during the process. This means that you can begin several transactions on an LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
+There is a write lock per LUI during the process. This means that you can begin several transactions on an LUI only if the transactions are open on different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
 
 
 ### Parallel Transactions
@@ -94,7 +94,7 @@ set common_local_trx=true;
 
 - When **common_local_trx** is set to **false**, the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. 
 
-The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
+The transaction is sent to Kafka and is saved into Kafka or the System DB, depending on its size. The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
 
 For example, run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
 
