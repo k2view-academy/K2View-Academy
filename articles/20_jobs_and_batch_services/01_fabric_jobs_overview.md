@@ -1,9 +1,9 @@
 # Fabric Jobs Overview 
 
-The Fabric Jobs mechanism is rich, resilient and scalable, and it can be used for running any script or executable. For example, recurring or one-time-only scheduled asynchronous actions that run Fabric functions according to a predefined schedule.
+The Fabric Jobs mechanism is rich, resilient and scalable, and it can be used for running any script or executable. An example of this mechanism is the recurring or one-time-only scheduled asynchronous actions that run Fabric functions according to a predefined schedule.
 
 
-Once set up, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code on specific dates and times. Jobs can also be used to collect data from structured DB, HTTP streams, files (local and remote) or message queues.
+Once set up, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code on specific dates and times. Jobs can also be used to collect data from structured DBs, HTTP streams, files (local and remote) or message queues.
 
 Fabric Jobs can be one of the following categories:
 
@@ -13,13 +13,13 @@ Fabric Jobs can be one of the following categories:
 
 - **Migrate process** that sync multiple instances of a specific LU.
 
-- **Parser executions** that get data from tables and unstructured files which can be pushed to a table in a System DB and then used to build an LUT Schema.
+- **Parser executions** that get data from tables and unstructured files that can be pushed to a table in a System DB and then used for building an LUT Schema.
 
 - **Broadway flows** that can be scheduled and benefit from Jobs execution parameters.
 
 
  # What is a Fabric Job? 
-A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
+A Fabric Job process can be exposed across Fabric nodes and run to execute scripts, flows or functions according to a specific schedule or once only.
 
 A Job must be deployed to Fabric so that it can be invoked by one of the Fabric Cluster's nodes following an allocation process that we will describe in more details in this section.
 
