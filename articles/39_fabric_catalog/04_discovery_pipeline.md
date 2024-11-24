@@ -7,9 +7,11 @@ The Discovery job is a pipeline which connects a series of steps where some are 
 * The Crawler scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 * The Plugin Framework is an internal platform for running the plugins. It is a pipeline of plugins which are executed by the Discovery job after the Crawler completion. 
 
- The pipeline execution is performed based on the product configuration **plugins.discovery** file which defines the crawler filter (if needed) and the list of plugins, their execution order and input parameters.
+The pipeline is executed based on the combination of the product and project rules (configurations). 
 
-Starting V8.2, the pipeline configuration is performed via a new [Discovery Pipeline screen] rather than by editing the plugins.discovery file manually. 
+The product configuration of the Discovery Pipeline includes the list of product built-in plugins with their input parameters, sample size for the data snapshot and more. 
+
+Starting from V8.2, the project configuration file includes only the overrides to the product configuration. The project level overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. 
 
 ### Plugins Pipeline
 
@@ -48,35 +50,31 @@ The global schema exclude list defines the schemas that should be excluded from 
 
 ### Baseline and Override Rules
 
-Starting V8.2, the Discovery execution is based on the rules. Creation of various rules enables creating different variations of a discovery pipeline process per data platform and schema.
+Starting V8.2, the Discovery execution is based on the rules. The creation of multiple rules allows different variations of a Discovery pipeline process to be tailored per data platform and schema.
 
-For example, you can define that a ```Plugin X``` is executed on ```Schema 1``` while it is not executed on all other schemas of the same data platform. You can also define a bigger data sample on ```Schema 2``` while all the rest will have a default sample size. 
+For example, you can define that a ```Plugin X``` is executed on ```Schema 1``` while it is not executed on all other schemas of the same data platform. You can also define a bigger data sample on ```Schema 2``` while all the rest will use a default sample size. 
 
 The product initial setup includes a **Baseline** rule which represents a baseline configuration, such as a sample size, list of all product plugins and their default settings.
 
-One can override a Baseline rule, e.g. make some plugin to be active, if its product setting is inactive. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
+One can override a Baseline rule, for example, deactivate a plugin, which is active in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
 
-The user can create one or more rules, per each relevant data platform. Each rule can define:
+The user can create multiple rules per a data platform. Each rule can define:
 
 * Crawler filter - schemas and/or datasets to be included or excluded from the Discovery job.
 * Override rule - plugins and other general overrides to the default product settings.
 * A combination of a filter and override rules.
 
-When there are multiple rules for the same process element, the most specific rule "wins". For example:
+The rules are executed based on the following hierarchy: when multiple rules apply to the same process element, the most specific rule takes precedence. For example, the following rules exist:
 
 * A **Baseline** rule defines that a ```Plugin X``` is inactive. 
-* A **Rule 1** is created for CRM_DB and it sets ```Plugin X``` to active. 
-* A **Rule 2** is created for CRM_DB and public2 schema, and it  sets ```Plugin X``` to active and a threshold = 0.8.
+* A **Rule 1** is applied on CRM_DB and it sets ```Plugin X``` to active. 
+* A **Rule 2** is applied on CRM_DB and public2 schema, and it  sets ```Plugin X``` to active and a threshold = 0.8.
 
-So, depending on which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
+Depending on which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
 
-All the above configuration changes are saved on the project level under the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder. 
+All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder,the **pluginsOverride.discovery** file. It is created when the overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. 
 
-The baseline configuration as well as the override rule can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
-
-[Click here for a detailed screen description, the guidelines for rules creation and examples.]
-
-
+Click [here](13_discovery_pipeline_settings.md) to learn about the baseline configuration as well as the override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
 
 
 
