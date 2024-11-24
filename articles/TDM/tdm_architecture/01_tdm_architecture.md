@@ -2,16 +2,16 @@
 
 ## TDM Components
 
-The K2View TDM has the following components:
+The K2view TDM has the following components:
 
-- TDM Portal (self-service).
-- TDM DB.
-- Test data store (Fabric). 
+- TDM Portal (self-service)
+- TDM DB
+- Test data store (Fabric) 
 
 ![tdm_architecture](images/tdm_architecture.png)
 
 ### TDM Portal
-The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and offers self-service implementation of the following activities:
+The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and it offers a self-service implementation of the following activities:
 - TDM definitions, setting TDM Business Entities, environments, roles and permissions. 
 - Creation and execution of TDM tasks that provide a selected subset of entities or tables to the selected environment. 
 
