@@ -243,7 +243,7 @@ The below illustration shows the sequence of actions involved in this process.
 
 ### Step 6
 
-- Each node writes iiDs into Cassandra.
+- Each node writes iiDs into the System DB (e.g., Cassandra).
 
 
 
