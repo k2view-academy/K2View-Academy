@@ -98,7 +98,7 @@ The transaction is sent to Kafka and is saved into Kafka or the System DB, depen
 
 For example, run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
 
-* Each bulk of 1000 commands is sent to Kafka, the commands are kept in Cassandra, and Kafka gets the transaction ID. 
+* Each bulk of 1000 commands is sent to Kafka, the commands are kept in the System DB, and Kafka gets the transaction ID. 
 * The 2500 inserts are divided into 3 transactions (1000 + 1000 + 500).
 * Then, run another 900 inserts. The 900 inserts are sent and stored in Kafka.
 
@@ -106,7 +106,7 @@ Parallel transactions are supported on Reference tables as follows:
 
 * The first commit updates the table. The commit is initiated either by:
   * Short transaction - the user runs the commit command.
-  * Large transaction - the commit is initiated internally for each bulk size, populated in Cassandra.
+  * Large transaction - the commit is initiated internally for each bulk size that is defined in the System DB.
 
 The REF_SYNC_WAIT and REF_STATUS commands support transactions on Reference tables. 
 
