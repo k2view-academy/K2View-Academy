@@ -20,9 +20,9 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 4. FAILED/CANCELLED/PAUSED/DONE
 
 
-The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
+The below illustration shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
 
-The Job Process then launches the batch command which, in turn, is executed through its lifecycle phases. 
+The Job Process then launches the batch command, which in turn, is executed through its lifecycle phases. 
  
 <img src="images/13_jobs_and_batch_services_batch_process.PNG">
 
