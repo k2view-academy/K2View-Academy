@@ -47,7 +47,7 @@ The Batch process triggers a new (temporary) job dedicated for this specific pro
 The new job runs the batch command.
 
 ### Step 3
-The Jobs table is updated for next run and the dedicated job will wait for the next instance of the scheduled batch process.
+The Jobs table is updated for the next run, and the dedicated job will wait for the next instance of the scheduled batch process.
 
 
 
@@ -215,14 +215,14 @@ The below illustration shows the sequence of actions involved in this process.
 ### Step 1 
 
 - The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator all along this process. 
-- A job process for this batch command is started.
+- A job process for this batch command starts.
 
 
 ### Step 2
 
 - The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes allocation rules described in the [Affinity](10_jobs_and_batches_affinity.md#affinity-properties) article. 
 - This node (Node 3) is referred to as the Job Owner node.
-- The job Owner Node initiates the migration's statistic collection process
+- The Job Owner node initiates the migration's statistic collection process.
 
 
 ### Step 3
