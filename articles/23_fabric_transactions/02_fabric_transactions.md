@@ -74,7 +74,7 @@ set async_trx=true;
 
 Notes:
 
-* The transaction is added to the delta table as is without any validation.
+* The transaction is added to the delta table as it is, without any validation.
 
 * The **set async_trx** command must be executed outside the transaction and prior to it.
 
@@ -84,7 +84,7 @@ Notes:
 
 Similar to LU tables, a Reference table can be defined with or without a population, and be populated by an update transaction.
 
-The transaction can be done in a synchronous or an asynchronous mode using the following command:
+The transaction can be done in either a synchronous or an asynchronous mode using the following command:
 
 ~~~
 set common_local_trx=true;
