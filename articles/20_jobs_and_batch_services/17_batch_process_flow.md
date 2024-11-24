@@ -3,8 +3,8 @@
 ## **Fabric Batch Processes Flow**  
 
 The following activities are automatically triggered when a new Batch process is executed:
--  A new Batch entry is added in Cassandra.
--  A new Job entry is recorded in also the k2system_jobs table with the following parameters:
+-  A new Batch entry is added in the System DB.
+-  A new Job entry is recorded also in the k2system_jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
    -  Type = BATCH PROCESS.
