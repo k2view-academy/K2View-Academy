@@ -6,7 +6,7 @@ Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open 
 
 - [Admin](03_web_admin_application.md) - a web application that manages various Fabric Server and System DB activities, such as monitoring batch processes, managing credentials or executing Fabric commands.
   As part of the [Admin](03_web_admin_application.md) application (a new tab called 'Configuration'), we have launched a new tool, where its main objective is to expose an interface that enables a user with suitable permissions to the Admin page to change values in the config.ini file, for a specific node, and to save these changes (overrides) in the System DB.
-- [Reports](/articles/38_reports/01_reports_overview.md) - a Reports Viewer application, which enables the generation of reports, created via the Designer component embedded into the Web Studio.
+- [Reports](/articles/38_reports/01_reports_overview.md) - a Reports Viewer application, which enables the generation of reports that are created via the Designer component embedded into the Web Studio.
 - [Statistics](/articles/34_JMX_statistics/01_JMX_overview.md) - JMX monitoring of the processes that run on the Fabric server, Cassandra, etc.
 - [API](/articles/15_web_services_and_graphit/09_swagger.md) - a full framework implementation for invocating and testing Fabric Web Services via a visualization utility - Swagger UI.
 - [Trace](/articles/29_tracing/05_trace_view.md) - a powerful Fabric mechanism for writing internal operations performed by Fabric into trace files. Tracing can be set on both global and session levels. The result of the tracing process is logged into a file that can be loaded for viewing in the Web Framework.
