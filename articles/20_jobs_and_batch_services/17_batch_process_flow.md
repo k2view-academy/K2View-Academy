@@ -33,7 +33,7 @@ The Job Process then launches the batch command, which in turn, is executed thro
 
 To schedule a Batch process to be executed either in a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job that contains the batch command, which needs to be repeatedly invoked. 
 
-Basically, this consists of creating a scheduled Job that calls a Batch process - which in turn will create multiple or scheduled one-time Jobs (each one parametered thanks to the execution settings parsed in the Batch command).
+Basically, this consists of creating a scheduled Job that calls a Batch process, which in turn, will create multiple or scheduled one-time Jobs (where each job is parametered thanks to the execution settings parsed in the Batch command).
 
 The below illustration describes the following steps:
 
