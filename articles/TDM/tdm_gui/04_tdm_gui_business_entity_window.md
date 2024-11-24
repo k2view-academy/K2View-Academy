@@ -28,7 +28,7 @@ The following is an example of a Customer Business Entity window:
 
 The General Information section consists of the BE **Name** , **Description** and the **Execution mode**. The Name setting is mandatory. Note that each active BE should have a specified Name. An error is displayed when an attempt is made to create several BEs with the same name.
 
-#### TDM Execution Mode
+#### Task Execution Mode
 
 TDM 9.2 introduces a new execution mode for TDM tasks: vertical execution. Vertical execution changes how the system handles Logical Unit (LU) hierarchies: instead of the **default Horizontal mode** of executing **system by system** (where all entities are processed in one system before moving to the next), **Vertical execution** processes the **complete LU hierarchy for each root entity before moving to the next root entity**. This mode is particularly useful when running TDM tasks on a large scale of entities and ensures better cross-systems data consistency and better data alignment.
 
