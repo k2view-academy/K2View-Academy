@@ -2,22 +2,22 @@
 
 ## TDM Components
 
-The K2View TDM has the following components:
+The K2view TDM has the following components:
 
-- TDM Portal (self-service).
-- TDM DB.
-- Test data store (Fabric). 
+- TDM Portal (self-service)
+- TDM DB
+- Test data store (Fabric) 
 
 ![tdm_architecture](images/tdm_architecture.png)
 
 ### TDM Portal
-The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and offers self-service implementation of the following activities:
+The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and it offers a self-service implementation of the following activities:
 - TDM definitions, setting TDM Business Entities, environments, roles and permissions. 
 - Creation and execution of TDM tasks that provide a selected subset of entities or tables to the selected environment. 
 
 ### TDM DB
 
-TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB to get or update TDM settings or tasks.
+TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB in order to get or to update TDM settings or tasks.
 
 ### Test Data Store (Fabric)
 
@@ -27,11 +27,11 @@ In addition, the TDM back-end APIs and processes are defined and executed in Fab
 
 #### Fabric as a Staging Repository
 
-When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to its LUs definitions. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
+When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to its LU definitions. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
 
 -  Convenience - Encapsulating the data of a business entity into one place so that it can be queried by consumers (many business entities have data residing in multiple data sources). 
 -  Security - MicroDB encryption (each MicroDB is encrypted separately) and field-level encryption provide more robust security.
--  Masking capabilities -  masking sensitive data when storing entities.
+-  Masking capabilities - masking sensitive data when storing entities.
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting an entity's data from source environments and storing it in Fabric in advance so that requests for loading it into target environments can be implemented without accessing source systems. 
    - Synchronizing data from source systems in order to get the most up-to-date data on entities when required.

@@ -3,8 +3,8 @@
 ## **Fabric Batch Processes Flow**  
 
 The following activities are automatically triggered when a new Batch process is executed:
--  A new Batch entry is added in Cassandra.
--  A new Job entry is recorded in also the k2system_jobs table with the following parameters:
+-  A new Batch entry is added in the System DB.
+-  A new Job entry is recorded also in the k2system_jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
    -  Type = BATCH PROCESS.
@@ -20,9 +20,9 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 4. FAILED/CANCELLED/PAUSED/DONE
 
 
-The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
+The below illustration shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
 
-The Job Process then launches the batch command which, in turn, is executed through its lifecycle phases. 
+The Job Process then launches the batch command, which in turn, is executed through its lifecycle phases. 
  
 <img src="images/13_jobs_and_batch_services_batch_process.PNG">
 
@@ -31,11 +31,11 @@ The Job Process then launches the batch command which, in turn, is executed thro
 ## **Scheduling Batch Processes**
 
 
-To schedule that a Batch process be executed either at a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job, containing the batch command that needs to be repeatedly invoked. 
+To schedule a Batch process to be executed either in a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job that contains the batch command, which needs to be repeatedly invoked. 
 
-Basically, this consists in creating a scheduled Job that calls a Batch process - which in turn will create multiple or scheduled one-time Jobs (each one parametered thanks to the execution settings parsed in the Batch command).
+Basically, this consists of creating a scheduled Job that calls a Batch process, which in turn, will create multiple or scheduled one-time Jobs (where each job is parametered thanks to the execution settings parsed in the Batch command).
 
-The illustration below describes the following steps:
+The below illustration describes the following steps:
 
 ### Step 1 
 User defines a job scheduled job to run a specific batch command. 
@@ -47,7 +47,7 @@ The Batch process triggers a new (temporary) job dedicated for this specific pro
 The new job runs the batch command.
 
 ### Step 3
-The Jobs table is updated for next run and the dedicated job will wait for the next instance of the scheduled batch process.
+The Jobs table is updated for the next run, and the dedicated job will wait for the next instance of the scheduled batch process.
 
 
 
@@ -55,7 +55,7 @@ The Jobs table is updated for next run and the dedicated job will wait for the n
 
  
 
-## **Batch Process Table in Cassandra**
+## **Batch Process Table in System DB**
 All batch-related information is displayed in the **k2batchprocess** keyspace in the **batchprocess_list** table.
 
 ### Example 
@@ -176,12 +176,12 @@ Additional fields featuring in the table:
 BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';
 ```
 
-In this case the command describes a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
+In this case, the command describes a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 
 **extra_stats**  
 
-This field shows the slowest-processed entities, along with their ID, processing time, status, and fields changes: 
+This field shows the slowest-processed entities, along with their IDs, processing time, status, and fields changes: 
 
 ```
 {"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}
@@ -190,16 +190,16 @@ This field shows the slowest-processed entities, along with their ID, processing
 
 
 
-## **Batch Process Execution & Resiliency**
+## **Batch Process Execution and Resiliency**
 
 
-When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node when a node is no longer active or no longer responding. 
+When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs the ability to transfer the process to a different node when a node is no longer active or no longer responding. 
 
 This handover mechanism uses the [*hearbeats*](09_jobs_configuration.md#heartbeat) and [*keepalive*](09_jobs_configuration.md#keepalive) parameters defined within the node.id file.
 
 The next handling node picks up the batch process (via its associated job) and resumes its execution from the latest known recorded stage.   
 
-Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the illustrations above.
+Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the above illustrations.
 
 
 
@@ -207,7 +207,7 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_j
 
 When a migration process is initiated, it is treated as a batch of multiple entities [synchronization processes](13_migrate_commands.md#migrate-commands).
 
-The illustration below shows the sequence of actions involved in this process.
+The below illustration shows the sequence of actions involved in this process.
 
 <img src="images/24_jobs_and_batch_services_migration_process.png">
 
@@ -215,35 +215,35 @@ The illustration below shows the sequence of actions involved in this process.
 ### Step 1 
 
 - The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator all along this process. 
-- A job process for this batch command is started.
+- A job process for this batch command starts.
 
 
 ### Step 2
 
 - The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes allocation rules described in the [Affinity](10_jobs_and_batches_affinity.md#affinity-properties) article. 
 - This node (Node 3) is referred to as the Job Owner node.
-- The job Owner Node initiates the migration's statistic collection process
+- The Job Owner node initiates the migration's statistic collection process.
 
 
 ### Step 3
 
-- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Sources systems. In our example, the iiDs are X1, X2, X3, X4, and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
+- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Source systems. In our example, the iiDs are X1, X2, X3, X4 and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
 
 
 ### Step 4
 
-- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
+- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job Owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
 
 
 ### Step 5
 
-- Each node syncs the instances that has been allocated from the External Sources systems.
-- N3 collects statistics information on each of the nodes and entity synchronization. The information collected is written onto Cassandra.
+- Each node syncs the instances that has been allocated from the External Source systems.
+- N3 collects statistics information on each of the nodes and entity synchronization. The collected information is written into the System DB (e.g., Cassandra).
 
 
 ### Step 6
 
-- Each node writes iiDs into Cassandra
+- Each node writes iiDs into the System DB (e.g., Cassandra).
 
 
 
