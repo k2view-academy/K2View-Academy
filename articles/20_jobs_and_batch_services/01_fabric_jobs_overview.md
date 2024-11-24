@@ -19,7 +19,7 @@ Fabric Jobs can be one of the following categories:
 
 
  # What is a Fabric Job? 
-A Fabric Job process can be exposed across Fabric nodes and run to execute scripts, flows or functions according to a specific schedule or once only.
+A Fabric Job process can be exposed across Fabric nodes and run to execute scripts, flows or functions according to a specific schedule, or only once.
 
 A Job must be deployed to Fabric so that it can be invoked by one of the Fabric Cluster's nodes following an allocation process that we will describe in more details in this section.
 
