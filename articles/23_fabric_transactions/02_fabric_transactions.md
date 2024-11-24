@@ -40,7 +40,7 @@ The OPTIMISTIC_LOCKING parameter in the **config.ini** can be set per node to su
 
 **Example**
 
-Transaction 1 runs on Node 1 (DC1) and Transaction 2 runs on Node 4 (DC2).
+Transaction 1 runs on Node 1 (DC1), and Transaction 2 runs on Node 4 (DC2).
 
 * If OPTIMISTIC_LOCKING=‘NONE’, Transaction 2 (the latest one) overrides Transaction 1.
 
