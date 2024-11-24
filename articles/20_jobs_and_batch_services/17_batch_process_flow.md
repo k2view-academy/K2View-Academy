@@ -190,16 +190,16 @@ This field shows the slowest-processed entities, along with their IDs, processin
 
 
 
-## **Batch Process Execution & Resiliency**
+## **Batch Process Execution and Resiliency**
 
 
-When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node when a node is no longer active or no longer responding. 
+When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs the ability to transfer the process to a different node when a node is no longer active or no longer responding. 
 
 This handover mechanism uses the [*hearbeats*](09_jobs_configuration.md#heartbeat) and [*keepalive*](09_jobs_configuration.md#keepalive) parameters defined within the node.id file.
 
 The next handling node picks up the batch process (via its associated job) and resumes its execution from the latest known recorded stage.   
 
-Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the illustrations above.
+Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the above illustrations.
 
 
 
@@ -207,7 +207,7 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_j
 
 When a migration process is initiated, it is treated as a batch of multiple entities [synchronization processes](13_migrate_commands.md#migrate-commands).
 
-The illustration below shows the sequence of actions involved in this process.
+The below illustration shows the sequence of actions involved in this process.
 
 <img src="images/24_jobs_and_batch_services_migration_process.png">
 
