@@ -12,7 +12,7 @@ Note that in both cases, depending on the size of the update, the table's conten
 
 A new node is online and requests an update:
 - No snapshot is available in the corresponding Kafka topic. The new node requests for a snapshot to be created.
-- The request is picked up by a node that in turn, prepares the snapshot and puts it in either Kafka (short) or the System DB (long). 
+- The request is picked up by a node, that in turn, prepares the snapshot and puts it in either Kafka (short) or the System DB (long). 
 - The new node waits for the snapshot by listening to the relevant Kafka queue message to be published by the node preparing the snapshot.
 
 
