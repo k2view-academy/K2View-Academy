@@ -8,7 +8,38 @@ The following information needs to be set for *Entities & referential data*:
 
 ### Business entity
 
-The task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task. When clicking **Advanced**, a pop-up window opens with the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  
+The task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
+
+
+
+
+
+![advanced be1](images/task_advanced_be_LUs.png)
+
+
+
+
+
+#### Advanced BE - Systems & Logical units Tab
+
+This tab displays the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  You can remove a System or one of its LUs from the task.
+
+#### Advanced BE - Execution Mode Tab
+
+The tab enables to change the task execution mode:
+
+
+
+![advanced be1](images/task_advanced_be_execution_mode.png)
+
+
+
+By default, the task execution mode is taken from the task's Business Entity (BE). However, you can set the task's execution mode to be independent to the BE's execution mode. The following options are available:
+
+- Vertical execution - executing the entire LU hierarchy on each root entity before moving to the next one. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity)
+- Horizontal execution - executing the task system by system (LU by LU) where all entities are processed in one LU before moving to the next one.
+
+The Vertical mode can be beneficial when running TDM tasks on a large scale of entities and ensures better cross-systems data consistency and better data alignment.
 
 ### Source environment
 
