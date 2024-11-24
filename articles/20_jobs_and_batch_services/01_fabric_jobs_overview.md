@@ -13,13 +13,13 @@ Fabric Jobs can be one of the following categories:
 
 - **Migrate process** that sync multiple instances of a specific LU.
 
-- **Parser executions** that get data from tables and unstructured files which can be pushed to a table in a System DB and then used to build an LUT Schema.
+- **Parser executions** that get data from tables and unstructured files that can be pushed to a table in a System DB and then used for building an LUT Schema.
 
 - **Broadway flows** that can be scheduled and benefit from Jobs execution parameters.
 
 
  # What is a Fabric Job? 
-A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
+A Fabric Job process can be exposed across Fabric nodes and run to execute scripts, flows or functions according to a specific schedule or once only.
 
 A Job must be deployed to Fabric so that it can be invoked by one of the Fabric Cluster's nodes following an allocation process that we will describe in more details in this section.
 
