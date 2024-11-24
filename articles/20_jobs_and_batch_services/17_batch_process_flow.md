@@ -176,12 +176,12 @@ Additional fields featuring in the table:
 BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';
 ```
 
-In this case the command describes a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
+In this case, the command describes a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 
 **extra_stats**  
 
-This field shows the slowest-processed entities, along with their ID, processing time, status, and fields changes: 
+This field shows the slowest-processed entities, along with their IDs, processing time, status, and fields changes: 
 
 ```
 {"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}
