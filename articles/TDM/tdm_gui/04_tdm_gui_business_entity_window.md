@@ -70,18 +70,18 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 ### Pre and Post Execution Processes Tabs
 
-These tabs enable adding pre and post execution processes. The pre-execution processes run at the beginning of the task's execution, before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
+These tabs enable adding pre and post execution processes. The pre-execution processes run in the beginning of the task's execution, before all related LUs have been executed. The post-execution processes run at the end of the task's execution, after all related LUs have been executed.
 
 Examples:
 
 - Running a cleanup flow before executing the task's LUs. 
 - Sending an email to the tester to notify that the execution of a task has ended. 
 
-The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many. That is, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs.  Note that a given flow can be attached as both - pre and post execution process - to a BE.
+The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many, namely, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs. Note that a given flow can be attached as both - pre and post execution process - to a BE.
 
 The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process attached to the task. The execution order is set according to the execution order defined in the BE.
 
-The pre and post execution processes are optional: a BE can be defined without any post-execution processes.
+The pre and post execution processes are optional: A BE can be defined with no post-execution processes.
 
 Note that the pre and post execution processes must be populated in the [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed by the BE window.
 
