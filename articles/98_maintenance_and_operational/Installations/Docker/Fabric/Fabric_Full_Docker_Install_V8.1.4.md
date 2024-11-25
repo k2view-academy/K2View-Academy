@@ -61,12 +61,12 @@ More detailed requirements for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3-HF1/D_k2view_fabric_8.1.4_3.tar.gz
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3/D_k2view_fabric_8.1.4_3.tar.gz
    <br>md5: 65837f3a0a2291568c07f0bae6d46513</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3-HF1/compose_fabric_8.1.4_3.tar.gz
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3/compose_fabric_8.1.4_3.tar.gz
    <br>md5: 0ea9a2f1e4dcff967981907aa80de2a5</br></td>
    </tr>
    </tbody>
@@ -77,8 +77,8 @@ More detailed requirements for each are described below:
    cd ~/ 
    wget https:/owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_3.tar.gz
    wget https:/owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/cassandra/4.1.3/D_k2view_cassandra_4.1.3.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3-HF1/D_k2view_fabric_8.1.4_3.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3-HF1/compose_fabric_8.1.4_3.tar.gz 
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3/D_k2view_fabric_8.1.4_3.tar.gz
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_8.1/Server/fabric-8.1.4_3/compose_fabric_8.1.4_3.tar.gz 
    ```
 3. Load the Docker images as follows: (skip Kafka if not needed)
 
