@@ -4,7 +4,7 @@ A [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (
 
 ## Business Entities List Window  
 
-The **Business Entities** window displays a list of all BEs defined in the TDM.  Only **Admin users** can create, edit or delete a BE. Other users can open BEs for viewing purposes only.
+The **Business Entities** window displays a list of all BEs defined in the TDM. Only **Admin users** can create, edit or delete a BE. Other users can open BEs for viewing purposes only.
 
 -   To create a new BE, click the **New Business Entity** icon. 
 -   To open a selected BE, click the **Name** value of the BE.
@@ -26,7 +26,7 @@ The following is an example of a Customer Business Entity window:
 
 ### General Information Section 
 
-The General Information section consists of the BE **Name** , **Description** and the **Execution mode**. The Name setting is mandatory. Note that each active BE should have a specified Name. An error is displayed when an attempt is made to create several BEs with the same name.
+The General Information section consists of the BE **Name**, **Description** and the selected **Execution mode**. The Name setting is mandatory. Note that each active BE should have a specified Name. When there is an attempt to create several BEs with the same name, an error displays.
 
 #### Task Execution Mode
 
