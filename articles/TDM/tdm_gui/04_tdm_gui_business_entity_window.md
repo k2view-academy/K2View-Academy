@@ -79,7 +79,7 @@ Examples:
 
 The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many, namely, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs. Note that a given flow can be attached as both - pre and post execution process - to a BE.
 
-The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process attached to the task. The execution order is set according to the execution order defined in the BE.
+The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process that is attached to the task. The execution order is set according to the execution order defined in the BE.
 
 The pre and post execution processes are optional: A BE can be defined with no post-execution processes.
 
