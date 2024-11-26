@@ -83,7 +83,7 @@ The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_pr
 
 The pre and post execution processes are optional: A BE can be defined with no post-execution processes.
 
-Note that the pre and post execution processes must be populated in the [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed by the BE window.
+Note that the pre and post execution processes must be populated in the [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed in the BE window.
 
 #### How Do I Add a Pre or Post Execution Process to a BE? 
 
