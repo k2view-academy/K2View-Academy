@@ -26,7 +26,7 @@ This tab displays the selected BE's systems and LUs. Note that if the selected s
 
 #### Advanced BE - Execution Mode Tab
 
-The tab enables to change the task execution mode:
+This tab enables to change the task execution mode:
 
 
 
