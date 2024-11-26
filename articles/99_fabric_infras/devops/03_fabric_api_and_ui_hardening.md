@@ -4,15 +4,15 @@
 
 ### Step 1 - Keys Generation
 
-Run the Web server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the key store. 
+Run the Web Server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the key store. 
 
 * Usage: ```certificates.sh genkey <ALIAS> [CNAME] [PASSWORD]```
 
-### Step 2 - Copy the key to all Fabric nodes
+### Step 2 - Copy the Key to All Fabric Nodes
 
-In case of multiple Fabric nodes, if you want that all the nodes will have the same certificate - copy the `${user.home}/.keystore` on each node into the same location.
+In case of multiple Fabric nodes, if you want all nodes to have the same certificate, copy the `${user.home}/.keystore` that was created in the first step, to each of the nodes in the same path/location.
 
-In case that Fabric is running in Docker container, the user may be different. Then you need to change the file owner by running the following command:
+In case Fabric is running in a Docker container, the user may be different. In such case you need to change the file owner by running the following command:
 
 ~~~bash
 chown root.root ~/.keystore
@@ -33,12 +33,12 @@ Note that the password of the certification file should be defined here:
 ~~~
 
 
-### Step 4 - Check access to Fabric Web UI via HTTPS
+### Step 4 - Check the Access to Fabric Web UI via HTTPS
 
 - Restart each one of the Fabric nodes.
-- Use the following access points to check that the **https** access has been properly granted: 
+- Use the following access points to check whether the **https** access has been properly granted: 
   - Admin Panel: ``` https://10.10.10.10:8443/ ```
-  - Fabric Web service will be available at: ``` https://10.10.10.10:8443/deploy ```
+  - Fabric Web Service will be available in: ``` https://10.10.10.10:8443/deploy ```
 
 ## Fabric JDBC Driver Hardening
 
