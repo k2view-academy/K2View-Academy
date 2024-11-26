@@ -30,7 +30,7 @@ The General Information section consists of the BE **Name**, **Description** and
 
 #### Task Execution Mode
 
-TDM 9.2 introduces a new execution mode for TDM tasks: **Vertical execution**. This mode changes how the system handles Logical Unit (LU) hierarchies: Instead of the **default Horizontal mode** of executing **system by system** (where all entities are processed in one system before moving on to the next hierarchy level), the **Vertical execution** processes the **complete LU hierarchy for each root entity before moving on to the next root entity**. This execution mode is particularly useful when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
+TDM 9.2 introduces a new execution mode for TDM tasks: **Vertical execution**. This mode changes how the system handles Logical Unit (LU) hierarchies: Instead of the **default Horizontal mode** of executing **system by system** (where all entities are processed in one system before moving on to the next system in the hierarchy), the **Vertical execution** processes the **complete LU hierarchy for each root entity before moving on to the next root entity**. This execution mode is particularly useful when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
 
 The default Horizontal execution mode can be replaced with the Vertical execution mode. By default, the BE's execution mode impacts the execution of all tasks relating to the BE. However, the task creator can override the execution mode on a given task.
 
