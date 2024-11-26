@@ -1,14 +1,14 @@
 # Task - Source Component - Entities and Referential Data
 
-The Business Entities & referential data option enables to extract Business Entities from a source environment. The user can select tables related to the Business Entities. This is the default option.
+The Business Entities & referential data option enables to extract Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
 
 The following information needs to be set for the *Entities & referential data* option:
 
 ![source-entities](images/task_source_settings_entities.png)
 
-### Business entity
+### Business Entity
 
-The task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
+This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list that contains all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
 
 
 
