@@ -117,9 +117,9 @@ Edit these properties in the `[saml]` section:
 - **SP_ASSERTION_CONSUMER_SERVICE_URL** - the endpoint in Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used as well). This property is also populated on the IDP side.
 - **IDP_ENTITYID** - the entity ID, in URI format, as provided by the IDP.
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL** - the IDP endpoint for the SAML request. 
-- **SECURE** - a flag indicating if certification and encryption is applied. Default is "true".
-- **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP, which is the public key to sign and encrypt the SAML response. 
-- **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP, which is the public key to sign and encrypt the SAML request.
+- **SECURE** - a flag indicating whether certification and encryption should apply. Default is "true".
+- **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP. This certification is the public key for the SAML response. 
+- **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP. This certification is the public key for the SAML request.
 - **GROUPS_KEY_MAPPING** (optional) - the name of the groups list, as retrieved from the IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
 - **SP_SECURE** (optional, default is true) - indicates if expecting SAML response to be secured (encrypted). Set it to *false* when IDP does not want to upload the certificate file, provided by K2view. Having that IDP does not have the public key, it cannot encrypt the response.
 
