@@ -2,7 +2,7 @@
 
 The Business Entities & referential data option enables to extract Business Entities from a source environment. The user can select tables related to the Business Entities. This is the default option.
 
-The following information needs to be set for *Entities & referential data*:
+The following information needs to be set for the *Entities & referential data* option:
 
 ![source-entities](images/task_source_settings_entities.png)
 
