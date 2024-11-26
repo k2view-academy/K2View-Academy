@@ -36,16 +36,16 @@ This tab enables to change the task execution mode:
 
 By default, the task execution mode is taken from the task's Business Entity (BE). However, you can set the task's execution mode to be independent to the BE's execution mode. The following options are available:
 
-- Vertical execution - executing the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity)
+- Vertical execution - executing the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity).
 - Horizontal execution - executing the task system by system (LU by LU) where all entities are processed in one LU before moving on to the next system.
 
 The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
 
-### Source environment
+### Source Environment
 
-Select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window displays a message that the sensitive data is masked. 
+Select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window displays a message stating that the sensitive data is masked. 
 
-### Policy for fetching data
+### Policy for Fetching Data
 
 This setting defines whether the data needs to be extracted from the source environment or whether it can be retrieved from the Test Data Store (Fabric). The following options are available:
 
