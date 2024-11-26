@@ -36,7 +36,7 @@ Fabric allows the use of proprietary custom authenticators as well, as it will b
 
 A sequence of authenticators can be specified using a comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as a fallback for its predecessor.
 
-Note that an appropriate accompanying section must be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
+Note that an appropriate accompanying section must be added per each authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
 
 If there is a need to use the same type - for example, use 2 LDAP servers, where one is a fallback to another - then you need to do the following:
 
@@ -94,7 +94,7 @@ The integration with a SAML IDP requires that both the identity provider (IDP) a
 
 You can verify the certification keys by using this command: `keytool -list -storepass <passowrd> -keystore <path to the jks repository file>`. JKS (Java KeyStore) is a repository of security certificates – either authorization certificates or public key certificates – as well as corresponding private keys.
 
-While running this command after running the above 2 keytool's *import* and *export* commands, you will see the corresponding 2 entries, where you would see, for each entry, its alias, last modified date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
+While running this command after running the above 2 keytool's *import* and *export* commands, you will see the corresponding 2 entries and notice, for each entry, its alias, last modified date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
 
 `okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
 `k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
