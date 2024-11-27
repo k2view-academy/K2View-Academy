@@ -28,7 +28,10 @@ The execution of the related task's components runs in the following order:
 
 1. [Pre-execution processes](21_task_pre_and_post_execution_processes.md), if they are added to the task. The pre-execution processes are executed according to their [execution order](04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) as defined in the task's BE. 
 
-2. LUs - run the LUs from parent to child.  
+2. LUs - the execution order depends on the task's execution mode:
+
+   - Horizontal execution - execution of the task LU by LU from parent to child, where all entities are processed in one LU before moving on to the next system in the hierarchy. 
+   - Vertical execution - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
 
    Click for more information about the [execution order of hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
@@ -38,8 +41,7 @@ The execution of the related task's components runs in the following order:
 
 The TDM Portal displays a list of the task's LUs and pre and post-execution processes, as well as the status of the currently running processes.
 
-
-**Example:**
+**Example 1 - Horizontal Execution:**
 
 - Execute and extract the task with the following LUs:
   - Customer - the root LU.
@@ -52,6 +54,23 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 - The Billing LU is executed after the execution of the Customer LU has ended:
 
   ![monitor execution](images/extract_task_execution_monitor_2.png)
+
+  
+
+  **Example 2 - Vertical Execution:**
+
+  - Execute and extract the task with the following LUs:
+
+    - Customer - the root LU.
+    - Billing - this is the children LU of the Customer LU.
+
+  - Show the Customer LU since it is the root LU. The related Billing entities are executed behind the scenes for each execution customer before moving to the next customer ID. Both LUs are marked as running:
+
+    ![monitor execution](images/extract_task_execution_monitor_vertical.png)
+
+    
+
+  
 
 - The **Logical Units Execution Summary** window displays the execution summary details of each LU, pre-execution processes, and post-execution processes.
 
