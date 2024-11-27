@@ -89,8 +89,6 @@ Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_impl
 
 ## Business Parameters
 
-Select entities from a predefined list of parameters. Set the **parameters and their values** and the **number of entities** for the task.
-
 Select one or several parameters. Additionally, you can add the same parameter multiple times with different values.
 
 ![parameters](images/task_business_parameters_example.png)
@@ -118,16 +116,6 @@ The Parameters selection has 2 modes:
 
   - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters.
 
-#### Filter out Reserved Entities Checkbox
-
-The **Filter out Reserved Entities** checkbox indicates whether entities that are reserved for other users in the target environment, must be filtered out from the task's entity list. If checked, these entities are filtered out from the task's entity list and from the **Number of entities matched** setting. Note that this checkbox can be checked only after the selection of the task's target environment in the [Target](17_task_target_component.md) component.
-
-For example:
-
-- There are 500 customers with VIP Status 'Gold' and 10 of them are reserved for other users on the task's target environments.
-- If the Filter out Reserved Entities checkbox is checked, the *Entities Matched* result is 490.
-- If the Filter out Reserved Entities checkbox is unchecked, the *Entities Matched* result is 500.
-
 #### How Do I Add a Condition?
 
 To add a parameter:
@@ -138,8 +126,6 @@ To add a parameter:
   - Combo parameters - click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
   - Free text parameters - populate the values with a separating comma. For example: NY, CA.
 - Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Portal displays the SQL query, which is built based on the selected parameters.
-
-
 
 #### How Do I Populate a Parameter's Value?
 
@@ -200,11 +186,37 @@ Click for more information about the [TDM parameters tables and View](/articles/
 
 ## Random
 
-Get a random list of entities from the [LU Params](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created in the TDM DB for the root LU of the task's BE. Entities that are reserved for other users are excluded from the selected entities.
+Get a random list of entities from the parameters' tables created in the TDM DB for the root LU of the task's BE. 
 
 Testers can select this option only if they are permitted to do so in the task's source environment.
 
 
+
+## Filter out Reserved Entities 
+
+- The **Filter out Reserved Entities** options enable the user to decide which reserved entities will be excluded from the task execution: 
+
+  - **Reserved by others** (default option) - excludes entities that are currently reserved by users other than the task creator/executor and allows task execution on entities reserved by the task creator/executor.
+
+  - **All reserved entities** - excludes all reserved entities, including those reserved by the task creator/executor. This option ensures there is no overlapping with any of the reserved entities, regardless of who reserved them.
+
+- The reserved entities are excluded when running the following tasks:
+
+  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and **Generate clones for an entity** checkboxes are cleared, i.e. the task loads the entities with their source IDs.
+  - [Delete tasks](17a_task_target_component_entities.md#delete)
+  - [Reserve tasks](17a_task_target_component_entities.md#reserve)
+
+- Notes:
+
+  - Set the target environment in the [Target component](17a_task_target_component_entities.md) in order to exclude reserved entities when calculating the  **Number of entities matched** based on the selected **Business parameters** in the Subset component.
+
+  - The **Filter out Reserved Entities** radio buttons are disabled in the following tasks:
+
+    - The **Replace IDs for the copied entities** or **Generate clones for an entity** checkbox are checked in the Target component, i.e. the task create new replicas of the copied entities.
+
+    - Creating an [AI based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e. the **Destination of test data** in the Target component is **AI training**.
+
+      
 
 ## Synthetic Entities - Load all Generated Entities of a Selected Data Generation Execution
 
