@@ -34,7 +34,7 @@ This tab enables to change the task execution mode:
 
 
 
-By default, the task execution mode is taken from the task's Business Entity (BE). However, you can set the task's execution mode to be independent to the BE's execution mode. The following options are available:
+By default, the task execution mode is taken from the task's [Business Entity (BE)](04_tdm_gui_business_entity_window.md#task-execution-mode). However, you can set the task's execution mode to be independent to the BE's execution mode. The following options are available:
 
 - Vertical execution - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
 - Horizontal execution - execution of the task system by system (LU by LU) where all entities are processed in one LU before moving on to the next system in the hierarchy.
