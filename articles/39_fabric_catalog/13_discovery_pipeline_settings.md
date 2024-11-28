@@ -4,7 +4,7 @@
 
 The **Discovery Pipeline** tab in the Catalog Settings provides a full and comprehensive view of the Discovery job configuration. It displays the product's default Baseline configuration rule and the project-level rules. 
 
-The **Baseline** rule includes a list of product built-in plugins with their input parameters, sample size for the data snapshot and more. The product settings are retrieved from the product configuration **plugins.discovery** file.
+The **Baseline** rule includes a list of product built-in plugins with their input parameters, sample size for the data snapshot and more. The product settings are retrieved from the product's **plugins.discovery** file.
 
 The Discovery Pipeline setup screen enables performing the following updates:
 
@@ -27,7 +27,7 @@ The Baseline rule is always enabled. You can edit the Baseline rule by clicking 
 
 * Update the crawler related settings, e.g. a sample size. 
 * Update the parameters of the product built-in plugins, e.g. set to inactive or update the threshold. 
-* Add a new plugin. 
+* Add a new plugin - described further in this article. 
 
 Note that the Baseline rule overrides are automatically propagated to the project-created rules. For example, when a new plugin is added to the Baseline, it is automatically added to all other rules. 
 
@@ -76,3 +76,11 @@ When the filter is empty and the Override checkbox is checked:
 
 * The Crawler is executed on the whole Data Platform.
 * The override rules are only applied on the specified Schema(s) and Datasets(s).
+
+### How Do I Add New Plugin?
+
+When a new custom plugin is created in a project, it should be added to the Baseline rule. Once added to the baseline, it is automatically propagated to all the existing rules.
+
+A new plugin can be added by clicking the plus icon in the lower part of the screen. This option is only available when the Baseline rule is selected and Override is clicked. 
+
+![](images/discovery_pipeline_new_plugin.png)
