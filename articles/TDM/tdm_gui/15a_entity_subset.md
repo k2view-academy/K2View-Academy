@@ -214,7 +214,7 @@ Testers can select this option only if they are permitted to do so in the task's
 
     - The **Replace IDs for the copied entities** or **Generate clones for an entity** checkbox are checked in the Target component, i.e., the task create new replicas of the copied entities.
 
-    - Creating an [AI based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e. the **Destination of test data** in the Target component is **AI training**.
+    - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is **AI training**.
 
       
 
