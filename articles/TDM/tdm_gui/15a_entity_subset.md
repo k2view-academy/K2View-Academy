@@ -160,7 +160,7 @@ There are several types of parameters:
 
 - Click **Add Group**.
 
-- Note that nested groups of parameters can be added, for example, in order to define an inner group in an outer group:
+- Note that nested groups of parameters can be added, for example, in order to define an inner group inside an outer group:
 
   ![task parameters grouping](images/task_parameters_grouping.png)
 
