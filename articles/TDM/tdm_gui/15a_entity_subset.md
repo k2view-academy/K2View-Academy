@@ -180,7 +180,7 @@ Click Refresh next to the **Number of entities matched** in order to calculate t
 
 - Click [![refesh](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
-Click for more information about the [TDM parameters tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) created by TDM in the TDM DB to display a hierarchical view of TDM parameters.
+Click for more information about the [TDM parameters' tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) - created by TDM in the TDM DB - that display a hierarchical view of TDM parameters.
 
 
 
