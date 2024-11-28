@@ -202,17 +202,17 @@ Testers can select this option only if they are permitted to do so in the task's
 
 - The reserved entities are excluded when running the following tasks:
 
-  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and **Generate clones for an entity** checkboxes are cleared, i.e. the task loads the entities with their source IDs.
+  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and **Generate clones for an entity** checkboxes are cleared, i.e., the task loads the entities with their source IDs.
   - [Delete tasks](17a_task_target_component_entities.md#delete)
   - [Reserve tasks](17a_task_target_component_entities.md#reserve)
 
 - Notes:
 
-  - Set the target environment in the [Target component](17a_task_target_component_entities.md) in order to exclude reserved entities when calculating the  **Number of entities matched** based on the selected **Business parameters** in the Subset component.
+  - Set the target environment in the [Target component](17a_task_target_component_entities.md) in order to exclude reserved entities when calculating the **Number of entities matched** based on the selected **Business parameters** in the Subset component.
 
   - The **Filter out Reserved Entities** radio buttons are disabled in the following tasks:
 
-    - The **Replace IDs for the copied entities** or **Generate clones for an entity** checkbox are checked in the Target component, i.e. the task create new replicas of the copied entities.
+    - The **Replace IDs for the copied entities** or **Generate clones for an entity** checkbox are checked in the Target component, i.e., the task create new replicas of the copied entities.
 
     - Creating an [AI based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e. the **Destination of test data** in the Target component is **AI training**.
 
