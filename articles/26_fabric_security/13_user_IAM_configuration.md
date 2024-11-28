@@ -26,9 +26,9 @@ There are 4 authenticators that come as part of the Fabric platform and that are
 - **adldap** - connect to the AD/LDAP server. For this option, the AD/LDAP server connection details are required and should be defined in section name: `adldap_auth`.
 - **block_all** - means that access is blocked. No further settings are required for it, and it is the recommended option in case of SAML. 
 
-The default authenticator is "cassandra" when `server_authenticator` is not set.
+When the `server_authenticator` is not set, the default authenticator is "cassandra".
 
-As explained later in this article, Fabric allows the use of proprietary custom authenticators as well.
+Fabric allows the use of proprietary custom authenticators as well, as it will be explained later in this article.
 
 
 
@@ -36,7 +36,7 @@ As explained later in this article, Fabric allows the use of proprietary custom 
 
 A sequence of authenticators can be specified using a comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as a fallback for its predecessor.
 
-Note that an appropriate accompanying section must be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
+Note that an appropriate accompanying section must be added per each authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
 
 If there is a need to use the same type - for example, use 2 LDAP servers, where one is a fallback to another - then you need to do the following:
 
@@ -94,7 +94,7 @@ The integration with a SAML IDP requires that both the identity provider (IDP) a
 
 You can verify the certification keys by using this command: `keytool -list -storepass <passowrd> -keystore <path to the jks repository file>`. JKS (Java KeyStore) is a repository of security certificates – either authorization certificates or public key certificates – as well as corresponding private keys.
 
-While running this command after running the above 2 keytool's *import* and *export* commands, you will see the corresponding 2 entries, where you would see, for each entry, its alias, last modified date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
+While running this command after running the above 2 keytool's *import* and *export* commands, you will see the corresponding 2 entries and notice, for each entry, its alias, last modified date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
 
 `okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
 `k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
@@ -117,9 +117,9 @@ Edit these properties in the `[saml]` section:
 - **SP_ASSERTION_CONSUMER_SERVICE_URL** - the endpoint in Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used as well). This property is also populated on the IDP side.
 - **IDP_ENTITYID** - the entity ID, in URI format, as provided by the IDP.
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL** - the IDP endpoint for the SAML request. 
-- **SECURE** - a flag indicating if certification and encryption is applied. Default is "true".
-- **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP, which is the public key to sign and encrypt the SAML response. 
-- **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP, which is the public key to sign and encrypt the SAML request.
+- **SECURE** - a flag indicating whether certification and encryption should apply. Default is "true".
+- **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP. This certification is the public key for the SAML response. 
+- **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP. This certification is the public key for the SAML request.
 - **GROUPS_KEY_MAPPING** (optional) - the name of the groups list, as retrieved from the IDP, as part of the SAML response. While Fabric expects that this value will be "groups" and this is its default, when required you can add this parameter and set its value.  
 - **SP_SECURE** (optional, default is true) - indicates if expecting SAML response to be secured (encrypted). Set it to *false* when IDP does not want to upload the certificate file, provided by K2view. Having that IDP does not have the public key, it cannot encrypt the response.
 
