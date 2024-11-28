@@ -166,11 +166,11 @@ There are several types of parameters:
 
   
 
-#### How Do I Remove a Parameter or a Parameters Group?
+#### How Do I Remove a Parameter or a Parameters' Group?
 
 1. Click the trash icon next to the parameter in order to delete it.
 
-2. Click **Remove Group** to remove a parameter's group.
+2. Click **Remove Group** to remove a parameters' group.
 
    
 
