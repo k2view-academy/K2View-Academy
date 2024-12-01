@@ -72,7 +72,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 
   
 
-- The **Logical Units Execution Summary** window displays the execution summary details of each LU, pre-execution processes, and post-execution processes.
+- The **Logical Units Execution Summary** window displays the execution summary details of each LU, pre-execution processes and post-execution processes.
 
 
 
