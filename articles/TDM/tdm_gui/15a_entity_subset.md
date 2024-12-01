@@ -238,11 +238,11 @@ The following options are available:
 
 #### Entity List
 
-Populate the list of entities separated by a comma in the **Entity IDs** setting.
+Populate the list of entity IDs separated by a comma in the **Entity IDs** setting.
+
+Each update of this list may change the list of available versions for the task.
 
 K2view's TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
-
-Each update on the entities list may change the list of available versions for the task. 
 
 ![load version with entities](images/task_load_data_version_with_entity_list.png)
 
