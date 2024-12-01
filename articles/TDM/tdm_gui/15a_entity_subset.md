@@ -226,7 +226,7 @@ The Subset form displays all available rule-based/AI-based data generation execu
 
 ## Select and Load Data Snapshot (version) Task
 
-When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, you need to select a data snapshot (version) to be loaded to the target environment. The Subset form displays a list of available data snapshots (versions) that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
+When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, you need to select a data snapshot (version) to be loaded to the target environment. The Subset form (below) displays a list of available data snapshots (versions) that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
 
 The following options are available:
 
@@ -238,7 +238,7 @@ The following options are available:
 
 #### Entity List
 
-Populate the list of entities separated by a comma in the **Entities List** setting.
+Populate the list of entities separated by a comma in the **Entity IDs** setting.
 
 K2view's TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
 
