@@ -212,9 +212,11 @@ Testers can select this option only if they are permitted to do so in the task's
 
   - The **Filter out Reserved Entities** radio buttons are disabled in tasks when:
 
-    - Either the **Replace IDs for the copied entities** or the **Generate clones for an entity** checkbox is checked in the Target component, i.e., the task create new replicas of the copied entities.
+    - Either the **Replace IDs for the copied entities** or the **Generate clones for an entity** checkbox is checked in the Target component, i.e., the task creates new replicas of the copied entities.
 
     - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is set to **AI training**.
+      
+    - The task's selection method is **Predefined entity list**.
 
       
 
