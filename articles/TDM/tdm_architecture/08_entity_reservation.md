@@ -68,7 +68,7 @@ The table contains the following information:
 
 ## **Reserved Entities Management**
 
-The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) enables the TDM users to run the following activities on the reserved entities:
+The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) enables TDM users to run the following activities on the reserved entities:
 
 - **View**: Each user can view the list of entities, reserved on their environment, in order to avoid running functional tests on entities reserved by other users.
 
