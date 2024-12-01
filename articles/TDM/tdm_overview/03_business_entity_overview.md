@@ -145,7 +145,7 @@ Notes:
 - The Vertical execution mode processes the child entities of each root entity. The child entities are processed one-by-one.
 - The Vertical execution mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
 - The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
-- In both execution modes, if execution of the parent entity fails, the related child entities are not processed and are marked as failed.
+- In both execution modes, if the execution of the parent entity fails, the related child entities are not processed and are marked as failed.
 
 **Example:**
 
