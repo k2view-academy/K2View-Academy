@@ -181,19 +181,19 @@ Notes:
      
      - **Step 2:**
        - Run Order LU on entities related to Customers #1 and #2, i.e., Order IDs #4, #5 and #9. The execution of Order #4 fails. The remaining Orders have been processed successfully. 
-       - Note that Order LU is not executed on Customer #3's orders, since it has failed.
+       - Note that Order LU is not executed on Customer #3's Orders, since it has failed.
      
 
    - **Step 3:**
-     - Run the Network Element LU on the entities related to the successfully processed Orders, i.e., Network Element IDs #92 and #98.
+     - Run the Network element LU on the entities related to the successfully processed Orders, i.e., Network element IDs #92 and #98.
 
    
 
    **Vertical execution mode:**
 
    - **Process Customer #1:**
-     - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network elements: process Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order id - #4 - failed. 
-     - Customers 1 and 2 are processed successfully. Customer 3 fails. 
+     - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network elements: process Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
+     - Customers #1 and #2 are processed successfully. Customer #3 fails. 
    - **Process Customer #2:**
      - Run Customer #2. Then run Order #9 and Network element #98.
 
