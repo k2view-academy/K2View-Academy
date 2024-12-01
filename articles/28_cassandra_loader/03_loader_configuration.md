@@ -1,4 +1,4 @@
-# Cassandra Loader Configuration 
+# System DB Loader Configuration 
 
 ### Configuration Logic
 
@@ -41,8 +41,8 @@ The loader works according to the following priority within each section:
   - Look for **iid_finder_loader** section.
   - If not exist, use **default_loader** section.
 - Save Big LUIs:
-  - Look for **[LU type]_ cassandra_entity_storage** section.
-  - If not exist, use **[cassandra_entity_storage]** section.
+  - Look for **[LU type]_system_db_entity_storage** section.
+  - If not exist, use **[system_db_entity_storage]** section.
 
 The session works according to the following priority:
 

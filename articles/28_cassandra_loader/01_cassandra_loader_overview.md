@@ -1,6 +1,6 @@
-# Cassandra Loader Overview
+# System DB Loader Overview
 
-The **Cassandra Loader** is a robust Fabric mechanism that can be used for massive WRITE operations to the Cassandra DB efficiently, when Cassandra is used as [Fabric's System Databse](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). 
+The **System DB Loader** is a robust Fabric mechanism that can be used for massive WRITE operations to the  [Fabric's System Databse](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). 
 
 By default, the loader / session ratio is 1:1. The loader's default architecture can be modified whereby the configuration change does not require Fabric restart and enables updating the ratio of processes per loader and loaders per session. The best configuration for a project should be found using a  trial and error fine-tuning process based on the project's hardware and the expected transaction volumes. 
 
