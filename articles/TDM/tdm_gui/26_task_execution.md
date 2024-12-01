@@ -64,7 +64,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
     - Customer - the root LU.
     - Billing - this is the children LU of the Customer LU.
 
-  - The Customer LU is displayed as this is the root LU. The related Billing entities are executed behind the scenes for each execution customer before moving to the next customer ID. Both LUs are marked as running:
+  - The Customer LU is displayed as this is the root LU. The related Billing entities are executed behind the scenes for each executed customer before moving to the next customer ID. Both LUs are marked as running:
 
     ![monitor execution](images/extract_task_execution_monitor_vertical.png)
 
@@ -78,7 +78,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 
 ###  Open the Batch Monitoring Window
 
-Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information and have a better tracking of the task execution. 
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. 
 
 ## Stop and Resume a Task Execution
 
