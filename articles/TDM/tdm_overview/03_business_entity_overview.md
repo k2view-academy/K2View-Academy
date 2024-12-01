@@ -19,7 +19,7 @@ Breaking down the BE into several LUs enables maximum flexibility and it avoids 
   - Customer 
   - Ordering
 
- The following BEs are defined in the TDM: 
+ The following BEs are defined in K2view's TDM: 
 
 ![Customer BE](images/customer_be.png) 
 
@@ -30,7 +30,7 @@ Breaking down the BE into several LUs enables maximum flexibility and it avoids 
 
 
 You can request to load a list of selected Customer IDs, whereby the TDM task also copies the related ordering, network elements and device data of the selected customers.
-Alternatively, you can request to load a list of selected Order IDs whereby the TDM task also loads the related network elements and device data of the selected orders.
+Alternatively, you can request to load a list of selected Order IDs, whereby the TDM task also loads the related network elements and device data of the selected orders.
 
 ### Building an LU Hierarchy in a BE
 
