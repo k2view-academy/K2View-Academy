@@ -115,7 +115,7 @@ The Hold and Activate task buttons are displayed on the Tasks screen of each tas
 
 - To execute a scheduled task on demand, click ![task execution icon](images/execute_task_icon.png). 
 
-- Both - the TDM Portal and the TDM Scheduling process - initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
+- Both the TDM Portal and the TDM Scheduling process initiate an execution request in the TDM DB. The TDM task execution process gets pending execution requests and executes the tasks.
 
   Click for more information about the [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md).
 
