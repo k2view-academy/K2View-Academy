@@ -16,8 +16,8 @@ Breaking down the BE into several LUs enables maximum flexibility and it avoids 
 - Network element LU root entity = Element ID.
 - Device LU root entity = Device ID.
 - Ordering, Network and Device LUs are attached to two BEs:
-  - Customer. 
-  - Ordering.
+  - Customer 
+  - Ordering
 
  The following BEs are defined in the TDM: 
 
