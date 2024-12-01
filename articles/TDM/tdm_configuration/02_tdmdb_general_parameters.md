@@ -66,7 +66,7 @@ where param_name='PARAMS_COUPLING';
 ## Display of Parameters' Name in the Task - ADD_LU_NAME_TO_PARAM_NAME
 TDM 9.2 and onwards enables removing the concatenation of the LU name to the parameters' name when selecting business parameters in a task. The display of business parameters' names is configurable. The following configuration parameter has been added to the tdm_general_parameters table:
 - Parameter name: **ADD_LU_NAME_TO_PARAM_NAME**.
-- By default, this parameter is **false**. Set this parameter to **true** in order to keep the previous versions' behavior and keep the LU name's concatenation to the business parameters' names in the task.
+- By default, this parameter is **false**. Set this parameter to **true** in order to keep the previous TDM versions' behavior and keep the LU name's concatenation to the business parameters' names in the task.
 
 
 ## TDM Portal General Parameters
