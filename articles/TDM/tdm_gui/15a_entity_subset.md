@@ -210,11 +210,11 @@ Testers can select this option only if they are permitted to do so in the task's
 
   - Set the target environment in the [Target component](17a_task_target_component_entities.md) in order to exclude reserved entities when calculating the **Number of entities matched** based on the selected **Business parameters** in the Subset component.
 
-  - The **Filter out Reserved Entities** radio buttons are disabled in the following tasks:
+  - The **Filter out Reserved Entities** radio buttons are disabled in tasks when:
 
-    - The **Replace IDs for the copied entities** or **Generate clones for an entity** checkbox are checked in the Target component, i.e., the task create new replicas of the copied entities.
+    - Either the **Replace IDs for the copied entities** or the **Generate clones for an entity** checkbox is checked in the Target component, i.e., the task create new replicas of the copied entities.
 
-    - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is **AI training**.
+    - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is set to **AI training**.
 
       
 
