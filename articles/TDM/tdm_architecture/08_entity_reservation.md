@@ -29,17 +29,14 @@ Note that entities can only be reserved by load or reserve tasks. A 'reservation
 
 ## Task Execution - Entity Reservation Validations
 
-- **Validate the number of reserved entities:**  Accumulate the number of reserved entities that are allowed for the user in the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
+- **Validate the number of reserved entities:**  Accumulate the number of reserved entities that are allowed for the user in the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserve up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to additional 20 entities in ST1.
 
 - **Validate the retention period** to verify that the number of days does not exceed the maximum number of days allowed for the tester.
 
 - **Validate the task's entities**:
 
-  - Filter out entities that are reserved by another user when running a task with **Custom Logic**, **Random** or **Parameters** section methods.
-  - If the task is executed on an entity list, verify that the **entities are not reserved for other users**. If an entity is reserved by another user, the entity fails.
-
-  Click here for more information about the [available task's selection methods](03a_task_execution_building_entity_list_on_tasks_LUs.md#root-lus).
-
+  - Filter out entities reserved by another user or all reserved entities when running a task, depending on the [filter out reserved entities](/articles/TDM/tdm_gui/15a_entity_subset.md#filter-out-reserved-entities) setting in the task.
+  - If an entity is reserved, its execution fails.
 
 
 ## Reserved Entity's Attributes
