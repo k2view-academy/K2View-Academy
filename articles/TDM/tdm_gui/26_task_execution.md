@@ -64,7 +64,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
     - Customer - the root LU.
     - Billing - this is the children LU of the Customer LU.
 
-  - Show the Customer LU as this is the root LU. The related Billing entities are executed behind the scenes for each execution customer before moving to the next customer ID. Both LUs are marked as running:
+  - The Customer LU is displayed as this is the root LU. The related Billing entities are executed behind the scenes for each execution customer before moving to the next customer ID. Both LUs are marked as running:
 
     ![monitor execution](images/extract_task_execution_monitor_vertical.png)
 
