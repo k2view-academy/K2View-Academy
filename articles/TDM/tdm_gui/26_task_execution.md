@@ -10,9 +10,9 @@ The following users can execute a TDM task:
 
 - **Admin users**
 - **Environment owners** of the task's environment:
-  - **Extract tasks**, the environment owner of the source environment.
-  - **Generate tasks**, the environment owner of the Synthetic environment.
-  - **Load, Reserve, or Delete tasks**, the environment owner of the target environment.
+  - **Extract tasks** - the environment owner of the source environment.
+  - **Generate tasks** - the environment owner of the Synthetic environment.
+  - **Load, Reserve, or Delete tasks** - the environment owner of the target environment.
 
 - **Testers**:
   - The task's creator.
