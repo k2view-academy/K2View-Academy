@@ -181,7 +181,7 @@ Notes:
      
      - **Step 2:**
        - Run Order LU on entities related to Customers #1 and #2, i.e., Order IDs #4, #5 and #9. The execution of Order #4 fails. The remaining Orders have been processed successfully. 
-       - Note that Order LU is not executed on Customer #3's Orders, since it has failed.
+       - Note that Order LU is not executed on Customer #3's Orders, since this Customer has failed.
      
 
    - **Step 3:**
