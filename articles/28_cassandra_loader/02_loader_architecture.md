@@ -1,4 +1,4 @@
-# Cassandra Loader Architecture
+# System DB Loader Architecture
 
 ### Default Architecture
 
@@ -8,7 +8,9 @@
 
 <img src="images/28_01_2_new.png" alt="default"  />
 
-The default architecture defines two session objects, one used by loaders to perform WRITE operations to the Cassandra DB, and one used by internal Fabric processes like Deploy. The internal processes run on a separate session to prevent dependency on other heavy processes.
+When System DB is Cassandra, the default architecture defines two session objects: one used by loaders to perform WRITE operations to the System DB, and one used by internal Fabric processes like Deploy. The internal processes run on a separate session to prevent dependency on other heavy processes.
+
+For other System DB types, the connection pool is used instead of the session object. 
 
 This architecture can be changed in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to enable the loader to reach its optimal efficiency. The optimal configuration is based on a combination of effective hardware consumption and best possible performance. 
 
