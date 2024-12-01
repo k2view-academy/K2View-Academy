@@ -149,7 +149,7 @@ Notes:
 
 **Example:**
 
-1. Create a TDM task to load **Customers #1, #2 and #3**, their orders and related network elements. 
+1. Create a TDM task to load **Customers #1, #2 and #3**, their Orders and related Network elements. 
 
 2. **Customers' related entities:**
 
@@ -168,7 +168,7 @@ Notes:
   - Order #11:
     - Network element #100.
   - Order #12:
-    - This order has no related network element.
+    - This Order has no related Network element.
 
 3. **Task execution order:**
 
