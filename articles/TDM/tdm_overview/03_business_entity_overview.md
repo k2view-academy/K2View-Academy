@@ -130,21 +130,22 @@ A TDM BE may include several root LUs with the same list of entities. For exampl
 ![BE with several roots](images/be_hierarchy_with_several_root_lu.png) 
 
  
-
 ### Task Execution of Hierarchical Business Entities
 
 A TDM task can include a BE with a hierarchical structure of several LUs. When processing the TDM task, all related LUs from parent and child LUs must also be processed.
 
 The task execution can be either horizontal or vertical:
 
-- Vertical execution - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
-- Horizontal execution - execution of the task system by system (LU by LU) where all entities are processed in one LU before moving on to the next system in the hierarchy.
+- **Horizontal execution** - execution of the task system by system (LU by LU) where all entities are processed in one LU before moving on to the next system in the hierarchy. This is the default execution mode.
+- **Vertical execution** - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. This execution mode has been added in TDM 9.2.
 
-By default, the task execution mode is taken from the task's [Business Entity (BE)](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#task-execution-mode). However, you can set the task's execution mode to be independent to the BE's execution mode. The following options are available:
+By default, the task execution mode is taken from the task's [Business Entity (BE)](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#task-execution-mode). However, you can set the task's execution mode to be independent of the BE's execution mode. The following options are available:
 
-The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
-
-Note that in both modes,  if execution of the parent entity fails, the related child entities are not processed and are marked as failed.
+Notes:
+- The Vertical execution mode processes the child entities of each root entity. The child entities are processed one-by-one.
+- The Vertical execution mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
+- The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
+- In both execution modes, if execution of the parent entity fails, the related child entities are not processed and are marked as failed.
 
 **Example:**
 
