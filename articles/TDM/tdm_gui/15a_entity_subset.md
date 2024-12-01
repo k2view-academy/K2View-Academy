@@ -198,11 +198,11 @@ Testers can select this option only if they are permitted to do so in the task's
 
   - **Reserved by others** (default option) - excludes entities that are currently reserved by users other than the task creator/executor and allows task execution on entities reserved by the task creator/executor.
 
-  - **All reserved entities** - excludes all reserved entities, including those reserved by the task creator/executor. This option ensures there is no overlapping with any of the reserved entities, regardless of who reserved them.
+  - **All reserved entities** - excludes all reserved entities, including those reserved by the task creator/executor. This option ensures there is no overlapping with any of the reserved entities, regardless of who has reserved them.
 
 - The reserved entities are excluded when running the following tasks:
 
-  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and **Generate clones for an entity** checkboxes are cleared, i.e., the task loads the entities with their source IDs.
+  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and the **Generate clones for an entity** checkboxes are cleared, i.e., the task loads the entities with their source IDs.
   - [Delete tasks](17a_task_target_component_entities.md#delete)
   - [Reserve tasks](17a_task_target_component_entities.md#reserve)
 
