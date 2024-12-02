@@ -293,9 +293,9 @@ Click the icon to display the window footer with the error messages:
 
 <img src="images/99_validation_output.PNG" alt="image" style="zoom:80%;" />
 
-Click the error and choose to ignore the exception or fix the problem.
+Click the error and choose to ignore the exception or fix the problem. Only the validations that the user cannot fix, can be dismissed. 
 
-For example, a flow includes a **DbCommand** Actor that has mandatory input arguments which are currently empty. After the Actor is updating with the missing arguments, the validation errors are dismissed. 
+For example, a flow includes a **DbCommand** Actor that has mandatory input arguments which are currently empty. This validation cannot be dismissed by the user. After the Actor is updated with the missing arguments, the validation errors are dismissed automatically. 
 
 
 
