@@ -46,7 +46,7 @@ In order to use a Secrets Management provider:
 
 Each of the supported Secrets Management providers has its own dedicated section in the config.ini file, with all required access and permissions details.
 
-In addition to populating these details, you shall turn it on by setting the 'ENABLED' property to 'true', in the section of the chosen Secrets Management provider.
+In addition to populating these details, you **must** turn it on by setting the 'ENABLED' property to 'true', in the section of the chosen Secrets Management provider. 
 
 Following are the config.ini attributes required for each Secrets Management provider:
 
@@ -88,6 +88,10 @@ Fabric supports 2 authentication methods:
 Additionally, this shall be set:
 
 * URL - the Vault API endpoint to get the secrets.
+
+Optional properties:
+
+* NAMESPACE - a secure multi-tenancy capability within Vault in order to provide isolation among teams at the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information.
 
 
 
