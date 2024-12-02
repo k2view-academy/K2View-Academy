@@ -57,19 +57,45 @@ Add the AI environment to:
 
 ### AI MTables 
 
-#### TrainingSpecialFields.csv
+#### AISpecialAndCategoricalFields
 
-This is an optional table that enables the addition of some values to the column_name in TrainingSpecialFields Mtable. The system auto-detects the columns that should be treated as special fields. You can override the auto-detection and, with your business knowledge, override the special fields by setting any of them as true or false. 
-Special fields are considered the columns that have a high cardinality (above the default threshold set in training execution params). For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not have to be real, just look realistic**. In some cases the **definition** of a field as a special param needs to be **overridden**. 
+- This is an optional table that enables the to **override** the default classification of fields as **special parameters** or **categorical** fields:
 
-For example, do not define a city as a special param as the data generation process has to generate real values for a city:
+  - **Special parameters** are **text** fields with **high cardinality**  (above the default threshold set in training execution params). For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not have to be real, just look realistic**. 
 
-![special params](images/ai_generation_special_params_example.png)
+  - **Categorical** data is a type of data that is used to group information with a low cardinality. The synthetic data keeps the source values for these fields. Example of categorical data: **gender**.
 
-#### Notes
-  - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in the **TrainingSpecialFields.csv.**
+    
+
+- The **Special** and **Categorical** indicates for which field type you wish to override the default behavior: special parameters or categorical field. One of these fields must be **true** for each record.
+
+- The **Indicator** field indicates how to override the default behavior: 
+
+​	**Examples**:
+
+- Do not define a city as a special param as the data generation process has to generate real values for a city.
+
+- Force the AI to treat the case_note field as a special param and generate dummy "realistic like" value for this field. 
+
+- The MTable will be populated as follows:
+
+  ![special params](images/ai_generation_special_params_example.png)
+
+##### Note:
+  - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in this table.
+
+
+
+#### AITableFieldsInclusion
+
+- This is an optional table that enables including or excluding tables or fields from being exported into the PG DB and as a result, including or excluding them from the AI training process. See example:
+
+  ![special params](images/ai_tables_inclusion_example.png)
+
+
 
 ### K2system tables 
+
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
      - These created tables are populated by the TDM AI Task and the AI Job:
@@ -77,7 +103,8 @@ For example, do not define a city as a special param as the data generation proc
               - Task_executions: This table holds all the task executions for all the task types.
               - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that may be useful for a later analysis.
               - Entity_list: A table with all the entities relevant to an existing training/generation job.
-       
+     
+
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
