@@ -15,7 +15,7 @@ A [TDM Task](/articles/TDM/tdm_gui/14_task_overview.md) can reserve entities in 
 
 In both cases, the **task execution** marks the **root target entity IDs** as reserved. On load and reserve tasks, the task execution reserves each root entity ID before loading it to the target environment. If the *reserve* fails due to any reason, the entity is marked as failed and it is not loaded to the target environment.
 
-If the loading of the root entity fails, the [TDM orchestration process](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestratorflow-from-the-template) deletes the failed entity from the TDM DB **tdm_reserved_entities** table.
+If the loading of the root entity fails, the [TDM orchestration process](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-tdmorchestratorflow-from-the-template) deletes the failed entity from the TDM DB's **tdm_reserved_entities** table.
 
 Note that entities can only be reserved by load or reserve tasks. A 'reservation' of entities by the extract task is implemented by the Data Versioning functionality.
 
@@ -68,7 +68,7 @@ The table contains the following information:
 
 ## **Reserved Entities Management**
 
-The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) enables the TDM users to run the following activities on the reserved entities:
+The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.md) enables TDM users to run the following activities on the reserved entities:
 
 - **View**: Each user can view the list of entities, reserved on their environment, in order to avoid running functional tests on entities reserved by other users.
 
@@ -86,7 +86,7 @@ The [Reserve Entities window](/articles/TDM/tdm_gui/13_reserved_entities_window.
 **Explicit release**: Release entities via the **new Reserved Entities window**. The entities are deleted from the reserved entities TDM table.
 
 **Implicit release**: A reserved entity can be released by either one of the following scenarios:
-- The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case, the record is not deleted automatically from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the new reservation period dates.
+- The reservation period ends. The entity is automatically released and is no longer reserved. Note that in this case, the record is not automatically deleted from the TDM DB. However, when the entity is reserved again, the record is updated with the new owner and the new reservation period dates.
 
 - A [delete only task](/articles/TDM/tdm_gui/19_delete_only_task.md) releases the deleted entities and deletes them from the reserved entities TDM table.
 
