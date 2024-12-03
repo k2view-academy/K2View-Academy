@@ -15,6 +15,14 @@ The below table displays the various Fabric versions, released date and end of l
     </thead>
     <tbody>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.1/Fabric_Release_Notes_V8.1.5.pdf">8.1.5</a></td>
+            <td>December 2, 2024</td>
+            <td></td>
+            <td></td>
+            <td>7</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.1/Fabric_Release_Notes_V8.1.4.pdf">8.1.4</a></td>
             <td>November 26, 2024</td>
             <td></td>
