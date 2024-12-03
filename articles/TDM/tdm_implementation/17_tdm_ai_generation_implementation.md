@@ -13,8 +13,7 @@ The below diagram describes the integration between TDM and AI:
 
 ## Training Task
 
-The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation as such
-generation is based on a selected training model. 
+The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation as data generation is based on a selected training model. 
 
 The following diagram describes the execution of the AI training task:
 
