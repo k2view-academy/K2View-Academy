@@ -4,7 +4,7 @@ TDM 9.2 has just been released and it includes the following new features/capabi
 
 * **Vertical execution mode**: Introducing an additional execution mode for TDM tasks, where instead of executing system by system (where all entities are processed in one system before moving on to the next system in the hierarchy), the vertical execution processes the **complete LU hierarchy for each root entity** before moving on to the next root entity. This execution mode is particularly useful when running TDM tasks on **a large scale of entities** as it ensures **better cross-systems data consistency** and **data alignment**.
 
-* **Filter out reserved entities enhancements**: Enabling the user to filter all reserved entities from the task's entities, including the ones reserved by the task executor.
+* **Filter out reserved entities enhancements**: Enabling the user to filter out all reserved entities from the task's entities, including the ones reserved by the task executor.
 
 * **Display Business Names for Task’s Parameters**: Omitting the Logical Unit (LU) name from the business parameter names that appear in the list of business parameters in the sub-setting of TDM task. The display of the previous parameter's name along with the LU name - is supported as well. 
 
