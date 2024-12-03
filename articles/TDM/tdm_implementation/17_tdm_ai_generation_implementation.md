@@ -98,7 +98,7 @@ Add the AI environment to:
 
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
-     - These created tables are populated by the TDM AI Task and the AI Job:
+     - These created tables are populated by the TDM AI task and the AI job:
        
               - Task_executions: This table holds all the task executions for all the task types.
               - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that may be useful for a later analysis.
