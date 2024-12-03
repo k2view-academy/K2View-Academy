@@ -35,9 +35,9 @@ The Baseline rule overrides can be reverted in one of the following ways:
 
 ![](images/discovery_pipeline_revert.png)
 
-* Uncheck the **Override** checkbox on the Baseline rule to remove all overrides at once.
-* Click the **revert** icon in the lower left side of the screen to reset the plugin's order to the original order.
-* Click the **revert** icon in the lower right side of the screen to reset the plugin's settings to baseline.
+1. Uncheck the **Override** checkbox on the Baseline rule to remove all overrides at once.
+2. Click the **revert** icon in the lower left side of the screen to reset the plugin's order to the original order.
+3. Click the **revert** icon in the lower right side of the screen to reset the plugin's settings to baseline.
 
 ### Project Rules
 
