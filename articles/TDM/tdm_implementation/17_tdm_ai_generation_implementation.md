@@ -67,15 +67,15 @@ Add the AI environment to:
 
     
 
-- The **Special** and **Categorical** indicates for which field type you wish to override the default behavior: special parameters or categorical field. One of these fields must be **true** for each record.
+- The **Special** and **Categorical** column headings indicate which field type you wish to override the default behavior for: special parameters or categorical field. One of these fields must be **true** for each record.
 
-- The **Indicator** field indicates how to override the default behavior: 
+- The **Indicator** column heading indicates how to override the default behavior: 
 
 ​	**Examples**:
 
 - Do not define a city as a special param as the data generation process has to generate real values for a city.
 
-- Force the AI to treat the case_note field as a special param and generate dummy "realistic like" value for this field. 
+- Force the AI to treat the case_note field as a special param and generate a realistic-like dummy value for this field. 
 
 - The MTable will be populated as follows:
 
