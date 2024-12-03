@@ -94,7 +94,7 @@ This is a product default definition of the LLM Description plugin that will gen
 	"monitorDesc": "Descriptions",
 	"inputParameters": {
 		"propertyName": "description",
-		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease write a one line description of the ${columnName} in order to use it in the technical documentation.\n${sample_prompt}\nDo not include table and coulmns names in your response.",
+		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${columnName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
 		"sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
       	"incrementalMode":"KEEP_ALL"

@@ -83,8 +83,10 @@ When the filter is empty and the Override checkbox is checked:
 
 ### How Do I Add New Plugin?
 
-When a new custom plugin is created in a project, it should be added to the Baseline rule. Once added to the baseline, it is automatically propagated to all the existing rules.
+When a new plugin is created in a project, it should be added to the Discovery Pipeline. The plugin needs to be defined under the Baseline rule. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
 
-A new plugin can be added by clicking the plus icon in the lower part of the screen. This option is only available when the Baseline rule is selected and Override is clicked. 
+For example, the plugin should only be active when running discovery on CRM_DB. Then it should be added to the baseline as inactive and a rule should be created for CRM_DB with setting this plugin to active.
+
+A new plugin can be added by clicking the plus icon in the lower part of the screen. This option is only available when the Baseline rule is selected and Override is clicked. Once the plugin name is populated, its parameters can be set in the lower right part of the screen: active (true/false), threshold, class and the monitor description. 
 
 ![](images/discovery_pipeline_new_plugin.png)
