@@ -67,7 +67,7 @@ Add the AI environment to:
 
     
 
-- The **Special** and **Categorical** column headings indicate which field type you wish to override the default behavior for: special parameters or categorical field. One of these fields must be **true** for each record.
+- The **Special** and **Categorical** column headings indicate which field type you wish to override the default behavior for - the special parameters or the categorical field. One of these fields must be **true** for each record.
 
 - The **Indicator** column heading indicates how to override the default behavior: 
 
