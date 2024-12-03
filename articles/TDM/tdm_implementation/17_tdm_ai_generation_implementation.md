@@ -88,7 +88,7 @@ Add the AI environment to:
 
 #### AITableFieldsInclusion
 
-- This is an optional table that enables including or excluding tables or fields from being exported into the PG DB and as a result, including or excluding them from the AI training process. See example:
+- This is an optional table that enables the inclusion/exclusion of tables/fields of the LU schema export into the PG DB, to be used in the AI training process. See example:
 
   ![special params](images/ai_tables_inclusion_example.png)
 
