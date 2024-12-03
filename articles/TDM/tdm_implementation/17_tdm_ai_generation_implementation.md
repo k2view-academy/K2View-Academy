@@ -1,4 +1,4 @@
-# AI-Based Generation Implementation
+# AI-based Generation Implementation
 
 TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports 2 modes of synthetic entities' generation:
 
@@ -19,7 +19,7 @@ The following diagram describes the execution of the AI training task:
 
 ![ai training](images/ai_training_task_process.png)
 
-## AI-Based Generation Task
+## AI-based Generation Task
 
 The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test Data Store (Fabric) and can be loaded to any target environment.
 
@@ -94,7 +94,7 @@ Add the AI environment to:
 
 
 
-### K2system tables 
+### K2system Tables 
 
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
