@@ -1,6 +1,6 @@
 # AI-based Generation Implementation
 
-TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports 2 modes of synthetic entities' generation:
+TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports 2 methods of synthetic entities' generation:
 
 - Rule-based generation
 - AI-based generation
