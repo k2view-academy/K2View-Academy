@@ -59,7 +59,7 @@ Add the AI environment to:
 
 #### AISpecialAndCategoricalFields
 
-- This is an optional table that enables to **override** the default classification of the **special parameters** or **categorical** fields in the AI training process:
+- This is an optional table that enables to **override** the default classification of the **special parameters** or the **categorical** fields in the AI training process:
 
   - **Special parameters** are **text** fields with **high cardinality** (above the default threshold set in training execution params). For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not have to be real, just look realistic**. 
 
