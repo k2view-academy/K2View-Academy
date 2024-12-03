@@ -7,13 +7,14 @@ TDM 9.0 adds integration with AI-based entities' generation (currently limited t
 
 The user, who creates the task, can select either one of these methods to generate synthetic entities by the task. The AI-based data generation supports only one LU (one schema).
 
-The diagram below describes the TDM and AI integration:
+The below diagram describes the integration between TDM and AI:
 
 ![tdm-ai](images/tdm_ai_integration.png)
 
 ## Training Task
 
-The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation since the generation is based on a selected training model. 
+The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation as such
+generation is based on a selected training model. 
 
 The following diagram describes the execution of the AI training task:
 
