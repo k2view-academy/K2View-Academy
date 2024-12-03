@@ -63,7 +63,7 @@ Add the AI environment to:
 
   - **Special parameters** are **text** fields with **high cardinality**  (above the default threshold set in training execution params). For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not have to be real, just look realistic**. 
 
-  - **Categorical** data is a type of data that is used to group information with a low cardinality. The synthetic data keeps the source values for these fields. Example of categorical data: **gender**.
+  - **Categorical** data is a type of data that is used to group information with a low cardinality. The synthetic data keeps the source values for these fields. An example for categorical data is **gender**.
 
     
 
