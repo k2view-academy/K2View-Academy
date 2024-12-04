@@ -125,7 +125,7 @@ Edit these properties in the `[saml]` section:
 
 
 
-In addition, `WEB_AUTHENTICATION_PROTOCOL` property's value shall set to "SAML".
+Moreover, the `WEB_AUTHENTICATION_PROTOCOL` property's value shall be set to "SAML".
 
 
 
@@ -135,7 +135,7 @@ When Fabric is running on Windows OS, usually when working locally during the pr
 
 1. Open the "fabric-server-start.bat" located in the Fabric server scripts directory - "<FABIRC_HOME>\Server\fabric\scripts".
 2. Update the following 4 properties:
-   - set javax_net_ssl_keyStore - the full path of the Fabric key store repository (jks file). This repository stores the the private key based upon which the public key is generated (this key is sent to the IDP).
+   - set javax_net_ssl_keyStore - the full path of the Fabric key store repository (jks file). This repository stores the private key upon which the generated public key is based (this key is sent to the IDP).
    - set javax_net_ssl_keyStorePassword
    - set javax_net_ssl_trustStore - the full path of the trust store, where the public key, which retrieved from the IDP, is stored (for local machine you can use the same jks file that holds the keystore).
    - set javax_net_ssl_trustStorePassword
