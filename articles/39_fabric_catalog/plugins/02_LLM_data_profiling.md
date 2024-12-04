@@ -127,3 +127,20 @@ This requirement can be achieved by setting up the relevant user prompt and upda
 }
 ~~~
 
+Note that when using the ```com.k2view.discovery.plugins.llm.LLMDataProfilingPlugin``` class for a custom plugin, the following parameters are mandatory:
+
+* ```threshold``` - a number between 0 and 1
+
+
+* Input parameters:
+  * ```propertyName```
+  * ```userPrompt```
+  * ```sampleSize``` - can be set to 0 if not applicable.
+  * ```samplePrompt``` - it should be referenced in the ```userPrompt```. However it can be empty if ```sampleSize``` is 0. 
+  * ```incrementalMode```
+
+The following parameters are optional:
+
+* ```possibleValues``` - should be defined as array and referenced in the ```userPrompt```.
+* ```llmInterface```
+

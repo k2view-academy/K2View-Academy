@@ -97,4 +97,6 @@ For example, the plugin should only be active when running discovery on CRM_DB. 
 
 A new plugin can be added by clicking the plus icon in the lower part of the screen. This option is only available when the Baseline rule is selected and Override is clicked. Once the plugin name is populated, its parameters can be set in the lower right part of the screen: active (true/false), threshold, class and the monitor description. 
 
+The plugin's execution order can be set by dragging the plugin to the design position in the list. 
+
 ![](images/discovery_pipeline_new_plugin.png)
