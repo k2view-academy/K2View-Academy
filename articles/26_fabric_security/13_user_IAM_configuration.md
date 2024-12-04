@@ -151,7 +151,7 @@ When Fabric is running on Windows OS, usually when working locally during the pr
 
 When LDAP is used as an authenticator, an admin role is automatically created for Fabric Bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $K2_HOME/config.template/admin_privileges.template file as reference). 
 
-The role's name should be provided by IT / LDAP owner (we assume he will create a dedicated role, to be used as K2view admin role).
+The role's name should be provided by the LDAP owner.
 
 ##### LDAPS: Secured LDAP
 
@@ -169,7 +169,7 @@ The `adldap_auth` or `ldap_auth` sections must define the following:
 
 The values should be provided by the LDAP owner.
 
-The instructions for LDAP and LDAPS can be found [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
+The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
 <br/>
 
