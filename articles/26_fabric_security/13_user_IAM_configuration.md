@@ -178,7 +178,7 @@ The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabri
 In order to use a custom authenticator, do the following in the config.ini:
 
 1. Add the `server_authenticator` authenticator list.
-2. Add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
+2. Add an new accompanying section, following this naming convention: `<authenticator_name>_auth`. 
    - Under this section, add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added as well and will be passed to the authenticator when activated.
 
 For more information about customer authenticator implementation, read [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
