@@ -2,16 +2,16 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project, and it performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs, based on the rules explained further in this article. 
+Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project, and it performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
-The product includes two LLM-based plugins, which accommodate for the following use cases:
+The product includes 2 LLM-based plugins that accommodate for the following use cases:
 
 - Use Case 1: **LLM Data Profiling** - profiling and classification of columns with sensitive / PII data. 
-- Use Case 2: **LLM Description** - creation of each column's short description.
+- Use Case 2: **LLM Description** - a creation of each column's short description.
 
-By default both plugins are disabled and should be enabled in the project-level settings, when needed. 
+By default, both of these plugins are disabled and should be enabled in the project-level settings, when needed. 
 
-The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag one will be used.
+The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the user prompt and other plugin's input parameters. For example, a new business dimension (new property) can be created via an advanced plugin setup. An explanation and an example are provided at the end of this article. 
 
