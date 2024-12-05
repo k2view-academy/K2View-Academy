@@ -30,8 +30,8 @@ The plugin's input parameters are:
   - ```${samplePrompt}``` is a user prompt part that is related to the data sample. It is taken from the ```"samplePrompt"``` input parameter.
   - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
 - ```"possibleValues"``` is a list of possible property values. 
-  - For example, ```"possibleVlues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
-  - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableVlues"``` should be populated, instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
+  - For example, ```"possibleValues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
+  - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableValues"``` should be populated, instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
   - It is recommended for a relatively short list of possible valid values.
   - When you don't intend or need to provide a list of possible values to the LLM, it is recommended to edit the ```"userPrompt"``` by removing the text that refers to the possible values. 
 - ```"sampleSize"``` defines a sample size to be used by the LLM. By default, ```"sampleSize": 10```.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
