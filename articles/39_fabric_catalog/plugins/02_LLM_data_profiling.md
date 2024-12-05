@@ -31,9 +31,9 @@ The plugin's input parameters are:
   - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
 - ```"possibleValues"``` is a list of possible property values. 
   - For example, ```"possibleVlues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
-  - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableVlues"``` should be populated instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
+  - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableVlues"``` should be populated, instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
   - It is recommended to make a relatively short the list of possible valid values. 
-  - When you don't want or need to provide a list of possible values to LLM, it is recommended to edit the ```"userPrompt"``` by removing the text which refers to the possible values. 
+  - When you don't want or need to provide a list of possible values to the LLM, it is recommended to edit the ```"userPrompt"``` by removing the text that refers to the possible values. 
 - ```"sampleSize"``` defines a sample size to be used by LLM. By default, ```"sampleSize": 10```.  If you don't want to send any sample data to the LLM, set the sample size to 0. 
 - ```"samplePrompt"``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```"sampleSize"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved at the Snapshot step and added to the prompt. 
