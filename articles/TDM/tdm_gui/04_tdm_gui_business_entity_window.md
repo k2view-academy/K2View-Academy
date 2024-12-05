@@ -4,7 +4,7 @@ A [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (
 
 ## Business Entities List Window  
 
-The **Business Entities** window displays a list of all BEs defined in the TDM.  Only **Admin users** can create, edit or delete a BE. Other users can open BEs for viewing purposes only.
+The **Business Entities** window displays a list of all BEs defined in the TDM. Only **Admin users** can create, edit or delete a BE. Other users can open BEs for viewing purposes only.
 
 -   To create a new BE, click the **New Business Entity** icon. 
 -   To open a selected BE, click the **Name** value of the BE.
@@ -26,7 +26,13 @@ The following is an example of a Customer Business Entity window:
 
 ### General Information Section 
 
-The General Information section consists of the BE **Name** and **Description**. The Name setting is mandatory. Note that each active BE should have a specified Name. An error is displayed when an attempt is made to create several BEs with the same name.
+The General Information section consists of the BE **Name**, **Description** and the selected **Execution mode**. The Name setting is mandatory. Note that each active BE should have a specified Name. When there is an attempt to create several BEs with the same name, an error displays.
+
+#### Task Execution Mode
+
+TDM 9.2 introduces a new execution mode for TDM tasks: **Vertical execution**. This mode changes how the system handles Logical Unit (LU) hierarchies: Instead of the **default Horizontal mode** of executing **system by system** (where all entities are processed in one system before moving on to the next system in the hierarchy), the **Vertical execution** processes the **complete LU hierarchy for each root entity before moving on to the next root entity**. This execution mode is particularly useful when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
+
+The default Horizontal execution mode can be replaced with the Vertical execution mode. By default, the BE's execution mode impacts the execution of all tasks relating to the BE. However, the task creator can override the execution mode on a given task.
 
 ### Logical Units Tab 
 
@@ -39,10 +45,10 @@ To use a BE in a TDM task, it must have one or more LUs assigned to it.
 ![be_Example](images/BE_add_lu_window.png)
 
 2. Do either: 
-   * Check **All Logical Units** to attach all LUs that are deployed to Fabric and that are not attached to the BE. The LUs are attached to the BE in a flat structure whereby the Parent LU is empty. When needed, the LUs can be edited to populate the Parent LU and the Data Center settings.
-   * Check **Select** and select an LU from the **Logical Unit** drop-down list:
+   * Click the **All Logical Units** option button to attach all LUs that are deployed to Fabric and that are not attached to the BE. The LUs are attached to the BE in a flat structure whereby the Parent LU is empty. When needed, the LUs can be edited to populate the Parent LU and the Data Center settings.
+   * Click the **Select** option button and select an LU from the **Logical Unit** drop-down list:
 
-     - Click <img src="images/plus_icon.png" alt="be_plus" style="zoom:80%;" /> or <img src="images/delete_icon.png" alt="be_delete" style="zoom:80%;" /> to add or remove LUs to / from the BE. 
+     - Click <img src="images/plus_icon.png" alt="be_plus" style="zoom:80%;" /> to add or <img src="images/delete_icon.png" alt="be_delete" style="zoom:80%;" /> to remove LUs to/from the BE. 
      - Populate the following optional settings for each selected LU:
        - **Logical Unit Description**.
        - **Parent Logical Unit** - set a parent LU to build a [hierarchy in the BE](/articles/TDM/tdm_overview/03_business_entity_overview.md). 
@@ -56,7 +62,7 @@ Notes:
 
 #### Editing LU Settings
 
-Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to edit or delete the LU from the BE. Note that the LU is deleted from the BE in the TDM DB. 
+Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> to edit or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to delete the LU from the BE. Note that the LU is deleted from the BE in the TDM DB. 
 
 Click for more information about [TDM DB tables that hold the BE and LU relationship](06_be_product_tdmdb_tables.md).
 
@@ -64,20 +70,20 @@ Click for more information about [TDM DB tables that hold the BE and LU relation
 
 ### Pre and Post Execution Processes Tabs
 
-These tabs enable adding pre and post execution processes. The pre-execution processes run at the beginning of the task's execution, before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
+These tabs enable adding pre and post execution processes. The pre-execution processes run in the beginning of the task's execution, before all related LUs have been executed. The post-execution processes run at the end of the task's execution, after all related LUs have been executed.
 
 Examples:
 
 - Running a cleanup flow before executing the task's LUs. 
 - Sending an email to the tester to notify that the execution of a task has ended. 
 
-The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many. That is, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs.  Note that a given flow can be attached as both - pre and post execution process - to a BE.
+The pre and post execution processes are Broadway flows defined in Fabric by the TDM implementor. The relationship between a pre or post execution process and a BE is many-to-many, namely, a BE can have several pre/post execution processes, and a pre/post execution process can be attached to multiple BEs. Note that a given flow can be attached as both - pre and post execution process - to a BE.
 
-The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process attached to the task. The execution order is set according to the execution order defined in the BE.
+The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) executes the [BATCH command](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) on each pre and post execution process that is attached to the task. The execution order is set according to the execution order defined in the BE.
 
-The pre and post execution processes are optional: a BE can be defined without any post-execution processes.
+The pre and post execution processes are optional: A BE can be defined with no post-execution processes.
 
-Note that the pre and post execution processes must be populated in the [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed by the BE window.
+Note that the pre and post execution processes must be populated in the [PostAndPreExecutionProcess](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#postandpreexecutionprocess-) MTable object to be displayed in the BE window.
 
 #### How Do I Add a Pre or Post Execution Process to a BE? 
 

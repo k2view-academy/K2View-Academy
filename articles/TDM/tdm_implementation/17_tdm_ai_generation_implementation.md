@@ -1,27 +1,27 @@
-# AI-Based Generation Implementation
+# AI-based Generation Implementation
 
-TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports 2 modes of synthetic entities' generation:
+TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports 2 methods of synthetic entities' generation:
 
 - Rule-based generation
 - AI-based generation
 
 The user, who creates the task, can select either one of these methods to generate synthetic entities by the task. The AI-based data generation supports only one LU (one schema).
 
-The diagram below describes the TDM and AI integration:
+The below diagram describes the integration between TDM and AI:
 
 ![tdm-ai](images/tdm_ai_integration.png)
 
 ## Training Task
 
-The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation since the generation is based on a selected training model. 
+The training task creates the training models on the LU schema tables. This is a prerequisite for AI-based data generation as data generation is based on a selected training model. 
 
 The following diagram describes the execution of the AI training task:
 
 ![ai training](images/ai_training_task_process.png)
 
-## AI-Based Generation Task
+## AI-based Generation Task
 
-The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test Data Store (Fabric) and can be loaded to any target environment.
+The AI-based data generation task generates synthetic entities based on a selected training model. The generated entities are imported to the Test Data Store (Fabric), from where they can be loaded to any target environment.
 
 The following diagram describes the execution of the AI training task:
 
@@ -31,7 +31,7 @@ The following diagram describes the execution of the AI training task:
 
 ### AI Globals
 
-The following shared Globals have been added for the AI-based data generation:
+The following shared Globals have been added to the AI-based data generation:
 
 - **AI_DB_INTERFACE** - the name of the AI DB interface. The default value is **AI_DB**. 
 - **CREATE_AI_K2SYSTEM_DB** - this Global indicates whether the TDM deploy flow needs to create the AI k2system tables in case they do not exist. The default value is **false**. Set this Global to **true** in order to implement the AI-based data generation.
@@ -48,7 +48,7 @@ Note that by default, the AI interfaces are disabled (inactive).
 
   Click [here](/articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
-  Click [here](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md) for more information about the TDM with AI installation. 
+  Click [here](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md) for more information about installing TDM with AI. 
 
 ### AI Environment
 Add the AI environment to:
@@ -57,27 +57,54 @@ Add the AI environment to:
 
 ### AI MTables 
 
-#### TrainingSpecialFields.csv
+#### AISpecialAndCategoricalFields
 
-This is an optional table that enables the addition of some values to the column_name in TrainingSpecialFields Mtable. The system auto-detects the columns that should be treated as special fields. You can override the auto-detection and, with your business knowledge, override the special fields by setting any of them as true or false. 
-Special fields are considered the columns that have a high cardinality (above the default threshold set in training execution params). For these fields, the data generation generates values that do not come directly from the original data. **The generated values do not have to be real, just look realistic**. In some cases the **definition** of a field as a special param needs to be **overridden**. 
+- This is an optional table that enables to **override** the default field classification of either **special parameters** or **categorical** in the AI training process:
 
-For example, do not define a city as a special param as the data generation process has to generate real values for a city:
+  - **Special parameters** are **text** fields with **high cardinality** (above the default threshold set in training execution params). For these fields, the data generation generates values that do not emerge directly from the original data. **The generated values do not have to be real, just look realistic**. 
 
-![special params](images/ai_generation_special_params_example.png)
+  - **Categorical** data is a type of data that is used for grouping information for values with a low cardinality. The synthetic data keeps the source values for these fields. An example for categorical data is **gender**.
 
-#### Notes
-  - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in the **TrainingSpecialFields.csv.**
+    
 
-### K2system tables 
+- The **Special** and **Categorical** column headings indicate which field type you wish to override the default behavior for - the special parameters or the categorical field. One of these fields must be **true** for each record.
+
+- The **Indicator** column heading indicates how to override the default behavior: 
+
+​	**Examples**:
+
+- Do not define a city as a special param as the data generation process has to generate real values for a city.
+
+- Force the AI to treat the case_note field as a special param and generate a realistic-like dummy value for this field. 
+
+- The MTable will be populated as follows:
+
+  ![special params](images/ai_generation_special_params_example.png)
+
+##### Note:
+  - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in this table.
+
+
+
+#### AITableFieldsInclusion
+
+- This is an optional table that enables the inclusion/exclusion of tables/fields of the LU schema export into the PG DB, to be used in the AI training process. See example:
+
+  ![special params](images/ai_tables_inclusion_example.png)
+
+
+
+### K2system Tables 
+
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
-     - These created tables are populated by the TDM AI Task and the AI Job:
+     - These created tables are populated by the TDM AI task and the AI job:
        
               - Task_executions: This table holds all the task executions for all the task types.
               - Task_execution_stats: A table that should be updated during the job execution. Will be holding any informative statistics/metrics that may be useful for a later analysis.
               - Entity_list: A table with all the entities relevant to an existing training/generation job.
-       
+     
+
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
