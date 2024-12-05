@@ -17,7 +17,7 @@ In addition to the above use cases, you can use the same plugin to achieve your 
 
 ### LLM Plugin Definition
 
-The input parameters are:
+The plugin's input parameters are:
 
 - ```"threshold"``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
   - By default, ```"threshold":0.7```. 
