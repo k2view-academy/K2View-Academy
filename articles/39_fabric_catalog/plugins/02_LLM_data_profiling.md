@@ -2,7 +2,7 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project and performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs, based on the rules explained further in this article. 
+Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project, and it performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs, based on the rules explained further in this article. 
 
 The product includes two LLM-based plugins, which accommodate for the following use cases:
 
