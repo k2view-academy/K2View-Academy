@@ -42,7 +42,7 @@ The plugin's input parameters are:
   - ```"KEEP_EXISTING"``` - if an LLM plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
   - ```"EVALUATE_ALL"``` - the LLM plugin will be invoked for all fields.
 - ```"llmInterface"``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
-  - When ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+  - When the ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 ### Use Case 1: LLM Data Profiling
 
