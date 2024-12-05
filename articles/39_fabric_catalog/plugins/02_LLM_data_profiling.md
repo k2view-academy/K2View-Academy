@@ -104,7 +104,7 @@ This is a product default definition of the LLM Description plugin that will gen
 
 ### Custom Use Case Definition
 
-The LLM plugin gives us the flexibility to define our own use cases, such as discovering new business parameters in a data source by setting up the relevant user prompt and other input parameters. 
+The LLM plugin facilitates flexibility to define our own use cases, such as discovering new business parameters in a data source by setting up the relevant user prompt and other input parameters. 
 
 For example, it may be required to identify all the data source's columns that include medical information, such as a medical condition, a medical treatment or a drug, and to create a new property ```medicalInfo = true``` . 
 
