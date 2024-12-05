@@ -4,14 +4,14 @@
 
 The Discovery job is a pipeline which connects a series of steps where some are executed sequentially and some - in parallel. It has two main parts: Crawler and Plugin Framework.
 
-* The Crawler scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
-* The Plugin Framework is an internal platform for running the plugins. It is a pipeline of plugins which are executed by the Discovery job after the Crawler completion. 
+The Crawler scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 
-The pipeline is executed based on the combination of the product configuration and the project rules. 
+The Plugin Framework is an internal platform for running the plugins. It is a pipeline of plugins which are executed by the Discovery job after the Crawler completion. 
 
-The product configuration of the Discovery Pipeline includes the list of product built-in plugins with their input parameters, sample size for the data snapshot and more. 
+The pipeline is executed based on the combination of the product configuration and the project rules: 
 
-Starting from V8.2, the project configuration file includes only the overrides to the product configuration. The project level overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. 
+* The **product** configuration of the Discovery Pipeline is a baseline which includes the list of product built-in plugins, their execution order and input parameters, data snapshot sample size and more. 
+* The **project** configuration is a list of user-created rules that can be defined for any of the project's interfaces using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. The rules can be created on a schema level or on a dataset level. Their purpose is to override the baseline settings. 
 
 ### Plugins Pipeline
 
@@ -25,6 +25,7 @@ The plugin input parameters are:
 * ```threshold``` - the score above which the plugin result impacts the Catalog
   * For example: the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. This rule has no impact on the Catalog.
   * To enable the Catalog to show more results, update the threshold to a lower number lower. To show less results, update the threshold to a higher number.
+  * Some plugins don't 
 * ```monitorDesc``` - the description displayed per each plugin in the Execution Progress area of the Catalog Monitor, under the number.
   * For example, "Classification PII Marker" shows the number of found PII Fields, thus this plugin's monitor description is "PII Fields".
 * ```inputParameters``` - is a key/value map of additional input parameters, which are different per each plugin.
