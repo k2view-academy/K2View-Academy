@@ -20,10 +20,12 @@ The `server_authenticator` property defines which authenticator should be used. 
 
 There are 5 authenticators that come as part of the Fabric platform and that are considered as reserved names: "fabric", "cassandra", "ldap", "asldap", "block_all" as follows:
 
-- **fabric**/**system_db** - (these two are regarded as the same) when using Fabric as the authenticator. No further settings are required for it.
+- **fabric** - (or system_db) when using Fabric as the authenticator. No further settings are required for it.
 - **cassandra** - when using Fabric local Cassandra as [Fabric System DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), ensure that the following 2 parameters in the cassandra configuration file (cassandra.yaml) - **authenticator** and **authorizer** - are configured with PasswordAuthenticator / CassandraAuthorizer option, respectively.
 
-   *Note: The concrete values need to be reconfirmed with the owner of the environment.*
+   Notes:
+     * The concrete values need to be reconfirmed with the owner of the environment.
+     * Cassandra can be the authenticator even if fabric uses SQLite as system_db.
 
 - **ldap** - connect to the LDAP server. For this option, the LDAP server connection details are required and should be defined in section name: `ldap_auth`. 
 - **adldap** - connect to the AD/LDAP server. For this option, the AD/LDAP server connection details are required and should be defined in section name: `adldap_auth`.
