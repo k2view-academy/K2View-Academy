@@ -19,7 +19,7 @@ In addition to the above use cases, you can use the same plugin to achieve your 
 
 The input parameters are:
 
-- ```"threshold"``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to the cases when the column already has **the same property** created by another plugin during the same Discovery Job execution. 
+- ```"threshold"``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
   - By default, ```"threshold":0.7```. 
   - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM plugin will not run on this column.
 - ```"propertyName"``` is a column's property that should be created by the plugin. 
