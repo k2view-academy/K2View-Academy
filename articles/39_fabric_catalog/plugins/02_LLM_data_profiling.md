@@ -48,7 +48,7 @@ The plugin's input parameters are:
 
 The Catalog includes 2 built-in plugins that perform profiling and classification of the columns using the regular expressions [Data Regex Classifier and Metadata Regex Classifier](02_classification_plugins.md). 
 
-However, these plugins might miss some columns with sensitive data, for various reasons. For example, when a column doesn't have a meaningful name and the regular expression cannot be applied on the column's values (e.g. names of people or geographic locations), the regex-driven plugins will not classify such columns. 
+However, these plugins might miss some columns with sensitive data, for various reasons. For example, when a column doesn't have a meaningful name and the regular expression cannot be applied on the column's values (e.g., names of people or geographic locations), the regex-driven plugins will not classify such columns. 
 
 LLM-based plugins help to improve the classification task by analyzing the column's data, in a context of table and column names. 
 
