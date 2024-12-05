@@ -25,7 +25,7 @@ The plugin's input parameters are:
 - ```"propertyName"``` is a column's property that should be created by the plugin. 
   - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Data Profiling use case.
 - ```"userPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
-  - ```${tableName} ```, ```${columns}``` and ```${columnName}``` respectively are a table and a column being profiled, as well as the names of all other columns in this table. These are passed to the plugin by the framework.
+  - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are, respectively, a table and a column being profiled, as well as the names of all other columns in this table. These are passed to the plugin by the framework.
   - ```${possibleValues}``` defines a list of valid values that can be assigned as a property's value. These values need to be defined when it is required that the LLM will select a value from a pre-defined list. The values are taken from the ```"possibleValues"``` input parameter.
   - ```${samplePrompt}``` is a user prompt part related to the data sample. It is taken from the ```"samplePrompt"``` input parameter.
   - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
