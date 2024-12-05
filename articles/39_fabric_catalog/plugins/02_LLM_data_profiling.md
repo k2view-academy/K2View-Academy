@@ -32,17 +32,17 @@ The plugin's input parameters are:
 - ```"possibleValues"``` is a list of possible property values. 
   - For example, ```"possibleVlues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
   - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableVlues"``` should be populated, instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
-  - It is recommended to make a relatively short the list of possible valid values. 
+  - It is recommended for a relatively short list of possible valid values.
   - When you don't want or need to provide a list of possible values to the LLM, it is recommended to edit the ```"userPrompt"``` by removing the text that refers to the possible values. 
-- ```"sampleSize"``` defines a sample size to be used by the LLM. By default, ```"sampleSize": 10```.  If you don't want to send any sample data to the LLM, set the sample size to 0. 
+- ```"sampleSize"``` defines a sample size to be used by the LLM. By default, ```"sampleSize": 10```.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
 - ```"samplePrompt"``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```"sampleSize"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
 - ```incrementalMode``` defines whether the plugin should be executed for the fields that already have the same property created by the same LLM plugin in a previous Discovery Job execution. This parameter is set in order to minimize the number of calls to the LLM. It has the following modes:
   - ```"KEEP_ALL"``` (default), which means: if an LLM plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
-  - ```"KEEP_EXISTING"```, which means: if an LLM plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g. "classification").
+  - ```"KEEP_EXISTING"```, which means: if an LLM plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
   - ```"EVALUATE_ALL"``` which means: the LLM plugin will be invoked for all fields.
 - ```"llmInterface"``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
-  - When ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for a LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+  - When ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 ### Use Case 1: LLM Data Profiling
 
