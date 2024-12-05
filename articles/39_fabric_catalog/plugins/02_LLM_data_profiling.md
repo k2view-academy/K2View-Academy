@@ -106,7 +106,7 @@ This is a product default definition of the LLM Description plugin that will gen
 
 The LLM plugin gives us the flexibility to define our own use cases, such as discovering new business parameters in a data source by setting up the relevant user prompt and other input parameters. 
 
-For example, it might be required to identify all of the data source's columns that include any medical information, such as a medical condition, a medical treatment or a drug, and creating a new property ```medicalInfo = true``` . 
+For example, it may be required to identify all the data source's columns that include any medical information, such as a medical condition, a medical treatment or a drug, and creating a new property ```medicalInfo = true``` . 
 
 This requirement can be achieved by setting up the relevant user prompt and updating the input parameters as follows:
 
@@ -136,11 +136,11 @@ Note that when using the ```com.k2view.discovery.plugins.llm.LLMDataProfilingPlu
   * ```propertyName```
   * ```userPrompt```
   * ```sampleSize``` - can be set to 0 if not applicable.
-  * ```samplePrompt``` - it should be referenced in the ```userPrompt```. However it can be empty if ```sampleSize``` is 0. 
+  * ```samplePrompt``` - it should be referenced in the ```userPrompt```. However, it can be empty if ```sampleSize``` is 0. 
   * ```incrementalMode```
 
 The following parameters are optional:
 
-* ```possibleValues``` - should be defined as array and referenced in the ```userPrompt```.
+* ```possibleValues``` - should be defined as an array and referenced in the ```userPrompt```.
 * ```llmInterface```
 
