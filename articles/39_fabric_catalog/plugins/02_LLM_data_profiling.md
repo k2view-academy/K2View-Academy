@@ -135,12 +135,12 @@ Note that when using the ```com.k2view.discovery.plugins.llm.LLMDataProfilingPlu
 * Input parameters:
   * ```propertyName```
   * ```userPrompt```
-  * ```sampleSize``` - can be set to 0 if not applicable.
+  * ```sampleSize``` - this can be set to 0, if not applicable.
   * ```samplePrompt``` - it should be referenced in the ```userPrompt```. However, it can be empty if ```sampleSize``` is 0. 
   * ```incrementalMode```
 
 The following parameters are optional:
 
-* ```possibleValues``` - should be defined as an array and referenced in the ```userPrompt```.
+* ```possibleValues``` - this should be defined as an array and referenced in the ```userPrompt```.
 * ```llmInterface```
 
