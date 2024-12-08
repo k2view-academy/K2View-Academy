@@ -53,9 +53,9 @@ The global schema exclude list defines the schemas that should be excluded from 
 
 ### Baseline and Override Rules
 
-Starting V8.2, the Discovery execution is based on the rules. The creation of multiple rules allows different variations of a Discovery pipeline process to be tailored per data platform and schema.
+From Fabric V8.2 onwards, the Discovery execution is based on rules that accommodate for different variations of a Discovery pipeline process. It is now possible to create rules per data platform to override the baseline configuration on a schema or even on a dataset level. The job executes a combination of the baseline and user-defined rules.
 
-For example, you can define that a ```Plugin X``` is executed on ```Schema 1``` while it is not executed on all other schemas of the same data platform. You can also define a bigger data sample on ```Schema 2``` while all the rest will use a default sample size. 
+For example, you can define ```Plugin X``` to be executed on ```Schema 1``` while it is not executed on all other schemas of the same data platform. You can also define a larger data sample on ```Schema 2``` while the rest of the schemas will use a default sample size.
 
 The product initial setup includes a **Baseline** rule which represents a baseline configuration, such as a sample size, list of all product plugins and their default settings.
 
@@ -71,7 +71,7 @@ The rules are executed based on the following hierarchy: when multiple rules app
 
 * A **Baseline** rule defines that a ```Plugin X``` is inactive. 
 * A **Rule 1** is applied on CRM_DB and it sets ```Plugin X``` to active. 
-* A **Rule 2** is applied on CRM_DB and public2 schema, and it  sets ```Plugin X``` to active and a threshold = 0.8.
+* A **Rule 2** is applied on CRM_DB and public2 schema, and it sets ```Plugin X``` to active and a threshold = 0.8.
 
 Depending on which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
 
