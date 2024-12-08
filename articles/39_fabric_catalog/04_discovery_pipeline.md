@@ -73,9 +73,9 @@ The rules are executed based on the following hierarchy: When multiple rules app
 * A **Rule 1** is applied on CRM_DB and it sets ```Plugin X``` to active. 
 * A **Rule 2** is applied on CRM_DB and public2 schema, and it sets ```Plugin X``` to active and a threshold = 0.8.
 
-Depending on which interface and/or schema the Discovery is executed, the ```Plugin X``` settings are taken from the most specific rule.
+Depending which interface and/or schema the Discovery is executed on, the ```Plugin X``` settings are taken from the most specific rule.
 
-All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder,the **pluginsOverride.discovery** file. It is created when the overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. 
+All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder,the **pluginsOverride.discovery** file. It is created when the overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings.
 
 Click [here](13_discovery_pipeline_settings.md) to learn about the baseline configuration as well as the override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
 
