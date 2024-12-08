@@ -49,7 +49,7 @@ For example, the percentage is 10%, min is 100 and max is 500. So, if a table in
 
 By default, all the data platform's entities are scanned except for those that are in the global schema exclude list. 
 
-The global schema exclude list defines the schemas that should be excluded from a discovery on any data platform. Those are system schemas that are not relevant for the discovery. The syntax supports regular expressions. For example, "SYS.*" means all schemas with a name that starts with 'SYS'.
+The global schema exclude list defines the schemas that should be excluded from a Discovery on any data platform. These excluded schemas are system schemas that are not relevant for the Discovery. The syntax supports regular expressions. For example, "SYS.*" refers to all schema names that start with 'SYS'.
 
 ### Baseline and Override Rules
 
