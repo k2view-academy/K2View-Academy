@@ -38,10 +38,10 @@ The K2view Discovery solution includes a constantly growing list of built-in plu
 
 The data sample is retrieved from the data source during the Discovery job run. The data is encrypted and is being used by various plugins during the job run. Once the plugins' execution has been completed, the data sample is deleted.
 
-The sample size is defined as follows:
+The sample size is defined by:
 
-- Percentage defines the % of dataset rows to be retrieved as a sample.
-- The min and max size definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than minimum or higher than maximum per each dataset.
+- Percentage, which defines the % of dataset rows to be retrieved as a sample.
+- Min and max size definitions that are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than minimum or higher than maximum per each dataset.
 
 ### Global Shema Exclusion
 
