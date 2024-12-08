@@ -6,7 +6,7 @@ The Discovery job is a pipeline that connects a series of steps where some are e
 
 The Crawler scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 
-The Plugin Framework is an internal platform for running the plugins. It is a pipeline of plugins which are executed by the Discovery job after the Crawler completion. 
+The Plugin Framework is an internal platform for running the plugins. It is a pipeline of plugins that are executed by the Discovery job after the Crawler completion. 
 
 The pipeline is executed based on the combination of the product configuration and the project rules: 
 
