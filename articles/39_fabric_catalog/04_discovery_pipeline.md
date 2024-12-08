@@ -2,7 +2,7 @@
 
 ### Overview
 
-The Discovery job is a pipeline that connects a series of steps where some are executed sequentially and some - in parallel. It has 2 main parts: **Crawler** and **Plugin Framework**.
+The Discovery job is a pipeline that connects a series of steps where some are executed sequentially and some - in parallel. It has **2** main parts: **Crawler** and **Plugin Framework**.
 
 The Crawler scans the data source while identifying the existing entities and the relationships between them. The Crawler's output is the Catalog schema.
 
