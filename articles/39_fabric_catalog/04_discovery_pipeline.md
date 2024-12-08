@@ -45,7 +45,7 @@ The sample size is defined as follows:
 
 ### Global Shema Exclusion
 
-By default, all the data platform's entities are scanned except for those in the global schema exclude list. 
+By default, all the data platform's entities are scanned except for those that are in the global schema exclude list. 
 
 The global schema exclude list defines the schemas that should be excluded from a discovery on any data platform. Those are system schemas that are not relevant for the discovery. The syntax supports regular expressions. For example, "SYS.*" means all schemas with a name that starts with 'SYS'.
 
