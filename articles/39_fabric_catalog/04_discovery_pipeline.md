@@ -23,12 +23,12 @@ The plugin input parameters are:
 * ```class``` - plugin's Java class 
 * ```active``` - whether the plugin is included in the execution ('true') or not ('false')
 * ```threshold``` - the score above which the plugin result impacts the Catalog
-  * For example: the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. This rule has no impact on the Catalog.
-  * To enable the Catalog to show more results, update the threshold to a lower number lower. To show less results, update the threshold to a higher number.
+  * For example, the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. This rule has no impact on the Catalog.
+  * To enable the Catalog to show more results, update the threshold to a lower number. To show less results, update the threshold to a higher number.
   * Some plugins don't 
 * ```monitorDesc``` - the description displayed per each plugin in the Execution Progress area of the Catalog Monitor, under the number.
   * For example, "Classification PII Marker" shows the number of found PII Fields, thus this plugin's monitor description is "PII Fields".
-* ```inputParameters``` - is a key/value map of additional input parameters, which are different per each plugin.
+* ```inputParameters``` - is a key/value map of additional input parameters that are different per each plugin.
 
 The K2view Discovery solution includes a constantly growing list of built-in plugins.
 
