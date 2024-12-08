@@ -41,7 +41,9 @@ The data sample is retrieved from the data source during the Discovery job run. 
 The sample size is defined by:
 
 - Percentage, which defines the % of dataset rows to be retrieved as a sample.
-- Min and max size definitions that are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than minimum or higher than maximum per each dataset.
+- Min and max size definitions that are set in order to accommodate for very small and very large datasets.
+
+For example, the percentage is 10%, min is 100 and max is 500. So, if a table includes 200 rows, the sample size wwould be 100. If a table includes 2,000 rows, the sample size would be 200. If a table includes 100,000 rows, the sample size would be 500.
 
 ### Global Shema Exclusion
 
