@@ -57,9 +57,9 @@ From Fabric V8.2 onwards, the Discovery execution is based on rules that accommo
 
 For example, you can define ```Plugin X``` to be executed on ```Schema 1``` while it is not executed on all other schemas of the same data platform. You can also define a larger data sample on ```Schema 2``` while the rest of the schemas will use a default sample size.
 
-The product initial setup includes a **Baseline** rule which represents a baseline configuration, such as a sample size, list of all product plugins and their default settings.
+The product initial setup includes a **Baseline** rule that represents a baseline configuration, such as a sample size, list of all product plugins and their default settings.
 
-One can override a Baseline rule, for example, deactivate a plugin, which is active in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
+One can override a Baseline rule, for example, deactivate a plugin that is active in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
 
 The user can create multiple rules per a data platform. Each rule can define:
 
@@ -67,7 +67,7 @@ The user can create multiple rules per a data platform. Each rule can define:
 * Override rule - plugins and other general overrides to the default product settings.
 * A combination of a filter and override rules.
 
-The rules are executed based on the following hierarchy: when multiple rules apply to the same process element, the most specific rule takes precedence. For example, the following rules exist:
+The rules are executed based on the following hierarchy: When multiple rules apply to the same process element, the most specific rule takes precedence. For example, the following rules exist:
 
 * A **Baseline** rule defines that a ```Plugin X``` is inactive. 
 * A **Rule 1** is applied on CRM_DB and it sets ```Plugin X``` to active. 
