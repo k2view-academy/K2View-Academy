@@ -23,7 +23,7 @@ The plugin input parameters are:
 * ```class``` - plugin's Java class 
 * ```active``` - whether the plugin is included in the execution ('true') or not ('false')
 * ```threshold``` - the score above which the plugin result impacts the Catalog
-  * For example, the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. This rule has no impact on the Catalog.
+  * For example, the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. In such case, this rule has no impact on the Catalog.
   * To enable the Catalog to show more results, update the threshold to a lower number. To show less results, update the threshold to a higher number.
   * Some plugins don't 
 * ```monitorDesc``` - the description displayed per each plugin in the Execution Progress area of the Catalog Monitor, under the number.
