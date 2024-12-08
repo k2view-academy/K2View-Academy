@@ -40,7 +40,7 @@ The data sample is retrieved from the data source during the Discovery job run. 
 
 The sample size is defined as follows:
 
-- Percentage defines the % of the dataset rows to be retrieved as a sample.
+- Percentage defines the % of dataset rows to be retrieved as a sample.
 - The min and max size definitions are set in order to accommodate for very small and very large datasets. This means that the sample size can’t be lower than minimum or higher than maximum per each dataset.
 
 ### Global Shema Exclusion
