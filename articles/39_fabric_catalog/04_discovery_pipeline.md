@@ -11,7 +11,7 @@ The Plugin Framework is an internal platform for running the plugins. It is a pi
 The pipeline is executed based on a combination of the product configuration and the project rules:
 
 * The **product** configuration of the Discovery Pipeline is a baseline, which includes the list of product built-in plugins, their execution order and input parameters, data snapshot sample size and more. 
-* The **project** configuration is a list of user-created rules that can be defined for any of the project's interfaces using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. The rules can be created on a schema level or on a dataset level. Their purpose is to override the baseline settings. 
+* The **project** configuration is a list of user-created rules that can be defined for any of the project's interfaces using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings. The rules can be created on either a schema level or a dataset level, and their purpose is to override the baseline settings. 
 
 ### Plugins Pipeline
 
