@@ -25,7 +25,7 @@ The plugin input parameters are:
 * ```threshold``` - the score above which the plugin result impacts the Catalog
   * For example, the threshold is 0.4 and the plugin's rule receives a calculated score of 0.4 or below. In such case, this rule has no impact on the Catalog.
   * To enable the Catalog to show more results, update the threshold to a lower number. To show less results, update the threshold to a higher number.
-  * Some plugins don't don't have a threshold.
+  * Some plugins don't have a threshold.
 * ```monitorDesc``` - the description displayed per each plugin in the Execution Progress area of the Catalog Monitor, under the number.
   * For example, "Classification PII Marker" shows the number of found PII Fields, thus this plugin's monitor description is "PII Fields".
 * ```inputParameters``` - is a key/value map of additional input parameters that are different per each plugin.
