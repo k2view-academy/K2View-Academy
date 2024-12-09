@@ -12,6 +12,25 @@ This capability can be used to conduct tests, implement data transformations, or
 
 The masking of sensitive data can be done either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before they are saved into Fabric), or by using a Broadway flow to mask the LUI data before they are loaded to the target.
 
+The masking process consists of 2 main parts:
+
+- Data generation - generate a random masked value for the masked field.
+
+- Data consistency - verify that the same original value gets the same masked value. 
+
+  
+
+Fabric supports **2 methods** to keep the **data consistency**:
+
+- Data consistency using **table**.
+- Data consistency using **seed**.
+
+The method is set based on the **interface** parameter of the **Masking** actor: if the interface parameter is populated with **SEED**, the masking mechanism keeps the **Data consistency using seed** method.
+
+### Data Consistency Using Table
+
+The mapping between the hashed original value and the masked value is kept in a **caching table**. The caching table is defined under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+
 The following diagram describes the masking process of sensitive data using an **LUI sync**:
 
 ![masking flow](images/masking_flow.png)
@@ -23,6 +42,24 @@ The following diagram describes the masking process of sensitive data **before l
 ![masking flow](images/masking_flow_load_to_target.png)
 
 
+
+### Data Consistency Using Seed
+
+This new method had been added in  Fabric 8.2. and ensures a **referential integrity without saving the mapping between the hashed original value and the masked value in the caching table.** Therefore, it can give a **better performance** comparing the regular masking, since it does not need to access the DB. The mapping between the hashed original value and the masked value is not kept in the caching table but in the **Java Random** method using a **seed**. 
+
+If the Masking actor's **interface** input parameter is populated with **SEED**, the **Masking** Actor populates with **seed** with the [caching key](#caching-level-parameters) and sends it to the **data generation Actor**.
+
+This is available only if the data generation Actor has a seed input parameter and uses the Java Random method to get the masked value if the input seed is populated.  **All the [built-in data generation Actors](/articles/19_Broadway/actors/07a_data_generators_actors.md) support data generation using based on seed**. 
+
+**Notes**:
+
+- In both data consistency methods,  Fabric uses the SHA-512 or SHA-512/256 algorithms to hash the original value. Additionally, Fabric uses a dedicated master key to salt the original value before hashing it. The hashing is a one-way activity. The hashed value cannot be reversed back to the original value.
+
+  Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) for more information about Fabric hashing mechanism. 
+
+- The referential integrity is not kept when the masked value is taken from a dynamic list. If the masked value is taken from a list, the random function will bring the same index in the list if the seed is identical. It checks the index of the returned value and not the value itself.
+
+- The masked value is impacted not only by the seed, but also by the data generation parameters. For example -getting a random value between 0-100 returns a different result than getting a random value between 0-200 even if they get the same seed value
 
 ### Broadway Masking Actors
 
@@ -50,6 +87,10 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 ### Masking Actors Properties
 
+#### Interface
+
+- The interface to be used to cache the masked values. If the Interface is populated with **SEED**, the **Masking** Actor populates with **seed** with the [caching key](#caching-key--caching-level-parameters) and sends it to the **data generation Actor**.
+
 #### Target Value Uniqueness
 
 - The user can decide whether the masked value is unique per original value (hashed value) or if it can be used for more than one original value. For example, a masked SSN must be unique, but a masked Family Name can be the masked value of different original values. 
@@ -58,7 +99,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 - Each cached link of a hashed value to a masked value can have a TTL (Time To Live). This link will expire once the TTL has been reached, and the original value will be masked again. Note that the TTL is supported only when creating the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#list-of-fabric-related-system-keyspaces-or-schemas) in Cassandra or populating the **interface** parameter in the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) with **IN-MEMORY** value. 
 
-#### Caching Level Parameters
+#### Caching Key - Caching Level Parameters
 
 - The caching of the masked values can be saved on different levels, based on the user’s input. Each one of the following parameters can be enabled or disabled from being a part of the **Caching key**:
   - Instance ID
@@ -125,7 +166,7 @@ Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#form
 
 - Supports **cross instances consistency** based on the hashed values.
 - The original value is not used as an input for creating the random masked value, other than for formatting purposes.
-- **IN-MEMORY** processing. The MicroDB is created with the masked values.
+- The MicroDB is created with the masked values.
 - Uses the Fabric Masking mechanism (using **SHA-512/256** algorithm).
 - **Multiple masking options** enable maximal flexibility when masking the data.
 
