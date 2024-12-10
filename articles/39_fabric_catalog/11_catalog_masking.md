@@ -8,7 +8,7 @@ To apply the Catalog Masking mechanism on either a flow or a population, start w
 
 ### Catalog Masking Actors
 
-The following 3 actors have been introduced by the Catalog Masking mechanism: 
+The Catalog Masking mechanism introduces the following 3 actors: 
 
 * CatalogMaskingMapper
 * CatalogMaskingRecord
