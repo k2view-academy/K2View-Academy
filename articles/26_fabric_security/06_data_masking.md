@@ -89,7 +89,7 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 #### Interface
 
-- The interface to be used to cache the masked values. If the Interface is populated with **SEED**, the **Masking** Actor populates with **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
+- The interface to be used to cache the masked values. If the Interface is populated with **SEED**, the **Masking** Actor populates the **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
 
 #### Target Value Uniqueness
 
