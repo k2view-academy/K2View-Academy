@@ -75,9 +75,9 @@ The rules are executed based on the following hierarchy: When multiple rules app
 
 Depending which interface and/or schema the Discovery is executed on, the ```Plugin X``` settings are taken from the most specific rule.
 
-All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder, the **pluginsOverride.discovery** file. It is created when the overrides are performed using the [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings.
+All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder, the **pluginsOverride.discovery** file. It is created when the overrides are performed using the [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings tab.
 
-Click [here](13_discovery_pipeline_settings.md) to learn about baseline configuration as well as override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
+Click [here](13_discovery_pipeline_settings.md) to learn about baseline configuration as well as override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings tab. 
 
 
 
