@@ -61,7 +61,7 @@ The product initial setup includes a **Baseline** rule that represents a baselin
 
 One can override a Baseline rule, for example, deactivate an active plugin in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
 
-The user can create multiple rules per a data platform. Each rule can define:
+The user can create multiple rules per data platform. Each rule can define:
 
 * Crawler filter - schemas and/or datasets to be included or excluded from the Discovery job.
 * Override rule - plugins and other general overrides to the default product settings.
@@ -75,9 +75,9 @@ The rules are executed based on the following hierarchy: When multiple rules app
 
 Depending which interface and/or schema the Discovery is executed on, the ```Plugin X``` settings are taken from the most specific rule.
 
-All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder,the **pluginsOverride.discovery** file. It is created when the overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings.
+All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder, the **pluginsOverride.discovery** file. It is created when the overrides are performed using a [Discovery Pipeline screen](13_discovery_pipeline_settings.md) in the Catalog Settings.
 
-Click [here](13_discovery_pipeline_settings.md) to learn about the baseline configuration as well as the override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
+Click [here](13_discovery_pipeline_settings.md) to learn about baseline configuration as well as override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings. 
 
 
 
