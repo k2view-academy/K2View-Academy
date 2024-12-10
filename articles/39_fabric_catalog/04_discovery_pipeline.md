@@ -67,9 +67,9 @@ The user can create multiple rules per data platform. Each rule can define:
 * Override rule - plugins and other general overrides to the default product settings.
 * A combination of a filter and override rules.
 
-The rules are executed based on the following hierarchy: When multiple rules apply to the same process element, the most specific rule takes precedence. For example, the following rules exist:
+The rules are executed based on the following hierarchy: When multiple rules apply to the same process element, the most specific rule takes precedence. The following is an illustration of the rules hierarchy:
 
-* A **Baseline** rule defines that a ```Plugin X``` is inactive. 
+* A **Baseline** rule defines ```Plugin X``` as inactive. 
 * A **Rule 1** is applied on CRM_DB and it sets ```Plugin X``` to active. 
 * A **Rule 2** is applied on CRM_DB and public2 schema, and it sets ```Plugin X``` to active and a threshold = 0.8.
 
