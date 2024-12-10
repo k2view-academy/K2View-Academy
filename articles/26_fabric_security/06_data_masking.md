@@ -25,11 +25,11 @@ Fabric supports **2 methods** to keep the **data consistency**:
 - Data consistency using **table**.
 - Data consistency using **seed**.
 
-The method is set based on the **interface** parameter of the **Masking** actor: if the interface parameter is populated with **SEED**, the masking mechanism keeps the **Data consistency using seed** method.
+The data consistency method is set based on the **interface** parameter of the **Masking** Actor: if the interface parameter is populated with **SEED**, the masking mechanism keeps the **Data consistency using seed** method.
 
 ### Data Consistency Using Table
 
-The mapping between the hashed original value and the masked value is kept in a **caching table**. The caching table is defined under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+The mapping between the hashed original and masked values is kept in a caching table, which is defined under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
 The following diagram describes the masking process of sensitive data using an **LUI sync**:
 
