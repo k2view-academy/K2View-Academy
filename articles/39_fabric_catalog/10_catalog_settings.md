@@ -2,12 +2,12 @@
 
 The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes product pre-defined settings which can be updated to accommodate the Project's needs. The updates are saved in the project. 
 
-The Settings includes the following sections, described in this and other articles:
+The Settings tab includes the following sections, described in this and other articles:
 
-* [Classifier Regex Tab](10_catalog_settings.md#classifier-regex-tab)
-* [PII & Masking Tab](10_catalog_settings.md#pii--masking-tab)
-* [Sequences Tab](10_catalog_settings.md#sequences-tab), available from V8.1
-* [Discovery Pipeline Tab](13_discovery_pipeline_settings.md), available from V8.2
+* [Classifier Regex](10_catalog_settings.md#classifier-regex-tab)
+* [PII & Masking](10_catalog_settings.md#pii--masking-tab)
+* [Sequences](10_catalog_settings.md#sequences-tab), available from V8.1
+* [Discovery Pipeline](13_discovery_pipeline_settings.md), available from V8.2
 
 ## Classifier Regex Tab
 
@@ -50,7 +50,7 @@ In this tab, each classification can have only one definition (row). Note that y
 
 #### Masking Setup Guidelines
 
-Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistent and Unique indicators as well as other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
 Upon invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated in a field with a given Classification. For instance, when a field is classified as a Social Security Number, you should set up the Generator for masking it. The Generator can be either the built-in RandomSSN.actor, or a custom actor or flow.
 
