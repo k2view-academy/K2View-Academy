@@ -59,7 +59,7 @@ For example, you can define ```Plugin X``` to be executed on ```Schema 1``` whil
 
 The product initial setup includes a **Baseline** rule that represents a baseline configuration, such as a sample size, list of all product plugins and their default settings.
 
-One can override a Baseline rule, for example, deactivate a plugin that is active in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
+One can override a Baseline rule, for example, deactivate an active plugin in the product settings. A crawler filter cannot be set on a Baseline rule since it is applied for all data platforms. 
 
 The user can create multiple rules per a data platform. Each rule can define:
 
