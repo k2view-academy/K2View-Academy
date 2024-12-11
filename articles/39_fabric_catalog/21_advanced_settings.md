@@ -8,8 +8,8 @@
 
   <img src="images/discovery_folder.png"  />
 
-  * The **MTable** subfolder holds the MTables used by the Catalog's various processes. In addition, when [Build Artifacts](09_build_artifacts.md) is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
-  * The **pluginsOverride.discovery** is a configuration file that defines the overrides in the crawler or plugins configuration (starting V8.2). Before V8.2 the project-level overrides file was called **plugins.discovery**. 
+  * The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when [Build Artifacts](09_build_artifacts.md) is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
+  * The **pluginsOverride.discovery** is a configuration file that defines the overrides in the crawler or plugins configuration (starting from V8.2). Before V8.2, the project-level overrides file was called **plugins.discovery**. 
 
 * *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands **Run Discovery Job** and **Open in Catalog** in the Web Studio. 
 
