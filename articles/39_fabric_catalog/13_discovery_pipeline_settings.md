@@ -9,7 +9,7 @@ The **Baseline** rule includes a list of product built-in plugins with their inp
 The Discovery Pipeline screen enables performing the following actions, described further in this article:
 
 * Overriding the product's default [Baseline rule](13_discovery_pipeline_settings.md#baseline-rule).
-* Creating [project rules](13_discovery_pipeline_settings.md#project -rule) to set a crawler filter and/or override the plugins settings.
+* Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the plugins settings.
 * [Adding new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) to the pipeline.
 
 
