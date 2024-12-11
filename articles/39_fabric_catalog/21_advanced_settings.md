@@ -25,7 +25,7 @@ The **properties-info.json** is a configuration file used by the Catalog Applica
 * ```"deletable": true``` - the property can be deleted via the [Edit Catalog capabililty.](07_manual_overrides.md)
 * ```"searchable": true``` - the property is searchable using the [Advanced Search](08_search_catalog.md#advanced-search) screen.
 * ```"filterable": true``` - the property is filterable using the [Catalog Filter](08a_filter_catalog.md) screen.
-* ```"values":[]``` defines a list of property's valid values. For some properties, this list is combined with programmatically retrieved values (e.g. classification).
+* ```"values":[]``` defines a list of a property's valid values. For some properties, this list is combined with programmatically retrieved values (e.g., classification).
 * ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
 * ```"hidden": true``` - the property is hidden from the Catalog's Properties tab.
 
@@ -33,7 +33,7 @@ The properties-info.json file is located in ```fabric/staticWeb/catalog``` folde
 
 In order to perform the project-level overrides in the **properties-info.json** file:
 
-* Create a **catalog** folder under the **Web** folder of the **Web Services** LU and copy the file into it. 
+* Create a **catalog** folder under the **Web** folder of the **Web Services** LU, and copy the file into it. 
 
   <web>
 
