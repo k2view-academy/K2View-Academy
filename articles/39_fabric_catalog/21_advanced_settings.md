@@ -20,7 +20,7 @@
 
 ### Catalog Application Configuration
 
-The **properties-info.json** is a configuration file used by the Catalog Application to determine the view and behavior of various Catalog UI elements. The following settings can be performed:
+The **properties-info.json** is a configuration file used by the Catalog Application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
 * ```"editable": true``` - the property is editable via the [Edit Catalog capabililty](07_manual_overrides.md).
 * ```"deletable": true``` - the property can be deleted via the [Edit Catalog capabililty.](07_manual_overrides.md)
 * ```"searchable": true``` - the property is searchable using the [Advanced Search](08_search_catalog.md#advanced-search) screen.
