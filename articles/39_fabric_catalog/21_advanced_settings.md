@@ -53,7 +53,7 @@ NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB parameter in the [data_discovery] section o
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
 * To update the heap size in an existing space, stop Neo4j and the DATA_DISCOVERY_JOB, update this setting in config.ini and run the Discovery Job.
 
-ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default it is set to true. If the Fabric space doesn’t include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
+ENABLE_DATA_DISCOVERY is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if neo4j is part of the Fabric space). By default, it is set to true. If the Fabric space does not include *neo4j*, ENABLE_DATA_DISCOVERY should be added to this section and set to false.
 
 
 
