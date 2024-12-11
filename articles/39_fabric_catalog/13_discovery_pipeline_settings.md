@@ -21,13 +21,13 @@ This article describes the screen capabilities and explains how they can impact 
 
 The **Baseline** rule is a default configuration applied when running the Discovery job on any data platform. It includes a sample size definition, global schema exclude and a list of product plugins with their settings.
 
-The Baseline rule is always enabled. It can be edited rule by clicking the **Override** checkbox. The following changes can be applied to the Baseline rule:
+The Baseline rule is always enabled. It can be edited rule by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
-* Update the crawler related settings, e.g. a sample size. 
+* Update the Crawler-related settings, e.g., a sample size. 
 * Update the parameters of the product built-in plugins. 
 * [Add a new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) - described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from active to inactive in the Baseline, this plugin becomes inactive in all other rules. The rule though can override the Baseline. 
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the Baseline, it becomes 'inactive' in all other rules. The rule though can override the Baseline. 
 
 #### Revert Baseline Overrides
 
