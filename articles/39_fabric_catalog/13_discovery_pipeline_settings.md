@@ -83,12 +83,12 @@ When the filter is set to **Exclude Others**:
 * This rule can be combined with *Override*. It allows to define the Crawler include list and both override the Baseline rules at the same time.
 
 
-#### No Crawler Filter & Override 
+#### No Crawler Filter and Override 
 
-When the filter is empty and the Override checkbox is checked:
+When the filter is empty and the *Override* checkbox is checked:
 
 * The Crawler is executed on the whole Data Platform.
-* The override rules are only applied on the specified Schema(s) and Datasets(s).
+* The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
 
 ### Adding New Plugin
 
