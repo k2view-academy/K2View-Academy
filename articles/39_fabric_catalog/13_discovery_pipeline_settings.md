@@ -65,7 +65,7 @@ The rules follow the following hierarchy:
 * Populating a schema and a dataset is optional. 
 
 
-* When multiple schemas or datasets are populated, they should be coma separated.
+* When multiple schemas or datasets are populated, they should be comma-separated.
 * A rule should either include a Crawler filter or the Override checkbox or both. Possible filter settings are described below.
 
 #### Crawler Filter = Exclude This 
