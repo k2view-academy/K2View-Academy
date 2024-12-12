@@ -72,8 +72,8 @@ The rules follow the following hierarchy:
 
 When the filter is set to **Exclude This**:
 
-* The Crawler excludes the specified Schema(s) and Dataset(s). Thus at least a schema should be populated.
-* This rule cannot be combined with Override, because the specified Schema(s) and Dataset(s) are excluded by the Crawler.
+* The Crawler excludes the specified *Schema(s)* and *Dataset(s)*. Thus, at least a schema should be populated.
+* This rule cannot be combined with *Override*, because the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
 
 #### Crawler Filter = Exclude Others
 
