@@ -59,7 +59,7 @@ The rules follow the following hierarchy:
 * Click **Add Rule +** to create a new rule. 
 
 
-* The mandatory rule's parameters are a Rule Name (which must be unique) and a Data Platform. 
+* The mandatory rule's parameters are *Rule Name* (which must be unique) and *Data Platform*. 
 
 
 * Populating a schema and a dataset is optional. 
