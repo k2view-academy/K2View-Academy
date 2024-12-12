@@ -44,7 +44,7 @@ The Baseline rule overrides can be reverted in one of the following ways:
 
 The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
 
-A rule should be attached to a data platform, with several optional parameters (schema, dataset, crawler filter and override indicator) that become mandatory, based on conditions; this is described further in this article. 
+A **rule** should be attached to a data platform, with several optional parameters (schema, dataset, crawler filter and override indicator) that become mandatory, based on conditions; this is described further in this article. 
 
 The rules follow the following hierarchy: 
 
