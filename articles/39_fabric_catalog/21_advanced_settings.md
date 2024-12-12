@@ -16,6 +16,37 @@
   * By default, *Show Catalog Commands* is enabled. 
   * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
 
+### Setup of Centralized Catalog for Multiple Users
+
+The following steps should be performed in order to configure a centralized Catalog for multiple users:
+
+* Create a "Central Neo4j" space that will serve as a centralized Catalog's GraphDB.
+
+  * This space should be created using a dedicated space profile.
+  * The purpose of this space is solely to include the central Neo4j.
+
+* Create the "child" spaces using the regular space profile. Prior to creating them, update the Advanced Settings of your profile, by setting the following in the config.ini:
+
+  ~~~
+  [data_discovery]
+  GRAPH_DB_URL=neo4j://neo4j-service.<space_name-tenant_name>.svc.cluster.local:7687
+  ~~~
+
+  * The ```<space_name-tenant_name>``` should be replaced by the "Central Neo4j" space name.
+
+* If it is required that one of the "child" spaces will work in a read-only mode in the Catalog, the following additional steps should be performed:
+
+  * Create a read-only neo4j user in the "Central Neo4j" space - TBD how to do it.
+  * Prior to creating a "child" space for a read-only user, add the user's credentials via the Advanced Settings:
+
+  ~~~
+  [data_discovery]
+  GRAPH_DB_URL=neo4j://neo4j-service.<space_name-tenant_name>.svc.cluster.local:7687
+
+  GRAPH_DB_USER=<read-only user name>
+  GRAPH_DB_PASSWORD=<read-only user password>
+  ~~~
+
 </web>
 
 ### Catalog Application Configuration

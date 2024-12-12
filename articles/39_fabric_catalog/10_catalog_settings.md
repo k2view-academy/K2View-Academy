@@ -39,18 +39,25 @@ The **PII & Masking** tab allows to view and update the PII and Catalog-based ma
 
 <img src="images/settings_pii_mask.png" />
 
-Each **Classification** in this tab is unique, and it includes 2 attributes:
+Each **Classification** in this tab is unique, and it includes the following attributes:
 
-* **PII** - indicates whether the Classification is considered Personally Identifiable Information. 
-* **Generator** - shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) for generating masking values. The generator runs in the case of either:
+* **PII** indicates whether the Classification is considered Personally Identifiable Information. 
+* **Generator** shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) for generating masking values. The generator runs in the case of either:
   - Data masking
   - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation
+* **Consistency Mode** sets the definition of consistency, uniqueness and see for a value that will be generator by the selected Generator. The values of the Consistency Mode are:
+  * **Random** (not consistent and not unique)
+  * **Consistent using table** (consistent and not unique)
+  * **Consistent using seed** (consistent with seed and not unique)
+  * **Consistent and unique**
+
+Note that **Consistent using seed** value is only available when the selected Generator supports seed.
 
 In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab since both classifications & sequences are saved in the same MTable.
 
 #### Masking Setup Guidelines
 
-Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a random value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+Click the <img src="images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
 Upon invocation of a Catalog Masking actor - e.g., during a table population - the generated value is populated in a field with a given Classification. For instance, when a field is classified as a Social Security Number, you should set up the Generator for masking it. The Generator can be either the built-in RandomSSN.actor, or a custom actor or flow.
 
@@ -96,7 +103,9 @@ The **Sequences** tab allows to set up the sequences that can be used in a proje
 
 This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
 
-Click the **Add Record +** button to create a sequence, and populate a **Sequence Name**, **Generator** and its parameters (PII, Verify Uniqueness indicators and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. The Generator can be any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+Click the **Add Record +** button to create a sequence, and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
+
+The Generator is pre-populated with the Sequence.actor though it can be updated to any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
 
 <img src="images/settings_seq.png" />
 
