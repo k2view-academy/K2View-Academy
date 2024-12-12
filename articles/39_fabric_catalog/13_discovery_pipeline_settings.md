@@ -79,8 +79,8 @@ When the filter is set to **Exclude This**:
 
 When the filter is set to **Exclude Others**:
 
-* The Crawler excludes everything except for the specified Schema(s) and optionally Dataset(s). Thus at least a schema should be populated.
-* This rule can be combined with Override. It allows to define the Crawler include list and both override the Baseline rules at the same time.
+* The Crawler excludes everything except for the specified *Schema(s)* and optionally *Dataset(s)*. Thus, at least a schema should be populated.
+* This rule can be combined with *Override*. It allows to define the Crawler include list and both override the Baseline rules at the same time.
 
 
 #### No Crawler Filter & Override 
