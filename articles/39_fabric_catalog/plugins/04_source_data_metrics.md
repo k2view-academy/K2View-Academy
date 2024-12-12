@@ -2,9 +2,9 @@
 
 ### Overview
 
-The following article describes the source data metrics plugins in the Catalog solution, calculated based on the data snapshot:
+This article describes the source data metrics plugins in the Catalog solution, calculated based on the data snapshot:
 
-* [NULL Percentage](04_source_data_metrics.md#null-percentage) - to calculate the percentage of NULL values per column. Starting V8.2 this plugin has been combined with the Data Quality Metrics plugin.
+* [NULL Percentage](04_source_data_metrics.md#null-percentage) - to calculate the percentage of NULL values per column. From Fabric V8.2 onwards, this plugin has been combined with the Data Quality Metrics plugin.
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) - to calculate various data quality metrics. 
 
 ### NULL Percentage
