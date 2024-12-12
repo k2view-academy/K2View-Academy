@@ -92,7 +92,7 @@ When the filter is empty and the *Override* checkbox is checked:
 
 ### Adding New Plugin
 
-When a new plugin is created in a project, it should be added to the the Baseline rule in order to be a part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to be a part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
 
 For example, a new plugin is created and it is only applicable when running discovery on CRM_DB. Then it should be added to the Baseline as inactive. In addition, a rule for CRM_DB should be created, setting this plugin to active.
 
