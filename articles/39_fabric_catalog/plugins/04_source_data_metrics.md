@@ -27,7 +27,7 @@ This plugin scans the data of the data sample in order to calculate the followin
   * This metric helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
   * In addition,  it can help validating whether the data values are within an acceptable or predefined range. For example, in a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
   * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
-* **Range Of Values** - the minimum and maximum in a numeric column, in the data sample (e.g. 1 - 100).
+* **Range Of Values** - the minimum and maximum in a numeric column, in the data sample (e.g., 1 - 100).
   * Establishing the range of values present in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entry (e.g., a negative age value).
   * Understanding the range helps ensure consistency across similar datasets. The range can inform business decisions by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, the range provides a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
