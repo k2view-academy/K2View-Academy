@@ -44,7 +44,7 @@ The Baseline rule overrides can be reverted in one of the following ways:
 
 The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
 
-A **rule** should be attached to a data platform, with several optional parameters (schema, dataset, crawler filter and override indicator) that become mandatory, based on conditions; this is described further in this article. 
+A **rule** should be attached to a data platform, along with several optional parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
 
 The rules follow the following hierarchy: 
 
@@ -66,14 +66,14 @@ The rules follow the following hierarchy:
 
 
 * When multiple schemas or datasets are populated, they should be comma-separated.
-* A rule should include either a Crawler filter or the Override checkbox or both. Possible filter settings are described below.
+* A rule should include either a Crawler filter or a checked Override checkbox, or both. Possible filter settings are described below.
 
 #### Crawler Filter = Exclude This 
 
 When the filter is set to **Exclude This**:
 
-* The Crawler excludes the specified *Schema(s)* and *Dataset(s)*. Thus, at least a schema should be populated.
-* This rule cannot be combined with *Override*, because the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
+* The Crawler excludes the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
+* This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
 
 #### Crawler Filter = Exclude Others
 
