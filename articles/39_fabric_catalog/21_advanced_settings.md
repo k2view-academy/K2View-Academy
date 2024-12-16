@@ -10,8 +10,8 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 
 * The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when [Build Artifacts](09_build_artifacts.md) is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
   * Starting from V8.1, the Catalog artifact can be split. As a result, multiple files will be created instead of a single one. Click [here](09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
-* The **pluginsOverride.discovery** is a configuration file that defines the overrides in the crawler or plugins configuration (starting from V8.2). Click [here](13_discovery_pipeline_settings.md#overview) for more information about it.
-  * Note that before V8.2, the project-level overrides file was called **plugins.discovery**. Refer to the [Fabric Upgrade Procedure to V8.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V8.2/Fabric_Upgrade_Procedure_To_V8.2.pdf.html) for more details.
+* The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](13_discovery_pipeline_settings.md#overview) for more information about it.
+  * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. Refer to the [Fabric Upgrade Procedure to V8.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V8.2/Fabric_Upgrade_Procedure_To_V8.2.pdf.html) for more details.
 
 *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands **Run Discovery Job** and **Open in Catalog** in the Web Studio. 
 
