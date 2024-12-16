@@ -90,11 +90,11 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 * The Crawler is executed on the whole Data Platform.
 * The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
 
-### Adding New Plugin
+### Adding New Plugins
 
-When a new plugin is created in a project, it should be added to the Baseline rule in order to be a part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
 
-For example, a new plugin is created and it is only applicable when running discovery on the CRM_DB. Then it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, setting this plugin to 'active'.
+For example, when a newly created plugin is applicable only for running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin should be set to 'active'.
 
 The steps to add a new plugin to the pipeline are:
 
