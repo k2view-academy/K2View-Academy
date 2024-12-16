@@ -27,7 +27,7 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 * Update the parameters of the product built-in plugins. 
 * [Add a new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) - described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the Baseline, it becomes 'inactive' in all other rules. The rule though can override the Baseline. 
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the Baseline, it becomes 'inactive' in all project-level rules. The rule, however, can override the Baseline.
 
 #### Revert Baseline Overrides
 
