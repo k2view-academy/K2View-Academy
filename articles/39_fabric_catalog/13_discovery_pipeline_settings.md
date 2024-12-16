@@ -100,7 +100,7 @@ The steps to add a new plugin to the pipeline are:
 
 1. Click **Override** of the Baseline rule.
 2. Click the ![](images/dots.png) icon to open the Plugins context menu and click **Add Plugin**.
-3. Alternatively, you can select a plugin in the list and click **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
+3. Alternatively, you can select an existing plugin from the list and click **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
 ![](images/discovery_pipeline_new_plugin.png)
 
