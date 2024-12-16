@@ -29,7 +29,7 @@ The **properties-info.json** is a configuration file used by the Catalog applica
 * ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
 * ```"hidden": true``` - the property is hidden from the Catalog's Properties tab.
 
-The properties-info.json file is located in ```fabric/staticWeb/catalog``` folder.
+The properties-info.json file is located in the ```fabric/staticWeb/catalog``` folder.
 
 In order to perform the project-level overrides in the **properties-info.json** file:
 
