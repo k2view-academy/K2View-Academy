@@ -31,7 +31,7 @@ This plugin scans the data of the data sample in order to calculate the followin
   * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
 * **Range Of Values** - the minimum and maximum values in a numeric column, in the data sample (e.g., 1 - 100).
   * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
-  * Understanding the range of values helps ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
+  * Understanding the range of values helps to ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, the range provides a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
 * **Null Percentage** - the percentage of null values per column. 
   * This percentage is calculated on each column of non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value is above the plugin's threshold. 
