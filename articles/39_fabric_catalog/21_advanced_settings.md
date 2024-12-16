@@ -53,7 +53,7 @@ The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discove
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
 * To update the heap size in an existing space, stop the Neo4j and the DATA_DISCOVERY_JOB, update this setting in the config.ini file and run the Discovery job.
 
-```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of config.ini specifies the maximum amount of Fabric memory allocated for the Data Snapshot process. It helps to balance the Fabric memory when running the Discovery on a data platform with multiple schemas or when multiple Discovery jobs are running in parallel on the same Neo4j.
+The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of config.ini specifies the maximum amount of Fabric memory allocated for the Data Snapshot process. It helps to balance the Fabric memory when running the Discovery on a data platform with multiple schemas or when multiple Discovery jobs are running in parallel on the same Neo4j.
 
 * When the in-memory data reaches this predefined limit, the Data Snapshot's data is committed to the SQLite file. 
 
