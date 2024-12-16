@@ -47,7 +47,7 @@ In order to perform the project-level overrides in the **properties-info.json** 
 
 ### General
 
-```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discovery]``` section of config.ini specifies the maximum heap size for the Neo4j server. By default, it is set to 2048 Mb. 
+The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum heap size for the Neo4j server. By default, it is set to 2048 Mb. 
 
 * The Neo4j heap size is set when starting Neo4j in a space. 
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
