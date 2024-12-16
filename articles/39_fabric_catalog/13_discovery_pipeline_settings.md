@@ -9,7 +9,7 @@ The **Baseline** rule includes a list of product built-in plugins with their inp
 The Discovery Pipeline screen enables performing the following actions, described further in this article:
 
 * Overriding the product's default [Baseline rule](13_discovery_pipeline_settings.md#baseline-rule).
-* Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the plugins settings.
+* Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the plugins' settings.
 * [Adding new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) to the pipeline.
 
 
@@ -19,9 +19,9 @@ This article describes the screen capabilities and explains how they can impact 
 
 ### Baseline Rule
 
-The **Baseline** rule is a default configuration applied when running the Discovery job on any data platform. It includes a sample size definition, global schema exclude and a list of product plugins with their settings.
+The **Baseline** rule is a default configuration applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
 
-The Baseline rule is always enabled. It can be edited rule by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
+The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
 * Update the Crawler-related settings, e.g., a sample size. 
 * Update the parameters of the product built-in plugins. 
