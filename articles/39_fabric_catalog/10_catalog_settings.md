@@ -85,7 +85,7 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 The purpose of the Advanced Masking Settings pop-up window is to allow setting up of additional masking parameters. This window includes the following:
 
-* **Masking indicators** determine the masking behavior during a flow run. They can be set either per population via the Catalog Masking Actor's inputs or per Classification via the Settings screen of the Catalog application. The Catalog definition of masking indicators overrides the setting of these indicators on the Catalog Masking Actor - for all the fields with the same Classification.
+* **Masking indicators** determine the masking behavior during a flow run. They can be set either per population via the Catalog Masking Actor's inputs or per Classification via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the setting of these indicators on the Catalog Masking Actor - for all the fields with the same Classification.
 * **Formatter Name and Parameters** are set in order to enable the [format-preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).
 * **Pre-Execution Logic** is an actor or a flow to be executed by the Catalog Masking Actor. 
 
@@ -99,21 +99,29 @@ Upon clicking the **Save** button in the **PII & Masking** tab, the **pii_profil
 
 ## Sequences Tab
 
-The **Sequences** tab allows to set up the sequences that can be used in a project as part of the masking flow (note that usage of the sequences will be introduced in the next Fabric version). 
+The **Sequences** tab allows to set up the sequences that can be generated in a project as part of a population of any other flow. 
 
 This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
 
 Click the **Add Record +** button to create a sequence, and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
 
-The Generator is pre-populated with the Sequence.actor though it can be updated to any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+The **Generator** is pre-populated with the Sequence.actor though it can be updated to any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
+
+The **sequenceId** parameter of the Sequence.actor is populated with the same value as the **Sequence Name**, when it is typed for the first time. Later, each one can be changed to a different value, if needed.
 
 <img src="images/settings_seq.png" />
 
 Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
 
+Note that after a list of sequences is set in the **Sequences** tab, a Catalog field should be marked as a sequence manually, by adding a **sequenceName** property, as follows:
+
+<img src="images/add_sequence_prop.png" />
+
 #### Advanced Sequence Settings
 
 The purpose of the Advanced Sequence Settings pop-up window is to allow the setting up of additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
+
+<img src="images/settings_seq_advanced.png" />
 
 Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
