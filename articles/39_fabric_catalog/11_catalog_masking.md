@@ -24,13 +24,13 @@ The **CatalogMaskingRecord** Actor receives a record, splits it internally into 
 
 The **CatalogMaskingField** Actor’s purpose is to mask a single field’s value, based on the Catalog’s Classification and the masking rules definition. 
 * The actor starts by checking whether the field should be masked. The check is based on the field's PII and Masking columns in the Catalog artifact (catalog_field_info MTable). [Click for more information about the Catalog artifact](09_build_artifacts.md).
-  * If both the PII is true and the Masking property is not OFF, the field's value should be masked. (More details about the Masking property are explained further in this article).
-* Then, the actor retrieves the field's Classification from the **catalog_field_info** MTable and searches for the generator in the **catalog_classification_generators** MTable. The generator can be either one of the existing built-in actors (RandomSSN, RandomZipCode, etc.), a custom actor or a flow.
+  * If both the PII is true and the Masking property does not equal to OFF, the field's value should be masked. (More details about the Masking property are explained further in this article).
+* Then, the actor retrieves the field's Classification from the **catalog_field_info** MTable and searches for the Generator in the **catalog_classification_generators** MTable. The Generator can be either one of the existing built-in actors (RandomSSN, RandomZipCode, etc.), a custom actor or a flow.
   * Click for more information about the Catalog's [PII & Masking Tab](10_catalog_settings.md#pii--masking-tab).
 * Finally, the actor internally invokes the **Masking** Actor, setting its parameters as follows:
   * The **maskingId** is set to the Classification.
   * The **flowName** is set to the Generator defined in the **catalog_classification_generators** MTable for this Classification.
-  * If the given Generator has parameters, they are also taken from the above MTable.
+  * If the given Generator includes parameters, they are also taken from the above MTable.
 
 ### The Masking Property
 
