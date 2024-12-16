@@ -60,7 +60,7 @@ The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discove
 
 * By default, the parameter is set to 4096 Mb. When working with very large data sources, it is recommended to increase this setting – assuming the system has sufficient resources for such increase.
 
-```ENABLE_DATA_DISCOVERY``` is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if Neo4j is part of the Fabric space). By default, it is set to true. If the Fabric space does not include Neo4j, ```ENABLE_DATA_DISCOVERY``` should be added to this section and set to false.
+```ENABLE_DATA_DISCOVERY``` is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if Neo4j is part of the Fabric space). By default, it is set to true. If the Fabric space does not include Neo4j, the ```ENABLE_DATA_DISCOVERY``` parameter should be added to this section and set to false.
 
 
 
