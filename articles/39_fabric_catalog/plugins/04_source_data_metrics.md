@@ -24,7 +24,7 @@ This plugin exists until the Fabric V8.1. In V8.2 it has been combined with the 
 This plugin scans the data of the data sample in order to calculate the following 3 parameters:
 
 * **Dataset Size** - the actual number of values in a column in the data sample.
-  * The data sample is retrieved per the Catalog settings. For example, the default is 10% of the table size with minimum 100 and maximum 500. However, the actual data sample can vary, based on the table size.
+  * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample can vary, based on the table size.
 * **Distinct Values** - the number of distinct values per column in the data sample. 
   * This metric helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
   * In addition,  it can help validating whether the data values are within an acceptable or predefined range. For example, in a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
