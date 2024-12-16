@@ -13,7 +13,7 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 * The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](13_discovery_pipeline_settings.md#overview) for more information about it.
   * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. Refer to the [Fabric Upgrade Procedure to V8.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V8.2/Fabric_Upgrade_Procedure_To_V8.2.pdf.html) for more details.
 
-*Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands **Run Discovery Job** and **Open in Catalog** in the Web Studio. 
+*Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands - **Run Discovery Job** and **Open in Catalog** - in the Web Studio. 
 
 * By default, *Show Catalog Commands* is enabled. 
 * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
