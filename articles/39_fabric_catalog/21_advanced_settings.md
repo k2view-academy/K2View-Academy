@@ -20,7 +20,7 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 
 ### Catalog Application Configuration
 
-The **properties-info.json** is a configuration file used by the Catalog Application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
+The **properties-info.json** is a configuration file used by the Catalog application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
 * ```"editable": true``` - the property is editable via the [Edit Catalog capabililty](07_manual_overrides.md).
 * ```"deletable": true``` - the property can be deleted via the [Edit Catalog capabililty.](07_manual_overrides.md)
 * ```"searchable": true``` - the property is searchable using the [Advanced Search](08_search_catalog.md#advanced-search) screen.
@@ -51,7 +51,7 @@ The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discove
 
 * The Neo4j heap size is set when starting Neo4j in a space. 
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
-* To update the heap size in an existing space, stop Neo4j and the DATA_DISCOVERY_JOB, update this setting in config.ini and run the Discovery Job.
+* To update the heap size in an existing space, stop Neo4j and the DATA_DISCOVERY_JOB, update this setting in the config.ini file and run the Discovery Job.
 
 ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of config.ini specifies the maximum amount of Fabric memory allocated for the Data Snapshot process. It helps to balance the Fabric memory when running the Discovery on a data platform with multiple schemas or when multiple Discovery jobs are running in parallel on the same Neo4j.
 
