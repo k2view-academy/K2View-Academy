@@ -13,7 +13,7 @@ The plugins are:
 
 The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated on each column of non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained [here](/articles/39_fabric_catalog/04_discovery_pipeline.md#data-sample-size).
 
-As a result, the **Null Percentage** property is added to the field's properties when the calculated value is above the threshold. 
+As a result, when the calculated value is above the threshold, the **Null Percentage** property is added to the field's properties. 
 
 For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
 
