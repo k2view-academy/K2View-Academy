@@ -47,18 +47,18 @@ In order to perform the project-level overrides in the **properties-info.json** 
 
 ### General
 
-The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum heap size for the Neo4j server. By default, it is set to 2048 Mb. 
+The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum heap size for the Neo4j server. By default, it is set to 2048 MB. 
 
 * The Neo4j heap size is set when starting Neo4j in a space. 
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
 * To update the heap size in an existing space, stop the Neo4j and the DATA_DISCOVERY_JOB, update this setting in the config.ini file and run the Discovery job.
 
-The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of config.ini specifies the maximum amount of Fabric memory allocated for the Data Snapshot process. It helps to balance the Fabric memory when running the Discovery on a data platform with multiple schemas or when multiple Discovery jobs are running in parallel on the same Neo4j.
+The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum amount of Fabric memory allocated for the Data Snapshot process. This parameter helps to balance the Fabric memory when running the Discovery on a data platform with multiple schemas or when multiple Discovery jobs are running in parallel on the same Neo4j.
 
 * When the in-memory data reaches this predefined limit, the Data Snapshot's data is committed to the SQLite file. 
 
 
-* By default, the parameter is set to 4096 Mb. When working with very large data sources, it is recommended to increase this setting – assuming the system has sufficient resources for such increase.
+* By default, the parameter is set to 4096 MB. When working with very large data sources, it is recommended to increase this setting – assuming the system has sufficient resources for such increase.
 
 The ```ENABLE_DATA_DISCOVERY``` is a hidden configuration parameter that defines whether the Discovery should be enabled in the system (if Neo4j is part of the Fabric space). By default, it is set to true. If the Fabric space does not include Neo4j, the ```ENABLE_DATA_DISCOVERY``` parameter should be added to this section and set to false.
 
