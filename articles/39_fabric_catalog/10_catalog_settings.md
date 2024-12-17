@@ -99,27 +99,30 @@ Upon clicking the **Save** button in the **PII & Masking** tab, the **pii_profil
 
 ## Sequences Tab
 
-The **Sequences** tab allows to set up the sequences that can be generated in a project as part of a population of any other flow. 
+The **Sequences** tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. This tab doesn't have a product built-in list of sequences since the sequence names and their definitions are usually project specific. 
 
-This tab doesn't have a product built-in setup as the sequence names and definitions are always project specific. 
+To create a sequence: 
 
-Click the **Add Record +** button to create a sequence, and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
-
-The **Generator** is pre-populated with the Sequence.actor though it can be updated to any existing built-in actor, a custom actor or a flow, which should be created under the **Shared Objects** in the Fabric Studio.
-
-The **sequenceId** parameter of the Sequence.actor is populated with the same value as the **Sequence Name**, when it is typed for the first time. Later, each one can be changed to a different value, if needed.
+* Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
+* Note that the **Generator** is pre-populated with the **Sequence.actor** though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
+* The **sequenceId** parameter of the **Sequence.actor** is populated with the same value as the **Sequence Name**, when it is typed for the first time. Later, each one can be changed to a different value, if needed.
 
 <img src="images/settings_seq.png" />
 
 Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
 
-Note that after a list of sequences is set in the **Sequences** tab, a Catalog field should be marked as a sequence manually, by adding a **sequenceName** property, as follows:
+Currently the Catalog doesn’t identify the sequence fields automatically. Thus, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be marked as sequences manually, as follows:
+
+* Click **Actions > Edit Catalog**.
+* Navigate to the required field and click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon to add a new property. 
+  * Select or type sequenceName as the property name.
+  * In the property value, select the name of the sequence that was setup via the Sequences tab. 
 
 <img src="images/add_sequence_prop.png" />
 
 #### Advanced Sequence Settings
 
-The purpose of the Advanced Sequence Settings pop-up window is to allow the setting up of additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
+The purpose of the Advanced Sequence Settings pop-up window is to setup additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
 
 <img src="images/settings_seq_advanced.png" />
 
