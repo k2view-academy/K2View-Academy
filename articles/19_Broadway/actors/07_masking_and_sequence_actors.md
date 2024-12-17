@@ -10,7 +10,7 @@ The masking process includes the generation (manufacturing) of random synthetic 
 
 Note that if there is a need to mask data before it is loaded to Fabric, the masking Actors can be used in Broadway population flows.
 
-Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID: the **MaskingSequence** and the **Sequence** Actors generate a unique sequence ID, based on the provided input arguments.
+Another important functionality provided by Fabric’s Broadway for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID. The sequence creation is done by the **MaskingSequence** and the **Sequence** Actors that generate a unique sequence ID, based on the provided input arguments.
 
 [Click for more information about the data generation Actors](07a_data_generators_actors.md).
 
