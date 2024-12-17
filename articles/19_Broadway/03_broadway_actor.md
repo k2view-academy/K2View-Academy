@@ -32,13 +32,13 @@ Starting from Fabric V8.2, Broadway includes an AI-based capability to search fo
 
 To start using the Co-pilot, click the selected icon as shown below and populate the prompt describing what should be done by the flow. Note that the Co-pilot invokes an LLM model using an LLM AI interface defined in the project. 
 
-<img src="images/99_04_01_add_by_ai.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_04_01_add_by_ai.png" alt="image" style="zoom:80%;" />
 
 
 
 Upon clicking enter, the LLM model is invoked and it returns the response explaining which actors are needed. In addition, the actors are retrieved from the repository. When multiple actors are suggested by Co-pilot, they can be added to a flow at once.
 
-<img src="images/99_04_01_add_by_ai_2.PNG" alt="image" style="zoom:80%;" />
+<img src="images/99_04_01_add_by_ai_2.png" alt="image" style="zoom:80%;" />
 
 ### How Do I Save a Flow as an Actor?
 
