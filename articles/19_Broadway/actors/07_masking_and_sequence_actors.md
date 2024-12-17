@@ -21,7 +21,7 @@ Another important functionality provided by Fabric’s Broadway for systems that
 Common input arguments of masking Actors are:
 
 * **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
-* **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor, for enabling the execution of the data generation flow or Actor, which generates a fake value.
+* **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor - for enabling the execution of the data generation flow or Actor - which generates a fake value.
   
 * **formatter** - this optional input has been added in Fabric 8.0 in order to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking).  This parameter can be set with either a formatter flow or an Actor in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or an Actor to format the masked value based on the original format. 
   
