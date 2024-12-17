@@ -163,11 +163,29 @@ You can link them by either dragging a connection line or by using the Tables Co
 
 <web>
 
-## Highlight Table Population Links
+## Population Links Clarity and Context
 
-In complex and large schemas, it is sometimes difficult to track the population link, from which table it comes and/or to which tables it goes. You can therefore click on the link and see it as an animated dashed line.
+### Highlight Table Population Links
+
+In complex and large schemas, it is sometimes difficult to track the population link, from which table it comes and/or to which tables it goes. 
+
+You can therefore click on the link and see it as an animated dashed line.
 
 ![](images/web/12_dashed_link.gif)
+
+
+
+### Population link context
+
+In certain scenarios, the connecting columns for a population may not be immediately visible—for instance, when tables include numerous columns that require scrolling to view. This can make exploring the schema and understanding table connections less convenient.
+
+You can therefore hover over the population link with your mouse cursor to view a tooltip that provides detailed information about the link, including the source table and columns, the destination table and columns, and the population name.
+
+In the below example, the connecting column at the destination table - RECOMMENDATIONS - is hidden. With this tooltip you do not need to scroll down to reveal it.
+
+
+
+![](images/web/12_population_tooltip.png)
 
 </web>
 
@@ -177,6 +195,10 @@ In complex and large schemas, it is sometimes difficult to track the population 
 
 <studio>Either click on the link and press the **Delete** key on your keyboard, or right-click and select **Delete**</studio>.
 <web>Click on the link and press the **Delete** key on your keyboard.</web>
+
+
+
+
 
 
 

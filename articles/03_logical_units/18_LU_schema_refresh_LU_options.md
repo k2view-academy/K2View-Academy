@@ -15,7 +15,7 @@ Note that Update Tables from Database does not delete or add tables to the LU sc
 
 <web>
 
-You can refresh your Logical Unit Schema by using the Logical Unit Schema toolbar action icon <img src="images/web/schema_refresh.png" style="zoom:80%;" />
+You can refresh your Logical Unit Schema by using the Logical Unit Schema toolbar action icon <img src="images/web/refresh.png" style="zoom:80%;" />
 
 
 

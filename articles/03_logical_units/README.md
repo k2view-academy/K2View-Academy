@@ -19,8 +19,11 @@
 	<li><a href="/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md">Group and Ungroup LU Tables</a></li>
 	<li><a href="/articles/03_logical_units/17_LU_schema_change_root_table.md">Change LU Root Table</a></li>
 	<li><a href="/articles/03_logical_units/18_LU_schema_refresh_LU_options.md">Refresh LU Options</a></li>
-</ul>
+	<web><li><a href="/articles/03_logical_units/19_LU_population_order_view.md">Population Order View</a></li></web>
+	<web><li><a href="/articles/03_logical_units/20_LU_highlight_tables.md">Tables' Highlighting</a></li>
+	<web><li><a href="/articles/03_logical_units/21_big_schema_productivity_tips.md">Large Schema Productivity Tips</a></li><web>
 
+</ul>
 
 
 
