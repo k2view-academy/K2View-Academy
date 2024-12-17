@@ -85,7 +85,7 @@ Fabric 8.0 includes this Actor for running a simple formatting logic. This Actor
 
 In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included that are in the formatDeny and/or that are not in the formatAllow parameters.
 
- In case the formatAllow is empty, any character is allowed, except for the characters specified in the formatDeny.
+ In case the formatAllow parameter is empty, any character is allowed, except for the characters specified in the formatDeny parameter.
 
  At least one the following inputs - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both inputs are empty, the formatter Actor/flow will do nothing. 
 
