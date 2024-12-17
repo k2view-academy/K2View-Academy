@@ -10,6 +10,7 @@ When a flow requires business logic that is not supported by a built-in Actor, a
 
 This article describes the following options for working with Actors:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
+- [Broadway Co-pilot](03_broadway_actor.md#broadway-co-pilot).
 - [Saving a flow as an Actor](03_broadway_actor.md#how-do-i-save-a-flow-as-an-actor) that can be used as an inner flow of other Broadway flows.
 - [Exporting Actors](03_broadway_actor.md#how-do-i-export-an-actor) to create inherited Actors with extended business logic. 
 
@@ -25,7 +26,22 @@ Note that you can add a call to an inner flow by switching the radio button from
 
 <img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
+### Broadway Co-pilot
+
+Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using a natural language rather than standard key words. 
+
+To start using the Co-pilot, click the selected icon as shown below and populate the prompt describing what should be done by the flow. Note that the Co-pilot invokes an LLM model using an LLM AI interface defined in the project. 
+
+<img src="images/99_04_01_add_by_ai.PNG" alt="image" style="zoom:80%;" />
+
+
+
+Upon clicking enter, the LLM model is invoked and it returns the response explaining which actors are needed. In addition, the actors are retrieved from the repository. When multiple actors are suggested by Co-pilot, they can be added to a flow at once.
+
+<img src="images/99_04_01_add_by_ai_2.PNG" alt="image" style="zoom:80%;" />
+
 ### How Do I Save a Flow as an Actor?
+
 A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.
 
 To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window.
