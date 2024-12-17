@@ -6,7 +6,7 @@ The masking process includes the generation (manufacturing) of random synthetic 
 
 1. Various data generation Actors, under the **generators** category, to generate a random synthetic value; e.g., RandomString, RandomNumber, and Sequence.
 2. **Masking** - this Actor can wrap any data generation Actor and add the hashing and caching capabilities on top of the data generation Actor.
-3. Broadway still keeps the existing masking Actors, such as **MaskingSSN** and **MaskingCreditCard**, for backward compatibility reasons. 
+3. Broadway still keeps the existing masking Actors - such as **MaskingSSN** and **MaskingCreditCard** - for backward compatibility reasons. 
 
 Note that if there is a need to mask data before they are loaded to Fabric, masking Actors can be used in Broadway population flows.
 
