@@ -2,7 +2,7 @@
 
 Data Management Systems, like **TDM**, often handle sensitive data. To be compliant with data protection and privacy laws, Fabric provides a **masking** category of Actors that can mask sensitive fields such as SSN, credit card numbers and email addresses before they are loaded into a target DB.
 
-The masking process includes the generation (manufacturing) of random synthetic values that replace the real values, as well as the caching of both the hashed original values and the masked values in order to keep the referential integrity of the data. Starting from V7.1, Fabric separates data generation (manufacturing) of synthetic data from the hashing and caching capabilities. Broadway provides the following Actors:
+The masking process includes the generation (manufacturing) of random synthetic values that replace the real values, as well as the caching of both the hashed original values and the masked values in order to keep the referential integrity of the data. Starting from V7.1, Fabric separates data generation (manufacturing) of synthetic data from the hashing and caching capabilities. Fabric's Broadway provides the following Actors:
 
 1. Various data generation Actors, under the **generators** category, to generate a random synthetic value; e.g., RandomString, RandomNumber, and Sequence.
 2. **Masking** - this Actor can wrap any data generation Actor and add the hashing and caching capabilities on top of the data generation Actor.
