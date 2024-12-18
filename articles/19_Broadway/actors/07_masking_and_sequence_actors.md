@@ -53,7 +53,7 @@ Common input arguments of masking Actors are:
 * **verifyUnique** - determines whether different input values can be masked with the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment, where the useEnvironment input argument is set to true, and per execution id, where the useExecutionId input argument is set to true. Set the verifyUnique input argument to **true** if the masked value should be unique, as in the case of masking an SSN.
   Notes:
     * Set the ***useExecutionId*** to **false**, the ***useEnvironment*** to **true**, and the ***verifyUnique*** to **true** in order to get unique masked values on a given field per environment for all executions.
-    * If an interface is **IN-MEMORY**, uniqueness is checked only on a single-node and not across a DC or a Cluster.
+    * If an interface input argument is populated with the **IN-MEMORY** value, uniqueness is checked only on a single-node and not across a DC or a cluster.
 
 
 * **TTL** - Time to Live. This represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this parameter is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with the IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
