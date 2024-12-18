@@ -109,13 +109,13 @@ You can define either a flow or an Actor to set a custom formatting logic. The f
 **Input Arguments:**
 
 - **formatterMode** - indicates whether the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
-- **originalValue** - populated with the original (source or generated) value. The originalValue is needed for both modes.
+- **originalValue** - populated with the original (source or generated) value. This input argument is needed for both modes.
 
-- **normalValue** - populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+- **normalValue** - populated with the masked normalized (‘naked‘) value. This input argument is needed if the formatterMode is *Format*.
 
 **Output Arguments:**
 
-- **value** - populated with the normalized or the formatted value; depends on the formatterMode. 
+- **value** - populated with the normalized or the formatted value; depends on the *formatterMode*. 
 
 Notes:
 - If you build a formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
