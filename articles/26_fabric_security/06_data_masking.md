@@ -37,7 +37,7 @@ The following diagram describes the sensitive data masking process, using an **L
 
 
 
-The following diagram describes the masking process of sensitive data **before loading the data to the target**:
+The following diagram describes the sensitive data masking process **before loading the data to the target**:
 
 ![masking flow](images/masking_flow_load_to_target.png)
 
