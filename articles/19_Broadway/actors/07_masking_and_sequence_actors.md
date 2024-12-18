@@ -87,7 +87,7 @@ In order to build the formatted output, the SimpleMaskingFormat Actor adds to th
 
  In case the formatAllow input argument is empty, any character is allowed, except for the characters specified in the formatDeny input argument.
 
- At least one the following input arguments - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both input arguments are empty, the formatter Actor/flow will do nothing. 
+ At least one the following input arguments - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both input arguments are empty, the formatter flow/Actor will do nothing. 
 
  If the normal value is longer than the original value, the remaining characters will be added to the output value.
 
