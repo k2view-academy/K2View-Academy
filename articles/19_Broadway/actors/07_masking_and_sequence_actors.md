@@ -25,7 +25,7 @@ Common input arguments of masking Actors are:
   
 * **formatter** - this optional input argument has been added in Fabric 8.0 as a way to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking). This parameter can be set with either a formatter flow or an Actor in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or an Actor to format the masked value based on the original format. 
   
-* **category** - this input argument has been added by Fabric 6.5.3 and it indicates *when* the masking Actor needs to generate a new value, e.g., in case of masking sensitive data or replacing the ID (sequence). The following values can be set in the category input argument:
+* **category** - this input argument has been added by Fabric 6.5.3 and it indicates *when* a masking Actor needs to generate a new value, e.g., in case of masking sensitive data or replacing the ID (sequence). The following values can be set in the category input argument:
   
   - **enable_sequences**, which generates a new ID value
   - **enable_masking**, which masks sensitive data
@@ -33,7 +33,7 @@ Common input arguments of masking Actors are:
   
    By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**.
   
-   The masking Actor inspects the **value of the session level key, set in the category**:
+   A masking Actor inspects the **value of the session level key, set in the category**:
   
    - If the related session-level key **is not set**, or is set to **true** - it generates a new value.    
    - Else, if the related session-level key is set to **false** - it returns the original value.
@@ -45,7 +45,7 @@ Common input arguments of masking Actors are:
 * **useInstanceId** - indicates whether to use the instance ID as part of the masking cache. If it is set to **true**, the instance ID is added to the masking cache. When set to **false**, the masked value is used across entities. Note that from Fabric 7.1 onwards, if this input argument is set to **true**, Fabric gets the instance ID value from the root_iid key, if it is set. If the root_iid key is not set, it gets the current LUI instance. The root_iid key enables the maintenance of the referential integrity on PII fields across different LUs that logically belong to each other. For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs.
 * **hashedInputValue** - indicates whether to store the original value or to hash the original value and store the hashed value. By default, the hashed value is stored. When set to **false**, this input argument disables the caching and stores the original value.
 * **interface** - this is the interface to be used for caching the masked values. It can be populated with either any SQL DB interface defined in Fabric, Fabric server memory, or **SEED**.
-  * When the interface input argument is populated with **SEED**, the Masking Actor uses the [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method for data consistency, namely, it populates the caching key into the seed parameter and sends it to the data generation Actor. 
+  * When the interface input argument is populated with **SEED**, the masking Actor uses the [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method for data consistency, namely, it populates the caching key into the seed parameter and sends it to the data generation Actor. 
   * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it by using either the **masking-create-cache-table.flow** example flow.
   * IN-MEMORY interface is useful for testing as it can only be used in a single-node configuration.
@@ -56,7 +56,7 @@ Common input arguments of masking Actors are:
     * If an interface input argument is populated with the **IN-MEMORY** value, uniqueness is checked only on a single-node and not across a DC or a cluster.
 
 
-* **TTL** - Time to Live. This represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this input argument is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8.0, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with the IN-MEMORY value. Fabric 8.0 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
+* **TTL** - Time to Live. This input argument represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this input argument is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8.0, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface input argument with the IN-MEMORY value. Fabric 8.0 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
