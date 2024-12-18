@@ -25,7 +25,7 @@ Fabric supports **2 methods** to keep the **data consistency**:
 - Data consistency using **table**.
 - Data consistency using **seed**.
 
-The data consistency method is set based on the **interface** parameter of the **Masking** Actor: if the interface parameter is populated with **SEED**, the masking mechanism keeps the **Data consistency using seed** method.
+The data consistency method is set based on the **interface** parameter of the **Masking** Actor: If the interface parameter is populated with **SEED**, the masking mechanism keeps the **Data consistency using seed** method.
 
 ### Data Consistency Using Table
 
