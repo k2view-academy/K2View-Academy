@@ -56,7 +56,7 @@ Common input arguments of masking Actors are:
     * If an interface input argument is populated with the **IN-MEMORY** value, uniqueness is checked only on a single-node and not across a DC or a cluster.
 
 
-* **TTL** - Time to Live. This represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this parameter is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with the IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
+* **TTL** - Time to Live. This represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this input argument is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with the IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
@@ -68,7 +68,7 @@ Common input arguments of masking Actors are:
 
 The below are specific input arguments for the **MaskingSequence** Actor:
 
-* **sequenceInterface** and **sequenceId** - the **sequenceInterface** is populated with the interface name. The **sequenceId** is populated with the sequence name defined in the sequence interface. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The method of how to get the next sequence value depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
+* **sequenceInterface** and **sequenceId** - the **sequenceInterface** input argument is populated with the interface name. The **sequenceId** input argument is populated with the sequence name defined in the sequence interface. If the *sequenceId* is empty, the sequence name is taken from the **maskingId** input argument. The method of how to get the next sequence value depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment** - define the initial value of the sequence and the value of the increment. 
 
 
