@@ -1,9 +1,9 @@
 # Fabric Data Masking
 
-Data Privacy laws require the ability to mask data by hiding the original values with modified content. 
-Fabric provides a field-level API to protect data classified as Personal Identifiable Information, sensitive personal data, or commercially sensitive data.
+Data Privacy laws require the ability to mask data by hiding the original values with a modified content. 
+Fabric provides a field-level API to protect data that is classified as Personal Identifiable Information, sensitive personal data, or commercially sensitive data.
 
-To ensure that the data are still valid for your data lifecycle management, the masked data will look real and appear consistent.
+To ensure that the data is still valid for your data lifecycle management, the masked data will look real and appear consistent.
 
 This capability can be used to conduct tests, implement data transformations, or serve anonymized data to external 3rd parties via web services or queue messages.
 
