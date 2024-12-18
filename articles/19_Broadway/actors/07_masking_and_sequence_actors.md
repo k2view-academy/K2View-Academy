@@ -119,7 +119,7 @@ You can define either a flow or an Actor to set a custom formatting logic. The f
 
 Notes:
 - If you build a formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
-- The mandatory input and output parameters must be set as external parameters in the formatter flow.
+- The mandatory input and output arguments must be set as external parameters in the formatter flow.
 
 ### How Do I Mask Data Using Masking Actors?
 
