@@ -83,7 +83,7 @@ Fabric 8.0 includes this Actor for running a simple formatting logic. This Actor
 
 - **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
 
-In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included in the formatDeny input argument and/or that are not in the formatAllow input argument.
+In order to build the formatted output, the SimpleMaskingFormat Actor adds to the normal value all the characters from the original value that are identified as format characters, i.e., those that are included in the *formatDeny* and/or that are not included in the *formatAllow*.
 
  In case the formatAllow input argument is empty, any character is allowed, except for the characters specified in the formatDeny input argument.
 
