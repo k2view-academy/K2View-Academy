@@ -75,11 +75,11 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 
 ### Formatter Actors and Flows
 
-#### SimpleMaskingFormat
+#### SimpleMaskingFormat Actor
 
 Fabric 8.0 includes this Actor for running a simple formatting logic. This Actor works in 2 modes:
 
-- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the ***formatDeny*** (backlist) and/or that are not in the ***formatAllow*** (white list).
+- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the ***formatDeny*** (black list) and/or that are not in the ***formatAllow*** (white list).
 
 - **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
 
