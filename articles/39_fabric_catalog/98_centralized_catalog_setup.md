@@ -31,7 +31,7 @@ The following steps should be performed to configure a centralized Catalog for m
   CENTRAL_SPACE_NAME_TENANT_NAME=<space_name-tenant_name>
   ~~~
 
-- The ```<space_name-tenant_name>``` is the Central Neo4j space name.
+- The ```<space_name-tenant_name>``` is the Central Neo4j space and tenant name.
 
 - Create the 'Child' space. This space will point to the Central Neo4j GraphDB rather than to its local one.
 
@@ -50,7 +50,7 @@ The following steps should be performed to configure a centralized Catalog for m
   IS_READONLY=Y
   ~~~
 
-- The ```<space_name-tenant_name>``` is the Central Neo4j space name.
+- The ```<space_name-tenant_name>``` is the Central Neo4j space and tenant name.
 
 - Create the 'Child' space. This space will point to the Central Neo4j GraphDB rather than to its local one and it will connect to it using the default read-only user.
 
