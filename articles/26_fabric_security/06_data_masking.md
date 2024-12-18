@@ -31,7 +31,7 @@ The data consistency method is set based on the **interface** parameter of the *
 
 The mapping between the hashed original and masked values is kept in a caching table, which is defined under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
-The following diagram describes the masking process of sensitive data using an **LUI sync**:
+The following diagram describes the sensitive data masking process, using an **LUI sync**:
 
 ![masking flow](images/masking_flow.png)
 
