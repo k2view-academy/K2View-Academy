@@ -5,7 +5,7 @@ Fabric provides a field-level API to protect data that is classified as Personal
 
 To ensure that the data is still valid for your data lifecycle management, the masked data will look real and appear consistent.
 
-This capability can be used to conduct tests, implement data transformations, or serve anonymized data to external 3rd parties via web services or queue messages.
+This capability can be used for conducting tests, implementing data transformations, or providing anonymized data to external 3rd parties via web services or queue messages.
 
 
 ## Masking Flow
