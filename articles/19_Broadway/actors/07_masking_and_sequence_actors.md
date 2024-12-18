@@ -98,9 +98,9 @@ In order to build the formatted output, it adds to the normal value all the char
 
 - **normalValue** - populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
 - **formatAllow** - indicates which characters can be included in the normalized value. The formatAllow can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
-    - E.g.: The formatAllow is Numeric. Therefore,  all non-numeric characters need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12-542-99 and the formatAllow = Numeric, the normalized value 1254299.
+    - E.g.: The *formatAllow* is Numeric. Therefore,  all non-numeric characters need to be removed from the *originalValue* in order to get the normalized value. If the *originalValue* = 12-542-99 and the *formatAllow* = Numeric, the normalized value 1254299.
 - **formatDeny** - indicates which characters must be excluded from the originalValue in order to get the normalized value. The formatDeny can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
-    - E.g.: If the formatDeny is '-', all the dashes need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12A-542B-99 and the formatDeny = '-', the normalized value would be 12A542B99.
+    - E.g.: If the *formatDeny* is '-', all the dashes need to be removed from the *originalValue* in order to get the normalized value. If the *originalValue* = 12A-542B-99 and the *formatDeny* = '-', the normalized value would be 12A542B99.
 
 #### Custom Formatting Logic
 
