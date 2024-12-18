@@ -30,13 +30,15 @@ Note that you can add a call to an inner flow by switching the radio button from
 
 Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using a natural language rather than standard key words. 
 
-To start using the Co-pilot, click the selected icon as shown below and populate the prompt describing what should be done by the flow. Note that the Co-pilot invokes an LLM model using an LLM AI interface defined in the project. 
+To start using the Co-pilot, make sure an LLM AI interface is defined in the project. 
+
+Open the **Add Actor** screen, click the **AI** icon as shown below and populate the prompt describing what should be done by the actors:
 
 <img src="images/99_04_01_add_by_ai.png" alt="image" style="zoom:80%;" />
 
 
 
-Upon clicking enter, the LLM model is invoked and it returns the response explaining which actors are needed. In addition, the actors are retrieved from the repository. When multiple actors are suggested by Co-pilot, they can be added to a flow at once.
+Upon clicking enter, the LLM model is invoked using the project's LLM AI interface. The LLM returns the explanation which actors are needed and the relevant actors are retrieved from the Broadway repository. Now the actors can be added to a flow, for completing the flow creation. When multiple actors are suggested by Co-pilot, they can be added at once.
 
 <img src="images/99_04_01_add_by_ai_2.png" alt="image" style="zoom:80%;" />
 
