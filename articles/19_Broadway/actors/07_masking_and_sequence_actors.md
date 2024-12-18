@@ -79,13 +79,13 @@ The below are specific input arguments for the **MaskingSequence** Actor:
 
 Fabric 8.0 includes this Actor for running a simple formatting logic. This Actor works in 2 modes:
 
-- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the **formatDeny** (backlist) and/or that are not in the **formatAllow** (white list)  parameters.
+- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the ***formatDeny*** (backlist) and/or that are not in the ***formatAllow*** (white list).
 
 - **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
 
-In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included that are in the formatDeny and/or that are not in the formatAllow parameters.
+In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included in the formatDeny input argument and/or that are not in the formatAllow input argument.
 
- In case the formatAllow parameter is empty, any character is allowed, except for the characters specified in the formatDeny parameter.
+ In case the formatAllow input argument is empty, any character is allowed, except for the characters specified in the formatDeny input argument.
 
  At least one the following input arguments - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both input arguments are empty, the formatter Actor/flow will do nothing. 
 
