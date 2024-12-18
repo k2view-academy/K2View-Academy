@@ -53,9 +53,9 @@ This is available only if the data generation Actor has a seed input parameter a
 
 **Notes**:
 
-- In both data consistency methods,  Fabric uses the SHA-512 or SHA-512/256 algorithms to hash the original value. Additionally, Fabric uses a dedicated master key to salt the original value before hashing it. The hashing is a one-way activity. The hashed value cannot be reversed back to the original value.
+- In both data consistency methods, Fabric uses the SHA-512 or SHA-512/256 algorithms to hash the original value. Additionally, Fabric uses a dedicated master key to salt the original value before hashing it. The hashing is a one-way activity. The hashed value cannot be reversed back to the original value.
 
-  Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) for more information about Fabric hashing mechanism. 
+  Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) for more information about the Fabric hashing mechanism.
 
 - The referential integrity is not kept when the masked value is taken from a dynamic list. If the masked value is taken from a list, the random function will bring the same index in the list if the seed is identical. It checks the index of the returned value and not the value itself.
 
