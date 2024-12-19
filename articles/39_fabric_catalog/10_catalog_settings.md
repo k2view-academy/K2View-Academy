@@ -117,7 +117,7 @@ Currently, the Catalog doesn’t automatically identify the sequence fields. Thu
 
 * Click **Actions > Edit Catalog**.
 * Navigate to the required field and click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon to add a new property. 
-  * Select or type sequenceName as the property name.
+  * Select or type *sequenceName* as the property name.
   * In the property value, select the name of the sequence that was set up via the Sequences tab. 
 
 <img src="images/add_sequence_prop.png" />
