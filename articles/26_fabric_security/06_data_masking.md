@@ -59,11 +59,11 @@ This is available only if the data generation Actor has a seed input argument, a
 
 - The referential integrity is not kept when the masked value is taken from a dynamic list. If the masked value is taken from a list, the random function will bring the same index in the list if the seed is identical. It checks the index of the returned value and not the value itself.
 
-- The masked value is impacted not only by the seed, but also by the data generation parameters. For example, getting a random value between 0-100 returns a different result than getting a random value between 0-200 even if they get the same seed value.
+- The masked value is impacted not only by the seed, but also by the data generation parameters. For example, getting a random value between 0-100 returns a different result than when getting a random value between 0-200, even if they get the same seed value.
 
 ### Broadway Masking Actors
 
-The masking process is executed by Broadway Actors that enable masking sensitive data before they are loaded into a target database or even into Fabric. The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value in order to keep the referential integrity of the data. 
+The masking process is executed by Broadway Actors that enable masking sensitive data before it is loaded into a target database or even into Fabric. The masking process contains the generation (manufacturing) of a random synthetic value that replaces the real value, and the caching of the hashed original value and the masked value in order to keep the referential integrity of the data. 
 Starting from V7.1, Fabric separates data generation (manufacturing) from the hashing and caching capabilities. Broadway provides the following Actors: 
 
 1. Various data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
@@ -74,7 +74,7 @@ The masking Actors use the Fabric hashing utility to hash the original value and
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use Fabric's masking Broadway Actors.
 
-Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about Fabric hashing mechanism.
+Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
 
 #### Customized Masking Logic 
 
