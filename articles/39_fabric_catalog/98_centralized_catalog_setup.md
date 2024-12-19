@@ -20,7 +20,7 @@ The following steps should be performed to configure a centralized Catalog for m
 
 **Step 2**: Creation of a 'Child' space with a regular user.  
 
-- Prior to creating a 'Child' space, open the Advanced Settings of your Project's profile:
+- Prior to creating a 'Child' space, open the *Advanced* settings of your Project's profile:
 
   <img src="images/profile_advaced.png"  />
 
