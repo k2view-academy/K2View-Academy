@@ -124,7 +124,7 @@ Currently, the Catalog doesn’t automatically identify the sequence fields. Thu
 
 #### Advanced Sequence Settings
 
-The purpose of the Advanced Sequence Settings pop-up window is to setup additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
+The purpose of the Advanced Sequence Settings pop-up window is to set up additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
 
 <img src="images/settings_seq_advanced.png" />
 
