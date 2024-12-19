@@ -45,7 +45,7 @@ The following diagram describes the sensitive data masking process **before load
 
 ### Data Consistency Using Seed
 
-This new method has been added in Fabric 8.2. and it ensures a **referential integrity without saving the mapping between the hashed original value and the masked value in the caching table.** Therefore, it can give a **better performance** comparing the regular masking, as it does not need to access the DB. The mapping between the hashed original value and the masked value is not kept in the caching table but in the **Java Random** method using a **seed**. 
+This new method has been added in Fabric 8.2. and it ensures a **referential integrity without saving the mapping between the hashed original value and the masked value in the caching table.** It can therefore lead to a **better performance**, when compared to regular masking, as it does not need to access the DB. The mapping between the hashed original value and the masked value is not kept in the caching table, but rather in the **Java Random** method using a **seed**. 
 
 If the Masking actor's **interface** input parameter is populated with **SEED**, the **Masking** Actor populates with **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
 
