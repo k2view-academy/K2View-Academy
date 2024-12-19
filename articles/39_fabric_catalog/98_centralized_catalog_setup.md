@@ -37,7 +37,7 @@ The following steps should be performed to configure a centralized Catalog for m
 
 **Step 3 (optional)**: Creation of a 'Child' space with a  read-only Neo4j user. 
 
-- Prior to creating a 'Child' space, open the Advanced Settings of your Project's profile:
+- Prior to creating a 'Child' space, open the *Advanced* settings of your Project's profile:
 
 
   <img src="images/profile_advaced.png"  />
