@@ -1,6 +1,6 @@
 # Catalog Settings
 
-The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes product pre-defined settings which can be updated to accommodate the Project's needs. The updates are saved in the project. 
+The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes product pre-defined settings that can be updated to accommodate the Project's needs. The updates are saved in the project. 
 
 The Settings tab includes the following sections, described in this and other articles:
 
