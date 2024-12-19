@@ -164,10 +164,10 @@ Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#form
 
 ## K2view Masking Advantages
 
-- Supports **cross instances consistency** based on the hashed values.
+- The support of **cross instances consistency**, based on the hashed values.
 - The original value is not used as an input for creating the random masked value, other than for formatting purposes.
 - The MicroDB is created with the masked values.
-- Uses the Fabric Masking mechanism (using **SHA-512/256** algorithm).
+- The usage of the Fabric's Masking mechanism (using **SHA-512/256** algorithm).
 - **Multiple masking options** enable maximal flexibility when masking the data.
 
 ## De-Anonymization (Pseudonymization)
