@@ -42,7 +42,7 @@ The following steps should be performed to configure a centralized Catalog for m
 
   <img src="images/profile_advaced.png"  />
 
-- Add the following to the config.ini section of the Advanced Settings:
+- Add the following to the config.ini section of the *Advanced* settings:
 
   ~~~
   [data_discovery]
