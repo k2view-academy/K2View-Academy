@@ -172,7 +172,7 @@ Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#form
 
 ## De-Anonymization (Pseudonymization)
 
-In some cases there is a business need to retrieve the original value of the masked LUI. For example, retrieve a mailing address in order to contact the customer. 
+In some cases, there is a business need to retrieve the original value of the masked LUI. For example, a retrieval of a mailing address in order to contact the customer. 
 
 There are 2 recommended approaches to support de-anonymization and retrieve the original value of the masked field: 
 
