@@ -113,12 +113,12 @@ To create a sequence:
 
 Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
 
-Currently, the Catalog doesn’t automatically identify the sequence fields. Thus, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be marked as sequences manually, as follows:
+Currently, the Catalog doesn’t automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences, as follows:
 
 * Click **Actions > Edit Catalog**.
 * Navigate to the required field and click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon to add a new property. 
   * Select or type sequenceName as the property name.
-  * In the property value, select the name of the sequence that was setup via the Sequences tab. 
+  * In the property value, select the name of the sequence that was set up via the Sequences tab. 
 
 <img src="images/add_sequence_prop.png" />
 
