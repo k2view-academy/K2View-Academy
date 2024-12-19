@@ -8,7 +8,7 @@ Starting from V8.2, it is possible to configure one centralized Catalog for mult
 
 In addition, the setup allows that some users will be connected to the Catalog in a read-only mode. They will be able to view the Catalog tree but not to run the Discovery job or do any manual overrides. These users will have read-only permissions in Neo4j only, while they still will be able to update the Catalog Settings and create an artifact in the Fabric instance.
 
-Utilizing this feature requires creating a Central Neo4j space and the Child spaces that will point to the “Central Neo4j” GraphDB. The steps how to do it are described below.
+Utilizing this feature requires creating a Central Neo4j space and the Child spaces that will point to the 'Central Neo4j' GraphDB. The steps of how to do it are described below.
 
 ### Setup Steps
 
