@@ -79,17 +79,17 @@ Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more
 #### Customized Masking Logic 
 
 K2view enables users to create their own masking functions:
-- The **MaskingLuFunction** Broadway Actor can be used to call a customized function (a shared function or an LU's function) to mask the required field.  
-- The **MaskingInnerFlow** Broadway Actor can be used to call a customized Broadway flow or an Actor to mask the required field.
-- Fabric 7.1 provides the general **Masking** Actor that enables running either a customized inner flow or an Actor to mask a required field.
+- The **MaskingLuFunction** Broadway Actor can be used to call a customized function (a shared function or an LU's function) - to mask the required field.  
+- The **MaskingInnerFlow** Broadway Actor can be used to call a customized Broadway flow or an Actor - to mask the required field.
+- Fabric 7.1 provides the general **Masking** Actor that enables running either a customized inner flow or an Actor - to mask a required field.
 
-The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors guarantees the usage of the K2view masking mechanism including **SHA-512/256** hashing and caching. The user does not need to handle them by their customized function.
+The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors guarantees the usage of the K2view masking mechanism, including **SHA-512/256** hashing and caching. The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
 #### Interface
 
-- The interface to be used to cache the masked values. If the Interface is populated with **SEED**, the **Masking** Actor populates the **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
+- The interface to be used to cache the masked values. If the interface is populated with **SEED**, the **Masking** Actor populates the **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
 
 #### Target Value Uniqueness
 
