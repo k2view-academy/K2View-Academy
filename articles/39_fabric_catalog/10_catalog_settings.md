@@ -101,7 +101,7 @@ Upon clicking the **Save** button in the **PII & Masking** tab, the **pii_profil
 
 ## Sequences Tab
 
-The **Sequences** tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. This tab doesn't have a product built-in list of sequences since the sequence names and their definitions are usually project specific. 
+The **Sequences** tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. This tab doesn't have a product built-in list of sequences as the sequence names and their definitions are usually project-specific. 
 
 To create a sequence: 
 
