@@ -49,7 +49,7 @@ This new method has been added in Fabric 8.2. and it ensures a **referential int
 
 If the Masking actor's **interface** input argument is populated with **SEED**, the masking Actor populates the **seed** with the [caching key](#caching-key---caching-level-parameters) and sends it to the **data generation Actor**.
 
-This is available only if the data generation Actor has a seed input parameter and uses the Java Random method to get the masked value if the input seed is populated.  **All the [built-in data generation Actors](/articles/19_Broadway/actors/07a_data_generators_actors.md) support data generation using based on seed**. 
+This is available only if the data generation Actor has a seed input argument, and it uses the Java Random method to get the masked value when the input seed is populated. **All the [built-in data generation Actors](/articles/19_Broadway/actors/07a_data_generators_actors.md) support data generation based on seed**.
 
 **Notes**:
 
