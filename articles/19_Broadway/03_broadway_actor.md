@@ -38,7 +38,7 @@ Open the **Add Actor** screen, click the **AI** icon as shown below and populate
 
 
 
-Upon clicking **enter**, the LLM model is invoked using the project's LLM AI interface. The LLM returns the explanation which actors are needed and the relevant actors are retrieved from the Broadway repository. Now the actors can be added to a flow, for completing the flow creation. When multiple actors are suggested by the Co-pilot, they can be added at once.
+Upon clicking **enter**, the LLM model is invoked using the project's LLM AI interface. The LLM returns the explanation which actors are needed and the relevant actors are retrieved from the Broadway repository. Now the actors can be added to a flow, for completing the flow creation. When multiple actors are suggested by the Co-pilot, they can be added all at once.
 
 <img src="images/99_04_01_add_by_ai_2.png" alt="image" style="zoom:80%;" />
 
