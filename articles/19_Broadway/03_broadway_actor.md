@@ -32,7 +32,7 @@ Starting from Fabric V8.2, Broadway includes an AI-based capability to search fo
 
 To start using the Co-pilot, make sure an LLM AI interface is defined in the project. 
 
-Open the **Add Actor** screen, click the **AI** icon as shown below and populate the prompt describing what should be done by the actors:
+Open the **Add Actor** window, click the **AI** icon as shown below and populate the prompt describing what should be done by the actors:
 
 <img src="images/99_04_01_add_by_ai.png" alt="image" style="zoom:80%;" />
 
