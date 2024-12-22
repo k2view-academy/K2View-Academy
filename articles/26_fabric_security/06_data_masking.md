@@ -70,7 +70,7 @@ Starting from V7.1, Fabric separates data generation (manufacturing) from the ha
 2. **Masking** Actor - this Actor can wrap any data generation Actor and add the hashing and caching capabilities on top of the data generation Actor.
 3. Broadway still keeps the existing masking Actors for backward compatibility reasons.
 
-The masking Actors use the Fabric hashing utility to hash the original value and save the mapping of the hashed value and the masked value to the cache table.
+The masking Actors use the Fabric hashing utility to hash the original value, and to save the mapping of the hashed and the masked values to the cache table.
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use Fabric's masking Broadway Actors.
 
