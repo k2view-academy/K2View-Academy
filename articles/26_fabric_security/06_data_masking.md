@@ -57,7 +57,7 @@ This is available only if the data generation Actor has a seed input argument, a
 
   Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) for more information about the Fabric hashing mechanism.
 
-- The referential integrity is not kept when the masked value is taken from a dynamic list. If the masked value is taken from a list, the random function will bring the same index in the list if the seed is identical. It checks the index of the returned value and not the value itself.
+- The referential integrity is not kept when the masked value is taken from a dynamic list. If the masked value is taken from a list, the random function will bring the same index from the list if the seed is identical. It checks the index of the returned value and not the value itself.
 
 - The masked value is impacted not only by the seed, but also by the data generation parameters. For example, getting a random value between 0-100 returns a different result than when getting a random value between 0-200, even if they get the same seed value.
 
