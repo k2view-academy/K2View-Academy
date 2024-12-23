@@ -1,6 +1,6 @@
 # Discovery Pipeline Settings
 
-### Overview
+## Overview
 
 The **Discovery Pipeline** screen in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's **plugins.discovery** file) and the project-level rules. 
 
@@ -17,7 +17,7 @@ The overrides are saved into the project **pluginsOverride.discovery** file, cre
 
 This article describes the screen capabilities and explains how they can impact the Discovery job. 
 
-### Baseline Rule
+## Baseline Rule
 
 The **Baseline** rule is a default configuration applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
 
@@ -40,17 +40,11 @@ The Baseline rule overrides can be reverted in one of the following ways:
 3. Click the **revert** icon at the lower-right-side of the screen to reset the plugin's current settings back to the baseline.
    * Note that if this is a project-level plugin, reverting to the baseline would delete it (since this plugin is not part of the baseline).
 
-### Project Rules
+## Project Rules
 
 The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
 
 A **rule** should be attached to a data platform, along with several optional parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
-
-The rules follow the following hierarchy: 
-
-* There can be zero or more rules for the same data platform. 
-* When multiple rules apply on the same process element, the most specific rule takes precedence.
-* When there is no specific rule for a process element, the Baseline rule is executed.
 
 #### How Do I Create a Rule?
 
@@ -68,29 +62,47 @@ The rules follow the following hierarchy:
 * When multiple schemas or datasets are populated, they should be comma-separated.
 * A rule should include either a Crawler filter or a checked Override checkbox, or both. Possible filter settings are described below.
 
-#### Crawler Filter = Exclude This 
+#### Rule Type: Crawler Filter = Exclude This 
 
 When the filter is set to **Exclude This**:
 
-* The Crawler excludes the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
+* The Crawler **excludes** the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
 * This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
 
-#### Crawler Filter = Exclude Others
+#### Rule Type: Crawler Filter = Exclude Others
 
 When the filter is set to **Exclude Others**:
 
-* The Crawler will only include the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
+* The Crawler will only **include** the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
 * This rule can be combined with the *Override* action. It allows to define the Crawler's include list as well as to override the Baseline rules at the same time.
 
 
-#### No Crawler Filter; Override is Checked
+#### Rule Type: No Crawler Filter; Override is Checked
 
 When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
 * The Crawler is executed on the whole Data Platform.
 * The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
 
-### Adding New Plugins
+#### Rules Combination and Hierarchy
+
+Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process for various elements. For example, one might need to set a higher sample size for some datasets or execute a certain plugin on a selected dataset or schema only. 
+
+When multiple rules are defined for the same data platform, they adhere to the following hierarchy: 
+
+- When multiple rules apply on the same process element, the most specific rule takes precedence. 
+
+**Example of rules combination and hierarchy**
+
+The below image shows 3 rules defined for the **AdventureWorks** data platform:
+
+![](images/discovery_pipeline_h.png)
+
+- **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
+- **Rule2** defines a filter on Sales schema. Meaning that the Sales schema is excluded from the Crawler on the AdventureWorks. 
+- **Rule3** defines an override that should be applied on the specified datasets of the Person schema only. Meaning that plugins applied on these datasets are only those defined in the **Rule3**.
+
+## Adding New Plugins
 
 When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
 
