@@ -15,7 +15,7 @@ The Discovery Pipeline screen enables performing the following actions, describe
 
 The overrides are saved into the project **pluginsOverride.discovery** file, created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
-This article describes the screen capabilities and explains how they can impact the Discovery job. 
+This article describes the capabilities of the Discovery Pipeline screen and explains how they can impact the Discovery job. 
 
 ## Baseline Rule
 
