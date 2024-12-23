@@ -60,7 +60,7 @@ A **rule** should be attached to a data platform, along with several optional pa
 
 
 * When multiple schemas or datasets are populated, they should be comma-separated.
-* A rule should include either a Crawler filter or a checked Override checkbox, or both. Possible filter settings are described below.
+* A rule should include either a Crawler Filter or a checked Override checkbox, or both. Possible filter settings are described below.
 
 #### Rule Type: Crawler Filter = Exclude This 
 
@@ -73,7 +73,7 @@ When the filter is set to **Exclude This**:
 
 When the filter is set to **Exclude Others**:
 
-* The Crawler will only **include** the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
+* The Crawler will **include** only the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
 * This rule can be combined with the *Override* action. It allows to define the Crawler's include list as well as to override the Baseline rules at the same time.
 
 
