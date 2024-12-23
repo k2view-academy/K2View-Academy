@@ -13,7 +13,7 @@ The Discovery Pipeline screen enables performing the following actions, describe
 * [Adding new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) to the pipeline.
 
 
-The overrides are saved into the project **pluginsOverride.discovery** file, created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The overrides are saved into the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
 This article describes the capabilities of the Discovery Pipeline screen and explains how they can impact the Discovery job. 
 
