@@ -50,7 +50,7 @@ A **rule** should be attached to a data platform, along with several optional pa
 
 ![](images/discovery_pipeline_2.png)
 
-* Click **Add Rule +** to create a new rule. 
+* Click on **Add Rule +** to create a new rule. 
 
 
 * The mandatory rule's parameters are *Rule Name* (which must be unique) and *Data Platform*. 
