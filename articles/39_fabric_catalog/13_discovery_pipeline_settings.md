@@ -19,7 +19,7 @@ This article describes the capabilities of the Discovery Pipeline screen and exp
 
 ## Baseline Rule
 
-The **Baseline** rule is a default configuration applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
+The **Baseline** rule is a default configuration, applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
 
 The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
