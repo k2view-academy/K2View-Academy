@@ -120,4 +120,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to a required position in the list.  
 
-Note that the **Delete selected** option in the context menu is only available for the project plugins. A product plugin cannot be deleted, if it is not needed, it can be set to 'inactive' in the Baseline rule. 
+Note that the **Delete selected** option in the context menu is only available for the project plugins. A product plugin cannot be deleted; if it is not needed, it can be set to 'inactive' in the Baseline rule. 
