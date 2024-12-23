@@ -108,7 +108,7 @@ When a new plugin is created in a project, it should be added to the Baseline ru
 
 For example, when a newly created plugin is applicable only for running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin should be set to 'active'.
 
-The steps to add a new plugin to the pipeline are:
+The steps for adding a new plugin to the pipeline are:
 
 1. Click **Override** of the Baseline rule.
 2. Click the ![](images/dots.png) icon to open the Plugins context menu and click **Add Plugin**.
