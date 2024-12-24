@@ -6,7 +6,7 @@
 
 Starting from V8.2, it is possible to configure one centralized Catalog for multiple Fabric instances. This is useful when, for example, several users need to work on the same project in parallel. Working on separate Fabric instances (e.g., spaces), the users can define different Catalog settings and run the Discovery independently from one another, on different interfaces. Eventually, the Catalog artifacts from each Fabric instance can be combined together, as explained [here](09_build_artifacts.md#splitting-and-combining-artifacts). 
 
-In addition, the setup allows that some users will be connected to the Catalog in a read-only mode. They will be able to view the Catalog tree but not to run the Discovery job or do any manual overrides. These users will have read-only permissions in Neo4j only, while they still will be able to update the Catalog Settings and create an artifact in the Fabric instance.
+In addition, the centralized Catalog’s setup allows for some of the users to be connected to the Catalog in a read-only mode, that is, they will be able to view the Catalog tree but would not be able to run the Discovery job or perform any manual overrides. Having only read-only permissions in the Neo4j, these users would still be able to update the Catalog Settings and create an artifact in the Fabric instance.
 
 Utilizing this feature requires creating a Central Neo4j space and the Child spaces that will point to the 'Central Neo4j' GraphDB. The steps of how to do it are described below.
 
