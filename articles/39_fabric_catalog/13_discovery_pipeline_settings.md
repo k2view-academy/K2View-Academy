@@ -86,7 +86,7 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
 #### Rules Combination and Hierarchy
 
-Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process for various elements. For example, one may need to set a higher sample size for some datasets or execute a certain plugin on a selected dataset or schema only. 
+Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process execution for different elements. For example, one may need to set a higher sample size for some datasets or execute a certain plugin on a selected dataset or schema only. 
 
 When multiple rules are defined for the same data platform, they adhere to the following hierarchy: 
 
