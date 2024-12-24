@@ -71,9 +71,9 @@ When selecting an actor or a flow, its respective input parameters are dynamical
 
 The first input parameter of a masking flow (or a custom actor) - selected as a Generator - is considered as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden (and not dynamically added) when a masking flow is selected in the above Masking setup screen. This is applicable only for an input parameter of Link or External type. 
 
-Therefore, when creating such a flow, its first input should be named 'value', even if this flow doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+Therefore, when creating a masking flow, its first input should be named 'value', even if this flow doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
 
-Below is a sample of such flow:
+Below is a masking flow sample:
 
 <img src="images/settings_masking_flow.png" style="zoom: 80%;" />
 
