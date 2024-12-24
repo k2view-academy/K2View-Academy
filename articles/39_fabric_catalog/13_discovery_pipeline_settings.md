@@ -99,20 +99,20 @@ The below image shows 3 rules defined for the **AdventureWorks** data platform:
 ![](images/discovery_pipeline_h.png)
 
 - **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
-- **Rule2** defines a filter on Sales schema. Meaning that the Sales schema is excluded from the Crawler on the AdventureWorks. 
-- **Rule3** defines an override that should be applied on the specified datasets of the Person schema only. Meaning that plugins applied on these datasets are only those defined in the **Rule3**.
+- **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on the AdventureWorks. 
+- **Rule3** defines an override that should be applied on the specified datasets of the Person schema only. This rule implies that plugins applied on these datasets are only those defined in the **Rule3**.
 
 ## Adding New Plugins
 
-When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, it is automatically propagated to all the existing rules and can have different settings in each rule.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all the existing rules and can have different settings in each rule.
 
 For example, when a newly created plugin is applicable only for running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin should be set to 'active'.
 
 The steps for adding a new plugin to the pipeline are:
 
-1. Click **Override** of the Baseline rule.
-2. Click the ![](images/dots.png) icon to open the Plugins context menu and click **Add Plugin**.
-3. Alternatively, you can select an existing plugin from the list and click on **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
+1. Check the **Override** checkbox of the Baseline rule.
+2. Click the ![](images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
+3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
 ![](images/discovery_pipeline_new_plugin.png)
 
@@ -120,4 +120,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to a required position in the list.  
 
-Note that the **Delete selected** option in the context menu is only available for the project plugins. A product plugin cannot be deleted; if it is not needed, it can be set to 'inactive' in the Baseline rule. 
+Note that the **Delete selected** option in the context menu is only available for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
