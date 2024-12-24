@@ -23,7 +23,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 ## Step 2 - Create Sequences
 
-Replacing the loaded IDs (sequences) may be required when populating a target database in order to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in the TDM tasks.
+Replacing the loaded IDs (sequences) may be required when populating a target database to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in the TDM tasks.
 
 Fabric 8.2 has added the [catalog's sequence setting](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities). The following section describes both methods of sequence handling implementation:
 
@@ -31,9 +31,9 @@ I. [Sequence handling based on catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-Note that both methods require a creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
+Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
 
-Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish the create the k2masking on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
+Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
 ### Set the Sequence Report Global
 
@@ -90,6 +90,8 @@ II. **createAllFromTemplates** flow. This flow:
 The createAllFromTemplates creates a separate flow per table on each type - load and delete. Moreover, it creates a *load all flow* to run all table-level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
+
+From TDM 9.3 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
 
 Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_Actor** to the load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key with the target entity ID. 
 
