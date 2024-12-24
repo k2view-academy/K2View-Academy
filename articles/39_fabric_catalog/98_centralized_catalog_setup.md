@@ -54,8 +54,8 @@ The following steps should be performed to configure a centralized Catalog for m
 
 - Create the 'Child' space. This space will point to the Central Neo4j GraphDB rather than to its local Neo4j; the space will connect to the Neo4j using the default user with read-only permissions.
 
-  - Note that the user with **read-only** permissions is created automatically upon the first run of the Discovery job (in a regular space). This implies that it is possible to connect to the 'read-only space' only after the first Discovery run.
-  - These users will have read-only permissions in Neo4j only, while they still will be able to update the Catalog Settings and create an artifact in the Fabric instance.
+  - Note that the user with **read-only** permissions is created automatically upon the first run of the Discovery job (in a regular space). This means that it is possible to connect to the 'read-only space' only after the first Discovery run.
+  - These users will only have read-only permissions in the Neo4j, while still being able to update the Catalog Settings and create an artifact in the Fabric instance.
 
 
 </web>
