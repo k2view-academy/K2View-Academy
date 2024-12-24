@@ -22,5 +22,12 @@ Currently, the Catalog doesn’t automatically identify the sequence fields. Thu
 
 
 
+### Optional - Overriding the Catalog's Sequence Logic
 
+Edit the flows to override the Catalog sequence logic for some of the ID fields: add [Data Generation Actors](/articles/TDM/tdm_implementation/articles/19_Broadway/actors/07_masking_and_sequence_actors.html) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
 
+Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor. 
+
+Follow these steps for setting custom logic for a given sequence:
+
+- Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
