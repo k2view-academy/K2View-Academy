@@ -45,7 +45,7 @@ Upon clicking **Enter**, the LLM model is invoked. The LLM returns an explanatio
 
 ### How Do I Save a Flow as an Actor?
 
-A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.
+A flow can be encapsulated and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows that include many steps.
 
 To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window.
 
