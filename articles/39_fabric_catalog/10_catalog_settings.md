@@ -31,7 +31,7 @@ Using this tab, you can either edit existing definitions or add new ones. The Cl
 
 Once the Save button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-Click [here](04_plugin_framework.md#built-in-plugins) for more details about these Profiling plugins.
+Click [here](plugins/02_classification_plugins.md) for more details about these Profiling plugins.
 
 ## PII & Masking Tab
 
