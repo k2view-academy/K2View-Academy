@@ -42,7 +42,7 @@ The **PII & Masking** tab allows to view and update the PII and the Catalog-base
 Each **Classification** in this tab is unique, and it includes the following attributes:
 
 * **PII** indicates whether the Classification is considered Personally Identifiable Information. 
-* **Generator** shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) for generating masking values. The generator runs in the case of either:
+* **Generator** shows which actor or flow is applied by the [Catalog masking mechanism](11_catalog_masking.md) for generating masking values. The generator runs in one of the following cases:
   - Data masking
   - [Rule-based](/articles/TDM/tdm_implementation/16_tdm_data_generation_implementation.md) synthetic data generation
 * **Consistency Mode** sets the definition of consistency, uniqueness and see for a value that will be generator by the selected Generator. The values of the Consistency Mode are:
