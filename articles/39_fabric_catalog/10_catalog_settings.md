@@ -55,7 +55,7 @@ Note that **Consistent using seed** value is only available when the selected Ge
 
 Click [here](/articles/26_fabric_security/06_data_masking.md) for more information about data consistency.
 
-In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification that appears in this tab, as both the classifications and the sequences are saved in the same MTable.
+In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with an identical name as the classification that appears in this tab, as both the classifications and the sequences are saved in the same MTable.
 
 #### Masking Setup Guidelines
 
