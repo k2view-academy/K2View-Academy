@@ -6,7 +6,7 @@ A Broadway  **Actor** represents an action that is executed on a [Stage](19_broa
 
 Broadway offers a number of [built-in Actors](04_built_in_actor_types.md) that address a wide range of predefined activities that can be added to Broadway flows.
 
-When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used which executes the JavaScript code provided in the **script** [Input parameter](/articles/19_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the **LuFunction** Actor to invoke Java functions or build your own Java Actor.
+When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used for executing the JavaScript code provided in the **script** [Input parameter](/articles/19_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the **LuFunction** Actor to invoke Java functions or build your own Java Actor.
 
 This article describes the following options for working with Actors:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
@@ -23,7 +23,7 @@ To add an Actor to a Stage in a Broadway flow:
 2.  Search for the required Actor and select it.
 3.  Click **Submit** to finish the action and to add the Actor to the Stage.
 
-Note that you can add a call to an inner flow by switching the radio button from **Actors** to **Flows** in the pop-up window and selecting a flow. An **InnerFlow** Actor is then added to the flow, and it includes the selected flow. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
+Note that you can add a call to an inner flow by switching the radio button from **Actors** to **Flows** at the top-right of the pop-up window. Select a flow and click **Submit**. At that point, the **InnerFlow** Actor, whose aim is to execute the Broadway flow that it encapsulates, is added to the stage. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
 
 <img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
