@@ -68,7 +68,7 @@ The description of the Actor is part of the Actor's file. A remark is a user's c
 
 When exporting an Actor, the Actor's remarks are copied to the description of the new Actor type.
 
-Click ![image](images/99_19_dots.PNG) in the top-right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode.
+Click ![image](images/dots.png) in the top-right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode.
 
 To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
