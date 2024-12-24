@@ -107,7 +107,7 @@ To create a sequence:
 
 * Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
 * Note that the **Generator** is pre-populated with the **Sequence.actor** though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
-* The **sequenceId** parameter of the **Sequence.actor** is populated with the same value that is stated in the **Sequence Name**, when it is typed for the first time. Later, each one can be changed to a different value, if needed.
+* The **sequenceId** parameter of the **Sequence.actor** is populated with the same value that is stated in the **Sequence Name**, when it is typed for the first time. Later, each one of them can be changed to a different value, if needed.
 
 <img src="images/settings_seq.png" />
 
@@ -130,7 +130,7 @@ The purpose of the Advanced Sequence Settings pop-up window is to set up additio
 
 Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-The sequences are saved in the same MTable as the masking classifications - **catalog_classification_generators** - with the following differences:
+The sequences are saved in the **catalog_classification_generators** MTable, (same location as the masking classifications), with the following differences:
 
 * The category of masking classifications is **enable_masking**.
 * The category of non-PII sequences is **enable_sequence**.
