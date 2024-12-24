@@ -35,9 +35,9 @@ The following steps should be performed to configure a centralized Catalog for m
 
 - Create the 'Child' space. This space will point to the Central Neo4j GraphDB rather than to its local Neo4j.
 
-**Step 3 (optional)**: Creation of a 'Child' space with a  read-only Neo4j user. 
+**Step 3 (optional)**: 'Child' space creation with a read-only permission for the Neo4j user. 
 
-- Prior to creating a 'Child' space, open the *Advanced* settings of your Project's profile:
+- Prior to creating a 'Child' space, open the *Advanced* settings of your Project's space profile:
 
 
   <img src="images/profile_advaced.png"  />
