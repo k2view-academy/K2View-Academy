@@ -111,7 +111,9 @@ Add the AI environment to:
 - In some cases, it may be required to fix or override some of the AI-based generated values. It can be implemented either by defining a post-execution flow that gets the generated entities and updates them, or by adding an override logic to the load flows to update the values before they are loaded to the target environment.
 
 ### LU Implementation
-Verify that all LU source tables have a PK. The PK is required for the AI-based training and generation tasks.
+- Verify that the linked fields in the LU tables have identical data types. The linked fields must have identical data types in order to support the MDB export of the LU schema into the TDM DB.
+- Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table in order to support the MDB export of these tables. All the parent LU table's PK/unique index fields must be linked to the child LU table. This is required for creating the FK relation in the PG DB for the exported LU tables.
+- The MDB export does not support multiple populations with different links to parent tables. The LU tables must have one link to a parent LU table.
 
 #### LU Schema Update
 If the LU schema is updated, the next training task execution will drop and recreate the schema tables for the updated LU.

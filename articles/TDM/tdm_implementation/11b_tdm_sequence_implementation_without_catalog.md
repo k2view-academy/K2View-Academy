@@ -1,0 +1,88 @@
+# TDM - Sequence Implementation Without Catalog
+
+Take the following steps in order to create the sequences for your TDM implementation:
+
+## Generate the Sequence Actors
+
+The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Open this Actor and populate it with the relevant information for your TDM implementation as follows:
+
+   - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
+
+   - **SEQUENCE_REDIS_OR_DB** - indicates whether the next value is taken from Redis, memory, or from the target DB interface. Populate this setting using either one of the following:
+
+     - **IN-MEMORY** - useful for testing only, as it can only be used in a single node configuration. 
+
+     - **DB interface name** - can be populated by either the target DB interface in order to get the next value from the DB sequence, or **TDM** in order to create a new DB sequence in the TDM DB. The DB interface name is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
+
+       ***Note:*** If the target DB does not have a sequence, or if it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
+
+   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
+
+     Notes:
+
+     - Define an init flow to set the initial value for the newly created sequence based on the maximum value in the environment to avoid a collision. The init flow must return an external parameter named **initialValue** for the sequence Actor.
+     - Use the 'IF NULL' function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;		   
+
+   Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence Actors.
+
+   An example of the **TDMSeqList** Actor:
+
+   ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\tdmSeqListExample.png)
+
+   An example of an inner flow for getting the initial sequence value:
+
+   ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\CustomerIdInitFlow.png)
+
+
+
+The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the sequence Actors. 
+
+Following completion of the Actor's update, refresh the project by clicking the ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
+
+**B.** Run either one of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor:
+
+I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
+
+II. Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
+
+III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
+
+Each generated sequence Actor includes a flow that invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
+
+Notes:  
+
+- The sequence creation should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
+- The sequence flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
+
+
+
+## Populate the Sequence Mapping Table
+
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into multiple tables and LUs.
+
+View the below example:
+
+![seq mapping](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\tdmSeqSrc2TrgMapping_example.png)
+
+
+
+This table serves 2 purposes: 
+
+1. Adding the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
+
+2. Adding the sequence Actors to the data generation flow that generates synthetic data for the LU table.
+
+     
+
+Click [here](16_tdm_data_generation_implementation.md) for more information about the rule-based synthetic data generation implementation.
+
+## Custom Sequence Logic
+
+By default, the generated sequence Actors and flows use the [MaskingSequence](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
+
+Follow these steps for setting custom logic for a given sequence:
+
+- Open the generated sequence flow and replace the MaskingSequence Actor with **MaskingLuFunction** Actor or **Masking** Actor. 
+- Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
+
+Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).

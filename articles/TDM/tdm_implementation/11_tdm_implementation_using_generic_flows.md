@@ -23,111 +23,17 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 ## Step 2 - Create Sequences
 
-When populating a target database, sequences are required. Therefore, setting and initiating sequences is mandatory when implementing TDM. 
+Replacing the loaded IDs (sequences) may be required when populating a target database to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in the TDM tasks.
 
-Deploy the TDM LU to Fabric. The TDM deploy.flow creates the k2masking keyspace.
+Fabric 8.2 has added the [catalog's sequence setting](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities). The following section describes both methods of sequence handling implementation:
 
-Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
+I. [Sequence handling based on catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
 
-Notes: 
+II. [Sequence handling without catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-- The k2masking keyspace can also be created by the deploy.flow of the TDM LU.
+Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
 
-- Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish the create the k2masking on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
-
-  
-
-Take the following steps in order to create the sequences for your TDM implementation:
-
-### Generate the Sequence Actors
-
-**A.** The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Open this Actor and populate it with the relevant information for your TDM implementation as follows:
-   - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
-
-   - **SEQUENCE_REDIS_OR_DB** - indicates whether the next value is taken from Redis, memory, or from the target DB interface. Populate this setting using either one of the following:
-     
-      - **FabricRedis** interface (imported from the TDM library).
-      
-      - **IN-MEMORY** - useful for testing only, as it can only be used in a single node configuration. 
-      
-      - **DB interface name** - can be populated by either the target DB interface in order to get the next value from the DB sequence, or **TDM** in order to create a new DB sequence in the TDM DB. The DB interface name is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, it creates it.  
-      
-        ***Note:*** If the target DB does not have a sequence, or if it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
-      
-   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value from FabricRedis, IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
-
-      Notes:
-
-      - Define an init flow to set the initial value for the newly created sequence based on the maximum value in the environment to avoid a collision. The init flow must return an external parameter named **initialValue** for the sequence Actor.
-      - Use the 'IF NULL' function such as COALCASE in PG and NVL in Oracle when getting the initial value for the newly created sequence. For example: Select COALESCE(max(activity_id),0) + 100000 as init_activity_id from activity;
-
-
-​		   
-
- Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence Actors.
-
-   An example of the **TDMSeqList** Actor:
-
-   ![image](images/tdmSeqListExample.png)
-
-   An example of an inner flow for getting the initial sequence value:
-
-   ![image](images/CustomerIdInitFlow.png)
-
-
-
-The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the sequence Actors. 
-
-Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
-
-**B.** Run either one of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor:
-
-I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
-
-II. Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
-
-III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
-
-Each generated sequence Actor includes a flow that invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
-
-Notes:  
-
-- The sequence creation should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
-- The sequence flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
-
-
-
-### Populate the Sequence Mapping Table
-
-The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into multiple tables and LUs.
-
-View the below example:
-
-![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
-
-
-
-This table serves 2 purposes: 
-
-1.  It has been added in TDM 7.3 to automatically add the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
-
-2. From TDM 8.0 onwards, this table is used for adding the sequence Actors to the data generation flow that generates synthetic data for the LU table.
-
-     
-
-Click [here](16_tdm_data_generation_implementation.md) for more information about the rule-based synthetic data generation implementation.
-
-### Custom Sequence Logic
-
-By default, the generated sequence Actors and flows use the [MaskingSequence](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
-
-Follow these steps for setting custom logic for a given sequence:
-
-- Open the generated sequence flow and replace the MaskingSequence Actor with **MaskingLuFunction** Actor or **Masking** Actor. 
-- Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
-- Save the updated sequence flow as an Actor.
-
-Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
+Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
 ### Set the Sequence Report Global
 
@@ -185,6 +91,8 @@ The createAllFromTemplates creates a separate flow per table on each type - load
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
+From TDM 9.3 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
+
 Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_Actor** to the load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key with the target entity ID. 
 
 ### Debug the Load and Delete Flows
@@ -232,7 +140,7 @@ TDM systems often handle sensitive data. Complying with data privacy laws and re
   Perform the following acts in order to use the new TDM templates for the Catalog masking:
   
   - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
-  - Optional: Edit the population flows to override the Catalog’s masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+  - Optional: Edit the population flows to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
      - Note: If you need to send the original (source) values for the Masking Actors in the LU population, move the Query result to an ArrayBuilder and connect the ArrayBuilder output to the CatalogMaskingMapper Actor instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper Actor and to the Masking Actor.
   
   </web> 

@@ -4,9 +4,9 @@
 
 A Broadway  **Actor** represents an action that is executed on a [Stage](19_broadway_flow_stages.md) of the [Broadway flow](02a_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
-Broadway offers a number of [built-in Actors](04_built_in_actor_types.md) which address a wide range of predefined activities that can be added to Broadway flows.
+Broadway offers a number of [built-in Actors](04_built_in_actor_types.md) that address a wide range of predefined activities that can be added to Broadway flows.
 
-When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used which executes the JavaScript code provided in the **script** [Input parameter](/articles/19_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the **LuFunction** Actor to invoke Java functions or build your own Java Actor.
+When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used for executing the JavaScript code provided in the **script** [Input parameter](/articles/19_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the **LuFunction** Actor to invoke Java functions or build your own Java Actor.
 
 This article describes the following options for working with Actors:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
@@ -19,10 +19,11 @@ To learn about more complex scenarios, such as creating or editing an Actor, ref
 ### How Do I Add Actor to Stage?
 
 To add an Actor to a Stage in a Broadway flow:
-1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right.
-2.  Click **Submit** to finish the action and to add the Actor to the Stage.
+1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window, which displays a list of categories on the left and Actors of each of these categories on the right.
+2.  Search for the required Actor and select it.
+3.  Click **Submit** to finish the action and to add the Actor to the Stage.
 
-Note that you can add a call to an inner flow by switching the radio button from **Actor** to **Flow** in the popup screen and selecting a flow from it. An **InnerFlow** Actor is then added to the flow and it includes the selected flow. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
+Note that you can add a call to an inner flow by switching the radio button from **Actors** to **Flows** at the top-right of the pop-up window. Select a flow and click **Submit**. At that point, the **InnerFlow** Actor, whose aim is to execute the Broadway flow that it encapsulates, is added to the stage. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
 
 <img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
 
@@ -30,19 +31,21 @@ Note that you can add a call to an inner flow by switching the radio button from
 
 Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using a natural language rather than standard key words. 
 
-To start using the Co-pilot, click the selected icon as shown below and populate the prompt describing what should be done by the flow. Note that the Co-pilot invokes an LLM model using an LLM AI interface defined in the project. 
+To start using the Co-pilot, make sure an LLM AI interface is defined in the project as it is a prerequisite.
+
+Open the **Add Actor** window, select the **AI** icon as shown below and populate the prompt describing what action should be performed by the actors:
 
 <img src="images/99_04_01_add_by_ai.png" alt="image" style="zoom:80%;" />
 
 
 
-Upon clicking enter, the LLM model is invoked and it returns the response explaining which actors are needed. In addition, the actors are retrieved from the repository. When multiple actors are suggested by Co-pilot, they can be added to a flow at once.
+Upon clicking **Enter**, the LLM model is invoked. The LLM returns an explanation, stating what actors are needed, and accordingly they are retrieved from the Broadway repository. At this stage, the actors can be added to a flow, and the user should complete the flow creation by adding the links between the actors. When multiple actors are suggested by the Co-pilot, they can be added all at once.
 
 <img src="images/99_04_01_add_by_ai_2.png" alt="image" style="zoom:80%;" />
 
 ### How Do I Save a Flow as an Actor?
 
-A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.
+A flow can be encapsulated and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows that include many steps.
 
 To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window.
 
@@ -54,7 +57,7 @@ To export an Actor, click **Export Actor** in the [Actor's context menu](18_broa
 
 ### Dynamic Logic Actors
 
-Dynamic Logic Actors include dynamic logic as one of their input parameters. The most frequently used Actors include:
+Dynamic Logic Actors include dynamic logic as one of their input parameters. Among the most frequently used Actors are:
 
 - **JavaScript** Actor, which executes the JavaScript code provided in the **script** parameter and returns the value of the last expression.
 - **DbCommand** Actor, which executes the SQL command provided in the **sql** parameter.
@@ -65,10 +68,10 @@ The description of the Actor is part of the Actor's file. A remark is a user's c
 
 When exporting an Actor, the Actor's remarks are copied to the description of the new Actor type.
 
-Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode.
+Click ![image](images/dots.png) in the top-right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode.
 
 To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
-Once there is a remark you can pull it up by clicking the green asterisk <img src="images/asterisk.png" style="zoom:80%;" />. To delete a remark, remove its text and close the remark. 
+Once there is a remark, you can view it by clicking the green asterisk <img src="images/asterisk.png" style="zoom:80%;" />. To delete a remark, remove its text and close the remark. 
 
 [![Previous](/articles/images/Previous.png)](02a_broadway_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)

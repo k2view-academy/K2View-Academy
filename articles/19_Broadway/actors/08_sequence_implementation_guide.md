@@ -30,7 +30,7 @@ Notes:
 
 ### Sequence Initiation Method
 
-Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is only relevant for IN-MEMORY or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md). The **initialValue** is also relevant for **a newly created DB sequence** in order to set its initial value upon the sequence creation. In an existing DB sequence, these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
+Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is only relevant for IN-MEMORY for **a newly created DB sequence** in order to set its initial value upon the sequence creation. In an existing DB sequence, these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, e.g., 1000000.
 * Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable, named **initialValue**. View the figures below: 
@@ -57,7 +57,7 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 
 *	When parent-child relationships exist across Logical Units, the same sequence can exist in both. The updated flow can be executed on the parent LU in order to add a child sequence. For example, after completing the Customer and Order LUs population, update the parent (i.e., Customer LU) with the sequence from the child (i.e., Order LU).
 
-* Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), e.g., for reporting purposes. 
+* Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), e.g., for reporting purposes. 
 
 * Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the [TDM implementation](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md). 
 

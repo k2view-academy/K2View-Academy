@@ -20,12 +20,12 @@ Another important functionality provided by Fabric’s Broadway for systems that
 
 Common input arguments of masking Actors are:
 
-* **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
-* **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This parameter has been added to the **Masking** Actor - for enabling the execution of the data generation flow or Actor - which generates a fake value.
+* **maskingId** - a unique masking identifier, used for generating a target value; populated by a String. To use the same masking Actor in different flows of the same project, use this input argument to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
+* **flowName** - the name of the flow or Actor to be executed in order to obtain a masked value. This input argument has been added to the **Masking** Actor - for enabling the execution of the data generation flow or Actor - which generates a fake value.
   
-* **formatter** - this optional input has been added in Fabric 8.0 as a way to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking). This parameter can be set with either a formatter flow or an Actor in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although they have a different format. Fabric offers a [SimpleMaskingFormat ] Actor, but the implementor can define a custom flow or an Actor to format the masked value based on the original format. 
+* **formatter** - this optional input argument has been added in Fabric 8.0 as a way to support a [format preserving masking](/articles/26_fabric_security/06_data_masking.md#format-preserving-masking). This parameter can be set with either a formatter flow or an Actor in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although they have a different format. Fabric offers a [SimpleMaskingFormat](#simplemaskingformat-actor) Actor, but the implementor can define a custom flow or an Actor to format the masked value based on the original format. 
   
-* **category** - this parameter has been added by Fabric 6.5.3 and it indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+* **category** - this input argument has been added by Fabric 6.5.3 and it indicates *when* a masking Actor needs to generate a new value, e.g., in case of masking sensitive data or replacing the ID (sequence). The following values can be set in the category input argument:
   
   - **enable_sequences**, which generates a new ID value
   - **enable_masking**, which masks sensitive data
@@ -33,7 +33,7 @@ Common input arguments of masking Actors are:
   
    By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**.
   
-   The masking Actor inspects the **value of the session level key, set in the category**:
+   A masking Actor inspects the **value of the session level key, set in the category**:
   
    - If the related session-level key **is not set**, or is set to **true** - it generates a new value.    
    - Else, if the related session-level key is set to **false** - it returns the original value.
@@ -41,22 +41,22 @@ Common input arguments of masking Actors are:
    Note that TDM implementation sets the **enable_masking** and **enable_sequences** session-level keys to either **true** or **false**, based on the TDM task's attributes. For example, the **MaskingSequence** Actor generates a new ID value when the task replaces the sequences of the copied entities, or else, the original ID value is returned. 
   
 * **useEnvironment** - indicates whether to separate the masked value per environment. When set to **true**, it generates a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
-* **useExecutionId** - indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, it generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
-* **useInstanceId** - indicates whether to use the instance ID as part of the masking cache. If it is set to **true**, the instance ID is added to the masking cache. When set to **false**, the masked value is used across entities. Note that from Fabric 7.1 onwards, if this parameter is set to **true**, Fabric gets the instance ID value from the root_iid key, if it is set. If the root_iid key is not set, it gets the current LUI instance. The root_iid key enables the maintenance of the referential integrity on PII fields across different LUs that logically belong to each other. For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs.
-* **hashedInputValue** - indicates whether to store the original or the hashed input value. By default, the hashed value is stored. When set to **false**, it disables the caching and stores the original value.
-* **interface** - this is the interface to be used for caching the masked values. This interface may be either any SQL DB interface defined in Fabric, Fabric server memory, or **SEED**.
-  * When the Interface parameter is populated with **SEED**, the Masking Actor uses the [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method for data consistency, namely, it populates the caching key into the seed parameter and sends it to the data generation Actor. 
-  * When the SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
-  * If the **k2masking** keyspace does not exist, create it by using either the **masking-create-cache-table.flow** example flow.
+* **useExecutionId** - indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. When set to **true**, this input argument generates a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
+* **useInstanceId** - indicates whether to use the instance ID as part of the masking cache. If it is set to **true**, the instance ID is added to the masking cache. When set to **false**, the masked value is used across entities. Note that from Fabric 7.1 onwards, if this input argument is set to **true**, Fabric gets the instance ID value from the root_iid key, if it is set. If the root_iid key is not set, it gets the current LUI instance. The root_iid key enables the maintenance of the referential integrity on PII fields across different LUs that logically belong to each other. For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs.
+* **hashedInputValue** - indicates whether to store the original value or to hash the original value and store the hashed value. By default, the hashed value is stored. When set to **false**, this input argument disables the caching and stores the original value.
+* **interface** - this is the interface to be used for caching the masked values. It can be populated with either any SQL DB interface defined in Fabric, Fabric server memory, or **SEED**.
+  * When the interface input argument is populated with **SEED**, the masking Actor uses the [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method for data consistency, namely, it populates the caching key into the seed parameter and sends it to the data generation Actor. 
+  * When the SQL DB interface is set, the **masking_cache** table under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
+  * If the **k2masking** schema does not exist, create it by using either the **masking-create-cache-table.flow** example flow.
   * IN-MEMORY interface is useful for testing as it can only be used in a single-node configuration.
   * Set the interface to **NONE** in order to avoid caching the masked values.
-* **verifyUnique** - determines whether different input values can be masked with the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment, where the useEnvironment is set to true, and per execution id, where the useExecutionId is set to true. Set this parameter to **true** if the masked value should be unique, as in the case of masking an SSN.
+* **verifyUnique** - determines whether different input values can be masked with the same masked value. The uniqueness is checked per **original value** (masked value) and **maskingId**. The uniqueness is also checked per environment, where the useEnvironment input argument is set to true, and per execution id, where the useExecutionId input argument is set to true. Set the verifyUnique input argument to **true** if the masked value should be unique, as in the case of masking an SSN.
   Notes:
-    * Set the **useExecutionId** to **false**, the **useEnvironment** to **true**, and the **verifyUnique** to **true** in order to get unique masked values on a given field per environment for all executions.
-    * If an interface is **IN-MEMORY**, uniqueness is checked only on a single-node and not across a DC or a Cluster.
+    * Set the ***useExecutionId*** to **false**, the ***useEnvironment*** to **true**, and the ***verifyUnique*** to **true** in order to get unique masked values on a given field per environment for all executions.
+    * If an interface input argument is populated with the **IN-MEMORY** value, uniqueness is checked only on a single-node and not across a DC or a cluster.
 
 
-* **TTL** - Time to Live. This represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this parameter is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface parameter with the IN-MEMORY value. Fabric 8 has added the support of a TTL also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
+* **TTL** - Time to Live. This input argument represents the time in seconds, for keeping the masked values in the caching tables. The default value is 86400 seconds (24 hours). If this input argument is set to 0, the masked value would not be deleted from the cache table. Note that until Fabric 8.0, the TTL was supported only when creating the k2masking keyspace in Cassandra DB or when populating the interface input argument with the IN-MEMORY value. Fabric 8.0 has added a TTL support also when the k2masking tables are created in Fabric system PostgreSQL DB, based on the new expiration date field added to the caching tables. 
 
 * **onEmpty** - determines what to do with the input value when it is either an empty string or NULL:
 
@@ -68,39 +68,39 @@ Common input arguments of masking Actors are:
 
 The below are specific input arguments for the **MaskingSequence** Actor:
 
-* **sequenceInterface** and **sequenceId** - the **sequenceInterface** is populated with the interface name. The **sequenceId** is populated with the sequence name defined in the sequence interface. If the sequenceId is empty, the sequence name is taken from the **maskingId** input argument. The method of how to get the next sequence value depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
+* **sequenceInterface** and **sequenceId** - the **sequenceInterface** input argument is populated with the interface name. The **sequenceId** input argument is populated with the sequence name defined in the sequence interface. If the *sequenceId* is empty, the sequence name is taken from the **maskingId** input argument. The method of how to get the next sequence value depends on the sequence definition set by the **sequenceInterface** input argument. [Click for more information about Sequence Next Value](08_sequence_implementation_guide.md#sequence-next-value).
 * **initialValue** and **increment** - define the initial value of the sequence and the value of the increment. 
 
 
 
 ### Formatter Actors and Flows
 
-#### SimpleMaskingFormat
+#### SimpleMaskingFormat Actor
 
 Fabric 8.0 includes this Actor for running a simple formatting logic. This Actor works in 2 modes:
 
-- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the **formatDeny** (backlist) and/or that are not in the **formatAllow** (white list)  parameters.
+- **Normalize** - normalizes the original value to get a normalized (’naked‘) value. It removes from the original value all the characters that are in the ***formatDeny*** (black list) and/or that are not in the ***formatAllow*** (white list).
 
 - **Format** - adds to normalized ('naked') value the formatting characters for building an output value that has the same format as the input’s original value.
 
-In order to build the formatted output, it adds to the normal value all the characters from the original value that are identified as format characters, i.e., that are included that are in the formatDeny and/or that are not in the formatAllow parameters.
+In order to build the formatted output, the SimpleMaskingFormat Actor adds to the normal value all the characters from the original value that are identified as format characters, i.e., those that are included in the *formatDeny* and/or that are not included in the *formatAllow*.
 
- In case the formatAllow parameter is empty, any character is allowed, except for the characters specified in the formatDeny parameter.
+ In case the formatAllow input argument is empty, any character is allowed, except for the characters specified in the formatDeny input argument.
 
- At least one the following inputs - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both inputs are empty, the formatter Actor/flow will do nothing. 
+ At least one the following input arguments - formatAllow and formatDeny - must be populated in order to format or normalize the input value. If both input arguments are empty, the formatter flow/Actor will do nothing. 
 
  If the normal value is longer than the original value, the remaining characters will be added to the output value.
 
  **Input Arguments:**
 
 - **formatterMode** - indicates whether the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
-- **originalValue** - populated with the original (source or generated) value. The originalValue is needed for both modes.
+- **originalValue** - populated with the original (source or generated) value. The originalValue input argument is needed for both modes.
 
-- **normalValue** - populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
-- **formatAllow** - indicates which characters can be included in the normalized value. The formatAllow can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
-    - Example: the formatAllow is Numeric. Therefore,  all non-numeric characters need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12-542-99 and the formatAllow = Numeric, the normalized value 1254299.
-- **formatDeny** - indicates which characters must be excluded from the originalValue in order to get the normalized value. The formatDeny can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
-    - Example: if the formatDeny is '-', all the dashes need to be removed from the originalValue in order to get the normalized value. If the OriginalValue = 12A-542B-99 and the formatDeny = '-', the normalized value would be 12A542B99.
+- **normalValue** - populated with the masked normalized (‘naked‘) value. This input argument is needed if the formatterMode is *Format*.
+- **formatAllow** - indicates which characters can be included in the normalized value. The formatAllow input argument can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that can be included in the normalized value. 
+    - E.g.: The *formatAllow* is Numeric. Therefore,  all non-numeric characters need to be removed from the *originalValue* in order to get the normalized value. If the *originalValue* = 12-542-99 and the *formatAllow* = Numeric, the normalized value 1254299.
+- **formatDeny** - indicates which characters must be excluded from the originalValue input argument in order to get the normalized value. The formatDeny input argument can be populated with either Numeric, Alpha, Alphanumeric, White-Space, or Custom values. When a Custom value is set, the implementor can populate a String with a list of characters that must be excluded from the normalized value.
+    - E.g.: If the *formatDeny* is '-', all the dashes need to be removed from the *originalValue* in order to get the normalized value. If the *originalValue* = 12A-542B-99 and the *formatDeny* = '-', the normalized value would be 12A542B99.
 
 #### Custom Formatting Logic
 
@@ -109,17 +109,17 @@ You can define either a flow or an Actor to set a custom formatting logic. The f
 **Input Arguments:**
 
 - **formatterMode** - indicates whether the formatter needs to normalize or format the input’s original value. Valid values: *Normalize*, *Format*. Initial value: *Normalize*.
-- **originalValue** - populated with the original (source or generated) value. The originalValue is needed for both modes.
+- **originalValue** - populated with the original (source or generated) value. This input argument is needed for both modes.
 
-- **normalValue** - populated with the masked normalized (‘naked‘) value. This input is needed if the formatterMode is *Format*.
+- **normalValue** - populated with the masked normalized (‘naked‘) value. This input argument is needed if the formatterMode is *Format*.
 
 **Output Arguments:**
 
-- **value** - populated with the normalized or the formatted value; depends on the formatterMode. 
+- **value** - populated with the normalized or the formatted value; depends on the *formatterMode*. 
 
 Notes:
 - If you build a formatter Actor, it is recommended to inherit the Actor from the **AbstractMaskingFormat** Actor to get the required  arguments.
-- The mandatory input and output parameters must be set as external parameters in the formatter flow.
+- The mandatory input and output arguments must be set as external parameters in the formatter flow.
 
 ### How Do I Mask Data Using Masking Actors?
 
