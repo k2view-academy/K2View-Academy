@@ -28,13 +28,13 @@ Displays the data received from the executed query. Click on **Export to Excel**
 
 <web>
 
-When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), the Query Builder opens in the main panel, on the right.
+When opened via the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md), or from [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md) or [Views](/articles/06_LU_tables/06_LU_views.md) editors, the Query Builder opens in the main panel, on the right.
 
 ![image](images/web/01_QB2.png)
 
 
 
-When opened from either the Schema Editor, Graphit or Broadway - the Query Builder opens as a popup window:
+When opened from either the Schema Editor table's view, Graphit or Broadway - the Query Builder opens as a popup window:
 
 <img src="../03_logical_units/images/web/01_QB_WEB_popup3.png" style="zoom:67%;">
 
@@ -77,9 +77,9 @@ When executing the query, the results are presented in a table view in the Resul
 
 * The Results table enables some manipulations that let you adjust the display according to your needs, in addition to the *Columns to show* option:
 
-  * Sort Order - click on the column's header sort icon ![sort](C:\Users\EyalOrbach\OneDrive - K2View\K2View-Academy-7.2\articles\11_query_builder\images\web\order_icon.png) to reorder the table (Ascending/Descending).
+  * Sort Order - click on the column's header sort icon ![sort](images/web/order_icon.png) to reorder the table (Ascending/Descending).
 
-  * Filter - click on the column's header filter icon ![sort](C:\Users\EyalOrbach\OneDrive - K2View\K2View-Academy-7.2\articles\11_query_builder\images\web\filter_icon.png)to filter table's display accordingly.
+  * Filter - click on the column's header filter icon ![filter](images/web/filter_icon.png)to filter table's display accordingly.
 
   * Group - click on the column's header left arrow to group the table rows by this column. 
 
@@ -88,7 +88,7 @@ When executing the query, the results are presented in a table view in the Resul
     * You can group by several columns.
     * To ungroup, click again on the column header arrow.
 
-    ![grouping](C:\Users\EyalOrbach\OneDrive - K2View\K2View-Academy-7.2\articles\11_query_builder\images\web\01_results_grouping.png)
+    ![grouping](images/web/01_results_grouping.png)
 
 
 

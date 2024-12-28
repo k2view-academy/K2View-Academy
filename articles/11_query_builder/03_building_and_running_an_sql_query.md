@@ -1,11 +1,11 @@
 # Building an SQL Query
 
-To use the Query Builder:
+Use the Query Builder to build SQL queries, as following:
 
 <web>
 
-1. Open the DB Explorer objects tree.
-2. Edit the SQL commands in the top Query Editor window. You can either create the SQL query manually or use the DB Explorer objects tree menu.
+1. Open the Query Builder window, as described [here](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window) (Remember to choose the interface you wish to query).
+2. Edit the SQL commands in the top Query Editor window. 
 3. Click to execute the query. 
 4. The results are presented in a table view in the Results window.
 
@@ -31,26 +31,11 @@ To use the Query Builder:
 
 ![image](images/01_querytab.PNG)
 
-</studio> 
-
-<web>
-
-## Viewing the List of DB Objects
-Expand or collapse the DB objects tree. When opened via the DB Interface Explorer, the DB objects tree looks as shown in the below image.
-
-![image](images/02_querytab_WEB.PNG)  
-
- A similar tree appears inside the Query Builder pop-up window, when the Query Builder is opened via Schema Editor, Graphit and Broadway. Select the relevant Interface and then expand or collapse the DB objects tree, as needed.
-
-![image](images/web/explorer_popup.png)
-
-</web>
 
 
+## Editing a SQL Statement  
 
-## Editing an SQL Query  
 
-<studio> 
 
 ### 1. Adding a DB Object to the Main Window
 Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do either:
@@ -120,7 +105,7 @@ Each SQL statement that is combined by the UNION operator has a **Q** icon in th
     a. Right-click the **Q** icon of the removed query and select **Remove**.\
     b. Right-click the **Main** window, select **Union > Remove**. 
 
-## Table of Selected Columns - Edit the SQL Query
+## Table of Selected Columns - Edit the SQL Statement
 This table is displayed at the bottom-right of the Main window and it enables editing the SQL query. Its selected columns hold the same information as the graphic map in a tabular format.
 
 ### Adding an SQL Function to a DB object Column 
@@ -149,11 +134,11 @@ The **Max rows** setting is used for setting the maximum number of rows returned
 
 <web>
 
-You can either create the SQL query manually or use the DB objects tree menu.
+You can create and edit a SQL statement by selecting the desired action from the Interface Explorer tree menu, typing it manually, or seeking guidance from the built-in AI Assistant. The later two are used for more complex queries.
 
-### Adding a query using the DB Object Tree
+### Adding a query using the Interface Explorer Tree
 
-Adding a query to the Query Editor panel using the DB Object Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as popup at Schema Editor, Graphit and Broadway.
+Adding a query to the Query Editor panel using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as popup at Schema Editor, Graphit and Broadway.
 
 At DB Interface Explorer, choose the required SQL statement by using the context menu (right click) on the relevant tree entry. The available statements are: *select* statement, *insert* statement, *update* statement, *delete* statement.
 
@@ -165,7 +150,25 @@ At Query Builder popup, you can click on the right arrow, which appear on hoover
 
 ![](images/web/query_editor_popup.png)
 
-### Query Editor Assistant 
+## Writing a SQL statement
+
+While writing your SQL statement at the editor you can be guided by 2 assistants:
+
+### AI Assistant
+
+You can use the built-in AI Assistant for creating SQL statements, by providing him your desired statement in a natural language. To use the AI Assistant:
+
+1. Click on the AI icon (<img src="images/web/ai-2-bw.png" />) at the top right side of the Query Builder Editor panel.
+2. The Editor screen is then split into two side by side editors: At left - the native language statements
+
+
+
+> Notes:
+>
+> 1. To activate the AI Assistant you shall install one of the AI connectors and create an interface upon.
+> 2. 
+
+### Query Editor Code Completion Assistant 
 
 While editing the SQL statements manually, you can be assisted by the Editor Assistant, which suggest you code completion. The completion suggestion is for schemas, tables, columns names of the current interface, as well as set of base SQL clauses.
 
@@ -175,7 +178,7 @@ The Assistant code completion is done while typing and on hitting CTRL+SPACE, as
 
 
 
-> **Notes**
+> **Notes and Tips**
 >
 >  * You can clear the whole Query Editor window by clicking on the Clear button.
 >  * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
