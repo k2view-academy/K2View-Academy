@@ -25,11 +25,11 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 Replacing the loaded IDs (sequences) may be required when populating a target database as a way to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
 
-Fabric 8.2 has added the [catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). The following section describes both methods of sequence handling implementation:
+Fabric V8.2 has added the [Catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). The following section describes both methods of sequence handling implementation:
 
-I. [Sequence handling based on catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
+I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
 
-II. [Sequence handling without catalog](11b_tdm_sequence_implementation_without_catalog.md). 
+II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
 Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
 
