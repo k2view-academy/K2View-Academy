@@ -14,7 +14,7 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
      - **DB interface name** - can be populated by either the target DB interface in order to get the next value from the DB sequence, or **TDM** in order to create a new DB sequence in the TDM DB. The DB interface name is supported for Oracle, DB2 and PostgreSQL DBs. The sequence Actors get the sequence name from the SEQUENCE_NAME column of the tdmSeqList. If the sequence does not exits in the DB, the sequence Actor creates it.  
 
-       ***Note:*** If the target DB does not have a sequence, or if it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will automatically be created in the TDM DB.
+       ***Note:*** If the target DB does not have a sequence, or if it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will then be automatically created in the TDM DB.
 
    - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
 
