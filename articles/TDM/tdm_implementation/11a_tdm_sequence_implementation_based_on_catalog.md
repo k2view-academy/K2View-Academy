@@ -12,13 +12,13 @@ Click [here](/articles/39_fabric_catalog/10_catalog_settings.md#sequences-tab) f
 
 ### II. Adding the Sequence Classification to the Tables
 
-Currently, the Catalog doesn’t automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences.
+Currently, the Catalog does not automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences.
 
 Click [here](/articles/39_fabric_catalog/10_catalog_settings.md#sequences-tab) for instructions.
 
 ### III. Adding the Catalog Masking Actor to the Load and Rule-based Data Generation Flow
 
- Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to add the **CatalogMaskingMapper** Actor to the load and data generation flows.
+Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to add the **CatalogMaskingMapper** Actor to the load and data generation flows.
 
 
 
