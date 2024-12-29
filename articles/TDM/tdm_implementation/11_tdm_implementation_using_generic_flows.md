@@ -31,9 +31,9 @@ I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking keyspace. 
+Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking schema. 
 
-Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
+Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking schema on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
 ### Set the Sequence Report Global
 
