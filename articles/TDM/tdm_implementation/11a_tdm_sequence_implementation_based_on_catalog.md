@@ -30,4 +30,5 @@ Fabric enables you to create your own function or Broadway flow in order to gene
 
 Follow these steps for setting custom logic for a given sequence:
 
+- Open the generated sequence flow and replace the MaskingSequence Actor with MaskingLuFunction Actor or Masking Actor.
 - Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** as a way to use the Actor for sequence (ID) replacement.  
