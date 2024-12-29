@@ -27,17 +27,17 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
    An example of the **TDMSeqList** Actor:
 
-   ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\tdmSeqListExample.png)
+   ![image](images/tdmSeqListExample.png)
 
    An example of an inner flow for getting the initial sequence value:
 
-   ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\CustomerIdInitFlow.png)
+   ![image](images/CustomerIdInitFlow.png)
 
 
 
 The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the sequence Actors. 
 
-Following completion of the Actor's update, refresh the project by clicking the ![image](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
+Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
 **B.** Run either one of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor:
 
@@ -62,7 +62,7 @@ The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors an
 
 View the below example:
 
-![seq mapping](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\tdmSeqSrc2TrgMapping_example.png)
+![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
 
 
