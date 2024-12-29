@@ -24,7 +24,7 @@ Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flo
 
 ### Optional - Overriding the Catalog's Sequence Logic
 
-Edit the flows to override the Catalog sequence logic for some of the ID fields: add [Data Generation Actors](/articles/TDM/tdm_implementation/articles/19_Broadway/actors/07_masking_and_sequence_actors.html) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+Edit the flows to override the Catalog sequence logic for some of the ID fields: Add [Data Generation Actors](/articles/TDM/tdm_implementation/articles/19_Broadway/actors/07_masking_and_sequence_actors.html) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
 
 Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor. 
 
