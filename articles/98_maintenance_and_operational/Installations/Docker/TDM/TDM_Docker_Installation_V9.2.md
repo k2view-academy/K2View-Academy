@@ -58,7 +58,7 @@ Download the TDM Library and import it to your Fabric project.
    - New TDM  installation: edit the project as follows, to create the TDM tables on the PostgreSQL TDM DB:
      - Set the **BUILD_TDMDB Global to true** (default is false).
      - Set the  **POSTGRESQL_ADMIN interface to be active**.
-     - Note that the TDM DB and user must be created in advance in the PostgreSQL DB. For more information see [TDM Installation and Initial Configuration](/articles/98_maintenance_and_operational/Installations/TDM/TDM_Installation_V9.1.md).
+     - Note that the TDM DB and user must be created in advance in the PostgreSQL DB. For more information see [TDM Installation and Initial Configuration](/articles/98_maintenance_and_operational/Installations/TDM/TDM_Installation_V9.2.md).
 3. Note that the apps.json file in the TDM LU overrides the list of web applications. Edit the file in order to add additional web applications, if needed, before deploying the TDM LU. 
 4. Deploy the TDM library to Fabric. The deployment of the TDM LU also deploys the TDM GUI web application to Fabric.
 
