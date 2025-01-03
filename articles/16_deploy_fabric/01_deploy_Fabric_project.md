@@ -76,13 +76,13 @@ To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft
 
 </web>
 
-To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+To activate the Soft Deploy during the [Offline Deploy](03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
 
 
 ### How Do I Check Which Project is Deployed to Fabric? 
 
-Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message displays.
+Only **one project** can be deployed to [a Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has already been deployed and an attempt to deploy another project to the same cluster is being made, an error message is displayed.
 
 <studio>
 	
@@ -92,8 +92,7 @@ To perform a project’s deployment check in the Fabric server, use the **SET** 
 
 <web>
 	
-To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal
-(choose **Fabric -> Open Fabric Terminal**).
+To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal (choose **Fabric -> Open Fabric Terminal**).
 
 </web>
 
