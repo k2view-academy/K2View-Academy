@@ -8,17 +8,17 @@ Below are several examples for project versioning use cases, accompanied by diag
 
 This example shows a few cases of a developer workflow.
 
-* Create a tag, where all changes are committed and pushed and aligned with GIT.
+* Create a tag where all changes are committed, pushed, and aligned with GIT.
 
-* Create a tag, where there are local changes that are not pushed to GIT. Studio, then, alerts about their presence.
+* Create a tag where local changes are not pushed to GIT. Studio, then, alerts about their presence.
 
-  However, the developer can also choose to ignore the alert and to continue with the version tagging. This is a slightly risky, yet a valid case, as the version that is about to be released should not include the features he is currently working on. In our example (depicted in the below diagram), the developer pushes his changes and re-activates the version tagging, this time without getting any alerts.
+  However, the developer can also choose to ignore the alert and continue with the version tagging. This is a slightly risky yet valid case, as the version that is about to be released should not include the features he is currently working on. In our example (depicted in the diagram below), the developer pushes his changes and re-activates the version tagging, this time without getting any alerts.
 
 <studio> 
 
-* Deploy to remote server where no changes were done after creating the tag. In this case, the deployed artifacts are fully aligned with the tag, in a way that when running the `version` command in the remote server, you can be assured that the version is aligned with tag artifacts.
+* Deploy to a remote server where no changes were made after creating the tag. In this case, the deployed artifacts are fully aligned with the tag so that when running the `version` command in the remote server, you can be assured that the version is aligned with tag artifacts.
 
-* Deploy to remote server where changes were done locally after creating the tag. In case where Warn-on-Tag-Diff is chosen in User Preferences for this remote server, Studio alerts the user. If the user chooses to proceed anyway, then the built artifacts are marked with a star (*). This way, when running the `version` command in the target remote server, the user is hinted that the deployed artifacts are not fully aligned with the tagged version.
+* Deploy to a remote server where changes were done locally after creating the tag. In the case where Warn-on-Tag-Diff is chosen in User Preferences for this remote server, Studio alerts the user. If the user chooses to proceed anyway, then the built artifacts are marked with a star (*). This way, when running the `version` command in the target remote server, the user is hinted that the deployed artifacts are not fully aligned with the tagged version.
 
 
 
@@ -42,13 +42,13 @@ This example shows a few cases of a developer workflow.
 
 ## Example #2: Studio Flow - Several Developers
 
-This example illustrates the case of several developers who work on the same project. This example starts when version 1.0.4 is created and two developers start working based on it (it is assumed that the branch is fully aligned with the tag. You can see in example 1 that it is not necessarily the case).
+This example illustrates the case of several developers who work on the same project. This example starts when version 1.0.4 is created, and two developers start working based on it (it is assumed that the branch is fully aligned with the tag. You can see in example 1 that this is not necessarily the case).
 
-* DEV 1 initiates the version tagging act. She is being alerted because DEV 2 has pushed his changes after she did, meaning, her code is not fully aligned with the branch. In our example - she proceeds with the process.
+* DEV 1 initiates the version tagging act. She is being alerted because DEV 2 has pushed his changes after she did, meaning her code is not fully aligned with the branch. In our example - she proceeds with the process.
 
-  >  This is a legitimate case, where another developer continues with an implementation that is aimed for a later version. Accordingly, DEV 1 should verify, before proceeding, that DEV 2's changes shall not be part of the current version's content.
+  > This is a legitimate case where another developer continues with an implementation aimed at a later version. So then, DEV 1 should verify, before proceeding, that DEV 2's changes should not be part of the current version's content.
 
-* DEV 2 initiates the version tagging act. He will be rejected because the prospective version tag is the same as DEV 1's (1.0.5), who has already created it. This will happen as long as DEV 2 did not pull DEV 1's changes from GIT, with the updated version tag, and as long as he did not change the auto proposed version.
+* DEV 2 initiates the version tagging act. He will be rejected because the prospective version tag is the same as DEV 1's (1.0.5), already created. This will happen as long as DEV 2 does not pull DEV 1's changes from GIT with the updated version tag and as long as he does not change the auto-proposed version.
 
 
 
@@ -58,14 +58,14 @@ This example illustrates the case of several developers who work on the same pro
 
 ## Example #3: Hotfix
 
-This example illustrates a required-hotfix case, where one of the developers handles the hotfix implementation, while another continues to work on the main branch, without any collisions.
+This example illustrates a required-hotfix case, where one of the developers handles the hotfix implementation while another continues to work on the main branch without any collisions.
 
-* DEV 2 is assigned to implement the hotfix and he switches to work on a version that is based on a tag (by doing it he detached from tag and needs to make his changes on a some branch).
+* DEV 2 is assigned to implement the hotfix, and he switches to work on a version that is based on a tag (by doing it, he detached from the tag and needs to make his changes on some branch).
 
   > When he starts developing, the GIT would detach the developer from the tag, where he would need to push his changes to a new branch.
  
-* When DEV 2 initiates the version tagging act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with a HF version ("1.0.0-HF1").
-* DEV 1 works on the ongoing branch and thus no conflicts will occur when pushing her commits into GIT. Similarly, no conflicts will occur when initiating the version tagging act, which would generate and offer, as expected, the tag 1.0.1.
+* When DEV 2 initiates the version tagging act, Studio offers him the next version - 1.0.1, which is the next consecutive version that follows the current 1.0.0 version. DEV 2 overrides this tag with an HF version ("1.0.0-HF1").
+* DEV 1 works on the ongoing branch, and thus, no conflicts will occur when pushing her commits into GIT. Similarly, no conflicts will occur when initiating the version tagging act, which would generate an offer, as expected, the tag 1.0.1.
 
 
 
