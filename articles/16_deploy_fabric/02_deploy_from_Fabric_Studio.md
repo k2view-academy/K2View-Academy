@@ -6,21 +6,23 @@ A deployment can be performed either from the Fabric Studio, as explained in thi
 
 <studio>
 
-Studio allows you to perform deployment into either the local development server or a remote server.
+Studio allows you to deploy to either the local development server or a remote server.
 
 Before starting the deployment process on a project, check that the target Fabric server is configured. To do so, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window and configure the required Fabric server, or use the  **'debug'** server entry, that is already configured to localhost, that is, to the Fabric server that the Studio works by default with.
 
 Note that in order to **force the sync** of the LU Instances after deployment, you should check the [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) checkbox in the **Server Configuration** window.
 
-> It is highly recommended not to deploy directly from Studio into a sensitive server such as staging and production. Deployment into such environments shall be done using CI/CD pipeline that first verifies the potential deployment package. Moreover, it may be required to combine the work of several developers.
+> It is strongly recommended to avoid deploying directly from Studio to sensitive environments, such as staging or production servers. Instead, deployments to these environments should be managed through a CI/CD pipeline. This approach ensures that the deployment package is thoroughly verified before implementation.
+
+> Additionally, deployments may require coordination among multiple developers to integrate their work effectively. Using a structured pipeline not only minimizes risks but also facilitates collaboration and ensures a smooth deployment process.
 
 </studio>
 
 ## Auto Deploy
 
-The Fabric Studio **Auto Deploy** capability performs an automatic deployment of the code changes, to the local Fabric server, while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway  Population, Parser and GraphIt. 
+The Fabric Studio **Auto Deploy** capability performs an automatic deployment of the code changes to the local Fabric server while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway Population, Parser, and GraphIt. 
 
-This reduces frictions during the debugging process and frees the user from performing a manual deployment upon each code change.
+This reduces friction during the debugging process and frees the user from performing a manual deployment upon each code change.
 
 Fabric performs a local deployment according to the following logic: 
 
@@ -61,27 +63,27 @@ You can activate a deployment and see the Deployment Status in several places wi
 
 A deployed LU has a green circle next to its name in the Project Tree. Otherwise, for example while making changes in its content, the circle turns gray.
 
-Additionally, you can look at the 'Deployment Status' in the bottom status bar and verify whether all LUs have been deployed. When hovering over it with the mouse, a tooltip appears, implying which LUs are not deployed.
+You can also check the 'Deployment Status' in the bottom status bar to verify whether all LUs have been deployed. Hovering the mouse over it will display a tooltip, implying that no LUs have been deployed.
 
-The below illustration shows the Project Tree, where all LUs - except 'Web Services' - appear with a green circle, indicating that they are deployed. A similar indication exists in the bottom status bar.
+The illustration below shows the Project Tree. All LUs except 'Web Services' appear with a green circle, indicating they are deployed. A similar indication exists in the bottom status bar.
 
 ![](images/16_2_web_deploy_status_bar.png)
 
 ### Activate Deploy
 
-Deployment can be done for either all updated LUs, those that are not yet deployed, or a specific LU.
+Deployment can be done for all updated LUs, those that have not yet been deployed, or a specific LU.
 
 To deploy all updated LUs, perform either one of the following actions:
 
 * In the top menu bar, click Fabric and then 'Deploy All Updated Logical Units'.
-* In the bottom status bar, hover with the mouse over 'Deployment Status', to display a tooltip that implies which LUs are not deployed. Clicking on 'Deployment Status' will trigger the deployment on these LUs.
+* In the bottom status bar, hover your mouse over 'Deployment Status' to display a tooltip indicating which LUs are not deployed. Clicking on 'Deployment Status' will trigger the deployment of these LUs.
 * Open the command pallet (you can use the CTRL+SHIST+P shortcut), look for 'Deploy All Updated Logical Units' and click on it.
 
-> Note: The 'Deploy All' action activates a Soft Deploy, unless this is the first time an LU is being deployed. This definition can be changed in the Preferences page, which is accessible via the bottom-left gear icon.
+> Note: The 'Deploy All' action activates a Soft Deploy unless this is the first time an LU is deployed. This definition can be changed on the Preferences page, accessible via the bottom-left gear icon.
 
 
 
-To deploy a specific LU, right-click on its name in the Project Tree. In the context menu, you can choose either Soft Deploy or Deploy. For more information about deploy options read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+To deploy a specific LU, right-click on its name in the Project Tree. In the context menu, you can choose either Soft Deploy or Deploy. Read [here](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) for more information about deploy options. 
 
 </web>
 
