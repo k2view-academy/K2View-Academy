@@ -52,7 +52,7 @@ Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:
 
 When Debug is ON, the values of the input and output arguments of each executed step are displayed in grey balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
 
-<img src="images/99_25_blue_balloons.png" alt="image"  />
+<img src="images/99_25_blue_balloons.PNG" alt="image"  />
 
 To view a step's data, click the balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
 
