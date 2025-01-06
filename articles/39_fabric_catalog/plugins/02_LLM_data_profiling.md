@@ -26,14 +26,14 @@ The plugin's input parameters are:
   - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Data Profiling use case.
 - ```"userPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are, respectively, a table and a column being profiled, as well as the names of all other columns in this table. These 3 parameters are passed to the plugin by the framework.
-  - ```${possibleValues}``` defines a list of valid values that can be assigned as a property's value. These values need to be defined when it is required that the LLM will select a value from a pre-defined list. The values are taken from the ```"possibleValues"``` input parameter.
-  - ```${samplePrompt}``` is a user prompt part that is related to the data sample. It is taken from the ```"samplePrompt"``` input parameter.
   - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
 - ```"possibleValues"``` is a list of possible property values. 
   - For example, ```"possibleValues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
-  - Alternatively, the values can be retrieved from a project's MTable. In this case, the parameter ```"possibleMTableValues"``` should be populated, instead of the ```"possibleValues"``` parameter, using the following format:  ```"<MTable name>.<Column name>"```. 
-  - It is recommended for a relatively short list of possible valid values.
   - When you don't intend or need to provide a list of possible values to the LLM, it is recommended to edit the ```"userPrompt"``` by removing the text that refers to the possible values. 
+- ```"possibleMTableValues"``` is an alternative way to provide the possible property values. It allows the values to be retrieved from a project's MTable. The ```"possibleMTableValues"``` should be populated using the following format:  ```"<MTable name>.<Column name>"```. 
+  - For example, ```"possibleMTableValues" : "pii_profiling.name"```
+  - It is recommended for a relatively short list of possible valid values.
+  - Either ```"possibleValues"``` or ```"possibleMTableValues"``` should be populated in the plugin's definition, but not both. The ```"userPropmt"``` should be updated accordingly. 
 - ```"sampleSize"``` defines a sample size to be used by the LLM. By default, ```"sampleSize": 10```.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
 - ```"samplePrompt"``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```"sampleSize"``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
@@ -96,6 +96,41 @@ This is a product default definition of the LLM Description plugin that will gen
 		"propertyName": "description",
 		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${columnName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
 		"sampleSize": 10,
+		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
+      	"incrementalMode":"KEEP_ALL"
+	}
+}
+~~~
+
+### Use Case 3: LLM Profiling by Property (experimental)
+
+Running the LLM Data Profiling plugin can be effective when either the columns have meaningful names or the column values provide some insight or the combination of both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
+
+For example, when the table and column names are not meaningful, the descriptions (or remarks) might have been included in the data source for each table and/or column explaining what is stored in them.
+
+To include the value of the ```description``` property in the LLM analysis, use the following syntax in the ```userPrompt```: ```${property.description}```.
+
+Below is an LLM plugin configuration to support this use case:
+
+~~~json
+{
+	"name": "LLM Property Profiling",
+	"class": "com.k2view.discovery.plugins.llm.LLMDataProfilingPlugin",
+	"active": true,
+	"threshold": 0.7,
+	"monitorDesc": "Classifications",
+	"inputParameters": {
+		"propertyName": "classification",
+		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease classify the column ${columnName} based on its name and additional information included here: ${property.description}. Choosing one of the following possible values: ${possibleValues}.\n${samplePrompt}\n If none of the possible values match, return $NONE$.",
+		"possibleValues": [
+					"FIRST_NAME",
+					"LAST_NAME",
+					"ADDRESS",
+					"CITY",
+					"COUNTRY"
+				],
+		"possibleMTableValues":"",
+      	 "sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
       	"incrementalMode":"KEEP_ALL"
 	}
