@@ -37,10 +37,10 @@ Supported Secrets Management providers are:
 
 ## Using Secrets Management Services
 
-In order to use a Secrets Management provider:
+In order to use a Secrets Management provider, you should:
 
-1. Set the configuration in the config.ini file with the selected Secrets Management provider's access and permissions details.
-2. Provision and mark the required interface connection details as those that shall be taken from the Secrets Management provider, as part of the project's implementation settings.
+1. Set the configuration in the config.ini file with the selected Secrets Management provider's access and permission details.
+2. Provision and mark the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings.
 
 ### Config.ini file
 
