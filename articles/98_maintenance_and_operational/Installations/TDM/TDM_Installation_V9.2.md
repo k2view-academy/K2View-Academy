@@ -20,7 +20,7 @@ Click here to open the [TDM 9.2 Docker Installation document](/articles/98_maint
 ### Import the TDM Library
 
 Both TDM layers - backend and frontend - are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) from v7.6 onwards.
-Download the TDM Library from the [download links]([TDM 9.2.0_download_links.docx](https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7B9C259AC2-1FA9-45EA-94CB-C42B81E21AC2%7D&file=TDM%209.2.0_download_links.docx&action=default&mobileredirect=true), import and deploy it. Use the Import All option to import the TDM LU.
+Download the TDM Library from the [download links](https://k2view.sharepoint.com/:w:/r/sites/KS/_layouts/15/Doc.aspx?sourcedoc=%7B9C259AC2-1FA9-45EA-94CB-C42B81E21AC2%7D&file=TDM%209.2.0_download_links.docx&action=default&mobileredirect=true), import and deploy it. Use the Import All option to import the TDM LU.
 
 Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for instructions on how to import and deploy the TDM Library.
 

@@ -92,8 +92,7 @@ To perform a project’s deployment check in the Fabric server, use the **SET** 
 
 <web>
 	
-To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal
-(choose **Fabric -> Open Fabric Terminal**).
+To perform a project’s deployment check in the Fabric server, use the **SET** command from the Fabric terminal (choose **Fabric -> Open Fabric Terminal**).
 
 </web>
 
