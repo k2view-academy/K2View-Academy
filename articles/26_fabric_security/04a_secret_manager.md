@@ -2,7 +2,7 @@
 
 Fabric supports integration with Secrets Management services, with the intent that secrets - like passwords, used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) that enable communication to external systems - will not be stored in Fabric itself. Further information on how secrets can be securely stored in Fabric, is found [here](/articles/26_fabric_security/04_fabric_interfaces_security.md)).
 
-Secrets Management services are tools aimed for securely storing, managing, accessing and auditing sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
+Secrets Management services are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
 
 Secrets Management has several advantages: 
 
