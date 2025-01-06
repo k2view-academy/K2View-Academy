@@ -44,9 +44,9 @@ In order to use a Secrets Management provider, you should:
 
 ### Config.ini file
 
-Each of the supported Secrets Management providers has its own dedicated section in the config.ini file, with all required access and permissions details.
+Each supported Secrets Management provider has its own dedicated section in the config.ini file, with all the required access and permission details.
 
-In addition to populating these details, you **must** turn it on by setting the 'ENABLED' property to 'true', in the section of the chosen Secrets Management provider. 
+In addition to populating these details, you **must** turn it on by setting the 'ENABLED' property to 'true' in the chosen Secrets Management provider section. 
 
 Following are the config.ini attributes required for each Secrets Management provider:
 
