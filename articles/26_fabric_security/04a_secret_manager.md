@@ -80,18 +80,18 @@ Fabric supports 2 authentication methods:
   When using this method, Fabric first accesses the *approle* URL to dynamically get a token, and then uses this token as the auth credentials for the purpose of getting the secret. For this method, you should specify the following attributes:
 
   * ROLE_ID - the role that Fabric is associated to in the Vault.
-  * SECRET_ID - the secret that is used to get the token.
+  * SECRET_ID - the secret that is used for getting the token.
   * APPROLE_URL (optional) - when AppRole endpoint is not the default setting (default setting ends with "/approle").
 
   
 
-Additionally, this shall be set:
+Additionally, this should be set:
 
-* URL - the Vault API endpoint to get the secrets.
+* URL - the Vault API endpoint for getting the secrets.
 
 Optional properties:
 
-* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide isolation among teams at the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information.
+* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information.
 
 
 
