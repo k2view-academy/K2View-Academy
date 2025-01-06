@@ -6,9 +6,9 @@ Secrets Management services are tools that aim to securely store, manage, access
 
 The advantages of Secrets Management are: 
 
-- Reducing the risk of secret leaks when providing the secret for each client application.
+- Reducing the risk of secret leaks when providing a secret for each client application.
 - Having a single source of truth, which can be better controlled, changed or rotated, manually or automatically.
-- Managing access to secrets with fine-grained authorization policies.
+- Managing accesses to secrets with fine-grained authorization policies.
 - Detecting security breaches and attempted accesses to systems, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
 Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
