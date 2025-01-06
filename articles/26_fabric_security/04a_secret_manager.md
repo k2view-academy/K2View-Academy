@@ -11,7 +11,7 @@ Secrets Management has several advantages:
 - Managing access to secrets with fine-grained authorization policies.
 - Detecting security breaches and attempted access to systems, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
-Fabric supports integration with various external Secrets Management providers, in which case Fabric doesn't store the secrets but rather their reference IDs. 
+Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
 
 Supported Secrets Management providers are: 
 
