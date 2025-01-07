@@ -13,7 +13,7 @@ The advantages of Secrets Management are:
 
 Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
 
-Supported Secrets Management providers are: 
+The supported Secrets Management providers are: 
 
 - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/)
 - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
