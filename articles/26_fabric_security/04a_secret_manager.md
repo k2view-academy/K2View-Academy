@@ -131,8 +131,8 @@ The authentication is done by sending an `Authorization: Bearer` header, either 
 Other parameters:
 
 * APP_ID (can be set in the config.ini file as well as in the interface, for more granularity, when needed)
-* FOLDER - optional (default is Root; this parameter can be specified or overridden per a secret)
-* SAFE_NAME - optional (this parameter can be specified or overridden per secret)
+* FOLDER - optional (default is Root; this parameter can be specified or overridden per each secret)
+* SAFE_NAME - optional (this parameter can be specified or overridden per each secret)
 * SERVER_IP - to be used in the URL parameter
 * TIMEOUT (default is 5000 ms)
 * URL - expected format is https://{SERVER_IP}/AIMWebService/api/Accounts
