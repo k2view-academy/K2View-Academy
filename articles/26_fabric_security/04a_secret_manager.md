@@ -59,7 +59,7 @@ properties:
 * SECRET_ACCESS_KEY
 * REGION
 
-Authentication and authorization processes can be done by the service account that the server is associated with. This is an alternative to using an Access ID and an Access Key.
+Authentication and authorization processes can be done by the service account, which the server is associated with. This is an alternative to using an Access ID and an Access Key.
 
 
 
