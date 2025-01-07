@@ -91,7 +91,7 @@ Additionally, this should be set:
 
 Optional properties:
 
-* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide an isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information.
+* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide an isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information about namespaces.
 
 
 
