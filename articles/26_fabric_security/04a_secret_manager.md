@@ -174,12 +174,12 @@ The authentication is done by certifications and keys that should be applied.
 
 ### Interface Connection Details' Settings
 
-In the Studio, for marking an interface's property that needs to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-seceret-manager\>}. For example: ${secretmanager:mysql-password}.
+In the Studio, for marking an interface's property that needs to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-secret-manager\>}. For example: ${secretmanager:mysql-password}.
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (e.g., with a dot sign inside the key name); you should follow that pattern.
 * The Secrets Management service can be used also for interface connection details inside environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
 * You can use the *Test connection* option to validate the connection settings also when the Secrets Management service is activated.
-* The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
+* The following properties can be addressed to the Secrets Management provider for the DB Interface types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
 * Additional notes and considerations regarding specific Secrets Management providers:
   
   * For CyberArk CCP, you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=}"
