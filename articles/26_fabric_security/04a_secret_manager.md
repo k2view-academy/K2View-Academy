@@ -130,7 +130,7 @@ The authentication is done by sending an `Authorization: Bearer` header, either 
 
 Other parameters:
 
-* APP_ID - can be set in the config.ini file as well as in the interface, for more granularity, when needed.
+* APP_ID (optional) - can be set in the config.ini file as well as in the interface, for more granularity, when needed.
 * FOLDER (optional) - default is Root; this parameter can be specified or overridden per each secret.
 * SAFE_NAME (optional) - this parameter can be specified or overridden per each secret.
 * SERVER_IP - to be used in the URL parameter.
@@ -174,28 +174,23 @@ The authentication is done by certifications and keys that should be applied.
 
 ### Interface Connection Details' Settings
 
+Marking an interface connection details property, to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-seceret-manager\>}. For example: ${secretmanager:mysql-password}.
 
-Marking an interface connection details property, to be taken from the Secrets Management provider, you should use this pattern in its value:
+* Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns.
+* The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
+* You can use the *Test connection* option to verify that the connection settings are OK, also when the Secrets Management service is activated.
+* The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
+* on top - additional notes and consedirations regarding specific providers
+  
+  * For CyberArk CCP, you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=}"
 
-${secretmanager:\<id-at-seceret-manager\>}
-For example: ${secretmanager:mysql-password}
+     >  AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
 
 
-
-* Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
-* For CyberArk CCP, you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
-
-  >  Mentioning that AppID can be added for more granularity, rather than general one, which can be set in the config.ini file.
-
-* For Safegurd, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
+  * For Safegurd, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
 
   
 
-> Notes: 
->
-> * The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
-> * You can use the *Test connection* option to verify that the connection settings are OK, also when the Secrets Management service is activated.
-> * The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
 
 
 
