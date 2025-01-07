@@ -183,11 +183,11 @@ For example: ${secretmanager:mysql-password}
 
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns. 
-* For CyberArk CCP, you can specify the *folder* and/or *safe-name* parameters, by using the '&' concatenating pattern. For example: "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
+* For CyberArk CCP, you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:Safe=my-safe&Folder=my-folder&Object=mysql-password&&AppID=}"
 
   >  Mentioning that AppID can be added for more granularity, rather than general one, which can be set in the config.ini file.
 
-* For Safegurd, you shall specify both *asset name* and *account name* parameters, by using the '&' concatenating pattern. For example: "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
+* For Safegurd, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
 
   
 
