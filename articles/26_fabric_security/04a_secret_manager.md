@@ -149,7 +149,7 @@ The authentication is done by a credentials file:
    * Select **IAM & admin** > **Service account**.
    * Find the service account you want to use.
    * Open your service account's Actions ⋮ menu, then select **Create key**.
-   * In the resulting **Create private key** dialog, select the **JSON** option, create the key, and download it.
+   * In the resulting **Create private key** dialog, select the **JSON** option, create the key and download it.
 2. Locate the file in the Fabric server.
 3. Set the CREDENTIAL_FILE parameter, providing the path into the file.  
 
