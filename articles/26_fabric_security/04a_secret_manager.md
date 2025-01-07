@@ -122,7 +122,7 @@ Section name: [encryption_azure_sm]
 
 Section name: [encryption_cyberark_sm]
 
-The authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using HTTP basic authentication method:
+The authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using the HTTP basic authentication method:
 
 * AUTH_TOKEN
 * AUTH_PASSWORD
