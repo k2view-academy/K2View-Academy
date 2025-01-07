@@ -131,8 +131,8 @@ The authentication is done by sending an `Authorization: Bearer` header, either 
 Other parameters:
 
 * APP_ID (can be set in the config.ini file as well as in the interface, for more granularity, when needed)
-* FOLDER, optional (default is Root. Can be specified or overriden per a secret)
-* SAFE_NAME, optional (can be specified or overriden per secret)
+* FOLDER - optional (default is Root; this parameter can be specified or overridden per a secret)
+* SAFE_NAME - optional (this parameter can be specified or overridden per secret)
 * SERVER_IP - to be used in the URL parameter
 * TIMEOUT (default is 5000 ms)
 * URL - expected format is https://{SERVER_IP}/AIMWebService/api/Accounts
@@ -143,7 +143,7 @@ Other parameters:
 
 Section name: [encryption_gcp_sm]
 
-Authentication is done by a credentials file:
+The authentication is done by a credentials file:
 
 1. In the Google Cloud console
    * Select **IAM & admin** > **Service account**.
@@ -165,17 +165,17 @@ Other parameters:
 
 Section name: [encryption_safeguard_sm]
 
-Authentication is done by  certifications and keys that shall be applied.
+The authentication is done by certifications and keys that should be applied.
 
-* HOST, the Safeguard URL, used for all API calls. 
-* TIMEOUT, Optional (default is 10000 ms)
+* HOST - this is the Safeguard URL, used for all API calls. 
+* TIMEOUT - optional (default is 10000 ms)
 
 
 
 ### Interface Connection Details' Settings
 
 
-Marking an interface connection details property, to be taken from the Secrets Management provider, you shall use this pattern in its value:
+Marking an interface connection details property, to be taken from the Secrets Management provider, you should use this pattern in its value:
 
 ${secretmanager:\<id-at-seceret-manager\>}
 For example: ${secretmanager:mysql-password}
