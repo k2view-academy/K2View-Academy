@@ -168,7 +168,7 @@ Section name: [encryption_safeguard_sm]
 The authentication is done by certifications and keys that should be applied.
 
 * HOST - this is the Safeguard URL, used for all API calls. 
-* TIMEOUT (optional) - (default is 10000 ms).
+* TIMEOUT (optional) - default is 10000 ms.
 
 
 
