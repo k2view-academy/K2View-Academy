@@ -102,11 +102,11 @@ Fabric supports one of the following authentication methods for Azure Key Vault:
  1. CLIENT_ID + CLIENT_SECRET + TENANT
  2. USE_MANAGED_IDENTITY_AUTH + CLIENT_ID + RESOURCE_ID 
  3. CLIENT_ID + USER_NAME + PASSWORD + TENANT_ID
- 4. When Fabric is hosted on an Azure server or when Azure [CLI](https://learn.microsoft.com/en-us/cli/azure/) agent is installed and activated, Fabric is already considered as being authenticated, without providing further authentication credentials.
+ 4. When Fabric is hosted on an Azure server or when the Azure [CLI](https://learn.microsoft.com/en-us/cli/azure/) agent is installed and activated, Fabric is considered to be authenticated, without providing further authentication credentials.
 
 Section name: [encryption_azure_sm]
 
-- KEY_VAULT_NAME - this property is required for any of the above 4 authentication method options
+- KEY_VAULT_NAME - this property is required for any one of the above 4 authentication methods.
 - CLIENT_ID
 - CLIENT_SECRET
 - TENANT_ID
@@ -122,7 +122,7 @@ Section name: [encryption_azure_sm]
 
 Section name: [encryption_cyberark_sm]
 
-Authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using HTTP basic authentication method:
+The authentication is done by sending an `Authorization: Bearer` header, either API key or user:passowrd, using HTTP basic authentication method:
 
 * AUTH_TOKEN
 * AUTH_PASSWORD
@@ -131,11 +131,11 @@ Authentication is done by sending an `Authorization: Bearer` header, either API 
 Other parameters:
 
 * APP_ID (can be set in the config.ini file as well as in the interface, for more granularity, when needed)
-* FOLDER, optional (default is Root. Can be specified or overriden per secret)
+* FOLDER, optional (default is Root. Can be specified or overriden per a secret)
 * SAFE_NAME, optional (can be specified or overriden per secret)
-* SERVER_IP, will be used in the URL parameter
+* SERVER_IP - to be used in the URL parameter
 * TIMEOUT (default is 5000 ms)
-* URL, expected format: https://{SERVER_IP}/AIMWebService/api/Accounts
+* URL - expected format is https://{SERVER_IP}/AIMWebService/api/Accounts
 
 
 
