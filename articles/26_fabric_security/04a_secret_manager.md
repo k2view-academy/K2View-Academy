@@ -174,7 +174,7 @@ The authentication is done by certifications and keys that should be applied.
 
 ### Interface Connection Details' Settings
 
-Marking an interface connection details property, to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-seceret-manager\>}. For example: ${secretmanager:mysql-password}.
+In the Studio, for marking an interface's property that needs to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-seceret-manager\>}. For example: ${secretmanager:mysql-password}.
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns.
 * The Secrets Management service can be used also for interface connection details inside environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
