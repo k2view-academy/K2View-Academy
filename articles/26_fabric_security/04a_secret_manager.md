@@ -122,7 +122,7 @@ Section name: [encryption_azure_sm]
 
 Section name: [encryption_cyberark_sm]
 
-The authentication is done by either an API key or user and password, and accordingly you should define the following properties:
+The authentication is done by using either an API key or user and password, and accordingly the following parameters have to be set:
 
 * AUTH_TOKEN
 * AUTH_PASSWORD
