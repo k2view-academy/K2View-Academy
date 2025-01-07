@@ -157,7 +157,7 @@ Other parameters:
 
 * PROJECT_ID
 
-* LOCATION_ID, Optional - in case you use a regional secret manager.
+* LOCATION_ID (optional) - in case you use a regional secret manager.
 
   
 
