@@ -85,7 +85,7 @@ Fabric supports 2 authentication methods:
 
   
 
-Additionally, this should be set:
+Additionally, this parameter should be set:
 
 * URL - the Vault API endpoint for getting the secrets.
 
@@ -151,7 +151,7 @@ The authentication is done by a credentials file:
    * Open your service account's Actions ⋮ menu, then select **Create key**.
    * In the resulting **Create private key** dialog, select the **JSON** option, create the key and download it.
 2. Locate the file in the Fabric server.
-3. Set the CREDENTIAL_FILE parameter, providing the path into the file.  
+3. Set the CREDENTIAL_FILE parameter, providing the path to the file.  
 
 Other parameters:
 
@@ -177,8 +177,8 @@ The authentication is done by certifications and keys that should be applied.
 Marking an interface connection details property, to be taken from the Secrets Management provider, you should use this pattern in its value: ${secretmanager:\<id-at-seceret-manager\>}. For example: ${secretmanager:mysql-password}.
 
 * Each Secret Manager service has its own pattern, usually by hierarchy (for example, with a dot sign inside the key name); you should follow these patterns.
-* The Secrets Management service can be used also for interface connection details inside Environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
-* You can use the *Test connection* option to verify that the connection settings are OK, also when the Secrets Management service is activated.
+* The Secrets Management service can be used also for interface connection details inside environments. Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
+* You can use the *Test connection* option to validate the connection settings also when the Secrets Management service is activated.
 * The following properties can be addressed to the Secrets Management provider for the DB Interfaces types: host, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
 * on top - additional notes and consedirations regarding specific providers
   
