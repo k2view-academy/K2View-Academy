@@ -32,7 +32,6 @@ As well as those project files, an additional file - *installed_extensions.json*
 
 > **Notes:** 
 >
-> * **Dependencies**: In case 
 >
 > * **Conflicts**: If a file, which is included in an extension that you are installing, already exists in your project, then Studio will notify about it and will display the list of the conflicting files. In such case, you can decide to either:
 >
