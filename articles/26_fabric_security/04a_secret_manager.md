@@ -187,7 +187,7 @@ In the Studio, for marking an interface's property that needs to be taken from t
      >  The AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
 
 
-  * For Safegurd, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
+  * For Safeguard, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., "${secretmanager:asset_name=OracleDB&account_name=PreProd}"
 
   
 
