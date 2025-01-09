@@ -8,7 +8,7 @@ In addition, the centralized Catalog’s setup allows for some of the users to b
 
 Utilizing this feature requires creating a Central Neo4j and additional clients (Fabric instances) that will point to the Central Neo4j GraphDB. The steps of how to do it are described below.
 
-![](images/central_arc.PNG)
+![](images/central_arc.png)
 
 ### Setup Steps
 
