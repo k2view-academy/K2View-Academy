@@ -56,7 +56,7 @@ In addition to populating these details, you **must** turn it on by setting the 
 
 The following are the required config.ini file attributes for each Secrets Management provider:
 
-#### *AWS Secrets Manager*
+#### <ins>*AWS Secrets Manager*</ins>
 
 Section name: [encryption_aws_sm]
 properties:
@@ -69,7 +69,7 @@ Authentication and authorization processes can be done by the service account, w
 
 
 
-#### *HashiCorp Vault*
+#### <ins>*HashiCorp Vault*</ins>
 
 Section name: [encryption_hashicorp_sm]
 
@@ -101,7 +101,7 @@ Optional properties:
 
 
 
-#### *Azure Key Vault*
+#### <ins>*Azure Key Vault*</ins>
 
 Fabric supports one of the following authentication methods for Azure Key Vault:
 
@@ -124,7 +124,7 @@ Section name: [encryption_azure_sm]
 
 
 
-#### *CyberArk CCP*
+#### <ins>*CyberArk CCP*</ins>
 
 Section name: [encryption_cyberark_sm]
 
@@ -145,7 +145,7 @@ Other parameters:
 
 
 
-#### *Google Cloud Secret Manager*
+#### <ins>*Google Cloud Secret Manager*</ins>
 
 Section name: [encryption_gcp_sm]
 
@@ -167,7 +167,7 @@ Other parameters:
 
   
 
-#### *OneIdentity Safeguard*
+#### <ins>*OneIdentity Safeguard*</ins>
 
 Section name: [encryption_safeguard_sm]
 
