@@ -13,14 +13,20 @@ The advantages of Secrets Management are:
 
 Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
 
-These are the currently supported Secrets Management providers: 
+These are the currently supported Secrets Management providers, along with their official webpages: 
 
-- [AWS Secret Manager](https://aws.amazon.com/secrets-manager/)
-- [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
-- [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/)
-- [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
-- [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager)
-- [OneIdentity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
+-	AWS Secret Manager - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/)
+
+- HashiCorp Vault - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management)
+
+- Azure Key Vault - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/)
+
+- CyberArk CCP - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
+
+- Google Cloud Secret Manager - [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager)
+
+- OneIdentity Safeguard - [OneIdentity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
+
 
 
 
@@ -50,7 +56,7 @@ In addition to populating these details, you **must** turn it on by setting the 
 
 The following are the required config.ini file attributes for each Secrets Management provider:
 
-#### AWS Secrets Manager
+#### <ins>*AWS Secrets Manager*</ins>
 
 Section name: [encryption_aws_sm]
 properties:
@@ -63,7 +69,7 @@ Authentication and authorization processes can be done by the service account, w
 
 
 
-#### HashiCorp Vault
+#### <ins>*HashiCorp Vault*</ins>
 
 Section name: [encryption_hashicorp_sm]
 
@@ -95,7 +101,7 @@ Optional properties:
 
 
 
-#### Azure Key Vault
+#### <ins>*Azure Key Vault*</ins>
 
 Fabric supports one of the following authentication methods for Azure Key Vault:
 
@@ -118,7 +124,7 @@ Section name: [encryption_azure_sm]
 
 
 
-#### CyberArk CCP
+#### <ins>*CyberArk CCP*</ins>
 
 Section name: [encryption_cyberark_sm]
 
@@ -139,7 +145,7 @@ Other parameters:
 
 
 
-#### Google Cloud Secret Manager
+#### <ins>*Google Cloud Secret Manager*</ins>
 
 Section name: [encryption_gcp_sm]
 
@@ -161,7 +167,7 @@ Other parameters:
 
   
 
-#### OneIdentity Safeguard
+#### <ins>*OneIdentity Safeguard*</ins>
 
 Section name: [encryption_safeguard_sm]
 
