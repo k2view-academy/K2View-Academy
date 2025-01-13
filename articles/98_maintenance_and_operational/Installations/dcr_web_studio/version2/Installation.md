@@ -144,7 +144,7 @@ These files must be named `cert.cer` and `cert.key` respectively. The TLS certif
 
 To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, restart Traefik using the instructions below.
 
-### **Step 4** - Select a Fabric Blueprint Profile to Use
+### **Step 5** - Select a Fabric Blueprint Profile to Use
 
 There are four profiles that each embeds Fabric to choose from. The default is "studio.config".  
 
