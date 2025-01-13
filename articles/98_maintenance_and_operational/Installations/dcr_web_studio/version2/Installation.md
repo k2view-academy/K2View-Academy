@@ -1,4 +1,4 @@
-# Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
 
 ## Prerequisites
 
