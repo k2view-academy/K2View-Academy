@@ -57,12 +57,9 @@ Internet access is required to perform this installation. You will need access t
    2. Password: admin
 
 2. Ports: Traefik employs the following ports:
-
-   | Protocol | Port | Description       |
-   | -------- | ---- | ----------------- |
-   | HTTP     | 8080 | Traefik dashboard |
-   | HTTP     | 80   | HTTP listener     |
-   | HTTPS    | 443  | HTTPS listener    |
+ * HTTP: Port 8080 - Traefik dashboard
+ * HTTP: Port 80 - HTTP listener
+ * HTTPS: Port 443 - HTTPS listener
 
 
 ## Installation
@@ -77,7 +74,7 @@ There are five steps to carry out to get Fabric Web Studio up and running within
 * **Step 6** - Create and Launch a Fabric Space
 * **Step 7** – Access Web Studio
 
-## Before you proceed, confirm that you have a K2view Nexus Container Registry Account
+### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
 You need to obtain credentials to access the K2view Nexus. Your K2view account representative can arrange this for you. If you do not have access, please contact your K2view representative, who can provide steps to help you through this process.
 
