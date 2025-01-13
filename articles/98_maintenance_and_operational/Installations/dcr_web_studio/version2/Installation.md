@@ -88,7 +88,7 @@ If Docker has not already been installed on your machine, follow the [Docker ins
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
 
-[**TODO**] If you are using Windows, you must first set up and use WSL. For instructions, please consult the [Install Docker and Docker Compose on Microsoft Windows](#_Install_Docker_and). 
+If you are using Windows, you must first set up and use WSL. Please consult the `Install Docker and Docker Compose on Microsoft Windows` below for instructions. 
 
 ### **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
 
@@ -142,7 +142,7 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 **Configuring TLS**
 
-Traefik will use its own self-signed TLS certificates for HTTPS connections by default. If you want to use your certificate, everything is pre-configured for you. You need to create an `ssl-certs` directory within the installation package's directory where you find k2vingress-compose.yaml file. and place your certificate[[1]](#1) and private key within this directory. These files must be named `cert.cer` and `cert.key` respectively.
+Traefik will use its own self-signed TLS certificates for HTTPS connections by default. If you want to use your certificate, everything is pre-configured for you. You need to create an `ssl-certs` directory within the installation package's directory where you find k2vingress-compose.yaml file. and place your certificate and private key within this directory. These files must be named `cert.cer` and `cert.key` respectively.
 
 The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
@@ -167,7 +167,7 @@ When creating a space, its name must consist only of lowercase alphanumeric char
 
 #### Create Spaces on Your Server
 
-You can create multiple Fabric Spaces on your server. To do so, use the [`k2space.sh`](#k2spacesh) script as shown here:
+You can create multiple Fabric Spaces on your server. To do so, use the k2space.sh script as shown here:
 
 ```bash
 ./k2space.sh create [--profile=profile-name] spacename
@@ -210,4 +210,51 @@ When presented with the login screen, enter:
  •  Password: admin
 
 If you access Fabric Web Studio, you have successfully installed it. 
+
+
+
+## Docker and Docker Compose Installation
+If Docker has not already been installed, follow the Docker installation guide from Docker's official documentation. Install docker from: [https://docs.docker.com/compose/](https://docs.docker.com/compose/).
+
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/). for more information.
+
+### Install Docker and Docker Compose on Linux
+
+1.	You need to install and run Docker that you can download from [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
+2.	The Docker Compose Runtime for Fabric Services requires Linux.  
+3.	You need to install the Docker Compose Plugin. Just so you know, if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
+
+### Install Docker and Docker Compose on Microsoft Windows
+1.	You need to install and run Docker that you can download from [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
+2.	The Docker Compose Runtime for Fabric Services requires Linux or Microsoft Windows if you use the Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. 
+3.	You need to install the Docker Compose Plugin. Please note that if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
+
+####	Using the Windows Subsystem for Linux (WSL)
+When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Doing otherwise will not work.
+
+####	Installing WSL
+1.	Open PowerShell as Administrator.
+
+2.	Install WSL and a Linux distribution (e.g., Ubuntu):
+   `wsl –install`
+3.	List the installed WSL distribution:
+	`wsl -l`
+4.	You cannot use the default “docker-desktop” distribution provided by Microsoft. You need to install a Linux distribution. 
+
+   `wsl --install -d <distribution_name>`
+
+e.g., wsl --install -d Ubuntu
+
+5.	You need to set the default to use the Linux distribution you selected. It might be listed as item 2 for example. To set the default use this command
+
+   `wsl --set-default-version 2`
+6.	You can now launch WSL using the desired distribution using the WSL command:
+
+   `wsl`
+
+###	Using the WSL File System
+In step 4 and when starting Fabric Docker Compose Runtime, it is essential that you do not use the Windows file system, for example, from within the /mnt/c directory. 
+Avoid running commands within the Windows file system (e.g., /mnt/c) this will cause Fabric to fail to run correctly. Rather, navigate to the WSL file system (e.g., /home/username).
+
+
 
