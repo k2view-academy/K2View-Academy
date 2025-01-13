@@ -1,4 +1,4 @@
-<strong>Maintenance and Operational<strong>
+<strong>Installation, Maintenance and Operations<strong>
 
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Hardware/README.md">Hardware Requirements</a></li>
