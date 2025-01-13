@@ -8,11 +8,11 @@ K2view Fabric Web Studio provides developers with a unified platform for designi
 
 **Content**
 
-About
-Installation
-Operating
-Upgrading
-Troubleshooting
-
-
+<ul>      
+<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.md">About</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.md">Installation</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.md">Operating</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Upgrading.md">Upgrading</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.md">Troubleshooting</a></li>
+</ul>
 
