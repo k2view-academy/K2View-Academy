@@ -47,7 +47,7 @@ Internet access is required to perform this installation. You will need access t
 
 ## Things to Configure
 1. Git Configuration - This is described in Step 5 - Configuring Git and TLS
-2. TLS Certificate and Private Key Configuration - Optional because Traefik uses its own self-signed TLS certificate for HTTPS connections by default.  To provide your own, please refer to Step 5. 
+2. TLS Certificate and Private Key Configuration - Optional because Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 5. 
 
 
 ## Things to Know
@@ -141,9 +141,9 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-Traefik will use its own self-signed TLS certificates for HTTPS connections by default. If you want to use your certificate, everything is pre-configured for you. You need to create an `ssl-certs` directory within the installation package's directory where you find k2vingress-compose.yaml file. and place your certificate and private key within this directory. These files must be named `cert.cer` and `cert.key` respectively.
+Traefik will use its own self-signed TLS certificates for HTTPS connections by default. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the`ssl-certs` directory within the installation package's directory, where you find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
 
-The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
+These files must be named `cert.cer` and `cert.key` respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
 To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, restart Traefik using the instructions below.
 
