@@ -19,7 +19,7 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
    1. Linux: root or sudo access granting you administrative rights
    2. Windows: you need administrator rights on your machine
 
-4. The Docker Compose Runtime for Fabric Services requires Linux. You can also use Microsoft Windows if you use the Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. Instructions are provided in the document’s Windows section. 
+4. The Docker Compose Runtime for Fabric Services requires Linux. You can also use Microsoft Windows if you use the Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. Instructions are provided in this article’s `Docker and Docker Compose Installation` section. 
 5. You need to install the Docker Compose Plugin. Please note that if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
 
 ### K2view Software
