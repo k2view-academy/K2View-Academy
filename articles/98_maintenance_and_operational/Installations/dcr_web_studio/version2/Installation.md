@@ -64,7 +64,7 @@ Internet access is required to perform this installation. You will need access t
 
 ## Installation
 
-There are five steps to carry out to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
+There are various steps to carry out to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
 * **Step 1** - Install and Validate Docker and Docker Compose
 * **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
