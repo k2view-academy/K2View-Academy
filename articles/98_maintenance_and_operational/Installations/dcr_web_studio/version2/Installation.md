@@ -15,12 +15,12 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
 1. You need to install a Git client on the computer by downloading and installing it. You can download it from https://git-scm.com/downloads and follow the instructions provided at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 2. You need to install and run Docker. You also need to install the Docker Compose Plugin. If you install Docker Desktop, Docker Compose is bundled. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. The installation links are:
-*  Install Docker Desktop: https://docs.docker.com/compose/install/
-*  Install Docker: https://docs.docker.com/engine/install/
-
+   - Install Docker Desktop: https://docs.docker.com/compose/install/
+   - Install Docker: https://docs.docker.com/engine/install/
+     
 3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
-* Linux: root or sudo access granting you administrative rights
-* Windows: you need administrator rights on your machine
+   - Linux: root or sudo access granting you administrative rights
+   - Windows: you need administrator rights on your machine
 
 
 ### K2view Software
@@ -54,26 +54,27 @@ Internet access is required to perform this installation. You will need access t
 ## Things to Know
 1. Default administrator credentials are
 
-   1. Username: admin
-   2. Password: admin
+   - Username: admin
+   - Password: admin
 
 2. Ports: Traefik employs the following ports:
- * HTTP: Port 8080 - Traefik dashboard
- * HTTP: Port 80 - HTTP listener
- * HTTPS: Port 443 - HTTPS listener
+
+   - HTTP: Port 8080 - Traefik dashboard
+   - HTTP: Port 80 - HTTP listener
+   - HTTPS: Port 443 - HTTPS listener
 
 
 ## Installation
 
 There are various steps to carry out to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-* **Step 1** - Install and Validate Docker and Docker Compose
-* **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
-* **Step 3** - Login to K2view's Nexus Container Registry
-* **Step 4** – Configure Git and TLS
-* **Step 5** - Select a Fabric Blueprint Profile to Use
-* **Step 6** - Create and Launch a Fabric Space
-* **Step 7** – Access Web Studio
+  - **Step 1** - Install and Validate Docker and Docker Compose
+  - **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
+  - **Step 3** - Login to K2view's Nexus Container Registry
+  - **Step 4** – Configure Git and TLS
+  - **Step 5** - Select a Fabric Blueprint Profile to Use
+  - **Step 6** - Create and Launch a Fabric Space
+  - **Step 7** – Access Web Studio
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
@@ -123,11 +124,11 @@ To do this, you must provide a token, a path to your Git repository, and the app
 
 To configure Git, open the .env file and specify the following in the Git Integration section:
 
-* GIT_REPO  - The Github repository URI to clone and store your project data. 
-  * **Important Note: Please do not prepend "HTTPS://" before the repository's URI**.
+  - GIT_REPO  - The Github repository URI to clone and store your project data. 
+    - **Important Note: Please do not prepend "HTTPS://" before the repository's URI**.
 
-* GIT_BRANCH - The Git branch to use. The default is "master".
-* GIT_TOKEN - Token used to authenticate to your GitHub repository.  
+  - GIT_BRANCH - The Git branch to use. The default is "master".
+  - GIT_TOKEN - Token used to authenticate to your GitHub repository.  
 
 Fabric Web Studio will use these parameters to run an initial clone and Git operations. The initial clone performed will be: 
 
@@ -202,8 +203,8 @@ You can also connect to Fabric remotely using *http://[hostname or ip address]/s
 
 When presented with the login screen, enter: 
 
-* Username: admin
-* Password: admin
+  - Username: admin
+  - Password: admin
 
 If you access Fabric Web Studio, you have successfully installed it. 
 
