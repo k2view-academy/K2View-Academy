@@ -90,7 +90,7 @@ Nodes that can be added:
 
 ## Catalog-related Actions in the Interface Explorer Tree
 
-The following Catalog-related action is available on the **schema** level of the interface after running discovery on it:
+The following Catalog-related actions are available on the **schema** level of the interface after running discovery on it:
 
 * Click **Show root table recommendation** icon to see the top 5 schema’s tables (based on the score). The score represents the importance of each node within the graph, based on the
   number of incoming relationships. It’s calculated using the PageRank algorithm. This information is reset on the tab reload.
@@ -99,7 +99,13 @@ The following Catalog-related action is available on the **schema** level of the
 
 
 
+* Click **Filter tables by tag/property** icon to filter the list of schema's tables based on the Catalog’s dataset properties. 
 
+  ![](images/web/25_6_catalog_filter_icon.png)
+
+  Table filtering by a property helps to create a Catalog-based Logical Unit, with a smaller number of tables.
+
+  ![](images/web/25_6_catalog_filter.gif)
 
 
 
