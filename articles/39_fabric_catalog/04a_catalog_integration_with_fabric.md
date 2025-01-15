@@ -8,7 +8,7 @@ To initiate the Discovery process:
 
 * Start by defining an interface for your data source in the Fabric Studio. 
 
-* Next, trigger the Discovery job on this interface. This is done by opening the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right-clicking on the interface and selecting **Run Discovery Job**.
+* Next, trigger the Discovery job on this interface. This is done by opening the [Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) in the Web Studio, right-clicking on the interface and selecting **Run Discovery Job**.
 
 * Alternatively, run the following command from the Fabric terminal:
 
@@ -50,15 +50,17 @@ Once the Discovery job execution on a data source has been completed, the messag
 
 You can view the discovery results in the Catalog by clicking the button in the message.
 
-Upon the Discovery job completion, the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the Discovery schema from the Neo4j rather than from the data source. Note that the tab should be refreshed.
+Upon the Discovery job completion, the [Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the Discovery schema from the Neo4j rather than from the data source. The interface is then marked with a different icon:
+
+<img src="images/catalog_indication.png" />
 
 To view a data source element in the Catalog application, do the following:
 
-* Open the DB Interface Explorer tab in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
+* Open the Interface Explorer tab in the Web Studio and select the required element. It can be either an interface, a schema, a table or a field.
 
 * Right-click the element and click **Open in Catalog**. 
 
-  <img src="images/show_catalog_commands.png" style="zoom:75%;" />
+  <img src="images/show_catalog_commands.png" />
 
 * The Catalog application opens and the selected element is displayed in the Catalog's Navigator tree.
 
