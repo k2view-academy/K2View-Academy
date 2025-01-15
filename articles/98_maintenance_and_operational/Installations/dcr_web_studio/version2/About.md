@@ -1,0 +1,19 @@
+# Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+This **README** describes the Docker Compose Runtime used to host K2view Fabric Web Studio. It covers setup, components, installation options, and features. 
+
+## About K2view Fabric Web Studio
+
+K2view Fabric Web Studio provides developers with a unified platform for designing, building, and managing data-driven solutions. The Docker Compose Runtime's multi-space capability enables the creation of data management applications supporting multiple developers.  Developers benefit from robust data management and orchestration tools for real-time integration, seamless testing, and debugging features that accelerate project completion and deliver collaborative functionality that supports multiple users. 
+
+Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0, supports multiple space creation and provides a simplified URL for accessing Fabric Spaces using a URL context rather than a subdomain-based URL. 
+
+## The Components
+
+1. **Docker Compose Runtime**: Fabric Web Studio can be installed within a Docker Compose Runtime environment. Docker and its Compose plugin provide the ability to run Web Studio for which three profiles can be selected, an embedded Fabric engine, and a Traefik reverse proxy, that combined provide the means to create multiple Fabric Spaces within the Docker Compose Runtime. 
+2. **Fabric Image**: The Docker Compose Runtime is certified to run specific Fabric releases you can download from K2view's Nexus Container Registry.
+3. **K2view Fabric Web Studio**: Available with four profiles that each embeds Fabric.
+   1. **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
+   2. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
+   3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
+   4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
+4. **Traefik Reverse Proxy** allows you to route requests to your various Fabric Spaces running within your Docker Compose Runtime at http(s)://[host]/[spacename]/. 
