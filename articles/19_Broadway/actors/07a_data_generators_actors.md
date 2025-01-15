@@ -1,8 +1,8 @@
 # Data Generation Actors
 
-Starting from V7.1, Fabric separates the data generation (manufacturing) of synthetic data from the hashing and caching capabilities. The data generation Actors can be used to either generate synthetic entities or mask sensitive data. Broadway provides various data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+Starting from V7.1, Fabric separates the data generation (manufacturing) of synthetic data from the hashing and caching capabilities. The data generation Actors can be used to either generate synthetic entities (rule-based generation) or mask sensitive data. Broadway provides various built-in data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
 
-A data generator Actor can be executed by either the Broadway flow ('as is') for generating new data or the **Masking** Actor for caching the generated data. 
+A data generator Actor can be executed by either the Broadway flow ('as is') for generating new data, invoked by the **Masking** Actor for caching the generated data or activated by the [catalog masking](/articles/39_fabric_catalog/10_catalog_settings.md#pii--masking-tab). 
 
 ## Main Data Generation Actors
 
@@ -109,9 +109,15 @@ A customer has 2 activities. The data generation inner flow needs to generate 3 
 
 **Rows per parent** mode: the data generation inner flow is called 2 times (there are 2 parent activities) - each call is set with a different parent activity ID and it generates 3 cases on each call.
 
-**Handle all parents rows** mode: the data generation inner flow is called once for the customer and generates 6 case records (2*3) for the customer: 3 case records for each parent activity ID.
+**Handle all parent rows** mode: the data generation inner flow is called once for the customer and generates 6 case records (2*3) for the customer: 3 case records for each parent activity ID.
 
-
+## Customized Data Generators
+Defining Broadway flows or Actors for customized data generation logic is possible. 
+### Customized Data Generation Flows - Guidelines
+- Set the output generated value to be an external variable.
+- Optional settings (Fabric 8.2 and onwards):
+  - If the customized flow calls the built-in data generation Actor to generate the new data, set the Actor's input **seed** parameter to be an external variable. This is needed to enable using [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method.
+  - The catalog masking can send the entire record to the data generator. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. Add to the flow an external variable named **record** in order to get the entire record from the catalog masking.
 
 [![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)
 
