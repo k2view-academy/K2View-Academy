@@ -1,10 +1,10 @@
 <web>
 
-# DB Interface Explorer
+# Interface Explorer
 
-DB Interface Explorer View lets you explore the project's data source (the DB interfaces), as well as Fabric, and carry out actions using the Studio editors. 
+Interface Explorer View lets you explore the project's data source (the DB interfaces), as well as Fabric, and carry out actions using the Studio editors. 
 
-To bring up this view, select the DB Interface Explorer <img src="images/web/datasource_explorer.png" style="zoom:67%;" /> icon in the **Activity Bar** on the side of Web Studio.
+To bring up this view, select the Interface Explorer <img src="images/web/datasource_explorer.png" style="zoom:67%;" /> icon in the **Activity Bar** on the side of Web Studio.
 
  ![DB Explorer icon](images/web/25_1_db_exp_view.png)
 
@@ -25,7 +25,7 @@ Choose the required SQL statement by using the context menu (right click) on the
 
 
 
-Following are the actions you can make with the DB Explorer View.
+Following are the actions you can make with the Interface Explorer View.
 
 ## Open the Query Builder
 
@@ -38,15 +38,11 @@ To open the Query Builder you can also click the DB icon <img src="../04_fabric_
 > 1. The DB icons let you to open the Query builder even when other editors, such as Java, Broadway or Graphit, are opened.
 > 2. If you choose entities of a DB Interface where a Query Builder is already opened on another Interface, an additional Query Builder tab will be opened. This will let you make queries on more than a single interface at the same time.
 
-
-
 ## Add SQL Statements to the Query Builder
 
 When Query Builder is opened and is in focus, you can right click to open the context menu and add a code snippet of the SQL statement for the selected table into the Query Builder Editor window.
 
- <img src="images/web/25_2_open_QB.jpg" alt="open QB" style="zoom:80%;" />
-
-
+![DB Explorer icon](images/web/25_2_open_QB.png)
 
 ## Add SQL Statements to Fabric Functions
 
@@ -65,8 +61,6 @@ In the following example, specific columns from the CASES table are selected in 
 
  ![add db fetch function](images/web/25_3_add_func.gif)
 
-
-
 ## Add DB Actors to Broadway
 
 When a Broadway's file is opened and is in focus, you can right click to open the context menu and add actors for the selected table.
@@ -79,7 +73,7 @@ The actors that can be added:
 
 
 
-![add bw actor](images/web/25_4_add_bw_actors.gif)
+![add bw actor](images/web/25_4_add_bw_actors.png)
 
 ## Add SQL Section to Graphit
 
@@ -90,11 +84,24 @@ Nodes that can be added:
 * SQL node
 * SQL node with fields expanded
 
-![add bw actor](images/web/25_5_add_graphit.jpg)
+![add bw actor](images/web/25_5_add_graphit.png)
 
 
 
-​	
+## Catalog-related Actions in the Interface Explorer Tree
+
+The following Catalog-related action is available on the **schema** level of the interface after running discovery on it:
+
+* Click **Show root table recommendation** icon to see the top 5 schema’s tables (based on the score). The score represents the importance of each node within the graph, based on the
+  number of incoming relationships. It’s calculated using the PageRank algorithm. This information is reset on the tab reload.
+
+![](images/web/25_6_catalog_root_table.png)
+
+
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/23_web_versioncontrol.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/27_web_productivity_tips.md)
