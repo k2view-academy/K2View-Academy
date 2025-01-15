@@ -14,13 +14,14 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
 
 1. You need to install a Git client on the computer by downloading and installing it. You can download it from https://git-scm.com/downloads and follow the instructions provided at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-2. You need to install and run Docker, which you can download from https://docs.docker.com/engine/install/.
-3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
-   1. Linux: root or sudo access granting you administrative rights
-   2. Windows: you need administrator rights on your machine
+2. You need to install and run Docker. You also need to install the Docker Compose Plugin. If you install Docker Desktop, Docker Compose is bundled. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. The installation links are:
+*  Install Docker Desktop: https://docs.docker.com/compose/install/
+*  Install Docker: https://docs.docker.com/engine/install/
 
-4. The Docker Compose Runtime for Fabric Services requires Linux. You can also use Microsoft Windows if you use the Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. Instructions are provided in this article’s `Docker and Docker Compose Installation` section. 
-5. You need to install the Docker Compose Plugin. Please note that if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
+3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
+* Linux: root or sudo access granting you administrative rights
+* Windows: you need administrator rights on your machine
+
 
 ### K2view Software
 
@@ -46,8 +47,8 @@ Internet access is required to perform this installation. You will need access t
 
 
 ## Things to Configure
-1. Git Configuration - This is described in Step 5 - Configuring Git and TLS
-2. TLS Certificate and Private Key Configuration - Optional because Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 5. 
+1. Git Configuration - This is described in Step 4 - Configuring Git and TLS
+2. TLS Certificate and Private Key Configuration - Optional because Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 4. 
 
 
 ## Things to Know
@@ -80,11 +81,9 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1** - Install and Validate Your Docker Compose Runtime Environment
 
-If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. Install https://docs.docker.com/compose/. 
+If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. 
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
-
-If you are using Windows, you must first set up and use WSL. Please consult the `Docker and Docker Compose Installation` section below for instructions. 
 
 ### **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
 
@@ -112,7 +111,7 @@ docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 
 You will be asked to enter your password.
 
-**Note**: the Docker login command and the k2space.sh shell script requires Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+**Note**: the Docker login command and the k2space.sh bash shell script requires Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
 
 ### **Step 4** – Configure Git and TLS
 
@@ -138,7 +137,7 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-Traefik will use its own self-signed TLS certificates for HTTPS connections by default. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the`ssl-certs` directory within the installation package's directory, where you find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
+Traefik will use its own self-signed TLS certificates for HTTPS connections by default. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
 
 These files must be named `cert.cer` and `cert.key` respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
@@ -209,49 +208,6 @@ When presented with the login screen, enter:
 If you access Fabric Web Studio, you have successfully installed it. 
 
 
-
-## Docker and Docker Compose Installation
-If Docker has not already been installed, follow the Docker installation guide from Docker's official documentation. Install docker from: [https://docs.docker.com/compose/](https://docs.docker.com/compose/).
-
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/). for more information.
-
-### Install Docker and Docker Compose on Linux
-
-1.	You need to install and run Docker that you can download from [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
-2.	The Docker Compose Runtime for Fabric Services requires Linux.  
-3.	You need to install the Docker Compose Plugin. Just so you know, if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
-
-### Install Docker and Docker Compose on Microsoft Windows
-1.	You need to install and run Docker that you can download from [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
-2.	The Docker Compose Runtime for Fabric Services requires Linux or Microsoft Windows if you use the Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. 
-3.	You need to install the Docker Compose Plugin. Please note that if you install Docker Desktop, Docker Compose is bundled. See https://docs.docker.com/compose/install/. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. 
-
-####	Using the Windows Subsystem for Linux (WSL)
-When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Doing otherwise will not work.
-
-####	Installing WSL
-1.	Open PowerShell as Administrator.
-
-2.	Install WSL and a Linux distribution (e.g., Ubuntu):
-   `wsl –install`
-3.	List the installed WSL distribution:
-	`wsl -l`
-4.	You cannot use the default “docker-desktop” distribution provided by Microsoft. You need to install a Linux distribution. 
-
-   `wsl --install -d <distribution_name>`
-
-e.g., wsl --install -d Ubuntu
-
-5.	You need to set the default to use the Linux distribution you selected. It might be listed as item 2 for example. To set the default use this command
-
-   `wsl --set-default-version 2`
-6.	You can now launch WSL using the desired distribution using the WSL command:
-
-   `wsl`
-
-###	Using the WSL File System
-In step 4 and when starting Fabric Docker Compose Runtime, it is essential that you do not use the Windows file system, for example, from within the /mnt/c directory. 
-Avoid running commands within the Windows file system (e.g., /mnt/c) this will cause Fabric to fail to run correctly. Rather, navigate to the WSL file system (e.g., /home/username).
 
 
 
