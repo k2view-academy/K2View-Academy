@@ -138,11 +138,11 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-Traefik will use its own self-signed TLS certificates for HTTPS connections by default. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
+By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
 
 These files must be named `cert.cer` and `cert.key` respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
-To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, restart Traefik using the instructions below.
+To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, you can restart Traefik using the instructions below.
 
 ### **Step 5** - Select a Fabric Blueprint Profile to Use
 
@@ -160,6 +160,12 @@ If you use the default "studio.config," you will not need to provide the profile
 #### **Space Naming**
 
 When creating a space, its name must consist only of lowercase alphanumeric characters, hyphens, and underscores and start with a letter or number.
+
+#### **Running k2space.sh on Microsoft Windows**
+
+The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using  `Git Bash` you can run the script after you change the directory to its location. 
+
+If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting "Show more options". This will display an "Open Git Bash here" menu item you can use to start `Git Bash` to run `k2start.sh`. 
 
 #### Create Spaces on Your Server
 
