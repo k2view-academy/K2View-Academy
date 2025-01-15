@@ -113,7 +113,7 @@ A customer has 2 activities. The data generation inner flow needs to generate 3 
 
 ## Customized Data Generators
 Defining Broadway flows or Actors for customized data generation logic is possible. 
-### Customized Data Generation Flows - Guidelines
+### Customized Data Generation Flows - Implementation Guidelines
 - Set the output generated value to be an external variable.
 - Optional settings (Fabric 8.2 and onwards):
   - If the customized flow calls the built-in data generation Actor to generate the new data, set the Actor's input **seed** parameter to be an external variable. This is needed to enable using [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method.
