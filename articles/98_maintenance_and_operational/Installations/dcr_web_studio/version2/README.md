@@ -3,8 +3,8 @@
 ## What's New
 
 Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0, offers 
-1. support for multiple space creation and
-2. provides a simplified URL for accessing Fabric Spaces using a URL context rather than a subdomain-based URL.
+  - support for multiple space creation and
+  - provides a simplified URL for accessing Fabric Spaces using a URL context rather than a subdomain-based URL.
 
 
 ## Content
