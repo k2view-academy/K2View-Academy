@@ -70,11 +70,14 @@ Following are the supported authentication providers as described [here](https:/
 Here are the command options for k2space.sh:
 
 --profile=         Allows you to select the desired Fabric Space Profile
+
 --heap=            Allows you to override the default 2GB allocated heap size
+
 --fabric-version=  Allows you to override the Fabric version specified in the .env file
+
 --compose=         Allows user to use a custom Docker compose.yaml file
 
-The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.6_5. 
+The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
 
 ### .config File Format
 These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
