@@ -52,7 +52,7 @@ You can view the discovery results in the Catalog by clicking the button in the 
 
 Upon the Discovery job completion, the [Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio retrieves the Discovery schema from the Neo4j rather than from the data source. The interface is then marked with a different icon:
 
-<img src="images/catalog_indication.png" />
+​	<img src="images/catalog_indication.png" />
 
 To view a data source element in the Catalog application, do the following:
 
