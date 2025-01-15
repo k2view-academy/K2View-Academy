@@ -2,22 +2,17 @@
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
-## How Do I Create a New User Job using Java code?
-
 <studio>
 
+## How Do I Create a Job Using Java Code?
+
 ### Step 1  
+
 Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **New Function** to display the **Function Editor** window.
 
 ### Step 2  
-Write the **User Job function** either from:
-   -    the **Function Editor** window
-        
-        or
-   
-   -    the **IntelliJ** IDE.
-   
-```java
+Write the **User Job function** using the **Function Editor** window, or **IntelliJ** IDE:
+~~~java
 //writing into a file;
 
 while (test<5 && !isAborted()){
@@ -28,28 +23,28 @@ while (test<5 && !isAborted()){
 	myWriter.write("Test Number: "+ test +"::->" + 10*test + " seconds have passed since ...");
 	myWriter.close();
 	}
-```
+~~~
 
 ### Step 3  
 Set the **Function Type** to the **User Job** value in the right panel. 
 Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
 
-<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
-	
-	
+<img src="images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
+​	
+​	
 Note that the loop control parameter (variable *test*) is defined as an input parameter of the User Job function, and that a second variable *inSecTime* is also defined as an output parameter. As such, its value is recorded in the *argument* field of the k2_jobs table in the k2system keyspace.
 
-Name and save the **function**.
-   
+Name and save the function.
+
 
 ### Step 4  
 Go to the **Project Tree** > your **LU** > **Jobs**.
 
-<img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
-   
+<img src="images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
+
 Jobs can be created also as References regardless of the specific LU. In the **Job table**, enter the values pertaining to the Job.
 
-<table style="width: 900px; height: 193px;">
+<table style="width: 900px">
 <tbody>
 <tr>
 <td style="width: 300px"><strong>Method</strong></td>
@@ -104,12 +99,9 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 <p class="unchanged rich-diff-level-one">Defines where the values of the input parameters are initialized. In this case the variable *test* is set to 0.</p>
 <p class="unchanged rich-diff-level-one">(The output parameter value is recorded in the argument field of the k2_jobs table in the k2system keyspace.)</p>
 </td>
-</tr>
-	
-	
+</tr>		
 </tbody>
 </table>
-<p class="unchanged rich-diff-level-one">&nbsp;</p>
 
 
 
@@ -118,60 +110,35 @@ Right click the **LU** in the **Project Tree**, deploy and then search for the f
 
 </studio>
 
-<web>
 
-### Step 1  
-Go to the **Project Tree** > **Logical Units** > **LU** > **Java** > **src** > **com** > **k2view** > **src** > **cdbms**> **usercode**> **lu** and right click **New Java File** to display the **Java Editor** window. Name the new file and click Save
+## How Do I Create a Job Using Broadway?
 
-### Step 2  
-Write the **User Job function**
-   
-```java
-//writing into a file;
-
-while (test<5 && !isAborted()){
-	test=test+1;
-	sleep(10000);
-	inSecTime=test*10; // value returned by user job function
-	FileWriter myWriter = new FileWriter("job_test4.txt",true);
-	myWriter.write("Test Number: "+ test +"::->" + 10*test + " seconds have passed since ...");
-	myWriter.close();
-	}
-```
-   	
-	
-</web>
-
-
-## How Do I Create a Broadway Job using the BroadwayJob Actor ?
+The job can be created using a **BroadwayJob** actor in the **deploy.flow** of the required LU.
 
 The **BroadwayJob** actor provides the ability to trigger a **Fabric Job** that will in turn execute another Broadway flow once or multiple times depending upon the configuration of the job.
 
 To use this capability, simply select the actor from the **Add Actors To Stage** menu in the Broadway Flow panel, as illustrated below:
 
-<img src="/articles/20_jobs_and_batch_services/images/37_jobs_and_batch_services_broadwayJobActor1.PNG">
+<img src="images/37_jobs_and_batch_services_broadwayJobActor1.PNG">
 
 
-The following parameters are to be filled in the properties tab:
-- Name: name of the flow to be triggered by this actor. 
-- UID: unique ID for this job.
+The following parameters are to be filled in the Properties tab:
+- **flowName** - a name of the flow to be triggered by this actor
+- **uid** - the unique ID for this job
 
-Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
+Note that both flowName and UID can either be chosen by the user or attributed automatically by Fabric.
 
-- Schedule: the execution frequency of the job, which can be either one of the following:
-	- Immediate
-	- Interval
-	- Date/Time
-	- CRON schedule
+- **schedule** - the execution frequency of the job, which can be either one of the following:
+  - Immediate (the job will run once on Deploy)
+  - Interval
+  - Date/Time
+  - CRON schedule
 
-- Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
+- **affinity** - sets which node/DC name IP address is to be used to run the Broadway job
 
-- Params: This refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
- 
-Please refer to this [section](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) in order to learn how to setup the schedule type and the affinity appropriately.
-	
-	
-</studio>	
+- **params** - refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
+
+​		
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 
