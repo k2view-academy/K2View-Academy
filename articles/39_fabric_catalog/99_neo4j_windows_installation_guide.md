@@ -32,12 +32,12 @@ Download the link from [here](https://download.k2view.com/index.php/s/jEDsercPn5
 
 #### Unzip the package:
 ```powershell
-Expand-Archive -Path .\k2view-neo4j-enterprise-5.23.0-windows.zip .
+Expand-Archive -Path .\k2view-neo4j-enterprise-5.25.1-windows.zip .
 ```
 
 #### Remove zip file:
 ```powershell
-Remove-Item -Path .\k2view-neo4j-enterprise-5.23.0-windows.zip
+Remove-Item -Path .\k2view-neo4j-enterprise-5.25.1-windows.zip
 ```
 
 #### Environment Variables in Windows:
