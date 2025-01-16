@@ -2,12 +2,21 @@
 
 ## Operating and Managing Docker Compose Runtime for Fabric Web Studio
 
+
+
 ### Fabric Spaces
 This k2space.sh shell script makes it easy to create and delete Fabric. You can also use it to list and get information about existing Fabric Spaces using: 
 
 ```bash
 Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 ```
+
+> **Running k2space.sh on Microsoft Windows**
+>
+> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using  `Git Bash` you can run the script after you change the directory to its location. 
+> 
+> If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting "Show more options". This will display an "Open Git Bash here" menu item you can use to start `Git Bash` to run `k2start.sh`. 
+
 
 **Listing your Spaces**
 List all Fabric Spaces, and some information like profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
@@ -70,11 +79,14 @@ Following are the supported authentication providers as described [here](https:/
 Here are the command options for k2space.sh:
 
 --profile=         Allows you to select the desired Fabric Space Profile
+
 --heap=            Allows you to override the default 2GB allocated heap size
+
 --fabric-version=  Allows you to override the Fabric version specified in the .env file
+
 --compose=         Allows user to use a custom Docker compose.yaml file
 
-The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.6_5. 
+The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
 
 ### .config File Format
 These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
