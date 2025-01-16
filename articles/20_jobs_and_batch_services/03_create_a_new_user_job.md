@@ -1,8 +1,8 @@
 # Creating New User & Broadway Jobs
 
-Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
-
 <studio>
+
+Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
 ## How Do I Create a Job Using Java Code?
 
@@ -110,6 +110,12 @@ Right click the **LU** in the **Project Tree**, deploy and then search for the f
 
 </studio>
 
+<web>
+
+Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be created using a BroadwayJob actor and executed either using a flow or by Fabric command.
+
+</web>
+
 
 ## How Do I Create a Job Using Broadway?
 
@@ -138,7 +144,7 @@ Note that both flowName and UID can either be chosen by the user or attributed a
 
 - **params** - refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
 
-​		
+  ​	
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 
