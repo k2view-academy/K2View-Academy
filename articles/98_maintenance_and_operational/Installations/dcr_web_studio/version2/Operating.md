@@ -92,7 +92,7 @@ Here are the command options for k2space.sh:
 The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
 
 ### .config File Format
-These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
+These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update config.ini
 
 ```ini
 [section1]
