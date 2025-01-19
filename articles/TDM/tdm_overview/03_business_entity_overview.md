@@ -136,7 +136,7 @@ A TDM task can include a BE with a hierarchical structure of several LUs. When p
 
 The task execution can be either horizontal or vertical:
 
-- **Horizontal execution** - execution of the task system by system (LU by LU) where all entities are processed in one LU before moving on to the next system in the hierarchy. This is the default execution mode.
+- **Horizontal execution** - execution of the task, system by system (LU by LU), where all entities are processed in one LU before moving on to the next system in the hierarchy. This is the default execution mode.
 - **Vertical execution** - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. This execution mode has been added in TDM 9.2.
 
 By default, the task execution mode is taken from the task's [Business Entity (BE)](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#task-execution-mode). However, you can set the [task's execution mode](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#advanced-be---execution-mode-tab) to be independent of the BE's execution mode. 
