@@ -4,4 +4,4 @@
 
 K2view certifies specific versions. To obtain the list of supported Fabric versions, please create a K2view support ticket via the [My Tickets](https://k2view.freshdesk.com/a/dashboard/default) link from the [K2view Support Site](https://support.k2view.com/).
 
-The approach is simple: 1) push all changes to Git, and 2) create a new Fabric Space with the desired certified version of Fabric. 
+The approach is simple: 1) Push all changes to Git, and 2) Create a new Fabric space with the desired certified version of Fabric. 
