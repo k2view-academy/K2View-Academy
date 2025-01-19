@@ -132,9 +132,9 @@ Below is an LLM plugin configuration to support this use case:
 					"COUNTRY"
 				],
 		"possibleMTableValues":"",
-      	 "sampleSize": 10,
+      	 	"sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
-      	"incrementalMode":"KEEP_ALL"
+      		"incrementalMode":"KEEP_ALL"
 	}
 }
 ~~~
