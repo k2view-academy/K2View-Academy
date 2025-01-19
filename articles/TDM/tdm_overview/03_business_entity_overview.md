@@ -193,7 +193,7 @@ Notes:
    **Vertical execution mode:**
 
    - **Process Customer #1:**
-     - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network elements: process Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
+     - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
      - Customers #1 and #2 are processed successfully. Customer #3 fails. 
    - **Process Customer #2:**
      - Run Customer #2. Then run Order #9 and Network element #98.
