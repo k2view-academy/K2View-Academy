@@ -49,12 +49,12 @@ Use:
 
 ### Traefik
 #### Starting Traefik
-Traefik starts automatically after you create your first Fabric Space. It will also check whenever a new Fabric Space is created. If it is not running it will be started automatically.
+Traefik starts automatically after you create your first Fabric space. It will also check whenever a new Fabric space is created. If it is not running, it will be started automatically.
 
-> __Note:__ Traefik relies on the Docker network created during the creation of a Fabric Space. Therefore, It must be started __after__ the Fabric Space.
+> __Note:__ Traefik relies on the Docker network created during the creation of a Fabric space. Therefore, it must be started __after__ the Fabric space.
 
 #### Restarting Traefik
-To restart Traefik (e.g., after configuring your TSL certificates)  run the command below:
+To restart Traefik (e.g., after configuring your TSL certificates) run the command below:
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
