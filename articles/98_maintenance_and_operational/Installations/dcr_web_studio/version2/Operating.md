@@ -5,7 +5,7 @@
 
 
 ### Fabric Spaces
-This k2space.sh shell script makes it easy to create and delete Fabric. You can also use it to list and get information about existing Fabric Spaces using: 
+This k2space.sh shell script simplifies the creation and deletion of Fabric. You can also use it to list and get information about existing Fabric spaces using: 
 
 ```bash
 Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
@@ -13,7 +13,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 > **Running k2space.sh on Microsoft Windows**
 >
-> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using  `Git Bash` you can run the script after you change the directory to its location. 
+> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after changing the directory to its location. 
 > 
 > If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting "Show more options". This will display an "Open Git Bash here" menu item you can use to start `Git Bash` to run `k2start.sh`. 
 
