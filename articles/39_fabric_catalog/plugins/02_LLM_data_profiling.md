@@ -13,7 +13,7 @@ The product includes 2 LLM-based plugins that accommodate for the following use 
 
 By default, both of these plugins are disabled and should be enabled in the project-level settings, when needed. 
 
-The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the user prompt and other plugin's input parameters. For example, a new business dimension (a new property) can be created via an advanced plugin setup. An explanation and an example are provided at the end of this article. 
 
