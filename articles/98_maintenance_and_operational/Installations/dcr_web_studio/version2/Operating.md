@@ -29,7 +29,7 @@ Use:
 
 **Creating Additional Spaces**
 
-Launch a Fabric space 'spacename' (optionally, with the selected space profile).
+Launch a Fabric space - *spacename* (optionally, with the selected space profile).
 
 Use: 
 ```bash
@@ -38,7 +38,7 @@ Use:
 
 **Destroying a Space**
 
-Delete the Fabric space 'spacename'. 
+Delete the Fabric space *spacename*. 
 
 This act will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them; they are located in the `persistent-data/spacename` directory.
 
@@ -49,7 +49,7 @@ Use:
 
 ### Traefik
 #### Starting Traefik
-Traefik starts automatically after you create your first Fabric space. It will also check whenever a new Fabric space is created. If it is not running, it will be started automatically.
+Traefik starts automatically after you create your first Fabric space. It will also check whenever a new Fabric space is created. If Traefik is not running, it will be started automatically.
 
 > __Note:__ Traefik relies on the Docker network created during the creation of a Fabric space. Therefore, it must be started __after__ the Fabric space.
 
