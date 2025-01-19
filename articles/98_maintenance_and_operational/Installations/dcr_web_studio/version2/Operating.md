@@ -29,7 +29,7 @@ Use:
 
 **Creating Additional Spaces**
 
-Launch a Fabric space "spacename" (optionally, with the selected Space Profile).
+Launch a Fabric space 'spacename' (optionally, with the selected space profile).
 
 Use: 
 ```bash
@@ -38,9 +38,9 @@ Use:
 
 **Destroying a Space**
 
-Delete the Fabric space "spacename". 
+Delete the Fabric space 'spacename'. 
 
-It will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them. These are located in the `persistent-data/spacename` directory.
+This act will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them; they are located in the `persistent-data/spacename` directory.
 
 Use: 
 ```bash
