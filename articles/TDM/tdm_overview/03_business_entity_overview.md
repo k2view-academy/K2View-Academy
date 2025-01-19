@@ -199,7 +199,7 @@ Notes:
      - Run Customer #2. Then run Order #9 and Network element #98.
 
    - **Process Customer #3:**
-     - Run Customer #3. The Customer's execution fails, therefore do not run the related Orders and Network elements.
+     - Run Customer #3. The Customer's execution fails, therefore, do not run the related Orders and Network elements.
 
  
 
