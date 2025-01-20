@@ -5,7 +5,7 @@
 
 
 ### Fabric Spaces
-This k2space.sh shell script makes it easy to create and delete Fabric. You can also use it to list and get information about existing Fabric Spaces using: 
+This k2space.sh shell script simplifies the creation and deletion of Fabric. You can also use it to list and get information about existing Fabric spaces using: 
 
 ```bash
 Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
@@ -13,13 +13,14 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 > **Running k2space.sh on Microsoft Windows**
 >
-> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using  `Git Bash` you can run the script after you change the directory to its location. 
+> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after changing the directory to its location. 
 > 
-> If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting "Show more options". This will display an "Open Git Bash here" menu item you can use to start `Git Bash` to run `k2start.sh`. 
+> If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
 
 
 **Listing your Spaces**
-List all Fabric Spaces, and some information like profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
+
+List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
 
 Use: 
 ```bash
@@ -27,7 +28,8 @@ Use:
 ```
 
 **Creating Additional Spaces**
-Launch a Fabric Space "spacename" (optionally, with the selected Space Profile).
+
+Launch a Fabric space - *spacename* (optionally, with the selected space profile).
 
 Use: 
 ```bash
@@ -35,9 +37,10 @@ Use:
 ```
 
 **Destroying a Space**
-Delete the Fabric Space "spacename". 
 
-It will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them. These are located in the `persistent-data/spacename` directory.
+Delete the Fabric space - *spacename*. 
+
+This act will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them; they are located in the `persistent-data/spacename` directory.
 
 Use: 
 ```bash
@@ -46,12 +49,12 @@ Use:
 
 ### Traefik
 #### Starting Traefik
-Traefik starts automatically after you create your first Fabric Space. It will also check whenever a new Fabric Space is created. If it is not running it will be started automatically.
+Traefik starts automatically after you create your first Fabric space. It will also check whenever a new Fabric space is created. If Traefik is not running, it will be started automatically.
 
-> __Note:__ Traefik relies on the Docker network created during the creation of a Fabric Space. Therefore, It must be started __after__ the Fabric Space.
+> __Note:__ Traefik relies on the Docker network created during the creation of a Fabric space. Therefore, it must be started __after__ the Fabric space.
 
 #### Restarting Traefik
-To restart Traefik (e.g., after configuring your TSL certificates)  run the command below:
+To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
@@ -63,14 +66,14 @@ You are ready to add users. You can experiment with the built-in System DB (e.g.
 
 To use the built-in authentication provider, navigate to the [Web Admin App](https://support.k2view.com/Academy/articles/30_web_framework/03_web_admin_application.html). Select the Security tab. Select the Users tab and add a user. Select the Roles tab, create a new role (e.g., User), and then assign Fabric permissions to the newly created role. 
 
-The Docker Compose Runtime for K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for user authentication and managing user IDs and roles.
+The Docker Compose Runtime for K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for handling user authentication and managing user IDs and roles.
 
 Following are the supported authentication providers as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/07_user_IAM_overview.html). 
 
 - **Fabric**: Fabric stores users' credentials in a System DB table using Postgres. Passwords are stored securely in this table using a salted password hashing technique. By default, Fabric is configured to use a 32-byte salt length. When Cassandra is used, the provider is named Cassandra.
 - **LDAP**: Fabric authentication is performed via LDAP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
 - **ADLDAP** (Microsoft Active Directory): Fabric authentication is performed via Active Directory integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
-- **SAML**:  Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users using, for example, Microsoft Entra ID and Okta. See the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
+- **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users using, for example, Microsoft Entra ID and Okta. See the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
 
 ## Reference Information
 
@@ -89,7 +92,7 @@ Here are the command options for k2space.sh:
 The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
 
 ### .config File Format
-These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
+These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update config.ini
 
 ```ini
 [section1]
