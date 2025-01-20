@@ -20,7 +20,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 **Listing your Spaces**
 
-List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
+List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used for accessing Web Studio if Traefik is running.
 
 Use: 
 ```bash
