@@ -89,7 +89,7 @@ Here are the command options for k2space.sh:
 
 --compose=         Allows user to use a custom Docker compose.yaml file
 
-The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
+The Fabric version is specified using major.minor Fabric version identifiers, e.g., 8.1.7_22. 
 
 ### .config File Format
 These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update config.ini
