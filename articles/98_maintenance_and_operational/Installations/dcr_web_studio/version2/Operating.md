@@ -20,7 +20,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 **Listing your Spaces**
 
-List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used for accessing Web Studio if Traefik is running.
+List all Fabric spaces, along with some information such as profile, status (running / stopped), Web Studio port, and the URL that can be used for accessing Web Studio if Traefik is running.
 
 Use: 
 ```bash
@@ -87,7 +87,7 @@ Here are the command options for k2space.sh:
 
 --fabric-version=  Allows you to override the Fabric version specified in the .env file
 
---compose=         Allows user to use a custom Docker compose.yaml file
+--compose=         Allows you to use a custom Docker compose.yaml file
 
 The Fabric version is specified using major.minor Fabric version identifiers, e.g., 8.1.7_22. 
 
