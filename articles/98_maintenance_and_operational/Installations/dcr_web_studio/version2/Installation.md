@@ -6,9 +6,9 @@ The Docker Compose Runtime for Fabric Services has specific prerequisites.
 
 ### Host Machine
 
-The supported processor architecture is AMD64.  Fabric does not support ARM-based processors.
+The supported processor architecture is AMD64. Fabric does not support ARM-based processors.
 
-The amount of RAM you need will depend on your use case. 32GB of memory should suffice to run your Docker Compose Runtime for Fabric Web Studio and the necessary integration. A 2GB Heap is allocated by default, which can be overridden. 
+The amount of RAM you need will depend on your use case. 32GB of memory should suffice to run your Docker Compose Runtime for Fabric Web Studio along with the necessary integration. A 2GB heap size is allocated by default, which can be overridden. 
 
 ### 3rd Party Software
 
