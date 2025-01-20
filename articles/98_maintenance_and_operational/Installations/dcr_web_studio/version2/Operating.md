@@ -20,7 +20,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 **Listing your Spaces**
 
-List all Fabric spaces, and some information like profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
+List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
 
 Use: 
 ```bash
@@ -38,7 +38,7 @@ Use:
 
 **Destroying a Space**
 
-Delete the Fabric space *spacename*. 
+Delete the Fabric space - *spacename*. 
 
 This act will **not delete the persistent files** created by Web Studio and your database(s). You must manually delete them; they are located in the `persistent-data/spacename` directory.
 
