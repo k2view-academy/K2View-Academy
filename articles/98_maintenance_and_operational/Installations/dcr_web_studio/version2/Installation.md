@@ -47,12 +47,12 @@ Internet access is required to perform this installation. You will need access t
 
 
 ## Things to Configure
-1. Git Configuration - This is described in Step 4 - Configuring Git and TLS
-2. TLS Certificate and Private Key Configuration - Optional because Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 4. 
+1. Git Configuration - this is described in 'Step 4 - Configure Git and TLS' of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 4. 
 
 
 ## Things to Know
-1. Default administrator credentials are
+1. The default administrator credentials are:
 
    - Username: admin
    - Password: admin
