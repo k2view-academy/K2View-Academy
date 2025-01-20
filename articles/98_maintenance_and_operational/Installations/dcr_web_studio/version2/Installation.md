@@ -19,13 +19,13 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
    - Install Docker: https://docs.docker.com/engine/install/
      
 3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
-   - Linux: root or sudo access granting you administrative rights
+   - Linux: Root or sudo access grants you administrative rights
    - Windows: Administrator rights are required on your machine
 
 
 ### K2view Software
 
-1. The installation presumes you have Internet access, so you can obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
+1. It is presumed that you have Internet access for the installation in order to obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
 2. To obtain a Fabric Studio docker image, a K2view Nexus account is required. Your K2view representative can arrange this for you. 
 
 ### Internet Access is Required
@@ -39,11 +39,11 @@ Internet access is required to perform this installation. You will need access t
 
 ## What's in this Package
 
-1. K2space.sh - A Bash shell script used to create, list, and destroy spaces defined by Web Studio profiles. This script is used to start Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
-2. .env file - define various Fabric and Git parameters
-3. common.config file - define various Fabric and runtime configurations
-4. Studio_*.config files - four Fabric Profiles to choose from
-5. YAML files are used to configure the Fabric and Traefik services. You can use the tls-config.yaml file to configure the TLS certificate and private key. 
+1. K2space.sh - a Bash shell script, which is used for creating, listing and destroying spaces defined by Web Studio profiles. This script is used for starting Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
+2. .env file - defines various Fabric and Git parameters
+3. common.config file - defines various Fabric and runtime configurations
+4. Studio_*.config files - four Fabric profiles to choose from
+5. YAML files are used for configuring the Fabric and Traefik services. You can use the tls-config.yaml file for configuring the TLS certificate and private key. 
 
 
 ## Things to Configure
