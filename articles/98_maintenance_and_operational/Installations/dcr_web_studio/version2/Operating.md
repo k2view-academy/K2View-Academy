@@ -20,7 +20,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 **Listing your Spaces**
 
-List all Fabric spaces, and some information such as profile, state (running / stopped), Web Studio port, and the URL that can be used to access Web Studio if Traefik is running.
+List all Fabric spaces, along with some information such as profile, status (running / stopped), Web Studio port, and the URL that can be used for accessing Web Studio if Traefik is running.
 
 Use: 
 ```bash
@@ -73,7 +73,7 @@ Following are the supported authentication providers as described [here](https:/
 - **Fabric**: Fabric stores users' credentials in a System DB table using Postgres. Passwords are stored securely in this table using a salted password hashing technique. By default, Fabric is configured to use a 32-byte salt length. When Cassandra is used, the provider is named Cassandra.
 - **LDAP**: Fabric authentication is performed via LDAP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
 - **ADLDAP** (Microsoft Active Directory): Fabric authentication is performed via Active Directory integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
-- **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users using, for example, Microsoft Entra ID and Okta. See the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
+- **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users by using, for example, Microsoft Entra ID and Okta. Read the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
 
 ## Reference Information
 
@@ -87,12 +87,12 @@ Here are the command options for k2space.sh:
 
 --fabric-version=  Allows you to override the Fabric version specified in the .env file
 
---compose=         Allows user to use a custom Docker compose.yaml file
+--compose=         Allows you to use a custom Docker compose.yaml file
 
-The Fabric version is specified using major.minor Fabric version identifiers. E.g., 8.1.7_22. 
+The Fabric version is specified using major.minor Fabric version identifiers, e.g., 8.1.7_22. 
 
 ### .config File Format
-These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update config.ini
+These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update the config.ini file.
 
 ```ini
 [section1]
