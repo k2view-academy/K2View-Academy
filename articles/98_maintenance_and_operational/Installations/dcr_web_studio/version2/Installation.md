@@ -20,13 +20,13 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
      
 3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
    - Linux: root or sudo access granting you administrative rights
-   - Windows: you need administrator rights on your machine
+   - Windows: Administrator rights are required on your machine
 
 
 ### K2view Software
 
 1. The installation presumes you have Internet access, so you can obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
-2. To obtain a Fabric Studio docker image, you need a K2view Nexus account. Your K2view representative can arrange this for you. 
+2. To obtain a Fabric Studio docker image, a K2view Nexus account is required. Your K2view representative can arrange this for you. 
 
 ### Internet Access is Required
 
