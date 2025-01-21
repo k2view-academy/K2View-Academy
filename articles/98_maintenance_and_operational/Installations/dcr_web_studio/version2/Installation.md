@@ -39,7 +39,7 @@ Internet access is required to perform this installation. You will need access t
 
 ## What's in this Package
 
-1. K2space.sh - a Bash shell script, which is used for creating, listing and destroying spaces defined by Web Studio profiles. This script is used for starting Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
+1. K2space.sh - a Bash shell script, which is used for creating, listing and destroying spaces that are defined by Web Studio profiles. This script is used for starting Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
 2. .env file - defines various Fabric and Git parameters
 3. common.config file - defines various Fabric and runtime configurations
 4. Studio_*.config files - four Fabric profiles to choose from
@@ -48,7 +48,7 @@ Internet access is required to perform this installation. You will need access t
 
 ## Things to Configure
 1. Git Configuration - this is described in 'Step 4 - Configure Git and TLS' of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. One is created for you by default for the machine. To provide your own, please refer to Step 4. 
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to Step 4. 
 
 
 ## Things to Know
@@ -138,7 +138,7 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. One is created for you by default for the machine. If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find the k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
+By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use your own certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find the k2vingress-compose.yaml file and replace the certificate and private key within this directory. 
 
 These files must be named `cert.cer` and `cert.key`, respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
