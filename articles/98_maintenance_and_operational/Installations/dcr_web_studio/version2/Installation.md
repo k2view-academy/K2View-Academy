@@ -70,7 +70,7 @@ There are various steps to carry out to get Fabric Web Studio up and running wit
 
   - **Step 1** - Install and Validate Docker and Docker Compose
   - **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
-  - **Step 3** - Login to K2view's Nexus Container Registry
+  - **Step 3** - Log in to K2view's Nexus Container Registry
   - **Step 4** – Configure Git and TLS
   - **Step 5** - Select a Fabric Blueprint Profile to Use
   - **Step 6** - Create and Launch a Fabric Space
