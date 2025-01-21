@@ -178,7 +178,7 @@ The authentication is done by certifications and keys that should be applied.
 
 
 
-## Interface Connection Details' Settings
+## Interface Connection Details Settings
 
 For Studio to mark an interface's property needing to be taken from the Secrets Management provider, you should use the following pattern for its value: 
 > ${secretmanager:\<secret-manager-id\>}.
