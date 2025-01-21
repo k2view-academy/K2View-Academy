@@ -68,19 +68,19 @@ Internet access is required to perform this installation. You will need access t
 
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-  - **Step 1** - Install and Validate Docker and Docker Compose
+  - **Step 1** – Install and Validate Docker and Docker Compose
   - **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
-  - **Step 3** - Log in to K2view's Nexus Container Registry
+  - **Step 3** – Log in to K2view's Nexus Container Registry
   - **Step 4** – Configure Git and TLS
-  - **Step 5** - Select a Fabric Blueprint Profile to Use
-  - **Step 6** - Create and Launch a Fabric Space
+  - **Step 5** – Select a Fabric Blueprint Profile to Use
+  - **Step 6** – Create and Launch a Fabric Space
   - **Step 7** – Access Web Studio
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
 You need to obtain credentials to access the K2view Nexus. Your K2view account representative can arrange this for you. If you do not have access, please contact your K2view representative, who can provide steps to help you through this process.
 
-### **Step 1** - Install and Validate Your Docker Compose Runtime Environment
+### **Step 1** – Install and Validate Your Docker Compose Runtime Environment
 
 If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. 
 
@@ -88,7 +88,7 @@ The easiest and recommended way to get Docker Compose is to install Docker Deskt
 
 ### **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
 
-After installing a Git client on your machine, you must “clone” the K2view Blueprints. These blueprints incorporate the Fabric Docker Compose Runtime blueprint. They are hosted on GitHub.com, so Internet access is required. 
+After installing a Git client on your machine, you must “clone” the K2view Blueprints. These blueprints incorporate the Fabric Docker Compose Runtime blueprint. They are hosted on GitHub.com (Internet access is required). 
 
 Select a directory to host the K2view Blueprints and within your shell's *change directory* command:
 
@@ -102,7 +102,7 @@ Using a shell, change to your Git directory and run the following command:
 git clone https://github.com/k2view/blueprints.git
 ```
 
-### **Step 3** - Login to K2view's Nexus Container Registry
+### **Step 3** – Login to K2view's Nexus Container Registry
 
 Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory you performed the git clone command from: 
 
@@ -124,7 +124,7 @@ To do this, you must provide a token, a path to your Git repository, and the app
 
 To configure Git, open the .env file and specify the following in the Git Integration section:
 
-  - GIT_REPO  - The Github repository URI to clone and store your project data. 
+  - GIT_REPO - The Github repository URI to clone and store your project data. 
     - **Important Note: Please do not prepend "HTTPS://" before the repository's URI**.
 
   - GIT_BRANCH - The Git branch to use. The default is "master".
@@ -144,7 +144,7 @@ These files must be named `cert.cer` and `cert.key` respectively. The TLS certif
 
 To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, you can restart Traefik using the instructions below.
 
-### **Step 5** - Select a Fabric Blueprint Profile to Use
+### **Step 5** – Select a Fabric Blueprint Profile to Use
 
 There are four profiles that each embeds Fabric to choose from. The default is "studio.config".  
 
@@ -155,7 +155,7 @@ There are four profiles that each embeds Fabric to choose from. The default is "
 
 If you use the default "studio.config," you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
 
-### **Step 6** - Create and Launch a Fabric Space
+### **Step 6** – Create and Launch a Fabric Space
 
 #### **Space Naming**
 
