@@ -335,14 +335,6 @@ The following table lists the keyspaces or schemas created by Fabric:
 <p>Supports the uniqueness of the masked value per execution and masking ID.</p>
 </td>
 </tr>
-<tr style="height: 46px;">
-<td style="height: 46px; width: 208.925px;">
-<p>TDM_SEQ_MAPPING</p>
-</td>
-<td style="height: 46px; width: 203.863px;">
-<p>Keeps the masked values per execution ID, including the additional information such as LU, table, IID to enable the creation of reports.</p>
-</td>
-</tr>
 </tbody>
 </table>
 <p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Click here for more information about Fabric Architecture overview.</a></p>
