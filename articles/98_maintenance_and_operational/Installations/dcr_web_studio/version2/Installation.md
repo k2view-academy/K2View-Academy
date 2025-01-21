@@ -102,9 +102,9 @@ Using a shell, change to your Git directory and run the following command:
 git clone https://github.com/k2view/blueprints.git
 ```
 
-### **Step 3** – Login to K2view's Nexus Container Registry
+### **Step 3** – Log in to K2view's Nexus Container Registry
 
-Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory you performed the git clone command from: 
+Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command: 
 
 ```bash
 docker login -u [YourAccount] https://docker.share.cloud.k2view.com
