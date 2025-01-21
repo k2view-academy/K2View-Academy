@@ -175,7 +175,7 @@ You can create multiple Fabric spaces on your server. To do so, use the k2space.
 ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-To use the default "studio.config", you can omit passing in a --profile parameter. 
+To use the default 'studio.config', you can omit passing in a --profile parameter. 
 
 ```bash
 ./k2space.sh create spacename
@@ -205,7 +205,7 @@ You have completed the installation and are ready to access Fabric Web Studio ov
 
 Open a browser and connect to http:*//localhost/spacename*
 
-You can also connect to Fabric remotely using *http://[hostname or ip address]/spacename*
+You can also connect to Fabric remotely, using *http://[hostname or ip address]/spacename*
 
 When presented with the login screen, enter: 
 
