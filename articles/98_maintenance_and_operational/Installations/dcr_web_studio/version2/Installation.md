@@ -153,17 +153,17 @@ There are four profiles that each embeds Fabric to choose from. The default is '
 3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
 4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
 
-If you use the default 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
+If you use the default profile, 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
 
 ### **Step 6** – Create and Launch a Fabric Space
 
 #### **Space Naming**
 
-When creating a space, its name must consist only of lowercase alphanumeric characters, hyphens, and underscores and start with a letter or number.
+When creating a space, its name must consist of only lowercase alphanumeric characters, hyphens and underscores and start with either a letter or a number.
 
 #### **Running k2space.sh on Microsoft Windows**
 
-The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using  `Git Bash` you can run the script after you change the directory to its location. 
+The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after you change the directory to its location. 
 
 If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting "Show more options". This will display an "Open Git Bash here" menu item you can use to start `Git Bash` to run `k2start.sh`. 
 
