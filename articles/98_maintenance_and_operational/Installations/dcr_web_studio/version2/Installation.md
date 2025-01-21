@@ -84,7 +84,7 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. 
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine and Docker CLI, that are all prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
 
 ### **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
 
