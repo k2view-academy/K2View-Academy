@@ -138,22 +138,22 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. One is created for you by default for the machine.  If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
+By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. One is created for you by default for the machine. If you want to use your certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find the k2vingress-compose.yaml file and replace the certificate and private key within this directory prepared for you with yours. 
 
-These files must be named `cert.cer` and `cert.key` respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
+These files must be named `cert.cer` and `cert.key`, respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
-To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the file `tls-config.yaml` file. If you configure your certificates after you have created your Fabric Space, you can restart Traefik using the instructions below.
+To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the `tls-config.yaml` file. If you configure your certificates after you have created your Fabric space, you can restart Traefik using the instructions below.
 
 ### **Step 5** – Select a Fabric Blueprint Profile to Use
 
-There are four profiles that each embeds Fabric to choose from. The default is "studio.config".  
+There are four profiles that each embeds Fabric to choose from. The default is 'studio.config'.  
 
 1. **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
 2. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
 3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
 4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
 
-If you use the default "studio.config," you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
+If you use the default 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
 
 ### **Step 6** – Create and Launch a Fabric Space
 
