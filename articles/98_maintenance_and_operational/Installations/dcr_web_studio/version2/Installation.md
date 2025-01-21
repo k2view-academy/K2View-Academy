@@ -90,7 +90,7 @@ The easiest and recommended way to get Docker Compose is to install Docker Deskt
 
 After installing a Git client on your machine, you must “clone” the K2view Blueprints. These blueprints incorporate the Fabric Docker Compose Runtime blueprint. They are hosted on GitHub.com (Internet access is required). 
 
-Select a directory to host the K2view Blueprints and within your shell's *change directory* command:
+Select a folder to host the K2view Blueprint files, then run the *change directory* command on your shell in order to switch to the designated folder:
 
 ```bash
 cd [selected directory]
