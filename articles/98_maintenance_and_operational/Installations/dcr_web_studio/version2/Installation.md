@@ -146,7 +146,7 @@ To enable the use of your certificates, uncomment the `certFile` and `keyFile` p
 
 ### **Step 5** – Select a Fabric Blueprint Profile to Use
 
-There are four profiles that each embeds Fabric to choose from. The default is 'studio.config'.  
+There are four profiles, where each embeds Fabric to choose from. The default is 'studio.config'.  
 
 1. **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
 2. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
@@ -175,7 +175,7 @@ You can create multiple Fabric spaces on your server. To do so, use the k2space.
 ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-To use the default 'studio.config', you can omit passing in a --profile parameter. 
+To use the default profile, 'studio.config', you can omit passing in a --profile parameter. 
 
 ```bash
 ./k2space.sh create spacename
