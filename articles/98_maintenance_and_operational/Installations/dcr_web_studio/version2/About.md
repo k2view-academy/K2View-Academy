@@ -9,7 +9,7 @@ Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0, supports a mul
 
 ## The Components
 
-1. **Docker Compose Runtime**: Fabric Web Studio can be installed within a Docker Compose Runtime environment. Docker and its Compose plugin provide the ability to run Web Studio for which profiles can be selected, an embedded Fabric engine, and a Traefik reverse proxy, that when combined, provide the means to create multiple Fabric spaces within the Docker Compose Runtime. 
+1. **Docker Compose Runtime**: Fabric Web Studio can be installed within a Docker Compose Runtime environment. Docker and its Compose plugin provide the ability to run Web Studio for which profiles can be selected, an embedded Fabric engine, and a Traefik reverse proxy - that when combined - provide the means to create multiple Fabric spaces within the Docker Compose Runtime. 
 2. **Fabric Image**: The Docker Compose Runtime is certified to run specific Fabric releases that you can download from K2view's Nexus Container Registry.
 3. **K2view Fabric Web Studio** - available with four profiles, where each embeds Fabric.
   - **studio.config**. The default Web Studio profile that embeds SQLite for its System DB.
