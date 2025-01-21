@@ -112,23 +112,23 @@ docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 
 You will be asked to enter your password.
 
-**Note**: the Docker login command and the k2space.sh bash shell script requires Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+**Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
 
 ### **Step 4** – Configure Git and TLS
 
 #### Configuring Git
 
-You should consider a few things, including configuring a Git repository for your project. Though not mandatory, it is a best practice to store your project files in Git (or a Git-compliant code repository). 
+You should consider a few things, including configuring a Git repository for your project. Though not mandatory, it is a best practice to store your project files in Git (or in a Git-compliant code repository). 
 
 To do this, you must provide a token, a path to your Git repository, and the appropriate branch. You can create your initial space without this configuration. However, to configure it later, you must configure these values and recreate your space. 
 
 To configure Git, open the .env file and specify the following in the Git Integration section:
 
-  - GIT_REPO - The Github repository URI to clone and store your project data. 
+  - GIT_REPO - the Github repository URI to clone and store your project data. 
     - **Important Note: Please do not prepend "HTTPS://" before the repository's URI**.
 
-  - GIT_BRANCH - The Git branch to use. The default is "master".
-  - GIT_TOKEN - Token used to authenticate to your GitHub repository.  
+  - GIT_BRANCH - the Git branch to use; the default is 'master'.
+  - GIT_TOKEN - the token used to authenticate to your GitHub repository.  
 
 Fabric Web Studio will use these parameters to run an initial clone and Git operations. The initial clone performed will be: 
 
