@@ -169,7 +169,7 @@ If you have Git integration enabled within Windows Explorer, you can also start 
 
 #### Create Spaces on Your Server
 
-You can create multiple Fabric Spaces on your server. To do so, use the k2space.sh script as shown here:
+You can create multiple Fabric spaces on your server. To do so, use the k2space.sh script as shown here:
 
 ```bash
 ./k2space.sh create [--profile=profile-name] spacename
