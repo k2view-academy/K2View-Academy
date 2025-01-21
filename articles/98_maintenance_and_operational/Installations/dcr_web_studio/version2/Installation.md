@@ -18,7 +18,7 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
    - Install Docker Desktop: https://docs.docker.com/compose/install/
    - Install Docker: https://docs.docker.com/engine/install/
      
-3. To install Docker and Docker Compose, which will host Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
+3. To install Docker and Docker Compose, which will host the Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
    - Linux: Root or sudo access grants you administrative rights
    - Windows: Administrator rights are required on your machine
 
