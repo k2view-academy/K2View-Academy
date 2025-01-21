@@ -1,5 +1,5 @@
 # Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
-This document describes the Docker Compose Runtime used to host K2view Fabric Web Studio. It covers setup, components, installation options and features. 
+This document describes the Docker Compose Runtime used for hosting K2view Fabric Web Studio. It covers setup, components, installation options and features. 
 
 ## About K2view Fabric Web Studio
 
