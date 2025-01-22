@@ -12,8 +12,7 @@ TDM 9.2 has just been released and it includes the following new features/capabi
 
 * Bug fixes.
 
-  
 
 To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/TDM-V9.2/TDM_Release_Notes_V9.2.pdf.html) and [Upgrade Procedure to 9.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/TDM-V9.2/TDM_Upgrade_Procedure_to_V9.2.pdf.html).
 
-<img src="images/img1.png" alt="image" style="zoom: 80%;" />
+<img src="images/img15.png" alt="image" style="zoom: 80%;" />
