@@ -123,7 +123,7 @@ Below is an LLM plugin configuration to support this use case:
 	"monitorDesc": "Classifications",
 	"inputParameters": {
 		"propertyName": "classification",
-		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease classify the column ${columnName} based on its name and additional information included here: ${property.description}. Choosing one of the following possible values: ${possibleValues}.\n${samplePrompt}\n If none of the possible values match, return $NONE$.",
+      	"userPrompt":"Please classify the column based on the information included here: \"${property.description}\" (however if this information is empty, return $NONE$). \nChoosing one of the following possible values: ${possibleMTableValues}.\nIf none of the possible values match, return $NONE$.",
 		"possibleValues": [
 					"FIRST_NAME",
 					"LAST_NAME",
@@ -132,9 +132,9 @@ Below is an LLM plugin configuration to support this use case:
 					"COUNTRY"
 				],
 		"possibleMTableValues":"",
-      	 	"sampleSize": 10,
+      	 "sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
-      		"incrementalMode":"KEEP_ALL"
+      	"incrementalMode":"KEEP_ALL"
 	}
 }
 ~~~
