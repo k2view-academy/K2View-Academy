@@ -94,7 +94,7 @@ mkdir K2view
 > 
 > Not only should you avoid using the Windows file system, but you should also avoid using WSL's /mnt/c mounted Windows file system. Instead, you should use the file system of the Linux distribution you installed, e.g., /home/username/K2view, to download and install the configuration files and hold the workspace data created by Fabric Web Studio. 
 
-##### Create the Base Directory
+#### Create the Base Directory
 
 *Identify the Name of your WSL Linux Distribution*
 
@@ -112,14 +112,14 @@ Ubuntu
 ```
 
 *Change Directory to your Linux WSL Distribution*
-Then, change directory to "\\wsl$\[distributionName]" - in this example "Ubuntu"
+Then, change directory to "\\\wsl$\\[distributionName]" - in this example "Ubuntu"
 
 ```bash
 cd \\wsl$\Ubuntu
 ```
 
 *Select a Base Directory for your Download and Installation Directory Locations*
-Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in \\wsl$\ubuntu\home\[username]. For example:
+Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in \\\wsl$\\ubuntu\\home\\[username]. For example:
 
 ```bash
 cd \\wsl$\Ubuntu\home\[username]
@@ -158,7 +158,7 @@ cp -r blueprints/Docker/ Studio
 ```
 *Using the Microsoft Windows PowerShell*
 
-You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review to Step 2's *Using Microsoft Windows" section for details.  
+You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review to Step 2's "Using Microsoft Windows" section for details.  
 
 ```bash
 cp -r blueprints\Docker\ Studio
@@ -284,9 +284,11 @@ $ ./k2space.sh create myspace
 
 You have completed the installation and are ready to access Fabric Web Studio over HTTP or HTTPS
 
-Open a browser and connect to http:*//localhost/spacename*
+Open a browser and connect to *http://localhost/spacename* 
 
-You can also connect to Fabric remotely, using *http://[hostname or ip address]/spacename*
+You can also connect to Fabric remotely, using *https://[hostname or ip address]/spacename*
+
+> Traefik will use its own self-signed TLS certificates for HTTPS connections by default. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
 
 When presented with the login screen, enter: 
 
