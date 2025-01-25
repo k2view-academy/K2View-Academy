@@ -1,5 +1,8 @@
 # Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
 
+## Prerequisites
+Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#Prerequisites">Prerequisites</a> topic first. 
+
 ## What's in this Package
 
 1. K2space.sh - a Bash shell script that is used for creating, listing, and destroying spaces that are defined by Web Studio profiles. This script is used to start Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
@@ -16,17 +19,21 @@
 
 ## Things to Know
 1. The default administrator credentials are:
-
+   
    - Username: admin
    - Password: admin
 
-2. Ports: Traefik employs the following ports:
+2. Ports
+   Traefik employs the following ports:
 
    - HTTP: Port 8080 - Traefik dashboard
    - HTTP: Port 80 - HTTP listener
    - HTTPS: Port 443 - HTTPS listener
   
-3. Running on Microsoft Windows
+4. Your Data Files
+   - Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
+
+5. Running on Microsoft Windows
    - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic.
 
 
@@ -289,9 +296,7 @@ When presented with the login screen, enter:
 If you access Fabric Web Studio, you have successfully installed it. 
 
 
-### Your Data Files ###
 
-Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain its data if you create multiple spaces. 
 
 
 
