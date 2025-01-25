@@ -6,9 +6,9 @@ The Docker Compose Runtime for Fabric Services has specific prerequisites.
 
 ### Host Machine
 
-The supported processor architecture is AMD64. Fabric does not support ARM-based processors.
+Fabric requires an AMD64 processor architecture. When running on Apple Silicon or ARM64 processor architectures, AMD64 emulation will be performed if your Docker installation's configuration is enabled.
 
-The amount of RAM you need will depend on your use case. 32GB of memory should suffice to run your Docker Compose Runtime for Fabric Web Studio along with the necessary integration. A 2GB heap size is allocated by default, which can be overridden. 
+The amount of RAM you need will depend on your use case. 32GB of memory should suffice to run your Docker Compose Runtime for Fabric Web Studio, along with the necessary integration. A 2GB heap size is allocated by default, which can be overridden. 
 
 ### 3rd Party Software
 
@@ -22,10 +22,11 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
    - Linux: Root or sudo access grants you administrative rights
    - Windows: Administrator rights are required on your machine
 
+4. To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution rather than use the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic. 
 
 ### K2view Software
 
-1. It is presumed that you have Internet access for the installation in order to obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
+1. It is presumed that you have Internet access for the installation to obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
 2. To obtain a Fabric Studio docker image, a K2view Nexus account is required. Your K2view representative can arrange this for you. 
 
 ### Internet Access is Required
@@ -39,7 +40,7 @@ Internet access is required to perform this installation. You will need access t
 
 ## What's in this Package
 
-1. K2space.sh - a Bash shell script, which is used for creating, listing and destroying spaces that are defined by Web Studio profiles. This script is used for starting Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
+1. K2space.sh - a Bash shell script that is used for creating, listing, and destroying spaces that are defined by Web Studio profiles. This script is used to start Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
 2. .env file - defines various Fabric and Git parameters
 3. common.config file - defines various Fabric and runtime configurations
 4. Studio_*.config files - four Fabric profiles to choose from
@@ -62,57 +63,139 @@ Internet access is required to perform this installation. You will need access t
    - HTTP: Port 8080 - Traefik dashboard
    - HTTP: Port 80 - HTTP listener
    - HTTPS: Port 443 - HTTPS listener
+  
+3. Running on Microsoft Windows
+   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic.
 
 
 ## Installation
 
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-  - **Step 1** – Install and Validate Docker and Docker Compose
-  - **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
-  - **Step 3** – Log in to K2view's Nexus Container Registry
+  - **Step 1** – Install and Validate Docker and Docker Compose Runtime
+  - **Step 2** – Download the K2view Blueprints
+  - **Step 3** – Create an Installation Directory and Copy the Fabric Web Studio Files
   - **Step 4** – Configure Git and TLS
-  - **Step 5** – Select a Fabric Blueprint Profile to Use
-  - **Step 6** – Create and Launch a Fabric Space
-  - **Step 7** – Access Web Studio
+  - **Step 5** – Select a Fabric Blueprint Profile to Use 
+  - **Step 6** – Log in to K2view's Nexus Container Registry
+  - **Step 7** – Create and Launch a Fabric Space
+  - **Step 8** – Access Web Studio
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
 You need to obtain credentials to access the K2view Nexus. Your K2view account representative can arrange this for you. If you do not have access, please contact your K2view representative, who can provide steps to help you through this process.
 
-### **Step 1** – Install and Validate Your Docker Compose Runtime Environment
+### **Step 1** – Install and Validate Docker and Docker Compose Runtime
 
 If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. 
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine and Docker CLI, that are all prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, all prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
 
-### **Step 2** – Obtain the K2view Fabric Docker Compose Runtime Blueprint
+### **Step 2** – Download the K2view Blueprints
 
-After installing a Git client on your machine, you must “clone” the K2view Blueprints. These blueprints incorporate the Fabric Docker Compose Runtime blueprint. They are hosted on GitHub.com (Internet access is required). 
+After installing a Git client on your machine, you must “clone” the K2view Blueprints to "download" them. These blueprints incorporate the Fabric Docker Compose Runtime installation files. The K2view Blueprints are hosted on GitHub.com (Internet access is required). 
 
-Select a folder to host the K2view Blueprint files, then run the *change directory* command on your shell in order to switch to the designated folder:
+Where you clone the files depends on the operating system you use. There are different instructions depending if you are using Linux or MacOS, than those for Microsoft Windows.
+
+Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain its data if you create multiple spaces. 
+
+#### Using Linux or MacOS
+
+*Select a Base Directory for your Download and Installation Directory Locations*
+
+First, please select a location to download the K2view Blueprint content. This *base* directory can also hold the Fabric Web Studio installation directory from where it will run. 
+
+Use the *change directory* command on your shell to switch to the designated base directory:
 
 ```bash
-cd [selected directory]
+cd [base directory]
 ```
 
-Using a shell, change to your Git directory and run the following command:
+*Create your Download and Installation Directory Location*
+
+Using a shell, create a "K2view" directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
 
 ```bash
+mkdir K2view
+```
+
+#### Using Microsoft Windows
+
+> Using a Linux file system is highly recommended if you're installing on Microsoft Windows. It can be installed with the Windows subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
+> 
+> Not only should you avoid using the Windows file system, but you should also avoid using WSL's /mnt/c mounted Windows file system. Instead, you should use the file system of the Linux distribution you installed, e.g., /home/username/K2view, to download and install the configuration files and hold the workspace data created by Fabric Web Studio. 
+
+##### Create the Base Directory
+
+*Identify the Name of your WSL Linux Distribution*
+
+First, find the path to your Linux distribution's location (e.g., Ubuntu used in these examples) by running "wsl --list" to obtain its name and then changing to its directory. If you enabled Windows Explorer navigation when you installed WSL, you can navigate directly to it under Explorer's "Linux" sidebar icon.
+
+```bash
+wsl --list
+```
+This will return the following. Ubuntu will be shown if you installed it as your Linux distribution. 
+
+```bash
+Windows Subsystem for Linux Distributions:
+docker-desktop (Default)
+Ubuntu
+```
+
+*Change Directory to your Linux WSL Distribution*
+Then, change directory to "\\wsl$\[distributionName]" - in this example "Ubuntu"
+
+```bash
+cd \\wsl$\Ubuntu
+```
+
+*Select a Base Directory for your Download and Installation Directory Locations*
+Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in \\wsl$\ubuntu\home\[username]. For example:
+
+```bash
+cd \\wsl$\Ubuntu\home\[username]
+```
+
+*Create your Download and Installation Directory Locations*
+
+Using a shell, create a "K2view" directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
+
+```bash
+mkdir K2view
+```
+
+### **Step 3** – Clone the K2view Blueprints 
+
+Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
+
+Using the prior example of the "K2view" directory:
+
+```bash
+cd K2view
 git clone https://github.com/k2view/blueprints.git
 ```
 
-### **Step 3** – Log in to K2view's Nexus Container Registry
+This will create a "blueprints" directory with various subdirectories. The "Docker" subdirectory holds the Fabric Web Studio installation files. 
 
-Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command: 
+### **Step 3** – Create an Installation Directory and Copy the Fabric Web Studio Files
+
+We recommend running Fabric Web Studio within the "Studio" directory of the "K2view" directory. From the K2view directory, copy the "blueprints/Docker" directory as "Studio". 
+
+*Using Linux or MacOS*
+From the K2view directory
 
 ```bash
-docker login -u [YourAccount] https://docker.share.cloud.k2view.com
+cp -r blueprints/Docker/ Studio
+```
+*Using the Microsoft Windows PowerShell*
+
+You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review to Step 2's *Using Microsoft Windows" section for details.  
+
+```bash
+cp -r blueprints\Docker\ Studio
 ```
 
-You will be asked to enter your password.
-
-**Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the "What's in this Package" above for details about these files. 
 
 ### **Step 4** – Configure Git and TLS
 
@@ -138,34 +221,51 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-By default, Traefik will use its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use your own certificate, everything is pre-configured for you. You need to open the `ssl-certs` directory within the installation package's directory, where you will find the k2vingress-compose.yaml file and replace the certificate and private key within this directory. 
+Traefik will use its own self-signed TLS certificates for HTTPS connections by default. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. You need to open the `ssl-certs` directory within the installation package's directory (e.g., K2view/Studio), where you will find the `ssl-certs` directory and replace the certificate and private key files. 
 
 These files must be named `cert.cer` and `cert.key`, respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
-To enable the use of your certificates, uncomment the `certFile` and `keyFile` parameters in the `tls-config.yaml` file. If you configure your certificates after you have created your Fabric space, you can restart Traefik using the instructions below.
+If you perform this step after the initial installation, you must restart Fabric for these to take effect.
 
 ### **Step 5** – Select a Fabric Blueprint Profile to Use
 
-There are four profiles, where each embeds Fabric to choose from. The default is 'studio.config'.  
+There are four profiles, each of which embeds Fabric. The default is 'studio.config'.  
 
 1. **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
 2. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
 3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
 4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
 
-If you use the default profile, 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
+Using the default profile, 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
 
-### **Step 6** – Create and Launch a Fabric Space
+
+### **Step 6** – Log in to K2view's Nexus Container Registry
+
+*Pre-requisite*
+Docker and its Compose extension must be running on the computer to perform this step. 
+
+Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command: 
+
+```bash
+docker login -u [YourAccount] https://docker.share.cloud.k2view.com
+```
+
+You will be asked to enter your password.
+
+**Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+
+
+### **Step 7** – Create and Launch a Fabric Space
 
 #### **Space Naming**
 
-When creating a space, its name must consist of only lowercase alphanumeric characters, hyphens and underscores and start with either a letter or a number.
+When creating a space, its name must consist of only lowercase alphanumeric characters, hyphens, and underscores and start with either a letter or a number. You cannot use uppercase characters. 
 
 #### **Running k2space.sh on Microsoft Windows**
 
 The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after you change the directory to its location. 
 
-If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
+If you have Git integration enabled within Windows Explorer, you can start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
 
 #### Create Spaces on Your Server
 
@@ -199,9 +299,21 @@ Otherwise, please use the following --profile commands:
 ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
-### **Step 7** – Access Web Studio
+##### The Initial Installation
+Creating your first Fabric Space will download Fabric from the K2view Nexus Container Registry. When this is happening, you should observe the following.
 
-You have completed the installation and are ready to access Fabric Web Studio over HTTP. 
+```bash
+$ ./k2space.sh create myspace
+[+] Running 0/3
+ - fabric Pulling                                                                    177.1s
+ - init-fabric [⡀] 318.8MB / 1.964GB Pulling                                         177.1s
+   - e7a390e229e3 Downloading [========>                                          ]  318.8MB/1.964GB   
+```
+
+
+### **Step 8** – Access Web Studio
+
+You have completed the installation and are ready to access Fabric Web Studio over HTTP or HTTPS
 
 Open a browser and connect to http:*//localhost/spacename*
 
@@ -214,6 +326,10 @@ When presented with the login screen, enter:
 
 If you access Fabric Web Studio, you have successfully installed it. 
 
+
+### Your Data Files ###
+
+Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain its data if you create multiple spaces. 
 
 
 
