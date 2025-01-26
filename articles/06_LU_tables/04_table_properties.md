@@ -25,7 +25,7 @@ It displays a list of properties, by sections, that should be defined for each L
     <ul>
      <li>BINARY - (default) compares the exact string in the field with the SQL statement.</li>
      <li>NOCASE - enables the Select statement to ignore upper/lower case letters when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set to either &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
-     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value&lsquo;.</li>
+     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value &lsquo;.</li>
    </ul>
 </td>
 </tr>
@@ -89,7 +89,7 @@ It displays a list of properties, by sections, that should be defined for each L
 <tr>
     <td style="vertical-align: top;"><p><strong>Description</strong></p></td>    
     <td style="vertical-align: top;">Description</td>
-    <td style="vertical-align: top;"><p>The table's description, useful for maintability and the ongoing project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
+    <td style="vertical-align: top;"><p>The table's description, useful for maintainability and the ongoing project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
 </td>
 </tr>
 </tbody>
@@ -159,7 +159,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Full Text Search</p>
 </td>
 <td style="vertical-align: top;">
-<p>When set to True, it enables the use of MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, it enables the use of MATCH SQLite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
