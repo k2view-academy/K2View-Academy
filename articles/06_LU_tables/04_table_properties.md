@@ -136,7 +136,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Instance ID Column</p>
 </td>
 <td style="vertical-align: top;">
-<p>A unique field that is used as the LU table Instance ID.</a></p>
+<p>A unique field used as the LU table Instance ID.</a></p>
 </td>
 </tr>
 <tr>
