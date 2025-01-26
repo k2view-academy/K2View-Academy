@@ -9,8 +9,7 @@ The easiest and recommended way to get Docker Compose is to install Docker Deskt
 
 1.	You need to install and run Docker, which you can download from https://docs.docker.com/engine/install/.
 2.	You need to install the Docker Compose Plugin. See https://docs.docker.com/compose/install/.
-
-If you install Docker Desktop, Docker Compose is bundled with Docker Engine. See https://docs.docker.com/desktop/ to install Docker Desktop.
+3.	If you install Docker Desktop, Docker Compose is bundled with Docker Engine. See https://docs.docker.com/desktop/ to install Docker Desktop.
 
 ## Using the Windows Subsystem for Linux (WSL)
 When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Otherwise, the installation will not perform adequately and will exhibit slow performance. 
