@@ -10,8 +10,6 @@ Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0, offers support
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.md">About</a></li>
   
-
-  
 <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.md">Installing Fabric Web Studio</a></li>
 
 <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.md">Operating</a></li>
