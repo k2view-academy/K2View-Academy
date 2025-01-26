@@ -92,4 +92,16 @@ Creating a Fabric Web Studio Space:
 sudo ./k2space.sh create [spacename]
 ```
 
+Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Running: 
 
+```bash
+sudo docker ps
+```
+
+If they are running you should see entries for traefik and each of the spaces you have created (e.g. myspace-fabric in this example)
+
+```bash
+CONTAINER ID   IMAGE      ...               NAMES
+55879667423d   traefik:latest   ....        traefik
+da112037b4d3   ... /fabric-studio:...  ...  myspace-fabric
+```
