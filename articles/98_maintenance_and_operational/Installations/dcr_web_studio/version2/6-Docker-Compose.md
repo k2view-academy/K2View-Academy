@@ -59,13 +59,13 @@ Not familiar with Docker commands? Please refer to Docker's [CLI Cheat Sheet](ht
 
 ## Starting Docker
 
-Fabric Web Studio and the k2space.sh command each require that Docker and Docker Compose are running.
+Fabric Web Studio and the `k2space.sh` command each require that Docker and Docker Compose are running.
 
 Starting Docker depends on the operating system you use. Please refer to Docker documentation for instructions on how to start Docker on your operating system. 
 
 ### Running Docker Desktop
 
-Running Docker Desktop will enable you to run Fabric Web Studio and the k2space.sh command. 
+Running Docker Desktop will enable you to run Fabric Web Studio and the `k2space.sh` command. 
 
 On Microsoft Windows, you need to enable WSL Integration for the Linux distribution you are using. To do so, on the Docker Desktop app, select Settings, then Resources, and then WSL Integration. In addition to enabling integration with my default WSL distro, you should be able to enable the distribution you selected. 
 
@@ -113,7 +113,7 @@ Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Run
 sudo docker ps
 ```
 
-If they are running you should see entries for traefik and each of the spaces you have created (e.g. myspace-fabric in this example)
+If they are running you should see entries for Rraefik and each of the spaces you have created (e.g. myspace-fabric in this example)
 
 ```bash
 CONTAINER ID   IMAGE      ...               NAMES
