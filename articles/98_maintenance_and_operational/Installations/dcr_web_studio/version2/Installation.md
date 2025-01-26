@@ -238,10 +238,16 @@ Using the default profile, 'studio.config', you will not need to provide the pro
 *Pre-requisite*
 Docker and its Compose extension must be running on the computer to perform this step. 
 
-Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command: 
+Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on Linux to ensure the login is inherited by sudo sessions: 
 
 ```bash
 docker login -u [YourAccount] https://docker.share.cloud.k2view.com
+```
+
+On Linux, prefix the command with `sudo`.
+
+```bash
+sudo docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 ```
 
 You will be asked to enter your password.
@@ -269,34 +275,34 @@ First, change directory to your Installation directory, e.g., "Studio"
 cd Studio
 ```
 
-You can create multiple Fabric spaces on your server. To do so, use the k2space.sh script as shown here:
+You can create multiple Fabric spaces on your server. To do so, use the k2space.sh script as shown here. On Linux, prefix the command with `sudo`.
 
 ```bash
-./k2space.sh create [--profile=profile-name] spacename
+sudo ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-To use the default profile, 'studio.config', you can omit passing in a --profile parameter. 
+To use the default profile, 'studio.config', you can omit passing in a --profile parameter. On Linux, prefix the command with `sudo`.
 
 ```bash
-./k2space.sh create spacename
+sudo ./k2space.sh create spacename
 ```
 
 Otherwise, please use the following --profile commands:
 
-1. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
+1. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
 ```bash
-./k2space.sh create --profile=studio_pg spacename
+sudo ./k2space.sh create --profile=studio_pg spacename
 ```
 
-2. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
+2. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
 ```bash
-./k2space.sh create --profile=studio_cass spacename
+sudo ./k2space.sh create --profile=studio_cass spacename
 ```
 
-3. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System 
+3. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System. On Linux, prefix the command with `sudo`. 
 
 ```bash
-./k2space.sh create --profile=studio_pg_cass spacename
+sudo ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
 #### The Initial Installation
