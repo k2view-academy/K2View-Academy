@@ -38,13 +38,14 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
 2. You need to install and run Docker. You also need to install the Docker Compose plugin. If you install Docker Desktop, then Docker Compose is bundled. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. The installation links are:
    - Install Docker Desktop: https://docs.docker.com/compose/install/
    - Install Docker: https://docs.docker.com/engine/install/
-  See also the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+
+See also the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
      
-3. To install Docker and Docker Compose, a platform that will host the Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
+4. To install Docker and Docker Compose, a platform that will host the Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
    - Linux: Root or sudo access grants you administrative rights
    - Windows: Administrator rights are required on your machine
 
-4. To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution rather than use the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
+5. To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution rather than use the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
 
 ### K2view Software
 
