@@ -2,7 +2,7 @@
 
 <web>
 
-The Table Properties tab appears in the right pane of the Schema window. This happens when either a table is selected or a table is being opened through the Project Tree and then open its properties pane.
+The Table Properties tab appears in the right pane of the Schema window. This happens when a table is either selected or is being opened through the Project Tree and then open its properties pane.
 
 ![](images/web_table_properties.png)
 
