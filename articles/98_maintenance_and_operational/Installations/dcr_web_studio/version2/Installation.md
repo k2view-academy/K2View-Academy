@@ -1,5 +1,22 @@
 # Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
 
+## Content
+<ul>      
+   <li><a href="#prerequisites">Prerequisites</a></li>
+   <li><a href="#whats-in-this-package">What's in this Package</a></li>
+   <li><a href="#things-to-configure">Things to Configure</a></li>
+   <li><a href="#installation">Installation</a></li>
+   <li><a href="#step-1--install-and-validate-docker-and-docker-compose-runtime">Step 1 – Install and Validate Docker and Docker Compose Runtime</a></li>
+   <li><a href="#step-2--download-the-k2view-blueprints">Step 2 – Download the K2view Blueprints</a></li>
+   <li><a href="#step-3--clone-the-k2view-blueprints">Step 3 – Clone the K2view Blueprints</a></li>
+   <li><a href="#step-4--configure-git-and-tls">Step 4 – Configure Git and TLS</a></li>
+   <li><a href="#step-5--select-a-fabric-blueprint-profile-to-use">Step 5 – Select a Fabric Blueprint Profile to Use</a></li>
+   <li><a href="#step-6--log-in-to-k2views-nexus-container-registry">Step 6 – Log in to K2view's Nexus Container Registry</a></li>
+   <li><a href="#step-7--create-and-launch-a-fabric-space">Step 7 – Create and Launch a Fabric Space</a></li>
+   <li><a href="#step-8--access-web-studio">Step 8 – Access Web Studio</a></li>
+</ul>
+
+
 ## Prerequisites
 Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#Prerequisites">Prerequisites</a> topic first. 
 
@@ -38,10 +55,10 @@ If running Docker Desktop on Microsoft Windows, you need to [enable the WSL Linu
    - HTTP: Port 80 - HTTP listener
    - HTTPS: Port 443 - HTTPS listener
   
-4. Your Data Files
+3. Your Data Files
    - Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
 
-5. Running on Microsoft Windows
+4. Running on Microsoft Windows
    - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
 
@@ -282,8 +299,8 @@ Otherwise, please use the following --profile commands:
 ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
-##### The Initial Installation
-Creating your first Fabric Space will download Fabric from the K2view Nexus Container Registry. When this is happening, you should observe the following.
+#### The Initial Installation
+When creating your first Fabric Space, you will download Fabric from the K2view Nexus Container Registry. When this is happening, you should observe the following.
 
 ```bash
 $ ./k2space.sh create myspace
@@ -302,7 +319,7 @@ Open a browser and connect to *http://localhost/spacename*
 
 You can also connect to Fabric remotely, using *https://[hostname or ip address]/spacename*
 
-> Traefik will use its own self-signed TLS certificates for HTTPS connections by default. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
+> Traefik will default use its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
 
 When presented with the login screen, enter: 
 
