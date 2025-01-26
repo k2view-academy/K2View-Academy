@@ -83,13 +83,13 @@ It displays a list of properties, by sections, that should be defined for each L
 <tr>
     <td style="vertical-align: top;"><p><strong>Data Change Indexes</strong></p></td>    
     <td style="vertical-align: top;">Columns' definitions per CDC Consumer</td>
-    <td style="vertical-align: top;"><p>Refer to <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list.</p>
+    <td style="vertical-align: top;"><p>Refer to the <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list.</p>
 </td>
 </tr>
 <tr>
     <td style="vertical-align: top;"><p><strong>Description</strong></p></td>    
     <td style="vertical-align: top;">Description</td>
-    <td style="vertical-align: top;"><p>Table's description, Useful for maintability and on going project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
+    <td style="vertical-align: top;"><p>The table's description, useful for maintability and the ongoing project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
 </td>
 </tr>
 </tbody>
