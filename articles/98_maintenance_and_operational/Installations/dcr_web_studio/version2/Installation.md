@@ -34,7 +34,7 @@ Please review the <a href="/articles/98_maintenance_and_operational/Installation
    - Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
 
 5. Running on Microsoft Windows
-   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic.
+   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
 
 ## Installation
@@ -90,7 +90,7 @@ mkdir K2view
 
 #### Using Microsoft Windows
 
-> Using a Linux file system is highly recommended if you're installing on Microsoft Windows. It can be installed with the Windows subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Docker-Compose-Installation.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
+> Using a Linux file system is highly recommended if you're installing on Microsoft Windows. It can be installed with the Windows subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
 > 
 > Not only should you avoid using the Windows file system, but you should also avoid using WSL's /mnt/c mounted Windows file system. Instead, you should use the file system of the Linux distribution you installed, e.g., /home/username/K2view, to download and install the configuration files and hold the workspace data created by Fabric Web Studio. 
 
