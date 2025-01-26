@@ -3,6 +3,14 @@
 ## Prerequisites
 Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#Prerequisites">Prerequisites</a> topic first. 
 
+### Essential Steps for Installing and Configuring Docker
+
+An important step is to ensure that Docker and the Docker Compose plugin are installed. These are described in the [3rd Party Software]([url](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#3rd-party-software)) topic, and the [Docker and Docker Compose Installation](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows) topic. 
+
+If installing Docker on Microsoft Windows, it is essential to review the instructions for [installing and using WSL](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl).
+
+If running Docker Desktop on Microsoft Windows, you need to [enable the WSL Linux distribution](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#running-docker-desktop). 
+
 ## What's in this Package
 
 1. K2space.sh - a Bash shell script that is used for creating, listing, and destroying spaces that are defined by Web Studio profiles. This script is used to start Fabric and the embedded Traefik reverse proxy. It can allocate additional heap space if required and override the default Fabric version specified in the .env file.
