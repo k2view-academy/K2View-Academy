@@ -18,15 +18,11 @@
 
 
 ## Prerequisites
-Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#Prerequisites">Prerequisites</a> topic first. 
-
-### Essential Steps for Installing and Configuring Docker
+Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
 An important step is to ensure that Docker and the Docker Compose plugin are installed. These are described in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic. 
 
-If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>.
-
-If running Docker Desktop on Microsoft Windows, you need to  <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#running-docker-desktop">ienable the WSL Linux distribution</a>.
+If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>. If running Docker Desktop on Microsoft Windows, you also need to  <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#running-docker-desktop"> enable the WSL Linux distribution</a>.
 
 ## What's in this Package
 
@@ -38,8 +34,8 @@ If running Docker Desktop on Microsoft Windows, you need to  <a href="/articles/
 
 
 ## Things to Configure
-1. Git Configuration - this is described in 'Step 4 - Configure Git and TLS' of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to Step 4. 
+1. Git Configuration - this is described in '<a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>' of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -57,6 +53,7 @@ If running Docker Desktop on Microsoft Windows, you need to  <a href="/articles/
   
 3. Your Data Files
    - Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
+   - The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory.
 
 4. Running on Microsoft Windows
    - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
@@ -66,14 +63,16 @@ If running Docker Desktop on Microsoft Windows, you need to  <a href="/articles/
 
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-  - **Step 1**: Install and Validate Docker and Docker Compose Runtime
-  - **Step 2**: Download the K2view Blueprints
-  - **Step 3**: Create an Installation Directory and Copy the Fabric Web Studio Files
-  - **Step 4**: Configure Git and TLS
-  - **Step 5**: Select a Fabric Blueprint Profile to Use 
-  - **Step 6**: Log in to K2view's Nexus Container Registry
-  - **Step 7**: Create and Launch a Fabric Space
-  - **Step 8**: Access Web Studio
+<ul> 
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2: Download the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-clone-the-k2view-blueprints">Step 3: Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
+</ul>
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
@@ -81,9 +80,9 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate Docker and Docker Compose Runtime
 
-If Docker has not already been installed on your machine, follow the <a href="https://docs.docker.com/engine/install/">Docker installation guide</a> from Docker's official documentation. 
+If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic. 
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, all prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, and all prerequisites for Compose. Please also refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
 ### **Step 2**: Download the K2view Blueprints
 
@@ -91,7 +90,7 @@ After installing a Git client on your machine, you must “clone” the K2view B
 
 Where you clone the files depends on the operating system you use. There are different instructions depending if you are using Linux or MacOS, than those for Microsoft Windows.
 
-Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. 
+Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory. This is a per-space configuration. 
 
 #### Using Linux or MacOS
 
@@ -117,13 +116,13 @@ mkdir K2view
 
 > Using a Linux file system is highly recommended if you're installing on Microsoft Windows. It can be installed with the Windows subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
 > 
-> Not only should you avoid using the Windows file system, but you should also avoid using WSL's /mnt/c mounted Windows file system. Instead, you should use the file system of the Linux distribution you installed, e.g., /home/username/K2view, to download and install the configuration files and hold the workspace data created by Fabric Web Studio. 
+> Not only should you avoid using the Windows file system, but you should also avoid using WSL's `/mnt/c` mounted Windows file system. Instead, you should use the file system of the Linux distribution you installed, e.g., `/home/username/K2view`, to download and install the configuration files and hold the workspace data created by Fabric Web Studio. 
 
 #### Create the Base Directory
 
 *Identify the Name of your WSL Linux Distribution*
 
-First, find the path to your Linux distribution's location (e.g., Ubuntu used in these examples) by running "wsl --list" to obtain its name and then changing to its directory. If you enabled Windows Explorer navigation when you installed WSL, you can navigate directly to it under Explorer's "Linux" sidebar icon.
+First, find the path to your Linux distribution's location (e.g., Ubuntu used in these examples) by running `wsl --list` to obtain its name and then changing to its directory. If you enabled Windows Explorer navigation when you installed WSL, you can navigate directly to it under Explorer's "Linux" sidebar icon.
 
 ```bash
 wsl --list
@@ -137,14 +136,16 @@ Ubuntu
 ```
 
 *Change Directory to your Linux WSL Distribution*
-Then, change directory to "\\\wsl$\\[distributionName]" - in this example "Ubuntu"
+
+Then, change directory to `\\wsl$\[distributionName]` - in this example "Ubuntu"
 
 ```bash
 cd \\wsl$\Ubuntu
 ```
 
 *Select a Base Directory for your Download and Installation Directory Locations*
-Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in \\\wsl$\\ubuntu\\home\\[username]. For example:
+
+Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in `\\wsl$\\ubuntu\\home\\[username]`. For example:
 
 ```bash
 cd \\wsl$\Ubuntu\home\[username]
@@ -152,7 +153,7 @@ cd \\wsl$\Ubuntu\home\[username]
 
 *Create your Download and Installation Directory Locations*
 
-Using a shell, create a "K2view" directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
+Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -162,20 +163,21 @@ mkdir K2view
 
 Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
 
-Using the prior example of the "K2view" directory:
+Using the prior example of the `K2view` directory:
 
 ```bash
 cd K2view
 git clone https://github.com/k2view/blueprints.git
 ```
 
-This will create a "blueprints" directory with various subdirectories. The "Docker" subdirectory holds the Fabric Web Studio installation files. 
+This will create a `blueprints` directory with various subdirectories. The `Docker` subdirectory holds the Fabric Web Studio installation files. 
 
 ### **Step 3** – Create an Installation Directory and Copy the Fabric Web Studio Files
 
-We recommend running Fabric Web Studio within the "Studio" directory of the "K2view" directory. From the K2view directory, copy the "blueprints/Docker" directory as "Studio". 
+We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Docker` directory as `Studio`. 
 
 *Using Linux or MacOS*
+
 From the K2view directory
 
 ```bash
@@ -183,13 +185,13 @@ cp -r blueprints/Docker/ Studio
 ```
 *Using the Microsoft Windows PowerShell*
 
-You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review to Step 2's "Using Microsoft Windows" section for details.  
+You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
 cp -r blueprints\Docker\ Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the "What's in this Package" above for details about these files. 
+The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
@@ -215,7 +217,7 @@ git clone --single-branch -b "${GIT_BRANCH}" "https://${GIT_TOKEN}@${GIT_REPO}"
 
 #### Configuring TLS
 
-Traefik will use its own self-signed TLS certificates for HTTPS connections by default. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. You need to open the `ssl-certs` directory within the installation package's directory (e.g., K2view/Studio), where you will find the `ssl-certs` directory and replace the certificate and private key files. 
+Traefik will use its own self-signed TLS certificates for HTTPS connections by default. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. You need to open the `ssl-certs` directory within the installation package's directory (e.g., `K2view/Studio`), where you will find the `ssl-certs` directory and replace the certificate and private key files. 
 
 These files must be named `cert.cer` and `cert.key`, respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
@@ -230,13 +232,14 @@ There are four profiles, each of which embeds Fabric. The default is 'studio.con
 3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
 4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
 
-Using the default profile, 'studio.config', you will not need to provide the profile on the k2space.sh command line. Otherwise, you will need to enter one of the other profiles. 
+Using the default profile, 'studio.config', you will not need to provide the profile on the `k2space.sh` command line. Otherwise, you will need to enter one of the other profiles. 
 
 
 ### **Step 6**: Log in to K2view's Nexus Container Registry
 
-*Pre-requisite*
-Docker and its Compose extension must be running on the computer to perform this step. 
+*Prerequisite*
+
+Docker and its Compose extension must be running on the server to perform this step. 
 
 Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on Linux to ensure the login is inherited by sudo sessions: 
 
@@ -269,19 +272,19 @@ If you have Git integration enabled within Windows Explorer, you can start `Git 
 
 #### Create Spaces on Your Server
 
-First, change directory to your Installation directory, e.g., "Studio"
+First, change directory to your Installation directory, e.g., `Studio`
 
 ```bash
 cd Studio
 ```
 
-You can create multiple Fabric spaces on your server. To do so, use the k2space.sh script as shown here. On Linux, prefix the command with `sudo`.
+You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On Linux, prefix the command with `sudo`.
 
 ```bash
 sudo ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-To use the default profile, 'studio.config', you can omit passing in a --profile parameter. On Linux, prefix the command with `sudo`.
+You can omit passing in a `-- profile` parameter to use the default profile, 'studio.config'. On Linux, prefix the command with `sudo`.
 
 ```bash
 sudo ./k2space.sh create spacename
@@ -290,11 +293,13 @@ sudo ./k2space.sh create spacename
 Otherwise, please use the following --profile commands:
 
 1. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
+   
 ```bash
 sudo ./k2space.sh create --profile=studio_pg spacename
 ```
 
 2. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
+   
 ```bash
 sudo ./k2space.sh create --profile=studio_cass spacename
 ```
@@ -306,7 +311,8 @@ sudo ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
 #### The Initial Installation
-When creating your first Fabric Space, you will download Fabric from the K2view Nexus Container Registry. When this is happening, you should observe the following.
+
+You will download Fabric from the K2view Nexus Container Registry when creating your first Fabric Space. While this is happening, you should observe the following.
 
 ```bash
 $ ./k2space.sh create myspace
@@ -319,11 +325,11 @@ $ ./k2space.sh create myspace
 
 ### **Step 8**: Access Web Studio
 
-You have completed the installation and are ready to access Fabric Web Studio over HTTP or HTTPS
+You have completed the installation and are ready to access Fabric Web Studio over HTTP or HTTPS.
 
-Open a browser and connect to *http://localhost/spacename* 
+Open a browser and connect to `http://localhost/spacename`. 
 
-You can also connect to Fabric remotely, using *https://[hostname or ip address]/spacename*
+You can also connect to Fabric remotely, using `https://[hostname or ip address]/spacename`.
 
 > Traefik will default use its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
 
