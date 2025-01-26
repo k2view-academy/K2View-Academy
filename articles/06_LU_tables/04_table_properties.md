@@ -33,7 +33,7 @@ It displays a list of properties, by sections, that should be defined for each L
 <td style="vertical-align: top;"></td>
 <td style="vertical-align: top;">Full Text Search</td>
 <td style="vertical-align: top;">
-<p>When set to True, it enables the use of MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, it enables the use of MATCH SQLite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
@@ -64,7 +64,7 @@ It displays a list of properties, by sections, that should be defined for each L
    <p>Notes:</p>
    <ul>
     <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.</li>
-    <li>If the Delete Mode is NonUpdated, it is recommended to define a PK on the LU table and to set the LU table population mode to Upsert or Update as a way to delete only the old data. If the LU table does not have a PK, new records are added to the LU table, and all previous records are deleted.</li>
+    <li>If the Delete Mode is set to NonUpdated value, it is recommended to define a PK on the LU table and to set the LU table population mode to Upsert or Update as a way to delete only the old data. If the LU table does not have a PK, new records are added to the LU table, and all previous records are deleted.</li>
  </ul>
 </td>
 </tr>
