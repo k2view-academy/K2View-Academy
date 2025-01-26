@@ -36,10 +36,11 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
 1. You need to install a Git client on the computer by downloading and installing it. You can download it from https://git-scm.com/downloads and follow the instructions provided at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
 
 2. You need to install and run Docker. You also need to install the Docker Compose plugin. If you install Docker Desktop, then Docker Compose is bundled. Please use the native Docker Compose plugin and not the Python-based docker-compose utility. The installation links are:
-   - Install Docker Desktop: https://docs.docker.com/compose/install/
+   - Install Docker Desktop: https://docs.docker.com/desktop/
    - Install Docker: https://docs.docker.com/engine/install/
+   - Install Docker Compose Pluging: https://docs.docker.com/compose/install/
 
-See also the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+> Please refer to the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
      
 4. To install Docker and Docker Compose, a platform that will host the Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
    - Linux: Root or sudo access grants you administrative rights
