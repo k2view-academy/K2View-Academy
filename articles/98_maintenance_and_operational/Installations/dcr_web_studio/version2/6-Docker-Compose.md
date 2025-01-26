@@ -19,26 +19,34 @@ When using Microsoft Windows, you must run Docker inside the WSL file system in 
 1.	Open PowerShell as Administrator.
 
 2.	Install WSL and a Linux distribution (e.g., Ubuntu):
-   
- > wsl –install
+
+```bash
+wsl –install
+```
 
 3.	List the installed WSL distribution:
 
- > wsl -l
+```bash
+wsl –l
+```
 
-4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. 
+4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. E.g., wsl --install -d Ubuntu
 
- > wsl --install -d <distribution_name>
-
-e.g., wsl --install -d Ubuntu
+```bash
+wsl --install -d <distribution_name>
+```
 
 5.	You can set the default to use your selected Linux distribution. It might be listed as item 2, for example. To set the default, use this command:
 
- > wsl --set-default-version 2
+```bash
+wsl --set-default-version 2
+```
 
 6.	You can now launch WSL using the desired distribution using the WSL command:
 
- > wsl
+```bash
+wsl 
+```
 
 ### Using the WSL File System
 When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., /home/username/K2view/Studio) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
