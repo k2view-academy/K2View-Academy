@@ -2,13 +2,13 @@
 
 <web>
 
-The Table Properties tab is displayed in the right pane of the Schema window, when a table is selected, or when opening a table through the Project Tree and then open its properties pane.
+The Table Properties tab appears in the right pane of the Schema window. This happens when either a table is selected or a table is being opened through the Project Tree and then open its properties pane.
 
 ![](images/web_table_properties.png)
 
 
 
-It displays a list of properties, by sections, that shall be defined for each LU table, as follows:
+It displays a list of properties, by sections, that should be defined for each LU table, as follows:
 
 <table width="900pxl">
 <tbody>
