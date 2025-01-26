@@ -3,7 +3,7 @@
 
 If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/desktop/ for information how to install Docker Desktop for your Operating System.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/desktop/ for information on how to install Docker Desktop for your Operating System.
 
 ## Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows
 
@@ -12,6 +12,7 @@ The easiest and recommended way to get Docker Compose is to install Docker Deskt
 3.	If you install Docker Desktop, Docker Compose is bundled with Docker Engine. See https://docs.docker.com/desktop/ to install Docker Desktop.
 
 ## Using the Windows Subsystem for Linux (WSL)
+
 When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Otherwise, the installation will not perform adequately and will exhibit slow performance. 
 
 ### Installing WSL
@@ -30,7 +31,7 @@ wsl –install
 wsl –l
 ```
 
-4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. E.g., wsl --install -d Ubuntu
+4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. E.g., `wsl --install -d Ubuntu`
 
 ```bash
 wsl --install -d <distribution_name>
@@ -49,7 +50,8 @@ wsl
 ```
 
 ### Using the WSL File System
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., /home/username/K2view/Studio) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
+
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
 
 ## Docker Commands
 
@@ -71,7 +73,9 @@ Using `wsl --install -d <distribution_name>` will achieve this also if the "Enab
 
 If you do not enable WSL integration, you may get errors like this when running k2space.sh. 
 
- > unable to get image '...': error during connect: Get "...": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+```bash
+unable to get image '...': error during connect: Get "...": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+```
 
 ### Running Docker on Linux
 
@@ -79,7 +83,9 @@ When running Docker commands or starting the Docker service on Linux, you must u
 
 If you do not, you will get errors like:
 
- > unable to get image '...': error during connect: Get "...":  ... connect: permission denied
+```bash
+unable to get image '...': error during connect: Get "...":  ... connect: permission denied
+```
 
 Examples of commands (see Docker's [CLI Cheat Sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) ). 
 
