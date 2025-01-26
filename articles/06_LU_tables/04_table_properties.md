@@ -159,7 +159,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Full Text Search</p>
 </td>
 <td style="vertical-align: top;">
-<p>When set to True, it enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, it enables the use of MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
