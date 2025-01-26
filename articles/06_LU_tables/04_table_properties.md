@@ -204,7 +204,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Description</p>
 </td>
 <td style="vertical-align: top;">
-Table's description, Useful for maintability and on going project lifecycle, as well as for the GenAI tools that use this information to generate better results.
+The table's description, useful for maintability and on going project lifecycle, as well as for the GenAI tools that use this information to generate better results.
 </td>
 </tr>
 <tr>
