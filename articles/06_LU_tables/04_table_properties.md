@@ -71,7 +71,7 @@ It displays a list of properties, by sections, that should be defined for each L
 <tr>
 <td style="vertical-align: top;"><p><strong>Indexes</strong></p></td>    
 <td style="vertical-align: top;"><p>Indexes List</p></td>    
-<td style="vertical-align: top;"><p>Sets table's indexes, as explained <a href="/articles/06_LU_tables/03_table_indexes.md">here. </a></p></td>
+<td style="vertical-align: top;"><p>Sets the table's indexes, as explained <a href="/articles/06_LU_tables/03_table_indexes.md">here. </a></p></td>
 </tr>
 <tr>
     <td style="vertical-align: top;"><p><strong>Triggers</strong></p></td>    
