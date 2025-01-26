@@ -238,6 +238,12 @@ If you have Git integration enabled within Windows Explorer, you can start `Git 
 
 #### Create Spaces on Your Server
 
+First, change directory to your Installation directory, e.g., "Studio"
+
+```bash
+cd Studio
+```
+
 You can create multiple Fabric spaces on your server. To do so, use the k2space.sh script as shown here:
 
 ```bash
