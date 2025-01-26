@@ -2,18 +2,18 @@
 
 ## Content
 <ul>      
-   <li><a href="#prerequisites">Prerequisites</a></li>
-   <li><a href="#whats-in-this-package">What's in this Package</a></li>
-   <li><a href="#things-to-configure">Things to Configure</a></li>
-   <li><a href="#installation">Installation</a></li>
-   <li><a href="#step-1--install-and-validate-docker-and-docker-compose-runtime">Step 1 – Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="#step-2--download-the-k2view-blueprints">Step 2 – Download the K2view Blueprints</a></li>
-   <li><a href="#step-3--clone-the-k2view-blueprints">Step 3 – Clone the K2view Blueprints</a></li>
-   <li><a href="#step-4--configure-git-and-tls">Step 4 – Configure Git and TLS</a></li>
-   <li><a href="#step-5--select-a-fabric-blueprint-profile-to-use">Step 5 – Select a Fabric Blueprint Profile to Use</a></li>
-   <li><a href="#step-6--log-in-to-k2views-nexus-container-registry">Step 6 – Log in to K2view's Nexus Container Registry</a></li>
-   <li><a href="#step-7--create-and-launch-a-fabric-space">Step 7 – Create and Launch a Fabric Space</a></li>
-   <li><a href="#step-8--access-web-studio">Step 8 – Access Web Studio</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#prerequisites">Prerequisites</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#things-to-configure">Things to Configure</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#installation">Installation</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1--install-and-validate-docker-and-docker-compose-runtime">Step 1 – Install and Validate Docker and Docker Compose Runtime</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2--download-the-k2view-blueprints">Step 2 – Download the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3--clone-the-k2view-blueprints">Step 3 – Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4--configure-git-and-tls">Step 4 – Configure Git and TLS</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5--select-a-fabric-blueprint-profile-to-use">Step 5 – Select a Fabric Blueprint Profile to Use</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6--log-in-to-k2views-nexus-container-registry">Step 6 – Log in to K2view's Nexus Container Registry</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-7--create-and-launch-a-fabric-space">Step 7 – Create and Launch a Fabric Space</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-8--access-web-studio">Step 8 – Access Web Studio</a></li>
 </ul>
 
 
@@ -22,11 +22,11 @@ Please review the <a href="/articles/98_maintenance_and_operational/Installation
 
 ### Essential Steps for Installing and Configuring Docker
 
-An important step is to ensure that Docker and the Docker Compose plugin are installed. These are described in the [3rd Party Software]([url](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#3rd-party-software)) topic, and the [Docker and Docker Compose Installation](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows) topic. 
+An important step is to ensure that Docker and the Docker Compose plugin are installed. These are described in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.html#3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic. 
 
-If installing Docker on Microsoft Windows, it is essential to review the instructions for [installing and using WSL](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl).
+If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>.
 
-If running Docker Desktop on Microsoft Windows, you need to [enable the WSL Linux distribution](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#running-docker-desktop). 
+If running Docker Desktop on Microsoft Windows, you need to  <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html#running-docker-desktop">ienable the WSL Linux distribution</a>.
 
 ## What's in this Package
 
@@ -81,7 +81,7 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1** – Install and Validate Docker and Docker Compose Runtime
 
-If Docker has not already been installed on your machine, follow the [Docker installation guide](https://docs.docker.com/engine/install/) from Docker's official documentation. 
+If Docker has not already been installed on your machine, follow the <a href="https://docs.docker.com/engine/install/">Docker installation guide</a> from Docker's official documentation. 
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, all prerequisites for Compose. See https://docs.docker.com/compose/install/ for more information.
 
@@ -91,7 +91,7 @@ After installing a Git client on your machine, you must “clone” the K2view B
 
 Where you clone the files depends on the operating system you use. There are different instructions depending if you are using Linux or MacOS, than those for Microsoft Windows.
 
-Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain its data if you create multiple spaces. 
+Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. 
 
 #### Using Linux or MacOS
 
