@@ -145,7 +145,7 @@ cd \\wsl$\Ubuntu
 
 *Select a Base Directory for your Download and Installation Directory Locations*
 
-Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in `\\wsl$\\ubuntu\\home\\[username]`. For example:
+Please select a directory where you will download the K2view Blueprints and install Fabric Web Studio. You can use your home directory in `\\wsl$\ubuntu\home\[username]`. For example:
 
 ```bash
 cd \\wsl$\Ubuntu\home\[username]
@@ -225,14 +225,14 @@ If you perform this step after the initial installation, you must restart Fabric
 
 ### **Step 5**: Select a Fabric Blueprint Profile to Use
 
-There are four profiles, each of which embeds Fabric. The default is 'studio.config'.  
+There are four profiles, each of which embeds Fabric. The default is 'studio'.  
 
-1. **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
-2. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
-3. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
-4. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
+1. **studio**. The default Web Studio profile embeds SQLite for its System DB.
+2. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
+3. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
+4. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
 
-Using the default profile, 'studio.config', you will not need to provide the profile on the `k2space.sh` command line. Otherwise, you will need to enter one of the other profiles. 
+Using the default profile, 'studio', you will not need to provide the profile on the `k2space.sh` command line. Otherwise, you will need to enter one of the other profiles. 
 
 
 ### **Step 6**: Log in to K2view's Nexus Container Registry
@@ -284,7 +284,7 @@ You can create multiple Fabric spaces on your server. To do so, use the `k2space
 sudo ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-You can omit passing in a `-- profile` parameter to use the default profile, 'studio.config'. On Linux, prefix the command with `sudo`.
+You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. On Linux, prefix the command with `sudo`.
 
 ```bash
 sudo ./k2space.sh create spacename
@@ -292,19 +292,19 @@ sudo ./k2space.sh create spacename
 
 Otherwise, please use the following --profile commands:
 
-1. **studio_pg.config**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
+1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
    
 ```bash
 sudo ./k2space.sh create --profile=studio_pg spacename
 ```
 
-2. **studio_cass.config**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
+2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
    
 ```bash
 sudo ./k2space.sh create --profile=studio_cass spacename
 ```
 
-3. **studio_pg_cass.config**. A TDM profile incorporating Apache Cassandra for its System. On Linux, prefix the command with `sudo`. 
+3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. On Linux, prefix the command with `sudo`. 
 
 ```bash
 sudo ./k2space.sh create --profile=studio_pg_cass spacename
