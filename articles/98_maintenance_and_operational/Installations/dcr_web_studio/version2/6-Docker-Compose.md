@@ -19,9 +19,11 @@ When using Microsoft Windows, you must run Docker inside the WSL file system in 
 1.	Open PowerShell as Administrator.
 
 2.	Install WSL and a Linux distribution (e.g., Ubuntu):
+   
  > wsl –install
 
 3.	List the installed WSL distribution:
+
  > wsl -l
 
 4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. 
