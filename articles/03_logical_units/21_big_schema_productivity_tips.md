@@ -48,7 +48,7 @@ Using the Zoom in and out top bar control, you can either focus on a specific ar
 
 ## Magnifier
 
-When the schema diagram is zoomed out - which usually happens in large LUs with a complex diagram, where tables looks small - you can use the Magnifier control to magnify areas in the schema. Click on the schema's top bar Magnifier control icon (![](images/web/magnifier1.png)) to activate it. 
+When the schema diagram is zoomed out - which usually happens in large LUs with a complex diagram, where tables look small - you can use the Magnifier control to magnify areas in the schema. Click on the schema's top bar Magnifier control icon (![](images/web/magnifier1.png)) to activate it. 
 
 When clicked, in addition to the appearing Magnifier that appears on the schema diagram, the Magnifier icon turns orange, indicating that it is turned-on.
 
