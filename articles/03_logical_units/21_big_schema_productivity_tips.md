@@ -24,7 +24,7 @@ You can type a keyword in the search box, where the search result widget will th
 
   ![](images/web/21_search2.png)
 
-* Clicking on an entry directs you to the element's location, to either the group or the table, and selects it. Table is also blinking for a short time. In case of searching for a table's column, then when clicking on it at the search bar will lead you to the column within its table, include scrolling the column list to the column and highlighting it.
+* Clicking on an entry in the search result widget directs you to the element's location, to either the group or the table, and selects it. The table is also blinking for a short time. In case the search is for a table's column, then when clicking on it at the search bar will lead you to the column within its table, include scrolling the column list to the column and highlighting it.
 
 
 
