@@ -172,7 +172,7 @@ git clone https://github.com/k2view/blueprints.git
 
 This will create a `blueprints` directory with various subdirectories. The `Docker` subdirectory holds the Fabric Web Studio installation files. 
 
-### **Step 3** – Create an Installation Directory and Copy the Fabric Web Studio Files
+#### Create an Installation Directory and Copy the Fabric Web Studio Files
 
 We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Docker` directory as `Studio`. 
 
