@@ -30,7 +30,7 @@ You can type a keyword in the search box, where the search result widget will th
 
 ## Navigation Minimap
 
-You can have an overview of the whole schema's diagram using the Navigation Map feature. To activate it, click on the schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg)).
+An overview of the whole schema's diagram is availble by using the Navigation Map feature. To activate it, click on the schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg)).
 
 Once Opened - at the top-left side of the schema diagram window, you can click and move the red rectangle, which represents the current schema view. This way you can navigate within the schema.
 
