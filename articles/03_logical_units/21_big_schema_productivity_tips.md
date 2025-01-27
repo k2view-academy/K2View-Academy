@@ -42,7 +42,7 @@ When clicked, in addition to the appearing navigation map, the Navigation Map ic
 
 ## Zoom In and Out
 
-Using the Zoom in and out top bar control, you can either focus on a specific area or get a wider view of the schema's diagram and its tables. Use either the '+' and '-' controls to gradually zoom (5% each click) or select one of the predefined zoom values using the select list options.  ![](images/web/schema_zoom_in_out.png)
+Using the Zoom in and out top bar control, you can either focus on a specific area or get a wider view of the schema's diagram and its tables. Use either the '+' and '-' controls to zoom gradually (5% each click) or select one of the predefined zoom values using the select list options.  ![](images/web/schema_zoom_in_out.png)
 
 
 
