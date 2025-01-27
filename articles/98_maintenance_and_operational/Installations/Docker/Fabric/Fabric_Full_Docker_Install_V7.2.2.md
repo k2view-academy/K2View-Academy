@@ -62,12 +62,12 @@ More detailed requirements for each are described below:
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_326-HF22/D_k2view_fabric_7.2.2_326.tar.gz
-   <br>md5: 0574f2cb163f21d09fbc3caf29099fd9</br></td>
+   <br>md5: d0c6cad23f318262373e3bb592a88102</br></td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
    <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_7.2/7.2.2/Server/fabric-7.2.2_326-HF22/compose_fabric_7.2.2_326.tar.gz
-   <br>md5: b29038847ef58cdf6534de71a5a663da</br></td>
+   <br>md5: 8c891af7daf15210db81fe451b487db3</br></td>
    </tr>
    </tbody>
    </table>
