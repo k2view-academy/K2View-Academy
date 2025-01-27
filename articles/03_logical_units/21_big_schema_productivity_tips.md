@@ -10,7 +10,7 @@ When maintaining large Logical Units with many tables, it sometimes becomes diff
 
 Use the schema Search input field for looking for tables, table-groups, tables' columns, populations and their input fields.
 
-To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears besides each element name.
+To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears beside each element name.
 
 ![](images/web/21_search1.png)
 
