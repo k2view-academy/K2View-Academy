@@ -10,15 +10,15 @@ When maintaining large Logical Units with many tables, it sometimes becomes diff
 
 Use the schema Search input field to look for tables, table-groups, tables' columns, populations and their input fields.
 
-To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears beside each element name.
+To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a **search result widget**, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears beside each element name.
 
 ![](images/web/21_search1.png)
 
 
 
-You can type a keyword into the search box, where the **search result widget** will then display all the occurrences of the searched text.
+You can type a keyword in the search box, where the search result widget will then display all the occurrences of the searched text.
 
-* The results show the entire element name containing the searched text, which is highlighted in orange. 
+* The search results display the entire element name, which contains the searched text highlighted in orange. 
 
 * Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the schema hierarchy. The below screenshot shows the example: "CRM > CONTRACT > CONTRACT_REF_ID". In this example, 'CRM' is the name of the group (which is optional), followed by a table name and a column, as the hovering is done on a table's column.
 
