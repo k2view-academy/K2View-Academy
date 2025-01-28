@@ -88,9 +88,9 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
+  * **Build Artifacts**. [Click for more information about the Catalog artifacts](09_build_artifacts.md).
   * **Edit Catalog**. [Click for more information about the Manual Overrides](07_manual_overrides.md).
   * View the list of **Hidden Nodes**. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
-  * **Build Artifacts**. [Click for more information about the Catalog artifacts](09_build_artifacts.md).
   * **Delete Catalog**. Clicking it will delete all data from the Neo4j Graph DB (once the user confirms his action). This feature is useful during the Development when a user wants to run Discovery on various data platforms and then re-build the Catalog from scratch on the same space. Available in V8.1.
 * **Search** <img src="images/search.png" style="zoom:80%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
 * **Filter** <img src="images/filter.png" style="zoom:80%;" />the Catalog graph by property. When a filter is set, the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
