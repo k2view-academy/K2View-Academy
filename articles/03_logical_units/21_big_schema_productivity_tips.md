@@ -2,53 +2,53 @@
 
 # Large Schema - Productivity Tips
 
-When maintaining large logical units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article suggests several features and productivity tips that may assist in such a case.
+When maintaining large Logical Units with many tables, it sometimes becomes difficult to understand and manage their complex schemas. This article highlights several features and productivity tips that may assist in such a case.
 
 
 
 ## Schema Search 
 
-Use the schema Search input field for looking for tables, table-groups, tables' columns, populations and their input fields.
+Use the schema Search input field to look for tables, table-groups, tables' columns, populations and their input fields.
 
-To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a result widget, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears besides each element name.
+To do so, first tap the search box located at the schema's top toolbar. Once done, the search box expands into a **search result widget**, displaying all schema tables in an alphabetical order, along with their related elements (columns and populations). The element type appears beside each element name.
 
 ![](images/web/21_search1.png)
 
 
 
-You can type a keyword into the search box, where the result widget would then display all the occurrences of the searched text.
+You can type a keyword in the search box, where the search result widget will then display all the occurrences of the searched text.
 
-* The results show the entire element name containing the searched text, which is highlighted in orange. 
+* The search results display the entire element name, which contains the searched text highlighted in orange. 
 
-* Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the schema hierarchy. The below screenshot shows the example: "CRM > CONTRACT > CONTRACT_REF_ID". In this example, 'CRM' is the name of the group (which is optional), followed by a table name and a column, as the hovering is done on a table's column.
+* Hovering over an entry in the search result widget triggers a tooltip that indicates the location of the searched text in the schema hierarchy. The below screenshot shows an example, "CRM > CONTRACT > CONTRACT_REF_ID". In this example, 'CRM' is the name of the group (which is optional), followed by a table name and a column, as the hovering is done on a table's column.
 
   ![](images/web/21_search2.png)
 
-* Clicking on an entry directs you to the element's location, to either the group or the table, and selects it. Table is also blinking for a short time. In case of searching for a table's column, then when clicking on it at the search bar will lead you to the column within its table, include scrolling the column list to the column and highlighting it.
+* Clicking on an entry in the search result widget directs you to the element's location, to either the group or the table, and selects it. The table is also blinking for a short time. In case the search is for a table's column, then when clicking on it in the search bar will lead you to the column within its table, include scrolling the column list to the column and highlighting it.
 
 
 
 ## Navigation Minimap
 
-You can have an overview of the whole schema's diagram using the Navigation Map feature. To activate it, click on the schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg)).
+An overview of the whole schema's diagram is available using the Navigation Map feature. To activate it, click on the schema's top bar Magnifier control icon (![](images/web/mini-map-off.svg)).
 
-Once Opened - at the top-left side of the schema diagram window, you can click and move the red rectangle, which represents the current schema view. This way you can navigate within the schema.
+Once Opened - on the top-left side of the schema diagram window - you can click and move the red rectangle, which represents the current schema view. This way you can navigate within the schema.
 
 ![](images/web/21_map.png)
 
-When clicked, in addition to the appearing navigation map, the Navigation Map icon turns orange, indicating that it is turned-on. To turn it off, click on this control icon again.
+When clicked, in addition to the appearing navigation map, the Navigation Map icon turns orange, indicating that it is turned on. To turn it off, click on this control icon again.
 
 
 
 ## Zoom In and Out
 
-Using the Zoom in and out top bar control, you can either focus on a specific area or get a wider view of the schema's diagram and its tables. Use either the '+' and '-' controls to gradually zoom (5% each click) or select one of the predefined zoom values using the select list options.  ![](images/web/schema_zoom_in_out.png)
+Using the Zoom in and out top bar control, you can either focus on a specific area or get a wider view of the schema's diagram and its tables. Use either the '+' and '-' controls to zoom gradually (5% each click) or select one of the predefined zoom values using the select list options.  ![](images/web/schema_zoom_in_out.png)
 
 
 
 ## Magnifier
 
-When the schema diagram is zoomed out - which usually happens in large LUs with complex diagram, where tables looks small - you can use the Magnifier control to magnify areas in the schema. Click on the schema's top bar Magnifier control icon (![](images/web/magnifier1.png)) to activate it. 
+When the schema diagram is zoomed out - which usually happens in large LUs with a complex diagram in which tables look small - you can use the Magnifier control to magnify areas in the schema. Click on the schema's top bar Magnifier control icon (![](images/web/magnifier1.png)) to activate it. 
 
 When clicked, in addition to the appearing Magnifier that appears on the schema diagram, the Magnifier icon turns orange, indicating that it is turned-on.
 

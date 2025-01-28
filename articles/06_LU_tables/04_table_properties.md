@@ -2,13 +2,13 @@
 
 <web>
 
-The Table Properties tab is displayed in the right pane of the Schema window, when a table is selected, or when opening a table through the Project Tree and then open its properties pane.
+The Table Properties tab appears in the right pane of the Schema window. This happens when a table is either selected or is being opened through the Project Tree and then open its properties pane.
 
 ![](images/web_table_properties.png)
 
 
 
-It displays a list of properties, by sections, that shall be defined for each LU table, as follows:
+It displays a list of properties, by sections, that should be defined for each LU table, as follows:
 
 <table width="900pxl">
 <tbody>
@@ -25,7 +25,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
     <ul>
      <li>BINARY - (default) compares the exact string in the field with the SQL statement.</li>
      <li>NOCASE - enables the Select statement to ignore upper/lower case letters when comparing text fields. For example: <br /> Select TYPE from tblExample where NAME = &lsquo;value&rsquo; returns records when the NAME field is set to either &lsquo;VALUE&rsquo; or &lsquo;value&rsquo;.</li>
-     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value&lsquo;.</li>
+     <li>RTRIM - enables the Select statement to ignore white space characters on the right side of the string when comparing text fields. For example:<br /> Select TYPE from tblExample where the NAME = &lsquo;value&rsquo; returns records that match both &lsquo;value&rsquo; and &lsquo;value &lsquo;.</li>
    </ul>
 </td>
 </tr>
@@ -33,7 +33,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
 <td style="vertical-align: top;"></td>
 <td style="vertical-align: top;">Full Text Search</td>
 <td style="vertical-align: top;">
-<p>When set to True, it enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, it enables the use of MATCH SQLite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
@@ -63,15 +63,15 @@ It displays a list of properties, by sections, that shall be defined for each LU
        <p>Click <a href="/articles/14_sync_LU_instance/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties">here </a> for more information about the Delete Mode.</p>  
    <p>Notes:</p>
    <ul>
-    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.</li>
-    <li>If the Delete Mode is NonUpdated, it is recommended to define a PK on the LU table and to set the LU table population mode to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.</li>
+    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends <i>delete</i> messages about all the truncated records and <i>insert</i> messages about the newly inserted records.</li>
+    <li>If the Delete Mode is set to NonUpdated value, it is recommended to define a PK on the LU table and to set the LU table population mode to Upsert or Update as a way to delete only the old data. If the LU table does not have a PK, new records are added to the LU table, and all previous records are deleted.</li>
  </ul>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><p><strong>Indexes</strong></p></td>    
 <td style="vertical-align: top;"><p>Indexes List</p></td>    
-<td style="vertical-align: top;"><p>Sets table's indexes, as explained <a href="/articles/06_LU_tables/03_table_indexes.md">here. </a></p></td>
+<td style="vertical-align: top;"><p>Sets the table's indexes, as explained <a href="/articles/06_LU_tables/03_table_indexes.md">here. </a></p></td>
 </tr>
 <tr>
     <td style="vertical-align: top;"><p><strong>Triggers</strong></p></td>    
@@ -83,13 +83,13 @@ It displays a list of properties, by sections, that shall be defined for each LU
 <tr>
     <td style="vertical-align: top;"><p><strong>Data Change Indexes</strong></p></td>    
     <td style="vertical-align: top;">Columns' definitions per CDC Consumer</td>
-    <td style="vertical-align: top;"><p>Refer to <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list.</p>
+    <td style="vertical-align: top;"><p>Refer to the <a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a> to learn how to edit this list.</p>
 </td>
 </tr>
 <tr>
     <td style="vertical-align: top;"><p><strong>Description</strong></p></td>    
     <td style="vertical-align: top;">Description</td>
-    <td style="vertical-align: top;"><p>Table's description, Useful for maintability and on going project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
+    <td style="vertical-align: top;"><p>The table's description, useful for maintainability and the ongoing project lifecycle, as well as for the GenAI tools that use this information to generate better results.</p>
 </td>
 </tr>
 </tbody>
@@ -102,7 +102,7 @@ It displays a list of properties, by sections, that shall be defined for each LU
 
 <studio>
 
-The Table Properties tab is displayed in the right pane of the Table's window.
+The Table Properties tab appears in the right pane of the Table's window.
 
 
 ![image](images/06_04_table_properties.png)
@@ -136,7 +136,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Instance ID Column</p>
 </td>
 <td style="vertical-align: top;">
-<p>A unique field that is used as the LU table Instance ID.</a></p>
+<p>A unique field used as the LU table Instance ID.</a></p>
 </td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Full Text Search</p>
 </td>
 <td style="vertical-align: top;">
-<p>When set to True, it enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, it enables the use of MATCH SQLite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
@@ -178,8 +178,8 @@ The Properties tab displays a list of properties that must be defined for each L
        <p>Click <a href="/articles/14_sync_LU_instance/04_sync_methods.md#delete-mode-and-truncate-before-sync-properties">here </a> for more information about the Delete Mode.</p>  
    <p>Notes:</p>
    <ul>
-    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends delete messages for all the truncated records and inserts messages for the newly inserted records.</li>
-    <li>If the Delete Mode is NonUpdated, it is recommended to define a PK on the LU table and to set the <a href="/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties">LU table population mode</a> to Upsert or Update in order to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.</li>
+    <li>It is recommended to set the <strong>NonUpdated</strong> value when the LU table has <a href="/articles/18_fabric_cdc/01_change_data_capture_overview.md">CDC fields</a> in order to send <a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC messages</a> only for the updated records. If the Delete Mode is set to All, Fabric sends <i>delete</i> messages about all the truncated records and <i>insert</i> messages about the newly inserted records.</li>
+    <li>If the Delete Mode is set to NonUpdated value, it is recommended to define a PK on the LU table and to set the <a href="/articles/07_table_population/04_table_population_properties_tab.md#target-lu-table-properties">LU table population mode</a> to Upsert or Update as a way to delete only the old data. If the LU table does not have a PK, new records are added to the LU table and all previous records are deleted.</li>
  </ul>
 </td>
 </tr>
@@ -204,7 +204,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>Description</p>
 </td>
 <td style="vertical-align: top;">
-Table's description, Useful for maintability and on going project lifecycle, as well as for the GenAI tools that use this information to generate better results.
+The table's description, useful for maintainability and the ongoing project lifecycle, as well as for the GenAI tools that use this information to generate better results.
 </td>
 </tr>
 <tr>
