@@ -107,7 +107,7 @@ The Table Properties tab displays a list of properties, by sections, that should
 
 <studio>
 
-The Table Properties tab appears in the right pane of the Table's window.
+The Table Properties tab appears on the right pane of the Table's window.
 
 
 ![image](images/06_04_table_properties.png)
