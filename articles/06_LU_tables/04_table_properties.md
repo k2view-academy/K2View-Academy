@@ -2,13 +2,18 @@
 
 <web>
 
-The Table Properties tab appears on the right side of the screen, following a single click on the horizontal label located on the top of the right edge of the screen. The Table Properties tab can be reached by one of the following two ways: This happens when a table is either selected or is being opened through the Project Tree and then open its properties pane.
+The Table Properties tab appears on the right side of the screen, following a single click on the horizontal label located on the top of the right edge of the screen. The Table Properties can be reached by one of the following two ways:
+
+* opening a schema and selecting one of its tables.
+
+* double-clicking on an LU from the Project Tree -> double-clicking on Tables -> selecting a table by double-clicking on it.
+
 
 ![](images/web_table_properties.png)
 
 
 
-It displays a list of properties, by sections, that should be defined for each LU table, as follows:
+The Table Properties tab displays a list of properties, by sections, that should be defined for each LU table, as follows:
 
 <table width="900pxl">
 <tbody>
