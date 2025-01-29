@@ -45,8 +45,6 @@ If Customer desires to have such failures corrected, K2view shall make reasonabl
 **2\.1.** K2view shall provide Customer with access to K2view’s online ticketing system for reporting Errors (“Create ticket”), available on K2view Support Site under the “Got a problem?” section.
 
 
-**2\.2.** K2view shall provide Customer 24/7 hotline phone number for reporting Critical and High Errors in production.
-
 **2\.3.** Errors will be submitted according to the following definition of content and severity. Each Error should report only one problem at a time to ensure separate tracking of unrelated problems. The Error should include  the following information, at least: Company name, Project name, Product name, K2view Software Version, Environment details, Type of Error, Priority, Detailed description of the problem.
 
 If requested by K2view and reasonably required to resolve any Error, Customer shall provide the following information:
