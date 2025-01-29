@@ -33,6 +33,8 @@ Use this pattern in its value:  ${secretmanager:<id-at-secret-manager>}. For exa
 1. Turn the key switch, located beside each relevant property, to be on (![off](images/secret-key-off.png) &rarr; ![off](images/secret-key-on.png)).
 1. type in the key, as exists in the secret management service.
 
+
+
 > Notes: 
 >
 > * When turned on, a default value appears, as a proposed key name, which built from the name of the Interface and the property name. For example: the proposed key name for *Host* property in ASSETS_DB interface will be `ASSET_DB.Host`. This is a suggested name, but you shall strictly align with the same name as exists in the secret management service.
@@ -42,14 +44,36 @@ Use this pattern in its value:  ${secretmanager:<id-at-secret-manager>}. For exa
 
 
 
-* Additional notes and considerations regarding **specific** Secrets Management providers:
+### Provider-Specific Considerations and Usage Patterns
 
-  * For **CyberArk CCP**, you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
+Following are additional notes and considerations regarding **specific** Secrets Management providers:
 
-     >  The AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
+* **HashiCorp Vault**: 
+
+   * The **KV (key value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
+   
+      - Each **path** is like a folder (for example:`k2view/mysql`).
+   
+      - Inside each path, you can store multiple key-value pairs (e.g., `user`, `password`, `host`, `port`. In the illustrated example we show `password` and `user`).
+   
+        ![](images/04c_hashicorp_example.png)
+   
+   * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric lets you to specify which key you wish to use.
+   
+      The pattern is <key-path>.<key>. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
+   
+   * HashiCorp has 2 versions, where their key-path are different but this does not affect the key and their path, as you set for the interface's properties. To read more about versions see [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
+   
+   
+   
+* **CyberArk CCP**: you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
+
+   >  The AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
 
 
-  * For **Safeguard**, you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., `asset_name=OracleDB&account_name=PreProd`
+
+
+  * **Safeguard**: you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., `asset_name=OracleDB&account_name=PreProd`
 
   
 
