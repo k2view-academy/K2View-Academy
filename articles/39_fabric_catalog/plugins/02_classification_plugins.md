@@ -40,25 +40,13 @@ To update the metadata profiling rules, go to the [Catalog Settings > Classifier
 
 #### Field Exclusion List
 
-Fields can be excluded from the **Metadata Regex Classifier** plugin's logic by either their name or type. This can be useful when, for example, you need to exclude all fields with a certain name or a name pattern from the classification process. 
+Fields can be excluded from the **Metadata Regex Classifier** plugin's logic by either their name or type. This can be useful when, for example, you need to exclude all fields with a certain name pattern from the classification process. 
 
-The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. The **field_name_exclude_list** definition can be either the exact field name or a regular expression.
+The exclusion list can be defined using Discovery Pipeline Settings screen as follows:
 
-**Example:**
+<img src="../images/fieldExcludeListExample.png" style="zoom: 67%;" />
 
-~~~json
-"input_parameters": {
-	"field_name_exclude_list": [
-					"(?i).*NAME.*",
-        			"STREET_ADDRESS_2"
-	],
-	"field_type_exclude_list": [
-					"boolean"
-	]
-}
-~~~
-
-
+[Click here to learn how to create the override rules using the Discovery Pipeline Settings screen](13_discovery_pipeline_settings.md).
 
 ### Classification PII Marker
 
@@ -72,22 +60,9 @@ To update the Classification's PII indicator, go to the [Catalog Settings > PII 
 
 Fields can be excluded from the **Classification PII Marker** plugin's logic by either their name or type. This can be useful when, for example, you need to exclude all fields with a certain name or a name pattern from the PII marking process. 
 
-The exclusion list can be defined using the **field_name_exclude_list** and **field_type_exclude_list** arrays in the plugin's input parameters definition of the plugins.discovery configuration file. The **field_name_exclude_list** definition can be either the exact field name or a regular expression.
+The exclusion list can be defined using Discovery Pipeline Settings screen as follows:
 
-**Example:**
+<img src="../images/fieldExcludeListPIIExample.png" style="zoom: 67%;" />
 
-~~~
-"input_parameters": {
-	"field_name_exclude_list": [
-					"^(?i)[a-z]+_?ID$"
-	],
-	"field_type_exclude_list": [
-					"DATETIME"
-	]
-}
-~~~
-
-
-
-
+[Click here to learn how to create the override rules using the Discovery Pipeline Settings screen](13_discovery_pipeline_settings.md).
 
