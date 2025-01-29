@@ -46,7 +46,7 @@ When opened from either the Schema Editor table's view, Graphit or Broadway - th
 
 ## Query Editor Panel
 
-You can edit the SQL commands in the Query Editor panel - the upper part of the Query Builder window.  
+You can edit the SQL commands in the Query Editor panel - the upper part of the Query Builder window.  Read [here](/articles/11_query_builder/03_building_and_running_an_sql_query.md)  more details about editing a SQL commands at the Query Editor.
 
 It contains the editing area and top action bar, where you can run your query by clicking on the **Execute** button or clear the editing area by clicking on the **Clear** button.
 

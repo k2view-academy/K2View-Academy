@@ -136,7 +136,7 @@ The **Max rows** setting is used for setting the maximum number of rows returned
 
 You can create and edit a SQL statement by selecting the desired action from the Interface Explorer tree menu, typing it manually, or seeking guidance from the built-in AI Assistant. The later two are used for more complex queries.
 
-### Adding a query using the Interface Explorer Tree
+## Adding a query using the Interface Explorer Tree
 
 Adding a query to the Query Editor panel using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as popup at Schema Editor, Graphit and Broadway.
 
@@ -159,14 +159,39 @@ While writing your SQL statement at the editor you can be guided by 2 assistants
 You can use the built-in AI Assistant for creating SQL statements, by providing him your desired statement in a natural language. To use the AI Assistant:
 
 1. Click on the AI icon (<img src="images/web/ai-2-bw.png" />) at the top right side of the Query Builder Editor panel.
-2. The Editor screen is then split into two side by side editors: At left - the native language statements
+
+   The Editor screen is then split into two side-by-side editors: At left - SQL Editor, where at the right - the native language statements Editor. 
+
+2. Write your desired statement at the right side editor.
+
+3. Choose the relevant schemas that you wish the AI will look at, via the *Schema Filter* select list. This aimed to avoid overwhelming the process. In case of a single schema DB, it is automatically selected
+
+   ![](images/web/03_ai_select_schema.png)
+
+   > You can see which schemas were selected, even without opening the select list again, by mouse hoover 
+   >
+   > ![](images/web/03_ai_selected_schema.png) 
+
+4. Click on the *Text &rarr; SQL* button.
+
+5. The query will then be generated and will appear at the SQL Editor.
+
+   ![](images/web/03_ai_done.png)
+
+   You can see the AI explanations, of how SQL command was created, by clicking on the question mark icon, which will appear above the SQL Editor, once Text to SQL generations process is ended.
 
 
 
-> Notes:
->
-> 1. To activate the AI Assistant you shall install one of the AI connectors and create an interface upon.
-> 2. 
+You can also activate the AI Assistant in the opposite way - to explain you an existing SQL in a native language. For this, Click on the *SQL &rarr; Text* button.
+
+When AI Assistant is activated inside a DB select function, like in BW DB Query actors or in Graphit node, the native language statement is saved as a comment alongside the the SQL.
+
+
+
+
+> Notes: To activate the AI Assistant you shall install one of the AI connectors and create an interface upon.
+
+
 
 ### Query Editor Code Completion Assistant 
 
@@ -174,7 +199,17 @@ While editing the SQL statements manually, you can be assisted by the Editor Ass
 
 The Assistant code completion is done while typing and on hitting CTRL+SPACE, as used while code programming.
 
+A select list is then opened where you can choose the relevant statement.
 
+![](images/web/03_code_complet.png)
+
+An icon appears aside any item in the select list, where:
+
+* ![](images/web/qb_assist_folder.svg) stands for a DB schema.
+* ![](images/web/qb_assist_table.svg) stands for a DB table.
+* ![](images/web/qb_assist_field.svg) stands for a table.
+
+Code Completion Assistant can also help you when looking for the standard SQL commands, like `Select`, `AND`, `WHERE`. The icon that represents them is: ![](images/web/qb_assist_keyword.svg).
 
 
 
