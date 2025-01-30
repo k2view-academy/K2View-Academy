@@ -340,7 +340,7 @@
 			"visible": true
 		},
 		{
-			"KB display name": "Maintenance & Operations",
+			"KB display name": "Installation & Maintenance",
 			"KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
 			"KB icon": "images/icon-maintenance.png",
 			"link":"Academy/articles/98_maintenance_and_operational/README.html",
