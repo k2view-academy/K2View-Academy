@@ -5,11 +5,11 @@
 Fabric Sync is a mechanism that synchronizes data between the data sources and Fabric by extraction and transformation processes that are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui). Fabric Sync can be performed in 2 modes:
 
 * Synchronization by request, which is based on predefined sync method and sync mode. [Click here for more information about Sync LUI by request, and various sync methods and sync modes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
-* Proactive sync. A Proactive approach is required in very large systems where millions of database changes occur per second, and numerous CSRs simultaneously query Fabric and request fresh data. A CSR must receive quick responses and should not be delayed due to an online data refreshing from source systems. The proactive sync mode ensures a much faster response time to external data requests, as it does not rely on an online refresh, since the data is always synchronized, as explained below.
+* Proactive sync. The Proactive approach is required in very large systems where millions of database changes occur per second, and numerous CSRs simultaneously query Fabric and request fresh data. A CSR must receive quick responses and should not be delayed due to an online data refreshing from source systems. The proactive sync mode ensures a much faster response time to external data requests, as it does not rely on an online refresh, since the data is always synchronized, as explained below.
 
 ## What is Stream Sync?
 
-**Stream Sync** is a Fabric module, which enables a proactive synchronization of Fabric with source systems by processing only the changes in the source system, without the need to re-synchronize the entire instance on every change in the source.
+**Stream Sync** is a Fabric module, which enables proactive synchronization of Fabric with source systems by processing changes only, without requiring re-synchronization of the entire instance for every change in the source.
 
 The Stream Sync job runs on a Fabric server and receives the Insert, Update and Delete transactions from the source system via a pre-defined PubSub interface. The job identifies which Instance ID is impacted by the change and updates it in the relevant tables of the Fabric DB. 
 

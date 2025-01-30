@@ -29,7 +29,7 @@ Note that you can add a call to an inner flow by switching the radio button from
 
 ### Broadway Co-pilot
 
-Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using a natural language rather than standard key words. 
+Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using natural language rather than standard key words. 
 
 To start using the Co-pilot, make sure an LLM AI interface is defined in the project as it is a prerequisite.
 
