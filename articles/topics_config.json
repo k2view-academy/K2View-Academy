@@ -259,6 +259,7 @@
 					"display name": "External Resources",
 					"value": "31_external_resources"
 				},
+				{
 					"display name": "Stream Sync",
 					"value": "40_stream_sync"
 				}
