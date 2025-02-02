@@ -115,6 +115,7 @@ A customer has 2 activities. The data generation inner flow needs to generate 3 
 Defining Broadway flows or Actors for customized data generation logic is possible. 
 ### Customized Data Generation Flows - Implementation Guidelines
 - Set the output generated value to be an external variable.
+- Add an external input named **value** to the data generator. This is needed since the Masking Actor always sends the input **value** (i.e. the original value) to the data generator. For example - a Masking Actor gets the original full address as an input value and calls a data generator in order to generate a new masked value based on an input State. The address data generator flow needs to get the **value** and **state** as input parameters. The Masking Actor will send both parameters to the data generator.  
 - Optional settings (Fabric 8.2 and onwards):
   - If the customized flow calls the built-in data generation Actor to generate the new data, set the Actor's input **seed** parameter to be an external variable. This is needed to enable using [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method.
   - The catalog masking can send the entire record to the data generator. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. Add to the flow an external variable named **record** in order to get the entire record from the catalog masking.
