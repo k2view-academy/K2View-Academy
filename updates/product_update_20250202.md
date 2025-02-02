@@ -1,4 +1,4 @@
-### The K2cloud January 2025 Release
+# The K2cloud January 2025 Release
 
 February 2, 2025, 11:00 UTC
 
