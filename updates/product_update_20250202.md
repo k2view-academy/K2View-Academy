@@ -6,7 +6,7 @@ We have released K2cloud January 2025 on 2 February 2025 at 11:00 UTC. This rele
 * **Simplified K2cloud Space URLs**: Simplified TLS management and domain setup with the Path-Based Routing feature.
 * **Suppport for Fabric v8.2.0**:
   * **Azure Blob Storage authentication methods** – Fabric now supports two additional authentication methods - Service Principal and Managed Identity.
-  * **Azure Postgres** - Fabrick now offers a managed PostgreSQL storage option on Microsoft Azure.
+  * **Azure Postgres** - Fabric now offers a managed PostgreSQL storage option on Microsoft Azure.
   * **Support for Multiple Secret Manager Instances** – Fabric now supports multiple instances of the same secret manager type.
   * **Simplifying Interface Certificates settings** – Fabric now offers a seamless way to set certificates for interfaces directly within the Interface Editor UI.
 
