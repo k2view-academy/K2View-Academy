@@ -12,6 +12,4 @@ We have introduced the K2cloud January 2025 Release, which brings key security, 
   * **Support for Multiple Secret Manager Instances** – Fabric now supports multiple instances of the same secret manager type
   * **Simplifying Interface Certificates settings** – Fabric now offers a seamless way to set certificates for interfaces directly within the Interface Editor UI instead of relying on scripts to upload certificates to the truststore
 
-
 To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/K2cloud/K2cloud_Release_Notes_Jan2025.pdf.html) 
-<img src="images/img2.png" alt="image" style="zoom: 70%;" />
