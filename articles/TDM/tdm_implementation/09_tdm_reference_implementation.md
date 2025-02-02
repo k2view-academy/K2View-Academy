@@ -100,7 +100,7 @@ Note that if you define a different interface in the target environment, you nee
 
 ###  TableLevelInterfaces MTable
 
-The **TableLevelInterfaces** MTable enables either disabling a table's selection from a given DB or setting a special handling for the tables that belong to a given DB.
+The **TableLevelInterfaces** MTable enables either disabling a table's selection from a given DB or setting special handling for the tables that belong to a given DB.
 
 By default, the MTable is populated with the TDM DBs to disable a selection of TDM tables by a TDM task. It is possible to populate additional DB interfaces in order to exclude them from the table selection in the TDM task or to set special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
 
@@ -149,7 +149,7 @@ The following settings should be populated for each record:
 
 ### Customized Table's Flows - Implementation Guidelines
 
-The customized table's flows are Broadway flows. These flows must be added under the Shared Objects or the TDM_TableLevel LU in the Project tree.
+The customized table's flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
 
 #### Extract Flow
 
