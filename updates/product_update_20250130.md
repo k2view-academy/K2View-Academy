@@ -1,4 +1,4 @@
-### The Fabric 8.2 Official Release
+### The Fabric 8.2.0 Official Release
 
 We are happy to announce that Fabric 8.2.0 has just been released and it includes the following:
 
