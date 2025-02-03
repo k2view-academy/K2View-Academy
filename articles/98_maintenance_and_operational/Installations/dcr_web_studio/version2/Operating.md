@@ -36,6 +36,35 @@ Use:
 ./k2space.sh create [--profile=profile-name] spacename
 ```
 
+After creating your first Space, you will need to restart Traefik after creating an additional space. To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+
+```bash
+docker compose -f k2vingress-compose.yaml restart
+```
+
+**Starting a Space**
+
+To start a Fabric space use: 
+
+```bash
+./k2space.sh start spacename
+```
+
+After starting a Space, you will need to restart Traefik. To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+
+```bash
+docker compose -f k2vingress-compose.yaml restart
+```
+
+**Stopping a Space**
+
+To stop a Fabric space use: 
+
+```bash
+./k2space.sh stop spacename
+```
+
+
 **Destroying a Space**
 
 Delete the Fabric space - *spacename*. 
