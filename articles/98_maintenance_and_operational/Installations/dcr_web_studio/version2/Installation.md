@@ -199,6 +199,10 @@ The Studio directory contains the configuration, YAML, and the K2Space.sh script
 
 You should consider a few things, including configuring a Git repository for your project. Though not mandatory, it is a best practice to store your project files in Git (or in a Git-compliant code repository). 
 
+You can configure it before the creation of Fabric Space via the .env file. You can do so after starting Fabric Web Studio using its built-in Git client. Performing this step within Fabric Web Studio.
+
+**Configuring Git before Creating your Fabric Space**
+
 To do this, you must provide a token, a path to your Git repository, and the appropriate branch. You can create your initial space without this configuration. However, to configure it later, you must configure these values and recreate your space. 
 
 To configure Git, open the .env file and specify the following in the Git Integration section:
