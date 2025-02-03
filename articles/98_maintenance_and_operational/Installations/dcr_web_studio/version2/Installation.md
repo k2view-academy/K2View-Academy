@@ -8,7 +8,7 @@
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#installation">Installation</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2: Download the K2view Blueprints</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-clone-the-k2view-blueprints">Step 3: Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-download">Step 3: Download</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
@@ -66,7 +66,7 @@ Various steps should be taken to get Fabric Web Studio up and running within the
 <ul> 
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2: Download the K2view Blueprints</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-clone-the-k2view-blueprints">Step 3: Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-download">Step 3: Download</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
@@ -159,7 +159,29 @@ Using a shell, create a `K2view` directory to download K2view's Blueprints. You 
 mkdir K2view
 ```
 
-### **Step 3**: Clone the K2view Blueprints 
+### **Step 3**: Download
+
+There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file or clone the content from K2view's Blueprints.
+
+#### Option: Download The Latest Version of Docker Compose Runtime for Fabric Web Studio
+
+You can download the latest version of Docker Compose Runtime for Fabric Web Studio from this location: 
+
+```bash
+https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-latest.zip
+```
+
+Then, change the directory to the K2view directory. Copy `Studio-latest.zip` to this directory, and unzip `Studio-latest.zip` to this directory. Then rename the `Studio-latest.zip` directory as `Studio`.
+
+```bash
+cd K2view
+# copy Studio-latest.zip to this directory
+# unzip Studio-latest.zip to this directory
+# rename the Studio-latest directory as Studio
+```
+
+
+#### Option: Clone the K2view Blueprints 
 
 Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
 
@@ -170,25 +192,25 @@ cd K2view
 git clone https://github.com/k2view/blueprints.git
 ```
 
-This will create a `blueprints` directory with various subdirectories. The `Docker` subdirectory holds the Fabric Web Studio installation files. 
+This will create a `blueprints` directory with various subdirectories. The `Studio` subdirectory holds the Fabric Web Studio installation files. 
 
 #### Create an Installation Directory and Copy the Fabric Web Studio Files
 
-We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Docker` directory as `Studio`. 
+We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Studio` directory as `Studio`. 
 
 *Using Linux or MacOS*
 
 From the K2view directory
 
 ```bash
-cp -r blueprints/Docker/ Studio
+cp -r blueprints/Studio/ Studio
 ```
 *Using the Microsoft Windows PowerShell*
 
 You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
-cp -r blueprints\Docker\ Studio
+cp -r blueprints\Studio\ Studio
 ```
 
 The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
