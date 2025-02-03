@@ -81,11 +81,11 @@ Studio lets you executing several actions for packaging and publishing extension
 
 * Building a **VSIX Package** - An extension installer package file (a zip like format), which contains all the extension's necessary components.  It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
 
-   VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange registry.
+   VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
-* Publishing extension into the **K2exchange registry** - This publishes the extension package into K2exchange registry, where then the extension can be discovered at the extension list.
+* Publishing extension into the **K2exchange store/registry** - This publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
 
-* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus cannot use neither VSIX package nor K2exchange registry.
+* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus cannot use neither VSIX package nor K2exchange store/registry.
 
 
 
@@ -111,7 +111,7 @@ Once you ran this, you can now execute the appropriate command to generate the p
 
 The action commands:
 
-* `Fabric-lib-publish`, for publishing into the K2Exchange registry.
+* `Fabric-lib-publish`, for publishing into the K2Exchange store/registry.
 
   > This actions requires a token that provided for users at the K2Exchange portal. Contact K2view team for more information and options.
 
@@ -153,6 +153,12 @@ To update an existing extension, follow the below steps:
 - A single repository can house multiple extensions, though separating them allows for greater flexibility, in terms of GIT branches aspects.
 
 - Before releasing an extension, test it using a VSIX package in a separate environment to ensure proper installation and functionality.
+
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/28_web_k2exchange.md)
 
 </web>
 
