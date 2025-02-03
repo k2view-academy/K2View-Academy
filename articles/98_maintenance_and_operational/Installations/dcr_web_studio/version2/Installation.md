@@ -306,7 +306,16 @@ First, change directory to your Installation directory, e.g., `Studio`
 cd Studio
 ```
 
+**Ensuring you have Execute Permission on Linux**
+You may need to make k2space.sh executable on a Linux system to do so use the `chmod` command using:
+
+```bash
+sudo chmod 700 k2space.sh
+```
+
+**Running the k2spach.sh Script**
 You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On Linux, prefix the command with `sudo`.
+
 
 ```bash
 sudo ./k2space.sh create [--profile=profile-name] spacename
