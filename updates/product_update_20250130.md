@@ -2,7 +2,7 @@
 
 We are happy to announce that Fabric 8.2.0 has just been released and it includes the following:
 
-* Fabric has been enhanced with integrated **GenAI** technology, leading to a wider range of product capabilities, such as:
+* Pre-integrated **GenAI** technology, leading to a wider range of product capabilities, such as:
   * **LLM-based Catalog profiling** as a way to identify classification of data using an LLM model.
   * **AI Assistant for SQL statements** – a built-in AI Assistant within the Query Builder editors, for an effortless creation of SQL statements by simply describing queries in natural language.
   * **Broadway Co-pilot** is an AI-based Broadway capability, which searches for required actors
