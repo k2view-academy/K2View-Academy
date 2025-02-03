@@ -180,6 +180,9 @@ cd K2view
 # rename the Studio-latest directory as Studio
 ```
 
+The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+
+You can now skip to <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
 
 #### Option: Clone the K2view Blueprints 
 
