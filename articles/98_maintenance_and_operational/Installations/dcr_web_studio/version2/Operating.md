@@ -41,7 +41,9 @@ Use:
 ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-After creating your first Space, you will need to restart Traefik after creating an additional space. To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+After creating your first Space, you will need to wait for Fabric to come up. Unless it up you may get a 404 error if Traefik hasn't yet processed its new ingress rules which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
+
+To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
@@ -55,11 +57,8 @@ To start a Fabric space use:
 ./k2space.sh start spacename
 ```
 
-After starting a Space, you will need to restart Traefik. To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+After starting a Space, you will need to wait until Traefik processes the new configuration and Fabric starts; otherwise, you may experience 404 and 502 errors temporarily.
 
-```bash
-docker compose -f k2vingress-compose.yaml restart
-```
 
 **Stopping a Space**
 
