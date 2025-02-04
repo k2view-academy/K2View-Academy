@@ -1,10 +1,15 @@
 # Operating - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
 
-## Operating and Managing Docker Compose Runtime for Fabric Web Studio
+## Content
+<ul>      
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#fabric-web-studio-spaces">Fabric Web Studio Spaces</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#restarting-traefik">Restarting Traefik</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#adding-users">Adding Users</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#reference-information">Reference Information</a></li>
+</ul>
 
+## Fabric Web Studio Spaces
 
-
-### Fabric Spaces
 This k2space.sh shell script simplifies the creation and deletion of Fabric. You can also use it to list and get information about existing Fabric spaces using: 
 
 ```bash
@@ -76,7 +81,7 @@ Use:
 ./k2space.sh destroy spacename
 ```
 
-### Traefik
+## Restarting Traefik
 #### Starting Traefik
 Traefik starts automatically after you create your first Fabric space. It will also check whenever a new Fabric space is created. If Traefik is not running, it will be started automatically.
 
@@ -89,7 +94,7 @@ To restart Traefik (e.g., after configuring your TSL certificates), run the comm
 docker compose -f k2vingress-compose.yaml restart
 ```
 
-### Adding Users
+## Adding Users
 
 You are ready to add users. You can experiment with the built-in System DB (e.g., Postgres or Cassandra data stores). We recommend using alternate authentication providers rather than using built-in providers. 
 
