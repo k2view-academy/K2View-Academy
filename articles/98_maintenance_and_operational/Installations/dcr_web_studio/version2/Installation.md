@@ -290,9 +290,9 @@ You will be asked to enter your password.
 
 **Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
 
-Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is about 1.9GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
-
-By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
+> Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is about 1.9GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
+>
+>By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
 
 
 ### **Step 7**: Create and Launch a Fabric Space
