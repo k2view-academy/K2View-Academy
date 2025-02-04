@@ -165,6 +165,25 @@ The Catalog masking actor is invoked **after** the extract flow execution. Do th
   - Add the customized masking actors to the extract flow after the CatalogMaskingMapper Actor.
   - Set the **enable_masking** to **false** at the end of the extract flow in order to prevent double masking of the table's record by the TDM execution processes.
 
+##### Customized Extract Flow - Example
+
+The example below executes the following:
+
+- Selects the records from address table.
+- Opens a loop on the extracted records.
+- On each record - 
+  - Masks the street, city, and zip code fields.
+  - Merges the masked fields into the address record. 
+  - Accumulates the merged record with the masked fields into an array. The accumulated array is the external **result** field of the flow.
+
+See an example of the flow: 
+
+![table extract](images/table_leve_custom_ext_flow.png)
+
+See the loop on the selected address records:
+
+![table extract](images/table_leve_custom_ext_flow2.png)
+
 #### Load Flow
 
 - The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) to get the load flow template and customize the load logic.
