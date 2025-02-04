@@ -9,7 +9,6 @@ We are happy to announce that Fabric 8.2.0 has just been released and it include
     using natural language rather than standard key words. 
 * Fabric's **Catalog** have been upgraded to perform discovery based on user-defined rules. The new Discovery Pipeline screen facilitates the creation of rules that allow overriding the product baseline. 
 * **Data Masking Consistency Using Seed**, which ensures referential integrity without the need to save the mapping between the hashed original value and the masked value in the caching table. 
-* Catalog Settings now include the setup of **sequences** for TDM 9.3 solution.
 * A **centralized Catalog** can now be used across multiple Fabric instances (clusters).
 * **Multiple instances of the same Secret Manager** **type** are now supported by Fabric.
 
