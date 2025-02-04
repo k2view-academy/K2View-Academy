@@ -51,7 +51,15 @@ If you do not, you will get errors like:
 unable to get image '...': error during connect: Get "...":  ... connect: permission denied
 ```
 
+## 404 and 502 Errors Following the Creation of a Space
 
+After creating your first Space, you will need to wait for Fabric to come up. Unless it up you may get a 404 error if Traefik hasn't yet processed its new ingress rules which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
+
+To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+
+```bash
+docker compose -f k2vingress-compose.yaml restart
+```
 
 
 
