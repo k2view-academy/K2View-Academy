@@ -79,7 +79,7 @@ unable to get image '...': error during connect: Get "...": open //./pipe/docker
 
 ### Running Docker on Linux
 
-When running Docker commands or starting the Docker service on Linux, you must use `sudo`. For example,
+When running Docker commands or starting the Docker service on Linux, depending on your system access you will need to use `sudo` with your commands. For example,
 
 If you do not, you will get errors like:
 
@@ -92,25 +92,25 @@ Examples of commands (see Docker's [CLI Cheat Sheet](https://docs.docker.com/get
 Starting the Docker service: 
 
 ```bash
-sudo service docker start
+ service docker start
 ```
 
 Logging in to the K2view Nexus Container Registry: 
 
 ```bash
-sudo docker login -u [user] https://docker.share.cloud.k2view.com
+ docker login -u [user] https://docker.share.cloud.k2view.com
 ```
 
 Creating a Fabric Web Studio Space: 
 
 ```bash
-sudo ./k2space.sh create [spacename]
+ ./k2space.sh create [spacename]
 ```
 
 Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Running: 
 
 ```bash
-sudo docker ps
+ docker ps
 ```
 
 If they are running you should see entries for Rraefik and each of the spaces you have created (e.g. myspace-fabric in this example)
