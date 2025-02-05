@@ -274,7 +274,7 @@ Using the default profile, 'studio', you will not need to provide the profile on
 
 Docker and its Compose extension must be running on the server to perform this step. 
 
-Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on Linux to ensure the login is inherited by sudo sessions: 
+Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on some Linux systems depending on your permissions. 
 
 ```bash
 docker login -u [YourAccount] https://docker.share.cloud.k2view.com
@@ -283,7 +283,7 @@ docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 On Linux, prefix the command with `sudo`.
 
 ```bash
-sudo docker login -u [YourAccount] https://docker.share.cloud.k2view.com
+docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 ```
 
 You will be asked to enter your password.
@@ -319,41 +319,41 @@ cd Studio
 You may need to make k2space.sh executable on a Linux system to do so use the `chmod` command using:
 
 ```bash
-sudo chmod 700 k2space.sh
+ chmod 700 k2space.sh
 ```
 
 **Running the k2spach.sh Script**
-You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On Linux, prefix the command with `sudo`.
+You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On some Linux systems, you may need to prefix the command with `sudo`.
 
 
 ```bash
-sudo ./k2space.sh create [--profile=profile-name] spacename
+ ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. On Linux, prefix the command with `sudo`.
+You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. On some Linux systems, you may need to prefix the command with `sudo`.
 
 ```bash
-sudo ./k2space.sh create spacename
+ ./k2space.sh create spacename
 ```
 
 Otherwise, please use the following --profile commands:
 
-1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
+1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On some Linux systems, you may need to prefix the command with `sudo`.
    
 ```bash
-sudo ./k2space.sh create --profile=studio_pg spacename
+ ./k2space.sh create --profile=studio_pg spacename
 ```
 
-2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
+2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On some Linux systems, you may need to prefix the command with `sudo`.
    
 ```bash
-sudo ./k2space.sh create --profile=studio_cass spacename
+ ./k2space.sh create --profile=studio_cass spacename
 ```
 
-3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. On Linux, prefix the command with `sudo`. 
+3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. On some Linux systems, you may need to prefix the command with `sudo`. 
 
 ```bash
-sudo ./k2space.sh create --profile=studio_pg_cass spacename
+ ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
 #### The Initial Installation
