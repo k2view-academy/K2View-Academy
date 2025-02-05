@@ -43,7 +43,7 @@ unable to get image '...': error during connect: Get "...": open //./pipe/docker
 
 "connect: permission denied" Errors Running Docker on Linux
 
-When running Docker commands - including `docker login` - or starting the Docker service on Linux, you must use `sudo`. For example,
+When running Docker commands - including `docker login` - or starting the Docker service on Linux, you might need to use `sudo` with your commands. For example,
 
 
 ```bash
