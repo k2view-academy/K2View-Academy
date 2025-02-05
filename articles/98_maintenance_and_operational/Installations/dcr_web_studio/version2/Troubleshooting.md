@@ -2,7 +2,7 @@
 
 <ul>      
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#command-failures">Command Failures</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#slow-performance-with-wsl">Slow Performance Using WSL</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#slow-performance-using-wsl">Slow Performance Using WSL</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#system-cannot-find-the-file-specified">System cannot find the file specified</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#connect-permission-denied">Connect Permission Denied</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.html#404-and-502-errors">404 and 502 Errors</a></li>
