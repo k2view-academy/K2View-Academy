@@ -19,7 +19,7 @@
 <web><li><a href="/articles/04_fabric_studio/08_fabric_project_tree.md">Fabric Project Tree</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/09_logic_files_and_categories.md">Logic Files and Categories</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li></web>
-<web><li><a href="/articles/04_fabric_studio/26_web_basic_editing.md">Basic Code Editing</li></web>
+<web><li><a href="/articles/04_fabric_studio/26_web_basic_code_editing.md">Basic Code Editing</li></web>
 <web><li><a href="/articles/04_fabric_studio/24_web_debug.md">Code Debugging</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/25_web_data_explorer.md">Interface Explorer</a></li></web>
