@@ -280,12 +280,6 @@ Using the K2view Nexus Container Registry account provided to you, run the follo
 docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 ```
 
-On Linux, prefix the command with `sudo`.
-
-```bash
-docker login -u [YourAccount] https://docker.share.cloud.k2view.com
-```
-
 You will be asked to enter your password.
 
 **Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
