@@ -1,19 +1,17 @@
 # Fabric Versions Table
 
-The below table displays the various Fabric versions, released date and end of life date.
+The below table displays the list of Fabric versions with their release information and end of life date.
 
 <table>
-    <thead>
-        <tr>
-            <th align="left">Fabric Version</th>
-            <th>Origin Released Date</th>
-            <th>Latest Hot Fix</th>
-            <th>Hot Fix released date</th>
-            <th>Release Number</th>
-            <th>End of Life</th>
-        </tr>
-    </thead>
     <tbody>
+        <tr>
+            <td width="130pxl"><p><strong>Fabric Version</strong></p></td>
+            <td width="190pxl"><p><strong>Version Release Date</strong></p></td>
+            <td width="150pxl"><p><strong>Latest Hot Fix</strong></p></td>
+            <td width="150pxl"><p><strong>HF Release Date</strong></p></td>
+            <td width="130pxl"><p><strong>Release Num</strong></p></td>
+            <td width="150pxl"><p><strong>End of Life</strong></p></td>
+        </tr>
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.0.pdf">8.2.0</a></td>
             <td>February 05, 2025</td>
