@@ -324,13 +324,15 @@ You may need to make k2space.sh executable on a Linux system to do so use the `c
 ```
 
 **Running the k2spach.sh Script**
-You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On some Linux systems, you may need to prefix the command with `sudo`.
+You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. 
+
+ > On some Linux systems, you may need to prefix the command with `sudo`.
 
 ```bash
  ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. On some Linux systems, you may need to prefix the command with `sudo`.
+You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. 
 
 ```bash
  ./k2space.sh create spacename
@@ -338,19 +340,19 @@ You can omit passing in a `-- profile` parameter to use the default profile, 'st
 
 Otherwise, please use the following --profile commands:
 
-1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On some Linux systems, you may need to prefix the command with `sudo`.
+1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. 
    
 ```bash
  ./k2space.sh create --profile=studio_pg spacename
 ```
 
-2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On some Linux systems, you may need to prefix the command with `sudo`.
+2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. 
    
 ```bash
  ./k2space.sh create --profile=studio_cass spacename
 ```
 
-3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. On some Linux systems, you may need to prefix the command with `sudo`. 
+3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. 
 
 ```bash
  ./k2space.sh create --profile=studio_pg_cass spacename
