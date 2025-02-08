@@ -411,6 +411,22 @@ Here is the flow:
 
 Doing this before you run the first `k2space.sh` command ensures the file will be present on your system to create your first space and avoids downloading the file from the Internet.
 
+4. Use similar procedures to obtain the following:
+
+* Traefik Reverse Proxy:
+
+   `docker pull traefik:latest`
+  
+* Socat Relay:
+
+  `docker pull alpine/socat`
+  
+* Database containers as required: Postgres 15.8, Cassandra 4.1.5
+
+  `docker pull postgres:15.8`
+  
+  `docker pull cassandra:4.1.5`
+
 
  
 
