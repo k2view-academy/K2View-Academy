@@ -142,7 +142,7 @@ Fabric supports 2 authentication methods:
 **Properties:**
 
 * ENABLED=true
-* HOST - this is the Safeguard URL, used for all API calls. 
+* HOST - this is the Safeguard host, used for all API calls. 
 
 **Optional Properties:**
 
