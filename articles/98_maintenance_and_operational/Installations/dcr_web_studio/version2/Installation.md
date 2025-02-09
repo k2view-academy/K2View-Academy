@@ -286,7 +286,7 @@ You will be asked to enter your password.
 
 > Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is about 1.9GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 >
->By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
+> By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
 
 
 ### **Step 7**: Create and Launch a Fabric Space
@@ -297,9 +297,15 @@ When creating a space, its name must consist of only lowercase alphanumeric char
 
 #### **Running k2space.sh on Microsoft Windows**
 
-The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after you change the directory to its location. 
+> A Windows PowerShell-compatible script is not yet available.
 
-If you have Git integration enabled within Windows Explorer, you can start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
+The `k2space.sh` file is a `bash` script. 
+
+To run the `k2space.sh` script, you can use the WSL distribution bash shell. You can also use the `Git Bash` applications offered by Git. Using WSL's `bash` shell or `Git Bash` you can run the script after you change the directory to its location.
+
+You can you Windows Explorer to navigate to the Installation location you selected, e.g., `/home/username/K2view/Studio` or `\\wsl$\ubuntu\home\username\K2view>` depending how you are accessing the directory.
+
+If you have WSL integration enabled within Windows Explorer, you can start either shell from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open terminal here' or 'Open Git Bash here' menu item that can be used to start your shell to run `k2start.sh`. 
 
 #### Create Spaces on Your Server
 
