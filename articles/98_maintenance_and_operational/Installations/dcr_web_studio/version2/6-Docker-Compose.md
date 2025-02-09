@@ -37,10 +37,10 @@ wsl –l
 wsl --install -d <distribution_name>
 ```
 
-5.	You can set the default to use your selected Linux distribution. It might be listed as item 2, for example. To set the default, use this command:
+5.	You should set the default to use your selected Linux distribution. It might be listed as item 2, for example. To set the default, use this command:
 
 ```bash
-wsl --set-default-version 2
+wsl --set-default <distribution_name>
 ```
 
 6.	You can now launch WSL using the desired distribution using the WSL command:
