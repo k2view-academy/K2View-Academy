@@ -100,7 +100,7 @@ Note that if you define a different interface in the target environment, you nee
 
 ###  TableLevelInterfaces MTable
 
-The **TableLevelInterfaces** MTable enables either disabling a table's selection from a given DB or setting a special handling for the tables that belong to a given DB.
+The **TableLevelInterfaces** MTable enables either disabling a table's selection from a given DB or setting special handling for the tables that belong to a given DB.
 
 By default, the MTable is populated with the TDM DBs to disable a selection of TDM tables by a TDM task. It is possible to populate additional DB interfaces in order to exclude them from the table selection in the TDM task or to set special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
 
@@ -149,7 +149,7 @@ The following settings should be populated for each record:
 
 ### Customized Table's Flows - Implementation Guidelines
 
-The customized table's flows are Broadway flows. These flows must be added under the Shared Objects or the TDM_TableLevel LU in the Project tree.
+The customized table's flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
 
 #### Extract Flow
 
@@ -160,10 +160,29 @@ The customized table's flows are Broadway flows. These flows must be added under
 The Catalog masking actor is invoked **after** the extract flow execution. Do the following in order to set a customized masking logic on the table:
 
 - If you need to set a customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking of these fields.
-- Sometimes, the customized masking logic is based on the Catalog masking. For example, build the masked email address based on the masked first and last names. If you need to call the Catalog masking in the extract flow, do the following: Override the masking of all the table's PII fields.
+- Sometimes, the customized masking logic is based on the Catalog masking. For example, build the masked email address based on the masked first and last names. If you need to call the Catalog masking in the extract flow, do the following: 
   - Add the **CatalogMaskingMapper** actor to the extract flow. 
-  - Add the customized masking actors to the extract flow.
+  - Add the customized masking actors to the extract flow after the CatalogMaskingMapper Actor.
   - Set the **enable_masking** to **false** at the end of the extract flow in order to prevent double masking of the table's record by the TDM execution processes.
+
+##### Customized Extract Flow - Example
+
+The example below executes the following:
+
+- Selects the records from address table.
+- Opens a loop on the extracted records.
+- On each record - 
+  - Masks the street, city, and zip code fields.
+  - Merges the masked fields into the address record. 
+  - Accumulates the merged record with the masked fields into an array. The accumulated array is the external **result** field of the flow.
+
+See an example of the flow: 
+
+![table extract](images/table_leve_custom_ext_flow.png)
+
+See the loop on the selected address records:
+
+![table extract](images/table_leve_custom_ext_flow2.png)
 
 #### Load Flow
 

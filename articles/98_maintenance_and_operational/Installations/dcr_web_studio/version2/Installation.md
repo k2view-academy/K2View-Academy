@@ -7,13 +7,14 @@
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#things-to-configure">Things to Configure</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#installation">Installation</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2: Download the K2view Blueprints</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-clone-the-k2view-blueprints">Step 3: Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-setup">Step 2: Setup</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-download">Step 3: Download</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a></li>
 </ul>
 
 
@@ -65,8 +66,8 @@ Various steps should be taken to get Fabric Web Studio up and running within the
 
 <ul> 
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2: Download the K2view Blueprints</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-clone-the-k2view-blueprints">Step 3: Clone the K2view Blueprints</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-setup">Step 2: Setup</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-3-download">Step 3: Download</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
@@ -84,7 +85,7 @@ If Docker has not already been installed on your machine, please refer to the <a
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, and all prerequisites for Compose. Please also refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
-### **Step 2**: Download the K2view Blueprints
+### **Step 2**: Setup
 
 After installing a Git client on your machine, you must “clone” the K2view Blueprints to "download" them. These blueprints incorporate the Fabric Docker Compose Runtime installation files. The K2view Blueprints are hosted on GitHub.com (Internet access is required). 
 
@@ -106,7 +107,11 @@ cd [base directory]
 
 *Create your Download and Installation Directory Location*
 
-Using a shell, create a "K2view" directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
+Where you situate this installation directory depends on your needs. On a Linux system, you might consider `/opt/apps/`. If you are installing on a Mac or Windows computer, the `/home/username` or `\users\username` directory, respectively, can be considered. 
+
+ > Keep in mind that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., `K2view/Studio/persistent-data`). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
+
+Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -159,7 +164,31 @@ Using a shell, create a `K2view` directory to download K2view's Blueprints. You 
 mkdir K2view
 ```
 
-### **Step 3**: Clone the K2view Blueprints 
+### **Step 3**: Download
+
+There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file or clone the content from K2view's Blueprints.
+
+#### Option: Download The Latest Version of Docker Compose Runtime for Fabric Web Studio
+
+You can download the latest version of Docker Compose Runtime for Fabric Web Studio from this location: 
+
+```bash
+https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-latest.zip
+```
+
+Then, change the directory to the K2view directory. Copy `Studio-latest.zip` to this directory, and unzip `Studio-latest.zip`. This will create the `Studio` directory.
+
+```bash
+cd K2view
+# copy Studio-latest.zip to this directory
+# unzip Studio-latest.zip to this directory
+```
+
+The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+
+You can now skip to <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
+
+#### Option: Clone the K2view Blueprints 
 
 Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
 
@@ -170,25 +199,25 @@ cd K2view
 git clone https://github.com/k2view/blueprints.git
 ```
 
-This will create a `blueprints` directory with various subdirectories. The `Docker` subdirectory holds the Fabric Web Studio installation files. 
+This will create a `blueprints` directory with various subdirectories. The `Studio` subdirectory holds the Fabric Web Studio installation files. 
 
 #### Create an Installation Directory and Copy the Fabric Web Studio Files
 
-We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Docker` directory as `Studio`. 
+We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Studio` directory as `Studio`. 
 
 *Using Linux or MacOS*
 
 From the K2view directory
 
 ```bash
-cp -r blueprints/Docker/ Studio
+cp -r blueprints/Studio/ Studio
 ```
 *Using the Microsoft Windows PowerShell*
 
 You must use the Linux file system to hold the Studio directory if using Microsoft Windows. Please review <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
-cp -r blueprints\Docker\ Studio
+cp -r blueprints\Studio\ Studio
 ```
 
 The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
@@ -198,6 +227,10 @@ The Studio directory contains the configuration, YAML, and the K2Space.sh script
 #### Configuring Git
 
 You should consider a few things, including configuring a Git repository for your project. Though not mandatory, it is a best practice to store your project files in Git (or in a Git-compliant code repository). 
+
+You can configure it before the creation of Fabric Space via the .env file. You can do so after starting Fabric Web Studio using its built-in Git client. Performing this step within Fabric Web Studio.
+
+**Configuring Git before Creating your Fabric Space**
 
 To do this, you must provide a token, a path to your Git repository, and the appropriate branch. You can create your initial space without this configuration. However, to configure it later, you must configure these values and recreate your space. 
 
@@ -241,21 +274,19 @@ Using the default profile, 'studio', you will not need to provide the profile on
 
 Docker and its Compose extension must be running on the server to perform this step. 
 
-Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on Linux to ensure the login is inherited by sudo sessions: 
+Using the K2view Nexus Container Registry account provided to you, run the following command from the same directory that you have performed the git clone command - please note that you need to use sudo on some Linux systems depending on your permissions. 
 
 ```bash
 docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 ```
 
-On Linux, prefix the command with `sudo`.
-
-```bash
-sudo docker login -u [YourAccount] https://docker.share.cloud.k2view.com
-```
-
 You will be asked to enter your password.
 
 **Note**: The Docker login command and the k2space.sh bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+
+> Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is about 1.9GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
+>
+> By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
 
 
 ### **Step 7**: Create and Launch a Fabric Space
@@ -266,9 +297,15 @@ When creating a space, its name must consist of only lowercase alphanumeric char
 
 #### **Running k2space.sh on Microsoft Windows**
 
-The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after you change the directory to its location. 
+> A Windows PowerShell-compatible script is not yet available.
 
-If you have Git integration enabled within Windows Explorer, you can start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
+The `k2space.sh` file is a `bash` script. 
+
+To run the `k2space.sh` script, you can use the WSL distribution bash shell. You can also use the `Git Bash` applications offered by Git. Using WSL's `bash` shell or `Git Bash` you can run the script after you change the directory to its location.
+
+You can you Windows Explorer to navigate to the Installation location you selected, e.g., `/home/username/K2view/Studio` or `\\wsl$\ubuntu\home\username\K2view>` depending how you are accessing the directory.
+
+If you have WSL integration enabled within Windows Explorer, you can start either shell from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open terminal here' or 'Open Git Bash here' menu item that can be used to start your shell to run `k2start.sh`. 
 
 #### Create Spaces on Your Server
 
@@ -278,36 +315,53 @@ First, change directory to your Installation directory, e.g., `Studio`
 cd Studio
 ```
 
-You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. On Linux, prefix the command with `sudo`.
+**Ensuring you have Read-Other Permission on all .config files on Linux**
+You may need to have Read-Other permissions on the .config files on a Linux system. To do so use the `chmod 644 [file]` command using:
 
 ```bash
-sudo ./k2space.sh create [--profile=profile-name] spacename
+ chmod 644 *.config
 ```
 
-You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. On Linux, prefix the command with `sudo`.
+**Ensuring you have Execute Permission on Linux**
+You may need to make k2space.sh executable on a Linux system to do so use the `chmod` command using:
 
 ```bash
-sudo ./k2space.sh create spacename
+ chmod 700 k2space.sh
+```
+
+**Running the k2spach.sh Script**
+You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. 
+
+ > On some Linux systems, you may need to prefix the command with `sudo`.
+
+```bash
+ ./k2space.sh create [--profile=profile-name] spacename
+```
+
+You can omit passing in a `-- profile` parameter to use the default profile, 'studio'. 
+
+```bash
+ ./k2space.sh create spacename
 ```
 
 Otherwise, please use the following --profile commands:
 
-1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. On Linux, prefix the command with `sudo`.
+1. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM. 
    
 ```bash
-sudo ./k2space.sh create --profile=studio_pg spacename
+ ./k2space.sh create --profile=studio_pg spacename
 ```
 
-2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. On Linux, prefix the command with `sudo`.
+2. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM. 
    
 ```bash
-sudo ./k2space.sh create --profile=studio_cass spacename
+ ./k2space.sh create --profile=studio_cass spacename
 ```
 
-3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. On Linux, prefix the command with `sudo`. 
+3. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System. 
 
 ```bash
-sudo ./k2space.sh create --profile=studio_pg_cass spacename
+ ./k2space.sh create --profile=studio_pg_cass spacename
 ```
 
 #### The Initial Installation
@@ -341,8 +395,46 @@ When presented with the login screen, enter:
 If you access Fabric Web Studio, you have successfully installed it. 
 
 
+## Docker Image Offline Package Download
+
+The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+
+Should you not have Internet connectivity, you can use this Docker Image Offline Package Download procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is about 1.9GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
+
+Following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
+
+Here is the flow:
+ 
+1. Save / compress the desired Image tag:
+
+`docker save docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22 | gzip > k2view_fabric-studio_8.1.7_22.tar.gz`
+
+2. Copy the `k2view_fabric-studio_8.1.7_22.tar.gz` file to the target machine.
+
+3. On the target machine, load the image locally:
+
+`docker load -i k2view_fabric-studio_8.1.7_22.tar.gz`
+
+Doing this before you run the first `k2space.sh` command ensures the file will be present on your system to create your first space and avoids downloading the file from the Internet.
+
+4. Use similar procedures to obtain the following:
+
+* Traefik Reverse Proxy:
+
+   `docker pull traefik:latest`
+  
+* Socat Relay:
+
+  `docker pull alpine/socat`
+  
+* Database containers as required: Postgres 15.8, Cassandra 4.1.5
+
+  `docker pull postgres:15.8`
+  
+  `docker pull cassandra:4.1.5`
 
 
+ 
 
 
 
