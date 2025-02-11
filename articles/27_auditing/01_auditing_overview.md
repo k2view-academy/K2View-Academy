@@ -98,7 +98,7 @@ When the user performs login to the Fabric console, it is audited as follows:
 
 Logouts are not audited.  
 
-The following activities in Fabric can be recorded by the auditing mechanism:
+The following activities in Fabric can be captured by the auditing mechanism:
 
 * System Login
 * Any executed Fabric commands
