@@ -14,6 +14,8 @@
 <studio><li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Exporting and Importing a Fabric Project</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li></studio>
 <studio><li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li></studio>
+<studio><li><a href="/articles/04_fabric_studio/30_build_web_apps.md">Building Web Apps</a></li></studio>
+
 <web><li><a href="/articles/04_fabric_studio/21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/22_web_search.md">Search for Terms and Content</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/08_fabric_project_tree.md">Fabric Project Tree</a></li></web>
@@ -24,6 +26,6 @@
 <web><li><a href="/articles/04_fabric_studio/23_web_versioncontrol.md">Using Source Control</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/25_web_data_explorer.md">Interface Explorer</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/28_web_k2exchange.md">K2exchange</a></li></web>    
-<web><li><a href="/articles/04_fabric_studio/30_web_build_web_apps.md">Building Web Apps</a></li></web>    
+<web><li><a href="/articles/04_fabric_studio/30_build_web_apps.md">Building Web Apps</a></li></web>    
 <web><li><a href="/articles/04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
 </ul>
