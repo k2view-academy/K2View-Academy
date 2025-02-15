@@ -109,7 +109,5 @@ The Fabric Web Framework exposes a **k2api** object with various methods that ca
 
 For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2View Web Framework's menu.
 
-<img src="C:\Users\EyalOrbach\OneDrive - K2View\K2View-Academy\articles\30_web_framework\images\30_01_doc.PNG" alt="image"  />
-
 To override default web framework styling, you shall specify the relevant elements in your project web app files. 
 
