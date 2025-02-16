@@ -4,7 +4,7 @@ The K2view web framework is a container that hosts multiple web applications and
 
 <img src="images/30_01_menu.PNG" alt="image" style="zoom:80%;" />
 
-The K2view web framework includes a list of [pre-integrated applications](02_preintegrated_apps_overview.md) such as the Admin. Several of the pre-integrated applications expose the Fabric commands and by that enable users to work with web-based graphic tool rather than with the Fabric Console.  
+The K2view web framework includes a list of [pre-integrated applications](02_preintegrated_apps_overview.md) such *Admin*. Several of the pre-integrated applications expose the Fabric commands and by that enable users to work with web-based graphic tool rather than with the Fabric Console.  
 
 <studio>
 
