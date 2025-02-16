@@ -30,7 +30,7 @@ In this article, we will walk through the steps of building a web app inside Web
    - **Vanilla** – a basic setup with initial files created for you (index.html, main.js, and style.css), along with Vite framework files for live update support.
    - **Empty** – no files are created, allowing you to start from scratch.
 
-5. Once the app has been created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the Fabric main menu (top-left *hamburger menu*).
+5. Once the app has been created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the K2view web framework's menu (top-left *hamburger menu*).
 
    > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web Services LU**. As the Web Services LU is deployed last, its apps.json file overrides all others. This is particularly relevant in case there are customized apps.json files in your project. 
 
@@ -107,7 +107,7 @@ To add the **My Web App** application to the framework, add the following to the
 
 The Fabric web framework exposes a **k2api** object with various methods that can be used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set by using either the K2view web framework style sheets (**k2.css**) for a unified 'look & feel' or a different set of style sheets. The framework supports any application type (multi-page or single page) and any routing method (History API, hash-based or regular links).
 
-For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2view web framework's menu.
+For detailed documentation about the integration development guidelines, supported methods and code examples, refer to the K2view web framework's menu (top-left *hamburger menu*) and select **Documentation > Web Framework API / Styles**.
 
 To override default web framework styling, you should specify the relevant elements in your project web app files. 
 
