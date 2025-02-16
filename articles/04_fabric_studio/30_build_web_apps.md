@@ -54,8 +54,8 @@ To activate it:
 
 1. In the Explorer View, go to the *NPM SCRIPTS* section, which appears below the *Project* section.
 2. Expand the entry with the app name.
-3. Click on arrow aside the **Install** command action or right-click and from the open menu click on Run.
-4. Similarly, click on **Start** command action, which would start the live preview watcher.
+3. Hover over the **install** command action and click on the arrow on the right; alternatively, right-click on this command and then click on Run from the open menu.
+4. Similarly, click on **start** command action, which would start the live preview watcher.
 
 ![](images/web/30_npm.png)
 
