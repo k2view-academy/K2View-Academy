@@ -44,9 +44,9 @@ Web Studio also enables to manage - create, edit and debug - the APIs used by th
 
 You can see a preview of your HTML files, without going to the app itself, using a built-in Preview view.
 
-To do so click on the preview icon ![](images/web/30_open-preview.svg), which is located at the top right of the HTML Editor.
+To do so, click on the preview icon ![](images/web/30_open-preview.svg), which is located at the top right of the HTML Editor.
 
-## Live Editing & Instant Updates
+## Live Editing and Instant Updates
 
 One of the most powerful features of Web Studio is its **real-time preview**. As you modify your code, the updates reflect immediately in the preview window, eliminating the need for manual builds and deployments. This feature significantly accelerates the development cycle and enhances productivity.
 
