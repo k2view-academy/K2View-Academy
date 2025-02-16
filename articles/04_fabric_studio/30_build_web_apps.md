@@ -8,7 +8,7 @@ In today's fast-paced development landscape, having an all-in-one platform for i
 
 This allows you to develop web applications within Web Studio as part of the Fabric solution, catering to various users such as CRM representatives, internal teams, or clients.
 
-One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any change. Web Studio allows developers to instantly see changes, as they make modifications, significantly streamlining the development process.
+One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any changes. Web Studio allows developers to instantly see changes, as they make modifications, significantly streamlining the development process.
 
 In this article, we will walk through the steps of building a web app inside Web Studio, illustrating the process with examples and showcasing its powerful features.
 
@@ -16,15 +16,15 @@ In this article, we will walk through the steps of building a web app inside Web
 
 ## Setting Up a New Web Application
 
-1. In the project tree, select the LU where you want to create the web application and navigate to the Web folder.
+1. In the Project tree, select the LU where you intend to create the web application, and navigate to the Web folder.
 
-2. Right click and choose "New Web App..."
+2. Right-click and choose "New Web App..."
 
    ![](images/web/30_new_app.jpg)
 
-3. In the popup, enter a name for your app.
+3. In the pop-up, enter a name for your app.
 
-4. In the popup, choose the app type from the following options:
+4. In the pop-up, choose the app type from the following options:
 
    - **React** – A React framework-based app, where base React source files are pre-generated for you. Additionally, files related to the **Vite** framework are included to support live updates.
    - **Vanilla** – A basic setup with initial files created for you (index.html, main.js, and style.css), along with Vite framework files for live update support.
