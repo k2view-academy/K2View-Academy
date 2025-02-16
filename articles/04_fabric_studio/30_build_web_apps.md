@@ -48,11 +48,11 @@ To do so, click on the preview icon ![](images/web/30_open-preview.svg), which i
 
 ## Live Editing and Instant Updates
 
-One of the most powerful features of Web Studio is its **real-time preview**. As you modify your code, the updates reflect immediately in the preview window, eliminating the need for manual builds and deployments. This feature significantly accelerates the development cycle and enhances productivity.
+One of the most powerful features of Web Studio is its **real-time preview**. As the code is being modified, the updates reflect immediately in the preview window, eliminating the need for manual builds and deployments. This feature significantly accelerates the development cycle and enhances productivity.
 
 To activate it:
 
-1. At the Explorer View go to the *NPM SCRIPTS* section, which appears under the *Project* section.
+1. In the Explorer View, go to the *NPM SCRIPTS* section that appears under the *Project* section.
 2. Expand the entry with the app name.
 3. Click on arrow aside the **Install** command action or right-click and from the open menu click on Run.
 4. Similarly, Click on **Start** command action. This will start the live preview watcher.
