@@ -1,4 +1,4 @@
-# CommonDB - Cluster Synchronization Overview
+# CommonDB Cluster Synchronization
 
 
 ## Overview
@@ -45,9 +45,7 @@ In a way each Kafka queue plays the role of a virtual table that publishes all t
   - Assuming that table T5 is in-sync across all nodes, all nodes will catch up with the update messages published by Node 1 and Node 3, starting with the update that was first committed.
 
 
-Note:
-
-The Node originating the update will also update its own CommonDB table by reading the very same message it published to Kafka and by using the updated data available on Kafka's message.
+Note that the Node originating the update will also update its own CommonDB table by reading the very same message it published to Kafka and by using the updated data available on Kafka's message.
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](03_fabric_commonDB_runtime.md)

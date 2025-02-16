@@ -13,11 +13,7 @@ For example: In a large Fabric cluster, syncing processes handling a very large 
 ## Affinity Properties
 
 ### Physical Affinity
-Physical Affinity consists of a node's IP or a DC name, e.g.
-
-```10.20.30.40```
-
-```DC-Europe```
+Physical Affinity consists of a node's IP or a DC name, e.g.: ```10.20.30.40``` or ```DC-Europe```
 
 ### Logical Affinity
 Logical Affinity can be seen as a role attached to a specific physical node and to which can be dedicated a number of threads, lower or equal to the number of threads allocated to the nodes.
@@ -31,10 +27,7 @@ Two new parameters can be defined:
 - recommended number of jobs
 - maximum number of jobs that can run concurrently on the same node.
 
-For example:
-
-```logical_id:2 4```
-```logical_id:2-4```
+For example: ```logical_id:2 4``` or ```logical_id:2-4```
 
 whereby:
 - 2 is the recommended number of jobs that can run concurrently.
@@ -73,7 +66,7 @@ In turn, each message, which can consists of hundreds of entries, will be handle
 
 Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, it becomes clear that a specific node (let's say Node 1) handling this job needs to be allocated, since on-going strong i/o capabilities for read/write operations in commonDB tables are essential to meet higher performance requirements.
 
-Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) article.
+Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the mechanism described in the [Fabric CommonDB Cluster Synchronization](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) article.
 
 
 
