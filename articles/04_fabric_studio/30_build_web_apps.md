@@ -16,7 +16,7 @@ In this article, we will walk through the steps of building a web app inside Web
 
 ## Setting Up a New Web Application
 
-1. In the Project tree, select the LU where you intend to create the web application, and navigate to the Web folder.
+1. In the Project Tree, select the LU where you intend to create the web application, and navigate to the Web folder.
 
 2. Right-click and choose "New Web App..."
 
