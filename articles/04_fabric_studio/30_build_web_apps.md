@@ -83,9 +83,9 @@ To introduce a new application using the Fabric web framework, follow these step
 
 * Under the **web** folder, create an additional folder representing your new application and place all the web static resources under this folder.
 
-* Add the new application to the **apps.json** file. This file can either be modified on the server side on the existing location, or you can copy the **apps.json** file to the web folder on the client side and edit accordingly. Fabric will consider the **apps.json** file under the web folder as a higher priority.
+* Add the new application to the **apps.json** file. This file can either be modified on the server side on the existing location, or you can copy this file to the web folder on the client side and edit it accordingly. Fabric will consider the **apps.json** file under the web folder as a higher priority.
 
-  > The order of the applications in the context menu list is determined by their order in **apps.json**. 
+  > The order of the applications in the context menu list is determined by their order in the **apps.json** file. 
 
 **Example**
 
