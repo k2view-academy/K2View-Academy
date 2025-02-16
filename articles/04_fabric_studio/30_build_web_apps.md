@@ -42,9 +42,9 @@ You can now edit the web app code while benefiting from built-in intelligent cod
 
 With Web Studio, you can also manage - create, edit and debug - the APIs your web app will use, and to first view the data, that expected to be shown in the app, through the **Studio Query Builder** tool. This makes the editing process more efficient and reducing development timelines.
 
-You can see a preview of your HTML files, without going to the app itself, using a built in Preview view.
+You can see a preview of your HTML files, without going to the app itself, using a built-in Preview view.
 
-To do so click on the preview icon ![](images/web/30_open-preview.svg) which is located at the top right of the HTML Editor.
+To do so click on the preview icon ![](images/web/30_open-preview.svg), which is located at the top right of the HTML Editor.
 
 ## Live Editing & Instant Updates
 
