@@ -48,7 +48,7 @@ The parameter is configured in the [config.ini](/articles/02_fabric_architecture
 This mechanism gives the opportunity to different nodes with empty slots to claim this job.
 In cases where a node claimed a job above its recommended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
 
-For this purpose, a random number is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it. This random number will fluctuate between the 2 following parameters that can be changed in [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file under the [jobs] section:
+For this purpose, a random number is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it. This random number will fluctuate between the 2 following hidden parameters that can be changed in [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file under the [jobs] section:
 
 * ```MIN_GIVE_UP_EXCEPTIONAL_MINUTES``` - defines the minimum time for restarting jobs after the recommended time is reached. The default value = 1.
 * ```MAX_GIVE_UP_EXCEPTIONAL_MINUTES``` - defines the maximum time for restarting jobs after the recommended time is reached. The default value = 14400.
