@@ -61,7 +61,7 @@ To activate it:
 
 
 
-Below are screenshots of the City Mobily C360 Demo project, where its react dashboard web app is developed within the Studio, along with the LU and APIs (Java and Graphit files), enabling end-to-end debug and preview.
+Below are screenshots of the City Mobily C360 Demo project, where its React dashboard web app is developed within the Studio, along with the LU and APIs (Java and Graphit files), enabling end-to-end debug and preview.
 
 
 
