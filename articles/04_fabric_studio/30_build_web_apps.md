@@ -32,7 +32,7 @@ In this article, we will walk through the steps of building a web app inside Web
 
 5. Once the app has been created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the Fabric main menu (top-left *hamburger menu*).
 
-   > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web Services LU**. Since Web Services is deployed last, its apps.json file overrides all others. This is particularly relevant in case there are customized apps.json files in your project. 
+   > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web Services LU**. As the Web Services LU is deployed last, its apps.json file overrides all others. This is particularly relevant in case there are customized apps.json files in your project. 
 
 
 
