@@ -38,9 +38,9 @@ In this article, we will walk through the steps of building a web app inside Web
 
 ## Editing and Managing Your Web App
 
-You can now edit the web app code while benefiting from built-in intelligent code completion and error notifications.
+It is now possible to edit the web app code while benefiting from built-in intelligent code completion and error notifications.
 
-With Web Studio, you can also manage - create, edit and debug - the APIs your web app will use, and to first view the data, that expected to be shown in the app, through the **Studio Query Builder** tool. This makes the editing process more efficient and reducing development timelines.
+Web Studio also enables to manage - create, edit and debug - the APIs your web app will use, and to first view the data expected to be shown in the app, through the **Studio Query Builder** tool. This makes the editing process more efficient and reduces development timelines.
 
 You can see a preview of your HTML files, without going to the app itself, using a built-in Preview view.
 
