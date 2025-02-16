@@ -22,15 +22,15 @@ In this article, we will walk through the steps of building a web app inside Web
 
    ![](images/web/30_new_app.jpg)
 
-3. In the pop-up, enter a name for your app.
+3. In the pop-up window, enter a name for your app.
 
-4. In the pop-up, choose the app type from the following options:
+4. In the pop-up window, choose the app type from the following options:
 
-   - **React** – A React framework-based app, where base React source files are pre-generated for you. Additionally, files related to the **Vite** framework are included to support live updates.
-   - **Vanilla** – A basic setup with initial files created for you (index.html, main.js, and style.css), along with Vite framework files for live update support.
-   - **Empty** – No files are created, allowing you to start from scratch.
+   - **React** – a React framework-based app, where base React source files are pre-generated for you. Additionally, files related to the **Vite** framework are included to support live updates.
+   - **Vanilla** – a basic setup with initial files created for you (index.html, main.js, and style.css), along with Vite framework files for live update support.
+   - **Empty** – no files are created, allowing you to start from scratch.
 
-5. Once the app is created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the Fabric main menu (top-left "hamburger" menu).
+5. Once the app has been created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the Fabric main menu (top-left "hamburger" menu).
 
    > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web Services LU**. Since Web Services is deployed last, its apps.json file overrides all others. This is particularly relevant if you have customized apps.json files in your project. 
 
