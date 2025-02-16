@@ -1,6 +1,6 @@
 # Web Framework Overview 
 
-The K2view web framework is a container that hosts multiple web applications and provides out-of-the-box services. It improves the system's usability by providing one unified tool with links to several frequently-used web applications running on the same application server. Instead of manually typing the URL to open each application, users can log in to the K2view web framework and select the application from the context menu. 
+The K2view web framework is a container that hosts multiple web applications and provides out-of-the-box services. It improves the system's usability by providing one unified tool with links to several frequently used web applications running on the same application server. Instead of manually typing the URL to open each application, users can log in to the K2view web framework and select the application from the context menu. 
 
 <img src="images/30_01_menu.PNG" alt="image" style="zoom:80%;" />
 
@@ -10,7 +10,7 @@ The K2view web framework includes a list of [pre-integrated applications](02_pre
 
 ### How Do I Access the Web Framework
 
-The web framework can be opened by using either the **http://[Fabric IP address]:[Fabric port]** URL or the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar. For example http://localhost:3213.
+The web framework can be opened by using either the **http://[Fabric IP address]:[Fabric port]** URL or the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar, e.g., http://localhost:3213.
 
 <img src="images/30_01_toolbar.PNG" alt="image"  />
 
@@ -20,7 +20,7 @@ Log in to the web framework using your username and password. This enables a Sin
 
 
 
-Read [here](/articles/04_fabric_studio/30_build_web_apps.md) how to build and integrate your Application into Fabric Web Framework.
+Read [here](/articles/04_fabric_studio/30_build_web_apps.md) how to build your application and integrate it into the Fabric web framework.
 
 
 
