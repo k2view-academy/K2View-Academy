@@ -8,7 +8,7 @@ The K2view web framework includes a list of [pre-integrated applications](02_pre
 
 <studio>
 
-### How Do I Access the Web Framework?
+### How Do I Access the Web Framework
 
 The web framework can be opened by using either the **http://[Fabric IP address]:[Fabric port]** URL or the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar. For example http://localhost:3213.
 
