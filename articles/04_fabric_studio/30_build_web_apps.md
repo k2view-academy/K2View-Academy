@@ -52,10 +52,10 @@ One of the most powerful features of Web Studio is its **real-time preview**. As
 
 To activate it:
 
-1. In the Explorer View, go to the *NPM SCRIPTS* section that appears under the *Project* section.
+1. In the Explorer View, go to the *NPM SCRIPTS* section, which appears below the *Project* section.
 2. Expand the entry with the app name.
 3. Click on arrow aside the **Install** command action or right-click and from the open menu click on Run.
-4. Similarly, Click on **Start** command action. This will start the live preview watcher.
+4. Similarly, click on **Start** command action, which would start the live preview watcher.
 
 ![](images/web/30_npm.png)
 
