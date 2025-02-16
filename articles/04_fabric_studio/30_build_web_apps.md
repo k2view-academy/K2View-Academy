@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In today's fast-paced development landscape, having an all-in-one platform for implementing and deploying applications is crucial. Web Studio IDE is designed as a one-stop shop, allowing you to seamlessly develop and deploy solutions in an **end-to-end manner** – from building and populating an LU to easily creating related APIs and web applications that consume them. Web Studio integrates multiple technologies to accomplish these tasks, offering built-in support for various languages such as Java, JavaScript, HTML, and CSS, along with intelligent code completion and error notifications.
+In today's fast-paced development landscape, having an all-in-one platform for implementing and deploying applications is crucial. **Web Studio IDE** is designed as a one-stop shop, allowing you to seamlessly develop and deploy solutions in an **end-to-end manner** – from building and populating an LU to easily creating related APIs and web applications that consume them. Web Studio integrates multiple technologies to accomplish these tasks, offering built-in support for various languages such as Java, JavaScript, HTML, and CSS, along with intelligent code completion and error notifications.
 
 This allows you to develop web applications within Web Studio as part of the Fabric solution, catering to various users such as CRM representatives, internal teams, or clients.
 
