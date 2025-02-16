@@ -77,11 +77,11 @@ Below are screenshots of the City Mobily C360 Demo project, where its React dash
 
 # Integrate an Application into the Framework
 
-To introduce a new application using the Fabric Web Framework, follow these steps:
+To introduce a new application using the Fabric web framework, follow these steps:
 
 * Create a new folder, called **web**, under the LU implementation folder.
 
-* Under the web folder create an additional folder representing your new application and put all the web static resources under this folder.
+* Under the web folder, create an additional folder representing your new application and put all the web static resources under this folder.
 
 * Add the new application to the **apps.json** file. This file can either be modified on the server side on the existing location, or you can copy the **apps.json** file to the web folder on the client side and edit accordingly. Fabric will consider the **apps.json** file under the web folder with higher priority.
 
@@ -89,7 +89,7 @@ To introduce a new application using the Fabric Web Framework, follow these step
 
 **Example**
 
-To add the **My Web App** application to the Framework, add the following to the **apps.json** file:
+To add the **My Web App** application to the framework, add the following to the **apps.json** file:
 
 ~~~json
    {
@@ -105,9 +105,9 @@ To add the **My Web App** application to the Framework, add the following to the
 
 ## Fabric Web Framework Tools
 
-The Fabric Web Framework exposes a **k2api** object with various methods that can be used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set either using K2View Web Framework style sheets (**k2.css**) for a unified look & feel or using a different set of style sheets. The Framework supports any application type (multi-page or single page) and any routing method (History API, hash-based or regular links).
+The Fabric web framework exposes a **k2api** object with various methods that can be used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set either using K2view web framework style sheets (**k2.css**) for a unified look & feel or using a different set of style sheets. The framework supports any application type (multi-page or single page) and any routing method (History API, hash-based or regular links).
 
-For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2View Web Framework's menu.
+For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2view web framework's menu.
 
-To override default web framework styling, you shall specify the relevant elements in your project web app files. 
+To override default web framework styling, you should specify the relevant elements in your project web app files. 
 
