@@ -2,7 +2,7 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant extension (e.g. OpenAI Connector). 
+Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). 
 
 The LLM plugin performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
