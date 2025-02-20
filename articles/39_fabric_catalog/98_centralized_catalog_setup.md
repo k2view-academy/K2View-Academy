@@ -8,7 +8,7 @@ This is useful when, for example, several users need to work on the same project
 
 Since all Fabric instances are pointing to a single Neo4j GraphDB, each user can view the combined Catalog. 
 
-In addition, some of the Fabric instances can be connected to the Catalog in a read-only mode, that is, they will be able to view the Catalog tree but would not be able to run the Discovery job or perform any manual overrides. Having only read-only permissions in the Neo4j, these users would still be able to update the Catalog Settings and create an artifact in the Fabric instance.
+In addition, some of the Fabric instances can be connected to the Catalog in a read-only mode: they will be able to view the Catalog tree but would not be able to run the Discovery job or perform any manual overrides. Having only read-only permissions in the Neo4j, these users would still be able to update the Catalog Settings and create an artifact in the Fabric instance.
 
 ![](images/central_arc.png)
 
