@@ -2,11 +2,11 @@
 
 ### Overview
 
-Starting from V8.2, it is possible to configure one centralized Neo4j GraphDB for multiple Fabric instances.
+Starting from V8.2, it is possible to configure one centralized Catalog for multiple Fabric instances.
 
 This is useful when, for example, several users need to work on the same project in parallel. Working on separate Fabric instance, the users can define different Catalog settings (e.g. different regular expressions for data classification) and run the Discovery independently from one another, on different data sources.
 
-Since all Fabric instances are pointing to the same Neo4j GraphDB, each user can view the combined Catalog. 
+Since all Fabric instances are pointing to a single Neo4j GraphDB, each user can view the combined Catalog. 
 
 In addition, some of the Fabric instances can be connected to the Catalog in a read-only mode, that is, they will be able to view the Catalog tree but would not be able to run the Discovery job or perform any manual overrides. Having only read-only permissions in the Neo4j, these users would still be able to update the Catalog Settings and create an artifact in the Fabric instance.
 
