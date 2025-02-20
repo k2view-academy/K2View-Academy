@@ -35,7 +35,7 @@
 <p><a title="LUI Sync Components - 2" href="LUI_Sync_Components_2.pdf">LUI Sync Components - 2</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>Common</p>
+<p><a title="Common Tables" href="Common_Tables.pdf">Common Tables</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>IIDFinder Advanced</p>
