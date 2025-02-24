@@ -16,7 +16,7 @@ To do so, first tap the Search box located on the right of the schema's top tool
 
 
 
-You can type a keyword in the search box, where the search result widget will then display all the occurrences of the searched text.
+You can type a keyword in the Search box, where the search result widget will accordingly display all occurrences of the searched text.
 
 * The search results display the entire element name, which contains the searched text highlighted in orange. 
 
