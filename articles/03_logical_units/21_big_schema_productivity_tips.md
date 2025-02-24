@@ -62,7 +62,7 @@ To turn it off and deactivate the Magnifier, click on this control icon again.
 
 ## Highlighting Tables and Links
 
-The Highlighting Connected Tables feature helps you to better understand the connection and relations between tables, especially in large schemas, by highlighting related tables. Use the schema's top bar highlighting bulb control icon ( ![](images/web/light-off.svg)) to activate it. Read [here](/articles/03_logical_units/20_LU_highlight_tables.md) to learn about this feature.
+The Highlighting Connected Tables feature helps you to better understand the connections and relations between tables - especially in large schemas - by highlighting related tables. Use the schema's top bar highlighting bulb control icon ( ![](images/web/light-off.svg)) to activate it. Read [here](/articles/03_logical_units/20_LU_highlight_tables.md) to learn more about this feature.
 
 
 
