@@ -123,7 +123,7 @@ Below is an LLM plugin configuration to support this use case:
 	"monitorDesc": "Classifications",
 	"inputParameters": {
 		"propertyName": "classification",
-      	"userPrompt":"Please classify the column based on the information included here: \"${property.description}\" (however if this information is empty, return $NONE$). \nChoosing one of the following possible values: ${possibleMTableValues}.\nIf none of the possible values match, return $NONE$.",
+      	"userPrompt":"Please classify the column based on the information included here: \"${property.description}\" (however if this information is empty, return $NONE$). \nChoosing one of the following possible values: ${possibleValues}.\nIf none of the possible values match, return $NONE$.",
 		"possibleValues": [
 					"FIRST_NAME",
 					"LAST_NAME",
