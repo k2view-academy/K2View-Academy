@@ -55,11 +55,11 @@ Fabric supports 2 authentication methods:
 
 * [AppRole](https://developer.hashicorp.com/vault/docs/auth/approle) - which is based on the role that Fabric is associated to in the Vault.
 
-  When using the AppRole method, Fabric first accesses the *approle* URL to dynamically get a token, and then uses the token as the auth credentials for the purpose of getting the secret. For this method, you should specify the following properties:
+  When using the AppRole method, Fabric first accesses the Approle URL to dynamically get a token, and then uses the token as the auth credentials for the purpose of getting the secret. For this method, you should specify the following properties:
 
   * ROLE_ID - the role that Fabric is associated to in the Vault.
   * SECRET_ID - the secret that is used for getting the token.
-  * APPROLE_URL (optional) - in cases where the AppRole endpoint is not the default setting (default setting ends with "/approle").
+  * APPROLE_URL
 
   
 
