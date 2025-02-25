@@ -16,7 +16,7 @@
 	<li><a href="/articles/39_fabric_catalog/10_catalog_settings.md">Catalog Settings</a></li>
 	<li><a href="/articles/39_fabric_catalog/11_catalog_masking.md">Catalog Based Masking</a></li>
 	<li><a href="/articles/39_fabric_catalog/12_discovery_monitor.md">Discovery Job Execution Monitor</a></li>
-	<li><a href="/articles/39_fabric_catalog/13_discovery_job_setup_screen.md">Discovery Job Setup Screen</a></li>
+	<li><a href="/articles/39_fabric_catalog/13_discovery_pipeline_settings.md">Discovery Pipeline Settings</a></li>
 	<li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li>
 	<li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Advanced Configuration</a></li>
 	<li><a href="/articles/39_fabric_catalog/98_centralized_catalog_setup.md">Centralized Catalog for Multiple Fabrics</a></li>
