@@ -119,7 +119,7 @@ A link can be added in both directions:
 * **Child to parent** - linking the child table population to a parent table.
 * **Parent to child** - linking a parent table to a child table population.
 
-You can link them by either dragging a connection line or by using the Tables Connection Assistance popup window, as follows:
+You can link them by either dragging a connection line or by using the Tables Connection Assistance pop-up window, as follows:
 
 ### Link a Child Table Population to a Parent Table
 1. Click the Population name of the child table.
