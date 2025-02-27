@@ -89,8 +89,8 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 * Root function
 
 **DB Query**
-* A DB query Table Population object can be linked to a parent table via its input argument fields. Only input arguments that are defined as True can be linked to parent tables.
-* In the DB query of a Root Table, only one field can be defined as True and it is populated by the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
+* A DB query Table Population object can be linked to a parent table via its input argument fields. Only input arguments that are defined as *True* can be linked to parent tables.
+* In the DB query of a Root Table, only one field can be defined as *True* and it is populated by the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
 * Other LU Tables can have several fields defined as input arguments. 
 
 **Root Function**
@@ -104,11 +104,11 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 
 
 ## Edit the Input Arguments in a DB Query
-When creating a DB query, by default all Input fields are set to True.  
+When creating a DB query, by default all Input fields are set to *True*.  
 
 To edit an Input argument, do the following: 
 
-Click the **source object** of the Population window (the DB query) and verify that the fields that should be linked to the **parent table** are set to **True**. Other fields that do not need to be linked to a parent table, can be set to **False**. 
+Click the **source object** of the Population window (the DB query) and verify that the fields that should be linked to the **parent table** are set to ***True***. Other fields that do not need to be linked to a parent table, can be set to ***False***. 
 
 ![image](images/03_12_link_tables5.png)
 
