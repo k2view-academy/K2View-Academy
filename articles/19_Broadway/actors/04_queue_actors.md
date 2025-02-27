@@ -16,7 +16,7 @@ Message provider types supported in Broadway are:
 
 ### Pub / Sub Input Arguments
 
-The **queue** category Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some only for JMS. For example:
+The **queue** category Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some only for JMS. Arguments not supported by the message provider can be left empty and be ignored. For example:
 -  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
 -  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
@@ -28,8 +28,6 @@ The **topic**, **group_id** and few other input arguments have a default configu
 
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
-
-Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
 The **transaction_mode** input argument on the **Publish** Actor determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). 
 
