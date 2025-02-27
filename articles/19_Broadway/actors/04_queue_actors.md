@@ -6,6 +6,8 @@ These Actors belong to the **queue** category and they are:
 - **Publish** Actor, publishes messages using a message provider.
 - **Subscribe** Actor, subscribes to messages and returns them one by one.
 - **SubscribeBatch** Actor, subscribes to messages and returns them in batches. 
+- **SubscribeWithMetadata** Actor, similar to SubscriberBatch, this actor subscribes to a message broker 
+  and exposes a stream of message batches. For every message in the batch,  this actor exposes key metadata fields in addition to the actual payload.
 
 Message provider types supported in Broadway are:
 * Apache Kafka.
@@ -22,7 +24,7 @@ Publisher and Subscriber applications must be defined in Fabric using a PubSub C
 
 [Click for more details about PubSub Configuration Interface](/articles/24_non_DB_interfaces/02a_pubsub_config.md).
 
-The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+The **topic**, **group_id** and few other input arguments have a default configuration on the interface level (when using a Kafka interface), thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
