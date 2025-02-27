@@ -6,7 +6,7 @@ An LU schema structure displays a hierarchical presentation of data relating to 
 
 * Each Table Population object can be linked to a different parent LU table.
 
-  **For instance:** an ADDRESS LU table is populated with 2 populations: 
+  **For example:** The ADDRESS LU table is populated with 2 populations: 
 
   * Population 1, populates the customer’s billing address. It is linked to the CUSTOMER table and selects the source address records belonging to the CUSTOMER_ID.
 
