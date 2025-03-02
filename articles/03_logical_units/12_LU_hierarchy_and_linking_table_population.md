@@ -90,13 +90,13 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 
 **DB Query**
 * A DB query Table Population object can be linked to a parent table via its input argument fields. Only input arguments that are defined as *True* can be linked to parent tables.
-* In the DB query of a Root Table, only one field can be defined as *True* and it is populated by the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
-* Other LU Tables can have several fields defined as input arguments. 
+* In the DB query of a Root table, only one field can be defined as *True* and it is populated by the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
+* The other LU tables can have several fields defined as input arguments. 
 
 **Root Function**
 * Each root function must have at least one Input parameter.
 * A population can be linked to a parent table via its Input parameters based on a Root function. 
-* The Root function of a Root Table can have only one Input parameter and it is populated by the Instance ID.
+* The Root function of a Root table can have only one Input parameter and it is populated by the Instance ID.
 
 [Click for more information about Table Population Types.](/articles/07_table_population/02_source_object_types.md#table-population---source-object-types)
 
