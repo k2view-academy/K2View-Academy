@@ -8,7 +8,7 @@ An LU schema structure displays a hierarchical presentation of data relating to 
 
   **For example:** The **ADDRESS LU table** is populated with 2 **Table Population** objects: 
 
-  * Population 1, (ADDRESS table) populates the customer’s Billing ADDRESS. The CUSTOMER and ADDRESS tables are linked, and they select the source address records that belong to the CUSTOMER_ID (that originates from the CUSTOMER table, which is the root table in this example).
+  * Population 1 (ADDRESS table) populates the customer’s **Billing ADDRESS**. The CUSTOMER and ADDRESS tables are linked, and they select the source address records that belong to the CUSTOMER_ID (that originates from the CUSTOMER table, which is the root table in this example).
 
     <studio>
 
@@ -22,7 +22,7 @@ An LU schema structure displays a hierarchical presentation of data relating to 
 
     </web>
 
-  * Population 2, populates the installation address of each subscription. It is linked to the SUBSCRIBER table and it selects the source address records belonging to the SUBSCRIBER_ID.
+  * Population 2 populates the **Installation ADDRESS** of each subscription. The SUBSCRIBER and ADDRESS tables are linked, and they select the source address records that belong to the SUBSCRIBER_ID (which originates from the SUBSCRIBER table).
 
     <studio>
 
