@@ -68,11 +68,11 @@ An LU schema structure displays a hierarchical presentation of data relating to 
 ## Table Population's Input Arguments
 <web>
 
-Input arguments of a population flow are defined by the **PopulationArgs** Actor's input argument that must be set to an **External** population type.
+Input arguments of a population flow are defined by the **PopulationArgs** Actor's Input argument that must be set to an **External** population type.
 
 <img src="images/web/12_link_tables_5.PNG" alt="image" style="zoom:80%;" />
 
-Each population flow should have at least one Input parameter. A Root table's population can have only one input argument, which is populated by the Instance ID.
+Each population flow should have at least one Input parameter. A Root table's population can have only one Input argument, which is populated by the Instance ID.
 
 [Click for more information about population flows.](/articles/07_table_population/14_table_population_based_Broadway.md)
 
@@ -89,9 +89,9 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 * Root function
 
 **DB Query**
-* A DB query Table Population object can be linked to a parent table via its input argument fields. Only input arguments that are defined as *True* can be linked to parent tables.
+* A DB query Table Population object can be linked to a parent table via its Input argument fields. Only input arguments that are defined as *True* can be linked to parent tables.
 * In the DB query of a Root table, only one field can be defined as *True* and it is populated by the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
-* The other LU tables can have several fields defined as input arguments. 
+* The other LU tables can have several fields defined as Input arguments. 
 
 **Root Function**
 * Each Root function must have at least one Input parameter.
