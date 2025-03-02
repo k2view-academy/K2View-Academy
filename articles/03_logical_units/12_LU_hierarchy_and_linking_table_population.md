@@ -94,7 +94,7 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 * The other LU tables can have several fields defined as input arguments. 
 
 **Root Function**
-* Each root function must have at least one Input parameter.
+* Each Root function must have at least one Input parameter.
 * A population can be linked to a parent table via its Input parameters based on a Root function. 
 * The Root function of a Root table can have only one Input parameter and it is populated by the Instance ID.
 
@@ -104,7 +104,7 @@ There are [2 types of Source Objects](/articles/07_table_population/02_source_ob
 
 
 ## Edit the Input Arguments in a DB Query
-When creating a DB query, by default all Input fields are set to *True*.  
+When creating a DB query, by default, all Input fields are set to *True*.  
 
 To edit an Input argument, do the following: 
 
