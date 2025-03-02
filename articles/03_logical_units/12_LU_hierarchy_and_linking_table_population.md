@@ -124,7 +124,7 @@ You can link them by either dragging a connection line or by using the Tables Co
 ### Link a Child Table Population to a Parent Table
 1. Click the Population name of the child table.
 
-2. Connect each **input field** to a **parent table** using one of the following methods:
+2. Connect each **Input field** to a **parent table** using one of the following methods:
 
    - Drag the **connection line** from this field into the **parent table** and **column**.
 
@@ -143,11 +143,11 @@ You can link them by either dragging a connection line or by using the Tables Co
 1. Click the **parent table**.
 2. Connect each **parent column** to the **child table population** using one of the following methods:
 
-   - Click the **child table population** header and drag a **connection line** between the **parent table**'s column and the **child table**'s input field.
+   - Click the **child table population** header and drag a **connection line** between the **parent table**'s column and the **child table**'s Input field.
 
    - <studio>Right-click, select **Add link to** > **child table population** > **column**.</studio>
 
-   - <web>Right-click on a field's output connector, select the target table, the target table population and then the target input field.</web>
+   - <web>Right-click on a field's output connector, select the target table, the target table population and then the target Input field.</web>
 
      <web>
 
