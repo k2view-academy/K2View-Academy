@@ -106,7 +106,7 @@ When creating a DB query, by default, all Input fields are set to *True*.
 
 To edit an Input argument, do the following: 
 
-Click the **source object** of the Population window (the DB query) and verify that the fields that should be linked to the **parent table** are set to ***True***. Other fields that do not need to be linked to a parent table, can be set to ***False***. 
+Clicking on the **source object** of the Population window (the DB query) opens the Properties pane on the right side of the screen. Verify that the fields that should be linked to the **parent table** are set to ***True***. Other fields that do not need to be linked to a parent table, can be set to ***False***. 
 
 ![image](images/03_12_link_tables5.png)
 
