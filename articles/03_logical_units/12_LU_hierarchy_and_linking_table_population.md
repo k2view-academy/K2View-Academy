@@ -175,7 +175,7 @@ You can therefore click on the link and see it as an animated dashed line.
 
 ### Population link context
 
-In certain scenarios, the connecting columns for a population may not be immediately visible—for instance, when tables include numerous columns that require scrolling to view. This can make exploring the schema and understanding table connections less convenient.
+In certain scenarios, the connecting columns for a population might not be immediately visible — for instance, when tables include numerous columns that require scrolling for viewing. This could make exploring the schema and understanding table connections less convenient.
 
 You can therefore hover over the population link with your mouse cursor to view a tooltip that provides detailed information about the link, including the source table and columns, the destination table and columns, and the population name.
 
