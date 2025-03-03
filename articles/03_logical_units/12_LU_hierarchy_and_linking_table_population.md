@@ -173,7 +173,7 @@ You can therefore click on the link and see it as an animated dashed line.
 
 
 
-### Population link context
+### Population Link Context
 
 In certain scenarios, the connecting columns for a population might not be immediately visible - for instance, when tables include numerous columns that require scrolling for viewing. This could make exploring the schema and understanding table connections less convenient.
 
