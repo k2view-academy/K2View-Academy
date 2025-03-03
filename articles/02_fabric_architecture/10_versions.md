@@ -159,9 +159,9 @@ The below table displays the list of Fabric versions with their release informat
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V6.5/Fabric_Release_Notes_V6.5.9.pdf">6.5.9</a></td>
             <td>September 2, 2022</td>
-            <td>HF25</td>
-            <td>November 3, 2024</td>
-            <td>252</td>
+            <td>HF28</td>
+            <td>February 27, 2025</td>
+            <td>260</td>
             <td></td>
         </tr>
         <tr>
