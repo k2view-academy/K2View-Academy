@@ -82,9 +82,9 @@ In a population flow, at least one Input argument must be defined to retrieve da
 
 <studio>
 
-Input arguments are a property of the [Source Object](/articles/01_fabric_overview/02_fabric_glossary.md#source-object) of a Table Population object.
+Input arguments are parameters used to retrieve data in a Table Population object. They define how data is linked to parent tables and fetched from external systems.
 
-There are [2 types of Source Objects](/articles/07_table_population/02_source_object_types.md) for a Table Population object:
+These arguments are utilized by [2 types of Source Objects](/articles/07_table_population/02_source_object_types.md) in a Table Population object:
 * DB query
 * Root function
 
