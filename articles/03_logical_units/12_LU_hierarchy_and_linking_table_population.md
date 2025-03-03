@@ -72,7 +72,7 @@ A population flow template includes a predefined set of **Input arguments**, def
 
 <img src="images/web/12_link_tables_5.PNG" alt="image" style="zoom:80%;" />
 
-In a population flow, at least one Input argument must be defined to retrieve data from external systems. The Root table must only have one Input argument, which receives the Instance ID to fetch data specific to that entity. Other tables use Input arguments to receive relevant identifiers from parent tables, which are then used to fetch related data from external systems.
+In a table population flow, at least one Input argument must be defined to retrieve data from external systems. The Root table must only have one Input argument, which receives the Instance ID to fetch data specific to that entity. Other tables use Input arguments to receive relevant identifiers from parent tables, which are then used to fetch related data from external systems.
 
 [Click for more information about population flows.](/articles/07_table_population/14_table_population_based_Broadway.md)
 
