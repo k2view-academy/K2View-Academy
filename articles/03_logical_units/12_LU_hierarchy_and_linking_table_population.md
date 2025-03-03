@@ -179,7 +179,7 @@ In certain scenarios, the connecting columns for a population might not be immed
 
 You can therefore hover over the population link with your mouse cursor to view a tooltip that provides detailed information about the link, including the source table and columns, the destination table and columns, and the population name.
 
-In the below example, the connecting column in the destination table - RECOMMENDATIONS - is hidden. With this tooltip you do not need to scroll down to reveal it.
+In the below example, the connecting column in the destination table - RECOMMENDATIONS - is hidden. However, with this tooltip you do not need to scroll down to reveal it.
 
 
 
