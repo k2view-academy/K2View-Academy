@@ -84,9 +84,7 @@ In a population flow, at least one Input argument must be defined to retrieve da
 
 Input arguments are parameters used to retrieve data in a Table Population object. They define how data is linked to parent tables and fetched from external systems.
 
-These arguments are utilized by [2 types of Source Objects](/articles/07_table_population/02_source_object_types.md) in a Table Population object:
-* DB query
-* Root function
+These arguments are utilized by [2 types of Source Objects](/articles/07_table_population/02_source_object_types.md) in a Table Population object: **DB Query** and **Root Function**.
 
 **DB Query**
 * A DB query Table Population object can be linked to a parent table via its Input argument fields. Only Input arguments that are defined as *True* can be linked to parent tables.
