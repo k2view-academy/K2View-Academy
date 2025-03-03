@@ -68,7 +68,7 @@ An LU schema structure displays a hierarchical presentation of data relating to 
 ## Table Population's Input Arguments
 <web>
 
-Input arguments of a population flow are defined by the **PopulationArgs** Actor's Input argument that must be set to an **External** population type.
+A population flow template includes a predefined set of **Input arguments**, defined within the **PopulationArgs Actor**, which are input parameters set as **External**.
 
 <img src="images/web/12_link_tables_5.PNG" alt="image" style="zoom:80%;" />
 
