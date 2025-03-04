@@ -34,7 +34,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
    > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
 
-2. Data Product Schema Editor > [Add Table](/articles/03_logical_units/09_add_table_to_a_schema.md ) > Create New > from source with SQL query. 
+2. Data Product Schema Editor > [Add Table](/articles/03_logical_units/09_add_table_to_a_schema.md ) > Create New > From Source With SQL Query. 
 
 3. [**Graphit window**](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
 
