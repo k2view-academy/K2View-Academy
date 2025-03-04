@@ -38,7 +38,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 3. [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A popup opens, where you shall choose the Interface you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
 
-4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A popup opens, where you shall choose the Interface you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
+4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
 
 5. [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can choose the Interface you wish to query, build the query and test it.
 
