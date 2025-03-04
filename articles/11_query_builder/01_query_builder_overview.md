@@ -30,19 +30,19 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 <web>
 
-1. [Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) - select the Interface Explorer icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> in the **Activity Bar** on the left side of Web Studio, and choose the relevant interface. Read [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder) for more explanations. 
+1. [**Interface Explorer**](/articles/04_fabric_studio/25_web_data_explorer.md) - select the Interface Explorer icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> in the **Activity Bar** on the left side of Web Studio, and choose the relevant interface. Clicking on the DB icon that appears to the right of the chosen interface, opens the Query Builder. Read [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder) for more explanations. 
 
    > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
 
 2. Data Product Schema Editor > [Add Table](/articles/03_logical_units/09_add_table_to_a_schema.md ) > Create New > from source with SQL query. 
 
-3. [Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
+3. [**Graphit window**](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
 
-4. [Broadway](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
+4. [**Broadway**](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A pop-up window opens, where you should choose the Interface you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
 
-5. [Instance Groups](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can choose the Interface you wish to query, build the query and test it.
+5. [**Instance Groups**](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can choose the Interface you wish to query, build the query and test it.
 
-6. [Views](/articles/06_LU_tables/06_LU_views.md), where you can choose the Interface you wish to query, build the query and test it.
+6. [**Views**](/articles/06_LU_tables/06_LU_views.md), where you can choose the Interface you wish to query, build the query and test it.
 
 </web>
 
