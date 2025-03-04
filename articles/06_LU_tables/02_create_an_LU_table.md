@@ -1,4 +1,4 @@
-# Create and Edit an Logical Unit Table
+# Create and Edit a Logical Unit Table
 
 LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md#logical-unit-lu-overview). There are several ways to create a new LU table.
 
