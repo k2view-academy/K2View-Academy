@@ -1,6 +1,6 @@
 # Building an SQL Query
 
-Use the Query Builder to build SQL queries, as following:
+Use the Query Builder to create SQL queries as shown below:
 
 <web>
 
