@@ -12,7 +12,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 1.	[**Fabric Studio Toolbars Tab**](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) > <img src="images/12_1_1%20icon.png"> **Query Builder**.
 2.	**Project Tree**, **Shared Objects** > **Interfaces** > right-click on **a DB Interface** > **Show Query Builder.**
-3.	**Fabric Studio Java Editor** (below image), double-click on **Shared Objects** or **Logical Units** and then select one > double-click on **Java** folder > click on the side arrow to expand the **category** > double-click on a **function** > on the **Editor** pane (main area)- right-click the location where the query should be entered > **Open Query Builder** > **Schema**.
+3.	**Fabric Studio Java Editor** (below image), **Shared Objects** or **Logical Units** and select an LU > **Java** folder > click the side arrow to expand the **category** > double-click on **a function** > **Editor pane** (main area) - right-click the query entry location > **Open Query Builder** > **Schema**.
 
 ​	![image](images/12_1_2_Schema.jpg)
 
