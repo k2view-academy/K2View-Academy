@@ -6,7 +6,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 ## Opening the Query Builder Window
 
- The Query Builder window can be opened in several ways. Select one of the following options: 
+ There are multiple ways to open the Query Builder window. Select one of the following options: 
 
 <studio>
 
