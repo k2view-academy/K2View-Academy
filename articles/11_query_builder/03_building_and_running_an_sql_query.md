@@ -25,7 +25,7 @@ Use the Query Builder to create SQL queries as shown below:
 <studio>
 
 ## Viewing the List of DB Objects
-* Click the **+** or **–** icons to expand or collapse the list in the DB objects.
+* Click the **+** or **–** icons to either expand or collapse the list in the DB objects.
 * Click **Refresh** to refresh the DB objects list. 
 * Click **Options** and check/uncheck the **Include Synonyms** option to include or exclude the DB Synonyms from the DB objects list.
 
@@ -33,7 +33,7 @@ Use the Query Builder to create SQL queries as shown below:
 
 
 
-## Editing a SQL Statement  
+## Editing an SQL Statement  
 
 
 
