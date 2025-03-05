@@ -17,7 +17,7 @@ The below table displays the list of Fabric versions with their release informat
             <td>March 05, 2025</td>
             <td></td>
             <td></td>
-            <td>32_1</td>
+            <td>32</td>
             <td></td>
         </tr>
         <tr>
