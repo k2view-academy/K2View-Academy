@@ -4,7 +4,7 @@ Use the Query Builder to create SQL queries as shown below:
 
 <web>
 
-1. Open the Query Builder window, as described [here](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window) (Remember to choose the interface you wish to query).
+1. Open the Query Builder window, as described [here](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window) (remember to choose the interface you wish to query).
 2. Edit the SQL commands in the top Query Editor window. 
 3. Click to execute the query. 
 4. The results are presented in a table view in the Results window.
