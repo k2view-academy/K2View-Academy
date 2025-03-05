@@ -30,7 +30,7 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 <web>
 
-1. [**Interface Explorer**](/articles/04_fabric_studio/25_web_data_explorer.md) - select the Interface Explorer icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> in the **Activity Bar** on the left side of Web Studio, and choose the relevant interface. Clicking on the DB icon that appears to the right of the chosen interface, opens the Query Builder. Read [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder) for more explanations. 
+1. [**Interface Explorer**](/articles/04_fabric_studio/25_web_data_explorer.md) - select the Interface Explorer icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> in the **Activity Bar** on the left side of Web Studio, and choose the relevant interface. Clicking the DB icon to the right of the chosen interface, opens the Query Builder. Read [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder) for more explanations. 
 
    > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
 
