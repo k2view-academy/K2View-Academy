@@ -60,7 +60,7 @@ To select columns from a DB object, perform either one of the following actions:
 
 ![image](images/12_3_3%20SQL%20Query..png)
 
-### 4. Removing the Selected Columns in a DB Object
+### 4. Removing Selected Columns from a DB Object
 To remove columns from a DB object, perform either one of the following actions:
 * Uncheck the selected columns. 
 * Right-click on the **DB object** > **Uncheck All** to remove all the table’s columns from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
