@@ -45,8 +45,8 @@ Select the **DB object** (Table, View or Synonym) from the **DB Tree** and proce
   The selected DB objects are added onto the Main window, when the related SQL statement is displayed in the [Query window](/articles/11_query_builder/02_query_builder_window.md#query-tab).
 
 ### 2. Removing a DB Object from the Main Window
-Either click the **DB object** and press **Delete** on your keyboard or right-click the **DB object** > **Remove**. 
-Note: The removal of a DB object automatically updates the SQL query in the **Query Builder** window.
+To remove a DB object from the Main window, you can either click the **DB object** and press **Delete** on your keyboard or right-click the **DB object** > **Remove**. 
+Note: Such removal automatically updates the SQL query in the **Query Builder** window.
 
 ### 3. Selecting the Columns in a DB Object 
 To select columns from a DB object, perform either one of the following choices:
