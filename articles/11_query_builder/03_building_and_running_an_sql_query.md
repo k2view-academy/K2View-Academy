@@ -56,7 +56,7 @@ To select columns from a DB object, perform either one of the following actions:
 
 ![image](images/12_3_2%20Table%20Name.png)
 
-* Right-click on the **DB object** > **Check All** to check all the columns in the table and add them to the SQL query.
+* Right-click on the **DB object** > **Check All** to check all column checkboxes in the table and add them to the SQL query.
 
 ![image](images/12_3_3%20SQL%20Query..png)
 
