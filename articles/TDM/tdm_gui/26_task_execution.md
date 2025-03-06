@@ -78,7 +78,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 
 ###  Open the Batch Monitoring Window
 
-Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. 
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. The batch monitor is available for entity's execution.
 
 ## Stop and Resume a Task Execution
 
