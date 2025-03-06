@@ -41,7 +41,7 @@ Use the Query Builder to create SQL queries as shown below:
 Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do either:
 * Double-click the **DB object**.
 * Select the **DB objects** and drag them to the **Main** window.
-* Select the **DB objects** and click on **Add Selected** (button located in the same pane).
+* Select the **DB objects** and click on **Add Selected** (at the bottom of the DB Tree pane).
   The selected DB objects are added onto the Main window, when the related SQL statement is displayed in the [Query window](/articles/11_query_builder/02_query_builder_window.md#query-tab).
 
 ### 2. Removing a DB Object from the Main Window
