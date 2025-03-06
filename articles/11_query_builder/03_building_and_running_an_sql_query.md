@@ -38,7 +38,7 @@ Use the Query Builder to create SQL queries as shown below:
 
 
 ### 1. Adding a DB Object to the Main Window
-Select the **DB object** (Table, View or Synonym) from the **DB Tree** and do either:
+Select the **DB object** (Table, View or Synonym) from the **DB Tree** and proceed with one of the following choices:
 * Double-click the **DB object**.
 * Select the **DB objects** and drag them to the **Main** window.
 * Select the **DB objects** and click on **Add Selected** (at the bottom of the DB Tree pane).
@@ -49,7 +49,7 @@ Either click the **DB object** and press **Delete** on your keyboard or right-cl
 Note: The removal of a DB object automatically updates the SQL query in the **Query Builder** window.
 
 ### 3. Selecting the Columns in a DB Object 
-To select columns from a DB object, do either:
+To select columns from a DB object, perform either one of the following choices:
 * Check specific **columns** in the **DB object** to include them in the SELECT statement.
 * Click the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select * from [Table Name]; </code></pre>
 
@@ -60,7 +60,7 @@ To select columns from a DB object, do either:
 ![image](images/12_3_3%20SQL%20Query..png)
 
 ### 4. Removing the Selected Columns in a DB Object
-To remove columns from a DB object, do either:
+To remove columns from a DB object, perform either one of the following choices:
 * Uncheck the selected columns. 
 * Right-click on the **DB object** > **Uncheck All** to remove all the table’s columns from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
 
@@ -71,7 +71,7 @@ To remove columns from a DB object, do either:
 
 ### 5. Joining the Selected Tables 
 
-To add a JOIN to the SQL query, do the following:
+To add a JOIN to the SQL query, perform the following:
 * Click on the **DB object column** (in the below example, it is the CUSTOMER_ID, in the CUSTOMER table) and drag a line to link it to a column in another **DB object** (CUSTOMER_ID, in the CONTRACT table). This would add an INNER JOIN to the SQL query.
 
 ![image](images/12_3_4%20DB%20object%20column.png)
