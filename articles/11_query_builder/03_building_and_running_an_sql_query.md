@@ -49,7 +49,7 @@ To remove a DB object from the Main window, you can either click the **DB object
 
 Note: Such removal automatically updates the SQL query in the **Query Builder** window.
 
-### 3. Selecting the Columns in a DB Object 
+### 3. Selecting Columns in a DB Object 
 To select columns from a DB object, perform either one of the following actions:
 * Check specific **columns** in the **DB object** to include them in the SELECT statement.
 * Click the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select * from [Table Name]; </code></pre>
