@@ -46,6 +46,7 @@ Select the **DB object** (Table, View or Synonym) from the **DB Tree** and proce
 
 ### 2. Removing a DB Object from the Main Window
 To remove a DB object from the Main window, you can either click the **DB object** and press **Delete** on your keyboard or right-click the **DB object** > **Remove**. 
+
 Note: Such removal automatically updates the SQL query in the **Query Builder** window.
 
 ### 3. Selecting the Columns in a DB Object 
