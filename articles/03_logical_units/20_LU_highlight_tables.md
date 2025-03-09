@@ -46,7 +46,7 @@ Once chosen, all other tables become blurred. Additionally, the highlighting bul
 
 > **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
 
-#### Schema Highlighting Focus Level
+#### Schema Highlighting *Focus Level*
 
 1.	Click the **highlight** icon (top bar).
 2. Select the tables that should be in focus.
