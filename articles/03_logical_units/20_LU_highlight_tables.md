@@ -2,7 +2,18 @@
 
 # Schema Tables' Highlighting
 
-When maintaining large logical units with many tables, it becomes difficult to understand and manage their complex schemas. The Tables' Highlighting feature enables to highlight some of the tables and bring them into focus.
+When maintaining large logical units with many tables, it becomes difficult to understand and manage their complex schemas. The Tables' Highlighting feature enables to highlight some of the tables, according to some criteria, and bring them into focus.
+
+the criteria are:
+
+* Highlighting connected tables
+* Highlighting tables that are not matched to their data source. Read [here](/articles/06_LU_tables/07_reconciliation.md#highlighting-mismatched-tables) for more information about this option. 
+* Highlighting tables by their associated population order
+* Highlighting tables by their data source
+
+You can find and set the criteria by clicking on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)).  
+
+![](images/web/20_highlight_options.png)
 
 
 
@@ -10,11 +21,7 @@ When maintaining large logical units with many tables, it becomes difficult to u
 
 Highlighting connected tables helps you to better understand the connection and relations between tables, especially in large schemas, by highlighting related tables.
 
-
-
-### Activate Highlighting
-
-To activate the **highlight** feature: 
+To activate the *highlighting connected tables* feature: 
 
 1. First, select a table with connections to other tables that you wish to see. 
 
@@ -34,7 +41,49 @@ To activate the **highlight** feature:
 
 
 
-Once chosen, all other tables become blurred. Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlight feature is currently turned-on.
+## Highlighting Tables by Population Order
+
+Highlighting tables by their associated populations' order lets you understand better the population flows. 
+
+To activate it:
+
+1. Choose one ore more population orders, by typing a range and/or by specifying each of them, using comma as separator. For example, to highlight population orders 1,2,3 and 5, you can either type "1, 2 ,3 ,5" or "1-3, 5".
+
+   Once any population order is typed, the Apply button becomes active.
+
+2. Click on Apply.
+
+Read [here](/articles/03_logical_units/19_LU_population_order_view.md) more about viewing and editing tables' populations order.
+
+
+
+## Highlighting Tables by Data Source
+
+To highlight tables by their origin data source (data sources are defined by [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)):
+
+1. Select one or more data sources using the select list. 
+
+   ![](images/web/20_highlight_datasource.png)
+
+   * Once any data source is selected the Apply button becomes active.
+
+   * You can deselect a selected data source by clicking on the X sign aside its name.
+
+2. Click on Apply
+
+  
+
+> **Note**: tables' data source are kept in case they were add to the schema by using the Data Explorer View  
+
+
+
+## Highlighting tables Operation
+
+### Activate Highlighting
+
+Once highlighting is activated, the focus in the schema is applied to the required tables, while all other tables become blurred. 
+
+Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlight feature is currently turned-on.
 
 
 
@@ -46,20 +95,25 @@ Once chosen, all other tables become blurred. Additionally, the highlighting bul
 
 > **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
 
-#### Schema Highlighting *Focus Level*
 
-1.	Click the **highlight** icon (top bar).
-2. Select the tables that should be in focus.
-3.	Click **Apply** (which also turns the highlight icon orange).
-4.	As a result: The focus in the schema is applied to the selected table with its originating links, while the rest of the schema appears blurred. The **Focus Level** ***IMAGE HERE*** widget pops up at the schema's bottom-left corner. The color contrast between the focused and blurred views ( i.e., less prominent tables) can be adjusted by moving the slider of the Focus Level feature (increments of 25%; default is the midpoint). The stronger the Focus Level is set, the more non-focused tables will be hidden.
-5.	To turn this feature off, click highlight icon again (whose color turns back to black).
 
-**Note**: The **Auto Layout** feature dynamically applies to visible tables, ensuring that when full focus is enabled, it is implemented for these tables only. 
+### Focus Level
+
+As a result of applying the highlighting, the **Focus Level** widget pops up at the schema's bottom-left corner. 
+
+![](images/web/20_highlight_focus.png)
+
+The color contrast between the focused and blurred views ( i.e., less prominent tables) can be adjusted by moving the slider of the Focus Level feature (increments of 25%; default is the midpoint). The stronger the Focus Level is set, the more non-focused tables will be hidden.
+
+> **Note**: The **Auto Layout** feature dynamically applies to visible tables, ensuring that when full focus is enabled, it is implemented for these tables only. 
+
 
 
 ### Deactivate Highlighting
 
 To deactivate the highlighting feature and turn it off, either click on the highlighting bulb icon, or click on the down arrow symbol and then on the selected highlighting option.
+
+
 
 ### Change Highlighting Type
 
