@@ -14,19 +14,19 @@ Highlighting connected tables helps you to better understand the connection and 
 
 ### Activate Highlighting
 
-To activate the highlighting feature: 
+To activate the **highlight** feature: 
 
 1. First, select a table with connections to other tables that you wish to see. 
 
 2. Choose to highlight by either:
 
-   - Click on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)). 
+   - Clicking on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)). 
 
-   - Open the table menu (ellipsis, 3 dot menu) and choose **Highlight by relation**
+   - Opening the table menu (ellipsis, 3 dot menu) and choosing **Highlight by relation**
 
      ![](images/web/20_highlight_menu.png)
 
-3. Select one of the following highlighting option types:
+3. Selecting one of the following highlighting option types:
 
    - Only connected tables, All connected tables - predecessors and successors
    - Only predecessors
@@ -34,7 +34,7 @@ To activate the highlighting feature:
 
 
 
-Once chosen, all other tables become blurred. Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlighting feature is currently turned-on.
+Once chosen, all other tables become blurred. Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlight feature is currently turned-on.
 
 
 
@@ -46,6 +46,15 @@ Once chosen, all other tables become blurred. Additionally, the highlighting bul
 
 > **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
 
+#### Schema Highlighting Focus Level
+
+1.	Click the **highlight** icon (top bar).
+2. Select the tables that should be in focus.
+3.	Click **Apply** (which also turns the highlight icon orange).
+4.	As a result: The focus in the schema is applied to the selected table with its originating links, while the rest of the schema appears blurred. The **Focus Level** ***IMAGE HERE*** widget pops up at the schema's bottom-left corner. The color contrast between the focused and blurred views ( i.e., less prominent tables) can be adjusted by moving the slider of the Focus Level feature (increments of 25%; default is the midpoint). The stronger the Focus Level is set, the more non-focused tables will be hidden.
+5.	To turn this feature off, click highlight icon again (whose color turns back to black).
+
+**Note**: The **Auto Layout** feature dynamically applies to visible tables, ensuring that when full focus is enabled, it is implemented for these tables only. 
 
 
 ### Deactivate Highlighting
