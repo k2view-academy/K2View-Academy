@@ -135,15 +135,15 @@ The **Max rows** setting defines the maximum number of rows that the SQL query c
 
 <web>
 
-You can create and edit a SQL statement by selecting the desired action from the Interface Explorer tree menu, typing it manually, or seeking guidance from the built-in AI Assistant. The later two are used for more complex queries.
+You can create and edit an SQL statement by selecting the desired action from the Interface Explorer menu tree, typing it manually, or seeking guidance from the built-in AI Assistant. The latter two are used for more complex queries.
 
-## Adding a query using the Interface Explorer Tree
+## Adding a Query using the Interface Explorer Tree
 
-Adding a query to the Query Editor panel using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as popup at Schema Editor, Graphit and Broadway.
+Adding a query to the Query Editor panel using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
 
-At DB Interface Explorer, choose the required SQL statement by using the context menu (right click) on the relevant tree entry. The available statements are: *select* statement, *insert* statement, *update* statement, *delete* statement.
+At DB Interface Explorer, choose the required SQL statement by using the context menu (right-click) on the relevant tree entry. The available statements are: *select*, *insert*, *update* and *delete*.
 
-You can choose either a table or specific table's fields so that the query will contain only those fields.
+You can choose either a table or specific table fields in a way that the query will contain these fields only.
 
 ![](images/web/db_interface_explorer_select.gif)
 
@@ -151,7 +151,7 @@ At Query Builder popup, you can click on the right arrow, which appear on hoover
 
 ![](images/web/query_editor_popup.png)
 
-## Writing a SQL statement
+## Writing an SQL statement
 
 While writing your SQL statement at the editor you can be guided by 2 assistants:
 
