@@ -29,7 +29,7 @@ To activate the *highlighting connected tables* feature:
 
    - Clicking on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)). 
 
-   - Opening the table menu (ellipsis, 3 dot menu) and choosing **Highlight by relation**
+   - Opening the table menu (vertical ellipsis, 3-dot menu) and choosing **Highlight by relation**
 
      ![](images/web/20_highlight_menu.png)
 
