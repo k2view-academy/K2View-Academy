@@ -77,7 +77,7 @@ To highlight tables by their origin data source (data sources are defined by [In
 
 
 
-## Highlighting Tables Operation
+## Table Highlighting
 
 ### Activate Highlighting
 
