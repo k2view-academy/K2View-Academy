@@ -11,7 +11,7 @@ The criteria are:
 * Highlighting tables by their associated population order
 * Highlighting tables by their data source
 
-You can find and set the criteria by clicking on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)).  
+The criteria can be found and set by clicking on the schema's top bar **highlighting bulb** action icon ( ![](images/web/light-off.svg)).  
 
 ![](images/web/20_highlight_options.png)
 
