@@ -43,7 +43,7 @@ To activate the *highlighting connected tables* feature:
 
 ## Highlighting Tables by Population Order
 
-Highlighting tables by their associated populations' order lets you understand better the population flows. 
+Highlighting tables by their associated population order provides a better understanding of the population flows. 
 
 To activate it:
 
