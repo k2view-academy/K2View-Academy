@@ -86,8 +86,8 @@ To add a JOIN to the SQL query, perform the following:
 ![image](images/12_3_6%20link%E2%80%99s%20line%20%20Properties.png)
 
 ### 6. Union SQL Queries  
-1. Do either:
-* Right-click in the **Main window > Union > New Union Sub-query/Copy Union Sub-Query**.
+1. Perform either one of the following actions:
+* Right-click in the **Main window > Union > New union sub-query/Copy union sub-query**.
 * Click the **+** next to the **Q** of the query to add a UNION operator, which combines the result-set of 2 or more SELECT statements. 
 
 ![image](images/06_01.PNG)
