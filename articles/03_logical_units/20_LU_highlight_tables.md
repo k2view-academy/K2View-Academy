@@ -35,7 +35,7 @@ To activate the *highlighting connected tables* feature:
 
 3. Selecting one of the following highlighting option types:
 
-   - Only connected tables, All connected tables - predecessors and successors
+   - Only connected tables (i.e., both predecessors and successors)
    - Only predecessors
    - Only successors
 
