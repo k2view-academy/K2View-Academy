@@ -94,7 +94,7 @@ To add a JOIN to the SQL query, perform the following:
 
 Each SQL statement, which is combined by the UNION operator, has a **Q** icon in the **Main window**. Clicking the **Q** icon of each SQL statement opens its Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the Union query. 
 
-2. To modify the **Union query** do either:
+2. To modify the **Union query**, perform either one of the following actions:
 
 * Right-click **Link** - ![image](images/12_3_8%20icon%20link.png) - between the queries to edit the Union type.
 
