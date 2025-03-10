@@ -88,11 +88,11 @@ To add a JOIN to the SQL query, perform the following:
 ### 6. Union SQL Queries  
 1. Perform either one of the following actions:
 * Right-click in the **Main window > Union > New union sub-query/Copy union sub-query**.
-* Click the **+** next to the **Q** of the query to add a UNION operator, which combines the result-set of 2 or more SELECT statements. 
+* Click the **+** next to the **Q** of the query (top-right corner of the Main window) to add a UNION operator, which combines the result-set of 2 or more SELECT statements. 
 
 ![image](images/06_01.PNG)
 
-Each SQL statement, which is combined by the UNION operator, has a **Q** icon in the **Main window**. Clicking the **Q** icon of each SQL statement opens its Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the Union query. 
+Each SQL statement, which is combined by the UNION operator, has a **Q** icon in the **Main window**. Clicking the **Q** icon of each SQL statement opens it in the Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the Union query. 
 
 2. To modify the **Union query**, perform either one of the following actions:
 
