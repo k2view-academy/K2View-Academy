@@ -73,15 +73,15 @@ To highlight tables by their origin data source (data sources are defined by [In
 
   
 
-> **Note**: Tables' data source are kept in case they were add to the schema by using the Data Explorer View  
+> **Note**: Tables' data sources are kept in case they were added to the schema using the Data Explorer View.  
 
 
 
-## Highlighting tables Operation
+## Highlighting Tables Operation
 
 ### Activate Highlighting
 
-Once highlighting is activated, the focus in the schema is applied to the required tables, while all other tables become blurred. 
+Once *highlighting* is activated, the focus in the schema is applied to the required tables, while all other tables become blurred. 
 
 Additionally, the highlighting bulb icon in the schema' top bar turns orange, indicating that the highlight feature is currently turned-on.
 
@@ -91,15 +91,15 @@ Additionally, the highlighting bulb icon in the schema' top bar turns orange, in
 
 
 
-> **Tip**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the highlighting bulb icon. (You can also click on the down arrow symbol, located next to it, in the schema's top bar, and look for the 'v' sign). 
+> **Tip**: The activated highlighting type can be quickly revealed as a tooltip when hovering the mouse over the highlighting bulb icon. (You can also click on the down arrow symbol, located next to this icon in the schema's top bar, and look for the 'v' sign). 
 
-> **Note**: When the Tables' Highlighting feature is turned-on, other tables are still available and active.
+> **Note**: When the table highlighting feature is turned-on, other tables are still available and active.
 
 
 
 ### Focus Level
 
-As a result of applying the highlighting, the **Focus Level** widget pops up at the schema's bottom-left corner. 
+As a result of applying *highlighting*, the **Focus Level** widget pops up at the schema's bottom-left corner. 
 
 ![](images/web/20_highlight_focus.png)
 
