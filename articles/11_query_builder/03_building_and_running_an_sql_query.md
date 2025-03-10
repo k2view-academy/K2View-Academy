@@ -129,7 +129,7 @@ Note that when running the Query Builder on a Fabric interface, you should run t
 
 ![image](images/06_04.png)
 
-The **Max rows** setting is used for setting the maximum number of rows returned by the SQL query. The default value is 10,000 rows. It is possible to set a different number of rows to be returned by the SQL query.
+The **Max rows** setting defines the maximum number of rows that the SQL query can return, with a default of 10,000. This limit can be adjusted as needed.
 
 </studio> 
 
