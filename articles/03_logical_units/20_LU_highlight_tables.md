@@ -49,7 +49,7 @@ To activate it:
 
 1. Choose one or more population orders, by typing a range and/or by specifying each of them, using commas as separators. For example, to highlight population orders 1,2,3 and 5, you can type either  "1, 2 ,3 ,5" or "1-3, 5".
 
-   Once any population order has been typed, the Apply button becomes active.
+   Once any population order is typed, the Apply button becomes active.
 
 2. Click on Apply.
 
