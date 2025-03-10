@@ -107,7 +107,7 @@ Each SQL statement, which is combined by the UNION operator, has a **Q** icon in
     b. Right-click the **Main** window, select **Union > Remove**. 
 
 ## Table of Selected Columns - Edit the SQL Statement
-This table displays underneath the Query Builder's Main window, and it enables editing the SQL query. Its selected columns hold the same information as the graphical map in a tabular format.
+This table displays underneath the Query Builder's Main window, and it enables editing the SQL query. Its selected columns hold the same information as the graphical map yet in a tabular format.
 
 ### Adding an SQL Function to a DB Object Column 
 1.	Click on the **3 dots** in the **Expression** column for opening the **Expression Editor** window. 
