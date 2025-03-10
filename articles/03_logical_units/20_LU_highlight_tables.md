@@ -4,10 +4,10 @@
 
 When maintaining large logical units with many tables, it becomes difficult to understand and manage their complex schemas. The Tables' Highlighting feature enables to highlight some of the tables, according to some criteria, and bring them into focus.
 
-the criteria are:
+The criteria are:
 
 * Highlighting connected tables
-* Highlighting tables that are not matched to their data source. Read [here](/articles/06_LU_tables/07_reconciliation.md#highlighting-mismatched-tables) for more information about this option. 
+* Highlighting tables that are not matched to their data source; read [here](/articles/06_LU_tables/07_reconciliation.md#highlighting-mismatched-tables) for more information about this option. 
 * Highlighting tables by their associated population order
 * Highlighting tables by their data source
 
