@@ -65,15 +65,15 @@ To highlight tables by their origin data source (data sources are defined by [In
 
    ![](images/web/20_highlight_datasource.png)
 
-   * Once any data source is selected the Apply button becomes active.
+   * Once any data source is selected, the Apply button becomes active.
 
-   * You can deselect a selected data source by clicking on the X sign aside its name.
+   * You can deselect a selected data source by clicking on the X sign beside its name.
 
-2. Click on Apply
+2. Click on Apply.
 
   
 
-> **Note**: tables' data source are kept in case they were add to the schema by using the Data Explorer View  
+> **Note**: Tables' data source are kept in case they were add to the schema by using the Data Explorer View  
 
 
 
