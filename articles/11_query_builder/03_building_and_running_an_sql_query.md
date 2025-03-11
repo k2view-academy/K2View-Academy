@@ -143,11 +143,11 @@ Adding a query to the Query Editor panel using the Interface Explorer Tree, is d
 
 At DB Interface Explorer, choose the required SQL statement by using the context menu (right-click) on the relevant tree entry. The available statements are: *select*, *insert*, *update* and *delete*.
 
-You can choose either a table or specific table fields in a way that the query will contain these fields only.
+You can choose either a table or specific table fields in a way that the query would include only those fields.
 
 ![](images/web/db_interface_explorer_select.gif)
 
-At Query Builder popup, you can click on the right arrow, which appear on hoovering a table in the tree. Once clicked, a "select *" statement from that table is added to the Query Editor editing board.
+In the Query Builder pop-up window, you can click on the right arrow, which appear on hoovering a table in the tree. Once clicked, a "select *" statement from that table is added to the Query Editor editing board.
 
 ![](images/web/query_editor_popup.png)
 
