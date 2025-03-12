@@ -161,9 +161,9 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
 1. Click on the AI icon (<img src="images/web/ai-2-bw.png" />) at the upper-right corner of the Query Builder Editor panel.
 
-   The Editor screen is then split into two side-by-side editors: At left - SQL Editor, where at the right - the native language statements Editor. 
+   The Editor screen is then split into two side-by-side editors: On the left - the SQL Editor, whereas on the right - the native language statements Editor. 
 
-2. Write your desired statement at the right side editor.
+2. Write your desired statement on the right-side editor.
 
 3. Choose the relevant schemas that you wish the AI will look at, via the *Schema Filter* select list. This aimed to avoid overwhelming the process. In case of a single schema DB, it is automatically selected
 
