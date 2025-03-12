@@ -185,7 +185,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
 You can also activate the AI Assistant in the opposite direction - to explain you an existing SQL in a native language. To do that, click on the *SQL &rarr; Text* button.
 
-When AI Assistant is activated inside a DB select function, like in BW DB Query actors or in Graphit node, the native language statement is saved as a comment alongside the SQL.
+When the AI Assistant is activated inside a DB select function, like in BW DB Query actors or in Graphit node, the native language statement is saved as a comment alongside the SQL.
 
 
 
