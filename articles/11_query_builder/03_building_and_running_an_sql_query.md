@@ -204,7 +204,7 @@ A select list then opens, allowing you to choose the relevant statement.
 
 ![](images/web/03_code_complet.png)
 
-An icon appears on the left side of each item in the select list, where:
+An icon appears to the left of each item in the select list, where:
 
 * ![](images/web/qb_assist_folder.svg) stands for a DB schema.
 * ![](images/web/qb_assist_table.svg) stands for a DB table.
