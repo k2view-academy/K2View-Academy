@@ -165,7 +165,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
 2. Write your desired statement on the right-side editor.
 
-3. Choose the relevant schemas that you wish the AI will look at, via the *Schema Filter* select list. This aimed to avoid overwhelming the process. In case of a single schema DB, it is automatically selected
+3. Choose the relevant schemas that you wish the AI will look at, via the *Schema Filter* select list. This aimed to avoid overwhelming the process. In case of a single schema DB, it is automatically selected.
 
    ![](images/web/03_ai_select_schema.png)
 
