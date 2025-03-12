@@ -210,17 +210,17 @@ An icon appears to the left of each item in the select list, where:
 * ![](images/web/qb_assist_table.svg) stands for a DB table.
 * ![](images/web/qb_assist_field.svg) stands for a table.
 
-Code Completion Assistant can also help you when looking for the standard SQL commands, like `Select`, `AND`, `WHERE`. The icon that represents them is: ![](images/web/qb_assist_keyword.svg).
+The Code Completion Assistant can also help you when looking for the standard SQL commands, such as `Select`, `AND`, `WHERE`. The icon that represents them is: ![](images/web/qb_assist_keyword.svg).
 
 
 
 > **Notes and Tips**
 >
->  * You can clear the whole Query Editor window by clicking on the Clear button.
+>  * Clearing the whole Query Editor window can be done by clicking on the Clear button.
 >  * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
->  * If the Query Editor window contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
+>  * If the Query Editor window contains several queries, and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
 >  * You can add Fabric commands to the Query Editor and they will also be executed. 
->  * When Fabric is the selected data source interface, set the top bar fields before executing the query.
+>  * When Fabric is the selected data source interface, set the top bar fields prior to executing the query.
 
 
 
