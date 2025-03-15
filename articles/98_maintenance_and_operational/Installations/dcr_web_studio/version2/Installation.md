@@ -404,20 +404,24 @@ Should you not have Internet connectivity, you can use this Docker Image Offline
 Following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
 
 Here is the flow:
+
+1. Pull the desired Image tag:
+
+`docker pull docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22`
  
-1. Save / compress the desired Image tag:
+2. Save / compress the desired Image tag:
 
 `docker save docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22 | gzip > k2view_fabric-studio_8.1.7_22.tar.gz`
 
-2. Copy the `k2view_fabric-studio_8.1.7_22.tar.gz` file to the target machine.
+3. Copy the `k2view_fabric-studio_8.1.7_22.tar.gz` file to the target machine.
 
-3. On the target machine, load the image locally:
+4. On the target machine, load the image locally:
 
 `docker load -i k2view_fabric-studio_8.1.7_22.tar.gz`
 
 Doing this before you run the first `k2space.sh` command ensures the file will be present on your system to create your first space and avoids downloading the file from the Internet.
 
-4. Use similar procedures to obtain the following:
+5. Use similar procedures to obtain the following:
 
 * Traefik Reverse Proxy:
 
