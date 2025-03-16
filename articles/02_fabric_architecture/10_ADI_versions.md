@@ -12,7 +12,7 @@ The below table displays the various ADI versions, released date and end of life
     </thead>
     <tbody>
          <tr>
-            <td>3.0</td>
+            <td>3.0.0</td>
             <td>February 14, 2025</td>
             <td></td>
         </tr>
