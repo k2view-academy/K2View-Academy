@@ -179,7 +179,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
    ![](images/web/03_ai_done.png)
 
-   You can see the AI Assistant's explanations, on how the SQL command was created, by clicking on the question mark icon that appears above the SQL Editor, once the Text to SQL generation process has ended.
+   You can see the AI Assistant's explanations, on how the SQL command was created, by clicking on the question mark icon that appears above the SQL Editor, once the Text to SQL generation process (`SQL ← Text`) has ended.
 
 
 
@@ -190,7 +190,7 @@ When the AI Assistant is activated inside a DB select function, like in Broadway
 
 
 
-> Note: To activate the AI Assistant, install one of the AI connectors and create an interface upon.
+> Note: To activate the AI Assistant, install one of the AI extensions and create an interface upon.
 
 
 
