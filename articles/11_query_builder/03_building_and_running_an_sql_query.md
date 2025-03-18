@@ -185,7 +185,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
 You can also activate the AI Assistant in the opposite direction, which would explain an existing SQL query in natural language. To do that, click on the `SQL → Text` button.
 
-When the AI Assistant is activated inside a DB select function, like in BW DB Query actors or in Graphit node, the native language statement is saved as a comment alongside the SQL.
+When the AI Assistant is activated inside a DB select function, like in Broadway DB Query actors or in Graphit nodes, the natural language statement is saved as a comment alongside the SQL.
 
 
 
