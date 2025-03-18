@@ -169,7 +169,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
    ![](images/web/03_ai_select_schema.png)
 
-   > You can see which schemas were selected, even without opening the select list again, by mouse hoover 
+   > In order to see the selected schema(s), you can simply mouse hoover over *Selected Schemas* (no need to reopen the select list). 
    >
    > ![](images/web/03_ai_selected_schema.png) 
 
