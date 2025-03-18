@@ -196,7 +196,7 @@ When the AI Assistant is activated inside a DB select function, like in Broadway
 
 ### Query Editor Code Completion Assistant 
 
-While manually editing the SQL statements, you can be assisted by the Editor Assistant, which provide code completion suggestions. The completion suggestion is for schemas, tables, column names of the current interface, as well as set of base SQL clauses.
+While manually editing the SQL statements, you can be assisted by the Editor Assistant, which provides code completion suggestions. These completion suggestions are intended for schemas, tables, column names of the current interface, as well as set of base SQL clauses.
 
 The Assistant code completion is done while typing and on hitting CTRL+SPACE, as used while code programming.
 
