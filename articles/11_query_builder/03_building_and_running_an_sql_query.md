@@ -173,7 +173,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
    >
    > ![](images/web/03_ai_selected_schema.png) 
 
-4. Click on the *Text &rarr; SQL* button.
+4. Click on the `SQL ← Text` button.
 
 5. The query will then be generated and will appear in the SQL Editor.
 
