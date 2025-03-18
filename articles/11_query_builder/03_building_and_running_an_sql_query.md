@@ -135,7 +135,7 @@ The **Max rows** setting defines the maximum number of rows that the SQL query c
 
 <web>
 
-You can create and edit an SQL statement by selecting the desired action from the Interface Explorer menu tree, typing it manually, or seeking guidance from the built-in AI Assistant. The latter two are used for more complex queries.
+You can create and edit an SQL statement by either selecting the desired action from the Interface Explorer menu tree, typing it manually, or seeking guidance from the built-in AI Assistant. The latter two options are used for more complex queries.
 
 ## Adding a Query using the Interface Explorer Tree
 
@@ -165,7 +165,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
 2. Write your desired statement on the right-side editor.
 
-3. Choose the relevant schemas that you wish the AI will look at, via the *Schema Filter* select list. This aimed to avoid overwhelming the process. In case of a single schema DB, it is automatically selected.
+3. Choose the relevant schemas that you would like the AI Assistant to look at, via the *Schema Filter* select list. This action aims to avoid an overburdening process. In case there is only a single schema DB, it is selected automatically.
 
    ![](images/web/03_ai_select_schema.png)
 
