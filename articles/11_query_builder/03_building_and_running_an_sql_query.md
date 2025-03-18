@@ -179,7 +179,7 @@ You can use the built-in AI Assistant for creating SQL statements, by entering y
 
    ![](images/web/03_ai_done.png)
 
-   You can see the AI Assistant's explanations, on how the SQL command was created, by clicking on the question mark icon that appears above the SQL Editor, once the Text to SQL generation process (`SQL ← Text`) has ended.
+   You can see the AI Assistant's explanations, on how the SQL command was created, by clicking on the question mark icon that appears above the SQL Editor, once the Text to SQL generation process (`Text → SQL`) has ended.
 
 
 
