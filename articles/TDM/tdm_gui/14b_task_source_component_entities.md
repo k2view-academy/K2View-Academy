@@ -24,6 +24,8 @@ This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from 
 
 This tab displays the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  You can remove a System or one of its LUs from the task.
 
+Note that if the selected environment contains disabled systems, and the **Policy for Fetching Data** extracts the data from the source environment, the  you must to uncheck the disabled systems. 
+
 #### Advanced BE - Execution Mode Tab
 
 This tab enables to change the task execution mode:
@@ -57,6 +59,7 @@ This setting defines whether the data needs to be extracted from the source envi
   Notes:
 
   - Options 1 and 2 are not available if the source environment is set with the [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
+  - Options 1 and 2 are not available if the tester user does not have a [Read permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities) on the source environment.
   - Option 2 (always sync) is available only for [permitted users](10_environment_roles_tab.md#refresh-all-data-from-source).
   - The task execution does not access the source environment directly when options 3 or 4 are selected.  
 
