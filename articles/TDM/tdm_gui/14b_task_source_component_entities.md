@@ -22,9 +22,9 @@ This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from 
 
 #### Advanced BE - Systems & Logical units Tab
 
-This tab displays the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and gives a warning to the user.  You can remove a System or one of its LUs from the task.
+This tab displays the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and displays a warning to the user.  You can remove a System or one of its LUs from the task.
 
-Note that if the selected environment contains disabled systems, and the **Policy for Fetching Data** extracts the data from the source environment, the  you must to uncheck the disabled systems. 
+Note that if the selected environment contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the **Policy for Fetching Data** extracts the data from the source environment, you must uncheck the disabled systems. 
 
 #### Advanced BE - Execution Mode Tab
 
