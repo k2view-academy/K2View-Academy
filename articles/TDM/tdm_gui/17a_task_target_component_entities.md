@@ -8,19 +8,20 @@ The following information needs to be set when the task's data type is Business 
 The following attributes must be set for **Testing environment** data destination:
 
 - Target environment name.
-- Actions to perform on the target environment.
+- Actions to be performed in the target environment.
 
 When you start the task creation with the Target component - e.g., a delete task - you must set the task's Business entity:
 
 ![target example1](images/task_target_component_delete_only.png)
 
 
-
 When you set the Source component before the Target, the selected [Business entity](14b_task_source_component_entities.md#business-entity) is already populated in the Target form:
 
 ![target example2](images/task_target_component_load_entities1.png)
 
-Note that you can edit the Business entity setting - change the selected Business entity or change the LUs' selection for the task's Business entity, but changing the task's Business entity will reset the Source and Subset components.
+Notes: 
+- You can edit the Business entity settings - change the selected Business entity or change the LUs' selection for the task's Business entity, but changing the task's Business entity will reset the Source and Subset components.
+- If the target environment contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the task performs load and/or delete actions on the target environment, you must uncheck the disabled systems. 
 
 
 

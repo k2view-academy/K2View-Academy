@@ -147,6 +147,18 @@ The following settings should be populated for each record:
 - **delete_flow** - populated with the customized delete flow. 
 - **load_flow** - populated with the load flow.
 
+
+
+### Supporting Table-Level Tasks on BigQuery - Update TableLevelDefinitions MTable 
+
+- Add a new record to the TableLevelDefinitions after installing the **BigQuery** connector extension in order to support Table-Level tasks based on the BigQuery connector:
+  - **interface_name** - populate this field with the BugQuery interface name.
+  - **extract_flow** - populate this field with **BQTableLevelExtractByQuery** or  **BQTableLevelExtractByStorage**.
+  - **delete_flow** - populate  this field with **BQTableLevelDelete**.
+  - **load_flow** - populate this field with **BQTableLevelLoadByStorage**.
+
+For more information, see the BigQuery extention Readme file. 
+
 ### Customized Table's Flows - Implementation Guidelines
 
 The customized table's flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.

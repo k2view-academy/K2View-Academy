@@ -78,7 +78,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 
 ###  Open the Batch Monitoring Window
 
-Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. 
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. The batch monitor is available for entity's execution.
 
 ## Stop and Resume a Task Execution
 
@@ -109,7 +109,11 @@ The Hold and Activate task buttons are displayed on the Tasks screen of each tas
 - Environment owner user, can hold or activate all active tasks in their environment.
 - Testers, can hold or activate their active tasks.
 
+## Disabled Tasks
 
+A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
+
+![disabled task](images/task_list_disabled_task.png) 
 
 **Notes:**
 
