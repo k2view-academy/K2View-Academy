@@ -175,7 +175,7 @@
 		{
 			"group display name": "Data Privacy Management (DPM)",
 			"group icon": "images/icon-4.png",
-			"visible in main": false,
+			"visible in main": true,
 			"topics": [
 				{
 					"display name": "DPM Overview",
