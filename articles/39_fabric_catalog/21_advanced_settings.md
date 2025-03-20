@@ -1,4 +1,4 @@
-# Advanced Configuration
+# Discovery Advanced Configuration
 
 <web>
 
