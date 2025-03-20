@@ -92,7 +92,7 @@ The TDM Portal displays a list of icons next to each task record:
 
 ### Disabled Tasks
 
-A Task that contains disabled systems on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
+A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
 
 ![disabled task](images/task_list_disabled_task.png) 
 
