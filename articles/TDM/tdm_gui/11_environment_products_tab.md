@@ -19,10 +19,20 @@ The System Window holds the following settings:
 
   Click for more information about [supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 
-  
-
   Note that the connection details of the data sources (interfaces) of a system in an environment are populated and saved in Fabric.
 
   
 
-   [![Previous](/articles/images/Previous.png)](10_environment_roles_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_environment_globals_tab.md)
+### Disabling the Environment's Systems
+
+One or multiple Systems may be temporarily disabled in an environment. For example, disabling the CRM for UAT environment. TDM 9.3 has added the  ability to disable the environment's Systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
+
+By default,  the environment's Systems are enabled. Set the System's toggle to Off in order to disable a system and click the Save Changes button to save the change in the TDM DB. 
+
+The CRM System is disabled in the example below:
+
+![disabled system](images/env_disabled_system_example.png)
+
+
+
+ [![Previous](/articles/images/Previous.png)](10_environment_roles_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_environment_globals_tab.md)
