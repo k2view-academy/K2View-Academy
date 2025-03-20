@@ -129,7 +129,7 @@ A TDM BE may include several root LUs with the same list of entities. For exampl
 
 ![BE with several roots](images/be_hierarchy_with_several_root_lu.png) 
 
- 
+
 ### Task Execution of Hierarchical Business Entities
 
 A TDM task can include a BE with a hierarchical structure of several LUs. When processing the TDM task, all related LUs from parent and child LUs must also be processed.
@@ -142,7 +142,7 @@ The task execution can be either horizontal or vertical:
 By default, the task execution mode is taken from the task's [Business Entity (BE)](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#task-execution-mode). However, you can set the [task's execution mode](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#advanced-be---execution-mode-tab) to be independent of the BE's execution mode. 
 
 Notes:
-- The Vertical execution mode processes the child entities of each root entity. The child entities are processed one-by-one.
+
 - The Vertical execution mode is unavailable when the child entity has multiple parent entities in the BE hierarchy. For example: Subscriber => Billing Account hierarchy. The Subscriber is the Billing Account's parent LU. If a Billing Account (payer) is shared between multiple Subscribers, this BE hierarchy needs to run in a horizontal mode.  
 - The Vertical execution mode is unavailable for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or for synthetic entities generation.
 - The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
@@ -184,20 +184,19 @@ Notes:
        - Run Order LU on entities related to Customers #1 and #2, i.e., Order IDs #4, #5 and #9. The execution of Order #4 fails. The remaining Orders have been processed successfully. 
        - Note that Order LU is not executed on Customer #3's Orders, since this Customer has failed.
      
-
    - **Step 3:**
      - Run the Network element LU on the entities related to the successfully processed Orders, i.e., Network element IDs #92 and #98.
-
    
-
+   
+   
    **Vertical execution mode:**
-
+   
    - **Process Customer #1:**
      - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
      - Customers #1 and #2 are processed successfully. Customer #3 fails. 
    - **Process Customer #2:**
      - Run Customer #2. Then run Order #9 and Network element #98.
-
+   
    - **Process Customer #3:**
      - Run Customer #3. The Customer's execution fails, therefore, do not run the related Orders and Network elements.
 
