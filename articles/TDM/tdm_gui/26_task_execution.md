@@ -109,7 +109,11 @@ The Hold and Activate task buttons are displayed on the Tasks screen of each tas
 - Environment owner user, can hold or activate all active tasks in their environment.
 - Testers, can hold or activate their active tasks.
 
+## Disabled Tasks
 
+A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
+
+![disabled task](images/task_list_disabled_task.png) 
 
 **Notes:**
 
