@@ -2,7 +2,7 @@
 
 ### Overview
 
-The following article describes plugins that create relations in the Catalog schema, based on the data source analysis.
+The following article describes plugins that create relations in the Catalog schema, based on the column names comparison in the data source.
 
 * [Metadata Logical Reference](05_relations_creation.md#metadata-logical-reference) - identify possible foreign key references between datasets by matching field names and create the *refersTo* relations.
 
