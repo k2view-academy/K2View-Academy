@@ -279,8 +279,8 @@ FILTER - filters Batch processes. The filter field must be populated by a string
     <li>Time at work (ms)</li>  
     <li>exeid</li>
     <li>command</li>
-</p>
-<p>Filter is a pattern of the fabric_command value. It must be a regex compatible argument.
+   
+Filter is a pattern of the fabric_command value. It must be a regex compatible argument.
 </p>
 </td>
 <td valign="top" width="300pxl">
