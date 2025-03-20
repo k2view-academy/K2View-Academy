@@ -279,12 +279,13 @@ FILTER - filters Batch processes. The filter field must be populated by a string
     <li>Time at work (ms)</li>  
     <li>exeid</li>
     <li>command</li>
-<li>Filter, must be a regex compatible argument.</li>
+</p>
+<p>Filter is a pattern of the fabric_command value. It must be a regex compatible argument.
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>BATCH_IN_PROCESS filter='^(cust)*$'</p>
-<p>This command will return all running batch processes with names containing the "cust" pattern</p>
+<p>BATCH_IN_PROCESS filter='.*Cust.*'</p>
+<p>This command will return all running batch processes with names containing the "Cust" pattern.</p>
 </td>
 </tr> 
 <tr>
