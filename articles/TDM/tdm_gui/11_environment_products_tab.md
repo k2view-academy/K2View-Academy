@@ -27,7 +27,7 @@ The System window holds the following settings:
 
 One or multiple systems may be temporarily disabled in an environment, e.g., disabling the CRM for UAT environment. TDM 9.3 has added the ability to disable the environment's systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
 
-By default, the environment's systems are enabled. Set the system's toggle to Off in order to disable a system and click the **Save Changes** button to save the change in the TDM DB. 
+By default, the environment's systems are enabled. Set the system's toggle to **Off** in order to disable a system and click the **Save Changes** button to save the change in the TDM DB. 
 
 As you can see in the below example, the CRM system is disabled:
 
