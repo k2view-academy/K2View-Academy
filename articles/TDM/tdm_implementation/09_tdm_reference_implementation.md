@@ -80,9 +80,9 @@ Import and deploy the TDM_TableLevel LU.
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
-## Step 3 - Optional - Set Different Source and Target Settings for Table Level Tasks
+## Step 3 - Optional - Set Different Source and Target Settings for Table-Level Tasks
 
-TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [Table level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for Table level tasks. 
+TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for table-level tasks. 
 
 ## Step 4 - Catalog
 
