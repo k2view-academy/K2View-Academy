@@ -71,7 +71,7 @@ Import and deploy the TDM_TableLevel LU.
 
 - **target_interface_name** - the name of the table's target interface. 
 
-- **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be later used to customize the load flow to run an Upsert on the target table.
+- **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
 
 - **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
 
