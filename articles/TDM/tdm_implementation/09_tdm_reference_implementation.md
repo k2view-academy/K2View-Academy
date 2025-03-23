@@ -143,7 +143,7 @@ The following settings should be populated for each record:
 - **schema_name** - the DB schema.
 - **table_name** - populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** - populated with the customized extract flow.
-- **table_order** - populated with a number. The table order in the TableLevelDefinitions has the highest priority and can override the order defined in the TableLevelInterfaces MTable.
+- **table_order** - populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
 - **delete_flow** - populated with the customized delete flow. 
 - **load_flow** - populated with the load flow.
 
