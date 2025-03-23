@@ -108,9 +108,9 @@ By default, the MTable is populated with the TDM DBs to disable a selection of T
 
 - **suppress_indicator** - if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false**, the interface's tables can be selected in a TDM task.
 
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to true.
+- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** - is set to true, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
+- **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
 - **order_flow** - an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
 
