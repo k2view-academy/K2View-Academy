@@ -82,17 +82,17 @@ Import and deploy the TDM_TableLevel LU.
 
 ## Step 3 - Optional - Set Different Source and Target Settings for Table Level Tasks
 
-TDM 9.1 enables adding tables to the **RefList** MTable in order to support the setting of different interface, schema name, or table name in the source and target environments for [Table level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** in order to define different settings on the source and target environments for Table level tasks. 
+TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [Table level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for Table level tasks. 
 
 ## Step 4 - Catalog
 
 ### Edit the PII settings
 
-The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog if needed.
+The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog, if needed.
 
 ### Run the Catalog to Identify Tables Relation and Order
 
-Run the Discovery job on the table's interfaces. Once the job is completed, the interface metadata will be retrieved from the Catalog.
+Run the Discovery job on the table's interfaces. Once the job has been completed, the interface metadata would be retrieved from the Catalog.
 
 Note that if you define a different interface in the target environment, you need to run the Discovery process on the **target interface** in order to get the table's list, order, and fields from the Catalog.
 
