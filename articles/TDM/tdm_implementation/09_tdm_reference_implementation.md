@@ -181,12 +181,12 @@ The Catalog masking actor is invoked **after** the extract flow execution. Do th
 
 The below example executes the following:
 
-- Selects the records from address table.
-- Opens a loop on the extracted records.
+- Selecting the records from address table.
+- Opening a loop on the extracted records.
 - On each record - 
-  - Masks the street, city, and zip code fields.
-  - Merges the masked fields into the address record. 
-  - Accumulates the merged record with the masked fields into an array. The accumulated array is the external **result** field of the flow.
+  - Masking the street, city, and zip code fields.
+  - Merging the masked fields into the address record. 
+  - Accumulating the merged record with the masked fields into an array. The accumulated array is the external **result** field of the flow.
 
 See an example of the flow: 
 
