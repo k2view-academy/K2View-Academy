@@ -129,7 +129,7 @@ By default, the MTable is populated with the TDM DBs to disable a selection of T
 
 TDM 9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
 
-A customized flow can be added to a table's extract, load or delete. The implementor can set a customized flow for all activities - extract, delete, and load - or only for apecific activities. This feature opens a variety of capabilities such as:
+A customized flow can be added to a table's extract, load or delete processes. The implementor can set a customized flow for all activities - extract, delete, and load - or only for apecific activities. This feature opens a variety of capabilities such as:
 
 - Custom masking of selective fields (not Catalog-based).
 
@@ -151,13 +151,13 @@ The following settings should be populated for each record:
 
 ### Supporting Table-Level Tasks on BigQuery - Update TableLevelDefinitions MTable 
 
-- Add a new record to the TableLevelDefinitions after installing the **BigQuery** connector extension in order to support Table-Level tasks based on the BigQuery connector:
+- Add a new record to the TableLevelDefinitions MTable after installing the **BigQuery** connector extension in order to support table-level tasks based on the BigQuery connector:
   - **interface_name** - populate this field with the BugQuery interface name.
-  - **extract_flow** - populate this field with **BQTableLevelExtractByQuery** or  **BQTableLevelExtractByStorage**.
+  - **extract_flow** - populate this field with **BQTableLevelExtractByQuery** or **BQTableLevelExtractByStorage**.
   - **delete_flow** - populate  this field with **BQTableLevelDelete**.
   - **load_flow** - populate this field with **BQTableLevelLoadByStorage**.
 
-For more information, see the BigQuery extention Readme file. 
+For more information, read the BigQuery extention Readme file. 
 
 ### Customized Table's Flows - Implementation Guidelines
 
