@@ -129,7 +129,7 @@ By default, the MTable is populated with the TDM DBs to disable a selection of T
 
 TDM 9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
 
-A customized flow can be added to table's extract, load or delete.  The implementor can set a customized flow for all activities - extract, delete, and load - or for some of the activities. This feature opens a variety of capabilities such as:
+A customized flow can be added to a table's extract, load or delete. The implementor can set a customized flow for all activities - extract, delete, and load - or only for apecific activities. This feature opens a variety of capabilities such as:
 
 - Custom masking of selective fields (not Catalog-based).
 
