@@ -12,7 +12,7 @@ An environment's systems are displayed in the Environment window's **Systems tab
 
 The System window holds the following settings:
 
-- **System Name**, select a system from the drop-down list.
+- **System Name**. Select a system from the drop-down list.
 - **Data Center Name**, the Data Center where the system is physically located in the environment. For example, ENV1 may have CRM in NY and Billing in TX. Select a Data Center from the drop-down list.
 
 - **System Version**, the version of the installed system in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5. Select a version from the drop-down list. Note that the **synthetic** version is set on each system that is added to the **Synthetic and AI environments**. 
@@ -25,11 +25,11 @@ The System window holds the following settings:
 
 ### Disabling the Environment's Systems
 
-One or multiple Systems may be temporarily disabled in an environment, e.g., disabling the CRM for UAT environment. TDM 9.3 has added the  ability to disable the environment's Systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
+One or multiple systems may be temporarily disabled in an environment, e.g., disabling the CRM for UAT environment. TDM 9.3 has added the ability to disable the environment's systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
 
-By default, the environment's Systems are enabled. Set the System's toggle to Off in order to disable a system and click the *Save Changes* button to save the change in the TDM DB. 
+By default, the environment's systems are enabled. Set the system's toggle to Off in order to disable a system and click the **Save Changes** button to save the change in the TDM DB. 
 
-As you can see in the below example, the CRM System is disabled:
+As you can see in the below example, the CRM system is disabled:
 
 ![disabled system](images/env_disabled_system_example.png)
 
