@@ -11,7 +11,7 @@ The actual data processing and/or entity reservation is performed by the task ex
 The following task actions are supported by TDM:
 
 - **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test Data Store (Fabric) for a later use.
-- **Generate** - generates synthetic entities. Either one of the entities' generation methods can be applied: rule-based data generation or AI-based data generation. 
+- **Generate** - generates synthetic entities. Either one of the entities' generation methods can be applied: Rule-based data generation or AI-based data generation. 
 - **Load** - provisions the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run AI-based training on a subset of entities. 
 - **Delete** - deletes the selected entities from the target environment.
 - **Reserve** - reserves the selected entities in the target environment.
