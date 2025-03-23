@@ -75,7 +75,7 @@ Import and deploy the TDM_TableLevel LU.
 
 - **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to false, if required, in order to avoid counting the records in the target.
+- **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
