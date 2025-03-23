@@ -41,19 +41,19 @@ Examples:
 
   ![extract task widget](images/task_widget_extract_only.png)
 
-- The user wishes to extract entities from Production and load them into the UAT environment. The user needs to select both - Source and Target components:
+- The user wishes to extract entities from Production and load them into the UAT environment. The user needs to select both the Source and the Target components:
 
   ![load task widget](images/task_widget_load.png)
 
 
 
-The user can click on each one of the components to open its form and update its settings. The task also has *Save task*, *Save & execute* and *Advanced settings* icons.
+The user can click on each one of the components to open its form and update its settings. The task also has **Save task**, **Save & execute** and **Advanced settings** icons.
 
 ## Who Can Create a Task?
 
 -  Admin users.
 -  Environment owners can create a TDM task for their environment.
--  Testers who can create a TDM task for the environments they are attached to by a [TDM Environment Permission Set](10_environment_roles_tab.md):
+-  Testers who can create a TDM task for the environments that they are attached to by a [TDM Environment Permission Set](10_environment_roles_tab.md):
    - Source environment, testers must be attached to the source environment by a permission set with [Read](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
    - Target environment, testers must be attached to the target environment by a permission set with [Write](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
 
@@ -61,10 +61,10 @@ The user can click on each one of the components to open its form and update its
 
 ## TDM Tasks List Window
 
-The TDM Task List displays, by default, the list of all Active tasks in the TDM. 
-It displays a list of settings on each task and these settings can also be used for filtering the displayed tasks.
+The TDM Task List displays, by default, the list of all Active tasks in TDM. 
+It displays a list of settings of each task, and these settings can also be used for filtering the displayed tasks.
 
-The following screenshot shows an example of the Tasks window: 
+The below screenshot shows an example of a Tasks window: 
 
   ![tasks list](images/tdm_task_list_window.png)
 
@@ -76,14 +76,14 @@ The following screenshot shows an example of the Tasks window:
 
 3. To remove a field from the display, click the field.
 
-4. To find a field, populate the **Search** box in order to filter the tasks by the searched value.
+4. To find a field, populate the **Search** box as a means to filter the tasks by the searched value.
 
 5. If the task has a description, an information icon is displayed next to the task name. Hover over the information icon to view the task description.
 
 The TDM Portal displays a list of icons next to each task record:
 
 - ![task icon](images/execute_task_icon.png)[Execute Task](26_task_execution.md). 
-- ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task temporarily to On Hold.
+- ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task temporarily to *On Hold*.
 - ![task icon](images/save_as_icon.png) Save As, copy the task into a new task.
 - ![task icon](images/task_execution_history_icon.png)[Task Execution History](27_task_execution_history.md), display the execution history of the selected task.
 -  ![delete icon](images/delete_task_icon.png) Delete the task.
@@ -92,7 +92,7 @@ The TDM Portal displays a list of icons next to each task record:
 
 ### Disabled Tasks
 
-A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
+A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering over the disabled Execute task icon:
 
 ![disabled task](images/task_list_disabled_task.png) 
 
@@ -102,13 +102,13 @@ A Task that contains [disabled systems](11_environment_products_tab.md#disabling
 2. To open a selected task, click the **Task Name** of the task.
 3. Click the **Back** or **Next** buttons to move between the tabs. 
 4. Click **Finish** in the last tab to create the task.
-Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to Inactive.
+Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to *Inactive*.
 
 ## Task Components
 
 ### Task Name
 
-When creating a new task or opening a task, the Task name form opens. Populating the Task name and Task description fields is optional. If no Task name is set, a default Task name is generated with some basic information about the task.
+When creating a new task or opening a task, the **Task name** form opens. Populating the Task name and Task description fields is optional. If no Task name is set, a default Task name is generated with some basic information about the task.
 
 You can exit each form, including the Task name form, by clicking any task component. You can re-open the Task name form by clicking the Task name in the upper-left corner of the window.
 
@@ -130,9 +130,9 @@ The Advanced settings include **optional** task settings:
 
 ### Save or Save & Execute
 
-The *Save task* icon saves the task in the TDM DB.
+The **Save task** icon saves the task in the TDM DB.
 
-The *Save & execute* icon saves the task in the TDM DB and executes the task.
+The **Save & execute** icon saves the task in the TDM DB and executes the task.
 
 
 
