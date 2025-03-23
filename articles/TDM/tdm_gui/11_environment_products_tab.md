@@ -10,7 +10,7 @@ An environment's systems are displayed in the Environment window's **Systems tab
 
 ## Environment System Window 
 
-The System Window holds the following settings:
+The System window holds the following settings:
 
 - **System Name**, select a system from the drop-down list.
 - **Data Center Name**, the Data Center where the system is physically located in the environment. For example, ENV1 may have CRM in NY and Billing in TX. Select a Data Center from the drop-down list.
