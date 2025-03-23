@@ -90,7 +90,7 @@ TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of suppo
 
 The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog, if needed.
 
-### Run the Catalog to Identify Tables Relation and Order
+### Run the Catalog to Identify a Table's Relation and Order
 
 Run the Discovery job on the table's interfaces. Once the job has been completed, the interface metadata would be retrieved from the Catalog.
 
