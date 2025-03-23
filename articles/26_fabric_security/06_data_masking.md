@@ -62,6 +62,7 @@ This is available only if the data generation Actor has a seed input argument, a
   For example, an [MTable](/articles/09_translations/06_mtables_overview.md) that contains a list of names is created at run-time. The 5th index is populated with 'Jonn' on the first run and 'Harry' on the second. If the first run gets 'John', the second run will get 'Harry' when running on the same seed as the first run. This happens because both names have the same index in this example. 
 
 - The masked value is impacted not only by the seed, but also by the data generation parameters. For example, getting a random value between 0-100 returns a different result than when getting a random value between 0-200, even if they get the same seed value.
+- The *Consistent and unique* consistency mode does not support data consistency using seed. Instead, it relies on tables within the k2masking schema to ensure both data consistency and uniqueness of masked values.
 
 ### Broadway Masking Actors
 
