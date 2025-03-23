@@ -4,7 +4,7 @@ A [TDM System](05_tdm_gui_product_window.md) (product) represents a system or ap
 
 An environment's systems are displayed in the Environment window's **Systems tab**:
 
-- To add a system to an environment, click **Add System**, populate the system's setting and then click **Add**.
+- To add a system to an environment, click **Add System**, populate the system's settings and then click **Add**.
 - To open a selected system, click the **Name** of the system and then click **Save Changes**. 
 - To delete a system, click the [![be_Example](images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the System window.
 
@@ -25,11 +25,11 @@ The System window holds the following settings:
 
 ### Disabling the Environment's Systems
 
-One or multiple Systems may be temporarily disabled in an environment. For example, disabling the CRM for UAT environment. TDM 9.3 has added the  ability to disable the environment's Systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
+One or multiple Systems may be temporarily disabled in an environment, e.g., disabling the CRM for UAT environment. TDM 9.3 has added the  ability to disable the environment's Systems in the TDM portal and as a result, disable executing tasks on the disabled systems.
 
-By default,  the environment's Systems are enabled. Set the System's toggle to Off in order to disable a system and click the Save Changes button to save the change in the TDM DB. 
+By default, the environment's Systems are enabled. Set the System's toggle to Off in order to disable a system and click the *Save Changes* button to save the change in the TDM DB. 
 
-The CRM System is disabled in the example below:
+As you can see in the below example, the CRM System is disabled:
 
 ![disabled system](images/env_disabled_system_example.png)
 
