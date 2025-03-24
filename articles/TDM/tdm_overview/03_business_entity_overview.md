@@ -181,8 +181,8 @@ Notes:
      - Customers #1 and #2 are processed successfully. Customer #3 fails.
      
      - **Step 2:**
-       - Run Order LU on entities related to Customers #1 and #2, i.e., Order IDs #4, #5 and #9. The execution of Order #4 fails. The remaining Orders have been processed successfully. 
-       - Note that Order LU is not executed on Customer #3's Orders, since this Customer has failed.
+       - Run Order LU on entities related to Customers #1 and #2, i.e., Order IDs #4, #5 and #9. The execution of Order #4 fails. The remaining Orders are processed successfully. 
+       - Note that Order LU is not executed on Customer #3's Orders since this Customer has failed.
      
    - **Step 3:**
      - Run the Network element LU on the entities related to the successfully processed Orders, i.e., Network element IDs #92 and #98.
