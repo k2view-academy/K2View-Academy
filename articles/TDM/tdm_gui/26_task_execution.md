@@ -78,7 +78,7 @@ The TDM Portal displays a list of the task's LUs and pre and post-execution proc
 
 ###  Open the Batch Monitoring Window
 
-Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution in order to get additional information as well as better tracking of the task execution. The batch monitor is available for entity's execution.
+Click the information icon next to each LU to open the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) window for the execution as a means to get additional information and better tracking of the task execution. The batch monitor is available for entity's execution.
 
 ## Stop and Resume a Task Execution
 
@@ -94,11 +94,11 @@ A task can be stopped if the processed entities fail due to an error; the task c
 
 Occasionally, you may need to temporarily hold a task (i.e., set it 'On Hold'). This status can be used - for example, if the testing environment is temporarily down - for holding all task executions on an environment until the testing environment is up again, and to then reactivate the tasks for this environment.
 
-The Hold or Activate task activities are enabled only for Active tasks. When a task is deleted (set to 'Inactive'), its task execution status cannot be modified.
+The **Hold** or **Activate** task activities are enabled only for Active tasks. When a task is deleted (set to 'Inactive'), its task execution status cannot be modified.
 
 Tasks on a **Hold** task-execution-status, cannot be executed.  
 
-The Hold and Activate task buttons are displayed on the Tasks screen of each task:
+The **Hold** and **Activate** task buttons are displayed on the Tasks screen of each task:
 
 - To hold a task (i.e., set it 'On Hold'/pause), click ![hold task](images/hold_task_icon.png).
 - To activate a task execution status, click ![activate task icon](images/activate_onhold_task_icon.png).
@@ -111,7 +111,7 @@ The Hold and Activate task buttons are displayed on the Tasks screen of each tas
 
 ## Disabled Tasks
 
-A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering the disabled Execute task icon:
+A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environments, cannot be executed. In such case, the Execute task icon is disabled for the task, and a message is presented to the user when hovering over the disabled Execute task icon:
 
 ![disabled task](images/task_list_disabled_task.png) 
 
