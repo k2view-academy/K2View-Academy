@@ -144,13 +144,13 @@ By default, the task execution mode is taken from the task's [Business Entity (B
 Notes:
 
 - The Vertical execution mode is unavailable when the child entity has multiple parent entities in the BE hierarchy. For example: Subscriber => Billing Account hierarchy. The Subscriber is the Billing Account's parent LU. If a Billing Account (i.e., the bill payer) is shared between multiple Subscribers, this BE hierarchy needs to run in a horizontal mode.  
-- The Vertical execution mode is unavailable for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or for synthetic entities generation.
-- The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
+- The Vertical execution mode is unavailable for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) and for synthetic entities generation.
+- The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures improved cross-system data consistency and alignment.
 - In both execution modes, if the execution of the parent entity fails, the related child entities are consequently not processed and marked as failed.
 
 **Example:**
 
-1. Create a TDM task to load **Customers #1, #2 and #3**, their Orders and related Network elements. 
+1. Create a TDM task to load **Customers #1, #2 and #3**, their Orders and their related Network elements. 
 
 2. **Customers' related entities:**
 
@@ -192,13 +192,13 @@ Notes:
    **Vertical execution mode:**
    
    - **Process Customer #1:**
-     - Run Customer #1. Then run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
+     - Run Customer #1. Then, run Orders #4 and #5. The execution of Order #4 fails. After processing the Customer's Orders, start processing the related Network element #92. Note that Network elements #90 and #91 are not processed since their parent Order ID - #4 - has failed. 
      - Customers #1 and #2 are processed successfully. Customer #3 fails. 
    - **Process Customer #2:**
-     - Run Customer #2. Then run Order #9 and Network element #98.
+     - Run Customer #2. Then, run Order #9 and Network element #98.
    
    - **Process Customer #3:**
-     - Run Customer #3. The Customer's execution fails, therefore, do not run the related Orders and Network elements.
+     - Run Customer #3. The Customer's execution fails, hence, do not run the related Orders and Network elements.
 
  
 
