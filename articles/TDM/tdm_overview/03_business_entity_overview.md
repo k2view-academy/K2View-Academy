@@ -144,7 +144,7 @@ By default, the task execution mode is taken from the task's [Business Entity (B
 Notes:
 
 - The Vertical execution mode is unavailable when the child entity has multiple parent entities in the BE hierarchy. For example: Subscriber => Billing Account hierarchy. The Subscriber is the Billing Account's parent LU. If a Billing Account (i.e., the bill payer) is shared between multiple Subscribers, this BE hierarchy needs to run in a horizontal mode.  
-- The Vertical execution mode is unavailable for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) and for synthetic entities generation.
+- The Vertical execution mode is unavailable for a task that generates [entity clones](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#generate-clones-for-an-entity) and for synthetic entities generation.
 - The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures improved cross-system data consistency and alignment.
 - In both execution modes, if the execution of the parent entity fails, the related child entities are consequently not processed and marked as failed.
 
