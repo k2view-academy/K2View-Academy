@@ -101,7 +101,7 @@ Tasks on a **Hold** task-execution-status, cannot be executed.
 The **Hold** and **Activate** task buttons are displayed on the Tasks screen of each task:
 
 - To hold a task (i.e., set it 'On Hold'/pause), click ![hold task](images/hold_task_icon.png).
-- To activate a task execution status, click ![activate task icon](images/activate_onhold_task_icon.png).
+- To activate a task execution, click ![activate task icon](images/activate_onhold_task_icon.png).
 
 ### Who Can Hold or Activate a Task?
 
