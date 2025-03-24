@@ -31,7 +31,7 @@ The execution of the related task's components runs in the following order:
 2. LUs - the execution order depends on the task's execution mode:
 
    - Horizontal execution - execution of the task LU by LU from parent to child, where all entities are processed in one LU before moving on to the next system in the hierarchy. 
-   - Vertical execution - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or synthetic entities generation.
+   - Vertical execution - execution of the entire LU hierarchy for each root entity before moving on to the next root entity. Note that this mode is not available for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) and for synthetic entities generation.
 
    Click for more information about the [execution order of hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
