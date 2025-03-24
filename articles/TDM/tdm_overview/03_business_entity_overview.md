@@ -37,7 +37,7 @@ Alternatively, you can request to load a list of selected Order IDs, whereby the
 A parent-child hierarchy of LUs can also be defined under a BE. The relationship between the **parent and child** LUs is **one-to-many**. Each parent LUI can have many child LUIs. 
 
 #### Root LU 
-If an LU in a BE has no parent LU, it is named **Root LU** whereby its root entity is equal to the root entity of the BE. A BE must have at least one Root LU. 
+If an LU in a BE has no parent LU, it is named **Root LU**, meaning its root entity is the same as the root entity of the BE. A BE must have at least one Root LU. 
 
 **Example of Customer #1 Hierarchy**
 
@@ -143,7 +143,7 @@ By default, the task execution mode is taken from the task's [Business Entity (B
 
 Notes:
 
-- The Vertical execution mode is unavailable when the child entity has multiple parent entities in the BE hierarchy. For example: Subscriber => Billing Account hierarchy. The Subscriber is the Billing Account's parent LU. If a Billing Account (bill payer) is shared between multiple Subscribers, this BE hierarchy needs to run in a horizontal mode.  
+- The Vertical execution mode is unavailable when the child entity has multiple parent entities in the BE hierarchy. For example: Subscriber => Billing Account hierarchy. The Subscriber is the Billing Account's parent LU. If a Billing Account (i.e., the bill payer) is shared between multiple Subscribers, this BE hierarchy needs to run in a horizontal mode.  
 - The Vertical execution mode is unavailable for a task that generates [entity clones](17a_task_target_component_entities.md#generate-clones-for-an-entity) or for synthetic entities generation.
 - The Vertical execution mode can be beneficial when running TDM tasks on a large scale of entities as it ensures better cross-systems data consistency and data alignment.
 - In both execution modes, if the execution of the parent entity fails, the related child entities are consequently not processed and marked as failed.
