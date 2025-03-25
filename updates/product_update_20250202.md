@@ -12,4 +12,4 @@ We have released K2cloud January 2025 on 2 February 2025 at 11:00 UTC. This rele
 
 View the [Release Notes](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/K2cloud/K2cloud_Release_Notes_Jan2025.pdf.html). 
 
-<img src="images/img2.png" alt="image" style="zoom: 70%;" />
+<img src="images/img.png" alt="image" style="zoom: 70%;" />
