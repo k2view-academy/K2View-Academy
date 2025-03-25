@@ -115,10 +115,53 @@ A customer has 2 activities. The data generation inner flow needs to generate 3 
 Defining Broadway flows or Actors for customized data generation logic is possible. 
 ### Customized Data Generation Flows - Implementation Guidelines
 - Set the output generated value to be an external variable.
+
 - Add an external input named **value** to the data generator. This is needed since the Masking Actor always sends the input **value** (i.e. the original value) to the data generator. For example - a Masking Actor gets the original full address as an input value and calls a data generator in order to generate a new masked value based on an input State. The address data generator flow needs to get the **value** and **state** as input parameters. The Masking Actor will send both parameters to the data generator.  
-- Optional settings (Fabric 8.2 and onwards):
-  - If the customized flow calls the built-in data generation Actor to generate the new data, set the Actor's input **seed** parameter to be an external variable. This is needed to enable using [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method.
-  - The catalog masking can send the entire record to the data generator. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. Add to the flow an external variable named **record** in order to get the entire record from the catalog masking.
+
+- From Fabric 8.2 and onwards, **the catalog masking can send the entire record to the data generator**. The record is sent with the **original values**. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. Add to the flow an external variable named **record** in order to get the entire record from the catalog masking.
+
+   
+
+### Customized Data Generators - Supporting [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed)
+
+The data generator must support the generating a random value using seed and must contain the **seed** external input parameter.
+
+#### Creating new Data Generator Actor
+
+- The new Actor must inherit the **AbstractRandomGeneratorActor** and import the **MaskingRandom** and **broadway.model.Data** classes as well:
+
+  ```java
+  import com.k2view.broadway.actors.masking.random.AbstractRandomGeneratorActor;
+  import com.k2view.broadway.actors.masking.random.MaskingRandom;
+  import com.k2view.broadway.model.Data;
+  
+  public class customGeneratorTest extends AbstractRandomGeneratorActor { ...
+  ```
+
+  
+
+- Override the **generate** method in the new Actor:
+
+  ```java
+  @Override
+  public Object generate(Data input, MaskingRandom maskingRandom) {
+  ```
+
+  
+
+- The new Actor must contain the **seed** as an input. The Masking actor sends the seed and original values to the data generator Actor.
+
+- Use the **MaskingRandom** methods in the **generate** method in order to get a consistent value based on the input seed. 
+
+   
+
+#### Customized Data Generator Flow
+
+- The customized flow support a data consistency using seed by using the built-in product data generator Actors:  set the data generator Actor's input **seed** parameter to be an **external variable**. The following example flow gets a random first name from a Collection. The RandomFromCollection Actor's **seed** input parameter must be set as **external** variable: 
+
+  ![seeded random example](../images/example_seeded_random_flow.png)
+
+
 
 [![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)
 
