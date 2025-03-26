@@ -1,6 +1,6 @@
 # Data Generation Actors
 
-Starting from V7.1, Fabric separates the data generation (manufacturing) of synthetic data from the hashing and caching capabilities. The data generation Actors can be used to either generate synthetic entities (rule-based generation) or mask sensitive data. Broadway provides various built-in data generation Actors under the **generators** category to generate a random synthetic value. For example: RandomString, RandomNumber, Sequence...
+Starting from V7.1, Fabric separates the data generation of the masked value from the hashing and caching parts. Data generation Actors can be used to either generate synthetic entities (rule-based generation) or mask sensitive data. Broadway provides various built-in data generation Actors (under the **generators** category) - e.g., RandomString, RandomNumber, Sequence - to generate a random synthetic values.
 
 A data generator Actor can be either executed by the Broadway flow ('as is') for generating new data, invoked by the **Masking** Actor for caching the generated data or activated by the [Catalog masking mechanism](/articles/39_fabric_catalog/11_catalog_masking.md). 
 
@@ -14,7 +14,7 @@ The **regex** input argument can get any regular expression.
 
 **Examples**:
 
-- Populate the **regex** with '[a-z0-9-_\.]{5,6}@[a-z][a-z0-9-_\.]{2,10}[a-z0-9]\.(com|net|org)' to generate an email.
+- Populate the **regex** with '[a-z0-9-_\.]{5,6}@[a-z][a-z0-9-_\.]{2,10}[a-z0-9]\.(com|net|org)' to generate an email address.
 - Populate the **regex** with '\w{10}' to generate a random String with 10 characters.
 - Populate the **regex** with '\d' to generate a random number.
 
