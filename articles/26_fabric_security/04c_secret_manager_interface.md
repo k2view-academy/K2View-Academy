@@ -60,7 +60,7 @@ Following are additional notes and considerations regarding **specific** Secrets
    
    * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric lets you to specify which key you wish to use.
    
-      The pattern is <key-path>.<key>. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
+      The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
    * HashiCorp has 2 versions, where their key-path are different but this does not affect the key and their path, as you set for the interface's properties. To read more about versions see [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
    
