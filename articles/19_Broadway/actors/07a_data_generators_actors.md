@@ -14,7 +14,7 @@ The **regex** input argument can get any regular expression.
 
 **Examples**:
 
-- Populate the **regex** with '[a-z0-9-_\.]{5,6}@[a-z][a-z0-9-_\.]{2,10}[a-z0-9]\.(com|net|org)' to generate an email address.
+- Populate the **regex** with [a-z0-9\.]{6,20}@[a-z\.]{4,10}\.(com|net|org) to generate an email address.
 - Populate the **regex** with '\w{10}' to generate a random String with 10 characters.
 - Populate the **regex** with '\d' to generate a random number.
 
