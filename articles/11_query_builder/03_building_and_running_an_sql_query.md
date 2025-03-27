@@ -49,14 +49,16 @@ To remove a DB object from the Main window, you can either click the **DB object
 
 Note: Such removal automatically updates the SQL statement in the Query Display pane.
 
-### 3. Selecting Columns in a DB Object 
-To select columns from a DB object, perform either one of the following actions:
-* Check specific **column checkboxes** in the **DB object** to include them in the SELECT statement.
-* Check the checkbox next to the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select * from [Table Name]; </code></pre>
+### 3. Selecting Columns in a DB Object
+The following default SQL syntax appears in the Query Display pane - <pre><code> Select * from [Table Name]; </code></pre> 
+
+* Check the checkboxes of **specific columns** in the **DB object** to include them only in the SELECT statement.
+* Check the checkbox next to the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select [Table Name.] * from [Table Name]; </code></pre>
 
 ![image](images/12_3_2%20Table%20Name.png)
+Note: Explicitly specifying the **[Table Name.]** before * can be useful in JOIN statements to avoid ambiguity. However, it is not required in most cases unless dealing with multiple tables with overlapping column names. 
 
-* Right-click on the **DB object** > **Check All** to check all column checkboxes in the table and add them to the SQL query.
+* Right-click on the **DB object** > **Check All** to check all column checkboxes in the table and add them to the SELECT statement.
 
 ![image](images/12_3_3%20SQL%20Query..png)
 
