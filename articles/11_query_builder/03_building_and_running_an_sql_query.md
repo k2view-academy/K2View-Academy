@@ -5,7 +5,7 @@ Use the Query Builder to create SQL queries as shown below:
 <web>
 
 1. Open the Query Builder window, as described [here](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window) (remember to choose the interface you wish to query).
-2. Edit the SQL commands in the top Query Editor window. 
+2. Edit the SQL commands in the Query Editor window (top pane). 
 3. Click to execute the query. 
 4. The results are presented in a table view in the Results window.
 
@@ -15,7 +15,7 @@ Use the Query Builder to create SQL queries as shown below:
 
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > select a [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The list of DB objects  (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree (as seen in the image below). 
 2.	Create and edit the SQL query. You can either create the SQL query manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
-3.	To execute the SQL statement, click on **Execute Query**.
+3.	To execute the SQL statement, click on **Execute Query** (in the Query Settings toolbar).
 4.	Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
 
 </studio>  
