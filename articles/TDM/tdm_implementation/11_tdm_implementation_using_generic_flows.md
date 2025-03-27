@@ -91,7 +91,7 @@ The createAllFromTemplates creates a separate flow per table on each type - load
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
-From TDM 9.3 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
+From TDM 9.3.1 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
 
 Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_Actor** to the load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key with the target entity ID. 
 
