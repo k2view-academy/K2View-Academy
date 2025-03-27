@@ -120,9 +120,9 @@ Defining Broadway flows or Actors for customized data generation logic is possib
 
 - From Fabric 8.2 and onwards, **the catalog masking can send the entire record to the data generator**. The record is sent with the **original values**. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. 
 
-  Add to the flow an external variable named **record** in order to get the entire record from the catalog masking.
+  Add an external variable, named **record**, to the flow in order to get the entire record from the Catalog masking.
   
-  Example: the following flow gets the original address record as an input and generates a masked city based on the original state:
+  Example: The following flow gets the original address record as an input and generates a masked city based on the original state:
   
   ![input record example](../images/example_data_generator_get_input_record.png)
   
