@@ -64,7 +64,7 @@ The following default SQL syntax appears in the Query Display pane - <pre><code>
 
 ### 4. Removing Selected Columns from a DB Object
 To remove columns from a DB object, perform either one of the following actions:
-* Uncheck the checkboxes of the selected columns. 
+* Uncheck the checkboxes of the **selected columns** in the **DB object**. 
 * Right-click on the **DB object** > **Uncheck All** to remove all columns of the table from the SELECT statement. Note that when this option is selected for all DB objects in the Main window, the Query Builder generates the following SQL syntax: select * from …
 
   
@@ -75,7 +75,7 @@ To remove columns from a DB object, perform either one of the following actions:
 ### 5. Joining the Selected Tables 
 
 To add a JOIN to the SQL query, perform the following:
-* Click on the **DB object column** (in the below example, it is the CUSTOMER_ID, in the CUSTOMER table) and drag a line to link it to a column in another **DB object** (CUSTOMER_ID, in the CONTRACT table). This would add an INNER JOIN to the SQL query.
+* Click on the **DB object column** (in the below example, it is the CUSTOMER_ID, in the CUSTOMER table) and drag a line to link it to a column in another **DB object** (CUSTOMER_ID, in the CONTRACT table). This action would add an INNER JOIN to the SQL query.
 
 ![image](images/12_3_4%20DB%20object%20column.png)
 
@@ -89,7 +89,7 @@ To add a JOIN to the SQL query, perform the following:
 
 ### 6. Union SQL Queries  
 1. Perform either one of the following actions:
-* Right-click in the **Main window > Union > New union sub-query/Copy union sub-query**.
+* Right-click in the **Main window > Union > New union sub-query**/**Copy union sub-query**.
 * Click the **+** next to the **Q** of the query (top-right corner of the Main window) to add a UNION operator, which combines the result-set of 2 or more SELECT statements. 
 
 ![image](images/06_01.PNG)
@@ -98,7 +98,7 @@ Each SQL statement, which is combined by the UNION operator, has a **Q** icon in
 
 2. To modify the **Union query**, perform either one of the following actions:
 
-* Right-click **Link** - ![image](images/12_3_8%20icon%20link.png) - between the queries to edit the Union type.
+* Right-click **Link** - ![image](images/12_3_8%20icon%20link.png) - between the queries, to edit the Union type.
 
 ![image](images/Union_type.png)
 
