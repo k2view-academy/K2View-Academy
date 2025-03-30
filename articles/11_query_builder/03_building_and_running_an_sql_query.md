@@ -141,7 +141,7 @@ You can create and edit an SQL statement by either selecting the desired action 
 
 ## Adding a Query using the Interface Explorer Tree
 
-Adding a query to the Query Editor pane using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
+Adding a query to the Query Editor window (top pane) using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
 
 At DB Interface Explorer, choose the required SQL statement by using the context menu (right-click) on the relevant tree entry. The available statements are: *select*, *insert*, *update* and *delete*.
 
@@ -221,7 +221,7 @@ The Code Completion Assistant can also help you when looking for the standard SQ
 >  * Clearing the whole Query Editor window can be done by clicking on the Clear button.
 >  * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
 >  * If the Query Editor window contains several queries, and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
->  * You can add Fabric commands to the Query Editor and they will also be executed. 
+>  * You can add Fabric commands to the Query Editor window and they will also be executed. 
 >  * When Fabric is the selected data source interface, set the top bar fields prior to executing the query.
 
 
