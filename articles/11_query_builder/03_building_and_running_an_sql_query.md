@@ -56,7 +56,7 @@ The following default SQL syntax appears in the Query Display pane - <pre><code>
 * Check the checkbox next to the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select [Table Name.] * from [Table Name]; </code></pre>
 
 ![image](images/12_3_2%20Table%20Name.png)
-Note: Explicitly specifying the **[Table Name.]** before * can be useful in JOIN statements to avoid ambiguity. However, it is not required in most cases unless dealing with multiple tables with overlapping column names. 
+> Note: As you can see in the above image, the **[Table Name.]** before * is explicitly specified, which can be useful in JOIN statements to avoid ambiguity. However, it is not required in most cases unless dealing with multiple tables with overlapping column names. 
 
 * Right-click on the **DB object** > **Check All** to check all column checkboxes in the table and add them to the SELECT statement.
 
