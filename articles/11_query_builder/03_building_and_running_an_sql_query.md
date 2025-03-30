@@ -104,7 +104,7 @@ Each SQL statement, which is combined by the UNION operator, has a **Q** icon in
 
 * Right-click the **Q** icon to change the order of the SQL statements in the Union SQL query.
 
-3.  To remove the **Union SQL** query, do one of the following:\
+3.  To remove the **Union SQL** query, perform either one of the following actions:\
     a. Right-click the **Q** icon of the removed query and select **Remove**.\
     b. Right-click the **Main** window, select **Union > Remove**. 
 
