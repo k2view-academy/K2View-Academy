@@ -109,7 +109,7 @@ Each SQL statement, which is combined by the UNION operator, has a **Q** icon in
     b. Right-click the **Main** window, select **Union > Remove**. 
 
 ## Table of Selected Columns - Edit the SQL Statement
-This table displays underneath the Query Builder's Main window, and it enables editing the SQL query. Its selected columns hold the same information as the graphical map yet in a tabular format.
+This table is located underneath the Query Builder's Main window, and it enables editing the SQL query. Its selected columns hold the same information as the graphical map, yet in a tabular format.
 
 ### Adding an SQL Function to a DB Object Column 
 1.	Click on the **3 dots** in the **Expression** column for opening the **Expression Editor** window. 
@@ -126,12 +126,12 @@ This table displays underneath the Query Builder's Main window, and it enables e
 6.	Populate the **Criteria** and **Or** columns in order to add the DB object column to the WHERE statement of the SQL query.
 
 ## Query Settings Toolbar
-The **Enable Pre-Execution Commands** checkbox enables running commands on the selected DB before running the SQL query. When this checkbox is checked, the Pre-Execution Commands window opens.
+The **Enable Pre-Execution Commands** checkbox (located in the Query Settings toolbar) enables running commands on the selected DB before running the SQL query. When this checkbox is checked, the Pre-Execution Commands window opens.
 Note that when running the Query Builder on a Fabric interface, you should run the [Get Instance] command in the Pre-Execution Commands window, as the SQL query must run on an [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
 ![image](images/06_04.png)
 
-The **Max rows** setting defines the maximum number of rows that the SQL query can return, with a default of 10,000. This limit can be adjusted as needed.
+The **Max rows** setting determines the maximum number of rows that the SQL query can return, with a default of 10,000, which can be modified as required.
 
 </studio> 
 
