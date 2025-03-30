@@ -58,7 +58,7 @@ The following default SQL syntax appears in the Query Display pane - <pre><code>
 ![image](images/12_3_2%20Table%20Name.png)
 > Note: As you can see in the above image, the **[Table Name.]** before * is explicitly specified, which can be useful in JOIN statements to avoid ambiguity. However, it is not required in most cases unless dealing with multiple tables with overlapping column names. 
 
-* Right-click on the **DB object** > **Check All** to check all column checkboxes in the table and add them to the SELECT statement.
+* Right-click on the **DB object** > **Check All** to check all checkboxes of all columns in the table and add them to the SELECT statement.
 
 ![image](images/12_3_3%20SQL%20Query..png)
 
