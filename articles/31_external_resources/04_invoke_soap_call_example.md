@@ -8,6 +8,12 @@ On client side, SOAP processing starts by analyzing the WSDL (Web Services Descr
 
 In this article we explain the recommended SOAP implementation and best practices and provide an example that demonstrates the steps for working with SOAP.
 
+
+
+**Important NOTE: Since JDK 11 removed the built-in SOAP tools, you need to use external libraries for working with WSDL in Java.** The below steps and instructions are relevant to prior JDK. 
+
+
+
 ### Preparations
 
 Due to the complexity of WSDL, it is recommended to use ready-made Java code or libraries. Note that this supportive code is dedicated per web service and is not  generic.
