@@ -94,7 +94,7 @@ To add a JOIN operator to the SQL query, perform the following:
 
 ![image](images/06_01.PNG)
 
-Each SQL statement, which is combined by the UNION operator, has a **Q** icon in the **Main window**. Clicking the **Q** icon of each SQL statement opens it in the Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the Union query. 
+Each SQL statement, which is combined by the UNION operator, has a **Q** icon in the **Main window**. Clicking the **Q** icon of each SQL statement opens it in the Main window, where you can add DB objects and link them to each other in order to edit the SQL statement in the SQL query. 
 
 2. To modify the **Union query**, perform either one of the following actions:
 
@@ -102,7 +102,7 @@ Each SQL statement, which is combined by the UNION operator, has a **Q** icon in
 
 ![image](images/Union_type.png)
 
-* Right-click the **Q** icon to change the order of the SQL statements in the Union SQL query.
+* Right-click the **Q** icon to change the order of the SQL statements in the SQL query.
 
 3.  To remove the **Union SQL** query, perform either one of the following actions:\
     a. Right-click the **Q** icon of the removed query and select **Remove**.\
