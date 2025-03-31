@@ -159,7 +159,7 @@ While writing your SQL statement in the Query Editor window (top pane), you can 
 
 ### AI Assistant
 
-You can use the built-in AI Assistant for creating SQL statements, by entering your desired statement in natural language for the AI Assistant. To use the AI Assistant:
+You can use the built-in AI Assistant to create SQL statements by entering your desired statement in natural language for the AI Assistant. To use the AI Assistant:
 
 1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) at the upper-right corner of the Query Builder Editor pane.
 
