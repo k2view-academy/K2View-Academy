@@ -161,9 +161,9 @@ While writing your SQL statement in the Query Editor window (top pane), you can 
 
 You can use the built-in AI Assistant to create SQL statements by entering your desired statement in natural language for the AI Assistant. To use the AI Assistant:
 
-1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) at the upper-right corner of the Query Builder Editor pane.
+1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) at the upper-right corner of the Query Editor window.
 
-   The Editor screen is then split into two side-by-side editors: On the left - the SQL Editor, whereas on the right - the native language statements Editor. 
+   This pane is then split into two side-by-side editors: On the left - the SQL Editor, whereas on the right - the native language statements Editor. 
 
 2. Write your desired statement on the right-side editor.
 
