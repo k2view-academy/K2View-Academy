@@ -143,7 +143,7 @@ You can create and edit an SQL statement by either selecting the desired action 
 
 Adding a query to the Query Editor (top pane) using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
 
-In DB Interface Explorer, choose the required SQL statement by using the context menu (right-click) on the relevant tree entry. The available statements are: *select*, *insert*, *update* and *delete*.
+In the DB Interface Explorer Tree, right-click the relevant entry and select the required SQL statement from the context menu. The available statements include SELECT, INSERT, UPDATE and DELETE.
 
 You can choose either a table or specific table fields ensuring that the query includes only the chosen fields.
 
