@@ -5,7 +5,7 @@ Use the Query Builder to create SQL queries as shown below:
 <web>
 
 1. Open the Query Builder window, as described [here](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window) (remember to choose the interface you wish to query).
-2. Edit the SQL commands in the Query Editor window (top pane). 
+2. Edit the SQL commands in the Query Editor (top pane). 
 3. Click to execute the query. 
 4. The results are presented in a table view in the Results window.
 
@@ -141,7 +141,7 @@ You can create and edit an SQL statement by either selecting the desired action 
 
 ## Adding a Query using the Interface Explorer Tree
 
-Adding a query to the Query Editor window (top pane) using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
+Adding a query to the Query Editor (top pane) using the Interface Explorer Tree, is depended on its occurrence - at DB Interface Explorer, or when opened as a pop-up at Schema Editor, Graphit and Broadway.
 
 In DB Interface Explorer, choose the required SQL statement by using the context menu (right-click) on the relevant tree entry. The available statements are: *select*, *insert*, *update* and *delete*.
 
@@ -149,29 +149,29 @@ You can choose either a table or specific table fields ensuring that the query i
 
 ![](images/web/db_interface_explorer_select.gif)
 
-In the Query Builder pop-up window, you can hover over a table in the tree and click on the arrow that appears on its right. Once clicked, a SELECT statement from that table is added to the Query Editor window.
+In the Query Builder pop-up window, you can hover over a table in the tree and click on the arrow that appears on its right. Once clicked, a SELECT statement from that table is added to the Query Editor.
 
 ![](images/web/query_editor_popup.png)
 
 ## Writing an SQL statement
 
-While writing your SQL statement in the Query Editor window (top pane), you can be guided by 2 assistants:
+While writing your SQL statement in the Query Editor (top pane), you can be guided by 2 assistants:
 
 ### AI Assistant
 
 You can use the built-in AI Assistant to create SQL statements by entering your desired statement in natural language for the AI Assistant. To use the AI Assistant:
 
-1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) at the upper-right corner of the Query Editor window.
+1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) in the upper-right corner of the Query Editor.
 
-   This pane is then split into two side-by-side editors: On the left - the SQL Editor, whereas on the right - the native language statements Editor. 
+   This pane is then split into two side-by-side editors: On the left - the SQL Editor, whereas on the right - the natural language statements Editor. 
 
-2. Write your desired statement on the right-side editor.
+2. Write your desired statement in the right-side editor.
 
 3. Choose the relevant schemas that you would like the AI Assistant to look at, via the *Schema Filter* select list. This action aims to avoid an overburdening process. In case there is only a single schema DB, it is selected automatically.
 
    ![](images/web/03_ai_select_schema.png)
 
-   > In order to see the selected schema(s), you can simply mouse hoover over *Selected Schemas* (no need to reopen the select list). 
+   > In order to see the selected schema(s), you can simply hover over *Selected Schemas* without reopening the select list. 
    >
    > ![](images/web/03_ai_selected_schema.png) 
 
@@ -218,10 +218,10 @@ The Code Completion Assistant can also help you when looking for the standard SQ
 
 > **Notes and Tips**
 >
->  * Clearing the whole Query Editor window can be done by clicking on the Clear button.
->  * The Query Editor window can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
->  * If the Query Editor window contains several queries, and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
->  * You can add Fabric commands to the Query Editor window and they will also be executed. 
+>  * Clearing the whole Query Editor can be done by clicking on the Clear button.
+>  * The Query Editor can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
+>  * If the Query Editor contains several queries, and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
+>  * You can add Fabric commands to the Query Editor and they will also be executed. 
 >  * When Fabric is the selected data source interface, set the top bar fields prior to executing the query.
 
 
