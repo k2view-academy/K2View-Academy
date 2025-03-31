@@ -155,7 +155,7 @@ In the Query Builder pop-up window, you can hover over a table in the tree and c
 
 ## Writing an SQL statement
 
-While writing your SQL statement in the editor, you can be guided by 2 assistants:
+While writing your SQL statement in the Query Editor window (top pane), you can be guided by 2 assistants:
 
 ### AI Assistant
 
