@@ -83,17 +83,12 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
 <p>If there is a need to define a query per source environment, populate the source environment name and create a separate record for each Logical Unit and source_env_name combination. Otherwise, leave the source environment empty.</p>
         <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information on how to implement a Broadway flow to get the entities (populated in external_table_flow field of MigrateList table).</p>   
-  <p><strong>Example 1:</strong></p>
-  <ul><li>lu_name= ORDER</li>
-    <li>source_env_name = ENV1</li>
-    <li>interface_name = TDM</li>
-<li>ig_sql = Select lu_type2_eid from tdm_lu_type_relation_eid where lu_type_2 = &lsquo;ORDER&rsquo; and source_env = 'ENV1';</li></ul>
-  <p><strong>Example 2:</strong></p>
+   <p><strong>Example 1:</strong></p>
   <ul><li>lu_name= CUSTOMER</li>
     <li>source_env_name is empty</li>
     <li>interface_name = CRM_DB</li>
     <li>ig_sql = Select customer_id from customer limit 1000;</li></ul>
-    <p><strong>Example 3:</strong></p>
+    <p><strong>Example 2:</strong></p>
   	<ul><li>lu_name= CUSTOMER</li>
     <li>source_env_name is empty</li>
     <li>external_table_flow = getEntityListFlow</li>   
@@ -205,6 +200,7 @@ The following MTables have been added to the **References** in the TDM library. 
     </tr>    
 </tbody>
 </table>
+
 
 
 
@@ -398,11 +394,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
-- **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** - TDM relationship tables that map the parent to child IDs. Note that these tables are also created in the TDM DB.
-
-  Click for more information about [TDM Hierarchy implementation](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md).
-
-
+  
 
 ## TDM_TableLevel LU
 
