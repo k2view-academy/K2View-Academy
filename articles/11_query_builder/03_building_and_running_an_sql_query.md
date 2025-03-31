@@ -149,7 +149,7 @@ You can choose either a table or specific table fields ensuring that the query i
 
 ![](images/web/db_interface_explorer_select.gif)
 
-In the Query Builder pop-up window, you can hover over a table in the tree and click on the arrow that appears on its right. Once clicked, a "select *" statement from that table is added to the Query Builder Editor's editing board.
+In the Query Builder pop-up window, you can hover over a table in the tree and click on the arrow that appears on its right. Once clicked, a SELECT statement from that table is added to the Query Editor window.
 
 ![](images/web/query_editor_popup.png)
 
