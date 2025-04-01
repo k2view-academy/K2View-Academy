@@ -183,7 +183,7 @@ To use the AI Assistant:
 
    ![](images/web/03_ai_done.png)
 
-   The AI Assistant's explanations of how the SQL command was created can be viewed by clicking the question mark icon that then appears above the SQL Editor.
+   The AI Assistant's explanations of how the SQL statement was created can be viewed by clicking the question mark icon that then appears above the SQL Editor.
 
 
 
@@ -220,10 +220,10 @@ The Code Completion Assistant can also help you when looking for the standard SQ
 > **Notes and Tips**
 >
 >  * Clearing the whole Query Editor can be done by clicking on the Clear button.
->  * The Query Editor can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results window will show the results of the last query.
->  * If the Query Editor contains several queries, and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
+>  * The Query Editor can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results pane will show the results of the last query.
+>  * If the Query Editor contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
 >  * You can add Fabric commands to the Query Editor and they will also be executed. 
->  * When Fabric is the selected data source interface, set the top bar fields prior to executing the query.
+>  * When *fabric* is the selected data source interface, set the top bar fields prior to executing the query.
 
 
 
