@@ -145,7 +145,7 @@ In the Query Builder, adding an SQL statement to the Query Editor (top pane) can
 
 To add an SQL statement through the Interface Explorer Tree, right-click the relevant table or specific table fields ensuring that only the chosen fields are included. The available statements include SELECT, INSERT, UPDATE and DELETE.
 
-The Query Builder tool can be opened through the Interface Explorer view (as explained above and as can be watched below) as well as a pop-up window in the LU Schema, Graphit and Broadway.
+> Note: The Query Builder tool can be opened through the **Interface Explorer view** (as explained above and as can be watched below) as well as a pop-up window in the LU Schema, Graphit and Broadway.
 
 ![](images/web/db_interface_explorer_select.gif)
 
