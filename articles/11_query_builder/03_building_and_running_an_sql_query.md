@@ -155,11 +155,13 @@ In the Query Builder pop-up window, you can hover over a table in the tree and c
 
 ## Writing an SQL statement
 
-While writing your SQL statement in the Query Editor (top pane), you can be guided by 2 assistants:
+While writing your SQL statement in the Query Editor (top pane), you can be guided by 2 assistants - **AI Assistant** and **Code Completion Assistant**.
 
 ### AI Assistant
 
-You can use the built-in AI Assistant to create SQL statements by entering your desired statement in natural language for the AI Assistant. To use the AI Assistant:
+You can use the built-in AI Assistant to create SQL statements by entering your desired statement in natural language for the AI Assistant. 
+To activate the AI Assistant, install from the [Exchange](/articles/04_fabric_studio/28_web_k2exchange.md) one of the AI extensions (such as OpenAI, Anthropic, Gemini) and create an AI [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) based on it. 
+To use the AI Assistant:
 
 1. Click on the **AI** icon (<img src="images/web/ai-2-bw.png" />) in the upper-right corner of the Query Editor.
 
@@ -171,36 +173,35 @@ You can use the built-in AI Assistant to create SQL statements by entering your 
 
    ![](images/web/03_ai_select_schema.png)
 
-   > In order to see the selected schema(s), you can simply hover over *Selected Schemas* without reopening the select list. 
+   > In order to see the selected schema(s), you can simply hover over *Selected Schemas* without reopening the *Schema Filter* select list. 
    >
    > ![](images/web/03_ai_selected_schema.png) 
 
 4. Click on the `SQL ← Text` button.
 
-5. The query will then be generated and will appear in the SQL Editor.
+5. The query will then be generated and will appear in the SQL Editor (on the left).
 
    ![](images/web/03_ai_done.png)
 
-   You can see the AI Assistant's explanations, on how the SQL command was created, by clicking on the question mark icon that appears above the SQL Editor, once the Text to SQL generation process (`SQL ← Text`) has ended.
+   The AI Assistant's explanations of how the SQL command was created can be viewed by clicking the question mark icon that then appears above the SQL Editor.
 
 
 
 You can also activate the AI Assistant in the opposite direction, which would explain an existing SQL query in natural language. To do that, click on the `SQL → Text` button.
 
-When the AI Assistant is activated inside a DB select function, like in Broadway DB Query actors or in Graphit nodes, the natural language statement is saved as a comment alongside the SQL.
+When the AI Assistant is activated within a DB select function, such as in Broadway DB Query actors or Graphit nodes, the natural language statement is saved as a comment alongside the SQL statement.
 
 
 
 
-> Note: To activate the AI Assistant, install one of the AI extensions and create an interface upon.
 
 
 
-### Query Editor Code Completion Assistant 
+### Query Editor's Code Completion Assistant 
 
-While manually editing the SQL statements, you can be assisted by the Editor Assistant, which provides code completion suggestions. These completion suggestions are intended for schemas, tables, column names of the current interface, as well as set of base SQL clauses.
+While manually editing SQL statements, you can be assisted by the Code Completion Assistant, which provides code completion suggestions. These completion suggestions are intended for schemas, tables, column names of the current interface, as well as sets of basic SQL clauses.
 
-The Assistant code completion is done while typing and on hitting CTRL+SPACE, as used while code programming.
+To use it, press CTRL+SPACE, similar to code programming.
 
 A select list then opens, allowing you to choose the relevant statement.
 
