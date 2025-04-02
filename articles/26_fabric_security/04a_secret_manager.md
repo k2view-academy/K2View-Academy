@@ -2,14 +2,14 @@
 
 Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. An example for secrets is passwords that are used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about secured storage of secrets in Fabric.
 
-Secrets Management services are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
+**Secrets Management services** are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
 
 The advantages of Secrets Management are: 
 
 - Reducing the risk of secret leaks when providing a secret for each client application.
 - Having a single source of truth, which can be better controlled, changed or rotated, manually or automatically.
-- Managing accesses to secrets with fine-grained authorization policies.
-- Detecting security breaches and attempted accesses to systems, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
+- Managing access to secrets with fine-grained authorization policies.
+- Detecting security breaches and attempted system access, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
 Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
 
