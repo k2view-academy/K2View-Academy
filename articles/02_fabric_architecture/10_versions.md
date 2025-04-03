@@ -23,8 +23,8 @@ The below table displays the list of Fabric versions with their release informat
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.0.pdf">8.2.0</a></td>
             <td>February 05, 2025</td>
-            <td></td>
-            <td></td>
+            <td>April 03, 2025</td>
+            <td>HF1</td>
             <td>236</td>
             <td></td>
         </tr>
@@ -33,7 +33,7 @@ The below table displays the list of Fabric versions with their release informat
             <td>March 25, 2025</td>
             <td></td>
             <td></td>
-            <td>7</td>
+            <td>9</td>
             <td></td>
         </tr>
         <tr>
