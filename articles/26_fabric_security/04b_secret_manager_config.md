@@ -18,7 +18,7 @@ The following are the required config.ini file properties for each Secrets Manag
 
 **Section name**: [encryption_aws_sm]
 
-**properties**:
+**Properties**:
 
 * ENABLED=true
 * REGION
@@ -43,7 +43,7 @@ The following are the required config.ini file properties for each Secrets Manag
 
 **Optional properties:**
 
-* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide an isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information about namespaces.
+* NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information about namespaces.
 
 **Authentication** is done by either tokens that can be used directly or using one of HashiCorp's other [auth methods](https://developer.hashicorp.com/vault/docs/concepts/auth), in which case the token is dynamically generated.
 
@@ -154,11 +154,11 @@ TIMEOUT - default is 10000 ms.
 
 ## Multi Secrets Management Providers and Instances Support
 
-You can use several secrets management services on the same Fabric by setting and activating them at the config.ini.
+You can use several secrets management services on the same Fabric by setting and activating them in the config.ini file.
 
 ### Multi Secrets Management Providers
 
-Different secrets management providers might be used by your organization, where data resources credentials are set in different providers. Fabric then is required to access different providers' services to acquire the secrets.  
+Different secrets management providers may be used by your organization, where data resources credentials are set in different providers. Fabric then is required to access different providers' services to acquire the secrets.  
 
 To use it: 
 
