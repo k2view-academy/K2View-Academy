@@ -1,6 +1,8 @@
 # **Secrets Management Integration** 
 
-Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. An example for secrets is passwords that are used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about secured storage of secrets in Fabric.
+A **secret**, such as a password, is considered sensitive data, and it is used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Hence, secrets should be protected and suitably stored. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about secured storage of secrets in Fabric.
+
+Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself.
 
 **Secrets Management services** are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
 
@@ -11,9 +13,9 @@ The advantages of Secrets Management are:
 - Managing access to secrets with fine-grained authorization policies.
 - Detecting security breaches and attempted system access, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
-Fabric supports integration with various external Secrets Management providers, in which case Fabric does not store the secrets but rather their reference IDs. 
+Fabric supports integration with various external Secrets Management services, in which case Fabric does not store the secrets but rather their reference IDs. 
 
-These are the currently supported Secrets Management providers, along with their official webpages: 
+These are Fabric's currently supported Secrets Management service providers, along with their official webpages: 
 
 - AWS Secret Manager - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
 - HashiCorp Vault - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management) [![link out](images/link-out-blue.png)](https://www.hashicorp.com/products/vault/secrets-management)
@@ -28,10 +30,10 @@ These are the currently supported Secrets Management providers, along with their
 
 1. The customer's security team administrator creates a set of credentials on either a database or a similarly secured resource server, and then provisions them as secrets in the Secrets Management provider. The latter encrypts and stores the credentials within the secrets.
 2. The administrator has to grant Fabric (client application) with permissions to approach these secrets.
-3. When Fabric opens a connection in order to access the database/resource server via an interface, it examines whether its credentials are defined as reference IDs in the external Secrets Management provider. If they are defined as such, Fabric queries the Secrets Management provider for the relevant secrets. 
-4. The Secrets Management provider decrypts and returns the secrets to Fabric over a secured channel.
+3. When Fabric opens a connection in order to access the database/resource server via an interface, it examines whether its credentials are defined as reference IDs in an external Secrets Management service. If they are defined as such, Fabric queries the Secrets Management service to retrieve the relevant secrets. 
+4. The Secrets Management service decrypts and returns the secrets to Fabric over a secured channel.
 5. Fabric uses the secrets as the resource server credentials, as defined in the interface.
-6. Fabric caches the credentials in memory. If the connection to a resource server fails due to credentials, Fabric assumes that the credentials were changed, and it accesses the Secrets Management provider again for getting them.
+6. Fabric caches the credentials in memory. If the connection to a resource server fails due to credentials, Fabric assumes that the credentials were changed, and therefore accesses the Secrets Management service again for the purpose of retrieving them.
 
 
 
