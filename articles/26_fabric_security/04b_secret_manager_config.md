@@ -1,4 +1,4 @@
-# Secrets Management Integration: Configuration
+# Integration of Secrets Management Services - Configuration
 
 Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. 
 
