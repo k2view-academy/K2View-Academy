@@ -22,9 +22,9 @@ When using Fabric for storing environment secrets, there are 3 optional encrypti
 
 2. **Assigned Environment without a keystore** - this option is similar to the previous #1 method, where the master key is set without a keystore protection.
 
-3. **Unassigned Environment** - this option does not encrypt the interface secrets by environment, and shall be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
+3. **Unassigned Environment** - this option does not encrypt the interface secrets by environment, and should be used in case Fabric servers for the environments are not yet running and thus cannot use their master key. 
 
-   The secrets encryption is done by using a code-based mechanism and thus can be used among all Fabric environments. 
+   Secret encryption is done by using a code-based mechanism and thus can be used among all Fabric environments. 
 
 
 
