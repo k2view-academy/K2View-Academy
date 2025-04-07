@@ -28,7 +28,7 @@ These are Fabric's currently supported Secrets Management service providers, alo
 
 ## How does it Work
 
-1. The customer's security team administrator creates a set of credentials on either a database or a similarly secured resource server, and then provisions them as secrets in the Secrets Management provider. The latter encrypts and stores the credentials within the secrets.
+1. The customer's security team administrator creates a set of credentials on either a database or a similarly secured resource server, and then provisions them as secrets in the Secrets Management service. The latter encrypts and stores the credentials within the secrets.
 2. The administrator has to grant Fabric (client application) with permissions to approach these secrets.
 3. When Fabric opens a connection in order to access the database/resource server via an interface, it examines whether its credentials are defined as reference IDs in an external Secrets Management service. If they are defined as such, Fabric queries the Secrets Management service to retrieve the relevant secrets. 
 4. The Secrets Management service decrypts and returns the secrets to Fabric over a secured channel.
@@ -39,10 +39,10 @@ These are Fabric's currently supported Secrets Management service providers, alo
 
 ## Using Secrets Management Services
 
-In order to use a Secrets Management provider, you should:
+In order to use a Secrets Management service, you should configure and set Fabric using the following 2 components:
 
-1. **config.ini**, Set the configuration in the config.ini file with the selected Secrets Management provider, along with access and permission details. Read [here](/articles/26_fabric_security/04b_secret_manager_config.md) for more details.
-2. **Interface Editor**, Provision and mark the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings. Read [here](/articles/26_fabric_security/04c_secret_manager_interface.md) for more details.
+1. **config.ini**. Set the configuration in the config.ini file with the selected Secrets Management service’s attributes, along with access and permission details. Read [here](/articles/26_fabric_security/04b_secret_manager_config.md) for more details.
+2. **Interface Editor**. Provision and mark the required interface connection details as those that should be taken from the Secrets Management service, as part of the project's implementation settings. Read [here](/articles/26_fabric_security/04c_secret_manager_interface.md) for more details.
 
 
 
