@@ -1,4 +1,4 @@
-<strong>Fabric Architecture<strong>
+<strong>Fabric Server Architecture<strong>
         
 <ul>
         <li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
@@ -7,8 +7,5 @@
         <li><a href="/articles/02_fabric_architecture/04_fabric_commands.md">Fabric Commands</a></li>
         <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric - Main Configuration Files</a></li>
         <li><a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Fabric System Database</a></li>
-        <li><a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md">Cassandra Basic Commands</a></li>
-        <li><a href="/articles/02_fabric_architecture/08_kafka_basic_commands.md">Kafka Basic Commands</a></li>
-		<li><a href="/articles/02_fabric_architecture/09_AWS_keyspaces.md">AWS Keyspaces Limitations & Troubleshooting</a></li>
 </ul>
 
