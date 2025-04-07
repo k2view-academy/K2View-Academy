@@ -150,7 +150,7 @@
 			]
 		},
 		{
-			"group display name": "Implementation",
+			"group display name": "Fabric Implementation",
 			"group icon": "images/implementation-icon.png",
 			"visible in main": true,
 			"topics": [
@@ -307,7 +307,7 @@
 					"value": "39_fabric_catalog"
 				},
 				{
-					"display name": "Catalog Plugins",
+					"display name": "Catalog Build-in Plugins",
 					"value": "39_fabric_catalog/plugins"
 				}
 			]
@@ -357,16 +357,16 @@
 		},
 		{
 			"KB display name": "Product Versions",
-			"KB display text": "List of Fabric, ADI and TDM available versions.",
+			"KB display text": "List of Fabric, ADI and TDM available versions, including the release date and number.",
 			"KB icon": "images/icon-demo.png",
 			"link": "Academy/articles/Product_Versions/README.html",
 			"visible": true
 		},
 		{
-			"KB display name": "Installation & Maintenance",
-			"KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
+			"KB display name": "Administration & Operations",
+			"KB display text": "Administration & operations documents, including technical notes and various system requirements.",
 			"KB icon": "images/icon-maintenance.png",
-			"link": "Academy/articles/98_maintenance_and_operational/README.html",
+			"link": "Academy/articles/44_administration_and_operations/README.html",
 			"visible": true
 		},
 		{

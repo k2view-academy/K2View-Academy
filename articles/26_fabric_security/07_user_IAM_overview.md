@@ -104,4 +104,4 @@ For more information about Fabric Security refer to these articles:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)
