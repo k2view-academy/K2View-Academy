@@ -1,6 +1,6 @@
 # Integrating Secrets Management Services - Configuration
 
-Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. 
+Fabric supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself. 
 
 In order to integrate any one of Fabric’s currently supported Secrets Management services, you should configure the config.ini file with the selected Secrets Management service’s properties, along with access and permission details.
 
@@ -152,18 +152,18 @@ TIMEOUT - default is 10000 ms.
 
 
 
-## Multi Secrets Management Providers and Instances Support
+## Multi Secrets Management Services and Instances Support
 
-You can use several secrets management services on the same Fabric by setting and activating them in the config.ini file.
+You can use several Secrets Management services on the same Fabric by setting and activating them in the config.ini file.
 
-### Multi Secrets Management Providers
+### Multi Secrets Management Service Systems
 
-Different secrets management providers may be used by your organization, where data resources credentials are set in different providers. Fabric then is required to access different providers' services to acquire the secrets.  
+There may be various systems that provide Secrets Management services for your organization, where data resource credentials are set across different providers. In such cases, Fabric is required to access each one of them to obtain the secrets.  
 
 To use it: 
 
-1. Set the required providers properties at their relevant sections in the config.in.
-2. set ENABLED property's value to be "true", to activate it.
+1. Set the properties of the required Secrets Management services in their relevant sections in the config.in file.
+2. Set the 'ENABLED' property to 'true' to activate the Secrets Management service.
 
 Note that in the Interface Editor you can specify, per secret, which secret manager provider to use. If you do not specify, then Fabric will try find the secrets in each of the activated providers (according to their appearance in the config.ini file). 
 
