@@ -356,10 +356,10 @@
 			"visible": true
 		},
 		{
-			"KB display name": "Demo Projects",
-			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM including the setup guidelines.",
+			"KB display name": "Product Versions",
+			"KB display text": "List of Fabric, ADI and TDM available versions.",
 			"KB icon": "images/icon-demo.png",
-			"link": "Academy/articles/demo_project/README.html",
+			"link": "Academy/articles/Product_Versions/README.html",
 			"visible": true
 		},
 		{
