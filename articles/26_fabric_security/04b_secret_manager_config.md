@@ -135,7 +135,7 @@ Fabric supports 2 authentication methods:
 
 
 
-### OneIdentity Safeguard
+### One Identity Safeguard
 
 **Section name**: [encryption_safeguard_sm]
 
