@@ -17,7 +17,7 @@ Fabric supports integration with various external Secrets Management services, i
 
 These are Fabric's currently supported Secrets Management service providers, along with their official webpages: 
 
-- AWS Secret Manager - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
+- AWS Secrets Manager - [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
 - HashiCorp Vault - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management) [![link out](images/link-out-blue.png)](https://www.hashicorp.com/products/vault/secrets-management)
 - Azure Key Vault - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) [![link out](images/link-out-blue.png)](https://azure.microsoft.com/en-us/products/key-vault/)
 - CyberArk CCP - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)  [![link out](images/link-out-blue.png)](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
