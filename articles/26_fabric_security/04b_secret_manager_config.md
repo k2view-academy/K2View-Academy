@@ -12,7 +12,7 @@ In addition to populating these details, you **must** also activate that selecte
 
 ## Configuration Settings
 
-The following are the required config.ini file properties for each Secrets Management provider:
+The following are the required config.ini file properties for each Secrets Management service provider:
 
 ### AWS Secrets Manager
 
@@ -28,7 +28,7 @@ The following are the required config.ini file properties for each Secrets Manag
 * ACCESS_KEY_ID
 * SECRET_ACCESS_KEY
 
- The authentication can be done also by the service account, which the server is associated with. This is an alternative to using an Access ID and an Access Key.
+ The authentication can also be done by the service account, which the server is associated with. This is an alternative to using an Access ID and an Access Key.
 
 
 
@@ -36,12 +36,12 @@ The following are the required config.ini file properties for each Secrets Manag
 
 **Section name**: [encryption_hashicorp_sm]
 
-**Properties**
+**Properties**:
 
 * ENABLED=true
 * URL - the Vault API endpoint for getting the secrets.
 
-**Optional properties:**
+**Optional Properties**:
 
 * NAMESPACE - a secure multi-tenancy capability within Vault as a means to provide isolation among teams in the organization. Read [here](https://developer.hashicorp.com/vault/tutorials/enterprise/namespaces) for more information about namespaces.
 
@@ -51,7 +51,7 @@ Fabric supports 2 authentication methods:
 
 * Directly - where AUTH_TOKEN property should be set.
 
-  When using this method, Fabric accesses the Vault URL with the token as the auth credentials in order to get the secret.
+  When using this method, Fabric accesses the Vault URL with the token as auth credentials to get the secret.
 
 * [AppRole](https://developer.hashicorp.com/vault/docs/auth/approle) - which is based on the role that Fabric is associated to in the Vault.
 
@@ -67,12 +67,12 @@ Fabric supports 2 authentication methods:
 
 **Section name**: [encryption_azure_sm]
 
-**Properties**
+**Properties**:
 
 - ENABLED=true
 - KEY_VAULT_NAME
 
-**Optional properties:**
+**Optional Properties**:
 
 * ENDPOINT_TEMPLATE - its default value is https://{key_vault_name}.vault.azure.net, where Fabric uses it according to the key vault name.
 
@@ -89,13 +89,13 @@ Fabric supports 2 authentication methods:
 
 **Section name**: [encryption_cyberark_sm]
 
-**Properties:**
+**Properties**:
 
 * ENABLED=true
 * SERVER_IP - to be used in the URL parameter.
 * URL - expected format is https://{SERVER_IP}/AIMWebService/api/Accounts.
 
-**Optional properties:**
+**Optional Properties**:
 
 * APP_ID - can be set in the config.ini file as well as in the interface, for more granularity, when needed.
 * FOLDER - default is Root; this parameter can be specified or overridden per each secret.
@@ -139,12 +139,12 @@ Fabric supports 2 authentication methods:
 
 **Section name**: [encryption_safeguard_sm]
 
-**Properties:**
+**Properties**:
 
 * ENABLED=true
 * HOST - this is the Safeguard host, used for all API calls. 
 
-**Optional Properties:**
+**Optional Properties**:
 
 TIMEOUT - default is 10000 ms.
 
