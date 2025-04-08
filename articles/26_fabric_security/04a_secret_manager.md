@@ -2,7 +2,7 @@
 
 A **secret**, such as a password, is considered sensitive data, and it is used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Hence, secrets should be protected and suitably stored. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about secured storage of secrets in Fabric.
 
-Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself.
+Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are.
 
 **Secrets Management services** are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
 
@@ -13,7 +13,6 @@ The advantages of Secrets Management services are:
 - Managing access to secrets with fine-grained authorization policies.
 - Detecting security breaches and attempted system access, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
-Fabric supports integration with various external Secrets Management services, in which case Fabric does not store the secrets but rather their reference IDs. 
 
 These are Fabric's currently supported Secrets Management service providers, along with their official webpages: 
 
@@ -22,7 +21,7 @@ These are Fabric's currently supported Secrets Management service providers, alo
 - Azure Key Vault - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) [![link out](images/link-out-blue.png)](https://azure.microsoft.com/en-us/products/key-vault/)
 - CyberArk CCP - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)  [![link out](images/link-out-blue.png)](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
 - Google Cloud Secret Manager - [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager) [![link out](images/link-out-blue.png)](https://cloud.google.com/security/products/secret-manager)
-- OneIdentity Safeguard - [OneIdentity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/) [![link out](images/link-out-blue.png)](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
+- One Identity Safeguard - [One Identity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/) [![link out](images/link-out-blue.png)](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
 
 
 
