@@ -165,11 +165,11 @@ To use it:
 1. Set the properties of the required Secrets Management services in their relevant sections in the config.in file.
 2. Set the 'ENABLED' property to 'true' to activate the Secrets Management service.
 
-Note that in the Interface Editor you can specify, per secret, which secret manager provider to use. If you do not specify, then Fabric will try find the secrets in each of the activated providers (according to their appearance in the config.ini file). 
+Note that in the Interface Editor you can specify, per secret, which Secrets Management service to use. If you do not specify it, then Fabric will try find the secrets in each of the activated services (according to their appearance in the config.ini file). 
 
 ### Multi Secrets Management Instances
 
-Different secrets management service instances may be used in your organization. For example, a TDM production DB resource secrets are managed at the production's secrets manager service, while the DB target resource secrets are managed by another secrets manager service instance, even though they are on same provider.
+Different Secrets Management Service instances may be used in your organization. For example, a TDM production DB resource secrets are managed at the production's secrets manager service, while the DB target resource secrets are managed by another secrets manager service instance, even though they are on same provider.
 
 To use it:
 
