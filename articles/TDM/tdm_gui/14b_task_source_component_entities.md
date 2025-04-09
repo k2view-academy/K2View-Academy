@@ -8,7 +8,7 @@ The following information needs to be set for the *Entities & referential data* 
 
 ### Business Entity
 
-This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list that contains all TDM BEs. The **Advanced** setting is **optional** and it enables either a partial selection of the systems or/and the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
+This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list that contains all TDM BEs. The **Advanced** setting is **optional** and it enables either a partial selection of the systems and/or the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
 
 
 
