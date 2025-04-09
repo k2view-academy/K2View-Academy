@@ -2,27 +2,26 @@
 
 A **secret**, such as a password, is considered sensitive data, and it is used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Hence, secrets should be protected and suitably stored. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about secured storage of secrets in Fabric.
 
-Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself.
+Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are.
 
 **Secrets Management services** are tools that aim to securely store, manage, access and audit sensitive information such as passwords, API keys and other credentials, across the organization. The features included in Secrets Management services are encryption, access controls, auditing and automatic rotation of secrets.
 
-The advantages of Secrets Management services are: 
+Key advantages of Secrets Management services are: 
 
 - Reducing the risk of secret leaks when providing a secret for each client application.
 - Having a single source of truth, which can be better controlled, changed or rotated, manually or automatically.
 - Managing access to secrets with fine-grained authorization policies.
 - Detecting security breaches and attempted system access, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
-Fabric supports integration with various external Secrets Management services, in which case Fabric does not store the secrets but rather their reference IDs. 
 
 These are Fabric's currently supported Secrets Management service providers, along with their official webpages: 
 
-- AWS Secret Manager - [AWS Secret Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
+- AWS Secrets Manager - [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
 - HashiCorp Vault - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management) [![link out](images/link-out-blue.png)](https://www.hashicorp.com/products/vault/secrets-management)
 - Azure Key Vault - [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) [![link out](images/link-out-blue.png)](https://azure.microsoft.com/en-us/products/key-vault/)
 - CyberArk CCP - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)  [![link out](images/link-out-blue.png)](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
 - Google Cloud Secret Manager - [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager) [![link out](images/link-out-blue.png)](https://cloud.google.com/security/products/secret-manager)
-- OneIdentity Safeguard - [OneIdentity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/) [![link out](images/link-out-blue.png)](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
+- One Identity Safeguard - [One Identity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/) [![link out](images/link-out-blue.png)](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
 
 
 
@@ -41,7 +40,7 @@ These are Fabric's currently supported Secrets Management service providers, alo
 
 In order to use a Secrets Management service, you should configure and set Fabric using the following 2 components:
 
-1. **config.ini**. Set the configuration in the config.ini file with the selected Secrets Management service’s attributes, along with access and permission details. Read [here](/articles/26_fabric_security/04b_secret_manager_config.md) for more details.
+1. **config.ini**. Set the configuration in the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details. Read [here](/articles/26_fabric_security/04b_secret_manager_config.md) for more details.
 2. **Interface Editor**. Provision and mark the required interface connection details as those that should be taken from the Secrets Management service, as part of the project's implementation settings. Read [here](/articles/26_fabric_security/04c_secret_manager_interface.md) for more details.
 
 
