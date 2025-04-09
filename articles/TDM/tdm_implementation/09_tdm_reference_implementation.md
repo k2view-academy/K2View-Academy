@@ -77,6 +77,11 @@ Import and deploy the TDM_TableLevel LU.
 
 - **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
+Note that from TDM 9.3.1 onwards, the schema_name and target_schema_name fields can be populated either with:
+
+- Schema name
+- Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
@@ -140,7 +145,10 @@ A customized flow can be added to a table's extract, load or delete processes. T
 The following settings should be populated for each record:
 
 - **interface_name** - the interface name defined in the TDM project implementation. 
-- **schema_name** - the DB schema.
+- **schema_name** - the DB schema. Can be populated either with:
+  - Schema name
+  - From TDM 9.3.1 onwards, the schema name can be populated with Global name as well. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+
 - **table_name** - populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** - populated with the customized extract flow.
 - **table_order** - populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
@@ -149,15 +157,15 @@ The following settings should be populated for each record:
 
 
 
-### Supporting Table-Level Tasks on BigQuery - Update TableLevelDefinitions MTable 
+### Supporting Table-Level Tasks Using Connectors - Update TableLevelDefinitions MTable 
 
-- Add a new record to the TableLevelDefinitions MTable after installing the **BigQuery** connector extension in order to support table-level tasks based on the BigQuery connector:
-  - **interface_name** - populate this field with the BugQuery interface name.
-  - **extract_flow** - populate this field with **BQTableLevelExtractByQuery** or **BQTableLevelExtractByStorage**.
-  - **delete_flow** - populate  this field with **BQTableLevelDelete**.
-  - **load_flow** - populate this field with **BQTableLevelLoadByStorage**.
+- Add a new record to the TableLevelDefinitions MTable after installing the connector extension, e.g. **BigQuery** in order to support table-level tasks based on the connector:
+  - **interface_name** - populate this field with the connector's interface name.
+  - **extract_flow** - populate this field with the connector's extract flow. 
+  - **delete_flow** - populate  this field with the connector's delete flow.
+  - **load_flow** - populate this field with the connector's load flow.
 
-For more information, read the BigQuery extention Readme file. 
+For more information about each connector, read the connector's Readme file. 
 
 ### Customized Table's Flows - Implementation Guidelines
 
