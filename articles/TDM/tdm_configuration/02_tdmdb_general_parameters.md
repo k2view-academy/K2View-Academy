@@ -44,7 +44,7 @@ The maximum number of days for the entity reservation is set in the **MAX_RESERV
 
 The maximum number of days that a tester can set to a retention period in the task is defined in the **MAX_RETENTION_DAYS_FOR_TESTER** parameter; the default value is 90 (90 days). Note that the validation is not set if the user sets the retention period to **Do not Delete**.
 
-## Restricting Testers from Removing Systems and LUs from a Task 
+## Restriction of Testers from Removing Systems and LUs from a Task 
 A new parameter has been added in TDM 9.3.1: **ENABLE_TASK_LU_EDITING_FOR_TESTERS**. This parameter indicates if a tester can [remove Systems or LUs from the task](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#advanced-be---systems--logical-units-tab). Set this parameter to **true** in order to restrict testers from removing systems and LUs from a task. The task LUs will be set based on the task’s Business Entity (BE) and environments. 
 
 ## Data Generation Parameters
