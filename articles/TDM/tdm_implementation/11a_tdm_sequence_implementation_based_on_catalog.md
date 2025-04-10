@@ -4,9 +4,9 @@ Fabric V8.2 has added the [Sequences tab](/articles/39_fabric_catalog/10_catalog
 
 ## Catalog-based Sequence Implementation Steps
 
-### I. Catalog - Populating the Sequence Tab
+### I. Catalog - Populating the Sequences Tab
 
-Adding the Sequence classification to sequence tab and setting the data generator for each sequence. 
+Adding the Sequence classification to the Sequences tab and setting the data generator for each sequence. 
 
 Click [here](/articles/39_fabric_catalog/10_catalog_settings.md#sequences-tab) for instructions.
 
@@ -20,7 +20,7 @@ Click [here](/articles/39_fabric_catalog/10_catalog_settings.md#sequences-tab) f
 
 - Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to regenerate the load and rule-based data generation flows.
 
-- Add the following Global on each LU for which the sequences should be populated by the Catalog: **TDM_USING_CATALOG_SEQUENCES**. Set the Global to **true**. 
+- Add the **TDM_USING_CATALOG_SEQUENCES** Global on each LU for which the sequences should be populated by the Catalog. Set this Global to **true**. 
 
   
 
