@@ -26,7 +26,9 @@ Click [here](/articles/39_fabric_catalog/10_catalog_settings.md#sequences-tab) f
 
 ### Optional - Overriding the Catalog's Sequence Logic
 
-Edit the flows to override the Catalog sequence logic for some of the ID fields: Add [Data Generation Actors](/articles/19_Broadway/actors/07a_data_generators_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+Edit the flows to override the Catalog sequence logic for some of the ID fields: 
+
+Add [Data Generation Actors](/articles/19_Broadway/actors/07a_data_generators_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
 
 Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor. 
 
