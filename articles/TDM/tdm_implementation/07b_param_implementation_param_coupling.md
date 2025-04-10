@@ -8,10 +8,10 @@
 - Verify that the **linked fields** in the LU tables have **identical data types**. The linked fields must have identical data types in order to support the [MDB export](/articles/02_fabric_architecture/04_fabric_commands.md#mdb-export--import) of the LU schema into the TDM DB.
 
 ### FK creation on the TDM DB
-  - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table and that **all**
- the **parent** LU table's **PK/unique index fields** are linked to the child LU table in order to enable the creation of an FK in the child table.
- -  However, sometimes the parent-child link is not made on the parent table's unique field, e.g. Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the contact_id is linked to the Contact table. TDM 9.3.1 has added a new mode to support the schema's export without the creation of FKs to support these cases:
-    - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global can be set to **false** (the default is **true**) in order to prevent the FK creation on the LU's export.    
+  - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table, and that **all
+ parent** LU table's **PK/unique index fields** are linked to the child LU table as a way to enable the creation of an FK in the child table.
+ -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitates such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
+    - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.    
 
 ## Optional - Adding Parameters to a Logical Unit
 
@@ -31,7 +31,7 @@
 
 - If you have calculated parameters such as number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-be-filtered-out)  actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
 
-- Verify that all the LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add a FK to tables when they are exported to the TDM DB.
+- Verify that all LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add an FK to tables when they are exported to the TDM DB.
 - Note that the MDB export does not support multiple populations with different links to parent tables. The LU tables in LuParamsMapping must have one link to a parent LU table.
 
 
@@ -40,7 +40,7 @@
 
 ### Export the LU Tables into the TDM DB
 
-The TDM extract task execution exports the LU tables to the TDM DB. A dedicated schema is created for each LU. An FK is created for each parent/child link between tables. The following tables are exported into the TDM DB:
+The TDM extract task execution exports LU tables to the TDM DB. A dedicated schema is created for each LU. An FK is created for each parent/child link between tables. The following tables are exported into the TDM DB:
 
 - FABRIC_TDM_ROOT - the entire table is exported.
 - TDM_BE_IIDS - the entire table is exported.
@@ -52,7 +52,7 @@ The TDM extract task execution exports the LU tables to the TDM DB. A dedicated 
     - Address is linked to Customer via the customer_id,
     - Address.state is mapped as a parameter. 
     - All 3 tables are exported. 
-    - Customer table  - the customer_id is exported.
+    - Customer table - the customer_id is exported.
     - Address table - the customer_id, address_id, and state fields are exported.
 
 - The exported tables are used for the following:
