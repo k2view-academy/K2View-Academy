@@ -10,12 +10,12 @@ This document describes the installation guidelines and the initial configuratio
 
 The following components must be installed as a prerequisite:
 
-- **Fabric Server** - TDM 9.3 works with Fabric 8.2.x and above. Read [here](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md).
+- **Fabric Server** - TDM 9.3.x works with Fabric 8.2.x and above. Read [here](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md).
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. PostgreSQL v15 or v17 versions are certified. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
 
 #### Docker Installation 
 
-Click here to open the [TDM 9.3 Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V9.3.md).
+Click here to open the [TDM 9.3.x Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V9.3.md).
 
 ### Import the TDM Library
 
@@ -26,7 +26,7 @@ Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for inst
 
 ### TDM Web Application
 
-Import the updated TDM LU to the Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web subfolder) into the TDM LU. The deployment of the TDM LU also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
+Import the updated TDM LU to the Fabric project and deploy it to Fabric. Use the *Import All* option to import the TDM Portal (self-service) code (stored in the web subfolder) into the TDM LU. The TDM LU's deployment also deploys the TDM Portal to Fabric and adds it to the web applications in your Fabric web framework.
 
 Click for more information about [Fabric Web Framework](/articles/30_web_framework/01_web_framework_overview.md).
 
