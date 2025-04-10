@@ -347,6 +347,9 @@
 			]
 		}
 	],
+	"RN": {
+		"folder":"Release_Notes"
+	},
 	"KB": [
 		{
 			"KB display name": "Product Release Notes",
