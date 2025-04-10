@@ -23,7 +23,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 ## Step 2 - Create Sequences
 
-Replacing the loaded IDs (sequences) may be required when populating a target database as a way to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
+It may be required to replacing the loaded IDs (sequences) when populating a target database as a way to avoid collision with existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
 
 Fabric V8.2 has added the [Catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). The following section describes two sequence handling implementation methods:
 
