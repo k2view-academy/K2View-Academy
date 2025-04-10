@@ -361,14 +361,14 @@
 		{
 			"KB display name": "Product Versions",
 			"KB display text": "List of Fabric, ADI and TDM available versions, including the release date and number.",
-			"KB icon": "images/pproduct_version_icon.png",
+			"KB icon": "images/product_version_icon.png",
 			"link": "Academy/articles/Product_Versions/README.html",
 			"visible": true
 		},
 		{
 			"KB display name": "Administration & Operations",
 			"KB display text": "Administration & operations documents, including technical notes and various system requirements.",
-			"KB icon": "images/administartion_icon.png",
+			"KB icon": "images/administration_icon.png",
 			"link": "Academy/articles/44_administration_and_operations/README.html",
 			"visible": true
 		},
