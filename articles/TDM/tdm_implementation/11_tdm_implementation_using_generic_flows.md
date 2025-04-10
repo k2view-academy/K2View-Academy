@@ -83,15 +83,15 @@ II. **createAllFromTemplates** flow. This flow:
   - Load flows: LoadFlows
   - Delete flows: DeleteFlows
 
-- From TDM 8.1 onwards, the generated delete flows do not require a manual update of the Get Table Data SQL query and the Delete key.
+- From TDM 8.1 onwards, the generated delete flows do not require a manual updating of the Get Table Data SQL query and the Delete key.
 
 ###  Load and Delete Flows
 
-The createAllFromTemplates creates a separate flow per table on each type - load and delete. Moreover, it creates a *load all flow* to run all table-level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
+The createAllFromTemplates creates a separate flow per table on each type - load and delete. Moreover, it creates a *load all* flow to run all table-level load flows in the right order, and a *delete all* flow to run all table-level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
-From TDM 9.3.1 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
+From TDM 9.3.1 onwards, the **CatalogMaskingMapper** Actor is added to the load flows as a way to enable [Catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
 
 Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_Actor** to the load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key with the target entity ID. 
 
