@@ -167,9 +167,9 @@ The following settings should be populated for each record:
 
 For more information about each connector, read the connector's Readme file. 
 
-### Customized Table's Flows - Implementation Guidelines
+### Customized Table Flows - Implementation Guidelines
 
-The customized table's flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
+The customized table flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
 
 #### Extract Flow
 
@@ -177,13 +177,14 @@ The customized table's flows are Broadway flows. These flows must be added under
 
 ##### Customized Masking Logic
 
-The Catalog masking actor is invoked **after** the extract flow execution. Do the following for the pupose of setting customized masking logic on the table:
+The Catalog masking actor is invoked **after** the extract flow execution. 
 
+Setting customized masking logic on tables:
 - If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking them.
-- Sometimes, the customized masking logic is based on the Catalog masking, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking in the extract flow, do the following: 
+- Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking actor in the extract flow, proceed as follows: 
   - Add the **CatalogMaskingMapper** actor to the extract flow. 
-  - Add the customized masking actors to the extract flow after the CatalogMaskingMapper actor.
-  - Set the **enable_masking** to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
+  - Add the customized masking actors to the extract flow to be envoked after the CatalogMaskingMapper actor.
+  - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
 
 ##### Customized Extract Flow - Example
 
@@ -206,7 +207,7 @@ See the loop on the selected address records:
 #### Load Flow
 
 - The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) to get the load flow template and customize the load logic.
-- Note that if you use **Fabric 8.1.6 and above**, you must manually add the following input parameter to the DbCommand/DbLoad actors: **__active_environment**. Set this parameter to be a Const and populate it with any value, e.g., target. See an example in the **LoadTableByQuery**  flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
+- Note that if you use **Fabric 8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery**  flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
 
   
 
