@@ -14,7 +14,7 @@ Key advantages of Secrets Management services are:
 - Detecting security breaches and attempted system access, done by analyzing audit logs and alerts that provide detailed history of client interactions, which can also be used for guiding security policy enforcement.
 
 
-These are Fabric's currently supported Secrets Management service providers, along with their official webpages: 
+These are the Secrets Management service providers currently supported by Fabric, along with their official webpages: 
 
 - AWS Secrets Manager - [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) [![link out](images/link-out-blue.png)](https://aws.amazon.com/secrets-manager/)
 - HashiCorp Vault - [HashiCorp Vault](https://www.hashicorp.com/products/vault/secrets-management) [![link out](images/link-out-blue.png)](https://www.hashicorp.com/products/vault/secrets-management)
