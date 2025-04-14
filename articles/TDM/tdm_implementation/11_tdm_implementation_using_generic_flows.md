@@ -23,7 +23,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 ## Step 2 - Create Sequences
 
-Replacing the loaded IDs (sequences) may be required when populating a target database as a way to avoid a collision with the existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
+It may be required to replacing the loaded IDs (sequences) when populating a target database as a way to avoid collision with existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
 
 Fabric V8.2 has added the [Catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). The following section describes two sequence handling implementation methods:
 
@@ -37,9 +37,9 @@ Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DB
 
 ### Set the Sequence Report Global
 
-A new Global has been added to the Shared Globals in TDM 8.1 - **TDM_SEQ_REPORT**. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
+A new Global - **TDM_SEQ_REPORT** - has been added to the Shared Globals in TDM 8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
-For a better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report**. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT as **false**.
+For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report**. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT Global set as **false**.
 
 ## Step 3 - Create, Load and Delete Flows
 
@@ -83,15 +83,15 @@ II. **createAllFromTemplates** flow. This flow:
   - Load flows: LoadFlows
   - Delete flows: DeleteFlows
 
-- From TDM 8.1 onwards, the generated delete flows do not require a manual update of the Get Table Data SQL query and the Delete key.
+- From TDM 8.1 onwards, the generated delete flows do not require a manual updating of the Get Table Data SQL query and the Delete key.
 
 ###  Load and Delete Flows
 
-The createAllFromTemplates creates a separate flow per table on each type - load and delete. Moreover, it creates a *load all flow* to run all table-level load flows in the right order, and a *delete all flow* to run all table-level delete flows in the right order.
+The createAllFromTemplates creates a separate flow per table on each type - load and delete. Moreover, it creates a *load all* flow to run all table-level load flows in the right order, and a *delete all* flow to run all table-level delete flows in the right order.
 
 The sequence Actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
-From TDM 9.3.1 onwards, the **CatalogMaskingMapper** Actor is added to the load flows in order to enable [catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
+From TDM 9.3.1 onwards, the **CatalogMaskingMapper** Actor is added to the load flows as a way to enable [Catalog-based sequence](11a_tdm_sequence_implementation_based_on_catalog.md) handling.
 
 Additionally, the **createAllFromTemplates** flow adds the **setTargetEntityId_Actor** to the load flow of the **main target table** in order to populate the **TARGET_ENTITY_ID** key with the target entity ID. 
 

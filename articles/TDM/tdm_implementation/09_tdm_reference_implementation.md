@@ -1,6 +1,6 @@
 # TDM - Tables Implementation
 
-TDM enables the user to provision tables in a TDM task. The user can select 1 of the following 2 options:
+TDM enables the user to provision tables in a TDM task. To do that, the user can select 1 of the following 2 options:
 
 1. Business entities and referential data. The included tables are related to the task's business entities and are needed in the testing environment.
 2. Tables - TDM 9.x enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
@@ -43,9 +43,9 @@ Each LUI contains the following tables:
 
 Notes: 
 
-- Previous TDM versions saved the tables into the TDM_Reference LU. As this LU is no longer in use - from TDM 9.0 onwards - the tables must be re-extracted into the new LU - TDM_TableLevel. 
+- Previous TDM versions saved the tables into the TDM_Reference LU. However, as this LU is no longer in use (since TDM 9.0), the tables must be re-extracted into the new LU, namely TDM_TableLevel. 
 
-A TDM table-level implementation has the following steps:
+A TDM table-level implementation contains the following steps:
 
 ## Step 1 - Deploy the TDM_TableLevel LU
 
@@ -76,6 +76,11 @@ Import and deploy the TDM_TableLevel LU.
 - **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
 - **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
+
+Note that from TDM 9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either:
+
+- Schema name
+- Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
 
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
@@ -140,7 +145,10 @@ A customized flow can be added to a table's extract, load or delete processes. T
 The following settings should be populated for each record:
 
 - **interface_name** - the interface name defined in the TDM project implementation. 
-- **schema_name** - the DB schema.
+- **schema_name** - the DB schema. Can be populated either with:
+  - Schema name
+  - From TDM 9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+
 - **table_name** - populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** - populated with the customized extract flow.
 - **table_order** - populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
@@ -149,19 +157,19 @@ The following settings should be populated for each record:
 
 
 
-### Supporting Table-Level Tasks on BigQuery - Update TableLevelDefinitions MTable 
+### Supporting Table-Level Tasks Using Connectors - Update TableLevelDefinitions MTable 
 
-- Add a new record to the TableLevelDefinitions MTable after installing the **BigQuery** connector extension in order to support table-level tasks based on the BigQuery connector:
-  - **interface_name** - populate this field with the BugQuery interface name.
-  - **extract_flow** - populate this field with **BQTableLevelExtractByQuery** or **BQTableLevelExtractByStorage**.
-  - **delete_flow** - populate  this field with **BQTableLevelDelete**.
-  - **load_flow** - populate this field with **BQTableLevelLoadByStorage**.
+- Add a new record to the TableLevelDefinitions MTable after installing a connector extension, e.g. **BigQuery**, in order to support table-level tasks based on the connector:
+  - **interface_name** - populate this field with the connector's interface name.
+  - **extract_flow** - populate this field with the connector's extract flow. 
+  - **delete_flow** - populate  this field with the connector's delete flow.
+  - **load_flow** - populate this field with the connector's load flow.
 
-For more information, read the BigQuery extention Readme file. 
+For more information about each connector, read the connector's Readme file. 
 
-### Customized Table's Flows - Implementation Guidelines
+### Customized Table Flows - Implementation Guidelines
 
-The customized table's flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
+The customized table flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
 
 #### Extract Flow
 
@@ -169,13 +177,14 @@ The customized table's flows are Broadway flows. These flows must be added under
 
 ##### Customized Masking Logic
 
-The Catalog masking actor is invoked **after** the extract flow execution. Do the following for the pupose of setting customized masking logic on the table:
+The Catalog masking actor is invoked **after** the extract flow execution. 
 
+Setting customized masking logic on tables:
 - If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking them.
-- Sometimes, the customized masking logic is based on the Catalog masking, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking in the extract flow, do the following: 
+- Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking actor in the extract flow, proceed as follows: 
   - Add the **CatalogMaskingMapper** actor to the extract flow. 
-  - Add the customized masking actors to the extract flow after the CatalogMaskingMapper actor.
-  - Set the **enable_masking** to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
+  - Add the customized masking actors to the extract flow to be envoked after the CatalogMaskingMapper actor.
+  - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
 
 ##### Customized Extract Flow - Example
 
@@ -198,7 +207,7 @@ See the loop on the selected address records:
 #### Load Flow
 
 - The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) to get the load flow template and customize the load logic.
-- Note that if you use **Fabric 8.1.6 and above**, you must manually add the following input parameter to the DbCommand/DbLoad actors: **__active_environment**. Set this parameter to be a Const and populate it with any value, e.g., target. See an example in the **LoadTableByQuery**  flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
+- Note that if you use **Fabric 8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery**  flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
 
   
 
