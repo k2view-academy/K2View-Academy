@@ -9,9 +9,9 @@
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3/TDM%209.3.0_download_links.docx?d=w537a15d48e5942c39305a562eb37c6e1&csf=1&web=1&e=SJwuR0">Download links</a></li>
+    <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa">Download links</a></li>
 </ul>
-
+h
 
 
 
