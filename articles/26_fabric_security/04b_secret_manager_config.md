@@ -23,12 +23,12 @@ The following are the required config.ini file properties for each Secrets Manag
 * ENABLED=true
 * REGION
 
-**Authentication** process can be done by setting these properties:
+**Authentication** can be done by setting these properties:
 
 * ACCESS_KEY_ID
 * SECRET_ACCESS_KEY
 
- The authentication can also be done by the service account, which the server is associated with. This is an alternative to using an Access ID and an Access Key.
+ The authentication can also be done by the service account that the server is associated with. This is an alternative to using an Access ID and an Access Key.
 
 
 
@@ -76,7 +76,9 @@ Fabric supports 2 authentication methods:
 
 * ENDPOINT_TEMPLATE - its default value is https://{key_vault_name}.vault.azure.net, where Fabric uses it according to the key vault name.
 
-**Authentication**, Fabric supports one of the following authentication methods for Azure Key Vault and accordingly you shall set their properties:
+**Authentication -** 
+
+Fabric supports one of the following authentication methods for Azure Key Vault and you should accordingly set their properties:
 
   1. CLIENT_ID + CLIENT_SECRET + TENANT
   2. USE_MANAGED_IDENTITY_AUTH + CLIENT_ID + RESOURCE_ID 
@@ -127,7 +129,7 @@ Fabric supports 2 authentication methods:
 
 1. In the Google Cloud console
    * Select **IAM & admin** > **Service account**.
-   * Find the service account you want to use.
+   * Find the service account you would like to use.
    * Open your service account's Actions ⋮ menu, then select **Create key**.
    * In the resulting **Create private key** dialog, select the **JSON** option, create the key and download it.
 2. Locate the file in the Fabric server.
