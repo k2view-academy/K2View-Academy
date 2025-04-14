@@ -160,7 +160,7 @@ You can use several Secrets Management services on the same Fabric by setting an
 
 ### Multi Secrets Management Service Systems
 
-There may be various systems that provide Secrets Management services for your organization, where data resource credentials are set across different providers. In such cases, Fabric is required to access each one of them to obtain the secrets.  
+There may be various systems that provide Secrets Management services for your organization, where data resource credentials are set across different providers. In such case, Fabric is required to access each one of them to obtain the secrets.  
 
 To use it: 
 
