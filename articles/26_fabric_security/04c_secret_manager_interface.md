@@ -2,13 +2,13 @@
 
 Fabric supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
 
-In order to use a Secrets Management provider, you should provision and mark, in the Interface Editor (including Environments Editor), the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings.
+In order to use a Secrets Management service, in the Interface Editor (including Environments Editor) you should mark the required interface connection details as those that should be taken from the Secrets Management service.
 
 
 
 ## Interface Connection Settings
 
-* Each Secrets Management service has its own keys pattern, usually by hierarchy (e.g., with a dot sign inside the key name); you should follow that pattern.
+* Each Secrets Management service has its own key pattern, usually by hierarchy (e.g., with a dot sign inside the key name); you should follow that pattern.
 
 * The Secrets Management service can also be used for interface connection details inside environments. 
 
