@@ -16,15 +16,15 @@ In order to use a Secrets Management service, in the Interface Editor (including
 
 * You can use the *Test connection* option to validate the connection settings also when the Secrets Management service is activated.
 
-* The following properties can be addressed to the Secrets Management provider for the DB Interface types: host, port, database, user, password. For all other interfaces, all connection details properties can be set to use the Secrets Management provider.  
+* The following properties can be set to the Secrets Management service for the DB Interface types: host, port, database, username and password. For all other interfaces, all connection detail properties can be set in order to use the Secrets Management service.  
 
 
 
-To set and mark an interface's property to use a secret manager:
+To set and mark an interface property to use a Secrets Management service:
 
 <studio>
 
-Use this pattern in its value:  ${secretmanager:<id-at-secret-manager>}. For example: `${secretmanager:mysql-password}`, where mysql-password is the key as exists in the Secrets Management service.
+Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the interface's property value. For example: `${secretmanager:mysql-password}`, where mysql-password is the key that exists in the Secrets Management service.
 
 </studio>
 
