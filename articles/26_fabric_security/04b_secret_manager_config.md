@@ -181,7 +181,7 @@ To use it:
 
 
 
-You can add as many sections as needed, also several instances among several providers. Later on, in the Interface Editor, you should refer to and specify each secret, advising which Secrets Management service instance to use.
+You can add as many sections as needed and also several instances across several providers. Later on, in the Interface Editor, you should refer to and specify each secret, advising which Secrets Management service instance to use.
 
 
 
