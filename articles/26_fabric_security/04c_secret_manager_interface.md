@@ -24,7 +24,7 @@ To set and mark an interface property to use a Secrets Management service:
 
 <studio>
 
-Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the interface's property value. For example: `${secretmanager:mysql-password}`, where mysql-password is the key that exists in the Secrets Management service.
+Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the interface property value. For example: `${secretmanager:mysql-password}`, where mysql-password is the key that exists in the Secrets Management service.
 
 </studio>
 
