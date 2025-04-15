@@ -2,15 +2,15 @@
 
 Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. 
 
-In order to use a Secrets Management provider, you should provision and mark, at the Interface Editor (including Environments Editor), the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings.
+In order to use a Secrets Management provider, you should provision and mark, in the Interface Editor (including Environments Editor), the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings.
 
 
 
 ## Interface Connection Settings
 
-* Each Secret Manager service has its own keys pattern, usually by hierarchy (e.g., with a dot sign inside the key name); you should follow that pattern.
+* Each Secrets Management service has its own keys pattern, usually by hierarchy (e.g., with a dot sign inside the key name); you should follow that pattern.
 
-* The Secrets Management service can be used also for interface connection details inside environments. 
+* The Secrets Management service can also be used for interface connection details inside environments. 
 
   > Each one of the environments and the interfaces is independent, in a way that some environments may use Secrets Management services, whereas others such as local testing, might not. 
 
@@ -24,7 +24,7 @@ To set and mark an interface's property to use a secret manager:
 
 <studio>
 
-Use this pattern in its value:  ${secretmanager:<id-at-secret-manager>}. For example: `${secretmanager:mysql-password}`, where mysql-password is the key as exists in the secret management service.
+Use this pattern in its value:  ${secretmanager:<id-at-secret-manager>}. For example: `${secretmanager:mysql-password}`, where mysql-password is the key as exists in the Secrets Management service.
 
 </studio>
 
