@@ -49,7 +49,7 @@ The following are the required config.ini file properties for each Secrets Manag
 
 Fabric supports 2 authentication methods:
 
-* Directly - where AUTH_TOKEN property should be set.
+* Directly - where the AUTH_TOKEN property should be set.
 
   When using this method, Fabric accesses the Vault URL with the token as auth credentials to get the secret.
 
@@ -104,7 +104,7 @@ Fabric supports one of the following authentication methods for Azure Key Vault 
 * SAFE_NAME - this parameter can be specified or overridden per each secret.
 * TIMEOUT - default is 5000 ms.
 
-**Authentication** is done by using either an API key or user and password, and accordingly the following parameters have to be set:
+**Authentication** is done by using either an API key or a username and password, and accordingly the following parameters have to be set:
 
 * AUTH_TOKEN
 * AUTH_PASSWORD
@@ -165,7 +165,7 @@ There may be various systems that provide Secrets Management services for your o
 To use it: 
 
 1. Set the properties of the required Secrets Management services in their relevant sections in the config.in file.
-2. Set the 'ENABLED' property to 'true' to activate the Secrets Management service.
+2. Set the 'ENABLED' property to 'true' to activate each Secrets Management service.
 
 Note that in the Interface Editor you can specify, per secret, which Secrets Management service to use. If you do not specify it, then Fabric will try find the secrets in each of the activated services (according to their appearance in the config.ini file). 
 
