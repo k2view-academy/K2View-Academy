@@ -1,6 +1,6 @@
-# **Secrets Management Integration**: Interface Editor 
+# Integrating Secrets Management Services - Interface Editor 
 
-Fabric supports integration with Secrets Management services, with the intention of not storing secrets in Fabric itself. 
+Fabric supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
 
 In order to use a Secrets Management provider, you should provision and mark, in the Interface Editor (including Environments Editor), the required interface connection details as those that should be taken from the Secrets Management provider, as part of the project's implementation settings.
 
