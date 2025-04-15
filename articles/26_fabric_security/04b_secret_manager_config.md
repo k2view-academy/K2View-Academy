@@ -169,13 +169,13 @@ To use it:
 
 Note that in the Interface Editor you can specify, per secret, which Secrets Management service to use. If you do not specify it, then Fabric will try find the secrets in each of the activated services (according to their appearance in the config.ini file). 
 
-### Multi Secrets Management Instances
+### Multi Secrets Management Service Instances
 
 Different Secrets Management Service instances may be used in your organization. For example, a TDM production DB resource secrets are managed at the production's secrets manager service, while the DB target resource secrets are managed by another secrets manager service instance, even though they are on same provider.
 
 To use it:
 
-1. Name the secret manager section you want to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production secret manager instance as`[encryption_prod_sm]` and  `[encryption_qa_sm]` for the QA secret manager instance.
+1. Name the secret manager section you want to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production secret manager instance as`[encryption_prod_sm]` and `[encryption_qa_sm]` for the QA secret manager instance.
 2. Add `TYPE`property to that section with the name of the service provider. You can find the type by looking for the default section name, as list above. For example, the section name for AWS Secret Manager is `[encryption_aws_sm]` and accordingly its type is `aws`. (Note: for the default sections it is not required, that is - no need to specify its type).
 
 
