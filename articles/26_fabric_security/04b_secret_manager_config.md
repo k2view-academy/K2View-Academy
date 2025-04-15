@@ -1,6 +1,6 @@
 # Integrating Secrets Management Services - Configuration
 
-Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
+Fabric supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
 
 In order to integrate any one of the Secrets Management service providers currently supported by Fabric, you should configure the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details.
 
@@ -171,16 +171,17 @@ Note that in the Interface Editor you can specify, per secret, which Secrets Man
 
 ### Multi Secrets Management Service Instances
 
-Different Secrets Management Service instances may be used in your organization. For example, a TDM production DB resource secrets are managed at the production's secrets manager service, while the DB target resource secrets are managed by another secrets manager service instance, even though they are on same provider.
+Different Secrets Management service instances may be used in your organization. For example, in TDM production, DB source secrets are managed by a production's Secrets Management service instance, while the DB target secrets are managed by another Secrets Management service instance, although both instances are of the same provider.
 
 To use it:
 
-1. Name the secret manager section you want to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production secret manager instance as`[encryption_prod_sm]` and `[encryption_qa_sm]` for the QA secret manager instance.
-2. Add `TYPE`property to that section with the name of the service provider. You can find the type by looking for the default section name, as list above. For example, the section name for AWS Secret Manager is `[encryption_aws_sm]` and accordingly its type is `aws`. (Note: for the default sections it is not required, that is - no need to specify its type).
+1. In the config.ini file, name the Secrets Management service section you would like to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production's Secrets Management service instance as `[encryption_prod_sm]` and the section for the QA's instance as `[encryption_qa_sm]`.
+2. Add `TYPE` property to that section, including the name of the service provider. You can find the type by looking for the default **section name**, as listed above. For example, the section name for AWS Secrets Manager is `[encryption_aws_sm]` and accordingly its type is `aws`.
+  > Note: This type-specifying step is not required for sections that preserve their default names stated in the above configuration settings.
 
 
 
-You can add as many sections as needed, also several instances among several providers. Later on, in the Interface Editor you shall refer and specify, per secret, which secret manager provider's instance to use.
+You can add as many sections as needed, also several instances among several providers. Later on, in the Interface Editor, you should refer to and specify each secret, advising which Secrets Management service instance to use.
 
 
 
