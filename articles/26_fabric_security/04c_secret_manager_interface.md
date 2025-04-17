@@ -16,7 +16,7 @@ In order to use a Secrets Management service, in the Interface Editor (including
 
 * You can use the *Test connection* option to validate the connection settings also when the Secrets Management service is activated.
 
-* The following properties can be set to the Secrets Management service for the DB type Interfaces: host, port, database, username and password. For all other interfaces, all connection detail properties can be set in order to use the Secrets Management service.  
+* The following properties - host, port, database, username and password - can be set to the Secrets Management service for the DB type Interfaces. For all other interfaces, all connection detail properties can be set in order to use the Secrets Management service.  
 
 
 
