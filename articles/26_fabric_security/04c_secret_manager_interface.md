@@ -20,7 +20,7 @@ In order to use a Secrets Management service, in the Interface Editor (including
 
 
 
-To set and mark an interface property to use a Secrets Management service:
+Setting and marking an interface property to use a Secrets Management service:
 
 <studio>
 
@@ -30,15 +30,15 @@ Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the int
 
 <web>
 
-1. Turn the key switch, located beside each relevant property, to be on (![off](images/secret-key-off.png) &rarr; ![off](images/secret-key-on.png)).
-1. type in the key, as exists in the secret management service.
+1. Turn on the key switch, located beside each relevant property (![off](images/secret-key-off.png) &rarr; ![off](images/secret-key-on.png)).
+1. Type in the key, as exists in the Secrets Management service.
 
 
 
 > Notes: 
 >
-> * When turned on, a default value appears, as a proposed key name, which built from the name of the Interface and the property name. For example: the proposed key name for *Host* property in ASSETS_DB interface will be `ASSET_DB.Host`. This is a suggested name, but you shall strictly align with the same name as exists in the secret management service.
-> * When turned on, also a property which is considered as password, it will be shown as is and characters will not be masked.
+> * When turned on, a default value appears, as a proposed key name, which built from the name of the Interface and the property name. For example, the proposed key name for *Host* property in the ASSETS_DB interface would be `ASSET_DB.Host`. This is a suggested name, but you should strictly align with the same name that exists in the Secrets Management service.
+> * When turned on, also a property which is considered a password, it will be shown as is and characters will not be masked.
 
 </web>
 
@@ -46,7 +46,7 @@ Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the int
 
 ### Provider-Specific Considerations and Usage Patterns
 
-Following are additional notes and considerations regarding **specific** Secrets Management providers:
+Following are additional notes and considerations regarding **specific** Secrets Management service providers:
 
 * **HashiCorp Vault**: 
 
