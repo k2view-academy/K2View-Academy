@@ -50,7 +50,7 @@ Following are additional notes and considerations regarding **specific** Secrets
 
 * **HashiCorp Vault**: 
 
-   * The **KV (key value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
+   * **KV (key value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
    
       - Each **path** is like a folder (for example:`k2view/mysql`).
    
@@ -62,7 +62,7 @@ Following are additional notes and considerations regarding **specific** Secrets
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
-   * HashiCorp has 2 versions, where their key-path are different but this does not affect the key and their path, as you set for the interface's properties. To read more about versions see [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
+   * HashiCorp has 2 versions, where their key-path are different but this does not affect the key and their path, as you set for the interface properties. To read more about versions see [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
    
    
    
@@ -77,11 +77,11 @@ Following are additional notes and considerations regarding **specific** Secrets
 
   
 
-## Multi Secrets Management Providers and Instances Support
+## Multi Secrets Management Services and Instances Support
 
-You can use several secrets management services on the same Fabric, per your need, as demonstrated [here](/articles/26_fabric_security/04b_secret_manager_config.md#multi-secrets-management-providers-and-instances-support).
+You can use several Secrets Management services on the same Fabric, per your needs, as demonstrated [here](/articles/26_fabric_security/04b_secret_manager_config.md#multi-secrets-management-providers-and-instances-support).
 
-### Multi Secrets Management Providers
+### Multi Secrets Management Services
 
 If you provisioned several secret management providers at the config.ini file (and they are set to be enabled), then, by default, Fabric will try to acquire the secret from each of them, until succeeding to resolve it. 
 
