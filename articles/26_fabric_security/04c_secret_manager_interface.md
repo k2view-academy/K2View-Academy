@@ -20,7 +20,7 @@ In order to use a Secrets Management service, in the Interface Editor (including
 
 
 
-Setting and marking an interface property to use a Secrets Management service:
+**Setting and marking an interface property to use a Secrets Management service:**
 
 <studio>
 
@@ -31,7 +31,7 @@ Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the int
 <web>
 
 1. Turn on the key switch, located beside each relevant property (![off](images/secret-key-off.png) &rarr; ![off](images/secret-key-on.png)).
-1. Type in the key, as exists in the Secrets Management service.
+1. Type in the key as it exists in the Secrets Management service.
 
 
 
@@ -54,11 +54,11 @@ Following are additional notes and considerations regarding **specific** Secrets
    
       - Each **path** is like a folder (for example:`k2view/mysql`).
    
-      - Inside each path, you can store multiple key-value pairs (e.g., `user`, `password`, `host`, `port`. In the illustrated example we show `password` and `user`).
+      - Inside each path, you can store multiple key-value pairs (e.g., `user`, `password`, `host`, `port`. In the below illustrated example we show `password` and `user`).
    
         ![](images/04c_hashicorp_example.png)
    
-   * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric lets you to specify which key you wish to use.
+   * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric allows you to specify which key you wish to use.
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
