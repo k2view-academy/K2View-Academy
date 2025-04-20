@@ -6,8 +6,12 @@
 - Verify that the TDM_BE_IIDS table is attached to the LU Schema. This table is mandatory for the parameters coupling mode and is used for joining multiple LU schemas when the task contains parameters of multiple LUs.
 - Verify that the **FABRIC_TDM_ROOT** table has a PK on the **iid** field. This PK is needed in order to export the LU schema tables into the TDM DB. The parameters' selection query runs on the exported tables.
 - Verify that the **linked fields** in the LU tables have **identical data types**. The linked fields must have identical data types in order to support the [MDB export](/articles/02_fabric_architecture/04_fabric_commands.md#mdb-export--import) of the LU schema into the TDM DB.
-- Verify that the linked fields are defined as either PKs or a unique indexes in the parent LU table in order to support the MDB export of these tables. All
- the parent LU table's PK/unique index fields must be linked to the child LU table. This is required for creating the FK relation in the PG DB for the exported LU tables. 
+
+### FK creation on the TDM DB
+  - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table, and that **all
+ parent** LU table's **PK/unique index fields** are linked to the child LU table as a way to enable the creation of an FK in the child table.
+ -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitates such cases, TDM 9.1.7 has added a new mode to support schema export without FK creations:
+    - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.  
 
 ## Optional - Adding Parameters to a Logical Unit
 
