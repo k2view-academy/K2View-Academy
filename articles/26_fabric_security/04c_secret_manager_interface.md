@@ -66,14 +66,20 @@ Following are additional notes and considerations regarding **specific** Secrets
    
    
    
-* **CyberArk CCP**: you can specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
+* **CyberArk CCP**:
 
-   >  The AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
+   * You should specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
+>  
+
+
+   > The AppID parameter is optional and can be added for more granularity, rather than a general AppID that can be set in the config.ini file.
 
 
 
 
-  * **Safeguard**: you should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., `asset_name=OracleDB&account_name=PreProd`
+* **One Identity Safeguard**:
+
+   * You should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., `asset_name=OracleDB&account_name=PreProd`
 
   
 
