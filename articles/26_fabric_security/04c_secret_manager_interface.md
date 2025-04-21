@@ -89,7 +89,7 @@ You can use several Secrets Management services on the same Fabric, per your nee
 
 ### Multi Secrets Management Services
 
-If you provisioned several secret management providers at the config.ini file (and they are set to be enabled), then, by default, Fabric will try to acquire the secret from each of them, until succeeding to resolve it. 
+In case you provision several Secrets Management service systems in the config.ini file (and they are set as 'ENABLED'), then Fabric will try to access each one of them to obtain the secrets, until succeeding. 
 
 For example, suppose you provision both AWS and HashiCorp sections in the config.ini, and you have a secret property which its key is "oracle-password" then Fabric will call first to AWS to look for this key. If it found - Fabric will use it and otherwise it will go and call to next provider, in our example - HashiCorp - to look for it. The call order is according to their order at the config.ini file.
 
