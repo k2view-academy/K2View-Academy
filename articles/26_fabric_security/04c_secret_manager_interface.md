@@ -37,7 +37,7 @@ Use the following pattern - ${secretmanager:<id-at-secret-manager>} - in the int
 
 > Notes: 
 >
-> * When turned on, a default value appears, as a proposed key name, which built from the name of the Interface and the property name. For example, the proposed key name for *Host* property in the ASSETS_DB interface would be `ASSET_DB.Host`. This is a suggested name, but you should strictly align with the same name that exists in the Secrets Management service.
+> * When turned on, a default value appears, as a proposed **key name** that is composed of the Interface name and the property name. For example, the proposed key name for *Host* property in the ASSETS_DB interface would be `ASSET_DB.Host`. This is only a suggested name, and you should strictly align with the same name that exists in the Secrets Management service.
 > * When turned on, also a property which is considered a password, it will be shown as is and characters will not be masked.
 
 </web>
