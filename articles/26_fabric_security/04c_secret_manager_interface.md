@@ -97,11 +97,11 @@ When using several Secrets Management service providers, it is recommended to ex
 
 For this, you should give its name following a semicolon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
 
-For example, if you use HashiCorp Vault for storing SQL Server DB connections secrets, while GCP Secret Manager for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
+For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while GCP Secret Manager for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
 
 <web>
 
-SQL Server DB connections secrets: "hashicorp:AdventureWorks-User" and "hashicorp:AdventureWorks-Password", assuming that at HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys.
+SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp:AdventureWorks-Password", assuming that in HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys.
 
 
 
