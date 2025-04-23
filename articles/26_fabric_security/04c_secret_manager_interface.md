@@ -50,7 +50,7 @@ Following are additional notes and considerations regarding **specific** Secrets
 
 * **HashiCorp Vault**: 
 
-   * **KV (key value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
+   * **KV (key-value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
    
       - Each **path** is like a folder (for example:`k2view/mysql`).
    
@@ -62,7 +62,7 @@ Following are additional notes and considerations regarding **specific** Secrets
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
-   * HashiCorp has 2 versions, where their key-path are different but this does not affect the key and their path, as you set for the interface properties. To read more about versions see [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
+   * HashiCorp has two versions, and in each version, the key paths are different. However, this difference in paths doesn’t affect how the keys work or how you configure them in the interface properties. For more information about the versions, read [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
    
    
    
