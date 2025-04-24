@@ -93,7 +93,7 @@ In case you provision several Secrets Management service providers in the config
 
 For example, suppose you provision both AWS and HashiCorp Secrets Management service provider sections in the config.ini, and you have a secret property whose key is 'oracle-password'. In such scenario, Fabric will first call AWS to look for this key. If found, Fabric would use it and if the key is not found, Fabric will call the next provider in our example - HashiCorp. Calls are made in the order in which the providers' sections appear in the config.ini file.
 
-When using several Secrets Management service providers, it is recommended to explicitly specify the provider for each interface property. This helps to prevent mistakes and to avoid unnecessary calls to irrelevant providers.
+When using several Secrets Management service providers, it is recommended to explicitly specify the provider's name for each interface property. This helps to prevent mistakes and to avoid unnecessary calls to irrelevant providers.
 
 For this, you should give its name followed by a colon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
 
