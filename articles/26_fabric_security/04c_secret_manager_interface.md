@@ -95,7 +95,7 @@ For example, suppose you provision both AWS and HashiCorp Secrets Management ser
 
 When using several Secrets Management service providers, it is recommended to explicitly specify the provider for each interface property. This helps to prevent mistakes and to avoid unnecessary calls to irrelevant providers.
 
-For this, you should give its name following a semicolon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
+For this, you should give its name followed by a colon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
 
 For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while GCP Secret Manager for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
 
@@ -113,7 +113,7 @@ The REST API
 
 <studio>
 
-"${secretmanager:AdventureWorks-User}" and "${secretmanager:AdventureWorks-Password}", assuming that at HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys. 
+"${secretmanager:hashicorp:AdventureWorks-User}" and "${secretmanager:hashicorp:AdventureWorks-Password}", assuming that at HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys. 
 
 </studio>
 
