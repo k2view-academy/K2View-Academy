@@ -62,7 +62,7 @@ Following are additional notes and considerations regarding **specific** Secrets
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
-   * HashiCorp has two versions, and in each version, the key paths are different. However, this difference in paths doesn’t affect how the keys work or how you configure them in the interface properties. For more information about the versions, read [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
+   * HashiCorp has two versions, and in each version, the key paths are different. However, this difference in paths does not affect how the keys work or how you configure them in the interface properties. For more information about the versions, read [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
    
    
    
@@ -117,11 +117,11 @@ The REST API
 
 </studio>
 
-### Multi Secrets Management Instances
+### Multi Secrets Management Service Instances
 
-When different secrets management service provider instances were provisioned at the configuration, you shall specify which one of them to use for  each Interface secret property.
+When different Secrets Management service instances were provisioned in the configuration, you should specify which one of them to use for each Interface secret property.
 
-For this you shall give its name following a semicolon and then the name of the key. The pattern is: <Stduio>${secretmanager:my_new_secretmanager:my_secret} </studio><web>my_new_secretmanager:my_secret</web>
+For this, you should give its name followed by a colon and then the name of the key. The pattern is: <Stduio>${secretmanager:my_new_secretmanager:my_secret} </studio><web>my_new_secretmanager:my_secret</web>
 
 For example: 
 
@@ -132,7 +132,7 @@ For example:
 
 Then, at the Production environment, the value of the password property might looks like "prod:oracle1-pswd", while at the QA Environment the corresponding property will be "qa:oracle1-pswd" (of course if at the QA secret manager the key is different then accordingly it shall be at the interface key).
 
-On runtime, Fabric will act according to theses definitions, so that for those properties with "prod" prefix, it will connect to the secrrt manager which defined at the `encryption_prod_sm` section in the config.ini file.
+At runtime, Fabric will act according to these definitions, so that for those properties with "prod" prefix, it will connect to the secrrt manager which defined at the `encryption_prod_sm` section in the config.ini file.
 
 
 
