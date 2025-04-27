@@ -2,13 +2,13 @@
 
 ### Overview
 
-Starting from V8.2, the Catalog includes a Data profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). 
+Starting from V8.2, the Catalog includes a data and metadata profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). 
 
 The LLM plugin performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
 The product includes 2 LLM-based plugins that accommodate for the following use cases:
 
-- Use Case 1: **LLM Data Profiling** - profiling and classification of columns with sensitive / PII data. 
+- Use Case 1: **LLM Profiling** - profiling and classification of columns with sensitive / PII data. 
 - Use Case 2: **LLM Description** - a creation of each column's short description.
 
 By default, both of these plugins are disabled and should be enabled in the project-level settings, when needed. 
@@ -25,7 +25,7 @@ The plugin's input parameters are:
   - By default, ```"threshold":0.7```. 
   - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM plugin will not run on this column.
 - ```"propertyName"``` is a column's property that should be created by the plugin. 
-  - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Data Profiling use case.
+  - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Profiling use case.
 - ```"userPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are, respectively, a table and a column being profiled, as well as the names of all other columns in this table. These 3 parameters are passed to the plugin by the framework.
   - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
@@ -46,7 +46,7 @@ The plugin's input parameters are:
 - ```"llmInterface"``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
   - When the ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
-### Use Case 1: LLM Data Profiling
+### Use Case 1: LLM Profiling
 
 The Catalog includes 2 built-in plugins that perform profiling and classification of the columns using the regular expressions [Data Regex Classifier and Metadata Regex Classifier](02_classification_plugins.md). 
 
@@ -54,11 +54,11 @@ However, these plugins might miss some columns with sensitive data, for various 
 
 LLM-based plugins help to improve the classification task by analyzing the column's data, in a context of table and column names. 
 
-This is a product default definition of the LLM Data Profiling:
+This is a product default definition of the LLM Profiling:
 
 ```json
 {
-	"name": "LLM Data Profiling",
+	"name": "LLM Profiling",
 	"class": "com.k2view.discovery.plugins.llm.LLMDataProfilingPlugin",
 	"active": true,
 	"threshold": 0.7,
@@ -106,7 +106,7 @@ This is a product default definition of the LLM Description plugin that will gen
 
 ### Use Case 3: LLM Profiling by Property (experimental)
 
-Running the LLM Data Profiling plugin can be effective when either the columns have meaningful names or the column values provide some insight or the combination of both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
+Running the LLM Profiling plugin can be effective when either the columns have meaningful names or the column values provide some insight or the combination of both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
 
 For example, when the table and column names are not meaningful, the descriptions (or remarks) might have been included in the data source for each table and/or column explaining what is stored in them.
 

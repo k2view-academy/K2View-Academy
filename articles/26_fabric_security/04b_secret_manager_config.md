@@ -1,6 +1,6 @@
 # Integrating Secrets Management Services - Configuration
 
-Fabric also supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
+Fabric supports integration with Secrets Management services as they provide several benefits while secrets are not stored in Fabric itself, only their reference IDs are. 
 
 In order to integrate any one of the Secrets Management service providers currently supported by Fabric, you should configure the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details.
 
@@ -23,12 +23,12 @@ The following are the required config.ini file properties for each Secrets Manag
 * ENABLED=true
 * REGION
 
-**Authentication** process can be done by setting these properties:
+**Authentication** can be done by setting these properties:
 
 * ACCESS_KEY_ID
 * SECRET_ACCESS_KEY
 
- The authentication can also be done by the service account, which the server is associated with. This is an alternative to using an Access ID and an Access Key.
+ The authentication can also be done by the service account that the server is associated with. This is an alternative to using an Access ID and an Access Key.
 
 
 
@@ -49,7 +49,7 @@ The following are the required config.ini file properties for each Secrets Manag
 
 Fabric supports 2 authentication methods:
 
-* Directly - where AUTH_TOKEN property should be set.
+* Directly - where the AUTH_TOKEN property should be set.
 
   When using this method, Fabric accesses the Vault URL with the token as auth credentials to get the secret.
 
@@ -76,7 +76,9 @@ Fabric supports 2 authentication methods:
 
 * ENDPOINT_TEMPLATE - its default value is https://{key_vault_name}.vault.azure.net, where Fabric uses it according to the key vault name.
 
-**Authentication**, Fabric supports one of the following authentication methods for Azure Key Vault and accordingly you shall set their properties:
+**Authentication -** 
+
+Fabric supports one of the following authentication methods for Azure Key Vault and you should accordingly set their properties:
 
   1. CLIENT_ID + CLIENT_SECRET + TENANT
   2. USE_MANAGED_IDENTITY_AUTH + CLIENT_ID + RESOURCE_ID 
@@ -102,7 +104,7 @@ Fabric supports 2 authentication methods:
 * SAFE_NAME - this parameter can be specified or overridden per each secret.
 * TIMEOUT - default is 5000 ms.
 
-**Authentication** is done by using either an API key or user and password, and accordingly the following parameters have to be set:
+**Authentication** is done by using either an API key or a username and password, and accordingly the following parameters have to be set:
 
 * AUTH_TOKEN
 * AUTH_PASSWORD
@@ -127,7 +129,7 @@ Fabric supports 2 authentication methods:
 
 1. In the Google Cloud console
    * Select **IAM & admin** > **Service account**.
-   * Find the service account you want to use.
+   * Find the service account you would like to use.
    * Open your service account's Actions ⋮ menu, then select **Create key**.
    * In the resulting **Create private key** dialog, select the **JSON** option, create the key and download it.
 2. Locate the file in the Fabric server.
@@ -158,27 +160,28 @@ You can use several Secrets Management services on the same Fabric by setting an
 
 ### Multi Secrets Management Service Systems
 
-There may be various systems that provide Secrets Management services for your organization, where data resource credentials are set across different providers. In such cases, Fabric is required to access each one of them to obtain the secrets.  
+There may be various systems that provide Secrets Management services for your organization, where data resource credentials are set across different providers. In such case, Fabric is required to access each one of them to obtain the secrets.  
 
 To use it: 
 
 1. Set the properties of the required Secrets Management services in their relevant sections in the config.in file.
-2. Set the 'ENABLED' property to 'true' to activate the Secrets Management service.
+2. Set the 'ENABLED' property to 'true' to activate each Secrets Management service.
 
 Note that in the Interface Editor you can specify, per secret, which Secrets Management service to use. If you do not specify it, then Fabric will try find the secrets in each of the activated services (according to their appearance in the config.ini file). 
 
-### Multi Secrets Management Instances
+### Multi Secrets Management Service Instances
 
-Different Secrets Management Service instances may be used in your organization. For example, a TDM production DB resource secrets are managed at the production's secrets manager service, while the DB target resource secrets are managed by another secrets manager service instance, even though they are on same provider.
+Different Secrets Management service instances may be used in your organization. For example, in TDM production, DB source secrets are managed by a production's Secrets Management service instance, while the DB target secrets are managed by another Secrets Management service instance, although both instances are of the same provider.
 
 To use it:
 
-1. Name the secret manager section you want to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production secret manager instance as`[encryption_prod_sm]` and  `[encryption_qa_sm]` for the QA secret manager instance.
-2. Add `TYPE`property to that section with the name of the service provider. You can find the type by looking for the default section name, as list above. For example, the section name for AWS Secret Manager is `[encryption_aws_sm]` and accordingly its type is `aws`. (Note: for the default sections it is not required, that is - no need to specify its type).
+1. In the config.ini file, name the Secrets Management service section you would like to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production's Secrets Management service instance as `[encryption_prod_sm]` and the section for the QA's instance as `[encryption_qa_sm]`.
+2. Add `TYPE` property to that section, including the name of the service provider. You can find the type by looking for the default **section name**, as listed above. For example, the section name for AWS Secrets Manager is `[encryption_aws_sm]` and accordingly its type is `aws`.
+  > Note: This type-specifying step is not required for sections that preserve their default names stated in the above configuration settings.
 
 
 
-You can add as many sections as needed, also several instances among several providers. Later on, in the Interface Editor you shall refer and specify, per secret, which secret manager provider's instance to use.
+You can add as many sections as needed and also several instances across several providers. Later on, in the Interface Editor, you should refer to and specify each secret, advising which Secrets Management service instance to use.
 
 
 

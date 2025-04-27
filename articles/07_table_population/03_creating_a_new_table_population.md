@@ -31,7 +31,6 @@ When an LU table has two populations, a second Table Population can extract data
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU table that has been inserted by Population 1.
 
-[Click for more information about Creating Table Population Objects.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
 <studio>
 
