@@ -107,7 +107,6 @@ SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp
 
 ![](images/web-specific-secret.png)
 
-The REST API 
 
 </web>  
 
@@ -119,7 +118,7 @@ The REST API
 
 ### Multi Secrets Management Service Instances
 
-When different Secrets Management service instances were provisioned in the configuration, you should specify which one of them to use for each Interface secret property.
+When different Secrets Management service **instances** are provisioned in the configuration, you should explicitly specify which one of them is ought to be used for each interface secret property.
 
 For this, you should give its name followed by a colon and then the name of the key. The pattern is: <Stduio>${secretmanager:my_new_secretmanager:my_secret} </studio><web>my_new_secretmanager:my_secret</web>
 
