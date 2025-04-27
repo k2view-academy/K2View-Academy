@@ -95,9 +95,9 @@ For example, suppose you provision both AWS and HashiCorp Secrets Management ser
 
 When using several Secrets Management service providers, it is recommended to explicitly specify the provider's name for each interface property. This helps to prevent mistakes and to avoid unnecessary calls to irrelevant providers.
 
-For this, you should give its name followed by a colon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
+To do this, you should insert the provider's name, followed by a colon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
 
-For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while GCP Secret Manager for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
+For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while Google Cloud Secret Manager is being used for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
 
 <web>
 
