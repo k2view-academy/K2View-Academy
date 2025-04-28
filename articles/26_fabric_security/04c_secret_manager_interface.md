@@ -126,7 +126,7 @@ For example:
 
 1. Two sections are provisioned in the config.ini file - `[encryption_prod_sm]` and  `[encryption_qa_sm]` - both with AWS as the Secrets Management service provider. 
 2. The "prod" instance is aimed to be used for production source system secrets while "qa" is aimed for secrets related to QA target system. 
-3. There are two environments, one for Production Interfaces and one for QA interfaces.
+3. There are two environments, one for Production interfaces and one for QA interfaces.
 4. One of the DBs is Oracle, both at source and target systems.
 
 Then, at the Production environment, the value of the password property might looks like "prod:oracle1-pswd", while at the QA Environment the corresponding property will be "qa:oracle1-pswd" (of course if at the QA secret manager the key is different then accordingly it shall be at the interface key).
