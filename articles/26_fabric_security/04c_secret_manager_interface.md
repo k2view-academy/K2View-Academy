@@ -101,7 +101,7 @@ For example, if you use HashiCorp Vault for storing SQL Server DB connection sec
 
 <web>
 
-SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp:AdventureWorks-Password", assuming that in HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys.
+SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp:AdventureWorks-Password", assuming that in HashiCorp there are corresponding "AdventureWorks-User" and "AdventureWorks-Password" keys.
 
 
 
@@ -112,7 +112,7 @@ SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp
 
 <studio>
 
-"${secretmanager:hashicorp:AdventureWorks-User}" and "${secretmanager:hashicorp:AdventureWorks-Password}", assuming that at HashiCorp there are corresponding "AdventureWorks-Password" and "AdventureWorks-User" keys. 
+"${secretmanager:hashicorp:AdventureWorks-User}" and "${secretmanager:hashicorp:AdventureWorks-Password}", assuming that in HashiCorp there are corresponding "AdventureWorks-User" and "AdventureWorks-Password" keys. 
 
 </studio>
 
