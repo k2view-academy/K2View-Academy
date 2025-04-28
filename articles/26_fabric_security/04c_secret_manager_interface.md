@@ -97,7 +97,7 @@ When using several Secrets Management service providers, it is recommended to ex
 
 To do this, you should insert the provider's name, followed by a colon and then the name of the key. <studio>The pattern is: ${secretmanager:secretmanager_provider-name:my_secret} </studio><web>secretmanager_provider-name:my_secret</web>
 
-For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while Google Cloud Secret Manager is being used for storing BigQuery connection secrets, then the Interface property values representing the keys might looks like the following:
+For example, if you use HashiCorp Vault for storing SQL Server DB connection secrets, while Google Cloud Secret Manager is being used for storing BigQuery connection secrets, then the interface property values representing the keys may looks like the following:
 
 <web>
 
