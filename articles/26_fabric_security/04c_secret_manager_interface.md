@@ -120,7 +120,7 @@ SQL Server DB connection secrets: "hashicorp:AdventureWorks-User" and "hashicorp
 
 When different Secrets Management service **instances** are provisioned in the configuration, you should explicitly specify which one of them is ought to be used for each interface secret property.
 
-For this, you should give its name followed by a colon and then the name of the key. The pattern is: <Stduio>${secretmanager:my_new_secretmanager:my_secret} </studio><web>my_new_secretmanager:my_secret</web>
+To do this, you should insert the instance's name, followed by a colon and then the name of the key. The pattern is: <Stduio>${secretmanager:my_new_secretmanager:my_secret} </studio><web>my_new_secretmanager:my_secret</web>
 
 For example: 
 
