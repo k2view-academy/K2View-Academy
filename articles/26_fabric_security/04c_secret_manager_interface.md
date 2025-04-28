@@ -125,11 +125,11 @@ To do this, you should insert the instance's name, followed by a colon and then 
 For example: 
 
 1. Two sections are provisioned in the config.ini file - `[encryption_prod_sm]` and  `[encryption_qa_sm]` - both with AWS as the Secrets Management service provider. 
-2. The "prod" instance is aimed to be used for production source system secrets while "qa" is aimed for secrets related to QA target system. 
+2. As per this example, when different Secrets Management service providers are being used, the "prod" instance is aimed to be used for Production source system secrets, while the "qa" instance is aimed to be used for secrets related to QA target system. 
 3. There are two environments, one for Production interfaces and one for QA interfaces.
 4. One of the DBs is Oracle, both at source and target systems.
 
-Then, at the Production environment, the value of the password property might looks like "prod:oracle1-pswd", while at the QA Environment the corresponding property will be "qa:oracle1-pswd" (of course if at the QA secret manager the key is different then accordingly it shall be at the interface key).
+Then, in the Production environment, the value of the password property may looks like "prod:oracle1-pswd", while in the QA environment the corresponding property would be "qa:oracle1-pswd" (of course if at the QA secret manager the key is different then accordingly it shall be at the interface key).
 
 At runtime, Fabric will act according to these definitions, so that for those properties with "prod" prefix, it will connect to the secrrt manager which defined at the `encryption_prod_sm` section in the config.ini file.
 
