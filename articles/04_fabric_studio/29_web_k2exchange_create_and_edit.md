@@ -8,7 +8,7 @@ As will be described, you can pick up specific project files to be included in y
 
 
 
-## Creating New Extension
+## Creating New Extensions
 
 
 
@@ -34,7 +34,7 @@ The extension’s folder, located at the root of the extensions directory, serve
 
 
 
-From the project tree:
+From the Project Tree:
 
 1. Select the file/s or folder/s to be included in the extension.
 
@@ -75,7 +75,7 @@ The key files you should manage include:
 
 
 
-## Packaging and Publishing Extension
+## Packaging and Publishing Extensions
 
 Studio lets you executing several actions for packaging and publishing extensions:
 
@@ -128,7 +128,7 @@ The action commands:
 
 
 
-## Updating Extension
+## Updating Extensions
 
 To update an existing extension, follow the below steps:
 
