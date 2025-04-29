@@ -2,7 +2,7 @@
 
 <web>
 
-K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio, which provides a comprehensive suite of tools for creating, editing, packaging, and publishing extensions efficiently.
+K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio, which provides a comprehensive suite of tools for efficiently creating, editing, packaging, and publishing extensions.
 
 As will be described, you can pick up specific project files to be included in your extension, while others not, allowing you to continue working on your project without disruptions.
 
@@ -44,7 +44,7 @@ From the project tree:
 
 
 
-3. A popup window will appear, prompting you to choose from a list, the right extension that these files shall be added into.
+3. A pop-up window will appear, prompting you to choose from a list, the right extension that these files shall be added into.
 
 4. This operation updates the `artifactsSourcePaths.txt` file, which maintains a list of included files or folders. Thus, when you add project's files the `artifactsSourcePaths.txt` file is automatically opened or get focus, if already opened (The file can be updated manually or incrementally by adding more files as needed.)
 
@@ -52,7 +52,7 @@ From the project tree:
 
 ## Preparing for Packaging
 
-Once you added the relevant project's files into the extension, you shall update, or at least review, extension's metadata files. These files are auto created during the extension creation with default initial content. 
+Once you have added the relevant project's files into the extension, you shall update, or at least review, extension's metadata files. These files are auto created during the extension creation with default initial content. 
 
 The key files you should manage include:
 
@@ -79,17 +79,17 @@ The key files you should manage include:
 
 Studio lets you executing several actions for packaging and publishing extensions:
 
-* Building a **VSIX Package** - An extension installer package file (a zip like format), which contains all the extension's necessary components.  It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
+* Building a **VSIX Package** - an extension installer package file (a zip like format), which contains all the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
 * Publishing extension into the **K2exchange store/registry** - This publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
 
-* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus cannot use neither VSIX package nor K2exchange store/registry.
+* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus can use neither VSIX package nor K2exchange store/registry.
 
 
 
-To run either of these actions, you shall first execute the *install* script, as a one time action per extension:
+To run either of these actions, you should first execute the *install* script, as a one time action per extension:
 
 1. At the project tree go to the *NPM SCRIPTS* section, which appears under the *Project* section.
 
