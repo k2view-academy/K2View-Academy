@@ -18,7 +18,7 @@ To create a new K2Exchange extension in your project, follow these steps:
 
 2. A pop-up window will appear, prompting you to define the **extension name** and **description**.
 
-3. Once confirmed, a new folder is created in the *extensions* folder that resides at the top of the Project Tree. This extension's folder is created with several subfolders and files, which are used as the extension's template, defaults and utilities.
+3. Once confirmed, a new folder is created in the *Extensions* folder that resides at the top of the Project Tree. This extension's folder is created with several subfolders and files, which are used as the extension's template, defaults and utilities.
 
    If this is the first extension, then the *extensions* folder itself will be created as well.
 
