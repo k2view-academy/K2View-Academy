@@ -129,7 +129,7 @@ Given example:
 3. There are two environments, one for Production interfaces and one for QA interfaces.
 4. One of the DBs is Oracle, both at source and target systems.
 
-Then, in the Production environment, the value of the password property may look like "prod:oracle1-pswd", whereas in the QA environment, the corresponding property would be "qa:oracle1-pswd" (of course if at the QA secret manager the key is different, then accordingly it shall be at the interface key).
+Then, in the Production environment, the **value** of the **password property** may look like "prod:oracle1-pswd", whereas in the QA environment, the corresponding property would be "qa:oracle1-pswd" (naturally, if the key in the QA Secrets Management service is different, then the same must also be reflected in the interface property).
 
 At runtime, Fabric will act according to these definitions, in a way that for those properties with "prod" prefix, it will connect to the Secrets Management service that is defined in the `encryption_prod_sm` section of the config.ini file.
 
