@@ -14,13 +14,13 @@ As will be described, you can pick up specific project files to be included in y
 
 To create a new K2Exchange extension in your project, follow these steps:
 
-1. Open the **Command Palette** (CMD/CTRL+SHIFT+P) and run **New Fabric Extension**.
+1. Open the **Command Palette** (CMD/CTRL+SHIFT+P) and run **Fabric: New Fabric Extension...**.
 
 2. A pop-up window will appear, prompting you to define the **extension name** and **description**.
 
-3. Once confirmed, a new folder is created in the *Extensions* folder that resides at the top of the Project Tree. This extension's folder is created with several subfolders and files, which are used as the extension's template, defaults and utilities.
+3. Once confirmed, a new folder is created under the *extensions* parent folder that resides at the top of the Project Tree. The newly created *extensions* folder contains several subfolders and files that serve as templates, defaults and utilities.
 
-   If this is the first extension, then the *extensions* folder itself will be created as well.
+   If this is the first extension being created, then the *extensions* folder itself will also be created.
 
 
 
