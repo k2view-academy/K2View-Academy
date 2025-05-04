@@ -20,23 +20,23 @@ To create a new K2Exchange extension in your project, follow these steps:
 
 3. Once confirmed, a new folder is created under the *extensions* parent folder that resides at the top of the Project Tree. The newly created *extensions* folder contains several subfolders and files that serve as templates, defaults and utilities.
 
-   If this is the first extension being created, then the *extensions* folder itself will also be created.
+   If this is the first extension being created, then the *extensions* parent folder itself will also be created.
 
 
 
->  You can proceed on this step as many time as you need, having several separated extensions which are built form the same project.
+>  You can go ahead and repeat these steps as many times as needed to create multiple separate extensions that stem from the same project.
 
 
 
 ## Adding Project Files to Extensions
 
-The extension’s folder, located at the root of the extensions directory, serves as the foundation for the artifact-building process. All necessary files should be placed there. Nevertheless, Studio eliminates the need to manually copy project files into the extension folder, preventing code duplication. This will let you confidence in that what you developed and tested will be included in the extension.
+Each created extension is placed in a folder that is located directly under the *extensions* parent folder, and it serves as the foundation for the artifact-building process. All required files should be placed in such folders. Nevertheless, Studio eliminates the need to manually copy project files into extension folders, and thus it prevents code duplication and ensures that the code you have developed and tested is included in the extension.
 
 
 
 From the Project Tree:
 
-1. Select the file(s) or folder(s) to be included in the extension.
+1. Select the file(s) or folder(s) to be included in the extension package.
 
 2. Right-click and choose **Add to Extension Artifacts List...**
 
@@ -44,7 +44,7 @@ From the Project Tree:
 
 
 
-3. A pop-up window will appear, prompting you to choose from a list, the right extension that these files should be added into.
+3. A pop-up window will appear, prompting you to choose from a list, the relevant extension to which these files should be added.
 
 4. This operation updates the `artifactsSourcePaths.txt` file, which maintains a list of included files or folders. Thus, when you add project's files the `artifactsSourcePaths.txt` file is automatically opened or get focus, if already opened (The file can be updated manually or incrementally by adding more files as needed.)
 
