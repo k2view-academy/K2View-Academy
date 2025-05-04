@@ -36,15 +36,15 @@ The extension’s folder, located at the root of the extensions directory, serve
 
 From the Project Tree:
 
-1. Select the file/s or folder/s to be included in the extension.
+1. Select the file(s) or folder(s) to be included in the extension.
 
-2. Right-click and choose **Add to Extension Artifacts List**.
+2. Right-click and choose **Add to Extension Artifacts List...**
 
      ![](images/web/29_add_files.png)
 
 
 
-3. A pop-up window will appear, prompting you to choose from a list, the right extension that these files shall be added into.
+3. A pop-up window will appear, prompting you to choose from a list, the right extension that these files should be added into.
 
 4. This operation updates the `artifactsSourcePaths.txt` file, which maintains a list of included files or folders. Thus, when you add project's files the `artifactsSourcePaths.txt` file is automatically opened or get focus, if already opened (The file can be updated manually or incrementally by adding more files as needed.)
 
