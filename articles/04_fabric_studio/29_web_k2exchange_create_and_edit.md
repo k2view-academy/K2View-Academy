@@ -28,7 +28,7 @@ To create a new K2Exchange extension in your project, follow these steps:
 
 
 
-## Adding Project's Files to Extension
+## Adding Project Files to Extensions
 
 The extension’s folder, located at the root of the extensions directory, serves as the foundation for the artifact-building process. All necessary files should be placed there. Nevertheless, Studio eliminates the need to manually copy project files into the extension folder, preventing code duplication. This will let you confidence in that what you developed and tested will be included in the extension.
 
