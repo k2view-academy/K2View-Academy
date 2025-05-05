@@ -46,7 +46,7 @@ From the Project Tree:
 
 3. A pop-up window will appear, prompting you to choose from a list, the relevant extension to which these files should be added.
 
-4. The above process updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths into/from it.
+4. The above action updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths into/from it.
 
 
 
