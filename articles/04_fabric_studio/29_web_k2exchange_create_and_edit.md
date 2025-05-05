@@ -14,7 +14,7 @@ As this article will outline, selecting some specific project files to be includ
 
 To create a new K2Exchange extension in your project, follow these steps:
 
-1. In K2studio application, navigate to the menu bar at the top, select the **View** option then open the **Command Palette** (Ctrl+Shift+P for Windows/Linux or Cmd+Shift+P for macOS). Search for **Fabric: New Fabric Extension...** and select it. 
+1. In K2Studio application, navigate to the menu bar at the top, select the **View** option then open the **Command Palette** (Ctrl+Shift+P for Windows/Linux or Cmd+Shift+P for macOS). Search for **Fabric: New Fabric Extension...** and select it. 
 
 2. A pop-up window will appear, prompting you to populate the **extension name** and **description**.
 
@@ -71,7 +71,7 @@ The key files you should manage include:
 
   - `description`: A brief description of the extension.
 
-- LICENSE.txt - This is an optional file, describing your license and terms of use, that you might wish to apply for your extension. By default, the README file contains a link to this file.
+- LICENSE.txt — this is an optional file, which details your license and terms of use that you may wish to apply for your extension. By default, the README file contains a link to this file.
 
 
 
