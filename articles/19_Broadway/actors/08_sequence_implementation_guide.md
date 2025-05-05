@@ -33,7 +33,7 @@ Notes:
 Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is only relevant for IN-MEMORY for **a newly created DB sequence** in order to set its initial value upon the sequence creation. In an existing DB sequence, these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, e.g., 1000000.
-* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable, named **initialValue**. View the figures below: 
+* Initialize the sequence using another Broadway flow, e.g. *customerInitFlow*,  by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable, named **initialValue**. View the figures below: 
 
 ![image](../images/init_seq_flow_example.png)
 
