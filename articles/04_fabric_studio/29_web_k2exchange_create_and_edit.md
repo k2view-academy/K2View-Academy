@@ -30,7 +30,7 @@ To create a new K2Exchange extension in your project, follow these steps:
 
 ## Adding Project Files to Extensions
 
-Each created extension is placed in a folder that is located directly under the *extensions* parent folder, and it serves as the foundation for the artifact-building process. All required files should be placed in such folders. Nevertheless, Studio eliminates the need to manually copy project files into extension folders, and thus it prevents code duplication and ensures that the code you have developed and tested is included in the extension.
+Each created extension is placed in a folder that is located directly under the *extensions* parent folder, and it serves as the foundation for the artifact-building process. All required files should be placed in such folders. Nevertheless, Studio eliminates the need to manually copy project files to extension folders, and thus it prevents code duplication and ensures that the code you have developed and tested is included in the extension.
 
 
 
@@ -46,22 +46,22 @@ From the Project Tree:
 
 3. A pop-up window will appear, prompting you to choose from a list, the relevant extension to which these files should be added.
 
-4. The above action updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths into/from it.
+4. The above action updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths to/from it.
 
 
 
 ## Preparing for Packaging
 
-Once you have added the relevant project files into the extension, you shall update, or at least review, extension's metadata files. These files are auto created during the extension creation with default initial content. 
+Once you have added the relevant project files to the extension, you should update, or at least review, the extension's metadata files. These files are auto-created with default initial content during the extension creation process. 
 
 The key files you should manage include:
 
-- README.md – Contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
+- README.md – contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
 
-- package.json – Stores the package configuration, including:
+- package.json – stores the package configuration, including:
   - `version`: The extension version.
 
-  - `preview`: `true/false` – Determines if the package is considered as preview. Since Fabric 8.2, *Preview* extensions are hidden by default.
+  - `preview`: `true/false` – determines whether the package is considered as preview. From Fabric 8.2 onwards, *Preview* extensions are hidden by default.
 
   - `minRequiredFabricVersion`: Specifies the minimum required Fabric version (validated during installation).
 
@@ -71,7 +71,7 @@ The key files you should manage include:
 
   - `description`: A brief description of the extension.
 
-- LICENSE.txt - This is an optional file, describing you license and terms of use, that you might wish to apply for your extension. By default, the README file contains a link to this file.
+- LICENSE.txt - This is an optional file, describing your license and terms of use, that you might wish to apply for your extension. By default, the README file contains a link to this file.
 
 
 
@@ -132,7 +132,7 @@ The action commands:
 
 To update an existing extension, follow the below steps:
 
-1. Add files and/or folders from the project folder into the extension. You can also remove files or folders.
+1. Add files and/or folders from the project folder to the extension. You can also remove files or folders.
 
 2. Update the **version number** in `package.json` file.
 
