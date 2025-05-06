@@ -59,17 +59,17 @@ The key files you should manage include:
 - README.md – contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
 
 - package.json – stores the package configuration, including:
-  - `version`: The extension version.
+  - `version` – the extension version.
 
-  - `preview`: `true/false` – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
+  - `preview`: true/false – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
 
-  - `minRequiredFabricVersion`: Specifies the minimum required Fabric version (validated during installation).
+  - `minRequiredFabricVersion` – specifies the minimum required Fabric version (validated during installation).
 
-  - `icon`: Defines the icon that appears in K2Exchange (the default is the K2 icon).
+  - `icon` – defines the icon that appears in K2Exchange (the default is the K2 icon).
 
-  - `displayName`: The name displayed in K2Exchange.
+  - `displayName` – the name displayed in K2Exchange.
 
-  - `description`: A brief description of the extension.
+  - `description` - a brief description of the extension.
 
 - LICENSE.txt – this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
 
