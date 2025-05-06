@@ -65,9 +65,9 @@ The key files you should manage include:
 
   - `minRequiredFabricVersion` – specifies the minimum required Fabric version (validated during installation).
 
-  - `icon` – defines the icon that appears in K2Exchange (the default is the K2 icon).
+  - `icon` – defines the icon that appears in K2exchange (the default is the K2 icon).
 
-  - `displayName` – the name displayed in K2Exchange.
+  - `displayName` – the name displayed in K2exchange.
 
   - `description` - a brief description of the extension.
 
@@ -111,9 +111,9 @@ Once you ran this, you can now execute the appropriate command to generate the p
 
 The action commands:
 
-* `Fabric-lib-publish`, for publishing into the K2Exchange store/registry.
+* `Fabric-lib-publish`, for publishing into the K2exchange store/registry.
 
-  > This actions requires a token that provided for users at the K2Exchange portal. Contact K2view team for more information and options.
+  > This actions requires a token that provided for users at the K2exchange portal. Contact K2view team for more information and options.
 
 * `Fabric-lib-package`: Creates a **VSIX** file for importing later by consumers.
 
