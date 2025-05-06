@@ -2,7 +2,7 @@
 
 <web>
 
-K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio. The latter provides a comprehensive suite of tools for efficiently creating, editing, packaging, and publishing extensions.
+K2exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio. The latter provides a comprehensive suite of tools for efficiently creating, editing, packaging, and publishing extensions.
 
 As this article will outline, selecting some specific project files to be included in your extension allows you to continue working on your project without any disruptions.
 
@@ -12,9 +12,9 @@ As this article will outline, selecting some specific project files to be includ
 
 
 
-To create a new K2Exchange extension in your project, follow these steps:
+To create a new K2exchange extension in your project, follow these steps:
 
-1. In K2Studio application, navigate to the menu bar at the top, select the **View** option then open the **Command Palette** (Ctrl+Shift+P for Windows/Linux or Cmd+Shift+P for macOS). Search for **Fabric: New Fabric Extension...** and select it. 
+1. In K2studio application, navigate to the menu bar at the top, select the **View** option then open the **Command Palette** (Ctrl+Shift+P for Windows/Linux or Cmd+Shift+P for macOS). Search for **Fabric: New Fabric Extension...** and select it. 
 
 2. A pop-up window will appear, prompting you to populate the **extension name** and **description**.
 
