@@ -4,7 +4,7 @@
 
 K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio. The latter provides a comprehensive suite of tools for efficiently creating, editing, packaging, and publishing extensions.
 
-As this article will outline, selecting some specific project files to be included in your extension, would allow you to continue working on your project without any disruptions.
+As this article will outline, selecting some specific project files to be included in your extension allows you to continue working on your project without any disruptions.
 
 
 
