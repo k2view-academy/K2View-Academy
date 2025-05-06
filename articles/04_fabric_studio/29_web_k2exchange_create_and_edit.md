@@ -2,94 +2,94 @@
 
 <web>
 
-K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio, which provides a comprehensive suite of tools for creating, editing, packaging, and publishing extensions efficiently.
+K2Exchange extensions are integral components of Fabric projects, designed to enhance their functionality. As such, the development of these extensions is naturally conducted within a Fabric project using Studio. The latter provides a comprehensive suite of tools for efficiently creating, editing, packaging, and publishing extensions.
 
-As will be described, you can pick up specific project's files to be included in your extension, while others not, allowing you to continue working on your project without disruptions.
+As this article will outline, selecting some specific project files to be included in your extension, would allow you to continue working on your project without any disruptions.
 
 
 
-## Creating New Extension
+## Creating New Extensions
 
 
 
 To create a new K2Exchange extension in your project, follow these steps:
 
-1. Open the **Command Palette** (CMD/CTRL+SHIFT+P) and run **New Fabric Extension**.
+1. In K2Studio application, navigate to the menu bar at the top, select the **View** option then open the **Command Palette** (Ctrl+Shift+P for Windows/Linux or Cmd+Shift+P for macOS). Search for **Fabric: New Fabric Extension...** and select it. 
 
-2. A popup window will appear, prompting you to define the **extension name** and **description**.
+2. A pop-up window will appear, prompting you to populate the **extension name** and **description**.
 
-3. Once confirmed, a new folder is created at the *extensions* folder which resides at the top of the project tree. This extension's folder is created with several sub folders and files, which are used as the extension's template, defaults and utilities.
+3. Once confirmed, a new folder is created under the *extensions* parent folder that resides at the top of the Project Tree. The newly created *extensions* folder contains several subfolders and files that serve as templates, defaults and utilities.
 
-   If this is the first extension then the *extensions* folder itself will be created too.
-
-
-
->  You can proceed on this step as many time as you need, having several separated extensions which are built form the same project.
+   If this is the first extension being created, then the *extensions* parent folder itself will also be created.
 
 
 
-## Adding Project's Files to Extension
-
-The extension’s folder, located at the root of the extensions directory, serves as the foundation for the artifact-building process. All necessary files should be placed there. Nevertheless, Studio eliminates the need to manually copy project files into the extension folder, preventing code duplication. This will let you confidence in that what you developed and tested will be included in the extension.
+>  You can go ahead and repeat these steps as many times as needed to create multiple separate extensions that stem from the same project.
 
 
 
-From the project tree:
+## Adding Project Files to Extensions
 
-1. Select the file/s or folder/s to be included in the extension.
+Each created extension is placed in a folder that is located directly under the *extensions* parent folder, and it serves as the foundation for the artifact-building process. All required files should be placed in such folders. Nevertheless, Studio eliminates the need to manually copy project files to extension folders, and thus it prevents code duplication and ensures that the code you have developed and tested is included in the extension.
 
-2. Right-click and choose **Add to Extension Artifacts List**.
+
+
+From the Project Tree:
+
+1. Select the file(s) or folder(s) to be included in the extension package.
+
+2. Right-click and choose **Add to Extension Artifacts List...**
 
      ![](images/web/29_add_files.png)
 
 
 
-3. A popup window will appear, prompting you to choose from a list, the right extension that these files shall be added into.
+3. A pop-up window will appear, prompting you to choose from a list, the relevant extension to which these files should be added.
 
-4. This operation updates the `artifactsSourcePaths.txt` file, which maintains a list of included files or folders. Thus, when you add project's files the `artifactsSourcePaths.txt` file is automatically opened or get focus, if already opened (The file can be updated manually or incrementally by adding more files as needed.)
+4. The above action updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths to/from it.
 
 
 
 ## Preparing for Packaging
 
-Once you added the relevant project's files into the extension, you shall update, or at least review, extension's metadata files. These files are auto created during the extension creation with default initial content. 
+Once you have added the relevant project files to the extension, you should update, or at least review, the extension's metadata files. These files are auto-created with default initial content during the extension creation process. 
 
 The key files you should manage include:
 
-- README.md – Contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
+- README.md – contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
 
-- package.json – Stores the package configuration, including:
+- package.json – stores the package configuration, including:
   - `version`: The extension version.
 
-  - `preview`: `true/false` – Determines if the package is considered as preview. Since Fabric 8.2, *Preview* extensions are hidden by default.
+  - `preview`: `true/false` – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
 
   - `minRequiredFabricVersion`: Specifies the minimum required Fabric version (validated during installation).
 
-  - `icon`: Defines the icon that appears in K2Exchange (default is K2 icon).
+  - `icon`: Defines the icon that appears in K2Exchange (the default is the K2 icon).
 
   - `displayName`: The name displayed in K2Exchange.
 
   - `description`: A brief description of the extension.
 
-- LICENSE.txt - This is an optional file, describing you license and terms of use, that you might wish to apply for your extension. By default, the README file contains a link to this file.
+- LICENSE.txt – this is an optional file, which details your license and terms of use that you may wish to apply for your extension. By default, the README file contains a link to this file.
 
 
 
-## Packaging and Publishing Extension
+## Packaging and Publishing Extensions
 
-Studio lets you executing several actions for packaging and publishing extensions:
+Studio lets you execute several actions for packaging and publishing extensions:
 
-* Building a **VSIX Package** - An extension installer package file (a zip like format), which contains all the extension's necessary components.  It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
+* Building a **VSIX Package** – an extension installer package file (a zip like format), which contains all the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
 * Publishing extension into the **K2exchange store/registry** - This publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
 
-* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus cannot use neither VSIX package nor K2exchange store/registry.
+* Creating a **k2export** file – this file can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2exchange and thus can use neither VSIX package nor K2exchange store/registry.
 
 
 
-To run either of these actions, you shall first execute the *install* script, as a one time action per extension:
+To run either of these actions, you should first execute the *install* script, as a one time action per extension:
 
 1. At the project tree go to the *NPM SCRIPTS* section, which appears under the *Project* section.
 
@@ -128,11 +128,11 @@ The action commands:
 
 
 
-## Updating Extension
+## Updating Extensions
 
 To update an existing extension, follow the below steps:
 
-1. Add files and/or folders from the project folder into the extension. You can also remove files or folders.
+1. Add files and/or folders from the project folder to the extension. You can also remove files or folders.
 
 2. Update the **version number** in `package.json` file.
 

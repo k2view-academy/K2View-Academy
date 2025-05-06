@@ -16,7 +16,7 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
        ***Note:*** If the target DB does not have a sequence, or if it is neither Oracle, DB2 nor PostgreSQL, you can populate the **Target DB interface name** with **TDM**. The sequence will then be automatically created in the TDM DB.
 
-   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
+   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow, e.g. customerInitValue, to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is **only relevant when getting the next value IN-MEMORY, or from a newly created DB sequence**. Otherwise, the next value is taken from the existing DB sequence.
 
      Notes:
 
