@@ -61,31 +61,31 @@ The key files you should manage include:
 - package.json – stores the package configuration, including:
   - `version`: The extension version.
 
-  - `preview`: `true/false` – determines whether the package is considered as preview. From Fabric 8.2 onwards, *Preview* extensions are hidden by default.
+  - `preview`: `true/false` – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
 
   - `minRequiredFabricVersion`: Specifies the minimum required Fabric version (validated during installation).
 
-  - `icon`: Defines the icon that appears in K2Exchange (default is K2 icon).
+  - `icon`: Defines the icon that appears in K2Exchange (the default is the K2 icon).
 
   - `displayName`: The name displayed in K2Exchange.
 
   - `description`: A brief description of the extension.
 
-- LICENSE.txt — this is an optional file, which details your license and terms of use that you may wish to apply for your extension. By default, the README file contains a link to this file.
+- LICENSE.txt – this is an optional file, which details your license and terms of use that you may wish to apply for your extension. By default, the README file contains a link to this file.
 
 
 
 ## Packaging and Publishing Extensions
 
-Studio lets you executing several actions for packaging and publishing extensions:
+Studio lets you execute several actions for packaging and publishing extensions:
 
-* Building a **VSIX Package** - an extension installer package file (a zip like format), which contains all the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
+* Building a **VSIX Package** – an extension installer package file (a zip like format), which contains all the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
 * Publishing extension into the **K2exchange store/registry** - This publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
 
-* Creating a **k2export** file - This can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2xchange and thus can use neither VSIX package nor K2exchange store/registry.
+* Creating a **k2export** file – this file can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2exchange and thus can use neither VSIX package nor K2exchange store/registry.
 
 
 
