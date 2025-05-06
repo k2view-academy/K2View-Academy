@@ -71,7 +71,7 @@ The key files you should manage include:
 
   - `description`: A brief description of the extension.
 
-- LICENSE.txt – this is an optional file, which details your license and terms of use that you may wish to apply for your extension. By default, the README file contains a link to this file.
+- LICENSE.txt – this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
 
 
 
@@ -79,7 +79,7 @@ The key files you should manage include:
 
 Studio lets you execute several actions for packaging and publishing extensions:
 
-* Building a **VSIX Package** – an extension installer package file (a zip like format), which contains all the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions, as defined during the extension preparations.
+* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions as defined during the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
