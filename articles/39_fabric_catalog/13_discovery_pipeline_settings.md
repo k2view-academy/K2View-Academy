@@ -9,7 +9,7 @@ The **Baseline** rule includes a list of product built-in plugins with their inp
 The Discovery Pipeline screen enables performing the following actions, described further in this article:
 
 * Overriding the product's default [Baseline rule](13_discovery_pipeline_settings.md#baseline-rule).
-* Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the plugins' settings.
+* Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the crawler and/or plugins' settings.
 * [Adding new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) to the pipeline.
 
 
@@ -69,6 +69,14 @@ When the filter is set to **Exclude This**:
 * The Crawler **excludes** the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
 * This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
 
+**Example of 'Exclude This' rule applied on Schema & Dataset level**
+
+The below image shows a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform & **main** schema. 
+
+The purpose of this rule is to completely exclude the **CASE_NOTES** table from the Discovery process. 
+
+![](images/discovery_pipeline_excludeThis.png)
+
 #### Rule Type: Crawler Filter = Exclude Others
 
 When the filter is set to **Exclude Others**:
@@ -83,6 +91,14 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
 * The Crawler is executed on the whole Data Platform.
 * The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
+
+**Example of a rule applied on Schema & Dataset level**
+
+The below image shows a rule defined for the **CUSTOMER** table of **CRM_DB** data platform & **main** schema. 
+
+The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset. 
+
+![](images/discovery_pipeline_sampleSize.png)
 
 #### Rules Combination and Hierarchy
 
