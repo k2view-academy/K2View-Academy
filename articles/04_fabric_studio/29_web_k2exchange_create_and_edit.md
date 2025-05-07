@@ -89,17 +89,17 @@ Studio lets you execute several actions for packaging and publishing extensions:
 
 
 
-To run either of these actions, you should first execute the *install* script, as a one time action per extension:
+To run either of these actions, you should first execute the *install* script, as a one-time action per extension:
 
-1. At the project tree go to the *NPM SCRIPTS* section, which appears under the *Project* section.
+1. In the Project Tree, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 
      ![](images/web/29_npm_section.png)
 
-    > if this section is not shown, refresh the Studio page. This might happen only on the first time of creating extensions.
+    > If this section is not shown, refresh the Studio page. This might occur only on the first time you create extensions.
 
 2. Expand the entry with the extension name.
 
-3. Click on arrow aside the Install command action or right-click and from the open menu click on Run
+3. Click the arrow aside the install command action or right-click and from the open menu click on Run
 
      ![](images/web/29_npm_install.png)
 
