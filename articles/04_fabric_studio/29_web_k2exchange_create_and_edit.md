@@ -65,11 +65,11 @@ The key files you should manage include:
 
   - `minRequiredFabricVersion` – specifies the minimum required Fabric version (validated during installation).
 
-  - `icon` – defines the icon that appears in K2exchange (the default is the K2 icon).
+  - `icon` – defines the icon that appears in K2exchange (the default is the **K2** icon).
 
   - `displayName` – the name displayed in K2exchange.
 
-  - `description` - a brief description of the extension.
+  - `description` – a brief description of the extension.
 
 - LICENSE.txt – this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
 
@@ -79,7 +79,7 @@ The key files you should manage include:
 
 Studio lets you execute several actions for packaging and publishing extensions:
 
-* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies and Installation instructions as defined during the extension preparations.
+* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined during the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
@@ -123,8 +123,8 @@ The action commands:
 
 >  After running the extension packaging process, you will be able to see at the extension's artifacts folder:
 >
->  * under the root folder - the VSIX file
->  * under the artifacts subfolder - the project's files, which are included in the extension, shown as symbolic link
+>  * under the root folder – the VSIX file
+>  * under the artifacts subfolder – the project's files, which are included in the extension, shown as symbolic link
 
 
 
@@ -136,7 +136,7 @@ To update an existing extension, follow the below steps:
 
 2. Update the **version number** in `package.json` file.
 
-3. Run the relevant script (`publish`, `k2export`, or `package`).
+3. Run the relevant script (`publish`, `k2export` or `package`).
 
 
 
