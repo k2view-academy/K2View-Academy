@@ -83,7 +83,7 @@ Studio lets you execute several actions for packaging and publishing extensions:
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
 
-* Publishing extension into the **K2exchange store/registry** - This publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
+* Publishing extension into the **K2exchange store/registry** - this publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
 
 * Creating a **k2export** file – this file can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2exchange and thus can use neither VSIX package nor K2exchange store/registry.
 
