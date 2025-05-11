@@ -107,17 +107,17 @@ To run either of these actions, you should first execute the *install* script, a
 
 
 
-Once you ran this, you can now execute the appropriate command to generate the package. This shall be done similar to the *install* action, by either clicking on the arrow aside the command or by using right-click and then choosing the Run action.
+Once you ran this, you can now execute the appropriate command to generate the package. This should be done similar to the *install* action, by either clicking on the arrow aside the command or by using right-click and then choosing the Run action.
 
 The action commands:
 
-* `Fabric-lib-publish`, for publishing into the K2exchange store/registry.
+* `Fabric-lib-publish`, for publishing to the K2exchange store/registry.
 
-  > This actions requires a token that provided for users at the K2exchange portal. Contact K2view team for more information and options.
+  > This action requires a token that provided for users at the K2exchange portal. Contact the K2view team for more information and options.
 
 * `Fabric-lib-package`: Creates a **VSIX** file for importing later by consumers.
 
-* `Fabric-lib-k2export`: Generates a `.k2export` file, which can be imported into .NET Desktop Studio.
+* `Fabric-lib-k2export`: Generates a `.k2export` file, which can be imported to the .NET Desktop Studio.
 
 
 
