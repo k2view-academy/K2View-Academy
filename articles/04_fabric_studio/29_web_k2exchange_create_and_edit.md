@@ -77,9 +77,9 @@ The key files you should manage include:
 
 ## Packaging and Publishing Extensions
 
-Studio lets you execute several actions for packaging and publishing extensions:
+Studio allows you to execute **several actions** for packaging and publishing extensions:
 
-* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined during the extension preparations.
+* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all the necessary components of an extension. This package file includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined in the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or for cases where publishing to the K2exchange store/registry is not possible.
 
@@ -89,7 +89,7 @@ Studio lets you execute several actions for packaging and publishing extensions:
 
 
 
-To run either of these actions, you should first execute the *install* script, as a one-time action per extension:
+To run any of these actions, you should first execute the *install* script, as a one-time action per extension:
 
 1. In the Project Tree, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 
