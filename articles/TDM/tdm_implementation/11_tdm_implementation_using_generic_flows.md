@@ -367,11 +367,15 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as external parameter. The external parameter name must be SESSION_GLOBALS.
+1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter. The external parameter name must be SESSION_GLOBALS.
 
 2. **DbCommand** - defines the Select statement to select the task's entities. The Select statement must return only the entity IDs. 
 
-3. **customLogicDirectFlowUtil** - filters out the reserved entities if needed,  and formats the entity IDs for the task execution. Set the **NUMBER_OF_ENTITIES** input parameter to be external, and link the DBCOmmand result to the **input values** parameter. The **output values** parameter must be external.
+3. **customLogicDirectFlowUtil** - filters out the reserved entities if needed,  and formats the entity IDs for the task execution:
+   - Set the **NUMBER_OF_ENTITIES** input parameter to be external.
+   - Link the DBCommand result to the **input values** parameter.
+   - Set the **innerFlowClose** input parameter to **false** in order to support the streaming of the resultSet by the inner flow and avoid the Broadway limitation of the maximum number of records (set to 100K by default).
+   - The **output values** parameter must be external.
 
 
 #### Indirect Call Flow

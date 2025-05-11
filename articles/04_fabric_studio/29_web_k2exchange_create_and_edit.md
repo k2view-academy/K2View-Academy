@@ -81,25 +81,25 @@ Studio lets you execute several actions for packaging and publishing extensions:
 
 * Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined during the extension preparations.
 
-   VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or use it when you cannot publish it to the K2exchange store/registry.
+   VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or for cases where publishing to the K2exchange store/registry is not possible.
 
-* Publishing extension into the **K2exchange store/registry** - this publishes the extension package into K2exchange store/registry, where then the extension can be discovered at the extension list.
+* Publishing an extension to the **K2exchange store/registry** - this action publishes the extension package to the K2exchange store/registry, after which the extension can be discovered in the list of extensions.
 
-* Creating a **k2export** file – this file can be useful for extension consumers who are using Desktop Studio, which is not integrated with the K2exchange and thus can use neither VSIX package nor K2exchange store/registry.
+* Creating a **k2export** file – this file can be useful for extension consumers who use Desktop Studio. The latter is not integrated with K2exchange and these consumers can therefore use neither a VSIX package nor the K2exchange store/registry.
 
 
 
-To run either of these actions, you should first execute the *install* script, as a one time action per extension:
+To run either of these actions, you should first execute the *install* script, as a one-time action per extension:
 
-1. At the project tree go to the *NPM SCRIPTS* section, which appears under the *Project* section.
+1. In the Project Tree, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 
      ![](images/web/29_npm_section.png)
 
-    > if this section is not shown, refresh the Studio page. This might happen only on the first time of creating extensions.
+    > If this section is not shown, refresh the Studio page. This might occur only on the first time you create extensions.
 
 2. Expand the entry with the extension name.
 
-3. Click on arrow aside the Install command action or right-click and from the open menu click on Run
+3. Click the arrow aside the install command action or right-click and from the open menu click on Run
 
      ![](images/web/29_npm_install.png)
 
