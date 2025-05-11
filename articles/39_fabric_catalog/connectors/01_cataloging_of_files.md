@@ -2,18 +2,18 @@
 
 ## Overview
 
-Fabric Catalog is a tool designed to organize all data assets within a company's data landscape. It facilitates metadata discovery, classification, the indication of PII, and the calculation of various data quality metrics for each source.
+Fabric Catalog is a tool designed to organize all data assets within a company's data landscape. It facilitates metadata discovery, classification, PII indication and calculation of various data quality metrics of all entities of a data source.
 
 Sometimes the company's data assets are stored in files rather than in a data base, due to some business needs. For example, files containing sensitive data arrive periodically to a predefined filesystem interface. Before these files are utilized for the business purposes, it is essential to identify and mask any sensitive data they contain.
 
 Starting V8.3 Fabric enables building a Catalog based on files. Discovery can be performed using:
 
-* Schema definition, such as JSON schema or AVRO schema files.
+* Metadata definition, such as JSON schema or AVRO schema files.
 * Sample files containing data.
 
-The Crawler framework used for file cataloging employs a generic mechanism that is independent of specific file types. It expects to get an input in a predefined format, achieved through the invocation of the Broadway flows. These flows provide mapping and transformation rules, converting the specific file format (their schema definition and/or the sample files) to the Catalog’s standard structure: data platform, schema(s), dataset(s), etc. 
+The Crawler framework used for file cataloging employs a generic mechanism that is independent of specific file types. It expects to get an input in a predefined format, achieved through the invocation of the Broadway flows. These flows provide mapping and transformation rules, converting the specific file format (their schema definition and/or the sample files) to the Catalog’s standard structure: data platform, schema(s), dataset(s), fields and their properties. 
 
-Once the Catalog structure is built, all regular steps are performed, such as parsing of complex structures, classification & PII indication, etc. 
+Once the Catalog structure is built, the active plugins (such as parsing of complex structures, classification & PII indication) are executed like in case of discovery over any other data source.
 
 Further  in this article, you can learn in more details about: 
 

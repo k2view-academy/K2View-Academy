@@ -223,12 +223,20 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
 
-The API builds the Catalog artifacts, based on a given version. An artifact includes the details of all Catalog fields with their properties, such as Classification and PII. The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+The API builds the Catalog artifacts, based on a given version. The artifacts include the details of all Catalog fields with their properties, such as Classification and PII. The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+
+Starting from V8.3, the artifacts of the relations might also be extracted by the API. It can be done when setting ```refersTo=true``` in the API's input.
+
+Refer to the [Catalog Artifacts article](09_build_artifacts.md) for more details about the extract files structure and naming convention. 
 
 **Example of an API call:**
 
 ```
 https://localhost:3213/api/catalog/4/build-catalog-artifacts
+```
+
+```
+https://localhost:3213/api/catalog/latest/build-catalog-artifacts?refersTo=true
 ```
 
 

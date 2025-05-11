@@ -29,11 +29,11 @@ This plugin scans the data of the data sample in order to calculate the followin
   * This parameter helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
   * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
-  * This calculation is done for alpha-numeric and numeric fields (string, integers, decimal and other kinds of numbers).
-* **Range Of Values** - the minimum and maximum values in a numeric column, in the data sample (e.g., 1 - 100).
+  * This calculation is done for alpha-numeric and numeric fields (string, integers and real).
+* **Minimum Value** and **Maximum Value** (Range Of Values until V8.3), **Average** and **Standard Deviation** (starting from V8.3) are basic statistical calculations in a numeric or date column, in the data sample.
   * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps to ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
-  * As part of basic descriptive statistics, the range provides a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
+  * As part of basic descriptive statistics, these metrics provide a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
 * **Null Percentage** - the percentage of null values per column. 
   * This percentage is calculated on each column of non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value is above the plugin's threshold. 
   * For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.

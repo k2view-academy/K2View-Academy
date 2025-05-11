@@ -20,7 +20,9 @@ The below image is a Catalog artifact example:
 
 The artifact is created for the Catalog version, which is displayed in the application. The last column's heading holds the version number, **V4** in the above example. This column remains always empty.
 
-Note that a Catalog artifact can be created for any Catalog version. Each new artifact overrides the existing artifact in the Project tree.
+Catalog's artifacts can be created for any Catalog version. Each new artifact overrides the existing artifact in the Project tree.
+
+Starting from V8.3, the artifacts of the relations might also be extracted. However this option is only available by the ```/api/catalog/{version}/build-catalog-artifacts``` API, as described [here](20_catalog_APIs.md#build-catalog-artifacts). 
 
 ### Splitting and Combining Artifacts
 
@@ -30,7 +32,7 @@ This ability allows to combine separate artifacts, created in different projects
 
 Note that if the catalog_field_info.csv file exists in the Project tree, it should be manually deleted.
 
-The splitting and combining ability is enabled only when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (OFF is this parameter's default setting).
+The splitting and combining ability is enabled only when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (which is this parameter's default setting starting from V8.3).
 
 The separate files' name is created based on the following template - ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 
