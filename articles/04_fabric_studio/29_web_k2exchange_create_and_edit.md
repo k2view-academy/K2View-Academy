@@ -77,7 +77,7 @@ The key files you should manage include:
 
 ## Packaging and Publishing Extensions
 
-Studio allows you to execute **several actions** for packaging and publishing extensions:
+Studio enables you to execute **several actions** for packaging and publishing extensions:
 
 * Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all the necessary components of an extension. This package file includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined in the extension preparations.
 
@@ -99,7 +99,7 @@ To run any of these actions, you should first execute the *install* script, as a
 
 2. Expand the entry with the extension name.
 
-3. Click the arrow aside the install command action or right-click and from the open menu click on Run
+3. Click the **install** command; you can either click the arrow aside it or right-click it and then select ‘Run’.
 
      ![](images/web/29_npm_install.png)
 
@@ -107,24 +107,24 @@ To run any of these actions, you should first execute the *install* script, as a
 
 
 
-Once you ran this, you can now execute the appropriate command to generate the package. This should be done similar to the *install* action, by either clicking on the arrow aside the command or by using right-click and then choosing the Run action.
+Once it has been run, you can execute the appropriate command to generate the package. This should be done similarly to the *install* command, by either clicking the arrow aside the command or right-clicking it and then selecting ‘Run’.
 
-The action commands:
+The commands are:
 
-* `Fabric-lib-publish`, for publishing to the K2exchange store/registry.
+* `Fabric-lib-publish` – for publishing to the K2exchange store/registry.
 
-  > This action requires a token that provided for users at the K2exchange portal. Contact the K2view team for more information and options.
+  > This action requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
 
-* `Fabric-lib-package`: Creates a **VSIX** file for importing later by consumers.
+* `Fabric-lib-package` – creates a **VSIX** file, which can be imported to the Web Studio.
 
-* `Fabric-lib-k2export`: Generates a `.k2export` file, which can be imported to the .NET Desktop Studio.
+* `Fabric-lib-k2export` – generates a `.k2export` file, which can be imported to the .NET Desktop Studio.
 
 
 
->  After running the extension packaging process, you will be able to see at the extension's artifacts folder:
+>  Following execution of the extension packaging process, you would be able to see - in the extension's artifacts folder - the following files:
 >
 >  * under the root folder – the VSIX file
->  * under the artifacts subfolder – the project's files that are included in the extension, shown as symbolic link
+>  * under the artifacts subfolder – the project's files that are included in the extension, shown as a symbolic link
 
 
 
