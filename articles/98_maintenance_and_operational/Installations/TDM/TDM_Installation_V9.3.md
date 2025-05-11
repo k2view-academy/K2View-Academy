@@ -20,9 +20,13 @@ Click here to open the [TDM 9.3.x Docker Installation document](/articles/98_mai
 ### Import the TDM Library
 
 Both TDM layers - backend and frontend - are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) from v7.6 onwards.
-Download the TDM Library from the [download links](https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa), import and deploy it. Use the Import All option to import the TDM LU.
+Download the TDM Library export files from the [download links](https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa), import and deploy them:
+- Use the **Custom Import** option - right-click on the root of Project Tree, click on Import and then click Custom Import - to import the TDM Library export file in order to import the TDM utils into your project.
+- Use the **Import All** option - right-click on the root of the Project Tree, click on Import, and then choose Import All to open the File Browser and select the export file to be imported - to import the TDM LU export file in order to import the following LUs into the project: TDM, TDM_LIBRARY, and the TDM_TableLevel.
 
-Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for instructions on how to import and deploy the TDM Library.
+Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for more information about the TDM Library.
+
+Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md#how-can-i-import-a-k2export-file-into-my-project) for more information about the import options.
 
 ### TDM Web Application
 
