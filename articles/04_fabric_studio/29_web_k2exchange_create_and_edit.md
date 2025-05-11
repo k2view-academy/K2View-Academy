@@ -124,7 +124,7 @@ The action commands:
 >  After running the extension packaging process, you will be able to see at the extension's artifacts folder:
 >
 >  * under the root folder – the VSIX file
->  * under the artifacts subfolder – the project's files, which are included in the extension, shown as symbolic link
+>  * under the artifacts subfolder – the project's files that are included in the extension, shown as symbolic link
 
 
 
@@ -140,7 +140,7 @@ To update an existing extension, follow the below steps:
 
 
 
-> **No need to run install again** if you are only updating the package content.
+> **It is not required to run install again** if you are only updating the package content.
 
 
 
@@ -148,9 +148,9 @@ To update an existing extension, follow the below steps:
 
 - Maintain dedicated GIT repository and environment/space where extensions are created.
 
-- Once creating an extension, add its folder files into GIT (but not the artifacts or the VSIX package, if created).
+- Once creating an extension, add its folder files to GIT (but not the artifacts or the VSIX package, if created).
 
-- A single repository can house multiple extensions, though separating them allows for greater flexibility, in terms of GIT branches aspects.
+- A single repository can house multiple extensions; however, separating them allows for greater flexibility, in terms of GIT branches aspects.
 
 - Before releasing an extension, test it using a VSIX package in a separate environment to ensure proper installation and functionality.
 
@@ -164,4 +164,4 @@ To update an existing extension, follow the below steps:
 
 
 
-<studio>Not Available at Desktop Studio</sutdio>
+<studio>Not Available in Desktop Studio</sutdio>
