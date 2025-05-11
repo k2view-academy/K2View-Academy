@@ -140,17 +140,17 @@ To update an existing extension, follow the below steps:
 
 
 
-> **It is not required to run install again** if you are only updating the package content.
+> If you are only updating the package content, it is not necessary to run the install again.
 
 
 
-## Best Practices
+## Good Practice
 
 - Maintain dedicated GIT repository and environment/space where extensions are created.
 
 - Once creating an extension, add its folder files to GIT (but not the artifacts or the VSIX package, if created).
 
-- A single repository can house multiple extensions; however, separating them allows for greater flexibility, in terms of GIT branches aspects.
+- A single repository can house multiple extensions; however, separating them allows for greater flexibility, in terms of GIT branching strategies.
 
 - Before releasing an extension, test it using a VSIX package in a separate environment to ensure proper installation and functionality.
 
