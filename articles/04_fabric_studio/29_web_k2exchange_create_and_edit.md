@@ -99,7 +99,7 @@ To run any of these actions, you should first execute the *install* script, as a
 
 2. Expand the entry with the extension name.
 
-3. Click the **install** command; you can either click the arrow aside it or right-click it and then select ‘Run’.
+3. Click the *install* command; you can either click the arrow aside it or right-click it and then select ‘Run’.
 
      ![](images/web/29_npm_install.png)
 
@@ -113,7 +113,7 @@ The commands are:
 
 * `Fabric-lib-publish` – for publishing to the K2exchange store/registry.
 
-  > This action requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
+  > This command requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
 
 * `Fabric-lib-package` – creates a **VSIX** file, which can be imported to the Web Studio.
 
@@ -164,4 +164,4 @@ To update an existing extension, follow the below steps:
 
 
 
-<studio>Not Available in Desktop Studio</sutdio>
+<studio>Not available in Desktop Studio</studio>
