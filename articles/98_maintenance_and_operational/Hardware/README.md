@@ -28,7 +28,7 @@
   </li>
   
   <li>
-    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements and Prerequisites for K2cloud on-prem Kubernetes Installation.md">
+    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements and Prerequisites for K2cloud on-prem K8s Installation.md">
       Hardware, System Requirements, and Installation Instructions for K2cloud On-premises Kubernetes Cluster
     </a>
   </li>
@@ -38,4 +38,3 @@
     </a>
   </li>
 </ul>
-
