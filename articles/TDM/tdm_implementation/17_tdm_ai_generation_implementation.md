@@ -67,13 +67,13 @@ Add the AI environment to:
 
     
 
-- The **Special** and **Categorical** column headings indicate which field type you wish to override the default behavior for - the special parameters or the categorical field. One of these fields must be **true** for each record.
+- The **override_special** and **override_categorical** column headings indicate if to override the default classification of the fields as special parameters or categorical data. One of these fields must be **true** for each record.
 
 - The **Indicator** column heading indicates how to override the default behavior: 
 
 ​	**Examples**:
 
-- Do not define a city as a special param as the data generation process has to generate real values for a city.
+- Do not define a city as a special param as the data generation process has to generate real values for a city. Override the special parameters' default classification and set the indicator to false in order to indicate that the city must not be treated as a special parameter field.
 
 - Force the AI to treat the case_note field as a special param and generate a realistic-like dummy value for this field. 
 
@@ -83,6 +83,7 @@ Add the AI environment to:
 
 ##### Note:
   - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in this table.
+  - Set the **active** to **true** to include this record in AI processing. 
 
 
 
