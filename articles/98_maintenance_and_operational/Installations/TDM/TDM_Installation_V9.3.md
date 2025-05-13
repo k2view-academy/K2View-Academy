@@ -2,6 +2,12 @@
 
 This document describes the installation guidelines and the initial configuration activities required for a new TDM installation or an upgrade of TDM to the current version.
 
+## Using Pre-created DB Schema for the TDMDB Creation 
+If you've pre-created a database schema for TDM DB instead of using the default, do the following:
+- Ensure the schema name is configured in both objects - the **TDMDB_SCHEMA** Global variable and the **TDMDBSchema** Actor.
+- Complete this configuration **before deploying** the TDM Logical Unit.
+ 
+
 ## TDM On-Prem Installation 
 
 ### Prerequisites
