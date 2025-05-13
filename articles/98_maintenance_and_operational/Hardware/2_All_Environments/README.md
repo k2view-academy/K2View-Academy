@@ -7,34 +7,35 @@
   </li>
   
   <li>
-    Linux and Docker Installations for Fabric and TDM Environments
+    Linux and Docker Fabric & TDM Installation
     <ul>
       <li>
-        <a href="/articles/98_maintenance_and_operational/Hardware/00_hardware_requirements_for_POV.md">
-          Hardware and System Requirements for Fabric and TDM Proof of Value (POV) Environments
+        <a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">
+          POV Requirements for Fabric & TDM
         </a>
       </li>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/02_hardware_req_for_dev_qa.md">
-          Hardware and System Requirements for Fabric and TDM Dev and QA Environments
+          Dev/QA Requirements for Fabric & TDM
         </a>
       </li>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/03_hardware_req_for_prod.md">
-          Hardware and System Requirements for Fabric and TDM Production Environments
+          Production Requirements for Fabric & TDM 
         </a>
       </li>
     </ul>
   </li>
-  
-  <li>
-    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements and Prerequisites for K2cloud on-prem K8s Installation.md">
-      Hardware, System Requirements, and Installation Instructions for K2cloud On-premises Kubernetes Cluster
-    </a>
-  </li>
+
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
-      Hardware and System Requirements for Self-hosted Cloud Kubernetes Installation
+      K2cloud Self-hosted Kubernetes Installation
     </a>
   </li>
+  <li>
+    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements and Prerequisites for K2cloud on-prem K8s Installation.md">
+      K2cloud On-premises Kubernetes Cluster Installation
+    </a>
+  </li>
+
 </ul>
