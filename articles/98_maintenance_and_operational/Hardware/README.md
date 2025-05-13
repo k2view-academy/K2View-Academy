@@ -1,4 +1,4 @@
-<strong>Hardware and System Prerequisites for VM, Docker, on-premises and Self-hosted Cloud Kubernetes Installations</strong>
+<strong>Hardware and System Prerequisites for VM, Docker, On-premises and Self-hosted Cloud Kubernetes Installations</strong>
 <ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">
