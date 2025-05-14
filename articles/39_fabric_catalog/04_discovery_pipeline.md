@@ -45,6 +45,8 @@ The sample size is defined by:
 
 For example, the percentage is 10%, min is 100 and max is 500. Hence, if a table includes 200 rows, the sample size wwould be 100. If a table includes 2,000 rows, the sample size would be 200. If a table includes 100,000 rows, the sample size would be 500.
 
+Starting from V8.3, Row Count check box is defined as part of the sample size. When Row Count is set to false, the Data Snapshot step does not perform ```count(*)```. Instead, the sample size is equal to Max. This is recommended for the data sources that have difficulty performing ```count(*)```, such as Cassandra.
+
 ### Global Shema Exclusion
 
 By default, all the data platform's entities are scanned except for those that are in the global schema exclude list. 
