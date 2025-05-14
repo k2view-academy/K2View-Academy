@@ -18,7 +18,7 @@ In this article, we will walk through the steps of building a web app inside Web
 
 1. In the Project Tree, select the LU where you intend to create the web application, and navigate to the Web folder.
 
-2. Right-click and choose "New Web App..."
+2. Right-click and choose 'New Web App...'
 
    ![](images/web/30_new_app.jpg)
 
@@ -48,7 +48,7 @@ To do so, click on the preview icon ![](images/web/30_open-preview.svg), which i
 
 ## Live Editing and Instant Updates
 
-One of the most powerful features of Web Studio is its **real-time preview**. As the code is being modified, the updates reflect immediately in the preview window, eliminating the need for manual builds and deployments. This feature significantly accelerates the development cycle and enhances productivity.
+One of the most powerful features of Web Studio is its **real-time preview**. As the code is modified, updates are immediately reflected in the preview window, eliminating the need for manual builds and deployments. This feature significantly accelerates the development cycle and enhances productivity.
 
 To activate it:
 
