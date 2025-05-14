@@ -115,9 +115,9 @@ The commands are:
 
   > This command requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
 
-* `Fabric-lib-package` – creates a **VSIX** file, which can be imported to the Web Studio.
+* `Fabric-lib-package` – creates a **VSIX** file, which can be imported into the Web Studio.
 
-* `Fabric-lib-k2export` – generates a `.k2export` file, which can be imported to the .NET Desktop Studio.
+* `Fabric-lib-k2export` – generates a `.k2export` file, which can be imported into the .NET Desktop Studio.
 
 
 
