@@ -9,7 +9,7 @@
 
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md">
-      K2view Fabric Web Studio
+      K2view Fabric Web Studio Installation
     </a>
   </li>
 
