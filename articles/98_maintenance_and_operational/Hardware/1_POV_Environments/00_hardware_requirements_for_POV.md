@@ -93,7 +93,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Amazon - AWS</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>m5.4xlarge</p>
+<p>m5.2xlarge</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -101,7 +101,7 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Google - GCP</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>D16d v4</p>
+<p>e2-standard-8</p>
 </td>
 </tr>
 <tr style="height: 46px;">
@@ -109,12 +109,11 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Microsoft - Azure</strong></p>
 </td>
 <td style="width: 447.516px; height: 46px;">
-<p>e2-standard-8</p>
+<p>D8d v5</p>
 </td>
 </tr>
 </tbody>
 </table>
-
 
 
 ## Fabric Studio Requirements:
