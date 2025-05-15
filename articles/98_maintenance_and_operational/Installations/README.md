@@ -17,7 +17,7 @@
     Kubernetes Installations
     <ul>
       <li>
-        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements and Prerequisites for K2cloud on-prem Kubernetes Installation.md">
+        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
           Installation Instructions for K2cloud On-premises Kubernetes Cluster
         </a>
       </li>
