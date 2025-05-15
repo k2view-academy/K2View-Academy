@@ -1,16 +1,16 @@
 <web>
 
-# Building Web Apps in Web Studio 
+# Building Web Applications in Web Studio 
 
 ## Introduction
 
-In today's fast-paced development landscape, having an all-in-one platform for implementing and deploying applications is crucial. **Web Studio IDE** is designed as a one-stop shop, allowing you to seamlessly develop and deploy solutions in an **end-to-end manner** – from building and populating an LU to easily creating related APIs and web applications that consume them. **Web Studio** integrates multiple technologies to accomplish these tasks, offering built-in support for various languages such as Java, JavaScript, HTML, and CSS, along with intelligent code completion and error notifications.
+In today's fast-paced development environment, having an all-in-one platform for implementing and deploying applications is crucial. **Web Studio IDE** is designed as a one-stop shop, allowing you to seamlessly develop and deploy solutions in an **end-to-end manner** – from building and populating an LU to easily creating related APIs and web applications that consume them. **Web Studio** integrates multiple technologies to accomplish these tasks, offering built-in support for various languages such as Java, JavaScript, HTML, and CSS, along with intelligent code completion and error notifications.
 
-This above-mentioned initiative allows you to develop web applications within Web Studio as part of the Fabric solution, catering to various users such as CRM representatives, internal teams, or clients.
+This above-mentioned initiative allows to develop web applications within Web Studio as part of the Fabric solution, catering to various users such as CRM representatives, internal teams, or clients.
 
 One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any changes. Using Web Studio, developers can instantly see changes, as they make modifications, which significantly streamlines the development process.
 
-In this article, we will walk through the steps of building a web app inside Web Studio, illustrating the process with examples and showcasing its powerful features.
+In this article, we will walk through the steps of building a web application inside Web Studio, illustrating the process with examples and showcasing its powerful features.
 
 
 
@@ -36,11 +36,11 @@ In this article, we will walk through the steps of building a web app inside Web
 
 
 
-## Editing and Managing Your Web App
+## Editing and Managing Your Web Application
 
-It is now possible to edit the web app code while benefiting from built-in intelligent code completion and error notifications.
+It is now possible to edit the web application code while benefiting from built-in intelligent code completion and error notifications.
 
-Web Studio also enables to manage - create, edit and debug - the APIs used by the web app, and to first view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
+Web Studio also enables to manage - create, edit and debug - the APIs used by the web application, and to first view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
 
 You can see a preview of your HTML files, without going to the app itself, using a built-in Preview view.
 
@@ -61,7 +61,7 @@ To activate it:
 
 
 
-Below are screenshots of the City Mobily C360 Demo project, where its React dashboard web app is developed within the Studio. The web app calls the customized project APIs (Java and Graphit files) that enable retrieval and saving of the data inside the LU. Altogether, this allows for the development, debugging and preview to occur in one single place.
+Below are screenshots of the City Mobily C360 Demo project, where its React dashboard web application is developed within the Studio. The web application calls the customized project APIs (Java and Graphit files) that enable retrieval and saving of the data inside the LU. Altogether, this allows for the development, debugging and preview to occur in one single place.
 
 
 
