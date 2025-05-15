@@ -7,7 +7,9 @@
   </li>
 
   <li>
-    Kubernetes Installation
+    <a href="/articles/98_maintenance_and_operational/Hardware/README.md">
+      Kubernetes Installation
+    </a>
     <ul>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
@@ -23,7 +25,9 @@
   </li>
   
   <li>
-    Linux and Docker Fabric & TDM Installation
+    <a href="/articles/98_maintenance_and_operational/Hardware/README.md">
+       Linux and Docker Fabric & TDM Installation
+    </a>    
     <ul>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">
