@@ -82,7 +82,7 @@ Below are some use cases:
 
 While setting up a K8s cluster, you shall follow these guidelines:
 
-* The supported versions for a Kubernetes cluster are: 1.28 - 1.30
+* The supported versions for a Kubernetes cluster are: 1.28 - 1.32
 * The supported versions for Helm chart are: 3.X
 
 - Verify that you have a client environment with the kubectl and Helm command-line tools, configured with a service account or a user that has an admin access to a namespace on the subject Kubernetes cluster.

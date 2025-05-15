@@ -44,7 +44,7 @@ From the Project Tree:
 
 
 
-3. A pop-up window will appear, prompting you to choose from a list, the relevant extension to which these files should be added.
+3. A pop-up window will appear, prompting you to choose the relevant extension (from a list) to which these files should be added.
 
 4. The above action updates the `artifactsSourcePaths.txt` file, which maintains the list of all files or folders included in the extension package. Thus, when you add project files, the `artifactsSourcePaths.txt` file either opens automatically or gets focus if it is already open. You can edit this file manually - by adding or removing file/folder paths to/from it.
 
@@ -56,40 +56,40 @@ Once you have added the relevant project files to the extension, you should upda
 
 The key files you should manage include:
 
-- README.md – contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
+- README.md — contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
 
-- package.json – stores the package configuration, including:
-  - `version` – the extension version.
+- package.json — stores the package configuration, including:
+  - `version` — the extension version.
 
-  - `preview`: true/false – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
+  - `preview`: true/false — determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
 
-  - `minRequiredFabricVersion` – specifies the minimum required Fabric version (validated during installation).
+  - `minRequiredFabricVersion` — specifies the minimum required Fabric version (validated during installation).
 
-  - `icon` – defines the icon that appears in K2exchange (the default is the **K2** icon).
+  - `icon` — defines the icon that appears in K2exchange (the default is the **K2** icon).
 
-  - `displayName` – the name displayed in K2exchange.
+  - `displayName` — the name displayed in K2exchange.
 
-  - `description` – a brief description of the extension.
+  - `description` — a brief description of the extension.
 
-- LICENSE.txt – this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
+- LICENSE.txt — this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
 
 
 
 ## Packaging and Publishing Extensions
 
-Studio lets you execute several actions for packaging and publishing extensions:
+Studio enables you to execute **several actions** for packaging and publishing extensions:
 
-* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all of the extension's necessary components. It includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined during the extension preparations.
+* Building a **VSIX Package** — an extension installer package file (a zip-like format), which contains all the necessary components of an extension. This package file includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined in the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or for cases where publishing to the K2exchange store/registry is not possible.
 
 * Publishing an extension to the **K2exchange store/registry** - this action publishes the extension package to the K2exchange store/registry, after which the extension can be discovered in the list of extensions.
 
-* Creating a **k2export** file – this file can be useful for extension consumers who use Desktop Studio. The latter is not integrated with K2exchange and these consumers can therefore use neither a VSIX package nor the K2exchange store/registry.
+* Creating a **k2export** file — this file can be useful for extension consumers who use Desktop Studio. The latter is not integrated with K2exchange and these consumers can therefore use neither a VSIX package nor the K2exchange store/registry.
 
 
 
-To run either of these actions, you should first execute the *install* script, as a one-time action per extension:
+To run any of these actions, you should first execute the *install* script, as a one-time action per extension:
 
 1. In the Project Tree, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 
@@ -99,7 +99,7 @@ To run either of these actions, you should first execute the *install* script, a
 
 2. Expand the entry with the extension name.
 
-3. Click the arrow aside the install command action or right-click and from the open menu click on Run
+3. Click the *install* command; you can either click the arrow aside it or right-click it and then select ‘Run’.
 
      ![](images/web/29_npm_install.png)
 
@@ -107,24 +107,24 @@ To run either of these actions, you should first execute the *install* script, a
 
 
 
-Once you ran this, you can now execute the appropriate command to generate the package. This shall be done similar to the *install* action, by either clicking on the arrow aside the command or by using right-click and then choosing the Run action.
+Once it has been run, you can execute the appropriate command to generate the package. This should be done similarly to the *install* command, by either clicking the arrow aside the command or right-clicking it and then selecting ‘Run’.
 
-The action commands:
+The commands are:
 
-* `Fabric-lib-publish`, for publishing into the K2exchange store/registry.
+* `Fabric-lib-publish` — for publishing to the K2exchange store/registry.
 
-  > This actions requires a token that provided for users at the K2exchange portal. Contact K2view team for more information and options.
+  > This command requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
 
-* `Fabric-lib-package`: Creates a **VSIX** file for importing later by consumers.
+* `Fabric-lib-package` — creates a **VSIX** file, which can be imported into the Web Studio.
 
-* `Fabric-lib-k2export`: Generates a `.k2export` file, which can be imported into .NET Desktop Studio.
+* `Fabric-lib-k2export` — generates a `.k2export` file, which can be imported into the .NET Desktop Studio.
 
 
 
->  After running the extension packaging process, you will be able to see at the extension's artifacts folder:
+>  Following execution of the extension packaging process, you would be able to see - in the extension's artifacts folder - the following files:
 >
->  * under the root folder – the VSIX file
->  * under the artifacts subfolder – the project's files, which are included in the extension, shown as symbolic link
+>  * under the root folder — the VSIX file
+>  * under the artifacts subfolder — the project's files that are included in the extension, shown as a symbolic link
 
 
 
@@ -140,17 +140,17 @@ To update an existing extension, follow the below steps:
 
 
 
-> **No need to run install again** if you are only updating the package content.
+> If you are only updating the package content, it is not necessary to run the install again.
 
 
 
-## Best Practices
+## Good Practice
 
 - Maintain dedicated GIT repository and environment/space where extensions are created.
 
-- Once creating an extension, add its folder files into GIT (but not the artifacts or the VSIX package, if created).
+- Once creating an extension, add its folder files to GIT (but not the artifacts or the VSIX package, if created).
 
-- A single repository can house multiple extensions, though separating them allows for greater flexibility, in terms of GIT branches aspects.
+- A single repository can house multiple extensions; however, separating them allows for greater flexibility, in terms of GIT branching strategies.
 
 - Before releasing an extension, test it using a VSIX package in a separate environment to ensure proper installation and functionality.
 
@@ -164,4 +164,4 @@ To update an existing extension, follow the below steps:
 
 
 
-<studio>Not Available at Desktop Studio</sutdio>
+<studio>Not available in Desktop Studio</studio>
