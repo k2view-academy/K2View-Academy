@@ -57,8 +57,8 @@ RedHat/CentOS 7 or Higher, Ubuntu 20 or higher Operating System, with **latest**
     \* Should be increased based on project scope and data retention requirements
 
 ##### For a Cloud Installation:
--   If using **AWS**: EC2: m5.4xlarge
--   If using **Azure** VM: D16d v4
+-   If using **AWS**: EC2: m5.2xlarge
+-   If using **Azure** VM: D8d v5
 -   If using **GCP**: e2-standard-8
 
 #### Linux Ports 
