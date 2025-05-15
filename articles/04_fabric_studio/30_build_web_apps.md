@@ -105,7 +105,7 @@ To add the **My Web App** application to the framework, add the following to the
 
 ## Fabric Web Framework Tools
 
-The Fabric web framework exposes a **k2api** object with various methods that can be used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set by using either the K2view web framework style sheets (**k2.css**) for a unified 'look & feel' or a different set of style sheets. The framework supports any application type (multi-page or single page) and any routing method (History API, hash-based or regular links).
+The Fabric web framework exposes a **k2api** object with various methods that can be used by the application, such as navigation, formatting and Fabric commands invocation. Application styles can be set by using either the K2view web framework style sheets (**k2.css**) for a unified 'look & feel' or a different set of style sheets. The framework supports any application type (multi-page or single-page) and any routing method (History API, hash-based or regular links).
 
 For detailed documentation about the integration development guidelines, supported methods and code examples, refer to the K2view web framework's menu (top-left *hamburger menu*) and select **Documentation > Web Framework API / Styles**.
 
