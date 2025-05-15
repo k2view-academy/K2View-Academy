@@ -16,7 +16,7 @@ If you've pre-created a database schema for TDM DB instead of using the default,
 
 #### Linux Installation 
 
-The following components must be installed as a prerequisite:
+The following components must be installed:
 
 - **Fabric Server** — TDM 9.3.x works with Fabric 8.2.x and above. Read [here](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md).
 - **PostgreSQL DB** — the TDM DB tables are created on a PostgreSQL DB. PostgreSQL v15 or v17 versions are certified. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
@@ -25,7 +25,7 @@ The following components must be installed as a prerequisite:
 
 Click here to open the [TDM 9.3.x Docker Installation document](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_Docker_Installation_V9.3.md).
 
-### Import the TDM Library
+### Fabric Studio (Desktop Studio) — Import the TDM Library
 
 Both TDM layers — backend and frontend — are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) from v7.6 onwards.
 Download the TDM Library export files from the [download links](https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa), import and deploy them:
@@ -76,7 +76,7 @@ After installing TDM, the admin user must [log into the TDM Portal](/articles/TD
 
 ## TDM Cloud Installation 
 
-The TDM project's profile must contain Fabric + PosgreSQL. Open the Fabric Web Studio, click the Extension icon, and select TDM to install the TDM library.
+The TDM project's profile must contain Fabric + PosgreSQL. Open the Fabric **Web Studio**, click the **Extension** icon, and select TDM to install the TDM library.
 
 Click [here](/articles/04_fabric_studio/28_web_k2exchange.md) for more information about Fabric's extensions. 
 
