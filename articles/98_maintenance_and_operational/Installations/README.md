@@ -14,7 +14,6 @@
   </li>
 
   <li>
-    Kubernetes Installations
     <a href="/articles/98_maintenance_and_operational/Installations/README.md">
           Kubernetes Installations
     </a>    
