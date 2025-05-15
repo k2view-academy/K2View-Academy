@@ -56,22 +56,22 @@ Once you have added the relevant project files to the extension, you should upda
 
 The key files you should manage include:
 
-- README.md – contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
+- README.md — contains the README information for the extension. You should provide a detailed explanation of the extension’s purpose, settings, usage guidelines, best practices, and licensing terms.
 
-- package.json – stores the package configuration, including:
-  - `version` – the extension version.
+- package.json — stores the package configuration, including:
+  - `version` — the extension version.
 
-  - `preview`: true/false – determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
+  - `preview`: true/false — determines whether the package is considered a preview. Starting from Fabric 8.2, *preview* extensions are hidden by default.
 
-  - `minRequiredFabricVersion` – specifies the minimum required Fabric version (validated during installation).
+  - `minRequiredFabricVersion` — specifies the minimum required Fabric version (validated during installation).
 
-  - `icon` – defines the icon that appears in K2exchange (the default is the **K2** icon).
+  - `icon` — defines the icon that appears in K2exchange (the default is the **K2** icon).
 
-  - `displayName` – the name displayed in K2exchange.
+  - `displayName` — the name displayed in K2exchange.
 
-  - `description` – a brief description of the extension.
+  - `description` — a brief description of the extension.
 
-- LICENSE.txt – this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
+- LICENSE.txt — this optional file details your license and terms of use, both of which can be applied to your extension. By default, the README file contains a link to this file.
 
 
 
@@ -79,13 +79,13 @@ The key files you should manage include:
 
 Studio enables you to execute **several actions** for packaging and publishing extensions:
 
-* Building a **VSIX Package** – an extension installer package file (a zip-like format), which contains all the necessary components of an extension. This package file includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined in the extension preparations.
+* Building a **VSIX Package** — an extension installer package file (a zip-like format), which contains all the necessary components of an extension. This package file includes the extension's source code, metadata, any required resources or dependencies, and installation instructions as defined in the extension preparations.
 
    VSIX can be imported into Studio. This is a good practice for testing an extension before publishing it, or for cases where publishing to the K2exchange store/registry is not possible.
 
 * Publishing an extension to the **K2exchange store/registry** - this action publishes the extension package to the K2exchange store/registry, after which the extension can be discovered in the list of extensions.
 
-* Creating a **k2export** file – this file can be useful for extension consumers who use Desktop Studio. The latter is not integrated with K2exchange and these consumers can therefore use neither a VSIX package nor the K2exchange store/registry.
+* Creating a **k2export** file — this file can be useful for extension consumers who use Desktop Studio. The latter is not integrated with K2exchange and these consumers can therefore use neither a VSIX package nor the K2exchange store/registry.
 
 
 
@@ -111,20 +111,20 @@ Once it has been run, you can execute the appropriate command to generate the pa
 
 The commands are:
 
-* `Fabric-lib-publish` – for publishing to the K2exchange store/registry.
+* `Fabric-lib-publish` — for publishing to the K2exchange store/registry.
 
   > This command requires a token that is provided for users in the K2exchange portal. Contact the K2view team for more information and options.
 
-* `Fabric-lib-package` – creates a **VSIX** file, which can be imported into the Web Studio.
+* `Fabric-lib-package` — creates a **VSIX** file, which can be imported into the Web Studio.
 
-* `Fabric-lib-k2export` – generates a `.k2export` file, which can be imported into the .NET Desktop Studio.
+* `Fabric-lib-k2export` — generates a `.k2export` file, which can be imported into the .NET Desktop Studio.
 
 
 
 >  Following execution of the extension packaging process, you would be able to see - in the extension's artifacts folder - the following files:
 >
->  * under the root folder – the VSIX file
->  * under the artifacts subfolder – the project's files that are included in the extension, shown as a symbolic link
+>  * under the root folder — the VSIX file
+>  * under the artifacts subfolder — the project's files that are included in the extension, shown as a symbolic link
 
 
 
