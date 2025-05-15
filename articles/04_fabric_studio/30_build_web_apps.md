@@ -42,7 +42,7 @@ It is now possible to edit the web application code while benefiting from built-
 
 Web Studio also enables to manage — create, edit and debug — the APIs used by the web application, and to first view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
 
-You can see a preview of your HTML files, without going to the app itself, using a built-in Preview view.
+Previewing your HTML files can be done using a built-in Preview view rather than going to the app itself.
 
 To do so, open the HTML file and click on the preview icon ![](images/web/30_open-preview.svg), which is located at the top-right corner of the HTML Editor.
 
@@ -52,10 +52,10 @@ One of the most powerful features of Web Studio is its **real-time preview**. As
 
 To activate it:
 
-1. In the Explorer View, go to the *NPM SCRIPTS* section, which appears below the *PROJECT* section.
+1. In the Explorer View, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 2. Expand the entry with the app name.
-3. Hover over the **install** command action and click on the arrow on the right; alternatively, right-click on this command and then click on Run from the open menu.
-4. Similarly, click on the **start** command action, which would start the live preview watcher.
+3. Hover over the *install* command; you can either click the arrow aside it or right-click it and then select ‘Run’.
+4. Similarly, click on the *start* command, which would start the live preview watcher.
 
 ![](images/web/30_npm.png)
 
