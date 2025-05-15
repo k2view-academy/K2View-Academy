@@ -20,7 +20,7 @@
     <ul>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
-          Self-hosted Cloud Kubernetes Cluster Installation
+          Cloud Self-hosted Kubernetes Cluster Installation
         </a>
       </li>
       <li>
