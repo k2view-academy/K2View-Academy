@@ -8,7 +8,7 @@ In today's fast-paced development landscape, having an all-in-one platform for i
 
 This above-mentioned initiative allows you to develop web applications within Web Studio as part of the Fabric solution, catering to various users such as CRM representatives, internal teams, or clients.
 
-One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any changes. Web Studio allows developers to instantly see changes, as they make modifications, significantly streamlining the development process.
+One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any changes. Using Web Studio, developers can instantly see changes, as they make modifications, which significantly streamlines the development process.
 
 In this article, we will walk through the steps of building a web app inside Web Studio, illustrating the process with examples and showcasing its powerful features.
 
