@@ -19,13 +19,13 @@
     </a>    
     <ul>
       <li>
-        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
-          Installation of On-premises Kubernetes Cluster
+        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
+          Self-hosted Cloud Kubernetes Cluster Installation
         </a>
       </li>
       <li>
-        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
-          Installation of Self-hosted Cloud Kubernetes Cluster
+        <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
+          On-premises Kubernetes Cluster Installation
         </a>
       </li>
     </ul>
