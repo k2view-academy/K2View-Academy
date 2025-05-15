@@ -15,6 +15,9 @@
 
   <li>
     Kubernetes Installations
+    <a href="/articles/98_maintenance_and_operational/Installations/README.md">
+          Kubernetes Installations
+    </a>    
     <ul>
       <li>
         <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
@@ -30,7 +33,9 @@
   </li>
 
   <li>
-    Linux and Docker Installations
+    <a href="/articles/98_maintenance_and_operational/Installations/README.md">
+         Linux and Docker Installations
+    </a>   
     <ul>
       <li>
         <a href="/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md">
