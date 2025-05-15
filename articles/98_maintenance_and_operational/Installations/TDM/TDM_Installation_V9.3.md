@@ -76,7 +76,7 @@ After installing TDM, the admin user must [log into the TDM Portal](/articles/TD
 
 ## TDM Cloud Installation 
 
-The TDM project's profile must contain Fabric + PosgreSQL. Open the Fabric **Web Studio**, click the **Extension** icon, and select TDM to install the TDM library.
+The TDM project's profile must contain Fabric + PosgreSQL. Open the Fabric **Web Studio**, click the **Extensions** icon, and select TDM to install the TDM library.
 
 Click [here](/articles/04_fabric_studio/28_web_k2exchange.md) for more information about Fabric's extensions. 
 
