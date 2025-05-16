@@ -1,5 +1,5 @@
 
-<strong>Linux and Docker Fabric & TDM Installation</strong>
+<strong>Requirements for Kubernetes, Linux, and Docker Fabric & TDM Installations</strong>
   
 <ul>
   <li>
