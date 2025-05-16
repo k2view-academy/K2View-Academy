@@ -1,4 +1,4 @@
-<strong>Installation, Maintenance and Operations</strong>
+<strong>Installation and Upgrade</strong>
 
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Hardware/README.md">Prerequisites: VM, Docker, On-prem/Self-hosted Cloud Kubernetes</a></li>
