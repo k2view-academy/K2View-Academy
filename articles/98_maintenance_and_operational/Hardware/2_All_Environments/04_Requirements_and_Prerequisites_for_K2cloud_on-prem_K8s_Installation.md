@@ -1,4 +1,4 @@
-# Prerequisites and Installation Instructions for K2cloud On-prem K8s Cluster  
+# Prerequisites and Requirements for K2cloud On-prem K8s Cluster Installation
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
 
@@ -53,11 +53,11 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
   > For a Proof of Technology (POT) Environment, both domain and certificates can be provided by K2view.
 
-* A user with sudo privilege is needed in order to run the installation script.
+* A user with sudo privileges is needed in order to run the installation script.
 
-* The requirement is for either a Docker engine to be installed (latest version) or for an OCI compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
+* The requirement is for either a Docker engine to be installed (latest version) or for an OCI-compatible tool. This will be used to push the images to the local Kubernetes (K8s) repository.
 
-* Verify that the host has outbound access to both GitHub.com and the K2view Cloud Manager in port 443 (https).
+* Verify that the host has outbound access to both GitHub.com and the K2view Cloud Manager on port 443 (https).
 
 * K2view should be provided with the domain name of your environment.
 
@@ -87,7 +87,7 @@ Navigate to the directory 'blueprints/baremetal'
 cd blueprints/baremetal
 ```
 
-Run the script 'single_node.sh' and follow all the in-screen instructions 
+Run the script 'single_node.sh' and follow all the in-screen instructions. 
 
 ```bash
 ./single_node.sh
@@ -111,7 +111,7 @@ During the installation, the installer script will request you to provide the va
 * DNS Record
 
 
-Once the setup process is complete (it may take a few minutes minutes) - and before you can create a new space - a few steps need to be taken:
+Once the setup process is complete (it may take a few minutes) - and before you can create a new space - a few steps need to be taken:
 
 * Load the downloaded docker images
 
@@ -131,7 +131,7 @@ docker tag <IMAGE_HASH> localhost:32000/image-name:tag
 docker push localhost:32000/image-name:tag
 ```
 
-* Deploy it in the nginx namespace and restart nginx controller
+* Deploy it in the nginx namespace and restart the nginx controller
 
 ```bash
 deploy_certificate.sh /path/to/fullchain.cer /path/to/private.key
