@@ -8,8 +8,6 @@ While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted)
 
 **Supported OS**: The K2cloud K8s cluster can be installed on Debian-based (Debian, Ubuntu) and RHEL-based (Redhat, Centos, Fedora, Amazon Linux 2) Linux distributions.
 
-
-
 A K8s worker node is expected to meet the following requirements and shall be prepared accordingly:
 
 <table>
@@ -43,8 +41,6 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 </tbody>
 </table>
 
-
-
 ## Preparations and Provisioning
 
 * Create a DNS record pointing to the server hosting the K8s node (it can point to a private or a public IP). The DNS record for the server hosting the K8s node does not need to be registered in DNS. The only requirement is that users can resolve the DNS name internally to the customer's environment.
@@ -67,3 +63,18 @@ A K8s worker node is expected to meet the following requirements and shall be pr
 
   * Mailbox ID and the Cloud Manager URL.
  
+
+## Installation Options for On-Premises Kubernetes
+K2view supports two variants of on-premises Kubernetes installations for Fabric and TDM, allowing customers to tailor deployments based on their environment and use case. These options are provided through two setup scripts in the K2view Blueprints repository:
+
+* `k8s-setup.sh` is intended for multi-node production-like deployments, installing a Kubernetes cluster across multiple bare-metal machines. It sets up both control plane and worker nodes, configures networking (e.g., Calico or Flannel), and handles node joining via kubeadm.
+
+* `single_node.sh` offers a lightweight, single-node cluster suitable for development or testing. It installs all required components on a single host and configures the node to run both control plane and workloads.
+  
+  * **Recommendation** - Customers looking to install [Fabric Web Studio](/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
+
+These installation methods provide flexibility for deploying Fabric and TDM in either realistic, distributed environments or local, self-contained setups.
+
+Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](articles/98_maintenance_and_operational/Installations/Kubernetes/02_K2cloud_on-prem_K8s_Installation.md) topic for instructions. 
+
+
