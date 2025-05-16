@@ -4,6 +4,35 @@ This article describes the guidelines and instructions for creating a K2cloud si
 
 While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">K2cloud Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
 
+## Table of Contents
+
+1. [On-premises K2cloud Kubernetes Cluster Installation](#on-premises-k2cloud-kubernetes-cluster-installation)  
+2. [Options](#options)  
+   - [1. Multi-Node K2cloud Kubernetes Cluster – `k8s-setup.sh`](#1-multi-node-k2cloud-kubernetes-cluster--k8s-setupsh)  
+   - [2. Single-Node K2cloud Kubernetes Cluster – `single_nodesh`](#2-single-node-k2cloud-kubernetes-cluster--single_nodesh)  
+   - [Summary Comparison - Multi-node Cluster / Single-node Cluster](#summary-comparison---multi-node-cluster--single-node-cluster)  
+   - [Recommendation](#recommendation)  
+3. [Hardware Requirements](#hardware-requirements)  
+4. [Preparations and Provisioning](#preparations-and-provisioning)  
+5. [Installing Fabric in a Multi-Node K2cloud Fabric Cluster](#installing-fabric-in-a-multi-node-k2cloud-fabric-cluster)  
+   - [Overview of the K2View Baremetal Kubernetes Setup Script (`k8s-setup.sh`)](#overview-of-the-k2view-baremetal-kubernetes-setup-script-k8s-setupsh)  
+   - [Key Features](#key-features)  
+   - [Prerequisites](#prerequisites)  
+   - [Internet Access Required](#internet-access-required)  
+   - [kubeadm](#kubeadm)  
+   - [How the `k8s-setup.sh` Script Works](#how-the-k8s-setupsh-script-works)  
+   - [Installed Components](#installed-components)  
+   - [Addons](#addons)  
+   - [Private container registry](#private-container-registry)  
+   - [Optional Components and Features](#optional-components-and-features)  
+   - [Usage Instructions](#usage-instructions)  
+   - [Post-Installation](#post-installation)  
+   - [Troubleshooting Tips](#troubleshooting-tips)  
+   - [References](#references)  
+6. [Installing Fabric in a Single-Node Cluster, "Kubernetes In a Box"](#installing-fabric-in-a-single-node-cluster-kubernetes-in-a-box)  
+   - [Starting and Stopping the Cluster and Services](#starting-and-stopping-the-cluster-and-services)  
+
+
 # Options
 There are **two variants** of on-premises Kubernetes installations for **K2view Fabric and TDM**, each tailored to different deployment needs and environments. These variants are based on two setup scripts available in the K2view Blueprints repository:
 
@@ -242,6 +271,36 @@ The following addons will be automatically installed in your Kubernetes cluster:
 * local-path Storage Class uses the directory "/opt/local-path-provisioner" in the host to store the Persistent Volumes
 * docker-registry Container Registry stores all its data in a local-path Persistent Volume
 * Helm is used to deploy some of the addons and will be automatically installed by k8s-setup.sh
+
+## Private container registry
+A private container registry can be configured if containerd is used for container runtime.
+
+To push images to this private container registry, pull or load (import) the desired image (Docker will not be installed by default, but you can use ctr as long as you can run sudo)
+
+* Pull the desired image
+
+```bash
+sudo ctr image pull -u <USERNAME> docker.share.cloud.k2view.com/k2view/fabric-studio:8.0.0_123
+```
+
+* OR import desired image (note: the image cannot be compressed)
+
+```bash
+sudo ctr image import /path/to/fabric-studio-8.0.0_123.tar
+```
+
+* Retag image
+
+```bash
+sudo ctr image tag docker.share.cloud.k2view.com/k2view/fabric-studio:8.0.0_123 registry.localhost/k2view/fabric-studio:8.0.0_123
+```
+
+* push image to private container registry
+
+```bash
+sudo ctr image push --plain-http registry.localhost/k2view/fabric-studio:8.0.0_123
+Now you can instruct the Cloud Orchestrator to use the image from your private container registry.
+```
 
 ## Optional Components and Features
 
