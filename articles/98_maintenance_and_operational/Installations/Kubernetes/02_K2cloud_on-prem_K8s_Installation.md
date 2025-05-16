@@ -29,7 +29,7 @@ While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_mai
    - [Post-Installation](#post-installation)  
    - [Troubleshooting Tips](#troubleshooting-tips)  
    - [References](#references)  
-6. [Installing Fabric in a Single-Node Cluster, "Kubernetes In a Box"](#installing-fabric-in-a-single-node-cluster-kubernetes-in-a-box)  
+6. [Installing Fabric in a Single-Node Cluster, "Kubernetes-in-a-Box"](#installing-fabric-in-a-single-node-cluster-kubernetes-in-a-box)  
    - [Starting and Stopping the Cluster and Services](#starting-and-stopping-the-cluster-and-services)  
 
 
@@ -107,7 +107,7 @@ These recommendations apply to both the multi-node and single-node cluster insta
 
 To install a K2cloud site on-premises, you must prepare and provide the necessary steps in coordination with your K2view representative. The process begins with gathering key configuration details, including TLS certificate files, and ensuring outbound internet access to specific K2view endpoints. These are essential for secure communications, image retrieval, and configuration via the K2cloud Orchestrator.
 
-You'll also need to contact your K2view representative to request access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry. 
+You must also contact your K2view representative to request access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry. 
 
 ---
 
@@ -223,7 +223,7 @@ The script orchestrates the following steps:
 
 2. **Container Runtime Installation**
 
-Kubernetes uses a container runtime to run pods (a list of all supported runtimes can be found in the link above). If none is installed, k8s-setup.sh will install and configure containerd as a container runtime. If containerd is already installed and its service is running, no modifications to its settings will be made. If that's the case, please ensure all parameters required by kubeadm are set.
+Kubernetes uses a container runtime to run pods (a list of all supported runtimes can be found in the link above). If none is installed, k8s-setup.sh will install and configure containerd as a runtime. If containerd is installed and its service is running, no modifications to its settings will be made. If that's the case, please ensure all parameters required by kubeadm are set.
 
    * Installs and configures Docker to use the `systemd` cgroup driver
 
@@ -376,7 +376,7 @@ You will be prompted to select the node type (control plane or worker), hostname
 
 ---
 
-# Installing Fabric in a Single-Node Cluster, "Kubernetes In a Box"
+# Installing Fabric in a Single-Node Cluster, "Kubernetes-in-a-box"
 
 The installation script will automatically configure and install everything required to have K8s running and ready.
 
