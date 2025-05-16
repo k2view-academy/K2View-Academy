@@ -7,7 +7,7 @@
 </ul>
 <strong>Upgrade</strong>
 <ul>      
-<li><a href="/articles/98_maintenance_and_operational/Upgrade/<li><a href="/articles/98_maintenance_and_operational/Maintenance/FabricSpace Upgrade.md">Fabric_Space_Upgrade/Rollback for Kubernetes</a></li>.md">Fabric Space Upgrade and Rollback Procedure</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Maintenance/Fabric_Space_Upgrade.md">Fabric Space Upgrade and Rollback Procedure</a></li>
 </ul>
 <strong>Support</strong>
 <ul>      
