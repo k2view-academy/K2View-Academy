@@ -205,7 +205,7 @@ These packages come from:
 
 ---
 
-## kubeadm
+## Before you Start
 Before installing Kubernetes, the swap and the internal firewall must be disabled. (Important: those steps will NOT be configured automatically during the execution of our installation script!)
 
 The official documentation for kubeadm installation can be found at this link: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 
