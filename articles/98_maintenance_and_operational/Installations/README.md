@@ -1,4 +1,4 @@
-<strong>Installation of TDM, Fabric, and Web Studio</strong>
+<strong>Installation of TDM and Web Studio</strong>
 
 <ul>
   <li>
