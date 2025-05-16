@@ -1,4 +1,4 @@
-# K2cloud Self-Hosted Cluster Installation
+# Cloud Self-Hosted Cluster Installation
 
 
 
