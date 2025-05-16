@@ -1,19 +1,323 @@
-# On-premises Kubernetes Cluster Installation
+# On-premises K2ckoud Kubernetes Cluster Installation
 
-This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
+This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster - on premises.  
 
-While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. This can be considered as Kubernetes in a box.
+While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">K2cloud Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
 
-## Hardware Requirements 
+# Options
+There are **two variants** of on-premises Kubernetes installations for **K2view Fabric and TDM**, each tailored to different deployment needs and environments. These variants are based on two setup scripts available in the K2view Blueprints repository:
 
-## Preparations and Provisioning
+---
 
+## 1. **Multi-Node K2cloud Kubernetes Cluster – `k8s-setup.sh`**
 
-## Installing Fabric in a Cluster
+This variant is designed for **production-like environments** and installs a **multi-node Kubernetes cluster** on bare metal servers.
 
+* **Purpose:** Prepares both **control plane** and **worker nodes** using `kubeadm`.
+* **Components Installed:**
 
+  * Container runtime (e.g., Docker)
+  * Kubernetes components: `kubeadm`, `kubectl`, `kubelet`
+  * Pod networking (e.g., Calico or Flannel)
+* **Features:**
 
-## Installing Fabric in a Single Node Cluster, "Kubernetes In a Box"
+  * Initializes the cluster (`kubeadm init`)
+  * Generates and applies **join tokens** for connecting worker nodes
+  * Ideal for distributed deployments simulating production clusters
+* **Use Case:** When you need a **realistic, multi-node Kubernetes environment** for hosting Fabric and TDM services across multiple machines.
+
+---
+
+## 2. **Single-Node K2cloud Kubernetes Cluster – `single_node.sh`**
+
+This variant targets **development, testing, or proof-of-concept scenarios** and installs a **self-contained Kubernetes cluster** on a single machine. It is also known as the **Kubenetes-in-a-box** installation. 
+
+* **Purpose:** Sets up a combined **control plane and worker node** on one host.
+* **Components Installed:**
+
+  * Container runtime
+  * Kubernetes components
+* **Features:**
+
+  * Automatically initializes the cluster (`kubeadm init`)
+  * Removes node taints to allow pod scheduling on the control plane
+  * Lightweight and easy to deploy
+* **Use Case:** When you need a **quick, local setup** of Fabric and TDM on a **single bare-metal host** for testing or evaluation.
+
+---
+
+## Summary Comparison - Multi-node Cluster / Single-node Cluster
+
+| Feature                   | `k8s-setup.sh`              | `single_node.sh`              |
+| ------------------------- | --------------------------- | ----------------------------- |
+| Target                    | Multi-node cluster          | Single-node cluster           |
+| Control plane setup       | Yes                         | Yes                           |
+| Worker node setup         | Yes (via join token)        | No (same node acts as worker) |
+| Taints removal (for pods) | No                          | Yes                           |
+| Pod networking setup      | Yes                         | Yes                           |
+| Intended use              | Production-like deployments | Local/test deployments        |
+
+---
+
+These options allow K2view customers to tailor their on-prem Kubernetes deployments of Fabric and TDM based on the scale and purpose of their environment.
+
+## Recommendation
+
+Customers looking to install [Fabric Web Studio](/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
+
+---
+
+# Hardware Requirements 
+Please consult the [requirements and prerequisites section](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md) for the K2cloud on-premises K8s cluster installation. 
+
+These recommendations apply to both the multi-node and single-node cluster installations. 
+
+---
+
+# Preparations and Provisioning
+
+To install a K2cloud site on-premises, you must prepare and provide the necessary steps in coordination with your K2view representative. The process begins with gathering key configuration details, including TLS certificate files, and ensuring outbound internet access to specific K2view endpoints. These are essential for secure communications, image retrieval, and configuration via the K2cloud Orchestrator.
+
+You'll also need to contact your K2view representative to request access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry. 
+
+---
+
+# Installing Fabric in a Multi-Node K2cloud Fabric Cluster
+
+## Overview of the K2View Baremetal Kubernetes Setup Script (`k8s-setup.sh`)
+
+The `k8s-setup.sh` script automates the deployment of a **multi-node Kubernetes cluster** on bare-metal infrastructure. It prepares the operating system, installs required Kubernetes components, configures networking, and provides the necessary tooling for control plane and worker node setup. The script also includes options for enabling various optional components and configurations, making it suitable for both production-grade and testing environments.
+
+## Key Features
+
+* Multi-node cluster setup with role-based configuration (control plane or worker node)
+* Automated installation of Docker, kubeadm, kubelet, and kubectl
+* Optional deployment of networking and DNS components
+* Customizable Kubernetes version, network CIDR, and more
+
+## Prerequisites
+
+* Linux OS (e.g., Ubuntu 20.04+)
+* Root or sudo access
+* Static IP address configuration
+* Internet access for downloading packages
+* Time synchronization enabled (e.g., via `ntpd` or `chronyd`)
+
+## Internet Access Required
+
+If you're running the script behind a firewall or proxy, please make sure that **HTTPS access to these sources is allowed** and that **DNS resolution is working** for the corresponding domains. Optionally, you could mirror or host the required packages and manifests internally for air-gapped environments.
+
+The `k8s-setup.sh` script from the K2view Blueprints repository installs various components required to bootstrap a Kubernetes cluster on bare metal. Here's a list of **internet packages** (downloaded via `apt`, `curl`, or similar tools) that the script installs or downloads from public sources:
+
+### **APT Packages (from Ubuntu repositories)**
+
+These are installed via `apt-get install`:
+
+* `apt-transport-https`
+* `ca-certificates`
+* `curl`
+* `gnupg`
+* `lsb-release`
+* `software-properties-common`
+* `jq`
+* `conntrack`
+* `containerd` or `docker.io` *(depending on the configuration)*
+* `kubelet`
+* `kubeadm`
+* `kubectl`
+
+These packages come from:
+
+* Ubuntu repositories
+* Google Kubernetes apt repo (`https://packages.cloud.google.com/apt`)
+* Docker apt repo (`https://download.docker.com/linux/ubuntu`)
+
+### **Remote Files and Scripts Downloaded via `curl`/`wget`**
+
+* **Kubernetes GPG Key**
+
+  ```bash
+  curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -o /usr/share/keyrings/kubernetes-archive-keyring.gpg
+  ```
+
+* **Docker GPG Key**
+
+  ```bash
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  ```
+
+* **CNI Plugin (e.g., Calico or Flannel)**
+  The script supports networking setup via:
+
+  * **Calico** (`https://raw.githubusercontent.com/projectcalico/calico/...`)
+  * **Flannel** (`https://raw.githubusercontent.com/coreos/flannel/...`)
+
+  These are applied with:
+
+  ```bash
+  kubectl apply -f <CNI_URL>
+  ```
+
+* **Helm Install Script**
+
+  ```bash
+  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  ```
+
+### Summary of Required Internet Repositories and URLs
+
+| Purpose                 | Source URL/Repo                                                  |
+| ----------------------- | ---------------------------------------------------------------- |
+| Kubernetes APT packages | `https://packages.cloud.google.com/apt`                          |
+| Docker APT packages     | `https://download.docker.com/linux/ubuntu`                       |
+| CNI Plugin YAMLs        | `https://raw.githubusercontent.com/projectcalico/...` or Flannel |
+| Helm                    | `https://raw.githubusercontent.com/helm/helm/main/scripts/...`   |
+| Ubuntu base packages    | Ubuntu APT mirrors (e.g., `http://archive.ubuntu.com/ubuntu`)    |
+
+---
+
+## kubeadm
+Before installing Kubernetes, the swap and the internal firewall must be disabled. (Important: those steps will NOT be configured automatically during the execution of our installation script!)
+
+The official documentation for kubeadm installation can be found at this link: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ 
+
+## How the `k8s-setup.sh` Script Works
+
+The script orchestrates the following steps:
+
+1. **System Preparation**
+
+`k8s-setup.sh` will change the following settings:
+
+  * Enable IP forwarding (as sysctl net.ipv4.ip_forward=1)
+  * Disable SELinux (as setenforce 0)
+
+2. **Container Runtime Installation**
+
+Kubernetes uses a container runtime to run pods (a list of all supported runtimes can be found in the link above). If none is installed, k8s-setup.sh will install and configure containerd as a container runtime. If containerd is already installed and its service is running, no modifications to its settings will be made. If that's the case, please ensure all parameters required by kubeadm are set.
+
+   * Installs and configures Docker to use the `systemd` cgroup driver
+
+4. **Kubernetes Installation**
+
+   * Installs Kubernetes packages (`kubeadm`, `kubectl`, `kubelet`)
+   * Applies kubeadm repository configuration and GPG keys
+
+5. **Control Plane Initialization (if selected)**
+
+   * Runs `kubeadm init` with specified network CIDR and hostname
+   * Sets up kubeconfig for `kubectl`
+   * Deploys a CNI plugin (Calico) to enable pod networking
+
+6. **Worker Node Setup (if selected)**
+
+   * Executes `kubeadm join` using a token to connect to the control plane
+
+7. **Cluster Verification**
+
+   * Lists nodes and pods across namespaces using `kubectl`
+
+## Installed Components
+
+| Component        | Description                                                        |
+| ---------------- | ------------------------------------------------------------------ |
+| **Docker**       | Container runtime used by Kubernetes                               |
+| **kubeadm**      | CLI utility for bootstrapping Kubernetes clusters                  |
+| **kubelet**      | Node-level agent that runs and manages pods                        |
+| **kubectl**      | Command-line interface for interacting with the Kubernetes cluster |
+| **Calico**       | Default CNI plugin for pod networking (if deployed)                |
+| **Sysctl Rules** | Kernel parameter tuning for bridging and forwarding                |
+
+## Addons
+The following addons will be automatically installed in your Kubernetes cluster:
+
+* [Tigera's Calico](https://www.tigera.io/project-calico/), a Container Network Interface
+* [Rancher's Local Path Provisioner](https://github.com/rancher/local-path-provisioner), a Storage Class called local-path, used to create Persistent Volumes using the host's filesystem
+* [Distribution's Registry](https://distribution.github.io/distribution/), a private Container Registry (requires containerd to be used as container runtime)
+* [MetalLB](https://metallb.io/), a network Load Balancer for the cluster
+* [K8s's Ingress-NGINX](https://kubernetes.github.io/ingress-nginx/), an Ingress Controller (plus additional components like error page handler / ingress test)
+* [K2view-agent](https://github.com/k2view/blueprints/blob/main/helm/k2view-agent/README.md), an application that communicates with our Cloud Orchestrator
+  
+**Note**:
+* local-path Storage Class uses the directory "/opt/local-path-provisioner" in the host to store the Persistent Volumes
+* docker-registry Container Registry stores all its data in a local-path Persistent Volume
+* Helm is used to deploy some of the addons and will be automatically installed by k8s-setup.sh
+
+## Optional Components and Features
+
+The `k8s-setup.sh` script offers the ability to optionally enable or configure the following components during installation:
+
+| Optional Component               | Description                                                                          |
+| -------------------------------- | ------------------------------------------------------------------------------------ |
+| **CNI Plugin (Calico)**          | Deployed by default for pod networking; other plugins may be substituted manually    |
+| **Custom Hostname**              | Prompts the user to define a hostname to register with the cluster                   |
+| **Kubernetes Version**           | You can specify a particular version to install (e.g., 1.28.x)                       |
+| **Pod Network CIDR**             | Allows customization of the internal pod network (default is `192.168.0.0/16`)       |
+| **Cluster Join Command**         | Generated and displayed to allow worker nodes to join via `kubeadm`                  |
+| **Firewall Rules (Manual)**      | The script may suggest configuring firewall rules but leaves enforcement to the user |
+| **CoreDNS Deployment**           | CoreDNS is set up as part of the control plane init via kubeadm                      |
+| **API Server Advertise Address** | Can be provided as a script argument or prompted interactively                       |
+
+> While these components are not toggled via flags directly in the script today, the script's design allows future extensibility or manual modification to enable/disable them.
+
+## Usage Instructions
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/k2view/blueprints.git
+cd blueprints/baremetal
+```
+
+### 2. Make Script Executable
+
+```bash
+chmod +x k8s-setup.sh
+```
+
+### 3. Run the Script
+
+```bash
+sudo ./k8s-setup.sh
+```
+
+You will be prompted to select the node type (control plane or worker), hostname, and provide any required settings such as the advertise IP address or join command.
+
+---
+
+## Post-Installation
+
+* Validate the cluster status:
+
+  ```bash
+  kubectl get nodes
+  kubectl get pods -A
+  ```
+
+* Run the generated `kubeadm join` command on additional worker nodes to add them to the cluster.
+
+---
+
+## Troubleshooting Tips
+
+| Issue                        | Solution                                                            |
+| ---------------------------- | ------------------------------------------------------------------- |
+| Swap not disabled            | Run `sudo swapoff -a` and remove swap entries from `/etc/fstab`     |
+| kubelet failing to start     | Check logs with `journalctl -u kubelet`                             |
+| Pods not reaching each other | Confirm CNI plugin is installed (`kubectl get pods -n kube-system`) |
+| Control plane unreachable    | Ensure port 6443 is open and accessible on the control plane node   |
+
+---
+
+## References
+
+* [K2View Blueprints – Baremetal](https://github.com/k2view/blueprints/tree/main/baremetal)
+* [Kubernetes Official Setup Guide](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+* [Calico CNI Plugin](https://docs.tigera.io/calico/latest/introduction/)
+
+---
+
+# Installing Fabric in a Single-Node Cluster, "Kubernetes In a Box"
 
 The installation script will automatically configure and install everything required to have K8s running and ready.
 
