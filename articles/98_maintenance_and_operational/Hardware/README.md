@@ -7,7 +7,7 @@
   </li>
 </ul>
 
-<strong>Kubernetes Installation</strong>
+<strong>Kubernetes Installation Requirements</strong>
 
 <ul>
   <li>
@@ -22,7 +22,7 @@
   </li>
 </ul>
 
-<strong>Linux and Docker Fabric & TDM Installation</strong>
+<strong>Linux and Docker Fabric & TDM Installation Requirements</strong>
   
 <ul>
   <li>
