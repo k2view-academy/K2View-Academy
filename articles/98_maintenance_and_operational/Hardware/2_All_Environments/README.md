@@ -7,6 +7,16 @@
     </a>
   </li>
   <li>
+    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
+      Cloud Self-hosted Kubernetes Requirements
+    </a>
+  </li>
+  <li>
+    <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
+      On-premises Kubernetes Cluster Requirements and Installation
+    </a>
+  </li>
+  <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">
       POV Requirements for Fabric & TDM
     </a>
