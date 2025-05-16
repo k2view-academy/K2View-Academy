@@ -1,7 +1,7 @@
 <strong>Installation</strong>
 
 <ul>      
-<li><a href="/articles/98_maintenance_and_operational/Hardware/README.md">Prerequisites: VM, Docker, On-prem/Self-hosted Cloud Kubernetes</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Hardware/README.md">Installation Requirements: VM, Docker, On-prem/Self-hosted Cloud Kubernetes</a></li>
 <li><a href="/articles/98_maintenance_and_operational/Installations/README.md">Fabric, TDM, and Web Studio Installations</a></li>
 
 </ul>
