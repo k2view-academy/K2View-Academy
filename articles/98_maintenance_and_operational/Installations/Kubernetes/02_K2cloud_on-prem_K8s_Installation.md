@@ -1,4 +1,4 @@
-# On-prem K8s Cluster Installation
+# On-prem Kubernetes Cluster Installation
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
 
