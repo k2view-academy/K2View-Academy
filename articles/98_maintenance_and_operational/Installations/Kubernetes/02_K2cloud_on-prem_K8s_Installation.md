@@ -19,7 +19,7 @@ While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_mai
    - [Key Features](#key-features)  
    - [Prerequisites](#prerequisites)  
    - [Internet Access Required](#internet-access-required)  
-   - [kubeadm](#kubeadm)  
+   - [Before you Start](#before-you-start)  
    - [How the `k8s-setup.sh` Script Works](#how-the-k8s-setupsh-script-works)  
    - [Installed Components](#installed-components)  
    - [Addons](#addons)  
