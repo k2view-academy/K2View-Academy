@@ -2,7 +2,7 @@
 
 ### Related Documents
 
-[FABRIC V8.x DOCKER INSTALLATION](/articles/98_maintenance_and_operational/Installations/Docker/Fabric).
+[Fabric v8.x Docker Installation](/articles/98_maintenance_and_operational/Installations/Docker/Fabric/README.md).
 
 ### Download Container Images 
 
