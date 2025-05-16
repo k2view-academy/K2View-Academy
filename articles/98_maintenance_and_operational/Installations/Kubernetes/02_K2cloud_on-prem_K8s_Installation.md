@@ -13,8 +13,9 @@ While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_mai
    - [Summary Comparison - Multi-node Cluster / Single-node Cluster](#summary-comparison---multi-node-cluster--single-node-cluster)  
    - [Recommendation](#recommendation)  
 3. [Hardware Requirements](#hardware-requirements)  
-4. [Preparations and Provisioning](#preparations-and-provisioning)  
-5. [Installing Fabric in a Multi-Node K2cloud Fabric Cluster](#installing-fabric-in-a-multi-node-k2cloud-fabric-cluster)  
+4. [Preparations and Provisioning](#preparations-and-provisioning)
+5. [K2view Bare Metal Blueprint](#k2view-bare-metal-blueprint)
+6. [Installing Fabric in a Multi-Node K2cloud Fabric Cluster](#installing-fabric-in-a-multi-node-k2cloud-fabric-cluster)  
    - [Overview of the K2View Baremetal Kubernetes Setup Script (`k8s-setup.sh`)](#overview-of-the-k2view-baremetal-kubernetes-setup-script-k8s-setupsh)  
    - [Key Features](#key-features)  
    - [Prerequisites](#prerequisites)  
@@ -29,7 +30,7 @@ While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_mai
    - [Post-Installation](#post-installation)  
    - [Troubleshooting Tips](#troubleshooting-tips)  
    - [References](#references)  
-6. [Installing Fabric in a Single-Node Cluster, "Kubernetes-in-a-Box"](#installing-fabric-in-a-single-node-cluster-kubernetes-in-a-box)  
+7. [Installing Fabric in a Single-Node Cluster, "Kubernetes-in-a-Box"](#installing-fabric-in-a-single-node-cluster-kubernetes-in-a-box)  
    - [Starting and Stopping the Cluster and Services](#starting-and-stopping-the-cluster-and-services)  
 
 
