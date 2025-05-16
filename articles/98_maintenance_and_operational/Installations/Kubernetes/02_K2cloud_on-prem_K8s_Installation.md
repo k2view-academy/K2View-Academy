@@ -109,6 +109,15 @@ To install a K2cloud site on-premises, you must prepare and provide the necessar
 
 You must also contact your K2view representative to request access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry. 
 
+
+---
+
+# K2view Bare Metal Blueprint
+
+The [baremetal blueprint article](https://github.com/k2view/blueprints/blob/main/baremetal/README.md) published to [K2view's blueprint GitHub repository](https://github.com/k2view/blueprints) provides comprehensive guidance for deploying a K2view Fabric Kubernetes cluster on bare-metal (on-premises) infrastructure. It outlines the two supported installation options — single-node and multi-node clusters — using purpose-built setup scripts, and details the prerequisites, tools, and execution steps required for each. 
+
+You'll need to clone this repository as described later in this article, if you don't mind. 
+
 ---
 
 # Installing Fabric in a Multi-Node K2cloud Fabric Cluster
