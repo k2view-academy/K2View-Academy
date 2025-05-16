@@ -1,4 +1,4 @@
-# Requirements and Prerequisites for K2cloud On-prem K8s Cluster Installation
+# Requirements and Prerequisites for K2cloud On-premises K8s Cluster Installation
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
 
