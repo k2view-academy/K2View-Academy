@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+
 1. [What is a K2cloud Self-Hosted Kubernetes Cluster](#what-is-a-k2cloud-self-hosted-kubernetes-cluster)
 2. [High-level Deployment View](#high-level-deployment-view)
 3. [Core Components](#core-components)
@@ -13,10 +14,23 @@
    - [Planning and Installation Step Overview](#planning-and-installation-step-overview)
    - [Provisioning](#provisioning)
    - [Prerequisites](#prerequisites)
-6. [Installation](#installation)
+6. [Components](#components)
+   - [K2-Agent](#k2-agent)
+   - [Fabric Container Registry](#fabric-container-registry)
+   - [NGINX Ingress Controller](#nginx-ingress-controller)
+7. [Installation](#installation)
    - [TLS Certificate Requirements](#tls-certificate-requirements)
    - [Installation with Terraform](#installation-with-terraform)
    - [Installation with Helm](#installation-with-helm)
+     - [Deploying NGINX Ingress Controller](#deploying-nginx-ingress-controller)
+     - [TLS Certificate Installation for K2view Deployment](#tls-certificate-installation-for-k2view-deployment)
+     - [Deploying Generic Database (PostgreSQL)](#deploying-generic-database-postgresql)
+     - [Deploying K2view Agent](#deploying-k2view-agent)
+     - [Deploying K2view Fabric](#deploying-k2view-fabric)
+     - [Verify Deployments](#verify-deployments)
+     - [Access Fabric Web Studio](#access-fabric-web-studio)
+     - [Post-Installation Steps](#post-installation-steps)
+
 
 
 ## What is a K2cloud Self-Hosted Kubernetes Cluster
@@ -132,6 +146,77 @@ Required tools:
 * Docker (latest)
 * Your provider's CLI (e.g., Azure CLI)
 
+## Componenents
+
+### K2-Agent 
+
+Please refer to: ([K8s Requirements](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.2/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md))
+
+The K2-Agent is a lightweight Kubernetes service that securely connects your on-premises or cloud-based K2view Fabric deployment to the K2cloud Orchestrator. It plays a crucial role in enabling centralized management, monitoring, and deployment orchestration.
+
+#### Function
+- The K2-Agent fetches configuration instructions, deployment updates, and execution metadata from K2cloud.
+- It acts as a secure communication bridge, ensuring the environment receives orchestrated control updates without manual intervention.
+- It establishes trust between the runtime environment and the central K2view control plane, including provisioning and runtime telemetry exchange.
+
+#### Security
+- **Outbound-only HTTPS**: The agent communicates using outbound HTTPS (port 443) and does not require any inbound access, reducing surface area and simplifying firewall configurations.
+- **Mailbox Authentication**: The agent authenticates with K2cloud using a tenant-specific Mailbox ID, securely provisioned by K2view.
+- **Isolated Execution**: Deployed as a dedicated pod in the cluster, it operates independently from runtime workloads, ensuring separation of control and data paths.
+- **No access to data**: K2-Agent does not have access to customer data or services directly. It only facilitates control plane instructions and status updates.
+
+This design makes the K2-Agent a secure, robust component for enterprise-grade hybrid deployments.
+
+---
+
+### Fabric Container Registry 
+
+Pease refer to: ([K8s Requirements](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.2/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md))
+
+K2view Docker images for Fabric, Studio, and supporting services must be pulled from K2view’s Nexus repository and pushed into a customer-managed, OCI-compliant container registry. This enables secure, high-performance retrieval of images during Helm-based Kubernetes deployment.
+
+#### Registry Setup Guidelines
+
+Customers can use any of the following cloud-native registries:
+
+- **Azure**: Azure Container Registry (ACR)
+- **AWS**: Amazon Elastic Container Registry (ECR)
+- **GCP**: Google Artifact Registry (GAR)
+
+You may also use a private registry hosted on your infrastructure as long as it supports OCI-compliant image handling and secure access.
+
+#### Considerations:
+- Ensure the registry is accessible from within the Kubernetes cluster (e.g., proper VPC/VNet routing, firewall rules).
+- Use access credentials, tokens, or identity-based authentication mechanisms (e.g., IAM roles) as required by your cloud provider.
+- Store and tag the pulled Docker images using the same names and versions provided by K2view to ensure compatibility.
+- Make sure to configure your Helm `values.yaml` files with the correct image repository path and tag.
+
+Once the registry is populated, you must share the full image paths (e.g., `gcr.io/project-id/k2view/fabric:8.2.1_40`) with your K2view representative to complete environment setup.
+
+- Populate from K2view Nexus:
+  - `fabric`, `fabric-studio`, `k2-cloud-deployer`
+- Push images to your OCI-compliant registry (e.g., ACR)
+- Share image locations with K2view for project setup
+
+### NGINX Ingress Controller
+
+K2view uses NGINX as the default Ingress Controller for routing external traffic to services inside the Kubernetes cluster. This controller provides a flexible, production-grade entry point capable of handling TLS termination, path-based routing, rate limiting, and custom annotations for fine-grained access control.
+
+#### Deployment Considerations:
+- Deployed using Helm and runs within its namespace (typically `ingress-nginx`).
+- Configured to support HTTPS, with TLS certificates passed via Kubernetes secrets.
+- Offers load balancing and reverse proxy functionality for accessing services like Fabric, TDM, and Studio externally.
+- Compatible with both subdomain-based and context-based URL routing schemes.
+- Custom annotations may be required depending on the cloud platform (e.g., internal vs. public load balancer annotations in Azure or AWS).
+
+#### Cloud Alternatives:
+While NGINX is the default, some environments may choose native cloud ingress solutions for deeper integration:
+- **AWS**: AWS ALB Ingress Controller
+- **Azure**: Azure Application Gateway Ingress Controller
+- **GCP**: Google Cloud Load Balancing with GKE Ingress
+
+These alternatives may simplify integration with native services such as identity management or centralized certificate storage, but may offer less flexibility than NGINX.
+
 ## Installation 
 
 K2view would like to help you through the installation to help you overcome various issues. Good planning goes a long way to ensuring that the installation goes smoothly and quickly. Being ready having your certificate will help a lot make this a reality. 
@@ -202,50 +287,172 @@ Using Terraform, organizations gain improved visibility, compliance, and managea
 
 Please refer to: ([K2view Helm Blueprints](https://github.com/k2view/blueprints/tree/main/helm))
 
-Once the infrastructure is provisioned and Docker images are pushed to your container registry, Helm is used to deploy the K2view Fabric and TDM services into your Kubernetes cluster.
+This guide outlines the step-by-step process to deploy K2view components using Helm charts. It assumes that you have a running Kubernetes cluster and have cloned the [K2view Helm blueprints repository](https://github.com/k2view/blueprints/tree/main/helm).
 
-#### Steps:
+For detailed configurations and advanced deployment scenarios, refer to the individual README files in the [K2view Helm blueprints repository](https://github.com/k2view/blueprints/tree/main/helm).
 
-1. **Access the Helm Blueprints**
-   - Navigate to the cloned `blueprints/helm` directory.
-   - The folder contains individual charts for components like `fabric`, `fabric-studio`, and `k2view-agent`.
+#### Prerequisites
 
-2. **Configure Helm Values**
-   - Each chart includes a `values.yaml` file that must be edited to reflect your environment. Key settings include:
-     - Docker image registry paths and versions
-     - Ingress domain and TLS certificate configuration
-     - Kubernetes namespace and service parameters
-     - Persistent volume claim names or storage class overrides
-     - Environment variables such as Mailbox ID, Fabric license, or Git branch/tag
+- **Kubernetes Cluster**: Ensure you can access a Kubernetes cluster.
+- **Helm**: Install Helm version 3.x. [Installation Guide](https://helm.sh/docs/intro/install/)
+- **Docker Registry Access**: Credentials to access K2view's Docker registry or your private registry.
+- **TLS Certificates**: Valid TLS certificates for securing ingress traffic.
+- **Mailbox ID**: Provided by K2view for agent configuration.
 
-3. **Install with Helm**
-   - Run Helm installation commands for each component:
-     ```bash
-     helm install fabric ./fabric -n k2view --create-namespace -f fabric-values.yaml
-     helm install studio ./fabric-studio -n k2view -f studio-values.yaml
-     helm install agent ./k2view-agent -n k2view -f agent-values.yaml
-     ```
-   - Use `--dry-run` for preview and `--debug` for verbose output during troubleshooting.
 
-4. **Validate Deployment**
-   - Check pod and service status using:
-     ```bash
-     kubectl get pods -n k2view
-     kubectl get svc -n k2view
-     ```
-   - Confirm the Ingress is correctly routing to services and TLS termination is functional.
+#### Deploying NGINX Ingress Controller
 
-5. **Update and Upgrade**
-   - Use `helm upgrade` for redeploying changes:
-     ```bash
-     helm upgrade fabric ./fabric -n k2view -f fabric-values.yaml
-     ```
-   - Maintain version control over your `values.yaml` files to track changes across environments.
+K2view provides a customized Helm chart for deploying the NGINX Ingress Controller.
 
-6. **Next Steps**
-   - After successful deployment, log into Fabric Studio via the ingress URL.
-   - Use K2cloud to create and manage Projects and Spaces as described in earlier sections.
+```bash
+helm install ingress-nginx ./ingress-nginx-k2v \
+  --namespace ingress-nginx \
+  --create-namespace \
+  -f ingress-nginx-k2v/values.yaml
+````
 
-Helm simplifies lifecycle management and enables seamless updates, rollback capabilities, and consistency across development, test, and production environments.
+> **Note**: Customize `values.yaml` to suit your cloud provider's load balancer settings and TLS configurations.
+
+#### TLS Certificate Installation for K2view Deployment
+
+The TLS certificate used to secure external HTTPS access to K2view Fabric and Studio is installed on the **Ingress Controller**, typically the **NGINX Ingress Controller**.
+
+##### Component and Location
+
+- **Component**: `ingress-nginx` (deployed via the `ingress-nginx-k2v` Helm chart)
+- **Kubernetes Resource**: TLS certificate is stored in a Kubernetes `Secret` of type `kubernetes.io/tls`
+- **Namespace**: Typically the same as the ingress controller (e.g., `ingress-nginx`)
+- **Referenced By**: The `Ingress` resource or Helm `values.yaml` under the `controller.extraArgs.default-ssl-certificate` setting
+
+##### Step-by-Step Instructions
+
+1. **Create a TLS Secret**
+
+Replace the certificate and key paths with your own, and adjust the namespace if different:
+
+```bash
+kubectl create secret tls fabric-tls-cert \
+  --cert=/path/to/fullchain.pem \
+  --key=/path/to/privkey.pem \
+  -n ingress-nginx
+````
+
+2. **Configure the Ingress Controller (`values.yaml`)**
+
+Update the `values.yaml` file used with the `ingress-nginx-k2v` Helm chart to reference the TLS secret:
+
+```yaml
+controller:
+  ingressClass: nginx
+  service:
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"  # if applicable
+  extraArgs:
+    default-ssl-certificate: ingress-nginx/fabric-tls-cert
+```
+
+3. **Ensure the Ingress Resources Use HTTPS**
+
+In your Fabric or Studio `Ingress` resources (usually templated through Helm), verify that TLS is enabled and the host matches the certificate:
+
+```yaml
+ingress:
+  enabled: true
+  hosts:
+    - host: fabric.example.com
+      paths: [/]
+  tls:
+    - secretName: fabric-tls-cert
+      hosts:
+        - fabric.example.com
+```
+
+With this setup, the ingress controller will terminate TLS traffic using the provided certificate and securely route requests to K2view services within the cluster.
+
+#### Deploying Generic Database (PostgreSQL)
+
+For development or testing environments, you can deploy a PostgreSQL database using the provided `generic-db` chart.
+
+```bash
+helm install generic-db ./generic-db \
+  --namespace k2view \
+  --create-namespace \
+  -f generic-db/values.yaml
+```
+
+> **Important**: For production environments, it's recommended to use a managed PostgreSQL service provided by your cloud provider.
+
+
+
+#### Deploying K2view Agent
+
+The K2view Agent facilitates communication between your Kubernetes cluster and the K2cloud Orchestrator.
+
+```bash
+helm install k2view-agent ./k2view-agent \
+  --namespace k2view-agent \
+  --create-namespace \
+  -f k2view-agent/values.yaml
+```
+
+Ensure that your `values.yaml` includes the correct `MAILBOX_ID` and Docker registry credentials if pulling images from a private registry.
+
+
+
+#### Deploying K2view Fabric
+
+Deploy the core Fabric services using the Fabric Helm chart.
+
+```bash
+helm install fabric ./fabric \
+  --namespace k2view \
+  --create-namespace \
+  -f fabric/values.yaml
+```
+
+Customize the `fabric/values.yaml` file to configure:
+
+* Docker image repository and tags.
+* Ingress settings (hostnames, TLS secrets).
+* Environment variables specific to your deployment.
+* Resource requests and limits.
+
+
+
+#### Verify Deployments
+
+After deploying all components, verify that all pods are running as expected:
+
+```bash
+kubectl get pods -n ingress-nginx
+kubectl get pods -n k2view
+kubectl get pods -n k2view-agent
+```
+
+Check the services and ingress resources to ensure they're correctly configured:
+
+```bash
+kubectl get svc -n ingress-nginx
+kubectl get svc -n k2view
+kubectl get ingress -n k2view
+```
+
+
+#### Access Fabric Web Studio
+
+Once all services are up and running, access the Fabric Web Studio using the configured ingress hostname. Ensure that your DNS records point to the ingress controller's external IP and that TLS certificates are correctly set up.
+
+
+#### Post-Installation Steps
+
+* **Create Projects and Spaces**: Use the K2cloud Orchestrator to create and manage projects and spaces.
+* **Monitor Logs**: Monitor the logs of each component to ensure they're functioning correctly.
+* **Backup Configurations**: Regularly back up your Helm `values.yaml` files and Kubernetes manifests.
+
+
+
+
+
+
 
 
