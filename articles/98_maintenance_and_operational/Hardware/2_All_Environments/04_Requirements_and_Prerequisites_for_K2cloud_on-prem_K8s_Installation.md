@@ -1,6 +1,6 @@
-# Requirements and Prerequisites for K2cloud On-premises K8s Cluster Installation
+# Requirements and Prerequisites for On-premises Kubernetes Cluster Installation
 
-This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster that is ready for operation.
+This article describes the guidelines and instructions for creating a K2cloud site - a Kubernetes (K8s) cluster ready for operation.
 
 While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. This can be considered as Kubernetes in a box.
 
@@ -69,7 +69,7 @@ K2view supports two variants of on-premises Kubernetes installations for Fabric 
 
 * `k8s-setup.sh` is intended for multi-node production-like deployments, installing a Kubernetes cluster across multiple bare-metal machines. It sets up both control plane and worker nodes, configures networking (e.g., Calico or Flannel), and handles node joining via kubeadm.
 
-* `single_node.sh` offers a lightweight, single-node cluster suitable for development or testing. It installs all required components on a single host and configures the node to run both control plane and workloads.
+* `single_node.sh` offers a lightweight, single-node cluster suitable for development or testing. It installs all required components on a single host and configures the node to run both the control plane and workloads.
   
   * **Recommendation** - Customers looking to install [Fabric Web Studio](/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
 
