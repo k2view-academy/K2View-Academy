@@ -68,10 +68,165 @@ For platform-specific sizing guidance, the [Requirements and Prerequisites for C
 
 ## Preparations and Provisioning
 
-* 
+To install a K2cloud Self-hosted Kubernetes cluster for Fabric and TDM, you will need to prepare and perform the necessary steps in coordination with your K2view representative. The process begins with gathering key configuration details, including TLS certificate files, and ensuring outbound internet access to specific K2view endpoints. These are essential for secure communications, image retrieval, and configuration via the K2cloud Orchestrator. K2view will also need to perform provisioning actions requiring information you will provide it. 
+
+Your K2view representative provide you with access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry.
+
+K2view will share a planning guide to help you with this provisioning and coordinate activities.
+
+### Planning and Installation Step Overview 
+
+Steps include:
+* Gather prerequisites and confirm network access
+* Provision of environment and services
+* Install K2view Fabric using Terraform and Helm
+* Populate the container registry
+* Provide container image paths and domain to K2view
+* Create K2view Project and Space
+
+### Provisioning 
+
+K2view provisions:
+* Nexus repo access
+* Mailbox ID
+* Initial admin user
+* Tenant environment
+
+Customer provides:
+* TLS cert + key
+* DNS config
+* Git repo + token
+* Registry image locations
 
 
+### Prerequisites 
 
+Internet access to:
+* https://cloud.k2view.com
+* https://nexus.share.cloud.k2view.com
+* https://github.com
+
+Required tools:
+* Terraform 1.9.x
+* Helm 2.13.0
+* Kubectl 1.14+
+* Docker (latest)
+* Your provider's CLI (e.g., Azure CLI)
 
 ## Installation 
+
+K2view would like to help you through the installation to help you overcome various issues. Good planning goes a long way to ensuring that the installation goes smoothly and quickly. Being ready having your certificate will help a lot make this a reality. 
+
+### TLS Certificate Requirements
+
+Here's a summary of the certificate requirements:
+
+* **Format**: Must be in PEM format.
+* **Full Chain**: The certificate must include the full Certificate Authority (CA) chain (e.g., a fullchain.pem file).
+* **Private Key**: An associated PEM-encoded private key must be provided.
+* **Domain Match**: The certificate must match the Fully Qualified Domain Name (FQDN) configured for the Kubernetes Ingress Controller.
+* **Base64 Encoding**: Both the certificate and private key must be base64-encoded if required by the automation tooling (e.g., Terraform or Helm charts).
+* **Wildcard or Context-Based Support**: If you're using subdomain-based access (e.g., *.domain.com), a wildcard certificate is required. For context-based URL routing (available in Fabric 8.2+), a standard single-domain certificate is sufficient and recommended
+
+### Installation with Terraform 
+
+Please refer to:([K2view Terraform Blueprints](https://github.com/k2view/blueprints/tree/main/Terraform))
+
+K2view provides Terraform blueprints to automate the provisioning of cloud infrastructure required for hosting Fabric and TDM services. This infrastructure-as-code approach ensures a consistent, repeatable, and secure setup of services across environments.
+
+#### Steps:
+
+1. **Clone K2view Blueprints**
+   - Clone the GitHub repository using:
+     ```bash
+     git clone https://github.com/k2view/blueprints.git
+     ```
+   - Navigate to the `Terraform` directory corresponding to your cloud provider (e.g., `azure-template`, `aws-template`, or `gcp-template`).
+
+2. **Modify `terraform.tfvars`**
+   - Edit the `terraform.tfvars` file to define key parameters such as:
+     - Resource group or project ID
+     - Region and availability zones
+     - DNS zone name
+     - Cluster name
+     - Container registry settings
+     - Mailbox ID and site name
+     - Node pool sizing
+   - Additional variables such as virtual network CIDR blocks and TLS paths may be required depending on your configuration.
+
+3. **Initialize and Apply the Terraform Plan**
+   - Initialize the working directory and install provider plugins:
+     ```bash
+     terraform init
+     ```
+   - Apply the configuration to provision infrastructure:
+     ```bash
+     terraform apply
+     ```
+   - Monitor the output for success messages and review any prompts to approve actions.
+
+4. **Review Terraform Output**
+   - Upon completion, Terraform will output values such as:
+     - Container registry login URL
+     - DNS zone and ingress FQDN
+     - Kubernetes cluster credentials or context info
+   - These outputs are used in subsequent Helm deployments and for sharing information with K2view (e.g., registry locations, domain settings).
+
+5. **Next Steps**
+   - After Terraform is complete, validate your environment setup (e.g., confirm cluster availability with `kubectl` and test the DNS resolution).
+   - Proceed to populate your container registry and perform Helm-based application deployment.
+
+Using Terraform, organizations gain improved visibility, compliance, and manageability of their infrastructure lifecycle.
+
+
+### Installation with Helm 
+
+Please refer to: ([K2view Helm Blueprints](https://github.com/k2view/blueprints/tree/main/helm))
+
+Once the infrastructure is provisioned and Docker images are pushed to your container registry, Helm is used to deploy the K2view Fabric and TDM services into your Kubernetes cluster.
+
+#### Steps:
+
+1. **Access the Helm Blueprints**
+   - Navigate to the cloned `blueprints/helm` directory.
+   - The folder contains individual charts for components like `fabric`, `fabric-studio`, and `k2view-agent`.
+
+2. **Configure Helm Values**
+   - Each chart includes a `values.yaml` file that must be edited to reflect your environment. Key settings include:
+     - Docker image registry paths and versions
+     - Ingress domain and TLS certificate configuration
+     - Kubernetes namespace and service parameters
+     - Persistent volume claim names or storage class overrides
+     - Environment variables such as Mailbox ID, Fabric license, or Git branch/tag
+
+3. **Install with Helm**
+   - Run Helm installation commands for each component:
+     ```bash
+     helm install fabric ./fabric -n k2view --create-namespace -f fabric-values.yaml
+     helm install studio ./fabric-studio -n k2view -f studio-values.yaml
+     helm install agent ./k2view-agent -n k2view -f agent-values.yaml
+     ```
+   - Use `--dry-run` for preview and `--debug` for verbose output during troubleshooting.
+
+4. **Validate Deployment**
+   - Check pod and service status using:
+     ```bash
+     kubectl get pods -n k2view
+     kubectl get svc -n k2view
+     ```
+   - Confirm the Ingress is correctly routing to services and TLS termination is functional.
+
+5. **Update and Upgrade**
+   - Use `helm upgrade` for redeploying changes:
+     ```bash
+     helm upgrade fabric ./fabric -n k2view -f fabric-values.yaml
+     ```
+   - Maintain version control over your `values.yaml` files to track changes across environments.
+
+6. **Next Steps**
+   - After successful deployment, log into Fabric Studio via the ingress URL.
+   - Use K2cloud to create and manage Projects and Spaces as described in earlier sections.
+
+Helm simplifies lifecycle management and enables seamless updates, rollback capabilities, and consistency across development, test, and production environments.
+
 
