@@ -6,7 +6,7 @@ While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_mai
 
 ## Table of Contents
 
-1. [On-premises K2cloud Kubernetes Cluster Installation](#on-premises-k2cloud-kubernetes-cluster-installation)  
+1. [On-premises Kubernetes Cluster Installation](#on-premises-k2cloud-kubernetes-cluster-installation)  
 2. [Options](#options)  
    - [1. Multi-Node K2cloud Kubernetes Cluster – `k8s-setup.sh`](#1-multi-node-k2cloud-kubernetes-cluster--k8s-setupsh)  
    - [2. Single-Node K2cloud Kubernetes Cluster – `single_nodesh`](#2-single-node-k2cloud-kubernetes-cluster--single_nodesh)  
