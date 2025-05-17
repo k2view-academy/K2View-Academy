@@ -1,5 +1,24 @@
 # Cloud Self-Hosted Kubernetes Cluster Installation
 
+## Table of Contents
+
+1. [What is a K2cloud Self-Hosted Kubernetes Cluster](#what-is-a-k2cloud-self-hosted-kubernetes-cluster)
+2. [High-level Deployment View](#high-level-deployment-view)
+3. [Core Components](#core-components)
+4. [Hardware Requirements](#hardware-requirements)
+   - [Node Requirements](#node-requirements)
+   - [K8s Cluster Preparations](#k8s-cluster-preparations)
+   - [Persistent Volumes and Storage Classes](#persistent-volumes-and-storage-classes)
+5. [Preparations and Provisioning](#preparations-and-provisioning)
+   - [Planning and Installation Step Overview](#planning-and-installation-step-overview)
+   - [Provisioning](#provisioning)
+   - [Prerequisites](#prerequisites)
+6. [Installation](#installation)
+   - [TLS Certificate Requirements](#tls-certificate-requirements)
+   - [Installation with Terraform](#installation-with-terraform)
+   - [Installation with Helm](#installation-with-helm)
+
+
 ## What is a K2cloud Self-Hosted Kubernetes Cluster
 
 A **K2cloud Self-hosted Kubernetes cluster** for Fabric and TDM refers to a customer-managed Kubernetes environment (either on-premises or in their cloud account) that runs the full K2view Fabric and optional TDM services independently, while still integrating securely with the K2cloud Orchestrator for deployment management and control.
