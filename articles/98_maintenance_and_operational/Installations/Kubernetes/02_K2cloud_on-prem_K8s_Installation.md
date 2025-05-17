@@ -2,7 +2,7 @@
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster - on premises.  
 
-While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">K2cloud Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
+While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
 
 ## Table of Contents
 
