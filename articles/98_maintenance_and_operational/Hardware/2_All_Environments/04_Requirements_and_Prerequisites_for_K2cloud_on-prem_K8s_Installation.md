@@ -75,6 +75,6 @@ K2view supports two variants of on-premises Kubernetes installations for Fabric 
 
 These installation methods provide flexibility for deploying Fabric and TDM in either realistic, distributed environments or local, self-contained setups.
 
-Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](articles/98_maintenance_and_operational/Installations/Kubernetes/02_K2cloud_on-prem_K8s_Installation.md) topic for instructions. 
+Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/articles/98_maintenance_and_operational/Installations/Kubernetes/02_K2cloud_on-prem_K8s_Installation.md) topic for instructions. 
 
 
