@@ -78,14 +78,47 @@ This variant targets **development, testing, or proof-of-concept scenarios** and
 
 ## Summary Comparison - Multi-node Cluster / Single-node Cluster
 
-| Feature                   | `k8s-setup.sh`              | `single_node.sh`              |
-| ------------------------- | --------------------------- | ----------------------------- |
-| Target                    | Multi-node cluster          | Single-node cluster           |
-| Control plane setup       | Yes                         | Yes                           |
-| Worker node setup         | Yes (via join token)        | No (same node acts as worker) |
-| Taints removal (for pods) | No                          | Yes                           |
-| Pod networking setup      | Yes                         | Yes                           |
-| Intended use              | Production-like deployments | Local/test deployments        |
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th><code>k8s-setup.sh</code></th>
+      <th><code>single_node.sh</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Target</td>
+      <td>Multi-node cluster</td>
+      <td>Single-node cluster</td>
+    </tr>
+    <tr>
+      <td>Control plane setup</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Worker node setup</td>
+      <td>Yes (via join token)</td>
+      <td>No (same node acts as worker)</td>
+    </tr>
+    <tr>
+      <td>Taints removal (for pods)</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Pod networking setup</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Intended use</td>
+      <td>Production-like deployments</td>
+      <td>Local/test deployments</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -205,13 +238,36 @@ These packages come from:
 
 ### Summary of Required Internet Repositories and URLs
 
-| Purpose                 | Source URL/Repo                                                  |
-| ----------------------- | ---------------------------------------------------------------- |
-| Kubernetes APT packages | `https://packages.cloud.google.com/apt`                          |
-| Docker APT packages     | `https://download.docker.com/linux/ubuntu`                       |
-| CNI Plugin YAMLs        | `https://raw.githubusercontent.com/projectcalico/...` or Flannel |
-| Helm                    | `https://raw.githubusercontent.com/helm/helm/main/scripts/...`   |
-| Ubuntu base packages    | Ubuntu APT mirrors (e.g., `http://archive.ubuntu.com/ubuntu`)    |
+<table>
+  <thead>
+    <tr>
+      <th>Purpose</th>
+      <th>Source URL/Repo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kubernetes APT packages</td>
+      <td><code>https://packages.cloud.google.com/apt</code></td>
+    </tr>
+    <tr>
+      <td>Docker APT packages</td>
+      <td><code>https://download.docker.com/linux/ubuntu</code></td>
+    </tr>
+    <tr>
+      <td>CNI Plugin YAMLs</td>
+      <td><code>https://raw.githubusercontent.com/projectcalico/...</code> or Flannel</td>
+    </tr>
+    <tr>
+      <td>Helm</td>
+      <td><code>https://raw.githubusercontent.com/helm/helm/main/scripts/...</code></td>
+    </tr>
+    <tr>
+      <td>Ubuntu base packages</td>
+      <td>Ubuntu APT mirrors (e.g., <code>http://archive.ubuntu.com/ubuntu</code>)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -258,14 +314,41 @@ Kubernetes uses a container runtime to run pods (a list of all supported runtime
 
 ## Installed Components
 
-| Component        | Description                                                        |
-| ---------------- | ------------------------------------------------------------------ |
-| **Docker**       | Container runtime used by Kubernetes                               |
-| **kubeadm**      | CLI utility for bootstrapping Kubernetes clusters                  |
-| **kubelet**      | Node-level agent that runs and manages pods                        |
-| **kubectl**      | Command-line interface for interacting with the Kubernetes cluster |
-| **Calico**       | Default CNI plugin for pod networking (if deployed)                |
-| **Sysctl Rules** | Kernel parameter tuning for bridging and forwarding                |
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Docker</strong></td>
+      <td>Container runtime used by Kubernetes</td>
+    </tr>
+    <tr>
+      <td><strong>kubeadm</strong></td>
+      <td>CLI utility for bootstrapping Kubernetes clusters</td>
+    </tr>
+    <tr>
+      <td><strong>kubelet</strong></td>
+      <td>Node-level agent that runs and manages pods</td>
+    </tr>
+    <tr>
+      <td><strong>kubectl</strong></td>
+      <td>Command-line interface for interacting with the Kubernetes cluster</td>
+    </tr>
+    <tr>
+      <td><strong>Calico</strong></td>
+      <td>Default CNI plugin for pod networking (if deployed)</td>
+    </tr>
+    <tr>
+      <td><strong>Sysctl Rules</strong></td>
+      <td>Kernel parameter tuning for bridging and forwarding</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Addons
 The following addons will be automatically installed in your Kubernetes cluster:
@@ -316,18 +399,51 @@ Now you can instruct the Cloud Orchestrator to use the image from your private c
 
 The `k8s-setup.sh` script offers the ability to optionally enable or configure the following components during installation:
 
-| Optional Component               | Description                                                                          |
-| -------------------------------- | ------------------------------------------------------------------------------------ |
-| **CNI Plugin (Calico)**          | Deployed by default for pod networking; other plugins may be substituted manually    |
-| **Custom Hostname**              | Prompts the user to define a hostname to register with the cluster                   |
-| **Kubernetes Version**           | You can specify a particular version to install (e.g., 1.28.x)                       |
-| **Pod Network CIDR**             | Allows customization of the internal pod network (default is `192.168.0.0/16`)       |
-| **Cluster Join Command**         | Generated and displayed to allow worker nodes to join via `kubeadm`                  |
-| **Firewall Rules (Manual)**      | The script may suggest configuring firewall rules but leaves enforcement to the user |
-| **CoreDNS Deployment**           | CoreDNS is set up as part of the control plane init via kubeadm                      |
-| **API Server Advertise Address** | Can be provided as a script argument or prompted interactively                       |
+<table>
+  <thead>
+    <tr>
+      <th>Optional Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CNI Plugin (Calico)</strong></td>
+      <td>Deployed by default for pod networking; other plugins may be substituted manually</td>
+    </tr>
+    <tr>
+      <td><strong>Custom Hostname</strong></td>
+      <td>Prompts the user to define a hostname to register with the cluster</td>
+    </tr>
+    <tr>
+      <td><strong>Kubernetes Version</strong></td>
+      <td>You can specify a particular version to install (e.g., 1.28.x)</td>
+    </tr>
+    <tr>
+      <td><strong>Pod Network CIDR</strong></td>
+      <td>Allows customization of the internal pod network (default is <code>192.168.0.0/16</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Cluster Join Command</strong></td>
+      <td>Generated and displayed to allow worker nodes to join via <code>kubeadm</code></td>
+    </tr>
+    <tr>
+      <td><strong>Firewall Rules (Manual)</strong></td>
+      <td>The script may suggest configuring firewall rules but leaves enforcement to the user</td>
+    </tr>
+    <tr>
+      <td><strong>CoreDNS Deployment</strong></td>
+      <td>CoreDNS is set up as part of the control plane init via kubeadm</td>
+    </tr>
+    <tr>
+      <td><strong>API Server Advertise Address</strong></td>
+      <td>Can be provided as a script argument or prompted interactively</td>
+    </tr>
+  </tbody>
+</table>
 
-> While these components are not toggled via flags directly in the script today, the script's design allows future extensibility or manual modification to enable/disable them.
+
+> While these components are not toggled via flags directly in the script today, their design allows future extensibility or manual modification to enable/disable them.
 
 ## Usage Instructions
 
@@ -369,12 +485,33 @@ You will be prompted to select the node type (control plane or worker), hostname
 
 ## Troubleshooting Tips
 
-| Issue                        | Solution                                                            |
-| ---------------------------- | ------------------------------------------------------------------- |
-| Swap not disabled            | Run `sudo swapoff -a` and remove swap entries from `/etc/fstab`     |
-| kubelet failing to start     | Check logs with `journalctl -u kubelet`                             |
-| Pods not reaching each other | Confirm CNI plugin is installed (`kubectl get pods -n kube-system`) |
-| Control plane unreachable    | Ensure port 6443 is open and accessible on the control plane node   |
+<table>
+  <thead>
+    <tr>
+      <th>Issue</th>
+      <th>Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Swap not disabled</td>
+      <td>Run <code>sudo swapoff -a</code> and remove swap entries from <code>/etc/fstab</code></td>
+    </tr>
+    <tr>
+      <td>kubelet failing to start</td>
+      <td>Check logs with <code>journalctl -u kubelet</code></td>
+    </tr>
+    <tr>
+      <td>Pods not reaching each other</td>
+      <td>Confirm CNI plugin is installed (<code>kubectl get pods -n kube-system</code>)</td>
+    </tr>
+    <tr>
+      <td>Control plane unreachable</td>
+      <td>Ensure port 6443 is open and accessible on the control plane node</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ---
 
