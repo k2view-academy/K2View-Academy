@@ -1,4 +1,4 @@
-<strong>Installation of TDM and Web Studio</strong>
+<strong>Installation of TDM</strong>
 
 <ul>
   <li>
@@ -6,7 +6,11 @@
       TDM Installation
     </a>
   </li>
+</ul>
 
+<strong>Installation of Fabric Web Studio</strong>
+
+<ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md">
       K2view Fabric Web Studio Installation
