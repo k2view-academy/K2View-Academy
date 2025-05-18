@@ -40,7 +40,7 @@ In this article, we will walk through the steps of building a web application in
 
 It is now possible to edit the web application code while benefiting from built-in intelligent code completion and error notifications.
 
-Web Studio also enables to manage — create, edit and debug — the APIs used by the web application, and to first view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
+Web Studio also enables to manage — create, edit and debug — the APIs used by the web application, and to view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
 
 Previewing your HTML files can be done using a built-in Preview view rather than going to the app itself.
 
