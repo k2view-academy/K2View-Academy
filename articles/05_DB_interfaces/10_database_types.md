@@ -20,6 +20,7 @@ You can also create a new database type, from start, which is not based on a tem
 To create a new custom interface type/database type _based on a template_, do the following:
 
 <studio>
+   
 1. Go to Project Tree > Shared Objects, right-click Database Types and select New Database Type From Template and then select the DB type, for example Oracle.
 
 2. Edit the required properties. For example, add the following connection property for Oracle:
@@ -35,6 +36,7 @@ To create a new custom interface type/database type _based on a template_, do th
 </studio>
 
 <web>
+   
 1. Go to Project Tree > Implementation > Shared Objects > Custom Interface Types/Database Types.
 
    - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
@@ -45,7 +47,9 @@ To create a new custom interface type/database type _based on a template_, do th
 
    - Choose one of the existing DB interface types from the available list. Press **Enter** to confirm or **Escape** to cancel.
 
+
      ![images](images/05_10_web_choose_custom_type_from_list.png)
+
 
 2. Name the new custom interface.
 3. Edit the required properties. For example, add the following connection property for Oracle:
@@ -54,6 +58,7 @@ To create a new custom interface type/database type _based on a template_, do th
    oracle.jdbc.ReadTimeout=10000
    ```
 4. **Save** the custom interface type.   
+
 </web>
 
 ### Create a Database Type from Start
