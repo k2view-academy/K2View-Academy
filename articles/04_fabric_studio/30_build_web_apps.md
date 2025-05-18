@@ -79,7 +79,7 @@ Below are screenshots of the City Mobily C360 Demo project, where its React dash
 
 To introduce a new application using the Fabric web framework, follow these steps:
 
-* Create a new folder, named **web**, under the LU implementation folder.
+* Create a new folder, named **web**, under the relevant LU folder.
 
 * Under the **web** folder, create an additional folder representing your new application and place all the web static resources under this folder.
 
