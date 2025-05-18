@@ -1,5 +1,3 @@
-
-
 # Custom Interface Types / Database Types 
 
 ## Overview
@@ -20,7 +18,7 @@ You can also create a new database type, from start, which is not based on a tem
 To create a new custom interface type/database type _based on a template_, do the following:
 
 <studio>
-   
+
 1. Go to Project Tree > Shared Objects, right-click Database Types and select New Database Type From Template and then select the DB type, for example Oracle.
 
 2. Edit the required properties. For example, add the following connection property for Oracle:
@@ -36,10 +34,12 @@ To create a new custom interface type/database type _based on a template_, do th
 </studio>
 
 <web>
-   
+
 1. Go to Project Tree > Implementation > Shared Objects > Custom Interface Types/Database Types.
 
    - Right-click on the folder icon (left), next to **Custom Interface Types/Database Types**.
+
+     ​
 
      ![images](images/05_10_web_location_of_custom_interface_types.png)
 
@@ -47,8 +47,11 @@ To create a new custom interface type/database type _based on a template_, do th
 
    - Choose one of the existing DB interface types from the available list. Press **Enter** to confirm or **Escape** to cancel.
 
+     ​
 
-     ![images](images/05_10_web_choose_custom_type_from_list.png)
+      ![images](images/05_10_web_choose_custom_type_from_list.png)
+
+
 
 
 2. Name the new custom interface.
@@ -64,6 +67,8 @@ To create a new custom interface type/database type _based on a template_, do th
 ### Create a Database Type from Start
 
 To create a new custom interface type/database type _from start_, do the following:
+
+
 
 <studio>
 
@@ -115,23 +120,20 @@ To create a new custom interface type/database type _from start_, do the followi
 
 
 
+
 <studio>
 
 #### Example of JDBC Connection Properties Definition
 
-- Create a new **MySQL2** Database type that includes the **useSSL** JDBC Connection Property and add it to the URL Template as shown below:
+- Create a new **MySQL2** Database type that includes the **useSSL** JDBC Connection Property and add it to the URL Template as shown below: ```&abc=[useSSL]```
 
-~~~
-&abc=[useSSL]
-~~~
+
 
 ![image](images/05_10_3.PNG)
 
-- Create a new Interface using the **MySQL2** Database type. Note that **useSSL** JDBC Connection Property is added to the [Interface window](03_DB_interfaces_overview.md) under Connection Properties section and the following is added to the Connection String:
+- Create a new Interface using the **MySQL2** Database type. Note that **useSSL** JDBC Connection Property is added to the [Interface window](03_DB_interfaces_overview.md) under Connection Properties section and the following is added to the Connection String: ```abc=false```
 
-~~~
-abc=false
-~~~
+  ​
 
 ![image](images/05_10_4.PNG)
 
@@ -140,13 +142,23 @@ abc=false
 </studio>
 
 
+
+
 ### JDBC Drivers Management
 
 When introducing a new database type, the JDBC driver is saved under:
 
-**[Fabric Project's Directory]/[Project Name]/lib/[new database type]**.
 
-Each database type is kept in a separate folder in order to avoid overlapping or conflicts with other drivers (dynamically loaded). <web>When creating a new custom interface type, such folder is automtically created, so that you just need to drop there the driver files.</web>
+
+**[Fabric Project's Directory]/[Project Name]/lib/[new database type]**
+
+
+
+Each database type is kept in a separate folder in order to avoid overlapping or conflicts with other drivers (dynamically loaded). 
+
+<web>When creating a new custom interface type, such folder is automatically created, so that you just need to drop there the driver files.</web>
+
+
 
 Note that since Fabric 8.0 the JDBC drivers are part of the [Fabric Deployment](/articles/01_fabric_overview/02_fabric_glossary.md#deployment) process.
 
