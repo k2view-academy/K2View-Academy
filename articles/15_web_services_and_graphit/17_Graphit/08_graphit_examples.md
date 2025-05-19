@@ -198,4 +198,29 @@ Output:
 
 <img src="images/grKeysResp.png"></img>
 
+
+
+#### grInclude.graphit
+
+In this example, *grInclude.graphit* includes another graphit named *included.graphit*.
+
+grInclude.graphit:
+
+![](images/grInclude.png)
+
+
+
+included.graphit:
+
+![](images/included.png)
+
+Note that in this example both expect to get external parameters to be used in their output.
+
+Accordingly, if we call to the parent graphit file similar to this `/api/grInclude?param1=hello&param2=wrold` yields this output:
+
+`{"a":"hello","b":"wrold"}`
+
+
+
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/07_invoke_javacode_from_graphit.md)
+

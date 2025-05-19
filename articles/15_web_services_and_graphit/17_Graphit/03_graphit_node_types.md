@@ -6,6 +6,8 @@ Node Type options define how content is structured and how a tag is presented in
 
 The following table lists the node types. Please refer to the files in the following table's Example column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
+![image-20250519181104716](C:\Users\EyalOrbach\AppData\Roaming\Typora\typora-user-images\image-20250519181104716.png)
+
 <table>
 <tbody>
 <tr>
@@ -32,7 +34,7 @@ The following table lists the node types. Please refer to the files in the follo
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grfunctiongraphit">grFunction</a></td>
 </tr>
 <tr>
-<td valign="top" width="50pxl">SQL</td>
+<td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
 <td valign="top" width="900pxl">Defines an SQL statement that retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click the SQL icon to open the Query Builder. 
     <br/><b>Note</b>: If the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
@@ -56,9 +58,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Get</td>
 <td valign="top" width="900pxl">Defines the Fabric Get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
-
-
-    Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
+Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
@@ -89,8 +89,19 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <td valign="top" width="900pxl">Presents data as output without manipulation. For example, a header for an XML format.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grrawgraphit">grRaw</a></td>
 </tr>
+<tr>
+    <td valign="top" width="50pxl">include</td>
+    <td valign="top" width="900pxl">Enable including another Graphit file, where its output is embedded as part of the parent. 	 <ul>
+        <li>You can specify the folder that contains the child graphit or skip on it.</li>
+        <li>You shall specify the "graphit" extension when populating the child graphit (for example: a.graphit).</li>
+        <li>You can use external paramaeters in the child graphit, where you shall send them to the parent, when calling it.</li> 
+</ul>
+    </td><td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grinclude">grInclude</a>
+    </td>
+</tr>
 </tbody>
 </table>
+
 
 
 
