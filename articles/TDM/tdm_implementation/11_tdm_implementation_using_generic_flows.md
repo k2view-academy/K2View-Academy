@@ -43,7 +43,7 @@ Example:
 Notes: 
 - A sequence can be shared between multiple LUs, e.g. subscriber_id is shared between CRM and Billing LUs. In order to keep the data referential integrity, all the shared LUs must have the same sequence name regardless of their sequence handling method.
 
-- Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy.flow. Alternatively, you could run the **masking-create-cache-table.flow** from the Broadway examples. 
+- Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy.flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway examples. 
 
 - Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking schema on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
@@ -51,7 +51,7 @@ Notes:
 
 A new Global - **TDM_SEQ_REPORT** - has been added to the Shared Globals in TDM 8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
-For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent the population of TDM_SEQ_MAPPING and the generation of the **Replace Sequence Summary Report**. Note that the replace sequence report will not be available for a task that is executed with the TDM_SEQ_REPORT Global set as **false**.
+For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent populating the TDM_SEQ_MAPPING table and generating the **Replace Sequence Summary Report**. Note that the Replace Sequence Summary Report would not be available for a task that is executed with the TDM_SEQ_REPORT Global set as **false**.
 
 ## Step 3 - Create, Load and Delete Flows
 
