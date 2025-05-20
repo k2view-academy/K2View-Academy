@@ -41,7 +41,7 @@ Example:
   -	Billing LU – set to true.
 
 Notes: 
-- A sequence can be shared between multiple LUs, e.g. subscriber_id is shared between CRM and Billing LUs. In order to keep the data referential integrity, all the shared LUs must have the same sequence name regardless of their sequence handling method.
+- A sequence can be shared between multiple LUs. For example, the subscriber_id is shared between the CRM and Billing LUs. In order to ensure referential integrity, all shared LUs must have the same sequence name regardless of their sequence handling method.
 
 - Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy.flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway examples. 
 
