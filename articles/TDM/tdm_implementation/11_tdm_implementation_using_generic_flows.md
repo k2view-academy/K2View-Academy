@@ -31,11 +31,11 @@ I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-A new shared Global has been added in TDM 9.3: **TDM_USING_CATALOG_SEQUENCES** (true/false) to set the default **sequence handling behavior** of the TDM: catalog-based sequence or sequence handling without catalog. This Global can be **added to an LU** to set a **behavior per LU**.
+A new shared Global has been added in TDM 9.3: **TDM_USING_CATALOG_SEQUENCES** (true/false) to set the default **sequence handling behavior** of the TDM: catalog-based sequence or sequence handling without Catalog. This Global can be **added to an LU** to set a **behavior per LU**.
 
 Example:
 - The TDM project has the CRM, Billing, and Ordering LUs.
-- By default, the sequences are handled without the Catalog except for the Billing LU for which the sequences are Catalog-based.
+- By default, the sequences are handled without the Catalog, except the Billing LU for which sequences are Catalog-based.
 - The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
   - Shared Global – set to false.
   -	Billing LU – set to true.
