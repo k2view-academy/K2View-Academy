@@ -25,15 +25,27 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 It may be required to replacing the loaded IDs (sequences) when populating a target database as a way to avoid collision with existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
 
-Fabric V8.2 has added the [Catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). The following section describes two sequence handling implementation methods:
+Fabric V8.2 has added the [Catalog's sequence setting](/articles/39_fabric_catalog/10_catalog_settings.md). TDM 9.3 and onwards supports both sequence methods: 
 
 I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-Note that both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking schema. 
+A new shared Global has been added in TDM 9.3: **TDM_USING_CATALOG_SEQUENCES** (true/false) to set the default **sequence handling behavior** of the TDM: catalog-based sequence or sequence handling without catalog. This Global can be **added to an LU** to set a **behavior per LU**.
 
-Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking schema on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
+Example:
+- The TDM project has the CRM, Billing, and Ordering LUs.
+- By default, the sequences are handed without the catalog except for the Billing LU for which the sequences are catalog-based.
+- The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
+  - Shared Global – set to false.
+  -	Billing LU – set to true.
+
+Notes: 
+- A sequence can be shared between multiple LUs, e.g. subscriber_id is shared between CRM and Billing LUs. In order to keep the data referential integrity, all the shared LUs must have the same sequence name regardless of their sequence handling method.
+
+- Both methods require the creation of the **k2masking** schema. The TDM deploy.flow creates the k2masking schema. Alternatively, run the **masking-create-cache-table.flow** from the Broadway examples to create the k2masking schema. 
+
+- Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. The settings are done via the new [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking schema on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
 ### Set the Sequence Report Global
 
