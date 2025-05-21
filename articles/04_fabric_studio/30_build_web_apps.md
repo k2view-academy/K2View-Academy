@@ -99,8 +99,6 @@ To introduce a new application — using the Fabric web framework — follow the
       "hidden": false
    }
 ~~~
-
-
 The ‘appId’ value — myApp — in this case, is the subfolder’s name under the **web** subfolder.
 
 
@@ -111,7 +109,7 @@ The ‘appId’ value — myApp — in this case, is the subfolder’s name unde
 >   •	In addition to adding the web subfolder upon its content, it also has to be added to the source control, such as GitHub, as should be done with any other project file.
 >
 > 
->    •   More applications may be added by adding them under the web subfolder and following the above steps.
+>    •   More applications may be added by adding them under the **web** subfolder and following the above steps.
  
 
 
