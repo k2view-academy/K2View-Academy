@@ -1,13 +1,19 @@
-# Fabric 7.x Setup Guide
+# Fabric 8.x Setup Guide
 
 ##  Fabric Pre-Installation Steps
 For a proper operation, Fabric relies on a few system settings and 3rd party solutions.
 K2view provide optional packages for Cassandra and Kafka to assist with installation, however the vendor installtion packages can be used.
 
-Cassandra or equivalent, is needed for all installation types, and Kafka is required only for multi-nodes Fabric environment.
+* System DB (SQlite, PostgreSQL, Cassandra), is required for all installation types.
+    + SQlite can be used with small or DEV enviroments, Support is built in within Fabric, so no intallation needed.
+    + PostgreSQL is Requiered for TDM installation and therfore we recommend to use it also for Fabric SystemDB when Setting up TDM.
+    + Cassandra or equivalent can also be used, and installed seperatly following the product manuals. However, to ease the installation, K2view provide a preconfigured package  that can be used.
+
+* Kafka is required only for multi-nodes Fabric environment.
+
 Follow the below steps, depending on the environment that you plan to use:
 
-1. Click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric Environment. Note that this is mandatory and should be performed on each server in the environment.
+1. Click [here](01_Fabric_8.xx_Installation_intro.md) to get the full list of activities to be performed prior to the installation of the Fabric Environment. Note that this is mandatory and should be performed on each server in the environment.
 2. Click [here](Cassandra_Setup.md) for instructions on how to install a Cassandra instance or a cluster with K2view's supplied package.
 3. Click [here](Kafka_Setup.md) for instructions on how to install a Kafka instance or a cluster with K2view's supplied package.
 
@@ -32,25 +38,13 @@ Fabric Server Installation package will be supplied to you by K2view.
 The following script should be run on the first node separately; once the setup is done and the Fabric node status is 'READY',
 run the same command on the rest of the Fabric nodes.
 
-**Mandatory required details:**
-+ Cassandra seed node IPs
-+ Cassandra user & password (if different from the default in the Cassandra setup)
-+ Kafka node IPs (if kafka_ips is not provided, the [PubSub](/articles/24_non_DB_interfaces/02a_pubsub_config.md) will run 'in memory')
++ To setup Fabric with Cassandra as SystemDB
+    Click [here](02.1_Fabric_8.x.x_Cassandra_setup.md) 
++ To setup Fabric with PostgreSQL as SystemDB
+    Click [here](02.2_Fabric_8.x.x_PG_setup.md) 
++ To setup Fabric with SQlite as SystemDB
+    Click [here](02.3_Fabric_8.x.x_Sqlite_setup.md) 
 
-
-
-1. Run the following command, replacing the parameters with your own environment:
-~~~bash
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
-~~~
-* If the Cassanda & Kafka are Hardened with SSL, add the switch --ssl to import the certificate to Fabric Truststore
-~~~bash
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 --ssl
-~~~
-> The above are examples for standard and simple Fabric installations. For more information about memory, Cassandra replication factor and additional configuration options, run: 
-~~~bash
-/opt/apps/fabric/scripts/fabric-setup.sh --help
-~~~
 
 2. To start Fabric - run:
 ~~~bash

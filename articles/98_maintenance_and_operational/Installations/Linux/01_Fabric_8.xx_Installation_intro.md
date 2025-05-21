@@ -1,4 +1,4 @@
-# Fabric 7.xx Pre-Installation Steps
+# Fabric 8.xx Pre-Installation Steps
 
 ## Introduction 
 
@@ -17,9 +17,9 @@ Follow the below instructions to prepare Linux environment for Fabric/TDM instal
 for detailed hardware requirement, please see below:
 <ul>      
 <li>
-<a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">Fabric and TDM 7.x Hardware Requirements for POV Environments</a></li>
+<a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">Fabric and TDM 8.x Hardware Requirements for POV Environments</a></li>
 <li>
-<a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">Fabric and TDM 7.x Hardware Requirements for ALL Environments</a></li>
+<a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">Fabric and TDM 8.x Hardware Requirements for ALL Environments</a></li>
 	  
 </ul>
 
@@ -36,10 +36,17 @@ chmod 755 /opt/apps
 
 On each server, depending on the service you wish to install, run the appropriate useradd command.
 (on a single host setup, run all commands on the same server)
-
+For Fabric Sever
 ~~~bash
 useradd -m -d /opt/apps/fabric  -s /bin/bash fabric
+~~~
+For Cassandra Instance (only in case Cassandrta is planned as system DB)
+~~~bash
 useradd -m -d /opt/apps/cassandra  -s /bin/bash cassandra
+~~~
+In Some cases, Kafka instance or cluster will be required.
+
+~~~bash
 useradd -m -d /opt/apps/kafka  -s /bin/bash kafka
 ~~~
 
@@ -49,15 +56,15 @@ Update the OS limits as follows:
 
 ~~~bash
 echo "root soft    nproc     unlimited" >> /etc/security/limits.conf
-echo "cassandra - nofile 100000" >> /etc/security/limits.conf
-echo "cassandra - nproc 50000" >> /etc/security/limits.conf
-echo "fabric - nofile 100000" >> /etc/security/limits.conf
-echo "fabric - nproc 50000" >> /etc/security/limits.conf
-echo "kafka hard nofile 100000" >> /etc/security/limits.conf
-echo "kafka soft nofile 100000" >> /etc/security/limits.conf
-echo "kafka - nproc 50000" >> /etc/security/limits.conf
-echo "kafka soft nofile 100000" >> /etc/security/limits.conf
-echo "kafka - nproc 50000" >> /etc/security/limits.conf
+echo "cassandra - nofile 1000000" >> /etc/security/limits.conf
+echo "cassandra - nproc 500000" >> /etc/security/limits.conf
+echo "fabric - nofile 1000000" >> /etc/security/limits.conf
+echo "fabric - nproc 500000" >> /etc/security/limits.conf
+echo "kafka hard nofile 1000000" >> /etc/security/limits.conf
+echo "kafka soft nofile 1000000" >> /etc/security/limits.conf
+echo "kafka - nproc 500000" >> /etc/security/limits.conf
+echo "kafka soft nofile 1000000" >> /etc/security/limits.conf
+echo "kafka - nproc 500000" >> /etc/security/limits.conf
 ~~~
 
 
@@ -75,21 +82,4 @@ sysctl -p
 ~~~
 
 
-If the system is planned to work over SSL/TLS and need to be hardend, OPENSSL is also required to be installed
-
-On RHEL/CentOs 8 server **only** - add the following packages:
-
-~~~bash
-dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
-ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
-~~~
-
-> **Note:** Running one of the following commands would indicate your Linux flavour:
-~~~bash
-rpm -E %{rhel}
-hostnamectl
-cat /etc/os-release
-~~~
-
-
-
+If the system is planned to work over SSL/TLS and need to be hardend, OPENSSL is also required to be installed, in most Disterbutions its already installed by default, in case its not. please follow the spefic Linux diterbution manuals.
