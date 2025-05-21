@@ -79,29 +79,45 @@ Below are screenshots from our City Mobily C360 Demo project, where its React da
 
 To introduce a new application — using the Fabric web framework — follow these steps:
 
-* Under the relevant LU folder, create a new subfolder named **web**.
+* Under the relevant LU folder, create a new subfolder named **web** (right-click the LU > Open Folder, and create the subfolder in Windows Explorer).
 
-* Under the **web** subfolder, create an additional subfolder representing your new application and place all the web static resources under this folder.
+* There, under the **web** subfolder, create an additional subfolder representing your new application and place all the web static resources under this folder.
 
-* Add the new application to the **apps.json** file. You can either modify this file on the server side at its existing location or copy it to the web subfolder on the client side and edit it there. Fabric prioritizes the apps.json file located in the web subfolder.
+* Add the new application to the **apps.json** file. Copy this file from its server location (path example in which Fabric 8.2 is installed: c:\K2View\Fabric_8.2\Server\fabric\staticWeb\) into the **web** subfolder and edit it there. Fabric prioritizes the apps.json file located in the **web** subfolder.
 
   > The presented order of the applications in the context menu list is determined by their order in the **apps.json** file. 
 
-**Example**
+  > **Example**
+  >
+  > To add the **My Web App** application to the framework, add the following to the **apps.json** file:
 
-To add the **My Web App** application to the framework, add the following to the **apps.json** file:
-
+   
 ~~~json
    {
-      "name": "My Simple Web App",
+      "name": "My Web App",
       "appId": "myApp",
       "hidden": false
    }
 ~~~
 
 
+The ‘appId’ value — myApp — in this case, is the subfolder’s name under the **web** subfolder.
 
+
+
+
+   > **Notes**
+> 
+>   •	In addition to adding the web subfolder upon its content, it also has to be added to the source control, such as GitHub, as should be done with any other project file.
+>
+> 
+>    •   More applications may be added by adding them under the web subfolder and following the above steps.
+ 
+
+
+> 
 </studio>
+
 
 ## Fabric Web Framework Tools
 
