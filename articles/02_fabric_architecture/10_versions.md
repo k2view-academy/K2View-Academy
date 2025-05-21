@@ -13,6 +13,14 @@ The below table displays the list of Fabric versions with their release informat
             <td width="150pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.4.pdf">8.2.4</a></td>
+            <td>May 22, 2025</td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.3.pdf">8.2.3</a></td>
             <td>May 13, 2025</td>
             <td>HF1</td>
