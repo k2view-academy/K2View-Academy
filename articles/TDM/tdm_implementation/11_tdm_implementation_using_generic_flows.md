@@ -43,7 +43,7 @@ Example:
 Notes: 
 - A sequence can be shared between multiple LUs. For example, the subscriber_id is shared between the CRM and Billing LUs. In order to ensure referential integrity, all shared LUs must have the same sequence name regardless of their sequence handling method.
 
-- Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy.flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway examples. 
+- Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy.flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow). 
 
 - Starting from Fabric V7.2, SQLite and PostgreSQL are also supported as System DBs. Setting them is done via the [internal_db section](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md#how-to-switch-to-sqlite-or-postgresql) of the Fabric config.ini file. Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface. By default, it is populated with **DB_CASSANDRA**. If you wish to create the k2masking schema on a PostgreSQL DB, set a PG DB interface name in the SEQ_CACHE_INTREFACE Global.
 
