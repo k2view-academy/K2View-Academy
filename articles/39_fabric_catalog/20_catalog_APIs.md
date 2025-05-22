@@ -138,6 +138,10 @@ https://localhost:3213/api/catalog/latest/CRM_DB
 ```
 
 ```
+https://localhost:3213/api/catalog/latest/CRM_DB?shortMode=true
+```
+
+```
 https://localhost:3213/api/catalog/1/CRM_DB
 ```
 
