@@ -121,6 +121,13 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <p>The data platform name.</p>
 </td>
 </tr>
+<tr>
+<td>shortMode</td>
+<td>N</td>
+<td>
+<p>When set to true, the EP returns an array of shema names only. without full list of properties and links. Available from V8.3.</p>
+</td>
+</tr>
 </tbody>
 </table>
 
