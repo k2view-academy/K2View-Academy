@@ -10,13 +10,13 @@ This above-mentioned initiative allows to develop web applications within Web St
 
 One of the key advantages of Web Studio is its **live update** capability, which also applies when developing a React app that typically requires a build step for any changes. Using Web Studio, developers can instantly see changes, as they make modifications, which significantly streamlines the development process.
 
-In this article, we will walk through the steps of building a web application inside Web Studio, illustrating the process with examples and showcasing its powerful features.
+In this article, we will walk through the steps of building a web application inside Web Studio while illustrating the process with examples and showcasing its powerful features.
 
 
 
 ## Setting Up a New Web Application
 
-1. In the Project Tree, select the LU where you intend to create the web application, and navigate to the Web folder.
+1. In the Project Tree, select the LU in which you intend to create the web application, and navigate to the Web folder.
 
 2. Right-click and choose 'New Web App...'
 
@@ -24,15 +24,15 @@ In this article, we will walk through the steps of building a web application in
 
 3. In the pop-up window, enter a name for your app.
 
-4. In the pop-up window, choose the app type from the following options:
+4. In the pop-up window that follows, choose the app type from the following options:
 
-   - **React** – a React framework-based app, where base React source files are pre-generated for you. Additionally, files related to the **Vite** framework are included to support live updates.
-   - **Vanilla** – a basic setup with initial files created for you (index.html, main.js, and style.css), along with Vite framework files for live update support.
-   - **Empty** – no files are created, allowing you to start from scratch.
+   - **react** – a React framework-based app, in which foundational React source files are pre-generated for your convenience. Additionally, files related to the **Vite** framework are included to support live updates.
+   - **vanilla** – a basic setup with initial files created for your usage (index.html, main.js, and style.css), along with Vite framework files for live update support.
+   - **empty** – no files are created, allowing you to start from scratch.
 
-5. Once the app has been created, a new app folder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available in the K2view web framework's menu (top-left *hamburger menu*).
+5. Once the app has been created, a new app subfolder appears under the **Web** folder. In addition to the generated files, your app is automatically added to the **apps.json** file, making it available for selection in the K2view web framework's menu (top-left *hamburger menu*).
 
-   > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web Services LU**. As the Web Services LU is deployed last, its apps.json file overrides all others. This is particularly relevant in case there are customized apps.json files in your project. 
+   > **Note**: It is recommended to manage all apps in the **apps.json** file located in the **Web** folder within the **Web Services LU**. As the Web Services LU is deployed last, its apps.json file overrides all other files. This is particularly relevant in case there are customized apps.json files in your project. 
 
 
 
@@ -40,7 +40,7 @@ In this article, we will walk through the steps of building a web application in
 
 It is now possible to edit the web application code while benefiting from built-in intelligent code completion and error notifications.
 
-Web Studio also enables to manage — create, edit and debug — the APIs used by the web application, and to view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
+Web Studio also enables you to manage — create, edit and debug — the APIs used by the web application, and to view the data expected to be shown in the app, through the **Studio Query Builder** tool. This whole sequence makes the editing process more efficient and reduces development timelines.
 
 Previewing your HTML files can be done using a built-in Preview view rather than going to the app itself.
 
@@ -61,7 +61,7 @@ To activate it:
 
 
 
-Below are screenshots of the City Mobily C360 Demo project, where its React dashboard web application is developed within the Studio. The web application calls the customized project APIs (Java and Graphit files) that enable retrieval and saving of the data inside the LU. Altogether, this allows for the development, debugging and preview to occur in one single place.
+Below are screenshots from our City Mobily C360 Demo project, where its React dashboard web application is developed within the Studio. The web application calls the customized project APIs (Java and Graphit files) that enable retrieval and saving of the data inside the LU. Altogether, this allows for the development, debugging and preview to occur in one single place.
 
 
 
@@ -77,31 +77,45 @@ Below are screenshots of the City Mobily C360 Demo project, where its React dash
 
 # Integrate an Application into the Framework
 
-To introduce a new application using the Fabric web framework, follow these steps:
+To introduce a new application — using the Fabric web framework — follow these steps:
 
-* Create a new folder, named **web**, under the relevant LU folder.
+* Under the relevant LU folder, create a new subfolder named **web** (right-click the LU > Open Folder, and create the subfolder in Windows Explorer).
 
-* Under the **web** folder, create an additional folder representing your new application and place all the web static resources under this folder.
+* There, under the **web** subfolder, create an additional subfolder representing your new application and place all the web static resources under this folder.
 
-* Add the new application to the **apps.json** file. This file can either be modified on the server side on the existing location, or you can copy this file to the web folder on the client side and edit it accordingly. Fabric will consider the **apps.json** file under the web folder as a higher priority.
+* Add the new application to the **apps.json** file. Copy this file from its server location (path example in which Fabric 8.2 is installed: c:\K2View\Fabric_8.2\Server\fabric\staticWeb\) into the **web** subfolder and edit it there. Fabric prioritizes the apps.json file located in the **web** subfolder.
 
-  > The order of the applications in the context menu list is determined by their order in the **apps.json** file. 
+  > The presented order of the applications in the context menu list is determined by their order in the **apps.json** file. 
 
-**Example**
+  > **Example**
+  >
+  > To add the **My Web App** application to the framework, add the following to the **apps.json** file:
 
-To add the **My Web App** application to the framework, add the following to the **apps.json** file:
-
+   
 ~~~json
    {
-      "name": "My Simple Web App",
+      "name": "My Web App",
       "appId": "myApp",
       "hidden": false
    }
 ~~~
+The ‘appId’ value — myApp — in this case, is the subfolder’s name under the **web** subfolder.
 
 
 
+
+   > **Notes**
+> 
+>   •	In addition to adding the web subfolder upon its content, it also has to be added to the source control, such as GitHub, as should be done with any other project file.
+>
+> 
+>    •   More applications may be added by adding them under the **web** subfolder and following the above steps.
+ 
+
+
+> 
 </studio>
+
 
 ## Fabric Web Framework Tools
 
@@ -109,5 +123,5 @@ The Fabric web framework exposes a **k2api** object with various methods that ca
 
 For detailed documentation about the integration development guidelines, supported methods and code examples, refer to the K2view web framework's menu (top-left *hamburger menu*) and select **Documentation > Web Framework API / Styles**.
 
-To override default web framework styling, you should specify the relevant elements in your project web app files. 
+To override default web framework styling, you should specify the relevant elements in your project web application files. 
 

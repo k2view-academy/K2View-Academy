@@ -91,7 +91,7 @@ Studio enables you to execute **several actions** for packaging and publishing e
 
 To run any of these actions, you should first execute the *install* script, as a one-time action per extension:
 
-1. In the Project Tree, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
+1. In the Explorer View, go to the *NPM SCRIPTS* section, which appears underneath the *PROJECT* section.
 
      ![](images/web/29_npm_section.png)
 

@@ -49,10 +49,8 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
   - It creates the TDM DB tables, sequences, views, and functions.
 
-  Notes: 
-
-  - You must set the **BUILD_TDMDB Global to true in order to create the TDM DB** by the TDM deploy flow.
-  - You must set the **POSTGRESQL_ADMIN interface** to be **active** in order to **create the TDMDB database and 'tdm' user (role) in the postgreSQL DB**.
+  Note: 
+   - You must set the **POSTGRESQL_ADMIN interface** to be **active** in order to **create the TDMDB database and 'tdm' user (role) in the postgreSQL DB**.
 
 ### Upgrade the TDM PostgreSQL DB (if not a new installation)
 
