@@ -22,7 +22,7 @@ The retention period is set on the extracted entities and/or tables. When this p
 
 - **Do not delete** - do not delete from Fabric. 
 
-- **Do not retain** - avoid saving the task's entities and/or tables in Fabric. This option can be used, for example, for running an extract task on a large subset of entities in order to populate the TDM parameter tables on each entity without saving the entities into Fabric.
+- **Do not retain** - avoid saving the task's entities and/or tables in Fabric. This option can be used, for example, for running an extract task on a large subset of entities in order to populate TDM parameter tables on each entity without saving the entities into Fabric.
 
 - Setting a time measuring unit (e.g., minutes, hours, days) and a corresponding value. For example, save the data in Fabric for 2 days. When this set period ends, the data will automatically be deleted from Fabric.
 
