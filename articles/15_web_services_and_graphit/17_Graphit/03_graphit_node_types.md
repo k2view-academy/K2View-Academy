@@ -4,7 +4,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 
 
-The following table lists node types. Please refer to the files in the following table's Examples column (please scroll to the right). The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
+The following table lists node types. Please refer to the files in the following table's **Examples** column (scroll furthest to the right). The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
 <table>
 <tbody>
@@ -35,11 +35,11 @@ The following table lists node types. Please refer to the files in the following
 <td valign="top" width="50pxl">SQL</td>
 <td valign="top" width="900pxl">Defines an SQL statement that retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click the SQL icon to open the Query Builder. 
-    <br/><b>Note</b>: If the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
+    <br/><b>Note</b>: If the database is not Fabric, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
 <ul>
-<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup opens; when it closes, the built query is copied into the Graphit node content.
+<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder pop-up opens; when it closes, the built query is copied into the Graphit node content.
 </li>    
-<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder popup, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields shall be used on further nodes.
+<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on further nodes.
 </li>    
 </ul>
 The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
