@@ -41,7 +41,7 @@ Below is the description of each expected flow:
 
    * The flow should return a list of relevant data sample files per each dataset. Several sample files can be provided for the same dataset. However, one sample file cannot include data for more than one dataset. 
 
-3. **Get Data Snapshot** is the third flow that returns a row of file's data. This flow is optional and only required when sample files are provided.
+3. **Get Data Snapshot** is the third flow that returns a row of file's data. This flow is optional and only required when sample files are provided (when **Get Files List** is defined, it should be defined too).
 
    * Per each file, the flow should return a result set which represents one row. 
 

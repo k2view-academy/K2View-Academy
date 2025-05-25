@@ -228,7 +228,13 @@ https://localhost:3213/api/catalog/1...5/CRM_DB/main
 https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 ```
 
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/datasets`
 
+The API retrieves a list of datasets that belong to the latest versions of the specified data platform and schema. This API and it is available starting from V8.3.
+
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/{dataset}/fields`
+
+The API retrieves a list of fields that belong to the latest versions of the specified data platform, schema and dataset. This API and it is available starting from V8.3.
 
 ## Build Catalog Artifacts
 
