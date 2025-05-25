@@ -132,11 +132,11 @@ Upon selecting 'Broadway' as the node type or when clicking on the <img src="ima
 
 2. Select the Broadway flow.
 
-3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This is the default option and it can save you time and prevent mistakes. Yet, you can uncheck this checkbox, in cases where flow input parameters are manually pre-set in the Graphit file, as constants or according to previous query results. 
+3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This default option helps save time and reduce the risk of errors. Yet, you can uncheck this checkbox, in cases where flow input parameters are manually pre-set in the Graphit file, as constants or according to previous query results. 
 
    > Note: For simplicity, this checkbox affects all Broadway flow input parameters. 
 
-4. Choose whether to add and reveal the Broadway flow output as fields in the Graphit, or not. This option is similar to the option provided via the SQL Query Builder Helper.
+4. Choose whether to add and reveal the Broadway flow output as fields in Graphit, or not. This option is similar to the option provided via the SQL Query Builder Helper.
 
 
 
