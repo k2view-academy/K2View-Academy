@@ -106,11 +106,11 @@ Upon selecting 'get' as the node type or when clicking on the <img src="images/s
 
 
 
-Select the logical unit and click 'Add'.
+Select a Logical Unit and click 'Add'.
 
-The popup will close and the get command will appear with the appropriate syntax. 
+The pop-up will close and the get command will appear with the appropriate syntax. 
 
-The *iid* parameter is smartly acquired from the logical unit root table iid and populated; it is also automatically added as the Graphit file input parameter.
+The *iid* parameter is smartly acquired from the Logical Unit root table iid, and populated; it is also automatically added as the Graphit file input parameter.
 
 <img src="images/get_command_builder_added.png" >
 
@@ -118,9 +118,9 @@ The *iid* parameter is smartly acquired from the logical unit root table iid and
 
 ### *Broadway* Command Builder
 
-You can call and activate a Broadway flow from Graphit, and combine it as a part of the logic and output of the Graphit file.
+You can call and activate a Broadway flow from Graphit, and include it as part of the logic and output of the Graphit file.
 
-Upon selecting 'Broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node, which is already of a 'Broadway' type, the Broadway Command Builder popup opens.
+Upon selecting 'Broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that already has the 'Broadway' type, the Broadway Command Builder pop-up opens.
 
 
 
@@ -128,7 +128,7 @@ Upon selecting 'Broadway' as the node type or when clicking on the <img src="ima
 
 
 
-1. Select the logical unit that the required Broadway flow is located in.
+1. Select the Logical Unit in which the required Broadway flow is located.
 
 2. Select the Broadway flow.
 
