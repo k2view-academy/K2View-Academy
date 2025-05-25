@@ -55,10 +55,10 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Get</td>
-<td valign="top" width="900pxl">Defines the Fabric **get** command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
+<td valign="top" width="900pxl">Defines the Fabric get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
 
 
-    Enter the **get** command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
+    Enter the get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
@@ -96,11 +96,11 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 
 ## Command Builders
 
-Graphit Editor provides 3 builders in order to ease the creation of Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder
+Graphit Editor provides 3 builders in order to ease the creation of Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder.
 
 ### *Get* Command Builder
 
-Upon selecting 'get' as the node type or when clicking on the <img src="images/selection.png" > icon of a node, which is already of a 'get' type, the *Get* Command Builder popup opens.
+Upon selecting 'get' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that already has the 'get' type, the *Get* Command Builder pop-up opens.
 
 <img src="images/get_command_builder.png" >
 
