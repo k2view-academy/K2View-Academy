@@ -39,7 +39,7 @@ The following table lists node types. Please refer to the files in the following
 <ul>
 <li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder pop-up opens; when it closes, the built query is copied into the Graphit node content.
 </li>    
-<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on further nodes.
+<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on subsequent nodes.
 </li>    
 </ul>
 The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
