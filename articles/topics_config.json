@@ -309,6 +309,10 @@
 				{
 					"display name": "Catalog Build-in Plugins",
 					"value": "39_fabric_catalog/plugins"
+				},
+				{
+					"display name": "Catalog Connectors",
+					"value": "39_fabric_catalog/connectors"
 				}
 			]
 		},
