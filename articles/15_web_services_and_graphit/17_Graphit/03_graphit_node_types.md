@@ -71,7 +71,7 @@ To build an SQL statement for each call, set the query type to SQL non-prepared.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Condition</td>
-<td valign="top" width="900pxl">Builds IF-ELSE statements that should include a condition. The nested nodes are/aren't executed according to the result of the condition.&nbsp;</td>
+<td valign="top" width="900pxl">Generates IF-ELSE statements that should include a condition. The nested nodes are/aren't executed according to the condition's result.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grconditiongraphit">grCondition</a></td>
 </tr>
 <tr>
