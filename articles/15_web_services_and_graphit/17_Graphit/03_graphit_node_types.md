@@ -76,7 +76,7 @@ To build an SQL statement for each call, set the query type to SQL non-prepared.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Group&nbsp;</td>
-<td valign="top" width="900pxl">Groups several elements. Used mainly with Condition nodes.</td>
+<td valign="top" width="900pxl">Groups several elements. It is used mainly with Condition nodes.</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grgroupgraphit">grGroup</a></td>
 </tr>
 <tr>
