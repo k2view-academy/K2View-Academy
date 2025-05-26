@@ -96,7 +96,7 @@ To build an SQL statement for each call, set the query type to SQL non-prepared.
 
 ## Command Builders
 
-Graphit Editor provides 3 builders in order to ease the creation of Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder.
+Graphit Editor provides three builders — SQL Query Builder, Get Command Builder and Broadway Command Builder — in order to ease the creation of Graphit file content. The SQL Query Builder opens the Studio's Query Builder.
 
 ### *Get* Command Builder
 
