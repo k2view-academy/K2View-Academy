@@ -42,9 +42,9 @@ The following table lists node types. Please refer to the files in the following
 <li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on subsequent nodes.
 </li>    
 </ul>
-The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
+The SQL type also enables looping results and executing nested codes on each returned row.<br/>
 Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.<br/>
-To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.
+To build an SQL statement for each call, set the query type to SQL non-prepared. For example, to build dynamic SQL, select X,Y from $table name.
 </td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#retrieving-data-for-an-lui">grSQL</a></td>
 </tr>
