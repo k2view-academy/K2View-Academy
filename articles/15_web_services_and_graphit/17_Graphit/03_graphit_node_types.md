@@ -37,9 +37,9 @@ The following table lists node types. Please refer to the files in the following
     Enter the SQL statement manually or hover over and then click the SQL icon to open the Query Builder. 
     <br/><b>Note</b>: If the database is not Fabric, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
 <ul>
-<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder pop-up opens; when it closes, the built query is copied into the Graphit node content.
+<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder pop-up window opens; when it closes, the built query is copied into the Graphit node content.
 </li>    
-<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on subsequent nodes.
+<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up window, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on subsequent nodes.
 </li>    
 </ul>
 The SQL type also enables looping results and executing nested codes on each returned row.<br/>
@@ -108,7 +108,7 @@ Upon selecting 'get' as the node type or when clicking on the <img src="images/s
 
 Select a Logical Unit and click 'Add'.
 
-The pop-up will close and the get command will appear with the appropriate syntax. 
+The pop-up window will close and the get command will appear with the appropriate syntax. 
 
 The *iid* parameter is smartly acquired from the Logical Unit root table iid, and populated; it is also automatically added as the Graphit file input parameter.
 
@@ -132,7 +132,7 @@ Upon selecting 'broadway' as the node type or when clicking on the <img src="ima
 
 2. Select the Broadway flow.
 
-3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This default option helps save time and reduce the risk of errors. Yet, you can uncheck this checkbox, in cases where flow input parameters are manually pre-set in the Graphit file, as constants or according to previous query results. 
+3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This default option helps save time and reduce the risk of errors. However, you can uncheck this checkbox in cases where flow input parameters are manually pre-set in the Graphit file — either as constants or based on the results of a previous query. 
 
    > Note: For simplicity, this checkbox affects all Broadway flow input parameters. 
 
