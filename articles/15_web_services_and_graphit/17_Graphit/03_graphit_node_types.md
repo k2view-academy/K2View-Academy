@@ -120,7 +120,7 @@ The *iid* parameter is smartly acquired from the Logical Unit root table iid, an
 
 You can call and activate a Broadway flow from Graphit, and include it as part of the logic and output of the Graphit file.
 
-Upon selecting 'broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that is already populated with the 'broadway' type, the Broadway Command Builder pop-up opens.
+Upon selecting 'broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that is already populated with the 'broadway' node type, the Broadway Command Builder pop-up opens.
 
 
 
