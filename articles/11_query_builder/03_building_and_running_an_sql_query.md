@@ -222,7 +222,7 @@ The Code Completion Assistant can also help you when looking for the standard SQ
 >  * Clearing the whole Query Editor can be done by clicking on the Clear button.
 >  * The Query Editor can hold and execute several queries. When clicking on the Execute button, all queries will be executed, one by one, where the Results pane will show the results of the last query.
 >  * If the Query Editor contains several queries and you wish to run some of them, there is no need to delete the others. To execute specific commands, select them and then click on Execute.
->  * You can add Fabric commands to the Query Editor and they will also be executed. 
+>  * You can add Fabric commands to the Query Editor, and they will also be executed. 
 >  * When *fabric* is the selected data source interface, set the top bar fields prior to executing the query.
 
 

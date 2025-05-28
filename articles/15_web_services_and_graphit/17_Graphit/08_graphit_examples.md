@@ -1,5 +1,5 @@
 # Graphit Examples
-This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services
+This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services.
 
 ### Retrieving Data for an LUI
 

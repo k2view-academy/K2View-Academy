@@ -94,7 +94,7 @@ These arguments are utilized by [2 types of Source Objects](/articles/07_table_p
 **Root Function**
 * Each Root function must have at least one Input parameter.
 * A population can be linked to a parent table via its Input parameters based on a Root function. 
-* The Root function of a Root table can have only one Input parameter and it is populated by the Instance ID.
+* The Root function of a Root table can have only one Input parameter, and it is populated by the Instance ID.
 
 [Click for more information about Table Population Types.](/articles/07_table_population/02_source_object_types.md#table-population---source-object-types)
 

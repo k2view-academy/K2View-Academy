@@ -4,7 +4,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 
 
-The following table lists the node types. Please refer to the files in the following table's Example column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
+The following table lists node types. Please refer to the files in the following table's **Examples** column (scroll furthest to the right). The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
 <table>
 <tbody>
@@ -35,16 +35,16 @@ The following table lists the node types. Please refer to the files in the follo
 <td valign="top" width="50pxl">SQL</td>
 <td valign="top" width="900pxl">Defines an SQL statement that retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click the SQL icon to open the Query Builder. 
-    <br/><b>Note</b>: If the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
+    <br/><b>Note</b>: If the database is not Fabric, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
 <ul>
-<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder popup opens; when it closes, the built query is copied into the Graphit node content.
+<li>If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> is selected, the Query Builder pop-up window opens; when it closes, the built query is copied into the Graphit node content.
 </li>    
-<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder popup, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields shall be used on further nodes.
+<li>Fields can be automatically expanded into nested nodes. When closing the Query Builder pop-up window, you are asked about this expansion. Expanding fields can be useful in case where further manipulation is needed on the result fields, or when the fields should be used on subsequent nodes.
 </li>    
 </ul>
-The SQL Type also enables looping results and executing nested codes on each returned row.<br/>
+The SQL type also enables looping results and executing nested codes on each returned row.<br/>
 Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.<br/>
-To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.
+To build an SQL statement for each call, set the query type to SQL non-prepared. For example, to build dynamic SQL, select X,Y from $table name.
 </td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#retrieving-data-for-an-lui">grSQL</a></td>
 </tr>
@@ -55,10 +55,10 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Get</td>
-<td valign="top" width="900pxl">Defines the Fabric Get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
+<td valign="top" width="900pxl">Defines the Fabric get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
 
 
-    Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
+    Enter the get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
@@ -71,12 +71,12 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Condition</td>
-<td valign="top" width="900pxl">Builds IF-ELSE statements that should include a condition. The nested nodes are/aren't executed according to the result of the condition.&nbsp;</td>
+<td valign="top" width="900pxl">Generates IF-ELSE statements that should include a condition. The nested nodes are/aren't executed according to the condition's result.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grconditiongraphit">grCondition</a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Group&nbsp;</td>
-<td valign="top" width="900pxl">Groups several elements. Used mainly with Condition nodes.</td>
+<td valign="top" width="900pxl">Groups several elements. It is used mainly with Condition nodes.</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grgroupgraphit">grGroup</a></td>
 </tr>
 <tr>
@@ -96,21 +96,21 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 
 ## Command Builders
 
-Graphit Editor provides 3 builders in order to ease the creation of Graphit file content: SQL Query Builder, Get Command Builder and Broadway Command Builder. The SQL Query Builder opens the Studio's Query Builder
+Graphit Editor provides three builders — SQL Query Builder, Get Command Builder and Broadway Command Builder — in order to ease the creation of Graphit file content. The SQL Query Builder opens the Studio's Query Builder.
 
 ### *Get* Command Builder
 
-Upon selecting 'get' as the node type or when clicking on the <img src="images/selection.png" > icon of a node, which is already of a 'get' type, the *Get* Command Builder popup opens.
+Upon selecting 'get' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that is already populated with the 'get' node type, the *Get* Command Builder pop-up window opens.
 
 <img src="images/get_command_builder.png" >
 
 
 
-Select the logical unit and click 'Add'.
+Select a Logical Unit and click 'Add'.
 
-The popup will close and the get command will appear with the appropriate syntax. 
+The pop-up window will close and the get command will appear with the appropriate syntax. 
 
-The *iid* parameter is smartly acquired from the logical unit root table iid and populated; it is also automatically added as the Graphit file input parameter.
+The *iid* parameter is smartly acquired from the Logical Unit root table iid, and populated; it is also automatically added as the Graphit file input parameter.
 
 <img src="images/get_command_builder_added.png" >
 
@@ -118,9 +118,9 @@ The *iid* parameter is smartly acquired from the logical unit root table iid and
 
 ### *Broadway* Command Builder
 
-You can call and activate a Broadway flow from Graphit, and combine it as a part of the logic and output of the Graphit file.
+You can call and activate a Broadway flow from Graphit, and include it as part of the logic and output of the Graphit file.
 
-Upon selecting 'Broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node, which is already of a 'Broadway' type, the Broadway Command Builder popup opens.
+Upon selecting 'broadway' as the node type or when clicking on the <img src="images/selection.png" > icon of a node that is already populated with the 'broadway' node type, the Broadway Command Builder pop-up window opens.
 
 
 
@@ -128,15 +128,15 @@ Upon selecting 'Broadway' as the node type or when clicking on the <img src="ima
 
 
 
-1. Select the logical unit that the required Broadway flow is located in.
+1. Select the Logical Unit in which the required Broadway flow is located.
 
 2. Select the Broadway flow.
 
-3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This is the default option and it can save you time and prevent mistakes. Yet, you can uncheck this checkbox, in cases where flow input parameters are manually pre-set in the Graphit file, as constants or according to previous query results. 
+3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This default option helps save time and reduce the risk of errors. However, you can uncheck this checkbox in cases where flow input parameters are manually pre-set in the Graphit file — either as constants or based on the results of a previous query. 
 
    > Note: For simplicity, this checkbox affects all Broadway flow input parameters. 
 
-4. Choose whether to add and reveal the Broadway flow output as fields in the Graphit, or not. This option is similar to the option provided via the SQL Query Builder Helper.
+4. Choose whether to add and reveal the Broadway flow output as fields in Graphit, or not. This option is similar to the option provided via the SQL Query Builder Helper.
 
 
 
