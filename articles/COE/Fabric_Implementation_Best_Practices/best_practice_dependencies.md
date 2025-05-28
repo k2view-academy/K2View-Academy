@@ -5,7 +5,7 @@ Fabric uses a modular and isolated class loading strategy to keep **project-spec
 Fabric adopts the **parent-first delegation**, which is the default class loading behavior in Java.
 
 Accordingly, when a class loader is asked to load a class, it first delegates the request to its parent class loader.
-This process repeats recursively up the hierarchy, and if none of the parent class loaders can find the class, the originate class loader will then attempt to load it itself.
+This process repeats recursively up the hierarchy, and if none of the parent class loaders can find the class, the original class loader will then attempt to load it itself.
 
 
 
@@ -36,7 +36,7 @@ Fabric deals with 3 class loaders: Fabric (App), plugins and LUs.
 
 - Each LU is packaged into a JAR during project build, and include the project JARS at `lib/` folder (included during LU build)
 
-  > Note: `lib` folder might contain also JDBC drivers related JARs. Each of them is resides under dedicated folder, named by the interface type name. These JARs are not packed with the LUs.
+  > Note: `lib` folder might contain also JDBC drivers related JARs. Each of them is resides under dedicated folder, named by the interface type name. These JARs are not bundled into the LU JAR.
 
 - Parent: **App class loader**
 
@@ -50,7 +50,7 @@ This model ensures class reuse and avoids conflicts, but it also introduces cons
 
 ## Example Scenarios
 
-#### LU Can Use its own JAR Version
+#### LU can use its own JAR version
 
 - Fabric has Jackson 2.9 JAR at fabric `'fabric/lib` folder.
 - LU needs Jackson version 2.14
@@ -59,7 +59,7 @@ This model ensures class reuse and avoids conflicts, but it also introduces cons
 
 In this case, LU loads its **own** (project) version.
 
-#### Conflict if Fabric Already Loaded JAR
+#### Conflict if Fabric already loaded the JAR
 
 - Fabric has Jackson 2.9 JAR at fabric `'lib` folder.
 - Jackson 2.14 is included in project's `lib` folder.
@@ -67,7 +67,7 @@ In this case, LU loads its **own** (project) version.
 
 In this case, LU must reuse its **parent's** - Fabric - JAR, even though it is **not** mentioned at `PACKAGE_NAMES_CLASS_LOADING_FILTER` property.
 
-#### LU Can Use Own AWS SDK JAR
+#### LU can use its own AWS SDK JAR
 
 - Fabric uses AWS SDK (`masterkey-aws`)
 - Project bundles its own AWS SDK version in project's `lib` folder.
@@ -94,20 +94,20 @@ By default: only `com.k2view.*` is exposed.
 
 ### Studio
 
-Studio project's complication and build is not under these dependencies rules and constraints. 
+Studio's build-time compilation environment does not follow the same class loading rules as Fabric runtime.
 
-* By default it is more strict about Fabric the classpath, encouraging developers to avoid using Fabric core (not `usercode`) code. 
+Studio is more strict by default and discourages use of Fabric core classes (outside `usercode`), to help prevent breakage, if Fabric internals change.
 
-  By doing that, you reduce the risk of case, where Fabric core is changed.
+To set the Studio classpath :
 
-* In any case, you shall align Studio classpath settings with config.ini, to ensure that what you use in Studio is also available by runtime class loaders.
+* Use the bottom-left **Manage Preferences** ![img](/articles/04_fabric_studio/images/web/settings.png) gear icon > **Settings**.
+* Move to the Workspace tab
+* Click the top right **Open Settings (JSON)** `{}` icon 
+* look for the "java.project.referencedLibraries" and change it, as needed.
 
-* To set the Studio classpath :
 
-  * Use the bottom-left **Manage Preferences** ![img](https://support.k2view.com/Academy/articles/04_fabric_studio/images/web/settings.png) gear icon > **Settings**.
-  * Move to the Workspace tab
-  * Click the top right **Open Settings (JSON)** `{}` icon 
-  * look for the "java.project.referencedLibraries" and change it, as needed.
+
+> Ensure that your Studio classpath matches the Fabric runtime configuration (as defined in `config.ini`). This alignment ensures that code which compiles and runs in Studio will also behave consistently at runtime, preventing class loading issues and unexpected errors
 
 </web>
 
