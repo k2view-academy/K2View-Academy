@@ -22,19 +22,24 @@ The retention period is set on the extracted entities and/or tables. When this p
 
 - **Do not delete** - do not delete from Fabric. 
 
-- **Do not retain** - avoid saving the task's entities and/or tables in Fabric (instead of saving and deleting). This option can be used, for example, to run an extract task on a large subset of entities in order to populate the TDM parameter’s tables on each entity without saving the entities into Fabric.
+- **Do not retain** - avoid saving the task's entities and/or tables in Fabric. This option can be used, for example, for running an extract task on a large subset of entities in order to populate TDM parameter tables on each entity without saving the entities into Fabric.
 
-- Setting of a time measuring unit (minutes/hours/days...) and a value. For example, save the data in Fabric for 2 days. After 2 days, the data is automatically deleted from Fabric.
+- Setting a time measuring unit (e.g., minutes, hours, days) and a corresponding value. For example, save the data in Fabric for 2 days. When this set period ends, the data will automatically be deleted from Fabric.
 
-  Note that the **retention period** can be set in **minutes**, **hours**, **days**, **weeks** or **years**, depending on the maximum retention period set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+  Notes:
+  - The time measuring unit and value can be set only if the Fabric storage supports TTL (Time to Live). Otherwise, the task window must be [configured](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#update-the-tdm_general_parameters-to-support-fabric-storage-without-a-ttl) to display only the **Do not delete** and **Do not retain** options.
+  - The **retention period** can be set in **minutes**, **hours**, **days**, **weeks** or **years**, depending on the maximum retention period that is set in the TDM DB. Both parameters - default retention period and maximum retention period - are set in the [TDM DB](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 #### Default Retention Period
 
-- Data versioning checkbox is clear - Do not Delete.
-- Data versioning checkbox is checked - 
-  - Entities: 5 days. 
-  - Tables: Do not delete.
+- Data versioning checkbox is clear - Do not delete.
+- Data versioning checkbox is checked -
+  - Fabric storage supports TTL:   
+    - Entities: 5 days. 
+    - Tables: Do not delete.
 
+  - Fabric storage does not support TTL:
+    - Do not delete   
 
  [![Previous](/articles/images/Previous.png)](15_task_subset_component.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_task_target_component.md)
 
