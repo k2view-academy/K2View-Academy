@@ -34,7 +34,7 @@ The following table lists and describes the available node types. Please refer t
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grfunctiongraphit">grFunction</a></td>
 </tr>
 <tr>
-<td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
+<td valign="top" width="50pxl">SQL and SQL Non-prepared</td>
 <td valign="top" width="900pxl">Defines an SQL statement that retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click the DB icon to open the Query Builder. 
     <br/><b>Note</b>: If the database is not Fabric, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. <br/>
@@ -147,11 +147,11 @@ Upon selecting 'broadway' as the node type or when clicking on the <img src="ima
 
 2. Select the Broadway flow.
 
-3. Choose whether the Broadway flow input parameters will automatically be added as the Graphit file input parameters. This default option helps save time and reduce the risk of errors. However, you can uncheck this checkbox in cases where flow input parameters are manually pre-set in the Graphit file — either as constants or based on the results of a previous query. 
+3. Choose whether the Broadway flow input parameters should be automatically added as input parameters in the Graphit file. This default option helps save time and reduce the risk of errors. However, you can uncheck this checkbox in cases where flow input parameters are manually pre-set in the Graphit file — either as constants or based on the results of a previous query. 
 
    > Note: For simplicity, this checkbox affects all Broadway flow input parameters. 
 
-4. Choose whether to add and reveal the Broadway flow output as fields in Graphit, or not. This option is similar to the option provided via the SQL Query Builder Helper.
+4. Choose whether to add and present the Broadway flow output as fields in Graphit, or not. This option is similar to the option stated in the SQL entry of the above table.
 
 
 
