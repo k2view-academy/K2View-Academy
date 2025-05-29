@@ -4,7 +4,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 
 
-The following table lists node types. Please refer to the Graphit file names that appear in the **Examples** column of the following table. These files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
+The following table lists and describes the available node types. Please refer to the Graphit file names that appear in the **Examples** column of the following table. These files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
 
 
@@ -108,6 +108,10 @@ Enter the Get command statement manually or hover over and then click the Helper
 ## Command Builders
 
 Graphit Editor provides three builders — SQL Query Builder, Get Command Builder and Broadway Command Builder — in order to simplify the creation of Graphit file content. The SQL Query Builder opens the Studio's Query Builder.
+
+### *SQL* Query Builder
+
+Upon selecting either 'sql' or ‘sql non-prepared’ as the node type and then clicking on the DB icon (a.k.a Query Builder) aside this field, the Query Builder pop-up window opens. This is where you are allowed to build SQL queries on a selected Interface (an external data source) as well as on Fabric.
 
 ### *Get* Command Builder
 
