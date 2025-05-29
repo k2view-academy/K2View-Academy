@@ -4,7 +4,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 
 
-The following table lists node types. Please refer to the files in the following table's **Examples** column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
+The following table lists node types. Please refer to the Graphit file names that appear in the **Examples** column of the following table. These files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
 
 
