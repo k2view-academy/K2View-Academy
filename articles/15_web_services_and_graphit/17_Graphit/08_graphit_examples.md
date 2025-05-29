@@ -22,7 +22,7 @@ Output data is returned with further information on whether the customer is eith
 
 
 ### CSV Output Example
-This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
+This example illustrates how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
 
 #### grCSV.graphit
 
