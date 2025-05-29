@@ -151,7 +151,7 @@ Upon selecting 'broadway' as the node type or when clicking on the <img src="ima
 
    > Note: For simplicity, this checkbox affects all Broadway flow input parameters. 
 
-4. Choose whether to add and present the Broadway flow output as fields in Graphit, or not. This option is similar to the option stated in the SQL entry of the above table.
+4. Choose whether to add and present the Broadway flow output as fields in Graphit, or not. This option is similar to the one stated in the SQL entry of the above table, where the Query Builder pop-up window closes and you are then asked whether to present the SQL fields.
 
 
 
