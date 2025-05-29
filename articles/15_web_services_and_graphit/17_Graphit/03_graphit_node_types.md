@@ -6,7 +6,7 @@ Node Type options define how content is structured and how a tag is presented in
 
 The following table lists the node types. Please refer to the files in the following table's Example column. The files can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services. We suggest that you run each Graphit file in a Debug mode and observe the response. 
 
-![image-20250519181104716](C:\Users\EyalOrbach\AppData\Roaming\Typora\typora-user-images\image-20250519181104716.png)
+![](images/node_type.png)
 
 <table>
 <tbody>
