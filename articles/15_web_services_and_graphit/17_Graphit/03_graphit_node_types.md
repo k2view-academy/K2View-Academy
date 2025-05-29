@@ -153,7 +153,5 @@ Upon selecting 'broadway' as the node type or when clicking on the <img src="ima
 
 
 
-
-
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/02_graphit_basic_editing.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md)
 
