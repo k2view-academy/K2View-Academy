@@ -55,10 +55,8 @@ To build an SQL statement for each call, set the query type to SQL non-prepared.
 </tr>
 <tr>
 <td valign="top" width="50pxl">Get</td>
-<td valign="top" width="900pxl">Defines the Fabric get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
-
-
-    Enter the get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
+<td valign="top" width="900pxl">Defines the Fabric Get command, according to the LU and LU iid, which will be executed when invoking this Graphit file.<br/>
+Enter the Get command statement manually or hover over and then click the Helper icon (<img src="images/selection.png" >) to open the Command Builder. See more information later in this article.
 </td>
 <td valign="top" width="50pxl"></a></td>
 </tr>
