@@ -63,7 +63,7 @@ wsl
 
 ### Using the WSL File System
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Instead, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#Installation) for this.
 
 ## Docker Commands
 
@@ -81,7 +81,7 @@ Running Docker Desktop will enable you to run Fabric Web Studio and the `k2space
 
 On Microsoft Windows, you need to enable WSL Integration for the Linux distribution you are using. To do so, on the Docker Desktop app, select Settings, then Resources, and then WSL Integration. In addition to enabling integration with my default WSL distro, you should be able to enable the distribution you selected. 
 
-Using `wsl --install -d <distribution_name>` will achieve this also if the "Enable integration with my default WSL distro" is enabled. 
+Using `wsl --install -d <distribution_name>` will also achieve this, provided the "Enable integration with my default WSL distro" option is enabled. 
 
 If you do not enable WSL integration, you may get errors like this when running k2space.sh. 
 
@@ -91,7 +91,7 @@ unable to get image '...': error during connect: Get "...": open //./pipe/docker
 
 ### Running Docker on Linux
 
-When running Docker commands or starting the Docker service on Linux, depending on your system access you will need to use `sudo` with your commands. For example,
+When running Docker commands or starting the Docker service on Linux, depending on your system access, you will need to use `sudo` with your commands. For example,
 
 If you do not, you will get errors like:
 
@@ -125,7 +125,7 @@ Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Run
  docker ps
 ```
 
-If they are running you should see entries for Rraefik and each of the spaces you have created (e.g. myspace-fabric in this example)
+If they are running, you should see entries for Rraefik and each of the spaces you have created (e.g., myspace-fabric in this example)
 
 ```bash
 CONTAINER ID   IMAGE      ...               NAMES
