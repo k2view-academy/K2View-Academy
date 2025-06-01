@@ -67,14 +67,14 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
 
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-    - [Step 1: Install and Validate Docker and Docker Compose Runtime](#step-1-install-and-validate-docker-and-docker-compose-runtime)
-    - [Step 2: Setup](#step-2-setup)
-    - [Step 3: Download](#step-3-download)
-    - [Step 4: Configure Git and TLS](#step-4-configure-git-and-tls)
-    - [Step 5: Select a Fabric Blueprint Profile to Use](#step-5-select-a-fabric-blueprint-profile-to-use)
-    - [Step 6: Log in to K2view's Nexus Container Registry](#step-6-log-in-to-k2views-nexus-container-registry)
-    - [Step 7: Create and Launch a Fabric Space](#step-7-create-and-launch-a-fabric-space)
-    - [Step 8: Access Web Studio](#step-8-access-web-studio)
+1. [Step 1: Install and Validate Docker and Docker Compose Runtime](#step-1-install-and-validate-docker-and-docker-compose-runtime)
+2. [Step 2: Setup](#step-2-setup)
+3. [Step 3: Download](#step-3-download)
+4. [Step 4: Configure Git and TLS](#step-4-configure-git-and-tls)
+5. [Step 5: Select a Fabric Blueprint Profile to Use](#step-5-select-a-fabric-blueprint-profile-to-use)
+6. [Step 6: Log in to K2view's Nexus Container Registry](#step-6-log-in-to-k2views-nexus-container-registry)
+7. [Step 7: Create and Launch a Fabric Space](#step-7-create-and-launch-a-fabric-space)
+8. [Step 8: Access Web Studio](#step-8-access-web-studio)
 
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
