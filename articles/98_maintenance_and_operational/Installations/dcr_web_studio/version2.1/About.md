@@ -61,16 +61,16 @@ Fabric Web Studio supports deployment across two container orchestration environ
 
 ### Docker Compose Runtime
 
-Docker Compose provides a widely adopted container orchestration layer to run Web Studio, embedded Fabric engine, and Traefik reverse proxy. Docker Compose allows full multi-space development on Docker-based platforms across Linux, macOS, or Windows (using WSL).
+Docker Compose provides a widely adopted container orchestration layer to run Web Studio, an embedded Fabric engine, and Traefik reverse proxy. Docker Compose allows full multi-space development on Docker-based platforms across Linux, macOS, or Windows (using WSL).
 
-See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html)
+See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html)
 
 
 ### Podman Compose Runtime
 
 Podman Compose introduces daemonless, enterprise-grade containerization ideal for Red Hat Enterprise Linux (RHEL), AlmaLinux, Rocky Linux, and CentOS Stream distributions. It delivers native Linux orchestration fully compatible with Fabric Web Studio’s Compose YAML deployment model.
 
-See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Podman.html)
+See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html)
 
 > Both runtimes provide equivalent capabilities. Selection depends on enterprise standards and operational preferences.
 
