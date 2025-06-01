@@ -16,14 +16,9 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio including updated
 
 
 ## Prerequisites
-Please review the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
+Please review the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
 The Podman Compose setup for Fabric Web Studio requires the following system prerequisites.
-
-### **Host Machine**
-
-- **Architecture**: The supported processor architecture is **AMD64**. Fabric Web Studio does **not support ARM-based processors**.
-- **Memory**: A minimum of **32GB RAM** is recommended for running Podman, Fabric Web Studio, and related integrations. Each Fabric Space allocates a **4GB heap by default**, which can be overridden via configuration.
 
 ### **Enterprise Linux Required**
 
@@ -68,7 +63,7 @@ A supported **Enterprise Linux distribution** (e.g., RHEL, AlmaLinux, Rocky Linu
 
 **K2view Software**
 
-1. The installation presumes you have Internet access, so you can obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
+1. The installation assumes you have Internet access, allowing you to obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
 2. To obtain a Fabric Studio docker image, you need a K2view Nexus account. Your K2view representative can arrange this for you. 
 
 **Internet Access is Required**
@@ -91,8 +86,8 @@ Internet access is required to perform this installation. You will need access t
 
 
 ## Things to Configure
-1. Git Configuration - this is described in <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
+1. Git Configuration - this is described in <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -109,7 +104,7 @@ Internet access is required to perform this installation. You will need access t
    - HTTPS: Port 443 - HTTPS listener
   
 3. Your Data Files
-   - Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
+   Please note that persistent files created by Fabric Web Studio and the database instance you install will store their data in the "persistent-data" folder of your installation directory (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
    - The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory.
 
 
@@ -133,18 +128,18 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate the Podman Runtime
 
-If Podman is not already installed on your machine, refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic. 
+If Podman is not already installed on your machine, refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic. 
 
 The recommended approach is to install **Podman** using your Linux distribution's package manager. This will install the Podman engine and CLI tools. You must also install **Podman Compose**, which provides Compose YAML support for Podman-based environments.
 
-Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic.
+Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic.
 
 
 ### **Step 2**: Setup
 
 You can download the distribution (recommended) or using a Git, “clone” the K2view Blueprints to "download" them. These blueprints incorporate the Fabric Docker Compose Runtime installation files. The K2view Blueprints are hosted on GitHub.com (Internet access is required). 
 
-Please note that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory. This is a per-space configuration. 
+Please note that persistent files created by Fabric Web Studio and the database instance you install will store their data in the "persistent-data" folder of your installation directory (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory. This is a per-space configuration. 
 
 *Select a Base Directory for your Download and Installation Directory Locations*
 
@@ -211,7 +206,7 @@ From the K2view directory
 ```bash
 cp -r blueprints/Studio/ Studio
 ```
-The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
