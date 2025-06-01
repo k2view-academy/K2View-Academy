@@ -2,14 +2,15 @@
 
 ## Table of Contents
 
-1. [What’s New in Version 2.1](#whats-new-in-version-21)
-2. [Supported Deployment Runtimes](#supported-deployment-runtimes)
+1. [About K2view Fabric Web Studio 2.1](#about-k2view-fabric-web-studio-21)
+2. [What’s New in Version 2.1](#whats-new-in-version-21)
+3. [Supported Deployment Runtimes](#supported-deployment-runtimes)
     - [Docker Compose Runtime](#docker-compose-runtime)
     - [Podman Compose Runtime](#podman-compose-runtime)
-3. [Fabric Web Studio Runtime Components](#fabric-web-studio-runtime-components)
-4. [Key Fabric Web Studio Features](#key-fabric-web-studio-features)
-5. [Supported Profiles](#supported-profiles)
-6. [Prerequisites](#prerequisites)
+4. [Fabric Web Studio Runtime Components](#fabric-web-studio-runtime-components)
+5. [Key Fabric Web Studio Features](#key-fabric-web-studio-features)
+6. [Supported Profiles](#supported-profiles)
+7. [Prerequisites](#prerequisites)
     - [Host Machine Requirements](#host-machine-requirements)
     - [Operating System Requirements](#operating-system-requirements)
     - [Required 3rd Party Software](#required-3rd-party-software)
@@ -17,11 +18,14 @@
         - [Docker Compose Specific](#docker-compose-specific)
         - [Podman Compose Specific](#podman-compose-specific)
     - [Network Access](#network-access)
-7. [Installation Package](#installation-package)
-8. [What’s Included in the Installation Package](#whats-included-in-the-installation-package)
-9. [Version Compatibility](#version-compatibility)
+8. [Installation Package](#installation-package)
+9. [What’s Included in the Installation Package](#whats-included-in-the-installation-package)
+10. [Version Compatibility](#version-compatibility)
+
 
 ---
+
+## About K2view Fabric Web Studio 2.1
 
 K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment for designing, building, managing, and deploying data-driven solutions across various integration, data product, orchestration, and transformation use cases.
 
