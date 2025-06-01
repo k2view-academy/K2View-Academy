@@ -1,4 +1,4 @@
-# Operating - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Operating - Fabric Web Studio
 
 ## Content
 <ul>      
@@ -16,7 +16,7 @@ This k2space.sh shell script simplifies the creation and deletion of Fabric. You
 Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 ```
 
-> **Running k2space.sh on Microsoft Windows**
+> **Docker Compose: Running k2space.sh on Microsoft Windows**
 >
 > The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after changing the directory to its location. 
 > 
@@ -52,9 +52,6 @@ To start a Fabric space use:
 ./k2space.sh start spacename
 ```
 
-After starting a Space, you will need to wait until Traefik processes the new configuration and Fabric starts; otherwise, you may experience 404 and 502 errors temporarily.
-
-
 **Stopping a Space**
 
 To stop a Fabric space use: 
@@ -82,10 +79,18 @@ Traefik starts automatically after you create your first Fabric space. It will a
 > __Note:__ Traefik relies on the Docker network created during the creation of a Fabric space. Therefore, it must be started __after__ the Fabric space.
 
 #### Restarting Traefik
-To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+To restart Traefik (e.g., after configuring your TLS certificates), run the command below:
+
+Using Docker Compose: 
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
+```
+
+Using Podman:
+
+```bash
+podman compose -f k2vingress-compose.yaml restart
 ```
 
 ## Adding Users
@@ -94,7 +99,7 @@ You are ready to add users. You can experiment with the built-in System DB (e.g.
 
 To use the built-in authentication provider, navigate to the [Web Admin App](https://support.k2view.com/Academy/articles/30_web_framework/03_web_admin_application.html). Select the Security tab. Select the Users tab and add a user. Select the Roles tab, create a new role (e.g., User), and then assign Fabric permissions to the newly created role. 
 
-The Docker Compose Runtime for K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for handling user authentication and managing user IDs and roles.
+The K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for handling user authentication and managing user IDs and roles.
 
 Following are the supported authentication providers as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/07_user_IAM_overview.html). 
 
@@ -109,20 +114,20 @@ Following are the supported authentication providers as described [here](https:/
 
 Here are the command options for k2space.sh:
 
-```bash
-  --profile=         Allows you to select the desired Fabric Space Profile
- 
-  --heap=            Allows you to override the default 2GB allocated heap size
- 
-  --fabric-version=  Allows you to override the Fabric version specified in the .env file
- 
-  --compose=         Allows you to use a custom Docker compose.yaml file
-```
+| Option            | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| --profile=        | Allows you to select the desired Fabric Space Profile        |
+| --heap=           | Allows you to override the default 4GB allocated heap size   |
+| --fabric-version= | Allows you to override the Fabric version specified in the .env file |
+| --compose=        | Allows you to use a custom Docker compose.yaml file         |
+| --env=            | Allows you to use a custom Docker environment file |
+| --project=            | Allows you to specify the Project's name |
 
-The Fabric version is specified using major.minor Fabric version identifiers, e.g., 8.1.7_22. 
+
+The Fabric version is specified using the desired image tag. E.g., 8.2.1_46 
 
 ### .config File Format
-These configuration files contain required or custom settings used by Fabric. Configure parameters as if you were editing any *ini* file to update the config.ini file.
+These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
 
 ```ini
 [section1]
@@ -137,3 +142,4 @@ key2=value2
 ### About the fabric-init Container
 
 This temporary container sets the proper ownership of the persistent data's _Space_ folder. After its execution, it should exit automatically.
+
