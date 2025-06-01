@@ -1,4 +1,4 @@
-# Upgrading - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Upgrading 
 
 ## Upgrading to a Later Fabric Version
 
