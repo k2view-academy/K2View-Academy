@@ -1,10 +1,22 @@
-
 # Docker and Docker Compose Installation
+
+## Table of Contents
+
+1. [Docker and Docker Compose Installation](#docker-and-docker-compose-installation)
+2. [Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows](#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows)
+3. [Using the Windows Subsystem for Linux (WSL)](#using-the-windows-subsystem-for-linux-wsl)
+    - [Installing WSL](#installing-wsl)
+    - [Using the WSL File System](#using-the-wsl-file-system)
+4. [Docker Commands](#docker-commands)
+5. [Starting Docker](#starting-docker)
+    - [Running Docker Desktop](#running-docker-desktop)
+    - [Running Docker on Linux](#running-docker-on-linux)
+
+## Docker and Docker Compose Installation
 
 If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/desktop/ for information on how to install Docker Desktop for your Operating System.
-
 ## Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows
 
 1.	You need to install and run Docker, which you can download from https://docs.docker.com/engine/install/.
