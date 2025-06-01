@@ -106,12 +106,32 @@ Regardless of runtime choice, each Fabric Web Studio deployment includes:
 
 At deployment, administrators select one of the following runtime profiles depending on database requirements:
 
-| Profile          | Description                                                  |
-| ---------------- | ------------------------------------------------------------ |
-| `studio`         | Default profile using embedded SQLite for System DB.         |
-| `studio_pg`      | Uses PostgreSQL for System DB and TDM functionality.         |
-| `studio_cass`    | Uses Cassandra for System DB and TDM functionality.          |
-| `studio_pg_cass` | Hybrid profile combining PostgreSQL (TDM) and Cassandra (System DB). |
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>studio</code></td>
+      <td>Default profile using embedded SQLite for System DB.</td>
+    </tr>
+    <tr>
+      <td><code>studio_pg</code></td>
+      <td>Uses PostgreSQL for System DB and TDM functionality.</td>
+    </tr>
+    <tr>
+      <td><code>studio_cass</code></td>
+      <td>Uses Cassandra for System DB and TDM functionality.</td>
+    </tr>
+    <tr>
+      <td><code>studio_pg_cass</code></td>
+      <td>Hybrid profile combining PostgreSQL (TDM) and Cassandra (System DB).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -131,10 +151,24 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
 
 ### Operating System Requirements
 
-| Runtime | Supported Platforms |
-|---------|----------------------|
-| **Docker Compose** | Linux (preferred), macOS, or Windows (via WSL2 and Linux distributions) |
-| **Podman Compose** | Enterprise Linux distributions: RHEL, AlmaLinux, Rocky Linux, CentOS Stream |
+<table>
+  <thead>
+    <tr>
+      <th>Runtime</th>
+      <th>Supported Platforms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Docker Compose</strong></td>
+      <td>Linux (preferred), macOS, or Windows (via WSL2 and Linux distributions)</td>
+    </tr>
+    <tr>
+      <td><strong>Podman Compose</strong></td>
+      <td>Enterprise Linux distributions: RHEL, AlmaLinux, Rocky Linux, CentOS Stream</td>
+    </tr>
+  </tbody>
+</table>
 
 > For best performance on Windows, Docker Compose should run within WSL2 using a native Linux distribution.
 
@@ -205,12 +239,32 @@ To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Wind
 
 Ensure the following external services are reachable from the host machine:
 
-| Service | Purpose |
-|---------|---------|
-| `https://github.com` | (optional) Clone K2view Blueprints |
-| `https://docker.share.cloud.k2view.com` | Access Fabric images |
-| `https://nexus.share.cloud.k2view.com` | Download Studio distributions |
-| `https://exchange.k2view.com` | (if TDM is used) Access Exchange packages |
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>https://github.com</code></td>
+      <td>(optional) Clone K2view Blueprints</td>
+    </tr>
+    <tr>
+      <td><code>https://docker.share.cloud.k2view.com</code></td>
+      <td>Access Fabric images</td>
+    </tr>
+    <tr>
+      <td><code>https://nexus.share.cloud.k2view.com</code></td>
+      <td>Download Studio distributions</td>
+    </tr>
+    <tr>
+      <td><code>https://exchange.k2view.com</code></td>
+      <td>(if TDM is used) Access Exchange packages</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
