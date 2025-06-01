@@ -1,122 +1,156 @@
 
-# Docker and Docker Compose Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Podman Installation 
 
-If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
+## Installing Podman
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/desktop/ for information on how to install Docker Desktop for your Operating System.
+ **Podman**:
+    Install Podman using your distribution's package manager. For example, on RHEL-based systems:
 
-## Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows
+   ```
+   bash
+   
+   sudo dnf install -y podman
+   ```
 
-1.	You need to install and run Docker, which you can download from https://docs.docker.com/engine/install/.
-2.	You need to install the Docker Compose Plugin. See https://docs.docker.com/compose/install/.
-3.	If you install Docker Desktop, Docker Compose is bundled with Docker Engine. See https://docs.docker.com/desktop/ to install Docker Desktop.
+   Refer to the official documentation at https://podman.io/getting-started/installation for complete installation steps.
 
-## Using the Windows Subsystem for Linux (WSL)
+3. **Podman Compose**:
+    Install **Podman Compose** to support Compose YAML workflows. Use either:
 
-When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Otherwise, the installation will not perform adequately and will exhibit slow performance. 
+   - DNF:
 
-### Installing WSL
+     ```
+     bash
+     
+     sudo dnf install -y podman-compose
+     ```
 
-1.	Open PowerShell as Administrator.
+   - Or pip:
 
-2.	Install WSL and a Linux distribution (e.g., Ubuntu):
+     ```
+     bash
+     
+     pip3 install --user podman-compose
+     ```
 
-```bash
-wsl –install
-```
+> **Note**:  Podman Compose provides native compatibility for Compose YAML files with Podman pods.
 
-3.	List the installed WSL distribution:
 
-```bash
-wsl –l
-```
 
-4.	You cannot use Microsoft's default “docker-desktop” distribution. You need to install a Linux distribution. E.g., `wsl --install -d Ubuntu`
+## Podman Command Reference for Enterprise Linux Environments
 
-```bash
-wsl --install -d <distribution_name>
-```
+This reference document captures the Podman CLI commands used by DevOps engineers (e.g., "May") when managing Fabric Web Studio environments on Enterprise Linux systems.
 
-5.	You should set the default to use your selected Linux distribution. It might be listed as item 2, for example. To set the default, use this command:
+---
 
-```bash
-wsl --set-default <distribution_name>
-```
+### 1. Container Management
 
-6.	You can now launch WSL using the desired distribution using the WSL command:
+#### List Containers
+- `podman ps`  
+  Lists all running containers.
+- `podman ps -a`  
+  Lists all containers, including stopped ones.
 
-```bash
-wsl 
-```
+#### Start/Stop Containers
+- `podman start <container>`  
+  Starts a specific container.
+- `podman stop <container>`  
+  Stops a specific container.
+- `podman stop -a`  
+  Stops all containers.
+- `podman stop --all`  
+  Stops all containers.
 
-### Using the WSL File System
+#### Remove Containers
+- `podman rm <container>`  
+  Removes a specific container.
+- `podman rm -f <container>`  
+  Force removes a container.
+- `podman rm -af`  
+  Force removes all containers.
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
+#### Inspect and Logs
+- `podman logs <container>`  
+  Displays logs for a container.
+- `podman inspect <container>`  
+  Shows low-level information about a container.
+- `podman exec -it <container> <cmd>`  
+  Executes a command inside a running container interactively.
 
-## Docker Commands
+---
 
-Not familiar with Docker commands? Please refer to Docker's [CLI Cheat Sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf). 
+### 2. Image and Registry Management
+- `podman images`  
+  Lists local container images.
+- `podman pull <image>`  
+  Pulls an image from a remote registry.
+- `podman login -u <user> -p <password> <registry>`  
+  Logs in to a container registry.
 
-## Starting Docker
+---
 
-Fabric Web Studio and the `k2space.sh` command each require that Docker and Docker Compose are running.
+### 3. Pod Management
 
-Starting Docker depends on the operating system you use. Please refer to Docker documentation for instructions on how to start Docker on your operating system. 
+#### View Pods
+- `podman pod ls`  
+  Lists all pods.
+- `podman pod ps`  
+  Lists running pods.
 
-### Running Docker Desktop
+#### Manage Pods
+- `podman pod create`  
+  Creates a new pod.
+- `podman pod rm <pod>`  
+  Removes a specified pod.
+- `podman pod rm -f <pod>`  
+  Force removes a pod.
+- `podman pod rm -af`  
+  Force removes all pods.
 
-Running Docker Desktop will enable you to run Fabric Web Studio and the `k2space.sh` command. 
+#### Logs and Inspection
+- `podman pod logs <pod>`  
+  Shows logs from all containers in a pod.
+- `podman pod inspect <pod>`  
+  Displays detailed info for a pod.
 
-On Microsoft Windows, you need to enable WSL Integration for the Linux distribution you are using. To do so, on the Docker Desktop app, select Settings, then Resources, and then WSL Integration. In addition to enabling integration with my default WSL distro, you should be able to enable the distribution you selected. 
+---
 
-Using `wsl --install -d <distribution_name>` will achieve this also if the "Enable integration with my default WSL distro" is enabled. 
+### 4. Network Management
+- `podman network ls`  
+  Lists existing networks.
+- `podman network create <name>`  
+  Creates a new container network.
+- `podman network rm <name>`  
+  Removes a specified network.
+- `podman network rm -a`  
+  Removes all networks.
+- `podman network prune`  
+  Removes unused networks.
 
-If you do not enable WSL integration, you may get errors like this when running k2space.sh. 
+---
 
-```bash
-unable to get image '...': error during connect: Get "...": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
-```
+### 5. System Utilities
+- `podman version`  
+  Shows the installed Podman version.
+- `podman system reset`  
+  Wipes all Podman data (containers, images, volumes).
+- `podman system migrate`  
+  Migrates container formats to the latest version.
+- `podman volume prune`  
+  Deletes all unused volumes.
 
-### Running Docker on Linux
+---
 
-When running Docker commands or starting the Docker service on Linux, depending on your system access you will need to use `sudo` with your commands. For example,
+### 6. Compose Support
+- `podman compose -v`  
+  Displays the version of Podman Compose (if installed).
 
-If you do not, you will get errors like:
+---
 
-```bash
-unable to get image '...': error during connect: Get "...":  ... connect: permission denied
-```
-
-Examples of commands (see Docker's [CLI Cheat Sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) ). 
-
-Starting the Docker service: 
-
-```bash
- service docker start
-```
-
-Logging in to the K2view Nexus Container Registry: 
-
-```bash
- docker login -u [user] https://docker.share.cloud.k2view.com
-```
-
-Creating a Fabric Web Studio Space: 
-
-```bash
- ./k2space.sh create [spacename]
-```
-
-Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Running: 
-
-```bash
- docker ps
-```
-
-If they are running you should see entries for Rraefik and each of the spaces you have created (e.g. myspace-fabric in this example)
-
-```bash
-CONTAINER ID   IMAGE      ...               NAMES
-55879667423d   traefik:latest   ....        traefik
-da112037b4d3   ... /fabric-studio:...  ...  myspace-fabric
-```
+### 7. Socket and Service Management
+- `systemctl --user enable --now podman.socket`  
+  Enables and starts Podman socket for rootless API access.
+- `systemctl --user status podman.socket`  
+  Checks the status of the Podman socket.
+- `loginctl enable-linger <user>`  
+  Enables lingering for systemd user services.
