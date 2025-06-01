@@ -1,17 +1,5 @@
 # About K2view Fabric Web Studio 2.1
 
-K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment for designing, building, managing, and deploying data-driven solutions across various integration, data product, orchestration, and transformation use cases.
-
-Fabric Web Studio enables:
-
-- Model-driven design of Logical Units and micro-databases.
-- Real-time development, testing, validation, and orchestration.
-- Flexible data integration across multiple data sources and platforms.
-- Visual creation and management of APIs, flows, business logic, and transformations.
-- Rapid creation of reusable data products for internal and external consumption.
-
-With **multi-space development**, Fabric Web Studio allows multiple developers or teams to work concurrently within isolated, independently configurable Spaces — supporting collaborative workflows, faster iterations, and simplified testing environments.
-
 ## Table of Contents
 
 1. [What’s New in Version 2.1](#whats-new-in-version-21)
@@ -34,6 +22,19 @@ With **multi-space development**, Fabric Web Studio allows multiple developers o
 9. [Version Compatibility](#version-compatibility)
 
 ---
+
+K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment for designing, building, managing, and deploying data-driven solutions across various integration, data product, orchestration, and transformation use cases.
+
+Fabric Web Studio enables:
+
+- Model-driven design of Logical Units and micro-databases.
+- Real-time development, testing, validation, and orchestration.
+- Flexible data integration across multiple data sources and platforms.
+- Visual creation and management of APIs, flows, business logic, and transformations.
+- Rapid creation of reusable data products for internal and external consumption.
+
+With **multi-space development**, Fabric Web Studio allows multiple developers or teams to work concurrently within isolated, independently configurable Spaces — supporting collaborative workflows, faster iterations, and simplified testing environments.
+
 
 ## What’s New in Version 2.1
 
