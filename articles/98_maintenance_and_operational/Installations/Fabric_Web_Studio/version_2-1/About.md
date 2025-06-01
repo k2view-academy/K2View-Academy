@@ -48,8 +48,8 @@ Version 2.1 introduces several important enhancements, most notably:
 - **Upgraded Fabric version 8.2.1_46** bundled with the distribution.
 - **Heap size increased to 4GB by default**, configurable per Space.
 - **PROJECT_NAME parameter introduced** to decouple project name from Space name.
-- **Per-Space configuration files** (`.env`, `compose.yaml`, `.config`) allow for easier customization.
-- **JDBC access via port 5124** exposed for optional direct database integration.
+- **Per-space configuration files** (`.env`, `compose.yaml`, `.config`) enable easier customization.
+- **JDBC access via port 5124** is exposed for optional direct database integration.
 - **Improved healthcheck behavior** for better runtime monitoring.
 - **New release packaging**:
   - Docker distribution: `Studio-Docker-latest.zip` 
@@ -63,14 +63,14 @@ Fabric Web Studio supports deployment across two container orchestration environ
 
 Docker Compose provides a widely adopted container orchestration layer to run Web Studio, an embedded Fabric engine, and Traefik reverse proxy. Docker Compose allows full multi-space development on Docker-based platforms across Linux, macOS, or Windows (using WSL).
 
-See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html)
+See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html)
 
 
 ### Podman Compose Runtime
 
 Podman Compose introduces daemonless, enterprise-grade containerization ideal for Red Hat Enterprise Linux (RHEL), AlmaLinux, Rocky Linux, and CentOS Stream distributions. It delivers native Linux orchestration fully compatible with Fabric Web Studio’s Compose YAML deployment model.
 
-See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html)
+See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html)
 
 > Both runtimes provide equivalent capabilities. Selection depends on enterprise standards and operational preferences.
 
@@ -144,8 +144,8 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
 - **Architecture**: AMD64 (x86-64) architecture is required.  
   > ARM-based processors are not directly supported. Certain operating systems provide AMD64 emulation capabilities for their ARM-based processors.
 
-- **Memory**: Minimum 32GB RAM recommended to support Web Studio, Fabric Spaces, and associated services.
-  - Each Fabric Space allocates 4GB JVM heap by default (overridable in configuration).
+- **Memory**: A minimum of 32GB RAM is recommended to support Web Studio, Fabric Spaces, and associated services.
+  - Each Fabric Space allocates a 4GB JVM heap by default (this can be overridden in the configuration).
 
 - **Disk Space**: Sufficient local storage for persistent data directories, Fabric images (~2GB per image), and logs.
 
@@ -199,16 +199,16 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
 - **Docker Engine and Compose Plugin**  
   - Install Docker Engine: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
   - Install Docker Compose: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
-  - Docker Desktop includes Docker Compose plugin by default.
+  - Docker Desktop includes the Docker Compose plugin by default.
   - Use the native Docker Compose plugin (not the legacy `docker-compose` Python utility).
 
-> Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+> Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
 
 - **WSL2 (Windows Subsystem for Linux 2)** *(Windows only)*  
   - Recommended for Windows users.
   - Install WSL2 and a supported Linux distribution (e.g., Ubuntu) to ensure full compatibility.
 
-To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
+To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
 
 ---
 
