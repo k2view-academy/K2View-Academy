@@ -90,9 +90,9 @@ Enter the Get command statement manually or hover over and then click the Helper
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grrawgraphit">grRaw</a></td>
 </tr>
 <tr>
-    <td valign="top" width="50pxl">include</td>
+    <td valign="top" width="50pxl">Include</td>
     <td valign="top" width="900pxl">Enables the inclusion of another Graphit file, where its output is embedded as part of the parent. 	 <ul>
-        <li>You can specify the folder that contains the child graphit or skip on it.</li>
+        <li>You can either specify the folder that contains the child graphit or skip it.</li>
         <li>You should specify the "graphit" extension when populating the child graphit (e.g., a.graphit).</li>
         <li>You can use external paramaeters in the child graphit, where you should send them to the parent, when calling it.</li> 
 </ul>
