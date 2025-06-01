@@ -13,9 +13,9 @@ The following Graphit file gets an input LUI, which extracts customer data from 
 
 The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
 
-Output data is returned with further information on whether the customer is either a:
--  VIP member, with a total balance of over USD 10,000.
--  Gold member, with a total balance of over USD 1,000. 
+The output data is returned with additional information indicating whether the customer is considered:
+-  VIP, with a total balance of over USD 10,000, or
+-  Gold, with a total balance of over USD 1,000. 
 
 <img src="images/advanced_with_calc_example.png"></img>
 
