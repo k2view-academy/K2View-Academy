@@ -12,11 +12,43 @@ Fabric Web Studio enables:
 
 With **multi-space development**, Fabric Web Studio allows multiple developers or teams to work concurrently within isolated, independently configurable Spaces — supporting collaborative workflows, faster iterations, and simplified testing environments.
 
+## Table of Contents
+
+1. [What’s New in Version 2.1](#whats-new-in-version-21)
+2. [Supported Deployment Runtimes](#supported-deployment-runtimes)
+    - [Docker Compose Runtime](#docker-compose-runtime)
+    - [Podman Compose Runtime](#podman-compose-runtime)
+3. [Fabric Web Studio Runtime Components](#fabric-web-studio-runtime-components)
+4. [Key Fabric Web Studio Features](#key-fabric-web-studio-features)
+5. [Supported Profiles](#supported-profiles)
+6. [Prerequisites](#prerequisites)
+    - [Host Machine Requirements](#host-machine-requirements)
+    - [Operating System Requirements](#operating-system-requirements)
+    - [Required 3rd Party Software](#required-3rd-party-software)
+        - [Common Requirements (Both Docker and Podman)](#common-requirements-both-docker-and-podman)
+        - [Docker Compose Specific](#docker-compose-specific)
+        - [Podman Compose Specific](#podman-compose-specific)
+    - [Network Access](#network-access)
+7. [Installation Package](#installation-package)
+8. [What’s Included in the Installation Package](#whats-included-in-the-installation-package)
+9. [Version Compatibility](#version-compatibility)
+
 ---
 
 ## What’s New in Version 2.1
 
-Fabric Web Studio 2.1 introduces several important enhancements provided [here](TODO) TODO
+Version 2.1 introduces several important enhancements, most notably:
+
+- **Support for Podman Compose runtime**, providing a daemonless, enterprise-grade alternative to Docker Compose.
+- **Upgraded Fabric version 8.2.1_46** bundled with the distribution.
+- **Heap size increased to 4GB by default**, configurable per Space.
+- **PROJECT_NAME parameter introduced** to decouple project name from Space name.
+- **Per-Space configuration files** (`.env`, `compose.yaml`, `.config`) allow for easier customization.
+- **JDBC access via port 5124** exposed for optional direct database integration.
+- **Improved healthcheck behavior** for better runtime monitoring.
+- **New release packaging**:
+  - Docker distribution: `Studio-Docker-latest.zip` 
+  - Podman distribution: `Studio-Podman-latest.zip` 
 
 ## Supported Deployment Runtimes
 
@@ -50,6 +82,19 @@ Regardless of runtime choice, each Fabric Web Studio deployment includes:
 - **System DB Profiles** — support SQLite, PostgreSQL, Cassandra, or hybrid combinations for embedded and TDM use cases.
 - **Git Integration** — allows full source control, team collaboration, and CI/CD alignment.
 - **Multi-Space Isolation** — enables creation of fully isolated developer environments on a shared runtime host.
+
+---
+
+## Key Fabric Web Studio Features
+
+- Visual development environment for data products, APIs, integrations, orchestration, and transformations.
+- Real-time interactive testing, deployment, and validation.
+- Embedded Fabric runtime engine.
+- Multiple database options per profile: SQLite, PostgreSQL, Cassandra, or a hybrid of Cassandra & PostgreSQL
+- Secure integration with Git for source control and team collaboration.
+- Traefik reverse proxy for flexible URL-based Space routing and SSL management.
+- Per-Space configuration isolation for greater flexibility across environments.
+- Multiple authentication providers: Fabric local, LDAP, Active Directory, and SAML-based identity federation.
 
 ---
 
@@ -170,3 +215,34 @@ Ensure the following external services are reachable from the host machine:
 ---
 
 > After verifying prerequisites, proceed to the Installation Guide for your chosen runtime (Docker or Podman).
+
+---
+
+## Installation Package
+
+The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Container Registry
+
+  - Docker distribution: `Studio-Docker-latest.zip`  TODO
+  - Podman distribution: `Studio-Podman-latest.zip`  TODO
+
+Either path will require that you obtain an account for K2view's Nexus Container Registry. If you do not have an account, please request one from your K2view representative. 
+
+---
+
+## What’s Included in the Installation Package
+
+- **README.md** – Installation reference guide (per runtime).
+- **k2space.sh** – Command-line tool to create, start, stop, list, and destroy Fabric Spaces.
+- **.env / .env-[spacename] files** – Runtime configuration parameters.
+- **common.config / [spacename].config files** – Fabric runtime configuration overrides.
+- **compose.yaml / compose-[spacename].yaml** – Container composition definitions.
+- **Traefik configuration files** for proxy and TLS management.
+- **SSL certificates directory** to allow insertion of organization-specific certificates.
+
+
+---
+
+## Version Compatibility
+
+Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.1_46`. Please reach out to your K2view representative if you'd like to use a later version of Fabric and TDM.
+
