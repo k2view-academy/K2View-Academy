@@ -131,14 +131,40 @@ Following are the supported authentication providers as described [here](https:/
 
 Here are the command options for k2space.sh:
 
-| Option            | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| --profile=        | Allows you to select the desired Fabric Space Profile        |
-| --heap=           | Allows you to override the default 4GB allocated heap size   |
-| --fabric-version= | Allows you to override the Fabric version specified in the .env file |
-| --compose=        | Allows you to use a custom Docker compose.yaml file         |
-| --env=            | Allows you to use a custom Docker environment file |
-| --project=            | Allows you to specify the Project's name |
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--profile=</code></td>
+      <td>Allows you to select the desired Fabric Space Profile</td>
+    </tr>
+    <tr>
+      <td><code>--heap=</code></td>
+      <td>Allows you to override the default 4GB allocated heap size</td>
+    </tr>
+    <tr>
+      <td><code>--fabric-version=</code></td>
+      <td>Allows you to override the Fabric version specified in the .env file</td>
+    </tr>
+    <tr>
+      <td><code>--compose=</code></td>
+      <td>Allows you to use a custom Docker compose.yaml file</td>
+    </tr>
+    <tr>
+      <td><code>--env=</code></td>
+      <td>Allows you to use a custom Docker environment file</td>
+    </tr>
+    <tr>
+      <td><code>--project=</code></td>
+      <td>Allows you to specify the Project's name</td>
+    </tr>
+  </tbody>
+</table>
 
 
 The Fabric version is specified using the desired image tag. E.g., 8.2.1_46 
