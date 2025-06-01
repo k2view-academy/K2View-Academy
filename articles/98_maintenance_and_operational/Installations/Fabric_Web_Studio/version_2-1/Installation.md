@@ -1,4 +1,4 @@
-# Fabric Web Studio 2.1 – Docker Compose Installation
+# Fabric Web Studio for Docker Compose, version 2.1, – Docker Compose Installation
 
 This document describes how to install and configure K2view Fabric Web Studio 2.1 using Docker Compose.
 
