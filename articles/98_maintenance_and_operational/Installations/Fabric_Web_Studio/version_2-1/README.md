@@ -1,6 +1,6 @@
-**Fabric Web Studio 2.1 Overview**
+**Fabric Web Studio for Docker Compose or Podman, version 2.1 Overview**
 
-K2view Fabric Web Studio version 2.1 introduces expanded capabilities for flexible, containerized deployment across enterprise environments. It enables development teams to build, manage, and test K2view Fabric projects quickly and securely using isolated development Spaces.
+K2view Fabric Web Studio for Docker Compose or Podman, version 2.1, introduces expanded capabilities for flexible, containerized deployment across enterprise environments. It enables development teams to build, manage, and test K2view Fabric projects quickly and securely using isolated development Spaces.
 
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/About.md">About</a></li>
