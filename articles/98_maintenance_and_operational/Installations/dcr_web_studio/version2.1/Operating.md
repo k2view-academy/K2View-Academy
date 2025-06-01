@@ -1,14 +1,29 @@
 # Operating - Fabric Web Studio
 
-## Content
-<ul>      
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#fabric-web-studio-spaces">Fabric Web Studio Spaces</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#restarting-traefik">Restarting Traefik</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#adding-users">Adding Users</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#reference-information">Reference Information</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#customizing-runtime-files-per-space">Customizing Runtime Files Per Space</a></li>
+## Table of Contents
 
-</ul>
+1. [Fabric Web Studio Spaces](#fabric-web-studio-spaces)
+    - [Listing your Spaces](#listing-your-spaces)
+    - [Creating Additional Spaces](#creating-additional-spaces)
+    - [Starting a Space](#starting-a-space)
+    - [Stopping a Space](#stopping-a-space)
+    - [Destroying a Space](#destroying-a-space)
+2. [Restarting Traefik](#restarting-traefik)
+    - [Starting Traefik](#starting-traefik)
+    - [Restarting Traefik](#restarting-traefik)
+3. [Adding Users](#adding-users)
+4. [Reference Information](#reference-information)
+    - [k2space.sh OPTIONS Reference](#k2spacesh-options-reference)
+    - [.config File Format](#config-file-format)
+    - [About the fabric-init Container](#about-the-fabric-init-container)
+5. [Customizing Runtime Files Per Space](#customizing-runtime-files-per-space)
+    - [File Customization Behavior](#file-customization-behavior)
+        - [.env Customization](#env-customization)
+        - [compose.yaml Customization](#composeyaml-customization)
+        - [.config Customization](#config-customization)
+    - [Manual Overrides](#manual-overrides)
+    - [Example Use Case](#example-use-case)
+
 
 ## Fabric Web Studio Spaces
 
