@@ -52,7 +52,7 @@ To build an SQL statement for each call, set the query type to SQL non-prepared.
 </tr>
 <tr>
 <td valign="top" width="50pxl">String</td>
-<td valign="top" width="900pxl">Simple string text or some combination with variables, such as input parameters or previous field nodes .&nbsp;</td>
+<td valign="top" width="900pxl">Simple string text or some combination with variables, such as input parameters or previous field nodes.&nbsp;</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grstringgraphit">grString</a></td>
 </tr>
 <tr>
@@ -91,10 +91,10 @@ Enter the Get command statement manually or hover over and then click the Helper
 </tr>
 <tr>
     <td valign="top" width="50pxl">include</td>
-    <td valign="top" width="900pxl">Enable including another Graphit file, where its output is embedded as part of the parent. 	 <ul>
+    <td valign="top" width="900pxl">Enables the inclusion of another Graphit file, where its output is embedded as part of the parent. 	 <ul>
         <li>You can specify the folder that contains the child graphit or skip on it.</li>
-        <li>You shall specify the "graphit" extension when populating the child graphit (for example: a.graphit).</li>
-        <li>You can use external paramaeters in the child graphit, where you shall send them to the parent, when calling it.</li> 
+        <li>You should specify the "graphit" extension when populating the child graphit (e.g., a.graphit).</li>
+        <li>You can use external paramaeters in the child graphit, where you should send them to the parent, when calling it.</li> 
 </ul>
     </td><td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/08_graphit_examples.md#grinclude">grInclude</a>
     </td>
