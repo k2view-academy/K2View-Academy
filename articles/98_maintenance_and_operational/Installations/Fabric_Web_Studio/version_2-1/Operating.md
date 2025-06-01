@@ -27,7 +27,7 @@
 
 ## Fabric Web Studio Spaces
 
-This k2space.sh shell script simplifies the creation and deletion of Fabric. You can also use it to list and get information about existing Fabric spaces using: 
+This `k2space.sh` shell script simplifies the creation and deletion of Fabric. You can also use it to list and get information about existing Fabric spaces using: 
 
 ```bash
 Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
@@ -35,7 +35,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 > **Docker Compose: Running k2space.sh on Microsoft Windows**
 >
-> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` applications offered by Git. Using `Git Bash` you can run the script after changing the directory to its location. 
+> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` application offered by Git. Using `Git Bash` you can run the script after changing the directory to its location. 
 > 
 > If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
 
@@ -58,7 +58,7 @@ Use:
 ./k2space.sh create [--profile=profile-name] spacename
 ```
 
-> After creating your first Space, you will need to wait for Fabric to come up. Unless it up you may get a 404 error if Traefik hasn't yet processed its new ingress rules which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
+> After creating your first Space, you will need to wait for Fabric to come up. Unless it's up, you may get a 404 error if Traefik hasn't yet processed its new ingress rules, which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
 
 
 **Starting a Space**
@@ -118,9 +118,9 @@ To use the built-in authentication provider, navigate to the [Web Admin App](htt
 
 The K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for handling user authentication and managing user IDs and roles.
 
-Following are the supported authentication providers as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/07_user_IAM_overview.html). 
+The following are the supported authentication providers as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/07_user_IAM_overview.html). 
 
-- **Fabric**: Fabric stores users' credentials in a System DB table using Postgres. Passwords are stored securely in this table using a salted password hashing technique. By default, Fabric is configured to use a 32-byte salt length. When Cassandra is used, the provider is named Cassandra.
+- **Fabric**: Fabric stores users' credentials in a system database table using PostgreSQL. Passwords are stored securely in this table using a salted password hashing technique. By default, Fabric is configured to use a 32-byte salt length. When Cassandra is used, the provider is referred to as Cassandra.
 - **LDAP**: Fabric authentication is performed via LDAP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
 - **ADLDAP** (Microsoft Active Directory): Fabric authentication is performed via Active Directory integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
 - **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users by using, for example, Microsoft Entra ID and Okta. Read the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
@@ -129,7 +129,7 @@ Following are the supported authentication providers as described [here](https:/
 
 ### k2space.sh OPTIONS Reference
 
-Here are the command options for k2space.sh:
+Here are the command options for `k2space.sh`:
 
 <table>
   <thead>
