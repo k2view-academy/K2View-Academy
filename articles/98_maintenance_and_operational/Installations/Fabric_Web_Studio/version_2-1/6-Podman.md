@@ -50,7 +50,7 @@
 
 ## Podman Command Reference for Enterprise Linux Environments
 
-This reference document captures the Podman CLI commands used by DevOps engineers when managing Fabric Web Studio environments on Enterprise Linux systems.
+This reference document outlines the Podman CLI commands used by DevOps engineers to manage Fabric Web Studio environments on Enterprise Linux systems.
 
 
 ### 1. Container Management
@@ -59,7 +59,7 @@ This reference document captures the Podman CLI commands used by DevOps engineer
 - `podman ps`  
   Lists all running containers.
 - `podman ps -a`  
-  Lists all containers, including stopped ones.
+  Lists all containers, including those that are stopped.
 
 #### Start/Stop Containers
 - `podman start <container>`  
