@@ -1,5 +1,5 @@
 
-# Docker and Docker Compose Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Docker and Docker Compose Installation
 
 If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
 
