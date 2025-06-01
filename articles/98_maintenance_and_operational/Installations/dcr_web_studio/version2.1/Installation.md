@@ -4,22 +4,14 @@ This document describes how to install and configure K2view Fabric Web Studio 2.
 
 Version 2.1 introduces minor enhancements to Fabric Web Studio including updated Fabric runtime, increased heap size defaults, improved healthcheck, simplified runtime overrides, and additional `k2space.sh` options.
 
-## Content
-<ul>      
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#prerequisites">Prerequisites</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#whats-in-this-package">What's in this Package</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#things-to-configure">Things to Configure</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#installation">Installation</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-2-setup">Step 2: Setup</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-3-download">Step 3: Download</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a></li>
-</ul>
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [What's in this Package](#whats-in-this-package)
+3. [Things to Configure](#things-to-configure)
+4. [Things to Know](#things-to-know)
+5. [Installation](#installation)
+6. [Docker Image Offline Package Download](#docker-image-offline-package-download)
 
 
 ## Prerequisites
@@ -75,16 +67,15 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
 
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
-<ul> 
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-2-setup">Step 2: Setup</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-3-download">Step 3: Download</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
-</ul>
+    - [Step 1: Install and Validate Docker and Docker Compose Runtime](#step-1-install-and-validate-docker-and-docker-compose-runtime)
+    - [Step 2: Setup](#step-2-setup)
+    - [Step 3: Download](#step-3-download)
+    - [Step 4: Configure Git and TLS](#step-4-configure-git-and-tls)
+    - [Step 5: Select a Fabric Blueprint Profile to Use](#step-5-select-a-fabric-blueprint-profile-to-use)
+    - [Step 6: Log in to K2view's Nexus Container Registry](#step-6-log-in-to-k2views-nexus-container-registry)
+    - [Step 7: Create and Launch a Fabric Space](#step-7-create-and-launch-a-fabric-space)
+    - [Step 8: Access Web Studio](#step-8-access-web-studio)
+
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
 
