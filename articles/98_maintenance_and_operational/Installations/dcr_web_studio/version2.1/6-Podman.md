@@ -4,8 +4,8 @@
 ## Table of Contents
 
 1. [Installing Podman](#installing-podman)
-    - [Podman](#1-podman)
-    - [Podman Compose](#2-podman-compose)
+    - [Podman](#podman)
+    - [Podman Compose](#podman-compose)
 2. [Podman Command Reference for Enterprise Linux Environments](#podman-command-reference-for-enterprise-linux-environments)
     - [1. Container Management](#1-container-management)
         - [List Containers](#list-containers)
@@ -25,7 +25,8 @@
 
 ## Installing Podman
 
- **1. Podman**:
+### Podman
+
     Install Podman using your distribution's package manager. For example, on RHEL-based systems:
 
    ```
@@ -36,7 +37,8 @@
 
    Refer to the official documentation at https://podman.io/getting-started/installation for complete installation steps.
 
-**2. Podman Compose**:
+### Podman Compose
+
     Install **Podman Compose** to support Compose YAML workflows. Use either:
 
    - DNF:
