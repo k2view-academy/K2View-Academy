@@ -1,4 +1,4 @@
-# Fabric Web Studio 2.1 – Podman Installation
+# Fabric Web Studio for Podman, version 2.1 – Podman Installation
 
 This document describes how to use **Podman Compose** to host K2view Fabric Web Studio. It outlines the setup, components, installation options, and features relevant to Podman-based container environments.
 
