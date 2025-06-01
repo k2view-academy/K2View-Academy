@@ -22,9 +22,7 @@
 
     Install Podman using your distribution's package manager. For example, on RHEL-based systems:
 
-   ```
-   bash
-   
+   ```bash
    sudo dnf install -y podman
    ```
 
@@ -36,29 +34,24 @@
 
    - DNF:
 
-     ```
-     bash
-     
+     ```bash
      sudo dnf install -y podman-compose
      ```
 
    - Or pip:
 
-     ```
-     bash
-     
+     ```bash
      pip3 install --user podman-compose
      ```
 
 > **Note**:  Podman Compose provides native compatibility for Compose YAML files with Podman pods.
 
-
+---
 
 ## Podman Command Reference for Enterprise Linux Environments
 
-This reference document captures the Podman CLI commands used by DevOps engineers (e.g., "May") when managing Fabric Web Studio environments on Enterprise Linux systems.
+This reference document captures the Podman CLI commands used by DevOps engineers when managing Fabric Web Studio environments on Enterprise Linux systems.
 
----
 
 ### 1. Container Management
 
@@ -91,10 +84,9 @@ This reference document captures the Podman CLI commands used by DevOps engineer
   Displays logs for a container.
 - `podman inspect <container>`  
   Shows low-level information about a container.
-- `podman exec -it <container> <cmd>`  
+- `podman exec -it <container> <cmd>`
   Executes a command inside a running container interactively.
 
----
 
 ### 2. Image and Registry Management
 - `podman images`  
@@ -104,7 +96,7 @@ This reference document captures the Podman CLI commands used by DevOps engineer
 - `podman login -u <user> -p <password> <registry>`  
   Logs in to a container registry.
 
----
+
 
 ### 3. Pod Management
 
@@ -130,7 +122,7 @@ This reference document captures the Podman CLI commands used by DevOps engineer
 - `podman pod inspect <pod>`  
   Displays detailed info for a pod.
 
----
+
 
 ### 4. Network Management
 - `podman network ls`  
@@ -144,7 +136,6 @@ This reference document captures the Podman CLI commands used by DevOps engineer
 - `podman network prune`  
   Removes unused networks.
 
----
 
 ### 5. System Utilities
 - `podman version`  
@@ -156,13 +147,11 @@ This reference document captures the Podman CLI commands used by DevOps engineer
 - `podman volume prune`  
   Deletes all unused volumes.
 
----
 
 ### 6. Compose Support
 - `podman compose -v`  
   Displays the version of Podman Compose (if installed).
 
----
 
 ### 7. Socket and Service Management
 - `systemctl --user enable --now podman.socket`  
