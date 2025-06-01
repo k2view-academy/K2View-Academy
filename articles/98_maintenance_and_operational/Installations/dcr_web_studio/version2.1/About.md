@@ -1,6 +1,6 @@
 # About K2view Fabric Web Studio 2.1
 
-K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment to design, build, manage, and deploy data-driven solutions across a variety of integration, data product, orchestration, and transformation use cases.
+K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment for designing, building, managing, and deploying data-driven solutions across various integration, data product, orchestration, and transformation use cases.
 
 Fabric Web Studio enables:
 
@@ -58,15 +58,14 @@ Fabric Web Studio supports deployment across two container orchestration environ
 
 Docker Compose provides a widely adopted container orchestration layer to run Web Studio, embedded Fabric engine, and Traefik reverse proxy. Docker Compose allows full multi-space development on Docker-based platforms across Linux, macOS, or Windows (using WSL).
 
-TODO
-See: [Docker Compose Installation Instructions](link-to-version2.1/Docker-Compose.html)
+See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.html)
+
 
 ### Podman Compose Runtime
 
 Podman Compose introduces daemonless, enterprise-grade containerization ideal for Red Hat Enterprise Linux (RHEL), AlmaLinux, Rocky Linux, and CentOS Stream distributions. It delivers native Linux orchestration fully compatible with Fabric Web Studio’s Compose YAML deployment model.
 
-TODO
-See: [Podman Installation Instructions](link-to-version2.1/Podman.html)
+See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Podman.html)
 
 > Both runtimes provide equivalent capabilities. Selection depends on enterprise standards and operational preferences.
 
@@ -118,7 +117,7 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
 ### Host Machine Requirements
 
 - **Architecture**: AMD64 (x86-64) architecture is required.  
-  > ARM-based processors are not supported.
+  > ARM-based processors are not directly supported. Certain operating systems provide AMD64 emulation capabilities for their ARM-based processors.
 
 - **Memory**: Minimum 32GB RAM recommended to support Web Studio, Fabric Spaces, and associated services.
   - Each Fabric Space allocates 4GB JVM heap by default (overridable in configuration).
@@ -164,17 +163,13 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
   - Docker Desktop includes Docker Compose plugin by default.
   - Use the native Docker Compose plugin (not the legacy `docker-compose` Python utility).
 
-TODO
-
-> Please refer to the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+> Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
 
 - **WSL2 (Windows Subsystem for Linux 2)** *(Windows only)*  
   - Recommended for Windows users.
   - Install WSL2 and a supported Linux distribution (e.g., Ubuntu) to ensure full compatibility.
 
-TODO
-
-To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution rather than use the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
+To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
 
 ---
 
@@ -222,8 +217,8 @@ Ensure the following external services are reachable from the host machine:
 
 The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Container Registry
 
-  - Docker distribution: `Studio-Docker-latest.zip`  TODO
-  - Podman distribution: `Studio-Podman-latest.zip`  TODO
+  - Docker distribution: `Studio-Docker-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Docker-Studio-latest.zip)
+  - Podman distribution: `Studio-Podman-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip)
 
 Either path will require that you obtain an account for K2view's Nexus Container Registry. If you do not have an account, please request one from your K2view representative. 
 
@@ -244,5 +239,5 @@ Either path will require that you obtain an account for K2view's Nexus Container
 
 ## Version Compatibility
 
-Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.1_46`. Please reach out to your K2view representative if you'd like to use a later version of Fabric and TDM.
+Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.1_46`. Please contact your K2view representative if you'd like to use a later version of Fabric and TDM.
 
