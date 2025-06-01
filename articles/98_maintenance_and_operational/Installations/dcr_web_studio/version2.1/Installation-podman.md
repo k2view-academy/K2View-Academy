@@ -32,9 +32,7 @@ A supported **Enterprise Linux distribution** (e.g., RHEL, AlmaLinux, Rocky Linu
 2. **Podman**:
     Install Podman using your distribution's package manager. For example, on RHEL-based systems:
 
-   ```
-   bash
-   
+   ```bash
    sudo dnf install -y podman
    ```
 
@@ -45,17 +43,13 @@ A supported **Enterprise Linux distribution** (e.g., RHEL, AlmaLinux, Rocky Linu
 
    - DNF:
 
-     ```
-     bash
-     
+     ```bash
      sudo dnf install -y podman-compose
      ```
 
    - Or pip:
 
-     ```
-     bash
-     
+     ```bash
      pip3 install --user podman-compose
      ```
 
@@ -263,9 +257,7 @@ Podman must be installed and properly configured to access the container registr
 
 Using the K2view Nexus Container Registry credentials provided to you, run the following command from the same directory where you performed the `git clone`:
 
-```
-bash
-
+```bash
 podman login -u [YourAccount] https://docker.share.cloud.k2view.com
 ```
 
@@ -283,9 +275,7 @@ To ensure the **Podman socket** is active in **rootless mode**, follow these ste
 
 **Check the status of the socket**
 
-```
-bash
-
+```bash
 systemctl --user status podman.socket
 ```
 
@@ -293,9 +283,7 @@ systemctl --user status podman.socket
 
 **Enable and start the socket**
 
-```
-bash
-
+```bash
 systemctl --user enable --now podman.socket
 ```
 
@@ -308,9 +296,7 @@ This will:
 
 **Enable linger (so user services run after logout)**
 
-```
-bash
-
+```bash
 loginctl enable-linger $USER
 ```
 
@@ -319,15 +305,13 @@ loginctl enable-linger $USER
 
 **Verify the socket is now listening**
 
-```
-bash
-
+```bash
 systemctl --user status podman.socket
 ```
 
 You should see output like:
 
-```
+```bash
 Active: active (listening)
 ```
 
@@ -347,9 +331,7 @@ By preloading the image locally, the `k2space.sh` script can create a Fabric Spa
 
 **Save and compress the desired Fabric image on an online machine:**
 
-```
-bash
-
+```bash
 podman save docker.share.cloud.k2view.com/k2view/fabric-studio:X.Y.Z_0 | gzip > k2view_fabric-studio_X.Y.Z_0.tar.gz
 ```
 
@@ -359,9 +341,7 @@ Use `scp`, USB, or any secure method to copy `k2view_fabric-studio_X.Y.Z_0.tar.g
 
 **Load the image into Podman on the offline machine:**
 
-```
-bash
-
+```bash
 podman load -i k2view_fabric-studio_X.Y.Z_0.tar.gz
 ```
 
