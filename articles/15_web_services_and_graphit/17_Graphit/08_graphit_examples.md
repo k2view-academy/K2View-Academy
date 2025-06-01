@@ -22,7 +22,7 @@ The output data is returned with additional information indicating whether the c
 
 
 ### CSV Output Example
-This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
+This example illustrates how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
 
 #### grCSV.graphit
 
@@ -36,13 +36,13 @@ Notes:
 
 - The csvRow has been set to the SUBSCRIBER_ID node. Therefore, a new line has been created for each new subscriber_id entry.
 
-- The csvHeader has been set to False in the SUBSCRIBER_INFO node. Therefore, the header has been removed from the CSV output.
+- The csvHeader has been set to false in the SUBSCRIBER_INFO node. Therefore, the header has been removed from the CSV output.
 
 
 
-###  Graphit Node Types Examples
+###  Graphit Node Type Examples
 #### grRaw.graphit
-This example illustrates an XML output in raw format. Observe the header value displayed in the response.  
+This example illustrates a raw-format XML output. Observe the header value displayed in the response.  
 
 <img src="images/graphit_example_raw.png"></img>
 
@@ -54,7 +54,7 @@ Output:
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?><SUBSCRIBERS><CRM_DB><SUBSCRIBER_ID>97</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>98</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>99</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>100</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>101</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>102</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>103</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>104</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>105</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>106</SUBSCRIBER_ID></CRM_DB></SUBSCRIBERS>
 ```
 
-When removing the 'raw' from the node's type, the output will be as following:
+When removing 'raw' as the node type, the output would be as follows:
 
 ```xml
 <Root><SUBSCRIBERS><CRM_DB><SUBSCRIBER_ID>97</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>98</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>99</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>100</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>101</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>102</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>103</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>104</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>105</SUBSCRIBER_ID></CRM_DB><CRM_DB><SUBSCRIBER_ID>106</SUBSCRIBER_ID></CRM_DB></SUBSCRIBERS></Root>
