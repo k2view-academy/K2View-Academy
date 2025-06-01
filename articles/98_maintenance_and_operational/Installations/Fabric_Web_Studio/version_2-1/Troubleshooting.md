@@ -16,7 +16,7 @@ This topic summarizes common errors that can be encountered.
 
 ## Command Failures
 
-Fabric Web Studio and the `k2space.sh` command each require that Docker and Docker Compose are running. If it is not running, commands like `docker login` or the `k2space.sh` will fail. If you install Docker Desktop to run your installation, it must be running.
+Fabric Web Studio and the `k2space.sh` command each require that Docker and Docker Compose are running. If it is not running, commands like `docker login` or `k2space.sh` will fail. If you install Docker Desktop to run your installation, it must be running.
 
 Starting Docker and its Docker Compose plugin depends on the operating system you use. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic.
 
@@ -30,11 +30,11 @@ When installing Fabric Web Studio, you must not use the Windows file system, suc
 
 ## System cannot find the file specified
 
-You may encounter "The system cannot find the file specified errors." when Running Docker Desktop on Microsoft Windows. 
+You may encounter "The system cannot find the file specified errors" when running Docker Desktop on Microsoft Windows. 
 
 On Microsoft Windows, you need to enable WSL Integration for the Linux distribution you are using. To do so, on the Docker Desktop app, select Settings, then Resources, and then WSL Integration. In addition to enabling integration with my default WSL distro, you should be able to enable the distribution you selected. 
 
-Using `wsl --install -d <distribution_name>` will achieve this also if the "Enable integration with my default WSL distro" is enabled. 
+Using `wsl --install -d <distribution_name>` will also achieve this, provided the "Enable integration with my default WSL distro" option is enabled. 
 
 If you do not enable WSL integration, you may get errors like this when running k2space.sh. 
 
@@ -46,7 +46,7 @@ unable to get image '...': error during connect: Get "...": open //./pipe/docker
 
 "connect: permission denied" Errors Running Docker on Linux
 
-When running Docker commands - including `docker login` - or starting the Docker service on Linux, you might need to use `sudo` with your commands. For example,
+When running Docker commands, including `docker login`, or starting the Docker service on Linux, you may need to use `sudo` with your commands. For example,
 
 
 ```bash
@@ -68,9 +68,9 @@ unable to get image '...': error during connect: Get "...":  ... connect: permis
 
 ## 404 and 502 Errors
 
-After creating your first Space, you will need to wait for Fabric to come up. Unless it up you may get a 404 error if Traefik hasn't yet processed its new ingress rules which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
+After creating your first Space, you will need to wait for Fabric to come up. Unless it's up, you may get a 404 error if Traefik hasn't yet processed its new ingress rules, which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
 
-To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+To restart Traefik (e.g., after configuring your TLS certificates), run the command below:
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
