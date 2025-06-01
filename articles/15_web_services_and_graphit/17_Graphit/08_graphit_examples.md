@@ -72,9 +72,11 @@ Output:
 <img src="images/grFormatResp.png"></img>
 
 #### grString.graphit
-This example illustrates how 2 values, retrieved from a previously-defined SQL query, are concatenated.<br></br>
+This example illustrates how two values, retrieved from a previously-defined SQL query, are concatenated.<br></br>
 <img src="images/12_graphit_examples_tags.PNG"></img>
+
 Output:
+
 <img src="images/grStringResp.png"></img>
 
 #### grCondition.graphit
