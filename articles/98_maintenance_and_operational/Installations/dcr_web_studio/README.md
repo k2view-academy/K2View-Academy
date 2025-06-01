@@ -3,7 +3,7 @@ K2view Fabric Web Studio offers developers, architects, and data teams a unified
 
 K2view Fabric Web Studio can be installed within a Docker Compose or Podman container runtime. 
 
-**Current Versions**
+**Current Fabric Web Studio Versions**
 
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/README.md">Version 2.0</a></li>
