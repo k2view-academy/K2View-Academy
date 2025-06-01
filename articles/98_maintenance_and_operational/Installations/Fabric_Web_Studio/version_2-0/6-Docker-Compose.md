@@ -1,5 +1,5 @@
 
-# Docker and Docker Compose Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+# Docker and Docker Compose Installation - K2view Fabric Web Studio, Version 2.0
 
 If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
 
@@ -51,7 +51,7 @@ wsl
 
 ### Using the WSL File System
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#Installation) for this.
 
 ## Docker Commands
 
