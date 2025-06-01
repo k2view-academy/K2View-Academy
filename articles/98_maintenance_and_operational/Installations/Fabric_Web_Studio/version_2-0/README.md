@@ -6,11 +6,11 @@ K2view Fabric Web Studio, Version 2.0, available to run on a Docker Compose runt
 ## Content
 
 <ul>      
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/About.md">About</a></li>
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.md">Installing Fabric Web Studio</a></li>
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.md">Operating</a></li>
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Troubleshooting.md">Troubleshooting</a></li>
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/6-Docker-Compose.md">Docker and Docker Compose Installation</a></li>
-<li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Upgrading.md">Upgrading</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/About.md">About</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.md">Installing Fabric Web Studio</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Operating.md">Operating</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Troubleshooting.md">Troubleshooting</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.md">Docker and Docker Compose Installation</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Upgrading.md">Upgrading</a></li>
 </ul>
 
