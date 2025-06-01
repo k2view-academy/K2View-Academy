@@ -219,7 +219,7 @@ When creating a Space named, for example, `dcr210`, the following behavior appli
 
 You can also explicitly specify files when using the `k2space.sh` script:
 
-```
+```bash
 ./k2space.sh create --env=custom.env --compose=custom-compose.yaml --config=custom.config dcr210
 ```
 
@@ -231,26 +231,20 @@ For a Space named `dcr210`, you might create:
 
 - `.env-dcr210` to override heap size:
 
-  ```
-  env
-  
+  ```env
   MAX_HEAP=8G
   ```
 
 - `compose-dcr210.yaml` to expose an additional port (e.g., JDBC port 5124):
 
-  ```
-  yaml
-  
+  ```yaml 
   ports:
     - "5124:5124"
   ```
 
 - `dcr210.config` to point to a different System DB path or define SSO behavior:
 
-  ```
-  ini
-  
+  ```ini
   [System]
   db.path=/custom/path/system.db
   ```
