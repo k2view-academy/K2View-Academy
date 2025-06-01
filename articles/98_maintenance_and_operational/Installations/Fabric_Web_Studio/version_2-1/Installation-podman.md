@@ -16,7 +16,7 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio including updated
 
 
 ## Prerequisites
-Please review the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
+Please review the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
 The Podman Compose setup for Fabric Web Studio requires the following system prerequisites.
 
@@ -80,8 +80,8 @@ Internet access is required to perform this installation. You will need access t
 
 
 ## Things to Configure
-1. Git Configuration - this is described in <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
+1. Git Configuration - this is described in <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -122,16 +122,16 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate the Podman Runtime
 
-If Podman is not already installed on your machine, refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic. 
+If Podman is not already installed on your machine, refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html">Podman and Podman Compose Installation</a> topic. 
 
 The recommended approach is to install **Podman** using your Linux distribution's package manager. This will install the Podman engine and CLI tools. You must also install **Podman Compose**, which provides Compose YAML support for Podman-based environments.
 
-Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Podman.html">Podman and Podman Compose Installation</a> topic.
+Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html">Podman and Podman Compose Installation</a> topic.
 
 
 ### **Step 2**: Setup
 
-You can download the distribution (recommended) or using a Git, “clone” the K2view Blueprints to "download" them. These blueprints incorporate the Fabric Docker Compose Runtime installation files. The K2view Blueprints are hosted on GitHub.com (Internet access is required). 
+You can download the distribution (recommended) or use Git, “clone” the K2view Blueprints to "download" them. These blueprints incorporate the Fabric Docker Compose Runtime installation files. The K2view Blueprints are hosted on GitHub.com (Internet access is required). 
 
 Please note that persistent files created by Fabric Web Studio and the database instance you install will store their data in the "persistent-data" folder of your installation directory (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces. The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory. This is a per-space configuration. 
 
@@ -147,7 +147,7 @@ cd [base directory]
 
 *Create your Download and Installation Directory Location*
 
-Using a shell, create a "K2view" directory. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend the use of K2view for this directory.
+Using a shell, create a "K2view" directory. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend using K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -174,7 +174,7 @@ cd K2view
 # unzip Podman-Studio-latest.zip to this directory
 ```
 
-The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the What's in this Package topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the What's in this Package topic above for details about these files. 
 
 You can now skip to Step 4.
 
@@ -200,7 +200,7 @@ From the K2view directory
 ```bash
 cp -r blueprints/Studio/ Studio
 ```
-The Studio directory contains the configuration, YAML, and the K2Space.sh script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
@@ -241,7 +241,7 @@ If you perform this step after the initial installation, you must restart Fabric
 
 There are four profiles, each of which embeds Fabric. The default is 'studio'.  
 
-1. **studio**. The default Web Studio profile embeds SQLite for its System DB.
+1. **studio**. The default Web Studio profile embeds SQLite as its system database.
 2. **studio_pg**. A generic Studio or TDM profile - Web Studio with PostgreSQL for use with its System DB and TDM.
 3. **studio_cass**. A TDM profile - Web Studio with Cassandra used for the System DB and TDM.
 4. **studio_pg_cass**. A TDM profile incorporating Apache Cassandra for its System DB and PostgreSQL for TDM tasks.
@@ -321,11 +321,11 @@ Active: active (listening)
 
 ### Podman Image Offline Package Download
 
-The Podman login command and the `k2space.sh` bash shell script requires Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com.
+The Podman login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker. share. cloud. k2view.com.
 
 If your target machine **does not have Internet connectivity**, you can follow this **offline download procedure** to transfer the required image from another system. The Fabric image is approximately **1.9GB**, and its version must match the value specified in your local `.env` file.
 
-By preloading the image locally, the `k2space.sh` script can create a Fabric Space without downloading the image from the registry.
+By preloading the image locally, the `k2space.sh` script can create a Fabric Space without needing to download the image from the registry.
 
 #### Offline Image Transfer Procedure
 
@@ -353,7 +353,7 @@ This will make the image available to the local Podman image store.
 
 #### **Space Name**
 
-When creating a space, its name must consist of only lowercase alphanumeric characters, hyphens, and underscores and start with either a letter or a number. You cannot use uppercase characters. 
+When creating a space, its name must consist of only lowercase alphanumeric characters, hyphens, and underscores, and start with either a letter or a number. You cannot use uppercase characters. 
 
 #### Create Spaces on Your Server
 
@@ -371,7 +371,7 @@ You may need to have Read-Other permissions on the .config files on a Linux syst
 ```
 
 **Ensuring you have Execute Permission on Linux**
-You may need to make k2space.sh executable on a Linux system to do so use the `chmod` command using:
+You may need to make `k2space.sh` executable on a Linux system. To do so, use the `chmod` command using:
 
 ```bash
  chmod 700 k2space.sh
@@ -431,9 +431,9 @@ You have completed the installation and are ready to access Fabric Web Studio ov
 
 Open a browser and connect to `http://localhost/spacename`. 
 
-You can also connect to Fabric remotely, using `https://[hostname or ip address]/spacename`.
+You can also connect to Fabric remotely, using `https://[hostname or IP address]/spacename`.
 
-> Traefik will default use its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
+> Traefik will default to using its own self-signed TLS certificates for HTTPS connections. The Certificate is created for you by default for the machine. If you want to use a certificate created by your organization, everything is pre-configured for you to do so. See the "Configuring TLS" topic above for instructions. 
 
 When presented with the login screen, enter: 
 
