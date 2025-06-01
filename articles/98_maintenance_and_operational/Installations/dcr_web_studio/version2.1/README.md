@@ -77,7 +77,7 @@ Both runtimes offer identical functional capabilities within Fabric Web Studio.
 - Visual development environment for data products, APIs, integrations, orchestration, and transformations.
 - Real-time interactive testing, deployment, and validation.
 - Embedded Fabric runtime engine.
-- Multiple database options per profile: SQLite, PostgreSQL, Cassandra or a hybrid of Cassandra & PostgreSQL
+- Multiple database options per profile: SQLite, PostgreSQL, Cassandra, or a hybrid of Cassandra & PostgreSQL
 - Secure integration with Git for source control and team collaboration.
 - Traefik reverse proxy for flexible URL-based Space routing and SSL management.
 - Per-Space configuration isolation for greater flexibility across environments.
@@ -101,12 +101,12 @@ During Fabric Web Studio space creation, you select one of four available runtim
 
 ## Installation Package
 
-The installation package is available for download via K2view's Nexus Image Repository or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Image Repository
+The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Container Registry
 
   - Docker distribution: `Studio-Docker-latest.zip`  TODO
   - Podman distribution: `Studio-Podman-latest.zip`  TODO
 
-Either path will require that you obtain an account for K2view's Nexus Image Repository. If you do not have an account, please request one from your K2view representative. 
+Either path will require that you obtain an account for K2view's Nexus Container Registry. If you do not have an account, please request one from your K2view representative. 
 
 ---
 
@@ -125,6 +125,6 @@ Either path will require that you obtain an account for K2view's Nexus Image Rep
 
 ## Version Compatibility
 
-Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.1_46`. Contact your K2view representative if you wish to employ a later version of Fabric and TDM.
+Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.1_46`. Please reach out to your K2view representative if you'd like to use a later version of Fabric and TDM.
 
 
