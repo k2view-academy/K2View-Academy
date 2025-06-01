@@ -64,7 +64,7 @@ When removing 'raw' as the node type, the output would be as follows:
 
 #### grFunction.graphit
 
-This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
+This example illustrates a simple JavaScript routine that returns the higher number of the two random numbers, **x** and **y**.<br></br>
 <img src="images/10_graphit_examples_tags.PNG"></img>
 
 Output:
