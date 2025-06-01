@@ -6,6 +6,8 @@
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#restarting-traefik">Restarting Traefik</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#adding-users">Adding Users</a></li>
    <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#reference-information">Reference Information</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Operating.html#customizing-runtime-files-per-space">Customizing Runtime Files Per Space</a></li>
+
 </ul>
 
 ## Fabric Web Studio Spaces
@@ -143,3 +145,73 @@ key2=value2
 
 This temporary container sets the proper ownership of the persistent data's _Space_ folder. After its execution, it should exit automatically.
 
+
+## Customizing Runtime Files Per Space
+
+K2view Fabric Web Studio's Docker Compose Runtime supports **per-Space configuration overrides** using custom `.env`, `compose.yaml`, and `.config` files. When a new Fabric Space is created using the `k2space.sh` script, the runtime checks for specially named files corresponding to the Space name and applies them accordingly.
+
+### File Customization Behavior
+
+When creating a Space named, for example, `dcr210`, the following behavior applies:
+
+- **`.env` and `.config` files** are **appended to** the base configuration.
+- **`compose.yaml` files** are **overridden completely** if a matching file is found.
+
+#### `.env` Customization
+
+- The base `.env` file is always loaded first.
+- If a file named `.env-dcr210` exists (where `dcr210` is the Space name), its values will be **appended to or override** those defined in the base `.env`.
+- You can use this to set environment-specific parameters such as `MAX_HEAP`, `GIT_REPO`, or other custom variables.
+
+#### `compose.yaml` Customization
+
+- The default `compose.yaml` is loaded unless a file named `compose-dcr210.yaml` exists.
+- If `compose-dcr210.yaml` exists  (where `dcr210` is the Space name), it will **completely replace** the default `compose.yaml` for that Space.
+
+#### `.config` Customization
+
+- The base `common.config` file is always loaded.
+- If a file named `dcr210.config` exists (where `dcr210` is the Space name), its values will be **appended to or override** settings from `common.config`.
+- This allows per-Space configuration of Fabric runtime behavior, such as a custom system DB path or SSO settings.
+
+### Manual Overrides
+
+You can also explicitly specify files when using the `k2space.sh` script:
+
+```
+./k2space.sh create --env=custom.env --compose=custom-compose.yaml --config=custom.config dcr210
+```
+
+When using the `--env` or `--compose` options, **automatic detection of `.env-[spacename]` and `compose-[spacename].yaml` is skipped**.
+
+### Example Use Case
+
+For a Space named `dcr210`, you might create:
+
+- `.env-dcr210` to override heap size:
+
+  ```
+  env
+  
+  MAX_HEAP=8G
+  ```
+
+- `compose-dcr210.yaml` to expose an additional port (e.g., JDBC port 5124):
+
+  ```
+  yaml
+  
+  ports:
+    - "5124:5124"
+  ```
+
+- `dcr210.config` to point to a different System DB path or define SSO behavior:
+
+  ```
+  ini
+  
+  [System]
+  db.path=/custom/path/system.db
+  ```
+
+This flexible mechanism supports both shared and isolated runtime customization for Fabric Web Studio Spaces, making it ideal for multi-tenant development, QA, or demo environments.
