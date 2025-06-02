@@ -163,16 +163,18 @@ There are two options to obtain Fabric Web Studio. You can download a zip file o
 You can download the latest version of Fabric Web Studio for Podman from this location: 
 
 ```bash
-https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip
+https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip
 ```
 
-Then, change the directory to the K2view directory. Copy `Podman-Studio-latest.zip` to this directory, and unzip `Podman-Studio-latest.zip` to this directory. Then, rename the `Podman-Studio-latest.zip` directory as `Studio`.
+Then, change the directory to the K2view directory. Copy `Studio-Podman-latest.zip` to this directory, and unzip `Studio-Podman-latest.zip` to this directory. Then, rename the `Studio-Podman` directory as `Studio`.
 
 ```bash
 cd K2view
-# copy Podman-Studio-latest.zip to this directory
-# unzip Podman-Studio-latest.zip to this directory
+# copy Studio-Podman-latest.zip to this directory
+# unzip Studio-Podman-latest.zip to this directory
+# rename Studio-Podman as Studio
 ```
+
 
 The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the What's in this Package topic above for details about these files. 
 
