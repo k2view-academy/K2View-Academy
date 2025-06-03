@@ -1,10 +1,22 @@
+# Docker and Docker Compose Installation
 
-# Docker and Docker Compose Installation - Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
+## Table of Contents
+
+1. [Docker and Docker Compose Installation](#docker-and-docker-compose-installation)
+2. [Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows](#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows)
+3. [Using the Windows Subsystem for Linux (WSL)](#using-the-windows-subsystem-for-linux-wsl)
+    - [Installing WSL](#installing-wsl)
+    - [Using the WSL File System](#using-the-wsl-file-system)
+4. [Docker Commands](#docker-commands)
+5. [Starting Docker](#starting-docker)
+    - [Running Docker Desktop](#running-docker-desktop)
+    - [Running Docker on Linux](#running-docker-on-linux)
+
+## Docker and Docker Compose Installation
 
 If Docker has not already been installed, follow the Docker installation guide from Docker's documentation. You also need to install the Docker Compose Plugin.
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, which are prerequisites for Compose. See https://docs.docker.com/desktop/ for information on how to install Docker Desktop for your Operating System.
-
 ## Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows
 
 1.	You need to install and run Docker, which you can download from https://docs.docker.com/engine/install/.
@@ -51,7 +63,7 @@ wsl
 
 ### Using the WSL File System
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2/Installation.html#Installation) for this.
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Instead, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#Installation) for this.
 
 ## Docker Commands
 
@@ -69,7 +81,7 @@ Running Docker Desktop will enable you to run Fabric Web Studio and the `k2space
 
 On Microsoft Windows, you need to enable WSL Integration for the Linux distribution you are using. To do so, on the Docker Desktop app, select Settings, then Resources, and then WSL Integration. In addition to enabling integration with my default WSL distro, you should be able to enable the distribution you selected. 
 
-Using `wsl --install -d <distribution_name>` will achieve this also if the "Enable integration with my default WSL distro" is enabled. 
+Using `wsl --install -d <distribution_name>` will also achieve this, provided the "Enable integration with my default WSL distro" option is enabled. 
 
 If you do not enable WSL integration, you may get errors like this when running k2space.sh. 
 
@@ -79,7 +91,7 @@ unable to get image '...': error during connect: Get "...": open //./pipe/docker
 
 ### Running Docker on Linux
 
-When running Docker commands or starting the Docker service on Linux, depending on your system access you will need to use `sudo` with your commands. For example,
+When running Docker commands or starting the Docker service on Linux, depending on your system access, you will need to use `sudo` with your commands. For example,
 
 If you do not, you will get errors like:
 
@@ -113,7 +125,7 @@ Determining if the Fabric Web Studio Space and the Traefik Reverse Proxy are Run
  docker ps
 ```
 
-If they are running you should see entries for Rraefik and each of the spaces you have created (e.g. myspace-fabric in this example)
+If they are running, you should see entries for Rraefik and each of the spaces you have created (e.g., myspace-fabric in this example)
 
 ```bash
 CONTAINER ID   IMAGE      ...               NAMES

@@ -1,17 +1,17 @@
 # Graphit Examples
-This article contains several Graphit file examples. Graphit file names, when are mentioned, refer to the files that can be found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services.
+This article contains several Graphit file examples. Graphit file names, when mentioned, refer to the files found in the [KB Demo Project](/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md) under Project Tree > Web Services.
 
 ### Retrieving Data for an LUI
 
-The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, using GET and SQL commands.
+The following Graphit file gets an input LUI that extracts customer data from the CUSTOMER LU, using GET and SQL commands.
 
 <img src="images/grsql.png"></img>
 
 
 
-### Building Output Data Based On SQL Result Calculations
+### Building Output Data Based on SQL Result Calculations
 
-The following Graphit file gets an input LUI, which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
+The following Graphit file gets an input LUI that extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
 
 The output data is returned with additional information indicating whether the customer is considered:
 -  VIP, with a total balance of over USD 10,000, or
