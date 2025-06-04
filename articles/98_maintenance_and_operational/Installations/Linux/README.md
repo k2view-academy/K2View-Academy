@@ -9,4 +9,5 @@
   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/Cassandra_Setup.md">Cassandra Installation Package & Node Setup</a></li>
   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/Kafka_Setup.md">Kafka Installation Package & Cluster Setup</a></li>
   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/03_fabric_scale.md">Fabric 8.x Cluster Scaling</a></li>
+  <li><a href="https://support.k2view.com/Academy_7.2/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.html">Fabric 7.x Setup</a></li>  
 </ul>
