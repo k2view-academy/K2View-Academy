@@ -12,7 +12,6 @@ This article describes how to scale Fabric cluster on-prem, within bare-metal or
 > Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included in this article scope. These components' scaling guidelines shall be applied according to their methodologies.
 
 
-
 ## Fabric Setup 
 
 ### Prerequisite
@@ -22,31 +21,27 @@ This article describes how to scale Fabric cluster on-prem, within bare-metal or
 
 ### Install the Package 
 
-The following steps are similar to the standard Fabric server [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md).
+Please refer to the Fabric server [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md).
+
+The basic steps you will find in this topic are:
 
 1. Log in with the previously created user for the Fabric installation.
 2. Download the package from the provided links.
-3. Untar the package in the user's home folder (/opt/apps/fabric):
+3. Untar the package in the user's home folder (/opt/apps/fabric)
 
-    ~~~bash
-    tar -zxf [package name].tar.gz -C /opt/apps/fabric && source .bash_profile
-    ~~~
+Please follow the [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md).
+
 
 ## Configuration
 Configure the new fabric node the same way you have configurated the other nodes.
 
 ### Basic configurations
-Run the following command to set up the base configuration. Replace the parameters with your own environment, where IPs must be the same as the ones used for other existing nodes.
-
-~~~bash
-/opt/apps/fabric/fabric/scripts/fabric-setup.sh --cassandra_user k2admin --cassandra_password changeit --cassandra_ips 10.0.0.1,10.0.0.2,10.0.0.3  --kafka_ips 10.0.0.4,10.0.0.5,10.0.0.6 
-~~~
-
-> If the Cassandra & Kafka are hardened with SSL, add  `--ssl` to the command.
+Please refer to the Fabric server [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md).
 
 ### Additional configuration
 
 When setting up a node, you shall either configure it from scratch or duplicate the configuration files from another node. When copying the configuration files from an existing node, please consider the following:
+
 * config.ini and iifConfig.ini: Ensure accurate passwords are inserted. Post the initial Fabric execution, passwords are encrypted, making them indecipherable to other nodes.
 * jvm.options and jvm.iid_finder.options: Verify that both the keystore and truststore are present, and that their respective paths and passwords are accurate.
 * node.id: If the node.id is configured, verify that the UUID is distinct or comment it out to prevent conflicts.
@@ -54,6 +49,7 @@ When setting up a node, you shall either configure it from scratch or duplicate 
 
 ### Certificates
 Ensure all necessary certificates are imported into the keystore and truststore as needed, according to your deployment, including:
+
 * Cassandra SSL certificate
 * Kafka SSL certificate
 * SAML certificate
@@ -88,8 +84,8 @@ You can just stop the relevant node, although it is in the midst of processing j
 For more information about an advanced setup, read below:
 
 <ul>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md">Fabric Installation</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md">Fabric Installation</a></li>
    <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric main configuration files</a></li>
    <li><a href="/articles/26_fabric_security/13_user_IAM_configuration.md">SAML configuration</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/03_hardware_req_for_prod.md">Hardware requirements</a></li>
+   <li><a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/README.md">Hardware requirements</a></li>
 </ul>

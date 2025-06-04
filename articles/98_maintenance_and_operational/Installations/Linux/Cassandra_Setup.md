@@ -72,7 +72,7 @@ The number of seed nodes should match the chosen replication factor number.
     /opt/apps/cassandra/cassandra-setup.sh --listeners --cassandra_user k2admin --cassandra_password changeit
     ~~~
 
-### Cassandra cluster - Start, Shutdown and Status 
+### Cassandra cluster - Start, Shutdown, and Status 
 
 * To stop the Cassandra cluster, run the following command on each node (seed nodes should be shut down last):
 
