@@ -28,7 +28,7 @@ This example illustrates how to retrieve data from multiple tables in the BILLIN
 
 <img src="images/63_graphit_examples.PNG"></img>
 
-Run the Graphit file in a Debug mode with 2 and 3 as consecutive values for the SubscriberID:
+Run the Graphit file in debug mode with 2 and 3 as consecutive values for the SubscriberID:
 
 <img src="images/65_graphit_examples.PNG"></img>
 
@@ -36,7 +36,7 @@ Notes:
 
 - The csvRow has been set to the SUBSCRIBER_ID node. Therefore, a new line has been created for each new subscriber_id entry.
 
-- The csvHeader has been set to false in the SUBSCRIBER_INFO node. Therefore, the header has been removed from the CSV output.
+- The csvHeader has been set to *false* in the SUBSCRIBER_INFO node. Therefore, the header has been removed from the CSV output.
 
 
 
