@@ -150,7 +150,7 @@ https://github.com/k2view/blueprints/blob/main/baremetal/README.md
 
 The Baremetal Blueprint article published to [K2view's blueprint GitHub repository](https://github.com/k2view/blueprints/blob/main/baremetal) provides comprehensive guidance for deploying a K2view Fabric Kubernetes cluster on bare-metal (on-premises) infrastructure. It outlines the two supported installation options — single-node and multi-node clusters — using purpose-built setup scripts, and details the prerequisites, tools, and execution steps required for each. 
 
-You'll need to clone this repository as described later in this article, if you don't mind. 
+You'll need to clone this repository as described later in this article. 
 
 ---
 
