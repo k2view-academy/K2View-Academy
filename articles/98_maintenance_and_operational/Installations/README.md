@@ -37,7 +37,7 @@
 
 <ul>
   <li>
-    <a href="/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_7.x.x_Setup.md">
+    <a href="/articles/98_maintenance_and_operational/Installations/Linux/README.md">
       Fabric Installation on Linux
     </a>
   </li>
