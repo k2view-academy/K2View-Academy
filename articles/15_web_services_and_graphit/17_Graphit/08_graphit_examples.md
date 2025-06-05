@@ -80,7 +80,7 @@ Output:
 <img src="images/grStringResp.png"></img>
 
 #### grCondition.graphit
-The condition defined in this file triggers either the TRUE or the FALSE node, depending on the randomly generated values of **x** and **y**.<br></br>
+The condition defined in this file triggers either the TRUE node or the FALSE node, depending on the randomly generated values of **x** and **y**.<br></br>
 <img src="images/13_graphit_examples_tags.PNG"></img>
 
 Output:
