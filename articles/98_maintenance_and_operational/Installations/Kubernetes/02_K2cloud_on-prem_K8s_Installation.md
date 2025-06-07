@@ -143,7 +143,6 @@ To install a K2cloud site on-premises, you must prepare and provide the necessar
 
 You must also contact your K2view representative to request access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry. 
 
-https://github.com/k2view/blueprints/blob/main/baremetal/README.md
 ---
 
 # K2view Bare Metal Blueprint
