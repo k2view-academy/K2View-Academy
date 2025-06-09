@@ -60,7 +60,7 @@ The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` 
 
 * By default, the parameter is set to 4096 MB. When working with very large data sources, it is recommended to increase this setting – assuming the system has sufficient resources for such increase.
 
-The ```STUDIO_INTERFACES_FROM_CATALOG``` (called ```ENABLE_DATA_DISCOVERY``` before V8.3) is a hidden configuration parameter that defines whether the interfaces metadata (in the Web Studio's Interface Explorer) should be retrieved from Neo4j or from the source. By default, it is set to true. If the Fabric configuration does not include Neo4j, the ```STUDIO_INTERFACES_FROM_CATALOG``` parameter should be added to this section and set to false.
+The ```STUDIO_INTERFACES_FROM_CATALOG``` (called ```ENABLE_DATA_DISCOVERY``` before V8.3) is a hidden configuration parameter that defines whether the interfaces metadata (in the Web Studio's Interface Explorer) should be retrieved from the Catalog or from the source DB. By default, it is set to true. If the Fabric configuration does not include Catalog, the ```STUDIO_INTERFACES_FROM_CATALOG``` parameter should be added to this section and set to false, to prevent the Studio APIs trying to retrieve the metadata from the Catalog.
 
 
 
