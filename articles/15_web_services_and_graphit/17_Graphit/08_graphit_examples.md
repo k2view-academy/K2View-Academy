@@ -28,7 +28,7 @@ This example illustrates how to retrieve data from multiple tables in the BILLIN
 
 <img src="images/63_graphit_examples.PNG"></img>
 
-Run the Graphit file in debug mode with 2 and 3 as consecutive values for the SubscriberID:
+Run the Graphit file in debug mode using the consecutive values 2 and 3 for the SUBSCRIBER_ID:
 
 <img src="images/65_graphit_examples.PNG"></img>
 
@@ -120,7 +120,7 @@ Output:
 
 #### grShowEnabled.graphit
 
-The response returns empty as the entire CRM_DB node and its children nodes are affected by the **enabled** flag.
+The response returns empty due to the **enabled** flag affecting the entire CRM_DB node and its child nodes.
 
 Additionally, the **nice** flag is set to TRUE on the root node level. As a result, each tag of the response is indented according to the position of the tag in the document's hierarchy.
 
