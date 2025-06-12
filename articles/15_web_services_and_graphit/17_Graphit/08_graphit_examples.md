@@ -123,9 +123,6 @@ Output:
 The response returns empty due to the **enabled** flag affecting the entire CRM_DB node and its child nodes.
 
 Additionally, the **nice** flag is set to TRUE on the root node level. As a result, each tag of the response is indented according to the position of the tag in the document's hierarchy.
-
-
-
 <br></br>
 <img src="images/18_graphit_examples_tags.PNG"></img>
 
