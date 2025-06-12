@@ -134,7 +134,7 @@ Output:
 
 #### grOne.graphit
 
-The **one** flag is set to TRUE and is applied to the Billing_DB2 node. The response brings only the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}} instead of the 10 expected values for this tag, had the **one** flag not been activated.<br></br>
+The **one** flag is set to TRUE and applied to the Billing_DB2 node. As a result, the response returns only the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}}, instead of the 10 expected values for this tag if the **one** flag had not been activated.<br></br>
 <img src="images/20_graphit_examples_tags.PNG"></img>
 
 Output:
