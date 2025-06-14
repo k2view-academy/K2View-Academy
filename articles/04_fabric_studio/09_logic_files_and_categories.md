@@ -34,6 +34,10 @@ The Globals.java file is automatically created under either the References or ea
 
 ### How Do I Associate a Function with a Category?
 
+</studio>
+
+<studio>
+
 When creating a new Java function, it must be associated with a category such as Built-in or Product. Each category has multiple subcategories, such as Date or Math, that contain the most common types of functions for that subcategory.
 
 * If the category does not exist, then a new Logic.java file will be created, and the function will be associated with it.
@@ -44,6 +48,10 @@ Each category creates a separate Logic.java file, which has a specific path, the
 
 [Click for more information about Project Functions.](/articles/07_table_population/08_project_functions.md)
 
+</studio>
+
+<studio>
+  
 #### Notes ####
 
 * [Export / Import](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md) can be implemented on a Java file level. To copy only one function from one category to another category or project, copy and paste the function’s code. 
@@ -52,6 +60,7 @@ Each category creates a separate Logic.java file, which has a specific path, the
 
 </studio>
 
+  
 ### How Do I Create a Category?
 
 <studio>
