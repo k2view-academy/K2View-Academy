@@ -1,5 +1,4 @@
 
-
 # Java Logic Files and Categories
 
 There are two types of Java files in Fabric Studio: one is dedicated to developing Java functions, and the other is for creating [Globals](/articles/08_globals/01_globals_overview.md) variables. 
@@ -34,10 +33,6 @@ The Globals.java file is automatically created under either the References or ea
 
 ### How Do I Associate a Function with a Category?
 
-</studio>
-
-<studio>
-
 When creating a new Java function, it must be associated with a category such as Built-in or Product. Each category has multiple subcategories, such as Date or Math, that contain the most common types of functions for that subcategory.
 
 * If the category does not exist, then a new Logic.java file will be created, and the function will be associated with it.
@@ -48,30 +43,24 @@ Each category creates a separate Logic.java file, which has a specific path, the
 
 [Click for more information about Project Functions.](/articles/07_table_population/08_project_functions.md)
 
-</studio>
-
-<studio>
-  
 #### Notes ####
 
 * [Export / Import](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md) can be implemented on a Java file level. To copy only one function from one category to another category or project, copy and paste the function’s code. 
 * Version control is managed on a Logic.java file level and not on a function level. 
 * Functions can be edited from IntelliJ by pressing Ctrl+I in a function in the Fabric Studio to activate IntelliJ. Fabric Studio enables you to open the source file.
-
-</studio>
-
   
 ### How Do I Create a Category?
-
-<studio>
-
 Go to the **Project Tree**, right-click **Java**, and click **New SharedLogic Category File / New Logic Category File**.
 
 Note that when creating a new function, you should enter a new category name, which would automatically create a new category folder.
 
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
+
 </studio>
 
 <web>
+  
+### How Do I Create a Category?
 
 Creating a new category is intended to create a new Logic Java file. It can be done by following these steps:
 
@@ -81,15 +70,6 @@ Creating a new category is intended to create a new Logic Java file. It can be d
 4. In the open pop-up window, type the name of the category/package
 5. A new package folder will be created, containing a Logic file template with the package name already set. 
 
-</web>
-
-<studio>
-  
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
-
-</studio>
-
-<web>
   
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
 
