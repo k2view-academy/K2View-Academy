@@ -322,9 +322,21 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Installation & Upgrade",
-					"value": "98_maintenance_and_operational"
-				}
+					"display name": "Hardware",
+					"value": "98_maintenance_and_operational/Hardware"
+				},
+				{
+					"display name": "Installations",
+					"value": "98_maintenance_and_operational/Installations"
+				},
+				{
+					"display name": "Maintenance",
+					"value": "98_maintenance_and_operational/Maintenance"
+				},
+				{
+					"display name": "Upgrade",
+					"value": "98_maintenance_and_operational/Upgrade"
+				},				
 			]
 		},
 		{
