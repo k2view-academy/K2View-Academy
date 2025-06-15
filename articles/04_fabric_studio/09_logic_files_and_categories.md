@@ -8,7 +8,7 @@ In Fabric Studio, the term **Logic Category Files** refers to a Java *package* t
 <studio>
 
 Although the functions are presented in the Project Tree as separate files, they are stored under a single file, called Logic.java, within the selected category. 
-  
+
 </studio> 
 
 ### Shared Java Files
@@ -29,7 +29,11 @@ Designated Logic.java files are files assigned to their levels of definition; su
 
 The Globals.java file is automatically created under either the References or each Logical Unit.
 
+
+
 <studio>
+
+
 
 ### How Do I Associate a Function with a Category?
 
@@ -48,7 +52,7 @@ Each category creates a separate Logic.java file, which has a specific path, the
 * [Export / Import](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md) can be implemented on a Java file level. To copy only one function from one category to another category or project, copy and paste the function’s code. 
 * Version control is managed on a Logic.java file level and not on a function level. 
 * Functions can be edited from IntelliJ by pressing Ctrl+I in a function in the Fabric Studio to activate IntelliJ. Fabric Studio enables you to open the source file.
-  
+
 ### How Do I Create a Category?
 Go to the **Project Tree**, right-click **Java**, and click **New SharedLogic Category File / New Logic Category File**.
 
@@ -57,10 +61,16 @@ Note that when creating a new function, you should enter a new category name, wh
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
 
+
+
 </studio>
 
+
+
 <web>
-  
+
+
+
 ### How Do I Create a Category?
 
 Creating a new category is intended to create a new Logic Java file. It can be done by following these steps:
@@ -71,7 +81,7 @@ Creating a new category is intended to create a new Logic Java file. It can be d
 4. In the open pop-up window, type the name of the category/package
 5. A new package folder will be created, containing a Logic file template with the package name already set. 
 
-  
+
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
 
 </web>
