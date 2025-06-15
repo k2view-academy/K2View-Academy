@@ -86,6 +86,6 @@ Creating a new category is intended to create a new Logic Java file. It can be d
 
 <div class="web">
 <a href="/articles/04_fabric_studio/08_fabric_project_tree.md"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
-<a href="/articles/04_fabric_studio/12_shared_objects.md.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a> 
+<a href="/articles/04_fabric_studio/12_shared_objects.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a> 
 </div>
 
