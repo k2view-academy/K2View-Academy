@@ -142,7 +142,7 @@ Output:
 <img src="images/grShowOneResp.png"></img>
 
 #### grEntry.graphit
-The **entry** flag has been set to the SUBSCRIBERS node, and therefore, the XML response displays tags around each subscriber_id value.<br></br>
+The **entry** flag has been set to the SUBSCRIBERS node, and therefore, the XML response displays tags around each SUBSCRIBER_ID value.<br></br>
 <img src="images/21_graphit_examples_tags.PNG"></img>
 
 Output:
