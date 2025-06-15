@@ -81,11 +81,11 @@ Creating a new category is intended to create a new Logic Java file. It can be d
 
 <div class="studio">
 <a href="/articles/04_fabric_studio/08_fabric_project_tree.md"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
-<a href="/articles/04_fabric_studio/04a_IntelliJ/10_fabric_studio_validating_java_code_within_a_project.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+<a href="/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
 </div>
 
 <div class="web">
 <a href="/articles/04_fabric_studio/08_fabric_project_tree.md"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
-<a href="/articles/04_fabric_studio/04a_IntelliJ/12_shared_objects.md.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a> 
+<a href="/articles/04_fabric_studio/12_shared_objects.md.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a> 
 </div>
 
