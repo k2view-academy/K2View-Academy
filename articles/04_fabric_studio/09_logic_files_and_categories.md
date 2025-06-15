@@ -58,20 +58,11 @@ Go to the **Project Tree**, right-click **Java**, and click **New SharedLogic Ca
 
 Note that when creating a new function, you should enter a new category name, which would automatically create a new category folder.
 
-
-
-
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)
-
-
-
 </studio>
 
 
 
 <web>
-
-
 
 ### How Do I Create a Category?
 
@@ -83,11 +74,18 @@ Creating a new category is intended to create a new Logic Java file. It can be d
 4. In the open pop-up window, type the name of the category/package
 5. A new package folder will be created, containing a Logic file template with the package name already set. 
 
-
-
-
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/08_fabric_project_tree.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
-
-
-
 </web>
+
+
+
+
+<div class="studio">
+<a href="/articles/04_fabric_studio/08_fabric_project_tree.md"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/04a_IntelliJ/10_fabric_studio_validating_java_code_within_a_project.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a>
+</div>
+
+<div class="web">
+<a href="/articles/04_fabric_studio/08_fabric_project_tree.md"><img onclick="popupimg(this)" src="/articles/images/Previous.png" alt="Previous"></a>
+<a href="/articles/04_fabric_studio/04a_IntelliJ/12_shared_objects.md.md"><img onclick="popupimg(this)" align="right" width="60" height="54" src="/articles/images/Next.png"></a> 
+</div>
+
