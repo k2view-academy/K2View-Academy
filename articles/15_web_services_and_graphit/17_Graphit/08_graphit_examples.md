@@ -98,7 +98,7 @@ Output:
 <img src="images/grGroupResp.png"></img>
 
 #### grCollect.graphit
-This example illustrates how both the Subscriber and Billing datasets are collected into one single array.<br></br>
+This example illustrates how both the Subscriber and Billing datasets are collected into one array.<br></br>
 <img src="images/15_graphit_examples_tags.PNG"></img>
 
 Output:
