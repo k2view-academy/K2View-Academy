@@ -153,7 +153,9 @@ Output:
 #### grAttribute.graphit
 The **attribute** flag has been activated on all children nodes of the CRM_DB node.<br></br>
 <img src="images/22_graphit_examples_tags.PNG"></img>
+
 Output:
+
 <img src="images/grAttributeResp.png"></img>
 
 #### grFormat.graphit
