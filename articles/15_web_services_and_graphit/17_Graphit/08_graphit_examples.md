@@ -159,9 +159,9 @@ Output:
 <img src="images/grAttributeResp.png"></img>
 
 #### grFormat.graphit
-The **format** flag has been set to XML in the CRM_DB node. If the format is specified, the node will only be evaluated and added if the output format matches the format value.
+The **format** flag in the CRM_DB node is set to XML. When a format is specified, the node is only evaluated and added if the output format matches the format value.
 
-The example below requests JSON in the output format. The CRM_DB node, with all its sub nodes, is not displayed in the response as its format is in XML.
+The example below requests JSON in the output format. The CRM_DB node, with all its subnodes, is not displayed in the response as its format is in XML.
 
 ![grFormat](images/graphit_examples_format1.png)
 
