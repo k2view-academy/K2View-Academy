@@ -168,7 +168,7 @@ The example below requests JSON in the output format. The CRM_DB node, with all 
 
 
 #### grShowEmpty.graphit
-The **showempty** flag has been set to False and is applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
+This example illustrates how the **showempty** flag is set to False and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
 <img src="images/24_graphit_examples_tags.PNG"></img>
 
 Output:
