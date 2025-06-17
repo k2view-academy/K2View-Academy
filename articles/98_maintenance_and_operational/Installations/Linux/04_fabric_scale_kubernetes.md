@@ -31,8 +31,8 @@ metadata:
 spec:
     scaleTargetRef:
         apiVersion: apps/v1
-        kind: deployment
-        name: fabric
+        kind: StatefulSet
+        name: fabric-stateful-sets
     minReplicas: 1
     maxReplicas: 3
     targetCPUUtilizationPercentage: 80
@@ -48,5 +48,3 @@ For more information about an advanced setup, read below:
 </ul>
 
 Read [here](/articles/98_maintenance_and_operational/Installations/Linux/03_fabric_scale.md) about scaling Fabric on-prem, within bare-metal or virtual machine environments.
-
-
