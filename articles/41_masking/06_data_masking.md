@@ -15,7 +15,6 @@ The masking of sensitive data can be done by either the [LU Table Population Bro
 The masking process consists of 2 main parts:
 
 - Data generation - generating a random masked value for the masked field.
-
 - Data consistency - verifying that the same original value gets the same masked value. 
 
 
