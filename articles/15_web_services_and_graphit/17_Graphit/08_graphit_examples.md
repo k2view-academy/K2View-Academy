@@ -122,7 +122,7 @@ Output:
 
 The response returns empty due to the **enabled** flag affecting the entire CRM_DB node and its child nodes.
 
-Additionally, the **nice** flag is set to TRUE on the root node level. As a result, each tag of the response is indented according to the position of the tag in the document's hierarchy.
+Additionally, the **nice** flag is set to *true* on the root node level. As a result, each tag of the response is indented according to the position of the tag in the document's hierarchy.
 <br></br>
 <img src="images/18_graphit_examples_tags.PNG"></img>
 
@@ -134,7 +134,7 @@ Output:
 
 #### grOne.graphit
 
-The **one** flag is set to TRUE and applied to the Billing_DB2 node. As a result, the response returns only the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}}, instead of the 10 expected values for this tag if the **one** flag had not been activated.<br></br>
+The **one** flag is set to *true* and applied to the Billing_DB2 node. As a result, the response returns only the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}}, instead of the 10 expected values for this tag if the **one** flag had not been activated.<br></br>
 <img src="images/20_graphit_examples_tags.PNG"></img>
 
 Output:
@@ -168,7 +168,7 @@ The example below requests JSON in the output format. The CRM_DB node, with all 
 
 
 #### grShowEmpty.graphit
-This example shows that the **showEmpty** flag is set to False and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
+This example shows that the **showEmpty** flag is set to *false* and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
 <img src="images/24_graphit_examples_tags.PNG"></img>
 
 Output:
@@ -176,7 +176,7 @@ Output:
 <img src="images/grShowEmptyResp.png"></img>
 
 #### grShowNull.graphit
-The **showNull** flag has been set to False and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
+The **showNull** flag has been set to *false* and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
 <img src="images/25_graphit_examples_tags.PNG"></img>
 
 Output:
