@@ -215,7 +215,7 @@ included.graphit:
 
 ![](images/included.png)
 
-Note that in this example both expect to get external parameters to be used in their output.
+Note that in this example, both expect to get external parameters to be used in their output.
 
 Accordingly, if we call to the parent graphit file similar to this `/api/grInclude?param1=hello&param2=wrold` yields this output:
 
