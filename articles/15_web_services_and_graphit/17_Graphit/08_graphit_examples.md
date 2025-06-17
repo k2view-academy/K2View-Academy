@@ -176,7 +176,7 @@ Output:
 <img src="images/grShowEmptyResp.png"></img>
 
 #### grShowNull.graphit
-The **showNull** flag has been set to *false* and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
+The **showNull** flag has been set to *false* and applied to the CRM_DB node. The response does not show the LAST_NAM field in the CRM_DB node because its Null values are ignored and therefore omitted from the CRM_DB section of the response. The flag is not applied to the BILLING_DB node, and therefore Null values are shown.<br></br>
 <img src="images/25_graphit_examples_tags.PNG"></img>
 
 Output:
