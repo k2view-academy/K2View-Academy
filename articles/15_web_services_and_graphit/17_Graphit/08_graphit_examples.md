@@ -184,7 +184,7 @@ Output:
 <img src="images/grShowNullResp.png"></img>
 
 #### grNumberFormat.graphit
-The **numberFormat** flag has been set to 000.00 and is applied to the NumberFormat node. All responses display **numberFormat** with 3 digits before the floating point and another 2 after it.<br></br>
+The **numberFormat** flag has been set to *000.00* and is applied to the NumberFormat node. All responses display **numberFormat** with three digits before the floating point and two digits after it.<br></br>
 <img src="images/26_graphit_examples_tags.PNG"></img>
 
 Output:
