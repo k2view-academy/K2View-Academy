@@ -192,7 +192,7 @@ Output:
 <img src="images/grNumberFormatResp.png"></img>
 
 #### grKeys.graphit
-The response has been reorganized using the subscriber_id as a key.<br></br>
+The response has been reorganized using SUBSCRIBER_ID as the key.<br></br>
 <img src="images/27_graphit_examples_tags.PNG"></img>
 
 Output:
