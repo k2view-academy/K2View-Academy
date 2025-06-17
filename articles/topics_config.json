@@ -307,11 +307,11 @@
 					"value": "39_fabric_catalog"
 				},
 				{
-					"display name": "Catalog Build-in Plugins",
+					"display name": "Catalog Built-in Plugins",
 					"value": "39_fabric_catalog/plugins"
 				},
 				{
-					"display name": "Catalog Connectors 123",
+					"display name": "Catalog Connectors",
 					"value": "39_fabric_catalog/connectors"
 				}
 			]
@@ -336,7 +336,7 @@
 				{
 					"display name": "Upgrade",
 					"value": "98_maintenance_and_operational/Upgrade"
-				},				
+				}
 			]
 		},
 		{
@@ -364,7 +364,7 @@
 		}
 	],
 	"RN": {
-		"folder":"Release_Notes"
+		"folder": "Release_Notes"
 	},
 	"KB": [
 		{
