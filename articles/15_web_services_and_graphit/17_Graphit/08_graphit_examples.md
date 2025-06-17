@@ -168,7 +168,7 @@ The example below requests JSON in the output format. The CRM_DB node, with all 
 
 
 #### grShowEmpty.graphit
-This example illustrates how the **showEmpty** flag is set to False and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
+This example shows that the **showEmpty** flag is set to False and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
 <img src="images/24_graphit_examples_tags.PNG"></img>
 
 Output:
@@ -176,7 +176,7 @@ Output:
 <img src="images/grShowEmptyResp.png"></img>
 
 #### grShowNull.graphit
-The **showNull** flag has been set to False and is applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
+The **showNull** flag has been set to False and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node as it has Null values that are ignored and are not shown in the section of the response referring to the CRM_DB. The flag is not applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
 <img src="images/25_graphit_examples_tags.PNG"></img>
 
 Output:
