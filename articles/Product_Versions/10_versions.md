@@ -13,6 +13,30 @@ The below table displays the list of Fabric versions with their release informat
             <td width="150pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.5.pdf">8.2.5</a></td>
+            <td>June 9, 2025</td>
+            <td></td>
+            <td></td>
+            <td>15</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.4.pdf">8.2.4</a></td>
+            <td>May 22, 2025</td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.3.pdf">8.2.3</a></td>
+            <td>May 13, 2025</td>
+            <td>HF1</td>
+            <td>May 19, 2025</td>
+            <td>22</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.2.pdf">8.2.2</a></td>
             <td>April 24, 2025</td>
             <td></td>
@@ -23,9 +47,9 @@ The below table displays the list of Fabric versions with their release informat
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.1.pdf">8.2.1</a></td>
             <td>March 05, 2025</td>
-            <td>HF2</td>
-            <td>March 24, 2025</td>
-            <td>46</td>
+            <td>HF3</td>
+            <td>May 19, 2025</td>
+            <td>52</td>
             <td></td>
         </tr>
         <tr>
@@ -127,9 +151,9 @@ The below table displays the list of Fabric versions with their release informat
          <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V7.2/Fabric_Release_Notes_V7.2.2.pdf">7.2.2</a></td>
             <td>February 14, 2024</td>
-            <td>HF26</td>
-            <td>March 31, 2025</td>
-            <td>346</td>
+            <td>HF28</td>
+            <td>May 28, 2025</td>
+            <td>352</td>
             <td></td>
         </tr>
         <tr>
@@ -680,10 +704,3 @@ The below table displays the list of Fabric versions with their release informat
 </table>
 
 The information in the table is provided under the terms and conditions of the license agreement that you have signed with K2view (the “License”). In case of any conflict or discrepancy between this table and your License, the License shall prevail.
-
-
-
-
-
-
-
