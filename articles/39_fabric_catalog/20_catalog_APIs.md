@@ -318,5 +318,5 @@ Example 2: When searching for any node types with *PII = true* and *Classificati
 
 
 
-[![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_advanced_settings.md) 
+[![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)
 

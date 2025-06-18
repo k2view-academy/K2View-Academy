@@ -6,10 +6,11 @@
 
 The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files: 
 
-<img src="images/discovery_folder.png"  />
+<img src="../images/discovery_folder.png" style="zoom:70%;" />
 
 * The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when the [Build Artifacts](09_build_artifacts.md) action is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
-  * Starting from V8.1, the Catalog artifact can be split. As a result, multiple files will be created instead of a single one. Click [here](09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
+  * Starting from V8.1, the Catalog artifact can be split. As a result, multiple files are created instead of a single one. 
+  * Starting from V8.3, the splitting is enabled by default. Click [here](09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
 * The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](13_discovery_pipeline_settings.md#overview) for more information about it.
   * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. Refer to the [Fabric Upgrade Procedure to V8.2](https://support.k2view.com/Academy/Release_Notes_And_Upgrade/V8.2/Fabric_Upgrade_Procedure_To_V8.2.pdf.html) for more details.
 
@@ -37,7 +38,7 @@ In order to perform the project-level overrides in the **properties-info.json** 
 
   <web>
 
-![](images/web_catalog.png)
+![](../images/web_catalog.png)
 
 </web>
 
@@ -63,6 +64,4 @@ The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` 
 The ```STUDIO_INTERFACES_FROM_CATALOG``` (called ```ENABLE_DATA_DISCOVERY``` before V8.3) is a hidden configuration parameter that defines whether the interfaces metadata (in the Web Studio's Interface Explorer) should be retrieved from the Catalog or from the source DB. By default, it is set to true. If the Fabric configuration does not include Catalog, the ```STUDIO_INTERFACES_FROM_CATALOG``` parameter should be added to this section and set to false, to prevent the Studio APIs trying to retrieve the metadata from the Catalog.
 
 
-
-[![Previous](/articles/images/Previous.png)](20_catalog_APIs.md)
 

@@ -17,9 +17,5 @@
 	<li><a href="/articles/39_fabric_catalog/12_discovery_monitor.md">Discovery Job Execution Monitor</a></li>
 	<li><a href="/articles/39_fabric_catalog/13_discovery_pipeline_settings.md">Discovery Pipeline Settings</a></li>
 	<li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li>
-	<li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Discovery Advanced Configuration</a></li>
-	<li><a href="/articles/39_fabric_catalog/98_centralized_catalog_setup.md">Centralized Catalog for Multiple Fabrics</a></li>
-	<studio><li><a href="/articles/39_fabric_catalog/99_catalog_setup_guide.md">Catalog Setup Guide for Desktop Studio</a></li></studio>
-	<studio><li><a href="/articles/39_fabric_catalog/99_neo4j_windows_installation_guide.md">Neo4j Installation for Windows</a></li></studio>
 
 </ul>
