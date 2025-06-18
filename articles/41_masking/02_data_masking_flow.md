@@ -1,14 +1,5 @@
-# Fabric Data Masking
 
-Data Privacy laws require the ability to mask data by hiding the original values with a modified content. 
-Fabric provides a field-level API to protect data that is classified as Personal Identifiable Information, sensitive personal data, or commercially sensitive data.
-
-To ensure that the data is still valid for your data lifecycle management, the masked data will look real and appear consistent.
-
-This capability can be used for conducting tests, implementing data transformations, or providing anonymized data to external 3rd parties via web services or queue messages.
-
-
-## Masking Flow
+# Masking Flow
 
 The masking of sensitive data can be done by either the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) that runs during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) before saving the LUI in Fabric, or by using a Broadway flow to mask the LUI data before it is loaded to the target.
 
@@ -113,74 +104,4 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 Format-preserving masking, introduced in Fabric 8.0, provides a solution for maintaining **consistent data masking** across multiple fields while **preserving their original formatting** patterns. It addresses scenarios where **the same underlying value appears in multiple fields with different formatting patterns**.
 
-An optional parameter has been added to the Masking Actor - **formatter** - to enable format-preserving masking. This parameter can be set with either a [formatter flow or an Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#formatter-actors-and-flows) in order to **preserve the original format in the masked value** and to set the same masked values to all fields that have the same normalized (’naked‘) value, although each field has a different format.
-
-Example:
-
-- The phone number exists in multiple fields in the data source in different formats: +1 (254) 455 5666, +1(254)4555666, +1 (254)-455-5666.
-- All these fields must get the same masked value (as they correspond to a single phone number), but the format needs to be different for each field in order to match its original format.
-
-<table>
-<tbody>
-<tr>
-<td width="232">
-<p><strong>Original Value</strong></p>
-</td>
-<td width="205">
-<p><strong>Masked Value</strong></p>
-</td>
-</tr>
-<tr>
-<td width="232">
-<p>+1 (254) 455 5666</p>
-</td>
-<td width="205">
-<p>+1 (254) 430 8992</p>
-</td>
-</tr>
-<tr>
-<td width="232">
-<p>+1(254)4555666</p>
-</td>
-<td width="205">
-<p>+1(254)4308992</p>
-</td>
-</tr>
-<tr>
-<td width="232">
-<p>+1 (254)-455-5666</p>
-</td>
-<td width="205">
-<p>+1 (254)-430-8992</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-The following diagram describes how the Masking Actor uses the formatter for preserving the original format in the masked value:
-
-![fpm flow](images/format_preserving_masking_flow.png)
-
-Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#formatter-actors-and-flows) for more information about the formatter flows and Actors.
-
-## K2view Masking Advantages
-
-- The support of **cross instances consistency**, based on the hashed values.
-- The original value is not used as an input for creating the random masked value, other than for formatting purposes.
-- The MicroDB is created with the masked values.
-- The usage of K2view's Masking mechanism (using **SHA-512/256** algorithm).
-- **Multiple masking options** enable maximal flexibility when masking the data.
-
-## De-Anonymization (Pseudonymization)
-
-In some cases, there is a business need to retrieve the original value of the masked LUI. For example, a retrieval of a mailing address in order to contact the customer. 
-
-There are 2 recommended approaches to support de-anonymization and retrieve the original value of the masked field: 
-
-- Keep the source Instance ID in Fabric and use it to retrieve the original data from the source system.
-
-- Keep the encrypted version (each instance is encrypted separately) of the original values in *Fabric only*, in addition to the anonymized values. Limit the access to the anonymized data. Only permitted users can access the original values.
-
-Click [here](/articles/26_fabric_security/03_fabric_LUI_encryption.md) for more information about the LUI encryption.
+Click [here](03_format_preserving_masking) for more information about format preserving masking.
