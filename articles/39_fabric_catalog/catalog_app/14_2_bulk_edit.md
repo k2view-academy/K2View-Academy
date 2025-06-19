@@ -11,7 +11,19 @@ Manually updating multiple Catalog entities can be time-consuming and error-pron
 
 This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
 
-This article explains how to create and view the bulk. Click here to read about the Bulk Edit.
+This article explains how to  edit the properties in bulk the bulk. Click [here](14_1_bulk_creation.md) to learn how to create and view bulk.
 
 ### How Can I Edit a Bulk?
 
+1. To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.  
+2. Then click the <img src="../images/bulk_icon.png" style="zoom:55%;"> icon on the menu bar to view the bulk.
+3. To **add** a new property:
+   * Click the <img src="../images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
+   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:75%;" /> icon to add the new property to the **Common properties list**.
+4. To **delete** a property, click the <img src="../images/delete.png" alt="plus" style="zoom:75%;" /> icon.
+5. To **edit** an existing property:
+   * Click the property in the Common properties list and update its **Value** and **Notes** fields. 
+   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:75%;" /> icon to add it to the **Common properties list**.
+6. Click **Submit** when bulk edit is completed.
+
+Note that all updates are aggregated on the client side only. The **Save** button should be clicked in the menu bar to trigger saving of all the changes together and creation of a new version. The Catalog will then exit the edit mode.

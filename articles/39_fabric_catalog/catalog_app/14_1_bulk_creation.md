@@ -24,7 +24,7 @@ This article explains how to create and view the bulk. Click [here](14_2_bulk_ed
 
 ### How Can I View the Bulk?
 
-Bulk can be viewed by clicking the <img src="../images/bulk_icon.png" style="zoom:55%;"> icon on the main menu:
+Bulk can be viewed by clicking the <img src="../images/bulk_icon.png" style="zoom:55%;"> icon on the menu bar:
 
 ![](../images/mainMenuBulk.png)
 
@@ -33,6 +33,8 @@ Bulk can be viewed by clicking the <img src="../images/bulk_icon.png" style="zoo
 
 ![](../images/viewBulk.png)
 
-When the Catalog is not in Edit mode, the Bulk Edit screen allows only to view the bulk and remove entities from it. The properties cannot be added or updated in this mode.
+When the Catalog is not in Edit mode, the Bulk Edit screen allows only to view the bulk and remove entities from it. 
 
-Click [here](14_2_bulk_edit.md) to learn how to edit the properties in bulk.
+The **Common properties list** displays a list of properties, that are common for all bulk entities. When the property doesn't have the same value for all entities, only the property name is displayed.
+
+The properties cannot be modified in this mode. Click [here](14_2_bulk_edit.md) to learn how to edit the properties in bulk.
