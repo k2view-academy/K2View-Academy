@@ -11,7 +11,7 @@ Manually updating multiple Catalog entities can be time-consuming and error-pron
 
 This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
 
-This article explains how to create and view the bulk. Click [here](14_2_bulk_edit.md) to learn how to edit the bulk.
+This article explains how to create and view the bulk. Click [here](14_2_bulk_edit.md) to learn how to edit the properties in bulk.
 
 ### How Can I Create a Bulk?
 
@@ -24,3 +24,15 @@ This article explains how to create and view the bulk. Click [here](14_2_bulk_ed
 
 ### How Can I View the Bulk?
 
+Bulk can be viewed by clicking the <img src="../images/bulk_icon.png" style="zoom:55%;"> icon on the main menu:
+
+![](../images/mainMenuBulk.png)
+
+* When bulk is empty, the icon is black
+* When bulk is not empty, the icon is orange.
+
+![](../images/viewBulk.png)
+
+When the Catalog is not in Edit mode, the Bulk Edit screen allows only to view the bulk and remove entities from it. The properties cannot be added or updated in this mode.
+
+Click [here](14_2_bulk_edit.md) to learn how to edit the properties in bulk.
