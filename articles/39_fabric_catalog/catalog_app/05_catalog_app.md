@@ -79,6 +79,8 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 
     ​	<img src="../images/legend.png" style="zoom: 67%;" />
 
+  * ​
+
   * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="../images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's Legend.
 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" /> an element from the window.
@@ -92,10 +94,11 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * **Edit Catalog**. [Click for more information about the Manual Overrides](07_manual_overrides.md).
   * View the list of **Hidden Nodes**. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
   * **Delete Catalog**. Clicking it will delete all data from the Neo4j Graph DB (once the user confirms his action). This feature is useful during the Development when a user wants to run Discovery on various data platforms and then re-build the Catalog from scratch on the same space. Available in V8.1.
-* **Search** <img src="../images/search.png" style="zoom:80%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
-* **Filter** <img src="../images/filter.png" style="zoom:80%;" />the Catalog graph by property. When a filter is set, the icon changes its color to <img src="../images/filter_selected.png" style="zoom:80%;" />. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
+* **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
+* **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
+* **Bulk**  <img src="../images/bulk_icon.png" style="zoom:55%;">, used to indicate whether there are entities in a bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. [Click for more information about the Catalog Bulk](14_1_bulk_creation.md). 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
-* **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to <img src="../images/connected_only_selected.png" style="zoom:80%;" />, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
+* **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to orange, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
 * **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
 * **Schema Insights** <img src="../images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
 * **Data Viewer** <img src="../images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
