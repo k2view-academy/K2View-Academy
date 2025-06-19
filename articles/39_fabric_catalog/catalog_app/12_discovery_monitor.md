@@ -4,7 +4,7 @@ The purpose of the Discovery job execution monitor is to track the progress of t
 
 The monitor is split into the following areas:
 
-* The **Run** <img src="images/run.png" style="zoom: 80%;" /> and **Stop** <img src="images/stop.png" style="zoom: 80%;" /> icons are located at the top of the Monitor screen. The monitor enables starting the job execution for the selected Data Platform, and stopping the job, when it is in progress.
+* The **Run** <img src="../images/run.png" style="zoom: 80%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 80%;" /> icons are located at the top of the Monitor screen. The monitor enables starting the job execution for the selected Data Platform, and stopping the job, when it is in progress.
 * The **General Info** area allows to select the Data Platform in order to retrieve details of the monitoring.
   * The monitor shows the last execution for the given Data Platform, either throughout its progress or when completed.
 * The **Execution Time** area shows the job's start time and its duration. If the job has been completed, the end time is displayed as well. 
@@ -18,19 +18,19 @@ The monitor displays the execution progress by using various icons, as follows:
 
 * The following image shows that the job is gathering the source data in order to start the crawler:
 
-  <img src="images/monitor_gather.png"  />
+  <img src="../images/monitor_gather.png"  />
 
 * The following image shows that the job is currently running:
 
-  <img src="images/monitor_inprogress.png"  />
+  <img src="../images/monitor_inprogress.png"  />
 
 * The following image shows that the job has been completed and a new version was created: 
 
-  <img src="images/monitor_new.png" />
+  <img src="../images/monitor_new.png" />
 
 * The following image shows that the job has been completed without creating a new version:
 
-  <img src="images/monitor_unchanged.png" style="zoom:80%;" />
+  <img src="../images/monitor_unchanged.png" style="zoom:80%;" />
 
 
 

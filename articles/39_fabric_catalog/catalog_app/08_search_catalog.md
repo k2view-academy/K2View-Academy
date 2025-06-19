@@ -4,11 +4,11 @@
 
 The Catalog application allows searching for Catalog objects (data platforms, schemas, datasets, fields and relations) within the currently displayed version. 
 
-To start the search, click the ![](images/search.png) icon in the menu bar. It opens a text box, where you can enter one or more keywords - the names of the objects to be searched. To search by additional parameters, open the Advanced Search by clicking the ![](images/advanced.png) icon. To exit the search, click the ![](images/close.png) icon.
+To start the search, click the ![](../images/search.png) icon in the menu bar. It opens a text box, where you can enter one or more keywords - the names of the objects to be searched. To search by additional parameters, open the Advanced Search by clicking the ![](../images/advanced.png) icon. To exit the search, click the ![](../images/close.png)icon.
 
 ### Advanced Search
 
-<img src="images/advanced_search.png" style="zoom:75%;" />
+<img src="../images/advanced_search.png" style="zoom:75%;" />
 
 Advanced Search allows to narrow the search results by specifying one (or more) of the following parameters:
 
@@ -26,15 +26,15 @@ phone pii:true type:field
 
 And vice versa, you can define your search criteria using syntax only in the text box, which will automatically feed back the search criteria fields. 
 
-Click [here](20_catalog_APIs.md#search-catalog) for more details about the syntax of Catalog search.
+Click [here](/articles/39_fabric_catalog/20_catalog_APIs.md#search-catalog) for more details about the syntax of Catalog search.
 
 ### Search Results
 
-<img src="images/search_results.png" style="zoom:75%;" />
+<img src="../images/search_results.png" style="zoom:75%;" />
 
 The search results are presented in a list that can be exported into a CSV file. The result set returned to the client is limited to 750 nodes and 750 relations, meaning, one single search can yield a total of up to 1500 results.
 
-To navigate from the search results to a node in the Catalog tree, click the ![](images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refersTo* relation.
+To navigate from the search results to a node in the Catalog tree, click the ![](../images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refersTo* relation.
 
 
 

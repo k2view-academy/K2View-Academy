@@ -4,7 +4,7 @@ The purpose of the Catalog Masking mechanism is to perform masking, based on the
 
 To apply the Catalog Masking mechanism on either a flow or a population, start with running the Discovery job and building the [Catalog artifact](09_build_artifacts.md). Then, create an LU and add either the **CatalogMaskingMapper** Actor or the **CatalogMaskingRecord** Actor to LU populations.
 
-<img src="images/population_with_masking.png" style="zoom:80%;" />
+<img src="../images/population_with_masking.png" style="zoom:80%;" />
 
 ### Catalog Masking Actors
 
@@ -36,7 +36,7 @@ The **CatalogMaskingField** Actor’s purpose is to mask a single field’s valu
 
 While the Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the **Masking** property should be added manually when it is required to control the masking mechanism of some fields. 
 
-<img src="images/masking_prop.png" style="zoom:80%;" />
+<img src="../images/masking_prop.png" style="zoom:80%;" />
 
 The purpose of adding the Masking property to a field is to override the Classification level definitions. The Masking property indicates that the selected field requires special handling by the Catalog Masking mechanism. The Masking property can have one of the following valid values:
 

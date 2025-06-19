@@ -12,11 +12,11 @@ Only the latest Catalog version can be edited. This article includes the descrip
 
 ### Edit Properties
 
-As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g., PK or source data type) and some are created by the plugins (e.g., PII or Classification). The Catalog allows to update only the properties that are predefined as editable in the **properties-info.json** configuration file. This definition can be updated on the project level. Follow the instructions [here](21_advanced_settings.md#catalog-application-configuration) in order to override the **properties-info.json** on the project level.
+As part of the Discovery process, properties are created for each node. Some properties are created by the Crawler (e.g., PK or source data type) and some are created by the plugins (e.g., PII or Classification). The Catalog allows to update only the properties that are predefined as editable in the **properties-info.json** configuration file. This definition can be updated on the project level. Follow the instructions [here](/articles/39_fabric_catalog/21_advanced_settings.md#catalog-application-configuration) in order to override the **properties-info.json** on the project level.
 
 
 
-<img src="images/edit_prop_1.png" style="zoom:75%;" />
+<img src="../images/edit_prop_1.png" style="zoom:75%;" />
 
 * To **edit** an existing property:
 
@@ -25,8 +25,8 @@ As part of the Discovery process, properties are created for each node. Some pro
   * When clicking Submit in the More Info pop-up window – the change is being aggregated on the client side and is not yet sent to the server. The tab indicates the change: the row with the new value is marked in green and the row with the old value is marked in red.
 
   * When clicking Cancel – the change performed in the More Info pop-up window is being discarded.
-* To **delete** a property, click the <img src="images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
-* To **add** a new property, click the <img src="images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. An **ID** will be generated according to the property's path, the **Origin** will be set to Manual and the **Score** to 1.
+* To **delete** a property, click the <img src="../images/delete.png" alt="plus" style="zoom:75%;" /> icon. Only editable or manually added properties can be deleted.
+* To **add** a new property, click the <img src="../images/add.png" alt="plus" style="zoom:75%;" /> icon and populate the **Name**, **Value** and **Notes** fields via the More Info pop-up window. An **ID** will be generated according to the property's path, the **Origin** will be set to Manual and the **Score** to 1.
   * When adding a new property, you can either select the property name from a predefined list or create a completely new property.
 
 
@@ -38,9 +38,9 @@ The relations can be modified as follows:
 * An alternative way to **add** a new relation is to select **Add Relation To**.
   * The Add Relation pop-up window will open where you need to first select the Child Data Platform, Schema and Dataset and then populate the Child Field(s).
 
-<img src="images/add_relation.png" style="zoom:75%;" />
+<img src="../images/add_relation.png" style="zoom:75%;" />
 
-* To **delete** a link, click the<img src="images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
+* To **delete** a link, click the<img src="../images/delete.png" alt="plus" style="zoom:75%;" />icon in the relation's Properties tab.
 
 Only *refers to* relations can be edited. 
 

@@ -20,13 +20,13 @@ Additional trigger for a version creation is a manual edit of the Catalog.
 
 By default, the Catalog application displays the latest available version. To view any version, open the version's drop-down list and click a version number: 
 
-<img src="images/versions.png" style="zoom:75%;" />
+<img src="../images/versions.png" style="zoom:75%;" />
 
 The Catalog tree is then displayed using the standard coloring scheme, where all the nodes are blue and the relations are orange. 
 
 ### Version Comparison
 
-To compare 2 versions, click the comparison <img src="images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the 2 versions, as follows:
+To compare 2 versions, click the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the 2 versions, as follows:
 
 * The new elements are green, the removed elements are red, and the updated elements are purple.
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed value is in red.
@@ -34,13 +34,13 @@ To compare 2 versions, click the comparison <img src="images/compare.png" style=
 
 To return to a regular view mode, open the version's drop-down list again and click a version number.
 
-<img src="images/compare_versions.png" style="zoom:67%;" />
+<img src="../images/compare_versions.png" style="zoom:67%;" />
 
 **Show Updates Only**
 
 When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the "Show updated only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
 
-<img src="images/data_platform_diff.gif"  />
+<img src="../images/data_platform_diff.gif"  />
 
 
 

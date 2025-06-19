@@ -69,7 +69,7 @@ To view a data source element in the Catalog application, do the following:
 
 * The Catalog application opens and the selected element is displayed in the Catalog's Navigator tree.
 
-[Click here for more information about the Catalog Application.](05_catalog_app.md)
+[Click here for more information about the Catalog Application.](/articles/39_fabric_catalog/catalog_app/05_catalog_app.md)
 
 
 
@@ -83,5 +83,5 @@ Note that **Run Discovery Job** and **Open in Catalog** commands may be hidden i
 
 
 
-[![Previous](/articles/images/Previous.png)](04_discovery_pipeline.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_catalog_app.md) 
+[![Previous](/articles/images/Previous.png)](04_discovery_pipeline.md)
 

@@ -201,7 +201,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <td>propertiesToInclude</td>
 <td>N</td>
 <td>
-<p>Coma-separated list of properties to be included in the output. When empty, all properties are included. Available in V7.2.2.</p><p>E.g.: propertiesToInclude=pii,pk</p>
+<p>Coma-separated list of properties to be included in the output. When empty, all properties are included. </p><p>E.g.: propertiesToInclude=pii,pk</p>
 </td>
 </tr>
 </tbody>
@@ -244,7 +244,7 @@ The API builds the Catalog artifacts, based on a given version. The artifacts in
 
 Starting from V8.3, the artifacts of relations might also be extracted by the API. It can be done when setting ```refersTo=true``` in the API's input. The relations artifact is is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Refer to the [Catalog Artifacts article](09_build_artifacts.md) for more details about the relations extract files structure and naming convention. 
+Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the relations extract files structure and naming convention. 
 
 **Example of an API call:**
 
@@ -317,6 +317,4 @@ Example 2: When searching for any node types with *PII = true* and *Classificati
 ~~~
 
 
-
-[![Previous](/articles/images/Previous.png)](12_discovery_monitor.md)
 

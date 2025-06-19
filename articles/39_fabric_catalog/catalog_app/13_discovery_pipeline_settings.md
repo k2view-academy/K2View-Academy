@@ -33,7 +33,7 @@ Note that the Baseline rule overrides are automatically propagated to the projec
 
 The Baseline rule overrides can be reverted in one of the following ways:
 
-![](images/discovery_pipeline_revert.png)
+![](../images/discovery_pipeline_revert.png)
 
 1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
 2. Clicking the **revert** icon at the lower-left side of the screen to reset the plugin's order to the original order.
@@ -48,7 +48,7 @@ A **rule** should be attached to a data platform, along with several optional pa
 
 #### How Do I Create a Rule?
 
-![](images/discovery_pipeline_2.png)
+![](../images/discovery_pipeline_2.png)
 
 * Click on **Add Rule +** to create a new rule. 
 
@@ -75,7 +75,7 @@ The below image shows a rule defined for the **CASE_NOTES** table of **CRM_DB** 
 
 The purpose of this rule is to completely exclude the **CASE_NOTES** table from the Discovery process. 
 
-![](images/discovery_pipeline_excludeThis.png)
+![](../images/discovery_pipeline_excludeThis.png)
 
 #### Rule Type: Crawler Filter = Exclude Others
 
@@ -98,7 +98,7 @@ The below image shows a rule defined for the **CUSTOMER** table of **CRM_DB** da
 
 The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset. 
 
-![](images/discovery_pipeline_sampleSize.png)
+![](../images/discovery_pipeline_sampleSize.png)
 
 #### Rules Combination and Hierarchy
 
@@ -112,7 +112,7 @@ When multiple rules are defined for the same data platform, they adhere to the f
 
 The below image shows 3 rules defined for the **AdventureWorks** data platform:
 
-![](images/discovery_pipeline_h.png)
+![](../images/discovery_pipeline_h.png)
 
 - **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
 - **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on the AdventureWorks. 
@@ -127,10 +127,10 @@ For example, when a newly created plugin is applicable only for running Discover
 The steps for adding a new plugin to the pipeline are:
 
 1. Check the **Override** checkbox of the Baseline rule.
-2. Click the ![](images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
+2. Click the ![](../images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
 3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
-![](images/discovery_pipeline_new_plugin.png)
+![](../images/discovery_pipeline_new_plugin.png)
 
 
 

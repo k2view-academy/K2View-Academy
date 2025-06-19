@@ -30,14 +30,14 @@ The initial view displays the Data Platform nodes (the data source interfaces de
 
 The Catalog's Legend, which presents the 3 node types with their respective icons, allows to hide or unhide all the elements of the same type.
 
-<img src="images/catalog_app.png" style="zoom:75%;" />
+<img src="../images/catalog_app.png" style="zoom:75%;" />
 
 **Catalog's Version**
 
 The Navigator displays the latest Catalog version by default. The version number is displayed in the upper-left corner of the main area. By clicking it, you can either: 
 
 * **View** another version, by clicking its number in the drop-down list.
-* **Compare** between 2 versions, by clicking the compare <img src="images/compare.png" style="zoom:75%;" /> icon.  
+* **Compare** between 2 versions, by clicking the compare <img src="../images/compare.png" style="zoom:75%;" /> icon.  
 
 [Click here for more information about the Catalog Versioning](06_catalog_versioning.md).
 
@@ -45,43 +45,43 @@ The Navigator displays the latest Catalog version by default. The version number
 
 A single click on any Data Platform or Schema node opens the context menu: 
 
-<img src="images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
+<img src="../images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
 The context menu allows performing the following actions:
 
-* **Expand** <img src="images/expand.png" style="zoom:80%;" />or **Collapse** <img src="images/collapse.png" style="zoom:80%;" /> the next level elements. 
-  * For example, clicking the <img src="images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
+* **Expand** <img src="../images/expand.png" style="zoom:80%;" />or **Collapse** <img src="../images/collapse.png" style="zoom:80%;" /> the next level elements. 
+  * For example, clicking the <img src="../images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
   * A double-click on a selected node can either expand or collapse it.
 
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
+* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
 
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
+* **Hide** <img src="../images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
-* **Focus** <img src="images/focus.png" style="zoom:80%;" /> on the next level elements.
+* **Focus** <img src="../images/focus.png" style="zoom:80%;" /> on the next level elements.
   * The Focus action differs from the Expand action in a way that it dives into the next hierarchy level, eliminating other nodes from the screen.
-  * For example, when<img src="images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
+  * For example, when<img src="../images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
 
   * In the Focus view, breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, and they allow to navigate up the tree.
 
-<img src="images/breadcrumbs.png" style="zoom: 67%;" />
+<img src="../images/breadcrumbs.png" style="zoom: 67%;" />
 
 **Dataset Context Menu**
 
 Clicking on any Dataset node opens its context menu, which includes the following actions:
 
-* **Expand** <img src="images/expand.png" style="zoom:80%;" /> Dataset fields:
+* **Expand** <img src="../images/expand.png" style="zoom:80%;" /> Dataset fields:
 
-  * Click the <img src="images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII, where applicable.
+  * Click the <img src="../images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII, where applicable.
 
-    ​	<img src="images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
+    ​	<img src="../images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
-  * To simultaneously expand all Datasets on the screen, click the <img src="images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's Legend:
+  * To simultaneously expand all Datasets on the screen, click the <img src="../images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's Legend:
 
-    ​	<img src="images/legend.png" style="zoom: 67%;" />
+    ​	<img src="../images/legend.png" style="zoom: 67%;" />
 
-  * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's Legend.
+  * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="../images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's Legend.
 
-* **Hide** <img src="images/hide.png" style="zoom:80%;" /> an element from the window.
+* **Hide** <img src="../images/hide.png" style="zoom:80%;" /> an element from the window.
 
 ### Menu Bar
 
@@ -92,25 +92,25 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
   * **Edit Catalog**. [Click for more information about the Manual Overrides](07_manual_overrides.md).
   * View the list of **Hidden Nodes**. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
   * **Delete Catalog**. Clicking it will delete all data from the Neo4j Graph DB (once the user confirms his action). This feature is useful during the Development when a user wants to run Discovery on various data platforms and then re-build the Catalog from scratch on the same space. Available in V8.1.
-* **Search** <img src="images/search.png" style="zoom:80%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
-* **Filter** <img src="images/filter.png" style="zoom:80%;" />the Catalog graph by property. When a filter is set, the icon changes its color to <img src="images/filter_selected.png" style="zoom:80%;" />. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
-* **Hide** <img src="images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
-* **Show only connected** <img src="images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to <img src="images/connected_only_selected.png" style="zoom:80%;" />, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
-* **Run Discovery** <img src="images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
-* **Schema Insights** <img src="images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
-* **Data Viewer** <img src="images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
-* **Layout selection** <img src="images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. A centered layout is the default, and vertical or horizontal layouts are supported.
+* **Search** <img src="../images/search.png" style="zoom:80%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
+* **Filter** <img src="../images/filter.png" style="zoom:80%;" />the Catalog graph by property. When a filter is set, the icon changes its color to <img src="../images/filter_selected.png" style="zoom:80%;" />. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
+* **Hide** <img src="../images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
+* **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to <img src="../images/connected_only_selected.png" style="zoom:80%;" />, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
+* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
+* **Schema Insights** <img src="../images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
+* **Data Viewer** <img src="../images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
+* **Layout selection** <img src="../images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. A centered layout is the default, and vertical or horizontal layouts are supported.
 * **Zoom in / out**, used for adjusting the zoom of the view.
 
 ### Properties Tab
 
 The Properties tab displays the selected element's name, the icon of the type and the element's properties.
 
-​	<img src="images/properties.png" style="zoom: 67%;" />
+​	<img src="../images/properties.png" style="zoom: 67%;" />
 
 Each element has different properties. For example, a Dataset field has properties such as **column size** and **source data type** - created by the Crawler, and **PII** and **Classification** that are created by the plugins.
 
-Clicking the property name or the <img src="images/info.png" style="zoom: 95%;" /> icon next to the element's name, opens the More Info pop-up window that provides more details about the property, e.g., the property's Origin, which could be either the Crawler, one of the plugins or manual.
+Clicking the property name or the <img src="../images/info.png" style="zoom: 95%;" /> icon next to the element's name, opens the More Info pop-up window that provides more details about the property, e.g., the property's Origin, which could be either the Crawler, one of the plugins or manual.
 
 When the selected element is a relation (a link) between 2 objects in the Catalog tree, its properties are displayed in the Properties tab. 
 
@@ -138,9 +138,9 @@ The ```<version>``` should be either the word **latest**, or alternatively the l
 
 <web>
 
-The Catalog can also be accessed from the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio, as explained [here](04a_catalog_integration_with_fabric.md#open-in-catalog).
+The Catalog can also be accessed from the [DB Interface Explorer](/articles/04_fabric_studio/25_web_data_explorer.md) tab in the Web Studio, as explained [here](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md#open-in-catalog).
 
 </web>
 
-[![Previous](/articles/images/Previous.png)](04a_catalog_integration_with_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_catalog_versioning.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_catalog_versioning.md) 
 

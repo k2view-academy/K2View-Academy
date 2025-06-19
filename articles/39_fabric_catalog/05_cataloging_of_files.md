@@ -19,8 +19,8 @@ Once the Catalog structure is built, the active plugins (such as parsing of comp
 
 Further  in this article, you can learn in more details about: 
 
-* [Transformation rules definition](01_cataloging_of_files.md#transformation-rules-definition)
-* [Rules attachment to interface](01_cataloging_of_files.md#rules-attachment-to-interface)
+* [Transformation rules definition](05_cataloging_of_files.md#transformation-rules-definition)
+* [Rules attachment to interface](05_cataloging_of_files.md#rules-attachment-to-interface)
 
 To illustrate the E2E process of file cataloging, the *Discovery of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). The extension can be installed in your project and it offers a comprehensive example of file discovery. The explanation about how to use the extension can be found in the extension's README file.
 
