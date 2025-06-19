@@ -303,20 +303,16 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Discovery & Catalog Solution",
+					"display name": "Discovery Solution",
 					"value": "39_fabric_catalog"
+				},
+				{
+					"display name": "Catalog Application",
+					"value": "39_fabric_catalog/catalog_app"
 				},
 				{
 					"display name": "Catalog Built-in Plugins",
 					"value": "39_fabric_catalog/plugins"
-				},
-				{
-					"display name": "Catalog Connectors",
-					"value": "39_fabric_catalog/connectors"
-				},
-				{
-					"display name": "Catalog Advanced Topics",
-					"value": "39_fabric_catalog/advanced"
 				}
 			]
 		},
