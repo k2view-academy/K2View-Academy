@@ -42,6 +42,14 @@ To create a new Amazon S3 Storage interface, do the following:
 <td>The name of the S3 bucket.</td>
 </tr>
 <tr>
+<td><strong>Working Directory&nbsp;</strong></td>
+<td>Directory where the files are stored</td>
+</tr>
+<tr>
+<td><strong>Files filter</strong></td>
+<td>Filters files by regular expression, e.g. "*.CSV"</td>
+</tr>  
+<tr>
 <td><strong>Access key ID</strong></td>
 <td>Access Key ID.</td>
 </tr>

@@ -55,7 +55,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td>&nbsp;<strong>Files filter</strong></td>
-<td>Filters files.</td>
+<td>Filters files by regular expression, e.g. "*.CSV"</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Affinity</strong></td>
