@@ -14,7 +14,7 @@ This plugin runs on a data snapshot that is extracted from the source, and it ex
 
 If a regular expression (known as regex) matches the field's data, a Classification property is added to the field with a value corresponding to the matching regex (e.g., EMAIL). If a match is found for more than one expression, the property is created with the Classification that got a higher calculated score. 
 
-To update the data profiling rules, go to the [Catalog Settings > Classifier Regex tab](../10_catalog_settings.md#classifier-regex-tab).
+To update the data profiling rules, go to the [Catalog Settings > Classifier Regex tab](../catalog_app/10_catalog_settings.md#classifier-regex-tab).
 
 **Example:**
 
