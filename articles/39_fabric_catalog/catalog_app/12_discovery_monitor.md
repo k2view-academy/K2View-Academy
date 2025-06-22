@@ -2,6 +2,10 @@
 
 The purpose of the Discovery job execution monitor is to track the progress of the Discovery process. The monitoring provides valuable insights that can help to follow-up the job execution, displaying the progress per each step. 
 
+Click Discovery in the top Catalog navigation bar to open the monitor:
+
+<img src="../images/catalog_navigator.png" />
+
 The monitor is split into the following areas:
 
 * The **Run** <img src="../images/run.png" style="zoom: 80%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 80%;" /> icons are located at the top of the Monitor screen. The monitor enables starting the job execution for the selected Data Platform, and stopping the job, when it is in progress.

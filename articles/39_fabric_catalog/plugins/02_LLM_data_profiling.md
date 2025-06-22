@@ -1,6 +1,6 @@
 # LLM-Based Profiling
 
-### Overview
+## Overview
 
 Starting from V8.2, the Catalog includes a data and metadata profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). 
 
@@ -11,40 +11,40 @@ The product includes 2 LLM-based plugins that accommodate for the following use 
 - Use Case 1: **LLM Profiling** - profiling and classification of columns with sensitive / PII data. 
 - Use Case 2: **LLM Description** - a creation of each column's short description.
 
-By default, both of these plugins are disabled and should be enabled in the project-level settings, when needed. 
+Both of these plugins are inactive by default and should be set to active, when needed. 
 
 The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the user prompt and other plugin's input parameters. For example, a new business dimension (a new property) can be created via an advanced plugin setup. An explanation and an example are provided at the end of this article. 
 
-### LLM Plugin Definition
+## LLM Profiling Plugin Definition
 
 The plugin's input parameters are:
 
-- ```"threshold"``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
-  - By default, ```"threshold":0.7```. 
-  - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM plugin will not run on this column.
-- ```"propertyName"``` is a column's property that should be created by the plugin. 
+- ```threshold``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
+  - By default, ```threshold``` is set to 0.7. 
+  - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM Profiling plugin will not run on this column.
+- ```propertyName``` is a column's property that should be created by the plugin. 
   - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Profiling use case.
 - ```"userPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are, respectively, a table and a column being profiled, as well as the names of all other columns in this table. These 3 parameters are passed to the plugin by the framework.
-  - The ```"userPrompt"``` should be updated to fit the required use case and project's needs. 
-- ```"possibleValues"``` is a list of possible property values. 
+  - The ```userPrompt``` should be updated to fit the required use case and project's needs. 
+- ```possibleValues``` is a list of possible property values. 
   - For example, ```"possibleValues":["FIRST_NAME","LAST_NAME","ADDRESS"]```.
-  - When you don't intend or need to provide a list of possible values to the LLM, it is recommended to edit the ```"userPrompt"``` by removing the text that refers to the possible values. 
-- ```"possibleMTableValues"``` is an alternative way to provide the possible property values. It allows the values to be retrieved from a project's MTable. The ```"possibleMTableValues"``` should be populated using the following format:  ```"<MTable name>.<Column name>"```. 
+  - When you don't intend or need to provide a list of possible values to the LLM, it is recommended to edit the ```userPrompt``` by removing the text that refers to the possible values. 
+- ```possibleMTableValues``` is an alternative way to provide the possible property values. It allows the values to be retrieved from a project's MTable. The ```"possibleMTableValues"``` should be populated using the following format:  ```"<MTable name>.<Column name>"```. 
   - For example, ```"possibleMTableValues" : "pii_profiling.name"```
   - It is recommended for a relatively short list of possible valid values.
-  - Either ```"possibleValues"``` or ```"possibleMTableValues"``` should be populated in the plugin's definition, but not both. The ```"userPropmt"``` should be updated accordingly. 
-- ```"sampleSize"``` defines a sample size to be used by the LLM. By default, ```"sampleSize": 10```.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
-- ```"samplePrompt"``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```"sampleSize"``` > 0 and if the column is not empty in the data snapshot. 
+  - Either ```possibleValues``` or ```possibleMTableValues``` should be populated in the plugin's definition, but not both. The ```userPropmt``` should be updated accordingly. 
+- ```sampleSize``` defines a sample size to be used by the LLM. By default, it is set to 10.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
+- ```samplePrompt``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```sampleSize``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
 - ```incrementalMode``` defines whether the plugin should be executed for the fields that already have the same property created by the same LLM plugin in a previous Discovery Job execution. This parameter is set in order to minimize the number of calls to the LLM. It has the following modes:
   - ```"KEEP_ALL"``` (default) - if an LLM plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
   - ```"KEEP_EXISTING"``` - if an LLM plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
   - ```"EVALUATE_ALL"``` - the LLM plugin will be invoked for all fields.
-- ```"llmInterface"``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
-  - When the ```"llmInterface"``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+- ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
+  - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 ### Use Case 1: LLM Profiling
 

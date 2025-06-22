@@ -2,7 +2,7 @@
 
 ### Overview
 
-Manually updating multiple Catalog entities can be time-consuming and error-prone, especially when you need to apply the same changes - such as adding a new property - to many entities. To improve efficiency and usability, the Catalog provides a **Bulk Creation and Edit** capability. 
+Manually updating multiple Catalog entities can be time-consuming and error-prone, especially when you need to apply the same changes - such as adding a new property - to many entities. To improve efficiency and usability, in V8.3 the Catalog provides a **Bulk Creation and Edit** capability.
 
 #### When to Use Bulk Creation and Editing
 
