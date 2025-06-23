@@ -39,19 +39,31 @@ To create a new Google Cloud Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Bucket name</strong></td>
-<td>The name of the bucket.</td>
+<td>The name of the Google Cloud Storage bucket where your files are stored. This is a required field. Must be globally unique, 3-63 characters, lowercase letters, numbers, periods, and hyphens only.</td>
+</tr>
+<tr>
+<td><strong>Working Path</strong></td>
+<td>The specific folder path within the bucket where the connector will look for files. </td>
+</tr>
+<tr>
+<td><strong>Files Filter</strong></td>
+<td>Filters files using regular expressions to specify which files to look for.</td>
 </tr>
 <tr>
 <td><strong>Project ID</strong></td>
-<td>Project ID.</td>
+<td>The Google Cloud Platform project ID where your bucket is located. This is a required field with a globally unique identifier, typically 6-30 characters using lowercase letters, numbers, and hyphens.</td>
 </tr>
 <tr>
-<td><strong>Location ID</strong>&nbsp;</td>
-<td>Location ID.</td>
+<td><strong>Location ID</strong></td>
+<td>The Google Cloud region or multi-region where your bucket is located (e.g., us-central1, europe-west1, asia). This is a required field and must match the actual location of your bucket.</td>
 </tr>
 <tr>
 <td><strong>Credentials file</strong></td>
-<td>The location of the credentials file.</td>
+<td>The location of the credentials file. This file includes the private key and service account details required to access the GCS bucket securely.</td>
+</tr>
+<tr>
+<td><strong>Discovery</strong></td>
+<td>Discoveryoptions for analyzing and cataloging GCS bucket contents. Available options include Get Metadata, Get Files List, and Get File Data for different levels of bucket analysis.</td>
 </tr>
 <p>Test Connection. Click to test the connection.</p>
 <studio>
