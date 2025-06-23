@@ -32,9 +32,13 @@ This plugin scans the data of the data sample in order to calculate various data
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in data sample) and save those values into a dedicated MTable, so they can be used for masking and synthetic data generation. 
 
-Separate MTable is generated per each data platform and schema, with the following name format: 
+Once a field is identified as an Option Set,  the property ```optionSet = true``` is created for it. In addition, separate MTable is generated per each data platform and schema to keep the distinct values (and their distribution). The MTable has the following name format: 
 
-* ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
+```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
+
+The below image is an example of such MTable:
+
+<img src="../images/option_set_mtable_ex.png" />
 
 The rules to identify fields with a limited number of distinct values are:
 
