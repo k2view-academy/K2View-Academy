@@ -1,6 +1,6 @@
-# Relations Creation
+# Creation of Reference Relation
 
-The following article describes plugins that create relations in the Catalog schema, based on the column names comparison in the data source.
+The following article describes plugins that create the *refersTo* relations in the Catalog schema, based on various types of analysis in the data source.
 
 * [Reference by Names Comparison](05_relations_creation.md#reference-by-names-comparison) - identify possible foreign key references between datasets by matching field names and create the *refersTo* relations.
 * [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) - identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and create the *refersTo* relations. The plugin is introduced in V8.3.
