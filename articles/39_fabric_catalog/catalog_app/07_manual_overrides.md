@@ -44,6 +44,8 @@ The relations can be modified as follows:
 
 Only *refers to* relations can be edited. 
 
+Note that starting V8.3, cross-schema / cross-data platform relations can be created.
+
 ### Saving Manual Overrides
 
 While the Catalog is in the edit mode, all updates are aggregated on the client side only. Once the manual changes have been made, the **Save** button should be clicked in the menu bar. This will trigger saving of all the changes together and would create a new version. The Catalog will then exit the edit mode.

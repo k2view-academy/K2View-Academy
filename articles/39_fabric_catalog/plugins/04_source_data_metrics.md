@@ -1,16 +1,16 @@
-# Source Data Metrics
+# Source Data Analysis
 
 This article describes plugins which analyses the source system's and calculates various metrics. The analysis is done based on the data snapshot.
 
 The plugins are:
 
-* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) - calculates various data quality metrics as described below.
-* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) - identifies fields with a limited number of distinct values (in data sample) and saves them into an MTable. The plugin is introduced in V8.3.
+* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) - calculates various data quality metrics as described below. These metrics can be then used for masking and synthetic data generation.
+* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) - identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can be then used for masking and synthetic data generation. The plugin is introduced in V8.3.
 * [NULL Percentage](04_source_data_metrics.md#null-percentage) - calculates the percentage of NULL values per column. From Fabric V8.2 onwards, this plugin has been combined with the Data Quality Metrics plugin.
 
 ## Data Quality Metrics
 
-This plugin scans the data of the data sample in order to calculate the following 4 parameters:
+This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can be then used for masking and synthetic data generation.
 
 * **Data Sample Size** - the actual number of values in a column in the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample size can vary, based on the table size.
@@ -30,7 +30,7 @@ This plugin scans the data of the data sample in order to calculate the followin
 
 ## Option Set Analyzer
 
-The purpose of this plugin is to identify fields with a limited number of distinct values (in data sample) and save those values into a dedicated MTable, so they can be used for synthetic data generation. 
+The purpose of this plugin is to identify fields with a limited number of distinct values (in data sample) and save those values into a dedicated MTable, so they can be used for masking and synthetic data generation. 
 
 Separate MTable is generated per each data platform and schema, with the following name format: 
 
@@ -45,25 +45,33 @@ Additional rules apply based on the plugin's input parameters, as explained belo
 
 #### Absolute Threshold
 
-Defines the absolute threshold number of distinct values. The absolute threshold is validated if the number of distinct values per field is above the plugin's threshold. For example:
+Defines the absolute threshold number of distinct values. The value is validated against an absolute threshold if the number of distinct values per field is above the plugin's threshold. For example:
 
-* When the sample size is 100 and a field includes 10 distinct values, the proportion of distinct values is qual to 0.1. This is higher than the threshold (0.05).
+* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values is qual to 0.1. This is higher than the plugin's threshold (0.05).
 * In this case, the results is validated against the absolute threshold to verify if it qualifies for being an **Option Set**. 
-* Since 10 distinct values is below the absolute threshold (15), the field qualifies as an **Option Set**.
+* Since 10 distinct values is below the absolute threshold level (15), the field qualifies as an **Option Set**.
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin's input parameter is to allow controlling which field's data types should be considered for checking the distinct values. 
+The ```fieldTypeIncludeList``` plugin's input parameter allowד controlling which field's data types should be considered for checking the distinct values. 
 
 By default, it is set to STRING, INTEGER for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
 #### Field Name Include List
 
+Allows to setup an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the property ```minSampleSize```).
+
 #### Field Name Exclude List
+
+Allows to setup an override list of field names. These fields will be excluded from the plugin's validation algorithm.
 
 #### Max String Length
 
+Defines a limit of the STRING size, to prevent handling text files or complex structures inside a field. The default value is 512Kb.
+
 #### Min Sample Size
+
+Allows to skip small tables, by defining the minimum sample size for verification if a field qualifies for being an **Option Set**.  The default value is 100.
 
 ## NULL Percentage
 
