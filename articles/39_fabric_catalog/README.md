@@ -7,6 +7,7 @@
 	<li><a href="/articles/39_fabric_catalog/04_discovery_pipeline.md">Discovery Pipeline</a></li>
 	<li><a href="/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md">Catalog Integration with Fabric</a></li>
 	<li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li>
+	<li><a href="/articles/39_fabric_catalog/05_cataloging_of_files.md">Cataloging of Files</a></li>
 	<li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Discovery Advanced Configuration</a></li>
 	<li><a href="/articles/39_fabric_catalog/98_centralized_catalog_setup.md">Centralized Catalog for Multiple Fabrics</a></li>
 	<studio><li><a href="/articles/39_fabric_catalog/99_catalog_setup_guide.md">Catalog Setup Guide for Desktop Studio</a></li></studio>
