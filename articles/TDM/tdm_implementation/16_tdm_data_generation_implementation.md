@@ -4,7 +4,7 @@ TDM data generation creates synthetic entities based on either rules or AI. The 
 
 ## Implementation of Logical Unit Population 
 
-To support synthetic data generation, LU population must be based on Broadway flows rather than DB Queries or root functions. Hence, the **sourceDbQuery** Actor was enhanced (in Fabric 7.1) to support either of the following two population modes: a DB Select query from a data source or synthetic population. The population mode is set based on the **ROWS_GENERATOR** key, which is a session variable. When set to **true**, the **sourceDbQuery** Actor runs the data generation inner flow to generate synthetic records. The number of synthetic records created for each parent key is determined by the **rowsGeneratorDistribution** input Actor.
+To support synthetic data generation, LU population must be based on Broadway flows rather than DB Queries or root functions. Hence, the **sourceDbQuery** Actor was enhanced (in Fabric 7.1) to support either of the following two population modes: a DB Select query from a data source or synthetic population. The population mode is set based on the **ROWS_GENERATOR** key, which is a session variable. When set to **true**, the **sourceDbQuery** Actor runs the data generation inner flow to generate synthetic records. The number of synthetic records created for each parent key is determined by the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor.
 
 ### LU Population Flows — Implementation Steps
 
@@ -13,11 +13,11 @@ To support synthetic data generation, LU population must be based on Broadway fl
 
 2. **Optional** — **edit the default number of generated synthetic records**. The data generation process needs to 'know' how many records have to be generated on each LU table. For example, the number of addresses to be generated for a synthetic customer should be indicated.
   
-   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between one and three records are generated for the remaining LU tables. The values of 1 and 3 are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
+   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between 1 and 3 records are generated for the remaining LU tables. The values '1' and '3' are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
 
    *Edit options:*
 
-   The following methods can be used to override the number range of generated records in the TDM implementation:
+   The following methods can be used to override the number range of generated records in a TDM implementation:
    
    i. Edit the default number range of generated records (set to 1-3 by default): Update the
    **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables, except for the main source LU table.
