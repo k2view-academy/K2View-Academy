@@ -34,30 +34,53 @@ To create a new Azure Blob Storage interface, do the following:
 <table>
 <tbody>
 <tr>
-<td width="300pxl"><strong>Parameter</strong></td>
-<td width="600pxl"><strong>Description</strong></td>
+<td width="300px"><strong>Parameter</strong></td>
+<td width="600px"><strong>Description</strong></td>
 </tr>
 <tr>
 <td><strong>Container name</strong></td>
-<td>The name of the container.</td>
+<td>The name of the blob container within your storage account where files are stored. Must be lowercase, 3-63 characters, and contain only letters, numbers, and hyphens.</td>
+</tr>
+<tr>
+<td><strong>Working Path</strong></td>
+<td>The specific folder path within the container where the connector will look for files</td>
+</tr>
+<tr>
+<td><strong>Files Filter</strong></td>
+<td>Specifies which file types the connector should process. Use regular extenstion to include specific files.</td>
 </tr>
 <tr>
 <td><strong>Account name</strong></td>
-<td>The name of the Azure Blob Storage account.</td>
+<td>The unique name of your Azure Storage Account. Must be 3-24 characters, lowercase letters and numbers only.</td>
 </tr>
 <tr>
-<td><strong>Account key</strong>&nbsp;</td>
-<td>The secret key of the account.</td>
+<td><strong>Account key</strong></td>
+<td>The primary or secondary access key for your storage account. This is a base64-encoded string that provides authentication to access the storage account.</td>
+</tr>
+<tr>
+<td><strong>Tenant Id</strong></td>
+<td>Your Azure Active Directory (Azure AD) tenant identifier. A GUID that uniquely identifies your organization's Azure AD instance.</td>
+</tr>
+<tr>
+<td><strong>Client Id</strong></td>
+<td>The Application (client) ID of the Azure AD app registration used for authentication. Identifies the specific application requesting access.</td>
+</tr>
+<tr>
+<td><strong>Resource Id</strong></td>
+<td>The full Azure Resource Manager path to your storage account, including subscription, resource group, and storage account name.</td>
+</tr>
+<tr>
+<td><strong>Client secret</strong></td>
+<td>The secret key associated with your Azure AD app registration. Works with the Client Id to authenticate application access.</td>
 </tr>
 <tr>
 <td><strong>Endpoint templates</strong></td>
-<td>Endpoint templates.</td>
+<td>URL templates for accessing blob storage endpoints. Typically follows the format: https://{accountname}.blob.core.windows.net/</td>
 </tr>
-  <tr>
+<tr>
 <td><strong>Credentials type</strong></td>
-<td>Credentials type, can be SHARED_KEY (default) or SAS.</td>
-</tr>
-<p>Test Connection. Click to test the connection.</p>
+<td>Authentication method for accessing the storage account.</td>
+</tr>   
 <studio>
 <p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
 </studio>

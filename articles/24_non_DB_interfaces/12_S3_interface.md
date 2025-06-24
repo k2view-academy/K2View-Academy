@@ -39,29 +39,37 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Bucket name</strong></td>
-<td>The name of the S3 bucket.</td>
+<td>The name of the S3 bucket where your files are stored. This is a required field. Must be globally unique, 3-63 characters, lowercase letters, numbers, periods, and hyphens only.</td>
 </tr>
 <tr>
-<td><strong>Working Directory&nbsp;</strong></td>
-<td>Directory where the files are stored</td>
+<td><strong>Working Path</strong></td>
+<td>The specific folder path within the bucket where the connector will look for files.</td>
 </tr>
 <tr>
-<td><strong>Files filter</strong></td>
-<td>Filters files by regular expression, e.g. "*.CSV"</td>
-</tr>  
+<td><strong>Files Filter</strong></td>
+<td>Filters files using regular expressions.</td>
+</tr>
 <tr>
 <td><strong>Access key ID</strong></td>
-<td>Access Key ID.</td>
+<td>The AWS access key ID for authentication. This is a 20-character alphanumeric identifier that works with the secret access key to authenticate API requests to AWS services.</td>
 </tr>
 <tr>
-<td><strong>Secret access key</strong>&nbsp;</td>
-<td>Secret access key.</td>
+<td><strong>Secret access key</strong></td>
+<td>The AWS secret access key paired with the access key ID. This is a 40-character base64-encoded string that must be kept secure and should not be shared or exposed in code.</td>
 </tr>
 <tr>
 <td><strong>Region</strong></td>
-<td>Region.</td>
+<td>The AWS region where your S3 bucket is located (e.g., us-east-1, eu-west-1, ap-southeast-2). This is a required field and must match the actual region of your bucket.</td>
 </tr>
-<p>Test Connection. Click to test the connection.</p>
+<tr>
+<td><strong>Discovery</strong></td>
+<td>Platform discovery catalog options for analyzing and cataloging S3 bucket contents. Available options:
+<ul>
+<li>Get Metadata - Retrieves metadata information about files and objects</li>
+<li>Get Files List - Generates a list of all files in the specified bucket/path</li>
+<li>Get File Data - Extracts actual file content and data for processing</li>
+</ul></td>
+</tr>
 <studio>
 <p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
 </studio>
