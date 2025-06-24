@@ -54,17 +54,18 @@ This command migrates all customers from the source systems into the Fabric CUST
 <p>This command migrates the customers defined in the ‘ig10CustomersList’ <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> into the CUSTOMER keyspace in the Fabric database.
 </p>
 </td>
-</tr> 
-<tr>
+</tr> <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt] [ESTIMATED_ENTITIES_COUNT=&ltnumber&gt];</h6>
+<h6>BATCH &amp;ltLU&amp;gt[@&amp;ltDC&amp;gt] from &amp;ltdb_interface&amp;gt using ('&amp;ltSQL&amp;gt') fabric_command='&amp;ltfabric command&amp;gt ?' [WITH [AFFINITY='&amp;ltaffinity&amp;gt' JOB_AFFINITY='&amp;ltjob affinity&amp;gt' GENERATE_ENTITIES_FIRST=true/false MAX_NODES=&amp;ltnumber&amp;gt [ESTIMATED_ENTITIES_COUNT=&amp;ltnumber&amp;gt] [[BIND_PARAMS=&lt;values&gt;][BIND_PARAMS_JSON=&lt;json array&gt;]] [BIND_PARAMS_SEPARATOR='&lt;value&gt;']];;</h6>
 </td>
 <td valign="top" width="400pxl">
-<p>Batch-processes a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.
-   Optional parameters are the same as described above.</p>
+<p>Batch-processes a subset of the LUI based on a query to a source interface defined in the &amp;ltdb_interface&amp;gt parameter. Optional parameters are the same as described above, with the addition of the following:</p>
+<p>BIND_PARAMS - list of binding parameters for the select query on the source interface.</p>
+<p>BIND_PARAMS_SEPARATOR - separator between parameters in BIND_PARAMS (optional. default: ',')</p>
+<p>BIND_PARAMS_JSON - json array with binding parameters for the select query on the source interface.</p>
+</td>
 <td valign="top" width="300pxl">
-<p>BATCH CUSTOMER FROM CRM_DB USING (‘select customer_id from CUSTOMER where customer_id <= 1000’) FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=’true’;
-</p>
+<p>BATCH CUSTOMER FROM CRM_DB USING (&lsquo;select customer_id from CUSTOMER where customer_id &lt;= 1000&rsquo;) FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=&rsquo;true&rsquo; BIND_PARAMS='1000';</p>
 </td>
 </tr> 
 <tr>
