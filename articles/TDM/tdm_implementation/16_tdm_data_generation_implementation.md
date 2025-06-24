@@ -32,7 +32,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
     ```
    
 
-   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set either a different range (minimum and maximum values) or a distribution type (default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3 to 6 contracts. The data generation randomly generates a number of records within this range:
+   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set either a different number range (minimum and maximum values) or a distribution type (default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3 to 6 contracts. The data generation randomly generates a number of records within this range:
 
    - Set the type of the distributed value to **integer**:
 
@@ -86,12 +86,12 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports data generation of synthetic data without Fabric Catalog, in case the Catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
 
-#### 1. Sequence handling 
+#### 1. Sequence Handling 
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
