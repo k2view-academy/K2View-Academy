@@ -67,7 +67,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
        
        The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
 
-3. **Optional** — **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate 1 address per customer. Do not enable the tester to set the number of generated addresses per customer in the task.  Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+3. **Optional** — **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address per customer. Do not enable the tester to set the number of generated addresses per customer in the task. Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
 
 
 
