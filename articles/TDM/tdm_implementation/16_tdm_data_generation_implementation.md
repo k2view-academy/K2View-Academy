@@ -19,11 +19,11 @@ To support synthetic data generation, LU population must be based on Broadway fl
 
    The following methods can be used to override the number range of generated records in a TDM implementation:
    
-   i. Edit the default number range of generated records (set to 1-3 by default): Update the
+   i. Edit the default number range of generated records (default is 1 to 3): Update the
    **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables, except for the main source LU table.
    
    Example:
-   Run the following Update statements in order to set the number of generated records to 2-4:
+   Run the following Update statements in order to set the number of generated records to be between 2 and 4:
    
     ```sql
    UPDATE tdm_general_parameters set param_value = '2' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MIN';
@@ -32,7 +32,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
     ```
    
 
-   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set a different range (minimum and maximum values) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3-6 contracts. The data generation randomly generates a number of records within this range:
+   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set either a different range (minimum and maximum values) or a distribution type (default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3 to 6 contracts. The data generation randomly generates a number of records within this range:
 
    - Set the type of the distributed value to **integer**:
 
@@ -46,16 +46,16 @@ To support synthetic data generation, LU population must be based on Broadway fl
    
      
    
-   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
+   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about distribution types. 
    
-   - If you edit the **rowsGeneratorDistribution** input argument, you must set it to be an **External parameter** with the following naming convention: 
+   - If you edit the **rowsGeneratorDistribution** input argument, you must set it as an **External parameter** using the following naming convention: 
    
    ```
    [lu name]_[lu table name]_number_of_records
    ```
    
    Notes:
-   - If the **rowsGeneratorDistribution** input argument is edited, but **not** set to be an **External parameter**, the parameter cannot be overridden by the TDM task.
+   - If the **rowsGeneratorDistribution** input argument is edited, but **not** set as an **External parameter**, the parameter cannot be overridden by the TDM task.
    
    - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
@@ -65,9 +65,9 @@ To support synthetic data generation, LU population must be based on Broadway fl
        
        For example: crm_address_number_of_records. 
        
-       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each.
+       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
 
-3. **Optional** - **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate 1 address per customer. Do not enable the tester to set the number of generated addresses per customer in the task.  Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+3. **Optional** — **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate 1 address per customer. Do not enable the tester to set the number of generated addresses per customer in the task.  Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
 
 
 
