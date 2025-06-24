@@ -1,6 +1,6 @@
 # Rule-Based Generation Implementation
 
-The TDM data generation creates synthetic entities based on rules or AI. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data.  The following article describes the **rule-based** data generation implementation.
+TDM data generation creates synthetic entities based on either rules or AI. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data. The following article describes the implementation of **rule-based** data generation.
 
 ## Implementation of Logical Unit Population 
 
