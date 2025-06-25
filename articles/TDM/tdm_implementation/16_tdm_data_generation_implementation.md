@@ -86,7 +86,7 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
@@ -95,7 +95,7 @@ From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog]
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
-This is required in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
+This is required in order to include sequence generation within data generation flows for fields that are defined as sequences in the **TDMSeqSrc2TrgMapping** table. The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
 Gen_[the sequence name in TDMSeqSrc2TrgMapping]
@@ -117,7 +117,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 In order to create the data generation flows, run either:
 
-I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) to add the target tables to the LU.
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run only once, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) for adding the target tables to the LU.
 
 II. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows). Set the **CREATE_GENERATE_FLOWS** input parameter to **true**.
 
@@ -137,11 +137,11 @@ The following data generation flows are created for each LU table:
 
 1. Data generation flow. This flow has the following naming convention:  `${population name}.generator` .
 
-    Example: contract.pop.generator
+    For example: contract.pop.generator
 
-2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their types. This inner flow is called when Fabric catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
+2. From TDM 8.1 onwards, TDM templates also create inner flows that set default values for table fields based on their types. This inner flow is called when the Fabric Catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
 
-    Example: contract.typeDefaultsGenerator
+    For example: contract.typeDefaultsGenerator
 
 
 
@@ -150,24 +150,24 @@ The following data generation flows are created for each LU table:
 ​	The data generation flows are created with the following logic:
 
 - IDs:
-  - The data generation flow sends the parent IDs to the child table's population based on the parent-child LU schema definition.
-  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table by the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id in the Address record.
+  - The data generation flow sends the parent IDs to the child's population flow, based on the parent-child LU schema definition.
+  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table via the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id to the Address record.
 
   - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in **TDMSeqSrc2TrgMapping**.
 
 - Other fields are populated with synthetic data:
 
-  - By default, this process calls the **CatalogGeneratorRecord** Actor to get the generated values from [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) based on the fields' catalog specification if set, and the field type (if no specification is set, a default value is generated for the field based on its type).
+  - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is set in the Catalog, the generated value is based on the classification's data generator. Otherwise, a default value is generated based on the field type.
 
-  - If no data is returned by the CatalogGeneratorRecord Actor (Fabric catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize  data generation Actors based on the fields' data type. Note that these default data generation Actors are selected based on the mapping defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors' mapping and should be edited before the creation of the data generation flows.
+  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors' mapping and should be updated before the data generation flows are created.
 
-- The data generation flow output contains a **Map** with a list of fields that are sent to the related LU population flow and that are loaded to the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
+- The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
 
   
 
 #### 3. Edit the data generation flow
 
- The following manual updates may be required on the data generation flows:
+ The following manual updates may be required for the data generation flows:
 
 ##### Data Generators
 
@@ -306,7 +306,7 @@ The rule-based data generation task runs on a dummy synthetic environment. The s
 Notes:
 
 - Fabric - You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
-- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service.
+- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service. The synthetic environment needs to have environment_id = -1.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
