@@ -117,7 +117,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 In order to create the data generation flows, run either:
 
-I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run one time, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) for adding the target tables to the LU.
+I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run only once, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) for adding the target tables to the LU.
 
 II. [createAllFromTemplates flow](11_tdm_implementation_using_generic_flows.md#step-3---create-load-and-delete-flows). Set the **CREATE_GENERATE_FLOWS** input parameter to **true**.
 
@@ -137,11 +137,11 @@ The following data generation flows are created for each LU table:
 
 1. Data generation flow. This flow has the following naming convention:  `${population name}.generator` .
 
-    Example: contract.pop.generator
+    For example: contract.pop.generator
 
-2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their types. This inner flow is called when Fabric catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
+2. From TDM 8.1 onwards, the template also creates an inner flow that sets default values on the table fields based on their types. This inner flow is called when the Fabric Catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
 
-    Example: contract.typeDefaultsGenerator
+    For example: contract.typeDefaultsGenerator
 
 
 
@@ -150,8 +150,8 @@ The following data generation flows are created for each LU table:
 ​	The data generation flows are created with the following logic:
 
 - IDs:
-  - The data generation flow sends the parent IDs to the child table's population based on the parent-child LU schema definition.
-  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table by the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id in the Address record.
+  - The data generation flow sends the parent IDs to the child table's population, based on the parent-child LU schema definition.
+  For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table via the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id in the Address record.
 
   - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in **TDMSeqSrc2TrgMapping**.
 
