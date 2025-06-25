@@ -1,29 +1,29 @@
 # Rule-Based Generation Implementation
 
-The TDM data generation creates synthetic entities based on rules or AI. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data.  The following article describes the **rule-based** data generation implementation.
+TDM data generation creates synthetic entities based on either rules or AI. The synthetic data is populated into the LU tables, where an LU table can be populated with either source data or generated synthetic data. This article describes the implementation of **rule-based** data generation.
 
 ## Implementation of Logical Unit Population 
 
-The LU population must be based on a Broadway flow (instead of on a DB Query or a root function) to support synthetic data generation. Thus, the **sourceDbQuery** Actor was enhanced by Fabric 7.1 to support either one of the following two population modes: a DB Select query from a data source or a synthetic population. The population mode is set based on the **ROWS_GENERATOR** key (session variable). When set to **true**, the **sourceDbQuery** Actor runs the data generation inner flow to generate the synthetic records. The number of synthetic records created for each parent key is set based on the **rowsGeneratorDistribution** input Actor.
+To support synthetic data generation, LU population must be based on Broadway flows rather than DB Queries or root functions. Hence, the **sourceDbQuery** Actor was enhanced (in Fabric 7.1) to support either of the following two population modes: a DB Select query from a data source or synthetic population. The population mode is set based on the **ROWS_GENERATOR** key, which is a session variable. When set to **true**, the **sourceDbQuery** Actor runs the data generation inner flow to generate synthetic records. The number of synthetic records created for each parent key is determined by the **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor.
 
-### LU Population Flows - Implementation Steps
+### LU Population Flows — Implementation Steps
 
-1. Verify that the LU tables' populations are based on a Broadway flow in order to support the synthetic data generation. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
+1. Verify that the LU tables' populations are based on Broadway flows in order to support synthetic data generation. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
 
-2. **Optional** - **edit the default number of generated synthetic records** - the data generation process needs to 'know' how many records have to be generated on each LU table. For example, indicate how many addresses should be generated for a synthetic customer.
+2. **Optional** — **edit the default number of generated synthetic records**. The data generation process needs to 'know' how many records have to be generated on each LU table. For example, the number of addresses to be generated for a synthetic customer should be indicated.
   
-   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates 1 record for the main LU table and 1-3 records for the remaining LU tables. The values of 1 and 3 are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
+   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between 1 and 3 records are generated for the remaining LU tables. The values '1' and '3' are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
 
    *Edit options:*
 
-   The following methods can be used to override the number range of generated records in the TDM implementation:
+   The following methods can be used to override the number range of generated records in a TDM implementation:
    
-   i. Edit the default number range of generated records (set to 1-3 by default): Update the
+   i. Edit the default number range of generated records (default is 1 to 3): Update the
    **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables, except for the main source LU table.
    
    Example:
-   Run the following Update statements in order to set the number of generated records to 2-4:
+   Run the following Update statements in order to set the number of generated records to be between 2 and 4:
    
     ```sql
    UPDATE tdm_general_parameters set param_value = '2' where param_name = 'TABLE_DEFAULT_DISTRIBUTION_MIN';
@@ -32,7 +32,7 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
     ```
    
 
-   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set a different range (minimum and maximum values) or a distribution type (the default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3-6 contracts. The data generation randomly generates a number of records within this range:
+   ii. Edit the **rowsGeneratorDistribution** input argument in the LU population flow in order to set either a different number range (minimum and maximum values) or a distribution type (default is **Uniform distribution**) of generated records for a given LU table, if needed. For example, generate customers with 3 to 6 contracts. The data generation randomly generates a number of records within this range:
 
    - Set the type of the distributed value to **integer**:
 
@@ -46,16 +46,16 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
    
      
    
-   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about the distribution types. 
+   Click [here](/articles/TDM/tdm_implementation/15_tdm_integrating_the_tdm_portal_with_broadway_editors.md#distribution-editor) for more information about distribution types. 
    
-   - If you edit the **rowsGeneratorDistribution** input argument, you must set it to be an **External parameter** with the following naming convention: 
+   - If you edit the **rowsGeneratorDistribution** input argument, you must set it as an **External parameter** using the following naming convention: 
    
    ```
    [lu name]_[lu table name]_number_of_records
    ```
    
    Notes:
-   - If the **rowsGeneratorDistribution** input argument is edited, but **not** set to be an **External parameter**, the parameter cannot be overridden by the TDM task.
+   - If the **rowsGeneratorDistribution** input argument is edited, but **not** set as an **External parameter**, the parameter cannot be overridden by the TDM task.
    
    - If the **rowsGeneratorDistribution** input argument is not edited, it is automatically generated behind the scenes as an [external parameter](#external-business-parameters) with the following naming convention: 
    
@@ -65,18 +65,18 @@ The LU population must be based on a Broadway flow (instead of on a DB Query or 
        
        For example: crm_address_number_of_records. 
        
-       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, ask to generate customers with 2-4 addresses and 3-6 contracts each.
+       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
 
-3. **Optional** - **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate 1 address per customer. Do not enable the tester to set the number of generated addresses per customer in the task.  Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+3. **Optional** — **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address per customer. Do not enable the tester to set the number of generated addresses per customer in the task. Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
 
 
 
 ## Implementation of Data Generation Flows 
 
 The **sourceDbQuery** Actor (automatically added to the LU population flow and named *Query*) runs an inner data generation flow to generate synthetic records for data generation tasks.
-The data generation flows must be created on each source LU table to support synthetic data generation.
+Data generation flows must be created on each source LU table to support synthetic data generation.
 
-The data generation flow must have the following naming convention:
+A data generation flow must have the following naming convention:
 
 ```
 ${population name}.generator
@@ -86,12 +86,12 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, the data generation flow is integrated with [Fabric catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on the fields' type. Additionally, TDM supports the data generation of synthetic data without Fabric catalog, in case the catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
 
-#### 1. Sequence handling 
+#### 1. Sequence Handling 
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
@@ -293,14 +293,20 @@ There are several optional modes for the data generation inner flow:
 
 Note that you can edit the data generation flow to be executed in different modes if needed: 
 
-- **Rows per parent** - generate all records for each input parent ID. For example, generating 2-5 open cases and 1-6 close cases per each parent activity ID requires using the 'rows per parent' mode.
+- **Rows per parent** - generate all records for each input parent ID. For example, generating 2-5 open cases and 1-6 closed cases per each parent activity ID requires using the 'rows per parent' mode.
 - **Handle all parent rows** - generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
 
 
 Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples about the RowsGenerator Actor.
 
 
+## Adding a Synthetic Environment
+The rule-based data generation task runs on a dummy synthetic environment. The synthetic environment must be added to Fabric and TDM self-service, and its name is defined by the *SYNTHETIC_ENVIRONMENT* Global. By default, this Global is set to **Synthetic**, but you can change it and set a different name.
 
+Notes:
+
+- Fabric - You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
+- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
