@@ -159,7 +159,7 @@ The following data generation flows are created for each LU table:
 
   - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is set in the Catalog, the generated value is based on the classification's data generator. Otherwise, a default value is generated based on the field type.
 
-  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors' mapping and should be updated before the data generation flows are created.
+  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default data generators and should be updated before the data generation flows are created.
 
 - The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
 
@@ -171,9 +171,9 @@ The following data generation flows are created for each LU table:
 
 ##### Data Generators
 
-- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows. This needs to be done in later flow stages, after the **Prepare Generated Data** stage (after calling the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow).
+- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows — this process needs to be done in later flow stages, after the **Prepare Generated Data** stage (after calling either the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow).
 
-- The overridden fields must be added to a Map. The Map needs to be sent as the last parameter to the **Merge Maps of all Fields** Actor in the data generation flow.
+- Overridden fields must be added to a Map — following this inclusion, the Map should be sent as the last parameter to the **Merge Maps of all Fields** Actor in the data generation flow.
 
   In the below example flow, the logic to generate the Associated_line, Associated_line_fmt, Contract_ref_id, and Description fields is overridden using MTables instead of the default generated values. These fields are added to a Map and are sent to the **Merge Maps of all Fields** Actor:
 
