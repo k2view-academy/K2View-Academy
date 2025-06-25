@@ -157,7 +157,7 @@ The following data generation flows are created for each LU table:
 
 - Other fields are populated with synthetic data:
 
-  - By default, this process calls the **CatalogGeneratorRecord** Actor to get the generated values from the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) based on the fields' Catalog specification if set, and the field type (if no specification is set, a default value is generated for the field based on its type).
+  - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is set in the Catalog, the generated value is based on the classification's data generator. Otherwise, a default value is generated based on the field type.
 
   - If no data is returned by the CatalogGeneratorRecord Actor (Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize  data generation Actors based on the fields' data type. Note that these default data generation Actors are selected based on the mapping defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors' mapping and should be edited before the creation of the data generation flows.
 
