@@ -182,7 +182,7 @@ The following data generation flows are created for each LU table:
 ##### PII Fields
 
 - In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks without overriding their values (as set by the user) by the Masking Actors in the LU population.
-- Verify that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid masking PII fields in the LU population flows for data generation tasks.
+- It should be verified that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid masking PII fields in the LU population flows for data generation tasks.
 - TDM 8.1 has added a new Actor: **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value: **generate_consistent**. Using this Actor in the data generation flow ensures the referential integrity across LUs for the generated field.
 - Notes:
     - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. 
