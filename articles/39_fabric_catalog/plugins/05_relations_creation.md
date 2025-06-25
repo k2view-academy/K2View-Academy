@@ -104,9 +104,11 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 ## Reference by Query Analysis
 
-The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and to create the *refersTo* relations. This plugin is useful when a source doesn't have predefined foreign key constraints. 
+The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and to create the *refersTo* relations. The file name format is: ```<Data Platform name>.sql```.
 
-Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
+Some database management systems (such as Oracle) support generation of **audit files** - special files that **record activities** within the database. They typically track executed SQL queries, user logins, schema changes, privilege escalations, and other security-relevant or operational events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries and save the transformed file with the required name format:  ```<Data Platform name>.sql```. This transformation can be performed by creating a Broadway flow in your project. 
+
+This plugin is useful when a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
 #### Matching Rules
 
