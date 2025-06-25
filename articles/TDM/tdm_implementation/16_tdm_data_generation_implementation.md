@@ -306,7 +306,7 @@ The rule-based data generation task runs on a dummy synthetic environment. The s
 Notes:
 
 - Fabric - You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
-- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service.
+- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service. The synthetic environment needs to have environment_id = -1.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
