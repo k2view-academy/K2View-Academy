@@ -86,7 +86,7 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
@@ -95,7 +95,7 @@ From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog]
 
 The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
 
-This is required in order to add a sequence generation in the data generation flow for sequence fields (set in the **TDMSeqSrc2TrgMapping** table). The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
+This is required in order to include sequence generation within data generation flows for fields that are defined as sequences in the **TDMSeqSrc2TrgMapping** table. The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
 Gen_[the sequence name in TDMSeqSrc2TrgMapping]
