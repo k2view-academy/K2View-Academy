@@ -86,14 +86,14 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
 
 #### 1. Sequence Handling 
 
-The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
+The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating data generation flows. 
 
 This is required in order to include sequence generation within data generation flows for fields that are defined as sequences in the **TDMSeqSrc2TrgMapping** table. The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
@@ -115,7 +115,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 #### 2. Generate the data generation flows for the LU table
 
-In order to create the data generation flows, run either:
+In order to create data generation flows, run either:
 
 I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run only once, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) for adding the target tables to the LU.
 
@@ -147,7 +147,7 @@ The following data generation flows are created for each LU table:
 
 ##### 	Data Generation Flow Logic
 
-​	The data generation flows are created with the following logic:
+​	Data generation flows are created with the following logic:
 
 - IDs:
   - The data generation flow sends the parent IDs to the child's population flow, based on the parent-child LU schema definition.
