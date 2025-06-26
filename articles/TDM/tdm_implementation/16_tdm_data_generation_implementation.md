@@ -198,7 +198,7 @@ The following data generation flows are created for each LU table:
   
 - PII fields can differ in their occurrence across records and in the requirement for referential integrity (consistency). Each scenario requires a different implementation approach.
 
-  Example: The First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
+  Example: The First Name and Last Name are located in both the CRM and Billing LUs, each of which represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
 
   The following table describes the implementation recommendations for each scenario: 
 
@@ -223,7 +223,7 @@ The following data generation flows are created for each LU table:
 <p>N/A</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ The following data generation flows are created for each LU table:
 <p>N</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -246,8 +246,8 @@ The following data generation flows are created for each LU table:
 </td>
 <td width="500pxl">
 <p>2 alternatives:</p>
-<p>1. Use a data generator Actor for one of the field's instances and then select the generated value and populate it into the remaining instances.</p>
-<p>2. Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep the referential integrity of the instances.</p>
+<p>1. Use a data generator Actor for one of the field's instances, and then select the generated value and populate it into the remaining instances.</p>
+<p>2. Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep referential integrity of the instances.</p>
 </td>
 </tr>
 <tr>
@@ -258,7 +258,7 @@ The following data generation flows are created for each LU table:
 <p>N</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -269,7 +269,7 @@ The following data generation flows are created for each LU table:
 <p>Y</p>
 </td>
 <td width="500pxl">
-<p>Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep the referential integrity of the instances.</p>
+<p>Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep referential integrity of the instances.</p>
 </td>
 </tr>
 </tbody>
