@@ -14,10 +14,10 @@ The below table displays the list of Fabric versions with their release informat
         </tr>
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.6.pdf">8.2.6</a></td>
-            <td>June 25, 2025</td>
+            <td>June 29, 2025</td>
             <td></td>
             <td></td>
-            <td>19</td>
+            <td>25</td>
             <td></td>
         </tr>
         <tr>

@@ -86,14 +86,14 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+From TDM 8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
 
 #### 1. Sequence Handling 
 
-The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating the data generation flows. 
+The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating data generation flows. 
 
 This is required in order to include sequence generation within data generation flows for fields that are defined as sequences in the **TDMSeqSrc2TrgMapping** table. The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
@@ -115,7 +115,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 #### 2. Generate the data generation flows for the LU table
 
-In order to create the data generation flows, run either:
+In order to create data generation flows, run either:
 
 I. [TDMInitFlow](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow. Set the **CREATE_GENERATE_FLOWS** input parameter to **true**. Note that this flow is designed to run only once, when creating an LU, and it also adds the TDM tables to the LU. If the LU already contains the TDM tables, it is recommended to run the **createAllFromTemplates** flow (see the below line) for adding the target tables to the LU.
 
@@ -147,7 +147,7 @@ The following data generation flows are created for each LU table:
 
 ##### 	Data Generation Flow Logic
 
-​	The data generation flows are created with the following logic:
+​	Data generation flows are created with the following logic:
 
 - IDs:
   - The data generation flow sends the parent IDs to the child's population flow, based on the parent-child LU schema definition.
@@ -159,7 +159,7 @@ The following data generation flows are created for each LU table:
 
   - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is set in the Catalog, the generated value is based on the classification's data generator. Otherwise, a default value is generated based on the field type.
 
-  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default Actors' mapping and should be updated before the data generation flows are created.
+  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default data generators and should be updated before the data generation flows are created.
 
 - The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
 
@@ -171,9 +171,9 @@ The following data generation flows are created for each LU table:
 
 ##### Data Generators
 
-- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows. This needs to be done in later flow stages, after the **Prepare Generated Data** stage (after calling the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow).
+- Replacement of the default data generation Actors with other [data generators](/articles/19_Broadway/actors/07a_data_generators_actors.md) or custom inner flows — this process needs to be done in later flow stages, after the **Prepare Generated Data** stage (after calling either the **CatalogGeneratorRecord** Actor or the `${table name}.typeDefaultsGenerator` inner flow).
 
-- The overridden fields must be added to a Map. The Map needs to be sent as the last parameter to the **Merge Maps of all Fields** Actor in the data generation flow.
+- Overridden fields must be added to a Map. Once added, this Map should be sent as the last parameter to the **Merge Maps of all Fields** Actor within the data generation flow.
 
   In the below example flow, the logic to generate the Associated_line, Associated_line_fmt, Contract_ref_id, and Description fields is overridden using MTables instead of the default generated values. These fields are added to a Map and are sent to the **Merge Maps of all Fields** Actor:
 
@@ -182,23 +182,23 @@ The following data generation flows are created for each LU table:
 ##### PII Fields
 
 - In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks without overriding their values (as set by the user) by the Masking Actors in the LU population.
-- Verify that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid masking PII fields in the LU population flows for data generation tasks.
-- TDM 8.1 has added a new Actor: **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value: **generate_consistent**. Using this Actor in the data generation flow ensures the referential integrity across LUs for the generated field.
+- It should be verified that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid masking PII fields in the LU population flows for data generation tasks.
+- TDM 8.1 has added a new Actor — **GenerateConsistent**. This Actor inherits the **Masking** Actor, but it has its own **category** value — **generate_consistent**. Using the **GenerateConsistent** Actor in data generation flows ensures referential integrity across LUs for the generated field.
 - Notes:
     - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. 
     - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
-    - If you have a PII field that exists across LUs and is set in multiple records in the LUI, you need to use a **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer can have multiple contracts and each contract needs to have a different name. The contracts exist in both LUs - CRM and Billing. Populate the Masking Actor's input parameters in the data generation flow as follows:
-        - **value**: populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter.
+    - If a PII field exists across multiple LUs and is set in several records within the LUI, you should use a **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer may have multiple contracts, each requiring a different name. The contracts exist in both the CRM and Billing LUs. To handle this, populate the Masking Actor's input parameters in the data generation flow as follows:
+        - **value** — populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter.
 
-      See example below:
+      View the below example:
 
       ![pii example](images/data_generation_pii_example_1.png)
       
-        - **category**: populate it with **generate_consistent** value.
+        - **category** — populate it with **generate_consistent** value.
   
-- PII fields can vary in their incidence and in their need for referential integrity (consistency). Each scenario requires a different implementation approach.
+- PII fields can differ in their occurrence across records and in the requirement for referential integrity (consistency). Each scenario requires a different implementation approach.
 
-  Example: The First Name and Last Name are located in both LUs - CRM and Billing. Each LU represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
+  Example: The First Name and Last Name are located in both the CRM and Billing LUs, each of which represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
 
   The following table describes the implementation recommendations for each scenario: 
 
@@ -223,7 +223,7 @@ The following data generation flows are created for each LU table:
 <p>N/A</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ The following data generation flows are created for each LU table:
 <p>N</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -246,8 +246,8 @@ The following data generation flows are created for each LU table:
 </td>
 <td width="500pxl">
 <p>2 alternatives:</p>
-<p>1. Use a data generator Actor for one of the field's instances and then select the generated value and populate it into the remaining instances.</p>
-<p>2. Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep the referential integrity of the instances.</p>
+<p>1. Use a data generator Actor for one of the field's instances, and then select the generated value and populate it into the remaining instances.</p>
+<p>2. Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep referential integrity of the instances.</p>
 </td>
 </tr>
 <tr>
@@ -258,7 +258,7 @@ The following data generation flows are created for each LU table:
 <p>N</p>
 </td>
 <td width="500pxl">
-<p>Use a data generator Actor to generate a random synthetic value</p>
+<p>Use a data generator Actor to generate a random synthetic value.</p>
 </td>
 </tr>
 <tr>
@@ -269,7 +269,7 @@ The following data generation flows are created for each LU table:
 <p>Y</p>
 </td>
 <td width="500pxl">
-<p>Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep the referential integrity of the instances.</p>
+<p>Use the new TDM 8.1 Actor - <strong>GenerateConsistent&nbsp;</strong> - for all the field's instances to keep referential integrity of the instances.</p>
 </td>
 </tr>
 </tbody>
@@ -281,11 +281,11 @@ The following data generation flows are created for each LU table:
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting. 
+- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not allowed in the External Name setting. 
 
-  Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the integration of the TDM portal with the Broadway editors and the implementation guides for MTable and Distribution parameters.
+  Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about integrating the TDM portal with the Broadway editors, as well as implementation guides for MTable and Distribution parameters.
 
-##### Handle the Loop over the Number of Records
+##### Handle Looping Over the Number of Records
 
 There are several optional modes for the data generation inner flow:
 
