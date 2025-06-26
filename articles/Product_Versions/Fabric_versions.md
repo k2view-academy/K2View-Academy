@@ -13,6 +13,14 @@ The below table displays the list of Fabric versions with their release informat
             <td width="150pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
+            <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.6.pdf">8.2.6</a></td>
+            <td>June 29, 2025</td>
+            <td></td>
+            <td></td>
+            <td>25</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.2.5.pdf">8.2.5</a></td>
             <td>June 9, 2025</td>
             <td></td>
@@ -175,9 +183,9 @@ The below table displays the list of Fabric versions with their release informat
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V7.1/Fabric_Release_Notes_V7.1.1.pdf">7.1.1</a></td>
             <td>July 25, 2023</td>
-            <td>HF14</td>
-            <td>March 27, 2025</td>
-            <td>102</td>
+            <td>HF15</td>
+            <td>June 17, 2025</td>
+            <td>104</td>
             <td></td>
         </tr>
         <tr>
@@ -704,3 +712,10 @@ The below table displays the list of Fabric versions with their release informat
 </table>
 
 The information in the table is provided under the terms and conditions of the license agreement that you have signed with K2view (the “License”). In case of any conflict or discrepancy between this table and your License, the License shall prevail.
+
+
+
+
+
+
+
