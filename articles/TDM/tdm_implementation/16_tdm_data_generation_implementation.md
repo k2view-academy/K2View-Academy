@@ -281,11 +281,11 @@ The following data generation flows are created for each LU table:
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters, except for an underscore, must not be included in the External Name setting. 
+- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not allowed in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about integrating the TDM portal with the Broadway editors, as well as implementation guides for MTable and Distribution parameters.
 
-##### Handle the Loop over the Number of Records
+##### Handle Looping Over the Number of Records
 
 There are several optional modes for the data generation inner flow:
 
