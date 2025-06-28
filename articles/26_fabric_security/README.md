@@ -23,4 +23,6 @@
     <li><a href="/articles/26_fabric_security/16_user_IAM_auditing.md">User IAM Auditing</a></li>
     <li><a href="/articles/26_fabric_security/17_user_IAM_custom_authenticator.md">User IAM Custom Authenticator</a></li>
 	<li><a href="/articles/26_fabric_security/18_FIPS_implementation.md">FIPS Compliance</a></li>
+	    <li><a href="/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md">Master Key Protection with KeyStore</a></li>
+    <li><a href="/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md">Fabric Master Key Integrated with KMS</a></li>
 </ul>
