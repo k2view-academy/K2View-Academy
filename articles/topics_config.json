@@ -357,7 +357,7 @@
 					"value": "27_auditing"
 				},
 				{
-					"display name": "Fabric Infrastructure",
+					"display name": "Fabric Infrastructure Security",
 					"value": "99_fabric_infras/devops"
 				}
 			]
