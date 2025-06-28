@@ -1,6 +1,5 @@
 <strong>Fabric Infrastructure Security<strong>
         
-
 <ul>
     <li><a href="/articles/99_fabric_infras/devops/01_fabric_security_overview.md">Security Overview</a></li>
     <li><a href="/articles/99_fabric_infras/devops/02_fabric_environments.md">Fabric Environments Security</a></li>
@@ -11,10 +10,6 @@
     <li><a href="/articles/99_fabric_infras/devops/06_kafka_hardening.md">Kafka Hardening</a></li>
     <li><a href="/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md">Connect Fabric to Kafka in TSL mode</a></li>
     <li><a href="/articles/99_fabric_infras/devops/11_kafka_plain_sasl_hardening.md">Kafka Plain SASL Hardening</a></li>
-    <li><a href="/articles/99_fabric_infras/devops/08_oracleGG_hardening.md">Oracle GG (Golden Gate) Big Data Setup with Kafka SSL</a></li>
-
-    <li><a href="/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md">Master Key Protection with KeyStore</a></li>
-    <li><a href="/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md">Fabric Master Key Integrated with KMS</a></li>
-
+    <li><a href="/articles/99_fabric_infras/devops/08_oracleGG_hardening.md">Oracle GG (Golden Gate) Big Data Setup with Kafka SSL</a></li>         
 </ul>
 
