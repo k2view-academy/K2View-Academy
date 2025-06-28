@@ -1,8 +1,8 @@
-# Backup of Fabric Credentials
+# Fabric Credentials Backup
 
-When testing the system, [user credentials setup](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#setting-credentials) may need to be repeated for a number of reasons, for example, due to an environmental cleanup or when creating additional environments. 
+When testing the system, [user credentials setup](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#setting-credentials) may need to be repeated for several reasons, such as environmental cleanup or when creating additional environments. 
 
-To prevent data loss and to speed up the setup process, it is recommended to create a Crontab expression that periodically backs up the credentials. The backup script can export the data from the System DB into a text file. If needed, this data can be imported from the text file into the System DB.  
+To prevent data loss and speed up the setup process, it is recommended to create a Crontab expression that periodically backs up the credentials. The backup script can export the data from the System DB into a text file. If needed, this data can be imported from the text file into the System DB.  
 
 ### Example of Exporting Data
 
