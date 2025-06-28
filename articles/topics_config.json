@@ -358,7 +358,7 @@
 				},
 				{
 					"display name": "Fabric Infrastructure",
-					"value": "99_fabric_infras"
+					"value": "99_fabric_infras/devops"
 				}
 			]
 		}
