@@ -1,4 +1,4 @@
-# Fabric Authorization Principals Commands
+# Fabric Authorization Commands
 
 The following tables discuss how user access control is managed using Fabric commands.
 
