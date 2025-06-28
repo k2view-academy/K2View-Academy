@@ -1,4 +1,4 @@
-# Fabric Credentials List Commands
+# Fabric Authorization Credentials List Commands
 
 The following table describes the methods to see the access control information using Fabric `LIST` commands.
 
