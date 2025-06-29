@@ -90,5 +90,5 @@ This article describes the setup and integration steps to connect your Single-Si
    <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta9.jpg">    </td></tr></tbody></table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/15_user_IAM_auditing.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/16_user_IAM_auditing.md)
 
