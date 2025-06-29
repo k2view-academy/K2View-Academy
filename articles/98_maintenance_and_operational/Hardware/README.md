@@ -1,8 +1,8 @@
-<strong>System Prerequisites</strong>
+<strong>System Requirements</strong>
 <ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">
-      Introduction
+      Fabric and TDM Installation Overview
     </a>
   </li>
 </ul>
