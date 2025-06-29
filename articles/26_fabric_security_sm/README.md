@@ -1,4 +1,4 @@
-<strong>Secret Managers Integration<strong>
+<strong>Secret Manager Integration<strong>
 
 <ul>
     <li><a href="/articles/26_fabric_security_sm/04a_secret_manager.md">Secret Managers Integration</a></li>
