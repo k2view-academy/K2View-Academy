@@ -1,0 +1,197 @@
+# User IAM Configuration
+
+Fabric allows you to configure web access and console access according to required authentication methods.
+
+The configuration resides in Fabric's main configuration file - **config.ini**. For more information about this file, read [here](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini).
+
+First, look for the config parameters in the locations as described below:
+
+* The **web access** is based on the `WEB_AUTHENTICATION_PROTOCOL` property, which gets one of 2 values:
+  * "SAML" - indicates to Fabric to use SAML as IDP. In this case, the `saml` section properties must be set appropriately, as described later in this article. 
+  * SERVER_AUTHENTICATOR" - indicates to Fabric to use the authenticators that are defined in the `server_authenticator` section, as described later in this article. This is the default option; when it is in use, you can leave the `WEB_AUTHENTICATION_PROTOCOL` entry in the comments. 
+
+- The **console access** is based on the `server_authenticator` section definitions.
+
+<br/>
+
+## server_authenticator Configuration
+
+The `server_authenticator` property defines which authenticator should be used. In case SAML is not in use, it is also relevant for web access. 
+
+Five authenticators come as part of the Fabric platform and are considered as reserved names: "fabric", "cassandra", "ldap", "asldap", "block_all", as follows:
+
+- **fabric** - (or system_db) when using Fabric as the authenticator. No further settings are required.
+- **cassandra** - When using Fabric local Cassandra as [Fabric System DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), ensure that the following 2 parameters in the cassandra configuration file (cassandra.yaml) - **authenticator** and **authorizer** - are configured with PasswordAuthenticator / CassandraAuthorizer option, respectively.
+
+   Notes:
+     * The concrete values need to be reconfirmed with the owner of the environment.
+     * Cassandra can be the authenticator even if Fabric uses SQLite as system_db.
+     * When AWS Keyspaces is being used, Fabric does not have permission to create users. Hence, it is recommended to use fabric as a server authenticator, where Fabric manages the users.
+
+- **ldap** - connect to the LDAP server. For this option, the LDAP server connection details are required and should be defined in the section named `ldap_auth`. 
+- **adldap** - connect to the AD/LDAP server. For this option, the AD/LDAP server connection details are required and should be defined in the section named `adldap_auth`.
+- **block_all** - means that access is blocked. No further settings are required for it, and it is the recommended option in case of SAML. 
+
+When the `server_authenticator` is not set, the default authenticator is "fabric".
+
+Fabric also allows the use of proprietary, custom authenticators, as will be explained later in this article.
+
+
+
+### Sequence Authenticators
+
+A sequence of authenticators can be specified using a comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as a fallback for its predecessor.
+
+Note that an appropriate accompanying section must be added for each authenticator. For example, if `server_authenticator=ldap,fabric` is configured, then one additional section - "ldap_auth" - should be added.
+
+If there is a need to use the same type, for example, use 2 LDAP servers, where one is a fallback to another, then do the following:
+
+1. Give a name to each of them, e.g., "ldap1", "ldap2"
+2. Make sure the additional section names match their names, e.g., "ldap1_auth", "ldap2_auth"
+3. Define their class-name as an additional property for the "<name>_auth" section, similar to a proprietary custom authenticator. This must be done, as these names are not reserved. For example, in case of LDAP - `class_name=com.k2view.fabric.authentication.providers.LdapAuthenticator`.
+
+
+
+<br/>
+
+## SAML Configuration
+
+### Preparations & Prerequisites
+
+The integration with a SAML IDP requires that both the identity provider (IDP) and the service provider (SP), i.e., Fabric, will provide information to each other, which will then be uploaded and configured in both platforms.
+
+* **Get from the IDP** - to be copied and downloaded from the IDP admin user interface 
+
+  * IDP entity ID.
+
+  * IDP SERVICE URL - the IDP endpoint to which Fabric redirects the user.
+
+  * Certificate file - the public key that the IDP generates. To import it into the Fabric truststore, run the following:
+
+    `keytool -importcert -alias <ALIAS-NAME> -file <full-path-to-downloaded-cert-file> -storetype JKS -keystore <full-path-to-truststore-file>`
+
+    The path to the trust-store file and related parameters can be found in the jvm.options file: In the *TLS/SSL SETTINGS* section look for "javax.net.ssl.trustStore". Those values are set for a hardened environment. An example of such a path is: "$K2_HOME/.cassandra_ssl/cassandra.truststore".
+
+    
+
+    The specified alias name should also be used in the configuration for the *IDP_CERT_ALIAS* property. You can specify any alias name.
+
+    
+
+* **Provide the IDP**
+
+  * SP entity ID.
+
+  * ACS URL - the endpoint in Fabric to which the SAML response should be sent.
+
+  * Certificate file - This is the public key generated by the Fabric private key. To generate it, run the following:
+
+    `keytool -export -alias <ALIAS-NAME> -storepass <password> -file <output-filename>.cer -keystore <full-path-to-keystore-file>` 
+
+    The path to the key-store file and related parameters can be found in the jvm.options file: In the *TLS/SSL SETTINGS* section, look for "javax.net.ssl.keyStore". Those values are set for a hardened environment. An example of such a path is: "$K2_HOME/.cassandra_ssl/keystore.jks".
+
+    
+
+    The specified alias name should be used in the configuration for the *SP_CERT_ALIAS* property. You'll need to use the alias of the certificate, which is already stored. Please verify it, using the keytool list command.
+
+
+
+### Keystore Verification
+
+You can verify the certification keys by using this command: `keytool -list -storepass <password> -keystore <path to the JKS repository file>`. JKS (Java KeyStore) is a repository of security certificates – either authorization certificates or public key certificates – along with their corresponding private keys.
+
+While running this command after running the above two keytool's *import* and *export* commands, you will see the corresponding two entries and notice, for each entry, its alias, last modified date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
+
+`okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
+`k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
+
+For more information about keystore handling, please read [here](/articles/99_fabric_infras/devops/04_cassandra_hardening.html) and [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html).
+
+<br/>
+
+For more information and guidelines as to where and how this information should be set in IDPs, refer to [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md).
+
+
+
+### Editing the config.ini File
+
+The following configuration actions should be applied in the Fabric **config.ini** configuration file, using the information set and acquired during the preparation step.
+
+Edit these properties in the `[saml]` section:
+
+- **SP_ENTITYID** - the identity of the Fabric, in URI format, which should be populated in the IDP. 
+- **SP_ASSERTION_CONSUMER_SERVICE_URL** - the endpoint in Fabric to which the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load balancer hostname (a DNS name can also be used). This property is also populated on the IDP side.
+- **IDP_ENTITYID** - the entity ID, in URI format, as provided by the IDP.
+- **IDP_SINGLE_SIGN_ON_SERVICE_URL** - the IDP endpoint for the SAML request. 
+- **SECURE** - a flag indicating whether certification and encryption should apply. The default is *true*.
+- **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP. This certification is the public key for the SAML response. 
+- **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP. This certification is the public key for the SAML request.
+- **GROUPS_KEY_MAPPING** (optional) - the name of the groups list, as retrieved from the IDP, as part of the SAML response. Although Fabric expects this value to be "groups" (its default), when required, you can add this parameter and set its value.  
+- **SP_SECURE** (optional; default is *true*) - indicates whether the expected SAML response is secured (encrypted). Set it to *false* when the client's IDP team does not intend to upload and use the certificate file provided by K2view. Without the public key, encrypting the response can’t take place.
+
+
+
+Moreover, the `WEB_AUTHENTICATION_PROTOCOL` property's value shall be set to "SAML".
+
+
+
+#### Configurations for Windows OS
+
+When Fabric is running on a Windows OS, typically during project implementation or testing, when working locally, the following additional steps are required in relation to the certification files.
+
+1. Open the "fabric-server-start.bat" located in the Fabric server scripts directory - "<FABIRC_HOME>\Server\fabric\scripts".
+2. Update the following four properties:
+   - set javax_net_ssl_keyStore - the full path of the Fabric key store repository (jks file). This repository stores the private key upon which the generated public key is based (this key is sent to the IDP).
+   - set javax_net_ssl_keyStorePassword
+   - set javax_net_ssl_trustStore - the full path of the trust store, where the public key, which is retrieved from the IDP, is stored (for the local machine, you can use the same JKS file that holds the keystore).
+   - set javax_net_ssl_trustStorePassword
+3. Restart Fabric.
+
+<br/>
+
+## LDAP & LDAPS Configuration
+
+### Preparations & Prerequisites
+
+##### Admin Role Settings
+
+When LDAP is used as an authenticator, an admin role is automatically created for Fabric Bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $K2_HOME/config.template/admin_privileges.template file as reference). 
+
+The LDAP owner should provide the name of the role.
+
+##### LDAPS: Secure LDAP
+
+When working with LDAPS (this is a secure LDAP), you must get a certificate file from the LDAP owner and import it to the Fabric truststore as shown:
+
+### Editing the config.ini file
+
+The `adldap_auth` or `ldap_auth` sections must define the following:
+
+- **url** - an LDAP URL endpoint. For an LDAPS (secured LDAP) connection, it will start with "ldaps://" (note that it is in lowercase letters).
+- **security_level** - set to "simple" (the default value, which can also be used for an LDAPS).
+- **admin_dn** - the LDAP admin user that has permissions to search and look for other users.
+- **admin_password** - the admin user password.
+- **users_base_dn** - the root base "dn" of the users.
+
+The LDAP owner should provide the values.
+
+The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
+
+<br/>
+
+## Proprietary Custom Authenticator
+
+In order to use a custom authenticator, do the following in the config.ini:
+
+1. Add the `server_authenticator` authenticator list.
+2. Add a new accompanying section, following this naming convention: `<authenticator_name>_auth`. 
+   - Under this section, add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Additional parameters can also be added and will be passed to the authenticator when activated.
+
+For more information about customer authenticator implementation, read [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
+
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
+
