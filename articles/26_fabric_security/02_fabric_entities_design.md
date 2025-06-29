@@ -29,13 +29,13 @@
 
 Most database management systems store data in silos, organized according to the type of data stored, such as customer data, financial data, address data, and device data. When data is required, hundreds or thousands of tables may need to be queried using complex joins to deliver the information. This process is very cumbersome, complex, and time-consuming. Most importantly, data safety is challenged, and security is increasingly compromised each time these tables are accessed. 
 
-Fabric's unique data approach offers a new paradigm for data management, particularly in terms of protecting data integrity. This approach utilizes a *Logical Unit*. Fabric uses the Logical Unit to store and enable access to data using an entity-centric predefined structure that considerably reinforces its security and integrity, as each entity is stored separately within a *Logical Unit Instance*. Each time data is accessed, a *Logical Unit Instance* is created or updated, based on a sync policy. 
+Fabric's unique data approach offers a new paradigm for data management, particularly in terms of protecting data integrity. This approach utilizes a *Logical Unit*. Fabric utilizes the Logical Unit to store and enable access to data using an entity-centric, predefined structure that considerably enhances its security and integrity, as each entity is stored separately within a Logical Unit Instance. Each time data is accessed, a *Logical Unit Instance* is created or updated based on a sync policy. 
 
 ### Logical Unit Instances Encryption
 
 Fabric encrypts each Logical Unit Instance (LUI) using an AES-256 algorithm along with an initialization vector (IV) and creates a unique encryption key for each LUI. The LUI data can only be read using the Fabric master key, which is also always encrypted. 
 
-This additional atomic-level encryption provides greater protection of sensitive data, in addition to eliminating the risk of a large-scale data breach of systems. Each entity is uniquely protected and its encryption secrets do not affect the other millions (or more) of entities stored in Fabric.   
+This additional atomic-level encryption provides greater protection of sensitive data, in addition to eliminating the risk of a large-scale data breach of systems. Each entity is uniquely protected, and its encryption secrets do not affect the other millions (or more) of entities stored in Fabric.   
 
 
 ## Fabric Hashing Mechanism
@@ -124,7 +124,7 @@ A key can be generated using the following command:
 
 The master key rotation supports the LUI encryption master key. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled daily or weekly job, calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt data from all instances.
 
-Note that the job does not have to be time-based; any other condition, such as the number of LUIs per node can trigger.
+Note that the job does not have to be time-based; any other condition, such as the number of LUIs per node, can trigger.
 
 Master key rotation enables the generation and activation of a new master key. The new master key affects Instance IDs saved in the LU database from the moment they are generated onwards. The new key does not impact the existing Instance IDs until they are next synced and saved in the LU database.
 
@@ -138,10 +138,10 @@ Fabric supports, since the v6.5.9 release, integrations with external KMS (Key M
 
 KMS is a service that provides a centralized key management with interfaces to generate, rotate, and manage cryptographic keys. KMS is supplied by various providers, with multiple capabilities, where Fabric supports integration with AWS and GCP KMS. Among the advantages of using KMS is that it is backed by hardware security modules (HSM). 
 
-Note: While KMS providers enable working with either symmetric or asymmetric encryption types, Fabric supports only the symmetric type, and thus the explanations below refer to this type only. 
+Note: While KMS providers enable working with either symmetric or asymmetric encryption types, Fabric supports only the symmetric type; therefore, the explanations below refer to this type only. 
 
 KMS exposes a two-tiered key hierarchy to clients: 
-* **Master Key** - At AWS, it is known as CMK (Customer Master Key), and at GCP, it is called KEK (Key Encryption Key). The master key, which is protected by an HSM, resides in KMS and never leaves it. Clients cannot get it, but are aware of its identity and ask KMS to use it. 
+* **Master Key** - At AWS, it is known as a CMK (Customer Master Key), and at GCP, it is referred to as a KEK (Key Encryption Key). The master key, which is protected by an HSM, resides in KMS and never leaves it. Clients cannot get it, but are aware of its identity and ask KMS to use it. 
 * **Data Encryption Key** (DEK) - used by applications to encrypt and decrypt the data. The KMS does not store data keys but instead generates (at AWS) and protects them using the master keys.  
 
 The application utilizes two forms of the data key: clear/plain and encrypted. While the encrypted form is stored and persistent, the clear or plain form must not be stored anywhere; it exists only in runtime memory.
@@ -161,7 +161,7 @@ When a KMS integration is used, Fabric treats KMS's data key as its master key:
 
 When integrated with AWS, instead of generating a master key, it calls the AWS KMS to get an encrypted data key. When integrated with GCP or KMIP KMS, it generates a data key and calls the KMS to encrypt and seal it. Then, Fabric treats the *encrypted* data key as its master key.  
 
-To encrypt or decrypt data, each Fabric node, upon going live, retrieves the stored Fabric master key, which is actually the encrypted data key, and calls the KMS to decrypt or unseal it. Having the data in its clear, plain form, Fabric can encrypt and decrypt data.
+To encrypt or decrypt data, each Fabric node, upon going live, retrieves the stored Fabric master key, which is the encrypted data key, and calls the KMS to decrypt or unseal it. Having the data in its clear, plain form, Fabric can encrypt and decrypt data.
 
 #### Setup 
 
@@ -191,7 +191,7 @@ When required, the KMS master key can be replaced. In such a case, a new KMS mas
 > Notes:
 >
 > * At AWS, manual key rotation is done only by creating a new master key, that is, using a key replacement. Others, like GCP, support manual rotation similar to the automatic rotation, i.e., without replacing the key.  
-> * To enable Fabric to decrypt older KMS master keys, these keys shall be preserved in the KMS. If it is required to delete them, then before doing it, the Fabric migration process should be done on the data, to re-encrypt them with the new master key.
+> * To enable Fabric to decrypt older KMS master keys, these keys shall be preserved in the KMS. If it is required to delete them, the Fabric migration process should be performed on the data to re-encrypt it with the new master key before deletion.
 
 #### Multi-Region Support
 
