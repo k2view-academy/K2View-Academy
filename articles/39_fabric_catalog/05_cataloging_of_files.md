@@ -35,8 +35,8 @@ Below is the description of each expected flow (transformation rule):
 
 1. **Get Metadata** is the first transformation rule that builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
 
-   * The metadata can be based on the schema definition file(s), if they are provided. In this case, each map is expected to represent a Catalog's field with its respective structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
-   * When there is no schema definition file and the metadata is expected to be discovered based on data sample, each map should represent a Catalog's dataset with its respective structure: data platform, schema, dataset, class. Then the fields and their properties will be completed from the example data.
+   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its respective structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
+   * When no schema definition file is provided and the metadata is expected to be discovered based on a data sample, each map should represent a Catalog dataset with its respective structure: data platform, schema, dataset, class. The fields and their properties will then be completed from the example data.
    * The combined approach is also possible. Meaning, some datasets can be defined by schema definition files and some can be defined by sample data.
 
 
