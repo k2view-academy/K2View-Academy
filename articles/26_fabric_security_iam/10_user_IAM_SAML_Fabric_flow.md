@@ -26,15 +26,15 @@ The user clicks on a link that leads him to a Fabric app (1 in the diagram below
 - The user then either has an existing active browser session with the identity provider or establishes one by logging in to the identity provider via the IDP login page (4).
 - The identity provider builds the authentication response in the form of an XML document containing the user’s identifier, signs it using an X.509 certificate, and posts this information to Fabric, along with various other assertions and attributes (5).
 - Fabric verifies and opens the response, using the certification and encryption keys and algorithms. Fabric then processes and extracts the content, including the groups and roles to which the user is associated (6).
-- Fabric establishes a Fabric session for the user, enabling him to access according to the permissions granted to him by Fabric and its apps. The Fabric session provides (via the *UsercCode*) the information about the user and the roles that he is associated with (7).
+Fabric establishes a Fabric session for the user, enabling them to access resources according to the permissions granted to them by Fabric and its apps. The Fabric session provides (via the *UsercCode*) the information about the user and the roles that he is associated with (7).
 
 
 
 Below is the logical flow illustrating these steps: 
 
-<img src="/articles/26_fabric_security/images/11_Fabric_SAML_login.jpg">
+<img src="/articles/26_fabric_security_iam/images/11_Fabric_SAML_login.jpg">
 
-See [here](/articles/26_fabric_security/12_web_login.md) for more information about the user log-in process.
+See [here](/articles/26_fabric_security_iam/12_web_login.md) for more information about the user log-in process.
 
 
 
@@ -46,7 +46,7 @@ In both cases,  Fabric starts the authentication process with the IDP, as explai
 
 
 
-For more information and guidelines about setting up Fabric with SAML IDPs, refer to the examples for [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
+For more information and guidelines about setting up Fabric with SAML IDPs, refer to the examples for [Azure AD SAML Setup Guide](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security_iam/15_user_IAM_SAML_Okta_setup.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#saml-configuration).
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/11_user_IAM_LDAP.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/09_user_IAM_SAML_fundamentals_and_terms.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md)
 
