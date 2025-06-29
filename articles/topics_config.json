@@ -345,16 +345,13 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Fabric Security",
+					"display name": "Concepts and Methods",
 					"value": "26_fabric_security"
 				},
 				{
 					"display name": "Capabilities",
 					"sub-topics": [
-						{
-							"display name": "Concepts and Methods",
-							"value": "26_fabric_security"
-						},
+
 						{
 							"display name": "User and Access Management",
 							"value": "26_fabric_security_iam"
