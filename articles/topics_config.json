@@ -345,7 +345,7 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Security Architecture & Identity Management",
+					"display name": "Security & Identity Management",
 					"value": "26_fabric_security"
 				},
 				{
