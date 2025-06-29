@@ -187,7 +187,7 @@ The following data generation flows are created for each LU table:
 - Notes:
     - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. 
     - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
-    - If a PII field exists across multiple LUs and is set in several records within the LUI, you should use a **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer may have multiple contracts, each requiring a different name. The contracts exist in both the CRM and Billing LUs. To handle this, populate the Masking Actor's input parameters in the data generation flow as follows:
+    - If a PII field exists across multiple LUs and is set in several records within the LUI, you should use the **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer may have multiple contracts, each requiring a different name. The contracts exist in both the CRM and Billing LUs. To handle this, populate the Masking Actor's input parameters in the data generation flow as follows:
         - **value** — populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter.
 
       View the below example:
