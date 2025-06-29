@@ -29,4 +29,5 @@ The following steps outline the process of fabric hardening on each server, incl
 Note that this section only addresses DevOps security hardening. For information about Fabric security from an architectural perspective, click [here](/articles/26_fabric_security/01_fabric_security_overview.md).
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md) 
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/02_fabric_environments.md) 
