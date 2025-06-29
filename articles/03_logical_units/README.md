@@ -1,7 +1,7 @@
-<strong>Logical Unit / Data Product<strong>
+<strong>Logical Unit<strong>
 
 <ul>
-    <li><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit Overview</a></li>
+    <li><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit Concepts</a></li>
     <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Logical Unit Creation Flow</a></li>
 	<li><a href="/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema Window</a></li>
 	<studio><li><a href="/articles/03_logical_units/04_LU_properties.md">Logical Unit Properties</a></li></studio>
