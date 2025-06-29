@@ -59,7 +59,7 @@ Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD).
 
 Assumption 2: Know how to simulate message creation in Kafka in a format similar to a message pushed by the OGG BD replicate component
 
-1. Check the Fabric, IIDFinder, Kafka, and OGG BD systems are up and running in SSL/TLS mode.
+1. Verify that the Fabric, IIDFinder, Kafka, and OGG BD systems are operational in SSL/TLS mode.
 2. Create an update in OGG to push a new message to Kafka.
 3. The IDFinder authenticates with Kafka and pulls the new message.
 4. The message is written to a cache instance under the keyspace k2staging tables.
