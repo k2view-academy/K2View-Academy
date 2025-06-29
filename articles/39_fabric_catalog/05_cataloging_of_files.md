@@ -19,13 +19,13 @@ These flows define mapping and transformation rules from file to Catalog metadat
 
 Once the Catalog structure is built, the plugins pipeline is executed, in the same way as running discovery over any other data source.
 
-Further  in this article, you can learn in more details about the implementation steps: 
+More details about the implementation steps can be learned further in this article: 
 
-* [Creating transformation rules](05_cataloging_of_files.md#creating -transformation-rules)
+* [Creating transformation rules](05_cataloging_of_files.md#creating-transformation-rules)
 * [Attaching rules to interface](05_cataloging_of_files.md#attaching-rules-to-interface)
 * [Organizing files in filesystem](05_cataloging_of_files.md#organizing-files-in-filesystem)
 
-To illustrate the E2E process of file cataloging, the *Cataloging of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). The extension can be installed in your project and it offers several comprehensive examples of file discovery (for various file types). The explanation about how to use the extension can be found in the extension's README file.
+To illustrate the E2E process of file cataloging, the *Cataloging of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). This extension can be installed in your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Rules
 
