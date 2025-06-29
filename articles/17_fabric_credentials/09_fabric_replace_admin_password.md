@@ -47,4 +47,4 @@ Connect to the Web UI to verify the new login details (replace the IP with your 
 ``` https://10.10.10.10:9443/admin/gui/index.html ```
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/02_fabric_environments.md)
+[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/01_fabric_credentials_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/01_fabric_credentials_commands.md)
