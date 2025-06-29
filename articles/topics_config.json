@@ -322,11 +322,11 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Hardware",
+					"display name": "System Requirements",
 					"value": "98_maintenance_and_operational/Hardware"
 				},
 				{
-					"display name": "Installations",
+					"display name": "Installation",
 					"value": "98_maintenance_and_operational/Installations"
 				},
 				{
