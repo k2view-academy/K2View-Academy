@@ -1,6 +1,6 @@
 # User IAM Using LDAP
 
-LDAP, the Lightweight Directory Access Protocol, is a mature, flexible, and well-supported standards-based mechanism for interacting with directory servers. It is often used for authentication and storing information about users, groups, and applications, but it is a fairly general-purpose data store and can be used in a wide variety of applications.
+LDAP, the Lightweight Directory Access Protocol, is a mature, flexible, and well-supported standards-based mechanism for interacting with directory servers. It is often used for authentication and storing information about users, groups, and applications; however, it is a fairly general-purpose data store that can be utilized in a wide variety of applications.
 
 The data is stored in a hierarchical structure, and Active Directory searches are done according to this hierarchy.
 
@@ -30,13 +30,13 @@ The user attempts to access a Fabric app (1 in the diagram below). One of two re
 Below is the logical flow, illustrating these steps: 
 
 
-<img src="/articles/26_fabric_security/images/15_Fabric LDAP.jpg">
+<img src="/articles/26_fabric_security_iam/images/15_Fabric LDAP.jpg">
 
  
 
-For more information and guidelines about setting up Fabric with LDAP, refer to the examples for [Azure AD LDAP](/articles/26_fabric_security/11.1_user_IAM_AD_LDAP.md) and [Azure AD LDAPS](/articles/26_fabric_security/11.2_user_IAM_AD_LDAPS.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#ldap--ldaps-configuration).
+For more information and guidelines about setting up Fabric with LDAP, refer to the examples for [Azure AD LDAP](/articles/26_fabric_security_iam/11.1_user_IAM_AD_LDAP.md) and [Azure AD LDAPS](/articles/26_fabric_security_iam/11.2_user_IAM_AD_LDAPS.md). For more information about SAML configuration in Fabric, please read [here](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#ldap--ldaps-configuration).
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/16_user_IAM_auditing.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/12_web_login.md)
 
