@@ -1,19 +1,19 @@
-# Replace Default Admin Password of Fabric
+# Fabrid Default Admin Password Replacement
 
 
 
 ## On a Fresh New Cluster  
 
-On the first Fabric node use the `adminInitialCredentials` file for setting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
+On the first Fabric node, use the `adminInitialCredentials` file for setting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
 
-As an example, to set the user and passoword to be k2consoleadmin and KW4RVG98RR9xcrTv, run the following commands:
+As an example, to set the user and password to be k2consoleadmin and KW4RVG98RR9xcrTv, run the following commands:
 
 ~~~bash
 cp config/adminInitialCredentials.template config/adminInitialCredentials
 sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
 ~~~
 
-You can now start Fabric, and use the above stated user and password.
+You can now start Fabric and use the above user and password.
 
 ## On Running Cluster 
 
