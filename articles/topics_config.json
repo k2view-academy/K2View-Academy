@@ -345,8 +345,11 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Capabilities",
+					"display name": "Fabric Security",
 					"value": "26_fabric_security"
+				},
+				{
+					"display name": "Capabilities",
 					"sub-topics": [
 						{
 							"display name": "Concepts and Methods",
