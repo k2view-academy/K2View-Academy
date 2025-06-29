@@ -346,6 +346,7 @@
 			"topics": [
 				{
 					"display name": "Capabilities",
+					"value": "26_fabric_security"
 					"sub-topics": [
 						{
 							"display name": "Concepts and Methods",
