@@ -1,17 +1,17 @@
 # Okta SAML Setup Guide
 
-This article describes the setup and integration steps to connect your Single-Sign-On account at Okta to Fabric and get the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
+This article describes the setup and integration steps to connect your Single-Sign-On account at Okta to Fabric, allowing you to enjoy the benefits of easy sign-in, as well as authentication and authorization control through your admin tools.
 
 ## Prerequisite Requirements
 
 - Admin access to Okta.
-- Access to Fabric configuration settings. For more information about SAML configuration at Fabric please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
 ## Configuration instructions: At Okta
 
-#### Select Fabric from Okta App Gallery
+#### Select Fabric from the Okta App Gallery
 
-1. Log into the Okta Admin console as an Admin. 
+1. Log in to the Okta Admin console as an Admin. 
 
 2. In the Admin Console, go to **Applications** > **Applications** via the left navigation bar.
 
@@ -51,7 +51,7 @@ This article describes the setup and integration steps to connect your Single-Si
    </tbody>
    </table>
 
-6. On next page, click **'Done'**. The app is created and is ready to configure the specific deployment setup.
+6. On the next page, click **'Done'**. The app is created and is ready to configure the specific deployment setup.
 
    <table><tbody><tr>    <td>    <img src="images/15_okta4_done.png">    </td></tr></tbody></table>
 
@@ -59,18 +59,18 @@ This article describes the setup and integration steps to connect your Single-Si
 
 #### Setup Configuration Settings
 
-7. Assign users or groups to the application, via the *Assignments* tab, by using the **'Assign'** button.  Assigning groups will assign the users associated with the groups.
+7. Assign users or groups to the application, via the *Assignments* tab, by using the **'Assign'** button.  Assigning groups assigns the users associated with those groups.
 
    <table><tbody><tr>    <td>    <img src="images/15_okta5_assignments.png">    </td></tr></tbody></table>
 
 
-8. Complete the SAML SSO configuration, via the *Sign On* tab, by clicking on **'Edit'** and filling in the relevant fields. Once done - click **'Save'**. 
+8. Complete the SAML SSO configuration, via the *Sign On* tab, by clicking on **'Edit'** and filling in the relevant fields. Once done, click **'Save'**. 
 
    - **groups** - at the select list choose "*Matches regex*" and fill ".*" in the form field. 
 
    - **Encryption Certificate** - browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Then click on '**Upload**'. Read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) more about the Fabric certificate file.
 
-   - **ACS URL** - as provided by Fabric team. It should be similar to this pattern: "https://\<fabric-external-domain-name>:\<port>/api/authenticate".
+   - **ACS URL** - as provided by the Fabric team. It should resemble the following pattern: "https://\<fabric-external-domain-name>:\<port>/api/authenticate".
 
    - **Audience URI (SP Entity ID)** - the intended audience of the SAML assertion. This is the Fabric **Entity ID**. It should be similar to this pattern: "https://\<fabric-external-domain-name>".
 
@@ -79,13 +79,13 @@ This article describes the setup and integration steps to connect your Single-Si
      <table><tbody><tr>    <td>    <img src="images/15_okta6_setup_config.png">    </td></tr></tbody></table>
 
 
-#### Collect the IDP properties to be set at Fabric configuration
+#### Collect the IDP properties to be set at the Fabric configuration
 
 9. At the "**Sign On**" tab, click on "View Setup Instructions".
 
    <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta8.png">    </td></tr></tbody></table>
 
-10. A new browser tab will open with the information that should be copied to Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key to be uploaded into Fabric, for signing the authentication requests.
+10. A new browser tab will open with the information that should be copied to the Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key to be uploaded into Fabric, for signing the authentication requests.
 
    <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta9.jpg">    </td></tr></tbody></table>
 
