@@ -1,19 +1,19 @@
-# **Fabric Batch Monitoring Window**
+# **Fabric Batch Process Monitoring**
 
 ## **Overview**  
 
 The batch monitoring window has been added to Fabric V6.5.3. 
 
-It has been designed to enable the user to monitor the execution and get a detailed information of a given batch process. In addition it enable the user to edit the maximum number of workers and stop a running batch process or resume a paused batch execution. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
+It has been designed to enable users to monitor the execution and obtain detailed information about a given batch process. Additionally, it allows users to edit the maximum number of workers and stop or resume a running batch process. It delivers real-time and historical insights, such as the performance or success/failure rates of processes per node, entity, or status basis.  
 
 ## **Batches Window**  
-This window displays the list of batch processes in Fabric based on the filter criteria. In addition it enables to start a new batch process to sync entities to a selected LU. 
+This window displays a list of batch processes in Fabric, filtered according to the specified criteria. In addition, it enables the start of a new batch process to sync entities to a selected LU. 
 
 ![image](images/26_jobs_and_batch_services_batchMonitor2.PNG)
 
 To open the batch list window, navigate to **Admin > Processes > Batch** to open the batch process.
 
-Note that if the batch status is **GENERATE_IID_LIST**, i.e. the batch process is still generating the entity list,  the Completion column displays a spinner, since the total number of entities is unknown at this stage and the completion percentage cannot be calculated till the the entity list is generated:
+Note that if the batch status is **GENERATE_IID_LIST**, i.e., the batch process is still generating the entity list,  the Completion column displays a spinner, since the total number of entities is unknown at this stage and the completion percentage cannot be calculated until the entity list is generated:
 
 
 
@@ -25,7 +25,7 @@ Each batch process has its own record. Select the ```...``` button in the left s
 
 ![image](images/25_jobs_and_batch_services_batchMonitor1.PNG)
 
-The Batches window also enables to cancel, pause or resume a selected batch process. Note that a cancelled batch cannot be resumed.
+The Batches window also enables you to cancel, pause, or resume a selected batch process. Note that a cancelled batch cannot be resumed.
 
 ## **Batch Monitor Window** 
 
@@ -45,7 +45,7 @@ Note that a cancelled batch process cannot be resumed.
 
 #### GENERATE_IID_LIST Status
 
-Batch processes that run on a large number of entities may take some time till the full entity list is generated. When the list generation starts and the batch status is GENERATE_IID_LIST, the total number of entities is still unknown. During the entity list processing, the control panel displays a running spinner, and the total number of entities flashes to indicate that the number of entities is still in process and not final at this stage:
+Batch processes that run on a large number of entities may take some time till the full entity list is generated. When list generation starts and the batch status is GENERATE_IID_LIST, the total number of entities remains unknown. During the entity list processing, the control panel displays a running spinner, and the total number of entities flashes to indicate that the number of entities is still in process and not final at this stage:
 
 ![image](images/batch_monitor_generate_iid_list.png)
 
@@ -53,15 +53,15 @@ Batch processes that run on a large number of entities may take some time till t
 
 ### General Data
 
-The general data section brings the related information of the batch process: execution status, Fabric command, LU name, and maximum number of workers:
+The general data section brings the related information of the batch process: execution status, Fabric command, LU name, and maximum number of workers.
 
 #### Execution Status:
 Provides the status of the current batch process as defined by the [batch_summary](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_summary) command
 
 #### Fabric Command:
-The actual batch command being processed. All details can be viewd by clicking on this sign: ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG)
+The actual batch command being processed. All details can be viewed by clicking on this sign: ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG)
 
-The fully detailed list of tha batch process (resulting from the execution of the [batch_info](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_info) command) will be displayed as illustrated below:
+The fully detailed list of the batch process (resulting from the execution of the [batch_info](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_info) command) will be displayed as illustrated below:
 
 ![image](images/29_jobs_and_batch_services_batchMonitor5.PNG)
 
@@ -85,20 +85,20 @@ This panel displays the information resulting from the execution of the [batch_s
 
 ### **Entity Status Summary**
 
-This panel provides a pie-chart view of the status of the entities being processed. See the illustration below: 
+This panel provides a pie chart view of the status of the entities being processed. See the illustration below: 
 
 ![image](images/33_jobs_and_batch_services_batchMonitor9.PNG)
 
-Note that when the batch status is **GENERATE_IID_LIST** the number of the unprocessed entities is still not final and can grow when the entity list is finalized.
+Note that when the batch status is **GENERATE_IID_LIST**, the number of unprocessed entities is still not final and may increase when the entity list is finalized.
 
 ### **Entities Detailed Status**
 
 Entities are categorized into 3 different groups:
 - Entities in process
-- Failed entities: displays a list of failed entities and their error message.
+- Failed entities: displays a list of failed entities along with their corresponding error messages.
 - Entities with the highest execution time
 
-This allows you to drill down on each instance's execution and identify bottlenecks, issues or unexpected behaviors.
+This allows you to drill down on each instance's execution and identify bottlenecks, issues, or unexpected behaviors.
 
 
 Each table shows the following details for each entity:
@@ -116,13 +116,13 @@ Click the ![image](images/additional_info_icon.png) icon to check for the stuck 
 
 #### Highest Execution Time
 
-Click the ![image](images/additional_info_icon.png) icon to and select the **Data Explorer** to open the Data Explorer web application on the entity and identify possible bottle checks in the LUI sync. Note that if there are additional LUs whose name contains the name of the batch's LU, for example, Customer and Customer_Extract LUs, you can select the required LU.  The Data Explorer is opened in a new tab. This selection option can be used when running a data migration process that syncs two LUs: extract and load LUs. 
+Click the ![image](images/additional_info_icon.png) icon to select the **Data Explorer** to open the Data Explorer web application on the entity and identify possible bottle checks in the LUI sync. Note that if there are additional LUs whose names contain the name of the batch's LU, such as Customer and Customer_Extract LUs, you can select the required LU.  The Data Explorer is opened in a new tab. This selection option can be used when running a data migration process that syncs two LUs: the extract and load LUs. 
 
 
 
-### **Batch process monitoring per Node or per Data Center**
+### **Batch process monitoring per Node or Data Center**
 
-The summary of the execution of the batch process is shown on a per-node basis or across the Data Centers responsible for the execution of the process.
+The summary of the batch process execution is displayed on a per-node basis or across the Data Centers responsible for executing the process.
 
 - DC-centric report:
 
@@ -144,11 +144,11 @@ The summary of the execution of the batch process is shown on a per-node basis o
 
 
 
-- All Nodes: click this option to open the **Nodes Execution Summary** window with the summary record on the all nodes that run the batch process.
+- All Nodes: click this option to open the **Nodes Execution Summary** window with the summary record for all nodes that run the batch process.
 
 
 
-Note that when the batch status is **GENERATE_IID_LIST** the number of the unprocessed entities is still not final and can grow when the entity list is finalized.
+Note that when the batch status is **GENERATE_IID_LIST**, the number of unprocessed entities is still not final and may increase when the entity list is finalized.
 
 [![Previous](/articles/images/Previous.png)](17_batch_process_flow.md)
 
