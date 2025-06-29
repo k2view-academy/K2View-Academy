@@ -162,7 +162,7 @@
 					"display name": "Logical Units",
 					"sub-topics": [
 						{
-							"display name": "Learning about LUs",
+							"display name": "Logical Unit and Data Product Concepts",
 							"value": "03_logical_units"
 						},
 						{
