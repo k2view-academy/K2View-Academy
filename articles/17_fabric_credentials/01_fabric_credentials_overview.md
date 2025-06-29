@@ -233,4 +233,4 @@ By default, Fabric creates the **admin** user as the initial superuser - when in
 
   
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/09_fabric_replace_admin_password.md)
