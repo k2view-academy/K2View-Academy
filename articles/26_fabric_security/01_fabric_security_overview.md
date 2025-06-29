@@ -3,16 +3,16 @@
 ## Overview
 K2View Fabric is a modern and highly secure distributed data management platform that securely liberates data from your existing systems and turns it into a dynamic resource that moves at the speed required by your business.
 
-With more and more data breaches making the headlines in today's world, enterprises need to scrutinize their own security controls to ensure that their most valuable asset, data, is fully secured. 
+With an increasing number of data breaches making headlines in today's world, enterprises must scrutinize their security controls to ensure that their most valuable asset, data, is fully protected. 
 
 
-IT departments use a variety of encryption protocols to protect their data. However, when these protocols need to be applied to a diverse IT ecosystem with hundreds, or even thousands of interacting systems, the process can be cumbersome and lead to an all-or-nothing approach. This means that if the security controls for a particular system are breached, all the data in that system and possibly across all the interacting systems will be compromised. 
+IT departments utilize a range of encryption protocols to safeguard their data. However, when these protocols need to be applied to a diverse IT ecosystem with hundreds, or even thousands, of interacting systems, the process can be cumbersome and lead to an all-or-nothing approach. This means that if the security controls for a particular system are breached, all the data in that system and possibly across all the interacting systems will be compromised. 
 
-By design, Fabric eliminates a significant number of potential large-scale breaches inherent to data exploration, while turning disconnected and untapped data into valuable new information.
+By design, Fabric eliminates a significant number of potential large-scale breaches inherent in data exploration, while transforming disconnected and untapped data into valuable new insights.
 
 ## Security Layers 
 
-In this section, we address how Fabric security tools address each layer in a Fabric cluster that has been fully deployed across multiple data centers, and how these tools interact with northbound or southbound systems spread across the cloud. 
+In this section, we discuss how Fabric security tools address each layer in a fully deployed Fabric cluster across multiple data centers, and how these tools interact with northbound or southbound systems spread across the cloud. 
 
 We  show, in detail, how to handle each of the following components that are crucial to any Fabric implementation: 
 
@@ -24,7 +24,7 @@ We  show, in detail, how to handle each of the following components that are cru
 
 
 
-Note that this section only addresses security features related to Fabric as a product. For information about safeguarding the Fabric DevOps environment, rules, policies and best practices, click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
+Note that this section only addresses security features related to Fabric as a product. For information about safeguarding the Fabric DevOps environment, rules, policies, and best practices, click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
 
 
 
