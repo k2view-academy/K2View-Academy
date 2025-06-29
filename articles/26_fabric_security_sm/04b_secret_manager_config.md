@@ -1,6 +1,6 @@
 # Integrating Secrets Management Services - Configuration
 
-Fabric supports integration with Secrets Management services as they provide several benefits, while secrets are not stored in Fabric itself, only their reference IDs are. 
+Fabric supports integration with Secrets Management services, as they provide several benefits. While secrets are not stored in Fabric itself, only their reference IDs are. 
 
 In order to integrate any one of the Secrets Management service providers currently supported by Fabric, you should configure the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details.
 
@@ -185,4 +185,4 @@ You can add as many sections as needed and also several instances across several
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04a_secret_manager.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/04c_secret_manager_interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_sm/04a_secret_manager.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_sm/04c_secret_manager_interface.md)
