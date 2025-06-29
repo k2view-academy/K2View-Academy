@@ -289,24 +289,24 @@ The following data generation flows are created for each LU table:
 
 There are several optional modes for the data generation inner flow:
 
-- **Row by row** - this is the recommended approach and it is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
+- **Row by row** — this recommended approach is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
-Note that you can edit the data generation flow to be executed in different modes if needed: 
+Note that the data generation flow can be edited to be executed in different modes, if needed: 
 
-- **Rows per parent** - generate all records for each input parent ID. For example, generating 2-5 open cases and 1-6 closed cases per each parent activity ID requires using the 'rows per parent' mode.
-- **Handle all parent rows** - generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
+- **Rows per parent** — generate all records for each input parent ID. For example, generating 2 to 5 open cases and 1 to 6 closed cases per each parent activity ID requires the usage of the 'rows per parent' mode.
+- **Handle all parent rows** — generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
 
 
-Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples about the RowsGenerator Actor.
+Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples related to the RowsGenerator Actor.
 
 
 ## Adding a Synthetic Environment
-The rule-based data generation task runs on a dummy synthetic environment. The synthetic environment must be added to Fabric and TDM self-service, and its name is defined by the *SYNTHETIC_ENVIRONMENT* Global. By default, this Global is set to **Synthetic**, but you can change it and set a different name.
+The rule-based data generation task runs on a dummy synthetic environment. The synthetic environment must be added to Fabric and TDM self-service, and its name is defined by the *SYNTHETIC_ENVIRONMENT* Global. By default, this Global is set to **Synthetic**, but it can be modified to use a different name.
 
 Notes:
 
-- Fabric - You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
-- TDM self-service - the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service. The synthetic environment needs to have environment_id = -1.
+- Fabric — You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
+- TDM self-service — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service. The synthetic environment must have environment_id = -1.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
