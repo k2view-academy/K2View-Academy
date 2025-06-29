@@ -281,7 +281,7 @@ The following data generation flows are created for each LU table:
 
 ##### External Business Parameters
 
-- Add external business parameters to the data generation flow, such as City and State, to enable the user to set their values in the TDM task's parameters if the user wishes to override the parameter's default value as set in the TDM implementation. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not allowed in the External Name setting. 
+- If users wish to override the default values of parameters that are set in the TDM implementation, they should be able to set their own values. Such overriding is facilitated only if external business parameters, such as City and State, are to be added to data generation flows. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not allowed in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about integrating the TDM portal with the Broadway editors, as well as implementation guides for MTable and Distribution parameters.
 
@@ -293,8 +293,8 @@ There are several optional modes for executing the data generation inner flow:
 
 Note that the data generation flow can be edited to be executed in different modes, if needed: 
 
-- **Rows per parent** — generate all records for each input parent ID. For example, generating 2 to 5 open cases and 1 to 6 closed cases per each parent activity ID requires the usage of the 'rows per parent' mode.
-- **Handle all parent rows** — generate all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
+- **Rows per parent** — generation of all records for each input parent ID. For example, generating 2 to 5 open cases and 1 to 6 closed cases per each parent activity ID requires the usage of the 'rows per parent' mode.
+- **Handle all parent rows** — generation of all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
 
 
 Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) for more information and examples related to the RowsGenerator Actor.
