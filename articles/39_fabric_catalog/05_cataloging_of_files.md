@@ -25,7 +25,7 @@ More details about the implementation steps can be learned further in this artic
 * [Attaching rules to interface](05_cataloging_of_files.md#attaching-rules-to-interface)
 * [Organizing files in filesystem](05_cataloging_of_files.md#organizing-files-in-filesystem)
 
-To illustrate the E2E process of file cataloging, the *Cataloging of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). This extension can be installed in your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
+To illustrate the file cataloging E2E process, the *Cataloging of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). This extension can be installed in your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Rules
 
