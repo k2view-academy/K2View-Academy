@@ -1,12 +1,12 @@
 # Kafka Custom Hardening
 
-In this section you configure Kafka with hardening accompanied by your own inputs.
+In this section, you configure Kafka with hardening, incorporating your inputs.
 
-Follow the guidelines for the correct settings, depending on your needs.
+Please follow the guidelines to set the correct settings according to your needs.
 
 > **NOTE:** 
-> In case it is your first Kafka setup with customized hardening, go to step 3. 
-> In case you've had Kafka in the past, without hardening, and now you wish to add a hardening configuration, follow the below instructions:
+If this is your first Kafka setup with customized hardening, proceed to step 3. 
+> In case you've had Kafka in the past, without hardening, and now you wish to add a hardening configuration, follow the instructions below:
 
 
 1. Stop Kafka
@@ -48,8 +48,11 @@ Below are your **KAFKA_SSL_FLAGS** options:
 ~~~bash
 --ssl --keystore_path </path/to/keystore> --keystore_password <keystorePWD> --truststore_path </path/to/truststore> --truststore_password <truststorePWD> --keypass <keyPWD>
 ~~~
- > In this case, Keystore and Truststore paths are defined differently, where each has a different password. In addition, the Key password inside the Keystore is different than the Keystore password.
+ > In this case, Keystore and Truststore paths are defined differently, where each has a different password. In addition, the Key password inside the keystore is different from the keystore password.
 
 
 
 ***In case you have a cluster, copy the certificate tar.gz file to the whole cluster and repeat the above commands on every node.***
+
+
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
