@@ -43,5 +43,4 @@ sed -i 's@#KEY_STORE_PASSWORD=.*@KEY_STORE_PASSWORD= <password>@' $K2_HOME/confi
 - Restart all Fabric nodes.
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_sm/04c_secret_manager_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_mk/10a_fabric_master_key_integrated_with_kms.md)
