@@ -345,18 +345,14 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Security & Identity Management",
+					"display name": "Capabilities",
 					"sub-topics": [
 						{
-							"display name": "Security Overview",
+							"display name": "Concepts and Methods",
 							"value": "26_fabric_security"
 						},
 						{
-							"display name": "Auditing",
-							"value": "27_auditing"
-						},
-						{
-							"display name": "User Identification and Access Management",
+							"display name": "User and Access Management",
 							"value": "26_fabric_security_iam"
 						},
 						{
@@ -365,8 +361,12 @@
 						},
 						{
 							"display name": "Master Key Protection",
-							"value": "99_fabric_infras/devops"
-						}
+							"value": "26_fabric_security_mk"
+						},
+						{
+							"display name": "Auditing",
+							"value": "27_auditing"
+						}					
 					]
 				},
 				{
