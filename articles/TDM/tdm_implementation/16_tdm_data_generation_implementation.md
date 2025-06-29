@@ -287,9 +287,9 @@ The following data generation flows are created for each LU table:
 
 ##### Handle Looping Over the Number of Records
 
-There are several optional modes for the data generation inner flow:
+There are several optional modes for executing the data generation inner flow:
 
-- **Row by row** — this recommended approach is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
+- **Row by row** — this recommended approach is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The data generation flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
 Note that the data generation flow can be edited to be executed in different modes, if needed: 
 
@@ -306,7 +306,7 @@ The rule-based data generation task runs on a dummy synthetic environment. The s
 Notes:
 
 - Fabric — You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
-- TDM self-service — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service. The synthetic environment must have environment_id = -1.
+- TDM self-service application — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service application. The synthetic environment must have environment_id = -1.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
