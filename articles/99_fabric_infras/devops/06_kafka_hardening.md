@@ -48,7 +48,7 @@ Below are your **KAFKA_SSL_FLAGS** options:
 ~~~bash
 --ssl --keystore_path </path/to/keystore> --keystore_password <keystorePWD> --truststore_path </path/to/truststore> --truststore_password <truststorePWD> --keypass <keyPWD>
 ~~~
- > In this case, Keystore and Truststore paths are defined differently, where each has a different password. In addition, the Key password inside the keystore is different from the keystore password.
+ > In this case, Keystore and Truststore paths are defined differently, where each has a different password. Additionally, the Key password inside the keystore differs from the keystore password.
 
 
 
