@@ -50,7 +50,7 @@ Below is the description of each expected flow (transformation rule):
 
 When creating your own flows, it is recommended to start from the sample flows provided in the *Cataloging of Files - Demo* extension and customize them per your needs. Keep in my to keep the flow's external input and output parameters as in the example flows!
 
-## Attaching Rules To Interface
+## Attaching Rules to Interface
 
 The filesystem interfaces include a group of input parameters called Discovery, which enable setting the names of Broadway flows to each of the rules.
 
@@ -60,13 +60,13 @@ The filesystem interfaces include a group of input parameters called Discovery, 
 2. Populate the names of the Broadway flows.
 3. Save and deploy the Web Services.
 
-## Organizing Files In Filesystem
+## Organizing Files in Filesystem
 
 There is no limitation to how to organize the files in the filesystem interface. The only rule is that files setup should correspond to the flow's logic.
 
 The *Cataloging of Files - Demo* extension demonstrates various ways to organize the files. 
 
-In the example of CSV files cataloging, all CSV files are located in one folder assuming each file represents a dataset, while the schema name is set to **main** in the respective **Get Metadata** flow.
+In the cataloging example of CSV files, all CSV files are located in one folder assuming each file represents a dataset, while the schema name is set to **main** in the respective **Get Metadata** flow.
 
 In the examples of JSON and XML files, the folders hierarchy is created: **main** folder represents the schema, then **contact** and **customer** folders represent datasets, while each one include its relevant sample data files. 
 
