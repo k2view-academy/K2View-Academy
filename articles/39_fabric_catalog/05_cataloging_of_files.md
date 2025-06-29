@@ -29,7 +29,7 @@ To illustrate the E2E process of file cataloging, the *Cataloging of Files - Dem
 
 ## Creating Transformation Rules
 
-Due to multiple file formats, transformation rules are required in order to perform file's cataloging. The transformation rules are created using Broadway flows, that should be placed in a Project tree under the Shared Objects and deployed. 
+Due to multiple file formats, transformation rules are required in order to perform file cataloging. Transformation rules are created using Broadway flows, that should be placed in a Project tree under the Shared Objects and deployed. 
 
 Below is the description of each expected flow (transformation rule):
 
