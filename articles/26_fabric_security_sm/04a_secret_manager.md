@@ -44,5 +44,9 @@ To use a Secrets Management service, you should configure and set Fabric using t
 2. **Interface Editor**. Provision and mark the required interface connection details as those that should be taken from the Secrets Management service, as part of the project's implementation settings. Read [here](/articles/26_fabric_security/04c_secret_manager_interface.md) for more details.
 
 
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_sm/04_fabric_interfaces_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_sm/04b_secret_manager_config.md)
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04_fabric_interfaces_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/04b_secret_manager_config.md)
+
+
+
+
