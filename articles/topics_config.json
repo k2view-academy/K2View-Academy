@@ -340,17 +340,17 @@
 			]
 		},
 		{
-			"group display name": "Security",
+			"group display name": "Fabric Security",
 			"group icon": "images/security-icon.png",
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Credentials",
-					"value": "17_fabric_credentials"
+					"display name": "Fabric Security Architecture & Identity Management",
+					"value": "26_fabric_security"
 				},
 				{
-					"display name": "Security",
-					"value": "26_fabric_security"
+					"display name": "Fabric Authorization",
+					"value": "17_fabric_credentials"
 				},
 				{
 					"display name": "Auditing",
