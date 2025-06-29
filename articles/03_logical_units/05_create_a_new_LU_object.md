@@ -1,4 +1,4 @@
-# Create a New Logical Unit / Data Product
+# Create a New Logical Unit 
 
 A new [Logical Unit](/articles/03_logical_units/01_LU_overview.md) can be added by either:
 
