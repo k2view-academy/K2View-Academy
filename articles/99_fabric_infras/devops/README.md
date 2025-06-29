@@ -2,8 +2,8 @@
         
 <ul>
     <li><a href="/articles/99_fabric_infras/devops/01_fabric_security_overview.md">Fabric Devops Security</a></li>
+    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Default Admin Password Replacement</a></li>
     <li><a href="/articles/99_fabric_infras/devops/02_fabric_environments.md">Fabric Environments Security</a></li>
-    <li><a href="/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md">Fabric Default Admin Password Replacement</a></li>
     <li><a href="/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md">Fabric API, UI, and JDBC Hardening</a></li>    
     <li><a href="/articles/99_fabric_infras/devops/04_cassandra_hardening.md">Cassandra Hardening</a></li>
     <li><a href="/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md">Connect Fabric to Cassandra in TLS mode</a></li>
