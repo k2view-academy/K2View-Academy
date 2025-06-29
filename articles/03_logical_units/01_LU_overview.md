@@ -1,7 +1,45 @@
 # Logical Unit Concepts
 
-### What is a Logical Unit?
-A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose (a Business Entity like customer, order, or loan). It holds a set of definitions and instructions used for integrating data from source systems, processing and governing the data, storing it, and delivering it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
+### Data Product 
+A Data Product is K2View’s term for a reusable, domain-specific “package” of data that's prepared, governed, and delivered to users or applications. It aligns with the modern data mesh philosophy, where:
+
+- Data domain teams treat data assets like software products—managing them end-to-end (define, engineer, test, deploy, monitor).
+- A Data Product is centered on a specific business entity (like a customer, order, loan).
+- It bundles everything needed:
+  - **Schema** (tables, fields, relationships)
+  - **Integration flow**s to pull from source systems
+  - **Transformations** (cleansing, enrichment, masking)
+  - **Access interfaces** (APIs, virtualization)
+
+- The goal: One trusted, governed, accessible dataset per business entity—always current and compliant 
+
+### Logical Unit (LU)
+In K2View’s Fabric Studio, a Logical Unit (LU), also referred to as a Logical Unit Type (LUT), is the blueprint or definition of a Data Product. It consists of:
+
+1. **LU Schema**: Defines root table, related tables, and their relationships.
+2. **LU Tables**: Structures (columns, keys, indexes) holding the data.
+3. **LU Table Populations**: Integration pipelines—specifying how data is sourced, transformed, and loaded.
+4. **Supporting components**: functions, parsers, jobs, instance groups, etc..
+5. **Properties**: Storage settings, sync policies, events, security, caching.
+
+A Logical Unit is thus the template used to create actual data stores.
+
+### Logical Unit Instance (LUI)
+When a Logical Unit is executed or deployed, it creates one or more LU Instances (LUIs) — these are the physical representations of the Data Product for specific entity entries (e.g., each customer record).
+
+- If your Customer LU is applied to 35 million customers, the system generates 35M LUIs—one isolated micro-database (e.g., SQLite/Cassandra/S3) per customer.
+- Each LUI holds that entity’s integrated data, kept in sync and governed individually.
+
+### How They're Connected
+- Data Product = the concept/domain. It’s what you want to build—say, “Customer 360”.
+- Logical Unit = the design artifact in K2View Fabric that defines that Data Product: schema, pipelines, policies.
+- LU Instances = the runtime deliverables—physical micro-databases each holding that product’s data for individual entities.
+
+So the flow is:
+- Define a Logical Unit (Data Product blueprint) → Fabric auto-generates LU Instances, each holding one entity’s data → these are managed, accessed, and governed individually, but all under one Data Product.
+
+### Logical Unit Details
+The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
 
 An LU is defined and configured in the Fabric Studio as a core element of the [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md). 
 These definitions are comprised of 3 main types of objects:
@@ -55,8 +93,6 @@ In addition to these main objects, others are part of the logical unit and are u
 
 </web>
 
-### What Is a Logical Unit Instance (LUI)?
-A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database that holds the data of a single Business Entity instance in the LUT structure definition.
 Using our example from above (Customer 360), assume that Company ABC has 35 million customers:
 
 * LU/LUT = Customer
