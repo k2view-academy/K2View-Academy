@@ -1,5 +1,5 @@
-# **Fabric Batch Overview** 
-The Batch process is a Fabric utility that can be used to run multiple commands on a list of instances, regardless of its size or type. 
+# **Batch Processes** 
+The Batch process is a Fabric utility that can be used to run multiple commands on a list of instances, regardless of their size or type. 
 
 The Batch process is used to trigger the following:
 - [Sync instances](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), to perform multiple syncs on all (or a subset of) instances (IIDs) for a specific Logical Unit. This process is also referred to as the Migration Process, handled by the *migrate* command.
@@ -11,10 +11,10 @@ The Batch process is used to trigger the following:
 Fabric's integrated Batch process provides the following advantages to ensure the smooth execution of heavy-resources demanding processes:
 - Efficient distribution of jobs between nodes.
 - Dynamic adjusting of work balance configuration between nodes during execution phases.
-- Monitoring of instances' synchronization progress (batch sync) at cluster, DC or node levels from the command line or using the [Batch Monitor Dashboard](/articles/20_jobs_and_batch_services/18_batch_monitor.md).
-- Process failure recovering. (e.g non-responding nodes).
-- Stopping and resuming of the migration process (LUI synchronization).
-- Process tracking at entity level. (e.g. timing, duration, handling node or failure management).
+- Monitoring of instances' synchronization progress (batch sync) at cluster, DC, or node levels from the command line or using the [Batch Monitor Dashboard](/articles/20_jobs_and_batch_services/18_batch_monitor.md).
+- Process failure recovery. (e.g non-responding nodes).
+- Stopping and resuming the migration process (LUI synchronization).
+- Process tracking at the entity level. (e.g., timing, duration, handling node, or failure management).
 
 # **Fabric Batch Use Cases**
 
