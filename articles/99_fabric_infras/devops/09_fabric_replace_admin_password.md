@@ -1,5 +1,4 @@
-# Fabrid Default Admin Password Replacement
-
+# Fabric Default Admin Password Replacement
 
 
 ## On a Fresh New Cluster  
@@ -48,6 +47,4 @@ Connect to the Web UI to verify the new login details (replace the IP with your 
 ``` https://10.10.10.10:9443/admin/gui/index.html ```
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/08_oracleGG_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md)
-
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md)
