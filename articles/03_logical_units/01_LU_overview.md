@@ -1,4 +1,4 @@
-# Logical Unit and Data Product Concepts
+# Logical Unit Concepts
 
 ### What is a Logical Unit?
 A Logical Unit (LU or Logical Unit type - LUT), also known as a Data Product, is a blueprint data asset, engineered to deliver a trusted dataset for a specific business purpose (a Business Entity like customer, order, or loan). It holds a set of definitions and instructions used for integrating data from source systems, processing and governing the data, storing it, and delivering it. The LU is the prototype from which LU Instances [(LUIs)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) are created. 
