@@ -345,15 +345,15 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Fabric Security Architecture & Identity Management",
+					"display name": "Security Architecture & Identity Management",
 					"value": "26_fabric_security"
 				},
 				{
-					"display name": "Fabric Authorization",
+					"display name": "Authorization",
 					"value": "17_fabric_credentials"
 				},
 				{
-					"display name": "Fabric Infrastructure Security",
+					"display name": "Infrastructure Security",
 					"value": "99_fabric_infras/devops"
 				}
 			]
