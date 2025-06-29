@@ -48,11 +48,12 @@ The User Details panel is located in the top right area of the web framework, ne
 
 To view the logout action and the connected username, the user should click on the avatar icon. 
 
-If the authenticator is Fabric, the "Change Passwords" action appears; otherwise, it is hidden and disabled. The below image shows the open panel when using an external authenticator:
+If the authenticator is Fabric, the "Change Passwords" action appears; otherwise, it is hidden and disabled. The image below shows the open panel when using an external authenticator:
 
 <img src="images/12_details_panel_ext.png">
 
 
 
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/13_user_IAM_configuration.md)
 
 
