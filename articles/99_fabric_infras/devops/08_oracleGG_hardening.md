@@ -1,4 +1,4 @@
-# Oracle GG (Golden Gate) Big Data Setup with Kafka SSL
+# Oracle Golden Gate Big Data Setup with Kafka TLS
 
 ## Step 1	- Copy kafka_ssl content
 
