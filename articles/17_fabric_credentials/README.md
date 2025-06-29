@@ -2,6 +2,7 @@
 
 <ul>
 <li><a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Authorization and Credentials Overview</a></li>
+<li><a href="/articles/17_fabric_credentials/09_fabric_replace_admin_password.md">Default Admin Password Replacement</a></li>
 <li><a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md">Fabric Authorization Commands</a></li>
 <li><a href="/articles/17_fabric_credentials/02a_fabric_credentials_list_commands.md">Fabric Authorization List Commands</a></li>    
 <li><a href="/articles/17_fabric_credentials/03_fabric_credentials_backup.md">Fabric Credentials Backup</a></li>
