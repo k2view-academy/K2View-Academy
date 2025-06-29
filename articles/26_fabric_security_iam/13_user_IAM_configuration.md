@@ -109,7 +109,7 @@ For more information about keystore handling, please read [here](/articles/99_fa
 
 <br/>
 
-For more information and guidelines as to where and how this information should be set in IDPs, refer to [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md).
+For more information and guidelines as to where and how this information should be set in IDPs, refer to [Azure AD SAML Setup Guide](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security_iam/15_user_IAM_SAML_Okta_setup.md).
 
 
 
@@ -126,7 +126,7 @@ Edit these properties in the `[saml]` section:
 - **SECURE** - a flag indicating whether certification and encryption should apply. The default is *true*.
 - **SP_CERT_ALIAS** - alias to the certification that is uploaded to the IDP. This certification is the public key for the SAML response. 
 - **IDP_CERT_ALIAS** - alias to the certification supplied by the IDP. This certification is the public key for the SAML request.
-- **GROUPS_KEY_MAPPING** (optional) - the name of the groups list, as retrieved from the IDP, as part of the SAML response. Although Fabric expects this value to be "groups" (its default), when required, you can add this parameter and set its value.  
+- **GROUPS_KEY_MAPPING** (optional) - the name of the groups list, as retrieved from the IDP, as part of the SAML response. Although Fabric expects this value to be "groups" (its default), you can add this parameter and set its value when required.  
 - **SP_SECURE** (optional; default is *true*) - indicates whether the expected SAML response is secured (encrypted). Set it to *false* when the client's IDP team does not intend to upload and use the certificate file provided by K2view. Without the public key, encrypting the response can’t take place.
 
 
@@ -161,13 +161,13 @@ The LDAP owner should provide the name of the role.
 
 ##### LDAPS: Secure LDAP
 
-When working with LDAPS (this is a secure LDAP), you must get a certificate file from the LDAP owner and import it to the Fabric truststore as shown:
+When working with LDAPS (this is a secure LDAP), you must get a certificate file from the LDAP owner and import it into the Fabric truststore as shown:
 
 ### Editing the config.ini file
 
 The `adldap_auth` or `ldap_auth` sections must define the following:
 
-- **url** - an LDAP URL endpoint. For an LDAPS (secured LDAP) connection, it will start with "ldaps://" (note that it is in lowercase letters).
+- **url** - an LDAP URL endpoint. For an LDAPS (Secure LDAP) connection, it starts with "ldaps://" (note that it is in lowercase letters).
 - **security_level** - set to "simple" (the default value, which can also be used for an LDAPS).
 - **admin_dn** - the LDAP admin user that has permissions to search and look for other users.
 - **admin_password** - the admin user password.
@@ -175,23 +175,23 @@ The `adldap_auth` or `ldap_auth` sections must define the following:
 
 The LDAP owner should provide the values.
 
-The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
+The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
 
 <br/>
 
 ## Proprietary Custom Authenticator
 
-In order to use a custom authenticator, do the following in the config.ini:
+To use a custom authenticator, do the following in the config.ini:
 
 1. Add the `server_authenticator` authenticator list.
 2. Add a new accompanying section, following this naming convention: `<authenticator_name>_auth`. 
    - Under this section, add a parameter named "class_name" where its value is the full class name of the implemented authenticator. Additional parameters can also be added and will be passed to the authenticator when activated.
 
-For more information about customer authenticator implementation, read [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md).
+For more information about customer authenticator implementation, read [here](/articles/26_fabric_security_iam/17_user_IAM_custom_authenticator.md).
 
 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)
 
