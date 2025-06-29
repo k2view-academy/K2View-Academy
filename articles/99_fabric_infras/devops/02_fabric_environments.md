@@ -8,7 +8,7 @@ This environment should contain:
 - Windows for installing and running the Fabric Studio.
 - SVN / GIT for version control.
 
-Access to this server and to SVN / GIT should be limited to the relevant developers.
+Access to this server and SVN / GIT should be limited to the relevant developers.
 
 <img src="/articles/99_fabric_infras/devops/images/01_devop-devEnv.png">
 
@@ -55,5 +55,4 @@ This environment should be isolated from the Development and QA environments and
 <img src="/articles/99_fabric_infras/devops/images/04_devop-prodEnv.png">
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md)
