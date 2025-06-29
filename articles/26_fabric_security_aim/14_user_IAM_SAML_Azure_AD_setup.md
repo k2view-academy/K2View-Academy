@@ -1,6 +1,6 @@
 # Azure AD SAML Setup Guide
 
-This article describes the setup and integration steps you should take in order to connect your Single-Sign-On account at Azure AD (Microsoft Azure Active Directory) to Fabric. This will grant you the benefits of an easy sign-in, along with authentication and authorization control via your admin tools.
+This article describes the setup and integration steps you should take to connect your Single-Sign-On account at Azure AD (Microsoft Azure Active Directory) to Fabric. This will grant you the benefits of an easy sign-in, along with authentication and authorization control via your admin tools.
 
 You can read more about the guidelines at this link: [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/fabric-tutorial), as Fabric is a part of the Azure AD's app marketplace. 
 
@@ -29,7 +29,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 3. In the **Add from the gallery** section, type **Fabric** in the search box.
 
-4. Select **Fabric** from results panel and then add the app. Wait a few seconds while the app is added to your tenant.
+4. Select **Fabric** from the results panel and then add the app. Wait a few seconds while the app is added to your tenant.
 
 5. On the **Fabric** application integration page, find the **Manage** section and select **single sign-on** to open the **Single sign-on** pane for editing.
 
@@ -50,7 +50,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 8. Edit the **Basic SAML Configuration** section (1) - information should be taken to match the Fabric Configuration, as explained [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
 
    - **Entity ID**
-   - **Reply URL** **(Assertion Consumer Service URL)** - the location where the SAML assertion is sent with a POST operation back to Fabric. Its format: `https://<HOSTNAME>:<PORT>/api/authenticate` (host name shall be the Fabric LB).
+   - **Reply URL** **(Assertion Consumer Service URL)** - the location where the SAML assertion is sent with a POST operation back to Fabric. Its format: `https://<HOSTNAME>:<PORT>/api/authenticate` (hostname shall be the Fabric LB).
 
    <table>
    <tbody>
@@ -64,7 +64,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 9. Edit the **User Attributes & Claims** section (2) and verify that the groups are sent in a claim named "groups".
 
-10. From the **SAML Signing Certificate** section (3), click **Download** to get the Azure IDP certificate key to be uploaded into Fabric, for signing the authentication requests.
+10. From the **SAML Signing Certificate** section (3), click **Download** to obtain the Azure IDP certificate key, which will be uploaded into Fabric for signing authentication requests.
 
   <table>
   <tbody>
@@ -104,7 +104,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 
 ## Configuration instructions: At Fabric
 
-In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration), setting-up SAML with Azure AD requires adding an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
+In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration), setting up SAML with Azure AD requires adding a configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
 
 
 
