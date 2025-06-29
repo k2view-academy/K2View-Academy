@@ -1,6 +1,6 @@
 # Integrating Secrets Management Services - Interface Editor 
 
-Fabric supports integration with Secrets Management services, as they provide several benefits. While secrets are not stored in Fabric itself, only their reference IDs are. 
+Fabric supports integration with Secrets Management services, offering several benefits. While secrets are not stored in Fabric itself, only their reference IDs are. 
 
 To use a Secrets Management service, in the Interface Editor (including Environments Editor), you should mark the required interface connection details as those that should be taken from the Secrets Management service.
 
@@ -89,9 +89,9 @@ You can use several Secrets Management services on the same Fabric, per your nee
 
 ### Multi Secrets Management Services
 
-In case you provision several Secrets Management service providers in the config.ini file (and they are set as 'ENABLED'), **Fabric** will try to access each one of them to obtain the secrets, until it succeeds. 
+If you provision multiple Secrets Management service providers in the config.ini file (and they are set to 'ENABLED'), **Fabric** will attempt to access each one to obtain the secrets, until it succeeds. 
 
-For example, suppose you provision both AWS and HashiCorp Secrets Management service provider sections in the config.ini file, and you have a secret property whose key is 'oracle-password'. In such a scenario, Fabric will first call AWS to look for this key. If found, Fabric would use it, and if the key is not found, Fabric will call the next provider in our example - HashiCorp. Calls are made in the order in which the providers' sections appear in the config.ini file.
+For example, suppose you provision both AWS and HashiCorp Secrets Management service provider sections in the config.ini file, and you have a secret property whose key is 'oracle-password'. In such a scenario, Fabric will first call AWS to look for this key. If found, Fabric would use it; if the key is not found, Fabric will call the next provider in our example, HashiCorp. Calls are made in the order in which the providers' sections appear in the config.ini file.
 
 When using several Secrets Management service providers, it is recommended to specify the provider's name for each interface property explicitly. This helps to prevent mistakes and to avoid unnecessary calls to irrelevant providers.
 
@@ -137,4 +137,4 @@ At runtime, **Fabric** will act according to these definitions in a way that whe
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04b_secret_manager_config.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_sm/04b_secret_manager_config.md)
