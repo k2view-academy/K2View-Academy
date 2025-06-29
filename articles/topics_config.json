@@ -356,7 +356,7 @@
 							"value": "26_fabric_security_iam"
 						},
 						{
-							"display name": "Secret Managers Integration",
+							"display name": "Secret Manager Integration",
 							"value": "26_fabric_security_sm"
 						},
 						{
