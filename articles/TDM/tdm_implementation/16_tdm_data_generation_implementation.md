@@ -161,7 +161,7 @@ The following data generation flows are created for each LU table:
 
   - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default data generators and should be updated before the data generation flows are created.
 
-- The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. The loop on the parent rows as well as the loop on each parent ID is handled by default by the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator).
+- The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. By default, the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles both the loop over the parent rows and the loop over the child IDs for each parent ID.
 
   
 
