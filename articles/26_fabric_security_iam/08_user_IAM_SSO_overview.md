@@ -1,6 +1,6 @@
 # SSO Overview
 
-Single sign-on (SSO) is a user authentication service that enables an organization's members (users) to use a single set of login credentials to access multiple applications and services. This service, also known as IDP (Identity Provider), authenticates the user for all applications to which the user has rights, and eliminates further prompts when the user switches between applications during the same session. On the backend, SSO helps log user activities and monitor user accounts.
+Single sign-on (SSO) is a user authentication service that enables an organization's members (users) to use a single set of login credentials to access multiple applications and services. This service, also known as an Identity Provider (IDP), authenticates the user for all applications to which the user has access, and eliminates further prompts when the user switches between applications during the same session. On the backend, SSO helps log user activities and monitor user accounts.
 
 The benefits of using single sign-on include: 
 
@@ -19,5 +19,5 @@ The SP requests and obtains an authentication assertion from the IDP. Based on t
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/07_user_IAM_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/07_user_IAM_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/09_user_IAM_SAML_fundamentals_and_terms.md)
 
