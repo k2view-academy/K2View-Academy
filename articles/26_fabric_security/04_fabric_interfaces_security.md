@@ -56,7 +56,7 @@ https://github.com/k2view-academy/K2View-Academy/edit/Academy_8.3/articles/26_fa
 Fabric enables connection to SFTP servers hosting files.
 When an SFTP connection is needed to pull or push files, SSH key-exchange-based authentication protocol can be used, in which case the password in the SFTP interface should be left blank.  
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_sm/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
 
 
 
