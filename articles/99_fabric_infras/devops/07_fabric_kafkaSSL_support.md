@@ -4,9 +4,9 @@ Execute the following command to stop Fabric:
 
 ```k2fabric stop```
 
-### Step 1: Connect with SSL
+### Step 1: Connect with TLS
 
-Configure Fabric connections to Kafka with SSL support.
+Configure Fabric connections to Kafka with TLS support.
 
 ~~~bash
 sed -i s/#SSL_ENABLED=.*/SSL_ENABLED=true/g $K2_HOME/config/config.ini
@@ -25,7 +25,7 @@ sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@
 `k2fabric start`
 
 
-## Setup the IIDFinder to Support Kafka SSL Connections
+## Setup the IIDFinder to Support Kafka TLS Connections
 
 Make sure the IIDFinder has stopped.
 
@@ -34,7 +34,7 @@ Make sure the IIDFinder has stopped.
 
 ### Step 1 - On Fabric 6.x and Higher Versions 
 
-Configure the IIDFinder to connect to Kafka with SSL support per node. The assumption is that the IIDFinder is already configured with basic connections to Kafka in non SSL / TLS modes:
+Configure the IIDFinder to connect to Kafka with SSL support per node. The assumption is that the IIDFinder is already configured with basic connections to Kafka in non-SSL / TLS modes:
 
 ~~~bash
 sed -i s@#SSL_ENABLED=.*@SSL_ENABLED=true@g $K2_HOME/config/iifConfig.ini
@@ -59,7 +59,7 @@ Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD).
 
 Assumption 2: Know how to simulate message creation in Kafka in a format similar to a message pushed by the OGG BD replicate component
 
-1. Check the Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode.
+1. Check the Fabric, IIDFinder, Kafka, and OGG BD systems are up and running in SSL/TLS mode.
 2. Create an update in OGG to push a new message to Kafka.
 3. The IDFinder authenticates with Kafka and pulls the new message.
 4. The message is written to a cache instance under the keyspace k2staging tables.
@@ -67,7 +67,7 @@ Assumption 2: Know how to simulate message creation in Kafka in a format similar
 
 
 **Note:**
-If the IIDFinder has not been configured with the SSL/TLS setup as required, the data in the k2staging cache is not be written as expected.
+If the IIDFinder has not been configured with the SSL/TLS setup as required, the data in the k2staging cache will not be written as expected.
 
 
 
