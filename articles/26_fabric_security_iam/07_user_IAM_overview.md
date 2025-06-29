@@ -91,7 +91,7 @@ When Fabric is integrated with an external IDP or authenticator,  it applies sec
 
 ## Auditing
 
-Users’ login access to Fabric is recorded in the Fabric auditing mechanism, including information about the channel and the authenticator used. For more information, see [here](/articles_iam/26_fabric_security/16_user_IAM_auditing.md).
+Users’ login access to Fabric is recorded in the Fabric auditing mechanism, including information about the channel and the authenticator used. For more information, see [here](/articles_iam/26_fabric_security_iam/16_user_IAM_auditing.md).
 
 
 
