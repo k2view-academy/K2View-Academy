@@ -301,7 +301,7 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgene
 
 
 ## Adding a Synthetic Environment
-The rule-based data generation task runs on a dummy synthetic environment. The synthetic environment must be added to Fabric and TDM self-service, and its name is defined by the *SYNTHETIC_ENVIRONMENT* Global. By default, this Global is set to **Synthetic**, but it can be modified to use a different name.
+The rule-based data generation task runs in a dummy synthetic environment. This synthetic environment must be added to both Fabric and the TDM self-service application, and its name is defined by the *SYNTHETIC_ENVIRONMENT* Global. By default, this Global is set to **Synthetic**, but it can be modified to use a different name.
 
 Notes:
 
