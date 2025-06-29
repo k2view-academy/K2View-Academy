@@ -1,7 +1,7 @@
 # LUI Encryption
 
 ## LUI Encryption Key
-Fabric encrypts each LUI using the AES-256 mode encryption algorithm. Hence, the key length is 256 bytes. 
+Fabric encrypts each LUI using the AES-256 mode encryption algorithm. Hence, the key length is 256 bits. 
 
 The underlying key, using the SHA-256 algorithm, is a hash that consists of the following parts:
 
@@ -10,7 +10,7 @@ The underlying key, using the SHA-256 algorithm, is a hash that consists of the 
 - Master key, [input key](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-master-key) generated. 
 
 Since each Instance ID has a different value, Fabric creates a different key for each Instance ID. Fabric saves the key description of each Instance ID in the ENTITY table in the Storage DB. This way, Fabric can decrypt the entity when necessary.
-The encrypted master key used to encrypt the Instance ID can be taken from the KEYS table according to the key's description.
+The encrypted master key used to encrypt the Instance ID can be retrieved from the KEYS table based on the key's description.
 
 ## Encrypting an LUI Using the Fabric Studio
 
@@ -18,16 +18,16 @@ By default, when creating a Logical Unit, the **Enable Data Encryption** field i
 
 To encrypt each instance (LUI), set the **Enable Data Encryption** property of the LU schema to **True**. 
 
-View the below screenshot:
+View the screenshot below:
 
 <img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
 There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE, which controls the 2 LUI encryption modes supported by Fabric. The modes are ON_SAVE and MDB, and each is described below:
 
-> **ON_SAVE** (default value from 6.5.4) - encrypts the LUI when saving it the storage layer. 
+> **ON_SAVE** (default value from 6.5.4) - encrypts the LUI when saving it to the storage layer. 
 > The encryption is done after the compression. The advantage of using this encryption mode is twofold compared to the non-encrypted mode: 
-> The data is stored encrypted in the Storage DB, and at the same time the data has minimal performance and storage impact. 
-> It is important to mention that the data in the cache is not encrypted and it is therefore the user’s responsibility to ensure that the data 
+> The data is stored encrypted in the Storage DB, and at the same time, it has minimal performance and storage impact. 
+> It is essential to mention that the data in the cache is not encrypted, and it is therefore the user’s responsibility to ensure that the data 
 > in the cache is secured on the operating system level.
 
 > **MDB** - encrypts on the MicroDB before the compression. The result here is that the compression has a minimal impact on the MicroDB size,
@@ -35,7 +35,7 @@ There is a parameter in config.ini called ENTITY_ENCRYPTION_MODE, which controls
 > the MicroDB is stored encrypted in the cache as well.
 
 Although ENTITY_ENCRYPTION_MODE is set to ON_SAVE by default, the user must set the **Enable Data Encryption** field 
-in LU schema properties to **True**, as otherwise the LU will not be encrypted.
+in the LU schema properties to **True**, as otherwise the LU will not be encrypted.
 
 ## Partial LUI Encryption
 
@@ -85,7 +85,7 @@ This function returns the following:
 
 ```public static String luRekey(String encryptedData) throws Exception```
 
-This function decrypts data using its key, and encrypts it using the latest master key. For a system to support the luRekey option, data must be rekeyed when resyncing the LUI.
+This function decrypts data using its key and encrypts it using the latest master key. For a system to support the luRekey option, data must be rekeyed when resyncing the LUI.
 
 Parameters:
 
