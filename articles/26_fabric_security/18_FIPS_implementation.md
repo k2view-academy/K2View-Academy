@@ -49,6 +49,6 @@ The following response is returned:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)
 
 
