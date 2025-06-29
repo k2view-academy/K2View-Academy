@@ -5,7 +5,7 @@ This article describes the setup and integration steps to connect your Single-Si
 ## Prerequisite Requirements
 
 - Admin access to Okta.
-- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration).
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric, please see [here](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#saml-configuration).
 
 ## Configuration instructions: At Okta
 
@@ -68,7 +68,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
    - **groups** - at the select list choose "*Matches regex*" and fill ".*" in the form field. 
 
-   - **Encryption Certificate** - browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Then click on '**Upload**'. Read [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) more about the Fabric certificate file.
+   - **Encryption Certificate** - browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. Then click on '**Upload**'. Read [here](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#saml-configuration) more about the Fabric certificate file.
 
    - **ACS URL** - as provided by the Fabric team. It should resemble the following pattern: "https://\<fabric-external-domain-name>:\<port>/api/authenticate".
 
@@ -90,5 +90,5 @@ This article describes the setup and integration steps to connect your Single-Si
    <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta9.jpg">    </td></tr></tbody></table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/15_user_IAM_auditing.md)
 
