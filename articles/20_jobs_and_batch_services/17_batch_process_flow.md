@@ -1,10 +1,10 @@
-# **Fabric Batch Processes Architecture**
+# **Fabric Batch Process Architecture**
 
-## **Fabric Batch Processes Flow**  
+## **Fabric Batch Process Flow**  
 
 The following activities are automatically triggered when a new Batch process is executed:
 -  A new Batch entry is added in the System DB.
--  A new Job entry is recorded also in the k2system_jobs table with the following parameters:
+-  A new Job entry is also recorded in the k2system_jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
    -  Type = BATCH PROCESS.
@@ -33,17 +33,17 @@ The Job Process then launches the batch command, which in turn, is executed thro
 
 To schedule a Batch process to be executed either in a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job that contains the batch command, which needs to be repeatedly invoked. 
 
-Basically, this consists of creating a scheduled Job that calls a Batch process, which in turn, will create multiple or scheduled one-time Jobs (where each job is parametered thanks to the execution settings parsed in the Batch command).
+Essentially, this involves creating a scheduled Job that calls a Batch process, which in turn creates multiple or scheduled one-time Jobs (where each job is parameterized thanks to the execution settings parsed in the Batch command).
 
-The below illustration describes the following steps:
+The following illustration describes the following steps:
 
 ### Step 1 
-User defines a job scheduled job to run a specific batch command. 
+The user defines a job scheduled to run a specific batch command. 
 Fabric assigns a job process for this batch command.
 
 ### Step 2 
 The dedicated job runs the scheduled or multiple instances of the batch command.
-The Batch process triggers a new (temporary) job dedicated for this specific process as described in the [section above](17_batch_process_flow.md#fabric-batch-processes-flow).  
+The Batch process triggers a new (temporary) job dedicated to this specific process as described in the [section above](17_batch_process_flow.md#fabric-batch-processes-flow).  
 The new job runs the batch command.
 
 ### Step 3
@@ -168,7 +168,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 </tbody>
 </table>
 
-Additional fields featuring in the table:
+Additional fields featured in the table:
 
 **Command**  
 
@@ -181,7 +181,7 @@ In this case, the command describes a synchronization process of a list of IDs w
 
 **extra_stats**  
 
-This field shows the slowest-processed entities, along with their IDs, processing time, status, and fields changes: 
+This field shows the slowest-processed entities, along with their IDs, processing time, status, and field changes: 
 
 ```
 {"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}
@@ -193,7 +193,7 @@ This field shows the slowest-processed entities, along with their IDs, processin
 ## **Batch Process Execution and Resiliency**
 
 
-When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs the ability to transfer the process to a different node when a node is no longer active or no longer responding. 
+When executed asynchronously (*async* flag set to *true*), the batch process inherits from the Jobs the ability to transfer the process to a different node when a node is no longer active or unresponsive. 
 
 This handover mechanism uses the [*hearbeats*](09_jobs_configuration.md#heartbeat) and [*keepalive*](09_jobs_configuration.md#keepalive) parameters defined within the node.id file.
 
@@ -207,20 +207,20 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](02_j
 
 When a migration process is initiated, it is treated as a batch of multiple entities [synchronization processes](13_migrate_commands.md#migrate-commands).
 
-The below illustration shows the sequence of actions involved in this process.
+The illustration below shows the sequence of actions involved in this process.
 
 <img src="images/24_jobs_and_batch_services_migration_process.png">
 
 
 ### Step 1 
 
-- The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator all along this process. 
+- The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator throughout this process. 
 - A job process for this batch command starts.
 
 
 ### Step 2
 
-- The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes allocation rules described in the [Affinity](10_jobs_and_batches_affinity.md#affinity-properties) article. 
+- The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes' allocation rules described in the [Affinity](10_jobs_and_batches_affinity.md#affinity-properties) article. 
 - This node (Node 3) is referred to as the Job Owner node.
 - The Job Owner node initiates the migration's statistic collection process.
 
@@ -232,13 +232,13 @@ The below illustration shows the sequence of actions involved in this process.
 
 ### Step 4
 
-- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job Owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
+Node 3 initiates worker threads for each node that will participate in the migration process. In our example, all five nodes are required to contribute: the Job Owner node (Node 3), the Coordinator node (Node 1), and the non-coordinator nodes (N2, N4, N5).
 
 
 ### Step 5
 
-- Each node syncs the instances that has been allocated from the External Source systems.
-- N3 collects statistics information on each of the nodes and entity synchronization. The collected information is written into the System DB (e.g., Cassandra).
+- Each node syncs the instances that have been allocated from the External Source systems.
+- N3 collects statistical information on each node and entity synchronization. The collected information is written into the System DB (e.g., Cassandra).
 
 
 ### Step 6
