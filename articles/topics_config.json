@@ -346,7 +346,28 @@
 			"topics": [
 				{
 					"display name": "Security & Identity Management",
-					"value": "26_fabric_security"
+					"sub-topics": [
+						{
+							"display name": "Security Overview",
+							"value": "26_fabric_security"
+						},
+						{
+							"display name": "Auditing",
+							"value": "27_auditing"
+						},
+						{
+							"display name": "User Identification and Access Management",
+							"value": "26_fabric_security_iam"
+						},
+						{
+							"display name": "Secret Managers Integration",
+							"value": "26_fabric_security_sm"
+						},
+						{
+							"display name": "Master Key Protection",
+							"value": "99_fabric_infras/devops"
+						}
+					]
 				},
 				{
 					"display name": "Authorization",
