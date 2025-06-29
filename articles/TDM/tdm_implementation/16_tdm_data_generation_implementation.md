@@ -113,7 +113,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 
 
-#### 2. Generate the data generation flows for the LU table
+#### 2. Generate data generation flows for LU tables
 
 In order to create data generation flows, run either:
 
