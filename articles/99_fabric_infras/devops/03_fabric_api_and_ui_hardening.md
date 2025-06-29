@@ -1,4 +1,4 @@
-# Fabric Hardening
+# Fabric API, UI, and JDBC Hardening
 
 ## Fabric API/WS Hardening 
 
@@ -36,7 +36,7 @@ Note that the password of the certification file should be defined here:
 ### Step 4 - Check the Access to Fabric Web UI via HTTPS
 
 - Restart each one of the Fabric nodes.
-- Use the following access points to check whether the **https** access has appropriately been granted: 
+- Use the following access points to check whether the **https** access has been granted appropriately: 
   - Admin Panel: ``` https://10.10.10.10:8443/ ```
   - Fabric Web Service will be available in: ``` https://10.10.10.10:8443/deploy ```
 
@@ -51,5 +51,4 @@ In order to securely access Fabric Data via its JDBC driver, the TLS option is s
 To disable hardening, set the SECURE flag to false.
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
