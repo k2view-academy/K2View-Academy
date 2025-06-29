@@ -1,14 +1,14 @@
 # SAML Fundamentals, Terminology, and Security
 
-Security Assertion Markup Language (SAML) is one of the most widely used open standards for authentication and authorizing between multiple parties. SAML gives users a single sign-on (SSO) experience for applications.  
+Security Assertion Markup Language (SAML) is one of the most widely used open standards for authentication and authorization between multiple parties. SAML gives users a single sign-on (SSO) experience for applications.  
 
 At its core, Security Assertion Markup Language (SAML) 2.0 is a means to exchange authorization and authentication information between services. SAML is frequently used to implement internal corporate single sign-on (SSO) solutions, where the user logs into the IDP (Identity Provider) - a service that acts as the single source of identity, which then grants access to a subset of other internal services.
 
 ## Terminology
 
-In addition to *IDP, SP*, and *principals* which are explained [here](/articles/26_fabric_security/07_user_IAM_overview.md), the following are more commonly used SAML terms:
+In addition to *IDP, SP*, and *principals* which are explained [here](/articles/26_fabric_security_iam/07_user_IAM_overview.md), the following are more commonly used SAML terms:
 
-- **Flows initiation** - SAML supports two types of flows: those initiated by the service provider (*SP-initiated*) and those initiated by the identity provider (*IDP-initiated*). The more common flow is SP-initiated flow. The SP-initiated flow starts when a user tries to access the service provider, is then redirected to the identity provider for authentication, and is finally redirected back to the service provider. This flow as operated at Fabric is described [here](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md). The IDP-initiated flow begins when an end user (principal) logs into the Identity Provider's login page and then clicks to log in to the SP's service.
+- **Flows initiation** - SAML supports two types of flows: those initiated by the service provider (*SP-initiated*) and those initiated by the identity provider (*IDP-initiated*). The more common flow is SP-initiated flow. The SP-initiated flow starts when a user tries to access the service provider, is then redirected to the identity provider for authentication, and is finally redirected back to the service provider. This flow as operated at Fabric is described [here](/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md). The IDP-initiated flow begins when an end user (principal) logs into the Identity Provider's login page and then clicks to log in to the SP's service.
 - **Authentication request** (AuthnRequest) - This is a request that is built and then sent by the SP toward the IDP. It consists of an XML file that contains several parameters,  including the ACS URL (reply URL), the SP entity ID (Issuer), and the required name ID (principal ID) format.
 - **Authentication response** - This is a token or assertion (in XML format) that contains authentication information about the user/principal, such as:
   - **Subject** - A NameID element (the authenticated principal name). Its format can be set at the request stage, although it is also usually provisioned at the IDP. Fabric works with an email format. Note that it is not necessary for the actual user's email.
@@ -21,7 +21,7 @@ In addition to *IDP, SP*, and *principals* which are explained [here](/articles/
 
 SAML provides several methods for certification and trust among the SP and IDP interactions, among them:
 
-* **Certification** - SP and IDP provide each other with their public key, which is used in their interactions. Their values are reflected and represented in Fabric [SAML configuration](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration) as SP_CERT_ALIAS and IDP_CERT_ALIAS. 
+* **Certification** - SP and IDP provide each other with their public key, which is used in their interactions. Their values are reflected and represented in Fabric [SAML configuration](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#saml-configuration) as SP_CERT_ALIAS and IDP_CERT_ALIAS. 
 
   As part of a pre-established trust relationship process between Fabric and the IDP, Fabric  provides to the IDP IT team the signed certificate public key "crt" file to be uploaded at the IDP, and the IDP team sends to the Fabric team the IDP "crt"/"cert" to be located at Fabric.
 
@@ -31,5 +31,5 @@ SAML provides several methods for certification and trust among the SP and IDP i
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/08_user_IAM_SSO_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md)
 
