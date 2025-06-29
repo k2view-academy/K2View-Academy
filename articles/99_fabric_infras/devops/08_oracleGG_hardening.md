@@ -1,6 +1,6 @@
 # Oracle Golden Gate Big Data Setup with Kafka TLS
 
-## Step 1	- Copy kafka_ssl content
+## Step 1	- Copy the kafka_ssl content
 
 Copy the contents of the $K2_HOME/.kafka_ssl file on the Kafka node to the local directory in the Oracle GG client.
 
@@ -45,4 +45,4 @@ ssl.endpoint.identification.algorithm=
  4. Restart the Kafka service.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
