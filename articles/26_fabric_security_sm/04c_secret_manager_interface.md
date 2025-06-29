@@ -85,7 +85,7 @@ The following are additional notes and considerations regarding **specific** Sec
 
 ## Multi Secrets Management Services and Instances Support
 
-You can use several Secrets Management services on the same Fabric, per your needs, as demonstrated [here](/articles/26_fabric_security/04b_secret_manager_config.md#multi-secrets-management-providers-and-instances-support).
+You can use several Secrets Management services on the same Fabric, per your needs, as demonstrated [here](/articles/26_fabric_security_sm/04b_secret_manager_config.md#multi-secrets-management-providers-and-instances-support).
 
 ### Multi Secrets Management Services
 
