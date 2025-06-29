@@ -198,7 +198,7 @@ The following data generation flows are created for each LU table:
   
 - PII fields can differ in their occurrence across records and in the requirement for referential integrity (consistency). Each scenario requires a different implementation approach.
 
-  Example: The First Name and Last Name are located in both the CRM and Billing LUs, each of which represents a different system. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
+  Example: Both the CRM and Billing LUs — representing separate systems — contain the First Name and Last Name fields. It is required to keep the same combination of the First and Last Names in both LUs for a given customer.
 
   The following table describes the implementation recommendations for each scenario: 
 
@@ -305,7 +305,7 @@ The rule-based data generation task runs on a dummy synthetic environment. The s
 
 Notes:
 
-- Fabric — You can set the source and target interfaces as Inactive for the synthetic environment. The TDM interface must be active.
+- Fabric — the source and target interfaces can be set as *inactive* in the synthetic environment. The TDM interface must be active.
 - TDM self-service application — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service application. The synthetic environment must have environment_id = -1.
 
 
