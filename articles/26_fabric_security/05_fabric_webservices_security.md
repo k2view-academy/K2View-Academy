@@ -2,7 +2,7 @@
 
 ## Authentication Methods
 
-Fabric secures and controls Web Services (WS) access via an authentication and authorization mechanisms in which each API call must be verified. 
+Fabric secures and controls Web Services (WS) access via an authentication and authorization mechanism in which each API call must be verified. 
 
 Fabric supports several methods for that purpose:
 
@@ -23,32 +23,32 @@ Fabric supports several methods for that purpose:
 
 ### API Key
 
-API key authentication is the simplest method because it can authenticate WS calls just by including a single key, where this simplicity also allows a client to make calls easily from various origins.
+API key authentication is the simplest method because it can authenticate WS calls simply by including a single key, which also allows a client to make calls easily from various origins.
 
-The API Key is sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where API Key is "ABC".
+The API Key is sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where the API Key is "ABC".
 
 See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key.
 
-The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+The authorization and permissions are assigned according to the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
 ### JWT: Signed by Fabric
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. To indicate that JWT is signed by Fabric do not select the "secured" option.
+1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. To indicate that JWT is signed by Fabric, do not select the "secured" option.
 
 2. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it provides one of the following credentials in the post body:
 
    - user/password, using the pattern: `{"username": "<USER>", "password": "<PASSWORD>"}`.
    - API Key, using the pattern: `{"apikey": "<APIKEY>"}`. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the "non secured" key).
 
-3. Upon authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT which is returned as a cookie.
+3. Upon authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT, which is returned as a cookie.
 
-4. Make the next web services calls by sending this JWT as the token value of the `Authorization: Bearer` header or as a cookie, as part of each request. If requests are done via the browser, this cookie is already stored at the browser.  
+4. Make the following web services calls by sending this JWT as the token value of the `Authorization: Bearer` header or as a cookie, as part of each request. If requests are made via the browser, this cookie is already stored in the browser.  
 
-   When used in the cookie, the JWT expiration is automatically extended on each call, where it is not extended when using Bearer header to pass the JWT.
+   When used in the cookie, the JWT expiration is automatically extended on each call, whereas it is not extended when using the Bearer header to pass the JWT.
 
-The authorization and permissions are done according to the credentials that were provided during the first "/api/authenticate" call - either by the user or by the API Key and the roles which are assigned to each of them. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+The authorization and permissions are performed according to the credentials provided during the initial "/api/authenticate" call, either by the user or the API Key, along with the assigned roles for each. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
 
 
@@ -56,31 +56,31 @@ The authorization and permissions are done according to the credentials that wer
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "secured" option, indicating that this is the client signing method. In such case, the "/api/authenticate" call, using the API Key, will be rejected, because this call is only available for cases where JWT is signed by Fabric.
+1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "secured" option, indicating that this is the client signing method. In such a case, the "/api/authenticate" call, using the API Key, will be rejected, because this call is only available for cases where Fabric signs the JWT.
 2. Generate a JWT, where:
-   - It must include "apk" claim with the value of the API Key, as part of the JWT payload.
+   - It must include an "apk" claim with the value of the API Key, as part of the JWT payload.
    - The secret key, provided by Fabric during the API Key generation, must be used to sign the JWT.
    - JWT is signed using HMAC-SHA256.
-   - The JWT's expiration time is maintained by the client.
+   - The client maintains the JWT's expiration time.
 3. Make the web services calls by sending this JWT as the token value of the `Authorization: Bearer` header.
-4. Fabric verifies that the JWT is signed with the secret that matches to the "apk".
+4. Fabric verifies that the JWT is signed with the secret that matches the "apk".
 
-The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+The authorization and permissions are assigned according to the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
 
 
 #### External Trusted Authentication 
 
-In some cases the client itself - a service in the organization which calls Fabric - has already authenticated the user (human or another system). For example, the client can be a service that interacts with an IDP (Identity Provider) to authenticate users by using SAML. In such a case, the client holds the actual user and the groups he is assigned to, and upon which he wants Fabric to act. For example for Fabric to use this information for roles permissions.
+In some cases, the client itself, a service within the organization that calls Fabric, has already authenticated the user (human or another system). For example, the client can be a service that interacts with an IDP (Identity Provider) to authenticate users by using SAML. In such a case, the client holds the actual user and the groups to which they are assigned, and upon which Fabric is to act. For example, Fabric uses this information for role permissions.
 
 Fabric supports these delegated authentications:
 
 * This option requires an extra security verification: 
 
   * Create a dedicated role (for example: "apikeyWithSAML") and grant it a permission for the "AUTHZ_CLAIMS" operation on all resources ("*").
-  * Assign this role to the API Key, that is used and sent in the JWT. 
+  * Assign this role to the API Key that is used and sent in the JWT. 
 
-* The user and groups shall be sent as part of the JWT payload claims - `unm` for user and `bgr` for group list, using an array structure. Here is  a JWT example:
+* The user and group lists shall be sent as part of the JWT payload claims - `unm` for the user and `bgr` for the group list, using an array structure. Here is  a JWT example:
 
   ```json
   {
@@ -97,10 +97,10 @@ Fabric supports these delegated authentications:
 
 ### Open Auth (OAuth)
 
-Fabric supports the standard Open Auth (OAuth) protocol for its web services autorization. 
+Fabric supports the standard Open Auth (OAuth) protocol for its web services authorization. 
 Using the OAuth requires the following preparations:
 
-* Set the JWK endpoint at the config.ini, using the JWK_ENDPOINT parameter located under oauth2 section. It should look like the following:
+* Set the JWK endpoint in the config.ini, using the JWK_ENDPOINT parameter located under the oauth2 section. It should look like the following:
   ```
   [oauth2]
   ## The JSON Web Key (JWK)'s endpoint that holds the keys for the access token (JWT) verification
@@ -109,43 +109,43 @@ Using the OAuth requires the following preparations:
 
 * Grant permissions according to *scopes* provided in an access token:
   1. Create roles for the scopes - each scope should be mapped to a Fabric role.
-  2. Grant permission to each role, per requirements.
+  2. Grant permission to each role as required.
 
-  > By default, it is expected that scopes claim name is "scope". If other is sent - add this parameter ACCESS_TOKEN_SCOPE_PROPERTY_NAME to the config.ini and set its value (for example: ACCESS_TOKEN_SCOPE_PROPERTY_NAME="scp" ).
+  > By default, it is expected that the scope's claim name is "scope". If another is sent, add this parameter ACCESS_TOKEN_SCOPE_PROPERTY_NAME to the config.ini and set its value (for example: ACCESS_TOKEN_SCOPE_PROPERTY_NAME="scp" ).
 
 
 
-Fabric extends the standard OAuth authorization capabilities, beyond the provided scopes:
+Fabric extends the standard OAuth authorization capabilities beyond the provided scopes:
 The access token (JWT) can be sent with an extra optional payload parameter, representing the client ID.
-This ID should be mapped to APIKEY in Fabric and it should be granted permissions upon demand.
+This ID should be mapped to APIKEY in Fabric, and it should be granted the necessary permissions.
 By default, the name of this optional parameter is "client_id".
 
-Fabric follows the OAuth standards for verifying web services API calls. When a client requests a web service:
+Fabric adheres to the OAuth standards for verifying web service API calls. When a client requests a web service:
 1. Fabric looks for a JWT access token at the `Authorization: Bearer` header.
 2. Fabric decodes the JWT and looks for the "kid" parameter.
-3. Fabric looks for the "kid" parameter in the JWK set; the set which is published by the Authorization server, is gained by Fabric.
+3. Fabric looks for the "kid" parameter in the JWK set; the set, which is published by the Authorization server, is gained by Fabric.
 4. Fabric verifies the JWT using the JWK matching key.
 
-> Note: Fabric, being the Resource Server, supports both OAuth grant types, i.e. *Authorization Code* and *Client Credentials*. 
+Note: Fabric, as the Resource Server, supports both OAuth grant types, i.e., Authorization Code and Client Credentials. 
 
 
 ### Basic Authentication
 
-Basic authentication, also known as *basic access authentication*, is a method for an HTTP user-agent to be authenticated by providing a user name and password, when making a request. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string of `username:password`.
+Basic authentication, also known as Basic Access Authentication, is a method for an HTTP user-agent to authenticate itself by providing a username and password when making a request. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string of `username:password`.
 
-**Note:** Basic authentication should only be used together with the HTTPS/SSL mechanism. For more information refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md).
+**Note:** Basic authentication should only be used together with the HTTPS/SSL mechanism. For more information, refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md).
 
-The authorization and permissions are done according to the roles which are assigned to the user, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+The authorization and permissions are assigned according to the roles assigned to the user and their associated permissions. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
 
 
 #### Browser Calls Helper
 
-The Fabric Basic Authentication mechanism provides a helper when calls are originated from a web browser which does not support request header sending.
+The Fabric Basic Authentication mechanism provides a helper when calls are originated from a web browser that does not support sending request headers.
 
 To activate the helper, add this additional parameter to the web service request: `basicAuth=true`.
 
-When activated, a browser popup will appear, when sending the request. The user can populate the popup fields with the username and password.
+When activated, a browser pop-up will appear when the request is sent. The user can populate the pop-up fields with the username and password.
 
 <img src="images/05_basic_auth_popup_helper.png">
 
@@ -153,7 +153,7 @@ When activated, a browser popup will appear, when sending the request. The user 
 
 ## Generating API Key  
 
-There are two options to generate an API key: either via the Web Framework Admin or by using a Fabric command. In both cases you can choose whether the API Key shall be secured or not, as described below.
+There are two options to generate an API key: either via the Web Framework Admin or by using a Fabric command. In both cases, you can choose whether the API Key shall be secured or not, as described below.
 
 * Web Framework Admin: 
 
@@ -164,13 +164,13 @@ There are two options to generate an API key: either via the Web Framework Admin
 
   4. Click  **Save**.
 
-  When the secured option has been selected, the secret key is displayed in a pop-up window and can be copied, for a later use. The secret key is used to sign the JWT.
+  When the secured option has been selected, the secret key is displayed in a pop-up window and can be copied for later use. The secret key is used to sign the JWT.
 
   For example:
 
   <img src="images/07_fabric_webToken.PNG">
 
-* Fabric command: `CREATE TOKEN <'token_name'> [SECURED]`.  When "SECURED" is used, the secret key is retrieved back.
+* Fabric command: `CREATE TOKEN <'token_name'> [SECURED]`.  When "SECURED" is used, the secret key is retrieved.
 
   For example:
 
@@ -183,7 +183,7 @@ There are two options to generate an API key: either via the Web Framework Admin
   ```
 
 
-If the secured option has not been selected,  the token name is used as the token value, for the API Key Authentication method.
+If the secured option has not been selected,  the token name is used as the token value for the API Key Authentication method.
 
 
 
@@ -192,7 +192,7 @@ If the secured option has not been selected,  the token name is used as the toke
 Web services authentication is done either by user or by API key,  where each can be assigned to roles and accordingly to permissions.
 
 
-Read this [article](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
+Read this [article](/articles/26_fabric_security/01_fabric_credentials_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/26_fabric_security/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
 
 
 
