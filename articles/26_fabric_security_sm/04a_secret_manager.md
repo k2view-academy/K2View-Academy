@@ -40,8 +40,8 @@ These are the Secrets Management service providers currently supported by Fabric
 
 To use a Secrets Management service, you should configure and set Fabric using the following two components:
 
-1. **config.ini**. Set the configuration in the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details. Read [here](/articles/26_fabric_security/04b_secret_manager_config.md) for more details.
-2. **Interface Editor**. Provision and mark the required interface connection details as those that should be taken from the Secrets Management service, as part of the project's implementation settings. Read [here](/articles/26_fabric_security/04c_secret_manager_interface.md) for more details.
+1. **config.ini**. Set the configuration in the config.ini file with the properties of the selected Secrets Management service, along with the access and permission details. Read [here](/articles/26_fabric_security_sm/04b_secret_manager_config.md) for more details.
+2. **Interface Editor**. Provision and mark the required interface connection details as those that should be taken from the Secrets Management service, as part of the project's implementation settings. Read [here](/articles/26_fabric_security_sm/04c_secret_manager_interface.md) for more details.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/README.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_sm/04b_secret_manager_config.md)
