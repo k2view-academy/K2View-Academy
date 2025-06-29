@@ -1,40 +1,40 @@
-# Nodes Configuration in Clusters
+# Cluster Node Job Configuration
 
-Job execution environments can be configured at both node and cluster levels.
+Job execution environments can be configured at both the node and cluster levels.
 
 
 ## Nodes Configuration
-Priority for a given job on any given logical or physical node can be defined in the node's configuration file.
-For example: to define that node X handles a maximum of 10 threads in parallel by setting the #K2JOBS_POOL_SIZE variable to 10. 
+The priority for a given job on any logical or physical node can be defined in the node's configuration file.
+For example, to define that node X handles a maximum of 10 threads in parallel by setting the #K2JOBS_POOL_SIZE variable to 10. 
 
 ### **Config.ini**
 
-Job-related configuration variables can be set in this file that is saved in the **k2view/config/config.ini** file under the **JOBS** section.
+Job-related configuration variables can be set in this file, which is saved in the **k2view/config/config.ini** file under the **JOBS** section.
 
-**K2JOBS_POOL_SIZE=25**, defines the size of the thread pool for processing Fabric Jobs. 
+**K2JOBS_POOL_SIZE=25** defines the size of the thread pool for processing Fabric Jobs. 
 
-**K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
+**K2JOB_ARCHIVING_TIME_HOUR=720** defines the time when to delete the Job row in the **k2_jobs table**. The default is 720 hours (30 days).
 
 
 ### **Node.id** 
 
-Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.id** file.
+Node and cluster-related configuration variables can be set in this file, which is saved in the **k2view/config/node.id** file.
 
 A set number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config** repository. Node identifiers can be used in the Job Affinity mechanism. 
 
 Note that there can be more than one logical name since a node can have more than one logical role.
-The node UUID is unique and if left undefined, Fabric generates a random node when starting up the first time.
+The node UUID is unique, and if left undefined, Fabric generates a random node when starting up for the first time.
 
 Example:
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
 
 #### Affinity Allocation
 
-The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical name can be associated with the maximum number of threads.
+The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e., with the same affinity), each logical name can be associated with the maximum number of threads.
 
 Example:
 
-Three logical names have been given for NODE 1 that share the 10 threads allocated to Job processing on Node 1.
+Three logical names have been assigned to NODE 1, each sharing the 10 threads allocated for job processing on Node 1.
 
 ```
 - Node_b:1
@@ -59,11 +59,11 @@ Note:
 - Several nodes can share the same logical name.
 
 #### *ANY* flag
-The *ANY* option is - by default - attributed to all nodes and only applies to jobs that were defined without affinity. This means that any node can contribute and compete for the execution of the jobs that were defined without a specific affinity.
+The *ANY* option is, by default, attributed to all nodes and only applies to jobs that were defined without affinity. This means that any node can contribute and compete for the execution of the jobs that were defined without a specific affinity.
 
-1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not execute jobs defined without affinity. 
+1. It is possible to exclude a node by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not execute jobs defined without affinity. 
 2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
-3. If the *ANY* parameter is not added to the node.id file, by default, the node will be contributing to all jobs that have been defined without affinity.
+3. If the *ANY* parameter is not added to the node.id file, by default, the node will be a candidate for all jobs that have been defined without affinity.
 
 #### Effective Ip
 
@@ -71,7 +71,7 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 
 The effective IP is the IP that Fabric uses to contact the [System DB](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#213-operational-database) when it is either Cassandra or PostgreSQL. It is read from Cassandra/PostgreSQL and set up automatically. 
 
-You should only override it in case you need to use your own specific IP.
+You should only override it if you need to use a specific IP.
 
 When the System DB is SQLite, the default will be set to 127.0.0.1.
 
@@ -94,24 +94,24 @@ A Cluster Identifier must contain only letters and numbers and is defined in the
 
 ```cluster_id: FabCluster1```
 
-Cluster are used in the following cases:
+Clusters are used in the following cases:
 - Run multiple Fabric nodes on the same Cassandra server 
 - In Fabric Studio, run multiple projects (each one as a single node) on the same Cassandra server
 
 ### **Heartbeat**
 
-A [heartbeat](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#job-execution-resiliency) value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
+A [heartbeat](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#job-execution-resiliency) value can be defined to set the delay of the Fabric node's heartbeat frequency. The default is set to 10 seconds.
 
-```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - in this case, the heartbit has been set to 5 seconds.
+```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - in this case, the heartbeat has been set to 5 seconds.
 
 
 ### **KeepAlive**
 
-The number of heartbeats that a Fabric node can miss before it is considered as unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note that any Job whose affinity has been set to this node will not run, and must be restarted manually.
+The number of heartbeats that a Fabric node can miss before it is considered unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note that any Job whose affinity has been set to this node will not run and must be restarted manually.
 
 ```FABRIC_HEARTBEAT_MISS=12```
 
-- If the node has been down for 60 seconds (12 missed heartbeats of 5 seconds each), it is considered as unavailable and is not part of the pool during next Job allocation.
+- If the node has been down for 60 seconds (12 missed heartbeats of 5 seconds each), it is considered unavailable and is not part of the pool during the next Job allocation.
 
 The configuration of these parameters can be found in the **k2view/config/config.ini** file under the **Fabric Cluster** section.
 
