@@ -1,4 +1,4 @@
-<strong>Requirements</strong>
+<strong>System Requirements</strong>
 <ul>      
 <li><a href="/articles/98_maintenance_and_operational/Hardware/README.md">Installation Requirements: VM, Docker, On-prem/Self-hosted Cloud Kubernetes</a></li>
 </ul>
