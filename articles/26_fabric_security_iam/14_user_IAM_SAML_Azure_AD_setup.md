@@ -107,6 +107,5 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
 In addition to the instructions detailed [here](/articles/26_fabric_security/13_user_IAM_configuration.md#saml-configuration), setting up SAML with Azure AD requires adding a configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
 
 
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/13_user_IAM_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/15_user_IAM_SAML_Okta_setup.md)
 
