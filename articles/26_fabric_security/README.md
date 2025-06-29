@@ -1,4 +1,4 @@
-<strong>Fabric Security Architecture & Identity Management<strong>
+<strong>Fabric Security & Identity Management<strong>
 
 <ul>
     <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Security Overview</a></li>
