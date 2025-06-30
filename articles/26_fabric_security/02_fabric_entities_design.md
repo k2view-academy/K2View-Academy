@@ -40,7 +40,7 @@ This additional atomic-level encryption provides greater protection of sensitive
 
 ## Fabric Hashing Mechanism
 
-As part of managing data securely, Fabric hashes keys that point to the data. For this purpose, Fabric uses the SHA-512 or SHA-512/256 algorithms for hashing: when working [with FIPS mode](18_FIPS_implementation.md), Fabric uses SHA-512/256 algorithm for hashing. If the FIPS mode is not set, Fabric uses the SHA-512 algorithm for hashing. Additionally, Fabric uses a [dedicated master key](#fabric-master-key) to salt the original value before hashing it.
+As part of managing data securely, Fabric hashes keys that point to the data. For this purpose, Fabric uses the SHA-512 or SHA-512/256 algorithms for hashing: when working [with FIPS mode](18_FIPS_implementation.md), Fabric uses SHA-512/256 algorithm for hashing. If the FIPS mode is not set, Fabric uses the SHA-512 algorithm for hashing. Additionally, Fabric uses a [dedicated master key](#master-key-generation) to salt the original value before hashing it.
 
 Examples for hashing:
 
@@ -85,7 +85,7 @@ To use it:
 
 * Set the ```MASTERKEY_KEY_STORE_ENABLED``` parameter of the config.ini file to ```true```. 
 
-* Generate a secret key and store it in the KeyStore using ```keytool -genseckey``` command as described [here](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md ) 
+* Generate a secret key and store it in the KeyStore using ```keytool -genseckey``` command as described [here](/articles/26_fabric_security_mk/10_fabric_defined_master_key.md )
 
   > Note: When Fabric is loaded for the first time, it checks whether such an entry exists, and if it does not, it generates it.
 
@@ -124,7 +124,7 @@ A key can be generated using the following command:
 
 The master key rotation supports the LUI encryption master key. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled daily or weekly job, calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt data from all instances.
 
-Note that the job does not have to be time-based; any other condition, such as the number of LUIs per node, can trigger.
+Note that the job does not have to be time-based; any other condition, such as the number of LUIs per node, can also trigger it.
 
 Master key rotation enables the generation and activation of a new master key. The new master key affects Instance IDs saved in the LU database from the moment they are generated onwards. The new key does not impact the existing Instance IDs until they are next synced and saved in the LU database.
 
@@ -165,7 +165,7 @@ To encrypt or decrypt data, each Fabric node, upon going live, retrieves the sto
 
 #### Setup 
 
-To work with KMS, you should set its information in config.ini and then generate a new Fabric master key accordingly. For details of what should be configured and done for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/99_fabric_infras/devops/10a_fabric_master_key_integrated_with_kms.md ).
+To work with KMS, you should set its information in config.ini and then generate a new Fabric master key accordingly. For details of what should be configured and done for working with KMS, refer to [Fabric Master Key Integrated with KMS](/articles/26_fabric_security_mk/10a_fabric_master_key_integrated_with_kms.md ).
 
 #### Fabric Master Key Commands
 
