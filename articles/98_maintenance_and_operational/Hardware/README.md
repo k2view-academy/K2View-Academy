@@ -1,15 +1,11 @@
 <strong>System Requirements</strong>
+  
 <ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">
       Fabric and TDM Installation Overview
     </a>
   </li>
-</ul>
-
-<strong>Kubernetes Installation Requirements</strong>
-
-<ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md">
       Cloud Self-hosted Kubernetes Installation Requirements
@@ -20,11 +16,6 @@
       On-premises Kubernetes Cluster Installation Requirements
     </a>
   </li>
-</ul>
-
-<strong>Linux and Docker Fabric & TDM Installation Requirements</strong>
-  
-<ul>
 
   <li>
     <a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/02_hardware_req_for_dev_qa.md">
