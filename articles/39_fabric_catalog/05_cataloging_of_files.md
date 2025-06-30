@@ -1,17 +1,17 @@
-# Cataloging of Files
+# File Cataloging
 
 ## Overview
 
 Fabric Catalog is a tool designed to organize all data assets across a company's data landscape. It facilitates metadata discovery, classification, PII indication and the calculation of various data quality metrics for all entities within a data source.
 
-Sometimes, a company's data assets are stored in files rather than in a database, and this data must be protected due to privacy laws. 
+Sometimes, a company's data assets are stored in files rather than in a database, and this data must be protected in accordance with privacy regulations. 
 
-For example, files containing sensitive data arrive periodically to a predefined filesystem interface. Before they are utilized for the business purposes, it is essential to identify and mask any sensitive data these files might contain.
+For example, files containing sensitive data arrive periodically to a predefined filesystem interface. Before being used for business purposes, it is essential to identify and mask the contained sensitive data.
 
-Starting in V8.3, Fabric enables building a Catalog based on files. Discovery can be performed using:
+Starting in V8.3, Fabric enables building a file-based Catalog. Discovery can be performed using:
 
 * Metadata definition, such as JSON schema or AVRO schema files.
-* Sample files containing data.
+* Sample files that contain data.
 
 The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of specific file types. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the Cataloging of files solution requires  creating Broadway flows and attaching them to the interface. Then are run-time these flows are invoked by the Crawler upon running the Discovery job on the given interface.
 
