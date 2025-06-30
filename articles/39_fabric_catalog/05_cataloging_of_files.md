@@ -13,11 +13,11 @@ Starting in V8.3, Fabric enables building a file-based Catalog. Discovery can be
 * Metadata definition, such as JSON schema or AVRO schema files.
 * Sample files that contain data.
 
-The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of specific file types. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the Cataloging of files solution requires  creating Broadway flows and attaching them to the interface. Then are run-time these flows are invoked by the Crawler upon running the Discovery job on the given interface.
+The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of a specific file format. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the File Cataloging  solution requires creating Broadway flows and attaching them to an interface. Then, at run-time, these flows are invoked by the Crawler upon running Discovery on the given interface.
 
-These flows define mapping and transformation rules from file to Catalog metadata, converting the specific file format (their schema definition and/or the sample files) into the Catalog’s standard structure: data platform, schema(s), dataset(s), fields and their properties. 
+These Broadway flows define mapping and transformation rules, converting a specific file format into the Catalog’s standard hierarchy: data platform, schema(s), dataset(s), fields and their properties. The Catalog metadata is built based on either schema definitions or sample files.
 
-Once the Catalog structure is built, the plugins pipeline is executed, in the same way as running discovery over any other data source.
+Once the Catalog structure is built, the plugins pipeline is executed, in the same manner as running discovery over any other data source.
 
 More details about the implementation steps can be learned further in this article: 
 
@@ -25,17 +25,17 @@ More details about the implementation steps can be learned further in this artic
 * [Attaching rules to interface](05_cataloging_of_files.md#attaching-rules-to-interface)
 * [Organizing files in filesystem](05_cataloging_of_files.md#organizing-files-in-filesystem)
 
-To illustrate the file cataloging E2E process, the *Cataloging of Files - Demo* extension is available on [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). This extension can be installed in your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
+To illustrate the **file cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Rules
 
-Due to multiple file formats, transformation rules are required in order to perform file cataloging. Transformation rules are created using Broadway flows, that should be placed in a Project tree under the Shared Objects and deployed. 
+Due to the existence of multiple file formats, applying transformation rules is required for performing the file cataloging process. Transformation rules are created using Broadway flows that should be placed in the Project tree (under the Shared Objects) and deployed. 
 
-Below is the description of each expected flow (transformation rule):
+To better understand the concept of **transformation rule** and its pivotal use in the file cataloging solution, below is a description of each expected flow (transformation rule):
 
 1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
 
-   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its respective structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
+   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
    * When no schema definition file is provided and the metadata is expected to be discovered based on a data sample, each map should represent a Catalog dataset with its respective structure: data platform, schema, dataset, class. The fields and their properties will then be completed from the example data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
