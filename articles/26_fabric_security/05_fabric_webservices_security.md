@@ -135,7 +135,7 @@ Basic authentication, also known as Basic Access Authentication, is a method for
 
 **Note:** Basic authentication should only be used together with the HTTPS/SSL mechanism. For more information, refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md).
 
-The authorization and permissions are assigned according to the roles assigned to the user and their associated permissions. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
+The authorization and permissions are assigned according to the roles assigned to the user and their associated permissions. See [here](/articles/26_fabric_security/01_fabric_security_overview.md) for more information about API Keys, roles, and permissions.
 
 
 
@@ -192,7 +192,7 @@ If the secured option has not been selected,  the token name is used as the toke
 Web services authentication is done either by user or by API key,  where each can be assigned to roles and accordingly to permissions.
 
 
-Read this [article](/articles/26_fabric_security/01_fabric_credentials_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/26_fabric_security/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
+Read this [article](/articles/26_fabric_security/01_fabric_security_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
 
 
 
