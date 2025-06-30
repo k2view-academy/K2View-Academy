@@ -1,6 +1,7 @@
 
 # Fabric Kubernetes Space Upgrade/Rollback Procedure
-This document details the upgrade and rollback procedure for upgrading the Fabric application that runs on a Kubernetes cluster.
+
+This document outlines the upgrade and rollback procedures for upgrading the Fabric application, which runs on a Kubernetes cluster.
 Here's the updated upgrade and rollback procedure for the Fabric application running on Kubernetes. Step 1 has been modified to include a command that lists the `fabric-deployment`, container versions, and their state.
 
 ---
@@ -8,7 +9,7 @@ Here's the updated upgrade and rollback procedure for the Fabric application run
 ### Upgrade Procedure for Fabric on Kubernetes
 
 **Note**: This procedure is valid for only minor upgrades or all versions above 8.0.
-Major upgrades may require additional steps like schema migrations, configuration changes, or downtime planning. Always consult regarding the specific upgrade documentation for major version changes.
+Major upgrades may require additional steps, such as schema migrations, configuration changes, or planning for downtime. Always consult the specific upgrade documentation for major version changes.
 
 
 **Prerequisites:**
@@ -36,7 +37,7 @@ or
 
 #### Step 2: Check the Current Version of the Deployment
 
-1. In order to check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
+1. To check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
    ```bash
    kubectl get deployment fabric-deployment -n space-k2view -o=jsonpath='{.spec.template.spec.containers[0].image}'
    ```
@@ -86,17 +87,17 @@ or
 #### Step 5: Verify Web Functionality
 
 1. Verify that Fabric is functioning as expected:
-   - Access the Web and generate a piece of test code to ensure that it operates correctly.
+   You can access the Web and generate a test code snippet to make sure it operates correctly.
    
 2. Check that the generated code is committed and pushed to the Git repository:
    - Navigate to the relevant Git repository and verify the presence of the latest commits.
-   - Confirm that the commits correspond to the generated code from Web.
+   - Confirm that the commits correspond to the generated code from the Web.
 
 ---
 
 ### Rollback Procedure for Fabric on Kubernetes
 
-If the upgrade fails or if any issues are being encountered, follow the steps below to roll back to the previous version.
+If the upgrade fails or any issues arise, please follow the steps below to roll back to the previous version.
 
 #### Step 1: Rollback to the Previous Version
 
@@ -130,7 +131,7 @@ If the upgrade fails or if any issues are being encountered, follow the steps be
    ```
 
 2. Confirm that Fabric is functioning as expected following the rollback:
-   - Generate/Run a code on the web and verify its functionality.
+   - Generate and run code on the web and verify its functionality.
 
 3. Confirm that the application is functioning as expected following the rollback.
 
@@ -164,7 +165,7 @@ If you encounter issues during the upgrade or the rollback process, consider the
    kubectl get svc,configmap,pvc -n space-k2view
    ```
 
-5. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate properly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
+5. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate correctly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
 
 6. **Check Pod Health:** Use the `describe` command to get detailed information about pod failures or restarts:
    ```bash
@@ -175,7 +176,7 @@ If you encounter issues during the upgrade or the rollback process, consider the
 
 8. **Cluster Health:** Ensure the overall health of the Kubernetes cluster is good, and there are no node issues, resource shortages, or other factors that could affect the deployment.
 
-9. **Contact Support:** If issues persist, consider reaching out to support with the relevant logs, steps taken, and any specific errors encountered.
+9. **Contact Support:** If issues persist, please contact support with the relevant logs, steps taken, and any specific errors encountered.
 
 ---
 
