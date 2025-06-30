@@ -53,7 +53,6 @@ If the authenticator is Fabric, the "Change Passwords" action appears; otherwise
 <img src="images/12_details_panel_ext.png">
 
 
-
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/13_user_IAM_configuration.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/11.2_user_IAM_AD_LDAPS.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/13_user_IAM_configuration.md)
 
 
