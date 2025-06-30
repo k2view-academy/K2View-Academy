@@ -1,4 +1,4 @@
-<strong>Installation of TDM</strong>
+<strong>TDM, Fabric, and Web Studio Installation on Kubernetes, Linux, and Docker</strong>
 
 <ul>
   <li>
@@ -6,36 +6,21 @@
       TDM Installation
     </a>
   </li>
-</ul>
-
-<strong>Installation of Fabric Web Studio</strong>
-
-<ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/README.md">
-      K2view Fabric Web Studio Installation
+     Fabric Web Studio Installation on Docker / Podman
     </a>
   </li>
-</ul>
-
-<strong>Kubernetes Installations of Fabric</strong>
-         
-<ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">
-      Cloud Self-hosted Kubernetes Cluster Installation
+      Fabric Installation on Cloud Self-hosted Kubernetes Cluster
     </a>
   </li>
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/02_K2cloud_on-prem_K8s_Installation.md">
-      On-premises Kubernetes Cluster Installation
+      Fabric Installation on On-premises Kubernetes Cluster
     </a>
   </li>
-</ul>
-
-<strong>Linux and Docker Installations of Fabric and TDM</strong>
-
-<ul>
   <li>
     <a href="/articles/98_maintenance_and_operational/Installations/Linux/README.md">
       Fabric Installation on Linux
