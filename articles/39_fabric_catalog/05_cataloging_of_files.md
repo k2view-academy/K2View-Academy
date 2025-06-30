@@ -17,7 +17,7 @@ The Crawler framework, used for file cataloging, employs a generic mechanism tha
 
 These Broadway flows define mapping and transformation rules, converting a specific file format into the Catalog’s standard hierarchy: data platform, schema(s), dataset(s), fields and their properties. The Catalog metadata is built based on either schema definitions or sample files.
 
-Once the Catalog structure is built, the plugins pipeline is executed, in the same manner as running discovery over any other data source.
+Once the Catalog structure is built, the plugins pipeline is executed, in the same manner as running Discovery over any other data source.
 
 More details about the implementation steps can be learned further in this article: 
 
@@ -62,14 +62,14 @@ All filesystem interface types (local, Azure, etc.) include a group of input par
 
 ## Organizing Files in Filesystem
 
-There is no limitation to how to organize the files in the filesystem interface. The only rule is that files setup should correspond to the flow's logic.
+There is no limitation on how to organize the files in the filesystem interface. The only rule is that the file setup should correspond to the flow's logic.
 
-The *File Cataloging - Demo* extension demonstrates various ways to organize the files. 
+The *File Cataloging - Demo* extension demonstrates various ways to organize files. 
 
-In the cataloging example of CSV files, all CSV files are located in one folder assuming each file represents a dataset, while the schema name is set to **main** in the respective **Get Metadata** flow.
+In the cataloging example for CSV files, all CSV files are located in one folder, assuming each file represents a dataset, while the schema name is set to **main** in the corresponding **Get Metadata** flow.
 
-In the examples of JSON and XML files, the folders hierarchy is created: **main** folder represents the schema, then **contact** and **customer** folders represent datasets, while each one include its relevant sample data files. 
+In the examples of JSON and XML files, a folder hierarchy is created: the **main** folder represents the schema, while the **contact** and **customer** folders represent datasets, each containing its relevant sample data files. 
 
-Note that the **masked** or **masked_main** folders are included only for illustration of the masking results folders. 
+Note that the **masked** or **masked_main** folders are included for illustration purposes only, to show the structure of the masking results folders. 
 
-To sum up, the data sample files folders as well as the masking results folders can be setup per your project's business needed. 
+To sum up, both the data sample file folders and the masking results folders can be set up according to your project's business needs. 
