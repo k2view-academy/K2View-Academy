@@ -1,4 +1,4 @@
-<strong>Logical Unit / Data Product Tables<strong>
+<strong>Logical Unit Tables<strong>
 
 <ul>
 <li><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables Overview</a></li>
