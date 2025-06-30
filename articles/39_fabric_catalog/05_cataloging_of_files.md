@@ -58,7 +58,7 @@ All filesystem interface types (local, Azure, etc.) include a group of input par
 
 1. Click the arrow icon to expand the parameters of the Discovery category (as shown in the above image).
 2. Populate the names of the Broadway flows.
-3. Save and deploy the Web Services.
+3. Save and deploy the Web Services LU.
 
 ## Organizing Files in Filesystem
 
