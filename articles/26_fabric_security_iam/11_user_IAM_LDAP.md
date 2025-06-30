@@ -38,5 +38,5 @@ For more information and guidelines about setting up Fabric with LDAP, refer to 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/12_web_login.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/11.1_user_IAM_AD_LDAP.md)
 
