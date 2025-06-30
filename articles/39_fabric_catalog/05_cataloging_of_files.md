@@ -64,7 +64,7 @@ All filesystem interface types (local, Azure, etc.) include a group of input par
 
 There is no limitation to how to organize the files in the filesystem interface. The only rule is that files setup should correspond to the flow's logic.
 
-The *Cataloging of Files - Demo* extension demonstrates various ways to organize the files. 
+The *File Cataloging - Demo* extension demonstrates various ways to organize the files. 
 
 In the cataloging example of CSV files, all CSV files are located in one folder assuming each file represents a dataset, while the schema name is set to **main** in the respective **Get Metadata** flow.
 
