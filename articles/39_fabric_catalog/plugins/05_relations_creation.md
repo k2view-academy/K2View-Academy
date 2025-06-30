@@ -8,7 +8,7 @@ The following article describes plugins that create the *refersTo* relations in 
 
 ## Reference by Names Comparison
 
-The purpose of a **Reference by Names Comparison** plugin (which was called *Metadata Logical Reference* before V8.3) is to identify possible foreign key references between datasets based on matching the field names and to create the *refersTo* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
+The purpose of a **Reference by Names Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets based on matching the field names and to create the *refersTo* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
 
 The matching algorithm works by comparing the field names of 2 datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name in case the field name is 'ID'. For example, the following field names - customer.ID, CUSTOMER_ID and CustomerID - will be normalized to the same value - customerid.
 
@@ -104,9 +104,9 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 ## Reference by Query Analysis
 
-The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and to create the *refersTo* relations. The file name format is: ```<Data Platform name>.sql```.
+The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of input SQL file and to create the *refersTo* relations. The input file's name format is: ```<Data Platform name>.sql```.
 
-Some database management systems (such as Oracle) support generation of **audit files** - special files that **record activities** within the database. They typically track executed SQL queries, user logins, schema changes, privilege escalations, and other security-relevant or operational events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries and save the transformed file with the required name format:  ```<Data Platform name>.sql```. This transformation can be performed by creating a Broadway flow in your project. 
+Some database management systems (such as Oracle) support the automatic generation of **audit files** that **record activities** within the database. They typically track executed SQL queries, user logins, schema changes, privilege escalations, and other security-relevant or operational events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries and save the transformed file with the required name format:  ```<Data Platform name>.sql```. This transformation can be performed by creating a Broadway flow in your project. 
 
 This plugin is useful when a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
@@ -148,7 +148,7 @@ The ```llmInterface``` is an optional parameter. It allows overriding the defaul
 
 The purpose of a **Reference by Data Comparison** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source doesn't have predefined foreign key constraints. 
 
-The data comparison is performed by comparing the values of the fields of 2 datasets at a time - dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
+The data comparison is performed by comparing the values of the fields of two datasets at a time - dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
 
 Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
