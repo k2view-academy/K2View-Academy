@@ -90,7 +90,7 @@ The purpose of the Advanced Masking Settings pop-up window is to allow the setti
 * **Masking indicators** - determine the masking behavior during a flow run. They can be set either per population via the Catalog Masking Actor's inputs or per Classification via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the setting of these indicators on the Catalog Masking Actor - for all the fields with the same Classification.
 * **Formatter Name and Parameters** - set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
 * **Pre-Execution Logic** - an actor or a flow to be executed by the Catalog Masking Actor. 
-* **Property Alias Map** - establish the mapping between the Catalog's property and an input parameter of the attached Masking Actor. The mapping is created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties.
+* **Property Alias Map** - establish the mapping between the Catalog's property and an input parameter of the attached Masking Actor. These mappings are created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties, by that to improve the quality of the generated value.
 
 <img src="../images/settings_masking_advanced.png" />
 
