@@ -15,7 +15,7 @@ This article explains how to create and view the bulk. Click [here](14_2_bulk_ed
 
 ### How Can I Create a Bulk?
 
-1. Search for the nodes (e.g. Catalog fields) using the [Catalog search](08_search_catalog).
+1. Search for the nodes (e.g. Catalog fields) using the [Catalog search](08_search_catalog.md).
 2. Select the required nodes and click **Add to bulk** <img src="../images/add_to_bulk_icon.png" style="zoom:100%;"> icon. 
 3. Once the field is added to bulk, the <img src="../images/bulk_icon.png" > icon is added next to it in the Search results screen.
 
