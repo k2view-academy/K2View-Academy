@@ -105,7 +105,7 @@ While running this command after running the above two keytool's *import* and *e
 `okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
 `k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
 
-For more information about keystore handling, please read [here](/articles/99_fabric_infras/devops/04_cassandra_hardening.html) and [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html).
+For more information about keystore handling, please read [here](https://support.k2view.com/Academy/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.html).
 
 <br/>
 
@@ -189,9 +189,6 @@ To use a custom authenticator, do the following in the config.ini:
 
 For more information about customer authenticator implementation, read [here](/articles/26_fabric_security_iam/17_user_IAM_custom_authenticator.md).
 
-
-
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)
 
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_iam/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md)
