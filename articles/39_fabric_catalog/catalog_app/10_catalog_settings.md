@@ -53,7 +53,7 @@ Each **Classification** in this tab is unique, and it includes the following att
 
 Note that **Consistent using seed** value is only available when the selected Generator supports seed.
 
-Click [here](/articles/41_masking/01_fabric_data_masking.md) for more information about data consistency.
+Click [here](/articles/41_masking/02_data_masking_flow.md) for more information about data consistency.
 
 In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with an identical name as the classification that appears in this tab, as both the classifications and the sequences are saved in the same MTable.
 
