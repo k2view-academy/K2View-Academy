@@ -33,22 +33,22 @@ Due to multiple file formats, transformation rules are required in order to perf
 
 Below is the description of each expected flow (transformation rule):
 
-1. **Get Metadata** is the first transformation rule that builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
+1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
 
    * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its respective structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
    * When no schema definition file is provided and the metadata is expected to be discovered based on a data sample, each map should represent a Catalog dataset with its respective structure: data platform, schema, dataset, class. The fields and their properties will then be completed from the example data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
 
-2. **Get Files List** is the second transformation rule that returns a mapping between the dataset and the respective list of sample files. This flow is optional and only required when sample files are provided.
+2. **Get Files List** is the second transformation rule, and it returns a mapping between the dataset and the respective list of sample files. This flow is optional and only required when sample files are provided.
 
    * The flow should return a list of relevant data sample files per each dataset. Several sample files can be provided for the same dataset. However, one sample file cannot include data for more than one dataset. 
 
-3. **Get Data Snapshot** is the third transformation rule that returns each file's data. This flow is optional and only required when sample files are provided (when **Get Files List** is defined, it should be defined too).
+3. **Get Data Snapshot** is the third transformation rule, and it returns the date from each file. This flow is optional and only required when sample files are provided. If **Get Files List** is defined, this rule should be defined as well.
 
-   * Per each file, the flow should return a result set which represents one dataset row. 
+   * For each file, the flow should return a result set that represents one dataset row. 
 
-When creating your own flows, it is recommended to start from the sample flows provided in the *Cataloging of Files - Demo* extension and customize them per your needs. Keep in my to keep the flow's external input and output parameters as in the example flows!
+When creating your own flows, it is recommended to start from the sample flows provided in the *Cataloging of Files - Demo* extension and customize them to fit your needs. Keep in my to keep the flow's external input and output parameters as in the example flows!
 
 ## Attaching Rules to Interface
 
@@ -56,7 +56,7 @@ The filesystem interfaces include a group of input parameters called Discovery, 
 
 <img src="images/filesystem_discovery.png"  />
 
-1. Click the arrow icon near Discovery to view the parameters .
+1. Click the arrow icon near Discovery to view the parameters.
 2. Populate the names of the Broadway flows.
 3. Save and deploy the Web Services.
 
