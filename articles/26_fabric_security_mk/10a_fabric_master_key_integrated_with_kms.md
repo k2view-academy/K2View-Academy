@@ -14,7 +14,6 @@ To define Fabric to work with KMS, the information should first be acquired from
 5. [Symmetric and Asymmetric Master Key Encryption Types](#symmetric-and-asymmetric-master-key-encryption-types)
 
 
-
 ## Integration with AWS KMS
 
 1. From KMS, get the specific customer master key information - region and customer master key ID
