@@ -36,11 +36,11 @@ To better understand the concept of **transformation rule** and its pivotal use 
 1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
 
    * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
-   * When no schema definition file is provided and the metadata is expected to be discovered based on a data sample, each map should represent a Catalog dataset with its respective structure: data platform, schema, dataset, class. The fields and their properties will then be completed from the example data.
+   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding structure: data platform, schema and dataset. The fields and their properties will then be inferred from the sample data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
 
-2. **Get Files List** is the second transformation rule, and it returns a mapping between the dataset and the respective list of sample files. This flow is optional and only required when sample files are provided.
+2. **Get Files List** is the second transformation rule, and it returns a mapping between each dataset and its corresponding list of sample files. This flow is optional and only required when sample files are provided.
 
    * The flow should return a list of relevant data sample files per each dataset. Several sample files can be provided for the same dataset. However, one sample file cannot include data for more than one dataset. 
 
@@ -48,11 +48,11 @@ To better understand the concept of **transformation rule** and its pivotal use 
 
    * For each file, the flow should return a result set that represents one dataset row. 
 
-When creating your own flows, it is recommended to start from the sample flows provided in the *Cataloging of Files - Demo* extension and customize them to fit your needs. Keep in my to keep the flow's external input and output parameters as in the example flows!
+When creating your own flows, it is recommended to start from the sample flows provided in the *File Cataloging - Demo* extension and customize them to fit your needs. Keep in mind to maintain the flow's external input and output parameters as defined in the example flows that appear in the demo.
 
-## Attaching Rules to Interface
+## Attaching Rules to Interfaces
 
-The filesystem interfaces include a group of input parameters called Discovery, which enable setting the names of Broadway flows to each of the rules.
+All filesystem interface types (local, Azure, etc.) include a group of input parameters called Discovery, which enable setting the names of Broadway flows to each of the rules.
 
 <img src="images/filesystem_discovery.png"  />
 
