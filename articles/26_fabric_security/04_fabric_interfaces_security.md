@@ -1,6 +1,6 @@
 # **Fabric Environments & Interfaces Security** 
 
-Fabric enables communication to external systems, such as source and target data, via [interfaces]("/articles/05_DB_interfaces/01_interfaces_overview.md") that define connection definitions.
+Fabric enables communication to external systems, such as source and target data, via interfaces that define connection definitions.
 
 The secrets, such as passwords, that are a part of the interfaces' definitions, are stored securely either in Fabric, where secrets are encrypted, or in an external Secret Manager service that Fabric integrates with.
 
@@ -12,7 +12,7 @@ Fabric enables you to define several source [environments](/articles/25_environm
 
 When using Fabric for storing environment secrets, there are 3 optional encryption levels that can be defined and applied - strong, stronger, and strongest:
 
-1. **Assigned Environment with a keystore** (Protection Key) - this is the most recommended and secured method, where:
+1. **Assigned Environment with a keystore** (Protection Key) - this is the most recommended and secure method, where:
 
    * Encryption is done using Fabric's powerful [Key Management](/articles/26_fabric_security/02_fabric_entities_design.md#key-management) mechanism.
    * Encryption is done using each environment's master key. This means that at runtime, an environment, along with all its interface secrets, can be used only on the Fabric to which it is associated. For example, Fabric in a UAT environment will not be able to access Production interfaces.
