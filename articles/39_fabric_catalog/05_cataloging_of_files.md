@@ -25,7 +25,7 @@ More details about the implementation steps can be learned further in this artic
 * [Attaching rules to interface](05_cataloging_of_files.md#attaching-rules-to-interface)
 * [Organizing files in filesystem](05_cataloging_of_files.md#organizing-files-in-filesystem)
 
-To illustrate the **file cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file discovery (for various file types). Instructions on how to use the extension can be found in its README file.
+To illustrate the **file cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging (for various file types). Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Rules
 
@@ -35,8 +35,8 @@ To better understand the concept of **transformation rule** and its pivotal use 
 
 1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
 
-   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding structure: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
-   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding structure: data platform, schema and dataset. The fields and their properties will then be inferred from the sample data.
+   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding hierarchy: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
+   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding hierarchy: data platform, schema and dataset. The fields and their properties will then be inferred from the sample data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
 
@@ -56,7 +56,7 @@ All filesystem interface types (local, Azure, etc.) include a group of input par
 
 <img src="images/filesystem_discovery.png"  />
 
-1. Click the arrow icon near Discovery to view the parameters.
+1. Click the arrow icon to expand the parameters of the Discovery category (as shown in the above image).
 2. Populate the names of the Broadway flows.
 3. Save and deploy the Web Services.
 
@@ -66,10 +66,10 @@ There is no limitation on how to organize the files in the filesystem interface.
 
 The *File Cataloging - Demo* extension demonstrates various ways to organize files. 
 
-In the cataloging example for CSV files, all CSV files are located in one folder, assuming each file represents a dataset, while the schema name is set to **main** in the corresponding **Get Metadata** flow.
+In the cataloging example for CSV files, all CSV files are placed in a single folder, assuming each file represents a dataset. The schema name is set to **main** in the corresponding **Get Metadata** flow.
 
 In the examples of JSON and XML files, a folder hierarchy is created: the **main** folder represents the schema, while the **contact** and **customer** folders represent datasets, each containing its relevant sample data files. 
 
-Note that the **masked** or **masked_main** folders are included for illustration purposes only, to show the structure of the masking results folders. 
+Note that the **masked** and **masked_main** folders are included for illustration purposes only, to show the structure of the masking results folders. 
 
-To sum up, both the data sample file folders and the masking results folders can be set up according to your project's business needs. 
+To sum up, both the data sample file folders and the masking results folders should be set up, depending on your project's requirements. 
