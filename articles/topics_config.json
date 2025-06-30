@@ -330,12 +330,12 @@
 					"value": "98_maintenance_and_operational/Installations"
 				},
 				{
-					"display name": "Maintenance",
-					"value": "98_maintenance_and_operational/Maintenance"
-				},
-				{
 					"display name": "Upgrade",
 					"value": "98_maintenance_and_operational/Upgrade"
+				},
+				{
+					"display name": "Software Maintenance and Support",
+					"value": "Academy/articles/98_maintenance_and_operational/Maintenance/K2view_Maintenance_and_Support.html"
 				}
 			]
 		},
