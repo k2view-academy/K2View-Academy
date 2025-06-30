@@ -35,10 +35,10 @@ The distribution parameters are set based on the selected distribution type:
   ![weighted dist example](/articles/19_Broadway/images/weighted_dist_example.png)
 
     Fabric 8.1 has added the option to set the values in the list based on a selected [MTable](09_MTable_actors.md). This option is available for a weighted distribution of string values. Do the following in order to define a weighted distribution based on an MTable:
-   1. Set the distribution type to **string** with **weighted distribution**.
-   2. Then select an MTable and choose one key of the selected MTable to enable the selection of the key's values for the values listed in the weighted distribution.
-   3. After selecting the MTable and the key within it, you can populate the Actor's weighted values based on the selected MTable. 
-  
+    1. Set the distribution type to **string** with **weighted distribution**.
+    2. Then select an MTable and choose one key of the selected MTable to enable the selection of the key's values for the values listed in the weighted distribution.
+    3. After selecting the MTable and the key within it, you can populate the Actor's weighted values based on the selected MTable. 
+
 - **Costant** distribution returns the populated constant value. For example: set the number of generated addresses to 1 address per customer.
 
 ### RandomFromCollection
@@ -50,7 +50,7 @@ This Actor returns a random value from the input collection.
 This Actor generates a fake but valid credit card number based on the input **value** and **prefixLength** input arguments:
 
 -  **value** - defines the credit card template. For example: 4580111122223333. The length of this argument defines the generated credit card number length. Note that if this argument is empty, the generated credit card number contains 16 digits.
-- **prefixLength** - the length of the prefix in an input template.
+-  **prefixLength** - the length of the prefix in an input template.
 
 Example:
 
@@ -121,14 +121,14 @@ Defining Broadway flows or Actors for customized data generation logic is possib
 - From Fabric 8.2 and onwards, **the catalog masking can send the entire record to the data generator**. The record is sent with the **original values**. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. 
 
   Add an external variable, named **record**, to the flow in order to get the entire record from the Catalog masking.
-  
+
   Example: The following flow gets the original address record as an input and generates a masked city based on the original state:
-  
+
   ![input record example](../images/example_data_generator_get_input_record.png)
-  
+
    
 
-### Customized Data Generators - Supporting [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed)
+### Customized Data Generators - Supporting [Data Consistency Using Seed](/articles/41_masking/02_data_masking_flow.md#data-consistency-using-seed)
 
 The data generator must support the generating a random value using seed and must contain the **seed** external input parameter.
 
@@ -140,11 +140,10 @@ The data generator must support the generating a random value using seed and mus
   import com.k2view.broadway.actors.masking.random.AbstractRandomGeneratorActor;
   import com.k2view.broadway.actors.masking.random.MaskingRandom;
   import com.k2view.broadway.model.Data;
-  
+
   public class customGeneratorTest extends AbstractRandomGeneratorActor { ...
   ```
 
-  
 
 - Override the **generate** method in the new Actor:
 
@@ -153,13 +152,11 @@ The data generator must support the generating a random value using seed and mus
   public Object generate(Data input, MaskingRandom maskingRandom) {
   ```
 
-  
 
 - The new Actor must contain the **seed** as an input. The Masking actor sends the seed and original values to the data generator Actor.
 
 - Use the **MaskingRandom** methods in the **generate** method in order to get a consistent value based on the input seed. 
 
-   
 
 #### Customized Data Generator Flow
 
