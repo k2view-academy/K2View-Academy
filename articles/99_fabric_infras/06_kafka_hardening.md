@@ -55,4 +55,4 @@ Below are your **KAFKA_SSL_FLAGS** options:
 ***In case you have a cluster, copy the certificate tar.gz file to the whole cluster and repeat the above commands on every node.***
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/07_fabric_kafkaSSL_support.md)

@@ -261,4 +261,4 @@ $CONFLUENT_HOME/bin/kafka-console-producer --broker-list <broker-ip>:9093 --topi
 $CONFLUENT_HOME/bin/kafka-console-consumer --bootstrap-server <bootstrap-ip>:9093 --topic <topic-name> --consumer.config ~/producer.properties
 ```
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/08_oracleGG_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/07_fabric_kafkaSSL_support.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/08_oracleGG_hardening.md)

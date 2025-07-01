@@ -10,7 +10,7 @@ This environment should contain:
 
 Access to this server and SVN / GIT should be limited to the relevant developers.
 
-<img src="/articles/99_fabric_infras/devops/images/01_devop-devEnv.png">
+<img src="/articles/99_fabric_infras/images/01_devop-devEnv.png">
 
 ## QA Environment
 
@@ -25,7 +25,7 @@ This environment should be isolated from the Development environment and should 
 Note that all connection methods and protocols must be of the same type as those defined in the Production environment. 
 All access to the above-described servers should be limited to the QA team members only.
 
-<img src="/articles/99_fabric_infras/devops/images/02_devop-QAEnv.png">
+<img src="/articles/99_fabric_infras/images/02_devop-QAEnv.png">
 
 ## Pre-Production Environment
 This environment should be isolated from the Development and QA environments and should be identical to the Production environment:
@@ -42,7 +42,7 @@ Note that:
 - The connection method and protocol must match those used in the Production environment. 
 - This environment should be sufficiently strong to be able to run load testing. 
 
-<img src="/articles/99_fabric_infras/devops/images/03_devop-preProdEnv.png">
+<img src="/articles/99_fabric_infras/images/03_devop-preProdEnv.png">
 
 ## Production Environment
 This environment should be isolated from the Development and QA environments and should be identical to the Pre-Production environment:
@@ -52,6 +52,6 @@ This environment should be isolated from the Development and QA environments and
 - Access to the Fabric WS (API) via the load balancer (LB).
 - Access to SVN/GIT for version control should be limited to the relevant users.
 
-<img src="/articles/99_fabric_infras/devops/images/04_devop-prodEnv.png">
+<img src="/articles/99_fabric_infras/images/04_devop-prodEnv.png">
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/03_fabric_api_and_ui_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/03_fabric_api_and_ui_hardening.md)

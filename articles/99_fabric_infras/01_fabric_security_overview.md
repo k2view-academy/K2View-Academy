@@ -30,4 +30,4 @@ Note that this section only addresses DevOps security hardening. For information
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/02_fabric_environments.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/02_fabric_environments.md) 

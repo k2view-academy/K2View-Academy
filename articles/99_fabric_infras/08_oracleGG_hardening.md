@@ -45,4 +45,4 @@ ssl.endpoint.identification.algorithm=
  4. Restart the Kafka service.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/11_kafka_plain_sasl_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/11_kafka_plain_sasl_hardening.md)

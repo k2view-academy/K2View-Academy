@@ -54,4 +54,4 @@ Tar and copy the Cassandra keys and certificates into all the Fabric nodes in th
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/06_kafka_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/04_cassandra_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/06_kafka_hardening.md)
