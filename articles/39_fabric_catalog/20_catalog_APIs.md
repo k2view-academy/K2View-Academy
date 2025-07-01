@@ -2,7 +2,7 @@
 
 Fabric provides out-of-the-box Web Service APIs for querying a project's Catalog.
 
-Any web service call passes authentication and authorization processes prior to being executed. For more information - see [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
+Any web service call passes authentication and authorization processes prior to being executed. For more information, read [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
 All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain Name>:<PORT>`
 
@@ -26,7 +26,7 @@ https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog`
 
-The API retrieves a list of the Catalog's versions and their creations' timestamp.
+The API retrieves a list of Catalog versions along with their creation timestamps.
 
 **Example of an API call:**
 
@@ -42,7 +42,7 @@ https://localhost:3213/api/catalog
 
 The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the *contains* relations to its respective schema nodes. 
 
-The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
+The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -57,7 +57,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <td>version</td>
 <td>Y</td>
 <td>
-<p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
+<p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
 <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
