@@ -7,7 +7,7 @@ If you've pre-created a database schema for TDM DB instead of using the default,
 - Ensure the schema name is configured in both objects, the **TDMDB_SCHEMA** Global variable and the **TDMDBSchema** Actor.
 - Complete this configuration **before deploying** the TDM Logical Unit.
 
- ## Deployment Order
+## Deployment Order
  - Edit and deploy the Environments before the TDM LU.
 
 ## TDM On-Prem Installation 
