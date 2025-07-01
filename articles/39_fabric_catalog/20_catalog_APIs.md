@@ -244,7 +244,7 @@ The API builds the Catalog artifacts based on a given version. The artifacts inc
 
 Starting from V8.3, the artifacts of relations might also be extracted by the API. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the relations extract files structure and naming convention. 
+Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming convention of the relations extract files. 
 
 **Example of an API call:**
 
@@ -269,13 +269,13 @@ The syntax of the request body definition is as follows:
 * **input** is an array of keywords 
   * Keyword is a string included in the node (or relation) name
 
-* **type** defines which object types will be searched
+* **type** specifies which object types will be searched
   * The valid values are: dataPlatform, schema, dataset, field, relation
   * Send an empty array in case of no limitation on object type
 * **advanced** includes a list of additional search parameters, such as:
   * **pii** is a PII property with either **true** or false **value**
   * **classification** is a Classification property with one of its valid values
-  * **score** is a maximum score of the searched object types (nodes or relations)
+  * **score** represents the maximum score among the searched object types (nodes or relations)
 
 At least one of the search parameters must be provided in the request body. 
 
