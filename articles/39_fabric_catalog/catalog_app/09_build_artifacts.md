@@ -2,9 +2,9 @@
 
 ### Overview
 
-The Catalog provides an ability to build artifacts and save them into the Project tree. An artifact includes details of all the Catalog fields with their properties, such as Classification and PII, for a currently displayed Catalog version. 
+The Catalog provides the ability to build artifacts and save them in the Project tree. An artifact includes details of all Catalog fields and  their properties — such as Classification and PII — for the currently displayed Catalog version. 
 
-Pre-requisite for building the Catalog artifact is running the Discovery Job for at least one Project interface.
+The prerequisite for building the Catalog artifact is running the Discovery job for at least one Project interface.
 
 ### Build Artifacts
 
