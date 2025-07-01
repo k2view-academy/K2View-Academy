@@ -14,7 +14,7 @@ The matching algorithm works by comparing the field names of 2 datasets at a tim
 
 This plugin allows defining a exclusion list of field names (e.g., 'username' or 'age') and an exclusion list of field types (e.g., date, time, blob). The field names or type defined there are excluded from the matching algorithm. 
 
-When the plugin finds a match by the field name, it evaluates the foreign key fields and direction by using the matching rules described below. The *refersTo* relation direction is Many-to-One. The relation is created with a score - a probability of the match's correctness. 
+When the plugin finds a match by the field name, it evaluates the foreign key fields and direction by using the matching rules described below. The *refersTo* relation direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule which defines a probability of the match's correctness. 
 
 #### Matching Rules
 
@@ -104,9 +104,11 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 ## Reference by Query Analysis
 
-The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of input SQL file and to create the *refersTo* relations. The input file's name format is: ```<Data Platform name>.sql```.
+The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
 
-Some database management systems (such as Oracle) support the automatic generation of **audit files** that **record activities** within the database. They typically track executed SQL queries, user logins, schema changes, privilege escalations, and other security-relevant or operational events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries and save the transformed file with the required name format:  ```<Data Platform name>.sql```. This transformation can be performed by creating a Broadway flow in your project. 
+The plugin evaluates then the candidate datasets using the matching rules described below. When one of the rules match, the *refersTo* relation is created and the direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
+
+Some database management systems (such as Oracle) support automatic generation of **audit files**. Those are files that record activities within the database, by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries. This transformation can be performed by creating a Broadway flow in your project that will transform file to the required format. 
 
 This plugin is useful when a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
@@ -129,7 +131,9 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 #### Queries Path
 
-The ```queriesPath``` plugin's input parameter must be set with the path to the file with a list of queries to be analyzed. The file name format is: ```<Data Platform name>.sql```.
+The ```queriesPath``` plugin's input parameter must be set with the path to the file with a list of queries to be analyzed. 
+
+The file name format is: ```<Data Platform name>.sql```.
 
 When the ```queriesPath``` is not set or includes an invalid path, the plugin will thrown an exception.  
 
