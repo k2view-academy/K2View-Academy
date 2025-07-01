@@ -376,7 +376,7 @@
 				},
 				{
 					"display name": "Infrastructure Security",
-					"value": "99_fabric_infras/devops"
+					"value": "99_fabric_infras"
 				}
 			]
 		}
