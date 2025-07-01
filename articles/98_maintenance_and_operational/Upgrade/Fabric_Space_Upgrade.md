@@ -2,6 +2,7 @@
 # Fabric Kubernetes Space Upgrade/Rollback Procedure
 
 This document outlines the upgrade and rollback procedures for upgrading the Fabric application, which runs on a Kubernetes cluster.
+
 Here's the updated upgrade and rollback procedure for the Fabric application running on Kubernetes. Step 1 has been modified to include a command that lists the `fabric-deployment`, container versions, and their state.
 
 ---
