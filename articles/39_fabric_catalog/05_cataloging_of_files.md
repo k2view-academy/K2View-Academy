@@ -72,4 +72,4 @@ In the examples of JSON and XML files, a folder hierarchy is created: the **main
 
 Note that the **masked** and **masked_main** folders are included for illustration purposes only, to show the structure of the masking results folders. 
 
-To sum up, both the data sample file folders and the masking results folders should be set up, depending on your project's requirements. 
+To sum up, files should be organized into folders according to a structure that aligns with the flow’s logic and meets your project's requirements. Multiple valid ways can be used for organizing files and setting up the folders, as long as they support the file cataloging solution upon its layout. 
