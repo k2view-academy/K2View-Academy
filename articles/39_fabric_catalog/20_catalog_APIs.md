@@ -94,7 +94,7 @@ https://localhost:3213/api/catalog/1...latest
 
 The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved with the *contains* relations to its respective dataset nodes. 
 
-The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
+The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -109,7 +109,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <td>version</td>
 <td>Y</td>
 <td>
-<p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
+<p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
 <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
@@ -131,7 +131,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 </tbody>
 </table>
 
-**Examples of an API call in the *view* mode:**
+**Examples of an API call in *view* mode:**
 
 ```
 https://localhost:3213/api/catalog/latest/CRM_DB
@@ -145,7 +145,7 @@ https://localhost:3213/api/catalog/latest/CRM_DB?shortMode=true
 https://localhost:3213/api/catalog/1/CRM_DB
 ```
 
-**Examples of an API call in the *compare* mode:**
+**Examples of an API call in *compare* mode:**
 
 ```
 https://localhost:3213/api/catalog/1...5/CRM_DB
@@ -161,9 +161,9 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}`
 
-The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include the datasets, fields and their properties, and the *refersTo* relations between the dataset nodes. 
+The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include datasets, fields and their properties, and the *refersTo* relations between dataset nodes. 
 
-The API has 2 modes - *view* and *compare* - that are interchangeably invoked based on the **version** input parameter, as explained below:
+The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
 <table style="width: 800px;">
 <thead>
@@ -178,7 +178,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 <td>version</td>
 <td>Y</td>
 <td>
-<p>Populate either the version number or the word <strong>latest</strong> to get the version's data.</p>
+<p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
 <p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
 <p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
@@ -208,7 +208,7 @@ The API has 2 modes - *view* and *compare* - that are interchangeably invoked ba
 </table>
 
 
-**Examples of an API call in the *view* mode:**
+**Examples of an API call in *view* mode:**
 
 ```
 https://localhost:3213/api/catalog/latest/CRM_DB/main
@@ -218,7 +218,7 @@ https://localhost:3213/api/catalog/latest/CRM_DB/main
 https://localhost:3213/api/catalog/1/CRM_DB/main
 ```
 
-**Examples of an API call in the *compare* mode:**
+**Examples of an API call in *compare* mode:**
 
 ```
 https://localhost:3213/api/catalog/1...5/CRM_DB/main
