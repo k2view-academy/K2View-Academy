@@ -236,7 +236,7 @@ The API retrieves a list of datasets that belong to the **latest version** of th
 
 The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API and it is available starting from V8.3.
 
-## Build Catalog Artifacts
+## Building Catalog Artifacts
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
 
@@ -258,7 +258,7 @@ https://localhost:3213/api/catalog/latest/build-catalog-artifacts?refersTo=true
 
 
 
-## Search Catalog
+## Catalog Search 
 
 <span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/search-graph`
 
