@@ -30,6 +30,14 @@ The below image is an example of the Catalog relations artifact:
 
 Note that when clicking on **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar), the relations artifacts are not created.
 
+The relations artifact includes a list of *refersTo* relations including the following information:
+
+* Parent data platform, schema, dataset and field(s)
+* Child data platform, schema, dataset and field(s)
+* Origin of the relation (Crawler or manual)
+
+In case of a combined relation key, the field names are separated by semicolon.
+
 ### Splitting and Combining Artifacts
 
 Catalog artifacts can be split into separate files for each data platform and schema of a given Catalog version. The content of these files is then combined into one single MTable in Fabric's memory although the files are saved separately in the Project tree.
