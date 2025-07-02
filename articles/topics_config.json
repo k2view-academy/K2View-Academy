@@ -317,7 +317,7 @@
 			]
 		},
 		{
-			"group display name": "Installation & Upgrade",
+			"group display name": "Installation and Upgrade",
 			"group icon": "images/deployment-icon.png",
 			"visible in main": true,
 			"topics": [
