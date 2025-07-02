@@ -24,7 +24,7 @@ Catalog artifacts can be created for any Catalog version. Each new artifact over
 
 Starting from Fabric V8.3, the relations artifact can be created when needed. This is only available through the ```/api/catalog/{version}/build-catalog-artifacts``` API, by setting ```refersTo=true``` in the API input, as described [here](/articles/39_fabric_catalog/20_catalog_APIs.md#build-catalog-artifacts). Note that relations artifacts are not created when *Build Artifacts* activity is initiated via the Catalog application.
 
-The below image is an example of the Catalog relations artifact:
+The below image is an example of the Catalog relations artifact. As you can see, it includes a list of relations between datasets upon their keys:
 
 <img src="../images/catalog_relations_mtable.png"  />
 
@@ -42,13 +42,13 @@ In case of a combined relation key, the field names are separated by a semicolon
 
 Catalog artifacts can be split into separate files for each data platform and schema of a given Catalog version. The content of these files is then combined into one single MTable in Fabric's memory although the files are saved separately in the Project tree.
 
-The splitting is enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (default parameter setting starting from V8.3).
+Splitting the Catalog artifacts is enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (default parameter setting starting from Fabric V8.3).
 
 This ability allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
 
 Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_info.csv``` file exists in the Project tree, it should be manually deleted.
 
-The separate files' name follows the below format:
+The names of the separate files follow the below format:
 
 *  ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name)
 *  ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name)
