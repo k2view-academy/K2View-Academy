@@ -36,7 +36,7 @@ The relations artifact includes a list of *refersTo* relations, containing the f
 * Child data platform, schema, dataset and field(s)
 * Origin of the relation (Crawler or manual)
 
-In case of a combined relation key, the field names are separated by a semicolon.
+In case of a combined relations key, the field names are separated by a semicolon.
 
 ### Splitting and Combining Artifacts
 
