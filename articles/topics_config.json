@@ -323,11 +323,11 @@
 			"topics": [
 				{
 					"display name": "System Requirements",
-					"value": "98_maintenance_and_operational/Hardware"
+					"value": "98_installation_and_upgrade/Hardware"
 				},
 				{
 					"display name": "Installation",
-					"value": "98_maintenance_and_operational/Installations"
+					"value": "98_installation_and_upgrade/Installations"
 				},
 				{
 					"display name": "Upgrade",
@@ -335,21 +335,21 @@
 
 						{
 							"display name": "Upgrade Fabric",
-							"value": "98_maintenance_and_operational/Upgrade_Fabric"
+							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
 						{
 							"display name": "Upgrade TDM",
-							"value": "98_maintenance_and_operational/Upgrade_TDM"
+							"value": "98_installation_and_upgrade/Upgrade_TDM"
 						},
 						{
 							"display name": "Upgrade a Fabric Kubernetes Space",
-							"value": "98_maintenance_and_operational/Upgrade"
+							"value": "98_installation_and_upgrade/Upgrade"
 						}					
 					]
 				},				
 				{
 					"display name": "Software Maintenance and Support",
-					"value": "98_maintenance_and_operational/Maintenance/K2view_Maintenance_and_Support.html"
+					"value": "98_installation_and_upgrade/Maintenance/K2view_Maintenance_and_Support.html"
 				}
 			]
 		},
