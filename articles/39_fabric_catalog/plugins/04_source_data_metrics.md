@@ -1,20 +1,20 @@
 # Source Data Analysis
 
-This article describes plugins that analyze source systems and calculate various metrics. The analysis is done based on the data snapshot.
+This article describes plugins that analyze source systems and calculate various metrics. The analysis is done based on data snapshots.
 
 The plugins are:
 
-* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) - calculates various data quality metrics as described below. These metrics can be then used for masking and synthetic data generation.
-* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) - identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can be then used for masking and synthetic data generation. The plugin is introduced in V8.3.
-* [NULL Percentage](04_source_data_metrics.md#null-percentage) - calculates the percentage of NULL values per column. From Fabric V8.2 onwards, this plugin has been combined with the Data Quality Metrics plugin.
+* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
+* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. The plugin is introduced in Fabric V8.3.
+* [NULL Percentage](04_source_data_metrics.md#null-percentage) — calculates the percentage of NULL values per column. Starting with Fabric V8.2, this plugin has been combined with the Data Quality Metrics plugin.
 
 ## Data Quality Metrics
 
-This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can be then used for masking and synthetic data generation.
+This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
-* **Data Sample Size** - the actual number of values in a column in the data sample.
+* **Data Sample Size** — the actual number of values in a column in the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample size can vary, based on the table size.
-* **Distinct Values** - the count of distinct values per column in the data sample. 
+* **Distinct Values** — the count of distinct values per column in the data sample. 
   * This parameter helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
   * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
@@ -75,7 +75,7 @@ Defines a limit of the STRING size, to prevent handling text files or complex st
 
 #### Min Sample Size
 
-Allows to skip small tables, by defining the minimum sample size for verification if a field qualifies for being an **Option Set**.  The default value is 100.
+Allows to skip small tables, by defining the minimum sample size for verification if a field qualifies for being an **Option Set**. The default value is 100.
 
 ## NULL Percentage
 
