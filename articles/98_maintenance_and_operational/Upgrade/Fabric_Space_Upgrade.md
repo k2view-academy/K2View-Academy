@@ -5,7 +5,6 @@ This document outlines the upgrade and rollback procedures for upgrading the Fab
 
 Here's the updated upgrade and rollback procedure for the Fabric application running on Kubernetes. Step 1 has been modified to include a command that lists the `fabric-deployment`, container versions, and their state.
 
----
 
 ### Upgrade Procedure for Fabric on Kubernetes
 
@@ -19,7 +18,6 @@ Major upgrades may require additional steps, such as schema migrations, configur
 - Check that the code is correctly committed and pushed to the Git repository.
 - Verify the current state of the deployment and pods.
 
----
 
 #### Step 1: Check the Current Status of the Fabric Deployment/Statefulset
 
@@ -94,7 +92,6 @@ or
    - Navigate to the relevant Git repository and verify the presence of the latest commits.
    - Confirm that the commits correspond to the generated code from the Web.
 
----
 
 ### Rollback Procedure for Fabric on Kubernetes
 
@@ -136,11 +133,10 @@ If the upgrade fails or any issues arise, please follow the steps below to roll 
 
 3. Confirm that the application is functioning as expected following the rollback.
 
----
 
 **Note:** After performing either an upgrade or a rollback, document the actions taken and validate the application's functionality thoroughly before proceeding with further steps.
 
----
+
 ### General Troubleshooting
 
 If you encounter issues during the upgrade or the rollback process, consider the following general troubleshooting steps:
@@ -179,7 +175,6 @@ If you encounter issues during the upgrade or the rollback process, consider the
 
 9. **Contact Support:** If issues persist, please contact support with the relevant logs, steps taken, and any specific errors encountered.
 
----
 
 ### Appendix: ClusterRole and ClusterRoleBinding Configuration
 
@@ -258,4 +253,3 @@ Apply the `ClusterRoleBinding` configuration:
 kubectl apply -f fabric--clusterrolebinding.yaml
 ```
 
----
