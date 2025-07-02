@@ -98,7 +98,7 @@ Users’ login access to Fabric is recorded in the Fabric auditing mechanism, in
 For more information about Fabric Security, refer to these articles:
 
 - [Fabric Security Overview](/articles/26_fabric_security/01_fabric_security_overview.md)
-- [Fabric Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md)
+- [Fabric DevOps Security](/articles/99_fabric_infras/01_fabric_security_overview.md)
 
 
 

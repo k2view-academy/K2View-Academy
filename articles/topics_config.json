@@ -331,8 +331,22 @@
 				},
 				{
 					"display name": "Upgrade",
-					"value": "98_maintenance_and_operational/Upgrade"
-				},
+					"sub-topics": [
+
+						{
+							"display name": "Upgrade Fabric",
+							"value": "98_maintenance_and_operational/Upgrade_Fabric"
+						},
+						{
+							"display name": "Upgrade TDM",
+							"value": "98_maintenance_and_operational/Upgrade_TDM"
+						},
+						{
+							"display name": "Upgrade a Fabric Kubernetes Space",
+							"value": "98_maintenance_and_operational/Upgrade"
+						}					
+					]
+				},				
 				{
 					"display name": "Software Maintenance and Support",
 					"value": "98_maintenance_and_operational/Maintenance/K2view_Maintenance_and_Support.html"
