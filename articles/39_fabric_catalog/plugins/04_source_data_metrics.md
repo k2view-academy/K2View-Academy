@@ -1,6 +1,6 @@
 # Source Data Analysis
 
-This article describes plugins which analyses the source system's and calculates various metrics. The analysis is done based on the data snapshot.
+This article describes plugins that analyze source systems and calculate various metrics. The analysis is done based on the data snapshot.
 
 The plugins are:
 
