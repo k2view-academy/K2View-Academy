@@ -4,39 +4,39 @@
 
 The Catalog provides the ability to build artifacts and save them in the Project tree. An artifact includes details of all Catalog fields and  their properties — such as Classification and PII — for the currently displayed Catalog version. 
 
-The prerequisite for building the Catalog artifact is running the Discovery job for at least one Project interface.
+The prerequisite for building the Catalog artifact is running the Discovery job for at least one project interface.
 
-### Build Artifacts
+### Building Artifacts
 
 Building a Catalog artifact is done by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). 
 
-A Catalog artifact is a file called **catalog_field_info.csv**. It is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder in the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
+A Catalog artifact is a file called **catalog_field_info.csv**. It is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
 
 The below image is an example of a Catalog artifact:
 
 <img src="../images/catalog_info_mtable.png" />
 
-The artifact is created for the Catalog version, which is displayed in the application. The heading of the last column indicates the version number (**V4** in the above example), and the column itself always remains empty.
+The artifact is created for the Catalog version, which is displayed in the application. The heading of the last column indicates the version number (**V14** in the above example), and the column itself always remains empty.
 
 Catalog artifacts can be created for any Catalog version. Each new artifact overrides the existing one in the Project tree.
 
-### Artifact of Relations
+### Building Artifacts Including Relations
 
-Starting from V8.3, the artifacts of the relations can be created when needed. This is only available by the ```/api/catalog/{version}/build-catalog-artifacts``` API, by setting ```refersTo=true``` in the API input, as described [here](/articles/39_fabric_catalog/20_catalog_APIs.md#build-catalog-artifacts). 
+Starting from Fabric V8.3, the relations artifact can be created when needed. This is only available through the ```/api/catalog/{version}/build-catalog-artifacts``` API, by setting ```refersTo=true``` in the API input, as described [here](/articles/39_fabric_catalog/20_catalog_APIs.md#build-catalog-artifacts). Note that relations artifacts are not created when *Build Artifacts* activity is initiated via the Catalog application.
 
 The below image is an example of the Catalog relations artifact:
 
 <img src="../images/catalog_relations_mtable.png"  />
 
-Note that when clicking on **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar), the relations artifacts are not created.
 
-The relations artifact includes a list of *refersTo* relations including the following information:
+
+The relations artifact includes a list of *refersTo* relations, containing the following information:
 
 * Parent data platform, schema, dataset and field(s)
 * Child data platform, schema, dataset and field(s)
 * Origin of the relation (Crawler or manual)
 
-In case of a combined relation key, the field names are separated by semicolon.
+In case of a combined relation key, the field names are separated by a semicolon.
 
 ### Splitting and Combining Artifacts
 
