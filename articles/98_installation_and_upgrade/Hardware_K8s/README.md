@@ -1,14 +1,14 @@
-<strong>Kubernetes Installation Requirements</strong>
+<strong>Kubernetes Requirements</strong>
   
 <ul>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Hardware/2_All_Environments/04_k8s_req.md">
-      Cloud Self-hosted Kubernetes Installation Requirements
+    <a href="/articles/98_installation_and_upgrade/Hardware_K8s/04_k8s_req.md">
+      Cloud Self-hosted Kubernetes Installation
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
-      On-premises Kubernetes Cluster Installation Requirements
+    <a href="/articles/98_installation_and_upgrade/Hardware_K8s/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md">
+      On-premises Kubernetes Cluster Installation
     </a>
   </li>
 </ul>
