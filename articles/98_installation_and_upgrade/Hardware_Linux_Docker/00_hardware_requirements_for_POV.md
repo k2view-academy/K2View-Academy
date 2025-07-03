@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Proof of Value Environment Installation System Requirements](#proof-of-value-environment-installation-system-requirements)
   - [Introduction](#introduction)
   - [Execution Server Specifications](#execution-server-specifications)
   - [Minimum System Configuration for a Single-node Server](#minimum-system-configuration-for-a-single-node-server)

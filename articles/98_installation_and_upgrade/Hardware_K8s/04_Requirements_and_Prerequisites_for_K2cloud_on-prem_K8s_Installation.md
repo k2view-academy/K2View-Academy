@@ -8,7 +8,6 @@ Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/artic
 
 ## Table of Contents
 
-- [On-premises Kubernetes Cluster Installation System Requirements](#on-premises-kubernetes-cluster-installation-system-requirements)
   - [Hardware Requirements](#hardware-requirements)
   - [Preparations and Provisioning](#preparations-and-provisioning)
   - [Installation Options for On-Premises Kubernetes](#installation-options-for-on-premises-kubernetes)

@@ -12,7 +12,6 @@ The K2cloud platform's Orchestrator handles the namespaces creation and the ongo
 
 ## Table of Contents
 
-- [Cloud Self-hosted Kubernetes Installation System Requirements](#cloud-self-hosted-kubernetes-installation-system-requirements)
   - [Hardware Requirements](#hardware-requirements)
     - [How Many Nodes Do I Need?](#how-many-nodes-do-i-need)
   - [K8s Cluster Preparations](#k8s-cluster-preparations)

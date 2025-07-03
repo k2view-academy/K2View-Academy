@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Production Environment Installation System Requirements](#production-environment-installation-system-requirements)
   - [Introduction](#introduction)
   - [Fabric Execution Servers - Node Specifications](#fabric-execution-servers---node-specifications)
   - [Minimum System Configuration for Each Fabric Node Server](#minimum-system-configuration-for-each-fabric-node-server)
