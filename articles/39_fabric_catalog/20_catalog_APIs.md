@@ -287,7 +287,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: When searching for Data Platform and Schema nodes, whose name includes a *customer* keyword, the request body is as follows:
+Example 1: When searching for Data Platform and Schema nodes, whose names include the keyword *customer*, the request body is as follows:
 
 ~~~json
 {
