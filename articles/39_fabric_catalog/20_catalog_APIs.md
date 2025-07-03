@@ -244,7 +244,7 @@ The API builds the Catalog artifacts based on a given version. The artifacts inc
 
 Starting from Fabric V8.3, the relations artifact can also be extracted by the API. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming convention of the relations extract files. 
+Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming format of relations artifacts. 
 
 **Example of an API call:**
 
@@ -273,7 +273,7 @@ The syntax of the request body definition is as follows:
   * The valid values are: dataPlatform, schema, dataset, field, relation
   * Send an empty array in case of no limitation on object type
 * **advanced** includes a list of additional search parameters, such as:
-  * **pii** is a PII property with either **true** or false **value**
+  * **pii** is a PII property with a value of either **true** or **false**
   * **classification** is a Classification property with one of its valid values
   * **score** represents the maximum score among the searched object types (nodes or relations)
 
