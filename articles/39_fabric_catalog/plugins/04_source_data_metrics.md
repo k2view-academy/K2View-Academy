@@ -67,22 +67,22 @@ This parameter allows to set up an override list of field names. These fields wi
 
 #### Field Name Exclude List
 
-Allows to set up an override list of field names. These fields will be excluded from the plugin's validation algorithm.
+This parameter allows to set up an override list of field names. These fields will be excluded from the plugin's validation algorithm.
 
 #### Max String Length
 
-Defines a limit of the STRING size, to prevent handling text files or complex structures inside a field. The default value is 512Kb.
+This parameter defines a limit to STRING size, to prevent handling text files or complex structures inside a field. The default value is 512Kb.
 
 #### Min Sample Size
 
-Allows to skip small tables, by defining the minimum sample size for verification if a field qualifies for being an **Option Set**. The default value is 100.
+This parameter allows to skip small tables by defining the minimum sample size required to verify whether a field qualifies as an **Option Set**. The default value is 100.
 
 ## NULL Percentage
 
-The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated on each column of non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained [here](/articles/39_fabric_catalog/04_discovery_pipeline.md#data-sample-size).
+The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated for each column in non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained [here](/articles/39_fabric_catalog/04_discovery_pipeline.md#data-sample-size).
 
-As a result, when the calculated value is above the threshold, the **Null Percentage** property is added to the field's properties. 
+As a result, when the calculated value exceeds the threshold, the **Null Percentage** property is added to the field's properties. 
 
-For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
+For example, when 30% of the values in a given field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property will not be added.
 
-This plugin exists until the Fabric V8.1. In V8.2 it has been combined with the Data Quality Metrics.
+This plugin was valid until Fabric V8.1. In V8.2 it has been merged into the Data Quality Metrics plugin.
