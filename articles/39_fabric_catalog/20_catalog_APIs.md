@@ -92,7 +92,7 @@ https://localhost:3213/api/catalog/1...latest
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
-The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved with the *contains* relations to its respective dataset nodes. 
+The API retrieves a list of schemas that belong to the specified Catalog version and data platform. Each schema is retrieved along with its  *contains* relations to the respective dataset nodes. 
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -110,8 +110,8 @@ The API has two modes — ***view*** and ***compare*** — that are interchangea
 <td>Y</td>
 <td>
 <p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
-<p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
+<p>Populate <strong>{base version}...{compare version}</strong> to retrieve a comparison between the versions. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
+<p>To view recent changes, set <strong>{base version}</strong> to an older version number, and <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
@@ -125,7 +125,7 @@ The API has two modes — ***view*** and ***compare*** — that are interchangea
 <td>shortMode</td>
 <td>N</td>
 <td>
-<p>When set to <strong>true</strong>, the EP returns an array of shema names only, without the list of properties and links. Available from V8.3.</p>
+<p>When set to <strong>true</strong>, the API returns an array of shema names only, without the list of properties and links. Available from Fabric V8.3.</p>
 </td>
 </tr>
 </tbody>
@@ -157,7 +157,7 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 
 
-## Get Catalog's Schema Details
+## Get Details of Catalog Schema 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}`
 
@@ -179,8 +179,8 @@ The API has two modes — ***view*** and ***compare*** — that are interchangea
 <td>Y</td>
 <td>
 <p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
-<p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
+<p>Populate <strong>{base version}...{compare version}</strong> to retrieve a comparison between the versions. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
+<p>To view recent changes, set <strong>{base version}</strong> to an older version number, and <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
 </tr>
 <tr>
@@ -230,19 +230,19 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/datasets`
 
-The API retrieves a list of datasets that belong to the **latest version** of the specified data platform and schema. This API and it is available starting from V8.3.
+The API retrieves a list of datasets that belong to the **latest version** of the specified data platform and schema. This API is available starting from Fabric V8.3.
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/{dataset}/fields`
 
-The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API and it is available starting from V8.3.
+The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API is available starting from Fabric V8.3.
 
 ## Building Catalog Artifacts
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
 
-The API builds the Catalog artifacts based on a given version. The artifacts include details of all Catalog fields and their properties, such as Classification and PII. The artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and is uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+The API builds the Catalog artifacts based on a given version. The artifacts include details of all Catalog fields and their properties, such as Classification and PII. The artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Starting from V8.3, the artifacts of relations might also be extracted by the API. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved into the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+Starting from Fabric V8.3, the relations artifact can also be extracted by the API. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
 Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming convention of the relations extract files. 
 
