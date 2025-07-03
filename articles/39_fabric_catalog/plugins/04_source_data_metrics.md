@@ -32,7 +32,7 @@ This plugin scans the data of the data sample in order to calculate various data
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save those values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
-Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. In addition, separate MTable is generated per each data platform and schema to keep the distinct values (and their distribution). The MTable has the following name format: 
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. In addition, a separate MTable is generated for each data platform and schema to keep the distinct values (and their distribution). The MTable has the following naming format: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 
@@ -40,10 +40,10 @@ The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
-The rules to identify fields with a limited number of distinct values are:
+The rules for identifying fields with a limited number of distinct values are:
 
 * The field is **not PII** (in order to keep the privacy laws and not to expose sensitive values).
-* The number of distinct values is either below a plugin's threshold (e.g. 0.05) OR below an ```Absolute Threshold```  input parameter (which is set to 15 by default).
+* The number of distinct values is either below a plugin's threshold (e.g., 0.05) OR below an ```Absolute Threshold```  input parameter (which is set to 15 by default).
 
 Additional rules apply based on the plugin's input parameters, as explained below.
 
@@ -51,23 +51,23 @@ Additional rules apply based on the plugin's input parameters, as explained belo
 
 Defines the absolute threshold number of distinct values. The value is validated against an absolute threshold if the number of distinct values per field is above the plugin's threshold. For example:
 
-* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values is qual to 0.1. This is higher than the plugin's threshold (0.05).
+* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This is higher than the plugin's threshold (0.05).
 * In this case, the results is validated against the absolute threshold to verify if it qualifies for being an **Option Set**. 
 * Since 10 distinct values is below the absolute threshold level (15), the field qualifies as an **Option Set**.
 
 #### Field Type Include List
 
-The ```fieldTypeIncludeList``` plugin's input parameter allowד controlling which field's data types should be considered for checking the distinct values. 
+The ```fieldTypeIncludeList``` plugin input parameter allows controlling which field data types should be considered for checking the distinct values. 
 
 By default, it is set to STRING, INTEGER for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
 #### Field Name Include List
 
-Allows to setup an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the property ```minSampleSize```).
+Allows to setup an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the ```minSampleSize``` property).
 
 #### Field Name Exclude List
 
-Allows to setup an override list of field names. These fields will be excluded from the plugin's validation algorithm.
+Allows to set up an override list of field names. These fields will be excluded from the plugin's validation algorithm.
 
 #### Max String Length
 
