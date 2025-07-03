@@ -340,7 +340,36 @@
 				},
 				{
 					"display name": "Installation",
-					"value": "98_installation_and_upgrade/Installations"
+					"sub-topics": [
+						{
+							"display name": "TDM Installation",
+							"value": "98_installation_and_upgrade/Installations/TDM"
+						},
+						{
+							"display name": "Fabric Web Studio Installation on Docker / Podman, v2.1",
+							"value": "98_installation_and_upgrade/Installations/Fabric_Web_Studio_v2-1"
+						},
+						{
+							"display name": "Fabric Web Studio Installation on Docker, v2.0",
+							"value": "98_installation_and_upgrade/Installations/Fabric_Web_Studio_v2-0"
+						},
+						{
+							"display name": "Fabric Installation on Kubernetes Cluster",
+							"value": "98_installation_and_upgrade/Installations/Kubernetes"
+						},
+						{
+							"display name": "Fabric Installation on Linux",
+							"value": "98_installation_and_upgrade/Installations/Linux"
+						},
+						{
+							"display name": "Fabric Installation on Docker",
+							"value": "98_installation_and_upgrade/Installations/Docker_Fabric"
+						},
+						{
+							"display name": "TDM Installation on Docker",
+							"value": "98_installation_and_upgrade/Installations/Docker_TDM"
+						}						
+					]
 				},
 				{
 					"display name": "Upgrade",
