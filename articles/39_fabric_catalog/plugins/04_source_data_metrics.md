@@ -5,7 +5,7 @@ This article describes three plugins that analyze source systems and calculate v
 **The plugins are:**
 
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
-* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. The plugin is introduced in Fabric V8.3.
+* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
 * [NULL Percentage](04_source_data_metrics.md#null-percentage) — calculates the percentage of NULL values per column. Starting with Fabric V8.2, this plugin has been combined with the Data Quality Metrics plugin.
 
 ## Data Quality Metrics
@@ -30,7 +30,7 @@ This plugin scans the data of the data sample in order to calculate various data
 
 ## Option Set Analyzer
 
-The purpose of this plugin is to identify fields with a limited number of distinct values (in data sample) and save those values into a dedicated MTable, so they can be used for masking and synthetic data generation. 
+The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save those values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
 Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. In addition, separate MTable is generated per each data platform and schema to keep the distinct values (and their distribution). The MTable has the following name format: 
 
