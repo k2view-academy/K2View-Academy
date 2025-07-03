@@ -346,28 +346,16 @@
 							"value": "98_installation_and_upgrade/Install_TDM"
 						},
 						{
-							"display name": "Fabric Web Studio Installation on Docker / Podman, v2.1",
+							"display name": "Fabric Web Studio Installation",
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
-							"display name": "Fabric Web Studio Installation on Docker, v2.0",
-							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0"
-						},
-						{
-							"display name": "Fabric Installation on Kubernetes Cluster",
+							"display name": "Fabric Installation on Kubernetes",
 							"value": "98_installation_and_upgrade/Install_on_Kubernetes"
 						},
 						{
 							"display name": "Fabric Installation on Linux",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
-						},
-						{
-							"display name": "Fabric Installation on Docker",
-							"value": "98_installation_and_upgrade/Install_Fabric_on_Docker"
-						},
-						{
-							"display name": "TDM Installation on Docker",
-							"value": "98_installation_and_upgrade/Install_TDM_on_Docker"
 						}						
 					]
 				},
