@@ -88,7 +88,7 @@ https://localhost:3213/api/catalog/1...latest
 
 
 
-## Get Catalog's Data Platform Details
+## Get Details of Catalog Data Platform 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
