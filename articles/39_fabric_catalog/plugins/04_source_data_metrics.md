@@ -21,18 +21,18 @@ This plugin scans the data of the data sample in order to calculate various data
   * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
 * **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
   * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
-  * Understanding the range of values helps to ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
-  * As part of basic descriptive statistics, these metrics provide a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
-* **Null Percentage** - the percentage of null values per column. 
-  * This percentage is calculated on each column of non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value is above the plugin's threshold. 
-  * For example, when 30% of the values in a certain field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property would not be added.
+  * Understanding the range of values helps to ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
+  * As part of basic descriptive statistics, these metrics offer an initial glimpse into data distribution and can serve as a precursor to more advanced statistical analyses.
+* **Null Percentage** — the percentage of null values per column. 
+  * This percentage is calculated on each column of non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
+  * For example, when 30% of the values in a given field are null, the Null Percentage property will be added to the field with the value = 0.3. However, if 20% or fewer of the values in this field are null, then this property will not be added.
 
 
 ## Option Set Analyzer
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in data sample) and save those values into a dedicated MTable, so they can be used for masking and synthetic data generation. 
 
-Once a field is identified as an Option Set,  the property ```optionSet = true``` is created for it. In addition, separate MTable is generated per each data platform and schema to keep the distinct values (and their distribution). The MTable has the following name format: 
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. In addition, separate MTable is generated per each data platform and schema to keep the distinct values (and their distribution). The MTable has the following name format: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 
