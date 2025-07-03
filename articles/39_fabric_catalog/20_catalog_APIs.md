@@ -36,11 +36,11 @@ https://localhost:3213/api/catalog
 
 
 
-## Get Catalog Version Details
+## Get Details of Catalog Version 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
-The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved with the *contains* relations to its respective schema nodes. 
+The API retrieves a list of data platforms that belong to a given Catalog version. Each data platform is retrieved along with its *contains* relations to the respective schema nodes. 
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -58,8 +58,8 @@ The API has two modes — ***view*** and ***compare*** — that are interchangea
 <td>Y</td>
 <td>
 <p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
-<p>Populate <strong>{base version}...{compare version}</strong> to get the versions comparison. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
-<p>In order to see the recent changes, set the <strong>{base version}</strong> to an older version number and the <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
+<p>Populate <strong>{base version}...{compare version}</strong> to retrieve a comparison between the versions. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
+<p>To view recent changes, set <strong>{base version}</strong> to an older version number, and <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
 </td>
 </tr>
 </tbody>
