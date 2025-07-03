@@ -33,10 +33,10 @@ Due to the existence of multiple file formats, applying transformation rules is 
 
 To better understand the concept of **transformation rule** and its pivotal use in the file cataloging solution, below is a description of each expected flow (transformation rule):
 
-1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning an array of maps. This flow is mandatory.
+1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
 
-   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding hierarchy: data platform, schema, dataset, class, field name and all of its properties (defined in the schema definition file).
-   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding hierarchy: data platform, schema and dataset. The fields and their properties will then be inferred from the sample data.
+   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding hierarchy: schema, dataset, class, field name and all of its properties (defined in the schema definition file).
+   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding hierarchy: schema and dataset. The fields and their properties will then be inferred from the sample data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
 
