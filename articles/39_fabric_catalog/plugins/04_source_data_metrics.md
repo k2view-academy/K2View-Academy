@@ -15,10 +15,10 @@ This plugin scans the data of the data sample in order to calculate various data
 * **Data Sample Size** — the actual number of values in a column in the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample size can vary, based on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
-  * This parameter helps to assess the variety or uniqueness of data within a column. It is beneficial for data categorization, since it helps to analyze whether the data includes a specific set of values or labels (such as status fields or categorical variables). 
+  * This parameter helps to assess the variety or uniqueness of data within a column. It is useful for data categorization as it helps to analyze whether the data contains a specific set of values or labels (such as status fields or categorical variables). 
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
-  * A high number of distinct values in a column where you expect fewer unique entries might suggest potential data anomalies, typos, or other errors. 
-  * This calculation is done for alpha-numeric and numeric fields (string, integers and real).
+  * A high number of distinct values in a column where fewer unique entries are expected may suggest potential data anomalies, typos, or other errors. 
+  * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
 * **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations perform in a numeric or date column, in the data sample.
   * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps to ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
