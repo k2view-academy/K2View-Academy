@@ -1,4 +1,46 @@
-# Fabric Minimum System Requirements for Development and QA Installations
+# Dev and QA Environment Installation System Requirements
+
+## Table of Contents
+
+- [Dev and QA Environment Installation System Requirements](#dev-and-qa-environment-installation-system-requirements)
+  - [Introduction](#introduction)
+  - [Fabric Execution Servers - Node Specifications](#fabric-execution-servers---node-specifications)
+  - [Minimum System Configuration for Each Fabric Node Server](#minimum-system-configuration-for-each-fabric-node-server)
+    - [Software Requirements](#software-requirements)
+      - [Operating system](#operating-system)
+    - [Hardware Requirements](#hardware-requirements)
+    - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types)
+    - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows)
+  - [Kafka Server Node Specifications](#kafka-server-node-specifications)
+    - [Minimum System Configuration for Each Kafka Node Server](#minimum-system-configuration-for-each-kafka-node-server)
+      - [Software Requirements](#software-requirements-1)
+        - [Operating system](#operating-system-1)
+      - [Hardware Requirements](#hardware-requirements-1)
+      - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-1)
+      - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows-1)
+  - [Cassandra Server Node Specifications](#cassandra-server-node-specifications)
+    - [Minimum System Configuration for Each Cassandra Node Server](#minimum-system-configuration-for-each-cassandra-node-server)
+      - [Software Requirements](#software-requirements-2)
+        - [Operating system](#operating-system-2)
+      - [Hardware Requirements](#hardware-requirements-2)
+      - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-2)
+      - [For all installations, the FS configuration should be as follows](#for-all-installations-the-fs-configuration-should-be-as-follows)
+  - [PostgreSQL Server Node Specifications](#postgresql-server-node-specifications)
+    - [Suggested System Configuration for PostgreSQL Server](#suggested-system-configuration-for-postgresql-server)
+      - [Software Requirements](#software-requirements-3)
+        - [Operating system](#operating-system-3)
+      - [Hardware Requirements](#hardware-requirements-3)
+      - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-3)
+      - [Examples of Cloud-supported SaaS](#examples-of-cloud-supported-saas)
+  - [Fabric Studio Requirements](#fabric-studio-requirements)
+    - [Minimum System Configuration](#minimum-system-configuration)
+    - [Windows Ports](#windows-ports)
+    - [Windows Permissions](#windows-permissions)
+    - [Recommended Software](#recommended-software)
+    - [Linux Server Ports](#linux-server-ports)
+    - [Connectivity](#connectivity)
+
+
 ## Introduction
 
 * This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.

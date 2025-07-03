@@ -1,4 +1,5 @@
-# Requirements and Prerequisites for Cloud Self-hosted Kubernetes Installation
+# Cloud Self-hosted Kubernetes Installation System Requirements
+
 This article describes the requirements and prerequisites for the K2cloud *self-hosted* cloud deployment, which is based on the Kubernetes (K8s) infrastructure, when deployed at your cloud. The supported cloud providers are: AWS, GCP, and Azure.
 
 K2cloud is also available as a *fully-managed* service (PaaS), where K2view manages the platform for you, with all relevant deployments and installations, on a segregated arena in the cloud.
@@ -8,6 +9,19 @@ K2cloud is also available as a *fully-managed* service (PaaS), where K2view mana
 A Terraform sample for the creation and installation of the infrastructure, as well as the Helm chart used during the deployment, can be found [here](https://github.com/k2view/blueprints/).
 
 The K2cloud platform's Orchestrator handles the namespaces creation and the ongoing lifecycle.
+
+## Table of Contents
+
+- [Cloud Self-hosted Kubernetes Installation System Requirements](#cloud-self-hosted-kubernetes-installation-system-requirements)
+  - [Hardware Requirements](#hardware-requirements)
+    - [How Many Nodes Do I Need?](#how-many-nodes-do-i-need)
+  - [K8s Cluster Preparations](#k8s-cluster-preparations)
+    - [Persistent Volumes and Storage Classes](#persistent-volumes-and-storage-classes)
+    - [K2-agent](#k2-agent)
+    - [Fabric Containers Registry](#fabric-containers-registry)
+    - [Connectivity and Networking](#connectivity-and-networking)
+    - [Managed Service Credentials](#managed-service-credentials)
+    - [Monitoring](#monitoring)
 
 
 
