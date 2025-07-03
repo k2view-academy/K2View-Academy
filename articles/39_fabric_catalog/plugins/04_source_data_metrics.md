@@ -2,7 +2,7 @@
 
 This article describes plugins that analyze source systems and calculate various metrics. The analysis is done based on data snapshots.
 
-The plugins are:
+**The plugins are:**
 
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
 * [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. The plugin is introduced in Fabric V8.3.
