@@ -322,8 +322,38 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "System Requirements",
-					"value": "98_installation_and_upgrade/Hardware"
+					"display name": "System Prerequisites",
+					"value": "98_installation_and_upgrade/Hardware/01_hardware_requirements_introduction.html"
+				},
+				{
+					"display name": "Kubernetes Installation Requirements",
+					"sub-topics": [
+						{
+							"display name": "Cloud Self-hosted Kubernetes Installation Requirements",
+							"value": "98_installation_and_upgrade/Hardware/04_k8s_req.html"
+						},
+						{
+							"display name": "On-premises Kubernetes Cluster Installation Requirements",
+							"value": "98_installation_and_upgrade/Hardware/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.html"
+						}
+					]
+				},
+				{
+					"display name": "Linux and Docker Fabric & TDM Installation Requirements",
+					"sub-topics": [
+						{
+							"display name": "Dev and QA Installation Requirements",
+							"value": "98_installation_and_upgrade/Hardware/02_hardware_req_for_dev_qa.html"
+						},
+						{
+							"display name": "Production Installation Requirements",
+							"value": "98_installation_and_upgrade/Hardware/03_hardware_req_for_prod.html"
+						},
+						{
+							"display name": "Proof of Value Installation Requirements",
+							"value": "98_installation_and_upgrade/Hardware/00_hardware_requirements_for_POV.html"
+						}
+					]
 				},
 				{
 					"display name": "Installation",
