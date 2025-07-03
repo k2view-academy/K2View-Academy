@@ -287,7 +287,7 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: When searching for Data Platform and Schema nodes, whose name includes a *customer* keyword, the request body is:
+Example 1: When searching for Data Platform and Schema nodes, whose name includes a *customer* keyword, the request body is as follows:
 
 ~~~json
 {
@@ -303,7 +303,7 @@ Example 1: When searching for Data Platform and Schema nodes, whose name include
 }
 ~~~
 
-Example 2: When searching for any node types with *PII = true* and *Classification = EMAIL* properties, the request body is:
+Example 2: When searching for node types with *PII = true* and *Classification = EMAIL* properties, the request body is as follows:
 
 ~~~json
 {
