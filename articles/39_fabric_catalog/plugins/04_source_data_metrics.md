@@ -19,7 +19,7 @@ This plugin scans the data of the data sample in order to calculate various data
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
   * A high number of distinct values in a column where fewer unique entries are expected may suggest potential data anomalies, typos, or other errors. 
   * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
-* **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations perform in a numeric or date column, in the data sample.
+* **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
   * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps to ensure consistency across similar datasets. The range can assist business decisions making, by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, these metrics provide a first glimpse into data distribution and can be a precursor to more advanced statistical analyses.
