@@ -49,7 +49,7 @@ Additional rules apply based on the plugin's **input parameters**, as explained 
 
 #### Absolute Threshold
 
-Defines the absolute threshold number of distinct values. The value is validated against an absolute threshold if the number of distinct values per field is above the plugin's threshold. For example:
+This parameter defines the absolute threshold number of distinct values. The value is validated against an absolute threshold if the number of distinct values per field is above the plugin's threshold. For example:
 
 * The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This figure exceeds  the plugin's threshold (0.05).
 * In this case, the result is validated against the absolute threshold to verify whether it qualifies as an **Option Set**. 
@@ -57,13 +57,13 @@ Defines the absolute threshold number of distinct values. The value is validated
 
 #### Field Type Include List
 
-The ```fieldTypeIncludeList``` plugin input parameter allows controlling which field data types should be considered for checking the distinct values. 
+The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when checking for distinct values. 
 
 By default, it is set to STRING, INTEGER for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
 #### Field Name Include List
 
-Allows to setup an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the ```minSampleSize``` property).
+This parameter allows to set up an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the ```minSampleSize``` property).
 
 #### Field Name Exclude List
 
