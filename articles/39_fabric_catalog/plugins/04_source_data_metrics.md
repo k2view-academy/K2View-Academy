@@ -6,25 +6,25 @@ This article describes plugins that analyze source systems and calculate various
 
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
 * [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
-* [NULL Percentage](04_source_data_metrics.md#null-percentage) — calculates the percentage of NULL values per column. Starting with Fabric V8.2, this plugin has been combined with the Data Quality Metrics plugin.
+* [NULL Percentage](04_source_data_metrics.md#null-percentage) — calculates the percentage of NULL values per column. Starting with Fabric V8.2, this plugin has been merged into the Data Quality Metrics plugin.
 
 ## Data Quality Metrics
 
 This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
-* **Data Sample Size** — the actual number of values in a column in the data sample.
+* **Data Sample Size** — the actual number of values in a column of the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample size can vary, based on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
-  * This parameter helps to assess the variety or uniqueness of data within a column. It is useful for data categorization as it helps to analyze whether the data contains a specific set of values or labels (such as status fields or categorical variables). 
+  * This parameter helps to assess the variety or uniqueness of data within a column.  
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
-  * A high number of distinct values in a column where fewer unique entries are expected may suggest potential data anomalies, typos, or other errors. 
+  * A high number of distinct values in a column where fewer unique entries are expected may indicate potential data anomalies, typos, or other errors. 
   * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
 * **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
-  * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This helps to identify potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
+  * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This can help to reveal potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps to ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, these metrics offer an initial glimpse into data distribution and can serve as a precursor to more advanced statistical analyses.
 * **Null Percentage** — the percentage of null values per column. 
-  * This percentage is calculated on each column of non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
+  * This percentage is calculated for each column in non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
   * For example, when 30% of the values in a given field are null, the Null Percentage property will be added to the field with the value = 0.3. However, if 20% or fewer of the values in this field are null, then this property will not be added.
 
 
