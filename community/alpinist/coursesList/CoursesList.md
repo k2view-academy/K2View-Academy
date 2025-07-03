@@ -49,7 +49,7 @@
 <p><a title="LU Table population" href="LU_Table_population.pdf">LU Table population</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>Jobs &amp; Batch</p>
+<p><a title="Jobs" href="Jobs.pdf">Jobs</a> &amp; <a title="Fabric Batch" href="Fabric_Batch.pdf">Fabric Batch</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>CDC</p>
