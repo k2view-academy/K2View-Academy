@@ -1,4 +1,4 @@
-# TDM AI Installation
+# TDM AI-driven Synthetic Generation Installation
 
 K2View’s Test Data Management (TDM) 9.0 equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into smart automation:
 
