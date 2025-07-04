@@ -41,14 +41,14 @@ The following shared Globals have been added to the AI-based data generation:
 
 - **AI_DB** - this Postgres interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow creating AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
 - **AI_Execution** - this interface must be active in order to enable the AI-based generation functionality. The TDM portal does not allow to create AI-based training or generation tasks if this interface is inactive. 
-- **AI_DB_External** - this custom interface must be active in order to enable the AI-based generation functionality. This custom interface is utilized in order to securely allow Fabric to interact with the Kubernetes server [(K8s server)](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md#admin-token). The AI_DB_EXTERNAL custom interface should have the same credentials as the AI_DB interface, and the Data field should be populated with your database name.
+- **AI_DB_External** - this custom interface must be active in order to enable the AI-based generation functionality. This custom interface is utilized in order to securely allow Fabric to interact with the Kubernetes server [(K8s server)](articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.0.md#admin-token). The AI_DB_EXTERNAL custom interface should have the same credentials as the AI_DB interface, and the Data field should be populated with your database name.
   ![ai training](images/External_DB.png)
 
 Note that by default, the AI interfaces are disabled (inactive). 
 
   Click [here](/articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
-  Click [here](/articles/98_maintenance_and_operational/Installations/TDM/TDM_AI_Installation_V9.0.md) for more information about installing TDM with AI. 
+  Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.0.md) for more information about installing TDM with AI. 
 
 ### AI Environment
 Add the AI environment to:
@@ -120,6 +120,6 @@ Add the AI environment to:
 If the LU schema is updated, the next training task execution will drop and recreate the schema tables for the updated LU.
 
 ### Cleanup Process 
-The cleanup process of both the AI execution server and the AI DB is manual, and it runs a dedicated flow. Click [here](/articles/98_maintenance_and_operational/Installations/Docker/TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
+The cleanup process of both the AI execution server and the AI DB is manual, and it runs a dedicated flow. Click [here](articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.0.md#manual-cleanup-flow) for more information about the AI cleanup process.
 
 [![Previous](/articles/images/Previous.png)](16_tdm_data_generation_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
