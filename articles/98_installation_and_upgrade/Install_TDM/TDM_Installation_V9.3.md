@@ -50,7 +50,7 @@ Click here to open the [TDM 9.3.x Docker Installation document](/articles/98_mai
 
 Both TDM layers — the backend and frontend — are included in the TDM library starting from version 7.6.
 
-Download the TDM Library export files from the link you  can obtain from your K2view representative. 
+Download the TDM Library export files from the links provided by your K2view representative. 
 <ul>
     <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a></li>
 </ul>
@@ -87,22 +87,22 @@ Click for more information about [Fabric Web Framework](/articles/30_web_framewo
 
 **For existing installations**:
 
-- Deploy the TDM LU to the Fabric server. The TDM deploy flow runs the Run the **RunTDMDBUpgradeScripts** flow. Before the deploy, verify that the TDM interface is updated with the TDM DB connection details.
+- Deploy the TDM LU to the Fabric server. The TDM deploy flow runs the Run the **RunTDMDBUpgradeScripts** flow. Before the deployment, verify that the TDM interface is updated with the TDM DB connection details.
 
 For more details, read [TDM Upgrade Document](/Release_Notes_And_Upgrade/TDM-V9.3/TDM_Upgrade_Procedure_to_V9.3.pdf).
 
 
 ### Create K2masking Schema
 
-The **k2masking** schema is needed for a TDM implementation in order to support masking or sequence handling. The **k2masking** schema is **automatically created** by the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** schema if needed.
+The **k2masking** schema is required for a TDM implementation to support masking or sequence handling. The **k2masking** schema is **automatically created** by the **TDM LU's deploy.flow** upon the deployment of the TDM LU to Fabric. Alternatively, you can run the **masking-create-cache-table.flow** from the library of Broadway examples or run the **create_masking_cache_table.sql** of the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) to create the **K2masking** schema if needed.
 
 ### Add Permission Groups Mapping to the TDM
 
-The TDM Portal application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework, and **Fabric authenticates the user**. The TDM Portal gets the **user id** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) by their Fabric roles**.
+The TDM Portal application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework, and **Fabric authenticates the user**. The TDM Portal retrieves the **user ID** and the user's **Fabric roles** from the user's session and **identifies the user type (Permission Group) based on their Fabric roles**.
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) TDM window and is kept in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-After installing TDM, the admin user must [log into the TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) and define the Permission Group mapping of each user's group (= Fabric role). This process is done in order to enable the TDM users to use the TDM Portal based on their Permission Groups.
+After installing TDM, the admin user must [log into the TDM Portal](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md), and define the Permission Group mapping of each user's group (= Fabric role). This process enables TDM users to access the TDM Portal based on their assigned Permission Groups.
 
 
 
@@ -116,12 +116,12 @@ Click [here](/articles/04_fabric_studio/28_web_k2exchange.md) for more informati
 
 ## TDM AI Installation
 
-K2View’s Test Data Management (TDM) 9.0 equips your QA and development teams with cutting-edge AI-driven synthetic data generation—transforming test data creation from manual rule-based scripts into smart automation:
+K2View’s Test Data Management (TDM) 9.0 equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
 - **AI-First Data Synthesis**: TDM seamlessly integrates with AI models to train on your existing data schema and generate realistic, production-grade synthetic entities—all within the platform.
-- **One-Click AI Workflows**: Simply select a business entity, choose your training model, specify volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optional direct loading into test environments 
+- **One-Click AI Workflows**: Select a business entity, choose your training model, specify volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optional direct loading into test environments 
 - **Robust Implementation Controls**: Easily configure AI endpoints using global settings—like AI_DB_INTERFACE, AI_ENVIRONMENT, and AI_EXECUTION—so teams can tailor connectivity, environments, and cleanup protocols 
-- **Hybrid, Business-Ready Approach** : Choose between rule-based or AI-based generation per scenario—ideal for use cases ranging from edge-case testing to large-scale synthetic population 
+- **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation per scenario—ideal for use cases ranging from edge-case testing to large-scale synthetic population 
 - **Seamless Integration & Compliance**: Generated entities come with built-in handling for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as needed. 
 
 The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the key infrastructure and application setup steps required to integrate K2View TDM 9.0 with AI-powered capabilities, covering everything from GPU-enabled environment provisioning to project configuration, cleanup processes, and performance testing.
@@ -147,12 +147,10 @@ The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the key in
 
 - The default limitation on the number of processed records is 100K records. If your tables have a higher number of records, do the following:
 
-  - Open the **config.ini** file and edit the **[broadway]** section — add the **MAX_CONCRETE_ARRAY_SIZE** attribute and set its value with a value higher than 100,000; for example: 
+  - Open the **config.ini** file and edit the **[broadway]** section — add the **MAX_CONCRETE_ARRAY_SIZE** attribute and set its value to a value higher than 100,000; for example: 
 
     ```
     MAX_CONCRETE_ARRAY_SIZE=50000000
     ```
-
-    
 
   - Restart Fabric.
