@@ -1,6 +1,19 @@
-# TDM with AI Installation Document
+# TDM AI-driven Synthetic Generation Installation
+
+K2View’s Test Data Management (TDM) 9.0 equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into smart automation:
+
+- **AI-First Data Synthesis**: TDM seamlessly integrates with AI models to train on your existing data schema and generate realistic, production-grade synthetic entities—all within the platform.
+- **One-Click AI Workflows**: Simply select a business entity, choose your training model, specify volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optional direct loading into test environments 
+- **Robust Implementation Controls**: Easily configure AI endpoints using global settings—like AI_DB_INTERFACE, AI_ENVIRONMENT, and AI_EXECUTION—so teams can tailor connectivity, environments, and cleanup protocols 
+- **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation per scenario—ideal for use cases ranging from edge-case testing to large-scale synthetic population 
+- **Seamless Integration & Compliance**: Generated entities come with built-in handling for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as needed. 
+
+To learn more, review the  TDM-AI project implementation guidelines available [here](/articles/TDM/tdm_implementation/17_tdm_ai_generation_implementation.md).
+
+This TDM AI installation guide outlines the key infrastructure and application setup steps required to integrate K2View TDM 9.0 with AI-powered capabilities, covering everything from GPU-enabled environment provisioning to project configuration, cleanup processes, and performance testing.
 
 This document describes the infrastructure and the application setup for integrating TDM with AI.
+
 
 ## Table of Contents
 1. [Prerequisites](#pre-requisites)
@@ -38,7 +51,7 @@ This document describes the infrastructure and the application setup for integra
     - Region
     - IPv4 range
 
-Keep the default values for the rest of the parameters.
+Keep the default values for the remaining parameters.
 
 ### GKE
 1. Open GCP console
