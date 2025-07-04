@@ -48,7 +48,7 @@ Note that by default, the AI interfaces are disabled (inactive).
 
   Click [here](/articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
-  Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md) for more information about installing TDM with AI. 
+  Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md) for more information about installing TDM for AI-driven synthetic data generation. 
 
 ### AI Environment
 Add the AI environment to:
@@ -99,7 +99,7 @@ Add the AI environment to:
 
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
-     - These created tables are populated by the TDM AI task and the AI job:
+     - The TDM AI task and the AI job populate these created tables:
        
               - Task_executions: This table stores all task executions for all task types.
               - Task_execution_stats: A table that should be updated during the job execution. Will hold any informative statistics or metrics that may be useful for a later analysis.
@@ -117,9 +117,9 @@ Add the AI environment to:
 - The MDB export does not support multiple populations with different links to parent tables. The LU tables must have one link to a parent LU table.
 
 #### LU Schema Update
-If the LU schema is updated, the next training task execution will drop and recreate the schema tables for the updated LU.
+If the LU schema is updated, the subsequent training task execution will drop and recreate the schema tables for the updated LU.
 
 ### Cleanup Process 
-The cleanup process of both the AI execution server and the AI DB is manual, and it runs a dedicated flow. Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md#manual-cleanup-flow) for more information about the AI cleanup process.
+The cleanup process for both the AI execution server and the AI DB is manual and runs a dedicated flow. Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md#manual-cleanup-flow) for more information about the AI synthetic data generation cleanup process.
 
 [![Previous](/articles/images/Previous.png)](16_tdm_data_generation_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
