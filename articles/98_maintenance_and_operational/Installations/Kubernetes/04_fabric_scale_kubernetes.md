@@ -1,4 +1,4 @@
-# Fabric scale within Kubernetes Deployment
+# Scaling Fabric with Kubernetes 
 Fabric cluster is deployed in Kubernetes where each pod represents a Fabric node.
 
 Kubernetes is designed to automatically scale the number of pods in either a deployment or a ReplicaSet, based on observed metrics like CPU utilization, by using its Horizontal Pod Autoscaling (HPA) mechanism.
