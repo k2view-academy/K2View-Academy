@@ -17,7 +17,7 @@ This document outlines the installation guidelines and initial configuration act
     - [Create K2masking Schema](#create-k2masking-schema)
     - [Add Permission Groups Mapping to the TDM](#add-permission-groups-mapping-to-the-tdm)
   - [TDM Cloud Installation](#tdm-cloud-installation)
-    - [TDM AI Installation](#tdm-ai-installation)
+  - [TDM AI Installation](#tdm-ai-installation)
   - [TDM Initial Configuration](#tdm-initial-configuration)
     - [Configure the Fabric's System DB including the Masking DB Global](#configure-the-fabrics-system-db-including-the-masking-db-global)
     - [Increase the Maximum Number of Records for TDM Tasks](#increase-the-maximum-number-of-records-for-tdm-tasks)
@@ -114,7 +114,7 @@ Click [here](/articles/04_fabric_studio/28_web_k2exchange.md) for more informati
 
 
 
-### TDM AI Installation
+## TDM AI Installation
 
 K2View’s Test Data Management (TDM) 9.0 equips your QA and development teams with cutting-edge AI-driven synthetic data generation—transforming test data creation from manual rule-based scripts into smart automation:
 
