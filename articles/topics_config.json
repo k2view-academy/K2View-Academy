@@ -322,7 +322,7 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Requirements, Installation, and Upgrade",
+					"display name": "Overview",
 					"value": "98_installation_and_upgrade/Hardware"
 				},
 				{
