@@ -4,7 +4,7 @@ This article describes the guidelines and instructions for creating a K2cloud si
 
 While K2cloud K8s cluster deployment on the cloud (fully managed or self-hosted) is done using Terraform, based on each cloud provider’s K8s infrastructure, the on-prem K8s cluster deployment is performed by running a script that is responsible for preparing all required infrastructure components. 
 
-Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/articles/98_installation_and_upgrade/Installations/02_K2cloud_on-prem_K8s_Installation.md) for instructions how this is acheived. 
+Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/articles/98_installation_and_upgrade/Install_on_Kubernetes/02_K2cloud_on-prem_K8s_Installation.md) for instructions on how this is achieved. 
 
 ## Table of Contents
 
@@ -71,7 +71,7 @@ A K8s worker node is expected to meet the following requirements and shall be pr
   * K2view Kubernetes Docker images, depending on the required projects.
 
   * Mailbox ID and the Cloud Manager URL.
- 
+
 
 ## Installation Options for On-Premises Kubernetes
 K2view supports two variants of on-premises Kubernetes installations for Fabric and TDM, allowing customers to tailor deployments based on their environment and use case. These options are provided through two setup scripts in the K2view Blueprints repository:
@@ -80,10 +80,9 @@ K2view supports two variants of on-premises Kubernetes installations for Fabric 
 
 * `single_node.sh` offers a lightweight, single-node cluster suitable for development or testing. It installs all required components on a single host and configures the node to run both the control plane and workloads.
   
-  * **Recommendation** - Customers looking to install [Fabric Web Studio](/articles/98_installation_and_upgrade/Installations/Fabric_Web_Studio/README.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
+  * **Recommendation** - Customers looking to install [Fabric Web Studio](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
 
 These installation methods provide flexibility for deploying Fabric and TDM in either realistic, distributed environments or local, self-contained setups.
 
-Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/articles/98_installation_and_upgrade/Installations/02_K2cloud_on-prem_K8s_Installation.md) topic for instructions. 
-
+Please refer to the [On-premises K2ckoud Kubernetes Cluster Installation](/articles/98_installation_and_upgrade/Install_on_Kubernetes/02_K2cloud_on-prem_K8s_Installation.md) topic for instructions. 
 

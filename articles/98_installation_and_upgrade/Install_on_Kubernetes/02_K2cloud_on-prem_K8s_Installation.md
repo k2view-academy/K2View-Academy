@@ -2,7 +2,7 @@
 
 This article describes the guidelines and instructions for creating a K2cloud site - a K8s (Kubernetes) cluster - on premises.  
 
-While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_maintenance_and_operational/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
+While K2cloud K8s cluster deployment on the Cloud as a <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">Self-hosted Kubernetes Cluster Installation</a> is done using Terraform and Helm charts, based on cloud provider’s K8s infrastructure, the on-premises K8s cluster deployment is done by running a script that is responsible for preparing all required infrastructure components. 
 
 ## Table of Contents
 
@@ -126,12 +126,12 @@ These options allow K2view customers to tailor their on-prem Kubernetes deployme
 
 ## Recommendation
 
-Customers looking to install [Fabric Web Studio](/articles/98_maintenance_and_operational/Installations/dcr_web_studio/README.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
+Customers looking to install [Fabric Web Studio](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.md) should consider installing it on Docker Compose or Podman. This provides a simpler installation experience than the use of the Kubernetes-in-a-box option. 
 
 ---
 
 # Hardware Requirements 
-Please consult the [requirements and prerequisites section](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md) for the K2cloud on-premises K8s cluster installation. 
+Please consult the [requirements and prerequisites section](/articles/98_installation_and_upgrade/Hardware_K8s/04_Requirements_and_Prerequisites_for_K2cloud_on-prem_K8s_Installation.md) for the K2cloud on-premises K8s cluster installation. 
 
 These recommendations apply to both the multi-node and single-node cluster installations. 
 
@@ -359,6 +359,7 @@ The following addons will be automatically installed in your Kubernetes cluster:
 * [K8s's Ingress-NGINX](https://kubernetes.github.io/ingress-nginx/), an Ingress Controller (plus additional components like error page handler / ingress test)
 * [K2view-agent](https://github.com/k2view/blueprints/blob/main/helm/k2view-agent/README.md), an application that communicates with our Cloud Orchestrator
   
+
 **Note**:
 * local-path Storage Class uses the directory "/opt/local-path-provisioner" in the host to store the Persistent Volumes
 * docker-registry Container Registry stores all its data in a local-path Persistent Volume

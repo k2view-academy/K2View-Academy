@@ -17,10 +17,10 @@ Follow the below instructions to prepare Linux environment for Fabric/TDM instal
 for detailed hardware requirement, please see below:
 <ul>      
 <li>
-<a href="/articles/98_maintenance_and_operational/Hardware/1_POV_Environments/00_hardware_requirements_for_POV.md">Fabric and TDM 8.x Hardware Requirements for POV Environments</a></li>
+<a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Fabric and TDM 8.x Hardware Requirements for POV Environments</a></li>
 <li>
-<a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md">Fabric and TDM 8.x Hardware Requirements for ALL Environments</a></li>
-	  
+<a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">Fabric and TDM 8.x Hardware Requirements for ALL Environments</a></li>
+
 </ul>
 
 ## OS Preparation

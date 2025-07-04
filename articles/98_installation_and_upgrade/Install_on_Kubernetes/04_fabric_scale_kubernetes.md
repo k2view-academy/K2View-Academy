@@ -47,4 +47,4 @@ For more information about an advanced setup, read below:
     <li><a href="https://github.com/kubernetes-sigs/metrics-server#deployment">Metrics server</a></li>
 </ul>
 
-Read [here](/articles/98_maintenance_and_operational/Installations/Linux/03_fabric_scale.md) about scaling Fabric on-prem, within bare-metal or virtual machine environments.
+Read [here](/articles/98_installation_and_upgrade/Install_on_Linux/03_fabric_scale.md) about scaling Fabric on-prem, within bare-metal or virtual machine environments.

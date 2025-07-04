@@ -7,9 +7,9 @@ By design, Fabric is built to enable horizontal scaling out by adding more fabri
 * Obtain the project deployment code.
 * Obtain the master key for data encryption.
 
-This article describes how to scale a Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here](/articles/98_maintenance_and_operational/Installations/Linux/04_fabric_scale_kubernetes.md) about scaling methodology for Kubernetes deployment.
+This article describes how to scale a Fabric cluster on-prem, within bare-metal or virtual machine environments. Read [here](/articles/98_installation_and_upgrade/Install_on_Kubernetes/04_fabric_scale_kubernetes) about the scaling methodology for Kubernetes deployment.
 
-> Note: Scaling guidelines for Fabric's accompanying components, like Cassandra, are not included within this article's scope. These components' scaling guidelines shall be applied according to their methodologies.
+> Note: Scaling guidelines for Fabric's accompanying components, such as Cassandra, are not within the scope of this article. These components' scaling guidelines shall be applied according to their methodologies.
 
 
 ## Fabric Setup 
@@ -27,11 +27,11 @@ The basic steps you will find in this topic are:
 2. Download the package from the provided links.
 3. Untar the package in the user's home folder (/opt/apps/fabric)
 
-Please follow the [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md).
+Please follow the [installation instructions](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md).
 
 
 ## Configuration
-Configure the new Fabric node the same way you have configured the other nodes. Please refer to the Fabric server [installation instructions](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md).
+Configure the new Fabric node the same way you have configured the other nodes. Please refer to the Fabric server [installation instructions](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md).
 
 ### Additional configuration
 
@@ -79,8 +79,8 @@ You can stop the relevant node, even though it is in the midst of processing job
 For more information about an advanced setup, read below:
 
 <ul>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md">Fabric Installation</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md">Fabric Installation</a></li>
    <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric main configuration files</a></li>
    <li><a href="/articles/26_fabric_security/13_user_IAM_configuration.md">SAML configuration</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Hardware/2_All_Environments/README.md">Hardware requirements</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">Hardware requirements</a></li>
 </ul>

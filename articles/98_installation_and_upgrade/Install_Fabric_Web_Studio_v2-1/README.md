@@ -11,8 +11,6 @@ K2view Fabric Web Studio for Docker Compose or Podman, version 2.1, introduces e
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Podman.md">Podman Installation</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Upgrading.md">Upgrading</a></li>
-li>
-<li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md">Previous Version: 2.0</a></li>
 </ul>
 
 

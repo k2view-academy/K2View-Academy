@@ -52,8 +52,9 @@ Both TDM layers — the backend and frontend — are included in the TDM library
 
 Download the TDM Library export files from the link you  can obtain from your K2view representative. 
 <ul>
-    <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa">Internal Download Links for K2view Representatives</a></li>
+    <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.3?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a></li>
 </ul>
+
 
 Once downloaded, import and deploy them:
 

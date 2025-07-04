@@ -11,4 +11,9 @@
       On-premises Kubernetes Cluster Installation
     </a>
   </li>
+  <li>
+    <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/04_fabric_scale_kubernetes">
+      Fabric Cluster Scaling on Kubernetes
+    </a>
+  </li>
 </ul>

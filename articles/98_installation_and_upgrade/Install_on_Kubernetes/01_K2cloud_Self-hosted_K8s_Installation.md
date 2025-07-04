@@ -81,11 +81,11 @@ This architecture ensures that K2view Fabric deployments are secure, highly avai
 ## Core Components
 K2cloud Fabric deployments on customer self-hosted Kubernetes clusters rely on several core components:
 
-* **Fabric Server**: The core runtime engine that powers the execution of data products and orchestrates the entire runtime lifecycle of services, processes, data access, and transformation logic within the platform. It supports concurrently executing multiple data services and interfaces, handles real-time data flows, and enables integration with external systems through configurable adapters. Fabric Server is highly scalable, designed to run as containerized workloads within a Kubernetes cluster, and supports stateful and stateless services. In production environments, it leverages Kubernetes-native features such as auto-scaling, persistent volume claims, and node affinity rules to deliver performance, fault tolerance, and operational flexibility.
-* **TDM** (Test Data Management): A powerful, optional extension to Fabric used to generate, mask, and provision test data across distributed environments. TDM enables creating realistic, privacy-compliant test data by extracting and transforming production data or generating fully synthetic datasets. It supports use cases such as test data provisioning, PII masking, subsetting, and referential integrity maintenance. TDM can integrate with multiple source systems and is optimized for performance and scalability when deployed in Kubernetes environments. It is particularly useful in regulated industries that require compliant data handling in non-production environments.
-* **Fabric Web Studio**: A comprehensive web-based UI for managing, developing, and deploying data products within the K2view platform. It provides visual tools for configuring interfaces, managing business logic, testing data flows, monitoring service activity, and accessing documentation. Fabric Studio supports collaborative development and tightly integrates with version control systems like Git. In development environments, it includes an embedded Neo4j instance for data relationship visualization. For production environments, it typically connects to managed backend services and excludes development-only tooling to optimize performance and security.
+* **Fabric Server**: The core runtime engine that powers the execution of data products and orchestrates the entire runtime lifecycle of services, processes, data access, and transformation logic within the platform. It supports the concurrent execution of multiple data services and interfaces, handles real-time data flows, and enables integration with external systems through configurable adapters. Fabric Server is highly scalable, designed to run as containerized workloads within a Kubernetes cluster, and supports stateful and stateless services. In production environments, it leverages Kubernetes-native features such as auto-scaling, persistent volume claims, and node affinity rules to deliver performance, fault tolerance, and operational flexibility.
+* **TDM** (Test Data Management): A powerful, optional extension to Fabric used to generate, mask, and provision test data across distributed environments. TDM enables the creation of realistic, privacy-compliant test data by extracting and transforming production data or generating fully synthetic datasets. It supports use cases such as test data provisioning, PII masking, subsetting, and maintaining referential integrity. TDM can integrate with multiple source systems and is optimized for performance and scalability when deployed in Kubernetes environments. It is particularly useful in regulated industries that require compliant data handling in non-production environments.
+* **Fabric Web Studio**: A comprehensive web-based UI for managing, developing, and deploying data products within the K2view platform. It provides visual tools for configuring interfaces, managing business logic, testing data flows, monitoring service activity, and accessing documentation. Fabric Studio supports collaborative development and tightly integrates with version control systems like Git. In development environments, it includes an embedded Neo4j instance for visualizing data relationships. For production environments, it typically connects to managed backend services and excludes development-only tooling to optimize performance and security.
 * **K2-Agent**: Communicates with the K2cloud Orchestrator to receive deployment instructions. The K2-Agent is a lightweight Kubernetes service that securely connects your on-premises or cloud-based K2view Fabric deployment to the K2cloud Orchestrator. It is crucial in enabling centralized management, monitoring, and deployment orchestration.
-* **Ingress Controller**: Handles routing external traffic to services within the cluster. K2view typically deploys an NGINX Ingress Controller as the default solution, offering a well-supported and configurable entry point across cloud and on-premises environments. For cloud-native implementations, customers may use provider-specific ingress solutions such as AWS ALB Ingress Controller, GCP Ingress, or Azure Application Gateway Ingress Controller, depending on their platform requirements, networking architecture, and load balancing needs.
+* **Ingress Controller**: Handles routing external traffic to services within the cluster. K2view typically deploys an NGINX Ingress Controller as the default solution, offering a well-supported and configurable entry point across cloud and on-premises environments. For cloud-native implementations, customers can use provider-specific ingress solutions, such as AWS ALB Ingress Controller, GCP Ingress, or Azure Application Gateway Ingress Controller, depending on their platform requirements, networking architecture, and load-balancing needs.
 * **Container Registry**: Stores and serves Docker images used during deployment.
 * **Persistent Storage**: Maintaining stateful data across service restarts and rescheduling events within the Kubernetes cluster. In production environments, persistent storage must support high availability and zone redundancy to ensure data durability and fault tolerance. K2view supports cloud-native options such as Azure Files with Zone Redundant Storage (ZRS), Amazon EFS or EBS with Multi-AZ replication, and Google Filestore with regional availability. In non-production or development setups, simpler storage configurations (e.g., LRS or single-zone disks) may be used because they provide lower resilience.
 * **PostgreSQL Database**: As the metadata store and persistence layer for Fabric configurations, project settings, and runtime state. In development or single-node deployments, an embedded PostgreSQL database is automatically provisioned within the cluster. For production-grade and multi-node clusters, a managed external PostgreSQL service (e.g., Azure Database for PostgreSQL) is required for resilience and scalability.
@@ -93,17 +93,17 @@ K2cloud Fabric deployments on customer self-hosted Kubernetes clusters rely on s
 
 ## Hardware Requirements 
 
-For platform-specific sizing guidance, the [Requirements and Prerequisites for Cloud Self-hosted Kubernetes Installation](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md) topic outlines detailed hardware specifications across AWS, GCP, and Azure environments, ensuring compatibility with Fabric and TDM workloads. It covers the following additional topics:
+For platform-specific sizing guidance, the [Requirements and Prerequisites for Cloud Self-hosted Kubernetes Installation](/articles/98_installation_and_upgrade/Hardware_K8s/04_k8s_req.md) topic outlines detailed hardware specifications across AWS, GCP, and Azure environments, ensuring compatibility with Fabric and TDM workloads. It covers the following additional topics:
 
 * **Node Requirements** - The number of nodes required depends on the intended usage (development, SIT, or production). While the document provides a general guideline, actual node count should account for redundancy, workload isolation, and autoscaling policies.
 * **K8s Cluster Preparations** - Successful cluster preparation involves ensuring tool readiness (kubectl, helm, terraform, etc.), verifying outbound internet connectivity, and aligning cloud provider configurations (e.g., role assignments, resource provider registrations). The referenced guide provides practical pre-installation steps for both administrators and DevOps engineers.
-* **Persistent Volumes and Storage Classes** - Fabric services rely on persistent volumes for stateful workloads. The guide explains the recommended use of high-availability storage classes such as ZRS or multi-zone volumes, depending on your cloud provider. Developers and operators should review this section to align their storage classes with cluster topology and SLA expectations.
+* **Persistent Volumes and Storage Classes** - Fabric services rely on persistent volumes for stateful workloads. The guide explains the recommended use of high-availability storage classes such as ZRS or multi-zone volumes, depending on your cloud provider. Developers and operators should review this section to ensure their storage classes align with the cluster topology and SLA expectations.
 
 ## Preparations and Provisioning
 
 To install a K2cloud Self-hosted Kubernetes cluster for Fabric and TDM, you will need to prepare and perform the necessary steps in coordination with your K2view representative. The process begins with gathering key configuration details, including TLS certificate files, and ensuring outbound internet access to specific K2view endpoints. These are essential for secure communications, image retrieval, and configuration via the K2cloud Orchestrator. K2view will also need to perform provisioning actions requiring information you will provide it. 
 
-Your K2view representative provide you with access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry.
+Your K2view representative will provide you with access credentials and provisioning information. This includes a Cloud Mailbox ID, a K2view Nexus Repository account for pulling required Docker images, and a list of container images to populate your private registry.
 
 K2view will share a planning guide to help you with this provisioning and coordinate activities.
 
@@ -115,7 +115,7 @@ Steps include:
 * Install K2view Fabric using Terraform and Helm
 * Populate the container registry
 * Provide container image paths and domain to K2view
-* Create K2view Project and Space
+* Create a K2view Project and Space
 
 ### Provisioning 
 
@@ -171,9 +171,9 @@ This design makes the K2-Agent a secure, robust component for enterprise-grade h
 
 ### Fabric Container Registry 
 
-Pease refer to: ([K8s Requirements](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.2/articles/98_maintenance_and_operational/Hardware/2_All_Environments/04_k8s_req.md))
+Please refer to [K8s Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/04_k8s_req.md).
 
-K2view Docker images for Fabric, Studio, and supporting services must be pulled from K2view’s Nexus repository and pushed into a customer-managed, OCI-compliant container registry. This enables secure, high-performance retrieval of images during Helm-based Kubernetes deployment.
+K2view Docker images for Fabric, Studio, and supporting services must be pulled from K2view’s Nexus repository and pushed into a customer-managed, OCI-compliant container registry. This enables secure, high-performance image retrieval during Helm-based Kubernetes deployments.
 
 #### Registry Setup Guidelines
 
@@ -189,7 +189,7 @@ You may also use a private registry hosted on your infrastructure as long as it 
 - Ensure the registry is accessible from within the Kubernetes cluster (e.g., proper VPC/VNet routing, firewall rules).
 - Use access credentials, tokens, or identity-based authentication mechanisms (e.g., IAM roles) as required by your cloud provider.
 - Store and tag the pulled Docker images using the same names and versions provided by K2view to ensure compatibility.
-- Make sure to configure your Helm `values.yaml` files with the correct image repository path and tag.
+- Ensure that you configure your Helm `values.yaml` files with the correct image repository path and tag.
 
 Once the registry is populated, you must share the full image paths (e.g., `gcr.io/project-id/k2view/fabric:8.2.1_40`) with your K2view representative to complete environment setup.
 
@@ -200,12 +200,12 @@ Once the registry is populated, you must share the full image paths (e.g., `gcr.
 
 ### NGINX Ingress Controller
 
-K2view uses NGINX as the default Ingress Controller for routing external traffic to services inside the Kubernetes cluster. This controller provides a flexible, production-grade entry point capable of handling TLS termination, path-based routing, rate limiting, and custom annotations for fine-grained access control.
+K2view uses NGINX as the default Ingress Controller for routing external traffic to services inside the Kubernetes cluster. This controller provides a flexible, production-grade entry point that can handle TLS termination, path-based routing, rate limiting, and custom annotations for fine-grained access control.
 
 #### Deployment Considerations:
 - Deployed using Helm and runs within its namespace (typically `ingress-nginx`).
 - Configured to support HTTPS, with TLS certificates passed via Kubernetes secrets.
-- Offers load balancing and reverse proxy functionality for accessing services like Fabric, TDM, and Studio externally.
+- Provides load balancing and reverse proxy functionality for accessing services such as Fabric, TDM, and Studio externally.
 - Compatible with both subdomain-based and context-based URL routing schemes.
 - Custom annotations may be required depending on the cloud platform (e.g., internal vs. public load balancer annotations in Azure or AWS).
 
@@ -234,7 +234,7 @@ Here's a summary of the certificate requirements:
 
 ### Installation with Terraform 
 
-Please refer to:([K2view Terraform Blueprints](https://github.com/k2view/blueprints/tree/main/Terraform))
+Please refer to [K2view Terraform Blueprints](https://github.com/k2view/blueprints/tree/main/Terraform).
 
 K2view provides Terraform blueprints to automate the provisioning of cloud infrastructure required for hosting Fabric and TDM services. This infrastructure-as-code approach ensures a consistent, repeatable, and secure setup of services across environments.
 
@@ -278,14 +278,14 @@ K2view provides Terraform blueprints to automate the provisioning of cloud infra
 
 5. **Next Steps**
    - After Terraform is complete, validate your environment setup (e.g., confirm cluster availability with `kubectl` and test the DNS resolution).
-   - Proceed to populate your container registry and perform Helm-based application deployment.
+   - Proceed to populate your container registry and deploy Helm-based applications.
 
 Using Terraform, organizations gain improved visibility, compliance, and manageability of their infrastructure lifecycle.
 
 
 ### Installation with Helm 
 
-Please refer to: ([K2view Helm Blueprints](https://github.com/k2view/blueprints/tree/main/helm))
+Please refer to [K2view Helm Blueprints](https://github.com/k2view/blueprints/tree/main/helm).
 
 This guide outlines the step-by-step process to deploy K2view components using Helm charts. It assumes that you have a running Kubernetes cluster and have cloned the [K2view Helm blueprints repository](https://github.com/k2view/blueprints/tree/main/helm).
 
@@ -448,7 +448,6 @@ Once all services are up and running, access the Fabric Web Studio using the con
 * **Create Projects and Spaces**: Use the K2cloud Orchestrator to create and manage projects and spaces.
 * **Monitor Logs**: Monitor the logs of each component to ensure they're functioning correctly.
 * **Backup Configurations**: Regularly back up your Helm `values.yaml` files and Kubernetes manifests.
-
 
 
 
