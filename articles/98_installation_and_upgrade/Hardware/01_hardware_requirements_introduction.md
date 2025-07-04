@@ -1,15 +1,27 @@
+
 ## Fabric and TDM Installation Overview
 
+This guide provides a comprehensive roadmap for planning, installing, and upgrading your Fabric, Fabric Web Studio, and Test Data Management (TDM) environments. Whether deploying in Kubernetes, on standalone Linux servers, or for proof-of-value scenarios, the sections below will help you make informed decisions and successfully complete your installation.
 
-### Introduction
+## What This Guide Covers
 
-This article, along with the following articles in this section, presents hardware, software, and operating system requirements for Fabric and TDM installations.
+- **Installation Requirements**  
+  Understand the key factors affecting sizing, including workloads, environments, and concurrency. This section will help you estimate CPU, memory, and storage needs based on whether you’re deploying on Kubernetes or standalone Linux.
+  - **Kubernetes Requirements** – Provides detailed specifications for clusters, nodes, Helm versions, ingress controllers, and Kubernetes-native prerequisites for a successful Fabric deployment.
+  - **Linux / Docker Requirements** – Outlines hardware recommendations for development, QA, production, and POV/POC deployments, including CPU, memory, and disk sizing per component.
 
-The requirements for working in a Development or Quality Assurance environment differ from those for working in a Production environment. It is assumed that the reader is familiar with Fabric and/or TDM.  
+- **Installation Steps**  
+  - **TDM Installation** – Guides you through deploying the TDM component, including optional AI capabilities for advanced synthetic data generation.
+  - **Fabric Web Studio Installation** – Covers deploying the Fabric Web Studio, the visual environment for managing Fabric projects, and configuring its runtime dependencies.
+  - **Fabric Installation** – Includes dedicated instructions for both Kubernetes-based and standalone Linux installations, helping you choose and follow the right path for your environment.
 
-### Diagram 
+- **Upgrades**  
+  - **Fabric and TDM Upgrade Procedures** – Step-by-step instructions for upgrading existing installations, including backing up databases, replacing binaries, performing migrations, and verifying updates.
+  - **Fabric Kubernetes Space Upgrades** – Special guidance for updating individual Fabric spaces within Kubernetes deployments without requiring a complete reinstallation.
 
-The diagram below depicts a generic system layout for Fabric and Test Data Management (TDM) projects. The number of Fabric, Cassandra and Kafka nodes can vary and should be based on the size of the specific project.
+## How to Use This Guide
 
-<img src="images/01_fabric_hardware.png" style="zoom:40%;" />
+1. **Select the appropriate Installation Requirements section** depending on whether you’re deploying on Kubernetes or Linux.
+2. **Follow the relevant Installation instructions** to deploy Fabric, TDM, and Fabric Web Studio in your environment.
+3. **Use the Upgrade sections** to plan or execute updates on existing installations.
 

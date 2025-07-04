@@ -322,11 +322,11 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "System Requirements",
+					"display name": "Requirements, Installation, and Upgrade",
 					"value": "98_installation_and_upgrade/Hardware"
 				},
 				{
-					"display name": "Installation Requirements",
+					"display name": "System Requirements",
 					"sub-topics": [
 						{
 							"display name": "Kubernetes Requirements",
