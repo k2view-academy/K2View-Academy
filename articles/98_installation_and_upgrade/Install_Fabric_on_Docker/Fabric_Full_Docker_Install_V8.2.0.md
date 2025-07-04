@@ -18,7 +18,7 @@ More detailed requirements for each are described below:
    - 16 GB RAM
    - HDD, 200GB must be available
 
-   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
+   **Note**: A minimum of 10 GB RAM is required for running 1x Fabric and 1x Cassandra. Our recommendation if for a physical Docker host and not a virtual machine.
 2. Install the latest Docker CE/EE version (https:/docs.docker.com/engine/install/centos/ ).
 
    **Note**: The /var/lib/docker should have at least 200GB of free memory.
@@ -48,7 +48,7 @@ More detailed requirements for each are described below:
   <table style="border-collapse: collapse; width: 100%;">
 
    <tbody>
-   
+
    <tr>
    <td style="width: 50%; height: 18px;"><strong>kafka </strong></td>
    <td style="width: 50%; height: 18px;">https:/owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_5.tar.gz
@@ -71,6 +71,7 @@ More detailed requirements for each are described below:
    </tr>
    </tbody>
    </table>
+
 2. Copy all files to the k2view directory as follows: (skip Kafka if not needed)
 
    ```bash
@@ -123,10 +124,10 @@ Cassandra and Fabric will start automatically.
 
    ```bah
    docker exec -u=cassandra -it cassandra bash su - cassandra 
-
+   
    ## stop cassandra  
    stop-server
-
+   
    ## restart cassandra  
    stop-server && cassandra
    ```
