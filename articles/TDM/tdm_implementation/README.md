@@ -8,7 +8,7 @@
 <li><a href="05_tdm_lu_implementation_general.md">TDM LU Implementation Guidelines</a></li>
 <li><a href="06_tdm_implementation_support_hierarchy.md">TDM LU Implementation Hierarchy Support</a></li>
 <li><a href="07_tdm_implementation_parameters_handling.md">Handling Parameters </a></li>
-<li><a href="08_tdm_implement_delete_of_entities.md">Delete of Entities</a></li>
+<li><a href="08_tdm_implement_delete_of_entities.md">Deleting Entities</a></li>
 <li><a href="09_tdm_reference_implementation.md">Tables Implementation</a></li>
 <li><a href="10_tdm_generic_broadway_flows.md">Generic Broadway Flows</a></li>
 <li><a href="11_tdm_implementation_using_generic_flows.md">Broadway Flows Implementation</a></li>
