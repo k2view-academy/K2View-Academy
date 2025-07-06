@@ -10,9 +10,9 @@ The article describes plugins that create *refersTo* relations in the Catalog sc
 
 ## Reference by Names Comparison
 
-The purpose of a **Reference by Names Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets based on matching the field names and to create the *refersTo* relations. This plugin is useful in a case where a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
+The purpose of the **Reference by Names Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets based on matching the field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
 
-The matching algorithm works by comparing the field names of 2 datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and addition of a table name in case the field name is 'ID'. For example, the following field names - customer.ID, CUSTOMER_ID and CustomerID - will be normalized to the same value - customerid.
+The matching algorithm operates by comparing the field names of two datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and the addition of the table name in case the field name is 'ID'. For example, the field names customer.ID, CUSTOMER_ID and CustomerID will be normalized to the same value — customerid.
 
 This plugin allows defining a exclusion list of field names (e.g., 'username' or 'age') and an exclusion list of field types (e.g., date, time, blob). The field names or type defined there are excluded from the matching algorithm. 
 
@@ -106,7 +106,7 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 ## Reference by Query Analysis
 
-The purpose of a **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
+The purpose of the **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
 
 The plugin evaluates then the candidate datasets using the matching rules described below. When one of the rules match, the *refersTo* relation is created and the direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
 
@@ -152,7 +152,7 @@ The ```llmInterface``` is an optional parameter. It allows overriding the defaul
 
 ## Reference by Data Comparison
 
-The purpose of a **Reference by Data Comparison** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source doesn't have predefined foreign key constraints. 
+The purpose of the **Reference by Data Comparison** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source doesn't have predefined foreign key constraints. 
 
 The data comparison is performed by comparing the values of the fields of two datasets at a time - dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
 
