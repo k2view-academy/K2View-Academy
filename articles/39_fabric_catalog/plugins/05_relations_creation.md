@@ -127,13 +127,13 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin's input parameter is to allow controlling which field's data types should be considered for creating the relations. 
+The purpose of the ```fieldTypeIncludeList``` plugin input parameter is to allow controlling which field's data types should be considered for creating the relations. 
 
 By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
 #### Queries Path
 
-The ```queriesPath``` plugin's input parameter must be set with the path to the file with a list of queries to be analyzed. 
+The ```queriesPath``` plugins input parameter must be set with the path to the file with a list of queries to be analyzed. 
 
 The file name format is: ```<Data Platform name>.sql```.
 
