@@ -49,7 +49,7 @@ Additional rules apply based on the plugin's **input parameters**, as explained 
 
 #### Absolute Threshold
 
-This parameter defines the absolute threshold number of distinct values. The value is validated against an absolute threshold if the number of distinct values per field is above the plugin's threshold. For example:
+This parameter defines the absolute threshold number of distinct values. If the relative number of distinct values per field, found in a data sample, exceeds the plugin’s threshold (0.05), it is then validated against the absolute threshold (15). For example:
 
 * The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This figure exceeds  the plugin's threshold (0.05).
 * In this case, the result is validated against the absolute threshold to verify whether it qualifies as an **Option Set**. 
