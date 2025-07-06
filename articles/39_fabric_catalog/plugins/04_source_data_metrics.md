@@ -45,7 +45,7 @@ The rules for identifying fields with a limited number of distinct values are:
 * The field is **not PII** (in order to comply with privacy regulations and not to expose sensitive values).
 * The number of distinct values is either below a plugin's threshold (e.g., 0.05) **or** below the ```Absolute Threshold```  input parameter (which is set to 15 by default).
 
-Additional rules apply based on the plugin's **input parameters**, as explained below.
+Additional rules apply based on the **plugin input parameters**, as explained below.
 
 #### Absolute Threshold
 
