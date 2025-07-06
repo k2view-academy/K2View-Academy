@@ -35,8 +35,8 @@ To better understand the concept of **transformation rule** and its pivotal use 
 
 1. **Get Metadata** is the first transformation rule, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
 
-   * Metadata may be based on the schema definition file(s), if they are provided. In such case, each map is expected to represent a Catalog field with its corresponding hierarchy: schema, dataset, class, field name and all of its properties (defined in the schema definition file).
-   * When no schema definition file is provided and the metadata is expected to be discovered from a data sample, each map should represent a Catalog dataset with its corresponding hierarchy: schema and dataset. The fields and their properties will then be inferred from the sample data.
+   * Metadata may be based on the schema definition file(s), if they are provided. Two dedicated actors are provided for this use case: **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format and **AvroSchemaToMetadata** to transform the Avro schema to the Catalog metadata format (Avro extension should be installed to use this actor).
+   * When no schema definition file exists, the metadata is expected to be discovered from a data sample. In this case, the output Catalog metadata will only include the dataset name with its corresponding schema. The fields and their properties will then be inferred from the sample data.
    * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
 
@@ -62,7 +62,7 @@ All filesystem interface types (local, Azure, etc.) include a group of input par
 
 ## Organizing Files in Filesystem
 
-There is no limitation on how to organize the files in the filesystem interface. The only rule is that the file setup should correspond to the flow's logic.
+There is no system limitation on how to organize the files in the filesystem interface. The only rule is that the file setup should correspond to the flow's logic.
 
 The *File Cataloging - Demo* extension demonstrates various ways to organize files. 
 
