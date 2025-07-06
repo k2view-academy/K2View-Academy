@@ -21,7 +21,7 @@ To control whether a CDC message is published to external systems, do either:
 - Update the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). Set the CDC_PUBLISH_MODE parameter to:
   - ON (default), when implemented, publish the CDC message.
   - OFF, never publish the CDC message.
-  - IF_SETUP, (Studio Debug default) when implemented, publish the CDC message only if the CDC publisher has been configured in the config.ini file.
+ 
 - Run the **SET CDC_PUBLISH** Fabric command to set the CDC mode on a session level. The values of the CDC_PUBLISH are **true** (enabling CDC publication) or **false** (disabling CDC publication). The default value is **true**.
 
 ## CDC Message Types
