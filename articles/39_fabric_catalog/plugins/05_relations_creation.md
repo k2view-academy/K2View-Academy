@@ -112,7 +112,7 @@ The plugin then evaluates the candidate datasets using the matching rules descri
 
 Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries. This transformation can be performed by creating a Broadway flow in your project that will transform file to the required format. 
 
-This plugin is useful when a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
+This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
 #### Matching Rules
 
