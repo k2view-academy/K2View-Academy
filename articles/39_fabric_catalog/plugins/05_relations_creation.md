@@ -14,9 +14,9 @@ The purpose of the **Reference by Names Comparison** plugin (formerly known as *
 
 The matching algorithm operates by comparing the field names of two datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and the addition of the table name in case the field name is 'ID'. For example, the field names customer.ID, CUSTOMER_ID and CustomerID will be normalized to the same value — customerid.
 
-This plugin allows defining a exclusion list of field names (e.g., 'username' or 'age') and an exclusion list of field types (e.g., date, time, blob). The field names or type defined there are excluded from the matching algorithm. 
+This plugin allows defining an exclusion list of field names (e.g., 'username' or 'age') and an exclusion list of field types (e.g., date, time, blob). The field names or type defined there are excluded from the matching algorithm. 
 
-When the plugin finds a match by the field name, it evaluates the foreign key fields and direction by using the matching rules described below. The *refersTo* relation direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule which defines a probability of the match's correctness. 
+When the plugin finds a match by the field name, it evaluates the foreign key fields and direction using the matching rules described below. The *refersTo* relation direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule which defines a probability of the match's correctness. 
 
 #### Matching Rules
 
