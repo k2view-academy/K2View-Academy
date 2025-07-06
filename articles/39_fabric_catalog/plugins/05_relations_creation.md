@@ -106,11 +106,11 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 ## Reference by Query Analysis
 
-The purpose of the **Reference by Query Analysis** plugin (introduced in V8.3) is to identify possible foreign key references between datasets by analyzing the JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
+The purpose of the **Reference by Query Analysis** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by analyzing JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
 
-The plugin evaluates then the candidate datasets using the matching rules described below. When one of the rules match, the *refersTo* relation is created and the direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
+The plugin then evaluates the candidate datasets using the matching rules described below. When one of the rules matches, a *refersTo* relation is created, with the direction being *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
 
-Some database management systems (such as Oracle) support automatic generation of **audit files**. Those are files that record activities within the database, by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries. This transformation can be performed by creating a Broadway flow in your project that will transform file to the required format. 
+Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries. This transformation can be performed by creating a Broadway flow in your project that will transform file to the required format. 
 
 This plugin is useful when a source doesn't have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
