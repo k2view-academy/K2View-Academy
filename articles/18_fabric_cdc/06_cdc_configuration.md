@@ -35,7 +35,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <p>#CDC_CONSUMER_JOB_AFFINITY=</p>
 </td>
 <td style="width: 335.562px;" valign="top">
-<p>Affinity for CDC consumer job</p>
+<p>Affinity for CDC consumer job (the Enalsticsearch)</p>
 </td>
 </tr>
 </tbody>
