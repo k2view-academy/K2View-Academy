@@ -1,10 +1,10 @@
 # Creation of Reference Relation
 
-The following article describes plugins that create the *refersTo* relations in the Catalog schema, based on various types of analysis in the data source.
+The article describes plugins that create *refersTo* relations in the Catalog schema based on various types of analysis performed on the data source.
 
-* [Reference by Names Comparison](05_relations_creation.md#reference-by-names-comparison) - identify possible foreign key references between datasets by matching field names and create the *refersTo* relations.
-* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) - identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and create the *refersTo* relations. The plugin is introduced in V8.3.
-* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) - identify possible foreign key references between datasets by analyzing the data within the field's columns and create the *refersTo* relations. The plugin is introduced in V8.3.
+* [Reference by Names Comparison](05_relations_creation.md#reference-by-names-comparison) — identify possible foreign key references between datasets by matching field names and create the *refersTo* relations.
+* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) — identify possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and create the *refersTo* relations. The plugin is introduced in V8.3.
+* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) — identify possible foreign key references between datasets by analyzing the data within the field's columns and create the *refersTo* relations. The plugin is introduced in V8.3.
 
 ## Reference by Names Comparison
 
@@ -20,22 +20,22 @@ When the plugin finds a match by the field name, it evaluates the foreign key fi
 
 The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
 
-- ```fieldNameIsIdAndPk``` - dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
+- ```fieldNameIsIdAndPk``` — dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.ID (PK) and* *activity.customer_id*
 
-- ```fieldNameIsIdAndNotPk``` - dataset1 has a field called **id** and dataset2 has a field **dataset1id** (normalized), both are non-PK.
+- ```fieldNameIsIdAndNotPk``` — dataset1 has a field called **id** and dataset2 has a field **dataset1id** (normalized), both are non-PK.
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.ID (non-PK) and* *activity.customer_id*
 
-- ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field with the same name (normalized).
+- ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field with the same name (normalized).
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.customer_id (PK) and* *activity.customer_id* 
 
-- ```*commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+- ```*commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
 
   - The relation *dataset2 refers to dataset1* is created.
 
@@ -89,7 +89,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
     </tbody>
     </table>
 
-- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
 
   - The relation is created and its direction is random. 
 
@@ -116,11 +116,11 @@ This plugin is useful when a source doesn't have predefined foreign key constrai
 
 The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
 
-* ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
+* ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   * The relation *dataset2 refers to dataset1* is created.
-* ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+* ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
   - The relation *dataset2 refers to dataset1* is created.
-* ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+* ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
@@ -160,11 +160,11 @@ Note that this plugin is inactive by default. If needed, the plugin should be se
 
 The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
 
-- ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
+- ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   - The relation *dataset2 refers to dataset1* is created.
 - ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
   - The relation *dataset2 refers to dataset1* is created.
-- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
