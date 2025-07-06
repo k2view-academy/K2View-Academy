@@ -133,11 +133,11 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 #### Queries Path
 
-The ```queriesPath``` plugins input parameter must be set with the path to the file with a list of queries to be analyzed. 
+The ```queriesPath``` plugin input parameter must be set with the path to the file with a list of queries to be analyzed. 
 
 The file name format is: ```<Data Platform name>.sql```.
 
-When the ```queriesPath``` is not set or includes an invalid path, the plugin will thrown an exception.  
+When the ```queriesPath``` is not set or includes an invalid path, the plugin will throw an exception.  
 
 #### Analysis Mode
 
@@ -164,7 +164,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 - ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   - The relation *dataset2 refers to dataset1* is created.
-- ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+- ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
   - The relation *dataset2 refers to dataset1* is created.
 - ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
   - The relation is created and its direction is random. 
