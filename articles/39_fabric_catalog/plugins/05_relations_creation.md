@@ -177,4 +177,4 @@ By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values
 
 #### Factor
 
-Defines the score’s multiplication factor for the data types other than GUID. By default, the factor is set to 0.85 in order to reduce the probability of a possible reference for the matches of the column, which have data types other than GUID.
+Defines the score’s multiplication factor for data types other than GUID. By default, the factor is set to 0.85 in order to reduce the probability of a possible reference for the matches of the column, which have data types other than GUID.
