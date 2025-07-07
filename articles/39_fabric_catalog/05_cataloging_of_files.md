@@ -8,7 +8,7 @@ Sometimes, a company's data assets are stored in files rather than in a database
 
 For example, files containing sensitive data arrive periodically to a predefined filesystem interface. Before being used for business purposes, it is essential to identify and mask the contained sensitive data.
 
-Starting in V8.3, Fabric enables running discovery on the following interface types:
+Starting from V8.3, Fabric enables running discovery on the following interface types:
 
 * Filesystem (local, Azure, etc.)
 * HTTP
