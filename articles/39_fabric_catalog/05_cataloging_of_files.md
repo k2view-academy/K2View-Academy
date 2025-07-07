@@ -8,10 +8,13 @@ Sometimes, a company's data assets are stored in files rather than in a database
 
 For example, files containing sensitive data arrive periodically to a predefined filesystem interface. Before being used for business purposes, it is essential to identify and mask the contained sensitive data.
 
-Starting in V8.3, Fabric enables building a file-based Catalog. Discovery can be performed using:
+Starting in V8.3, Fabric enables running discovery on the following interface types:
 
-* Metadata definition, such as JSON schema or AVRO schema files.
-* Sample files that contain data.
+* Filesystem (local, Azure, etc.)
+* HTTP
+* Custom
+
+Discovery can be performed by either the metadata definition (such as JSON schema or AVRO schema files) or by sample data.
 
 The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of a specific file format. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the File Cataloging  solution requires creating Broadway flows and attaching them to an interface. Then, at run-time, these flows are invoked by the Crawler upon running Discovery on the given interface.
 
@@ -27,7 +30,7 @@ More details about the implementation steps can be learned further in this artic
 
 Once the Catalog is created based on files, a process can be defined to receive the files and mask them.
 
-To illustrate the **File Cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging (for various file types). Instructions on how to use the extension can be found in its README file.
+To illustrate the **File Cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, AVRO and HTTP formats. Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Flows
 
@@ -54,13 +57,22 @@ When creating your own flows, it is recommended to start from the sample flows p
 
 ## Attaching Flows to Interfaces
 
-All filesystem interface types (local, Azure, etc.) include a group of input parameters called Discovery, which enable setting the names of Broadway flows to each of the flows.
+The following interface types include a group of input parameters called Discovery. 
+
+- Filesystem (local, Azure, etc.)
+- HTTP
+- Custom
+
+The purpose of these input parameters is attach the relevant [transformation flows](05_cataloging_of_files.md#creating-transformation-flows) as explained in the above paragraph. 
+
+Do the following steps to attach the transformation flows:
+
+1. Create an interface or open an existing interface.
+2. Click the arrow icon to expand the parameters of the Discovery category (as shown in the image).
+3. Populate the names of the Broadway flows.
+4. Save and deploy the Web Services LU.
 
 <img src="images/filesystem_discovery.png"  />
-
-1. Click the arrow icon to expand the parameters of the Discovery category (as shown in the above image).
-2. Populate the names of the Broadway flows.
-3. Save and deploy the Web Services LU.
 
 ## Organizing Files in Filesystem
 
