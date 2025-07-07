@@ -145,10 +145,10 @@ Defines whether the queries are analyzed by Fabric's internal parser only, by LL
 
 #### LLM Interface
 
-The ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name. 
+The ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface name. 
 
 - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
-- Setting the ```llmInterface``` parameter is only applicable when the plugin invokes LLM (it happens if the ```analysisMode``` is set to either LLM or to ANTLR & LLM).
+- Setting the ```llmInterface``` parameter is only applicable when the plugin invokes LLM (it happens if the ```analysisMode``` is set to either LLM or  ANTLR & LLM).
 
 ## Reference by Data Comparison
 
