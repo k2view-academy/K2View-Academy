@@ -414,10 +414,10 @@ The Fabric SET command enables updating Fabric settings on a session level.
     ~~~
     fabric>set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
     (1 row affected)
-
+  
     fabric>set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
     (1 row affected)
-
+  
     fabric>set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
     (1 row affected)
     ~~~
@@ -437,14 +437,14 @@ The Fabric SET command enables updating Fabric settings on a session level.
   ~~~
   fabric>set auto_mdb_scope=true;
   (1 row affected)
-
+  
   fabric>select * from CRM.customer where customer_id = 123;
   |CUSTOMER_ID|SSN       |FIRST_NAME|LAST_NAME|HAS_OPEN_CASES|VALIDATIONS_NOT_PASSED|
   +-----------+----------+----------+---------+--------------+----------------------+
   |123.0      |7416713403|Gaynelle  |Gill     |0             |null                  |
-
+  
   (1 rows)
-
+  
   fabric>select customer.customer_id, subscriber.contract_id, subscriber.contract_description 
   from CRM.customer, CRM.subscriber where customer.customer_id = 123;
   |CUSTOMER_ID|CONTRACT_ID|CONTRACT_DESCRIPTION|
@@ -454,9 +454,9 @@ The Fabric SET command enables updating Fabric settings on a session level.
   |123.0      |316.0      |450 min             |
   |123.0      |317.0      |Unlimited call      |
   |123.0      |318.0      |Unlimited text      |
-
+  
   (5 rows)
-
+  
   fabric>select * from CRM.address where entity_id = 123;
   Cannot execute the query due to missing WHERE clause on the IID column.
   ~~~
@@ -725,28 +725,98 @@ Example:
 
 ### MDB Export / Import
 
-Fabric supports exporting or importing the MicroDB data from SQLite to another DB type (PostgreSQL). This solution allows performing the Fabric data backup, share it with others or import data from external data sources into Fabric.
+Fabric supports exporting and importing LUIs (Logical Unit Instances) for backup, testing, data sharing, and migration across environments. LUIs can be transferred either through PostgreSQL interfaces or via file-based interfaces using SQLite format.
 
-The following Fabric commands have been introduced for this purpose:
+These capabilities are useful for scenarios such as environment replication, regression testing with fixed data snapshots, or issue reproduction and debugging.
 
-* **MDB_EXPORT <u>without</u> IID**
-  * In this mode, the schema of the specified Logical Unit (LU) is dropped (if exists) and created again.
-  * All pre-defined constraints (such as PKs, FKs, and indexes), are included in the exported schema. 
-  * The command returns the number of exported tables.
-  * Notes:
-     - The FK creation is configurable and depends on the command's **FK** parameter (true/false). 
-     - A new column named **__iid** is added to each table, as well as to each table’s primary key (PK). 
+#### MDB_EXPORT Command
 
-* **MDB_EXPORT <u>with</u> IID**
-  * In this mode, data is retrieved from the Fabric MDB and written to the pre-created PG schema using the driver provided by the specified interface.
-  * The data will be added to the PG tables based on their PKs and FKs, ensuring that the table constraints are respected.
-  * The command returns the number of exported rows.
+**Syntax:** 
 
-* **MDB_IMPORT with IID**
-  * The command enables the data import from the external PG storage into the Fabric MDB, replacing the existing MDB data.
+```
+MDB_EXPORT <LU>[.<IID>] WITH INTERFACE_NAME=<name> [optional parameters]
+```
+
+The command operates in three modes:
+
+1. Schema Export to PostgreSQL (without IID)
+
+   - Creates or replaces the LU schema in the specified PostgreSQL interface.
+
+   - All table definitions, constraints (PKs, FKs, indexes), and structure are exported.
+
+   - A `__iid` column is added to each table and included in the PK.
+
+   - If `PHYSICAL_FK=true` (default), foreign keys are included in the schema.
+
+   - Returns the number of exported tables.
+
+2. LUI Data Export to PostgreSQL (with IID)
+
+   - Exports LUI data from Fabric to the PostgreSQL interface.
+
+   - Respects table constraints and structure, using PKs and FKs.
+
+   - Returns the number of exported rows.
+
+   - Supports:
+     - `INCLUDED_TABLES` / `EXCLUDED_TABLES` for granular control
+     - `REMOTE_IID` to assign a different target IID in the exported schema
+
+3. LUI Data Export to File
+
+   - Exports LUI data from Fabric to a SQLite file via a file-type interface.
+
+   - Useful for portability, testing, and reproducibility across environments.
+
+   - File-type interfaces can include S3, Azure Blob, GCS, SFTP, or local file system.
+
+   - Syntax: `MDB_EXPORT <LU>.<IID> WITH INTERFACE_NAME=<file-interface> [REMOTE_IID=<file-name>]`
 
 
-Both import and export commands can optionally receive a list of tables to be excluded from the import or export process.
+
+#### MDB_IMPORT Command
+
+**Syntax:**
+
+```
+MDB_IMPORT <LU>.<IID> WITH INTERFACE_NAME=<name> [optional parameters]
+```
+
+The command supports two modes:
+
+1. Import from PostgreSQL into Fabric
+
+   - Replaces the current LUI data in Fabric with data from the PostgreSQL interface.
+
+   - Supports:
+     - `EXCLUDED_TABLES` to skip specific tables
+     - `REMOTE_IID` to use a source IID different from the target IID
+
+2. Import from File into Fabric
+
+   - Imports LUI data from a file-based interface into Fabric.
+
+   - Suitable for restoring fixed test sets or debugging datasets.
+
+   - Syntax: `MDB_IMPORT <LU>.<IID> WITH INTERFACE_NAME=<file-interface> [REMOTE_IID=<file-name>]`
+
+
+
+#### Parameters Reference
+
+| Parameter         | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| `INTERFACE_NAME`  | Name of the PostgreSQL or file-type interface.               |
+| `INCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to include. |
+| `EXCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to exclude. |
+| `FK`              | When true, includes FK-linked tables/columns even if excluded (default: true). |
+| `PHYSICAL_FK`     | When true, creates FKs physically in schema (default: true). |
+| `REMOTE_IID`      | Optional. Used to rename IID in target schema or file.       |
+
+This flexible export/import system allows teams to move LUIs between environments efficiently using either database or file-based approaches.
+
+
 
 ### MDB Size
 
