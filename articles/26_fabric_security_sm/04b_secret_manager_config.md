@@ -40,6 +40,9 @@ Authentication can also be performed by the service account associated with the 
 
 * ENABLED=true
 * URL - the Vault API endpoint for getting the secrets.
+  * For key vault type 1, format is  `https://<vault_URL>/v1/<engine_name>`, where default engine name is "secret" (accordingly format will looks like ` https://<vault_URL>/v1/secret`
+  * For key vault type 2, format is  `https://<vault_URL>/v1/<engine_name>/data` 
+
 
 **Optional Properties**:
 
