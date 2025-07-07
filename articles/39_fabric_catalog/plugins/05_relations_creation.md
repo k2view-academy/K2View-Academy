@@ -152,9 +152,9 @@ The ```llmInterface``` is an optional parameter. It allows overriding the defaul
 
 ## Reference by Data Comparison
 
-The purpose of the **Reference by Data Comparison** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source doesn't have predefined foreign key constraints. 
+The purpose of the **Reference by Data Comparison** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source does not have predefined foreign key constraints. 
 
-The data comparison is performed by comparing the values of the fields of two datasets at a time - dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
+The data comparison is performed by comparing the values of the fields of two datasets at a time — dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
 
 Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
 
@@ -171,7 +171,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin's input parameter is to allow controlling which field's data types should be considered for creating the relations. 
+The purpose of the ```fieldTypeIncludeList``` plugin input parameter is to allow controlling which field's data types should be considered for creating the relations. 
 
 By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
