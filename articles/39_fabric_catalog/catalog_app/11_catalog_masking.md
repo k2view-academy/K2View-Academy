@@ -32,6 +32,8 @@ The **CatalogMaskingField** Actor’s purpose is to mask a single field’s valu
   * The **flowName** is set to the Generator defined in the **catalog_classification_generators** MTable for this Classification.
   * If the given Generator includes parameters, they are also taken from the above MTable.
 
+Note: if the catalog_field_info MTable doesn’t exist or it exists but the field is missing, the value is passed ‘as is’ without masking.
+
 ### The Masking Property
 
 While the Classification and PII properties are added to the Catalog nodes by the Classifier plugins, the **Masking** property should be added manually when it is required to control the masking mechanism of some fields. 
