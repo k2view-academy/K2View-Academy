@@ -20,7 +20,7 @@ When the plugin finds a match based on field names, it evaluates the foreign key
 
 #### Matching Rules
 
-The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
+The following matching rules are applied by the plugin. Note that each of these rules is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
 - ```fieldNameIsIdAndPk``` — dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
 
@@ -96,11 +96,11 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   - The relation is created and its direction is random. 
 
 
-Note that ```sameFieldNamesNotPk``` rule to create relations between non-FK fields has been removed as of Fabric V8.3
+Note that the ```sameFieldNamesNotPk``` rule to create relations between non-FK fields has been removed as of Fabric V8.3
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin's input parameter is to allow controlling which field's data types should be considered for creating the relations. 
+The ```fieldTypeIncludeList``` plugins input parameter controls which field data types are considered when creating relations. 
 
 By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
 
