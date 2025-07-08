@@ -127,9 +127,9 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin input parameter is to allow controlling which field's data types should be considered for creating the relations. 
+The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when creating relations. 
 
-By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
+By default, this parameter is set to the STRING, INTEGER or REAL data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Queries Path
 
@@ -173,7 +173,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 The purpose of the ```fieldTypeIncludeList``` plugin input parameter is to allow controlling which field's data types should be considered for creating the relations. 
 
-By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
+By default, this parameter is set to the STRING, INTEGER or REAL data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Factor
 
