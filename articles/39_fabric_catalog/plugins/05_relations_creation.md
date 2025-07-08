@@ -91,7 +91,7 @@ The following matching rules are applied by the plugin. Note that each of these 
     </tbody>
     </table>
 
-- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
 
   - The relation is created and its direction is random. 
 
@@ -122,7 +122,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   * The relation *dataset2 refers to dataset1* is created.
 * ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-* ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+* ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
@@ -133,22 +133,22 @@ By default, this parameter is set to the STRING, INTEGER or REAL data type for t
 
 #### Queries Path
 
-The ```queriesPath``` plugin input parameter must be set with the path to the file with a list of queries to be analyzed. 
+The ```queriesPath``` plugin input parameter must be set to the path of the file containing the list of queries to be analyzed. 
 
 The file name format is: ```<Data Platform name>.sql```.
 
-When the ```queriesPath``` is not set or includes an invalid path, the plugin will throw an exception.  
+If the ```queriesPath``` is not set or contains an invalid path, the plugin throws an exception.  
 
 #### Analysis Mode
 
-Defines whether the queries are analyzed by Fabric's internal parser only, by LLM only, or first attempt to analyze by Fabric and in case of low results, analyze them by LLM. By default, ```analysisMode``` is set to ANTLR (Fabric's internal parser).
+This plugin input parameter controls how queries are analyzed: using Fabric's internal parser only, by an LLM only, or first by Fabric with fallback to the LLM if needed (when results are insufficient). By default, ```analysisMode``` is set to ANTLR (Fabric's internal parser).
 
 #### LLM Interface
 
-The ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface name. 
+The ```llmInterface``` parameter is optional. It allows overriding the project's default LLM interface to be used by the LLM plugin. This parameter should include the interface name. 
 
-- When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
-- Setting the ```llmInterface``` parameter is only applicable when the plugin invokes LLM (it happens if the ```analysisMode``` is set to either LLM or  ANTLR & LLM).
+- If the ```llmInterface``` parameter is not set in the plugin definition, the plugin searches for an LLM AI interface tagged as 'discovery'. If none of the LLM AI interfaces are tagged as 'discovery', it will use an interface tagged as 'default'.
+- Setting the ```llmInterface``` parameter is only applicable when the plugin invokes an LLM which occurs if the ```analysisMode``` parameter is set to either LLM or ANTLR & LLM.
 
 ## Reference by Data Comparison
 
@@ -166,7 +166,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   - The relation *dataset2 refers to dataset1* is created.
 - ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
+- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
