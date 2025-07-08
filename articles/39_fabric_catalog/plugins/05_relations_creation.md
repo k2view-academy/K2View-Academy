@@ -96,7 +96,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   - The relation is created and its direction is random. 
 
 
-Note that ```sameFieldNamesNotPk``` rule to create relations between non-FK fields has been removed in V8.3
+Note that ```sameFieldNamesNotPk``` rule to create relations between non-FK fields has been removed as of Fabric V8.3
 
 #### Field Type Include List
 
