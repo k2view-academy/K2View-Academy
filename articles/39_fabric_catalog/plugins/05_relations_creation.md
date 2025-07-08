@@ -16,11 +16,11 @@ The matching algorithm operates by comparing the field names of two datasets at 
 
 This plugin allows defining an exclusion list of field names (e.g., 'username' or 'age') and an exclusion list of field types (e.g., date, time, blob). The defined field names and types are excluded from the matching algorithm. 
 
-When the plugin finds a match by the field name, it evaluates the foreign key fields and direction using the matching rules described below. The *refersTo* relation direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule which defines a probability of the match's correctness. 
+When the plugin finds a match based on field names, it evaluates the foreign key fields and the direction of the relation using the matching rules described below. The *refersTo* relation direction is *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
 
 #### Matching Rules
 
-The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
+The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
 - ```fieldNameIsIdAndPk``` — dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
 
@@ -37,7 +37,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.customer_id (PK) and* *activity.customer_id* 
 
-- ```*commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+- ```*commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
 
   - The relation *dataset2 refers to dataset1* is created.
 
