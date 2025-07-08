@@ -22,6 +22,7 @@
 	<web><li><a href="/articles/03_logical_units/19_LU_population_order_view.md">Population Order View</a></li></web>
 	<web><li><a href="/articles/03_logical_units/20_LU_highlight_tables.md">Tables' Highlighting</a></li>
 	<web><li><a href="/articles/03_logical_units/21_big_schema_productivity_tips.md">Large Schema Productivity Tips</a></li><web>
+	<web><li><a href="/articles/03_logical_units/22_native_support_for_NoSQL.md">Native Support for NoSQL Document Storage</a></li><web>
 
 </ul>
 
