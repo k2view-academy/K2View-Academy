@@ -152,11 +152,11 @@ The ```llmInterface``` parameter is optional. It allows overriding the project's
 
 ## Reference by Data Comparison
 
-The purpose of the **Reference by Data Comparison** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by comparison of the data within the field's columns and to create the *refersTo* relations. This plugin is useful when a source does not have predefined foreign key constraints. 
+**Reference by Data Comparison** is a new plugin (introduced in Fabric V8.3) that examines data within data source fields to identify correlations using the probabilistic Bloom filter algorithm. Based on the analysis results, this plugin can establish FK relationships between datasets. 
 
-The data comparison is performed by comparing the values of the fields of two datasets at a time — dataset1 and dataset2. All fields of dataset2 are considered for analysis, while only the PK fields of dataset1are considered.  
+The data comparison is performed by comparing the values of the fields of two datasets at a time — dataset1 and dataset2. All fields in dataset2 are considered for analysis, while in dataset1 only the PK fields are used for this comparison.  
 
-Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
+Note that this plugin is inactive by default and must be manually activated if needed. 
 
 #### Matching Rules
 
@@ -171,10 +171,10 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 #### Field Type Include List
 
-The purpose of the ```fieldTypeIncludeList``` plugin input parameter is to allow controlling which field's data types should be considered for creating the relations. 
+The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when creating relations. 
 
 By default, this parameter is set to the STRING, INTEGER or REAL data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Factor
 
-Defines the score’s multiplication factor for data types other than GUID. By default, the factor is set to 0.85 in order to reduce the probability of a possible reference for the matches of the column, which have data types other than GUID.
+The factor refers to the score multiplication factor, applied only for calculating the score when comparing data types other than GUID. By default, the factor is set to 0.85 as it aims to reduce the probability of marking non-GUID columns as possible references as a potential match.
