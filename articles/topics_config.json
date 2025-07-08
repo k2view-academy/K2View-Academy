@@ -162,7 +162,7 @@
 					"display name": "Logical Units",
 					"sub-topics": [
 						{
-							"display name": "Concepts",
+							"display name": "LU Concepts",
 							"value": "03_logical_units"
 						},
 						{
