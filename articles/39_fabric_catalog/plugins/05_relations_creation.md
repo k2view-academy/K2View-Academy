@@ -102,25 +102,25 @@ Note that the ```sameFieldNamesNotPk``` rule to create relations between non-FK 
 
 The ```fieldTypeIncludeList``` plugins input parameter controls which field data types are considered when creating relations. 
 
-By default, it is set to STRING, INTEGER, REAL for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
+By default, this parameter is set to the STRING, INTEGER or REAL data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 ## Reference by Query Analysis
 
-The purpose of the **Reference by Query Analysis** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by analyzing JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, the datasets of this JOIN become candidates for creating the *refersTo* relations. 
+The purpose of the **Reference by Query Analysis** plugin (introduced in Fabric V8.3) is to identify possible foreign key references between datasets by analyzing JOIN operations in the queries of the input SQL file. Whenever a JOIN is found, its datasets are considered candidates for creating the *refersTo* relations. 
 
-The plugin then evaluates the candidate datasets using the matching rules described below. When one of the rules matches, a *refersTo* relation is created, with the direction being *childDataset refersTo parentDataset*. The relation is created with a score of the matching rule. 
+The plugin then evaluates the candidate datasets using the matching rules described below. When one of the rules matches, a *refersTo* relation is created, with the direction being *childDataset refersTo parentDataset*. The relation is created with a score of that matching rule. 
 
-Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. Audit file can be used to create an input SQL file for the plugin analysis. File transformation is required, to remove all information other than the SQL queries. This transformation can be performed by creating a Broadway flow in your project that will transform file to the required format. 
+Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. An audit file can be used for creating an input SQL file for the plugin analysis. However, the audit file must first be transformed to remove all information except the SQL queries. This transformation can be done by creating a Broadway flow in your project, which converts the file to the required format. 
 
-This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default. If needed, the plugin should be set to active. 
+This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be manually activated if needed. 
 
 #### Matching Rules
 
-The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
+The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
 * ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   * The relation *dataset2 refers to dataset1* is created.
-* ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+* ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
 * ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
   - The relation is created and its direction is random. 
@@ -160,11 +160,11 @@ Note that this plugin is inactive by default. If needed, the plugin should be se
 
 #### Matching Rules
 
-The following matching rules are applied by the plugin. Note that the rule is applied only if its score is **above** the plugin's threshold. Otherwise the rule is skipped.
+The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
 - ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   - The relation *dataset2 refers to dataset1* is created.
-- ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, but dataset1 has less PKs than dataset2.
+- ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
 - ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have an identical number of PKs.
   - The relation is created and its direction is random. 
