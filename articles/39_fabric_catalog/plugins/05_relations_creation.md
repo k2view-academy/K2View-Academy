@@ -4,7 +4,7 @@ The article describes plugins that create *refersTo* relations in the Catalog sc
 
 **The plugins are:**
 
-* [Reference by Name Comparison](05_relations_creation.md#reference-by-names-comparison) — identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
+* [Reference by Name Comparison](05_relations_creation.md#reference-by-name-comparison) — identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
 * [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) — identifies possible foreign key references between datasets by analyzing JOIN statements in the provided SQL file, and then creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
 * [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) — identifies possible foreign key references between datasets by analyzing data in fields' columns, and then creates the *refersTo* relations. This plugin is available starting from Fabric V8.3.
 
