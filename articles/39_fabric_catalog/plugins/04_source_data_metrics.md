@@ -59,7 +59,7 @@ This parameter defines the absolute threshold number of distinct values. If the 
 
 The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when checking for distinct values. 
 
-By default, it is set to STRING, INTEGER for this plugin. The valid values are: STRING, INTEGER, REAL, DATETIME, DATE, BOOLEAN.
+By default, this parameter is set to the STRING or INTEGER data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Field Name Include List
 
