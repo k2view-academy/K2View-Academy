@@ -4,13 +4,13 @@ The article describes plugins that create *refersTo* relations in the Catalog sc
 
 **The plugins are:**
 
-* [Reference by Names Comparison](05_relations_creation.md#reference-by-names-comparison) — identifies possible foreign key references between datasets by matching field names and create the *refersTo* relations.
-* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) — identifies possible foreign key references between datasets by analyzing the JOIN statements in the provided SQL file and create the *refersTo* relations. This plugin is available starting from Fabric V8.3.
-* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) — identifies possible foreign key references between datasets by analyzing data in the field's columns and create the *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by Name Comparison](05_relations_creation.md#reference-by-names-comparison) — identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
+* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) — identifies possible foreign key references between datasets by analyzing JOIN statements in the provided SQL file, and then create corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) — identifies possible foreign key references between datasets by analyzing data in fields' columns, and then create the *refersTo* relations. This plugin is available starting from Fabric V8.3.
 
-## Reference by Names Comparison
+## Reference by Name Comparison
 
-The purpose of the **Reference by Names Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets based on matching the field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
+The purpose of the **Reference by Name Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets based on matching the field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and if needed, it should be set to active. 
 
 The matching algorithm operates by comparing the field names of two datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and the addition of the table name in case the field name is 'ID'. For example, the field names customer.ID, CUSTOMER_ID and CustomerID will be normalized to the same value — customerid.
 
