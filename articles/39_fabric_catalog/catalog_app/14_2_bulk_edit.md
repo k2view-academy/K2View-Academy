@@ -11,7 +11,7 @@ Manually updating multiple Catalog entities can be time-consuming and error-pron
 
 This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
 
-This article explains how to  edit the properties in bulk the bulk. Click [here](14_1_bulk_creation.md) to learn how to create and view bulk.
+This article explains how to edit properties in bulk. Click [here](14_1_bulk_creation.md) to learn how to create and view bulk.
 
 ### How Can I Edit a Bulk?
 
