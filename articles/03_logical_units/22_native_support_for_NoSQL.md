@@ -5,23 +5,50 @@
 Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Storage (such as MongoDB or CouchBase), including the following:
 
 * Discovery job can run on an interface of MongoDB or CouchBase instance, once the respective K2exchange connector has been installed in the project. Then the Catalog is created based on the discovered document hierarchy. (This feature is already supported prior to 8.3)
-
 * The Web Studio’s Interface explorer can now present the Document’s complex structures such as nested hierarchy levels and arrays of primitives.
-
 * The Logical Unit can now be created based on the Document’s metadata retrieved from the Catalog, after discovery has run on it.
 
   * The nested hierarchy levels are then created as LU tables with a referential link to their respective parent level.
   * When a complex structure on any level has a non-unique name, the names of the parent levels are concatenated to it, after 3 underscores. E.g. ```emailInfo___emergencyContacts```.
-
 * The LU tables are created with the following system-generated fields:
 
   * ```_docId``` is a unique ID added to each LU table. Its purpose is to uniquely identify the row of an instance, when splitting the document and composing it back.
   * ```_parentDocId``` is added to all LU tables except for the root table, and it is used for creating the referential link from the nested structure to its parent structure.
   * ```_value``` is only added to LU tables that represent an array of primitives, to keep the element’s value.
   * ```_docHints``` is a field used internally by Fabric to manage the composition of the original Document.
-
 * The root table population is the only population that reads data from the source (the Document).
-
 * The populations created for such LU tables include a dedicated **DocumentQuery** actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the actor takes the respective part of the original Document and breaks it into the fields, populated in the LU table.
 
-  ​
+### Step 1: Running Discovery on Document DB
+
+Start from defining the interface for the Document DB (including the installation of the required connector) and running discovery on it. 
+
+The below image illustrates the **employee** document in MongoDB which is represented by a **dataset** entity in the Catalog. The additional nesting levels of the document are presented by the **classes** and **fields** entities of the Catalog. 
+
+![](images/document_storage_in_catalog.png)
+
+
+
+### Step 2: Document DB Presentation in Interface Explorer
+
+Once the discovery of the Document DB is completed, the interface is displayed in the Studio's Interface Explorer. The dataset which represents an object shows graphically the nested levels of hierarchy, such as: embedded objects, arrays of objects and arrays of primitives. 
+
+The below image illustrates the nested levels with their graphical indication.
+
+![](images/document_storage_in_studio.png)
+
+### Step 3: LU Creation Based on Document DB
+
+The Logical Unit can be created based on the Document DB, using the metadata retrieved from the Catalog. The nested hierarchy levels are then created as LU tables.
+
+Start the LU creation by the right click on the dataset which represents the document and clicking 'Add Table to Schema with Descendants'.
+
+![](images/document_storage_create_lu.png)
+
+The following message is then displayed. Click Yes to expand all the nested complex fields and create a relational LU schema.
+
+![](images/document_storage_expand_msg.png)
+
+The LU Schema is created:
+
+![](images/document_storage_lu_schema.png)
