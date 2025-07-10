@@ -154,7 +154,7 @@ The ```llmInterface``` parameter is optional. It allows overriding the project's
 
 **Reference by Data Comparison** is a new plugin (introduced in Fabric V8.3) that examines data within data source fields to identify correlations using the probabilistic Bloom filter algorithm. Based on the analysis results, this plugin can establish FK relationships between datasets. 
 
-The data comparison is performed by comparing the values of the fields of two datasets at a time — dataset1 and dataset2. All fields in dataset2 are considered for analysis, while in dataset1 only the PK fields are used for this comparison.  
+The data comparison is performed by comparing field values of two datasets at a time — dataset1 and dataset2. All fields in dataset2 are considered for analysis, while only the PK fields in dataset1 are used for this comparison. As a result of the data comparison, the calculated score represents the probability of a match between each pair of columns from two datasets.   
 
 Note that this plugin is inactive by default and must be manually activated if needed. 
 
