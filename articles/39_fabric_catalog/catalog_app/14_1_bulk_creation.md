@@ -4,16 +4,16 @@
 
 Manual update of multiple Catalog entities can be time-consuming and error-prone, especially when applying the same change — such as adding a new property — to many entities. Starting from Fabric V8.3, the Catalog includes **Bulk Creation and Edit** capabilities for improving efficiency and usability of manual procedures.
 
-**Why should I create a bulk?**
+**Why Should I Create a Bulk of Entities?**
 
-- For adding a new property to several entities at once.
-- For updating or deleting an existing property for multiple entities.
+- For adding a new property to several entities simultaneously.
+- For updating or removing an existing property from multiple entities.
 
-This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
+This capability streamlines tasks that are often performed by database administrators or managers who need to make large-scale changes easily and consistently.
 
-This article explains how to create and view the bulk. Click [here](14_2_bulk_edit.md) to learn how to edit the properties in bulk.
+This article explains how to create and view a bulk of entities. Click [here](14_2_bulk_edit.md) to learn how properties can be bulk-edited.
 
-### How Can I Create a Bulk?
+### How Can I Add Entities to a Bulk Group?
 
 1. Search for the nodes (e.g., Catalog fields) using the [Catalog search](08_search_catalog.md).
 2. Select the required nodes and click on the **Add to bulk** <img src="../images/add_to_bulk_icon.png" style="zoom:100%;"> icon. 
