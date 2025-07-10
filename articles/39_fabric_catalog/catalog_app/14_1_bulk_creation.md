@@ -28,8 +28,8 @@ To view entities in a bulk group, click the <img src="../images/bulk_icon.png" >
 
 ![](../images/mainMenuBulk.png)
 
-* When bulk is empty, the icon is black
-* When bulk is not empty, the icon is orange.
+* The icon is black when the bulk is empty.
+* An orange icon indicates that the bulk includes one or more entities.
 
 ![](../images/viewBulk.png)
 
