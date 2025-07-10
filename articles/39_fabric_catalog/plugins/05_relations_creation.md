@@ -177,4 +177,4 @@ By default, this parameter is set to the STRING, INTEGER or REAL data type for t
 
 #### Factor
 
-The factor refers to the score multiplication factor, applied only for calculating the score when comparing data types other than GUID. By default, the factor is set to 0.85 as it aims to reduce the probability of marking non-GUID columns as possible references as a potential match.
+The factor refers to score multiplication, applied only when comparing columns defined by non-GUID data types. By default, the factor is set to 0.85 as it aims to reduce the score of potential matches between non-GUID columns.
