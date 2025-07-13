@@ -21,7 +21,7 @@ Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Sto
 
 ### Step 1: Running Discovery on Document DB
 
-Start from defining the interface for the Document DB (including the installation of the required connector) and running discovery on it. 
+Start from defining the interface for the Document DB, installing the required connector and running discovery on this interface. 
 
 The below image illustrates the **employee** document in MongoDB which is represented by a **dataset** entity in the Catalog. The additional nesting levels of the document are presented by the **classes** and **fields** entities of the Catalog. 
 
