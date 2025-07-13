@@ -4,13 +4,13 @@ The article describes plugins that create *refersTo* relations in the Catalog sc
 
 **The plugins are:**
 
-* [Reference by Name Comparison](05_relations_creation.md#reference-by-name-comparison) — identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
-* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) — identifies possible foreign key references between datasets by analyzing JOIN statements in the provided SQL file, and then creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
-* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) — identifies possible foreign key references between datasets by analyzing data in fields' columns, and then creates the *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by Name Comparison](05_relations_creation.md#reference-by-name-comparison) - identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
+* [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) - identifies possible foreign key references between datasets by analyzing JOIN statements in the provided SQL file, and then creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) - identifies possible foreign key references between datasets by analyzing data in fields' columns, and then creates the *refersTo* relations. This plugin is available starting from Fabric V8.3.
 
 ## Reference by Name Comparison
 
-The purpose of the **Reference by Name Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets by matching field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be manually activated if needed. 
+The purpose of the **Reference by Name Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets by matching field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed.
 
 The matching algorithm operates by comparing the field names of two datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and the addition of the table name in case the field name is 'ID'. For example, the field names customer.ID, CUSTOMER_ID and CustomerID will be normalized to the same value — customerid.
 
@@ -22,22 +22,22 @@ When the plugin finds a match based on field names, it evaluates the foreign key
 
 The following matching rules are applied by the plugin. Note that each of these rules is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
-- ```fieldNameIsIdAndPk``` — dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
+- ```fieldNameIsIdAndPk``` - dataset1 has a PK field **id** and dataset2 has a field **dataset1id** (normalized).
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.ID (PK) and* *activity.customer_id*
 
-- ```fieldNameIsIdAndNotPk``` — dataset1 has a field called **id** and dataset2 has a field **dataset1id** (normalized), both are non-PK.
+- ```fieldNameIsIdAndNotPk``` - dataset1 has a field called **id** and dataset2 has a field **dataset1id** (normalized), both are non-PK.
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.ID (non-PK) and* *activity.customer_id*
 
-- ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field with the same name (normalized).
+- ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field with the same name (normalized).
 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.customer_id (PK) and* *activity.customer_id* 
 
-- ```*commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
+- ```*commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
 
   - The relation *dataset2 refers to dataset1* is created.
 
@@ -91,7 +91,7 @@ The following matching rules are applied by the plugin. Note that each of these 
     </tbody>
     </table>
 
-- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
 
   - The relation is created and its direction is random. 
 
@@ -112,17 +112,17 @@ The plugin then evaluates the candidate datasets using the matching rules descri
 
 Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. An audit file can be used for creating an input SQL file for the plugin analysis. However, the audit file must first be transformed to remove all information except the SQL queries. This transformation can be done by creating a Broadway flow in your project, which converts the file to the required format. 
 
-This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be manually activated if needed. 
+This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed. 
 
 #### Matching Rules
 
 The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
-* ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
+* ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   * The relation *dataset2 refers to dataset1* is created.
-* ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
+* ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-* ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+* ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
@@ -154,19 +154,19 @@ The ```llmInterface``` parameter is optional. It allows overriding the project's
 
 **Reference by Data Comparison** is a new plugin (introduced in Fabric V8.3) that examines data within data source fields to identify correlations using the probabilistic Bloom filter algorithm. Based on the analysis results, this plugin can establish FK relationships between datasets. 
 
-The data comparison is performed by comparing field values of two datasets at a time — dataset1 and dataset2. All fields in dataset2 are considered for analysis, while only the PK fields in dataset1 are used for this comparison. The data comparison results with a calculated score that represents the probability of a match between each pair of columns from two datasets.   
+The data comparison is performed by comparing field values of two datasets at a time - dataset1 and dataset2. All fields in dataset2 are considered for analysis, while only the PK fields in dataset1 are used for this comparison. The data comparison results with a calculated score that represents the probability of a match between each pair of columns from two datasets.   
 
-Note that this plugin is inactive by default and must be manually activated if needed. 
+Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed. 
 
 #### Matching Rules
 
 The following matching rules are applied by the plugin. Note that the rule is applied only if its score **exceeds** the plugin's threshold; otherwise, the rule is skipped.
 
-- ```singleFieldPkAndNotPk``` — dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
+- ```singleFieldPkAndNotPk``` - dataset1 has a single PK field and dataset2 has a non-PK field, while both of these fields are part of the same JOIN statement.
   - The relation *dataset2 refers to dataset1* is created.
-- ```commonFieldsInBothPk``` — common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
+- ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-- ```sameFieldNamesPk``` — common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List

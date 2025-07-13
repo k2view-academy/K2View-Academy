@@ -11,7 +11,7 @@ The product includes 2 LLM-based plugins that accommodate for the following use 
 - Use Case 1: **LLM Profiling** - profiling and classification of columns with sensitive / PII data. 
 - Use Case 2: **LLM Description** - a creation of each column's short description.
 
-Both of these plugins are inactive by default and should be set to active, when needed. 
+Both of these plugins are inactive by default and must be activated via Discovery Pipeline if needed. 
 
 The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
