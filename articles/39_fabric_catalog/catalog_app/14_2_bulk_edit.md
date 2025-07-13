@@ -16,6 +16,7 @@ This article explains how to edit properties in bulk. Click [here](14_1_bulk_cre
 
 1. To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.  
 2. Then click the <img src="../images/bulk_full.png" > icon on the menu bar to view the bulk.
+   * An orange icon indicates that the bulk includes one or more entities.
 3. To **add** a new property:
    * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
    * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add the new property to the **Common properties list**.
@@ -25,6 +26,8 @@ This article explains how to edit properties in bulk. Click [here](14_1_bulk_cre
    * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add it to the **Common properties list**.
 6. Click **Submit** when bulk edit is completed.
 
-Note that all updates are aggregated on the client side only. The **Save** button should be clicked in the menu bar to trigger saving of all the changes together and creation of a new version. The Catalog will then exit the edit mode.
+Note that clicking **Submit & Clear bulk** submits the bulk changes and clears the bulk in one action. This is useful when an additional bulk of entities needs to be created and bulk-edited. 
+
+All updates are aggregated on the client side only. The **Save** button should be clicked in the menu bar to trigger saving of all the changes together and creation of a new version. The Catalog will then exit the edit mode.
 
 ![](../images/editBulk.gif)
