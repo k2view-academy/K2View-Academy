@@ -20,8 +20,8 @@ The columns of this tab are:
 * **Classification**, which defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
 
 * **Type**, which can be either **Field Name** or **Field Value**:
-  * Entries defined as the **Field Name** type are used by the *Metadata Regex Classifier* plugin.
-  * Entries defined as the **Field Value** type are used by the *Data Regex Classifier* plugin.
+  * Entries defined as **Field Name** type are used by the *Metadata Regex Classifier* plugin.
+  * Entries defined as **Field Value** type are used by the *Data Regex Classifier* plugin.
 * **Regular Expression**, which defines the expression applied on the field, either its name or its value, depending on the **Type**.
 * **Score**, which defines the confidence level that the current rule is true. 
 
