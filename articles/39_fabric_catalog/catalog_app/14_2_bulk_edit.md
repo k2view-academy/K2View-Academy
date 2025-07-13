@@ -1,10 +1,10 @@
-# Bulk Edit
+# Bulk Edit of Catalog Entities
 
 ### Overview
 
-Manually updating multiple Catalog entities can be time-consuming and error-prone, especially when you need to apply the same changes - such as adding a new property - to many entities. To improve efficiency and usability, in V8.3 the Catalog provides a **Bulk Creation and Edit** capability. 
+Manual update of multiple Catalog entities is often slow and prone to errors, especially when the same change must be applied to many of them. Starting from Fabric V8.3, the Catalog includes **Bulk Creation and Edit** capabilities for improving efficiency and usability of manual procedures.
 
-**Why should I create a bulk?**
+**Why Should I Bulk-Edit Entities?**
 
 - For adding a new property to several entities at once.
 - For updating or deleting an existing property for multiple entities.
