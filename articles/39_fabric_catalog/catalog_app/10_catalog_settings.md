@@ -1,13 +1,13 @@
 # Catalog Settings
 
-The purpose of the Settings tab in the Catalog application is to enable viewing and editing various Catalog configurations. The Catalog includes product settings that can be updated to accommodate the Project's needs. The updates are saved in the project. 
+The purpose of the Settings tab in the Catalog application is to enable viewing and editing of various configurations. The Catalog includes product settings that can be updated to accommodate the Project's needs. The updates are saved in the project. 
 
 The Settings tab includes the following sections:
 
 * [Classifier Regex](10_catalog_settings.md#classifier-regex-tab)
 * [PII & Masking](10_catalog_settings.md#pii--masking-tab)
-* [Sequences](10_catalog_settings.md#sequences-tab), available from V8.1
-* [Discovery Pipeline](13_discovery_pipeline_settings.md), available from V8.2
+* [Sequences](10_catalog_settings.md#sequences-tab), available from Fabric V8.1
+* [Discovery Pipeline](13_discovery_pipeline_settings.md), available from Fabric V8.2
 
 ## Classifier Regex Tab
 
