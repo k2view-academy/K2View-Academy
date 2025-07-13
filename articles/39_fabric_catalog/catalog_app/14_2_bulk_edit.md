@@ -6,8 +6,7 @@ Manual update of multiple Catalog entities is often slow and prone to errors, es
 
 **Why Should I Bulk-Edit Entities?**
 
-- For adding a new property to several entities at once.
-- For updating or deleting an existing property for multiple entities.
+- For simultaneous editing, adding or deleting of multiple entities.
 
 This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
 
