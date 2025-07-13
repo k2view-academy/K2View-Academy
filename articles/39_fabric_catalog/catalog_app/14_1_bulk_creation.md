@@ -16,7 +16,7 @@ This article explains how to create and view a bulk of entities. Click [here](14
 ### How Can I Add Entities to a Bulk Group?
 
 1. Search for the nodes (e.g., Catalog fields) using the [Catalog search](08_search_catalog.md).
-2. Select the required nodes and click on the <img src="../images/add_to_bulk_icon.png" style="zoom:100%;"> **Add to bulk** icon. 
+2. Select the required nodes and click the <img src="../images/add_to_bulk_icon.png" style="zoom:100%;"> **Add to bulk** icon. 
 3. Once the entity has been added to the bulk, the <img src="../images/bulk_icon.png" > icon appears next to it (in the Name column of the Search results screen), indicating that the entity is now part of the bulk.
 
 ![](../images/search_bulk.png)
@@ -24,7 +24,7 @@ This article explains how to create and view a bulk of entities. Click [here](14
 
 ### How Can I View Entities in a Bulk Group?
 
-To view entities in a bulk group, click the <img src="../images/bulk_icon.png" > icon on the menu bar:
+To view entities in a bulk group, click the <img src="../images/bulk_icon.png" > icon in the menu bar:
 
 ![](../images/mainMenuBulk.png)
 
