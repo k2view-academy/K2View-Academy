@@ -10,9 +10,11 @@ Manual update of multiple Catalog entities is often slow and prone to errors, es
 
 This capability streamlines tasks often performed by database administrators or managers that need to make large-scale changes with consistency and ease.
 
-This article explains how to edit properties in bulk. Click [here](14_1_bulk_creation.md) to learn how to create and view bulk.
+This article explains how to edit properties using the Bulk Edit capability. Click [here](14_1_bulk_creation.md) to learn how to create and view a bulk of entities.
 
-### How Can I Edit a Bulk?
+### How Can I Edit Entities in a Bulk Group?
+
+The Common properties list displays the properties that are shared across all bulk-selected entities. Bulk-editing of properties is performed using this pane.
 
 1. To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.  
 2. Then click the <img src="../images/bulk_full.png" > icon on the menu bar to view the bulk.
