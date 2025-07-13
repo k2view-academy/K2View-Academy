@@ -14,10 +14,10 @@ This article explains how to edit properties using the Bulk Edit capability. Cli
 
 ### How Can I Edit Entities in a Bulk Group?
 
-The Common properties list displays the properties that are shared across all bulk-selected entities. Bulk-editing of properties is performed using this pane.
+The **Common properties list** displays the properties that are shared across all bulk-selected entities. Bulk-editing of properties is performed using this pane.
 
-1. To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.  
-2. Then click the <img src="../images/bulk_full.png" > icon on the menu bar to view the bulk.
+1. To initiate the bulk-edit activity, it is required to switch the Catalog to an edit mode by clicking **Actions > Edit Catalog** in the menu bar.  
+2. Next, click the <img src="../images/bulk_full.png" > icon located in the menu bar to view the **bulk** of entities.
    * An orange icon indicates that the bulk includes one or more entities.
 3. To **add** a new property:
    * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
