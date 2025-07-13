@@ -16,7 +16,7 @@ This article explains how to edit properties in bulk. Click [here](14_1_bulk_cre
 ### How Can I Edit a Bulk?
 
 1. To start the manual overrides, click **Actions > Edit Catalog** in the menu bar.  
-2. Then click the <img src="../images/bulk_icon.png" > icon on the menu bar to view the bulk.
+2. Then click the <img src="../images/bulk_full.png" > icon on the menu bar to view the bulk.
 3. To **add** a new property:
    * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
    * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add the new property to the **Common properties list**.
