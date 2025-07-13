@@ -33,7 +33,7 @@ To view entities in a bulk group, click the <img src="../images/bulk_icon.png" >
 
 ![](../images/viewBulk.png)
 
-When the Catalog is in Edit mode, editing via the Bulk Edit screen is enabled. However, when the Catalog is in non-Edit mode, only viewing the bulk and removing entities from it is possible; properties cannot be modified in this mode. 
+When the Catalog is in edit mode, editing via the Bulk Edit screen is enabled. However, when the Catalog is in non-edit mode, only viewing the bulk and removing entities from it is possible; properties cannot be modified in this mode. 
 
 The **Common properties list** displays the properties that are shared across all bulk-selected entities. If a property's values differ across the bulk-selected entities, only its name is displayed — without a value.
 
