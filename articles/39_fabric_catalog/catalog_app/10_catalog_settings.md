@@ -65,7 +65,7 @@ Upon invocation of a Catalog Masking actor — e.g., during table population —
 
 <img src="../images/settings_masking_edit.png"  />
 
-When selecting an actor or a flow, its respective input parameters are dynamically added underneath it. 
+Selecting an actor or a flow dynamically adds its corresponding input parameters underneath it. 
 
 **Guidelines for Creating a Masking Flow**
 
