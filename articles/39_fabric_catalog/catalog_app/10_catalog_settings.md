@@ -59,7 +59,7 @@ In this tab, each classification can have only one definition (row). Note that y
 
 #### Masking Setup Guidelines
 
-Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
+Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
 
 Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field with a given Classification. For instance, if a field is classified as a Social Security Number, you should set up the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
 
@@ -107,7 +107,7 @@ The **Sequences** tab allows to set up the sequences that can be generated in a 
 To create a sequence: 
 
 * Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
-* Note that the **Generator** is pre-populated with the [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
+* Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
 * The **sequenceId** parameter of the **Sequence.actor** is populated with the same value that is stated in the **Sequence Name**, when it is typed for the first time. Later, each one of them can be changed to a different value, if needed.
 
 <img src="../images/settings_seq.png" />
