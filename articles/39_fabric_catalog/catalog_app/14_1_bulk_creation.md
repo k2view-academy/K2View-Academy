@@ -31,8 +31,13 @@ To view entities in a bulk group, click the <img src="../images/bulk_icon.png" >
 * The icon is black when the bulk is empty.
 * An orange icon indicates that the bulk includes one or more entities.
 
+The Bulk Edit screen displays a list of entities (their name and path) that were gathered to a bulk group. 
+
+The **Common properties list** displays the properties that are shared across all bulk-selected entities. If a property's values differ across the bulk-selected entities, only its name is displayed - without a value. 
+
+When the Catalog is in a regular, non-edit mode, only viewing the bulk and removing entities from it is possible; properties cannot be modified in this mode. 
+
+When the Catalog is in edit mode, editing via the Bulk Edit screen is enabled - as described [here](14_2_bulk_edit.md). 
+
 ![](../images/viewBulk.png)
 
-The **Common properties list** displays the properties that are shared across all bulk-selected entities. If a property's values differ across the bulk-selected entities, only its name is displayed - without a value.
-
-When the Catalog is in edit mode, editing via the Bulk Edit screen is enabled - as described [here](14_2_bulk_edit.md). However, when the Catalog is in non-edit mode, only viewing the bulk and removing entities from it is possible; properties cannot be modified in this mode. 
