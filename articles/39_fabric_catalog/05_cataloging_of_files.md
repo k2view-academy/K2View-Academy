@@ -30,28 +30,29 @@ More details about the implementation steps can be learned further in this artic
 
 Once the Catalog is created based on files, a process can be defined to receive the files and mask them.
 
-To illustrate the **File Cataloging** E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, AVRO and HTTP formats. Instructions on how to use the extension can be found in its README file.
+To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, AVRO and HTTP formats. Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Flows
 
 Due to the existence of multiple file formats, applying transformation is required for performing the file cataloging process. Transformation flows are created using Broadway flows that should be placed in the Project tree (under the Shared Objects) and deployed. 
 
-To better understand the concept of **transformation flow** and its pivotal use in the file cataloging solution, below is a description of each expected flow:
+To better understand the concept of a **transformation flow** and its pivotal use in the file cataloging solution, below is a description of each expected flow:
 
-1. **Get Metadata** is the first transformation flow, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
+**Get Metadata** is the first transformation flow, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
 
-   * Metadata may be based on the schema definition file(s), if they are provided. Two dedicated actors are provided for this use case: **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format and **AvroSchemaToMetadata** to transform the Avro schema to the Catalog metadata format (Avro extension should be installed to use this actor).
-   * When no schema definition file exists, the metadata is expected to be discovered from a data sample. In this case, the output Catalog metadata will only include the dataset name with its corresponding schema. The fields and their properties will then be inferred from the sample data.
-   * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
+* Metadata may be based on the schema definition file(s), if they are provided. Two dedicated actors are provided for this use case:
+  * **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format.
+  * **AvroSchemaToMetadata** to transform the Avro schema to the Catalog metadata format (Avro extension should be installed to use this actor).
+* When no schema definition file exists, the metadata is expected to be discovered from a data sample. In this case, the output Catalog metadata will only include the dataset name with its corresponding schema. The fields and their properties will then be inferred from the sample data.
+* A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
+**Get Files List** is the second transformation flow, and it returns a mapping between each dataset and its corresponding sample files. This flow is optional and only required when sample files are provided.
 
-2. **Get Files List** is the second transformation flow, and it returns a mapping between each dataset and its corresponding sample files. This flow is optional and only required when sample files are provided.
+* The flow should return a list of relevant data sample files (including the file's full path) per each dataset. Several sample files can be provided for the same dataset. However, one sample file cannot include data for more than one dataset. 
 
-   * The flow should return a list of relevant data sample files (including the file's full path) per each dataset. Several sample files can be provided for the same dataset. However, one sample file cannot include data for more than one dataset. 
+**Get Data Snapshot** is the third transformation flow, and it returns the sample file's data. This flow is optional and only required when sample files are provided. If **Get Files List** is defined, this flow should be defined as well.
 
-3. **Get Data Snapshot** is the third transformation flow, and it returns the sample file's data. This flow is optional and only required when sample files are provided. If **Get Files List** is defined, this flow should be defined as well.
-
-   * For each file, the flow should return a result set that represents one dataset row. 
+* For each file, the flow should return a result set that represents one dataset row. 
 
 When creating your own flows, it is recommended to start from the sample flows provided in the *File Cataloging - Demo* extension and customize them to fit your needs. Keep in mind to maintain the flow's external input and output parameters as defined in the example flows that appear in the demo.
 
