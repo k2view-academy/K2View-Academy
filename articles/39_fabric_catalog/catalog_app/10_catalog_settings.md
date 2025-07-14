@@ -71,7 +71,7 @@ Selecting an actor or a flow dynamically adds its corresponding input parameters
 
 The first input parameter of a masking flow (or a custom actor) — selected as a Generator — is regarded as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden (and not dynamically added) when a masking flow is selected in the above Masking setup screen. This is applicable only for an input parameter of Link or External type. 
 
-Therefore, when creating a masking flow, its first input should be named 'value', even if this flow doesn't need to receive any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
 
 Below is a masking flow sample:
 
@@ -85,12 +85,12 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 #### Advanced Masking Settings
 
-The purpose of the Advanced Masking Settings pop-up window is to allow the setting-up of additional masking parameters. The settings included in this window are:
+The purpose of the Advanced Masking Settings pop-up window is to allow the setting-up of additional masking parameters. The settings included in this window are as follows:
 
-* **Masking indicators** - determine the masking behavior during a flow run. They can be set either per population via the Catalog Masking Actor's inputs or per Classification via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the setting of these indicators on the Catalog Masking Actor - for all the fields with the same Classification.
-* **Formatter Name and Parameters** - set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
-* **Pre-Execution Logic** - an actor or a flow to be executed by the Catalog Masking Actor. 
-* **Property Alias Map** - establish the mapping between the Catalog's property and an input parameter of the attached Masking Actor. These mappings are created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties, by that to improve the quality of the generated value.
+* **Masking indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
+* **Formatter Name and Parameters** — these are set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
+* **Pre-Execution Logic** — an actor or a flow to be executed by the Catalog Masking Actor. 
+* **Property Alias Map** — establishes mapping between the Catalog's property and an input parameter of the attached Masking Actor. These mappings are created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties, by that to improve the quality of the generated value.
 
 <img src="../images/settings_masking_advanced.png" />
 
