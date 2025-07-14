@@ -27,7 +27,7 @@ The columns of this tab are:
 
 Each **Classification** can have several definitions, with either the same or different **Types**.
 
-Using this tab, you can either edit existing definitions or add new ones. The Classification value can be either new or selected from the list.
+Using this tab, you can either edit existing definitions or add new ones. The Classification value can be either newly entered or selected from the list.
 
 Once the **Save** button is clicked, the **metadata_profiling** and **data_profiling** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
