@@ -22,8 +22,8 @@ Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > i
 The **Common properties list** displays the properties that are shared across all bulk-selected entities. Bulk-editing of properties is performed using this pane, as follows:
 
 1. To **add** a new property:
-   * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
-   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add the new property to the **Common properties list**.
+   * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon on the **Common Properties list** pane and populate the **Name** and **Value** fields in the **Edit property** sub-section that opens below. 
+   * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the new property is added to the **Common properties list**.
 2. To **delete** a property, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon.
 3. To **edit** an existing property:
    * Click the property in the Common properties list and update its **Value** and **Notes** fields. 
