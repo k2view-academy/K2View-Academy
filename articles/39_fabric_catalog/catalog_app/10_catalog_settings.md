@@ -55,13 +55,13 @@ Note that the **Consistent using seed** value is only available when the selecte
 
 Click [here](/articles/41_masking/02_data_masking_flow.md) for more information about data consistency.
 
-In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
+In the **PII & Masking** tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
 
 #### Masking Setup Guidelines
 
-Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
+Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (which includes PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
 
-Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field with a given Classification. For instance, if a field is classified as a Social Security Number, you should set up the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
+Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field associated with a given Classification. For instance, if a field is classified as a Social Security Number, you should configure the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
 
 <img src="../images/settings_masking_edit.png"  />
 
@@ -71,7 +71,7 @@ Selecting an actor or a flow dynamically adds its corresponding input parameters
 
 The first input parameter of a masking flow (or a custom actor) — selected as a Generator — is regarded as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden (and not dynamically added) when a masking flow is selected in the above Masking setup screen. This is applicable only for an input parameter of Link or External type. 
 
-Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This ensures that the first configuration parameter of the selected Generator is not hidden in the Masking setup screen, as explained above. 
 
 Below is a masking flow sample:
 
