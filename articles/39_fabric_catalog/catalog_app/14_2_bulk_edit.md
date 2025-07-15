@@ -27,8 +27,8 @@ The **Common properties list** displays the properties that are shared across al
 2. To **delete** a property from the **Common Properties list**, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon next to the property.
 3. To **edit** an existing property:
    * Click the property in the **Common properties list** and update its **Value** field in the **Edit property** sub-section. 
-   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add it to the **Common properties list**.
-4. Click **Submit** when bulk edit is completed.
+   * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the edited property is updated in the **Common properties list**.
+4. Click **Submit** to complete the bulk-edit activity.
 
 Note that clicking **Submit & Clear bulk** submits the bulk changes and clears the bulk in one action. This is useful when an additional bulk of entities needs to be created and bulk-edited. 
 
