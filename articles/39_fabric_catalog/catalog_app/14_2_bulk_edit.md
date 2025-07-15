@@ -24,9 +24,9 @@ The **Common properties list** displays the properties that are shared across al
 1. To **add** a new property:
    * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon on the **Common Properties list** pane and populate the **Name** and **Value** fields in the **Edit property** sub-section that opens below. 
    * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the new property is added to the **Common properties list**.
-2. To **delete** a property, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon.
+2. To **delete** a property from the **Common Properties list**, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon next to the property.
 3. To **edit** an existing property:
-   * Click the property in the Common properties list and update its **Value** and **Notes** fields. 
+   * Click the property in the **Common properties list** and update its **Value** field in the **Edit property** sub-section. 
    * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add it to the **Common properties list**.
 4. Click **Submit** when bulk edit is completed.
 
