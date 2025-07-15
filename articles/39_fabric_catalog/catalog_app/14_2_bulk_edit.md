@@ -30,7 +30,7 @@ The **Common properties list** displays the properties that are shared across al
    * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the edited property is updated in the **Common properties list**.
 4. Click **Submit** to complete the bulk-edit activity.
 
-Note that clicking **Submit & Clear bulk** submits the bulk changes and clears the bulk in a single action. This is useful when there is a need to create and edit another bulk of entities. 
+Note that clicking **Submit & Clear bulk** applies the bulk changes and clears the bulk in a single action. This is useful when there is a need to create and edit another bulk of entities. 
 
 All updates are aggregated on the client side only. To save all changes and create a new version, click the **Save** button in the menu bar. The Catalog will then exit the edit mode.
 
