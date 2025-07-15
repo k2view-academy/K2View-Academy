@@ -1,6 +1,6 @@
 # Catalog Settings
 
-The purpose of the Settings tab in the Catalog application is to enable viewing and editing of various configurations. The Catalog includes product settings that can be updated to accommodate the Project's needs. The updates are saved in the project. 
+The purpose of the Settings tab in the Catalog application is to enable viewing and editing of various configurations. The Catalog includes product settings that can be updated to suite the project's needs. These updates are saved within the project. 
 
 The Settings tab includes the following sections:
 
@@ -11,7 +11,7 @@ The Settings tab includes the following sections:
 
 ## Classifier Regex Tab
 
-The **Classifier Regex** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
+The **Classifier Regex** tab enables viewing and updating of the regular expression rules used by the built-in Profiling plugins: *Data Regex Classifier* and *Metadata Regex Classifier*.
 
 ![](../images/settings_regex.png)
 
@@ -22,7 +22,7 @@ The columns of this tab are:
 * **Type** — can be either **Field Name** or **Field Value**:
   * Entries defined as **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * Entries defined as **Field Value** type are used by the *Data Regex Classifier* plugin.
-* **Regular Expression** — defines the expression applied on the field, either its name or its value, depending on the **Type**.
+* **Regular Expression** — specifies the expression applied to the field, either to its name or its value, depending on the **Type**.
 * **Score** — defines the confidence level that the current rule is true. 
 
 Each **Classification** can have several definitions, with either the same or different **Types**.
