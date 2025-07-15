@@ -12,9 +12,9 @@ This article explains how to edit properties using the Bulk Edit capability. Cli
 
 ### How Can I Edit Entities in a Bulk Group?
 
-To enable the bulk-edit activity, it is required to switch the Catalog to an edit mode by clicking **Actions > Edit Catalog** in the menu bar.  
+To enable the bulk-edit activity, it is required to switch the Catalog to edit mode by selecting **Actions > Edit Catalog** in the menu bar.  
 
-Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > icon located in the menu bar.
+Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > icon in the menu bar.
 
 - An orange icon indicates that the bulk includes one or more entities.
 - If the icon is black, the bulk group is empty. Then the bulk should be first created, as explained [here](14_1_bulk_creation.md).
