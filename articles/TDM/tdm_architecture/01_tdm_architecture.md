@@ -12,18 +12,18 @@ The K2view TDM has the following components:
 
 ### TDM Portal
 The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and it offers a self-service implementation of the following activities:
-- TDM definitions, setting TDM Business Entities, environments, roles and permissions. 
+- TDM definitions, setting TDM Business Entities, environments, roles, and permissions. 
 - Creation and execution of TDM tasks that provide a selected subset of entities or tables to the selected environment. 
 
 ### TDM DB
 
-TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB in order to get or to update TDM settings or tasks.
+TDM settings and tasks are kept in the TDM PostgreSQL DB. Both TDM layers, the backend and frontend, connect to the TDM DB to get or update TDM settings or tasks.
 
 ### Test Data Store (Fabric)
 
-Fabric acts as a staging DB for the provisioned entities and as an ETL layer for extracting data from data sources and loading it to the target environment.
+Fabric acts as a staging DB for the provisioned entities and as an ETL layer for extracting data from data sources and loading it into the target environment.
 
-In addition, the TDM back-end APIs and processes are defined and executed in Fabric. The TDM back-end APIs and processes are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
+Additionally, the TDM back-end APIs and processes are defined and executed within Fabric. The TDM back-end APIs and processes are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
 
 #### Fabric as a Staging Repository
 
@@ -34,23 +34,23 @@ When running a TDM task, data from the selected entities is stored and synchroni
 -  Masking capabilities - masking sensitive data when storing entities.
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting an entity's data from source environments and storing it in Fabric in advance so that requests for loading it into target environments can be implemented without accessing source systems. 
-   - Synchronizing data from source systems in order to get the most up-to-date data on entities when required.
-  - Version control - TDM enables creating and executing [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks in order to maintain various versions (snapshots) of each selected list of entities. Each version is kept as a separate LUI. For example, saving a version of a customer's list every 2 hours in order to back up the data during functional tests. 
+   - Synchronizing data from source systems to get the most up-to-date data on entities when required.
+  - Version control - TDM enables creating and executing [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks to maintain various versions (snapshots) of each selected list of entities. Each version is kept as a separate LUI. For example, saving a version of a customer's list every 2 hours to back up the data during functional tests. 
 
   #### Tables
 
-A TDM task can provision selected tables with or without Business Entities. The tables are extracted from the source environment and can stored in Fabric. The tables that are stored in Fabric can be later loaded into selected target environments.
+A TDM task can provision selected tables with or without Business Entities. The tables are extracted from the source environment and can be stored in Fabric. The tables that are stored in Fabric can be later loaded into selected target environments.
 
 [Click here for more information about TDM Tables implementation](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md).
 
 #### Fabric ETL Capabilities
 
 - [Fabric ETL](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#33-fabric-etl-layer) capabilities are used to extract data from data sources and load it into selected target environments. 
-- [Broadway](/articles/19_Broadway/01_broadway_overview.md) is a Fabric module used to design data movement, its transformation and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine activated by Fabric. Broadway supports a wide range of data sources as well as data transformation logic such as:
-  -  Replacing sequences in order to prevent a collision with the target environment.
-  -  Masking sensitive data before loading it to the target environment. 
+- [Broadway](/articles/19_Broadway/01_broadway_overview.md) is a Fabric module used to design data movement, its transformation, and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine activated by Fabric. Broadway supports a wide range of data sources as well as data transformation logic, such as:
+  -  Replacing sequences to prevent a collision with the target environment.
+  -  Masking sensitive data before loading it into the target environment. 
 
-### TDM - Multi DCs Architecture
+### TDM - Multi-DCs Architecture
 
 An organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
 
@@ -61,22 +61,22 @@ An organization's systems and environments can be located in different geographi
 - The testing environments are located in NY, TX, and CA (DC3). 
 - The testing environments in CA need to get the CRM and Billing data from NY, and the Ordering and Ticketing data from TX.
 
-One of the main challenges when  running a data transmission over the network is the performance of the data transmission. Getting data from a distant location may be time-consuming.
+One of the main challenges when  running data transmission over a network is ensuring the performance of the data transmission. Obtaining data from a remote location can be time-consuming.
 
 K2view TDM architecture ensures efficient and quick data transmission between different locations. The following diagram is an example of the TDM architecture in a multi-DC topography:
 
 ![tdm multi DCs](images/tdm_multi_dc_architecture.png)
 
-- Each Data Center (DC) has its own Fabric and Cassandra nodes. 
+- Each Data Center (DC) has its Fabric and Cassandra nodes. 
 - The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
 - The data is distributed automatically by Cassandra between DCs.
 - The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
 
 ## TDM  - Data Provisioning Flow
 
-In general, data provisioning is divided into 2 main sections:
--   Data provisioning requests are created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM Portal and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
-    - **What** - a Business Entity to be provisioned such as customer, employee, order, product, source and target environments, subset of entities, and general request parameters like Sync mode.
+In general, data provisioning is divided into two main sections:
+-   Data provisioning requests are created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user through the TDM Portal and is stored in the TDM database. The TDM task specifies the **what** and **when** details of the data request: 
+    - **What** - a Business Entity to be provisioned, such as customer, employee, order, product, source, and target environments, a subset of entities, and general request parameters like Sync mode.
     - **When** - when a task has to be executed. Execute either by a request or by setting scheduling parameters for periodical task execution.     
 -   Task execution - a task can be executed manually via the **TDM Portal** or periodically via the **TDM Scheduler** process based on predefined scheduling parameters. 
 
