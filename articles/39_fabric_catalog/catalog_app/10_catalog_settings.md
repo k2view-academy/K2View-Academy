@@ -73,7 +73,7 @@ The first input parameter of a masking flow (or a custom actor) — selected as 
 
 Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This ensures that the first configuration parameter of the selected Generator is not hidden in the Masking setup screen, as explained above. 
 
-Below is a masking flow sample:
+Below is an example of a masking flow:
 
 <img src="../images/settings_masking_flow.png" style="zoom: 80%;" />
 
@@ -85,12 +85,12 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 #### Advanced Masking Settings
 
-The purpose of the Advanced Masking Settings pop-up window is to allow the setting-up of additional masking parameters. The settings included in this window are as follows:
+The purpose of the Advanced Masking Settings pop-up window is to allow the configuration of additional masking parameters. The settings included in this window are as follows:
 
 * **Masking indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
 * **Formatter Name and Parameters** — these are set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
 * **Pre-Execution Logic** — an actor or a flow to be executed by the Catalog Masking Actor. 
-* **Property Alias Map** — establishes mapping between the Catalog's property and an input parameter of the attached Masking Actor. These mappings are created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties, by that to improve the quality of the generated value.
+* **Property Alias Map** — establishes mappings between a Catalog field property and an input parameter of the attached Masking Actor. Such mappings override the actor’s input parameters (Generator, Formatter or Pre-execution logic) with values from the Catalog field properties.
 
 <img src="../images/settings_masking_advanced.png" />
 
