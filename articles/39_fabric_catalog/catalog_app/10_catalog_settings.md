@@ -87,7 +87,7 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 The purpose of the Advanced Masking Settings pop-up window is to allow the configuration of additional masking parameters. The settings included in this window are as follows:
 
-* **Masking indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
+* **Masking Indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
 * **Formatter Name and Parameters** — these are set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
 * **Pre-Execution Logic** — an actor or a flow to be executed by the Catalog Masking Actor. 
 * **Property Alias Map** — establishes mappings between a Catalog field property and an input parameter of the attached Masking Actor. Such mappings override the actor’s input parameters (Generator, Formatter or Pre-execution logic) with values from the Catalog field properties.
@@ -107,8 +107,8 @@ The **Sequences** tab allows to set up the sequences that can be generated in a 
 To create a sequence: 
 
 * Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
-* Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
-* The **sequenceId** parameter of the **Sequence.actor** is populated with the same value that is stated in the **Sequence Name**, when it is typed for the first time. Later, each one of them can be changed to a different value, if needed.
+* Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md), but it can be changed to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
+* The value of the **Sequence Name** field is replicated to the **sequenceId** parameter of the **Sequence.actor**. This takes place only in the first population of the **Sequence Name** field. Both values can later be changed independently, if needed.
 
 <img src="../images/settings_seq.png" />
 
