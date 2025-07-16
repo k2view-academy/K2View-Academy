@@ -59,7 +59,7 @@ In the **PII & Masking** tab, each classification can have only one definition (
 
 #### Masking Setup Guidelines
 
-Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (which includes PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
+Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (which includes PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters). The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
 
 Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field associated with a given Classification. For instance, if a field is classified as a Social Security Number, you should configure the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
 
@@ -106,7 +106,7 @@ The **Sequences** tab allows to set up the sequences that can be generated in a 
 
 To create a sequence: 
 
-* Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
+* Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed). 
 * Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md), but it can be changed to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
 * The value of the **Sequence Name** field is replicated to the **sequenceId** parameter of the **Sequence.actor**. This takes place only in the first population of the **Sequence Name** field. Both values can later be changed independently, if needed.
 
