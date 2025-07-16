@@ -155,6 +155,10 @@
 					"value": "TDM/tdm_overview"
 				},
 				{
+					"display name": "TDM Architecture",
+					"value": "TDM/tdm_architecture"
+				},				
+				{
 					"display name": "TDM Portal",
 					"value": "TDM/tdm_gui"
 				},
@@ -165,10 +169,6 @@
 				{
 					"display name": "TDM Configuration",
 					"value": "TDM/tdm_configuration"
-				},
-				{
-					"display name": "TDM Architecture",
-					"value": "TDM/tdm_architecture"
 				}
 			]
 		},
