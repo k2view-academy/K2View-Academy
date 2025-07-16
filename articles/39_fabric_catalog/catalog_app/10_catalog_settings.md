@@ -112,7 +112,7 @@ To create a sequence:
 
 <img src="../images/settings_seq.png" />
 
-Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
+Each sequence can have only one definition (row). Note that you cannot create a classification (via the **PII & Masking** tab) with the same name as a sequence listed in this tab.
 
 Currently, the Catalog does not automatically identify sequence fields. Therefore, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences, as follows:
 
@@ -127,7 +127,7 @@ Currently, the Catalog does not automatically identify sequence fields. Therefor
 
 #### Advanced Sequence Settings
 
-The purpose of the Advanced Sequence Settings pop-up window is to set up additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
+The purpose of the Advanced Sequence Settings pop-up window is to configure additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
 
 <img src="../images/settings_seq_advanced.png" />
 
