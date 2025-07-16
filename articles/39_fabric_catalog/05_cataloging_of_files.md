@@ -14,7 +14,7 @@ Starting from V8.3, Fabric enables running discovery on the following interface 
 * HTTP
 * Custom
 
-Discovery can be performed by either the metadata definition (such as JSON schema or AVRO schema files) or sample data.
+Discovery can be performed by using either the metadata definition (such as JSON schema or AVRO schema files) or sample data.
 
 The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of a specific file format. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the File Cataloging  solution requires creating Broadway flows and attaching them to an interface. Then, at run-time, these flows are invoked by the Crawler upon running Discovery on the given interface.
 
