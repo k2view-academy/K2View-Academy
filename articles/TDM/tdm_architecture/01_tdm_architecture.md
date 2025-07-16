@@ -37,7 +37,7 @@ When running a TDM task, data from the selected entities is stored and synchroni
    - Synchronizing data from source systems to get the most up-to-date data on entities when required.
   - Version control - TDM enables creating and executing [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks to maintain various versions (snapshots) of each selected list of entities. Each version is kept as a separate LUI. For example, saving a version of a customer's list every 2 hours to back up the data during functional tests. 
 
-  #### Tables
+#### Tables
 
 A TDM task can provision selected tables with or without Business Entities. The tables are extracted from the source environment and can be stored in Fabric. The tables that are stored in Fabric can be later loaded into selected target environments.
 
