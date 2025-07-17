@@ -8,11 +8,11 @@ For example, the Customer Details web service retrieves an SSN, which is conside
 
 Starting from Fabric V8.3, a new feature validates during the sync process whether a user is authorized to view LU instance data based on their role, security profile and defined view on the root table, and throws an unauthorized exception if access is denied. The Search command has been enhanced to return only the iid when the user is unauthorized. The Web Service/graphit functionality has been enhanced to consider security profile definitions.
 
-For example, if there is a list of users that should not have access to VIP customers, it can be achieved by adding a new field to the root table called vip_ind and mark the VIP customers with 'Y', that means all other customers will stay with VIP_IND as null. Afterwards define a view called customers_vip that will run select * from root_table where vip_ind is null. The users with a role linked to a security profile contains this view will not have access to the VIP customers, as the sync activity will throw unauthorised exception.
+For example, if there is a list of users that should not have access to VIP customers, it can be achieved by adding a new field to the root table called vip_ind and mark the VIP customers with 'Y', that means all other customers will stay with VIP_IND as null. Afterwards, it is required to define a view called customers_vip that runs select * from root_table where vip_ind is null. Users with a role linked to a security profile that contains this view will not have access to the VIP customers, as the sync activity will throw unauthorized exception.
 
-Known limitation: Field Level Authorization is not applied on GraphIt that is invoked directly as a Web Service. In order to enforce the authorization mechanism, you need to create a Web Service that will invoke a GraphIt file.  
+Known limitation: Field-Level Authorization does not apply to GraphIt when it is invoked directly as a Web Service. In order to enforce the authorization mechanism, you should create a Web Service that invokes a GraphIt file.  
 
-### E2E Field Level Authorization Definition
+### E2E Field-Level Authorization Definition
 
 1. Apply data manipulation on a table that contains sensitive data. For example, you can add a new field called MASKED_SSN to the CUSTOMER LU table and populate it with a masked value of the original SSN field using the CUSTOMER population flow as illustrated below:
 
@@ -20,7 +20,7 @@ Known limitation: Field Level Authorization is not applied on GraphIt that is in
 
 2. Create an LU view that retrieves the manipulated value instead of the original value. For example, using the following query, create an LU view that exposes the value of the MASKED_SSN field instead of the original SSN value. Data manipulation can also be done using an [LUDB function](/articles/07_table_population/11_3_creating_an_LUDB_function.md).
 
-   * Note that the LU view must have the same number of columns as the original LU table, otherwise the Web Service or GraphIt calling it will fail to replace the table by a view. However, should you wish to hide all values of a certain column, you could always use the `NULL AS <column name>` syntax.
+   * Note: The LU view must have the same number of columns as the original LU table, otherwise the Web Service or GraphIt that calls it will fail to replace the table with the view. However, should you wish to hide all values of a certain column, you could always use the `NULL AS <column name>` syntax.
 
 <studio>
 
